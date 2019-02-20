@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **string** | Email | [optional] 
-**signup_steps** | [**\Flipdish\Client\Model\SignupStep[]**](SignupStep.md) | Signup steps | [optional] 
+**signup_steps** | [**\Flipdish\Client\Models\SignupStep[]**](SignupStep.md) | Signup steps | [optional] 
 **is_verified** | **bool** | Is account email verified | [optional] 
 **name** | **string** | Name | [optional] 
 **language** | **string** | Language Id | [optional] 

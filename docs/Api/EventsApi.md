@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **getCustomerEvents**
-> \Flipdish\Client\Model\RestApiEventSearchPaginationResult getCustomerEvents($customer_id, $limit, $page, $start, $end, $name)
+> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getCustomerEvents($customer_id, $limit, $page, $start, $end, $name)
 
 Get customer events  For technical reasons, the number of records returned is limited to 100.
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEvents**
-> \Flipdish\Client\Model\RestApiEventSearchPaginationResult getEvents($store_id, $white_label_id, $customer_id, $limit, $page, $start, $end, $name)
+> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getEvents($store_id, $white_label_id, $customer_id, $limit, $page, $start, $end, $name)
 
 Get events  For technical reasons, the number of records returned is limited to 100.
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEventsById**
-> \Flipdish\Client\Model\EventSearchResult getEventsById($event_id)
+> \Flipdish\Client\Models\EventSearchResult getEventsById($event_id)
 
 Get event by Id  For technical reasons, the number of records returned is limited to 100.
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\EventSearchResult**](../Model/EventSearchResult.md)
+[**\Flipdish\Client\Models\EventSearchResult**](../Model/EventSearchResult.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMenuEvents**
-> \Flipdish\Client\Model\RestApiEventSearchPaginationResult getMenuEvents($menu_id, $limit, $page, $start, $end, $name)
+> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getMenuEvents($menu_id, $limit, $page, $start, $end, $name)
 
 Get menu events  For technical reasons, the number of records returned is limited to 100.
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrderEvents**
-> \Flipdish\Client\Model\RestApiEventSearchPaginationResult getOrderEvents($order_id, $limit, $page, $start, $end, $name)
+> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getOrderEvents($order_id, $limit, $page, $start, $end, $name)
 
 Get order events  For technical reasons, the number of records returned is limited to 100.
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrderEventsByCustomer**
-> \Flipdish\Client\Model\RestApiEventSearchPaginationResult getOrderEventsByCustomer($customer_id, $limit, $page, $start, $end, $name)
+> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getOrderEventsByCustomer($customer_id, $limit, $page, $start, $end, $name)
 
 Get order events by customer  For technical reasons, the number of records returned is limited to 100.
 
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStoreEvents**
-> \Flipdish\Client\Model\RestApiEventSearchPaginationResult getStoreEvents($store_id, $limit, $page, $start, $end, $name)
+> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getStoreEvents($store_id, $limit, $page, $start, $end, $name)
 
 Get store events  For technical reasons, the number of records returned is limited to 100.
 
@@ -423,7 +423,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -437,7 +437,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserEvents**
-> \Flipdish\Client\Model\RestApiEventSearchPaginationResult getUserEvents($user_id, $limit, $page, $start, $end, $name)
+> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getUserEvents($user_id, $limit, $page, $start, $end, $name)
 
 Get user events  For technical reasons, the number of records returned is limited to 100.
 
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWhiteLabelEvents**
-> \Flipdish\Client\Model\RestApiEventSearchPaginationResult getWhiteLabelEvents($whitelabel_id, $limit, $page, $start, $end, $name)
+> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getWhiteLabelEvents($whitelabel_id, $limit, $page, $start, $end, $name)
 
 Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 
@@ -545,7 +545,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 

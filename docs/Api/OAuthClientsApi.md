@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **addRedirectUri**
-> \Flipdish\Client\Model\RestApiResultOauthClientRedirectUri addRedirectUri($o_auth_client_id, $uri)
+> \Flipdish\Client\Models\RestApiResultOauthClientRedirectUri addRedirectUri($o_auth_client_id, $uri)
 
 Create OAuth client redirect uri
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultOauthClientRedirectUri**](../Model/RestApiResultOauthClientRedirectUri.md)
+[**\Flipdish\Client\Models\RestApiResultOauthClientRedirectUri**](../Model/RestApiResultOauthClientRedirectUri.md)
 
 ### Authorization
 
@@ -87,7 +87,7 @@ $apiInstance = new Flipdish\Client\Api\OAuthClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$o_auth_client = new \Flipdish\Client\Model\OAuthClient(); // \Flipdish\Client\Model\OAuthClient | OAuth client
+$o_auth_client = new \Flipdish\Client\Models\OAuthClient(); // \Flipdish\Client\Models\OAuthClient | OAuth client
 
 try {
     $apiInstance->createOAuthClient($o_auth_client);
@@ -101,7 +101,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **o_auth_client** | [**\Flipdish\Client\Model\OAuthClient**](../Model/OAuthClient.md)| OAuth client |
+ **o_auth_client** | [**\Flipdish\Client\Models\OAuthClient**](../Model/OAuthClient.md)| OAuth client |
 
 ### Return type
 
@@ -169,7 +169,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOAuthClientByClientId**
-> \Flipdish\Client\Model\RestApiResultOAuthClient getOAuthClientByClientId($client_id)
+> \Flipdish\Client\Models\RestApiResultOAuthClient getOAuthClientByClientId($client_id)
 
 Get OAuth client by identifier
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultOAuthClient**](../Model/RestApiResultOAuthClient.md)
+[**\Flipdish\Client\Models\RestApiResultOAuthClient**](../Model/RestApiResultOAuthClient.md)
 
 ### Authorization
 
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOAuthClientSecret**
-> \Flipdish\Client\Model\RestApiStringResult getOAuthClientSecret($client_id)
+> \Flipdish\Client\Models\RestApiStringResult getOAuthClientSecret($client_id)
 
 Get OAuth client secret key
 
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiStringResult**](../Model/RestApiStringResult.md)
+[**\Flipdish\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
 
 ### Authorization
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOAuthClients**
-> \Flipdish\Client\Model\RestApiArrayResultOAuthClient getOAuthClients()
+> \Flipdish\Client\Models\RestApiArrayResultOAuthClient getOAuthClients()
 
 Get all OAuth client
 
@@ -304,7 +304,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultOAuthClient**](../Model/RestApiArrayResultOAuthClient.md)
+[**\Flipdish\Client\Models\RestApiArrayResultOAuthClient**](../Model/RestApiArrayResultOAuthClient.md)
 
 ### Authorization
 
@@ -318,7 +318,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOauthAccessToken**
-> \Flipdish\Client\Model\RestApiStringResult getOauthAccessToken($o_auth_client_id)
+> \Flipdish\Client\Models\RestApiStringResult getOauthAccessToken($o_auth_client_id)
 
 Get OAuth access token for client
 
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiStringResult**](../Model/RestApiStringResult.md)
+[**\Flipdish\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
 
 ### Authorization
 
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRedirectUris**
-> \Flipdish\Client\Model\RestApiArrayResultOauthClientRedirectUri getRedirectUris($o_auth_client_id)
+> \Flipdish\Client\Models\RestApiArrayResultOauthClientRedirectUri getRedirectUris($o_auth_client_id)
 
 Get OAuth client redirect uris
 
@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultOauthClientRedirectUri**](../Model/RestApiArrayResultOauthClientRedirectUri.md)
+[**\Flipdish\Client\Models\RestApiArrayResultOauthClientRedirectUri**](../Model/RestApiArrayResultOauthClientRedirectUri.md)
 
 ### Authorization
 

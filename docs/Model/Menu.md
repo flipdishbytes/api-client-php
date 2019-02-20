@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **modified_time** | [**\DateTime**](\DateTime.md) | Last modified time | [optional] 
 **version_number** | **int** | Menu version | [optional] 
 **image_url** | **string** | Image url | [optional] 
-**menu_sections** | [**\Flipdish\Client\Model\MenuSection[]**](MenuSection.md) | Menu sections (startes, main etc) | [optional] 
+**menu_sections** | [**\Flipdish\Client\Models\MenuSection[]**](MenuSection.md) | Menu sections (startes, main etc) | [optional] 
 **display_section_links** | **bool** | Display menu section link on UI | [optional] 
 **menu_section_behaviour** | **string** | Menu section behaviour | [optional] 
 

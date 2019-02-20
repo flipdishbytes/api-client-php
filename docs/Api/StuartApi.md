@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **stuartGetJob**
-> \Flipdish\Client\Model\RestApiResultJobResponse stuartGetJob($job_id, $store_id)
+> \Flipdish\Client\Models\RestApiResultJobResponse stuartGetJob($job_id, $store_id)
 
 
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultJobResponse**](../Model/RestApiResultJobResponse.md)
+[**\Flipdish\Client\Models\RestApiResultJobResponse**](../Model/RestApiResultJobResponse.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **stuartGetStuartSettings**
-> \Flipdish\Client\Model\RestApiResultStuartSettings stuartGetStuartSettings($store_id)
+> \Flipdish\Client\Models\RestApiResultStuartSettings stuartGetStuartSettings($store_id)
 
 Get stuart credentials
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultStuartSettings**](../Model/RestApiResultStuartSettings.md)
+[**\Flipdish\Client\Models\RestApiResultStuartSettings**](../Model/RestApiResultStuartSettings.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ $apiInstance = new Flipdish\Client\Api\StuartApi(
     $config
 );
 $store_id = 56; // int | 
-$stuart_settings = new \Flipdish\Client\Model\StuartSettings(); // \Flipdish\Client\Model\StuartSettings | 
+$stuart_settings = new \Flipdish\Client\Models\StuartSettings(); // \Flipdish\Client\Models\StuartSettings | 
 
 try {
     $result = $apiInstance->stuartPostStuartSettings($store_id, $stuart_settings);
@@ -203,7 +203,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**|  |
- **stuart_settings** | [**\Flipdish\Client\Model\StuartSettings**](../Model/StuartSettings.md)|  |
+ **stuart_settings** | [**\Flipdish\Client\Models\StuartSettings**](../Model/StuartSettings.md)|  |
 
 ### Return type
 

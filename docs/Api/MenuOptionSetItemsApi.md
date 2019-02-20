@@ -36,7 +36,7 @@ $menu_id = 56; // int | Menu identifier
 $menu_section_id = 56; // int | Menu section identifier
 $menu_section_item_id = 56; // int | Menu section item identifier
 $option_set_id = 56; // int | Option set identifier
-$menu_item_option_set_item = new \Flipdish\Client\Model\MenuItemOptionSetItemBase(); // \Flipdish\Client\Model\MenuItemOptionSetItemBase | Option set item
+$menu_item_option_set_item = new \Flipdish\Client\Models\MenuItemOptionSetItemBase(); // \Flipdish\Client\Models\MenuItemOptionSetItemBase | Option set item
 
 try {
     $result = $apiInstance->addMenuItemOptionSetItem($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id, $menu_item_option_set_item);
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
  **menu_section_id** | **int**| Menu section identifier |
  **menu_section_item_id** | **int**| Menu section item identifier |
  **option_set_id** | **int**| Option set identifier |
- **menu_item_option_set_item** | [**\Flipdish\Client\Model\MenuItemOptionSetItemBase**](../Model/MenuItemOptionSetItemBase.md)| Option set item |
+ **menu_item_option_set_item** | [**\Flipdish\Client\Models\MenuItemOptionSetItemBase**](../Model/MenuItemOptionSetItemBase.md)| Option set item |
 
 ### Return type
 
@@ -131,7 +131,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMenuItemOptionSetItemById**
-> \Flipdish\Client\Model\RestApiResultMenuItemOptionSetItem getMenuItemOptionSetItemById($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id, $menu_item_option_set_item_id)
+> \Flipdish\Client\Models\RestApiResultMenuItemOptionSetItem getMenuItemOptionSetItemById($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id, $menu_item_option_set_item_id)
 
 Get menu item option set item by identifier
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultMenuItemOptionSetItem**](../Model/RestApiResultMenuItemOptionSetItem.md)
+[**\Flipdish\Client\Models\RestApiResultMenuItemOptionSetItem**](../Model/RestApiResultMenuItemOptionSetItem.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMenuItemOptionSetItems**
-> \Flipdish\Client\Model\RestApiArrayResultMenuItemOptionSetItem getMenuItemOptionSetItems($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id)
+> \Flipdish\Client\Models\RestApiArrayResultMenuItemOptionSetItem getMenuItemOptionSetItems($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id)
 
 Get menu item option set items
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultMenuItemOptionSetItem**](../Model/RestApiArrayResultMenuItemOptionSetItem.md)
+[**\Flipdish\Client\Models\RestApiArrayResultMenuItemOptionSetItem**](../Model/RestApiArrayResultMenuItemOptionSetItem.md)
 
 ### Authorization
 
@@ -328,7 +328,7 @@ $menu_section_id = 56; // int | Menu section identifier
 $menu_section_item_id = 56; // int | Menu section item identifier
 $option_set_id = 56; // int | Option set identifier
 $menu_item_option_set_item_id = 56; // int | Option set item identifier
-$menu_item_option_set_item = new \Flipdish\Client\Model\MenuItemOptionSetItemBase(); // \Flipdish\Client\Model\MenuItemOptionSetItemBase | Option set item (delta)
+$menu_item_option_set_item = new \Flipdish\Client\Models\MenuItemOptionSetItemBase(); // \Flipdish\Client\Models\MenuItemOptionSetItemBase | Option set item (delta)
 $undo_after = 1.2; // double | An optional time period, in hours, after which the hide-section operaton will be undone.
 
 try {
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
  **menu_section_item_id** | **int**| Menu section item identifier |
  **option_set_id** | **int**| Option set identifier |
  **menu_item_option_set_item_id** | **int**| Option set item identifier |
- **menu_item_option_set_item** | [**\Flipdish\Client\Model\MenuItemOptionSetItemBase**](../Model/MenuItemOptionSetItemBase.md)| Option set item (delta) |
+ **menu_item_option_set_item** | [**\Flipdish\Client\Models\MenuItemOptionSetItemBase**](../Model/MenuItemOptionSetItemBase.md)| Option set item (delta) |
  **undo_after** | **double**| An optional time period, in hours, after which the hide-section operaton will be undone. | [optional]
 
 ### Return type
@@ -367,7 +367,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **uploadOptionSetItemImage**
-> \Flipdish\Client\Model\RestApiStringResult uploadOptionSetItemImage($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id, $menu_item_option_set_item_id, $image)
+> \Flipdish\Client\Models\RestApiStringResult uploadOptionSetItemImage($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id, $menu_item_option_set_item_id, $image)
 
 Upload menu item option set item image
 
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiStringResult**](../Model/RestApiStringResult.md)
+[**\Flipdish\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
 
 ### Authorization
 

@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsGetCard**
-> \Flipdish\Client\Model\RestApiResultCard subscriptionsGetCard($subscription_id)
+> \Flipdish\Client\Models\RestApiResultCard subscriptionsGetCard($subscription_id)
 
 Get the card linked to the subscription
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultCard**](../Model/RestApiResultCard.md)
+[**\Flipdish\Client\Models\RestApiResultCard**](../Model/RestApiResultCard.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsGetPlansByCurrency**
-> \Flipdish\Client\Model\RestApiResultSubscriptionPlansResponse subscriptionsGetPlansByCurrency()
+> \Flipdish\Client\Models\RestApiResultSubscriptionPlansResponse subscriptionsGetPlansByCurrency()
 
 Get avaialble plans for currency's user
 
@@ -151,7 +151,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultSubscriptionPlansResponse**](../Model/RestApiResultSubscriptionPlansResponse.md)
+[**\Flipdish\Client\Models\RestApiResultSubscriptionPlansResponse**](../Model/RestApiResultSubscriptionPlansResponse.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsGetSubscription**
-> \Flipdish\Client\Model\RestApiResultSubscription subscriptionsGetSubscription($subscription_id)
+> \Flipdish\Client\Models\RestApiResultSubscription subscriptionsGetSubscription($subscription_id)
 
 Get the subscription including the payment history
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultSubscription**](../Model/RestApiResultSubscription.md)
+[**\Flipdish\Client\Models\RestApiResultSubscription**](../Model/RestApiResultSubscription.md)
 
 ### Authorization
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsGetUserSubscriptionByAppId**
-> \Flipdish\Client\Model\RestApiResultSubscription subscriptionsGetUserSubscriptionByAppId($app_id)
+> \Flipdish\Client\Models\RestApiResultSubscription subscriptionsGetUserSubscriptionByAppId($app_id)
 
 Get subscription by appId
 
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultSubscription**](../Model/RestApiResultSubscription.md)
+[**\Flipdish\Client\Models\RestApiResultSubscription**](../Model/RestApiResultSubscription.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ $apiInstance = new Flipdish\Client\Api\SubscriptionsApi(
     $config
 );
 $subscription_id = 56; // int | Subscription identifier
-$card = new \Flipdish\Client\Model\CardWithToken(); // \Flipdish\Client\Model\CardWithToken | Token Id
+$card = new \Flipdish\Client\Models\CardWithToken(); // \Flipdish\Client\Models\CardWithToken | Token Id
 
 try {
     $result = $apiInstance->subscriptionsReplaceOldCardWithNewCard($subscription_id, $card);
@@ -302,7 +302,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscription_id** | **int**| Subscription identifier |
- **card** | [**\Flipdish\Client\Model\CardWithToken**](../Model/CardWithToken.md)| Token Id |
+ **card** | [**\Flipdish\Client\Models\CardWithToken**](../Model/CardWithToken.md)| Token Id |
 
 ### Return type
 
@@ -338,7 +338,7 @@ $apiInstance = new Flipdish\Client\Api\SubscriptionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$subscription = new \Flipdish\Client\Model\SubscriptionWithToken(); // \Flipdish\Client\Model\SubscriptionWithToken | Data necessary to create a new subscription
+$subscription = new \Flipdish\Client\Models\SubscriptionWithToken(); // \Flipdish\Client\Models\SubscriptionWithToken | Data necessary to create a new subscription
 
 try {
     $result = $apiInstance->subscriptionsSubscribe($subscription);
@@ -353,7 +353,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription** | [**\Flipdish\Client\Model\SubscriptionWithToken**](../Model/SubscriptionWithToken.md)| Data necessary to create a new subscription |
+ **subscription** | [**\Flipdish\Client\Models\SubscriptionWithToken**](../Model/SubscriptionWithToken.md)| Data necessary to create a new subscription |
 
 ### Return type
 
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionsUpdateCardExpiringDate**
-> \Flipdish\Client\Model\RestApiResultCard subscriptionsUpdateCardExpiringDate($subscription_id, $card)
+> \Flipdish\Client\Models\RestApiResultCard subscriptionsUpdateCardExpiringDate($subscription_id, $card)
 
 Update card expiring date
 
@@ -390,7 +390,7 @@ $apiInstance = new Flipdish\Client\Api\SubscriptionsApi(
     $config
 );
 $subscription_id = 56; // int | Subscription identifier
-$card = new \Flipdish\Client\Model\CardBase(); // \Flipdish\Client\Model\CardBase | Data to update card expiring date
+$card = new \Flipdish\Client\Models\CardBase(); // \Flipdish\Client\Models\CardBase | Data to update card expiring date
 
 try {
     $result = $apiInstance->subscriptionsUpdateCardExpiringDate($subscription_id, $card);
@@ -406,11 +406,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscription_id** | **int**| Subscription identifier |
- **card** | [**\Flipdish\Client\Model\CardBase**](../Model/CardBase.md)| Data to update card expiring date |
+ **card** | [**\Flipdish\Client\Models\CardBase**](../Model/CardBase.md)| Data to update card expiring date |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultCard**](../Model/RestApiResultCard.md)
+[**\Flipdish\Client\Models\RestApiResultCard**](../Model/RestApiResultCard.md)
 
 ### Authorization
 
@@ -443,7 +443,7 @@ $apiInstance = new Flipdish\Client\Api\SubscriptionsApi(
     $config
 );
 $subscription_id = 56; // int | Subscription identifier
-$subscription = new \Flipdish\Client\Model\SubscriptionBase(); // \Flipdish\Client\Model\SubscriptionBase | Data to update the subscription
+$subscription = new \Flipdish\Client\Models\SubscriptionBase(); // \Flipdish\Client\Models\SubscriptionBase | Data to update the subscription
 
 try {
     $result = $apiInstance->subscriptionsUpdateSubscription($subscription_id, $subscription);
@@ -459,7 +459,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscription_id** | **int**| Subscription identifier |
- **subscription** | [**\Flipdish\Client\Model\SubscriptionBase**](../Model/SubscriptionBase.md)| Data to update the subscription |
+ **subscription** | [**\Flipdish\Client\Models\SubscriptionBase**](../Model/SubscriptionBase.md)| Data to update the subscription |
 
 ### Return type
 

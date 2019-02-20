@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**early** | [**\Flipdish\Client\Model\Range**](Range.md) | Early | [optional] 
-**late** | [**\Flipdish\Client\Model\Range**](Range.md) | Late | [optional] 
-**ranges** | [**\Flipdish\Client\Model\Range[]**](Range.md) | Ranges | [optional] 
+**early** | [**\Flipdish\Client\Models\Range**](Range.md) | Early | [optional] 
+**late** | [**\Flipdish\Client\Models\Range**](Range.md) | Late | [optional] 
+**ranges** | [**\Flipdish\Client\Models\Range[]**](Range.md) | Ranges | [optional] 
 **day_of_week** | **string** | Day of week | [optional] 
 **start_time** | **string** | Start time | [optional] 
 **period** | **string** | Period | [optional] 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **getAuthorizationTokens**
-> \Flipdish\Client\Model\RestApiPaginationResultOAuthTokenModel getAuthorizationTokens($client_id, $page, $limit)
+> \Flipdish\Client\Models\RestApiPaginationResultOAuthTokenModel getAuthorizationTokens($client_id, $page, $limit)
 
 Get authorization tokens
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiPaginationResultOAuthTokenModel**](../Model/RestApiPaginationResultOAuthTokenModel.md)
+[**\Flipdish\Client\Models\RestApiPaginationResultOAuthTokenModel**](../Model/RestApiPaginationResultOAuthTokenModel.md)
 
 ### Authorization
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getRoles**
-> \Flipdish\Client\Model\RestApiStringArrayResult getRoles()
+> \Flipdish\Client\Models\RestApiStringArrayResult getRoles()
 
 Get role names
 
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiStringArrayResult**](../Model/RestApiStringArrayResult.md)
+[**\Flipdish\Client\Models\RestApiStringArrayResult**](../Model/RestApiStringArrayResult.md)
 
 ### Authorization
 

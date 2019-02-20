@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **craeteWebhookSubscription**
-> \Flipdish\Client\Model\RestApiIntegerResult craeteWebhookSubscription($client_id, $webhook_subscription)
+> \Flipdish\Client\Models\RestApiIntegerResult craeteWebhookSubscription($client_id, $webhook_subscription)
 
 Create a webhook subscription for you Oauth client
 
@@ -35,7 +35,7 @@ $apiInstance = new Flipdish\Client\Api\WebhooksApi(
     $config
 );
 $client_id = "client_id_example"; // string | Oauth client identifier
-$webhook_subscription = new \Flipdish\Client\Model\WebhookSubscription(); // \Flipdish\Client\Model\WebhookSubscription | Webhook subscription object
+$webhook_subscription = new \Flipdish\Client\Models\WebhookSubscription(); // \Flipdish\Client\Models\WebhookSubscription | Webhook subscription object
 
 try {
     $result = $apiInstance->craeteWebhookSubscription($client_id, $webhook_subscription);
@@ -51,11 +51,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **client_id** | **string**| Oauth client identifier |
- **webhook_subscription** | [**\Flipdish\Client\Model\WebhookSubscription**](../Model/WebhookSubscription.md)| Webhook subscription object |
+ **webhook_subscription** | [**\Flipdish\Client\Models\WebhookSubscription**](../Model/WebhookSubscription.md)| Webhook subscription object |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiIntegerResult**](../Model/RestApiIntegerResult.md)
+[**\Flipdish\Client\Models\RestApiIntegerResult**](../Model/RestApiIntegerResult.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhookEventNames**
-> \Flipdish\Client\Model\RestApiStringArrayResult getWebhookEventNames()
+> \Flipdish\Client\Models\RestApiStringArrayResult getWebhookEventNames()
 
 Get all webhook subscription event names
 
@@ -262,7 +262,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiStringArrayResult**](../Model/RestApiStringArrayResult.md)
+[**\Flipdish\Client\Models\RestApiStringArrayResult**](../Model/RestApiStringArrayResult.md)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhookEventNamesBySubscriptionId**
-> \Flipdish\Client\Model\RestApiStringArrayResult getWebhookEventNamesBySubscriptionId($client_id, $webhook_subscription_id)
+> \Flipdish\Client\Models\RestApiStringArrayResult getWebhookEventNamesBySubscriptionId($client_id, $webhook_subscription_id)
 
 Get your webhook subscriptions selected event names
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiStringArrayResult**](../Model/RestApiStringArrayResult.md)
+[**\Flipdish\Client\Models\RestApiStringArrayResult**](../Model/RestApiStringArrayResult.md)
 
 ### Authorization
 
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhookLogs**
-> \Flipdish\Client\Model\RestApiPaginationResultWebhookLog getWebhookLogs($client_id, $webhook_subscription_id, $start, $end, $page, $limit)
+> \Flipdish\Client\Models\RestApiPaginationResultWebhookLog getWebhookLogs($client_id, $webhook_subscription_id, $start, $end, $page, $limit)
 
 Get logs for your webhook subscription
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiPaginationResultWebhookLog**](../Model/RestApiPaginationResultWebhookLog.md)
+[**\Flipdish\Client\Models\RestApiPaginationResultWebhookLog**](../Model/RestApiPaginationResultWebhookLog.md)
 
 ### Authorization
 
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWebhookSubscriptions**
-> \Flipdish\Client\Model\RestApiArrayResultWebhookSubscription getWebhookSubscriptions($client_id)
+> \Flipdish\Client\Models\RestApiArrayResultWebhookSubscription getWebhookSubscriptions($client_id)
 
 Get all webhook subscriptions by your Oauth client id
 
@@ -427,7 +427,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultWebhookSubscription**](../Model/RestApiArrayResultWebhookSubscription.md)
+[**\Flipdish\Client\Models\RestApiArrayResultWebhookSubscription**](../Model/RestApiArrayResultWebhookSubscription.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ $apiInstance = new Flipdish\Client\Api\WebhooksApi(
 );
 $client_id = "client_id_example"; // string | Oauth client identifier
 $webhook_subscription_id = 56; // int | Webhook subscription identifier
-$webhook_subscription = new \Flipdish\Client\Model\WebhookSubscription(); // \Flipdish\Client\Model\WebhookSubscription | Webhook subscription object
+$webhook_subscription = new \Flipdish\Client\Models\WebhookSubscription(); // \Flipdish\Client\Models\WebhookSubscription | Webhook subscription object
 
 try {
     $apiInstance->updateWebhookSubscription($client_id, $webhook_subscription_id, $webhook_subscription);
@@ -477,7 +477,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **client_id** | **string**| Oauth client identifier |
  **webhook_subscription_id** | **int**| Webhook subscription identifier |
- **webhook_subscription** | [**\Flipdish\Client\Model\WebhookSubscription**](../Model/WebhookSubscription.md)| Webhook subscription object |
+ **webhook_subscription** | [**\Flipdish\Client\Models\WebhookSubscription**](../Model/WebhookSubscription.md)| Webhook subscription object |
 
 ### Return type
 

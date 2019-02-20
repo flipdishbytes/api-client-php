@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getProcessingFeeConfigsByStoreIds**
-> \Flipdish\Client\Model\RestApiArrayResultProcessingFeeConfig getProcessingFeeConfigsByStoreIds($store_ids)
+> \Flipdish\Client\Models\RestApiArrayResultProcessingFeeConfig getProcessingFeeConfigsByStoreIds($store_ids)
 
 Get processing fee configs by store identifiers
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultProcessingFeeConfig**](../Model/RestApiArrayResultProcessingFeeConfig.md)
+[**\Flipdish\Client\Models\RestApiArrayResultProcessingFeeConfig**](../Model/RestApiArrayResultProcessingFeeConfig.md)
 
 ### Authorization
 

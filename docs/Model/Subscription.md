@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **start_date** | [**\DateTime**](\DateTime.md) | Starting date of the subscription | [optional] 
 **status** | **string** | Status of the subscription (TrialPeriod, Ongoing, Unpaid, Canceled) | [optional] 
 **user_id** | **int** | Flipdish user identifier | [optional] 
-**subscription_plan** | [**\Flipdish\Client\Model\SubscriptionPlan**](SubscriptionPlan.md) | Subscription Plan | [optional] 
-**card** | [**\Flipdish\Client\Model\Card**](Card.md) | Card | [optional] 
+**subscription_plan** | [**\Flipdish\Client\Models\SubscriptionPlan**](SubscriptionPlan.md) | Subscription Plan | [optional] 
+**card** | [**\Flipdish\Client\Models\Card**](Card.md) | Card | [optional] 
 **app_id** | **string** | App name Id of the subscription | 
 **vat_number** | **string** | Last 4 digits of the card | [optional] 
 **vat_country_code** | **string** | Expiry date of the card | 

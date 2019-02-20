@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **menu_item_option_set_id** | **int** | Menu item option set identifier | [optional] 
 **image_url** | **string** | Image url | [optional] 
-**menu_item_option_set_items** | [**\Flipdish\Client\Model\MenuItemOptionSetItem[]**](MenuItemOptionSetItem.md) | Option set items | [optional] 
+**menu_item_option_set_items** | [**\Flipdish\Client\Models\MenuItemOptionSetItem[]**](MenuItemOptionSetItem.md) | Option set items | [optional] 
 **public_id** | **string** | Permanent reference to the item. | [optional] 
 **name** | **string** | Menu item option set name | [optional] 
 **is_master_option_set** | **bool** | Is master option set. This can affect the layout of the options in the menu displayed to the customer. Usually it is true if the option could be considerd a standalone item as opposed to an addition (\&quot;with ketchup\&quot;) or modifier (\&quot;large\&quot;). | [optional] 

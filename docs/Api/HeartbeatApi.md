@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **ping**
-> \Flipdish\Client\Model\RestApiStringResult ping()
+> \Flipdish\Client\Models\RestApiStringResult ping()
 
 
 
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiStringResult**](../Model/RestApiStringResult.md)
+[**\Flipdish\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
 
 ### Authorization
 

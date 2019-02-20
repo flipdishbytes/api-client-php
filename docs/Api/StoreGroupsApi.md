@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createStoreGroup**
-> \Flipdish\Client\Model\RestApiResultStoreGroup createStoreGroup($app_name_id, $store_group)
+> \Flipdish\Client\Models\RestApiResultStoreGroup createStoreGroup($app_name_id, $store_group)
 
 Creates a Store Group  It will be attached to an existing App
 
@@ -31,7 +31,7 @@ $apiInstance = new Flipdish\Client\Api\StoreGroupsApi(
     $config
 );
 $app_name_id = "app_name_id_example"; // string | App Name Id
-$store_group = new \Flipdish\Client\Model\StoreGroupBase(); // \Flipdish\Client\Model\StoreGroupBase | Store group definition
+$store_group = new \Flipdish\Client\Models\StoreGroupBase(); // \Flipdish\Client\Models\StoreGroupBase | Store group definition
 
 try {
     $result = $apiInstance->createStoreGroup($app_name_id, $store_group);
@@ -47,11 +47,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_name_id** | **string**| App Name Id |
- **store_group** | [**\Flipdish\Client\Model\StoreGroupBase**](../Model/StoreGroupBase.md)| Store group definition |
+ **store_group** | [**\Flipdish\Client\Models\StoreGroupBase**](../Model/StoreGroupBase.md)| Store group definition |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultStoreGroup**](../Model/RestApiResultStoreGroup.md)
+[**\Flipdish\Client\Models\RestApiResultStoreGroup**](../Model/RestApiResultStoreGroup.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStoreGroup**
-> \Flipdish\Client\Model\RestApiResultStoreGroup getStoreGroup($store_group_id)
+> \Flipdish\Client\Models\RestApiResultStoreGroup getStoreGroup($store_group_id)
 
 Returns a Store Groups
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultStoreGroup**](../Model/RestApiResultStoreGroup.md)
+[**\Flipdish\Client\Models\RestApiResultStoreGroup**](../Model/RestApiResultStoreGroup.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStoreGroups**
-> \Flipdish\Client\Model\RestApiPaginationResultStoreGroup getStoreGroups($app_name_id, $search_query, $page, $limit)
+> \Flipdish\Client\Models\RestApiPaginationResultStoreGroup getStoreGroups($app_name_id, $search_query, $page, $limit)
 
 Returns a paginated list of Store Groups
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiPaginationResultStoreGroup**](../Model/RestApiPaginationResultStoreGroup.md)
+[**\Flipdish\Client\Models\RestApiPaginationResultStoreGroup**](../Model/RestApiPaginationResultStoreGroup.md)
 
 ### Authorization
 
@@ -223,7 +223,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateStoreGroup**
-> \Flipdish\Client\Model\RestApiResultStoreGroupBase updateStoreGroup($store_group_id, $store_group)
+> \Flipdish\Client\Models\RestApiResultStoreGroupBase updateStoreGroup($store_group_id, $store_group)
 
 Updates Store Group
 
@@ -242,7 +242,7 @@ $apiInstance = new Flipdish\Client\Api\StoreGroupsApi(
     $config
 );
 $store_group_id = 56; // int | Store Group Id
-$store_group = new \Flipdish\Client\Model\StoreGroupBase(); // \Flipdish\Client\Model\StoreGroupBase | Store Group Delta
+$store_group = new \Flipdish\Client\Models\StoreGroupBase(); // \Flipdish\Client\Models\StoreGroupBase | Store Group Delta
 
 try {
     $result = $apiInstance->updateStoreGroup($store_group_id, $store_group);
@@ -258,11 +258,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_group_id** | **int**| Store Group Id |
- **store_group** | [**\Flipdish\Client\Model\StoreGroupBase**](../Model/StoreGroupBase.md)| Store Group Delta |
+ **store_group** | [**\Flipdish\Client\Models\StoreGroupBase**](../Model/StoreGroupBase.md)| Store Group Delta |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultStoreGroupBase**](../Model/RestApiResultStoreGroupBase.md)
+[**\Flipdish\Client\Models\RestApiResultStoreGroupBase**](../Model/RestApiResultStoreGroupBase.md)
 
 ### Authorization
 

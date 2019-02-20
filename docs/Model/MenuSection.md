@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **menu_section_id** | **int** | Menu section identifier | [optional] 
 **image_url** | **string** | Image url | [optional] 
-**menu_items** | [**\Flipdish\Client\Model\MenuSectionItem[]**](MenuSectionItem.md) | Menu items | [optional] 
-**menu_section_availability** | [**\Flipdish\Client\Model\MenuSectionAvailability**](MenuSectionAvailability.md) | Menu section availability | [optional] 
+**menu_items** | [**\Flipdish\Client\Models\MenuSectionItem[]**](MenuSectionItem.md) | Menu items | [optional] 
+**menu_section_availability** | [**\Flipdish\Client\Models\MenuSectionAvailability**](MenuSectionAvailability.md) | Menu section availability | [optional] 
 **public_id** | **string** | Permanent reference to the item. | [optional] 
 **name** | **string** | Name | [optional] 
 **description** | **string** | Description | [optional] 

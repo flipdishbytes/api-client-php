@@ -123,7 +123,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMenuById**
-> \Flipdish\Client\Model\RestApiResultMenu getMenuById($menu_id)
+> \Flipdish\Client\Models\RestApiResultMenu getMenuById($menu_id)
 
 Get menu by identifier
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultMenu**](../Model/RestApiResultMenu.md)
+[**\Flipdish\Client\Models\RestApiResultMenu**](../Model/RestApiResultMenu.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMenuItemMetadata**
-> \Flipdish\Client\Model\RestApiArrayResultMetadata getMenuItemMetadata($menu_id, $store_id, $menu_item_id)
+> \Flipdish\Client\Models\RestApiArrayResultMetadata getMenuItemMetadata($menu_id, $store_id, $menu_item_id)
 
 Get menu item metadata
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultMetadata**](../Model/RestApiArrayResultMetadata.md)
+[**\Flipdish\Client\Models\RestApiArrayResultMetadata**](../Model/RestApiArrayResultMetadata.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMenuItemOptionSetItemMetadata**
-> \Flipdish\Client\Model\RestApiResultMetadata getMenuItemOptionSetItemMetadata($menu_id, $store_id, $option_set_item_id)
+> \Flipdish\Client\Models\RestApiResultMetadata getMenuItemOptionSetItemMetadata($menu_id, $store_id, $option_set_item_id)
 
 Get menu item option set item metadata by key
 
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultMetadata**](../Model/RestApiResultMetadata.md)
+[**\Flipdish\Client\Models\RestApiResultMetadata**](../Model/RestApiResultMetadata.md)
 
 ### Authorization
 
@@ -361,7 +361,7 @@ $apiInstance = new Flipdish\Client\Api\MenusApi(
 $menu_id = 56; // int | Menu identifier
 $store_id = 56; // int | Store identifier
 $menu_item_id = 56; // int | Menu item identifier
-$metadata = new \Flipdish\Client\Model\Metadata(); // \Flipdish\Client\Model\Metadata | Metadata object
+$metadata = new \Flipdish\Client\Models\Metadata(); // \Flipdish\Client\Models\Metadata | Metadata object
 
 try {
     $apiInstance->setMenuItemMetadata($menu_id, $store_id, $menu_item_id, $metadata);
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
  **menu_id** | **int**| Menu identifier |
  **store_id** | **int**| Store identifier |
  **menu_item_id** | **int**| Menu item identifier |
- **metadata** | [**\Flipdish\Client\Model\Metadata**](../Model/Metadata.md)| Metadata object |
+ **metadata** | [**\Flipdish\Client\Models\Metadata**](../Model/Metadata.md)| Metadata object |
 
 ### Return type
 
@@ -417,7 +417,7 @@ $apiInstance = new Flipdish\Client\Api\MenusApi(
 $menu_id = 56; // int | Menu identifier
 $store_id = 56; // int | Store identifier
 $option_set_item_id = 56; // int | Menu item option set item identifier
-$metadata = new \Flipdish\Client\Model\Metadata(); // \Flipdish\Client\Model\Metadata | Metadata object
+$metadata = new \Flipdish\Client\Models\Metadata(); // \Flipdish\Client\Models\Metadata | Metadata object
 
 try {
     $apiInstance->setMenuItemOptionSetItemMetadata($menu_id, $store_id, $option_set_item_id, $metadata);
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
  **menu_id** | **int**| Menu identifier |
  **store_id** | **int**| Store identifier |
  **option_set_item_id** | **int**| Menu item option set item identifier |
- **metadata** | [**\Flipdish\Client\Model\Metadata**](../Model/Metadata.md)| Metadata object |
+ **metadata** | [**\Flipdish\Client\Models\Metadata**](../Model/Metadata.md)| Metadata object |
 
 ### Return type
 
@@ -471,7 +471,7 @@ $apiInstance = new Flipdish\Client\Api\MenusApi(
     $config
 );
 $menu_id = 56; // int | Menu identifier
-$menu = new \Flipdish\Client\Model\MenuBase(); // \Flipdish\Client\Model\MenuBase | Menu (delta)
+$menu = new \Flipdish\Client\Models\MenuBase(); // \Flipdish\Client\Models\MenuBase | Menu (delta)
 
 try {
     $apiInstance->updateMenu($menu_id, $menu);
@@ -486,7 +486,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menu_id** | **int**| Menu identifier |
- **menu** | [**\Flipdish\Client\Model\MenuBase**](../Model/MenuBase.md)| Menu (delta) |
+ **menu** | [**\Flipdish\Client\Models\MenuBase**](../Model/MenuBase.md)| Menu (delta) |
 
 ### Return type
 
@@ -504,7 +504,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **uploadMenuImage**
-> \Flipdish\Client\Model\RestApiStringResult uploadMenuImage($menu_id, $image)
+> \Flipdish\Client\Models\RestApiStringResult uploadMenuImage($menu_id, $image)
 
 Upload menu image
 
@@ -543,7 +543,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiStringResult**](../Model/RestApiStringResult.md)
+[**\Flipdish\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
 
 ### Authorization
 

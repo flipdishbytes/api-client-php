@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**store** | [**\Flipdish\Client\Model\StoreSummary**](StoreSummary.md) | Store summary | [optional] 
-**customer** | [**\Flipdish\Client\Model\CustomerSummary**](CustomerSummary.md) | Customer summary | [optional] 
-**voucher** | [**\Flipdish\Client\Model\OrderVoucherSummary**](OrderVoucherSummary.md) | Voucher summary | [optional] 
-**fees** | [**\Flipdish\Client\Model\FeeSummary**](FeeSummary.md) | Fee summary | [optional] 
-**order_items** | [**\Flipdish\Client\Model\OrderItem[]**](OrderItem.md) | Ordered items | [optional] 
-**delivery_location** | [**\Flipdish\Client\Model\DeliveryLocation**](DeliveryLocation.md) | Delivery location for delivery orders | [optional] 
-**customer_location** | [**\Flipdish\Client\Model\Coordinates**](Coordinates.md) | Customer location | [optional] 
+**store** | [**\Flipdish\Client\Models\StoreSummary**](StoreSummary.md) | Store summary | [optional] 
+**customer** | [**\Flipdish\Client\Models\CustomerSummary**](CustomerSummary.md) | Customer summary | [optional] 
+**voucher** | [**\Flipdish\Client\Models\OrderVoucherSummary**](OrderVoucherSummary.md) | Voucher summary | [optional] 
+**fees** | [**\Flipdish\Client\Models\FeeSummary**](FeeSummary.md) | Fee summary | [optional] 
+**order_items** | [**\Flipdish\Client\Models\OrderItem[]**](OrderItem.md) | Ordered items | [optional] 
+**delivery_location** | [**\Flipdish\Client\Models\DeliveryLocation**](DeliveryLocation.md) | Delivery location for delivery orders | [optional] 
+**customer_location** | [**\Flipdish\Client\Models\Coordinates**](Coordinates.md) | Customer location | [optional] 
 **order_id** | **int** | Order identifier | [optional] 
 **delivery_type** | **string** | Delivery type | [optional] 
 **pickup_location_type** | **string** | Pickup location type | [optional] 

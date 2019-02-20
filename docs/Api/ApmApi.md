@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **getBasicStatistics**
-> \Flipdish\Client\Model\RestApiResultApmStatistics getBasicStatistics($app_id, $store_id)
+> \Flipdish\Client\Models\RestApiResultApmStatistics getBasicStatistics($app_id, $store_id)
 
 [PRIVATE API] Get Basic Statistics
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultApmStatistics**](../Model/RestApiResultApmStatistics.md)
+[**\Flipdish\Client\Models\RestApiResultApmStatistics**](../Model/RestApiResultApmStatistics.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCalendarWeekStatistics**
-> \Flipdish\Client\Model\RestApiArrayResultApmHourlyDataPoint getCalendarWeekStatistics($app_id, $store_id)
+> \Flipdish\Client\Models\RestApiArrayResultApmHourlyDataPoint getCalendarWeekStatistics($app_id, $store_id)
 
 [PRIVATE API] Get Calendar statistics
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultApmHourlyDataPoint**](../Model/RestApiArrayResultApmHourlyDataPoint.md)
+[**\Flipdish\Client\Models\RestApiArrayResultApmHourlyDataPoint**](../Model/RestApiArrayResultApmHourlyDataPoint.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCallsStatistics**
-> \Flipdish\Client\Model\RestApiArrayResultApmDataPoint getCallsStatistics($app_id, $aggregate_data_by, $data_point_limit, $store_id)
+> \Flipdish\Client\Models\RestApiArrayResultApmDataPoint getCallsStatistics($app_id, $aggregate_data_by, $data_point_limit, $store_id)
 
 [PRIVATE API] Get Calls Statistics
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultApmDataPoint**](../Model/RestApiArrayResultApmDataPoint.md)
+[**\Flipdish\Client\Models\RestApiArrayResultApmDataPoint**](../Model/RestApiArrayResultApmDataPoint.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrderStatistics**
-> \Flipdish\Client\Model\RestApiArrayResultApmCurrencyDataPoint getOrderStatistics($app_id, $aggregate_data_by, $data_point_limit, $store_id)
+> \Flipdish\Client\Models\RestApiArrayResultApmCurrencyDataPoint getOrderStatistics($app_id, $aggregate_data_by, $data_point_limit, $store_id)
 
 [PRIVATE API] Get Order Statistics (Value of Orders)
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultApmCurrencyDataPoint**](../Model/RestApiArrayResultApmCurrencyDataPoint.md)
+[**\Flipdish\Client\Models\RestApiArrayResultApmCurrencyDataPoint**](../Model/RestApiArrayResultApmCurrencyDataPoint.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPaginatedCallList**
-> \Flipdish\Client\Model\RestApiPaginationResultPhoneCall getPaginatedCallList($app_id, $page, $limit, $store_id)
+> \Flipdish\Client\Models\RestApiPaginationResultPhoneCall getPaginatedCallList($app_id, $page, $limit, $store_id)
 
 [PRIVATE API] Get paginated APM call list
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiPaginationResultPhoneCall**](../Model/RestApiPaginationResultPhoneCall.md)
+[**\Flipdish\Client\Models\RestApiPaginationResultPhoneCall**](../Model/RestApiPaginationResultPhoneCall.md)
 
 ### Authorization
 

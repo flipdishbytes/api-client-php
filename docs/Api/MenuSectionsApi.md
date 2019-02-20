@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **cloneMenuSection**
-> \Flipdish\Client\Model\RestApiResultMenuSection cloneMenuSection($menu_id, $menu_section_id)
+> \Flipdish\Client\Models\RestApiResultMenuSection cloneMenuSection($menu_id, $menu_section_id)
 
 Clone menu section
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultMenuSection**](../Model/RestApiResultMenuSection.md)
+[**\Flipdish\Client\Models\RestApiResultMenuSection**](../Model/RestApiResultMenuSection.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ $apiInstance = new Flipdish\Client\Api\MenuSectionsApi(
 $menu_id = 56; // int | Menu identifier
 $menu_section_id = 56; // int | Menu section identifier
 $day_of_week = "day_of_week_example"; // string | 
-$business_hours_period = new \Flipdish\Client\Model\BusinessHoursPeriodBase(); // \Flipdish\Client\Model\BusinessHoursPeriodBase | 
+$business_hours_period = new \Flipdish\Client\Models\BusinessHoursPeriodBase(); // \Flipdish\Client\Models\BusinessHoursPeriodBase | 
 
 try {
     $result = $apiInstance->createMenuAvailabilityForDay($menu_id, $menu_section_id, $day_of_week, $business_hours_period);
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
  **menu_id** | **int**| Menu identifier |
  **menu_section_id** | **int**| Menu section identifier |
  **day_of_week** | **string**|  |
- **business_hours_period** | [**\Flipdish\Client\Model\BusinessHoursPeriodBase**](../Model/BusinessHoursPeriodBase.md)|  |
+ **business_hours_period** | [**\Flipdish\Client\Models\BusinessHoursPeriodBase**](../Model/BusinessHoursPeriodBase.md)|  |
 
 ### Return type
 
@@ -146,7 +146,7 @@ $apiInstance = new Flipdish\Client\Api\MenuSectionsApi(
     $config
 );
 $menu_id = 56; // int | Menu identifier
-$menu_section = new \Flipdish\Client\Model\MenuSectionBase(); // \Flipdish\Client\Model\MenuSectionBase | Menu section
+$menu_section = new \Flipdish\Client\Models\MenuSectionBase(); // \Flipdish\Client\Models\MenuSectionBase | Menu section
 
 try {
     $result = $apiInstance->createMenuSection($menu_id, $menu_section);
@@ -162,7 +162,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menu_id** | **int**| Menu identifier |
- **menu_section** | [**\Flipdish\Client\Model\MenuSectionBase**](../Model/MenuSectionBase.md)| Menu section |
+ **menu_section** | [**\Flipdish\Client\Models\MenuSectionBase**](../Model/MenuSectionBase.md)| Menu section |
 
 ### Return type
 
@@ -200,7 +200,7 @@ $apiInstance = new Flipdish\Client\Api\MenuSectionsApi(
 );
 $menu_id = 56; // int | Menu identifier
 $menu_section_id = 56; // int | Menu section identifier
-$menu_section_availability = new \Flipdish\Client\Model\MenuSectionAvailabilityBase(); // \Flipdish\Client\Model\MenuSectionAvailabilityBase | 
+$menu_section_availability = new \Flipdish\Client\Models\MenuSectionAvailabilityBase(); // \Flipdish\Client\Models\MenuSectionAvailabilityBase | 
 
 try {
     $result = $apiInstance->createMenuSectionAvailability($menu_id, $menu_section_id, $menu_section_availability);
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menu_id** | **int**| Menu identifier |
  **menu_section_id** | **int**| Menu section identifier |
- **menu_section_availability** | [**\Flipdish\Client\Model\MenuSectionAvailabilityBase**](../Model/MenuSectionAvailabilityBase.md)|  |
+ **menu_section_availability** | [**\Flipdish\Client\Models\MenuSectionAvailabilityBase**](../Model/MenuSectionAvailabilityBase.md)|  |
 
 ### Return type
 
@@ -339,7 +339,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMenuSectionById**
-> \Flipdish\Client\Model\RestApiResultMenuSection getMenuSectionById($menu_id, $menu_section_id)
+> \Flipdish\Client\Models\RestApiResultMenuSection getMenuSectionById($menu_id, $menu_section_id)
 
 Get menu section by identifier
 
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultMenuSection**](../Model/RestApiResultMenuSection.md)
+[**\Flipdish\Client\Models\RestApiResultMenuSection**](../Model/RestApiResultMenuSection.md)
 
 ### Authorization
 
@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMenuSections**
-> \Flipdish\Client\Model\RestApiArrayResultMenuSection getMenuSections($menu_id)
+> \Flipdish\Client\Models\RestApiArrayResultMenuSection getMenuSections($menu_id)
 
 Get menu sections
 
@@ -429,7 +429,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultMenuSection**](../Model/RestApiArrayResultMenuSection.md)
+[**\Flipdish\Client\Models\RestApiArrayResultMenuSection**](../Model/RestApiArrayResultMenuSection.md)
 
 ### Authorization
 
@@ -463,7 +463,7 @@ $apiInstance = new Flipdish\Client\Api\MenuSectionsApi(
 );
 $menu_id = 56; // int | Menu identifier
 $menu_section_id = 56; // int | Menu section identifier
-$menu_section = new \Flipdish\Client\Model\MenuSectionBase(); // \Flipdish\Client\Model\MenuSectionBase | Menu section changes (delta)
+$menu_section = new \Flipdish\Client\Models\MenuSectionBase(); // \Flipdish\Client\Models\MenuSectionBase | Menu section changes (delta)
 $undo_after = 1.2; // double | An optional time period, in hours, after which the hide-section operaton will be undone.
 
 try {
@@ -480,7 +480,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **menu_id** | **int**| Menu identifier |
  **menu_section_id** | **int**| Menu section identifier |
- **menu_section** | [**\Flipdish\Client\Model\MenuSectionBase**](../Model/MenuSectionBase.md)| Menu section changes (delta) |
+ **menu_section** | [**\Flipdish\Client\Models\MenuSectionBase**](../Model/MenuSectionBase.md)| Menu section changes (delta) |
  **undo_after** | **double**| An optional time period, in hours, after which the hide-section operaton will be undone. | [optional]
 
 ### Return type
@@ -499,7 +499,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **uploadMenuSectionImage**
-> \Flipdish\Client\Model\RestApiStringResult uploadMenuSectionImage($menu_id, $menu_section_id, $image)
+> \Flipdish\Client\Models\RestApiStringResult uploadMenuSectionImage($menu_id, $menu_section_id, $image)
 
 Upload menu section image
 
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiStringResult**](../Model/RestApiStringResult.md)
+[**\Flipdish\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
 
 ### Authorization
 

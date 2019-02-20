@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getLogs**
-> \Flipdish\Client\Model\RestApiPaginationResultHttpRequestAndResponseLog getLogs($start, $end, $filter_by_user_id, $page, $limit)
+> \Flipdish\Client\Models\RestApiPaginationResultHttpRequestAndResponseLog getLogs($start, $end, $filter_by_user_id, $page, $limit)
 
 Get API interaction logs
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiPaginationResultHttpRequestAndResponseLog**](../Model/RestApiPaginationResultHttpRequestAndResponseLog.md)
+[**\Flipdish\Client\Models\RestApiPaginationResultHttpRequestAndResponseLog**](../Model/RestApiPaginationResultHttpRequestAndResponseLog.md)
 
 ### Authorization
 

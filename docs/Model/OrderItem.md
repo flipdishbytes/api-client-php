@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**order_item_options** | [**\Flipdish\Client\Model\OrderItemOption[]**](OrderItemOption.md) | Option list | [optional] 
+**order_item_options** | [**\Flipdish\Client\Models\OrderItemOption[]**](OrderItemOption.md) | Option list | [optional] 
 **metadata** | **map[string,string]** | Metadata | [optional] 
 **menu_section_name** | **string** | Menu section name | [optional] 
 **menu_section_display_order** | **int** | Menu section display order | [optional] 

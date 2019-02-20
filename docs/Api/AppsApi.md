@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getApps**
-> \Flipdish\Client\Model\RestApiPaginationResultApp getApps($name_filter, $page, $limit)
+> \Flipdish\Client\Models\RestApiPaginationResultApp getApps($name_filter, $page, $limit)
 
 Get Apps
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiPaginationResultApp**](../Model/RestApiPaginationResultApp.md)
+[**\Flipdish\Client\Models\RestApiPaginationResultApp**](../Model/RestApiPaginationResultApp.md)
 
 ### Authorization
 

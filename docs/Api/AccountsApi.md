@@ -91,7 +91,7 @@ $apiInstance = new Flipdish\Client\Api\AccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$change_password_model = new \Flipdish\Client\Model\ChangePasswordModel(); // \Flipdish\Client\Model\ChangePasswordModel | Change password model
+$change_password_model = new \Flipdish\Client\Models\ChangePasswordModel(); // \Flipdish\Client\Models\ChangePasswordModel | Change password model
 
 try {
     $apiInstance->changePassword($change_password_model);
@@ -105,7 +105,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **change_password_model** | [**\Flipdish\Client\Model\ChangePasswordModel**](../Model/ChangePasswordModel.md)| Change password model |
+ **change_password_model** | [**\Flipdish\Client\Models\ChangePasswordModel**](../Model/ChangePasswordModel.md)| Change password model |
 
 ### Return type
 
@@ -141,7 +141,7 @@ $apiInstance = new Flipdish\Client\Api\AccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$change_password_model = new \Flipdish\Client\Model\SetPasswordWithPinModel(); // \Flipdish\Client\Model\SetPasswordWithPinModel | Change password model
+$change_password_model = new \Flipdish\Client\Models\SetPasswordWithPinModel(); // \Flipdish\Client\Models\SetPasswordWithPinModel | Change password model
 
 try {
     $apiInstance->changePasswordWithPin($change_password_model);
@@ -155,7 +155,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **change_password_model** | [**\Flipdish\Client\Model\SetPasswordWithPinModel**](../Model/SetPasswordWithPinModel.md)| Change password model |
+ **change_password_model** | [**\Flipdish\Client\Models\SetPasswordWithPinModel**](../Model/SetPasswordWithPinModel.md)| Change password model |
 
 ### Return type
 
@@ -191,7 +191,7 @@ $apiInstance = new Flipdish\Client\Api\AccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_account_model = new \Flipdish\Client\Model\CreateAccountModel(); // \Flipdish\Client\Model\CreateAccountModel | Create account model
+$create_account_model = new \Flipdish\Client\Models\CreateAccountModel(); // \Flipdish\Client\Models\CreateAccountModel | Create account model
 
 try {
     $apiInstance->createAccount($create_account_model);
@@ -205,7 +205,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_account_model** | [**\Flipdish\Client\Model\CreateAccountModel**](../Model/CreateAccountModel.md)| Create account model |
+ **create_account_model** | [**\Flipdish\Client\Models\CreateAccountModel**](../Model/CreateAccountModel.md)| Create account model |
 
 ### Return type
 
@@ -223,7 +223,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAccountDetails**
-> \Flipdish\Client\Model\RestApiResultAccountDetail getAccountDetails()
+> \Flipdish\Client\Models\RestApiResultAccountDetail getAccountDetails()
 
 Gets the current account detail
 
@@ -256,7 +256,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultAccountDetail**](../Model/RestApiResultAccountDetail.md)
+[**\Flipdish\Client\Models\RestApiResultAccountDetail**](../Model/RestApiResultAccountDetail.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLocalisedTimeZones**
-> \Flipdish\Client\Model\RestApiArrayResultLocalisedTimeZone getLocalisedTimeZones()
+> \Flipdish\Client\Models\RestApiArrayResultLocalisedTimeZone getLocalisedTimeZones()
 
 [PRIVATE API] Get timezones localised to users language
 
@@ -303,7 +303,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultLocalisedTimeZone**](../Model/RestApiArrayResultLocalisedTimeZone.md)
+[**\Flipdish\Client\Models\RestApiArrayResultLocalisedTimeZone**](../Model/RestApiArrayResultLocalisedTimeZone.md)
 
 ### Authorization
 
@@ -335,7 +335,7 @@ $apiInstance = new Flipdish\Client\Api\AccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$login_model = new \Flipdish\Client\Model\LoginModel(); // \Flipdish\Client\Model\LoginModel | Login model
+$login_model = new \Flipdish\Client\Models\LoginModel(); // \Flipdish\Client\Models\LoginModel | Login model
 
 try {
     $apiInstance->login($login_model);
@@ -349,7 +349,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **login_model** | [**\Flipdish\Client\Model\LoginModel**](../Model/LoginModel.md)| Login model |
+ **login_model** | [**\Flipdish\Client\Models\LoginModel**](../Model/LoginModel.md)| Login model |
 
 ### Return type
 
@@ -385,7 +385,7 @@ $apiInstance = new Flipdish\Client\Api\AccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$login_model = new \Flipdish\Client\Model\LoginWithPinModel(); // \Flipdish\Client\Model\LoginWithPinModel | Login model
+$login_model = new \Flipdish\Client\Models\LoginWithPinModel(); // \Flipdish\Client\Models\LoginWithPinModel | Login model
 
 try {
     $apiInstance->loginWithPin($login_model);
@@ -399,7 +399,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **login_model** | [**\Flipdish\Client\Model\LoginWithPinModel**](../Model/LoginWithPinModel.md)| Login model |
+ **login_model** | [**\Flipdish\Client\Models\LoginWithPinModel**](../Model/LoginWithPinModel.md)| Login model |
 
 ### Return type
 
@@ -481,7 +481,7 @@ $apiInstance = new Flipdish\Client\Api\AccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$password_reset_model = new \Flipdish\Client\Model\PasswordResetModel(); // \Flipdish\Client\Model\PasswordResetModel | Password reset model
+$password_reset_model = new \Flipdish\Client\Models\PasswordResetModel(); // \Flipdish\Client\Models\PasswordResetModel | Password reset model
 
 try {
     $apiInstance->passwordResetWithToken($password_reset_model);
@@ -495,7 +495,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **password_reset_model** | [**\Flipdish\Client\Model\PasswordResetModel**](../Model/PasswordResetModel.md)| Password reset model |
+ **password_reset_model** | [**\Flipdish\Client\Models\PasswordResetModel**](../Model/PasswordResetModel.md)| Password reset model |
 
 ### Return type
 
@@ -513,7 +513,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **requestLoginPin**
-> \Flipdish\Client\Model\RequestLoginPinResposne requestLoginPin($request_login_pin_request)
+> \Flipdish\Client\Models\RequestLoginPinResposne requestLoginPin($request_login_pin_request)
 
 Request login PIN. The server sends the PIN to the email address.
 
@@ -531,7 +531,7 @@ $apiInstance = new Flipdish\Client\Api\AccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$request_login_pin_request = new \Flipdish\Client\Model\RequestLoginPinModel(); // \Flipdish\Client\Model\RequestLoginPinModel | Request login PIN request
+$request_login_pin_request = new \Flipdish\Client\Models\RequestLoginPinModel(); // \Flipdish\Client\Models\RequestLoginPinModel | Request login PIN request
 
 try {
     $result = $apiInstance->requestLoginPin($request_login_pin_request);
@@ -546,11 +546,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request_login_pin_request** | [**\Flipdish\Client\Model\RequestLoginPinModel**](../Model/RequestLoginPinModel.md)| Request login PIN request |
+ **request_login_pin_request** | [**\Flipdish\Client\Models\RequestLoginPinModel**](../Model/RequestLoginPinModel.md)| Request login PIN request |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RequestLoginPinResposne**](../Model/RequestLoginPinResposne.md)
+[**\Flipdish\Client\Models\RequestLoginPinResposne**](../Model/RequestLoginPinResposne.md)
 
 ### Authorization
 
@@ -582,7 +582,7 @@ $apiInstance = new Flipdish\Client\Api\AccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$request_password_reset_model = new \Flipdish\Client\Model\RequestPasswordResetModel(); // \Flipdish\Client\Model\RequestPasswordResetModel | Request password reset model
+$request_password_reset_model = new \Flipdish\Client\Models\RequestPasswordResetModel(); // \Flipdish\Client\Models\RequestPasswordResetModel | Request password reset model
 
 try {
     $apiInstance->requestPasswordReset($request_password_reset_model);
@@ -596,7 +596,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request_password_reset_model** | [**\Flipdish\Client\Model\RequestPasswordResetModel**](../Model/RequestPasswordResetModel.md)| Request password reset model |
+ **request_password_reset_model** | [**\Flipdish\Client\Models\RequestPasswordResetModel**](../Model/RequestPasswordResetModel.md)| Request password reset model |
 
 ### Return type
 
@@ -682,7 +682,7 @@ $apiInstance = new Flipdish\Client\Api\AccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$update_account_model = new \Flipdish\Client\Model\AccountDetailBase(); // \Flipdish\Client\Model\AccountDetailBase | Update account model
+$update_account_model = new \Flipdish\Client\Models\AccountDetailBase(); // \Flipdish\Client\Models\AccountDetailBase | Update account model
 
 try {
     $apiInstance->updateAccount($update_account_model);
@@ -696,7 +696,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **update_account_model** | [**\Flipdish\Client\Model\AccountDetailBase**](../Model/AccountDetailBase.md)| Update account model |
+ **update_account_model** | [**\Flipdish\Client\Models\AccountDetailBase**](../Model/AccountDetailBase.md)| Update account model |
 
 ### Return type
 

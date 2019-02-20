@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **getVoucherById**
-> \Flipdish\Client\Model\RestApiResultVoucherWithStats getVoucherById($voucher_id)
+> \Flipdish\Client\Models\RestApiResultVoucherWithStats getVoucherById($voucher_id)
 
 [PRIVATE API] Get voucher by identifier
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultVoucherWithStats**](../Model/RestApiResultVoucherWithStats.md)
+[**\Flipdish\Client\Models\RestApiResultVoucherWithStats**](../Model/RestApiResultVoucherWithStats.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getVoucherStatsById**
-> \Flipdish\Client\Model\RestApiArrayResultVoucherDataPoint getVoucherStatsById($voucher_id, $aggregate_data_by, $data_point_limit)
+> \Flipdish\Client\Models\RestApiArrayResultVoucherDataPoint getVoucherStatsById($voucher_id, $aggregate_data_by, $data_point_limit)
 
 [PRIVATE API] Get voucher stats by identifier
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultVoucherDataPoint**](../Model/RestApiArrayResultVoucherDataPoint.md)
+[**\Flipdish\Client\Models\RestApiArrayResultVoucherDataPoint**](../Model/RestApiArrayResultVoucherDataPoint.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getVouchers**
-> \Flipdish\Client\Model\RestApiPaginationResultVoucherSummary getVouchers($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids, $is_enabled)
+> \Flipdish\Client\Models\RestApiPaginationResultVoucherSummary getVouchers($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids, $is_enabled)
 
 [PRIVATE API] Get vouchers summaries for App Id
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiPaginationResultVoucherSummary**](../Model/RestApiPaginationResultVoucherSummary.md)
+[**\Flipdish\Client\Models\RestApiPaginationResultVoucherSummary**](../Model/RestApiPaginationResultVoucherSummary.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateVoucher**
-> \Flipdish\Client\Model\RestApiResultVoucherWithStats updateVoucher($voucher_id, $voucher)
+> \Flipdish\Client\Models\RestApiResultVoucherWithStats updateVoucher($voucher_id, $voucher)
 
 [PRIVATE API] Updates voucher
 
@@ -203,7 +203,7 @@ $apiInstance = new Flipdish\Client\Api\VouchersApi(
     $config
 );
 $voucher_id = 56; // int | Id of the voucher
-$voucher = new \Flipdish\Client\Model\VoucherBase(); // \Flipdish\Client\Model\VoucherBase | Updated details for the voucher
+$voucher = new \Flipdish\Client\Models\VoucherBase(); // \Flipdish\Client\Models\VoucherBase | Updated details for the voucher
 
 try {
     $result = $apiInstance->updateVoucher($voucher_id, $voucher);
@@ -219,11 +219,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **voucher_id** | **int**| Id of the voucher |
- **voucher** | [**\Flipdish\Client\Model\VoucherBase**](../Model/VoucherBase.md)| Updated details for the voucher |
+ **voucher** | [**\Flipdish\Client\Models\VoucherBase**](../Model/VoucherBase.md)| Updated details for the voucher |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultVoucherWithStats**](../Model/RestApiResultVoucherWithStats.md)
+[**\Flipdish\Client\Models\RestApiResultVoucherWithStats**](../Model/RestApiResultVoucherWithStats.md)
 
 ### Authorization
 

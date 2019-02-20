@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createTeammate**
-> \Flipdish\Client\Model\RestApiResultTeammate createTeammate($app_id, $teammate)
+> \Flipdish\Client\Models\RestApiResultTeammate createTeammate($app_id, $teammate)
 
 Create teammate and send an invite.
 
@@ -32,7 +32,7 @@ $apiInstance = new Flipdish\Client\Api\TeammatesApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$teammate = new \Flipdish\Client\Model\CreateTeammate(); // \Flipdish\Client\Model\CreateTeammate | 
+$teammate = new \Flipdish\Client\Models\CreateTeammate(); // \Flipdish\Client\Models\CreateTeammate | 
 
 try {
     $result = $apiInstance->createTeammate($app_id, $teammate);
@@ -48,11 +48,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **teammate** | [**\Flipdish\Client\Model\CreateTeammate**](../Model/CreateTeammate.md)|  |
+ **teammate** | [**\Flipdish\Client\Models\CreateTeammate**](../Model/CreateTeammate.md)|  |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultTeammate**](../Model/RestApiResultTeammate.md)
+[**\Flipdish\Client\Models\RestApiResultTeammate**](../Model/RestApiResultTeammate.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeammateByAppIdAndTeammateId**
-> \Flipdish\Client\Model\RestApiResultTeammate getTeammateByAppIdAndTeammateId($app_id, $id)
+> \Flipdish\Client\Models\RestApiResultTeammate getTeammateByAppIdAndTeammateId($app_id, $id)
 
 Get a teammates by email address
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultTeammate**](../Model/RestApiResultTeammate.md)
+[**\Flipdish\Client\Models\RestApiResultTeammate**](../Model/RestApiResultTeammate.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeammatesByAppId**
-> \Flipdish\Client\Model\RestApiArrayResultTeammate getTeammatesByAppId($app_id)
+> \Flipdish\Client\Models\RestApiArrayResultTeammate getTeammatesByAppId($app_id)
 
 Get all teammates
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultTeammate**](../Model/RestApiArrayResultTeammate.md)
+[**\Flipdish\Client\Models\RestApiArrayResultTeammate**](../Model/RestApiArrayResultTeammate.md)
 
 ### Authorization
 
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **redeemInvitation**
-> \Flipdish\Client\Model\RestApiResultRedeemInvitationResult redeemInvitation($otc, $app_id)
+> \Flipdish\Client\Models\RestApiResultRedeemInvitationResult redeemInvitation($otc, $app_id)
 
 
 
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultRedeemInvitationResult**](../Model/RestApiResultRedeemInvitationResult.md)
+[**\Flipdish\Client\Models\RestApiResultRedeemInvitationResult**](../Model/RestApiResultRedeemInvitationResult.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateTeammate**
-> \Flipdish\Client\Model\RestApiResultTeammate updateTeammate($app_id, $id, $teammate)
+> \Flipdish\Client\Models\RestApiResultTeammate updateTeammate($app_id, $id, $teammate)
 
 Update teammates (this method does not support Deltas!)
 
@@ -295,7 +295,7 @@ $apiInstance = new Flipdish\Client\Api\TeammatesApi(
 );
 $app_id = "app_id_example"; // string | 
 $id = "id_example"; // string | 
-$teammate = new \Flipdish\Client\Model\TeammateBase(); // \Flipdish\Client\Model\TeammateBase | 
+$teammate = new \Flipdish\Client\Models\TeammateBase(); // \Flipdish\Client\Models\TeammateBase | 
 
 try {
     $result = $apiInstance->updateTeammate($app_id, $id, $teammate);
@@ -312,11 +312,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
  **id** | **string**|  |
- **teammate** | [**\Flipdish\Client\Model\TeammateBase**](../Model/TeammateBase.md)|  |
+ **teammate** | [**\Flipdish\Client\Models\TeammateBase**](../Model/TeammateBase.md)|  |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultTeammate**](../Model/RestApiResultTeammate.md)
+[**\Flipdish\Client\Models\RestApiResultTeammate**](../Model/RestApiResultTeammate.md)
 
 ### Authorization
 

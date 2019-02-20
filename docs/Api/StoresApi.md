@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 
 # **cloneStore**
-> \Flipdish\Client\Model\RestApiResultStore cloneStore($store_id, $settings)
+> \Flipdish\Client\Models\RestApiResultStore cloneStore($store_id, $settings)
 
 Clone store with store clone settings
 
@@ -41,7 +41,7 @@ $apiInstance = new Flipdish\Client\Api\StoresApi(
     $config
 );
 $store_id = 56; // int | Store identifier
-$settings = new \Flipdish\Client\Model\StoreCloneSettings(); // \Flipdish\Client\Model\StoreCloneSettings | Settings for cloning the store
+$settings = new \Flipdish\Client\Models\StoreCloneSettings(); // \Flipdish\Client\Models\StoreCloneSettings | Settings for cloning the store
 
 try {
     $result = $apiInstance->cloneStore($store_id, $settings);
@@ -57,11 +57,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**| Store identifier |
- **settings** | [**\Flipdish\Client\Model\StoreCloneSettings**](../Model/StoreCloneSettings.md)| Settings for cloning the store |
+ **settings** | [**\Flipdish\Client\Models\StoreCloneSettings**](../Model/StoreCloneSettings.md)| Settings for cloning the store |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultStore**](../Model/RestApiResultStore.md)
+[**\Flipdish\Client\Models\RestApiResultStore**](../Model/RestApiResultStore.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createBusinessHoursOverrideByStoreId**
-> \Flipdish\Client\Model\RestApiResultBusinessHoursOverride createBusinessHoursOverrideByStoreId($store_id, $business_hours_override)
+> \Flipdish\Client\Models\RestApiResultBusinessHoursOverride createBusinessHoursOverrideByStoreId($store_id, $business_hours_override)
 
 Create Business Hours Override for a store
 
@@ -94,7 +94,7 @@ $apiInstance = new Flipdish\Client\Api\StoresApi(
     $config
 );
 $store_id = 56; // int | Store identifier
-$business_hours_override = new \Flipdish\Client\Model\BusinessHoursOverrideBase(); // \Flipdish\Client\Model\BusinessHoursOverrideBase | Business Hours Override
+$business_hours_override = new \Flipdish\Client\Models\BusinessHoursOverrideBase(); // \Flipdish\Client\Models\BusinessHoursOverrideBase | Business Hours Override
 
 try {
     $result = $apiInstance->createBusinessHoursOverrideByStoreId($store_id, $business_hours_override);
@@ -110,11 +110,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**| Store identifier |
- **business_hours_override** | [**\Flipdish\Client\Model\BusinessHoursOverrideBase**](../Model/BusinessHoursOverrideBase.md)| Business Hours Override |
+ **business_hours_override** | [**\Flipdish\Client\Models\BusinessHoursOverrideBase**](../Model/BusinessHoursOverrideBase.md)| Business Hours Override |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultBusinessHoursOverride**](../Model/RestApiResultBusinessHoursOverride.md)
+[**\Flipdish\Client\Models\RestApiResultBusinessHoursOverride**](../Model/RestApiResultBusinessHoursOverride.md)
 
 ### Authorization
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createStore**
-> \Flipdish\Client\Model\RestApiResultStore createStore($store_group_id, $store)
+> \Flipdish\Client\Models\RestApiResultStore createStore($store_group_id, $store)
 
 Create store with Store Group identifier
 
@@ -147,7 +147,7 @@ $apiInstance = new Flipdish\Client\Api\StoresApi(
     $config
 );
 $store_group_id = 56; // int | Store Group identifier
-$store = new \Flipdish\Client\Model\StoreCreateBase(); // \Flipdish\Client\Model\StoreCreateBase | Store
+$store = new \Flipdish\Client\Models\StoreCreateBase(); // \Flipdish\Client\Models\StoreCreateBase | Store
 
 try {
     $result = $apiInstance->createStore($store_group_id, $store);
@@ -163,11 +163,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_group_id** | **int**| Store Group identifier |
- **store** | [**\Flipdish\Client\Model\StoreCreateBase**](../Model/StoreCreateBase.md)| Store |
+ **store** | [**\Flipdish\Client\Models\StoreCreateBase**](../Model/StoreCreateBase.md)| Store |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultStore**](../Model/RestApiResultStore.md)
+[**\Flipdish\Client\Models\RestApiResultStore**](../Model/RestApiResultStore.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteBusinessHoursOverride**
-> \Flipdish\Client\Model\RestApiArrayResultRestApiDefaultResponse deleteBusinessHoursOverride($store_id, $business_hours_override_id)
+> \Flipdish\Client\Models\RestApiArrayResultRestApiDefaultResponse deleteBusinessHoursOverride($store_id, $business_hours_override_id)
 
 Delete Business Hours Override for a store
 
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultRestApiDefaultResponse**](../Model/RestApiArrayResultRestApiDefaultResponse.md)
+[**\Flipdish\Client\Models\RestApiArrayResultRestApiDefaultResponse**](../Model/RestApiArrayResultRestApiDefaultResponse.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBusinessHours**
-> \Flipdish\Client\Model\RestApiArrayResultBusinessHoursPeriod getBusinessHours($store_id, $delivery_type)
+> \Flipdish\Client\Models\RestApiArrayResultBusinessHoursPeriod getBusinessHours($store_id, $delivery_type)
 
 Get Bussiness hours
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultBusinessHoursPeriod**](../Model/RestApiArrayResultBusinessHoursPeriod.md)
+[**\Flipdish\Client\Models\RestApiArrayResultBusinessHoursPeriod**](../Model/RestApiArrayResultBusinessHoursPeriod.md)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBusinessHoursOverrideByStoreId**
-> \Flipdish\Client\Model\RestApiPaginationResultBusinessHoursOverride getBusinessHoursOverrideByStoreId($store_id, $after, $page, $limit)
+> \Flipdish\Client\Models\RestApiPaginationResultBusinessHoursOverride getBusinessHoursOverrideByStoreId($store_id, $after, $page, $limit)
 
 Get business hours overrides by store identifier
 
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiPaginationResultBusinessHoursOverride**](../Model/RestApiPaginationResultBusinessHoursOverride.md)
+[**\Flipdish\Client\Models\RestApiPaginationResultBusinessHoursOverride**](../Model/RestApiPaginationResultBusinessHoursOverride.md)
 
 ### Authorization
 
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProcessingFeeConfigsByStoreId**
-> \Flipdish\Client\Model\RestApiArrayResultProcessingFeeConfig getProcessingFeeConfigsByStoreId($store_id, $app_name_id)
+> \Flipdish\Client\Models\RestApiArrayResultProcessingFeeConfig getProcessingFeeConfigsByStoreId($store_id, $app_name_id)
 
 Get processing fee configs by store identifier
 
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiArrayResultProcessingFeeConfig**](../Model/RestApiArrayResultProcessingFeeConfig.md)
+[**\Flipdish\Client\Models\RestApiArrayResultProcessingFeeConfig**](../Model/RestApiArrayResultProcessingFeeConfig.md)
 
 ### Authorization
 
@@ -397,7 +397,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProcessingFeeConfigsByStoreIdAndPaymentAccountType**
-> \Flipdish\Client\Model\RestApiResultProcessingFeeConfig getProcessingFeeConfigsByStoreIdAndPaymentAccountType($store_id, $payment_account_type, $app_name_id)
+> \Flipdish\Client\Models\RestApiResultProcessingFeeConfig getProcessingFeeConfigsByStoreIdAndPaymentAccountType($store_id, $payment_account_type, $app_name_id)
 
 Get processing fee configs by store identifier
 
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultProcessingFeeConfig**](../Model/RestApiResultProcessingFeeConfig.md)
+[**\Flipdish\Client\Models\RestApiResultProcessingFeeConfig**](../Model/RestApiResultProcessingFeeConfig.md)
 
 ### Authorization
 
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStoreById**
-> \Flipdish\Client\Model\RestApiResultStore getStoreById($store_id)
+> \Flipdish\Client\Models\RestApiResultStore getStoreById($store_id)
 
 Get store by identifier
 
@@ -489,7 +489,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultStore**](../Model/RestApiResultStore.md)
+[**\Flipdish\Client\Models\RestApiResultStore**](../Model/RestApiResultStore.md)
 
 ### Authorization
 
@@ -503,7 +503,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStores**
-> \Flipdish\Client\Model\RestApiPaginationResultStore getStores($search_query, $page, $limit, $store_group_id)
+> \Flipdish\Client\Models\RestApiPaginationResultStore getStores($search_query, $page, $limit, $store_group_id)
 
 Get all stores
 
@@ -546,7 +546,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiPaginationResultStore**](../Model/RestApiPaginationResultStore.md)
+[**\Flipdish\Client\Models\RestApiPaginationResultStore**](../Model/RestApiPaginationResultStore.md)
 
 ### Authorization
 
@@ -560,7 +560,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStoresByAppId**
-> \Flipdish\Client\Model\RestApiPaginationResultStore getStoresByAppId($app_id, $search_query, $page, $limit)
+> \Flipdish\Client\Models\RestApiPaginationResultStore getStoresByAppId($app_id, $search_query, $page, $limit)
 
 Get all stores by app name id
 
@@ -603,7 +603,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiPaginationResultStore**](../Model/RestApiPaginationResultStore.md)
+[**\Flipdish\Client\Models\RestApiPaginationResultStore**](../Model/RestApiPaginationResultStore.md)
 
 ### Authorization
 
@@ -617,7 +617,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setBusinessHours**
-> \Flipdish\Client\Model\RestApiResultBusinessHoursPeriod setBusinessHours($store_id, $delivery_type, $business_hours_period)
+> \Flipdish\Client\Models\RestApiResultBusinessHoursPeriod setBusinessHours($store_id, $delivery_type, $business_hours_period)
 
 Set Bussiness hours
 
@@ -637,7 +637,7 @@ $apiInstance = new Flipdish\Client\Api\StoresApi(
 );
 $store_id = 56; // int | Store identifier
 $delivery_type = "delivery_type_example"; // string | Deliery type
-$business_hours_period = new \Flipdish\Client\Model\BusinessHoursPeriodBase(); // \Flipdish\Client\Model\BusinessHoursPeriodBase | Business Hours Period
+$business_hours_period = new \Flipdish\Client\Models\BusinessHoursPeriodBase(); // \Flipdish\Client\Models\BusinessHoursPeriodBase | Business Hours Period
 
 try {
     $result = $apiInstance->setBusinessHours($store_id, $delivery_type, $business_hours_period);
@@ -654,11 +654,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**| Store identifier |
  **delivery_type** | **string**| Deliery type |
- **business_hours_period** | [**\Flipdish\Client\Model\BusinessHoursPeriodBase**](../Model/BusinessHoursPeriodBase.md)| Business Hours Period |
+ **business_hours_period** | [**\Flipdish\Client\Models\BusinessHoursPeriodBase**](../Model/BusinessHoursPeriodBase.md)| Business Hours Period |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultBusinessHoursPeriod**](../Model/RestApiResultBusinessHoursPeriod.md)
+[**\Flipdish\Client\Models\RestApiResultBusinessHoursPeriod**](../Model/RestApiResultBusinessHoursPeriod.md)
 
 ### Authorization
 
@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateStore**
-> \Flipdish\Client\Model\RestApiResultStore updateStore($store_id, $store)
+> \Flipdish\Client\Models\RestApiResultStore updateStore($store_id, $store)
 
 Update store by identifier
 
@@ -691,7 +691,7 @@ $apiInstance = new Flipdish\Client\Api\StoresApi(
     $config
 );
 $store_id = 56; // int | Store Group identifier
-$store = new \Flipdish\Client\Model\StoreBase(); // \Flipdish\Client\Model\StoreBase | Store
+$store = new \Flipdish\Client\Models\StoreBase(); // \Flipdish\Client\Models\StoreBase | Store
 
 try {
     $result = $apiInstance->updateStore($store_id, $store);
@@ -707,11 +707,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**| Store Group identifier |
- **store** | [**\Flipdish\Client\Model\StoreBase**](../Model/StoreBase.md)| Store |
+ **store** | [**\Flipdish\Client\Models\StoreBase**](../Model/StoreBase.md)| Store |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultStore**](../Model/RestApiResultStore.md)
+[**\Flipdish\Client\Models\RestApiResultStore**](../Model/RestApiResultStore.md)
 
 ### Authorization
 
@@ -725,7 +725,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateStoreAddress**
-> \Flipdish\Client\Model\RestApiResultStoreAddress updateStoreAddress($store_id, $store_address)
+> \Flipdish\Client\Models\RestApiResultStoreAddress updateStoreAddress($store_id, $store_address)
 
 Update store address
 
@@ -744,7 +744,7 @@ $apiInstance = new Flipdish\Client\Api\StoresApi(
     $config
 );
 $store_id = 56; // int | Store identifier
-$store_address = new \Flipdish\Client\Model\StoreAddressBase(); // \Flipdish\Client\Model\StoreAddressBase | Store address
+$store_address = new \Flipdish\Client\Models\StoreAddressBase(); // \Flipdish\Client\Models\StoreAddressBase | Store address
 
 try {
     $result = $apiInstance->updateStoreAddress($store_id, $store_address);
@@ -760,11 +760,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**| Store identifier |
- **store_address** | [**\Flipdish\Client\Model\StoreAddressBase**](../Model/StoreAddressBase.md)| Store address |
+ **store_address** | [**\Flipdish\Client\Models\StoreAddressBase**](../Model/StoreAddressBase.md)| Store address |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultStoreAddress**](../Model/RestApiResultStoreAddress.md)
+[**\Flipdish\Client\Models\RestApiResultStoreAddress**](../Model/RestApiResultStoreAddress.md)
 
 ### Authorization
 
@@ -778,7 +778,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateStoreAddressCoordinates**
-> \Flipdish\Client\Model\RestApiResultCoordinates updateStoreAddressCoordinates($store_id, $coordinates, $app_name_id)
+> \Flipdish\Client\Models\RestApiResultCoordinates updateStoreAddressCoordinates($store_id, $coordinates, $app_name_id)
 
 Update store address coordinates
 
@@ -797,7 +797,7 @@ $apiInstance = new Flipdish\Client\Api\StoresApi(
     $config
 );
 $store_id = 56; // int | Store identifier
-$coordinates = new \Flipdish\Client\Model\Coordinates(); // \Flipdish\Client\Model\Coordinates | Store address coordinates
+$coordinates = new \Flipdish\Client\Models\Coordinates(); // \Flipdish\Client\Models\Coordinates | Store address coordinates
 $app_name_id = "app_name_id_example"; // string | App Name Id(Not used, still here for compatability reasons)
 
 try {
@@ -814,12 +814,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**| Store identifier |
- **coordinates** | [**\Flipdish\Client\Model\Coordinates**](../Model/Coordinates.md)| Store address coordinates |
+ **coordinates** | [**\Flipdish\Client\Models\Coordinates**](../Model/Coordinates.md)| Store address coordinates |
  **app_name_id** | **string**| App Name Id(Not used, still here for compatability reasons) | [optional]
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultCoordinates**](../Model/RestApiResultCoordinates.md)
+[**\Flipdish\Client\Models\RestApiResultCoordinates**](../Model/RestApiResultCoordinates.md)
 
 ### Authorization
 

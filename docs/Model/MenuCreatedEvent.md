@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **event_name** | **string** | The event name | [optional] 
 **description** | **string** | Description | [optional] 
-**user** | [**\Flipdish\Client\Model\UserEventInfo**](UserEventInfo.md) | User who has created the menu | [optional] 
-**menu** | [**\Flipdish\Client\Model\Menu**](Menu.md) | The menu | [optional] 
+**user** | [**\Flipdish\Client\Models\UserEventInfo**](UserEventInfo.md) | User who has created the menu | [optional] 
+**menu** | [**\Flipdish\Client\Models\Menu**](Menu.md) | The menu | [optional] 
 **flipdish_event_id** | **string** | The identitfier of the event | [optional] 
 **create_time** | [**\DateTime**](\DateTime.md) | The time of creation of the event | [optional] 
 **position** | **int** | Position | [optional] 

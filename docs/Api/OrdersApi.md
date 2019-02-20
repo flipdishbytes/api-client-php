@@ -34,7 +34,7 @@ $apiInstance = new Flipdish\Client\Api\OrdersApi(
     $config
 );
 $id = 56; // int | Order identifier
-$accept_object = new \Flipdish\Client\Model\Accept(); // \Flipdish\Client\Model\Accept | 
+$accept_object = new \Flipdish\Client\Models\Accept(); // \Flipdish\Client\Models\Accept | 
 
 try {
     $apiInstance->acceptOrder($id, $accept_object);
@@ -49,7 +49,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Order identifier |
- **accept_object** | [**\Flipdish\Client\Model\Accept**](../Model/Accept.md)|  |
+ **accept_object** | [**\Flipdish\Client\Models\Accept**](../Model/Accept.md)|  |
 
 ### Return type
 
@@ -67,7 +67,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrderById**
-> \Flipdish\Client\Model\RestApiResultOrder getOrderById($id)
+> \Flipdish\Client\Models\RestApiResultOrder getOrderById($id)
 
 Get order by ID
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultOrder**](../Model/RestApiResultOrder.md)
+[**\Flipdish\Client\Models\RestApiResultOrder**](../Model/RestApiResultOrder.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrders**
-> \Flipdish\Client\Model\RestApiPaginationResultOrder getOrders($physical_restaurant_id, $state, $page, $limit)
+> \Flipdish\Client\Models\RestApiPaginationResultOrder getOrders($physical_restaurant_id, $state, $page, $limit)
 
 Get orders by filter
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiPaginationResultOrder**](../Model/RestApiPaginationResultOrder.md)
+[**\Flipdish\Client\Models\RestApiPaginationResultOrder**](../Model/RestApiPaginationResultOrder.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrdersSummary**
-> \Flipdish\Client\Model\RestApiPaginationResultOrderSummary getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit)
+> \Flipdish\Client\Models\RestApiPaginationResultOrderSummary getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit)
 
 [PRIVATE API] Get summary of orders by filter
 
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiPaginationResultOrderSummary**](../Model/RestApiPaginationResultOrderSummary.md)
+[**\Flipdish\Client\Models\RestApiPaginationResultOrderSummary**](../Model/RestApiPaginationResultOrderSummary.md)
 
 ### Authorization
 
@@ -257,7 +257,7 @@ $apiInstance = new Flipdish\Client\Api\OrdersApi(
     $config
 );
 $id = 56; // int | Order identifier
-$refund_object = new \Flipdish\Client\Model\Refund(); // \Flipdish\Client\Model\Refund | 
+$refund_object = new \Flipdish\Client\Models\Refund(); // \Flipdish\Client\Models\Refund | 
 
 try {
     $apiInstance->refundOrder($id, $refund_object);
@@ -272,7 +272,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Order identifier |
- **refund_object** | [**\Flipdish\Client\Model\Refund**](../Model/Refund.md)|  |
+ **refund_object** | [**\Flipdish\Client\Models\Refund**](../Model/Refund.md)|  |
 
 ### Return type
 
@@ -311,7 +311,7 @@ $apiInstance = new Flipdish\Client\Api\OrdersApi(
     $config
 );
 $id = 56; // int | Order identifier
-$reject_object = new \Flipdish\Client\Model\Reject(); // \Flipdish\Client\Model\Reject | 
+$reject_object = new \Flipdish\Client\Models\Reject(); // \Flipdish\Client\Models\Reject | 
 
 try {
     $apiInstance->rejectOrder($id, $reject_object);
@@ -326,7 +326,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Order identifier |
- **reject_object** | [**\Flipdish\Client\Model\Reject**](../Model/Reject.md)|  |
+ **reject_object** | [**\Flipdish\Client\Models\Reject**](../Model/Reject.md)|  |
 
 ### Return type
 

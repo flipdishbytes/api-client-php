@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **lightspeedGetStoreSettings**
-> \Flipdish\Client\Model\RestApiResultLightspeedSettings lightspeedGetStoreSettings($store_id)
+> \Flipdish\Client\Models\RestApiResultLightspeedSettings lightspeedGetStoreSettings($store_id)
 
 
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultLightspeedSettings**](../Model/RestApiResultLightspeedSettings.md)
+[**\Flipdish\Client\Models\RestApiResultLightspeedSettings**](../Model/RestApiResultLightspeedSettings.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **lightspeedSaveStoreSettings**
-> \Flipdish\Client\Model\RestApiResultLightspeedSettings lightspeedSaveStoreSettings($store_id, $lightspeed_settings)
+> \Flipdish\Client\Models\RestApiResultLightspeedSettings lightspeedSaveStoreSettings($store_id, $lightspeed_settings)
 
 
 
@@ -131,7 +131,7 @@ $apiInstance = new Flipdish\Client\Api\LightspeedApi(
     $config
 );
 $store_id = 56; // int | 
-$lightspeed_settings = new \Flipdish\Client\Model\LightspeedSettings(); // \Flipdish\Client\Model\LightspeedSettings | 
+$lightspeed_settings = new \Flipdish\Client\Models\LightspeedSettings(); // \Flipdish\Client\Models\LightspeedSettings | 
 
 try {
     $result = $apiInstance->lightspeedSaveStoreSettings($store_id, $lightspeed_settings);
@@ -147,11 +147,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**|  |
- **lightspeed_settings** | [**\Flipdish\Client\Model\LightspeedSettings**](../Model/LightspeedSettings.md)|  |
+ **lightspeed_settings** | [**\Flipdish\Client\Models\LightspeedSettings**](../Model/LightspeedSettings.md)|  |
 
 ### Return type
 
-[**\Flipdish\Client\Model\RestApiResultLightspeedSettings**](../Model/RestApiResultLightspeedSettings.md)
+[**\Flipdish\Client\Models\RestApiResultLightspeedSettings**](../Model/RestApiResultLightspeedSettings.md)
 
 ### Authorization
 
