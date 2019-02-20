@@ -1,0 +1,11 @@
+# JobEta
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**pickup** | **string** | Pickup | [optional] 
+**dropoff** | **string** | Dropoff | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
