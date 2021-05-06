@@ -4,12 +4,12 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAuthorizationTokens**](AuthorizationTokensApi.md#getAuthorizationTokens) | **GET** /api/v1.0/authorizationtokens/{clientId} | Get authorization tokens
-[**revokeToken**](AuthorizationTokensApi.md#revokeToken) | **DELETE** /api/v1.0/authorizationtokens/{key} | Revoke token
+[**getAuthorizationTokens**](AuthorizationTokensApi.md#getAuthorizationTokens) | **GET** /api/v1.0/{appId}/authorizationtokens/{oauthAppId} | Get authorization tokens
+[**revokeToken**](AuthorizationTokensApi.md#revokeToken) | **DELETE** /api/v1.0/{appId}/authorizationtokens/{key} | Revoke token
 
 
 # **getAuthorizationTokens**
-> \Flipdish\Client\Models\RestApiPaginationResultOAuthTokenModel getAuthorizationTokens($client_id, $page, $limit)
+> \Flipdish\Client\Models\RestApiPaginationResultOAuthTokenModel getAuthorizationTokens($oauth_app_id, $app_id, $page, $limit)
 
 Get authorization tokens
 
@@ -29,12 +29,13 @@ $apiInstance = new Flipdish\Client\Api\AuthorizationTokensApi(
     new GuzzleHttp\Client(),
     $config
 );
-$client_id = "client_id_example"; // string | Client identifier
+$oauth_app_id = "oauth_app_id_example"; // string | Client identifier
+$app_id = "app_id_example"; // string | 
 $page = 56; // int | Requested page number
 $limit = 56; // int | Requested page limit
 
 try {
-    $result = $apiInstance->getAuthorizationTokens($client_id, $page, $limit);
+    $result = $apiInstance->getAuthorizationTokens($oauth_app_id, $app_id, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuthorizationTokensApi->getAuthorizationTokens: ', $e->getMessage(), PHP_EOL;
@@ -46,7 +47,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **client_id** | **string**| Client identifier |
+ **oauth_app_id** | **string**| Client identifier |
+ **app_id** | **string**|  |
  **page** | **int**| Requested page number | [optional]
  **limit** | **int**| Requested page limit | [optional]
 
@@ -66,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **revokeToken**
-> revokeToken($key)
+> revokeToken($key, $app_id)
 
 Revoke token
 
@@ -85,9 +87,10 @@ $apiInstance = new Flipdish\Client\Api\AuthorizationTokensApi(
     $config
 );
 $key = "key_example"; // string | Token identifier key
+$app_id = "app_id_example"; // string | 
 
 try {
-    $apiInstance->revokeToken($key);
+    $apiInstance->revokeToken($key, $app_id);
 } catch (Exception $e) {
     echo 'Exception when calling AuthorizationTokensApi->revokeToken: ', $e->getMessage(), PHP_EOL;
 }
@@ -99,6 +102,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| Token identifier key |
+ **app_id** | **string**|  |
 
 ### Return type
 

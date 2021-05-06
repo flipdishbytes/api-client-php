@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **is_available** | **bool** | True if we accept orders for this item still | [optional] 
 **cell_layout_type** | **string** | Small | Medium | Large  Affects the layout of the menu. | [optional] 
 **disable_vouchers** | **bool** | If true, then vouchers won&#39;t be applied for this item | [optional] 
+**image_url** | **string** | Image url | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -17,6 +17,10 @@ Name | Type | Description | Notes
 **store_notes** | [**\Flipdish\Client\Models\StoreNote[]**](StoreNote.md) | Store notes | [optional] 
 **microsoft_time_zone** | **string** | Microsoft Time Zone Index Values (https://msdn.microsoft.com/en-us/library/ms912391)  (Editable through store coordinate change) | [optional] 
 **iana_time_zone** | **string** | IANA Time Zone (https://www.iana.org/time-zones)  (Editable through store coordinate change) | [optional] 
+**currency** | **string** | Currency (derived from Store Group) | [optional] 
+**pre_order_delivery_enabled** | **bool** | Is PerOrder Enabled for Delivery | [optional] 
+**pre_order_pickup_enabled** | **bool** | Is PerOrder Enabled for Pickup | [optional] 
+**logo_url** | **string** | Url for logo image | [optional] 
 **phone_number** | **string** | Phone number | [optional] 
 **always_appear_open** | **bool** | True if the store always appears open | [optional] 
 **pre_order_enabled** | **bool** | True if the store accepts pre-orders | [optional] 
@@ -38,11 +42,14 @@ Name | Type | Description | Notes
 **require_customer_name_for_pickup** | **bool** | True if customer name required for pickup orders | [optional] 
 **gdpr_customer_phone_numbers** | **bool** | Mask your customers phone numbers printed on receipts and reduce the amout of personally identifiable customer information that is exposed. | [optional] 
 **require_customer_name_for_delivery** | **bool** | True if customer name required for delivery orders | [optional] 
+**allow_chef_notes** | **bool** | True if the customer is allowed enter custom notes with their orders | [optional] 
 **eta_in_pickup_confirmation_sms_enabled** | **bool** | True if order confirmation sms includes estimated time when order will be ready for collection | [optional] 
 **eta_in_delivery_confirmation_sms_enabled** | **bool** | True if order confirmation sms includes estimated time when order will delivered | [optional] 
+**is_archived** | **bool** | Is the Store Archived | [optional] 
+**is_published** | **bool** | Is the Store Published | [optional] 
 **name** | **string** | Name | [optional] 
 **email_address** | **string** | Email address (visible to customers) | [optional] 
-**staff_language** | **string** | Staff Language (used for communcation with the staff)  Emails, Printouts etc | [optional] 
+**staff_language** | **string** | Staff Language (used for communication with the staff)  Emails, Printouts etc | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

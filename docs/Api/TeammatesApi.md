@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**deleteTeammate**](TeammatesApi.md#deleteTeammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
 [**getTeammateByAppIdAndTeammateId**](TeammatesApi.md#getTeammateByAppIdAndTeammateId) | **GET** /api/v1.0/{appId}/teammates/{id} | Get a teammates by email address
 [**getTeammatesByAppId**](TeammatesApi.md#getTeammatesByAppId) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
-[**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | Redeem one-time code from invitation
 [**updateTeammate**](TeammatesApi.md#updateTeammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
 
 
@@ -31,8 +31,8 @@ $apiInstance = new Flipdish\Client\Api\TeammatesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | 
-$teammate = new \Flipdish\Client\Models\CreateTeammate(); // \Flipdish\Client\Models\CreateTeammate | 
+$app_id = "app_id_example"; // string | Application identifier
+$teammate = new \Flipdish\Client\Models\CreateTeammate(); // \Flipdish\Client\Models\CreateTeammate | teammate model
 
 try {
     $result = $apiInstance->createTeammate($app_id, $teammate);
@@ -47,8 +47,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
- **teammate** | [**\Flipdish\Client\Models\CreateTeammate**](../Model/CreateTeammate.md)|  |
+ **app_id** | **string**| Application identifier |
+ **teammate** | [**\Flipdish\Client\Models\CreateTeammate**](../Model/CreateTeammate.md)| teammate model |
 
 ### Return type
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 # **redeemInvitation**
 > \Flipdish\Client\Models\RestApiResultRedeemInvitationResult redeemInvitation($otc, $app_id)
 
-
+Redeem one-time code from invitation
 
 ### Example
 ```php
@@ -293,9 +293,9 @@ $apiInstance = new Flipdish\Client\Api\TeammatesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | 
-$id = "id_example"; // string | 
-$teammate = new \Flipdish\Client\Models\TeammateBase(); // \Flipdish\Client\Models\TeammateBase | 
+$app_id = "app_id_example"; // string | Application identifier
+$id = "id_example"; // string | teammate identifier
+$teammate = new \Flipdish\Client\Models\TeammateBase(); // \Flipdish\Client\Models\TeammateBase | teammate model
 
 try {
     $result = $apiInstance->updateTeammate($app_id, $id, $teammate);
@@ -310,9 +310,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
- **id** | **string**|  |
- **teammate** | [**\Flipdish\Client\Models\TeammateBase**](../Model/TeammateBase.md)|  |
+ **app_id** | **string**| Application identifier |
+ **id** | **string**| teammate identifier |
+ **teammate** | [**\Flipdish\Client\Models\TeammateBase**](../Model/TeammateBase.md)| teammate model |
 
 ### Return type
 

@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**createStoreGroup**](StoreGroupsApi.md#createStoreGroup) | **POST** /api/v1.0/{appNameId}/storegroups | Creates a Store Group  It will be attached to an existing App
 [**getStoreGroup**](StoreGroupsApi.md#getStoreGroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | Returns a Store Groups
 [**getStoreGroups**](StoreGroupsApi.md#getStoreGroups) | **GET** /api/v1.0/{appNameId}/storegroups | Returns a paginated list of Store Groups
+[**getStoreGroupsExtended**](StoreGroupsApi.md#getStoreGroupsExtended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | [PRIVATE API] Returns a paginated list of Extended Store Groups
 [**removeStoreGroup**](StoreGroupsApi.md#removeStoreGroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
 [**updateStoreGroup**](StoreGroupsApi.md#updateStoreGroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | Updates Store Group
 
@@ -160,6 +161,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\Client\Models\RestApiPaginationResultStoreGroup**](../Model/RestApiPaginationResultStoreGroup.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getStoreGroupsExtended**
+> \Flipdish\Client\Models\RestApiPaginationResultStoreGroupExtended getStoreGroupsExtended($app_name_id, $search_query, $page, $limit, $grouping_radius)
+
+[PRIVATE API] Returns a paginated list of Extended Store Groups
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\StoreGroupsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_name_id = "app_name_id_example"; // string | App Name Id
+$search_query = "search_query_example"; // string | Search query
+$page = 56; // int | Requested page index
+$limit = 56; // int | Requested page limit
+$grouping_radius = 56; // int | 
+
+try {
+    $result = $apiInstance->getStoreGroupsExtended($app_name_id, $search_query, $page, $limit, $grouping_radius);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoreGroupsApi->getStoreGroupsExtended: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_name_id** | **string**| App Name Id |
+ **search_query** | **string**| Search query | [optional]
+ **page** | **int**| Requested page index | [optional]
+ **limit** | **int**| Requested page limit | [optional]
+ **grouping_radius** | **int**|  | [optional]
+
+### Return type
+
+[**\Flipdish\Client\Models\RestApiPaginationResultStoreGroupExtended**](../Model/RestApiPaginationResultStoreGroupExtended.md)
 
 ### Authorization
 

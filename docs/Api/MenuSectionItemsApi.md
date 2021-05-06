@@ -10,6 +10,8 @@ Method | HTTP request | Description
 [**deleteMenuSectionItemImage**](MenuSectionItemsApi.md#deleteMenuSectionItemImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
 [**getMenuItemById**](MenuSectionItemsApi.md#getMenuItemById) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
 [**getMenuItems**](MenuSectionItemsApi.md#getMenuItems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Get menu items
+[**moveMenuItem**](MenuSectionItemsApi.md#moveMenuItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | [PRIVATE API]Move an Item within a menu
+[**setSectionItemTax**](MenuSectionItemsApi.md#setSectionItemTax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/taxrate/{taxRateId} | [PRIVATE API]Move an Item within a menu
 [**updateMenuSectionItem**](MenuSectionItemsApi.md#updateMenuSectionItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Update menu section item
 [**uploadMenuSectionItemImage**](MenuSectionItemsApi.md#uploadMenuSectionItemImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
 
@@ -328,6 +330,118 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\Client\Models\RestApiArrayResultMenuSectionItem**](../Model/RestApiArrayResultMenuSectionItem.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **moveMenuItem**
+> moveMenuItem($menu_id, $menu_section_id, $menu_section_item_id, $destination_display_order)
+
+[PRIVATE API]Move an Item within a menu
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\MenuSectionItemsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$menu_id = 56; // int | Menu identifier
+$menu_section_id = 56; // int | Section to put item in (will usually be original section)
+$menu_section_item_id = 56; // int | ID of Item to be moved
+$destination_display_order = 56; // int | New Display Order of item
+
+try {
+    $apiInstance->moveMenuItem($menu_id, $menu_section_id, $menu_section_item_id, $destination_display_order);
+} catch (Exception $e) {
+    echo 'Exception when calling MenuSectionItemsApi->moveMenuItem: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**| Menu identifier |
+ **menu_section_id** | **int**| Section to put item in (will usually be original section) |
+ **menu_section_item_id** | **int**| ID of Item to be moved |
+ **destination_display_order** | **int**| New Display Order of item |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setSectionItemTax**
+> setSectionItemTax($menu_id, $menu_section_id, $menu_section_item_id, $tax_rate_id)
+
+[PRIVATE API]Move an Item within a menu
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\MenuSectionItemsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$menu_id = 56; // int | Menu identifier
+$menu_section_id = 56; // int | Section to put item in (will usually be original section)
+$menu_section_item_id = 56; // int | ID of Item to be moved
+$tax_rate_id = 56; // int | tax rate to be set against item
+
+try {
+    $apiInstance->setSectionItemTax($menu_id, $menu_section_id, $menu_section_item_id, $tax_rate_id);
+} catch (Exception $e) {
+    echo 'Exception when calling MenuSectionItemsApi->setSectionItemTax: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**| Menu identifier |
+ **menu_section_id** | **int**| Section to put item in (will usually be original section) |
+ **menu_section_item_id** | **int**| ID of Item to be moved |
+ **tax_rate_id** | **int**| tax rate to be set against item |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

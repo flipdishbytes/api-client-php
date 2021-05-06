@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**guid** | **string** | Id of the log | [optional] 
 **verb** | **string** | Verb associated with the HTTP call. | [optional] 
 **request_uri** | **string** | Http request URI. | [optional] 
 **status_code** | **int** | Http response status code. | [optional] 
