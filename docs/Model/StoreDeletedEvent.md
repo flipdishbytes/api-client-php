@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **event_name** | **string** | The event name | [optional] 
 **store_id** | **int** | Store Id | [optional] 
+**store_group_id** | **int** | Store group Id | [optional] 
 **user** | [**\Flipdish\Client\Models\UserEventInfo**](UserEventInfo.md) | User which deleted this store | [optional] 
 **description** | **string** | Description | [optional] 
 **store** | [**\Flipdish\Client\Models\Store**](Store.md) | Deleted Store | [optional] 

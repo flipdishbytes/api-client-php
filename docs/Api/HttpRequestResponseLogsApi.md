@@ -4,11 +4,11 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getLogs**](HttpRequestResponseLogsApi.md#getLogs) | **GET** /api/v1.0/interactions/logs | Get API interaction logs
+[**getLogs**](HttpRequestResponseLogsApi.md#getLogs) | **GET** /api/v1.0/{appId}/interactions/logs | Get API interaction logs
 
 
 # **getLogs**
-> \Flipdish\Client\Models\RestApiPaginationResultHttpRequestAndResponseLog getLogs($start, $end, $filter_by_user_id, $page, $limit)
+> \Flipdish\Client\Models\RestApiPaginationResultHttpRequestAndResponseLog getLogs($start, $end, $app_id, $filter_by_user_id, $guid, $page, $limit)
 
 Get API interaction logs
 
@@ -28,12 +28,14 @@ $apiInstance = new Flipdish\Client\Api\HttpRequestResponseLogsApi(
 );
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date time
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date time
+$app_id = "app_id_example"; // string | 
 $filter_by_user_id = 56; // int | User id (optional)
+$guid = "guid_example"; // string | Id of the log
 $page = 56; // int | Page number
 $limit = 56; // int | Page size
 
 try {
-    $result = $apiInstance->getLogs($start, $end, $filter_by_user_id, $page, $limit);
+    $result = $apiInstance->getLogs($start, $end, $app_id, $filter_by_user_id, $guid, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling HttpRequestResponseLogsApi->getLogs: ', $e->getMessage(), PHP_EOL;
@@ -47,7 +49,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start** | **\DateTime**| Start date time |
  **end** | **\DateTime**| End date time |
+ **app_id** | **string**|  |
  **filter_by_user_id** | **int**| User id (optional) | [optional]
+ **guid** | **string**| Id of the log | [optional]
  **page** | **int**| Page number | [optional]
  **limit** | **int**| Page size | [optional]
 

@@ -4,22 +4,137 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**archiveStore**](StoresApi.md#archiveStore) | **POST** /api/v1.0/stores/{storeId}/archive | Archive store
+[**assignMenu**](StoresApi.md#assignMenu) | **POST** /api/v1.0/stores/{storeId}/menu/{menuId} | Assign Menu to Store
 [**cloneStore**](StoresApi.md#cloneStore) | **POST** /api/v1.0/stores/{storeId}/clone | Clone store with store clone settings
 [**createBusinessHoursOverrideByStoreId**](StoresApi.md#createBusinessHoursOverrideByStoreId) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | Create Business Hours Override for a store
 [**createStore**](StoresApi.md#createStore) | **POST** /api/v1.0/stores | Create store with Store Group identifier
 [**deleteBusinessHoursOverride**](StoresApi.md#deleteBusinessHoursOverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | Delete Business Hours Override for a store
-[**getBusinessHours**](StoresApi.md#getBusinessHours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Get Bussiness hours
+[**getBankAccountForStore**](StoresApi.md#getBankAccountForStore) | **GET** /api/v1.0/stores/{storeId}/bankaccount | Get Stores Bank Account Id
+[**getBusinessHours**](StoresApi.md#getBusinessHours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Get Business hours
 [**getBusinessHoursOverrideByStoreId**](StoresApi.md#getBusinessHoursOverrideByStoreId) | **GET** /api/v1.0/stores/{storeId}/businesshoursoverrides | Get business hours overrides by store identifier
+[**getEndOfDayReport**](StoresApi.md#getEndOfDayReport) | **GET** /api/v1.0/stores/{storeId}/endofdayreport | Get store end of day report
+[**getPreOrderConfig**](StoresApi.md#getPreOrderConfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | Get the pre order config for a store, by type
+[**getPreOrderPreview**](StoresApi.md#getPreOrderPreview) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/preview | Get the Preview times of the pre-order configuration
 [**getProcessingFeeConfigsByStoreId**](StoresApi.md#getProcessingFeeConfigsByStoreId) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
 [**getProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getProcessingFeeConfigsByStoreIdAndPaymentAccountType) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 [**getStoreById**](StoresApi.md#getStoreById) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
-[**getStores**](StoresApi.md#getStores) | **GET** /api/v1.0/stores | Get all stores
+[**getStoreHeadersByAppId**](StoresApi.md#getStoreHeadersByAppId) | **GET** /api/v1.0/{appId}/stores/header | Get all stores by app name id
+[**getStoreNetSales**](StoresApi.md#getStoreNetSales) | **GET** /api/v1.0/{appId}/stores/stats | Get stores statistics by app name id and storeIds
+[**getStores**](StoresApi.md#getStores) | **GET** /api/v1.0/stores | Get all stores, excluding archived ones
 [**getStoresByAppId**](StoresApi.md#getStoresByAppId) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
-[**setBusinessHours**](StoresApi.md#setBusinessHours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Set Bussiness hours
+[**publishStore**](StoresApi.md#publishStore) | **POST** /api/v1.0/stores/{storeId}/publish | Publish store
+[**setBusinessHours**](StoresApi.md#setBusinessHours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Set Business hours
+[**setPreOrdeEnabled**](StoresApi.md#setPreOrdeEnabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | UPDATE pre order config for a store, by type
+[**unpublishStore**](StoresApi.md#unpublishStore) | **POST** /api/v1.0/stores/{storeId}/unpublish | Unpublish store
+[**updatePreOrderConfig**](StoresApi.md#updatePreOrderConfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | UPDATE pre order config for a store, by type
 [**updateStore**](StoresApi.md#updateStore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
 [**updateStoreAddress**](StoresApi.md#updateStoreAddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 [**updateStoreAddressCoordinates**](StoresApi.md#updateStoreAddressCoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
 
+
+# **archiveStore**
+> archiveStore($store_id)
+
+Archive store
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+
+try {
+    $apiInstance->archiveStore($store_id);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->archiveStore: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **assignMenu**
+> \Flipdish\Client\Models\RestApiArrayResultRestApiDefaultResponse assignMenu($store_id, $menu_id)
+
+Assign Menu to Store
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+$menu_id = 56; // int | Id of Menu to assign to store
+
+try {
+    $result = $apiInstance->assignMenu($store_id, $menu_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->assignMenu: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+ **menu_id** | **int**| Id of Menu to assign to store |
+
+### Return type
+
+[**\Flipdish\Client\Models\RestApiArrayResultRestApiDefaultResponse**](../Model/RestApiArrayResultRestApiDefaultResponse.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cloneStore**
 > \Flipdish\Client\Models\RestApiResultStore cloneStore($store_id, $settings)
@@ -233,10 +348,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getBusinessHours**
-> \Flipdish\Client\Models\RestApiArrayResultBusinessHoursPeriod getBusinessHours($store_id, $delivery_type)
+# **getBankAccountForStore**
+> \Flipdish\Client\Models\RestApiResultAssignedBankAccount getBankAccountForStore($store_id)
 
-Get Bussiness hours
+Get Stores Bank Account Id
 
 ### Example
 ```php
@@ -253,7 +368,58 @@ $apiInstance = new Flipdish\Client\Api\StoresApi(
     $config
 );
 $store_id = 56; // int | Store identifier
-$delivery_type = "delivery_type_example"; // string | Deliery type
+
+try {
+    $result = $apiInstance->getBankAccountForStore($store_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->getBankAccountForStore: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+
+### Return type
+
+[**\Flipdish\Client\Models\RestApiResultAssignedBankAccount**](../Model/RestApiResultAssignedBankAccount.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getBusinessHours**
+> \Flipdish\Client\Models\RestApiArrayResultBusinessHoursPeriod getBusinessHours($store_id, $delivery_type)
+
+Get Business hours
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+$delivery_type = "delivery_type_example"; // string | Delivery type
 
 try {
     $result = $apiInstance->getBusinessHours($store_id, $delivery_type);
@@ -269,7 +435,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**| Store identifier |
- **delivery_type** | **string**| Deliery type |
+ **delivery_type** | **string**| Delivery type |
 
 ### Return type
 
@@ -339,6 +505,185 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getEndOfDayReport**
+> \Flipdish\Client\Models\RestApiResultStoreEndOfDayReport getEndOfDayReport($store_id, $date)
+
+Get store end of day report
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+$date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Store identifier
+
+try {
+    $result = $apiInstance->getEndOfDayReport($store_id, $date);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->getEndOfDayReport: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+ **date** | **\DateTime**| Store identifier | [optional]
+
+### Return type
+
+[**\Flipdish\Client\Models\RestApiResultStoreEndOfDayReport**](../Model/RestApiResultStoreEndOfDayReport.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getPreOrderConfig**
+> \Flipdish\Client\Models\RestApiResultPreOrderConfig getPreOrderConfig($store_id, $delivery_type)
+
+Get the pre order config for a store, by type
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+$delivery_type = "delivery_type_example"; // string | \"delivery\" or \"pickup\"
+
+try {
+    $result = $apiInstance->getPreOrderConfig($store_id, $delivery_type);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->getPreOrderConfig: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+ **delivery_type** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; |
+
+### Return type
+
+[**\Flipdish\Client\Models\RestApiResultPreOrderConfig**](../Model/RestApiResultPreOrderConfig.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getPreOrderPreview**
+> \Flipdish\Client\Models\RestApiArrayResultPreOrderTime getPreOrderPreview($store_id, $delivery_type, $pre_order_config_lead_time_minutes, $pre_order_config_interval_minutes, $pre_order_config_max_order_ahead_days, $pre_order_config_include_asap, $pre_order_config_include_more_granular_initial_time, $pre_order_config_cut_off_time_previous_day_basic, $pre_order_config_cut_off_time_current_day_basic, $pre_order_config_pre_order_time_display_type, $pre_order_config_always_appear_open, $pre_order_config_require_explicit_select_always)
+
+Get the Preview times of the pre-order configuration
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+$delivery_type = "delivery_type_example"; // string | \"delivery\" or \"pickup\"
+$pre_order_config_lead_time_minutes = 56; // int | Lead Time in Minutes
+$pre_order_config_interval_minutes = 56; // int | Interval in minutes
+$pre_order_config_max_order_ahead_days = 56; // int | Max Days to order ahead
+$pre_order_config_include_asap = true; // bool | Show ASAP as option
+$pre_order_config_include_more_granular_initial_time = true; // bool | Granual Init' Time
+$pre_order_config_cut_off_time_previous_day_basic = "pre_order_config_cut_off_time_previous_day_basic_example"; // string | Cut off time previous day
+$pre_order_config_cut_off_time_current_day_basic = "pre_order_config_cut_off_time_current_day_basic_example"; // string | Cut off time current day
+$pre_order_config_pre_order_time_display_type = "pre_order_config_pre_order_time_display_type_example"; // string | Type of time displayed.
+$pre_order_config_always_appear_open = true; // bool | Specifies whether a customer can pre-order outside the store opening hours or not.
+$pre_order_config_require_explicit_select_always = true; // bool | Force customer to select collection time.
+
+try {
+    $result = $apiInstance->getPreOrderPreview($store_id, $delivery_type, $pre_order_config_lead_time_minutes, $pre_order_config_interval_minutes, $pre_order_config_max_order_ahead_days, $pre_order_config_include_asap, $pre_order_config_include_more_granular_initial_time, $pre_order_config_cut_off_time_previous_day_basic, $pre_order_config_cut_off_time_current_day_basic, $pre_order_config_pre_order_time_display_type, $pre_order_config_always_appear_open, $pre_order_config_require_explicit_select_always);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->getPreOrderPreview: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+ **delivery_type** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; |
+ **pre_order_config_lead_time_minutes** | **int**| Lead Time in Minutes | [optional]
+ **pre_order_config_interval_minutes** | **int**| Interval in minutes | [optional]
+ **pre_order_config_max_order_ahead_days** | **int**| Max Days to order ahead | [optional]
+ **pre_order_config_include_asap** | **bool**| Show ASAP as option | [optional]
+ **pre_order_config_include_more_granular_initial_time** | **bool**| Granual Init&#39; Time | [optional]
+ **pre_order_config_cut_off_time_previous_day_basic** | **string**| Cut off time previous day | [optional]
+ **pre_order_config_cut_off_time_current_day_basic** | **string**| Cut off time current day | [optional]
+ **pre_order_config_pre_order_time_display_type** | **string**| Type of time displayed. | [optional]
+ **pre_order_config_always_appear_open** | **bool**| Specifies whether a customer can pre-order outside the store opening hours or not. | [optional]
+ **pre_order_config_require_explicit_select_always** | **bool**| Force customer to select collection time. | [optional]
+
+### Return type
+
+[**\Flipdish\Client\Models\RestApiArrayResultPreOrderTime**](../Model/RestApiArrayResultPreOrderTime.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -502,10 +847,120 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getStoreHeadersByAppId**
+> \Flipdish\Client\Models\RestApiPaginationResultStoreHeader getStoreHeadersByAppId($app_id, $store_name_query, $page, $limit)
+
+Get all stores by app name id
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | App Name Id
+$store_name_query = "store_name_query_example"; // string | 
+$page = 56; // int | 
+$limit = 56; // int | 
+
+try {
+    $result = $apiInstance->getStoreHeadersByAppId($app_id, $store_name_query, $page, $limit);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->getStoreHeadersByAppId: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**| App Name Id |
+ **store_name_query** | **string**|  | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
+
+### Return type
+
+[**\Flipdish\Client\Models\RestApiPaginationResultStoreHeader**](../Model/RestApiPaginationResultStoreHeader.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getStoreNetSales**
+> \Flipdish\Client\Models\RestApiArrayResultStoreStatistics getStoreNetSales($app_id, $store_id)
+
+Get stores statistics by app name id and storeIds
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | App Name Id
+$store_id = array(56); // int[] | Store Ids
+
+try {
+    $result = $apiInstance->getStoreNetSales($app_id, $store_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->getStoreNetSales: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**| App Name Id |
+ **store_id** | [**int[]**](../Model/int.md)| Store Ids |
+
+### Return type
+
+[**\Flipdish\Client\Models\RestApiArrayResultStoreStatistics**](../Model/RestApiArrayResultStoreStatistics.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getStores**
 > \Flipdish\Client\Models\RestApiPaginationResultStore getStores($search_query, $page, $limit, $store_group_id)
 
-Get all stores
+Get all stores, excluding archived ones
 
 ### Example
 ```php
@@ -616,10 +1071,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **setBusinessHours**
-> \Flipdish\Client\Models\RestApiResultBusinessHoursPeriod setBusinessHours($store_id, $delivery_type, $business_hours_period)
+# **publishStore**
+> publishStore($store_id)
 
-Set Bussiness hours
+Publish store
 
 ### Example
 ```php
@@ -636,7 +1091,57 @@ $apiInstance = new Flipdish\Client\Api\StoresApi(
     $config
 );
 $store_id = 56; // int | Store identifier
-$delivery_type = "delivery_type_example"; // string | Deliery type
+
+try {
+    $apiInstance->publishStore($store_id);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->publishStore: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setBusinessHours**
+> \Flipdish\Client\Models\RestApiResultBusinessHoursPeriod setBusinessHours($store_id, $delivery_type, $business_hours_period)
+
+Set Business hours
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+$delivery_type = "delivery_type_example"; // string | Delivery type
 $business_hours_period = new \Flipdish\Client\Models\BusinessHoursPeriodBase(); // \Flipdish\Client\Models\BusinessHoursPeriodBase | Business Hours Period
 
 try {
@@ -653,12 +1158,172 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**| Store identifier |
- **delivery_type** | **string**| Deliery type |
+ **delivery_type** | **string**| Delivery type |
  **business_hours_period** | [**\Flipdish\Client\Models\BusinessHoursPeriodBase**](../Model/BusinessHoursPeriodBase.md)| Business Hours Period |
 
 ### Return type
 
 [**\Flipdish\Client\Models\RestApiResultBusinessHoursPeriod**](../Model/RestApiResultBusinessHoursPeriod.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setPreOrdeEnabled**
+> \Flipdish\Client\Models\RestApiArrayResultRestApiDefaultResponse setPreOrdeEnabled($store_id, $delivery_type, $enabled)
+
+UPDATE pre order config for a store, by type
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+$delivery_type = "delivery_type_example"; // string | \"delivery\" or \"pickup\"
+$enabled = true; // bool | Update pre order config values
+
+try {
+    $result = $apiInstance->setPreOrdeEnabled($store_id, $delivery_type, $enabled);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->setPreOrdeEnabled: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+ **delivery_type** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; |
+ **enabled** | **bool**| Update pre order config values |
+
+### Return type
+
+[**\Flipdish\Client\Models\RestApiArrayResultRestApiDefaultResponse**](../Model/RestApiArrayResultRestApiDefaultResponse.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **unpublishStore**
+> unpublishStore($store_id)
+
+Unpublish store
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+
+try {
+    $apiInstance->unpublishStore($store_id);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->unpublishStore: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updatePreOrderConfig**
+> \Flipdish\Client\Models\RestApiArrayResultRestApiDefaultResponse updatePreOrderConfig($store_id, $delivery_type, $pre_order_config)
+
+UPDATE pre order config for a store, by type
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+$delivery_type = "delivery_type_example"; // string | \"delivery\" or \"pickup\"
+$pre_order_config = new \Flipdish\Client\Models\PreOrderConfig(); // \Flipdish\Client\Models\PreOrderConfig | Update pre order config values
+
+try {
+    $result = $apiInstance->updatePreOrderConfig($store_id, $delivery_type, $pre_order_config);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->updatePreOrderConfig: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+ **delivery_type** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; |
+ **pre_order_config** | [**\Flipdish\Client\Models\PreOrderConfig**](../Model/PreOrderConfig.md)| Update pre order config values |
+
+### Return type
+
+[**\Flipdish\Client\Models\RestApiArrayResultRestApiDefaultResponse**](../Model/RestApiArrayResultRestApiDefaultResponse.md)
 
 ### Authorization
 

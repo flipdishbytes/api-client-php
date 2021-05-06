@@ -5,6 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**acceptOrder**](OrdersApi.md#acceptOrder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
+[**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 [**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | Get orders by filter
 [**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -34,7 +35,7 @@ $apiInstance = new Flipdish\Client\Api\OrdersApi(
     $config
 );
 $id = 56; // int | Order identifier
-$accept_object = new \Flipdish\Client\Models\Accept(); // \Flipdish\Client\Models\Accept | 
+$accept_object = new \Flipdish\Client\Models\Accept(); // \Flipdish\Client\Models\Accept | Order accept parameters (eg: EstimatedMinutesForDelivery)
 
 try {
     $apiInstance->acceptOrder($id, $accept_object);
@@ -49,7 +50,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Order identifier |
- **accept_object** | [**\Flipdish\Client\Models\Accept**](../Model/Accept.md)|  |
+ **accept_object** | [**\Flipdish\Client\Models\Accept**](../Model/Accept.md)| Order accept parameters (eg: EstimatedMinutesForDelivery) |
 
 ### Return type
 
@@ -62,6 +63,58 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **dispatchOrder**
+> dispatchOrder($id)
+
+Dispatch order
+
+To dispatch an order send a POST request with `Id` path parameter which identifies the order.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\Client\Api\OrdersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 56; // int | Order identifier
+
+try {
+    $apiInstance->dispatchOrder($id);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersApi->dispatchOrder: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| Order identifier |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -118,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrders**
-> \Flipdish\Client\Models\RestApiPaginationResultOrder getOrders($physical_restaurant_id, $state, $page, $limit)
+> \Flipdish\Client\Models\RestApiPaginationResultOrder getOrders($physical_restaurant_id, $state, $from, $to, $page, $limit)
 
 Get orders by filter
 
@@ -138,11 +191,13 @@ $apiInstance = new Flipdish\Client\Api\OrdersApi(
 );
 $physical_restaurant_id = array(56); // int[] | Physical restaurant identifiers
 $state = array("state_example"); // string[] | Order states
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Order has been placed after this parameter value
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Order has been placed before this parameter value
 $page = 56; // int | Requested page number
 $limit = 56; // int | Requested page limit
 
 try {
-    $result = $apiInstance->getOrders($physical_restaurant_id, $state, $page, $limit);
+    $result = $apiInstance->getOrders($physical_restaurant_id, $state, $from, $to, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->getOrders: ', $e->getMessage(), PHP_EOL;
@@ -156,6 +211,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **physical_restaurant_id** | [**int[]**](../Model/int.md)| Physical restaurant identifiers | [optional]
  **state** | [**string[]**](../Model/string.md)| Order states | [optional]
+ **from** | **\DateTime**| Order has been placed after this parameter value | [optional]
+ **to** | **\DateTime**| Order has been placed before this parameter value | [optional]
  **page** | **int**| Requested page number | [optional]
  **limit** | **int**| Requested page limit | [optional]
 
@@ -175,7 +232,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrdersSummary**
-> \Flipdish\Client\Models\RestApiPaginationResultOrderSummary getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit)
+> \Flipdish\Client\Models\RestApiPaginationResultOrderSummary getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time)
 
 [PRIVATE API] Get summary of orders by filter
 
@@ -199,9 +256,10 @@ $physical_restaurant_id = array(56); // int[] | Physical restaurant identifiers
 $state = array("state_example"); // string[] | Order states
 $page = 56; // int | Requested page number
 $limit = 56; // int | Requested page limit
+$order_by_requested_for_time = true; // bool | 
 
 try {
-    $result = $apiInstance->getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit);
+    $result = $apiInstance->getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->getOrdersSummary: ', $e->getMessage(), PHP_EOL;
@@ -219,6 +277,7 @@ Name | Type | Description  | Notes
  **state** | [**string[]**](../Model/string.md)| Order states | [optional]
  **page** | **int**| Requested page number | [optional]
  **limit** | **int**| Requested page limit | [optional]
+ **order_by_requested_for_time** | **bool**|  | [optional]
 
 ### Return type
 
