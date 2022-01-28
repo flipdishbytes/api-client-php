@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address_id** | **int** | Address identifier | [optional] 
-**coordinates** | [**\Flipdish\Client\Models\Coordinates**](Coordinates.md) | Coordinate | [optional] 
+**coordinates** | [**\Flipdish\\Client\Models\Coordinates**](Coordinates.md) | Coordinate | [optional] 
 **line1** | **string** | Address line 1 | [optional] 
 **postcode** | **string** | Postcode | [optional] 
 **city** | **string** | City | [optional] 

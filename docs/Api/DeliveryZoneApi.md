@@ -1,4 +1,4 @@
-# Flipdish\Client\DeliveryZoneApi
+# Flipdish\\Client\DeliveryZoneApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **addDeliveryZone**
-> \Flipdish\Client\Models\RestApiResultDeliveryZone addDeliveryZone($store_id, $delivery_zone_base)
+> \Flipdish\\Client\Models\RestApiResultDeliveryZone addDeliveryZone($store_id, $delivery_zone_base)
 
 Adds a delivery zone to the store id
 
@@ -21,16 +21,16 @@ Adds a delivery zone to the store id
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\DeliveryZoneApi(
+$apiInstance = new Flipdish\\Client\Api\DeliveryZoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $store_id = 56; // int | Store Id to which the delivery zone will be added
-$delivery_zone_base = new \Flipdish\Client\Models\DeliveryZoneBase(); // \Flipdish\Client\Models\DeliveryZoneBase | Optional delivery zone, if not supplied will create a default zone
+$delivery_zone_base = new \Flipdish\\Client\Models\DeliveryZoneBase(); // \Flipdish\\Client\Models\DeliveryZoneBase | Optional delivery zone, if not supplied will create a default zone
 
 try {
     $result = $apiInstance->addDeliveryZone($store_id, $delivery_zone_base);
@@ -46,11 +46,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**| Store Id to which the delivery zone will be added |
- **delivery_zone_base** | [**\Flipdish\Client\Models\DeliveryZoneBase**](../Model/DeliveryZoneBase.md)| Optional delivery zone, if not supplied will create a default zone |
+ **delivery_zone_base** | [**\Flipdish\\Client\Models\DeliveryZoneBase**](../Model/DeliveryZoneBase.md)| Optional delivery zone, if not supplied will create a default zone |
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultDeliveryZone**](../Model/RestApiResultDeliveryZone.md)
+[**\Flipdish\\Client\Models\RestApiResultDeliveryZone**](../Model/RestApiResultDeliveryZone.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDeliveryZones**
-> \Flipdish\Client\Models\RestApiArrayResultDeliveryZone getDeliveryZones($store_id)
+> \Flipdish\\Client\Models\RestApiArrayResultDeliveryZone getDeliveryZones($store_id)
 
 Get all the delivery zones associated with a store
 
@@ -74,9 +74,9 @@ Get all the delivery zones associated with a store
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\DeliveryZoneApi(
+$apiInstance = new Flipdish\\Client\Api\DeliveryZoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiArrayResultDeliveryZone**](../Model/RestApiArrayResultDeliveryZone.md)
+[**\Flipdish\\Client\Models\RestApiArrayResultDeliveryZone**](../Model/RestApiArrayResultDeliveryZone.md)
 
 ### Authorization
 
@@ -125,9 +125,9 @@ Removes the existing delivery zone
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\DeliveryZoneApi(
+$apiInstance = new Flipdish\\Client\Api\DeliveryZoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -167,7 +167,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateDeliveryZone**
-> \Flipdish\Client\Models\RestApiResultDeliveryZone updateDeliveryZone($store_id, $delivery_zone_id, $delivery_zone)
+> \Flipdish\\Client\Models\RestApiResultDeliveryZone updateDeliveryZone($store_id, $delivery_zone_id, $delivery_zone)
 
 Updates the existing delivery zone
 
@@ -177,9 +177,9 @@ Updates the existing delivery zone
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\DeliveryZoneApi(
+$apiInstance = new Flipdish\\Client\Api\DeliveryZoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -187,7 +187,7 @@ $apiInstance = new Flipdish\Client\Api\DeliveryZoneApi(
 );
 $store_id = 56; // int | Store Id to which the delivery zone belongs
 $delivery_zone_id = 56; // int | Delivery zone id to be updated
-$delivery_zone = new \Flipdish\Client\Models\DeliveryZoneBase(); // \Flipdish\Client\Models\DeliveryZoneBase | Delta of delivery zone parameters that need to be changed
+$delivery_zone = new \Flipdish\\Client\Models\DeliveryZoneBase(); // \Flipdish\\Client\Models\DeliveryZoneBase | Delta of delivery zone parameters that need to be changed
 
 try {
     $result = $apiInstance->updateDeliveryZone($store_id, $delivery_zone_id, $delivery_zone);
@@ -204,11 +204,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**| Store Id to which the delivery zone belongs |
  **delivery_zone_id** | **int**| Delivery zone id to be updated |
- **delivery_zone** | [**\Flipdish\Client\Models\DeliveryZoneBase**](../Model/DeliveryZoneBase.md)| Delta of delivery zone parameters that need to be changed |
+ **delivery_zone** | [**\Flipdish\\Client\Models\DeliveryZoneBase**](../Model/DeliveryZoneBase.md)| Delta of delivery zone parameters that need to be changed |
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultDeliveryZone**](../Model/RestApiResultDeliveryZone.md)
+[**\Flipdish\\Client\Models\RestApiResultDeliveryZone**](../Model/RestApiResultDeliveryZone.md)
 
 ### Authorization
 

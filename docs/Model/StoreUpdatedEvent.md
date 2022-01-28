@@ -5,9 +5,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **event_name** | **string** | The event name | [optional] 
 **store_id** | **int** | Store Id | [optional] 
-**user** | [**\Flipdish\Client\Models\UserEventInfo**](UserEventInfo.md) | User which updated this store | [optional] 
+**store_group_id** | **int** | Store group Id | [optional] 
+**user** | [**\Flipdish\\Client\Models\UserEventInfo**](UserEventInfo.md) | User which updated this store | [optional] 
 **description** | **string** | Description | [optional] 
-**store** | [**\Flipdish\Client\Models\Store**](Store.md) | Updated Store | [optional] 
+**store** | [**\Flipdish\\Client\Models\Store**](Store.md) | Updated Store | [optional] 
 **flipdish_event_id** | **string** | The identitfier of the event | [optional] 
 **create_time** | [**\DateTime**](\DateTime.md) | The time of creation of the event | [optional] 
 **position** | **int** | Position | [optional] 

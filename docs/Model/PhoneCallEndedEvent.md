@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **event_name** | **string** | The event name | [optional] 
 **description** | **string** | Description | [optional] 
 **store_id** | **int** | Store Id | [optional] 
-**phone_call** | [**\Flipdish\Client\Models\PhoneCall**](PhoneCall.md) | The phone call | [optional] 
+**phone_call** | [**\Flipdish\\Client\Models\PhoneCall**](PhoneCall.md) | The phone call | [optional] 
 **flipdish_event_id** | **string** | The identitfier of the event | [optional] 
 **create_time** | [**\DateTime**](\DateTime.md) | The time of creation of the event | [optional] 
 **position** | **int** | Position | [optional] 

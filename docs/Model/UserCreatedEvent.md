@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **event_name** | **string** | The event name | [optional] 
 **description** | **string** | Description | [optional] 
-**user** | [**\Flipdish\Client\Models\UserEventInfo**](UserEventInfo.md) | The user | [optional] 
+**user** | [**\Flipdish\\Client\Models\UserEventInfo**](UserEventInfo.md) | The user | [optional] 
 **flipdish_event_id** | **string** | The identitfier of the event | [optional] 
 **create_time** | [**\DateTime**](\DateTime.md) | The time of creation of the event | [optional] 
 **position** | **int** | Position | [optional] 

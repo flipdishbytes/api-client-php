@@ -1,4 +1,4 @@
-# Flipdish\Client\MenuOptionSetsApi
+# Flipdish\\Client\MenuOptionSetsApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -24,9 +24,9 @@ Create menu item option set
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\MenuOptionSetsApi(
+$apiInstance = new Flipdish\\Client\Api\MenuOptionSetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -35,7 +35,7 @@ $apiInstance = new Flipdish\Client\Api\MenuOptionSetsApi(
 $menu_id = 56; // int | Menu identifier
 $menu_section_id = 56; // int | Menu section identifier
 $menu_section_item_id = 56; // int | Menu section item identifier
-$menu_item_option_set = new \Flipdish\Client\Models\MenuItemOptionSetBase(); // \Flipdish\Client\Models\MenuItemOptionSetBase | Menu item option set
+$menu_item_option_set = new \Flipdish\\Client\Models\MenuItemOptionSetBase(); // \Flipdish\\Client\Models\MenuItemOptionSetBase | Menu item option set
 
 try {
     $result = $apiInstance->createMenuItemOptionSet($menu_id, $menu_section_id, $menu_section_item_id, $menu_item_option_set);
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
  **menu_id** | **int**| Menu identifier |
  **menu_section_id** | **int**| Menu section identifier |
  **menu_section_item_id** | **int**| Menu section item identifier |
- **menu_item_option_set** | [**\Flipdish\Client\Models\MenuItemOptionSetBase**](../Model/MenuItemOptionSetBase.md)| Menu item option set |
+ **menu_item_option_set** | [**\Flipdish\\Client\Models\MenuItemOptionSetBase**](../Model/MenuItemOptionSetBase.md)| Menu item option set |
 
 ### Return type
 
@@ -81,9 +81,9 @@ Delete menu item option set
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\MenuOptionSetsApi(
+$apiInstance = new Flipdish\\Client\Api\MenuOptionSetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -137,9 +137,9 @@ Delete option set image
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\MenuOptionSetsApi(
+$apiInstance = new Flipdish\\Client\Api\MenuOptionSetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -183,7 +183,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMenuItemOptionSetById**
-> \Flipdish\Client\Models\RestApiResultMenuItemOptionSet getMenuItemOptionSetById($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id)
+> \Flipdish\\Client\Models\RestApiResultMenuItemOptionSet getMenuItemOptionSetById($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id)
 
 Get menu item option set by identifier
 
@@ -193,9 +193,9 @@ Get menu item option set by identifier
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\MenuOptionSetsApi(
+$apiInstance = new Flipdish\\Client\Api\MenuOptionSetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultMenuItemOptionSet**](../Model/RestApiResultMenuItemOptionSet.md)
+[**\Flipdish\\Client\Models\RestApiResultMenuItemOptionSet**](../Model/RestApiResultMenuItemOptionSet.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMenuItemOptionSets**
-> \Flipdish\Client\Models\RestApiArrayResultMenuItemOptionSet getMenuItemOptionSets($menu_id, $menu_section_id, $menu_section_item_id)
+> \Flipdish\\Client\Models\RestApiArrayResultMenuItemOptionSet getMenuItemOptionSets($menu_id, $menu_section_id, $menu_section_item_id)
 
 Get menu item option sets
 
@@ -250,9 +250,9 @@ Get menu item option sets
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\MenuOptionSetsApi(
+$apiInstance = new Flipdish\\Client\Api\MenuOptionSetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiArrayResultMenuItemOptionSet**](../Model/RestApiArrayResultMenuItemOptionSet.md)
+[**\Flipdish\\Client\Models\RestApiArrayResultMenuItemOptionSet**](../Model/RestApiArrayResultMenuItemOptionSet.md)
 
 ### Authorization
 
@@ -305,9 +305,9 @@ Update menu item option set
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\MenuOptionSetsApi(
+$apiInstance = new Flipdish\\Client\Api\MenuOptionSetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -317,7 +317,7 @@ $menu_id = 56; // int | Menu identifier
 $menu_section_id = 56; // int | Menu section identifier
 $menu_section_item_id = 56; // int | Menu section item identifier
 $option_set_id = 56; // int | Option set identifier
-$menu_item_option_set = new \Flipdish\Client\Models\MenuItemOptionSetBase(); // \Flipdish\Client\Models\MenuItemOptionSetBase | Menu item option set (delta)
+$menu_item_option_set = new \Flipdish\\Client\Models\MenuItemOptionSetBase(); // \Flipdish\\Client\Models\MenuItemOptionSetBase | Menu item option set (delta)
 
 try {
     $apiInstance->updateMenuItemOptionSet($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id, $menu_item_option_set);
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
  **menu_section_id** | **int**| Menu section identifier |
  **menu_section_item_id** | **int**| Menu section item identifier |
  **option_set_id** | **int**| Option set identifier |
- **menu_item_option_set** | [**\Flipdish\Client\Models\MenuItemOptionSetBase**](../Model/MenuItemOptionSetBase.md)| Menu item option set (delta) |
+ **menu_item_option_set** | [**\Flipdish\\Client\Models\MenuItemOptionSetBase**](../Model/MenuItemOptionSetBase.md)| Menu item option set (delta) |
 
 ### Return type
 
@@ -353,7 +353,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **uploadOptionSetImage**
-> \Flipdish\Client\Models\RestApiStringResult uploadOptionSetImage($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id, $image)
+> \Flipdish\\Client\Models\RestApiStringResult uploadOptionSetImage($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id, $image)
 
 Upload menu item option set image
 
@@ -363,9 +363,9 @@ Upload menu item option set image
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\MenuOptionSetsApi(
+$apiInstance = new Flipdish\\Client\Api\MenuOptionSetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
+[**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
 
 ### Authorization
 

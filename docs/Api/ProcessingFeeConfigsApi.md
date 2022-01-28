@@ -1,4 +1,4 @@
-# Flipdish\Client\ProcessingFeeConfigsApi
+# Flipdish\\Client\ProcessingFeeConfigsApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getProcessingFeeConfigsByStoreIds**
-> \Flipdish\Client\Models\RestApiArrayResultProcessingFeeConfig getProcessingFeeConfigsByStoreIds($store_ids)
+> \Flipdish\\Client\Models\RestApiArrayResultProcessingFeeConfig getProcessingFeeConfigsByStoreIds($store_ids)
 
 Get processing fee configs by store identifiers
 
@@ -18,9 +18,9 @@ Get processing fee configs by store identifiers
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\ProcessingFeeConfigsApi(
+$apiInstance = new Flipdish\\Client\Api\ProcessingFeeConfigsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiArrayResultProcessingFeeConfig**](../Model/RestApiArrayResultProcessingFeeConfig.md)
+[**\Flipdish\\Client\Models\RestApiArrayResultProcessingFeeConfig**](../Model/RestApiArrayResultProcessingFeeConfig.md)
 
 ### Authorization
 

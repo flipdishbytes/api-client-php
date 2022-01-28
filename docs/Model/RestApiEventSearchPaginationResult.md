@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\Flipdish\Client\Models\EventSearchResult**](EventSearchResult.md) | Event results | 
+**data** | [**\Flipdish\\Client\Models\EventSearchResult**](EventSearchResult.md) | Event results | 
 **page** | **int** | Current page index | 
 **limit** | **int** | Current page size | 
 **total_record_count** | **int** | Total record count | 

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **company_id** | **string** | Company Id | [optional] 
+**use_o_auth** | **bool** | Use OAuth for authentication | [optional] 
 **enabled** | **bool** | Enabled | [optional] 
 **estimated_minutes_for_delivery** | **int** | Estimated minutes for delivery | [optional] 
 **estimated_minutes_for_collection** | **int** | Estimated minutes for collection | [optional] 
@@ -14,6 +15,13 @@ Name | Type | Description | Notes
 **processing_fee_id** | **string** | The Lightspeed processing fee identifier to map with our | [optional] 
 **price_type** | **string** | Which price to choose from Lightspeed menu | [optional] 
 **menu_id** | **int** | The menu id of the store | [optional] 
+**collection_table_id** | **int** | Collection Table ID to send orders | [optional] 
+**delivery_table_id** | **int** | Delivery Table ID to send orders | [optional] 
+**collection_table_ids** | **map[string,string]** | Collection Table IDs to send orders to | [optional] 
+**delivery_table_ids** | **map[string,string]** | Delivery Table IDs to send orders to | [optional] 
+**use_tax_inclusive_prices** | **bool** | Exclude tax | [optional] 
+**skip_status_check_and_accept_order_after_sending** | **bool** | WARNING: only use this option if the Liteserver is not synchronizing within max 5 minutes with Lightspeed cloud! | [optional] 
+**send_table_number_to_table_id** | **bool** | Send Table Number to Table Id | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

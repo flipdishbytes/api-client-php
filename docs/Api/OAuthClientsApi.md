@@ -1,24 +1,26 @@
-# Flipdish\Client\OAuthClientsApi
+# Flipdish\\Client\OAuthClientsApi
 
 All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addRedirectUri**](OAuthClientsApi.md#addRedirectUri) | **POST** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis | Create OAuth client redirect uri
-[**createOAuthClient**](OAuthClientsApi.md#createOAuthClient) | **POST** /api/v1.0/oauthclients | Create OAuth client
-[**deleteOAuthClient**](OAuthClientsApi.md#deleteOAuthClient) | **DELETE** /api/v1.0/oauthclients/{oAuthClientId} | Delete OAuth client
-[**getOAuthClientByClientId**](OAuthClientsApi.md#getOAuthClientByClientId) | **GET** /api/v1.0/oauthclients/{clientId} | Get OAuth client by identifier
-[**getOAuthClientSecret**](OAuthClientsApi.md#getOAuthClientSecret) | **GET** /api/v1.0/oauthclients/{clientId}/secret | Get OAuth client secret key
-[**getOAuthClients**](OAuthClientsApi.md#getOAuthClients) | **GET** /api/v1.0/oauthclients | Get all OAuth client
-[**getOauthAccessToken**](OAuthClientsApi.md#getOauthAccessToken) | **GET** /api/v1.0/oauthclients/{oAuthClientId}/accesstoken | Get OAuth access token for client
-[**getRedirectUris**](OAuthClientsApi.md#getRedirectUris) | **GET** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis | Get OAuth client redirect uris
-[**removeRedirectUri**](OAuthClientsApi.md#removeRedirectUri) | **DELETE** /api/v1.0/oauthclients/{oAuthClientId}/redirecturis/{uriId} | Delete OAuth client redirect uri
+[**addRedirectUri**](OAuthClientsApi.md#addRedirectUri) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
+[**createOAuthApp**](OAuthClientsApi.md#createOAuthApp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
+[**deleteOAuthApp**](OAuthClientsApi.md#deleteOAuthApp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Delete OAuth App
+[**getOAuthApps**](OAuthClientsApi.md#getOAuthApps) | **GET** /api/v1.0/{appId}/oauthclients | Get all OAuth Apps
+[**getOAuthClientByClientId**](OAuthClientsApi.md#getOAuthClientByClientId) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Get OAuth App by identifier
+[**getOAuthClientSecret**](OAuthClientsApi.md#getOAuthClientSecret) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/secret | Get OAuth App secret key
+[**getOauthAccessToken**](OAuthClientsApi.md#getOauthAccessToken) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/accesstoken | Get OAuth access token for App
+[**getRedirectUris**](OAuthClientsApi.md#getRedirectUris) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Get OAuth App redirect uris
+[**oAuthClientsGetApplications**](OAuthClientsApi.md#oAuthClientsGetApplications) | **GET** /api/v1.0/{appId}/oauthclients/appnames | 
+[**removeRedirectUri**](OAuthClientsApi.md#removeRedirectUri) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId} | Delete OAuth App redirect uri
+[**updateOAuthApp**](OAuthClientsApi.md#updateOAuthApp) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Update OAuth App
 
 
 # **addRedirectUri**
-> \Flipdish\Client\Models\RestApiResultOauthClientRedirectUri addRedirectUri($o_auth_client_id, $uri)
+> \Flipdish\\Client\Models\RestApiResultOauthClientRedirectUri addRedirectUri($oauth_app_id, $uri, $app_id)
 
-Create OAuth client redirect uri
+Create OAuth App redirect uri
 
 ### Example
 ```php
@@ -26,19 +28,20 @@ Create OAuth client redirect uri
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OAuthClientsApi(
+$apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$o_auth_client_id = "o_auth_client_id_example"; // string | OAuth client identifier
+$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
 $uri = "uri_example"; // string | Redirect uri
+$app_id = "app_id_example"; // string | 
 
 try {
-    $result = $apiInstance->addRedirectUri($o_auth_client_id, $uri);
+    $result = $apiInstance->addRedirectUri($oauth_app_id, $uri, $app_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OAuthClientsApi->addRedirectUri: ', $e->getMessage(), PHP_EOL;
@@ -50,12 +53,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **o_auth_client_id** | **string**| OAuth client identifier |
+ **oauth_app_id** | **string**| OAuth App identifier |
  **uri** | **string**| Redirect uri |
+ **app_id** | **string**|  |
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultOauthClientRedirectUri**](../Model/RestApiResultOauthClientRedirectUri.md)
+[**\Flipdish\\Client\Models\RestApiResultOauthClientRedirectUri**](../Model/RestApiResultOauthClientRedirectUri.md)
 
 ### Authorization
 
@@ -68,10 +72,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **createOAuthClient**
-> createOAuthClient($o_auth_client)
+# **createOAuthApp**
+> createOAuthApp($o_auth_app, $app_id)
 
-Create OAuth client
+Create OAuth App
 
 ### Example
 ```php
@@ -79,20 +83,21 @@ Create OAuth client
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OAuthClientsApi(
+$apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$o_auth_client = new \Flipdish\Client\Models\OAuthClient(); // \Flipdish\Client\Models\OAuthClient | OAuth client
+$o_auth_app = new \Flipdish\\Client\Models\OAuthApp(); // \Flipdish\\Client\Models\OAuthApp | OAuth App
+$app_id = "app_id_example"; // string | 
 
 try {
-    $apiInstance->createOAuthClient($o_auth_client);
+    $apiInstance->createOAuthApp($o_auth_app, $app_id);
 } catch (Exception $e) {
-    echo 'Exception when calling OAuthClientsApi->createOAuthClient: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OAuthClientsApi->createOAuthApp: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -101,7 +106,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **o_auth_client** | [**\Flipdish\Client\Models\OAuthClient**](../Model/OAuthClient.md)| OAuth client |
+ **o_auth_app** | [**\Flipdish\\Client\Models\OAuthApp**](../Model/OAuthApp.md)| OAuth App |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -118,10 +124,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteOAuthClient**
-> deleteOAuthClient($o_auth_client_id)
+# **deleteOAuthApp**
+> deleteOAuthApp($oauth_app_id, $app_id)
 
-Delete OAuth client
+Delete OAuth App
 
 ### Example
 ```php
@@ -129,20 +135,21 @@ Delete OAuth client
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OAuthClientsApi(
+$apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$o_auth_client_id = "o_auth_client_id_example"; // string | OAuth client identifier
+$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
+$app_id = "app_id_example"; // string | 
 
 try {
-    $apiInstance->deleteOAuthClient($o_auth_client_id);
+    $apiInstance->deleteOAuthApp($oauth_app_id, $app_id);
 } catch (Exception $e) {
-    echo 'Exception when calling OAuthClientsApi->deleteOAuthClient: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OAuthClientsApi->deleteOAuthApp: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -151,11 +158,65 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **o_auth_client_id** | **string**| OAuth client identifier |
+ **oauth_app_id** | **string**| OAuth App identifier |
+ **app_id** | **string**|  |
 
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getOAuthApps**
+> \Flipdish\\Client\Models\RestApiArrayResultOAuthApp getOAuthApps($app_id, $oauth_app_name)
+
+Get all OAuth Apps
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$oauth_app_name = "oauth_app_name_example"; // string | 
+
+try {
+    $result = $apiInstance->getOAuthApps($app_id, $oauth_app_name);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OAuthClientsApi->getOAuthApps: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **oauth_app_name** | **string**|  | [optional]
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiArrayResultOAuthApp**](../Model/RestApiArrayResultOAuthApp.md)
 
 ### Authorization
 
@@ -169,9 +230,9 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOAuthClientByClientId**
-> \Flipdish\Client\Models\RestApiResultOAuthClient getOAuthClientByClientId($client_id)
+> \Flipdish\\Client\Models\RestApiResultOAuthApp getOAuthClientByClientId($oauth_app_id, $app_id)
 
-Get OAuth client by identifier
+Get OAuth App by identifier
 
 ### Example
 ```php
@@ -179,18 +240,19 @@ Get OAuth client by identifier
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OAuthClientsApi(
+$apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$client_id = "client_id_example"; // string | OAuth client identifier
+$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
+$app_id = "app_id_example"; // string | 
 
 try {
-    $result = $apiInstance->getOAuthClientByClientId($client_id);
+    $result = $apiInstance->getOAuthClientByClientId($oauth_app_id, $app_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OAuthClientsApi->getOAuthClientByClientId: ', $e->getMessage(), PHP_EOL;
@@ -202,11 +264,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **client_id** | **string**| OAuth client identifier |
+ **oauth_app_id** | **string**| OAuth App identifier |
+ **app_id** | **string**|  |
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultOAuthClient**](../Model/RestApiResultOAuthClient.md)
+[**\Flipdish\\Client\Models\RestApiResultOAuthApp**](../Model/RestApiResultOAuthApp.md)
 
 ### Authorization
 
@@ -220,9 +283,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOAuthClientSecret**
-> \Flipdish\Client\Models\RestApiStringResult getOAuthClientSecret($client_id)
+> \Flipdish\\Client\Models\RestApiStringResult getOAuthClientSecret($oauth_app_id, $app_id)
 
-Get OAuth client secret key
+Get OAuth App secret key
 
 ### Example
 ```php
@@ -230,18 +293,19 @@ Get OAuth client secret key
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OAuthClientsApi(
+$apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$client_id = "client_id_example"; // string | OAuth client identifier
+$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
+$app_id = "app_id_example"; // string | 
 
 try {
-    $result = $apiInstance->getOAuthClientSecret($client_id);
+    $result = $apiInstance->getOAuthClientSecret($oauth_app_id, $app_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OAuthClientsApi->getOAuthClientSecret: ', $e->getMessage(), PHP_EOL;
@@ -253,58 +317,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **client_id** | **string**| OAuth client identifier |
+ **oauth_app_id** | **string**| OAuth App identifier |
+ **app_id** | **string**|  |
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **getOAuthClients**
-> \Flipdish\Client\Models\RestApiArrayResultOAuthClient getOAuthClients()
-
-Get all OAuth client
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\Client\Api\OAuthClientsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-
-try {
-    $result = $apiInstance->getOAuthClients();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OAuthClientsApi->getOAuthClients: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\Flipdish\Client\Models\RestApiArrayResultOAuthClient**](../Model/RestApiArrayResultOAuthClient.md)
+[**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
 
 ### Authorization
 
@@ -318,9 +336,9 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOauthAccessToken**
-> \Flipdish\Client\Models\RestApiStringResult getOauthAccessToken($o_auth_client_id)
+> \Flipdish\\Client\Models\RestApiStringResult getOauthAccessToken($oauth_app_id, $app_id)
 
-Get OAuth access token for client
+Get OAuth access token for App
 
 ### Example
 ```php
@@ -328,18 +346,19 @@ Get OAuth access token for client
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OAuthClientsApi(
+$apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$o_auth_client_id = "o_auth_client_id_example"; // string | OAuth client identifier
+$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
+$app_id = "app_id_example"; // string | 
 
 try {
-    $result = $apiInstance->getOauthAccessToken($o_auth_client_id);
+    $result = $apiInstance->getOauthAccessToken($oauth_app_id, $app_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OAuthClientsApi->getOauthAccessToken: ', $e->getMessage(), PHP_EOL;
@@ -351,11 +370,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **o_auth_client_id** | **string**| OAuth client identifier |
+ **oauth_app_id** | **string**| OAuth App identifier |
+ **app_id** | **string**|  |
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
+[**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
 
 ### Authorization
 
@@ -369,9 +389,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRedirectUris**
-> \Flipdish\Client\Models\RestApiArrayResultOauthClientRedirectUri getRedirectUris($o_auth_client_id)
+> \Flipdish\\Client\Models\RestApiArrayResultOauthClientRedirectUri getRedirectUris($oauth_app_id, $app_id)
 
-Get OAuth client redirect uris
+Get OAuth App redirect uris
 
 ### Example
 ```php
@@ -379,18 +399,19 @@ Get OAuth client redirect uris
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OAuthClientsApi(
+$apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$o_auth_client_id = "o_auth_client_id_example"; // string | OAuth client identifier
+$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
+$app_id = "app_id_example"; // string | 
 
 try {
-    $result = $apiInstance->getRedirectUris($o_auth_client_id);
+    $result = $apiInstance->getRedirectUris($oauth_app_id, $app_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OAuthClientsApi->getRedirectUris: ', $e->getMessage(), PHP_EOL;
@@ -402,11 +423,63 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **o_auth_client_id** | **string**| OAuth client identifier |
+ **oauth_app_id** | **string**| OAuth App identifier |
+ **app_id** | **string**|  |
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiArrayResultOauthClientRedirectUri**](../Model/RestApiArrayResultOauthClientRedirectUri.md)
+[**\Flipdish\\Client\Models\RestApiArrayResultOauthClientRedirectUri**](../Model/RestApiArrayResultOauthClientRedirectUri.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **oAuthClientsGetApplications**
+> object oAuthClientsGetApplications($app_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+
+try {
+    $result = $apiInstance->oAuthClientsGetApplications($app_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OAuthClientsApi->oAuthClientsGetApplications: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+
+### Return type
+
+**object**
 
 ### Authorization
 
@@ -420,9 +493,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **removeRedirectUri**
-> removeRedirectUri($o_auth_client_id, $uri_id)
+> removeRedirectUri($oauth_app_id, $uri_id, $app_id)
 
-Delete OAuth client redirect uri
+Delete OAuth App redirect uri
 
 ### Example
 ```php
@@ -430,19 +503,20 @@ Delete OAuth client redirect uri
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OAuthClientsApi(
+$apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$o_auth_client_id = "o_auth_client_id_example"; // string | OAuth client identifier
+$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
 $uri_id = 56; // int | Redirect uri identifier
+$app_id = "app_id_example"; // string | 
 
 try {
-    $apiInstance->removeRedirectUri($o_auth_client_id, $uri_id);
+    $apiInstance->removeRedirectUri($oauth_app_id, $uri_id, $app_id);
 } catch (Exception $e) {
     echo 'Exception when calling OAuthClientsApi->removeRedirectUri: ', $e->getMessage(), PHP_EOL;
 }
@@ -453,8 +527,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **o_auth_client_id** | **string**| OAuth client identifier |
+ **oauth_app_id** | **string**| OAuth App identifier |
  **uri_id** | **int**| Redirect uri identifier |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -467,6 +542,60 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateOAuthApp**
+> updateOAuthApp($oauth_app_id, $o_auth_app, $app_id)
+
+Update OAuth App
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
+$o_auth_app = new \Flipdish\\Client\Models\OAuthApp(); // \Flipdish\\Client\Models\OAuthApp | OAuth App
+$app_id = "app_id_example"; // string | 
+
+try {
+    $apiInstance->updateOAuthApp($oauth_app_id, $o_auth_app, $app_id);
+} catch (Exception $e) {
+    echo 'Exception when calling OAuthClientsApi->updateOAuthApp: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oauth_app_id** | **string**| OAuth App identifier |
+ **o_auth_app** | [**\Flipdish\\Client\Models\OAuthApp**](../Model/OAuthApp.md)| OAuth App |
+ **app_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

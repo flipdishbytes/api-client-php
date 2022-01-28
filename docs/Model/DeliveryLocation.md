@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**coordinates** | [**\Flipdish\Client\Models\Coordinates**](Coordinates.md) | Geo cordinate | [optional] 
+**coordinates** | [**\Flipdish\\Client\Models\Coordinates**](Coordinates.md) | Geo cordinate | [optional] 
 **building** | **string** | Building | [optional] 
 **street** | **string** | Street | [optional] 
 **town** | **string** | Town | [optional] 

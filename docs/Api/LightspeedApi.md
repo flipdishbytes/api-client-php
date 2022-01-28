@@ -1,4 +1,4 @@
-# Flipdish\Client\LightspeedApi
+# Flipdish\\Client\LightspeedApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -20,9 +20,9 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\LightspeedApi(
+$apiInstance = new Flipdish\\Client\Api\LightspeedApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **lightspeedGetStoreSettings**
-> \Flipdish\Client\Models\RestApiResultLightspeedSettings lightspeedGetStoreSettings($store_id)
+> \Flipdish\\Client\Models\RestApiResultLightspeedSettings lightspeedGetStoreSettings($store_id)
 
 
 
@@ -71,9 +71,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\LightspeedApi(
+$apiInstance = new Flipdish\\Client\Api\LightspeedApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultLightspeedSettings**](../Model/RestApiResultLightspeedSettings.md)
+[**\Flipdish\\Client\Models\RestApiResultLightspeedSettings**](../Model/RestApiResultLightspeedSettings.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **lightspeedSaveStoreSettings**
-> \Flipdish\Client\Models\RestApiResultLightspeedSettings lightspeedSaveStoreSettings($store_id, $lightspeed_settings)
+> \Flipdish\\Client\Models\RestApiResultLightspeedSettings lightspeedSaveStoreSettings($store_id, $lightspeed_settings)
 
 
 
@@ -122,16 +122,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\LightspeedApi(
+$apiInstance = new Flipdish\\Client\Api\LightspeedApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $store_id = 56; // int | 
-$lightspeed_settings = new \Flipdish\Client\Models\LightspeedSettings(); // \Flipdish\Client\Models\LightspeedSettings | 
+$lightspeed_settings = new \Flipdish\\Client\Models\LightspeedSettings(); // \Flipdish\\Client\Models\LightspeedSettings | 
 
 try {
     $result = $apiInstance->lightspeedSaveStoreSettings($store_id, $lightspeed_settings);
@@ -147,11 +147,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**|  |
- **lightspeed_settings** | [**\Flipdish\Client\Models\LightspeedSettings**](../Model/LightspeedSettings.md)|  |
+ **lightspeed_settings** | [**\Flipdish\\Client\Models\LightspeedSettings**](../Model/LightspeedSettings.md)|  |
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultLightspeedSettings**](../Model/RestApiResultLightspeedSettings.md)
+[**\Flipdish\\Client\Models\RestApiResultLightspeedSettings**](../Model/RestApiResultLightspeedSettings.md)
 
 ### Authorization
 

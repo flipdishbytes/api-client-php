@@ -14,9 +14,9 @@ Name | Type | Description | Notes
 **comment** | **string** | Comment | [optional] 
 **distance** | **double** | Distance | [optional] 
 **duration** | **int** | Duration | [optional] 
-**deliveries** | [**\Flipdish\Client\Models\JobDelivery[]**](JobDelivery.md) | Deliveries | [optional] 
-**pricing** | [**\Flipdish\Client\Models\JobPricing**](JobPricing.md) | Pricing | [optional] 
-**driver** | [**\Flipdish\Client\Models\JobDriver**](JobDriver.md) | Driver | [optional] 
+**deliveries** | [**\Flipdish\\Client\Models\JobDelivery[]**](JobDelivery.md) | Deliveries | [optional] 
+**pricing** | [**\Flipdish\\Client\Models\JobPricing**](JobPricing.md) | Pricing | [optional] 
+**driver** | [**\Flipdish\\Client\Models\JobDriver**](JobDriver.md) | Driver | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

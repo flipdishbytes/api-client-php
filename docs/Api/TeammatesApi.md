@@ -1,4 +1,4 @@
-# Flipdish\Client\TeammatesApi
+# Flipdish\\Client\TeammatesApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -8,12 +8,12 @@ Method | HTTP request | Description
 [**deleteTeammate**](TeammatesApi.md#deleteTeammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
 [**getTeammateByAppIdAndTeammateId**](TeammatesApi.md#getTeammateByAppIdAndTeammateId) | **GET** /api/v1.0/{appId}/teammates/{id} | Get a teammates by email address
 [**getTeammatesByAppId**](TeammatesApi.md#getTeammatesByAppId) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
-[**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | Redeem one-time code from invitation
 [**updateTeammate**](TeammatesApi.md#updateTeammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
 
 
 # **createTeammate**
-> \Flipdish\Client\Models\RestApiResultTeammate createTeammate($app_id, $teammate)
+> \Flipdish\\Client\Models\RestApiResultTeammate createTeammate($app_id, $teammate)
 
 Create teammate and send an invite.
 
@@ -23,16 +23,16 @@ Create teammate and send an invite.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\TeammatesApi(
+$apiInstance = new Flipdish\\Client\Api\TeammatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | 
-$teammate = new \Flipdish\Client\Models\CreateTeammate(); // \Flipdish\Client\Models\CreateTeammate | 
+$app_id = "app_id_example"; // string | Application identifier
+$teammate = new \Flipdish\\Client\Models\CreateTeammate(); // \Flipdish\\Client\Models\CreateTeammate | teammate model
 
 try {
     $result = $apiInstance->createTeammate($app_id, $teammate);
@@ -47,12 +47,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
- **teammate** | [**\Flipdish\Client\Models\CreateTeammate**](../Model/CreateTeammate.md)|  |
+ **app_id** | **string**| Application identifier |
+ **teammate** | [**\Flipdish\\Client\Models\CreateTeammate**](../Model/CreateTeammate.md)| teammate model |
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultTeammate**](../Model/RestApiResultTeammate.md)
+[**\Flipdish\\Client\Models\RestApiResultTeammate**](../Model/RestApiResultTeammate.md)
 
 ### Authorization
 
@@ -76,9 +76,9 @@ Delete teammate
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\TeammatesApi(
+$apiInstance = new Flipdish\\Client\Api\TeammatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeammateByAppIdAndTeammateId**
-> \Flipdish\Client\Models\RestApiResultTeammate getTeammateByAppIdAndTeammateId($app_id, $id)
+> \Flipdish\\Client\Models\RestApiResultTeammate getTeammateByAppIdAndTeammateId($app_id, $id)
 
 Get a teammates by email address
 
@@ -128,9 +128,9 @@ Get a teammates by email address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\TeammatesApi(
+$apiInstance = new Flipdish\\Client\Api\TeammatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultTeammate**](../Model/RestApiResultTeammate.md)
+[**\Flipdish\\Client\Models\RestApiResultTeammate**](../Model/RestApiResultTeammate.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeammatesByAppId**
-> \Flipdish\Client\Models\RestApiArrayResultTeammate getTeammatesByAppId($app_id)
+> \Flipdish\\Client\Models\RestApiArrayResultTeammate getTeammatesByAppId($app_id)
 
 Get all teammates
 
@@ -181,9 +181,9 @@ Get all teammates
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\TeammatesApi(
+$apiInstance = new Flipdish\\Client\Api\TeammatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiArrayResultTeammate**](../Model/RestApiArrayResultTeammate.md)
+[**\Flipdish\\Client\Models\RestApiArrayResultTeammate**](../Model/RestApiArrayResultTeammate.md)
 
 ### Authorization
 
@@ -222,9 +222,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **redeemInvitation**
-> \Flipdish\Client\Models\RestApiResultRedeemInvitationResult redeemInvitation($otc, $app_id)
+> \Flipdish\\Client\Models\RestApiResultRedeemInvitationResult redeemInvitation($otc, $app_id)
 
-
+Redeem one-time code from invitation
 
 ### Example
 ```php
@@ -232,9 +232,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\TeammatesApi(
+$apiInstance = new Flipdish\\Client\Api\TeammatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultRedeemInvitationResult**](../Model/RestApiResultRedeemInvitationResult.md)
+[**\Flipdish\\Client\Models\RestApiResultRedeemInvitationResult**](../Model/RestApiResultRedeemInvitationResult.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateTeammate**
-> \Flipdish\Client\Models\RestApiResultTeammate updateTeammate($app_id, $id, $teammate)
+> \Flipdish\\Client\Models\RestApiResultTeammate updateTeammate($app_id, $id, $teammate)
 
 Update teammates (this method does not support Deltas!)
 
@@ -285,17 +285,17 @@ Update teammates (this method does not support Deltas!)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\TeammatesApi(
+$apiInstance = new Flipdish\\Client\Api\TeammatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | 
-$id = "id_example"; // string | 
-$teammate = new \Flipdish\Client\Models\TeammateBase(); // \Flipdish\Client\Models\TeammateBase | 
+$app_id = "app_id_example"; // string | Application identifier
+$id = "id_example"; // string | teammate identifier
+$teammate = new \Flipdish\\Client\Models\TeammateBase(); // \Flipdish\\Client\Models\TeammateBase | teammate model
 
 try {
     $result = $apiInstance->updateTeammate($app_id, $id, $teammate);
@@ -310,13 +310,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
- **id** | **string**|  |
- **teammate** | [**\Flipdish\Client\Models\TeammateBase**](../Model/TeammateBase.md)|  |
+ **app_id** | **string**| Application identifier |
+ **id** | **string**| teammate identifier |
+ **teammate** | [**\Flipdish\\Client\Models\TeammateBase**](../Model/TeammateBase.md)| teammate model |
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultTeammate**](../Model/RestApiResultTeammate.md)
+[**\Flipdish\\Client\Models\RestApiResultTeammate**](../Model/RestApiResultTeammate.md)
 
 ### Authorization
 

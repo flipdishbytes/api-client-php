@@ -1,19 +1,19 @@
-# Flipdish\Client\StuartApi
+# Flipdish\\Client\StuartApi
 
 All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**stuartCancelJob**](StuartApi.md#stuartCancelJob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
-[**stuartGetJob**](StuartApi.md#stuartGetJob) | **GET** /api/v1.0/stuart/jobs/{jobId} | 
-[**stuartGetStuartSettings**](StuartApi.md#stuartGetStuartSettings) | **GET** /api/v1.0/stuart/settings/{storeId} | Get stuart credentials
-[**stuartPostStuartSettings**](StuartApi.md#stuartPostStuartSettings) | **POST** /api/v1.0/stuart/settings/{storeId} | 
+[**stuartCancelJob**](StuartApi.md#stuartCancelJob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | Cancel a stuart job
+[**stuartGetJob**](StuartApi.md#stuartGetJob) | **GET** /api/v1.0/stuart/jobs/{jobId} | Get start job details
+[**stuartGetStuartSettings**](StuartApi.md#stuartGetStuartSettings) | **GET** /api/v1.0/stuart/settings/{storeId} | Get stuart settings for a store
+[**stuartPostStuartSettings**](StuartApi.md#stuartPostStuartSettings) | **POST** /api/v1.0/stuart/settings/{storeId} | Set stuart settings for a store
 
 
 # **stuartCancelJob**
 > object stuartCancelJob($job_id, $store_id)
 
-
+Cancel a stuart job
 
 ### Example
 ```php
@@ -21,16 +21,16 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\StuartApi(
+$apiInstance = new Flipdish\\Client\Api\StuartApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$job_id = 56; // int | 
-$store_id = 56; // int | 
+$job_id = 56; // int | Stuart job identifier
+$store_id = 56; // int | Store identifier
 
 try {
     $result = $apiInstance->stuartCancelJob($job_id, $store_id);
@@ -45,8 +45,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **job_id** | **int**|  |
- **store_id** | **int**|  |
+ **job_id** | **int**| Stuart job identifier |
+ **store_id** | **int**| Store identifier |
 
 ### Return type
 
@@ -64,9 +64,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **stuartGetJob**
-> \Flipdish\Client\Models\RestApiResultJobResponse stuartGetJob($job_id, $store_id)
+> \Flipdish\\Client\Models\RestApiResultJobResponse stuartGetJob($job_id, $store_id)
 
-
+Get start job details
 
 ### Example
 ```php
@@ -74,16 +74,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\StuartApi(
+$apiInstance = new Flipdish\\Client\Api\StuartApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$job_id = 56; // int | 
-$store_id = 56; // int | 
+$job_id = 56; // int | Stuart job identifier
+$store_id = 56; // int | Store identifier
 
 try {
     $result = $apiInstance->stuartGetJob($job_id, $store_id);
@@ -98,12 +98,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **job_id** | **int**|  |
- **store_id** | **int**|  |
+ **job_id** | **int**| Stuart job identifier |
+ **store_id** | **int**| Store identifier |
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultJobResponse**](../Model/RestApiResultJobResponse.md)
+[**\Flipdish\\Client\Models\RestApiResultJobResponse**](../Model/RestApiResultJobResponse.md)
 
 ### Authorization
 
@@ -117,9 +117,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **stuartGetStuartSettings**
-> \Flipdish\Client\Models\RestApiResultStuartSettings stuartGetStuartSettings($store_id)
+> \Flipdish\\Client\Models\RestApiResultStuartSettings stuartGetStuartSettings($store_id)
 
-Get stuart credentials
+Get stuart settings for a store
 
 ### Example
 ```php
@@ -127,15 +127,15 @@ Get stuart credentials
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\StuartApi(
+$apiInstance = new Flipdish\\Client\Api\StuartApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | 
+$store_id = 56; // int | Store Identifier
 
 try {
     $result = $apiInstance->stuartGetStuartSettings($store_id);
@@ -150,11 +150,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**|  |
+ **store_id** | **int**| Store Identifier |
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultStuartSettings**](../Model/RestApiResultStuartSettings.md)
+[**\Flipdish\\Client\Models\RestApiResultStuartSettings**](../Model/RestApiResultStuartSettings.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 # **stuartPostStuartSettings**
 > object stuartPostStuartSettings($store_id, $stuart_settings)
 
-
+Set stuart settings for a store
 
 ### Example
 ```php
@@ -178,16 +178,16 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\StuartApi(
+$apiInstance = new Flipdish\\Client\Api\StuartApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | 
-$stuart_settings = new \Flipdish\Client\Models\StuartSettings(); // \Flipdish\Client\Models\StuartSettings | 
+$store_id = 56; // int | Store Identifier
+$stuart_settings = new \Flipdish\\Client\Models\StuartSettings(); // \Flipdish\\Client\Models\StuartSettings | Stuart settings model
 
 try {
     $result = $apiInstance->stuartPostStuartSettings($store_id, $stuart_settings);
@@ -202,8 +202,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**|  |
- **stuart_settings** | [**\Flipdish\Client\Models\StuartSettings**](../Model/StuartSettings.md)|  |
+ **store_id** | **int**| Store Identifier |
+ **stuart_settings** | [**\Flipdish\\Client\Models\StuartSettings**](../Model/StuartSettings.md)| Stuart settings model |
 
 ### Return type
 

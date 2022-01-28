@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **metadata** | **map[string,string]** | Metadata | [optional] 
+**menu_item_option_public_id** | **string** | Public id of the Menu Item Option | [optional] 
 **menu_item_option_id** | **int** | Menu item option identifier | [optional] 
 **is_master_option_set_item** | **bool** | Is master option set item | [optional] 
 **name** | **string** | Name | [optional] 

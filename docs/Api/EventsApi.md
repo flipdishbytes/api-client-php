@@ -1,4 +1,4 @@
-# Flipdish\Client\EventsApi
+# Flipdish\\Client\EventsApi
 
 All URIs are relative to *https://api.flipdish.co*
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **getCustomerEvents**
-> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getCustomerEvents($customer_id, $limit, $page, $start, $end, $name)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getCustomerEvents($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get customer events  For technical reasons, the number of records returned is limited to 100.
 
@@ -26,9 +26,9 @@ Get customer events  For technical reasons, the number of records returned is li
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\EventsApi(
+$apiInstance = new Flipdish\\Client\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -39,10 +39,18 @@ $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
-$name = array("name_example"); // string[] | Event names to filter in
+$order_id = 56; // int | Events that have Order Id
+$store_id = 56; // int | Events that have Store Id
+$store_group_id = 56; // int | Events that have Store Group Id
+$user_id = 56; // int | Events that have User Id
+$user_email = "user_email_example"; // string | Events that have User Email
+$user_name = "user_name_example"; // string | Events that have User Name
+$voucher_code = "voucher_code_example"; // string | Events that have voucher code
+$event_type = array("event_type_example"); // string[] | Events that have event type\\s
+$flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getCustomerEvents($customer_id, $limit, $page, $start, $end, $name);
+    $result = $apiInstance->getCustomerEvents($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getCustomerEvents: ', $e->getMessage(), PHP_EOL;
@@ -59,11 +67,19 @@ Name | Type | Description  | Notes
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
  **end** | **\DateTime**| End date | [optional]
- **name** | [**string[]**](../Model/string.md)| Event names to filter in | [optional]
+ **order_id** | **int**| Events that have Order Id | [optional]
+ **store_id** | **int**| Events that have Store Id | [optional]
+ **store_group_id** | **int**| Events that have Store Group Id | [optional]
+ **user_id** | **int**| Events that have User Id | [optional]
+ **user_email** | **string**| Events that have User Email | [optional]
+ **user_name** | **string**| Events that have User Name | [optional]
+ **voucher_code** | **string**| Events that have voucher code | [optional]
+ **event_type** | [**string[]**](../Model/string.md)| Events that have event type\\s | [optional]
+ **flipdish_event_id** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -77,7 +93,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEvents**
-> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getEvents($store_id, $white_label_id, $customer_id, $limit, $page, $start, $end, $name)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getEvents($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get events  For technical reasons, the number of records returned is limited to 100.
 
@@ -87,25 +103,32 @@ Get events  For technical reasons, the number of records returned is limited to 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\EventsApi(
+$apiInstance = new Flipdish\\Client\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store Id
 $white_label_id = 56; // int | White Label Id
 $customer_id = 56; // int | Customer Id
 $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
-$name = array("name_example"); // string[] | Event names to filter in
+$order_id = 56; // int | Events that have Order Id
+$store_id = 56; // int | Events that have Store Id
+$store_group_id = 56; // int | Events that have Store Group Id
+$user_id = 56; // int | Events that have User Id
+$user_email = "user_email_example"; // string | Events that have User Email
+$user_name = "user_name_example"; // string | Events that have User Name
+$voucher_code = "voucher_code_example"; // string | Events that have voucher code
+$event_type = array("event_type_example"); // string[] | Events that have event type\\s
+$flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getEvents($store_id, $white_label_id, $customer_id, $limit, $page, $start, $end, $name);
+    $result = $apiInstance->getEvents($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getEvents: ', $e->getMessage(), PHP_EOL;
@@ -117,18 +140,25 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store Id | [optional]
  **white_label_id** | **int**| White Label Id | [optional]
  **customer_id** | **int**| Customer Id | [optional]
  **limit** | **int**| The maximum elements to return | [optional]
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
  **end** | **\DateTime**| End date | [optional]
- **name** | [**string[]**](../Model/string.md)| Event names to filter in | [optional]
+ **order_id** | **int**| Events that have Order Id | [optional]
+ **store_id** | **int**| Events that have Store Id | [optional]
+ **store_group_id** | **int**| Events that have Store Group Id | [optional]
+ **user_id** | **int**| Events that have User Id | [optional]
+ **user_email** | **string**| Events that have User Email | [optional]
+ **user_name** | **string**| Events that have User Name | [optional]
+ **voucher_code** | **string**| Events that have voucher code | [optional]
+ **event_type** | [**string[]**](../Model/string.md)| Events that have event type\\s | [optional]
+ **flipdish_event_id** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -142,7 +172,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEventsById**
-> \Flipdish\Client\Models\EventSearchResult getEventsById($event_id)
+> \Flipdish\\Client\Models\EventSearchResult getEventsById($event_id)
 
 Get event by Id  For technical reasons, the number of records returned is limited to 100.
 
@@ -152,9 +182,9 @@ Get event by Id  For technical reasons, the number of records returned is limite
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\EventsApi(
+$apiInstance = new Flipdish\\Client\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -179,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Models\EventSearchResult**](../Model/EventSearchResult.md)
+[**\Flipdish\\Client\Models\EventSearchResult**](../Model/EventSearchResult.md)
 
 ### Authorization
 
@@ -193,7 +223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMenuEvents**
-> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getMenuEvents($menu_id, $limit, $page, $start, $end, $name)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getMenuEvents($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get menu events  For technical reasons, the number of records returned is limited to 100.
 
@@ -203,9 +233,9 @@ Get menu events  For technical reasons, the number of records returned is limite
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\EventsApi(
+$apiInstance = new Flipdish\\Client\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -216,10 +246,18 @@ $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
-$name = array("name_example"); // string[] | Event names to filter in
+$order_id = 56; // int | Events that have Order Id
+$store_id = 56; // int | Events that have Store Id
+$store_group_id = 56; // int | Events that have Store Group Id
+$user_id = 56; // int | Events that have User Id
+$user_email = "user_email_example"; // string | Events that have User Email
+$user_name = "user_name_example"; // string | Events that have User Name
+$voucher_code = "voucher_code_example"; // string | Events that have voucher code
+$event_type = array("event_type_example"); // string[] | Events that have event type\\s
+$flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getMenuEvents($menu_id, $limit, $page, $start, $end, $name);
+    $result = $apiInstance->getMenuEvents($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getMenuEvents: ', $e->getMessage(), PHP_EOL;
@@ -236,11 +274,19 @@ Name | Type | Description  | Notes
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
  **end** | **\DateTime**| End date | [optional]
- **name** | [**string[]**](../Model/string.md)| Event names to filter in | [optional]
+ **order_id** | **int**| Events that have Order Id | [optional]
+ **store_id** | **int**| Events that have Store Id | [optional]
+ **store_group_id** | **int**| Events that have Store Group Id | [optional]
+ **user_id** | **int**| Events that have User Id | [optional]
+ **user_email** | **string**| Events that have User Email | [optional]
+ **user_name** | **string**| Events that have User Name | [optional]
+ **voucher_code** | **string**| Events that have voucher code | [optional]
+ **event_type** | [**string[]**](../Model/string.md)| Events that have event type\\s | [optional]
+ **flipdish_event_id** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -254,7 +300,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrderEvents**
-> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getOrderEvents($order_id, $limit, $page, $start, $end, $name)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getOrderEvents($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get order events  For technical reasons, the number of records returned is limited to 100.
 
@@ -264,9 +310,9 @@ Get order events  For technical reasons, the number of records returned is limit
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\EventsApi(
+$apiInstance = new Flipdish\\Client\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -277,10 +323,18 @@ $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
-$name = array("name_example"); // string[] | Event names to filter in
+$order_id2 = 56; // int | Events that have Order Id
+$store_id = 56; // int | Events that have Store Id
+$store_group_id = 56; // int | Events that have Store Group Id
+$user_id = 56; // int | Events that have User Id
+$user_email = "user_email_example"; // string | Events that have User Email
+$user_name = "user_name_example"; // string | Events that have User Name
+$voucher_code = "voucher_code_example"; // string | Events that have voucher code
+$event_type = array("event_type_example"); // string[] | Events that have event type\\s
+$flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getOrderEvents($order_id, $limit, $page, $start, $end, $name);
+    $result = $apiInstance->getOrderEvents($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getOrderEvents: ', $e->getMessage(), PHP_EOL;
@@ -297,11 +351,19 @@ Name | Type | Description  | Notes
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
  **end** | **\DateTime**| End date | [optional]
- **name** | [**string[]**](../Model/string.md)| Event names to filter in | [optional]
+ **order_id2** | **int**| Events that have Order Id | [optional]
+ **store_id** | **int**| Events that have Store Id | [optional]
+ **store_group_id** | **int**| Events that have Store Group Id | [optional]
+ **user_id** | **int**| Events that have User Id | [optional]
+ **user_email** | **string**| Events that have User Email | [optional]
+ **user_name** | **string**| Events that have User Name | [optional]
+ **voucher_code** | **string**| Events that have voucher code | [optional]
+ **event_type** | [**string[]**](../Model/string.md)| Events that have event type\\s | [optional]
+ **flipdish_event_id** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -315,7 +377,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrderEventsByCustomer**
-> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getOrderEventsByCustomer($customer_id, $limit, $page, $start, $end, $name)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getOrderEventsByCustomer($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get order events by customer  For technical reasons, the number of records returned is limited to 100.
 
@@ -325,9 +387,9 @@ Get order events by customer  For technical reasons, the number of records retur
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\EventsApi(
+$apiInstance = new Flipdish\\Client\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -338,10 +400,18 @@ $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
-$name = array("name_example"); // string[] | Event names to filter in
+$order_id = 56; // int | Events that have Order Id
+$store_id = 56; // int | Events that have Store Id
+$store_group_id = 56; // int | Events that have Store Group Id
+$user_id = 56; // int | Events that have User Id
+$user_email = "user_email_example"; // string | Events that have User Email
+$user_name = "user_name_example"; // string | Events that have User Name
+$voucher_code = "voucher_code_example"; // string | Events that have voucher code
+$event_type = array("event_type_example"); // string[] | Events that have event type\\s
+$flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getOrderEventsByCustomer($customer_id, $limit, $page, $start, $end, $name);
+    $result = $apiInstance->getOrderEventsByCustomer($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getOrderEventsByCustomer: ', $e->getMessage(), PHP_EOL;
@@ -358,11 +428,19 @@ Name | Type | Description  | Notes
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
  **end** | **\DateTime**| End date | [optional]
- **name** | [**string[]**](../Model/string.md)| Event names to filter in | [optional]
+ **order_id** | **int**| Events that have Order Id | [optional]
+ **store_id** | **int**| Events that have Store Id | [optional]
+ **store_group_id** | **int**| Events that have Store Group Id | [optional]
+ **user_id** | **int**| Events that have User Id | [optional]
+ **user_email** | **string**| Events that have User Email | [optional]
+ **user_name** | **string**| Events that have User Name | [optional]
+ **voucher_code** | **string**| Events that have voucher code | [optional]
+ **event_type** | [**string[]**](../Model/string.md)| Events that have event type\\s | [optional]
+ **flipdish_event_id** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -376,7 +454,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStoreEvents**
-> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getStoreEvents($store_id, $limit, $page, $start, $end, $name)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getStoreEvents($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get store events  For technical reasons, the number of records returned is limited to 100.
 
@@ -386,9 +464,9 @@ Get store events  For technical reasons, the number of records returned is limit
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\EventsApi(
+$apiInstance = new Flipdish\\Client\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -399,10 +477,18 @@ $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
-$name = array("name_example"); // string[] | Event names to filter in
+$order_id = 56; // int | Events that have Order Id
+$store_id2 = 56; // int | Events that have Store Id
+$store_group_id = 56; // int | Events that have Store Group Id
+$user_id = 56; // int | Events that have User Id
+$user_email = "user_email_example"; // string | Events that have User Email
+$user_name = "user_name_example"; // string | Events that have User Name
+$voucher_code = "voucher_code_example"; // string | Events that have voucher code
+$event_type = array("event_type_example"); // string[] | Events that have event type\\s
+$flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getStoreEvents($store_id, $limit, $page, $start, $end, $name);
+    $result = $apiInstance->getStoreEvents($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getStoreEvents: ', $e->getMessage(), PHP_EOL;
@@ -419,11 +505,19 @@ Name | Type | Description  | Notes
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
  **end** | **\DateTime**| End date | [optional]
- **name** | [**string[]**](../Model/string.md)| Event names to filter in | [optional]
+ **order_id** | **int**| Events that have Order Id | [optional]
+ **store_id2** | **int**| Events that have Store Id | [optional]
+ **store_group_id** | **int**| Events that have Store Group Id | [optional]
+ **user_id** | **int**| Events that have User Id | [optional]
+ **user_email** | **string**| Events that have User Email | [optional]
+ **user_name** | **string**| Events that have User Name | [optional]
+ **voucher_code** | **string**| Events that have voucher code | [optional]
+ **event_type** | [**string[]**](../Model/string.md)| Events that have event type\\s | [optional]
+ **flipdish_event_id** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -437,7 +531,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserEvents**
-> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getUserEvents($user_id, $limit, $page, $start, $end, $name)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getUserEvents($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id2, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get user events  For technical reasons, the number of records returned is limited to 100.
 
@@ -447,9 +541,9 @@ Get user events  For technical reasons, the number of records returned is limite
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\EventsApi(
+$apiInstance = new Flipdish\\Client\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -460,10 +554,18 @@ $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
-$name = array("name_example"); // string[] | Event names to filter in
+$order_id = 56; // int | Events that have Order Id
+$store_id = 56; // int | Events that have Store Id
+$store_group_id = 56; // int | Events that have Store Group Id
+$user_id2 = 56; // int | Events that have User Id
+$user_email = "user_email_example"; // string | Events that have User Email
+$user_name = "user_name_example"; // string | Events that have User Name
+$voucher_code = "voucher_code_example"; // string | Events that have voucher code
+$event_type = array("event_type_example"); // string[] | Events that have event type\\s
+$flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getUserEvents($user_id, $limit, $page, $start, $end, $name);
+    $result = $apiInstance->getUserEvents($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id2, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getUserEvents: ', $e->getMessage(), PHP_EOL;
@@ -480,11 +582,19 @@ Name | Type | Description  | Notes
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
  **end** | **\DateTime**| End date | [optional]
- **name** | [**string[]**](../Model/string.md)| Event names to filter in | [optional]
+ **order_id** | **int**| Events that have Order Id | [optional]
+ **store_id** | **int**| Events that have Store Id | [optional]
+ **store_group_id** | **int**| Events that have Store Group Id | [optional]
+ **user_id2** | **int**| Events that have User Id | [optional]
+ **user_email** | **string**| Events that have User Email | [optional]
+ **user_name** | **string**| Events that have User Name | [optional]
+ **voucher_code** | **string**| Events that have voucher code | [optional]
+ **event_type** | [**string[]**](../Model/string.md)| Events that have event type\\s | [optional]
+ **flipdish_event_id** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 
@@ -498,7 +608,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWhiteLabelEvents**
-> \Flipdish\Client\Models\RestApiEventSearchPaginationResult getWhiteLabelEvents($whitelabel_id, $limit, $page, $start, $end, $name)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getWhiteLabelEvents($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 
@@ -508,9 +618,9 @@ Get WhiteLabel events  For technical reasons, the number of records returned is 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\EventsApi(
+$apiInstance = new Flipdish\\Client\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -521,10 +631,18 @@ $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
-$name = array("name_example"); // string[] | Event names to filter in
+$order_id = 56; // int | Events that have Order Id
+$store_id = 56; // int | Events that have Store Id
+$store_group_id = 56; // int | Events that have Store Group Id
+$user_id = 56; // int | Events that have User Id
+$user_email = "user_email_example"; // string | Events that have User Email
+$user_name = "user_name_example"; // string | Events that have User Name
+$voucher_code = "voucher_code_example"; // string | Events that have voucher code
+$event_type = array("event_type_example"); // string[] | Events that have event type\\s
+$flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getWhiteLabelEvents($whitelabel_id, $limit, $page, $start, $end, $name);
+    $result = $apiInstance->getWhiteLabelEvents($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getWhiteLabelEvents: ', $e->getMessage(), PHP_EOL;
@@ -541,11 +659,19 @@ Name | Type | Description  | Notes
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
  **end** | **\DateTime**| End date | [optional]
- **name** | [**string[]**](../Model/string.md)| Event names to filter in | [optional]
+ **order_id** | **int**| Events that have Order Id | [optional]
+ **store_id** | **int**| Events that have Store Id | [optional]
+ **store_group_id** | **int**| Events that have Store Group Id | [optional]
+ **user_id** | **int**| Events that have User Id | [optional]
+ **user_email** | **string**| Events that have User Email | [optional]
+ **user_name** | **string**| Events that have User Name | [optional]
+ **voucher_code** | **string**| Events that have voucher code | [optional]
+ **event_type** | [**string[]**](../Model/string.md)| Events that have event type\\s | [optional]
+ **flipdish_event_id** | **string**| Unique Identifier of Event, if this is specified, all other criteria are ignored. | [optional]
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
+[**\Flipdish\\Client\Models\RestApiEventSearchPaginationResult**](../Model/RestApiEventSearchPaginationResult.md)
 
 ### Authorization
 

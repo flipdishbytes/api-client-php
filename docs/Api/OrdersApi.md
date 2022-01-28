@@ -1,15 +1,18 @@
-# Flipdish\Client\OrdersApi
+# Flipdish\\Client\OrdersApi
 
 All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**acceptOrder**](OrdersApi.md#acceptOrder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
+[**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
+[**getDeliveryInformation**](OrdersApi.md#getDeliveryInformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
 [**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | Get orders by filter
 [**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
 [**refundOrder**](OrdersApi.md#refundOrder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
 [**rejectOrder**](OrdersApi.md#rejectOrder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
+[**updateDeliveryInformation**](OrdersApi.md#updateDeliveryInformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
 
 
 # **acceptOrder**
@@ -25,16 +28,16 @@ To accept an order, you create an `accept` object and send it to Flipdish API us
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OrdersApi(
+$apiInstance = new Flipdish\\Client\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Order identifier
-$accept_object = new \Flipdish\Client\Models\Accept(); // \Flipdish\Client\Models\Accept | 
+$accept_object = new \Flipdish\\Client\Models\Accept(); // \Flipdish\\Client\Models\Accept | Order accept parameters (eg: EstimatedMinutesForDelivery)
 
 try {
     $apiInstance->acceptOrder($id, $accept_object);
@@ -49,7 +52,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Order identifier |
- **accept_object** | [**\Flipdish\Client\Models\Accept**](../Model/Accept.md)|  |
+ **accept_object** | [**\Flipdish\\Client\Models\Accept**](../Model/Accept.md)| Order accept parameters (eg: EstimatedMinutesForDelivery) |
 
 ### Return type
 
@@ -66,8 +69,113 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **dispatchOrder**
+> dispatchOrder($id)
+
+Dispatch order
+
+To dispatch an order send a POST request with `Id` path parameter which identifies the order.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\OrdersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 56; // int | Order identifier
+
+try {
+    $apiInstance->dispatchOrder($id);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersApi->dispatchOrder: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| Order identifier |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getDeliveryInformation**
+> \Flipdish\\Client\Models\RestApiResultOrderDeliveryInformation getDeliveryInformation($order_id)
+
+Get order delivery information
+
+Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\OrdersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$order_id = 56; // int | Flipdish Order Id
+
+try {
+    $result = $apiInstance->getDeliveryInformation($order_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersApi->getDeliveryInformation: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order_id** | **int**| Flipdish Order Id |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultOrderDeliveryInformation**](../Model/RestApiResultOrderDeliveryInformation.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getOrderById**
-> \Flipdish\Client\Models\RestApiResultOrder getOrderById($id)
+> \Flipdish\\Client\Models\RestApiResultOrder getOrderById($id)
 
 Get order by ID
 
@@ -77,9 +185,9 @@ Get order by ID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OrdersApi(
+$apiInstance = new Flipdish\\Client\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -104,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiResultOrder**](../Model/RestApiResultOrder.md)
+[**\Flipdish\\Client\Models\RestApiResultOrder**](../Model/RestApiResultOrder.md)
 
 ### Authorization
 
@@ -118,7 +226,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrders**
-> \Flipdish\Client\Models\RestApiPaginationResultOrder getOrders($physical_restaurant_id, $state, $page, $limit)
+> \Flipdish\\Client\Models\RestApiPaginationResultOrder getOrders($physical_restaurant_id, $state, $from, $to, $page, $limit)
 
 Get orders by filter
 
@@ -128,9 +236,9 @@ Get orders by filter
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OrdersApi(
+$apiInstance = new Flipdish\\Client\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -138,11 +246,13 @@ $apiInstance = new Flipdish\Client\Api\OrdersApi(
 );
 $physical_restaurant_id = array(56); // int[] | Physical restaurant identifiers
 $state = array("state_example"); // string[] | Order states
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Order has been placed after this parameter value
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Order has been placed before this parameter value
 $page = 56; // int | Requested page number
 $limit = 56; // int | Requested page limit
 
 try {
-    $result = $apiInstance->getOrders($physical_restaurant_id, $state, $page, $limit);
+    $result = $apiInstance->getOrders($physical_restaurant_id, $state, $from, $to, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->getOrders: ', $e->getMessage(), PHP_EOL;
@@ -156,12 +266,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **physical_restaurant_id** | [**int[]**](../Model/int.md)| Physical restaurant identifiers | [optional]
  **state** | [**string[]**](../Model/string.md)| Order states | [optional]
+ **from** | **\DateTime**| Order has been placed after this parameter value | [optional]
+ **to** | **\DateTime**| Order has been placed before this parameter value | [optional]
  **page** | **int**| Requested page number | [optional]
  **limit** | **int**| Requested page limit | [optional]
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiPaginationResultOrder**](../Model/RestApiPaginationResultOrder.md)
+[**\Flipdish\\Client\Models\RestApiPaginationResultOrder**](../Model/RestApiPaginationResultOrder.md)
 
 ### Authorization
 
@@ -175,7 +287,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrdersSummary**
-> \Flipdish\Client\Models\RestApiPaginationResultOrderSummary getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit)
+> \Flipdish\\Client\Models\RestApiPaginationResultOrderSummary getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels)
 
 [PRIVATE API] Get summary of orders by filter
 
@@ -185,9 +297,9 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OrdersApi(
+$apiInstance = new Flipdish\\Client\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -199,9 +311,11 @@ $physical_restaurant_id = array(56); // int[] | Physical restaurant identifiers
 $state = array("state_example"); // string[] | Order states
 $page = 56; // int | Requested page number
 $limit = 56; // int | Requested page limit
+$order_by_requested_for_time = true; // bool | 
+$channels = array("channels_example"); // string[] | 
 
 try {
-    $result = $apiInstance->getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit);
+    $result = $apiInstance->getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->getOrdersSummary: ', $e->getMessage(), PHP_EOL;
@@ -219,10 +333,12 @@ Name | Type | Description  | Notes
  **state** | [**string[]**](../Model/string.md)| Order states | [optional]
  **page** | **int**| Requested page number | [optional]
  **limit** | **int**| Requested page limit | [optional]
+ **order_by_requested_for_time** | **bool**|  | [optional]
+ **channels** | [**string[]**](../Model/string.md)|  | [optional]
 
 ### Return type
 
-[**\Flipdish\Client\Models\RestApiPaginationResultOrderSummary**](../Model/RestApiPaginationResultOrderSummary.md)
+[**\Flipdish\\Client\Models\RestApiPaginationResultOrderSummary**](../Model/RestApiPaginationResultOrderSummary.md)
 
 ### Authorization
 
@@ -248,16 +364,16 @@ To refund an order, you create a `refund` object and send it to Flipdish API usi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OrdersApi(
+$apiInstance = new Flipdish\\Client\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Order identifier
-$refund_object = new \Flipdish\Client\Models\Refund(); // \Flipdish\Client\Models\Refund | 
+$refund_object = new \Flipdish\\Client\Models\Refund(); // \Flipdish\\Client\Models\Refund | 
 
 try {
     $apiInstance->refundOrder($id, $refund_object);
@@ -272,7 +388,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Order identifier |
- **refund_object** | [**\Flipdish\Client\Models\Refund**](../Model/Refund.md)|  |
+ **refund_object** | [**\Flipdish\\Client\Models\Refund**](../Model/Refund.md)|  |
 
 ### Return type
 
@@ -302,16 +418,16 @@ To reject an order, you create a `reject` object and send it to Flipdish API usi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Flipdish\Client\Api\OrdersApi(
+$apiInstance = new Flipdish\\Client\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Order identifier
-$reject_object = new \Flipdish\Client\Models\Reject(); // \Flipdish\Client\Models\Reject | 
+$reject_object = new \Flipdish\\Client\Models\Reject(); // \Flipdish\\Client\Models\Reject | 
 
 try {
     $apiInstance->rejectOrder($id, $reject_object);
@@ -326,7 +442,61 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Order identifier |
- **reject_object** | [**\Flipdish\Client\Models\Reject**](../Model/Reject.md)|  |
+ **reject_object** | [**\Flipdish\\Client\Models\Reject**](../Model/Reject.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateDeliveryInformation**
+> updateDeliveryInformation($order_id, $delivery_information)
+
+Add/update delivery-related information to an order
+
+Returns an order's delivery information. This would be used to display the latest known delivery information on a screen.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\OrdersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$order_id = 56; // int | Flipdish Order Id
+$delivery_information = new \Flipdish\\Client\Models\OrderDeliveryInformationBase(); // \Flipdish\\Client\Models\OrderDeliveryInformationBase | Delivery Information
+
+try {
+    $apiInstance->updateDeliveryInformation($order_id, $delivery_information);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersApi->updateDeliveryInformation: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order_id** | **int**| Flipdish Order Id |
+ **delivery_information** | [**\Flipdish\\Client\Models\OrderDeliveryInformationBase**](../Model/OrderDeliveryInformationBase.md)| Delivery Information |
 
 ### Return type
 
