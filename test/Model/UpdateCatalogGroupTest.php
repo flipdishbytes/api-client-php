@@ -117,4 +117,11 @@ class UpdateCatalogGroupTest extends \PHPUnit_Framework_TestCase
     public function testPropertyItems()
     {
     }
+
+    /**
+     * Test attribute "metafields"
+     */
+    public function testPropertyMetafields()
+    {
+    }
 }

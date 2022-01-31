@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **min_select_count** | **int** | Minimum number of items that the user has to select | [optional] 
 **max_select_count** | **int** | Maximum number of items that the user has to select | [optional] 
 **items** | [**\Flipdish\\Client\Models\CatalogItemReference[]**](CatalogItemReference.md) | Collection of items associated with this product | [optional] 
+**metafields** | [**\Flipdish\\Client\Models\Metafield[]**](Metafield.md) | Collection of metafields | [optional] 
 **group_type** | **string** | Type of group (ModifierGroup, etc) | 
 **sku** | **string** | Stock Keeping Unit (SKU) | 
 **name** | **string** | Group name | 

@@ -112,6 +112,13 @@ class CatalogGroupTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "metafields"
+     */
+    public function testPropertyMetafields()
+    {
+    }
+
+    /**
      * Test attribute "group_type"
      */
     public function testPropertyGroupType()

@@ -63,7 +63,8 @@ class UpdateCatalogGroup implements ModelInterface, ArrayAccess
         'image_file_name' => 'string',
         'min_select_count' => 'int',
         'max_select_count' => 'int',
-        'items' => '\Flipdish\\Client\Models\UpdateCatalogItemReference[]'
+        'items' => '\Flipdish\\Client\Models\UpdateCatalogItemReference[]',
+        'metafields' => '\Flipdish\\Client\Models\Metafield[]'
     ];
 
     /**
@@ -77,7 +78,8 @@ class UpdateCatalogGroup implements ModelInterface, ArrayAccess
         'image_file_name' => null,
         'min_select_count' => 'int32',
         'max_select_count' => 'int32',
-        'items' => null
+        'items' => null,
+        'metafields' => null
     ];
 
     /**
@@ -112,7 +114,8 @@ class UpdateCatalogGroup implements ModelInterface, ArrayAccess
         'image_file_name' => 'ImageFileName',
         'min_select_count' => 'MinSelectCount',
         'max_select_count' => 'MaxSelectCount',
-        'items' => 'Items'
+        'items' => 'Items',
+        'metafields' => 'Metafields'
     ];
 
     /**
@@ -126,7 +129,8 @@ class UpdateCatalogGroup implements ModelInterface, ArrayAccess
         'image_file_name' => 'setImageFileName',
         'min_select_count' => 'setMinSelectCount',
         'max_select_count' => 'setMaxSelectCount',
-        'items' => 'setItems'
+        'items' => 'setItems',
+        'metafields' => 'setMetafields'
     ];
 
     /**
@@ -140,7 +144,8 @@ class UpdateCatalogGroup implements ModelInterface, ArrayAccess
         'image_file_name' => 'getImageFileName',
         'min_select_count' => 'getMinSelectCount',
         'max_select_count' => 'getMaxSelectCount',
-        'items' => 'getItems'
+        'items' => 'getItems',
+        'metafields' => 'getMetafields'
     ];
 
     /**
@@ -209,6 +214,7 @@ class UpdateCatalogGroup implements ModelInterface, ArrayAccess
         $this->container['min_select_count'] = isset($data['min_select_count']) ? $data['min_select_count'] : null;
         $this->container['max_select_count'] = isset($data['max_select_count']) ? $data['max_select_count'] : null;
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['metafields'] = isset($data['metafields']) ? $data['metafields'] : null;
     }
 
     /**
@@ -420,6 +426,30 @@ class UpdateCatalogGroup implements ModelInterface, ArrayAccess
     public function setItems($items)
     {
         $this->container['items'] = $items;
+
+        return $this;
+    }
+
+    /**
+     * Gets metafields
+     *
+     * @return \Flipdish\\Client\Models\Metafield[]
+     */
+    public function getMetafields()
+    {
+        return $this->container['metafields'];
+    }
+
+    /**
+     * Sets metafields
+     *
+     * @param \Flipdish\\Client\Models\Metafield[] $metafields Collection of metafields
+     *
+     * @return $this
+     */
+    public function setMetafields($metafields)
+    {
+        $this->container['metafields'] = $metafields;
 
         return $this;
     }

@@ -63,6 +63,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
         'min_select_count' => 'int',
         'max_select_count' => 'int',
         'items' => '\Flipdish\\Client\Models\CatalogItemReference[]',
+        'metafields' => '\Flipdish\\Client\Models\Metafield[]',
         'group_type' => 'string',
         'sku' => 'string',
         'name' => 'string',
@@ -80,6 +81,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
         'min_select_count' => 'int32',
         'max_select_count' => 'int32',
         'items' => null,
+        'metafields' => null,
         'group_type' => null,
         'sku' => null,
         'name' => null,
@@ -118,6 +120,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
         'min_select_count' => 'MinSelectCount',
         'max_select_count' => 'MaxSelectCount',
         'items' => 'Items',
+        'metafields' => 'Metafields',
         'group_type' => 'GroupType',
         'sku' => 'Sku',
         'name' => 'Name',
@@ -135,6 +138,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
         'min_select_count' => 'setMinSelectCount',
         'max_select_count' => 'setMaxSelectCount',
         'items' => 'setItems',
+        'metafields' => 'setMetafields',
         'group_type' => 'setGroupType',
         'sku' => 'setSku',
         'name' => 'setName',
@@ -152,6 +156,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
         'min_select_count' => 'getMinSelectCount',
         'max_select_count' => 'getMaxSelectCount',
         'items' => 'getItems',
+        'metafields' => 'getMetafields',
         'group_type' => 'getGroupType',
         'sku' => 'getSku',
         'name' => 'getName',
@@ -236,6 +241,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
         $this->container['min_select_count'] = isset($data['min_select_count']) ? $data['min_select_count'] : null;
         $this->container['max_select_count'] = isset($data['max_select_count']) ? $data['max_select_count'] : null;
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['metafields'] = isset($data['metafields']) ? $data['metafields'] : null;
         $this->container['group_type'] = isset($data['group_type']) ? $data['group_type'] : null;
         $this->container['sku'] = isset($data['sku']) ? $data['sku'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -438,6 +444,30 @@ class CatalogGroup implements ModelInterface, ArrayAccess
     public function setItems($items)
     {
         $this->container['items'] = $items;
+
+        return $this;
+    }
+
+    /**
+     * Gets metafields
+     *
+     * @return \Flipdish\\Client\Models\Metafield[]
+     */
+    public function getMetafields()
+    {
+        return $this->container['metafields'];
+    }
+
+    /**
+     * Sets metafields
+     *
+     * @param \Flipdish\\Client\Models\Metafield[] $metafields Collection of metafields
+     *
+     * @return $this
+     */
+    public function setMetafields($metafields)
+    {
+        $this->container['metafields'] = $metafields;
 
         return $this;
     }
