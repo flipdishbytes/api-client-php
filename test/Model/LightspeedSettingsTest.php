@@ -208,4 +208,25 @@ class LightspeedSettingsTest extends \PHPUnit_Framework_TestCase
     public function testPropertySendTableNumberToTableId()
     {
     }
+
+    /**
+     * Test attribute "add_chef_note_to_product"
+     */
+    public function testPropertyAddChefNoteToProduct()
+    {
+    }
+
+    /**
+     * Test attribute "chef_note_item_id"
+     */
+    public function testPropertyChefNoteItemId()
+    {
+    }
+
+    /**
+     * Test attribute "chef_note_modifier_id"
+     */
+    public function testPropertyChefNoteModifierId()
+    {
+    }
 }

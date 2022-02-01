@@ -22,6 +22,9 @@ Name | Type | Description | Notes
 **use_tax_inclusive_prices** | **bool** | Exclude tax | [optional] 
 **skip_status_check_and_accept_order_after_sending** | **bool** | WARNING: only use this option if the Liteserver is not synchronizing within max 5 minutes with Lightspeed cloud! | [optional] 
 **send_table_number_to_table_id** | **bool** | Send Table Number to Table Id | [optional] 
+**add_chef_note_to_product** | **bool** | Add ChefNote To Product | [optional] 
+**chef_note_item_id** | **string** | The Lightspeed Chef Note Item Id to map | [optional] 
+**chef_note_modifier_id** | **string** | The Lightspeed Chef Note Modifier Id to map | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

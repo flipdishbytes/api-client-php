@@ -76,7 +76,10 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
         'delivery_table_ids' => 'map[string,string]',
         'use_tax_inclusive_prices' => 'bool',
         'skip_status_check_and_accept_order_after_sending' => 'bool',
-        'send_table_number_to_table_id' => 'bool'
+        'send_table_number_to_table_id' => 'bool',
+        'add_chef_note_to_product' => 'bool',
+        'chef_note_item_id' => 'string',
+        'chef_note_modifier_id' => 'string'
     ];
 
     /**
@@ -103,7 +106,10 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
         'delivery_table_ids' => null,
         'use_tax_inclusive_prices' => null,
         'skip_status_check_and_accept_order_after_sending' => null,
-        'send_table_number_to_table_id' => null
+        'send_table_number_to_table_id' => null,
+        'add_chef_note_to_product' => null,
+        'chef_note_item_id' => null,
+        'chef_note_modifier_id' => null
     ];
 
     /**
@@ -151,7 +157,10 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
         'delivery_table_ids' => 'DeliveryTableIds',
         'use_tax_inclusive_prices' => 'UseTaxInclusivePrices',
         'skip_status_check_and_accept_order_after_sending' => 'SkipStatusCheckAndAcceptOrderAfterSending',
-        'send_table_number_to_table_id' => 'SendTableNumberToTableId'
+        'send_table_number_to_table_id' => 'SendTableNumberToTableId',
+        'add_chef_note_to_product' => 'AddChefNoteToProduct',
+        'chef_note_item_id' => 'ChefNoteItemId',
+        'chef_note_modifier_id' => 'ChefNoteModifierId'
     ];
 
     /**
@@ -178,7 +187,10 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
         'delivery_table_ids' => 'setDeliveryTableIds',
         'use_tax_inclusive_prices' => 'setUseTaxInclusivePrices',
         'skip_status_check_and_accept_order_after_sending' => 'setSkipStatusCheckAndAcceptOrderAfterSending',
-        'send_table_number_to_table_id' => 'setSendTableNumberToTableId'
+        'send_table_number_to_table_id' => 'setSendTableNumberToTableId',
+        'add_chef_note_to_product' => 'setAddChefNoteToProduct',
+        'chef_note_item_id' => 'setChefNoteItemId',
+        'chef_note_modifier_id' => 'setChefNoteModifierId'
     ];
 
     /**
@@ -205,7 +217,10 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
         'delivery_table_ids' => 'getDeliveryTableIds',
         'use_tax_inclusive_prices' => 'getUseTaxInclusivePrices',
         'skip_status_check_and_accept_order_after_sending' => 'getSkipStatusCheckAndAcceptOrderAfterSending',
-        'send_table_number_to_table_id' => 'getSendTableNumberToTableId'
+        'send_table_number_to_table_id' => 'getSendTableNumberToTableId',
+        'add_chef_note_to_product' => 'getAddChefNoteToProduct',
+        'chef_note_item_id' => 'getChefNoteItemId',
+        'chef_note_modifier_id' => 'getChefNoteModifierId'
     ];
 
     /**
@@ -304,6 +319,9 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
         $this->container['use_tax_inclusive_prices'] = isset($data['use_tax_inclusive_prices']) ? $data['use_tax_inclusive_prices'] : null;
         $this->container['skip_status_check_and_accept_order_after_sending'] = isset($data['skip_status_check_and_accept_order_after_sending']) ? $data['skip_status_check_and_accept_order_after_sending'] : null;
         $this->container['send_table_number_to_table_id'] = isset($data['send_table_number_to_table_id']) ? $data['send_table_number_to_table_id'] : null;
+        $this->container['add_chef_note_to_product'] = isset($data['add_chef_note_to_product']) ? $data['add_chef_note_to_product'] : null;
+        $this->container['chef_note_item_id'] = isset($data['chef_note_item_id']) ? $data['chef_note_item_id'] : null;
+        $this->container['chef_note_modifier_id'] = isset($data['chef_note_modifier_id']) ? $data['chef_note_modifier_id'] : null;
     }
 
     /**
@@ -799,6 +817,78 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
     public function setSendTableNumberToTableId($send_table_number_to_table_id)
     {
         $this->container['send_table_number_to_table_id'] = $send_table_number_to_table_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets add_chef_note_to_product
+     *
+     * @return bool
+     */
+    public function getAddChefNoteToProduct()
+    {
+        return $this->container['add_chef_note_to_product'];
+    }
+
+    /**
+     * Sets add_chef_note_to_product
+     *
+     * @param bool $add_chef_note_to_product Add ChefNote To Product
+     *
+     * @return $this
+     */
+    public function setAddChefNoteToProduct($add_chef_note_to_product)
+    {
+        $this->container['add_chef_note_to_product'] = $add_chef_note_to_product;
+
+        return $this;
+    }
+
+    /**
+     * Gets chef_note_item_id
+     *
+     * @return string
+     */
+    public function getChefNoteItemId()
+    {
+        return $this->container['chef_note_item_id'];
+    }
+
+    /**
+     * Sets chef_note_item_id
+     *
+     * @param string $chef_note_item_id The Lightspeed Chef Note Item Id to map
+     *
+     * @return $this
+     */
+    public function setChefNoteItemId($chef_note_item_id)
+    {
+        $this->container['chef_note_item_id'] = $chef_note_item_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets chef_note_modifier_id
+     *
+     * @return string
+     */
+    public function getChefNoteModifierId()
+    {
+        return $this->container['chef_note_modifier_id'];
+    }
+
+    /**
+     * Sets chef_note_modifier_id
+     *
+     * @param string $chef_note_modifier_id The Lightspeed Chef Note Modifier Id to map
+     *
+     * @return $this
+     */
+    public function setChefNoteModifierId($chef_note_modifier_id)
+    {
+        $this->container['chef_note_modifier_id'] = $chef_note_modifier_id;
 
         return $this;
     }
