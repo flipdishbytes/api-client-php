@@ -318,7 +318,10 @@ Class | Method | HTTP request | Description
 *MenusApi* | [**updateMenu**](docs/Api/MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
 *MenusApi* | [**uploadMenuImage**](docs/Api/MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 *MenusApi* | [**uploadNewMenuForApp**](docs/Api/MenusApi.md#uploadnewmenuforapp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.
-*MetafieldDefinitionsApi* | [**getMetafieldDefinitions**](docs/Api/MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get paginated groups by app name id filtered by types
+*MetafieldDefinitionsApi* | [**createMetafieldDefinition**](docs/Api/MetafieldDefinitionsApi.md#createmetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Create a Metafield Definition
+*MetafieldDefinitionsApi* | [**getMetafieldDefinitions**](docs/Api/MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
+*MetafieldDefinitionsApi* | [**getOwnerEntityConfigurations**](docs/Api/MetafieldDefinitionsApi.md#getownerentityconfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+*MetafieldDefinitionsApi* | [**updateMetafieldDefinition**](docs/Api/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Create a Metafield Definition
 *OAuthClientsApi* | [**addRedirectUri**](docs/Api/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**createOAuthApp**](docs/Api/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
 *OAuthClientsApi* | [**deleteOAuthApp**](docs/Api/OAuthClientsApi.md#deleteoauthapp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Delete OAuth App
@@ -527,6 +530,7 @@ Class | Method | HTTP request | Description
  - [CreateMenuSectionItemFromProducts](docs/Model/CreateMenuSectionItemFromProducts.md)
  - [CreateMenuTaxRate](docs/Model/CreateMenuTaxRate.md)
  - [CreateMetadata](docs/Model/CreateMetadata.md)
+ - [CreateMetafieldDefinition](docs/Model/CreateMetafieldDefinition.md)
  - [CreateTeammate](docs/Model/CreateTeammate.md)
  - [CreateVoucher](docs/Model/CreateVoucher.md)
  - [CreatedMenuSectionItems](docs/Model/CreatedMenuSectionItems.md)
@@ -693,6 +697,8 @@ Class | Method | HTTP request | Description
  - [OrderTipUpdatedEvent](docs/Model/OrderTipUpdatedEvent.md)
  - [OrderVoucherSummary](docs/Model/OrderVoucherSummary.md)
  - [OtherChargesDetails](docs/Model/OtherChargesDetails.md)
+ - [OwnerEntityConfiguration](docs/Model/OwnerEntityConfiguration.md)
+ - [OwnerEntityConfigurations](docs/Model/OwnerEntityConfigurations.md)
  - [PasswordResetModel](docs/Model/PasswordResetModel.md)
  - [PaymentInfo](docs/Model/PaymentInfo.md)
  - [PaymentTerminalDetails](docs/Model/PaymentTerminalDetails.md)
@@ -792,6 +798,7 @@ Class | Method | HTTP request | Description
  - [RestApiPaginationResultOAuthTokenModel](docs/Model/RestApiPaginationResultOAuthTokenModel.md)
  - [RestApiPaginationResultOrder](docs/Model/RestApiPaginationResultOrder.md)
  - [RestApiPaginationResultOrderSummary](docs/Model/RestApiPaginationResultOrderSummary.md)
+ - [RestApiPaginationResultOwnerEntityConfigurations](docs/Model/RestApiPaginationResultOwnerEntityConfigurations.md)
  - [RestApiPaginationResultPayout](docs/Model/RestApiPaginationResultPayout.md)
  - [RestApiPaginationResultPayoutChargeback](docs/Model/RestApiPaginationResultPayoutChargeback.md)
  - [RestApiPaginationResultPayoutOrder](docs/Model/RestApiPaginationResultPayoutOrder.md)
@@ -846,6 +853,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultMenuSectionAvailability](docs/Model/RestApiResultMenuSectionAvailability.md)
  - [RestApiResultMenuSectionItem](docs/Model/RestApiResultMenuSectionItem.md)
  - [RestApiResultMetadata](docs/Model/RestApiResultMetadata.md)
+ - [RestApiResultMetafieldDefinition](docs/Model/RestApiResultMetafieldDefinition.md)
  - [RestApiResultOAuthApp](docs/Model/RestApiResultOAuthApp.md)
  - [RestApiResultOauthClientRedirectUri](docs/Model/RestApiResultOauthClientRedirectUri.md)
  - [RestApiResultOrder](docs/Model/RestApiResultOrder.md)
@@ -955,6 +963,7 @@ Class | Method | HTTP request | Description
  - [UpdateCatalogItemReference](docs/Model/UpdateCatalogItemReference.md)
  - [UpdateDriverNotificationToken](docs/Model/UpdateDriverNotificationToken.md)
  - [UpdateDriverProfileModel](docs/Model/UpdateDriverProfileModel.md)
+ - [UpdateMetafieldDefinition](docs/Model/UpdateMetafieldDefinition.md)
  - [UserAnsweredSignupQuestionsEvent](docs/Model/UserAnsweredSignupQuestionsEvent.md)
  - [UserCreatedEvent](docs/Model/UserCreatedEvent.md)
  - [UserDeletedEvent](docs/Model/UserDeletedEvent.md)

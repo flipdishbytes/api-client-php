@@ -4,13 +4,73 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getMetafieldDefinitions**](MetafieldDefinitionsApi.md#getMetafieldDefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get paginated groups by app name id filtered by types
+[**createMetafieldDefinition**](MetafieldDefinitionsApi.md#createMetafieldDefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Create a Metafield Definition
+[**getMetafieldDefinitions**](MetafieldDefinitionsApi.md#getMetafieldDefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
+[**getOwnerEntityConfigurations**](MetafieldDefinitionsApi.md#getOwnerEntityConfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+[**updateMetafieldDefinition**](MetafieldDefinitionsApi.md#updateMetafieldDefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Create a Metafield Definition
 
+
+# **createMetafieldDefinition**
+> \Flipdish\\Client\Models\RestApiResultMetafieldDefinition createMetafieldDefinition($app_id, $owner_entity, $create_metafield_definition)
+
+Create a Metafield Definition
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MetafieldDefinitionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$owner_entity = "owner_entity_example"; // string | 
+$create_metafield_definition = new \Flipdish\\Client\Models\CreateMetafieldDefinition(); // \Flipdish\\Client\Models\CreateMetafieldDefinition | 
+
+try {
+    $result = $apiInstance->createMetafieldDefinition($app_id, $owner_entity, $create_metafield_definition);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MetafieldDefinitionsApi->createMetafieldDefinition: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **owner_entity** | **string**|  |
+ **create_metafield_definition** | [**\Flipdish\\Client\Models\CreateMetafieldDefinition**](../Model/CreateMetafieldDefinition.md)|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultMetafieldDefinition**](../Model/RestApiResultMetafieldDefinition.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMetafieldDefinitions**
 > \Flipdish\\Client\Models\RestApiPaginationResultMetafieldDefinition getMetafieldDefinitions($app_id, $owner_entity, $search_term, $page, $limit)
 
-Get paginated groups by app name id filtered by types
+Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -64,6 +124,118 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getOwnerEntityConfigurations**
+> \Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations getOwnerEntityConfigurations($app_id)
+
+Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MetafieldDefinitionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+
+try {
+    $result = $apiInstance->getOwnerEntityConfigurations($app_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MetafieldDefinitionsApi->getOwnerEntityConfigurations: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations**](../Model/RestApiPaginationResultOwnerEntityConfigurations.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateMetafieldDefinition**
+> \Flipdish\\Client\Models\RestApiResultMetafieldDefinition updateMetafieldDefinition($app_id, $owner_entity, $key, $update_metafield_definition)
+
+Create a Metafield Definition
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MetafieldDefinitionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$owner_entity = "owner_entity_example"; // string | 
+$key = "key_example"; // string | 
+$update_metafield_definition = new \Flipdish\\Client\Models\UpdateMetafieldDefinition(); // \Flipdish\\Client\Models\UpdateMetafieldDefinition | 
+
+try {
+    $result = $apiInstance->updateMetafieldDefinition($app_id, $owner_entity, $key, $update_metafield_definition);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MetafieldDefinitionsApi->updateMetafieldDefinition: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **owner_entity** | **string**|  |
+ **key** | **string**|  |
+ **update_metafield_definition** | [**\Flipdish\\Client\Models\UpdateMetafieldDefinition**](../Model/UpdateMetafieldDefinition.md)|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultMetafieldDefinition**](../Model/RestApiResultMetafieldDefinition.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

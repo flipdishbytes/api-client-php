@@ -343,6 +343,11 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_UPDATE_CATALOG_ELEMENTS = 'UpdateCatalogElements';
     const APP_RESOURCE_SET_VIEW_CATALOG_ELEMENTS = 'ViewCatalogElements';
     const APP_RESOURCE_SET_DELETE_CATALOG_ELEMENTS = 'DeleteCatalogElements';
+    const APP_RESOURCE_SET_VIEW_METAFIELD_DEFINITIONS = 'ViewMetafieldDefinitions';
+    const APP_RESOURCE_SET_CREATE_METAFIELD_DEFINITIONS = 'CreateMetafieldDefinitions';
+    const APP_RESOURCE_SET_UPDATE_METAFIELD_DEFINITIONS = 'UpdateMetafieldDefinitions';
+    const APP_RESOURCE_SET_DELETE_METAFIELD_DEFINITIONS = 'DeleteMetafieldDefinitions';
+    const APP_RESOURCE_SET_UPDATE_METAFIELDS = 'UpdateMetafields';
     const APP_RESOURCE_SET_VIEW_APP_STATISTICS = 'ViewAppStatistics';
     const APP_RESOURCE_SET_VIEW_APM_STATISTICS = 'ViewApmStatistics';
     const APP_RESOURCE_SET_VIEW_CAMPAIGNS_STATISTICS = 'ViewCampaignsStatistics';
@@ -509,6 +514,11 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_UPDATE_CATALOG_ELEMENTS,
             self::APP_RESOURCE_SET_VIEW_CATALOG_ELEMENTS,
             self::APP_RESOURCE_SET_DELETE_CATALOG_ELEMENTS,
+            self::APP_RESOURCE_SET_VIEW_METAFIELD_DEFINITIONS,
+            self::APP_RESOURCE_SET_CREATE_METAFIELD_DEFINITIONS,
+            self::APP_RESOURCE_SET_UPDATE_METAFIELD_DEFINITIONS,
+            self::APP_RESOURCE_SET_DELETE_METAFIELD_DEFINITIONS,
+            self::APP_RESOURCE_SET_UPDATE_METAFIELDS,
             self::APP_RESOURCE_SET_VIEW_APP_STATISTICS,
             self::APP_RESOURCE_SET_VIEW_APM_STATISTICS,
             self::APP_RESOURCE_SET_VIEW_CAMPAIGNS_STATISTICS,

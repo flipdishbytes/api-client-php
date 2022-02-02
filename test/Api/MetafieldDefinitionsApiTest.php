@@ -72,12 +72,42 @@ class MetafieldDefinitionsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createMetafieldDefinition
+     *
+     * Create a Metafield Definition.
+     *
+     */
+    public function testCreateMetafieldDefinition()
+    {
+    }
+
+    /**
      * Test case for getMetafieldDefinitions
      *
-     * Get paginated groups by app name id filtered by types.
+     * Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}.
      *
      */
     public function testGetMetafieldDefinitions()
+    {
+    }
+
+    /**
+     * Test case for getOwnerEntityConfigurations
+     *
+     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions.
+     *
+     */
+    public function testGetOwnerEntityConfigurations()
+    {
+    }
+
+    /**
+     * Test case for updateMetafieldDefinition
+     *
+     * Create a Metafield Definition.
+     *
+     */
+    public function testUpdateMetafieldDefinition()
     {
     }
 }

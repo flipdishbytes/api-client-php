@@ -88,9 +88,339 @@ class MetafieldDefinitionsApi
     }
 
     /**
+     * Operation createMetafieldDefinition
+     *
+     * Create a Metafield Definition
+     *
+     * @param  string $app_id  (required)
+     * @param  string $owner_entity owner_entity (required)
+     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition  (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiResultMetafieldDefinition
+     */
+    public function createMetafieldDefinition($app_id, $owner_entity, $create_metafield_definition)
+    {
+        list($response) = $this->createMetafieldDefinitionWithHttpInfo($app_id, $owner_entity, $create_metafield_definition);
+        return $response;
+    }
+
+    /**
+     * Operation createMetafieldDefinitionWithHttpInfo
+     *
+     * Create a Metafield Definition
+     *
+     * @param  string $app_id  (required)
+     * @param  string $owner_entity (required)
+     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition  (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiResultMetafieldDefinition, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createMetafieldDefinitionWithHttpInfo($app_id, $owner_entity, $create_metafield_definition)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultMetafieldDefinition';
+        $request = $this->createMetafieldDefinitionRequest($app_id, $owner_entity, $create_metafield_definition);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiResultMetafieldDefinition',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createMetafieldDefinitionAsync
+     *
+     * Create a Metafield Definition
+     *
+     * @param  string $app_id  (required)
+     * @param  string $owner_entity (required)
+     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createMetafieldDefinitionAsync($app_id, $owner_entity, $create_metafield_definition)
+    {
+        return $this->createMetafieldDefinitionAsyncWithHttpInfo($app_id, $owner_entity, $create_metafield_definition)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation createMetafieldDefinitionAsyncWithHttpInfo
+     *
+     * Create a Metafield Definition
+     *
+     * @param  string $app_id  (required)
+     * @param  string $owner_entity (required)
+     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createMetafieldDefinitionAsyncWithHttpInfo($app_id, $owner_entity, $create_metafield_definition)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultMetafieldDefinition';
+        $request = $this->createMetafieldDefinitionRequest($app_id, $owner_entity, $create_metafield_definition);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'createMetafieldDefinition'
+     *
+     * @param  string $app_id  (required)
+     * @param  string $owner_entity (required)
+     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function createMetafieldDefinitionRequest($app_id, $owner_entity, $create_metafield_definition)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling createMetafieldDefinition'
+            );
+        }
+        // verify the required parameter 'owner_entity' is set
+        if ($owner_entity === null || (is_array($owner_entity) && count($owner_entity) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $owner_entity when calling createMetafieldDefinition'
+            );
+        }
+        // verify the required parameter 'create_metafield_definition' is set
+        if ($create_metafield_definition === null || (is_array($create_metafield_definition) && count($create_metafield_definition) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $create_metafield_definition when calling createMetafieldDefinition'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/{appId}/metafields/definitions/{ownerEntity}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($owner_entity !== null) {
+            $resourcePath = str_replace(
+                '{' . 'ownerEntity' . '}',
+                ObjectSerializer::toPathValue($owner_entity),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($create_metafield_definition)) {
+            $_tempBody = $create_metafield_definition;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation getMetafieldDefinitions
      *
-     * Get paginated groups by app name id filtered by types
+     * Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
      *
      * @param  string $app_id  (required)
      * @param  string $owner_entity  (required)
@@ -111,7 +441,7 @@ class MetafieldDefinitionsApi
     /**
      * Operation getMetafieldDefinitionsWithHttpInfo
      *
-     * Get paginated groups by app name id filtered by types
+     * Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
      *
      * @param  string $app_id  (required)
      * @param  string $owner_entity  (required)
@@ -214,7 +544,7 @@ class MetafieldDefinitionsApi
     /**
      * Operation getMetafieldDefinitionsAsync
      *
-     * Get paginated groups by app name id filtered by types
+     * Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
      *
      * @param  string $app_id  (required)
      * @param  string $owner_entity  (required)
@@ -238,7 +568,7 @@ class MetafieldDefinitionsApi
     /**
      * Operation getMetafieldDefinitionsAsyncWithHttpInfo
      *
-     * Get paginated groups by app name id filtered by types
+     * Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
      *
      * @param  string $app_id  (required)
      * @param  string $owner_entity  (required)
@@ -424,6 +754,652 @@ class MetafieldDefinitionsApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getOwnerEntityConfigurations
+     *
+     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+     *
+     * @param  string $app_id  (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations
+     */
+    public function getOwnerEntityConfigurations($app_id)
+    {
+        list($response) = $this->getOwnerEntityConfigurationsWithHttpInfo($app_id);
+        return $response;
+    }
+
+    /**
+     * Operation getOwnerEntityConfigurationsWithHttpInfo
+     *
+     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+     *
+     * @param  string $app_id  (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getOwnerEntityConfigurationsWithHttpInfo($app_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations';
+        $request = $this->getOwnerEntityConfigurationsRequest($app_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getOwnerEntityConfigurationsAsync
+     *
+     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+     *
+     * @param  string $app_id  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getOwnerEntityConfigurationsAsync($app_id)
+    {
+        return $this->getOwnerEntityConfigurationsAsyncWithHttpInfo($app_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getOwnerEntityConfigurationsAsyncWithHttpInfo
+     *
+     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+     *
+     * @param  string $app_id  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getOwnerEntityConfigurationsAsyncWithHttpInfo($app_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations';
+        $request = $this->getOwnerEntityConfigurationsRequest($app_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getOwnerEntityConfigurations'
+     *
+     * @param  string $app_id  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getOwnerEntityConfigurationsRequest($app_id)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling getOwnerEntityConfigurations'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/{appId}/metafields/definitions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation updateMetafieldDefinition
+     *
+     * Create a Metafield Definition
+     *
+     * @param  string $app_id  (required)
+     * @param  string $owner_entity owner_entity (required)
+     * @param  string $key  (required)
+     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition  (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiResultMetafieldDefinition
+     */
+    public function updateMetafieldDefinition($app_id, $owner_entity, $key, $update_metafield_definition)
+    {
+        list($response) = $this->updateMetafieldDefinitionWithHttpInfo($app_id, $owner_entity, $key, $update_metafield_definition);
+        return $response;
+    }
+
+    /**
+     * Operation updateMetafieldDefinitionWithHttpInfo
+     *
+     * Create a Metafield Definition
+     *
+     * @param  string $app_id  (required)
+     * @param  string $owner_entity (required)
+     * @param  string $key  (required)
+     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition  (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiResultMetafieldDefinition, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateMetafieldDefinitionWithHttpInfo($app_id, $owner_entity, $key, $update_metafield_definition)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultMetafieldDefinition';
+        $request = $this->updateMetafieldDefinitionRequest($app_id, $owner_entity, $key, $update_metafield_definition);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiResultMetafieldDefinition',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateMetafieldDefinitionAsync
+     *
+     * Create a Metafield Definition
+     *
+     * @param  string $app_id  (required)
+     * @param  string $owner_entity (required)
+     * @param  string $key  (required)
+     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateMetafieldDefinitionAsync($app_id, $owner_entity, $key, $update_metafield_definition)
+    {
+        return $this->updateMetafieldDefinitionAsyncWithHttpInfo($app_id, $owner_entity, $key, $update_metafield_definition)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation updateMetafieldDefinitionAsyncWithHttpInfo
+     *
+     * Create a Metafield Definition
+     *
+     * @param  string $app_id  (required)
+     * @param  string $owner_entity (required)
+     * @param  string $key  (required)
+     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateMetafieldDefinitionAsyncWithHttpInfo($app_id, $owner_entity, $key, $update_metafield_definition)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultMetafieldDefinition';
+        $request = $this->updateMetafieldDefinitionRequest($app_id, $owner_entity, $key, $update_metafield_definition);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'updateMetafieldDefinition'
+     *
+     * @param  string $app_id  (required)
+     * @param  string $owner_entity (required)
+     * @param  string $key  (required)
+     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function updateMetafieldDefinitionRequest($app_id, $owner_entity, $key, $update_metafield_definition)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling updateMetafieldDefinition'
+            );
+        }
+        // verify the required parameter 'owner_entity' is set
+        if ($owner_entity === null || (is_array($owner_entity) && count($owner_entity) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $owner_entity when calling updateMetafieldDefinition'
+            );
+        }
+        // verify the required parameter 'key' is set
+        if ($key === null || (is_array($key) && count($key) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $key when calling updateMetafieldDefinition'
+            );
+        }
+        // verify the required parameter 'update_metafield_definition' is set
+        if ($update_metafield_definition === null || (is_array($update_metafield_definition) && count($update_metafield_definition) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $update_metafield_definition when calling updateMetafieldDefinition'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($owner_entity !== null) {
+            $resourcePath = str_replace(
+                '{' . 'ownerEntity' . '}',
+                ObjectSerializer::toPathValue($owner_entity),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($key !== null) {
+            $resourcePath = str_replace(
+                '{' . 'key' . '}',
+                ObjectSerializer::toPathValue($key),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($update_metafield_definition)) {
+            $_tempBody = $update_metafield_definition;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
