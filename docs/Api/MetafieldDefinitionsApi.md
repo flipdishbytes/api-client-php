@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOwnerEntityConfigurations**
-> \Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations getOwnerEntityConfigurations($app_id)
+> \Flipdish\\Client\Models\OwnerEntityConfigurations getOwnerEntityConfigurations($app_id)
 
 Get OwnerEntity Configurations which contain information to manage Metafield Definitions
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations**](../Model/RestApiPaginationResultOwnerEntityConfigurations.md)
+[**\Flipdish\\Client\Models\OwnerEntityConfigurations**](../Model/OwnerEntityConfigurations.md)
 
 ### Authorization
 

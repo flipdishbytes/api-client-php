@@ -798,7 +798,6 @@ Class | Method | HTTP request | Description
  - [RestApiPaginationResultOAuthTokenModel](docs/Model/RestApiPaginationResultOAuthTokenModel.md)
  - [RestApiPaginationResultOrder](docs/Model/RestApiPaginationResultOrder.md)
  - [RestApiPaginationResultOrderSummary](docs/Model/RestApiPaginationResultOrderSummary.md)
- - [RestApiPaginationResultOwnerEntityConfigurations](docs/Model/RestApiPaginationResultOwnerEntityConfigurations.md)
  - [RestApiPaginationResultPayout](docs/Model/RestApiPaginationResultPayout.md)
  - [RestApiPaginationResultPayoutChargeback](docs/Model/RestApiPaginationResultPayoutChargeback.md)
  - [RestApiPaginationResultPayoutOrder](docs/Model/RestApiPaginationResultPayoutOrder.md)

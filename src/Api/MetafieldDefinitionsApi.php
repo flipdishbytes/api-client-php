@@ -769,7 +769,7 @@ class MetafieldDefinitionsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations
+     * @return \Flipdish\\Client\Models\OwnerEntityConfigurations
      */
     public function getOwnerEntityConfigurations($app_id)
     {
@@ -786,11 +786,11 @@ class MetafieldDefinitionsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\OwnerEntityConfigurations, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOwnerEntityConfigurationsWithHttpInfo($app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations';
+        $returnType = '\Flipdish\\Client\Models\OwnerEntityConfigurations';
         $request = $this->getOwnerEntityConfigurationsRequest($app_id);
 
         try {
@@ -842,7 +842,7 @@ class MetafieldDefinitionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations',
+                        '\Flipdish\\Client\Models\OwnerEntityConfigurations',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -908,7 +908,7 @@ class MetafieldDefinitionsApi
      */
     public function getOwnerEntityConfigurationsAsyncWithHttpInfo($app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultOwnerEntityConfigurations';
+        $returnType = '\Flipdish\\Client\Models\OwnerEntityConfigurations';
         $request = $this->getOwnerEntityConfigurationsRequest($app_id);
 
         return $this->client
