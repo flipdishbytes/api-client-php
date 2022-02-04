@@ -82,9 +82,19 @@ class MetafieldDefinitionsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getMetafieldDefinitionByKey
+     *
+     * Get a Metafield Definition for the specified owner entity and key..
+     *
+     */
+    public function testGetMetafieldDefinitionByKey()
+    {
+    }
+
+    /**
      * Test case for getMetafieldDefinitions
      *
-     * Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}.
+     * Get Metafield Definitions for the specified owner entity..
      *
      */
     public function testGetMetafieldDefinitions()
@@ -102,9 +112,19 @@ class MetafieldDefinitionsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getOwnerEntityRecommendations
+     *
+     * Get OwnerEntity Definition Recommendations.
+     *
+     */
+    public function testGetOwnerEntityRecommendations()
+    {
+    }
+
+    /**
      * Test case for updateMetafieldDefinition
      *
-     * Create a Metafield Definition.
+     * Update a Metafield Definition.
      *
      */
     public function testUpdateMetafieldDefinition()

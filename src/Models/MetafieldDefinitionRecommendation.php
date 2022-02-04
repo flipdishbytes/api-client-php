@@ -1,6 +1,6 @@
 <?php
 /**
- * CreateMetafieldDefinition
+ * MetafieldDefinitionRecommendation
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * CreateMetafieldDefinition Class Doc Comment
+ * MetafieldDefinitionRecommendation Class Doc Comment
  *
  * @category Class
- * @description Information to create a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}
+ * @description OwnerEntity Metafield Definition Recommendation
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CreateMetafieldDefinition implements ModelInterface, ArrayAccess
+class MetafieldDefinitionRecommendation implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class CreateMetafieldDefinition implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'CreateMetafieldDefinition';
+    protected static $swaggerModelName = 'MetafieldDefinitionRecommendation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,6 @@ class CreateMetafieldDefinition implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'is_read_only' => 'bool',
         'owner_entity' => 'string',
         'key' => 'string',
         'value_type' => 'string',
@@ -73,7 +72,6 @@ class CreateMetafieldDefinition implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'is_read_only' => null,
         'owner_entity' => null,
         'key' => null,
         'value_type' => null,
@@ -109,7 +107,6 @@ class CreateMetafieldDefinition implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_read_only' => 'IsReadOnly',
         'owner_entity' => 'OwnerEntity',
         'key' => 'Key',
         'value_type' => 'ValueType',
@@ -124,7 +121,6 @@ class CreateMetafieldDefinition implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'is_read_only' => 'setIsReadOnly',
         'owner_entity' => 'setOwnerEntity',
         'key' => 'setKey',
         'value_type' => 'setValueType',
@@ -139,7 +135,6 @@ class CreateMetafieldDefinition implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'is_read_only' => 'getIsReadOnly',
         'owner_entity' => 'getOwnerEntity',
         'key' => 'getKey',
         'value_type' => 'getValueType',
@@ -257,7 +252,6 @@ class CreateMetafieldDefinition implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['is_read_only'] = isset($data['is_read_only']) ? $data['is_read_only'] : null;
         $this->container['owner_entity'] = isset($data['owner_entity']) ? $data['owner_entity'] : null;
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['value_type'] = isset($data['value_type']) ? $data['value_type'] : null;
@@ -311,30 +305,6 @@ class CreateMetafieldDefinition implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets is_read_only
-     *
-     * @return bool
-     */
-    public function getIsReadOnly()
-    {
-        return $this->container['is_read_only'];
-    }
-
-    /**
-     * Sets is_read_only
-     *
-     * @param bool $is_read_only Indicates if a definition can be edited or not
-     *
-     * @return $this
-     */
-    public function setIsReadOnly($is_read_only)
-    {
-        $this->container['is_read_only'] = $is_read_only;
-
-        return $this;
-    }
 
     /**
      * Gets owner_entity

@@ -1,6 +1,6 @@
 <?php
 /**
- * CreateMetafieldDefinitionTest
+ * MetafieldDefinitionRecommendationTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * CreateMetafieldDefinitionTest Class Doc Comment
+ * MetafieldDefinitionRecommendationTest Class Doc Comment
  *
  * @category    Class
- * @description Information to create a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}
+ * @description OwnerEntity Metafield Definition Recommendation
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CreateMetafieldDefinitionTest extends \PHPUnit_Framework_TestCase
+class MetafieldDefinitionRecommendationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,9 @@ class CreateMetafieldDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CreateMetafieldDefinition"
+     * Test "MetafieldDefinitionRecommendation"
      */
-    public function testCreateMetafieldDefinition()
-    {
-    }
-
-    /**
-     * Test attribute "is_read_only"
-     */
-    public function testPropertyIsReadOnly()
+    public function testMetafieldDefinitionRecommendation()
     {
     }
 

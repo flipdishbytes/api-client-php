@@ -319,9 +319,11 @@ Class | Method | HTTP request | Description
 *MenusApi* | [**uploadMenuImage**](docs/Api/MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 *MenusApi* | [**uploadNewMenuForApp**](docs/Api/MenusApi.md#uploadnewmenuforapp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.
 *MetafieldDefinitionsApi* | [**createMetafieldDefinition**](docs/Api/MetafieldDefinitionsApi.md#createmetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Create a Metafield Definition
-*MetafieldDefinitionsApi* | [**getMetafieldDefinitions**](docs/Api/MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
+*MetafieldDefinitionsApi* | [**getMetafieldDefinitionByKey**](docs/Api/MetafieldDefinitionsApi.md#getmetafielddefinitionbykey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Get a Metafield Definition for the specified owner entity and key.
+*MetafieldDefinitionsApi* | [**getMetafieldDefinitions**](docs/Api/MetafieldDefinitionsApi.md#getmetafielddefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get Metafield Definitions for the specified owner entity.
 *MetafieldDefinitionsApi* | [**getOwnerEntityConfigurations**](docs/Api/MetafieldDefinitionsApi.md#getownerentityconfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
-*MetafieldDefinitionsApi* | [**updateMetafieldDefinition**](docs/Api/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Create a Metafield Definition
+*MetafieldDefinitionsApi* | [**getOwnerEntityRecommendations**](docs/Api/MetafieldDefinitionsApi.md#getownerentityrecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | Get OwnerEntity Definition Recommendations
+*MetafieldDefinitionsApi* | [**updateMetafieldDefinition**](docs/Api/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
 *OAuthClientsApi* | [**addRedirectUri**](docs/Api/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**createOAuthApp**](docs/Api/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
 *OAuthClientsApi* | [**deleteOAuthApp**](docs/Api/OAuthClientsApi.md#deleteoauthapp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Delete OAuth App
@@ -671,6 +673,7 @@ Class | Method | HTTP request | Description
  - [Metadata](docs/Model/Metadata.md)
  - [Metafield](docs/Model/Metafield.md)
  - [MetafieldDefinition](docs/Model/MetafieldDefinition.md)
+ - [MetafieldDefinitionRecommendation](docs/Model/MetafieldDefinitionRecommendation.md)
  - [OAuthApp](docs/Model/OAuthApp.md)
  - [OAuthTokenModel](docs/Model/OAuthTokenModel.md)
  - [OauthClientRedirectUri](docs/Model/OauthClientRedirectUri.md)
@@ -795,6 +798,7 @@ Class | Method | HTTP request | Description
  - [RestApiPaginationResultHttpRequestAndResponseLog](docs/Model/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [RestApiPaginationResultHydraDeviceDetails](docs/Model/RestApiPaginationResultHydraDeviceDetails.md)
  - [RestApiPaginationResultMetafieldDefinition](docs/Model/RestApiPaginationResultMetafieldDefinition.md)
+ - [RestApiPaginationResultMetafieldDefinitionRecommendation](docs/Model/RestApiPaginationResultMetafieldDefinitionRecommendation.md)
  - [RestApiPaginationResultOAuthTokenModel](docs/Model/RestApiPaginationResultOAuthTokenModel.md)
  - [RestApiPaginationResultOrder](docs/Model/RestApiPaginationResultOrder.md)
  - [RestApiPaginationResultOrderSummary](docs/Model/RestApiPaginationResultOrderSummary.md)

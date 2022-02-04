@@ -58,9 +58,9 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'is_read_only' => 'bool',
         'owner_entity' => 'string',
         'key' => 'string',
-        'is_read_only' => 'bool',
         'value_type' => 'string',
         'name' => 'string',
         'description' => 'string',
@@ -73,9 +73,9 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'is_read_only' => null,
         'owner_entity' => null,
         'key' => null,
-        'is_read_only' => null,
         'value_type' => null,
         'name' => null,
         'description' => null,
@@ -109,9 +109,9 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'is_read_only' => 'IsReadOnly',
         'owner_entity' => 'OwnerEntity',
         'key' => 'Key',
-        'is_read_only' => 'IsReadOnly',
         'value_type' => 'ValueType',
         'name' => 'Name',
         'description' => 'Description',
@@ -124,9 +124,9 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'is_read_only' => 'setIsReadOnly',
         'owner_entity' => 'setOwnerEntity',
         'key' => 'setKey',
-        'is_read_only' => 'setIsReadOnly',
         'value_type' => 'setValueType',
         'name' => 'setName',
         'description' => 'setDescription',
@@ -139,9 +139,9 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'is_read_only' => 'getIsReadOnly',
         'owner_entity' => 'getOwnerEntity',
         'key' => 'getKey',
-        'is_read_only' => 'getIsReadOnly',
         'value_type' => 'getValueType',
         'name' => 'getName',
         'description' => 'getDescription',
@@ -257,9 +257,9 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['is_read_only'] = isset($data['is_read_only']) ? $data['is_read_only'] : null;
         $this->container['owner_entity'] = isset($data['owner_entity']) ? $data['owner_entity'] : null;
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['is_read_only'] = isset($data['is_read_only']) ? $data['is_read_only'] : null;
         $this->container['value_type'] = isset($data['value_type']) ? $data['value_type'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -313,6 +313,30 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
 
 
     /**
+     * Gets is_read_only
+     *
+     * @return bool
+     */
+    public function getIsReadOnly()
+    {
+        return $this->container['is_read_only'];
+    }
+
+    /**
+     * Sets is_read_only
+     *
+     * @param bool $is_read_only Indicates if a definition can be edited or not
+     *
+     * @return $this
+     */
+    public function setIsReadOnly($is_read_only)
+    {
+        $this->container['is_read_only'] = $is_read_only;
+
+        return $this;
+    }
+
+    /**
      * Gets owner_entity
      *
      * @return string
@@ -325,7 +349,7 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets owner_entity
      *
-     * @param string $owner_entity The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition.OwnerEntity}
+     * @param string $owner_entity The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}
      *
      * @return $this
      */
@@ -365,30 +389,6 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
     public function setKey($key)
     {
         $this->container['key'] = $key;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_read_only
-     *
-     * @return bool
-     */
-    public function getIsReadOnly()
-    {
-        return $this->container['is_read_only'];
-    }
-
-    /**
-     * Sets is_read_only
-     *
-     * @param bool $is_read_only Indicates if a definition can be edited or not
-     *
-     * @return $this
-     */
-    public function setIsReadOnly($is_read_only)
-    {
-        $this->container['is_read_only'] = $is_read_only;
 
         return $this;
     }

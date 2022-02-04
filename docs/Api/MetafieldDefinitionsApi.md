@@ -5,9 +5,11 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createMetafieldDefinition**](MetafieldDefinitionsApi.md#createMetafieldDefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Create a Metafield Definition
-[**getMetafieldDefinitions**](MetafieldDefinitionsApi.md#getMetafieldDefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
+[**getMetafieldDefinitionByKey**](MetafieldDefinitionsApi.md#getMetafieldDefinitionByKey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Get a Metafield Definition for the specified owner entity and key.
+[**getMetafieldDefinitions**](MetafieldDefinitionsApi.md#getMetafieldDefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get Metafield Definitions for the specified owner entity.
 [**getOwnerEntityConfigurations**](MetafieldDefinitionsApi.md#getOwnerEntityConfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
-[**updateMetafieldDefinition**](MetafieldDefinitionsApi.md#updateMetafieldDefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Create a Metafield Definition
+[**getOwnerEntityRecommendations**](MetafieldDefinitionsApi.md#getOwnerEntityRecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | Get OwnerEntity Definition Recommendations
+[**updateMetafieldDefinition**](MetafieldDefinitionsApi.md#updateMetafieldDefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
 
 
 # **createMetafieldDefinition**
@@ -67,10 +69,67 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getMetafieldDefinitionByKey**
+> \Flipdish\\Client\Models\RestApiResultMetafieldDefinition getMetafieldDefinitionByKey($app_id, $owner_entity, $key)
+
+Get a Metafield Definition for the specified owner entity and key.
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MetafieldDefinitionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$owner_entity = "owner_entity_example"; // string | 
+$key = "key_example"; // string | 
+
+try {
+    $result = $apiInstance->getMetafieldDefinitionByKey($app_id, $owner_entity, $key);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MetafieldDefinitionsApi->getMetafieldDefinitionByKey: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **owner_entity** | **string**|  |
+ **key** | **string**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultMetafieldDefinition**](../Model/RestApiResultMetafieldDefinition.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getMetafieldDefinitions**
 > \Flipdish\\Client\Models\RestApiPaginationResultMetafieldDefinition getMetafieldDefinitions($app_id, $owner_entity, $search_term, $page, $limit)
 
-Get {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s for the specified {Flipdish.PublicModels.V1.Metafields.OwnerEntity}
+Get Metafield Definitions for the specified owner entity.
 
 [BETA - this endpoint is under development, do not use it in your production system]
 
@@ -181,10 +240,71 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getOwnerEntityRecommendations**
+> \Flipdish\\Client\Models\RestApiPaginationResultMetafieldDefinitionRecommendation getOwnerEntityRecommendations($app_id, $owner_entity, $search_term, $page, $limit)
+
+Get OwnerEntity Definition Recommendations
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MetafieldDefinitionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$owner_entity = "owner_entity_example"; // string | 
+$search_term = "search_term_example"; // string | 
+$page = 56; // int | 
+$limit = 56; // int | 
+
+try {
+    $result = $apiInstance->getOwnerEntityRecommendations($app_id, $owner_entity, $search_term, $page, $limit);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MetafieldDefinitionsApi->getOwnerEntityRecommendations: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **owner_entity** | **string**|  |
+ **search_term** | **string**|  | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiPaginationResultMetafieldDefinitionRecommendation**](../Model/RestApiPaginationResultMetafieldDefinitionRecommendation.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **updateMetafieldDefinition**
 > \Flipdish\\Client\Models\RestApiResultMetafieldDefinition updateMetafieldDefinition($app_id, $owner_entity, $key, $update_metafield_definition)
 
-Create a Metafield Definition
+Update a Metafield Definition
 
 [BETA - this endpoint is under development, do not use it in your production system]
 

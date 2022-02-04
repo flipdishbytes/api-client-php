@@ -1,6 +1,6 @@
 <?php
 /**
- * CreateMetafieldDefinitionTest
+ * RestApiPaginationResultMetafieldDefinitionRecommendationTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * CreateMetafieldDefinitionTest Class Doc Comment
+ * RestApiPaginationResultMetafieldDefinitionRecommendationTest Class Doc Comment
  *
  * @category    Class
- * @description Information to create a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}
+ * @description Rest api pagination result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CreateMetafieldDefinitionTest extends \PHPUnit_Framework_TestCase
+class RestApiPaginationResultMetafieldDefinitionRecommendationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,58 +70,37 @@ class CreateMetafieldDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CreateMetafieldDefinition"
+     * Test "RestApiPaginationResultMetafieldDefinitionRecommendation"
      */
-    public function testCreateMetafieldDefinition()
+    public function testRestApiPaginationResultMetafieldDefinitionRecommendation()
     {
     }
 
     /**
-     * Test attribute "is_read_only"
+     * Test attribute "page"
      */
-    public function testPropertyIsReadOnly()
+    public function testPropertyPage()
     {
     }
 
     /**
-     * Test attribute "owner_entity"
+     * Test attribute "limit"
      */
-    public function testPropertyOwnerEntity()
+    public function testPropertyLimit()
     {
     }
 
     /**
-     * Test attribute "key"
+     * Test attribute "total_record_count"
      */
-    public function testPropertyKey()
+    public function testPropertyTotalRecordCount()
     {
     }
 
     /**
-     * Test attribute "value_type"
+     * Test attribute "data"
      */
-    public function testPropertyValueType()
-    {
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-    }
-
-    /**
-     * Test attribute "behaviors"
-     */
-    public function testPropertyBehaviors()
+    public function testPropertyData()
     {
     }
 }

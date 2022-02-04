@@ -77,6 +77,13 @@ class MetafieldDefinitionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_read_only"
+     */
+    public function testPropertyIsReadOnly()
+    {
+    }
+
+    /**
      * Test attribute "owner_entity"
      */
     public function testPropertyOwnerEntity()
@@ -87,13 +94,6 @@ class MetafieldDefinitionTest extends \PHPUnit_Framework_TestCase
      * Test attribute "key"
      */
     public function testPropertyKey()
-    {
-    }
-
-    /**
-     * Test attribute "is_read_only"
-     */
-    public function testPropertyIsReadOnly()
     {
     }
 

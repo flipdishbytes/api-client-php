@@ -1,9 +1,8 @@
-# CreateMetafieldDefinition
+# MetafieldDefinitionRecommendation
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_read_only** | **bool** | Indicates if a definition can be edited or not | [optional] 
 **owner_entity** | **string** | The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity} | [optional] 
 **key** | **string** | Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot | 
 **value_type** | **string** | The excepted type for the Value field | [optional] 
