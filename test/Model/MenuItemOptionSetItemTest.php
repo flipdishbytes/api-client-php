@@ -112,6 +112,27 @@ class MenuItemOptionSetItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "tax_rate_name"
+     */
+    public function testPropertyTaxRateName()
+    {
+    }
+
+    /**
+     * Test attribute "tax_rate_id"
+     */
+    public function testPropertyTaxRateId()
+    {
+    }
+
+    /**
+     * Test attribute "tax_value"
+     */
+    public function testPropertyTaxValue()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
