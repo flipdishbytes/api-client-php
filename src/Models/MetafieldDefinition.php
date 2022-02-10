@@ -64,7 +64,8 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
         'value_type' => 'string',
         'name' => 'string',
         'description' => 'string',
-        'behaviors' => 'string[]'
+        'behaviors' => 'string[]',
+        'metafield_definition_recommendation_id' => 'int'
     ];
 
     /**
@@ -79,7 +80,8 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
         'value_type' => null,
         'name' => null,
         'description' => null,
-        'behaviors' => null
+        'behaviors' => null,
+        'metafield_definition_recommendation_id' => 'int32'
     ];
 
     /**
@@ -115,7 +117,8 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
         'value_type' => 'ValueType',
         'name' => 'Name',
         'description' => 'Description',
-        'behaviors' => 'Behaviors'
+        'behaviors' => 'Behaviors',
+        'metafield_definition_recommendation_id' => 'MetafieldDefinitionRecommendationId'
     ];
 
     /**
@@ -130,7 +133,8 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
         'value_type' => 'setValueType',
         'name' => 'setName',
         'description' => 'setDescription',
-        'behaviors' => 'setBehaviors'
+        'behaviors' => 'setBehaviors',
+        'metafield_definition_recommendation_id' => 'setMetafieldDefinitionRecommendationId'
     ];
 
     /**
@@ -145,7 +149,8 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
         'value_type' => 'getValueType',
         'name' => 'getName',
         'description' => 'getDescription',
-        'behaviors' => 'getBehaviors'
+        'behaviors' => 'getBehaviors',
+        'metafield_definition_recommendation_id' => 'getMetafieldDefinitionRecommendationId'
     ];
 
     /**
@@ -264,6 +269,7 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['behaviors'] = isset($data['behaviors']) ? $data['behaviors'] : null;
+        $this->container['metafield_definition_recommendation_id'] = isset($data['metafield_definition_recommendation_id']) ? $data['metafield_definition_recommendation_id'] : null;
     }
 
     /**
@@ -382,7 +388,7 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets key
      *
-     * @param string $key Key of the metafield.  Allowed characters: lowercase letters, numbers, hyphen, underscore and dot
+     * @param string $key Key of the metafield.  The key must have two parts, separated by a dot. The first part acts as a category, for organizational purposes.  The parts can be composed of lowercase letters, numbers, hyphen and underscore
      *
      * @return $this
      */
@@ -503,6 +509,30 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
             );
         }
         $this->container['behaviors'] = $behaviors;
+
+        return $this;
+    }
+
+    /**
+     * Gets metafield_definition_recommendation_id
+     *
+     * @return int
+     */
+    public function getMetafieldDefinitionRecommendationId()
+    {
+        return $this->container['metafield_definition_recommendation_id'];
+    }
+
+    /**
+     * Sets metafield_definition_recommendation_id
+     *
+     * @param int $metafield_definition_recommendation_id Metafield Recommendation Id
+     *
+     * @return $this
+     */
+    public function setMetafieldDefinitionRecommendationId($metafield_definition_recommendation_id)
+    {
+        $this->container['metafield_definition_recommendation_id'] = $metafield_definition_recommendation_id;
 
         return $this;
     }

@@ -117,4 +117,11 @@ class MetafieldDefinitionRecommendationTest extends \PHPUnit_Framework_TestCase
     public function testPropertyBehaviors()
     {
     }
+
+    /**
+     * Test attribute "metafield_definition_recommendation_id"
+     */
+    public function testPropertyMetafieldDefinitionRecommendationId()
+    {
+    }
 }
