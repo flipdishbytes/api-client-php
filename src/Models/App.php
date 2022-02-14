@@ -258,6 +258,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_ACCESS_LEVEL_STORE_STAFF = 'StoreStaff';
     const APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS = 'StoreReadOnlyAccess';
     const APP_ACCESS_LEVEL_FINANCE_MANGER = 'FinanceManger';
+    const APP_ACCESS_LEVEL_SUPPORT = 'Support';
     const APP_RESOURCE_SET_VIEW_APP = 'ViewApp';
     const APP_RESOURCE_SET_CREATE_APP = 'CreateApp';
     const APP_RESOURCE_SET_UPDATE_APP = 'UpdateApp';
@@ -418,6 +419,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_ACCESS_LEVEL_STORE_STAFF,
             self::APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS,
             self::APP_ACCESS_LEVEL_FINANCE_MANGER,
+            self::APP_ACCESS_LEVEL_SUPPORT,
         ];
     }
     

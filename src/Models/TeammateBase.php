@@ -178,6 +178,7 @@ class TeammateBase implements ModelInterface, ArrayAccess
     const APP_ACCESS_LEVEL_STORE_STAFF = 'StoreStaff';
     const APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS = 'StoreReadOnlyAccess';
     const APP_ACCESS_LEVEL_FINANCE_MANGER = 'FinanceManger';
+    const APP_ACCESS_LEVEL_SUPPORT = 'Support';
     
 
     
@@ -198,6 +199,7 @@ class TeammateBase implements ModelInterface, ArrayAccess
             self::APP_ACCESS_LEVEL_STORE_STAFF,
             self::APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS,
             self::APP_ACCESS_LEVEL_FINANCE_MANGER,
+            self::APP_ACCESS_LEVEL_SUPPORT,
         ];
     }
     
