@@ -176,8 +176,11 @@ Class | Method | HTTP request | Description
 *ChannelsApi* | [**attachStoreToSalesChannel**](docs/Api/ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
 *ChannelsApi* | [**detachAllStoresFromSalesChannel**](docs/Api/ChannelsApi.md#detachallstoresfromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
 *ChannelsApi* | [**detachStoreFromSalesChannel**](docs/Api/ChannelsApi.md#detachstorefromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
+*ChannelsApi* | [**getAssignedChannels**](docs/Api/ChannelsApi.md#getassignedchannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given whitelabel
 *ChannelsApi* | [**getChannel**](docs/Api/ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
 *ChannelsApi* | [**getChannels**](docs/Api/ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | 
+*ChannelsApi* | [**getNotAssignedChannels**](docs/Api/ChannelsApi.md#getnotassignedchannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given whitelabel
+*ChannelsApi* | [**getStoresAssignedToChannel**](docs/Api/ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of store that are assigned to the given sales channel.
 *ChannelsApi* | [**getStoresBySalesChannel**](docs/Api/ChannelsApi.md#getstoresbysaleschannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
 *ContentSecurityPolicyApi* | [**contentSecurityPolicyReport**](docs/Api/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
 *CustomersApi* | [**getCustomerById**](docs/Api/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | Get customer of an app by Id
