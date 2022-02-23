@@ -153,7 +153,9 @@ Class | Method | HTTP request | Description
 *CampaignsApi* | [**updateRetentionCampaign**](docs/Api/CampaignsApi.md#updateretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention/{campaignId} | Updates retention campaign
 *CardReadersApi* | [**authorizeStripeTerminal**](docs/Api/CardReadersApi.md#authorizestripeterminal) | **POST** /api/v1.0/{appId}/stripeterminal/authorize | Get Authorization Key for Stripe Terminal
 *CardReadersApi* | [**cancelCurrentlyInitiatedBluetoothDeviceUpdate**](docs/Api/CardReadersApi.md#cancelcurrentlyinitiatedbluetoothdeviceupdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | Cancel currently initiated install update for bluetooth terminal
+*CardReadersApi* | [**generateStripeTerminalLocation**](docs/Api/CardReadersApi.md#generatestripeterminallocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | Get Location ID for Stripe Terminal
 *CardReadersApi* | [**getBluetoothTerminalStatus**](docs/Api/CardReadersApi.md#getbluetoothterminalstatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | Get the status of the bluetooth terminal
+*CardReadersApi* | [**getStripeConnectionToken**](docs/Api/CardReadersApi.md#getstripeconnectiontoken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | Get Connection Token For a Stripe Terminal
 *CardReadersApi* | [**initiateBluetoothTerminalDeviceUpdateCheck**](docs/Api/CardReadersApi.md#initiatebluetoothterminaldeviceupdatecheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | Trigger check for Bluetooth device update on Kiosk
 *CardReadersApi* | [**initiateKioskBluetoothPairingMode**](docs/Api/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
 *CardReadersApi* | [**initiateKioskBluetoothUpdateInstall**](docs/Api/CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
@@ -882,6 +884,8 @@ Class | Method | HTTP request | Description
  - [RestApiResultStoreKioskSettings](docs/Model/RestApiResultStoreKioskSettings.md)
  - [RestApiResultStoreOrderCapacityConfig](docs/Model/RestApiResultStoreOrderCapacityConfig.md)
  - [RestApiResultStripeConnectedAccount](docs/Model/RestApiResultStripeConnectedAccount.md)
+ - [RestApiResultStripeTerminalConnectionToken](docs/Model/RestApiResultStripeTerminalConnectionToken.md)
+ - [RestApiResultStripeTerminalLocation](docs/Model/RestApiResultStripeTerminalLocation.md)
  - [RestApiResultStripeTerminalPrivateKey](docs/Model/RestApiResultStripeTerminalPrivateKey.md)
  - [RestApiResultStuartSettings](docs/Model/RestApiResultStuartSettings.md)
  - [RestApiResultTeammate](docs/Model/RestApiResultTeammate.md)
@@ -953,6 +957,8 @@ Class | Method | HTTP request | Description
  - [StripeAccountLinkRequest](docs/Model/StripeAccountLinkRequest.md)
  - [StripeConnectedAccount](docs/Model/StripeConnectedAccount.md)
  - [StripeConnectedAccountInfo](docs/Model/StripeConnectedAccountInfo.md)
+ - [StripeTerminalConnectionToken](docs/Model/StripeTerminalConnectionToken.md)
+ - [StripeTerminalLocation](docs/Model/StripeTerminalLocation.md)
  - [StripeTerminalPrivateKey](docs/Model/StripeTerminalPrivateKey.md)
  - [StuartSettings](docs/Model/StuartSettings.md)
  - [StuartSettingsTransportPrices](docs/Model/StuartSettingsTransportPrices.md)

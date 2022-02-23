@@ -92,12 +92,32 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for generateStripeTerminalLocation
+     *
+     * Get Location ID for Stripe Terminal.
+     *
+     */
+    public function testGenerateStripeTerminalLocation()
+    {
+    }
+
+    /**
      * Test case for getBluetoothTerminalStatus
      *
      * Get the status of the bluetooth terminal.
      *
      */
     public function testGetBluetoothTerminalStatus()
+    {
+    }
+
+    /**
+     * Test case for getStripeConnectionToken
+     *
+     * Get Connection Token For a Stripe Terminal.
+     *
+     */
+    public function testGetStripeConnectionToken()
     {
     }
 
