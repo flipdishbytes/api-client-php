@@ -72,6 +72,16 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for assignAppIdToSalesChannel
+     *
+     * Assign a given AppId to a Sales Channel.
+     *
+     */
+    public function testAssignAppIdToSalesChannel()
+    {
+    }
+
+    /**
      * Test case for attachStoreToSalesChannel
      *
      * Attachs the specified store to the given sales channel..
