@@ -126,6 +126,20 @@ class AppDetailTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "teammate_app_access_level"
+     */
+    public function testPropertyTeammateAppAccessLevel()
+    {
+    }
+
+    /**
+     * Test attribute "permissions_type"
+     */
+    public function testPropertyPermissionsType()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

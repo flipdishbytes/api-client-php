@@ -70,6 +70,8 @@ class AppConfigurationDetail implements ModelInterface, ArrayAccess
         'setup_instructions' => 'string',
         'external_setup_link' => 'string',
         'o_auth_app_id' => 'string',
+        'teammate_app_access_level' => 'string',
+        'permissions_type' => 'string',
         'name' => 'string',
         'description' => 'string',
         'logo' => 'string',
@@ -97,6 +99,8 @@ class AppConfigurationDetail implements ModelInterface, ArrayAccess
         'setup_instructions' => null,
         'external_setup_link' => null,
         'o_auth_app_id' => null,
+        'teammate_app_access_level' => null,
+        'permissions_type' => null,
         'name' => null,
         'description' => null,
         'logo' => null,
@@ -145,6 +149,8 @@ class AppConfigurationDetail implements ModelInterface, ArrayAccess
         'setup_instructions' => 'SetupInstructions',
         'external_setup_link' => 'ExternalSetupLink',
         'o_auth_app_id' => 'OAuthAppId',
+        'teammate_app_access_level' => 'TeammateAppAccessLevel',
+        'permissions_type' => 'PermissionsType',
         'name' => 'Name',
         'description' => 'Description',
         'logo' => 'Logo',
@@ -172,6 +178,8 @@ class AppConfigurationDetail implements ModelInterface, ArrayAccess
         'setup_instructions' => 'setSetupInstructions',
         'external_setup_link' => 'setExternalSetupLink',
         'o_auth_app_id' => 'setOAuthAppId',
+        'teammate_app_access_level' => 'setTeammateAppAccessLevel',
+        'permissions_type' => 'setPermissionsType',
         'name' => 'setName',
         'description' => 'setDescription',
         'logo' => 'setLogo',
@@ -199,6 +207,8 @@ class AppConfigurationDetail implements ModelInterface, ArrayAccess
         'setup_instructions' => 'getSetupInstructions',
         'external_setup_link' => 'getExternalSetupLink',
         'o_auth_app_id' => 'getOAuthAppId',
+        'teammate_app_access_level' => 'getTeammateAppAccessLevel',
+        'permissions_type' => 'getPermissionsType',
         'name' => 'getName',
         'description' => 'getDescription',
         'logo' => 'getLogo',
@@ -254,6 +264,15 @@ class AppConfigurationDetail implements ModelInterface, ArrayAccess
     const STORE_SELECTOR_TYPE_NONE = 'None';
     const STORE_SELECTOR_TYPE_SINGLE = 'Single';
     const STORE_SELECTOR_TYPE_MULTIPLE = 'Multiple';
+    const TEAMMATE_APP_ACCESS_LEVEL_OWNER = 'Owner';
+    const TEAMMATE_APP_ACCESS_LEVEL_STORE_OWNER = 'StoreOwner';
+    const TEAMMATE_APP_ACCESS_LEVEL_MANAGED_OWNER = 'ManagedOwner';
+    const TEAMMATE_APP_ACCESS_LEVEL_INTEGRATOR = 'Integrator';
+    const TEAMMATE_APP_ACCESS_LEVEL_STORE_MANAGER = 'StoreManager';
+    const TEAMMATE_APP_ACCESS_LEVEL_STORE_STAFF = 'StoreStaff';
+    const TEAMMATE_APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS = 'StoreReadOnlyAccess';
+    const TEAMMATE_APP_ACCESS_LEVEL_FINANCE_MANGER = 'FinanceManger';
+    const PERMISSIONS_TYPE_TEAMMATE = 'Teammate';
     const VERIFICATION_STATUS_DRAFT = 'Draft';
     const VERIFICATION_STATUS_SUBMITTED = 'Submitted';
     const VERIFICATION_STATUS_VERIFIED = 'Verified';
@@ -284,6 +303,37 @@ class AppConfigurationDetail implements ModelInterface, ArrayAccess
             self::STORE_SELECTOR_TYPE_NONE,
             self::STORE_SELECTOR_TYPE_SINGLE,
             self::STORE_SELECTOR_TYPE_MULTIPLE,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTeammateAppAccessLevelAllowableValues()
+    {
+        return [
+            self::TEAMMATE_APP_ACCESS_LEVEL_OWNER,
+            self::TEAMMATE_APP_ACCESS_LEVEL_STORE_OWNER,
+            self::TEAMMATE_APP_ACCESS_LEVEL_MANAGED_OWNER,
+            self::TEAMMATE_APP_ACCESS_LEVEL_INTEGRATOR,
+            self::TEAMMATE_APP_ACCESS_LEVEL_STORE_MANAGER,
+            self::TEAMMATE_APP_ACCESS_LEVEL_STORE_STAFF,
+            self::TEAMMATE_APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS,
+            self::TEAMMATE_APP_ACCESS_LEVEL_FINANCE_MANGER,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getPermissionsTypeAllowableValues()
+    {
+        return [
+            self::PERMISSIONS_TYPE_TEAMMATE,
         ];
     }
     
@@ -329,6 +379,8 @@ class AppConfigurationDetail implements ModelInterface, ArrayAccess
         $this->container['setup_instructions'] = isset($data['setup_instructions']) ? $data['setup_instructions'] : null;
         $this->container['external_setup_link'] = isset($data['external_setup_link']) ? $data['external_setup_link'] : null;
         $this->container['o_auth_app_id'] = isset($data['o_auth_app_id']) ? $data['o_auth_app_id'] : null;
+        $this->container['teammate_app_access_level'] = isset($data['teammate_app_access_level']) ? $data['teammate_app_access_level'] : null;
+        $this->container['permissions_type'] = isset($data['permissions_type']) ? $data['permissions_type'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
@@ -384,6 +436,25 @@ class AppConfigurationDetail implements ModelInterface, ArrayAccess
         if ($this->container['o_auth_app_id'] === null) {
             $invalidProperties[] = "'o_auth_app_id' can't be null";
         }
+        $allowedValues = $this->getTeammateAppAccessLevelAllowableValues();
+        if (!is_null($this->container['teammate_app_access_level']) && !in_array($this->container['teammate_app_access_level'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'teammate_app_access_level', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        if ($this->container['permissions_type'] === null) {
+            $invalidProperties[] = "'permissions_type' can't be null";
+        }
+        $allowedValues = $this->getPermissionsTypeAllowableValues();
+        if (!is_null($this->container['permissions_type']) && !in_array($this->container['permissions_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'permissions_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
@@ -724,6 +795,72 @@ class AppConfigurationDetail implements ModelInterface, ArrayAccess
     public function setOAuthAppId($o_auth_app_id)
     {
         $this->container['o_auth_app_id'] = $o_auth_app_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets teammate_app_access_level
+     *
+     * @return string
+     */
+    public function getTeammateAppAccessLevel()
+    {
+        return $this->container['teammate_app_access_level'];
+    }
+
+    /**
+     * Sets teammate_app_access_level
+     *
+     * @param string $teammate_app_access_level Teammate App Access Level
+     *
+     * @return $this
+     */
+    public function setTeammateAppAccessLevel($teammate_app_access_level)
+    {
+        $allowedValues = $this->getTeammateAppAccessLevelAllowableValues();
+        if (!is_null($teammate_app_access_level) && !in_array($teammate_app_access_level, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'teammate_app_access_level', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['teammate_app_access_level'] = $teammate_app_access_level;
+
+        return $this;
+    }
+
+    /**
+     * Gets permissions_type
+     *
+     * @return string
+     */
+    public function getPermissionsType()
+    {
+        return $this->container['permissions_type'];
+    }
+
+    /**
+     * Sets permissions_type
+     *
+     * @param string $permissions_type Permissions Type
+     *
+     * @return $this
+     */
+    public function setPermissionsType($permissions_type)
+    {
+        $allowedValues = $this->getPermissionsTypeAllowableValues();
+        if (!in_array($permissions_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'permissions_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['permissions_type'] = $permissions_type;
 
         return $this;
     }

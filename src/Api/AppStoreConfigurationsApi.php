@@ -1718,15 +1718,15 @@ class AppStoreConfigurationsApi
      * @param  string $app_id App Id (required)
      * @param  string $app_store_app_id App Store App Id (required)
      * @param  string $config_id App Store Configuration Id (required)
-     * @param  \Flipdish\\Client\Models\AppConfiguration $app_configuration_base App Store Configuration Base (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppConfiguration $update_app_configuration_base App Store Configuration Base (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function updateAppStoreConfig($app_id, $app_store_app_id, $config_id, $app_configuration_base)
+    public function updateAppStoreConfig($app_id, $app_store_app_id, $config_id, $update_app_configuration_base)
     {
-        $this->updateAppStoreConfigWithHttpInfo($app_id, $app_store_app_id, $config_id, $app_configuration_base);
+        $this->updateAppStoreConfigWithHttpInfo($app_id, $app_store_app_id, $config_id, $update_app_configuration_base);
     }
 
     /**
@@ -1737,16 +1737,16 @@ class AppStoreConfigurationsApi
      * @param  string $app_id App Id (required)
      * @param  string $app_store_app_id App Store App Id (required)
      * @param  string $config_id App Store Configuration Id (required)
-     * @param  \Flipdish\\Client\Models\AppConfiguration $app_configuration_base App Store Configuration Base (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppConfiguration $update_app_configuration_base App Store Configuration Base (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAppStoreConfigWithHttpInfo($app_id, $app_store_app_id, $config_id, $app_configuration_base)
+    public function updateAppStoreConfigWithHttpInfo($app_id, $app_store_app_id, $config_id, $update_app_configuration_base)
     {
         $returnType = '';
-        $request = $this->updateAppStoreConfigRequest($app_id, $app_store_app_id, $config_id, $app_configuration_base);
+        $request = $this->updateAppStoreConfigRequest($app_id, $app_store_app_id, $config_id, $update_app_configuration_base);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1825,14 +1825,14 @@ class AppStoreConfigurationsApi
      * @param  string $app_id App Id (required)
      * @param  string $app_store_app_id App Store App Id (required)
      * @param  string $config_id App Store Configuration Id (required)
-     * @param  \Flipdish\\Client\Models\AppConfiguration $app_configuration_base App Store Configuration Base (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppConfiguration $update_app_configuration_base App Store Configuration Base (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAppStoreConfigAsync($app_id, $app_store_app_id, $config_id, $app_configuration_base)
+    public function updateAppStoreConfigAsync($app_id, $app_store_app_id, $config_id, $update_app_configuration_base)
     {
-        return $this->updateAppStoreConfigAsyncWithHttpInfo($app_id, $app_store_app_id, $config_id, $app_configuration_base)
+        return $this->updateAppStoreConfigAsyncWithHttpInfo($app_id, $app_store_app_id, $config_id, $update_app_configuration_base)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1848,15 +1848,15 @@ class AppStoreConfigurationsApi
      * @param  string $app_id App Id (required)
      * @param  string $app_store_app_id App Store App Id (required)
      * @param  string $config_id App Store Configuration Id (required)
-     * @param  \Flipdish\\Client\Models\AppConfiguration $app_configuration_base App Store Configuration Base (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppConfiguration $update_app_configuration_base App Store Configuration Base (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAppStoreConfigAsyncWithHttpInfo($app_id, $app_store_app_id, $config_id, $app_configuration_base)
+    public function updateAppStoreConfigAsyncWithHttpInfo($app_id, $app_store_app_id, $config_id, $update_app_configuration_base)
     {
         $returnType = '';
-        $request = $this->updateAppStoreConfigRequest($app_id, $app_store_app_id, $config_id, $app_configuration_base);
+        $request = $this->updateAppStoreConfigRequest($app_id, $app_store_app_id, $config_id, $update_app_configuration_base);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1887,12 +1887,12 @@ class AppStoreConfigurationsApi
      * @param  string $app_id App Id (required)
      * @param  string $app_store_app_id App Store App Id (required)
      * @param  string $config_id App Store Configuration Id (required)
-     * @param  \Flipdish\\Client\Models\AppConfiguration $app_configuration_base App Store Configuration Base (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppConfiguration $update_app_configuration_base App Store Configuration Base (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateAppStoreConfigRequest($app_id, $app_store_app_id, $config_id, $app_configuration_base)
+    protected function updateAppStoreConfigRequest($app_id, $app_store_app_id, $config_id, $update_app_configuration_base)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -1912,10 +1912,10 @@ class AppStoreConfigurationsApi
                 'Missing the required parameter $config_id when calling updateAppStoreConfig'
             );
         }
-        // verify the required parameter 'app_configuration_base' is set
-        if ($app_configuration_base === null || (is_array($app_configuration_base) && count($app_configuration_base) === 0)) {
+        // verify the required parameter 'update_app_configuration_base' is set
+        if ($update_app_configuration_base === null || (is_array($update_app_configuration_base) && count($update_app_configuration_base) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_configuration_base when calling updateAppStoreConfig'
+                'Missing the required parameter $update_app_configuration_base when calling updateAppStoreConfig'
             );
         }
 
@@ -1954,8 +1954,8 @@ class AppStoreConfigurationsApi
 
         // body params
         $_tempBody = null;
-        if (isset($app_configuration_base)) {
-            $_tempBody = $app_configuration_base;
+        if (isset($update_app_configuration_base)) {
+            $_tempBody = $update_app_configuration_base;
         }
 
         if ($multipart) {

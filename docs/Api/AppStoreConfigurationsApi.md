@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAppStoreConfig**
-> updateAppStoreConfig($app_id, $app_store_app_id, $config_id, $app_configuration_base)
+> updateAppStoreConfig($app_id, $app_store_app_id, $config_id, $update_app_configuration_base)
 
 Update app store app configuration
 
@@ -313,10 +313,10 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreConfigurationsApi(
 $app_id = "app_id_example"; // string | App Id
 $app_store_app_id = "app_store_app_id_example"; // string | App Store App Id
 $config_id = "config_id_example"; // string | App Store Configuration Id
-$app_configuration_base = new \Flipdish\\Client\Models\AppConfiguration(); // \Flipdish\\Client\Models\AppConfiguration | App Store Configuration Base
+$update_app_configuration_base = new \Flipdish\\Client\Models\UpdateAppConfiguration(); // \Flipdish\\Client\Models\UpdateAppConfiguration | App Store Configuration Base
 
 try {
-    $apiInstance->updateAppStoreConfig($app_id, $app_store_app_id, $config_id, $app_configuration_base);
+    $apiInstance->updateAppStoreConfig($app_id, $app_store_app_id, $config_id, $update_app_configuration_base);
 } catch (Exception $e) {
     echo 'Exception when calling AppStoreConfigurationsApi->updateAppStoreConfig: ', $e->getMessage(), PHP_EOL;
 }
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
  **app_id** | **string**| App Id |
  **app_store_app_id** | **string**| App Store App Id |
  **config_id** | **string**| App Store Configuration Id |
- **app_configuration_base** | [**\Flipdish\\Client\Models\AppConfiguration**](../Model/AppConfiguration.md)| App Store Configuration Base |
+ **update_app_configuration_base** | [**\Flipdish\\Client\Models\UpdateAppConfiguration**](../Model/UpdateAppConfiguration.md)| App Store Configuration Base |
 
 ### Return type
 

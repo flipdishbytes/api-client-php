@@ -1,6 +1,6 @@
 <?php
 /**
- * AppConfiguration
+ * UpdateAppConfiguration
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * AppConfiguration Class Doc Comment
+ * UpdateAppConfiguration Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AppConfiguration implements ModelInterface, ArrayAccess
+class UpdateAppConfiguration implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class AppConfiguration implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'AppConfiguration';
+    protected static $swaggerModelName = 'UpdateAppConfiguration';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -1,4 +1,4 @@
-# AppConfiguration
+# UpdateAppConfiguration
 
 ## Properties
 Name | Type | Description | Notes

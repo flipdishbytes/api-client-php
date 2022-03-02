@@ -1,6 +1,6 @@
 <?php
 /**
- * AppConfigurationTest
+ * UpdateAppConfigurationTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * AppConfigurationTest Class Doc Comment
+ * UpdateAppConfigurationTest Class Doc Comment
  *
  * @category    Class
- * @description AppConfiguration
+ * @description UpdateAppConfiguration
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AppConfigurationTest extends \PHPUnit_Framework_TestCase
+class UpdateAppConfigurationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class AppConfigurationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AppConfiguration"
+     * Test "UpdateAppConfiguration"
      */
-    public function testAppConfiguration()
+    public function testUpdateAppConfiguration()
     {
     }
 
