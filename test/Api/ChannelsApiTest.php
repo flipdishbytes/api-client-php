@@ -92,16 +92,6 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for assignStoreToChannel_0
-     *
-     * Unassign a Store from a Sales Channel.
-     *
-     */
-    public function testAssignStoreToChannel0()
-    {
-    }
-
-    /**
      * Test case for attachStoreToSalesChannel
      *
      * Attachs the specified store to the given sales channel..
@@ -208,6 +198,16 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testGetStoresBySalesChannel()
+    {
+    }
+
+    /**
+     * Test case for unassignStoreFromChannel
+     *
+     * Unassign a Store from a Sales Channel.
+     *
+     */
+    public function testUnassignStoreFromChannel()
     {
     }
 }
