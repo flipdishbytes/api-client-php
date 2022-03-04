@@ -396,6 +396,8 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_UPDATE_ORDERS_DELIVERY_TRACKING_STATUS = 'UpdateOrdersDeliveryTrackingStatus';
     const APP_RESOURCE_SET_VIEW_PAYOUTS = 'ViewPayouts';
     const APP_RESOURCE_SET_VIEW_CHANNELS = 'ViewChannels';
+    const APP_RESOURCE_SET_VIEW_ONBOARDING = 'ViewOnboarding';
+    const APP_RESOURCE_SET_UPDATE_ONBOARDING = 'UpdateOnboarding';
     const APPLICATION_CATEGORY_RESTAURANT = 'Restaurant';
     const APPLICATION_CATEGORY_CAFE = 'Cafe';
     const APPLICATION_CATEGORY_CONVENIENCE = 'Convenience';
@@ -568,6 +570,8 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_UPDATE_ORDERS_DELIVERY_TRACKING_STATUS,
             self::APP_RESOURCE_SET_VIEW_PAYOUTS,
             self::APP_RESOURCE_SET_VIEW_CHANNELS,
+            self::APP_RESOURCE_SET_VIEW_ONBOARDING,
+            self::APP_RESOURCE_SET_UPDATE_ONBOARDING,
         ];
     }
     

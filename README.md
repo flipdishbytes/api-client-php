@@ -345,6 +345,8 @@ Class | Method | HTTP request | Description
 *OAuthClientsApi* | [**oAuthClientsGetApplications**](docs/Api/OAuthClientsApi.md#oauthclientsgetapplications) | **GET** /api/v1.0/{appId}/oauthclients/appnames | 
 *OAuthClientsApi* | [**removeRedirectUri**](docs/Api/OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId} | Delete OAuth App redirect uri
 *OAuthClientsApi* | [**updateOAuthApp**](docs/Api/OAuthClientsApi.md#updateoauthapp) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Update OAuth App
+*OnboardingApi* | [**onboardingGetOnboardingItems**](docs/Api/OnboardingApi.md#onboardinggetonboardingitems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
+*OnboardingApi* | [**onboardingUpdateOnboardingItem**](docs/Api/OnboardingApi.md#onboardingupdateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
 *OrderIngestApi* | [**orderIngestSubmitNewOrder**](docs/Api/OrderIngestApi.md#orderingestsubmitneworder) | **POST** /api/v1.0/{appNameId}/order-ingest/submit | Provides an ability to ingest a 3rd party order into Flipdish ecosystem
 *OrdersApi* | [**acceptOrder**](docs/Api/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 *OrdersApi* | [**dispatchOrder**](docs/Api/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
@@ -688,6 +690,7 @@ Class | Method | HTTP request | Description
  - [OAuthTokenModel](docs/Model/OAuthTokenModel.md)
  - [OauthClientRedirectUri](docs/Model/OauthClientRedirectUri.md)
  - [ObjectDisplayOrder](docs/Model/ObjectDisplayOrder.md)
+ - [OnboardingItemUpdate](docs/Model/OnboardingItemUpdate.md)
  - [Order](docs/Model/Order.md)
  - [OrderAcceptedEvent](docs/Model/OrderAcceptedEvent.md)
  - [OrderCapacityConfigUpdatedEvent](docs/Model/OrderCapacityConfigUpdatedEvent.md)
