@@ -50,7 +50,7 @@ class RestApiPaginationResultWebhookLog implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult[WebhookLog]';
+    protected static $swaggerModelName = 'RestApiPaginationResult-WebhookLog';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

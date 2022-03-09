@@ -50,7 +50,7 @@ class RestApiResultPaymentTerminalTransactionDetails implements ModelInterface, 
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[PaymentTerminalTransactionDetails]';
+    protected static $swaggerModelName = 'RestApiResult-PaymentTerminalTransactionDetails';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class RestApiArrayResultDriverStore implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult[DriverStore]';
+    protected static $swaggerModelName = 'RestApiArrayResult-DriverStore';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

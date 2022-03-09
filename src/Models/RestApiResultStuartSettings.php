@@ -50,7 +50,7 @@ class RestApiResultStuartSettings implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[StuartSettings]';
+    protected static $swaggerModelName = 'RestApiResult-StuartSettings';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

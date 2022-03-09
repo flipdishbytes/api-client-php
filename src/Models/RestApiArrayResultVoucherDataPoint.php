@@ -50,7 +50,7 @@ class RestApiArrayResultVoucherDataPoint implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult[VoucherDataPoint]';
+    protected static $swaggerModelName = 'RestApiArrayResult-VoucherDataPoint';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

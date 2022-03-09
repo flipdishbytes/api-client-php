@@ -50,7 +50,7 @@ class RestApiResultStripeConnectedAccount implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[StripeConnectedAccount]';
+    protected static $swaggerModelName = 'RestApiResult-StripeConnectedAccount';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

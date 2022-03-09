@@ -50,7 +50,7 @@ class RestApiArrayResultMetadata implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult[Metadata]';
+    protected static $swaggerModelName = 'RestApiArrayResult-Metadata';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

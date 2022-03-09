@@ -50,7 +50,7 @@ class RestApiResultOrder implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[Order]';
+    protected static $swaggerModelName = 'RestApiResult-Order';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

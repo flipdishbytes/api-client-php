@@ -50,7 +50,7 @@ class RestApiResultMetafieldDefinition implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[MetafieldDefinition]';
+    protected static $swaggerModelName = 'RestApiResult-MetafieldDefinition';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

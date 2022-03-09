@@ -50,7 +50,7 @@ class RestApiResultLightspeedSettings implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[LightspeedSettings]';
+    protected static $swaggerModelName = 'RestApiResult-LightspeedSettings';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class RestApiResultCatalogGroup implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[CatalogGroup]';
+    protected static $swaggerModelName = 'RestApiResult-CatalogGroup';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

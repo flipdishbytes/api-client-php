@@ -50,7 +50,7 @@ class RestApiResultApmStatus implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[ApmStatus]';
+    protected static $swaggerModelName = 'RestApiResult-ApmStatus';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

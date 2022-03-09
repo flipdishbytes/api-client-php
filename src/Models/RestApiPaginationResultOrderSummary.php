@@ -50,7 +50,7 @@ class RestApiPaginationResultOrderSummary implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult[OrderSummary]';
+    protected static $swaggerModelName = 'RestApiPaginationResult-OrderSummary';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

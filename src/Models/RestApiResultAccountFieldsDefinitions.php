@@ -50,7 +50,7 @@ class RestApiResultAccountFieldsDefinitions implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[AccountFieldsDefinitions]';
+    protected static $swaggerModelName = 'RestApiResult-AccountFieldsDefinitions';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class RestApiPaginationResultMetafieldDefinition implements ModelInterface, Arra
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult[MetafieldDefinition]';
+    protected static $swaggerModelName = 'RestApiPaginationResult-MetafieldDefinition';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

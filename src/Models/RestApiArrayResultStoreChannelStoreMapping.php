@@ -50,7 +50,7 @@ class RestApiArrayResultStoreChannelStoreMapping implements ModelInterface, Arra
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult[StoreChannelStoreMapping]';
+    protected static $swaggerModelName = 'RestApiArrayResult-StoreChannelStoreMapping';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

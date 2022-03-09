@@ -50,7 +50,7 @@ class RestApiResultHydraDeviceDetails implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[HydraDeviceDetails]';
+    protected static $swaggerModelName = 'RestApiResult-HydraDeviceDetails';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class RestApiPaginationResultChannel implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult[Channel]';
+    protected static $swaggerModelName = 'RestApiPaginationResult-Channel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

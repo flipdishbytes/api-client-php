@@ -50,7 +50,7 @@ class RestApiPaginationResultPushNotificationResponse implements ModelInterface,
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult[PushNotificationResponse]';
+    protected static $swaggerModelName = 'RestApiPaginationResult-PushNotificationResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

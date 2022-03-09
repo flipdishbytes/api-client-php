@@ -50,7 +50,7 @@ class RestApiPaginationResultHttpRequestAndResponseLog implements ModelInterface
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult[HttpRequestAndResponseLog]';
+    protected static $swaggerModelName = 'RestApiPaginationResult-HttpRequestAndResponseLog';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

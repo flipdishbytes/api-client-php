@@ -50,7 +50,7 @@ class RestApiArrayResultRetentionCampaign implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult[RetentionCampaign]';
+    protected static $swaggerModelName = 'RestApiArrayResult-RetentionCampaign';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

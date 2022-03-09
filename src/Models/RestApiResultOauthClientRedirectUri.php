@@ -50,7 +50,7 @@ class RestApiResultOauthClientRedirectUri implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[OauthClientRedirectUri]';
+    protected static $swaggerModelName = 'RestApiResult-OauthClientRedirectUri';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

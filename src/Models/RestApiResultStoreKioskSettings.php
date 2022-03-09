@@ -50,7 +50,7 @@ class RestApiResultStoreKioskSettings implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[StoreKioskSettings]';
+    protected static $swaggerModelName = 'RestApiResult-StoreKioskSettings';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

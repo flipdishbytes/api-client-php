@@ -50,7 +50,7 @@ class RestApiArrayResultCountryWithAccountFieldsDefinitions implements ModelInte
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult[CountryWithAccountFieldsDefinitions]';
+    protected static $swaggerModelName = 'RestApiArrayResult-CountryWithAccountFieldsDefinitions';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

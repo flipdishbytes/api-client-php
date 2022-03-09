@@ -50,7 +50,7 @@ class RestApiResultHydraStatus implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[HydraStatus]';
+    protected static $swaggerModelName = 'RestApiResult-HydraStatus';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

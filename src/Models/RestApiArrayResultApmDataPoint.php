@@ -50,7 +50,7 @@ class RestApiArrayResultApmDataPoint implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult[ApmDataPoint]';
+    protected static $swaggerModelName = 'RestApiArrayResult-ApmDataPoint';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

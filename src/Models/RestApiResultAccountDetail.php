@@ -50,7 +50,7 @@ class RestApiResultAccountDetail implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[AccountDetail]';
+    protected static $swaggerModelName = 'RestApiResult-AccountDetail';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

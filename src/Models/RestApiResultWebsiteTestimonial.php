@@ -50,7 +50,7 @@ class RestApiResultWebsiteTestimonial implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[WebsiteTestimonial]';
+    protected static $swaggerModelName = 'RestApiResult-WebsiteTestimonial';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class RestApiPaginationResultWebhookSubscription implements ModelInterface, Arra
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult[WebhookSubscription]';
+    protected static $swaggerModelName = 'RestApiPaginationResult-WebhookSubscription';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class RestApiResultCreatedMenuSectionItems implements ModelInterface, ArrayAcces
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[CreatedMenuSectionItems]';
+    protected static $swaggerModelName = 'RestApiResult-CreatedMenuSectionItems';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class RestApiResultLoyaltyCampaign implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[LoyaltyCampaign]';
+    protected static $swaggerModelName = 'RestApiResult-LoyaltyCampaign';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

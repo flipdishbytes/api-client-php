@@ -50,7 +50,7 @@ class RestApiPaginationResultBusinessHoursOverride implements ModelInterface, Ar
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult[BusinessHoursOverride]';
+    protected static $swaggerModelName = 'RestApiPaginationResult-BusinessHoursOverride';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

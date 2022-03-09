@@ -50,7 +50,7 @@ class RestApiResultStripeTerminalConnectionToken implements ModelInterface, Arra
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[StripeTerminalConnectionToken]';
+    protected static $swaggerModelName = 'RestApiResult-StripeTerminalConnectionToken';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

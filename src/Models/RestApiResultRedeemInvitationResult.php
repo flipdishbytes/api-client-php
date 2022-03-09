@@ -50,7 +50,7 @@ class RestApiResultRedeemInvitationResult implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[RedeemInvitationResult]';
+    protected static $swaggerModelName = 'RestApiResult-RedeemInvitationResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

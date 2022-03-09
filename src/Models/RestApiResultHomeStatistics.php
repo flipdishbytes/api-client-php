@@ -50,7 +50,7 @@ class RestApiResultHomeStatistics implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[HomeStatistics]';
+    protected static $swaggerModelName = 'RestApiResult-HomeStatistics';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

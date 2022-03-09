@@ -50,7 +50,7 @@ class RestApiArrayResultMenuElementEditResponse implements ModelInterface, Array
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult[MenuElementEditResponse]';
+    protected static $swaggerModelName = 'RestApiArrayResult-MenuElementEditResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
