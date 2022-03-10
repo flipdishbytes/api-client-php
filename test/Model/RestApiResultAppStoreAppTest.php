@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfiguredPhysicalRestaurantTest
+ * RestApiResultAppStoreAppTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * ConfiguredPhysicalRestaurantTest Class Doc Comment
+ * RestApiResultAppStoreAppTest Class Doc Comment
  *
  * @category    Class
- * @description Configured stores
+ * @description Rest api result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
+class RestApiResultAppStoreAppTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,23 +70,16 @@ class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ConfiguredPhysicalRestaurant"
+     * Test "RestApiResultAppStoreApp"
      */
-    public function testConfiguredPhysicalRestaurant()
+    public function testRestApiResultAppStoreApp()
     {
     }
 
     /**
-     * Test attribute "store_id"
+     * Test attribute "data"
      */
-    public function testPropertyStoreId()
-    {
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
+    public function testPropertyData()
     {
     }
 }

@@ -91,9 +91,9 @@ class AppStoreConfigUpdatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "app_store_app_configuration"
+     * Test attribute "update_app_store_app_store_app_store_app_configuration"
      */
-    public function testPropertyAppStoreAppConfiguration()
+    public function testPropertyUpdateAppStoreAppStoreAppStoreAppConfiguration()
     {
     }
 

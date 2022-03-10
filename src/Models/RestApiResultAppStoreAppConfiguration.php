@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfiguredPhysicalRestaurant
+ * RestApiResultAppStoreAppConfiguration
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * ConfiguredPhysicalRestaurant Class Doc Comment
+ * RestApiResultAppStoreAppConfiguration Class Doc Comment
  *
  * @category Class
- * @description Configured stores
+ * @description Rest api result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
+class RestApiResultAppStoreAppConfiguration implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ConfiguredPhysicalRestaurant';
+    protected static $swaggerModelName = 'RestApiResult[AppStoreAppConfiguration]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,7 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'store_id' => 'int',
-        'name' => 'string'
+        'data' => '\Flipdish\\Client\Models\AppStoreAppConfiguration'
     ];
 
     /**
@@ -68,8 +67,7 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'store_id' => 'int32',
-        'name' => null
+        'data' => null
     ];
 
     /**
@@ -99,8 +97,7 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_id' => 'StoreId',
-        'name' => 'Name'
+        'data' => 'Data'
     ];
 
     /**
@@ -109,8 +106,7 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_id' => 'setStoreId',
-        'name' => 'setName'
+        'data' => 'setData'
     ];
 
     /**
@@ -119,8 +115,7 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_id' => 'getStoreId',
-        'name' => 'getName'
+        'data' => 'getData'
     ];
 
     /**
@@ -183,8 +178,7 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -196,6 +190,9 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -212,49 +209,25 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_id
+     * Gets data
      *
-     * @return int
+     * @return \Flipdish\\Client\Models\AppStoreAppConfiguration
      */
-    public function getStoreId()
+    public function getData()
     {
-        return $this->container['store_id'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets store_id
+     * Sets data
      *
-     * @param int $store_id Store id
+     * @param \Flipdish\\Client\Models\AppStoreAppConfiguration $data Generic data object.
      *
      * @return $this
      */
-    public function setStoreId($store_id)
+    public function setData($data)
     {
-        $this->container['store_id'] = $store_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name Name of store
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
+        $this->container['data'] = $data;
 
         return $this;
     }

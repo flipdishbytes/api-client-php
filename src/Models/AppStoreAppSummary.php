@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldGroup
+ * AppStoreAppSummary
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * FieldGroup Class Doc Comment
+ * AppStoreAppSummary Class Doc Comment
  *
  * @category Class
- * @description Field group
+ * @description App store app summary information
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class FieldGroup implements ModelInterface, ArrayAccess
+class AppStoreAppSummary implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class FieldGroup implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'FieldGroup';
+    protected static $swaggerModelName = 'AppStoreAppSummary';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,11 +58,15 @@ class FieldGroup implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'string',
+        'verification_status' => 'string',
+        'logo' => 'string',
         'name' => 'string',
         'description' => 'string',
-        'tooltip' => 'string',
-        'position' => 'int',
-        'fields' => '\Flipdish\\Client\Models\Field[]'
+        'is_enabled' => 'bool',
+        'tags' => 'string[]',
+        'regions' => 'string[]',
+        'developer_name' => 'string'
     ];
 
     /**
@@ -71,11 +75,15 @@ class FieldGroup implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'id' => null,
+        'verification_status' => null,
+        'logo' => null,
         'name' => null,
         'description' => null,
-        'tooltip' => null,
-        'position' => 'int32',
-        'fields' => null
+        'is_enabled' => null,
+        'tags' => null,
+        'regions' => null,
+        'developer_name' => null
     ];
 
     /**
@@ -105,11 +113,15 @@ class FieldGroup implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'Id',
+        'verification_status' => 'VerificationStatus',
+        'logo' => 'Logo',
         'name' => 'Name',
         'description' => 'Description',
-        'tooltip' => 'Tooltip',
-        'position' => 'Position',
-        'fields' => 'Fields'
+        'is_enabled' => 'IsEnabled',
+        'tags' => 'Tags',
+        'regions' => 'Regions',
+        'developer_name' => 'DeveloperName'
     ];
 
     /**
@@ -118,11 +130,15 @@ class FieldGroup implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
+        'verification_status' => 'setVerificationStatus',
+        'logo' => 'setLogo',
         'name' => 'setName',
         'description' => 'setDescription',
-        'tooltip' => 'setTooltip',
-        'position' => 'setPosition',
-        'fields' => 'setFields'
+        'is_enabled' => 'setIsEnabled',
+        'tags' => 'setTags',
+        'regions' => 'setRegions',
+        'developer_name' => 'setDeveloperName'
     ];
 
     /**
@@ -131,11 +147,15 @@ class FieldGroup implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
+        'verification_status' => 'getVerificationStatus',
+        'logo' => 'getLogo',
         'name' => 'getName',
         'description' => 'getDescription',
-        'tooltip' => 'getTooltip',
-        'position' => 'getPosition',
-        'fields' => 'getFields'
+        'is_enabled' => 'getIsEnabled',
+        'tags' => 'getTags',
+        'regions' => 'getRegions',
+        'developer_name' => 'getDeveloperName'
     ];
 
     /**
@@ -179,8 +199,25 @@ class FieldGroup implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const VERIFICATION_STATUS_DRAFT = 'Draft';
+    const VERIFICATION_STATUS_SUBMITTED = 'Submitted';
+    const VERIFICATION_STATUS_VERIFIED = 'Verified';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getVerificationStatusAllowableValues()
+    {
+        return [
+            self::VERIFICATION_STATUS_DRAFT,
+            self::VERIFICATION_STATUS_SUBMITTED,
+            self::VERIFICATION_STATUS_VERIFIED,
+        ];
+    }
     
 
     /**
@@ -198,11 +235,15 @@ class FieldGroup implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['verification_status'] = isset($data['verification_status']) ? $data['verification_status'] : null;
+        $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['tooltip'] = isset($data['tooltip']) ? $data['tooltip'] : null;
-        $this->container['position'] = isset($data['position']) ? $data['position'] : null;
-        $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
+        $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['regions'] = isset($data['regions']) ? $data['regions'] : null;
+        $this->container['developer_name'] = isset($data['developer_name']) ? $data['developer_name'] : null;
     }
 
     /**
@@ -214,20 +255,29 @@ class FieldGroup implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['verification_status'] === null) {
+            $invalidProperties[] = "'verification_status' can't be null";
+        }
+        $allowedValues = $this->getVerificationStatusAllowableValues();
+        if (!is_null($this->container['verification_status']) && !in_array($this->container['verification_status'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'verification_status', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if ($this->container['position'] === null) {
-            $invalidProperties[] = "'position' can't be null";
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
         }
-        if (($this->container['position'] > 1000)) {
-            $invalidProperties[] = "invalid value for 'position', must be smaller than or equal to 1000.";
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
         }
-
-        if (($this->container['position'] < 1)) {
-            $invalidProperties[] = "invalid value for 'position', must be bigger than or equal to 1.";
+        if ($this->container['regions'] === null) {
+            $invalidProperties[] = "'regions' can't be null";
         }
-
         return $invalidProperties;
     }
 
@@ -242,6 +292,87 @@ class FieldGroup implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets id
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string $id Unique App store app id
+     *
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets verification_status
+     *
+     * @return string
+     */
+    public function getVerificationStatus()
+    {
+        return $this->container['verification_status'];
+    }
+
+    /**
+     * Sets verification_status
+     *
+     * @param string $verification_status Application verification status
+     *
+     * @return $this
+     */
+    public function setVerificationStatus($verification_status)
+    {
+        $allowedValues = $this->getVerificationStatusAllowableValues();
+        if (!in_array($verification_status, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'verification_status', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['verification_status'] = $verification_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets logo
+     *
+     * @return string
+     */
+    public function getLogo()
+    {
+        return $this->container['logo'];
+    }
+
+    /**
+     * Sets logo
+     *
+     * @param string $logo Logo
+     *
+     * @return $this
+     */
+    public function setLogo($logo)
+    {
+        $this->container['logo'] = $logo;
+
+        return $this;
+    }
 
     /**
      * Gets name
@@ -292,81 +423,97 @@ class FieldGroup implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets tooltip
+     * Gets is_enabled
+     *
+     * @return bool
+     */
+    public function getIsEnabled()
+    {
+        return $this->container['is_enabled'];
+    }
+
+    /**
+     * Sets is_enabled
+     *
+     * @param bool $is_enabled Is application enabled
+     *
+     * @return $this
+     */
+    public function setIsEnabled($is_enabled)
+    {
+        $this->container['is_enabled'] = $is_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     *
+     * @return string[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     *
+     * @param string[] $tags Tags
+     *
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets regions
+     *
+     * @return string[]
+     */
+    public function getRegions()
+    {
+        return $this->container['regions'];
+    }
+
+    /**
+     * Sets regions
+     *
+     * @param string[] $regions Regions
+     *
+     * @return $this
+     */
+    public function setRegions($regions)
+    {
+        $this->container['regions'] = $regions;
+
+        return $this;
+    }
+
+    /**
+     * Gets developer_name
      *
      * @return string
      */
-    public function getTooltip()
+    public function getDeveloperName()
     {
-        return $this->container['tooltip'];
+        return $this->container['developer_name'];
     }
 
     /**
-     * Sets tooltip
+     * Sets developer_name
      *
-     * @param string $tooltip Tooltip  <remarks>Displays on text hover</remarks>
+     * @param string $developer_name Developer Name
      *
      * @return $this
      */
-    public function setTooltip($tooltip)
+    public function setDeveloperName($developer_name)
     {
-        $this->container['tooltip'] = $tooltip;
-
-        return $this;
-    }
-
-    /**
-     * Gets position
-     *
-     * @return int
-     */
-    public function getPosition()
-    {
-        return $this->container['position'];
-    }
-
-    /**
-     * Sets position
-     *
-     * @param int $position Position  <remarks>Position order in the field groups to display</remarks>
-     *
-     * @return $this
-     */
-    public function setPosition($position)
-    {
-
-        if (($position > 1000)) {
-            throw new \InvalidArgumentException('invalid value for $position when calling FieldGroup., must be smaller than or equal to 1000.');
-        }
-        if (($position < 1)) {
-            throw new \InvalidArgumentException('invalid value for $position when calling FieldGroup., must be bigger than or equal to 1.');
-        }
-
-        $this->container['position'] = $position;
-
-        return $this;
-    }
-
-    /**
-     * Gets fields
-     *
-     * @return \Flipdish\\Client\Models\Field[]
-     */
-    public function getFields()
-    {
-        return $this->container['fields'];
-    }
-
-    /**
-     * Sets fields
-     *
-     * @param \Flipdish\\Client\Models\Field[] $fields Fields
-     *
-     * @return $this
-     */
-    public function setFields($fields)
-    {
-        $this->container['fields'] = $fields;
+        $this->container['developer_name'] = $developer_name;
 
         return $this;
     }

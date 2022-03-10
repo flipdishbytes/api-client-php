@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfiguredPhysicalRestaurantTest
+ * AppStoreAppConfigurationHeaderTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * ConfiguredPhysicalRestaurantTest Class Doc Comment
+ * AppStoreAppConfigurationHeaderTest Class Doc Comment
  *
  * @category    Class
- * @description Configured stores
+ * @description App store app configuration header information
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
+class AppStoreAppConfigurationHeaderTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,16 @@ class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ConfiguredPhysicalRestaurant"
+     * Test "AppStoreAppConfigurationHeader"
      */
-    public function testConfiguredPhysicalRestaurant()
+    public function testAppStoreAppConfigurationHeader()
     {
     }
 
     /**
-     * Test attribute "store_id"
+     * Test attribute "app_store_app_id"
      */
-    public function testPropertyStoreId()
+    public function testPropertyAppStoreAppId()
     {
     }
 
@@ -87,6 +87,27 @@ class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
      * Test attribute "name"
      */
     public function testPropertyName()
+    {
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+    }
+
+    /**
+     * Test attribute "logo"
+     */
+    public function testPropertyLogo()
+    {
+    }
+
+    /**
+     * Test attribute "developer_name"
+     */
+    public function testPropertyDeveloperName()
     {
     }
 }

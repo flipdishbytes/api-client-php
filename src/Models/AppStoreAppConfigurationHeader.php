@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfiguredPhysicalRestaurant
+ * AppStoreAppConfigurationHeader
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * ConfiguredPhysicalRestaurant Class Doc Comment
+ * AppStoreAppConfigurationHeader Class Doc Comment
  *
  * @category Class
- * @description Configured stores
+ * @description App store app configuration header information
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
+class AppStoreAppConfigurationHeader implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ConfiguredPhysicalRestaurant';
+    protected static $swaggerModelName = 'AppStoreAppConfigurationHeader';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,11 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'store_id' => 'int',
-        'name' => 'string'
+        'app_store_app_id' => 'string',
+        'name' => 'string',
+        'description' => 'string',
+        'logo' => 'string',
+        'developer_name' => 'string'
     ];
 
     /**
@@ -68,8 +71,11 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'store_id' => 'int32',
-        'name' => null
+        'app_store_app_id' => null,
+        'name' => null,
+        'description' => null,
+        'logo' => null,
+        'developer_name' => null
     ];
 
     /**
@@ -99,8 +105,11 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_id' => 'StoreId',
-        'name' => 'Name'
+        'app_store_app_id' => 'AppStoreAppId',
+        'name' => 'Name',
+        'description' => 'Description',
+        'logo' => 'Logo',
+        'developer_name' => 'DeveloperName'
     ];
 
     /**
@@ -109,8 +118,11 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_id' => 'setStoreId',
-        'name' => 'setName'
+        'app_store_app_id' => 'setAppStoreAppId',
+        'name' => 'setName',
+        'description' => 'setDescription',
+        'logo' => 'setLogo',
+        'developer_name' => 'setDeveloperName'
     ];
 
     /**
@@ -119,8 +131,11 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_id' => 'getStoreId',
-        'name' => 'getName'
+        'app_store_app_id' => 'getAppStoreAppId',
+        'name' => 'getName',
+        'description' => 'getDescription',
+        'logo' => 'getLogo',
+        'developer_name' => 'getDeveloperName'
     ];
 
     /**
@@ -183,8 +198,11 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
+        $this->container['app_store_app_id'] = isset($data['app_store_app_id']) ? $data['app_store_app_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
+        $this->container['developer_name'] = isset($data['developer_name']) ? $data['developer_name'] : null;
     }
 
     /**
@@ -196,6 +214,15 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['app_store_app_id'] === null) {
+            $invalidProperties[] = "'app_store_app_id' can't be null";
+        }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -212,25 +239,25 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_id
+     * Gets app_store_app_id
      *
-     * @return int
+     * @return string
      */
-    public function getStoreId()
+    public function getAppStoreAppId()
     {
-        return $this->container['store_id'];
+        return $this->container['app_store_app_id'];
     }
 
     /**
-     * Sets store_id
+     * Sets app_store_app_id
      *
-     * @param int $store_id Store id
+     * @param string $app_store_app_id Unique App store app id
      *
      * @return $this
      */
-    public function setStoreId($store_id)
+    public function setAppStoreAppId($app_store_app_id)
     {
-        $this->container['store_id'] = $store_id;
+        $this->container['app_store_app_id'] = $app_store_app_id;
 
         return $this;
     }
@@ -248,13 +275,85 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name Name of store
+     * @param string $name Name of Appstore app
      *
      * @return $this
      */
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param string $description Description
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets logo
+     *
+     * @return string
+     */
+    public function getLogo()
+    {
+        return $this->container['logo'];
+    }
+
+    /**
+     * Sets logo
+     *
+     * @param string $logo Logo
+     *
+     * @return $this
+     */
+    public function setLogo($logo)
+    {
+        $this->container['logo'] = $logo;
+
+        return $this;
+    }
+
+    /**
+     * Gets developer_name
+     *
+     * @return string
+     */
+    public function getDeveloperName()
+    {
+        return $this->container['developer_name'];
+    }
+
+    /**
+     * Sets developer_name
+     *
+     * @param string $developer_name Developer name
+     *
+     * @return $this
+     */
+    public function setDeveloperName($developer_name)
+    {
+        $this->container['developer_name'] = $developer_name;
 
         return $this;
     }

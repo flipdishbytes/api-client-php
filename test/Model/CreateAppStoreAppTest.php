@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldGroupTest
+ * CreateAppStoreAppTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * FieldGroupTest Class Doc Comment
+ * CreateAppStoreAppTest Class Doc Comment
  *
  * @category    Class
- * @description Field group
+ * @description Create App store app
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class FieldGroupTest extends \PHPUnit_Framework_TestCase
+class CreateAppStoreAppTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,65 @@ class FieldGroupTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "FieldGroup"
+     * Test "CreateAppStoreApp"
      */
-    public function testFieldGroup()
+    public function testCreateAppStoreApp()
+    {
+    }
+
+    /**
+     * Test attribute "configuration_type"
+     */
+    public function testPropertyConfigurationType()
+    {
+    }
+
+    /**
+     * Test attribute "store_selector_type"
+     */
+    public function testPropertyStoreSelectorType()
+    {
+    }
+
+    /**
+     * Test attribute "field_groups"
+     */
+    public function testPropertyFieldGroups()
+    {
+    }
+
+    /**
+     * Test attribute "setup_instructions"
+     */
+    public function testPropertySetupInstructions()
+    {
+    }
+
+    /**
+     * Test attribute "external_setup_link"
+     */
+    public function testPropertyExternalSetupLink()
+    {
+    }
+
+    /**
+     * Test attribute "o_auth_app_id"
+     */
+    public function testPropertyOAuthAppId()
+    {
+    }
+
+    /**
+     * Test attribute "teammate_app_access_level"
+     */
+    public function testPropertyTeammateAppAccessLevel()
+    {
+    }
+
+    /**
+     * Test attribute "permissions_type"
+     */
+    public function testPropertyPermissionsType()
     {
     }
 
@@ -91,23 +147,30 @@ class FieldGroupTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "tooltip"
+     * Test attribute "is_enabled"
      */
-    public function testPropertyTooltip()
+    public function testPropertyIsEnabled()
     {
     }
 
     /**
-     * Test attribute "position"
+     * Test attribute "tags"
      */
-    public function testPropertyPosition()
+    public function testPropertyTags()
     {
     }
 
     /**
-     * Test attribute "fields"
+     * Test attribute "regions"
      */
-    public function testPropertyFields()
+    public function testPropertyRegions()
+    {
+    }
+
+    /**
+     * Test attribute "developer_name"
+     */
+    public function testPropertyDeveloperName()
     {
     }
 }

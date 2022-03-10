@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfiguredPhysicalRestaurantTest
+ * AppStoreAppSummaryTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * ConfiguredPhysicalRestaurantTest Class Doc Comment
+ * AppStoreAppSummaryTest Class Doc Comment
  *
  * @category    Class
- * @description Configured stores
+ * @description App store app summary information
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
+class AppStoreAppSummaryTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,30 @@ class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ConfiguredPhysicalRestaurant"
+     * Test "AppStoreAppSummary"
      */
-    public function testConfiguredPhysicalRestaurant()
+    public function testAppStoreAppSummary()
     {
     }
 
     /**
-     * Test attribute "store_id"
+     * Test attribute "id"
      */
-    public function testPropertyStoreId()
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "verification_status"
+     */
+    public function testPropertyVerificationStatus()
+    {
+    }
+
+    /**
+     * Test attribute "logo"
+     */
+    public function testPropertyLogo()
     {
     }
 
@@ -87,6 +101,41 @@ class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
      * Test attribute "name"
      */
     public function testPropertyName()
+    {
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+    }
+
+    /**
+     * Test attribute "is_enabled"
+     */
+    public function testPropertyIsEnabled()
+    {
+    }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+    }
+
+    /**
+     * Test attribute "regions"
+     */
+    public function testPropertyRegions()
+    {
+    }
+
+    /**
+     * Test attribute "developer_name"
+     */
+    public function testPropertyDeveloperName()
     {
     }
 }

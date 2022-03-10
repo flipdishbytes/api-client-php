@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfiguredPhysicalRestaurantTest
+ * AppStoreAppConfigurationSummaryTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * ConfiguredPhysicalRestaurantTest Class Doc Comment
+ * AppStoreAppConfigurationSummaryTest Class Doc Comment
  *
  * @category    Class
- * @description Configured stores
+ * @description App store app configuration summary information
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
+class AppStoreAppConfigurationSummaryTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,58 @@ class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ConfiguredPhysicalRestaurant"
+     * Test "AppStoreAppConfigurationSummary"
      */
-    public function testConfiguredPhysicalRestaurant()
+    public function testAppStoreAppConfigurationSummary()
     {
     }
 
     /**
-     * Test attribute "store_id"
+     * Test attribute "id"
      */
-    public function testPropertyStoreId()
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "app_id"
+     */
+    public function testPropertyAppId()
+    {
+    }
+
+    /**
+     * Test attribute "is_enabled"
+     */
+    public function testPropertyIsEnabled()
+    {
+    }
+
+    /**
+     * Test attribute "physical_restaurants"
+     */
+    public function testPropertyPhysicalRestaurants()
+    {
+    }
+
+    /**
+     * Test attribute "configuration_type"
+     */
+    public function testPropertyConfigurationType()
+    {
+    }
+
+    /**
+     * Test attribute "store_selector_type"
+     */
+    public function testPropertyStoreSelectorType()
+    {
+    }
+
+    /**
+     * Test attribute "app_store_app_id"
+     */
+    public function testPropertyAppStoreAppId()
     {
     }
 
@@ -87,6 +129,27 @@ class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
      * Test attribute "name"
      */
     public function testPropertyName()
+    {
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+    }
+
+    /**
+     * Test attribute "logo"
+     */
+    public function testPropertyLogo()
+    {
+    }
+
+    /**
+     * Test attribute "developer_name"
+     */
+    public function testPropertyDeveloperName()
     {
     }
 }

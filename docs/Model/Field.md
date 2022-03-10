@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **description** | **string** | Description | 
 **key** | **string** | Key | 
 **tooltip** | **string** | Tooltip | [optional] 
-**position** | **int** | Position  &lt;remarks&gt;Position order in the fields list to display&lt;/remarks&gt; | 
-**default_value** | **string** | Default Value  &lt;example&gt;10&lt;/example&gt;&lt;example&gt;true&lt;/example&gt; | [optional] 
+**position** | **int** | Position | 
+**default_value** | **string** | Default Value | [optional] 
 **valid_values** | [**\Flipdish\\Client\Models\ValidValue[]**](ValidValue.md) | Valid Values  &lt;remarks&gt;Used typically for dropdown/select&lt;/remarks&gt; | [optional] 
 **validation_regex** | **string** | Validation Regex | [optional] 
 **field_type** | **string** | Field Type | 

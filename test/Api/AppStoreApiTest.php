@@ -74,7 +74,7 @@ class AppStoreApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for appVerificationUpdate
      *
-     * Update app store app verification.
+     * Update App store app verification.
      *
      */
     public function testAppVerificationUpdate()
@@ -84,7 +84,7 @@ class AppStoreApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createAppStoreApp
      *
-     * Create app store app.
+     * Create App store app.
      *
      */
     public function testCreateAppStoreApp()
@@ -94,7 +94,7 @@ class AppStoreApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteAppStoreApp
      *
-     * Delete app store app.
+     * Delete App store app.
      *
      */
     public function testDeleteAppStoreApp()
@@ -104,7 +104,7 @@ class AppStoreApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAppStoreApp
      *
-     * Get app store app details.
+     * Get App store app.
      *
      */
     public function testGetAppStoreApp()
@@ -114,7 +114,7 @@ class AppStoreApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAppStoreApps
      *
-     * Get list of app store app summaries.
+     * Get list of App store app summaries.
      *
      */
     public function testGetAppStoreApps()
@@ -124,7 +124,7 @@ class AppStoreApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateAppStoreApp
      *
-     * Update app store app.
+     * Update App store app.
      *
      */
     public function testUpdateAppStoreApp()
@@ -134,7 +134,7 @@ class AppStoreApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for uploadAppStoreAppLogo
      *
-     * Upload the app store app logo \\ icon.
+     * Upload the App store app logo \\ icon.
      *
      */
     public function testUploadAppStoreAppLogo()

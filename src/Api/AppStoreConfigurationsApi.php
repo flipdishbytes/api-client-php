@@ -90,14 +90,14 @@ class AppStoreConfigurationsApi
     /**
      * Operation createAppStoreConfig
      *
-     * Create app store app configuration
+     * Create App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultAppConfigurationSummary
+     * @return \Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration
      */
     public function createAppStoreConfig($app_id, $app_store_app_id)
     {
@@ -108,18 +108,18 @@ class AppStoreConfigurationsApi
     /**
      * Operation createAppStoreConfigWithHttpInfo
      *
-     * Create app store app configuration
+     * Create App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultAppConfigurationSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAppStoreConfigWithHttpInfo($app_id, $app_store_app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultAppConfigurationSummary';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration';
         $request = $this->createAppStoreConfigRequest($app_id, $app_store_app_id);
 
         try {
@@ -171,7 +171,7 @@ class AppStoreConfigurationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultAppConfigurationSummary',
+                        '\Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -208,10 +208,10 @@ class AppStoreConfigurationsApi
     /**
      * Operation createAppStoreConfigAsync
      *
-     * Create app store app configuration
+     * Create App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -229,17 +229,17 @@ class AppStoreConfigurationsApi
     /**
      * Operation createAppStoreConfigAsyncWithHttpInfo
      *
-     * Create app store app configuration
+     * Create App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createAppStoreConfigAsyncWithHttpInfo($app_id, $app_store_app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultAppConfigurationSummary';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration';
         $request = $this->createAppStoreConfigRequest($app_id, $app_store_app_id);
 
         return $this->client
@@ -282,8 +282,8 @@ class AppStoreConfigurationsApi
     /**
      * Create request for operation 'createAppStoreConfig'
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -406,11 +406,11 @@ class AppStoreConfigurationsApi
     /**
      * Operation deleteAppStoreConfig
      *
-     * Delete app store app configuration
+     * Delete App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -425,11 +425,11 @@ class AppStoreConfigurationsApi
     /**
      * Operation deleteAppStoreConfigWithHttpInfo
      *
-     * Delete app store app configuration
+     * Delete App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -534,11 +534,11 @@ class AppStoreConfigurationsApi
     /**
      * Operation deleteAppStoreConfigAsync
      *
-     * Delete app store app configuration
+     * Delete App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -556,11 +556,11 @@ class AppStoreConfigurationsApi
     /**
      * Operation deleteAppStoreConfigAsyncWithHttpInfo
      *
-     * Delete app store app configuration
+     * Delete App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -610,9 +610,9 @@ class AppStoreConfigurationsApi
     /**
      * Create request for operation 'deleteAppStoreConfig'
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -749,15 +749,15 @@ class AppStoreConfigurationsApi
     /**
      * Operation getAppStoreConfig
      *
-     * Get app store app configuration
+     * Get App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\AppConfigurationDetail
+     * @return \Flipdish\\Client\Models\AppStoreAppConfiguration
      */
     public function getAppStoreConfig($app_id, $app_store_app_id, $config_id)
     {
@@ -768,19 +768,19 @@ class AppStoreConfigurationsApi
     /**
      * Operation getAppStoreConfigWithHttpInfo
      *
-     * Get app store app configuration
+     * Get App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\AppConfigurationDetail, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\AppStoreAppConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAppStoreConfigWithHttpInfo($app_id, $app_store_app_id, $config_id)
     {
-        $returnType = '\Flipdish\\Client\Models\AppConfigurationDetail';
+        $returnType = '\Flipdish\\Client\Models\AppStoreAppConfiguration';
         $request = $this->getAppStoreConfigRequest($app_id, $app_store_app_id, $config_id);
 
         try {
@@ -832,7 +832,7 @@ class AppStoreConfigurationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\AppConfigurationDetail',
+                        '\Flipdish\\Client\Models\AppStoreAppConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -877,11 +877,11 @@ class AppStoreConfigurationsApi
     /**
      * Operation getAppStoreConfigAsync
      *
-     * Get app store app configuration
+     * Get App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -899,18 +899,18 @@ class AppStoreConfigurationsApi
     /**
      * Operation getAppStoreConfigAsyncWithHttpInfo
      *
-     * Get app store app configuration
+     * Get App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function getAppStoreConfigAsyncWithHttpInfo($app_id, $app_store_app_id, $config_id)
     {
-        $returnType = '\Flipdish\\Client\Models\AppConfigurationDetail';
+        $returnType = '\Flipdish\\Client\Models\AppStoreAppConfiguration';
         $request = $this->getAppStoreConfigRequest($app_id, $app_store_app_id, $config_id);
 
         return $this->client
@@ -953,9 +953,9 @@ class AppStoreConfigurationsApi
     /**
      * Create request for operation 'getAppStoreConfig'
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1092,14 +1092,14 @@ class AppStoreConfigurationsApi
     /**
      * Operation getConfiguredAppSingleApp
      *
-     * Get list of app store app configurations for one app store app
+     * Get list of App store app configurations for one App store app
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiArrayResultAppConfigurationSummary
+     * @return \Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationSummary
      */
     public function getConfiguredAppSingleApp($app_id, $app_store_app_id)
     {
@@ -1110,18 +1110,18 @@ class AppStoreConfigurationsApi
     /**
      * Operation getConfiguredAppSingleAppWithHttpInfo
      *
-     * Get list of app store app configurations for one app store app
+     * Get list of App store app configurations for one App store app
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiArrayResultAppConfigurationSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConfiguredAppSingleAppWithHttpInfo($app_id, $app_store_app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppConfigurationSummary';
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationSummary';
         $request = $this->getConfiguredAppSingleAppRequest($app_id, $app_store_app_id);
 
         try {
@@ -1173,7 +1173,7 @@ class AppStoreConfigurationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiArrayResultAppConfigurationSummary',
+                        '\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1218,10 +1218,10 @@ class AppStoreConfigurationsApi
     /**
      * Operation getConfiguredAppSingleAppAsync
      *
-     * Get list of app store app configurations for one app store app
+     * Get list of App store app configurations for one App store app
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1239,17 +1239,17 @@ class AppStoreConfigurationsApi
     /**
      * Operation getConfiguredAppSingleAppAsyncWithHttpInfo
      *
-     * Get list of app store app configurations for one app store app
+     * Get list of App store app configurations for one App store app
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function getConfiguredAppSingleAppAsyncWithHttpInfo($app_id, $app_store_app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppConfigurationSummary';
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationSummary';
         $request = $this->getConfiguredAppSingleAppRequest($app_id, $app_store_app_id);
 
         return $this->client
@@ -1292,8 +1292,8 @@ class AppStoreConfigurationsApi
     /**
      * Create request for operation 'getConfiguredAppSingleApp'
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1416,13 +1416,13 @@ class AppStoreConfigurationsApi
     /**
      * Operation getConfiguredApps
      *
-     * Get list of app store apps which have been configured
+     * Get list of App store apps which have been configured
      *
-     * @param  string $app_id App Id (required)
+     * @param  string $app_id App id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiArrayResultAppConfigurationHeader
+     * @return \Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationHeader
      */
     public function getConfiguredApps($app_id)
     {
@@ -1433,17 +1433,17 @@ class AppStoreConfigurationsApi
     /**
      * Operation getConfiguredAppsWithHttpInfo
      *
-     * Get list of app store apps which have been configured
+     * Get list of App store apps which have been configured
      *
-     * @param  string $app_id App Id (required)
+     * @param  string $app_id App id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiArrayResultAppConfigurationHeader, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationHeader, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConfiguredAppsWithHttpInfo($app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppConfigurationHeader';
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationHeader';
         $request = $this->getConfiguredAppsRequest($app_id);
 
         try {
@@ -1495,7 +1495,7 @@ class AppStoreConfigurationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiArrayResultAppConfigurationHeader',
+                        '\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationHeader',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1532,9 +1532,9 @@ class AppStoreConfigurationsApi
     /**
      * Operation getConfiguredAppsAsync
      *
-     * Get list of app store apps which have been configured
+     * Get list of App store apps which have been configured
      *
-     * @param  string $app_id App Id (required)
+     * @param  string $app_id App id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1552,16 +1552,16 @@ class AppStoreConfigurationsApi
     /**
      * Operation getConfiguredAppsAsyncWithHttpInfo
      *
-     * Get list of app store apps which have been configured
+     * Get list of App store apps which have been configured
      *
-     * @param  string $app_id App Id (required)
+     * @param  string $app_id App id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function getConfiguredAppsAsyncWithHttpInfo($app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppConfigurationHeader';
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationHeader';
         $request = $this->getConfiguredAppsRequest($app_id);
 
         return $this->client
@@ -1604,7 +1604,7 @@ class AppStoreConfigurationsApi
     /**
      * Create request for operation 'getConfiguredApps'
      *
-     * @param  string $app_id App Id (required)
+     * @param  string $app_id App id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1713,40 +1713,40 @@ class AppStoreConfigurationsApi
     /**
      * Operation updateAppStoreConfig
      *
-     * Update app store app configuration
+     * Update App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
-     * @param  \Flipdish\\Client\Models\UpdateAppConfiguration $update_app_configuration_base App Store Configuration Base (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreAppConfiguration $update_app_store_app_configuration Update App store app configuration (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function updateAppStoreConfig($app_id, $app_store_app_id, $config_id, $update_app_configuration_base)
+    public function updateAppStoreConfig($app_id, $app_store_app_id, $config_id, $update_app_store_app_configuration)
     {
-        $this->updateAppStoreConfigWithHttpInfo($app_id, $app_store_app_id, $config_id, $update_app_configuration_base);
+        $this->updateAppStoreConfigWithHttpInfo($app_id, $app_store_app_id, $config_id, $update_app_store_app_configuration);
     }
 
     /**
      * Operation updateAppStoreConfigWithHttpInfo
      *
-     * Update app store app configuration
+     * Update App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
-     * @param  \Flipdish\\Client\Models\UpdateAppConfiguration $update_app_configuration_base App Store Configuration Base (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreAppConfiguration $update_app_store_app_configuration Update App store app configuration (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAppStoreConfigWithHttpInfo($app_id, $app_store_app_id, $config_id, $update_app_configuration_base)
+    public function updateAppStoreConfigWithHttpInfo($app_id, $app_store_app_id, $config_id, $update_app_store_app_configuration)
     {
         $returnType = '';
-        $request = $this->updateAppStoreConfigRequest($app_id, $app_store_app_id, $config_id, $update_app_configuration_base);
+        $request = $this->updateAppStoreConfigRequest($app_id, $app_store_app_id, $config_id, $update_app_store_app_configuration);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1820,19 +1820,19 @@ class AppStoreConfigurationsApi
     /**
      * Operation updateAppStoreConfigAsync
      *
-     * Update app store app configuration
+     * Update App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
-     * @param  \Flipdish\\Client\Models\UpdateAppConfiguration $update_app_configuration_base App Store Configuration Base (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreAppConfiguration $update_app_store_app_configuration Update App store app configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAppStoreConfigAsync($app_id, $app_store_app_id, $config_id, $update_app_configuration_base)
+    public function updateAppStoreConfigAsync($app_id, $app_store_app_id, $config_id, $update_app_store_app_configuration)
     {
-        return $this->updateAppStoreConfigAsyncWithHttpInfo($app_id, $app_store_app_id, $config_id, $update_app_configuration_base)
+        return $this->updateAppStoreConfigAsyncWithHttpInfo($app_id, $app_store_app_id, $config_id, $update_app_store_app_configuration)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1843,20 +1843,20 @@ class AppStoreConfigurationsApi
     /**
      * Operation updateAppStoreConfigAsyncWithHttpInfo
      *
-     * Update app store app configuration
+     * Update App store app configuration
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
-     * @param  \Flipdish\\Client\Models\UpdateAppConfiguration $update_app_configuration_base App Store Configuration Base (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreAppConfiguration $update_app_store_app_configuration Update App store app configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAppStoreConfigAsyncWithHttpInfo($app_id, $app_store_app_id, $config_id, $update_app_configuration_base)
+    public function updateAppStoreConfigAsyncWithHttpInfo($app_id, $app_store_app_id, $config_id, $update_app_store_app_configuration)
     {
         $returnType = '';
-        $request = $this->updateAppStoreConfigRequest($app_id, $app_store_app_id, $config_id, $update_app_configuration_base);
+        $request = $this->updateAppStoreConfigRequest($app_id, $app_store_app_id, $config_id, $update_app_store_app_configuration);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1884,15 +1884,15 @@ class AppStoreConfigurationsApi
     /**
      * Create request for operation 'updateAppStoreConfig'
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $config_id App Store Configuration Id (required)
-     * @param  \Flipdish\\Client\Models\UpdateAppConfiguration $update_app_configuration_base App Store Configuration Base (required)
+     * @param  string $app_id App id (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $config_id App store app configuration id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreAppConfiguration $update_app_store_app_configuration Update App store app configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateAppStoreConfigRequest($app_id, $app_store_app_id, $config_id, $update_app_configuration_base)
+    protected function updateAppStoreConfigRequest($app_id, $app_store_app_id, $config_id, $update_app_store_app_configuration)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -1912,10 +1912,10 @@ class AppStoreConfigurationsApi
                 'Missing the required parameter $config_id when calling updateAppStoreConfig'
             );
         }
-        // verify the required parameter 'update_app_configuration_base' is set
-        if ($update_app_configuration_base === null || (is_array($update_app_configuration_base) && count($update_app_configuration_base) === 0)) {
+        // verify the required parameter 'update_app_store_app_configuration' is set
+        if ($update_app_store_app_configuration === null || (is_array($update_app_store_app_configuration) && count($update_app_store_app_configuration) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $update_app_configuration_base when calling updateAppStoreConfig'
+                'Missing the required parameter $update_app_store_app_configuration when calling updateAppStoreConfig'
             );
         }
 
@@ -1954,8 +1954,8 @@ class AppStoreConfigurationsApi
 
         // body params
         $_tempBody = null;
-        if (isset($update_app_configuration_base)) {
-            $_tempBody = $update_app_configuration_base;
+        if (isset($update_app_store_app_configuration)) {
+            $_tempBody = $update_app_store_app_configuration;
         }
 
         if ($multipart) {

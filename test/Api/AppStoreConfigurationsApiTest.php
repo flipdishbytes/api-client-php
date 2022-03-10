@@ -74,7 +74,7 @@ class AppStoreConfigurationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createAppStoreConfig
      *
-     * Create app store app configuration.
+     * Create App store app configuration.
      *
      */
     public function testCreateAppStoreConfig()
@@ -84,7 +84,7 @@ class AppStoreConfigurationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteAppStoreConfig
      *
-     * Delete app store app configuration.
+     * Delete App store app configuration.
      *
      */
     public function testDeleteAppStoreConfig()
@@ -94,7 +94,7 @@ class AppStoreConfigurationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAppStoreConfig
      *
-     * Get app store app configuration.
+     * Get App store app configuration.
      *
      */
     public function testGetAppStoreConfig()
@@ -104,7 +104,7 @@ class AppStoreConfigurationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getConfiguredAppSingleApp
      *
-     * Get list of app store app configurations for one app store app.
+     * Get list of App store app configurations for one App store app.
      *
      */
     public function testGetConfiguredAppSingleApp()
@@ -114,7 +114,7 @@ class AppStoreConfigurationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getConfiguredApps
      *
-     * Get list of app store apps which have been configured.
+     * Get list of App store apps which have been configured.
      *
      */
     public function testGetConfiguredApps()
@@ -124,7 +124,7 @@ class AppStoreConfigurationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateAppStoreConfig
      *
-     * Update app store app configuration.
+     * Update App store app configuration.
      *
      */
     public function testUpdateAppStoreConfig()

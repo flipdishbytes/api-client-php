@@ -90,10 +90,10 @@ class AppStoreApi
     /**
      * Operation appVerificationUpdate
      *
-     * Update app store app verification
+     * Update App store app verification
      *
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $verification_status New Verification Status (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $verification_status New verification status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,10 +107,10 @@ class AppStoreApi
     /**
      * Operation appVerificationUpdateWithHttpInfo
      *
-     * Update app store app verification
+     * Update App store app verification
      *
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $verification_status New Verification Status (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $verification_status New verification status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -193,10 +193,10 @@ class AppStoreApi
     /**
      * Operation appVerificationUpdateAsync
      *
-     * Update app store app verification
+     * Update App store app verification
      *
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $verification_status New Verification Status (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $verification_status New verification status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -214,10 +214,10 @@ class AppStoreApi
     /**
      * Operation appVerificationUpdateAsyncWithHttpInfo
      *
-     * Update app store app verification
+     * Update App store app verification
      *
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $verification_status New Verification Status (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $verification_status New verification status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -253,8 +253,8 @@ class AppStoreApi
     /**
      * Create request for operation 'appVerificationUpdate'
      *
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  string $verification_status New Verification Status (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $verification_status New verification status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -372,35 +372,35 @@ class AppStoreApi
     /**
      * Operation createAppStoreApp
      *
-     * Create app store app
+     * Create App store app
      *
-     * @param  \Flipdish\\Client\Models\AppDetailBase $app_detail_base App Store App Detail Base (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultAppDetail
+     * @return \Flipdish\\Client\Models\RestApiResultAppStoreApp
      */
-    public function createAppStoreApp($app_detail_base)
+    public function createAppStoreApp($create_app_store_app)
     {
-        list($response) = $this->createAppStoreAppWithHttpInfo($app_detail_base);
+        list($response) = $this->createAppStoreAppWithHttpInfo($create_app_store_app);
         return $response;
     }
 
     /**
      * Operation createAppStoreAppWithHttpInfo
      *
-     * Create app store app
+     * Create App store app
      *
-     * @param  \Flipdish\\Client\Models\AppDetailBase $app_detail_base App Store App Detail Base (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultAppDetail, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultAppStoreApp, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createAppStoreAppWithHttpInfo($app_detail_base)
+    public function createAppStoreAppWithHttpInfo($create_app_store_app)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultAppDetail';
-        $request = $this->createAppStoreAppRequest($app_detail_base);
+        $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreApp';
+        $request = $this->createAppStoreAppRequest($create_app_store_app);
 
         try {
             $options = $this->createHttpClientOption();
@@ -451,7 +451,7 @@ class AppStoreApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultAppDetail',
+                        '\Flipdish\\Client\Models\RestApiResultAppStoreApp',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -488,16 +488,16 @@ class AppStoreApi
     /**
      * Operation createAppStoreAppAsync
      *
-     * Create app store app
+     * Create App store app
      *
-     * @param  \Flipdish\\Client\Models\AppDetailBase $app_detail_base App Store App Detail Base (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAppStoreAppAsync($app_detail_base)
+    public function createAppStoreAppAsync($create_app_store_app)
     {
-        return $this->createAppStoreAppAsyncWithHttpInfo($app_detail_base)
+        return $this->createAppStoreAppAsyncWithHttpInfo($create_app_store_app)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -508,17 +508,17 @@ class AppStoreApi
     /**
      * Operation createAppStoreAppAsyncWithHttpInfo
      *
-     * Create app store app
+     * Create App store app
      *
-     * @param  \Flipdish\\Client\Models\AppDetailBase $app_detail_base App Store App Detail Base (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAppStoreAppAsyncWithHttpInfo($app_detail_base)
+    public function createAppStoreAppAsyncWithHttpInfo($create_app_store_app)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultAppDetail';
-        $request = $this->createAppStoreAppRequest($app_detail_base);
+        $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreApp';
+        $request = $this->createAppStoreAppRequest($create_app_store_app);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -560,17 +560,17 @@ class AppStoreApi
     /**
      * Create request for operation 'createAppStoreApp'
      *
-     * @param  \Flipdish\\Client\Models\AppDetailBase $app_detail_base App Store App Detail Base (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createAppStoreAppRequest($app_detail_base)
+    protected function createAppStoreAppRequest($create_app_store_app)
     {
-        // verify the required parameter 'app_detail_base' is set
-        if ($app_detail_base === null || (is_array($app_detail_base) && count($app_detail_base) === 0)) {
+        // verify the required parameter 'create_app_store_app' is set
+        if ($create_app_store_app === null || (is_array($create_app_store_app) && count($create_app_store_app) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_detail_base when calling createAppStoreApp'
+                'Missing the required parameter $create_app_store_app when calling createAppStoreApp'
             );
         }
 
@@ -585,8 +585,8 @@ class AppStoreApi
 
         // body params
         $_tempBody = null;
-        if (isset($app_detail_base)) {
-            $_tempBody = $app_detail_base;
+        if (isset($create_app_store_app)) {
+            $_tempBody = $create_app_store_app;
         }
 
         if ($multipart) {
@@ -664,9 +664,9 @@ class AppStoreApi
     /**
      * Operation deleteAppStoreApp
      *
-     * Delete app store app
+     * Delete App store app
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -681,9 +681,9 @@ class AppStoreApi
     /**
      * Operation deleteAppStoreAppWithHttpInfo
      *
-     * Delete app store app
+     * Delete App store app
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -788,9 +788,9 @@ class AppStoreApi
     /**
      * Operation deleteAppStoreAppAsync
      *
-     * Delete app store app
+     * Delete App store app
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -808,9 +808,9 @@ class AppStoreApi
     /**
      * Operation deleteAppStoreAppAsyncWithHttpInfo
      *
-     * Delete app store app
+     * Delete App store app
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -860,7 +860,7 @@ class AppStoreApi
     /**
      * Create request for operation 'deleteAppStoreApp'
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -969,13 +969,13 @@ class AppStoreApi
     /**
      * Operation getAppStoreApp
      *
-     * Get app store app details
+     * Get App store app
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\AppDetail
+     * @return \Flipdish\\Client\Models\AppStoreApp
      */
     public function getAppStoreApp($app_store_app_id)
     {
@@ -986,17 +986,17 @@ class AppStoreApi
     /**
      * Operation getAppStoreAppWithHttpInfo
      *
-     * Get app store app details
+     * Get App store app
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\AppDetail, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\AppStoreApp, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAppStoreAppWithHttpInfo($app_store_app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\AppDetail';
+        $returnType = '\Flipdish\\Client\Models\AppStoreApp';
         $request = $this->getAppStoreAppRequest($app_store_app_id);
 
         try {
@@ -1048,7 +1048,7 @@ class AppStoreApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\AppDetail',
+                        '\Flipdish\\Client\Models\AppStoreApp',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1093,9 +1093,9 @@ class AppStoreApi
     /**
      * Operation getAppStoreAppAsync
      *
-     * Get app store app details
+     * Get App store app
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1113,16 +1113,16 @@ class AppStoreApi
     /**
      * Operation getAppStoreAppAsyncWithHttpInfo
      *
-     * Get app store app details
+     * Get App store app
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function getAppStoreAppAsyncWithHttpInfo($app_store_app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\AppDetail';
+        $returnType = '\Flipdish\\Client\Models\AppStoreApp';
         $request = $this->getAppStoreAppRequest($app_store_app_id);
 
         return $this->client
@@ -1165,7 +1165,7 @@ class AppStoreApi
     /**
      * Create request for operation 'getAppStoreApp'
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1274,16 +1274,16 @@ class AppStoreApi
     /**
      * Operation getAppStoreApps
      *
-     * Get list of app store app summaries
+     * Get list of App store app summaries
      *
-     * @param  string $search Query app store app name (required)
+     * @param  string $search Query App store app name (required)
      * @param  int $page Requested page index (optional)
      * @param  int $limit Requested page limit (optional)
-     * @param  bool $exclude_not_owned Exclude app store apps that user is not the owner off (optional)
+     * @param  bool $exclude_not_owned Exclude App store apps that user is not the owner off (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiPaginationResultAppSummary
+     * @return \Flipdish\\Client\Models\RestApiPaginationResultAppStoreAppSummary
      */
     public function getAppStoreApps($search, $page = null, $limit = null, $exclude_not_owned = null)
     {
@@ -1294,20 +1294,20 @@ class AppStoreApi
     /**
      * Operation getAppStoreAppsWithHttpInfo
      *
-     * Get list of app store app summaries
+     * Get list of App store app summaries
      *
-     * @param  string $search Query app store app name (required)
+     * @param  string $search Query App store app name (required)
      * @param  int $page Requested page index (optional)
      * @param  int $limit Requested page limit (optional)
-     * @param  bool $exclude_not_owned Exclude app store apps that user is not the owner off (optional)
+     * @param  bool $exclude_not_owned Exclude App store apps that user is not the owner off (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiPaginationResultAppSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiPaginationResultAppStoreAppSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAppStoreAppsWithHttpInfo($search, $page = null, $limit = null, $exclude_not_owned = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultAppSummary';
+        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultAppStoreAppSummary';
         $request = $this->getAppStoreAppsRequest($search, $page, $limit, $exclude_not_owned);
 
         try {
@@ -1359,7 +1359,7 @@ class AppStoreApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiPaginationResultAppSummary',
+                        '\Flipdish\\Client\Models\RestApiPaginationResultAppStoreAppSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1396,12 +1396,12 @@ class AppStoreApi
     /**
      * Operation getAppStoreAppsAsync
      *
-     * Get list of app store app summaries
+     * Get list of App store app summaries
      *
-     * @param  string $search Query app store app name (required)
+     * @param  string $search Query App store app name (required)
      * @param  int $page Requested page index (optional)
      * @param  int $limit Requested page limit (optional)
-     * @param  bool $exclude_not_owned Exclude app store apps that user is not the owner off (optional)
+     * @param  bool $exclude_not_owned Exclude App store apps that user is not the owner off (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1419,19 +1419,19 @@ class AppStoreApi
     /**
      * Operation getAppStoreAppsAsyncWithHttpInfo
      *
-     * Get list of app store app summaries
+     * Get list of App store app summaries
      *
-     * @param  string $search Query app store app name (required)
+     * @param  string $search Query App store app name (required)
      * @param  int $page Requested page index (optional)
      * @param  int $limit Requested page limit (optional)
-     * @param  bool $exclude_not_owned Exclude app store apps that user is not the owner off (optional)
+     * @param  bool $exclude_not_owned Exclude App store apps that user is not the owner off (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function getAppStoreAppsAsyncWithHttpInfo($search, $page = null, $limit = null, $exclude_not_owned = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultAppSummary';
+        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultAppStoreAppSummary';
         $request = $this->getAppStoreAppsRequest($search, $page, $limit, $exclude_not_owned);
 
         return $this->client
@@ -1474,10 +1474,10 @@ class AppStoreApi
     /**
      * Create request for operation 'getAppStoreApps'
      *
-     * @param  string $search Query app store app name (required)
+     * @param  string $search Query App store app name (required)
      * @param  int $page Requested page index (optional)
      * @param  int $limit Requested page limit (optional)
-     * @param  bool $exclude_not_owned Exclude app store apps that user is not the owner off (optional)
+     * @param  bool $exclude_not_owned Exclude App store apps that user is not the owner off (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1594,36 +1594,36 @@ class AppStoreApi
     /**
      * Operation updateAppStoreApp
      *
-     * Update app store app
+     * Update App store app
      *
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  \Flipdish\\Client\Models\AppDetail $app_detail App Store App Detail (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function updateAppStoreApp($app_store_app_id, $app_detail)
+    public function updateAppStoreApp($app_store_app_id, $app_store_app)
     {
-        $this->updateAppStoreAppWithHttpInfo($app_store_app_id, $app_detail);
+        $this->updateAppStoreAppWithHttpInfo($app_store_app_id, $app_store_app);
     }
 
     /**
      * Operation updateAppStoreAppWithHttpInfo
      *
-     * Update app store app
+     * Update App store app
      *
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  \Flipdish\\Client\Models\AppDetail $app_detail App Store App Detail (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAppStoreAppWithHttpInfo($app_store_app_id, $app_detail)
+    public function updateAppStoreAppWithHttpInfo($app_store_app_id, $app_store_app)
     {
         $returnType = '';
-        $request = $this->updateAppStoreAppRequest($app_store_app_id, $app_detail);
+        $request = $this->updateAppStoreAppRequest($app_store_app_id, $app_store_app);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1697,17 +1697,17 @@ class AppStoreApi
     /**
      * Operation updateAppStoreAppAsync
      *
-     * Update app store app
+     * Update App store app
      *
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  \Flipdish\\Client\Models\AppDetail $app_detail App Store App Detail (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAppStoreAppAsync($app_store_app_id, $app_detail)
+    public function updateAppStoreAppAsync($app_store_app_id, $app_store_app)
     {
-        return $this->updateAppStoreAppAsyncWithHttpInfo($app_store_app_id, $app_detail)
+        return $this->updateAppStoreAppAsyncWithHttpInfo($app_store_app_id, $app_store_app)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1718,18 +1718,18 @@ class AppStoreApi
     /**
      * Operation updateAppStoreAppAsyncWithHttpInfo
      *
-     * Update app store app
+     * Update App store app
      *
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  \Flipdish\\Client\Models\AppDetail $app_detail App Store App Detail (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAppStoreAppAsyncWithHttpInfo($app_store_app_id, $app_detail)
+    public function updateAppStoreAppAsyncWithHttpInfo($app_store_app_id, $app_store_app)
     {
         $returnType = '';
-        $request = $this->updateAppStoreAppRequest($app_store_app_id, $app_detail);
+        $request = $this->updateAppStoreAppRequest($app_store_app_id, $app_store_app);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1757,13 +1757,13 @@ class AppStoreApi
     /**
      * Create request for operation 'updateAppStoreApp'
      *
-     * @param  string $app_store_app_id App Store App Id (required)
-     * @param  \Flipdish\\Client\Models\AppDetail $app_detail App Store App Detail (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateAppStoreAppRequest($app_store_app_id, $app_detail)
+    protected function updateAppStoreAppRequest($app_store_app_id, $app_store_app)
     {
         // verify the required parameter 'app_store_app_id' is set
         if ($app_store_app_id === null || (is_array($app_store_app_id) && count($app_store_app_id) === 0)) {
@@ -1771,10 +1771,10 @@ class AppStoreApi
                 'Missing the required parameter $app_store_app_id when calling updateAppStoreApp'
             );
         }
-        // verify the required parameter 'app_detail' is set
-        if ($app_detail === null || (is_array($app_detail) && count($app_detail) === 0)) {
+        // verify the required parameter 'app_store_app' is set
+        if ($app_store_app === null || (is_array($app_store_app) && count($app_store_app) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_detail when calling updateAppStoreApp'
+                'Missing the required parameter $app_store_app when calling updateAppStoreApp'
             );
         }
 
@@ -1797,8 +1797,8 @@ class AppStoreApi
 
         // body params
         $_tempBody = null;
-        if (isset($app_detail)) {
-            $_tempBody = $app_detail;
+        if (isset($app_store_app)) {
+            $_tempBody = $app_store_app;
         }
 
         if ($multipart) {
@@ -1876,9 +1876,9 @@ class AppStoreApi
     /**
      * Operation uploadAppStoreAppLogo
      *
-     * Upload the app store app logo \\ icon
+     * Upload the App store app logo \\ icon
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      * @param  \SplFileObject $image App Store App Logo (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1893,9 +1893,9 @@ class AppStoreApi
     /**
      * Operation uploadAppStoreAppLogoWithHttpInfo
      *
-     * Upload the app store app logo \\ icon
+     * Upload the App store app logo \\ icon
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      * @param  \SplFileObject $image App Store App Logo (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1971,9 +1971,9 @@ class AppStoreApi
     /**
      * Operation uploadAppStoreAppLogoAsync
      *
-     * Upload the app store app logo \\ icon
+     * Upload the App store app logo \\ icon
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      * @param  \SplFileObject $image App Store App Logo (required)
      *
      * @throws \InvalidArgumentException
@@ -1992,9 +1992,9 @@ class AppStoreApi
     /**
      * Operation uploadAppStoreAppLogoAsyncWithHttpInfo
      *
-     * Upload the app store app logo \\ icon
+     * Upload the App store app logo \\ icon
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      * @param  \SplFileObject $image App Store App Logo (required)
      *
      * @throws \InvalidArgumentException
@@ -2031,7 +2031,7 @@ class AppStoreApi
     /**
      * Create request for operation 'uploadAppStoreAppLogo'
      *
-     * @param  string $app_store_app_id App Store App Id (required)
+     * @param  string $app_store_app_id App store app id (required)
      * @param  \SplFileObject $image App Store App Logo (required)
      *
      * @throws \InvalidArgumentException

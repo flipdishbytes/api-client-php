@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfiguredPhysicalRestaurant
+ * RestApiPaginationResultAppStoreAppSummary
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * ConfiguredPhysicalRestaurant Class Doc Comment
+ * RestApiPaginationResultAppStoreAppSummary Class Doc Comment
  *
  * @category Class
- * @description Configured stores
+ * @description Rest api pagination result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
+class RestApiPaginationResultAppStoreAppSummary implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ConfiguredPhysicalRestaurant';
+    protected static $swaggerModelName = 'RestApiPaginationResult[AppStoreAppSummary]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,10 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'store_id' => 'int',
-        'name' => 'string'
+        'page' => 'int',
+        'limit' => 'int',
+        'total_record_count' => 'int',
+        'data' => '\Flipdish\\Client\Models\AppStoreAppSummary[]'
     ];
 
     /**
@@ -68,8 +70,10 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'store_id' => 'int32',
-        'name' => null
+        'page' => 'int32',
+        'limit' => 'int32',
+        'total_record_count' => 'int32',
+        'data' => null
     ];
 
     /**
@@ -99,8 +103,10 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_id' => 'StoreId',
-        'name' => 'Name'
+        'page' => 'Page',
+        'limit' => 'Limit',
+        'total_record_count' => 'TotalRecordCount',
+        'data' => 'Data'
     ];
 
     /**
@@ -109,8 +115,10 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_id' => 'setStoreId',
-        'name' => 'setName'
+        'page' => 'setPage',
+        'limit' => 'setLimit',
+        'total_record_count' => 'setTotalRecordCount',
+        'data' => 'setData'
     ];
 
     /**
@@ -119,8 +127,10 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_id' => 'getStoreId',
-        'name' => 'getName'
+        'page' => 'getPage',
+        'limit' => 'getLimit',
+        'total_record_count' => 'getTotalRecordCount',
+        'data' => 'getData'
     ];
 
     /**
@@ -183,8 +193,10 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['total_record_count'] = isset($data['total_record_count']) ? $data['total_record_count'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -196,6 +208,18 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['page'] === null) {
+            $invalidProperties[] = "'page' can't be null";
+        }
+        if ($this->container['limit'] === null) {
+            $invalidProperties[] = "'limit' can't be null";
+        }
+        if ($this->container['total_record_count'] === null) {
+            $invalidProperties[] = "'total_record_count' can't be null";
+        }
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -212,49 +236,97 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_id
+     * Gets page
      *
      * @return int
      */
-    public function getStoreId()
+    public function getPage()
     {
-        return $this->container['store_id'];
+        return $this->container['page'];
     }
 
     /**
-     * Sets store_id
+     * Sets page
      *
-     * @param int $store_id Store id
+     * @param int $page Current page index
      *
      * @return $this
      */
-    public function setStoreId($store_id)
+    public function setPage($page)
     {
-        $this->container['store_id'] = $store_id;
+        $this->container['page'] = $page;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets limit
      *
-     * @return string
+     * @return int
      */
-    public function getName()
+    public function getLimit()
     {
-        return $this->container['name'];
+        return $this->container['limit'];
     }
 
     /**
-     * Sets name
+     * Sets limit
      *
-     * @param string $name Name of store
+     * @param int $limit Current page size
      *
      * @return $this
      */
-    public function setName($name)
+    public function setLimit($limit)
     {
-        $this->container['name'] = $name;
+        $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_record_count
+     *
+     * @return int
+     */
+    public function getTotalRecordCount()
+    {
+        return $this->container['total_record_count'];
+    }
+
+    /**
+     * Sets total_record_count
+     *
+     * @param int $total_record_count Total record count
+     *
+     * @return $this
+     */
+    public function setTotalRecordCount($total_record_count)
+    {
+        $this->container['total_record_count'] = $total_record_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     *
+     * @return \Flipdish\\Client\Models\AppStoreAppSummary[]
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     *
+     * @param \Flipdish\\Client\Models\AppStoreAppSummary[] $data Generic data object.
+     *
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
 
         return $this;
     }

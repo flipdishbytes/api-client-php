@@ -60,7 +60,7 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'event_name' => 'string',
         'app_store_app_id' => 'string',
-        'app_store_app_configuration' => '\Flipdish\\Client\Models\AppConfigurationBase',
+        'update_app_store_app_store_app_store_app_configuration' => '\Flipdish\\Client\Models\UpdateAppStoreAppConfigurationWebhookDTO',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -75,7 +75,7 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'event_name' => null,
         'app_store_app_id' => null,
-        'app_store_app_configuration' => null,
+        'update_app_store_app_store_app_store_app_configuration' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -111,7 +111,7 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'event_name' => 'EventName',
         'app_store_app_id' => 'AppStoreAppId',
-        'app_store_app_configuration' => 'AppStoreAppConfiguration',
+        'update_app_store_app_store_app_store_app_configuration' => 'UpdateAppStoreAppStoreAppStoreAppConfiguration',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -126,7 +126,7 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
     protected static $setters = [
         'event_name' => 'setEventName',
         'app_store_app_id' => 'setAppStoreAppId',
-        'app_store_app_configuration' => 'setAppStoreAppConfiguration',
+        'update_app_store_app_store_app_store_app_configuration' => 'setUpdateAppStoreAppStoreAppStoreAppConfiguration',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -141,7 +141,7 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
     protected static $getters = [
         'event_name' => 'getEventName',
         'app_store_app_id' => 'getAppStoreAppId',
-        'app_store_app_configuration' => 'getAppStoreAppConfiguration',
+        'update_app_store_app_store_app_store_app_configuration' => 'getUpdateAppStoreAppStoreAppStoreAppConfiguration',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -210,7 +210,7 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
     {
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
         $this->container['app_store_app_id'] = isset($data['app_store_app_id']) ? $data['app_store_app_id'] : null;
-        $this->container['app_store_app_configuration'] = isset($data['app_store_app_configuration']) ? $data['app_store_app_configuration'] : null;
+        $this->container['update_app_store_app_store_app_store_app_configuration'] = isset($data['update_app_store_app_store_app_store_app_configuration']) ? $data['update_app_store_app_store_app_store_app_configuration'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -290,25 +290,25 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets app_store_app_configuration
+     * Gets update_app_store_app_store_app_store_app_configuration
      *
-     * @return \Flipdish\\Client\Models\AppConfigurationBase
+     * @return \Flipdish\\Client\Models\UpdateAppStoreAppConfigurationWebhookDTO
      */
-    public function getAppStoreAppConfiguration()
+    public function getUpdateAppStoreAppStoreAppStoreAppConfiguration()
     {
-        return $this->container['app_store_app_configuration'];
+        return $this->container['update_app_store_app_store_app_store_app_configuration'];
     }
 
     /**
-     * Sets app_store_app_configuration
+     * Sets update_app_store_app_store_app_store_app_configuration
      *
-     * @param \Flipdish\\Client\Models\AppConfigurationBase $app_store_app_configuration App Configuration
+     * @param \Flipdish\\Client\Models\UpdateAppStoreAppConfigurationWebhookDTO $update_app_store_app_store_app_store_app_configuration App Configuration
      *
      * @return $this
      */
-    public function setAppStoreAppConfiguration($app_store_app_configuration)
+    public function setUpdateAppStoreAppStoreAppStoreAppConfiguration($update_app_store_app_store_app_store_app_configuration)
     {
-        $this->container['app_store_app_configuration'] = $app_store_app_configuration;
+        $this->container['update_app_store_app_store_app_store_app_configuration'] = $update_app_store_app_store_app_store_app_configuration;
 
         return $this;
     }

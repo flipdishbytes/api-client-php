@@ -422,7 +422,7 @@ class Field implements ModelInterface, ArrayAccess
     /**
      * Sets position
      *
-     * @param int $position Position  <remarks>Position order in the fields list to display</remarks>
+     * @param int $position Position
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class Field implements ModelInterface, ArrayAccess
     /**
      * Sets default_value
      *
-     * @param string $default_value Default Value  <example>10</example><example>true</example>
+     * @param string $default_value Default Value
      *
      * @return $this
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfiguredPhysicalRestaurant
+ * UpdateAppStoreAppConfiguration
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * ConfiguredPhysicalRestaurant Class Doc Comment
+ * UpdateAppStoreAppConfiguration Class Doc Comment
  *
  * @category Class
- * @description Configured stores
+ * @description Update App store app configuration
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
+class UpdateAppStoreAppConfiguration implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ConfiguredPhysicalRestaurant';
+    protected static $swaggerModelName = 'UpdateAppStoreAppConfiguration';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,9 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'store_id' => 'int',
-        'name' => 'string'
+        'is_enabled' => 'bool',
+        'physical_restaurants' => 'int[]',
+        'settings' => '\Flipdish\\Client\Models\Setting[]'
     ];
 
     /**
@@ -68,8 +69,9 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'store_id' => 'int32',
-        'name' => null
+        'is_enabled' => null,
+        'physical_restaurants' => 'int32',
+        'settings' => null
     ];
 
     /**
@@ -99,8 +101,9 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_id' => 'StoreId',
-        'name' => 'Name'
+        'is_enabled' => 'IsEnabled',
+        'physical_restaurants' => 'PhysicalRestaurants',
+        'settings' => 'Settings'
     ];
 
     /**
@@ -109,8 +112,9 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_id' => 'setStoreId',
-        'name' => 'setName'
+        'is_enabled' => 'setIsEnabled',
+        'physical_restaurants' => 'setPhysicalRestaurants',
+        'settings' => 'setSettings'
     ];
 
     /**
@@ -119,8 +123,9 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_id' => 'getStoreId',
-        'name' => 'getName'
+        'is_enabled' => 'getIsEnabled',
+        'physical_restaurants' => 'getPhysicalRestaurants',
+        'settings' => 'getSettings'
     ];
 
     /**
@@ -183,8 +188,9 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
+        $this->container['physical_restaurants'] = isset($data['physical_restaurants']) ? $data['physical_restaurants'] : null;
+        $this->container['settings'] = isset($data['settings']) ? $data['settings'] : null;
     }
 
     /**
@@ -196,6 +202,9 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['is_enabled'] === null) {
+            $invalidProperties[] = "'is_enabled' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -212,49 +221,73 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_id
+     * Gets is_enabled
      *
-     * @return int
+     * @return bool
      */
-    public function getStoreId()
+    public function getIsEnabled()
     {
-        return $this->container['store_id'];
+        return $this->container['is_enabled'];
     }
 
     /**
-     * Sets store_id
+     * Sets is_enabled
      *
-     * @param int $store_id Store id
+     * @param bool $is_enabled Is enabled
      *
      * @return $this
      */
-    public function setStoreId($store_id)
+    public function setIsEnabled($is_enabled)
     {
-        $this->container['store_id'] = $store_id;
+        $this->container['is_enabled'] = $is_enabled;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets physical_restaurants
      *
-     * @return string
+     * @return int[]
      */
-    public function getName()
+    public function getPhysicalRestaurants()
     {
-        return $this->container['name'];
+        return $this->container['physical_restaurants'];
     }
 
     /**
-     * Sets name
+     * Sets physical_restaurants
      *
-     * @param string $name Name of store
+     * @param int[] $physical_restaurants Stores id's
      *
      * @return $this
      */
-    public function setName($name)
+    public function setPhysicalRestaurants($physical_restaurants)
     {
-        $this->container['name'] = $name;
+        $this->container['physical_restaurants'] = $physical_restaurants;
+
+        return $this;
+    }
+
+    /**
+     * Gets settings
+     *
+     * @return \Flipdish\\Client\Models\Setting[]
+     */
+    public function getSettings()
+    {
+        return $this->container['settings'];
+    }
+
+    /**
+     * Sets settings
+     *
+     * @param \Flipdish\\Client\Models\Setting[] $settings Settings
+     *
+     * @return $this
+     */
+    public function setSettings($settings)
+    {
+        $this->container['settings'] = $settings;
 
         return $this;
     }

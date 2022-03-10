@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfiguredPhysicalRestaurantTest
+ * RestApiPaginationResultAppStoreAppSummaryTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * ConfiguredPhysicalRestaurantTest Class Doc Comment
+ * RestApiPaginationResultAppStoreAppSummaryTest Class Doc Comment
  *
  * @category    Class
- * @description Configured stores
+ * @description Rest api pagination result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
+class RestApiPaginationResultAppStoreAppSummaryTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,23 +70,37 @@ class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ConfiguredPhysicalRestaurant"
+     * Test "RestApiPaginationResultAppStoreAppSummary"
      */
-    public function testConfiguredPhysicalRestaurant()
+    public function testRestApiPaginationResultAppStoreAppSummary()
     {
     }
 
     /**
-     * Test attribute "store_id"
+     * Test attribute "page"
      */
-    public function testPropertyStoreId()
+    public function testPropertyPage()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "limit"
      */
-    public function testPropertyName()
+    public function testPropertyLimit()
+    {
+    }
+
+    /**
+     * Test attribute "total_record_count"
+     */
+    public function testPropertyTotalRecordCount()
+    {
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
     {
     }
 }

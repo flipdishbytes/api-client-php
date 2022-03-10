@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfiguredPhysicalRestaurantTest
+ * UpdateAppStoreAppConfigurationTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * ConfiguredPhysicalRestaurantTest Class Doc Comment
+ * UpdateAppStoreAppConfigurationTest Class Doc Comment
  *
  * @category    Class
- * @description Configured stores
+ * @description Update App store app configuration
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
+class UpdateAppStoreAppConfigurationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,23 +70,30 @@ class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ConfiguredPhysicalRestaurant"
+     * Test "UpdateAppStoreAppConfiguration"
      */
-    public function testConfiguredPhysicalRestaurant()
+    public function testUpdateAppStoreAppConfiguration()
     {
     }
 
     /**
-     * Test attribute "store_id"
+     * Test attribute "is_enabled"
      */
-    public function testPropertyStoreId()
+    public function testPropertyIsEnabled()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "physical_restaurants"
      */
-    public function testPropertyName()
+    public function testPropertyPhysicalRestaurants()
+    {
+    }
+
+    /**
+     * Test attribute "settings"
+     */
+    public function testPropertySettings()
     {
     }
 }

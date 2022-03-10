@@ -104,19 +104,19 @@ Class | Method | HTTP request | Description
 *ApmApi* | [**getCallsStatistics**](docs/Api/ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
 *ApmApi* | [**getOrderStatistics**](docs/Api/ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics (Value of Orders)
 *ApmApi* | [**getPaginatedCallList**](docs/Api/ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/{appId}/apm/calls | [PRIVATE API] Get paginated APM call list
-*AppStoreApi* | [**appVerificationUpdate**](docs/Api/AppStoreApi.md#appverificationupdate) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId}/verification | Update app store app verification
-*AppStoreApi* | [**createAppStoreApp**](docs/Api/AppStoreApi.md#createappstoreapp) | **POST** /api/v1.0/appstore/apps | Create app store app
-*AppStoreApi* | [**deleteAppStoreApp**](docs/Api/AppStoreApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/appstore/apps/{appStoreAppId} | Delete app store app
-*AppStoreApi* | [**getAppStoreApp**](docs/Api/AppStoreApi.md#getappstoreapp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get app store app details
-*AppStoreApi* | [**getAppStoreApps**](docs/Api/AppStoreApi.md#getappstoreapps) | **GET** /api/v1.0/appstore/apps | Get list of app store app summaries
-*AppStoreApi* | [**updateAppStoreApp**](docs/Api/AppStoreApi.md#updateappstoreapp) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId} | Update app store app
-*AppStoreApi* | [**uploadAppStoreAppLogo**](docs/Api/AppStoreApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/appstore/apps/{appStoreAppId}/logo | Upload the app store app logo \\ icon
-*AppStoreConfigurationsApi* | [**createAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#createappstoreconfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create app store app configuration
-*AppStoreConfigurationsApi* | [**deleteAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#deleteappstoreconfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete app store app configuration
-*AppStoreConfigurationsApi* | [**getAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#getappstoreconfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get app store app configuration
-*AppStoreConfigurationsApi* | [**getConfiguredAppSingleApp**](docs/Api/AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of app store app configurations for one app store app
-*AppStoreConfigurationsApi* | [**getConfiguredApps**](docs/Api/AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of app store apps which have been configured
-*AppStoreConfigurationsApi* | [**updateAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#updateappstoreconfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update app store app configuration
+*AppStoreApi* | [**appVerificationUpdate**](docs/Api/AppStoreApi.md#appverificationupdate) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId}/verification | Update App store app verification
+*AppStoreApi* | [**createAppStoreApp**](docs/Api/AppStoreApi.md#createappstoreapp) | **POST** /api/v1.0/appstore/apps | Create App store app
+*AppStoreApi* | [**deleteAppStoreApp**](docs/Api/AppStoreApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/appstore/apps/{appStoreAppId} | Delete App store app
+*AppStoreApi* | [**getAppStoreApp**](docs/Api/AppStoreApi.md#getappstoreapp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get App store app
+*AppStoreApi* | [**getAppStoreApps**](docs/Api/AppStoreApi.md#getappstoreapps) | **GET** /api/v1.0/appstore/apps | Get list of App store app summaries
+*AppStoreApi* | [**updateAppStoreApp**](docs/Api/AppStoreApi.md#updateappstoreapp) | **PUT** /api/v1.0/appstore/apps/{appStoreAppId} | Update App store app
+*AppStoreApi* | [**uploadAppStoreAppLogo**](docs/Api/AppStoreApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
+*AppStoreConfigurationsApi* | [**createAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#createappstoreconfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create App store app configuration
+*AppStoreConfigurationsApi* | [**deleteAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#deleteappstoreconfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete App store app configuration
+*AppStoreConfigurationsApi* | [**getAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#getappstoreconfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get App store app configuration
+*AppStoreConfigurationsApi* | [**getConfiguredAppSingleApp**](docs/Api/AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of App store app configurations for one App store app
+*AppStoreConfigurationsApi* | [**getConfiguredApps**](docs/Api/AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of App store apps which have been configured
+*AppStoreConfigurationsApi* | [**updateAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#updateappstoreconfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update App store app configuration
 *AppsApi* | [**getApp**](docs/Api/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
 *AppsApi* | [**getAppHostnameStatus**](docs/Api/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | Get the application hostname DNS delegation states for A and CNAME records.
 *AppsApi* | [**getApps**](docs/Api/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
@@ -481,18 +481,15 @@ Class | Method | HTTP request | Description
  - [App](docs/Model/App.md)
  - [AppCompliance](docs/Model/AppCompliance.md)
  - [AppConfigUpdateModel](docs/Model/AppConfigUpdateModel.md)
- - [AppConfigurationBase](docs/Model/AppConfigurationBase.md)
- - [AppConfigurationDetail](docs/Model/AppConfigurationDetail.md)
- - [AppConfigurationHeader](docs/Model/AppConfigurationHeader.md)
- - [AppConfigurationSetting](docs/Model/AppConfigurationSetting.md)
- - [AppConfigurationSummary](docs/Model/AppConfigurationSummary.md)
  - [AppCreatedEvent](docs/Model/AppCreatedEvent.md)
- - [AppDetail](docs/Model/AppDetail.md)
- - [AppDetailBase](docs/Model/AppDetailBase.md)
+ - [AppStoreApp](docs/Model/AppStoreApp.md)
+ - [AppStoreAppConfiguration](docs/Model/AppStoreAppConfiguration.md)
+ - [AppStoreAppConfigurationHeader](docs/Model/AppStoreAppConfigurationHeader.md)
+ - [AppStoreAppConfigurationSummary](docs/Model/AppStoreAppConfigurationSummary.md)
+ - [AppStoreAppSummary](docs/Model/AppStoreAppSummary.md)
  - [AppStoreConfigCreatedEvent](docs/Model/AppStoreConfigCreatedEvent.md)
  - [AppStoreConfigDeletedEvent](docs/Model/AppStoreConfigDeletedEvent.md)
  - [AppStoreConfigUpdatedEvent](docs/Model/AppStoreConfigUpdatedEvent.md)
- - [AppSummary](docs/Model/AppSummary.md)
  - [AppUpdatedEvent](docs/Model/AppUpdatedEvent.md)
  - [AssignedBankAccount](docs/Model/AssignedBankAccount.md)
  - [BalanceDetails](docs/Model/BalanceDetails.md)
@@ -535,6 +532,7 @@ Class | Method | HTTP request | Description
  - [Coordinates](docs/Model/Coordinates.md)
  - [CountryWithAccountFieldsDefinitions](docs/Model/CountryWithAccountFieldsDefinitions.md)
  - [CreateAccountModel](docs/Model/CreateAccountModel.md)
+ - [CreateAppStoreApp](docs/Model/CreateAppStoreApp.md)
  - [CreateCatalogGroup](docs/Model/CreateCatalogGroup.md)
  - [CreateCatalogGroupReference](docs/Model/CreateCatalogGroupReference.md)
  - [CreateCatalogItem](docs/Model/CreateCatalogItem.md)
@@ -766,8 +764,8 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultApmCurrencyDataPoint](docs/Model/RestApiArrayResultApmCurrencyDataPoint.md)
  - [RestApiArrayResultApmDataPoint](docs/Model/RestApiArrayResultApmDataPoint.md)
  - [RestApiArrayResultApmHourlyDataPoint](docs/Model/RestApiArrayResultApmHourlyDataPoint.md)
- - [RestApiArrayResultAppConfigurationHeader](docs/Model/RestApiArrayResultAppConfigurationHeader.md)
- - [RestApiArrayResultAppConfigurationSummary](docs/Model/RestApiArrayResultAppConfigurationSummary.md)
+ - [RestApiArrayResultAppStoreAppConfigurationHeader](docs/Model/RestApiArrayResultAppStoreAppConfigurationHeader.md)
+ - [RestApiArrayResultAppStoreAppConfigurationSummary](docs/Model/RestApiArrayResultAppStoreAppConfigurationSummary.md)
  - [RestApiArrayResultBankAccountSummary](docs/Model/RestApiArrayResultBankAccountSummary.md)
  - [RestApiArrayResultBusinessHoursPeriod](docs/Model/RestApiArrayResultBusinessHoursPeriod.md)
  - [RestApiArrayResultCountryWithAccountFieldsDefinitions](docs/Model/RestApiArrayResultCountryWithAccountFieldsDefinitions.md)
@@ -809,7 +807,7 @@ Class | Method | HTTP request | Description
  - [RestApiForbiddenResult](docs/Model/RestApiForbiddenResult.md)
  - [RestApiIntegerResult](docs/Model/RestApiIntegerResult.md)
  - [RestApiPaginationResultApp](docs/Model/RestApiPaginationResultApp.md)
- - [RestApiPaginationResultAppSummary](docs/Model/RestApiPaginationResultAppSummary.md)
+ - [RestApiPaginationResultAppStoreAppSummary](docs/Model/RestApiPaginationResultAppStoreAppSummary.md)
  - [RestApiPaginationResultBusinessHoursOverride](docs/Model/RestApiPaginationResultBusinessHoursOverride.md)
  - [RestApiPaginationResultCatalogGroup](docs/Model/RestApiPaginationResultCatalogGroup.md)
  - [RestApiPaginationResultCatalogItem](docs/Model/RestApiPaginationResultCatalogItem.md)
@@ -842,8 +840,8 @@ Class | Method | HTTP request | Description
  - [RestApiResultApmStatus](docs/Model/RestApiResultApmStatus.md)
  - [RestApiResultApp](docs/Model/RestApiResultApp.md)
  - [RestApiResultAppCompliance](docs/Model/RestApiResultAppCompliance.md)
- - [RestApiResultAppConfigurationSummary](docs/Model/RestApiResultAppConfigurationSummary.md)
- - [RestApiResultAppDetail](docs/Model/RestApiResultAppDetail.md)
+ - [RestApiResultAppStoreApp](docs/Model/RestApiResultAppStoreApp.md)
+ - [RestApiResultAppStoreAppConfiguration](docs/Model/RestApiResultAppStoreAppConfiguration.md)
  - [RestApiResultAssignedBankAccount](docs/Model/RestApiResultAssignedBankAccount.md)
  - [RestApiResultBankAccountDetail](docs/Model/RestApiResultBankAccountDetail.md)
  - [RestApiResultBluetoothTerminalStatus](docs/Model/RestApiResultBluetoothTerminalStatus.md)
@@ -986,7 +984,9 @@ Class | Method | HTTP request | Description
  - [TeammateInviteAcceptedEvent](docs/Model/TeammateInviteAcceptedEvent.md)
  - [TeammateInviteSentEvent](docs/Model/TeammateInviteSentEvent.md)
  - [TeammateUpdatedEvent](docs/Model/TeammateUpdatedEvent.md)
- - [UpdateAppConfiguration](docs/Model/UpdateAppConfiguration.md)
+ - [UpdateAppStoreApp](docs/Model/UpdateAppStoreApp.md)
+ - [UpdateAppStoreAppConfiguration](docs/Model/UpdateAppStoreAppConfiguration.md)
+ - [UpdateAppStoreAppConfigurationWebhookDTO](docs/Model/UpdateAppStoreAppConfigurationWebhookDTO.md)
  - [UpdateCatalogGroup](docs/Model/UpdateCatalogGroup.md)
  - [UpdateCatalogGroupReference](docs/Model/UpdateCatalogGroupReference.md)
  - [UpdateCatalogItem](docs/Model/UpdateCatalogItem.md)
