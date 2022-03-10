@@ -50,7 +50,7 @@ class RestApiArrayResultBankAccountSummary implements ModelInterface, ArrayAcces
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-BankAccountSummary';
+    protected static $swaggerModelName = 'RestApiArrayResult[BankAccountSummary]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

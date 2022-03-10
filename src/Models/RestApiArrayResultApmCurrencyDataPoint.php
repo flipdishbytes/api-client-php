@@ -50,7 +50,7 @@ class RestApiArrayResultApmCurrencyDataPoint implements ModelInterface, ArrayAcc
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-ApmCurrencyDataPoint';
+    protected static $swaggerModelName = 'RestApiArrayResult[ApmCurrencyDataPoint]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

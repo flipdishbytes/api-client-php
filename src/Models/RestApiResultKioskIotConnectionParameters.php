@@ -50,7 +50,7 @@ class RestApiResultKioskIotConnectionParameters implements ModelInterface, Array
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-KioskIotConnectionParameters';
+    protected static $swaggerModelName = 'RestApiResult[KioskIotConnectionParameters]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

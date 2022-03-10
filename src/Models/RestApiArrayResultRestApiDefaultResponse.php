@@ -50,7 +50,7 @@ class RestApiArrayResultRestApiDefaultResponse implements ModelInterface, ArrayA
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-RestApiDefaultResponse';
+    protected static $swaggerModelName = 'RestApiArrayResult[RestApiDefaultResponse]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

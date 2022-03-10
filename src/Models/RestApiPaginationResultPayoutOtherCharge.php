@@ -50,7 +50,7 @@ class RestApiPaginationResultPayoutOtherCharge implements ModelInterface, ArrayA
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult-PayoutOtherCharge';
+    protected static $swaggerModelName = 'RestApiPaginationResult[PayoutOtherCharge]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

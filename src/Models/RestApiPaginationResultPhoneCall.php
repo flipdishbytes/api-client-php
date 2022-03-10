@@ -50,7 +50,7 @@ class RestApiPaginationResultPhoneCall implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult-PhoneCall';
+    protected static $swaggerModelName = 'RestApiPaginationResult[PhoneCall]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

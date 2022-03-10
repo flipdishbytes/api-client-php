@@ -50,7 +50,7 @@ class RestApiArrayResultSupportedCountry implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-SupportedCountry';
+    protected static $swaggerModelName = 'RestApiArrayResult[SupportedCountry]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

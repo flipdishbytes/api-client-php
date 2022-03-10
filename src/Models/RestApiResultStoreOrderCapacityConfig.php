@@ -50,7 +50,7 @@ class RestApiResultStoreOrderCapacityConfig implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-StoreOrderCapacityConfig';
+    protected static $swaggerModelName = 'RestApiResult[StoreOrderCapacityConfig]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

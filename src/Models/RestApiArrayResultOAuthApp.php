@@ -50,7 +50,7 @@ class RestApiArrayResultOAuthApp implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-OAuthApp';
+    protected static $swaggerModelName = 'RestApiArrayResult[OAuthApp]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

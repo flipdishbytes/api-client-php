@@ -50,7 +50,7 @@ class RestApiArrayResultProcessingFeeConfig implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-ProcessingFeeConfig';
+    protected static $swaggerModelName = 'RestApiArrayResult[ProcessingFeeConfig]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

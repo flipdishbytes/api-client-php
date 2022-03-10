@@ -50,7 +50,7 @@ class RestApiPaginationResultPayoutOrder implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult-PayoutOrder';
+    protected static $swaggerModelName = 'RestApiPaginationResult[PayoutOrder]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

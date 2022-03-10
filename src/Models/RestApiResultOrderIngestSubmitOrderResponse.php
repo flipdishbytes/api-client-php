@@ -50,7 +50,7 @@ class RestApiResultOrderIngestSubmitOrderResponse implements ModelInterface, Arr
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-OrderIngestSubmitOrderResponse';
+    protected static $swaggerModelName = 'RestApiResult[OrderIngestSubmitOrderResponse]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

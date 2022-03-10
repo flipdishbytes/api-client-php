@@ -50,7 +50,7 @@ class RestApiArrayResultBusinessHoursPeriod implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-BusinessHoursPeriod';
+    protected static $swaggerModelName = 'RestApiArrayResult[BusinessHoursPeriod]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

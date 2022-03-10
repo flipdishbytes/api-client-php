@@ -50,7 +50,7 @@ class RestApiResultStripeTerminalPrivateKey implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-StripeTerminalPrivateKey';
+    protected static $swaggerModelName = 'RestApiResult[StripeTerminalPrivateKey]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

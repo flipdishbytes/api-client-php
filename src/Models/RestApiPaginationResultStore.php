@@ -50,7 +50,7 @@ class RestApiPaginationResultStore implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult-Store';
+    protected static $swaggerModelName = 'RestApiPaginationResult[Store]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

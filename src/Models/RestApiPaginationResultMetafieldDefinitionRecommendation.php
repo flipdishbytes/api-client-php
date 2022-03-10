@@ -50,7 +50,7 @@ class RestApiPaginationResultMetafieldDefinitionRecommendation implements ModelI
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult-MetafieldDefinitionRecommendation';
+    protected static $swaggerModelName = 'RestApiPaginationResult[MetafieldDefinitionRecommendation]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

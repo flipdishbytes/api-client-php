@@ -50,7 +50,7 @@ class RestApiArrayResultHomeAction implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-HomeAction';
+    protected static $swaggerModelName = 'RestApiArrayResult[HomeAction]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class RestApiPaginationResultOAuthTokenModel implements ModelInterface, ArrayAcc
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult-OAuthTokenModel';
+    protected static $swaggerModelName = 'RestApiPaginationResult[OAuthTokenModel]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

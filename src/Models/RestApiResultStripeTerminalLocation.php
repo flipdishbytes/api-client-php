@@ -50,7 +50,7 @@ class RestApiResultStripeTerminalLocation implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-StripeTerminalLocation';
+    protected static $swaggerModelName = 'RestApiResult[StripeTerminalLocation]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class RestApiResultCoordinates implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-Coordinates';
+    protected static $swaggerModelName = 'RestApiResult[Coordinates]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

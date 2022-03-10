@@ -50,7 +50,7 @@ class RestApiPaginationResultVoucherSummary implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult-VoucherSummary';
+    protected static $swaggerModelName = 'RestApiPaginationResult[VoucherSummary]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class RestApiArrayResultMenuCheckpoint implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-MenuCheckpoint';
+    protected static $swaggerModelName = 'RestApiArrayResult[MenuCheckpoint]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

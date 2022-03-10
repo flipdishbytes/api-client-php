@@ -50,7 +50,7 @@ class RestApiArrayResultPreOrderTime implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-PreOrderTime';
+    protected static $swaggerModelName = 'RestApiArrayResult[PreOrderTime]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

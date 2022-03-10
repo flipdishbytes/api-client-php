@@ -50,7 +50,7 @@ class RestApiResultApp implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-App';
+    protected static $swaggerModelName = 'RestApiResult[App]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class RestApiResultWebsiteImage implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-WebsiteImage';
+    protected static $swaggerModelName = 'RestApiResult[WebsiteImage]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

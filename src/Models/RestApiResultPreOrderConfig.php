@@ -50,7 +50,7 @@ class RestApiResultPreOrderConfig implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-PreOrderConfig';
+    protected static $swaggerModelName = 'RestApiResult[PreOrderConfig]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

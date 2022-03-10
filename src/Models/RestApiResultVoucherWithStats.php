@@ -50,7 +50,7 @@ class RestApiResultVoucherWithStats implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-VoucherWithStats';
+    protected static $swaggerModelName = 'RestApiResult[VoucherWithStats]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class RestApiArrayResultPayoutSummary implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-PayoutSummary';
+    protected static $swaggerModelName = 'RestApiArrayResult[PayoutSummary]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

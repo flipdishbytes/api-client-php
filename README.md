@@ -159,6 +159,7 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**initiateBluetoothTerminalDeviceUpdateCheck**](docs/Api/CardReadersApi.md#initiatebluetoothterminaldeviceupdatecheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | Trigger check for Bluetooth device update on Kiosk
 *CardReadersApi* | [**initiateKioskBluetoothPairingMode**](docs/Api/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
 *CardReadersApi* | [**initiateKioskBluetoothUpdateInstall**](docs/Api/CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
+*CardReadersApi* | [**registerStripeTerminal**](docs/Api/CardReadersApi.md#registerstripeterminal) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/register | 
 *CardReadersApi* | [**unpairCurrentlyPairedBluetoothDevice**](docs/Api/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
 *CatalogGroupsApi* | [**archiveCatalogGroup**](docs/Api/CatalogGroupsApi.md#archivecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId}/archive | Archive Catalog Group
 *CatalogGroupsApi* | [**createCatalogGroup**](docs/Api/CatalogGroupsApi.md#createcataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
@@ -509,6 +510,8 @@ Class | Method | HTTP request | Description
  - [BusinessHoursPeriod](docs/Model/BusinessHoursPeriod.md)
  - [BusinessHoursPeriodBase](docs/Model/BusinessHoursPeriodBase.md)
  - [CampaignStatistics](docs/Model/CampaignStatistics.md)
+ - [CardReader](docs/Model/CardReader.md)
+ - [CardReaderRegistrationRequest](docs/Model/CardReaderRegistrationRequest.md)
  - [Cart](docs/Model/Cart.md)
  - [CatalogGroup](docs/Model/CatalogGroup.md)
  - [CatalogGroupArchivedEvent](docs/Model/CatalogGroupArchivedEvent.md)
@@ -846,6 +849,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultBluetoothTerminalStatus](docs/Model/RestApiResultBluetoothTerminalStatus.md)
  - [RestApiResultBusinessHoursOverride](docs/Model/RestApiResultBusinessHoursOverride.md)
  - [RestApiResultBusinessHoursPeriod](docs/Model/RestApiResultBusinessHoursPeriod.md)
+ - [RestApiResultCardReader](docs/Model/RestApiResultCardReader.md)
  - [RestApiResultCatalogGroup](docs/Model/RestApiResultCatalogGroup.md)
  - [RestApiResultCatalogItem](docs/Model/RestApiResultCatalogItem.md)
  - [RestApiResultCoordinates](docs/Model/RestApiResultCoordinates.md)

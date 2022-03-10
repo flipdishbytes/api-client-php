@@ -50,7 +50,7 @@ class RestApiResultTeammate implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-Teammate';
+    protected static $swaggerModelName = 'RestApiResult[Teammate]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

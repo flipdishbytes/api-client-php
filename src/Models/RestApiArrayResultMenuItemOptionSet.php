@@ -50,7 +50,7 @@ class RestApiArrayResultMenuItemOptionSet implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-MenuItemOptionSet';
+    protected static $swaggerModelName = 'RestApiArrayResult[MenuItemOptionSet]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

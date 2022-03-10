@@ -50,7 +50,7 @@ class RestApiArrayResultEmvTerminalWithAssignments implements ModelInterface, Ar
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-EmvTerminalWithAssignments';
+    protected static $swaggerModelName = 'RestApiArrayResult[EmvTerminalWithAssignments]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class RestApiResultStoreAddress implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-StoreAddress';
+    protected static $swaggerModelName = 'RestApiResult[StoreAddress]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

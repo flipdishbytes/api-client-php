@@ -50,7 +50,7 @@ class RestApiResultIndexPageBase implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-IndexPageBase';
+    protected static $swaggerModelName = 'RestApiResult[IndexPageBase]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

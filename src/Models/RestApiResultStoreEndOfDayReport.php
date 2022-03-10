@@ -50,7 +50,7 @@ class RestApiResultStoreEndOfDayReport implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-StoreEndOfDayReport';
+    protected static $swaggerModelName = 'RestApiResult[StoreEndOfDayReport]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

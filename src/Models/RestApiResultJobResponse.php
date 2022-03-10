@@ -50,7 +50,7 @@ class RestApiResultJobResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-JobResponse';
+    protected static $swaggerModelName = 'RestApiResult[JobResponse]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

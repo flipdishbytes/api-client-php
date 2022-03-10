@@ -50,7 +50,7 @@ class RestApiResultBluetoothTerminalStatus implements ModelInterface, ArrayAcces
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-BluetoothTerminalStatus';
+    protected static $swaggerModelName = 'RestApiResult[BluetoothTerminalStatus]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

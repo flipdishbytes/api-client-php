@@ -50,7 +50,7 @@ class RestApiArrayResultAppConfigurationSummary implements ModelInterface, Array
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-AppConfigurationSummary';
+    protected static $swaggerModelName = 'RestApiArrayResult[AppConfigurationSummary]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

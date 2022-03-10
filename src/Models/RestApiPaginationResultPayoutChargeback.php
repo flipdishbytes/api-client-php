@@ -50,7 +50,7 @@ class RestApiPaginationResultPayoutChargeback implements ModelInterface, ArrayAc
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult-PayoutChargeback';
+    protected static $swaggerModelName = 'RestApiPaginationResult[PayoutChargeback]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

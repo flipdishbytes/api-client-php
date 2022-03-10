@@ -50,7 +50,7 @@ class RestApiArrayResultLocalisedTimeZone implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-LocalisedTimeZone';
+    protected static $swaggerModelName = 'RestApiArrayResult[LocalisedTimeZone]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

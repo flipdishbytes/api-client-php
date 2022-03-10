@@ -50,7 +50,7 @@ class RestApiResultDeliveryZone implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult-DeliveryZone';
+    protected static $swaggerModelName = 'RestApiResult[DeliveryZone]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

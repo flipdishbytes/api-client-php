@@ -50,7 +50,7 @@ class RestApiArrayResultStoreStatistics implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult-StoreStatistics';
+    protected static $swaggerModelName = 'RestApiArrayResult[StoreStatistics]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
