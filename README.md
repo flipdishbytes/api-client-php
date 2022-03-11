@@ -183,13 +183,13 @@ Class | Method | HTTP request | Description
 *ChannelsApi* | [**channelsSetStoreChannelStoreMapping**](docs/Api/ChannelsApi.md#channelssetstorechannelstoremapping) | **POST** /api/v1.0/{appId}/channels/channelstores | 
 *ChannelsApi* | [**detachAllStoresFromSalesChannel**](docs/Api/ChannelsApi.md#detachallstoresfromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
 *ChannelsApi* | [**detachStoreFromSalesChannel**](docs/Api/ChannelsApi.md#detachstorefromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
-*ChannelsApi* | [**getAssignedChannels**](docs/Api/ChannelsApi.md#getassignedchannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given whitelabel
+*ChannelsApi* | [**getAssignedChannels**](docs/Api/ChannelsApi.md#getassignedchannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given AppId
+*ChannelsApi* | [**getAvailableChannels**](docs/Api/ChannelsApi.md#getavailablechannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given AppId
 *ChannelsApi* | [**getChannel**](docs/Api/ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
 *ChannelsApi* | [**getChannels**](docs/Api/ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | 
-*ChannelsApi* | [**getNotAssignedChannels**](docs/Api/ChannelsApi.md#getnotassignedchannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given whitelabel
-*ChannelsApi* | [**getStoresAssignedToChannel**](docs/Api/ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of store that are assigned to the given sales channel.
+*ChannelsApi* | [**getStoresAssignedToChannel**](docs/Api/ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of stores of an AppId that are assigned to a given Sales Channel
 *ChannelsApi* | [**getStoresBySalesChannel**](docs/Api/ChannelsApi.md#getstoresbysaleschannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
-*ChannelsApi* | [**unassignStoreFromChannel**](docs/Api/ChannelsApi.md#unassignstorefromchannel) | **POST** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
+*ChannelsApi* | [**unassignStoreFromChannel**](docs/Api/ChannelsApi.md#unassignstorefromchannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
 *ContentSecurityPolicyApi* | [**contentSecurityPolicyReport**](docs/Api/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
 *CustomersApi* | [**getCustomerById**](docs/Api/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | Get customer of an app by Id
 *CustomersApi* | [**updateCustomerById**](docs/Api/CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | Update customer of an app by Id
@@ -479,6 +479,7 @@ Class | Method | HTTP request | Description
  - [ApmStatistics](docs/Model/ApmStatistics.md)
  - [ApmStatus](docs/Model/ApmStatus.md)
  - [App](docs/Model/App.md)
+ - [AppChannelAssignment](docs/Model/AppChannelAssignment.md)
  - [AppCompliance](docs/Model/AppCompliance.md)
  - [AppConfigUpdateModel](docs/Model/AppConfigUpdateModel.md)
  - [AppCreatedEvent](docs/Model/AppCreatedEvent.md)
@@ -768,6 +769,7 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultAppStoreAppConfigurationSummary](docs/Model/RestApiArrayResultAppStoreAppConfigurationSummary.md)
  - [RestApiArrayResultBankAccountSummary](docs/Model/RestApiArrayResultBankAccountSummary.md)
  - [RestApiArrayResultBusinessHoursPeriod](docs/Model/RestApiArrayResultBusinessHoursPeriod.md)
+ - [RestApiArrayResultChannel](docs/Model/RestApiArrayResultChannel.md)
  - [RestApiArrayResultCountryWithAccountFieldsDefinitions](docs/Model/RestApiArrayResultCountryWithAccountFieldsDefinitions.md)
  - [RestApiArrayResultDeliveryZone](docs/Model/RestApiArrayResultDeliveryZone.md)
  - [RestApiArrayResultDriver](docs/Model/RestApiArrayResultDriver.md)
@@ -795,6 +797,7 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultProcessingFeeConfig](docs/Model/RestApiArrayResultProcessingFeeConfig.md)
  - [RestApiArrayResultRestApiDefaultResponse](docs/Model/RestApiArrayResultRestApiDefaultResponse.md)
  - [RestApiArrayResultRetentionCampaign](docs/Model/RestApiArrayResultRetentionCampaign.md)
+ - [RestApiArrayResultStoreChannelAssignment](docs/Model/RestApiArrayResultStoreChannelAssignment.md)
  - [RestApiArrayResultStoreChannelStoreMapping](docs/Model/RestApiArrayResultStoreChannelStoreMapping.md)
  - [RestApiArrayResultStoreListItem](docs/Model/RestApiArrayResultStoreListItem.md)
  - [RestApiArrayResultStoreStatistics](docs/Model/RestApiArrayResultStoreStatistics.md)
@@ -811,7 +814,6 @@ Class | Method | HTTP request | Description
  - [RestApiPaginationResultBusinessHoursOverride](docs/Model/RestApiPaginationResultBusinessHoursOverride.md)
  - [RestApiPaginationResultCatalogGroup](docs/Model/RestApiPaginationResultCatalogGroup.md)
  - [RestApiPaginationResultCatalogItem](docs/Model/RestApiPaginationResultCatalogItem.md)
- - [RestApiPaginationResultChannel](docs/Model/RestApiPaginationResultChannel.md)
  - [RestApiPaginationResultHttpRequestAndResponseLog](docs/Model/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [RestApiPaginationResultHydraDeviceDetails](docs/Model/RestApiPaginationResultHydraDeviceDetails.md)
  - [RestApiPaginationResultMetafieldDefinition](docs/Model/RestApiPaginationResultMetafieldDefinition.md)
@@ -839,6 +841,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultApmStatistics](docs/Model/RestApiResultApmStatistics.md)
  - [RestApiResultApmStatus](docs/Model/RestApiResultApmStatus.md)
  - [RestApiResultApp](docs/Model/RestApiResultApp.md)
+ - [RestApiResultAppChannelAssignment](docs/Model/RestApiResultAppChannelAssignment.md)
  - [RestApiResultAppCompliance](docs/Model/RestApiResultAppCompliance.md)
  - [RestApiResultAppStoreApp](docs/Model/RestApiResultAppStoreApp.md)
  - [RestApiResultAppStoreAppConfiguration](docs/Model/RestApiResultAppStoreAppConfiguration.md)
@@ -892,6 +895,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultRetentionCampaign](docs/Model/RestApiResultRetentionCampaign.md)
  - [RestApiResultStore](docs/Model/RestApiResultStore.md)
  - [RestApiResultStoreAddress](docs/Model/RestApiResultStoreAddress.md)
+ - [RestApiResultStoreChannelAssignment](docs/Model/RestApiResultStoreChannelAssignment.md)
  - [RestApiResultStoreEndOfDayReport](docs/Model/RestApiResultStoreEndOfDayReport.md)
  - [RestApiResultStoreGroup](docs/Model/RestApiResultStoreGroup.md)
  - [RestApiResultStoreGroupBase](docs/Model/RestApiResultStoreGroupBase.md)
@@ -933,6 +937,7 @@ Class | Method | HTTP request | Description
  - [StoreBusinessHoursOverrideCreatedEvent](docs/Model/StoreBusinessHoursOverrideCreatedEvent.md)
  - [StoreBusinessHoursOverrideDeletedEvent](docs/Model/StoreBusinessHoursOverrideDeletedEvent.md)
  - [StoreCampaignStartTime](docs/Model/StoreCampaignStartTime.md)
+ - [StoreChannelAssignment](docs/Model/StoreChannelAssignment.md)
  - [StoreChannelStoreMapping](docs/Model/StoreChannelStoreMapping.md)
  - [StoreCloneSettings](docs/Model/StoreCloneSettings.md)
  - [StoreCreateBase](docs/Model/StoreCreateBase.md)

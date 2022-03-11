@@ -176,6 +176,14 @@ class ChannelsApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiResultAppChannelAssignment',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -196,6 +204,14 @@ class ChannelsApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -494,6 +510,14 @@ class ChannelsApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiResultStoreChannelAssignment',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -514,6 +538,14 @@ class ChannelsApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2365,13 +2397,13 @@ class ChannelsApi
     /**
      * Operation getAssignedChannels
      *
-     * Returns a list of sales channels that are assigned to a given whitelabel
+     * Returns a list of sales channels that are assigned to a given AppId
      *
      * @param  string $app_id Application Id (AppNameIdxxx) (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return \Flipdish\\Client\Models\RestApiArrayResultChannel
      */
     public function getAssignedChannels($app_id)
     {
@@ -2382,17 +2414,17 @@ class ChannelsApi
     /**
      * Operation getAssignedChannelsWithHttpInfo
      *
-     * Returns a list of sales channels that are assigned to a given whitelabel
+     * Returns a list of sales channels that are assigned to a given AppId
      *
      * @param  string $app_id Application Id (AppNameIdxxx) (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultChannel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssignedChannelsWithHttpInfo($app_id)
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultChannel';
         $request = $this->getAssignedChannelsRequest($app_id);
 
         try {
@@ -2444,7 +2476,7 @@ class ChannelsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Flipdish\\Client\Models\RestApiArrayResultChannel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2473,6 +2505,14 @@ class ChannelsApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
@@ -2481,7 +2521,7 @@ class ChannelsApi
     /**
      * Operation getAssignedChannelsAsync
      *
-     * Returns a list of sales channels that are assigned to a given whitelabel
+     * Returns a list of sales channels that are assigned to a given AppId
      *
      * @param  string $app_id Application Id (AppNameIdxxx) (required)
      *
@@ -2501,7 +2541,7 @@ class ChannelsApi
     /**
      * Operation getAssignedChannelsAsyncWithHttpInfo
      *
-     * Returns a list of sales channels that are assigned to a given whitelabel
+     * Returns a list of sales channels that are assigned to a given AppId
      *
      * @param  string $app_id Application Id (AppNameIdxxx) (required)
      *
@@ -2510,7 +2550,7 @@ class ChannelsApi
      */
     public function getAssignedChannelsAsyncWithHttpInfo($app_id)
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultChannel';
         $request = $this->getAssignedChannelsRequest($app_id);
 
         return $this->client
@@ -2660,14 +2700,319 @@ class ChannelsApi
     }
 
     /**
-     * Operation getChannel
+     * Operation getAvailableChannels
      *
-     * @param  int $id id (required)
-     * @param  string $app_id app_id (required)
+     * Returns a list of sales channels that are not yet assigned to a given AppId
+     *
+     * @param  string $app_id Application Id (AppNameIdxxx) (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiPaginationResultChannel
+     * @return \Flipdish\\Client\Models\RestApiArrayResultChannel
+     */
+    public function getAvailableChannels($app_id)
+    {
+        list($response) = $this->getAvailableChannelsWithHttpInfo($app_id);
+        return $response;
+    }
+
+    /**
+     * Operation getAvailableChannelsWithHttpInfo
+     *
+     * Returns a list of sales channels that are not yet assigned to a given AppId
+     *
+     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultChannel, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAvailableChannelsWithHttpInfo($app_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultChannel';
+        $request = $this->getAvailableChannelsRequest($app_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiArrayResultChannel',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getAvailableChannelsAsync
+     *
+     * Returns a list of sales channels that are not yet assigned to a given AppId
+     *
+     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAvailableChannelsAsync($app_id)
+    {
+        return $this->getAvailableChannelsAsyncWithHttpInfo($app_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getAvailableChannelsAsyncWithHttpInfo
+     *
+     * Returns a list of sales channels that are not yet assigned to a given AppId
+     *
+     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAvailableChannelsAsyncWithHttpInfo($app_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultChannel';
+        $request = $this->getAvailableChannelsRequest($app_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getAvailableChannels'
+     *
+     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getAvailableChannelsRequest($app_id)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling getAvailableChannels'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/{appId}/channels/available-channels';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getChannel
+     *
+     * @param  int $id ChannelId (required)
+     * @param  string $app_id AppId (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\Channel
      */
     public function getChannel($id, $app_id)
     {
@@ -2678,16 +3023,16 @@ class ChannelsApi
     /**
      * Operation getChannelWithHttpInfo
      *
-     * @param  int $id (required)
-     * @param  string $app_id (required)
+     * @param  int $id ChannelId (required)
+     * @param  string $app_id AppId (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiPaginationResultChannel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\Channel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getChannelWithHttpInfo($id, $app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultChannel';
+        $returnType = '\Flipdish\\Client\Models\Channel';
         $request = $this->getChannelRequest($id, $app_id);
 
         try {
@@ -2739,7 +3084,7 @@ class ChannelsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiPaginationResultChannel',
+                        '\Flipdish\\Client\Models\Channel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2776,6 +3121,14 @@ class ChannelsApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
@@ -2786,8 +3139,8 @@ class ChannelsApi
      *
      * 
      *
-     * @param  int $id (required)
-     * @param  string $app_id (required)
+     * @param  int $id ChannelId (required)
+     * @param  string $app_id AppId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2807,15 +3160,15 @@ class ChannelsApi
      *
      * 
      *
-     * @param  int $id (required)
-     * @param  string $app_id (required)
+     * @param  int $id ChannelId (required)
+     * @param  string $app_id AppId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function getChannelAsyncWithHttpInfo($id, $app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultChannel';
+        $returnType = '\Flipdish\\Client\Models\Channel';
         $request = $this->getChannelRequest($id, $app_id);
 
         return $this->client
@@ -2858,8 +3211,8 @@ class ChannelsApi
     /**
      * Create request for operation 'getChannel'
      *
-     * @param  int $id (required)
-     * @param  string $app_id (required)
+     * @param  int $id ChannelId (required)
+     * @param  string $app_id AppId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2986,7 +3339,7 @@ class ChannelsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiPaginationResultChannel
+     * @return \Flipdish\\Client\Models\RestApiArrayResultChannel
      */
     public function getChannels($app_id)
     {
@@ -3001,11 +3354,11 @@ class ChannelsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiPaginationResultChannel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultChannel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getChannelsWithHttpInfo($app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultChannel';
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultChannel';
         $request = $this->getChannelsRequest($app_id);
 
         try {
@@ -3057,7 +3410,7 @@ class ChannelsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiPaginationResultChannel',
+                        '\Flipdish\\Client\Models\RestApiArrayResultChannel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3131,7 +3484,7 @@ class ChannelsApi
      */
     public function getChannelsAsyncWithHttpInfo($app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultChannel';
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultChannel';
         $request = $this->getChannelsRequest($app_id);
 
         return $this->client
@@ -3281,313 +3634,16 @@ class ChannelsApi
     }
 
     /**
-     * Operation getNotAssignedChannels
-     *
-     * Returns a list of sales channels that are not yet assigned to a given whitelabel
-     *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return object
-     */
-    public function getNotAssignedChannels($app_id)
-    {
-        list($response) = $this->getNotAssignedChannelsWithHttpInfo($app_id);
-        return $response;
-    }
-
-    /**
-     * Operation getNotAssignedChannelsWithHttpInfo
-     *
-     * Returns a list of sales channels that are not yet assigned to a given whitelabel
-     *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getNotAssignedChannelsWithHttpInfo($app_id)
-    {
-        $returnType = 'object';
-        $request = $this->getNotAssignedChannelsRequest($app_id);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getNotAssignedChannelsAsync
-     *
-     * Returns a list of sales channels that are not yet assigned to a given whitelabel
-     *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getNotAssignedChannelsAsync($app_id)
-    {
-        return $this->getNotAssignedChannelsAsyncWithHttpInfo($app_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getNotAssignedChannelsAsyncWithHttpInfo
-     *
-     * Returns a list of sales channels that are not yet assigned to a given whitelabel
-     *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getNotAssignedChannelsAsyncWithHttpInfo($app_id)
-    {
-        $returnType = 'object';
-        $request = $this->getNotAssignedChannelsRequest($app_id);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'getNotAssignedChannels'
-     *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getNotAssignedChannelsRequest($app_id)
-    {
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling getNotAssignedChannels'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/{appId}/channels/available-channels';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-        // path params
-        if ($app_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
      * Operation getStoresAssignedToChannel
      *
-     * Returns a list of store that are assigned to the given sales channel.
+     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
      *
      * @param  string $app_id Application Id (AppNameId) (required)
      * @param  int $channel_id Sales channel (Android, IOS, Web, etc.) (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return \Flipdish\\Client\Models\RestApiArrayResultStoreChannelAssignment
      */
     public function getStoresAssignedToChannel($app_id, $channel_id)
     {
@@ -3598,18 +3654,18 @@ class ChannelsApi
     /**
      * Operation getStoresAssignedToChannelWithHttpInfo
      *
-     * Returns a list of store that are assigned to the given sales channel.
+     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
      *
      * @param  string $app_id Application Id (AppNameId) (required)
      * @param  int $channel_id Sales channel (Android, IOS, Web, etc.) (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultStoreChannelAssignment, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStoresAssignedToChannelWithHttpInfo($app_id, $channel_id)
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultStoreChannelAssignment';
         $request = $this->getStoresAssignedToChannelRequest($app_id, $channel_id);
 
         try {
@@ -3661,7 +3717,7 @@ class ChannelsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Flipdish\\Client\Models\RestApiArrayResultStoreChannelAssignment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3698,7 +3754,7 @@ class ChannelsApi
     /**
      * Operation getStoresAssignedToChannelAsync
      *
-     * Returns a list of store that are assigned to the given sales channel.
+     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
      *
      * @param  string $app_id Application Id (AppNameId) (required)
      * @param  int $channel_id Sales channel (Android, IOS, Web, etc.) (required)
@@ -3719,7 +3775,7 @@ class ChannelsApi
     /**
      * Operation getStoresAssignedToChannelAsyncWithHttpInfo
      *
-     * Returns a list of store that are assigned to the given sales channel.
+     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
      *
      * @param  string $app_id Application Id (AppNameId) (required)
      * @param  int $channel_id Sales channel (Android, IOS, Web, etc.) (required)
@@ -3729,7 +3785,7 @@ class ChannelsApi
      */
     public function getStoresAssignedToChannelAsyncWithHttpInfo($app_id, $channel_id)
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultStoreChannelAssignment';
         $request = $this->getStoresAssignedToChannelRequest($app_id, $channel_id);
 
         return $this->client
@@ -4324,6 +4380,14 @@ class ChannelsApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
@@ -4529,7 +4593,7 @@ class ChannelsApi
 
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
-            'POST',
+            'DELETE',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

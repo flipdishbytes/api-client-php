@@ -11,13 +11,13 @@ Method | HTTP request | Description
 [**channelsSetStoreChannelStoreMapping**](ChannelsApi.md#channelsSetStoreChannelStoreMapping) | **POST** /api/v1.0/{appId}/channels/channelstores | 
 [**detachAllStoresFromSalesChannel**](ChannelsApi.md#detachAllStoresFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
 [**detachStoreFromSalesChannel**](ChannelsApi.md#detachStoreFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
-[**getAssignedChannels**](ChannelsApi.md#getAssignedChannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given whitelabel
+[**getAssignedChannels**](ChannelsApi.md#getAssignedChannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given AppId
+[**getAvailableChannels**](ChannelsApi.md#getAvailableChannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given AppId
 [**getChannel**](ChannelsApi.md#getChannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
 [**getChannels**](ChannelsApi.md#getChannels) | **GET** /api/v1.0/{appId}/channels | 
-[**getNotAssignedChannels**](ChannelsApi.md#getNotAssignedChannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given whitelabel
-[**getStoresAssignedToChannel**](ChannelsApi.md#getStoresAssignedToChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of store that are assigned to the given sales channel.
+[**getStoresAssignedToChannel**](ChannelsApi.md#getStoresAssignedToChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of stores of an AppId that are assigned to a given Sales Channel
 [**getStoresBySalesChannel**](ChannelsApi.md#getStoresBySalesChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
-[**unassignStoreFromChannel**](ChannelsApi.md#unassignStoreFromChannel) | **POST** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
+[**unassignStoreFromChannel**](ChannelsApi.md#unassignStoreFromChannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
 
 
 # **assignAppIdToSalesChannel**
@@ -400,9 +400,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAssignedChannels**
-> object getAssignedChannels($app_id)
+> \Flipdish\\Client\Models\RestApiArrayResultChannel getAssignedChannels($app_id)
 
-Returns a list of sales channels that are assigned to a given whitelabel
+Returns a list of sales channels that are assigned to a given AppId
 
 ### Example
 ```php
@@ -437,7 +437,58 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\Flipdish\\Client\Models\RestApiArrayResultChannel**](../Model/RestApiArrayResultChannel.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getAvailableChannels**
+> \Flipdish\\Client\Models\RestApiArrayResultChannel getAvailableChannels($app_id)
+
+Returns a list of sales channels that are not yet assigned to a given AppId
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\ChannelsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | Application Id (AppNameIdxxx)
+
+try {
+    $result = $apiInstance->getAvailableChannels($app_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ChannelsApi->getAvailableChannels: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**| Application Id (AppNameIdxxx) |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiArrayResultChannel**](../Model/RestApiArrayResultChannel.md)
 
 ### Authorization
 
@@ -451,7 +502,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getChannel**
-> \Flipdish\\Client\Models\RestApiPaginationResultChannel getChannel($id, $app_id)
+> \Flipdish\\Client\Models\Channel getChannel($id, $app_id)
 
 
 
@@ -469,8 +520,8 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | 
-$app_id = "app_id_example"; // string | 
+$id = 56; // int | ChannelId
+$app_id = "app_id_example"; // string | AppId
 
 try {
     $result = $apiInstance->getChannel($id, $app_id);
@@ -485,12 +536,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**|  |
- **app_id** | **string**|  |
+ **id** | **int**| ChannelId |
+ **app_id** | **string**| AppId |
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiPaginationResultChannel**](../Model/RestApiPaginationResultChannel.md)
+[**\Flipdish\\Client\Models\Channel**](../Model/Channel.md)
 
 ### Authorization
 
@@ -504,7 +555,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getChannels**
-> \Flipdish\\Client\Models\RestApiPaginationResultChannel getChannels($app_id)
+> \Flipdish\\Client\Models\RestApiArrayResultChannel getChannels($app_id)
 
 
 
@@ -541,58 +592,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiPaginationResultChannel**](../Model/RestApiPaginationResultChannel.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **getNotAssignedChannels**
-> object getNotAssignedChannels($app_id)
-
-Returns a list of sales channels that are not yet assigned to a given whitelabel
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\ChannelsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$app_id = "app_id_example"; // string | Application Id (AppNameIdxxx)
-
-try {
-    $result = $apiInstance->getNotAssignedChannels($app_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ChannelsApi->getNotAssignedChannels: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application Id (AppNameIdxxx) |
-
-### Return type
-
-**object**
+[**\Flipdish\\Client\Models\RestApiArrayResultChannel**](../Model/RestApiArrayResultChannel.md)
 
 ### Authorization
 
@@ -606,9 +606,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStoresAssignedToChannel**
-> object getStoresAssignedToChannel($app_id, $channel_id)
+> \Flipdish\\Client\Models\RestApiArrayResultStoreChannelAssignment getStoresAssignedToChannel($app_id, $channel_id)
 
-Returns a list of store that are assigned to the given sales channel.
+Returns a list of stores of an AppId that are assigned to a given Sales Channel
 
 ### Example
 ```php
@@ -645,7 +645,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\Flipdish\\Client\Models\RestApiArrayResultStoreChannelAssignment**](../Model/RestApiArrayResultStoreChannelAssignment.md)
 
 ### Authorization
 

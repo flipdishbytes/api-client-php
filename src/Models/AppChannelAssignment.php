@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiPaginationResultChannel
+ * AppChannelAssignment
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * RestApiPaginationResultChannel Class Doc Comment
+ * AppChannelAssignment Class Doc Comment
  *
  * @category Class
- * @description Rest api pagination result
+ * @description Describes a ChannelAssignment which is   when a AppId is assigned to a Sales Channel
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RestApiPaginationResultChannel implements ModelInterface, ArrayAccess
+class AppChannelAssignment implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class RestApiPaginationResultChannel implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult[Channel]';
+    protected static $swaggerModelName = 'AppChannelAssignment';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +58,8 @@ class RestApiPaginationResultChannel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page' => 'int',
-        'limit' => 'int',
-        'total_record_count' => 'int',
-        'data' => '\Flipdish\\Client\Models\Channel[]'
+        'channel_id' => 'int',
+        'app_id' => 'string'
     ];
 
     /**
@@ -70,10 +68,8 @@ class RestApiPaginationResultChannel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'page' => 'int32',
-        'limit' => 'int32',
-        'total_record_count' => 'int32',
-        'data' => null
+        'channel_id' => 'int32',
+        'app_id' => null
     ];
 
     /**
@@ -103,10 +99,8 @@ class RestApiPaginationResultChannel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'page' => 'Page',
-        'limit' => 'Limit',
-        'total_record_count' => 'TotalRecordCount',
-        'data' => 'Data'
+        'channel_id' => 'ChannelId',
+        'app_id' => 'AppId'
     ];
 
     /**
@@ -115,10 +109,8 @@ class RestApiPaginationResultChannel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'page' => 'setPage',
-        'limit' => 'setLimit',
-        'total_record_count' => 'setTotalRecordCount',
-        'data' => 'setData'
+        'channel_id' => 'setChannelId',
+        'app_id' => 'setAppId'
     ];
 
     /**
@@ -127,10 +119,8 @@ class RestApiPaginationResultChannel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'page' => 'getPage',
-        'limit' => 'getLimit',
-        'total_record_count' => 'getTotalRecordCount',
-        'data' => 'getData'
+        'channel_id' => 'getChannelId',
+        'app_id' => 'getAppId'
     ];
 
     /**
@@ -193,10 +183,8 @@ class RestApiPaginationResultChannel implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['total_record_count'] = isset($data['total_record_count']) ? $data['total_record_count'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['channel_id'] = isset($data['channel_id']) ? $data['channel_id'] : null;
+        $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
     }
 
     /**
@@ -208,18 +196,6 @@ class RestApiPaginationResultChannel implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['page'] === null) {
-            $invalidProperties[] = "'page' can't be null";
-        }
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
-        }
-        if ($this->container['total_record_count'] === null) {
-            $invalidProperties[] = "'total_record_count' can't be null";
-        }
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -236,97 +212,49 @@ class RestApiPaginationResultChannel implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets page
+     * Gets channel_id
      *
      * @return int
      */
-    public function getPage()
+    public function getChannelId()
     {
-        return $this->container['page'];
+        return $this->container['channel_id'];
     }
 
     /**
-     * Sets page
+     * Sets channel_id
      *
-     * @param int $page Current page index
+     * @param int $channel_id Id of the channel on the assignment
      *
      * @return $this
      */
-    public function setPage($page)
+    public function setChannelId($channel_id)
     {
-        $this->container['page'] = $page;
+        $this->container['channel_id'] = $channel_id;
 
         return $this;
     }
 
     /**
-     * Gets limit
+     * Gets app_id
      *
-     * @return int
+     * @return string
      */
-    public function getLimit()
+    public function getAppId()
     {
-        return $this->container['limit'];
+        return $this->container['app_id'];
     }
 
     /**
-     * Sets limit
+     * Sets app_id
      *
-     * @param int $limit Current page size
+     * @param string $app_id AppId of the assignment
      *
      * @return $this
      */
-    public function setLimit($limit)
+    public function setAppId($app_id)
     {
-        $this->container['limit'] = $limit;
-
-        return $this;
-    }
-
-    /**
-     * Gets total_record_count
-     *
-     * @return int
-     */
-    public function getTotalRecordCount()
-    {
-        return $this->container['total_record_count'];
-    }
-
-    /**
-     * Sets total_record_count
-     *
-     * @param int $total_record_count Total record count
-     *
-     * @return $this
-     */
-    public function setTotalRecordCount($total_record_count)
-    {
-        $this->container['total_record_count'] = $total_record_count;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     *
-     * @return \Flipdish\\Client\Models\Channel[]
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     *
-     * @param \Flipdish\\Client\Models\Channel[] $data Generic data object.
-     *
-     * @return $this
-     */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
+        $this->container['app_id'] = $app_id;
 
         return $this;
     }

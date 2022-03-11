@@ -144,10 +144,20 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAssignedChannels
      *
-     * Returns a list of sales channels that are assigned to a given whitelabel.
+     * Returns a list of sales channels that are assigned to a given AppId.
      *
      */
     public function testGetAssignedChannels()
+    {
+    }
+
+    /**
+     * Test case for getAvailableChannels
+     *
+     * Returns a list of sales channels that are not yet assigned to a given AppId.
+     *
+     */
+    public function testGetAvailableChannels()
     {
     }
 
@@ -172,19 +182,9 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getNotAssignedChannels
-     *
-     * Returns a list of sales channels that are not yet assigned to a given whitelabel.
-     *
-     */
-    public function testGetNotAssignedChannels()
-    {
-    }
-
-    /**
      * Test case for getStoresAssignedToChannel
      *
-     * Returns a list of store that are assigned to the given sales channel..
+     * Returns a list of stores of an AppId that are assigned to a given Sales Channel.
      *
      */
     public function testGetStoresAssignedToChannel()

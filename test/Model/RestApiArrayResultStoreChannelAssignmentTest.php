@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiPaginationResultChannelTest
+ * RestApiArrayResultStoreChannelAssignmentTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * RestApiPaginationResultChannelTest Class Doc Comment
+ * RestApiArrayResultStoreChannelAssignmentTest Class Doc Comment
  *
  * @category    Class
- * @description Rest api pagination result
+ * @description Rest api array result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RestApiPaginationResultChannelTest extends \PHPUnit_Framework_TestCase
+class RestApiArrayResultStoreChannelAssignmentTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,30 +70,9 @@ class RestApiPaginationResultChannelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RestApiPaginationResultChannel"
+     * Test "RestApiArrayResultStoreChannelAssignment"
      */
-    public function testRestApiPaginationResultChannel()
-    {
-    }
-
-    /**
-     * Test attribute "page"
-     */
-    public function testPropertyPage()
-    {
-    }
-
-    /**
-     * Test attribute "limit"
-     */
-    public function testPropertyLimit()
-    {
-    }
-
-    /**
-     * Test attribute "total_record_count"
-     */
-    public function testPropertyTotalRecordCount()
+    public function testRestApiArrayResultStoreChannelAssignment()
     {
     }
 
