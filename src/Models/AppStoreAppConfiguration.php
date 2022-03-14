@@ -276,6 +276,30 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
     const TEAMMATE_APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS = 'StoreReadOnlyAccess';
     const TEAMMATE_APP_ACCESS_LEVEL_FINANCE_MANGER = 'FinanceManger';
     const PERMISSIONS_TYPE_TEAMMATE = 'Teammate';
+    const TAGS_POINT_OF_SALE = 'PointOfSale';
+    const TAGS_DELIVERY_AND_LOGISTICS = 'DeliveryAndLogistics';
+    const TAGS_CRM = 'CRM';
+    const TAGS_GIFT_CARD = 'GiftCard';
+    const TAGS_ACCOUNTING = 'Accounting';
+    const TAGS_LOYALTY_AND_MARKETING = 'LoyaltyAndMarketing';
+    const TAGS_OTHER = 'Other';
+    const REGIONS_GB = 'GB';
+    const REGIONS_IE = 'IE';
+    const REGIONS_FR = 'FR';
+    const REGIONS_ES = 'ES';
+    const REGIONS_PT = 'PT';
+    const REGIONS_IT = 'IT';
+    const REGIONS_DE = 'DE';
+    const REGIONS_PL = 'PL';
+    const REGIONS_BE = 'BE';
+    const REGIONS_LU = 'LU';
+    const REGIONS_NL = 'NL';
+    const REGIONS_US = 'US';
+    const REGIONS_CA = 'CA';
+    const REGIONS_BG = 'BG';
+    const REGIONS_MX = 'MX';
+    const REGIONS_AU = 'AU';
+    const REGIONS_NZ = 'NZ';
     
 
     
@@ -348,6 +372,52 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
     {
         return [
             self::PERMISSIONS_TYPE_TEAMMATE,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTagsAllowableValues()
+    {
+        return [
+            self::TAGS_POINT_OF_SALE,
+            self::TAGS_DELIVERY_AND_LOGISTICS,
+            self::TAGS_CRM,
+            self::TAGS_GIFT_CARD,
+            self::TAGS_ACCOUNTING,
+            self::TAGS_LOYALTY_AND_MARKETING,
+            self::TAGS_OTHER,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getRegionsAllowableValues()
+    {
+        return [
+            self::REGIONS_GB,
+            self::REGIONS_IE,
+            self::REGIONS_FR,
+            self::REGIONS_ES,
+            self::REGIONS_PT,
+            self::REGIONS_IT,
+            self::REGIONS_DE,
+            self::REGIONS_PL,
+            self::REGIONS_BE,
+            self::REGIONS_LU,
+            self::REGIONS_NL,
+            self::REGIONS_US,
+            self::REGIONS_CA,
+            self::REGIONS_BG,
+            self::REGIONS_MX,
+            self::REGIONS_AU,
+            self::REGIONS_NZ,
         ];
     }
     
@@ -989,6 +1059,15 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
      */
     public function setTags($tags)
     {
+        $allowedValues = $this->getTagsAllowableValues();
+        if (array_diff($tags, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'tags', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
         $this->container['tags'] = $tags;
 
         return $this;
@@ -1013,6 +1092,15 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
      */
     public function setRegions($regions)
     {
+        $allowedValues = $this->getRegionsAllowableValues();
+        if (array_diff($regions, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'regions', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
         $this->container['regions'] = $regions;
 
         return $this;
