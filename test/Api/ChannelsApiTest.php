@@ -102,26 +102,6 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for channelsGetStoreChannelStoreMapping
-     *
-     * .
-     *
-     */
-    public function testChannelsGetStoreChannelStoreMapping()
-    {
-    }
-
-    /**
-     * Test case for channelsSetStoreChannelStoreMapping
-     *
-     * .
-     *
-     */
-    public function testChannelsSetStoreChannelStoreMapping()
-    {
-    }
-
-    /**
      * Test case for detachAllStoresFromSalesChannel
      *
      * Detaches all the stores from the given sales channel..
@@ -164,7 +144,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getChannel
      *
-     * .
+     * Returns a Sales Channel by Id..
      *
      */
     public function testGetChannel()
@@ -174,7 +154,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getChannels
      *
-     * .
+     * Returns a list of enabled Channels.
      *
      */
     public function testGetChannels()
