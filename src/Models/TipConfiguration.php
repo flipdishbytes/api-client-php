@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiPaginationResultProduct
+ * TipConfiguration
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * RestApiPaginationResultProduct Class Doc Comment
+ * TipConfiguration Class Doc Comment
  *
  * @category Class
- * @description Rest api pagination result
+ * @description Describes the configuration of tipping
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RestApiPaginationResultProduct implements ModelInterface, ArrayAccess
+class TipConfiguration implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class RestApiPaginationResultProduct implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult[Product]';
+    protected static $swaggerModelName = 'TipConfiguration';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +58,11 @@ class RestApiPaginationResultProduct implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page' => 'int',
-        'limit' => 'int',
-        'total_record_count' => 'int',
-        'data' => '\Flipdish\\Client\Models\Product[]'
+        'store_id' => 'int',
+        'is_enabled' => 'bool',
+        'allow_custom_tips' => 'bool',
+        'percentages' => 'double[]',
+        'default_percentage' => 'double'
     ];
 
     /**
@@ -70,10 +71,11 @@ class RestApiPaginationResultProduct implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'page' => 'int32',
-        'limit' => 'int32',
-        'total_record_count' => 'int32',
-        'data' => null
+        'store_id' => 'int32',
+        'is_enabled' => null,
+        'allow_custom_tips' => null,
+        'percentages' => 'double',
+        'default_percentage' => 'double'
     ];
 
     /**
@@ -103,10 +105,11 @@ class RestApiPaginationResultProduct implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'page' => 'Page',
-        'limit' => 'Limit',
-        'total_record_count' => 'TotalRecordCount',
-        'data' => 'Data'
+        'store_id' => 'StoreId',
+        'is_enabled' => 'IsEnabled',
+        'allow_custom_tips' => 'AllowCustomTips',
+        'percentages' => 'Percentages',
+        'default_percentage' => 'DefaultPercentage'
     ];
 
     /**
@@ -115,10 +118,11 @@ class RestApiPaginationResultProduct implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'page' => 'setPage',
-        'limit' => 'setLimit',
-        'total_record_count' => 'setTotalRecordCount',
-        'data' => 'setData'
+        'store_id' => 'setStoreId',
+        'is_enabled' => 'setIsEnabled',
+        'allow_custom_tips' => 'setAllowCustomTips',
+        'percentages' => 'setPercentages',
+        'default_percentage' => 'setDefaultPercentage'
     ];
 
     /**
@@ -127,10 +131,11 @@ class RestApiPaginationResultProduct implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'page' => 'getPage',
-        'limit' => 'getLimit',
-        'total_record_count' => 'getTotalRecordCount',
-        'data' => 'getData'
+        'store_id' => 'getStoreId',
+        'is_enabled' => 'getIsEnabled',
+        'allow_custom_tips' => 'getAllowCustomTips',
+        'percentages' => 'getPercentages',
+        'default_percentage' => 'getDefaultPercentage'
     ];
 
     /**
@@ -193,10 +198,11 @@ class RestApiPaginationResultProduct implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['total_record_count'] = isset($data['total_record_count']) ? $data['total_record_count'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
+        $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
+        $this->container['allow_custom_tips'] = isset($data['allow_custom_tips']) ? $data['allow_custom_tips'] : null;
+        $this->container['percentages'] = isset($data['percentages']) ? $data['percentages'] : null;
+        $this->container['default_percentage'] = isset($data['default_percentage']) ? $data['default_percentage'] : null;
     }
 
     /**
@@ -208,18 +214,6 @@ class RestApiPaginationResultProduct implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['page'] === null) {
-            $invalidProperties[] = "'page' can't be null";
-        }
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
-        }
-        if ($this->container['total_record_count'] === null) {
-            $invalidProperties[] = "'total_record_count' can't be null";
-        }
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -236,97 +230,121 @@ class RestApiPaginationResultProduct implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets page
+     * Gets store_id
      *
      * @return int
      */
-    public function getPage()
+    public function getStoreId()
     {
-        return $this->container['page'];
+        return $this->container['store_id'];
     }
 
     /**
-     * Sets page
+     * Sets store_id
      *
-     * @param int $page Current page index
+     * @param int $store_id Configuration is for this StoreId
      *
      * @return $this
      */
-    public function setPage($page)
+    public function setStoreId($store_id)
     {
-        $this->container['page'] = $page;
+        $this->container['store_id'] = $store_id;
 
         return $this;
     }
 
     /**
-     * Gets limit
+     * Gets is_enabled
      *
-     * @return int
+     * @return bool
      */
-    public function getLimit()
+    public function getIsEnabled()
     {
-        return $this->container['limit'];
+        return $this->container['is_enabled'];
     }
 
     /**
-     * Sets limit
+     * Sets is_enabled
      *
-     * @param int $limit Current page size
+     * @param bool $is_enabled Are tips enabled?
      *
      * @return $this
      */
-    public function setLimit($limit)
+    public function setIsEnabled($is_enabled)
     {
-        $this->container['limit'] = $limit;
+        $this->container['is_enabled'] = $is_enabled;
 
         return $this;
     }
 
     /**
-     * Gets total_record_count
+     * Gets allow_custom_tips
      *
-     * @return int
+     * @return bool
      */
-    public function getTotalRecordCount()
+    public function getAllowCustomTips()
     {
-        return $this->container['total_record_count'];
+        return $this->container['allow_custom_tips'];
     }
 
     /**
-     * Sets total_record_count
+     * Sets allow_custom_tips
      *
-     * @param int $total_record_count Total record count
+     * @param bool $allow_custom_tips Are custom tips allowed?
      *
      * @return $this
      */
-    public function setTotalRecordCount($total_record_count)
+    public function setAllowCustomTips($allow_custom_tips)
     {
-        $this->container['total_record_count'] = $total_record_count;
+        $this->container['allow_custom_tips'] = $allow_custom_tips;
 
         return $this;
     }
 
     /**
-     * Gets data
+     * Gets percentages
      *
-     * @return \Flipdish\\Client\Models\Product[]
+     * @return double[]
      */
-    public function getData()
+    public function getPercentages()
     {
-        return $this->container['data'];
+        return $this->container['percentages'];
     }
 
     /**
-     * Sets data
+     * Sets percentages
      *
-     * @param \Flipdish\\Client\Models\Product[] $data Generic data object.
+     * @param double[] $percentages Ordered list of tip breakpoints (smallest -&gt; largest)
      *
      * @return $this
      */
-    public function setData($data)
+    public function setPercentages($percentages)
     {
-        $this->container['data'] = $data;
+        $this->container['percentages'] = $percentages;
+
+        return $this;
+    }
+
+    /**
+     * Gets default_percentage
+     *
+     * @return double
+     */
+    public function getDefaultPercentage()
+    {
+        return $this->container['default_percentage'];
+    }
+
+    /**
+     * Sets default_percentage
+     *
+     * @param double $default_percentage Defines a default percentage, it must be in the list of Percentages
+     *
+     * @return $this
+     */
+    public function setDefaultPercentage($default_percentage)
+    {
+        $this->container['default_percentage'] = $default_percentage;
 
         return $this;
     }

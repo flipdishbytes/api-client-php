@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **group_type** | **string** | Type of group (ModifierGroup, etc) | 
 **sku** | **string** | Stock Keeping Unit (SKU) | 
 **name** | **string** | Group name | 
+**autogenerate_display_text** | **bool** | Autogenerate display text in ordering applications | [optional] 
 **image_file_name** | **string** | Image File Name | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

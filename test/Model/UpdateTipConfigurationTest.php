@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiPaginationResultProductTest
+ * UpdateTipConfigurationTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * RestApiPaginationResultProductTest Class Doc Comment
+ * UpdateTipConfigurationTest Class Doc Comment
  *
  * @category    Class
- * @description Rest api pagination result
+ * @description Describes the configuration of tipping
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RestApiPaginationResultProductTest extends \PHPUnit_Framework_TestCase
+class UpdateTipConfigurationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,37 @@ class RestApiPaginationResultProductTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RestApiPaginationResultProduct"
+     * Test "UpdateTipConfiguration"
      */
-    public function testRestApiPaginationResultProduct()
+    public function testUpdateTipConfiguration()
     {
     }
 
     /**
-     * Test attribute "page"
+     * Test attribute "is_enabled"
      */
-    public function testPropertyPage()
+    public function testPropertyIsEnabled()
     {
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "allow_custom_tips"
      */
-    public function testPropertyLimit()
+    public function testPropertyAllowCustomTips()
     {
     }
 
     /**
-     * Test attribute "total_record_count"
+     * Test attribute "percentages"
      */
-    public function testPropertyTotalRecordCount()
+    public function testPropertyPercentages()
     {
     }
 
     /**
-     * Test attribute "data"
+     * Test attribute "default_percentage"
      */
-    public function testPropertyData()
+    public function testPropertyDefaultPercentage()
     {
     }
 }

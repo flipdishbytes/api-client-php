@@ -1,6 +1,6 @@
 <?php
 /**
- * ProductTest
+ * RestApiResultTipConfigurationTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * ProductTest Class Doc Comment
+ * RestApiResultTipConfigurationTest Class Doc Comment
  *
  * @category    Class
- * @description Product Information
+ * @description Rest api result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProductTest extends \PHPUnit_Framework_TestCase
+class RestApiResultTipConfigurationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,72 +70,16 @@ class ProductTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Product"
+     * Test "RestApiResultTipConfiguration"
      */
-    public function testProduct()
+    public function testRestApiResultTipConfiguration()
     {
     }
 
     /**
-     * Test attribute "product_id"
+     * Test attribute "data"
      */
-    public function testPropertyProductId()
-    {
-    }
-
-    /**
-     * Test attribute "sku"
-     */
-    public function testPropertySku()
-    {
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-    }
-
-    /**
-     * Test attribute "price"
-     */
-    public function testPropertyPrice()
-    {
-    }
-
-    /**
-     * Test attribute "product_type"
-     */
-    public function testPropertyProductType()
-    {
-    }
-
-    /**
-     * Test attribute "image_file_name"
-     */
-    public function testPropertyImageFileName()
-    {
-    }
-
-    /**
-     * Test attribute "is_archived"
-     */
-    public function testPropertyIsArchived()
-    {
-    }
-
-    /**
-     * Test attribute "alcohol"
-     */
-    public function testPropertyAlcohol()
+    public function testPropertyData()
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * ProductsApi
+ * TipsApi
  * PHP version 5
  *
  * @category Class
@@ -40,14 +40,14 @@ use Flipdish\\Client\HeaderSelector;
 use Flipdish\\Client\ObjectSerializer;
 
 /**
- * ProductsApi Class Doc Comment
+ * TipsApi Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProductsApi
+class TipsApi
 {
     /**
      * @var ClientInterface
@@ -88,318 +88,37 @@ class ProductsApi
     }
 
     /**
-     * Operation archiveProduct
+     * Operation tipConfigGet
      *
-     * Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
+     * Returns current tip configuration for a store
      *
-     * @param  string $app_id  (required)
-     * @param  string $product_id  (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function archiveProduct($app_id, $product_id)
-    {
-        $this->archiveProductWithHttpInfo($app_id, $product_id);
-    }
-
-    /**
-     * Operation archiveProductWithHttpInfo
-     *
-     * Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-     *
-     * @param  string $app_id  (required)
-     * @param  string $product_id  (required)
+     * @param  int $store_id Store Id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return \Flipdish\\Client\Models\RestApiResultTipConfiguration
      */
-    public function archiveProductWithHttpInfo($app_id, $product_id)
+    public function tipConfigGet($store_id)
     {
-        $returnType = '';
-        $request = $this->archiveProductRequest($app_id, $product_id);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation archiveProductAsync
-     *
-     * Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-     *
-     * @param  string $app_id  (required)
-     * @param  string $product_id  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function archiveProductAsync($app_id, $product_id)
-    {
-        return $this->archiveProductAsyncWithHttpInfo($app_id, $product_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation archiveProductAsyncWithHttpInfo
-     *
-     * Archive a product. If the product is used in Menus, the related MenuItems will be marked as deleted
-     *
-     * @param  string $app_id  (required)
-     * @param  string $product_id  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function archiveProductAsyncWithHttpInfo($app_id, $product_id)
-    {
-        $returnType = '';
-        $request = $this->archiveProductRequest($app_id, $product_id);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'archiveProduct'
-     *
-     * @param  string $app_id  (required)
-     * @param  string $product_id  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function archiveProductRequest($app_id, $product_id)
-    {
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling archiveProduct'
-            );
-        }
-        // verify the required parameter 'product_id' is set
-        if ($product_id === null || (is_array($product_id) && count($product_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $product_id when calling archiveProduct'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/{appId}/catalog/products/{productId}/archive';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-        // path params
-        if ($app_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($product_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'productId' . '}',
-                ObjectSerializer::toPathValue($product_id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation duplicateProduct
-     *
-     * Duplicate a product
-     *
-     * @param  string $app_id  (required)
-     * @param  string $product_id  (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultProduct
-     */
-    public function duplicateProduct($app_id, $product_id)
-    {
-        list($response) = $this->duplicateProductWithHttpInfo($app_id, $product_id);
+        list($response) = $this->tipConfigGetWithHttpInfo($store_id);
         return $response;
     }
 
     /**
-     * Operation duplicateProductWithHttpInfo
+     * Operation tipConfigGetWithHttpInfo
      *
-     * Duplicate a product
+     * Returns current tip configuration for a store
      *
-     * @param  string $app_id  (required)
-     * @param  string $product_id  (required)
+     * @param  int $store_id Store Id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultProduct, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultTipConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
-    public function duplicateProductWithHttpInfo($app_id, $product_id)
+    public function tipConfigGetWithHttpInfo($store_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultProduct';
-        $request = $this->duplicateProductRequest($app_id, $product_id);
+        $returnType = '\Flipdish\\Client\Models\RestApiResultTipConfiguration';
+        $request = $this->tipConfigGetRequest($store_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -450,7 +169,7 @@ class ProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultProduct',
+                        '\Flipdish\\Client\Models\RestApiResultTipConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -485,19 +204,18 @@ class ProductsApi
     }
 
     /**
-     * Operation duplicateProductAsync
+     * Operation tipConfigGetAsync
      *
-     * Duplicate a product
+     * Returns current tip configuration for a store
      *
-     * @param  string $app_id  (required)
-     * @param  string $product_id  (required)
+     * @param  int $store_id Store Id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function duplicateProductAsync($app_id, $product_id)
+    public function tipConfigGetAsync($store_id)
     {
-        return $this->duplicateProductAsyncWithHttpInfo($app_id, $product_id)
+        return $this->tipConfigGetAsyncWithHttpInfo($store_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -506,20 +224,19 @@ class ProductsApi
     }
 
     /**
-     * Operation duplicateProductAsyncWithHttpInfo
+     * Operation tipConfigGetAsyncWithHttpInfo
      *
-     * Duplicate a product
+     * Returns current tip configuration for a store
      *
-     * @param  string $app_id  (required)
-     * @param  string $product_id  (required)
+     * @param  int $store_id Store Id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function duplicateProductAsyncWithHttpInfo($app_id, $product_id)
+    public function tipConfigGetAsyncWithHttpInfo($store_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultProduct';
-        $request = $this->duplicateProductRequest($app_id, $product_id);
+        $returnType = '\Flipdish\\Client\Models\RestApiResultTipConfiguration';
+        $request = $this->tipConfigGetRequest($store_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -559,30 +276,23 @@ class ProductsApi
     }
 
     /**
-     * Create request for operation 'duplicateProduct'
+     * Create request for operation 'tipConfigGet'
      *
-     * @param  string $app_id  (required)
-     * @param  string $product_id  (required)
+     * @param  int $store_id Store Id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function duplicateProductRequest($app_id, $product_id)
+    protected function tipConfigGetRequest($store_id)
     {
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+        // verify the required parameter 'store_id' is set
+        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling duplicateProduct'
-            );
-        }
-        // verify the required parameter 'product_id' is set
-        if ($product_id === null || (is_array($product_id) && count($product_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $product_id when calling duplicateProduct'
+                'Missing the required parameter $store_id when calling tipConfigGet'
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/catalog/products/{productId}/duplicate';
+        $resourcePath = '/api/v1.0/stores/{storeId}/tipconfig';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -591,360 +301,10 @@ class ProductsApi
 
 
         // path params
-        if ($app_id !== null) {
+        if ($store_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($product_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'productId' . '}',
-                ObjectSerializer::toPathValue($product_id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation getProducts
-     *
-     * Get paginated products by app name id filtered by product types
-     *
-     * @param  string $app_id  (required)
-     * @param  string[] $product_types  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiPaginationResultProduct
-     */
-    public function getProducts($app_id, $product_types, $search_term = null, $page = null, $limit = null)
-    {
-        list($response) = $this->getProductsWithHttpInfo($app_id, $product_types, $search_term, $page, $limit);
-        return $response;
-    }
-
-    /**
-     * Operation getProductsWithHttpInfo
-     *
-     * Get paginated products by app name id filtered by product types
-     *
-     * @param  string $app_id  (required)
-     * @param  string[] $product_types  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiPaginationResultProduct, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getProductsWithHttpInfo($app_id, $product_types, $search_term = null, $page = null, $limit = null)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultProduct';
-        $request = $this->getProductsRequest($app_id, $product_types, $search_term, $page, $limit);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiPaginationResultProduct',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getProductsAsync
-     *
-     * Get paginated products by app name id filtered by product types
-     *
-     * @param  string $app_id  (required)
-     * @param  string[] $product_types  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getProductsAsync($app_id, $product_types, $search_term = null, $page = null, $limit = null)
-    {
-        return $this->getProductsAsyncWithHttpInfo($app_id, $product_types, $search_term, $page, $limit)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getProductsAsyncWithHttpInfo
-     *
-     * Get paginated products by app name id filtered by product types
-     *
-     * @param  string $app_id  (required)
-     * @param  string[] $product_types  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getProductsAsyncWithHttpInfo($app_id, $product_types, $search_term = null, $page = null, $limit = null)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultProduct';
-        $request = $this->getProductsRequest($app_id, $product_types, $search_term, $page, $limit);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'getProducts'
-     *
-     * @param  string $app_id  (required)
-     * @param  string[] $product_types  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getProductsRequest($app_id, $product_types, $search_term = null, $page = null, $limit = null)
-    {
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling getProducts'
-            );
-        }
-        // verify the required parameter 'product_types' is set
-        if ($product_types === null || (is_array($product_types) && count($product_types) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $product_types when calling getProducts'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/{appId}/catalog/products';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if (is_array($product_types)) {
-            $queryParams['productTypes'] = $product_types;
-        } else
-        if ($product_types !== null) {
-            $queryParams['productTypes'] = ObjectSerializer::toQueryValue($product_types);
-        }
-        // query params
-        if ($search_term !== null) {
-            $queryParams['searchTerm'] = ObjectSerializer::toQueryValue($search_term);
-        }
-        // query params
-        if ($page !== null) {
-            $queryParams['page'] = ObjectSerializer::toQueryValue($page);
-        }
-        // query params
-        if ($limit !== null) {
-            $queryParams['limit'] = ObjectSerializer::toQueryValue($limit);
-        }
-
-        // path params
-        if ($app_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
+                '{' . 'storeId' . '}',
+                ObjectSerializer::toPathValue($store_id),
                 $resourcePath
             );
         }
@@ -1018,6 +378,317 @@ class ProductsApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation tipConfigUpsert
+     *
+     * Update or insert current tip configuration for a store
+     *
+     * @param  int $store_id Store Id (required)
+     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config Update Configuration (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiResultTipConfiguration
+     */
+    public function tipConfigUpsert($store_id, $update_config)
+    {
+        list($response) = $this->tipConfigUpsertWithHttpInfo($store_id, $update_config);
+        return $response;
+    }
+
+    /**
+     * Operation tipConfigUpsertWithHttpInfo
+     *
+     * Update or insert current tip configuration for a store
+     *
+     * @param  int $store_id Store Id (required)
+     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config Update Configuration (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiResultTipConfiguration, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function tipConfigUpsertWithHttpInfo($store_id, $update_config)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultTipConfiguration';
+        $request = $this->tipConfigUpsertRequest($store_id, $update_config);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiResultTipConfiguration',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation tipConfigUpsertAsync
+     *
+     * Update or insert current tip configuration for a store
+     *
+     * @param  int $store_id Store Id (required)
+     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config Update Configuration (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function tipConfigUpsertAsync($store_id, $update_config)
+    {
+        return $this->tipConfigUpsertAsyncWithHttpInfo($store_id, $update_config)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation tipConfigUpsertAsyncWithHttpInfo
+     *
+     * Update or insert current tip configuration for a store
+     *
+     * @param  int $store_id Store Id (required)
+     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config Update Configuration (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function tipConfigUpsertAsyncWithHttpInfo($store_id, $update_config)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultTipConfiguration';
+        $request = $this->tipConfigUpsertRequest($store_id, $update_config);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'tipConfigUpsert'
+     *
+     * @param  int $store_id Store Id (required)
+     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config Update Configuration (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function tipConfigUpsertRequest($store_id, $update_config)
+    {
+        // verify the required parameter 'store_id' is set
+        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $store_id when calling tipConfigUpsert'
+            );
+        }
+        // verify the required parameter 'update_config' is set
+        if ($update_config === null || (is_array($update_config) && count($update_config) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $update_config when calling tipConfigUpsert'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/stores/{storeId}/tipconfig';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($store_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'storeId' . '}',
+                ObjectSerializer::toPathValue($store_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($update_config)) {
+            $_tempBody = $update_config;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
