@@ -102,16 +102,6 @@ class MenuSectionItemsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createMenuSectionItemFromProducts
-     *
-     * Create menu section items from a list of Products.
-     *
-     */
-    public function testCreateMenuSectionItemFromProducts()
-    {
-    }
-
-    /**
      * Test case for deleteMenuSectionItem
      *
      * Delete menu section item.

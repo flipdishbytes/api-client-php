@@ -170,12 +170,10 @@ Class | Method | HTTP request | Description
 *CatalogImagesApi* | [**uploadCatalogImage**](docs/Api/CatalogImagesApi.md#uploadcatalogimage) | **POST** /api/v1.0/{appId}/catalog/images | Upload a Catalog Image
 *CatalogItemsApi* | [**archiveCatalogItem**](docs/Api/CatalogItemsApi.md#archivecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/archive | Archive Catalog Item
 *CatalogItemsApi* | [**createCatalogItem**](docs/Api/CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create a Catalog Item
-*CatalogItemsApi* | [**deleteCatalogItemImage**](docs/Api/CatalogItemsApi.md#deletecatalogitemimage) | **DELETE** /api/v1.0/{appId}/catalog/items/{catalogItemId}/image | Delete a CatalogItem Image
 *CatalogItemsApi* | [**duplicateCatalogItem**](docs/Api/CatalogItemsApi.md#duplicatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/duplicate | Duplicate Catalog Item
 *CatalogItemsApi* | [**getCatalogItemById**](docs/Api/CatalogItemsApi.md#getcatalogitembyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
 *CatalogItemsApi* | [**getItems**](docs/Api/CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
 *CatalogItemsApi* | [**updateCatalogItem**](docs/Api/CatalogItemsApi.md#updatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Update Catalog Item
-*CatalogItemsApi* | [**uploadCatalogItemImage**](docs/Api/CatalogItemsApi.md#uploadcatalogitemimage) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/image | Upload a Catalog Item Image
 *ChannelsApi* | [**assignAppIdToSalesChannel**](docs/Api/ChannelsApi.md#assignappidtosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | Assign a given AppId to a Sales Channel
 *ChannelsApi* | [**assignStoreToChannel**](docs/Api/ChannelsApi.md#assignstoretochannel) | **POST** /api/v1.0/{appId}/channels/assign-store | Assign a Store to a Sales Channel
 *ChannelsApi* | [**attachStoreToSalesChannel**](docs/Api/ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
@@ -280,7 +278,6 @@ Class | Method | HTTP request | Description
 *MenuSectionItemsApi* | [**cloneMenuSectionItem**](docs/Api/MenuSectionItemsApi.md#clonemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/clone | Clone menu section item
 *MenuSectionItemsApi* | [**createMenuSectionItem**](docs/Api/MenuSectionItemsApi.md#createmenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Create menu section item
 *MenuSectionItemsApi* | [**createMenuSectionItemFromCatalogItems**](docs/Api/MenuSectionItemsApi.md#createmenusectionitemfromcatalogitems) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/add-catalogitems | Create menu section items from a list of Catalog Items
-*MenuSectionItemsApi* | [**createMenuSectionItemFromProducts**](docs/Api/MenuSectionItemsApi.md#createmenusectionitemfromproducts) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/add-products | Create menu section items from a list of Products
 *MenuSectionItemsApi* | [**deleteMenuSectionItem**](docs/Api/MenuSectionItemsApi.md#deletemenusectionitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Delete menu section item
 *MenuSectionItemsApi* | [**deleteMenuSectionItemImage**](docs/Api/MenuSectionItemsApi.md#deletemenusectionitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
 *MenuSectionItemsApi* | [**getMenuItemById**](docs/Api/MenuSectionItemsApi.md#getmenuitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
@@ -543,7 +540,6 @@ Class | Method | HTTP request | Description
  - [CreateFullMenuSection](docs/Model/CreateFullMenuSection.md)
  - [CreateFullMenuSectionItem](docs/Model/CreateFullMenuSectionItem.md)
  - [CreateMenuSectionItemFromCatalogItems](docs/Model/CreateMenuSectionItemFromCatalogItems.md)
- - [CreateMenuSectionItemFromProducts](docs/Model/CreateMenuSectionItemFromProducts.md)
  - [CreateMenuTaxRate](docs/Model/CreateMenuTaxRate.md)
  - [CreateMetadata](docs/Model/CreateMetadata.md)
  - [CreateMetafieldDefinition](docs/Model/CreateMetafieldDefinition.md)
@@ -745,7 +741,6 @@ Class | Method | HTTP request | Description
  - [PrinterTurnedOnEvent](docs/Model/PrinterTurnedOnEvent.md)
  - [PrinterUnassignedFromStoreEvent](docs/Model/PrinterUnassignedFromStoreEvent.md)
  - [ProcessingFeeConfig](docs/Model/ProcessingFeeConfig.md)
- - [ProductItem](docs/Model/ProductItem.md)
  - [PushNotificationDeletedEvent](docs/Model/PushNotificationDeletedEvent.md)
  - [PushNotificationRequest](docs/Model/PushNotificationRequest.md)
  - [PushNotificationResponse](docs/Model/PushNotificationResponse.md)

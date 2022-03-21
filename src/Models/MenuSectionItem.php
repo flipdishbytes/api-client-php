@@ -536,7 +536,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
     /**
      * Sets tax_rate_id
      *
-     * @param int $tax_rate_id tax_rate_id
+     * @param int $tax_rate_id TaxRate
      *
      * @return $this
      */
@@ -560,7 +560,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
     /**
      * Sets tax_value
      *
-     * @param double $tax_value tax_value
+     * @param double $tax_value TaxValue - the tax associated with this item, based on TaxRate / TaxType and Currency (currency determines decimal point precision)
      *
      * @return $this
      */

@@ -92,16 +92,6 @@ class CatalogItemsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for deleteCatalogItemImage
-     *
-     * Delete a CatalogItem Image.
-     *
-     */
-    public function testDeleteCatalogItemImage()
-    {
-    }
-
-    /**
      * Test case for duplicateCatalogItem
      *
      * Duplicate Catalog Item.
@@ -138,16 +128,6 @@ class CatalogItemsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testUpdateCatalogItem()
-    {
-    }
-
-    /**
-     * Test case for uploadCatalogItemImage
-     *
-     * Upload a Catalog Item Image.
-     *
-     */
-    public function testUploadCatalogItemImage()
     {
     }
 }
