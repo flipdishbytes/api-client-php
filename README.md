@@ -374,6 +374,7 @@ Class | Method | HTTP request | Description
 *PayoutsExportApi* | [**exportPayoutRefunds**](docs/Api/PayoutsExportApi.md#exportpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | Export a list of payout&#39;s refunds as CSV
 *PayoutsExportApi* | [**exportPayoutStores**](docs/Api/PayoutsExportApi.md#exportpayoutstores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | Export payout&#39;s details as CSV
 *PayoutsExportApi* | [**exportPayouts**](docs/Api/PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | Export payouts as CSV
+*PendingMenuChangesApi* | [**getPendingMenuChanges**](docs/Api/PendingMenuChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/pendingmenuchanges | Get menu pending changes from Catalog groups and items
 *ProcessingFeeConfigsApi* | [**getProcessingFeeConfigsByStoreIds**](docs/Api/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
 *PushNotificationsApi* | [**deletePushNotification**](docs/Api/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**getPushNotifications**](docs/Api/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
@@ -735,6 +736,7 @@ Class | Method | HTTP request | Description
  - [PayoutRequestIds](docs/Model/PayoutRequestIds.md)
  - [PayoutStore](docs/Model/PayoutStore.md)
  - [PayoutSummary](docs/Model/PayoutSummary.md)
+ - [PendingMenuChanges](docs/Model/PendingMenuChanges.md)
  - [PercentDiscountDetails](docs/Model/PercentDiscountDetails.md)
  - [PhoneCall](docs/Model/PhoneCall.md)
  - [PhoneCallEndedEvent](docs/Model/PhoneCallEndedEvent.md)
@@ -828,6 +830,7 @@ Class | Method | HTTP request | Description
  - [RestApiPaginationResultPayoutOrder](docs/Model/RestApiPaginationResultPayoutOrder.md)
  - [RestApiPaginationResultPayoutOtherCharge](docs/Model/RestApiPaginationResultPayoutOtherCharge.md)
  - [RestApiPaginationResultPayoutRefund](docs/Model/RestApiPaginationResultPayoutRefund.md)
+ - [RestApiPaginationResultPendingMenuChanges](docs/Model/RestApiPaginationResultPendingMenuChanges.md)
  - [RestApiPaginationResultPhoneCall](docs/Model/RestApiPaginationResultPhoneCall.md)
  - [RestApiPaginationResultPushNotificationResponse](docs/Model/RestApiPaginationResultPushNotificationResponse.md)
  - [RestApiPaginationResultStore](docs/Model/RestApiPaginationResultStore.md)
