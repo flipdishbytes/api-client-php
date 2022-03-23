@@ -259,6 +259,10 @@ Class | Method | HTTP request | Description
 *LightspeedApi* | [**lightspeedGenerateMenu**](docs/Api/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
 *LightspeedApi* | [**lightspeedGetStoreSettings**](docs/Api/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
 *LightspeedApi* | [**lightspeedSaveStoreSettings**](docs/Api/LightspeedApi.md#lightspeedsavestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
+*LocationAreasApi* | [**createLocationArea**](docs/Api/LocationAreasApi.md#createlocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | Create a Location Area, i.e: Room, Floor, Parking lot
+*LocationAreasApi* | [**getLocationArea**](docs/Api/LocationAreasApi.md#getlocationarea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | Retrieve a Location Area
+*LocationAreasApi* | [**getLocationsForStore**](docs/Api/LocationAreasApi.md#getlocationsforstore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
+*LocationAreasApi* | [**updateLocationArea**](docs/Api/LocationAreasApi.md#updatelocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/update | Update a Location Area, i.e: Room, Floor, Car park space
 *LookerSingleSignOnApi* | [**getLookerCustomerReportingEmbedUrl**](docs/Api/LookerSingleSignOnApi.md#getlookercustomerreportingembedurl) | **GET** /api/v1.0/{appId}/looker/sso/CustomerReporting | 
 *MenuOptionSetItemsApi* | [**addMenuItemOptionSetItem**](docs/Api/MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
 *MenuOptionSetItemsApi* | [**deleteOptionSetItemImage**](docs/Api/MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
@@ -539,6 +543,7 @@ Class | Method | HTTP request | Description
  - [CreateFullMenuItemOptionSetItem](docs/Model/CreateFullMenuItemOptionSetItem.md)
  - [CreateFullMenuSection](docs/Model/CreateFullMenuSection.md)
  - [CreateFullMenuSectionItem](docs/Model/CreateFullMenuSectionItem.md)
+ - [CreateLocationArea](docs/Model/CreateLocationArea.md)
  - [CreateMenuSectionItemFromCatalogItems](docs/Model/CreateMenuSectionItemFromCatalogItems.md)
  - [CreateMenuTaxRate](docs/Model/CreateMenuTaxRate.md)
  - [CreateMetadata](docs/Model/CreateMetadata.md)
@@ -632,6 +637,9 @@ Class | Method | HTTP request | Description
  - [LineItemOption](docs/Model/LineItemOption.md)
  - [LocalisedTimeZone](docs/Model/LocalisedTimeZone.md)
  - [Location](docs/Model/Location.md)
+ - [LocationArea](docs/Model/LocationArea.md)
+ - [LocationAreaLocation](docs/Model/LocationAreaLocation.md)
+ - [LocationAreaWithLocations](docs/Model/LocationAreaWithLocations.md)
  - [LoginModel](docs/Model/LoginModel.md)
  - [LoginWithPinModel](docs/Model/LoginWithPinModel.md)
  - [LoyaltyCampaign](docs/Model/LoyaltyCampaign.md)
@@ -771,6 +779,7 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultHomeAction](docs/Model/RestApiArrayResultHomeAction.md)
  - [RestApiArrayResultKioskCashPaymentSettings](docs/Model/RestApiArrayResultKioskCashPaymentSettings.md)
  - [RestApiArrayResultLocalisedTimeZone](docs/Model/RestApiArrayResultLocalisedTimeZone.md)
+ - [RestApiArrayResultLocationAreaWithLocations](docs/Model/RestApiArrayResultLocationAreaWithLocations.md)
  - [RestApiArrayResultLoyaltyCampaign](docs/Model/RestApiArrayResultLoyaltyCampaign.md)
  - [RestApiArrayResultMenuCheckpoint](docs/Model/RestApiArrayResultMenuCheckpoint.md)
  - [RestApiArrayResultMenuElementEditResponse](docs/Model/RestApiArrayResultMenuElementEditResponse.md)
@@ -991,6 +1000,7 @@ Class | Method | HTTP request | Description
  - [UpdateCatalogItemReference](docs/Model/UpdateCatalogItemReference.md)
  - [UpdateDriverNotificationToken](docs/Model/UpdateDriverNotificationToken.md)
  - [UpdateDriverProfileModel](docs/Model/UpdateDriverProfileModel.md)
+ - [UpdateLocationArea](docs/Model/UpdateLocationArea.md)
  - [UpdateMetafieldDefinition](docs/Model/UpdateMetafieldDefinition.md)
  - [UpdateTipConfiguration](docs/Model/UpdateTipConfiguration.md)
  - [UserAnsweredSignupQuestionsEvent](docs/Model/UserAnsweredSignupQuestionsEvent.md)
