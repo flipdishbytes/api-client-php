@@ -1,10 +1,9 @@
-# LocationAreaLocation
+# CreateLocation
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**location_id** | **int** | Id of the Location | [optional] 
-**location_name** | **string** | Name of the Location | [optional] 
+**location_name** | **string** | Descriptive LocationArea name | [optional] 
 **display_order** | **int** | The order that the Location should be displayed on the screen | [optional] 
 **external_location_id** | **string** | Id of the Location on an external system | [optional] 
 

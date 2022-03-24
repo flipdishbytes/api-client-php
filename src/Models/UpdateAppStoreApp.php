@@ -58,6 +58,7 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'details' => 'string',
         'configuration_type' => 'string',
         'store_selector_type' => 'string',
         'field_groups' => '\Flipdish\\Client\Models\FieldGroup[]',
@@ -80,6 +81,7 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'details' => null,
         'configuration_type' => null,
         'store_selector_type' => null,
         'field_groups' => null,
@@ -123,6 +125,7 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'details' => 'Details',
         'configuration_type' => 'ConfigurationType',
         'store_selector_type' => 'StoreSelectorType',
         'field_groups' => 'FieldGroups',
@@ -145,6 +148,7 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'details' => 'setDetails',
         'configuration_type' => 'setConfigurationType',
         'store_selector_type' => 'setStoreSelectorType',
         'field_groups' => 'setFieldGroups',
@@ -167,6 +171,7 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'details' => 'getDetails',
         'configuration_type' => 'getConfigurationType',
         'store_selector_type' => 'getStoreSelectorType',
         'field_groups' => 'getFieldGroups',
@@ -385,6 +390,7 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
         $this->container['configuration_type'] = isset($data['configuration_type']) ? $data['configuration_type'] : null;
         $this->container['store_selector_type'] = isset($data['store_selector_type']) ? $data['store_selector_type'] : null;
         $this->container['field_groups'] = isset($data['field_groups']) ? $data['field_groups'] : null;
@@ -410,6 +416,9 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['details'] === null) {
+            $invalidProperties[] = "'details' can't be null";
+        }
         if ($this->container['configuration_type'] === null) {
             $invalidProperties[] = "'configuration_type' can't be null";
         }
@@ -480,6 +489,30 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets details
+     *
+     * @return string
+     */
+    public function getDetails()
+    {
+        return $this->container['details'];
+    }
+
+    /**
+     * Sets details
+     *
+     * @param string $details Details
+     *
+     * @return $this
+     */
+    public function setDetails($details)
+    {
+        $this->container['details'] = $details;
+
+        return $this;
+    }
 
     /**
      * Gets configuration_type

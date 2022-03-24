@@ -1,6 +1,6 @@
 <?php
 /**
- * LocationAreaLocation
+ * CreateLocation
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * LocationAreaLocation Class Doc Comment
+ * CreateLocation Class Doc Comment
  *
  * @category Class
- * @description Representation of a Location i.e: (Table, Hotel Room, Car Park, etc )
+ * @description Input model for creating a Location
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class LocationAreaLocation implements ModelInterface, ArrayAccess
+class CreateLocation implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'LocationArea_Location';
+    protected static $swaggerModelName = 'CreateLocation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,6 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'location_id' => 'int',
         'location_name' => 'string',
         'display_order' => 'int',
         'external_location_id' => 'string'
@@ -70,7 +69,6 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'location_id' => 'int32',
         'location_name' => null,
         'display_order' => 'int32',
         'external_location_id' => null
@@ -103,7 +101,6 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'location_id' => 'LocationId',
         'location_name' => 'LocationName',
         'display_order' => 'DisplayOrder',
         'external_location_id' => 'ExternalLocationId'
@@ -115,7 +112,6 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'location_id' => 'setLocationId',
         'location_name' => 'setLocationName',
         'display_order' => 'setDisplayOrder',
         'external_location_id' => 'setExternalLocationId'
@@ -127,7 +123,6 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'location_id' => 'getLocationId',
         'location_name' => 'getLocationName',
         'display_order' => 'getDisplayOrder',
         'external_location_id' => 'getExternalLocationId'
@@ -193,7 +188,6 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['location_id'] = isset($data['location_id']) ? $data['location_id'] : null;
         $this->container['location_name'] = isset($data['location_name']) ? $data['location_name'] : null;
         $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
         $this->container['external_location_id'] = isset($data['external_location_id']) ? $data['external_location_id'] : null;
@@ -224,30 +218,6 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets location_id
-     *
-     * @return int
-     */
-    public function getLocationId()
-    {
-        return $this->container['location_id'];
-    }
-
-    /**
-     * Sets location_id
-     *
-     * @param int $location_id Id of the Location
-     *
-     * @return $this
-     */
-    public function setLocationId($location_id)
-    {
-        $this->container['location_id'] = $location_id;
-
-        return $this;
-    }
-
-    /**
      * Gets location_name
      *
      * @return string
@@ -260,7 +230,7 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
     /**
      * Sets location_name
      *
-     * @param string $location_name Name of the Location
+     * @param string $location_name Descriptive LocationArea name
      *
      * @return $this
      */

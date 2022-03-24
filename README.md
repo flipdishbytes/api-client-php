@@ -259,6 +259,7 @@ Class | Method | HTTP request | Description
 *LightspeedApi* | [**lightspeedGenerateMenu**](docs/Api/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
 *LightspeedApi* | [**lightspeedGetStoreSettings**](docs/Api/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
 *LightspeedApi* | [**lightspeedSaveStoreSettings**](docs/Api/LightspeedApi.md#lightspeedsavestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
+*LocationApi* | [**createLocation**](docs/Api/LocationApi.md#createlocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location | Create a Location i.e: Table, Hotel Room, Car park space
 *LocationAreasApi* | [**createLocationArea**](docs/Api/LocationAreasApi.md#createlocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | Create a Location Area, i.e: Room, Floor, Parking lot
 *LocationAreasApi* | [**getLocationArea**](docs/Api/LocationAreasApi.md#getlocationarea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | Retrieve a Location Area
 *LocationAreasApi* | [**getLocationsForStore**](docs/Api/LocationAreasApi.md#getlocationsforstore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
@@ -544,6 +545,7 @@ Class | Method | HTTP request | Description
  - [CreateFullMenuItemOptionSetItem](docs/Model/CreateFullMenuItemOptionSetItem.md)
  - [CreateFullMenuSection](docs/Model/CreateFullMenuSection.md)
  - [CreateFullMenuSectionItem](docs/Model/CreateFullMenuSectionItem.md)
+ - [CreateLocation](docs/Model/CreateLocation.md)
  - [CreateLocationArea](docs/Model/CreateLocationArea.md)
  - [CreateMenuSectionItemFromCatalogItems](docs/Model/CreateMenuSectionItemFromCatalogItems.md)
  - [CreateMenuTaxRate](docs/Model/CreateMenuTaxRate.md)

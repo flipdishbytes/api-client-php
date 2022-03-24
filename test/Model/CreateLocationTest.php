@@ -1,6 +1,6 @@
 <?php
 /**
- * LocationAreaLocationTest
+ * CreateLocationTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * LocationAreaLocationTest Class Doc Comment
+ * CreateLocationTest Class Doc Comment
  *
  * @category    Class
- * @description Representation of a Location i.e: (Table, Hotel Room, Car Park, etc )
+ * @description Input model for creating a Location
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LocationAreaLocationTest extends \PHPUnit_Framework_TestCase
+class CreateLocationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,9 @@ class LocationAreaLocationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "LocationAreaLocation"
+     * Test "CreateLocation"
      */
-    public function testLocationAreaLocation()
-    {
-    }
-
-    /**
-     * Test attribute "location_id"
-     */
-    public function testPropertyLocationId()
+    public function testCreateLocation()
     {
     }
 

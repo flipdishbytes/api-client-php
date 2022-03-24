@@ -61,6 +61,7 @@ class AppStoreApp implements ModelInterface, ArrayAccess
         'id' => 'string',
         'verification_status' => 'string',
         'logo' => 'string',
+        'details' => 'string',
         'configuration_type' => 'string',
         'store_selector_type' => 'string',
         'field_groups' => '\Flipdish\\Client\Models\FieldGroup[]',
@@ -86,6 +87,7 @@ class AppStoreApp implements ModelInterface, ArrayAccess
         'id' => null,
         'verification_status' => null,
         'logo' => null,
+        'details' => null,
         'configuration_type' => null,
         'store_selector_type' => null,
         'field_groups' => null,
@@ -132,6 +134,7 @@ class AppStoreApp implements ModelInterface, ArrayAccess
         'id' => 'Id',
         'verification_status' => 'VerificationStatus',
         'logo' => 'Logo',
+        'details' => 'Details',
         'configuration_type' => 'ConfigurationType',
         'store_selector_type' => 'StoreSelectorType',
         'field_groups' => 'FieldGroups',
@@ -157,6 +160,7 @@ class AppStoreApp implements ModelInterface, ArrayAccess
         'id' => 'setId',
         'verification_status' => 'setVerificationStatus',
         'logo' => 'setLogo',
+        'details' => 'setDetails',
         'configuration_type' => 'setConfigurationType',
         'store_selector_type' => 'setStoreSelectorType',
         'field_groups' => 'setFieldGroups',
@@ -182,6 +186,7 @@ class AppStoreApp implements ModelInterface, ArrayAccess
         'id' => 'getId',
         'verification_status' => 'getVerificationStatus',
         'logo' => 'getLogo',
+        'details' => 'getDetails',
         'configuration_type' => 'getConfigurationType',
         'store_selector_type' => 'getStoreSelectorType',
         'field_groups' => 'getFieldGroups',
@@ -420,6 +425,7 @@ class AppStoreApp implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['verification_status'] = isset($data['verification_status']) ? $data['verification_status'] : null;
         $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
+        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
         $this->container['configuration_type'] = isset($data['configuration_type']) ? $data['configuration_type'] : null;
         $this->container['store_selector_type'] = isset($data['store_selector_type']) ? $data['store_selector_type'] : null;
         $this->container['field_groups'] = isset($data['field_groups']) ? $data['field_groups'] : null;
@@ -459,6 +465,9 @@ class AppStoreApp implements ModelInterface, ArrayAccess
             );
         }
 
+        if ($this->container['details'] === null) {
+            $invalidProperties[] = "'details' can't be null";
+        }
         if ($this->container['configuration_type'] === null) {
             $invalidProperties[] = "'configuration_type' can't be null";
         }
@@ -607,6 +616,30 @@ class AppStoreApp implements ModelInterface, ArrayAccess
     public function setLogo($logo)
     {
         $this->container['logo'] = $logo;
+
+        return $this;
+    }
+
+    /**
+     * Gets details
+     *
+     * @return string
+     */
+    public function getDetails()
+    {
+        return $this->container['details'];
+    }
+
+    /**
+     * Sets details
+     *
+     * @param string $details Details
+     *
+     * @return $this
+     */
+    public function setDetails($details)
+    {
+        $this->container['details'] = $details;
 
         return $this;
     }
