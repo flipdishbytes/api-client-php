@@ -131,4 +131,11 @@ class KioskBluetoothInstallUpdateInitiateEventTest extends \PHPUnit_Framework_Te
     public function testPropertyAppId()
     {
     }
+
+    /**
+     * Test attribute "ip_address"
+     */
+    public function testPropertyIpAddress()
+    {
+    }
 }

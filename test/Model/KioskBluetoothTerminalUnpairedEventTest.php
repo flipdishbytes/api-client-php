@@ -131,4 +131,11 @@ class KioskBluetoothTerminalUnpairedEventTest extends \PHPUnit_Framework_TestCas
     public function testPropertyAppId()
     {
     }
+
+    /**
+     * Test attribute "ip_address"
+     */
+    public function testPropertyIpAddress()
+    {
+    }
 }

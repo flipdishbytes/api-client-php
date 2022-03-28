@@ -693,6 +693,13 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "bank_account_assigned_event"
+     */
+    public function testPropertyBankAccountAssignedEvent()
+    {
+    }
+
+    /**
      * Test attribute "hydra_assigned_event"
      */
     public function testPropertyHydraAssignedEvent()

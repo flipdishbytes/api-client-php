@@ -138,4 +138,11 @@ class LoyaltyCampaignUpdatedEventTest extends \PHPUnit_Framework_TestCase
     public function testPropertyAppId()
     {
     }
+
+    /**
+     * Test attribute "ip_address"
+     */
+    public function testPropertyIpAddress()
+    {
+    }
 }

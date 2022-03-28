@@ -64,7 +64,8 @@ class UserPasswordCreatedEvent implements ModelInterface, ArrayAccess
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
-        'app_id' => 'string'
+        'app_id' => 'string',
+        'ip_address' => 'string'
     ];
 
     /**
@@ -79,7 +80,8 @@ class UserPasswordCreatedEvent implements ModelInterface, ArrayAccess
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
-        'app_id' => null
+        'app_id' => null,
+        'ip_address' => null
     ];
 
     /**
@@ -115,7 +117,8 @@ class UserPasswordCreatedEvent implements ModelInterface, ArrayAccess
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
-        'app_id' => 'AppId'
+        'app_id' => 'AppId',
+        'ip_address' => 'IpAddress'
     ];
 
     /**
@@ -130,7 +133,8 @@ class UserPasswordCreatedEvent implements ModelInterface, ArrayAccess
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
-        'app_id' => 'setAppId'
+        'app_id' => 'setAppId',
+        'ip_address' => 'setIpAddress'
     ];
 
     /**
@@ -145,7 +149,8 @@ class UserPasswordCreatedEvent implements ModelInterface, ArrayAccess
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
-        'app_id' => 'getAppId'
+        'app_id' => 'getAppId',
+        'ip_address' => 'getIpAddress'
     ];
 
     /**
@@ -215,6 +220,7 @@ class UserPasswordCreatedEvent implements ModelInterface, ArrayAccess
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
+        $this->container['ip_address'] = isset($data['ip_address']) ? $data['ip_address'] : null;
     }
 
     /**
@@ -405,6 +411,30 @@ class UserPasswordCreatedEvent implements ModelInterface, ArrayAccess
     public function setAppId($app_id)
     {
         $this->container['app_id'] = $app_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets ip_address
+     *
+     * @return string
+     */
+    public function getIpAddress()
+    {
+        return $this->container['ip_address'];
+    }
+
+    /**
+     * Sets ip_address
+     *
+     * @param string $ip_address Ip Address
+     *
+     * @return $this
+     */
+    public function setIpAddress($ip_address)
+    {
+        $this->container['ip_address'] = $ip_address;
 
         return $this;
     }

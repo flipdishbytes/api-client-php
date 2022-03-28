@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **create_time** | [**\DateTime**](\DateTime.md) | The time of creation of the event | [optional] 
 **position** | **int** | Position | [optional] 
 **app_id** | **string** | App id | [optional] 
+**ip_address** | **string** | Ip Address | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

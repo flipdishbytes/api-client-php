@@ -145,4 +145,11 @@ class StoreBusinessHoursOverrideDeletedEventTest extends \PHPUnit_Framework_Test
     public function testPropertyAppId()
     {
     }
+
+    /**
+     * Test attribute "ip_address"
+     */
+    public function testPropertyIpAddress()
+    {
+    }
 }
