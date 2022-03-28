@@ -58,7 +58,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'product_id' => 'string',
+        'catalog_element_id' => 'string',
         'menu_id' => 'int',
         'last_updated_at' => '\DateTime'
     ];
@@ -69,7 +69,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'product_id' => null,
+        'catalog_element_id' => null,
         'menu_id' => 'int32',
         'last_updated_at' => 'date-time'
     ];
@@ -101,7 +101,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'product_id' => 'ProductId',
+        'catalog_element_id' => 'CatalogElementId',
         'menu_id' => 'MenuId',
         'last_updated_at' => 'LastUpdatedAt'
     ];
@@ -112,7 +112,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'product_id' => 'setProductId',
+        'catalog_element_id' => 'setCatalogElementId',
         'menu_id' => 'setMenuId',
         'last_updated_at' => 'setLastUpdatedAt'
     ];
@@ -123,7 +123,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'product_id' => 'getProductId',
+        'catalog_element_id' => 'getCatalogElementId',
         'menu_id' => 'getMenuId',
         'last_updated_at' => 'getLastUpdatedAt'
     ];
@@ -188,7 +188,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['product_id'] = isset($data['product_id']) ? $data['product_id'] : null;
+        $this->container['catalog_element_id'] = isset($data['catalog_element_id']) ? $data['catalog_element_id'] : null;
         $this->container['menu_id'] = isset($data['menu_id']) ? $data['menu_id'] : null;
         $this->container['last_updated_at'] = isset($data['last_updated_at']) ? $data['last_updated_at'] : null;
     }
@@ -202,12 +202,12 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['product_id']) && (mb_strlen($this->container['product_id']) > 30)) {
-            $invalidProperties[] = "invalid value for 'product_id', the character length must be smaller than or equal to 30.";
+        if (!is_null($this->container['catalog_element_id']) && (mb_strlen($this->container['catalog_element_id']) > 30)) {
+            $invalidProperties[] = "invalid value for 'catalog_element_id', the character length must be smaller than or equal to 30.";
         }
 
-        if (!is_null($this->container['product_id']) && (mb_strlen($this->container['product_id']) < 0)) {
-            $invalidProperties[] = "invalid value for 'product_id', the character length must be bigger than or equal to 0.";
+        if (!is_null($this->container['catalog_element_id']) && (mb_strlen($this->container['catalog_element_id']) < 0)) {
+            $invalidProperties[] = "invalid value for 'catalog_element_id', the character length must be bigger than or equal to 0.";
         }
 
         return $invalidProperties;
@@ -226,32 +226,32 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets product_id
+     * Gets catalog_element_id
      *
      * @return string
      */
-    public function getProductId()
+    public function getCatalogElementId()
     {
-        return $this->container['product_id'];
+        return $this->container['catalog_element_id'];
     }
 
     /**
-     * Sets product_id
+     * Sets catalog_element_id
      *
-     * @param string $product_id Unique product id
+     * @param string $catalog_element_id Unique catalog element id
      *
      * @return $this
      */
-    public function setProductId($product_id)
+    public function setCatalogElementId($catalog_element_id)
     {
-        if (!is_null($product_id) && (mb_strlen($product_id) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $product_id when calling PendingMenuChanges., must be smaller than or equal to 30.');
+        if (!is_null($catalog_element_id) && (mb_strlen($catalog_element_id) > 30)) {
+            throw new \InvalidArgumentException('invalid length for $catalog_element_id when calling PendingMenuChanges., must be smaller than or equal to 30.');
         }
-        if (!is_null($product_id) && (mb_strlen($product_id) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $product_id when calling PendingMenuChanges., must be bigger than or equal to 0.');
+        if (!is_null($catalog_element_id) && (mb_strlen($catalog_element_id) < 0)) {
+            throw new \InvalidArgumentException('invalid length for $catalog_element_id when calling PendingMenuChanges., must be bigger than or equal to 0.');
         }
 
-        $this->container['product_id'] = $product_id;
+        $this->container['catalog_element_id'] = $catalog_element_id;
 
         return $this;
     }

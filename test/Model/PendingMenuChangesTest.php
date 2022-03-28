@@ -77,9 +77,9 @@ class PendingMenuChangesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "product_id"
+     * Test attribute "catalog_element_id"
      */
-    public function testPropertyProductId()
+    public function testPropertyCatalogElementId()
     {
     }
 

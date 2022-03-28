@@ -1,6 +1,6 @@
 <?php
 /**
- * PendingMenuChangesApi
+ * CatalogChangesApi
  * PHP version 5
  *
  * @category Class
@@ -40,14 +40,14 @@ use Flipdish\\Client\HeaderSelector;
 use Flipdish\\Client\ObjectSerializer;
 
 /**
- * PendingMenuChangesApi Class Doc Comment
+ * CatalogChangesApi Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PendingMenuChangesApi
+class CatalogChangesApi
 {
     /**
      * @var ClientInterface
@@ -312,7 +312,7 @@ class PendingMenuChangesApi
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/menus/pendingmenuchanges';
+        $resourcePath = '/api/v1.0/{appId}/menus/catalog-changes';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

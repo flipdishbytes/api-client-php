@@ -336,10 +336,6 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_INITIATE_BLUETOOTH_PAIRING_MODE = 'InitiateBluetoothPairingMode';
     const APP_RESOURCE_SET_VIEW_CUSTOMERS = 'ViewCustomers';
     const APP_RESOURCE_SET_EDIT_CUSTOMERS = 'EditCustomers';
-    const APP_RESOURCE_SET_CREATE_PRODUCT = 'CreateProduct';
-    const APP_RESOURCE_SET_UPDATE_PRODUCT = 'UpdateProduct';
-    const APP_RESOURCE_SET_VIEW_PRODUCT = 'ViewProduct';
-    const APP_RESOURCE_SET_DELETE_PRODUCT = 'DeleteProduct';
     const APP_RESOURCE_SET_CREATE_CATALOG_ELEMENTS = 'CreateCatalogElements';
     const APP_RESOURCE_SET_UPDATE_CATALOG_ELEMENTS = 'UpdateCatalogElements';
     const APP_RESOURCE_SET_VIEW_CATALOG_ELEMENTS = 'ViewCatalogElements';
@@ -349,6 +345,8 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_UPDATE_METAFIELD_DEFINITIONS = 'UpdateMetafieldDefinitions';
     const APP_RESOURCE_SET_DELETE_METAFIELD_DEFINITIONS = 'DeleteMetafieldDefinitions';
     const APP_RESOURCE_SET_UPDATE_METAFIELDS = 'UpdateMetafields';
+    const APP_RESOURCE_SET_VIEW_CATALOG_MENU_CHANGES = 'ViewCatalogMenuChanges';
+    const APP_RESOURCE_SET_PUBLISH_CATALOG_MENU_CHANGES = 'PublishCatalogMenuChanges';
     const APP_RESOURCE_SET_VIEW_APP_STATISTICS = 'ViewAppStatistics';
     const APP_RESOURCE_SET_VIEW_APM_STATISTICS = 'ViewApmStatistics';
     const APP_RESOURCE_SET_VIEW_CAMPAIGNS_STATISTICS = 'ViewCampaignsStatistics';
@@ -510,10 +508,6 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_INITIATE_BLUETOOTH_PAIRING_MODE,
             self::APP_RESOURCE_SET_VIEW_CUSTOMERS,
             self::APP_RESOURCE_SET_EDIT_CUSTOMERS,
-            self::APP_RESOURCE_SET_CREATE_PRODUCT,
-            self::APP_RESOURCE_SET_UPDATE_PRODUCT,
-            self::APP_RESOURCE_SET_VIEW_PRODUCT,
-            self::APP_RESOURCE_SET_DELETE_PRODUCT,
             self::APP_RESOURCE_SET_CREATE_CATALOG_ELEMENTS,
             self::APP_RESOURCE_SET_UPDATE_CATALOG_ELEMENTS,
             self::APP_RESOURCE_SET_VIEW_CATALOG_ELEMENTS,
@@ -523,6 +517,8 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_UPDATE_METAFIELD_DEFINITIONS,
             self::APP_RESOURCE_SET_DELETE_METAFIELD_DEFINITIONS,
             self::APP_RESOURCE_SET_UPDATE_METAFIELDS,
+            self::APP_RESOURCE_SET_VIEW_CATALOG_MENU_CHANGES,
+            self::APP_RESOURCE_SET_PUBLISH_CATALOG_MENU_CHANGES,
             self::APP_RESOURCE_SET_VIEW_APP_STATISTICS,
             self::APP_RESOURCE_SET_VIEW_APM_STATISTICS,
             self::APP_RESOURCE_SET_VIEW_CAMPAIGNS_STATISTICS,

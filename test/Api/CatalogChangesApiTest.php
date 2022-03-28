@@ -1,6 +1,6 @@
 <?php
 /**
- * PendingMenuChangesApiTest
+ * CatalogChangesApiTest
  * PHP version 5
  *
  * @category Class
@@ -33,14 +33,14 @@ use \Flipdish\\Client\ApiException;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * PendingMenuChangesApiTest Class Doc Comment
+ * CatalogChangesApiTest Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PendingMenuChangesApiTest extends \PHPUnit_Framework_TestCase
+class CatalogChangesApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**

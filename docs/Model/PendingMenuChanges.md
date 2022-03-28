@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**product_id** | **string** | Unique product id | [optional] 
+**catalog_element_id** | **string** | Unique catalog element id | [optional] 
 **menu_id** | **int** | Unique menu id | [optional] 
 **last_updated_at** | [**\DateTime**](\DateTime.md) | Update date and time | [optional] 
 
