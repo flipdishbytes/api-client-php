@@ -1,6 +1,6 @@
 <?php
 /**
- * LocationAreaWithLocationsTest
+ * RestApiResultLocationAreaWithLocationsTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * LocationAreaWithLocationsTest Class Doc Comment
+ * RestApiResultLocationAreaWithLocationsTest Class Doc Comment
  *
  * @category    Class
- * @description Represents a LocationArea and its Location list
+ * @description Rest api result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LocationAreaWithLocationsTest extends \PHPUnit_Framework_TestCase
+class RestApiResultLocationAreaWithLocationsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,44 +70,16 @@ class LocationAreaWithLocationsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "LocationAreaWithLocations"
+     * Test "RestApiResultLocationAreaWithLocations"
      */
-    public function testLocationAreaWithLocations()
+    public function testRestApiResultLocationAreaWithLocations()
     {
     }
 
     /**
-     * Test attribute "location_area_id"
+     * Test attribute "data"
      */
-    public function testPropertyLocationAreaId()
-    {
-    }
-
-    /**
-     * Test attribute "store_id"
-     */
-    public function testPropertyStoreId()
-    {
-    }
-
-    /**
-     * Test attribute "location_area_name"
-     */
-    public function testPropertyLocationAreaName()
-    {
-    }
-
-    /**
-     * Test attribute "locations"
-     */
-    public function testPropertyLocations()
-    {
-    }
-
-    /**
-     * Test attribute "is_deleted"
-     */
-    public function testPropertyIsDeleted()
+    public function testPropertyData()
     {
     }
 }

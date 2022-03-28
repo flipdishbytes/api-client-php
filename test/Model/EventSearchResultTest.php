@@ -943,4 +943,11 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCatalogGroupArchivedEvent()
     {
     }
+
+    /**
+     * Test attribute "store_tip_updated_event"
+     */
+    public function testPropertyStoreTipUpdatedEvent()
+    {
+    }
 }

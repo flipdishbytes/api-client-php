@@ -261,6 +261,7 @@ Class | Method | HTTP request | Description
 *LightspeedApi* | [**lightspeedGetStoreSettings**](docs/Api/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
 *LightspeedApi* | [**lightspeedSaveStoreSettings**](docs/Api/LightspeedApi.md#lightspeedsavestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
 *LocationApi* | [**createLocation**](docs/Api/LocationApi.md#createlocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location | Create a Location i.e: Table, Hotel Room, Car park space
+*LocationApi* | [**updateLocation**](docs/Api/LocationApi.md#updatelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update | Update a Location i.e: Table, Hotel Room, Car park space
 *LocationAreasApi* | [**createLocationArea**](docs/Api/LocationAreasApi.md#createlocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | Create a Location Area, i.e: Room, Floor, Parking lot
 *LocationAreasApi* | [**getLocationArea**](docs/Api/LocationAreasApi.md#getlocationarea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | Retrieve a Location Area
 *LocationAreasApi* | [**getLocationsForStore**](docs/Api/LocationAreasApi.md#getlocationsforstore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
@@ -859,6 +860,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultCardReader](docs/Model/RestApiResultCardReader.md)
  - [RestApiResultCatalogGroup](docs/Model/RestApiResultCatalogGroup.md)
  - [RestApiResultCatalogItem](docs/Model/RestApiResultCatalogItem.md)
+ - [RestApiResultChannel](docs/Model/RestApiResultChannel.md)
  - [RestApiResultCoordinates](docs/Model/RestApiResultCoordinates.md)
  - [RestApiResultCreatedMenuSectionItems](docs/Model/RestApiResultCreatedMenuSectionItems.md)
  - [RestApiResultCustomer](docs/Model/RestApiResultCustomer.md)
@@ -876,6 +878,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultKioskIotConnectionParameters](docs/Model/RestApiResultKioskIotConnectionParameters.md)
  - [RestApiResultKioskStoreSettings](docs/Model/RestApiResultKioskStoreSettings.md)
  - [RestApiResultLightspeedSettings](docs/Model/RestApiResultLightspeedSettings.md)
+ - [RestApiResultLocationAreaWithLocations](docs/Model/RestApiResultLocationAreaWithLocations.md)
  - [RestApiResultLoyaltyCampaign](docs/Model/RestApiResultLoyaltyCampaign.md)
  - [RestApiResultMenu](docs/Model/RestApiResultMenu.md)
  - [RestApiResultMenuItemOptionSet](docs/Model/RestApiResultMenuItemOptionSet.md)
@@ -977,6 +980,7 @@ Class | Method | HTTP request | Description
  - [StorePublishedEvent](docs/Model/StorePublishedEvent.md)
  - [StoreStatistics](docs/Model/StoreStatistics.md)
  - [StoreSummary](docs/Model/StoreSummary.md)
+ - [StoreTipUpdatedEvent](docs/Model/StoreTipUpdatedEvent.md)
  - [StoreUnarchivedEvent](docs/Model/StoreUnarchivedEvent.md)
  - [StoreUnpublishedEvent](docs/Model/StoreUnpublishedEvent.md)
  - [StoreUpdatedEvent](docs/Model/StoreUpdatedEvent.md)

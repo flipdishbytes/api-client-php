@@ -1,6 +1,6 @@
 <?php
 /**
- * LocationAreaWithLocations
+ * RestApiResultLocationAreaWithLocations
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * LocationAreaWithLocations Class Doc Comment
+ * RestApiResultLocationAreaWithLocations Class Doc Comment
  *
  * @category Class
- * @description Represents a LocationArea and its Location list
+ * @description Rest api result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class LocationAreaWithLocations implements ModelInterface, ArrayAccess
+class RestApiResultLocationAreaWithLocations implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'LocationAreaWithLocations';
+    protected static $swaggerModelName = 'RestApiResult[LocationAreaWithLocations]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,11 +58,7 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'location_area_id' => 'int',
-        'store_id' => 'int',
-        'location_area_name' => 'string',
-        'locations' => '\Flipdish\\Client\Models\LocationAreaLocation[]',
-        'is_deleted' => 'bool'
+        'data' => '\Flipdish\\Client\Models\LocationAreaWithLocations'
     ];
 
     /**
@@ -71,11 +67,7 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'location_area_id' => 'int32',
-        'store_id' => 'int32',
-        'location_area_name' => null,
-        'locations' => null,
-        'is_deleted' => null
+        'data' => null
     ];
 
     /**
@@ -105,11 +97,7 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'location_area_id' => 'LocationAreaId',
-        'store_id' => 'StoreId',
-        'location_area_name' => 'LocationAreaName',
-        'locations' => 'Locations',
-        'is_deleted' => 'IsDeleted'
+        'data' => 'Data'
     ];
 
     /**
@@ -118,11 +106,7 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'location_area_id' => 'setLocationAreaId',
-        'store_id' => 'setStoreId',
-        'location_area_name' => 'setLocationAreaName',
-        'locations' => 'setLocations',
-        'is_deleted' => 'setIsDeleted'
+        'data' => 'setData'
     ];
 
     /**
@@ -131,11 +115,7 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'location_area_id' => 'getLocationAreaId',
-        'store_id' => 'getStoreId',
-        'location_area_name' => 'getLocationAreaName',
-        'locations' => 'getLocations',
-        'is_deleted' => 'getIsDeleted'
+        'data' => 'getData'
     ];
 
     /**
@@ -198,11 +178,7 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['location_area_id'] = isset($data['location_area_id']) ? $data['location_area_id'] : null;
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
-        $this->container['location_area_name'] = isset($data['location_area_name']) ? $data['location_area_name'] : null;
-        $this->container['locations'] = isset($data['locations']) ? $data['locations'] : null;
-        $this->container['is_deleted'] = isset($data['is_deleted']) ? $data['is_deleted'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -214,6 +190,9 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -230,121 +209,25 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets location_area_id
+     * Gets data
      *
-     * @return int
+     * @return \Flipdish\\Client\Models\LocationAreaWithLocations
      */
-    public function getLocationAreaId()
+    public function getData()
     {
-        return $this->container['location_area_id'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets location_area_id
+     * Sets data
      *
-     * @param int $location_area_id Id of the LocationArea
+     * @param \Flipdish\\Client\Models\LocationAreaWithLocations $data Generic data object.
      *
      * @return $this
      */
-    public function setLocationAreaId($location_area_id)
+    public function setData($data)
     {
-        $this->container['location_area_id'] = $location_area_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets store_id
-     *
-     * @return int
-     */
-    public function getStoreId()
-    {
-        return $this->container['store_id'];
-    }
-
-    /**
-     * Sets store_id
-     *
-     * @param int $store_id Id of the Store that this LocationArea belongs to
-     *
-     * @return $this
-     */
-    public function setStoreId($store_id)
-    {
-        $this->container['store_id'] = $store_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets location_area_name
-     *
-     * @return string
-     */
-    public function getLocationAreaName()
-    {
-        return $this->container['location_area_name'];
-    }
-
-    /**
-     * Sets location_area_name
-     *
-     * @param string $location_area_name Descriptive LocationArea name
-     *
-     * @return $this
-     */
-    public function setLocationAreaName($location_area_name)
-    {
-        $this->container['location_area_name'] = $location_area_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets locations
-     *
-     * @return \Flipdish\\Client\Models\LocationAreaLocation[]
-     */
-    public function getLocations()
-    {
-        return $this->container['locations'];
-    }
-
-    /**
-     * Sets locations
-     *
-     * @param \Flipdish\\Client\Models\LocationAreaLocation[] $locations List of Locations that belongs to this Location Area
-     *
-     * @return $this
-     */
-    public function setLocations($locations)
-    {
-        $this->container['locations'] = $locations;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_deleted
-     *
-     * @return bool
-     */
-    public function getIsDeleted()
-    {
-        return $this->container['is_deleted'];
-    }
-
-    /**
-     * Sets is_deleted
-     *
-     * @param bool $is_deleted Returns if the LocationArea is deleted or not
-     *
-     * @return $this
-     */
-    public function setIsDeleted($is_deleted)
-    {
-        $this->container['is_deleted'] = $is_deleted;
+        $this->container['data'] = $data;
 
         return $this;
     }

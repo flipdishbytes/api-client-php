@@ -80,4 +80,14 @@ class LocationApiTest extends \PHPUnit_Framework_TestCase
     public function testCreateLocation()
     {
     }
+
+    /**
+     * Test case for updateLocation
+     *
+     * Update a Location i.e: Table, Hotel Room, Car park space.
+     *
+     */
+    public function testUpdateLocation()
+    {
+    }
 }

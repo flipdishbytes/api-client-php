@@ -2368,7 +2368,7 @@ class ChannelsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\Channel
+     * @return \Flipdish\\Client\Models\RestApiResultChannel
      */
     public function getChannel($id, $app_id)
     {
@@ -2386,11 +2386,11 @@ class ChannelsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\Channel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultChannel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getChannelWithHttpInfo($id, $app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\Channel';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultChannel';
         $request = $this->getChannelRequest($id, $app_id);
 
         try {
@@ -2442,7 +2442,7 @@ class ChannelsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\Channel',
+                        '\Flipdish\\Client\Models\RestApiResultChannel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2526,7 +2526,7 @@ class ChannelsApi
      */
     public function getChannelAsyncWithHttpInfo($id, $app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\Channel';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultChannel';
         $request = $this->getChannelRequest($id, $app_id);
 
         return $this->client

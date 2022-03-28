@@ -181,7 +181,8 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'catalog_item_archived_event' => '\Flipdish\\Client\Models\CatalogItemArchivedEvent[]',
         'catalog_group_created_event' => '\Flipdish\\Client\Models\CatalogGroupCreatedEvent[]',
         'catalog_group_updated_event' => '\Flipdish\\Client\Models\CatalogGroupUpdatedEvent[]',
-        'catalog_group_archived_event' => '\Flipdish\\Client\Models\CatalogGroupArchivedEvent[]'
+        'catalog_group_archived_event' => '\Flipdish\\Client\Models\CatalogGroupArchivedEvent[]',
+        'store_tip_updated_event' => '\Flipdish\\Client\Models\StoreTipUpdatedEvent[]'
     ];
 
     /**
@@ -313,7 +314,8 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'catalog_item_archived_event' => null,
         'catalog_group_created_event' => null,
         'catalog_group_updated_event' => null,
-        'catalog_group_archived_event' => null
+        'catalog_group_archived_event' => null,
+        'store_tip_updated_event' => null
     ];
 
     /**
@@ -466,7 +468,8 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'catalog_item_archived_event' => 'CatalogItemArchivedEvent',
         'catalog_group_created_event' => 'CatalogGroupCreatedEvent',
         'catalog_group_updated_event' => 'CatalogGroupUpdatedEvent',
-        'catalog_group_archived_event' => 'CatalogGroupArchivedEvent'
+        'catalog_group_archived_event' => 'CatalogGroupArchivedEvent',
+        'store_tip_updated_event' => 'StoreTipUpdatedEvent'
     ];
 
     /**
@@ -598,7 +601,8 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'catalog_item_archived_event' => 'setCatalogItemArchivedEvent',
         'catalog_group_created_event' => 'setCatalogGroupCreatedEvent',
         'catalog_group_updated_event' => 'setCatalogGroupUpdatedEvent',
-        'catalog_group_archived_event' => 'setCatalogGroupArchivedEvent'
+        'catalog_group_archived_event' => 'setCatalogGroupArchivedEvent',
+        'store_tip_updated_event' => 'setStoreTipUpdatedEvent'
     ];
 
     /**
@@ -730,7 +734,8 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'catalog_item_archived_event' => 'getCatalogItemArchivedEvent',
         'catalog_group_created_event' => 'getCatalogGroupCreatedEvent',
         'catalog_group_updated_event' => 'getCatalogGroupUpdatedEvent',
-        'catalog_group_archived_event' => 'getCatalogGroupArchivedEvent'
+        'catalog_group_archived_event' => 'getCatalogGroupArchivedEvent',
+        'store_tip_updated_event' => 'getStoreTipUpdatedEvent'
     ];
 
     /**
@@ -917,6 +922,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         $this->container['catalog_group_created_event'] = isset($data['catalog_group_created_event']) ? $data['catalog_group_created_event'] : null;
         $this->container['catalog_group_updated_event'] = isset($data['catalog_group_updated_event']) ? $data['catalog_group_updated_event'] : null;
         $this->container['catalog_group_archived_event'] = isset($data['catalog_group_archived_event']) ? $data['catalog_group_archived_event'] : null;
+        $this->container['store_tip_updated_event'] = isset($data['store_tip_updated_event']) ? $data['store_tip_updated_event'] : null;
     }
 
     /**
@@ -3915,6 +3921,30 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     public function setCatalogGroupArchivedEvent($catalog_group_archived_event)
     {
         $this->container['catalog_group_archived_event'] = $catalog_group_archived_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets store_tip_updated_event
+     *
+     * @return \Flipdish\\Client\Models\StoreTipUpdatedEvent[]
+     */
+    public function getStoreTipUpdatedEvent()
+    {
+        return $this->container['store_tip_updated_event'];
+    }
+
+    /**
+     * Sets store_tip_updated_event
+     *
+     * @param \Flipdish\\Client\Models\StoreTipUpdatedEvent[] $store_tip_updated_event Store Tip Updated Event
+     *
+     * @return $this
+     */
+    public function setStoreTipUpdatedEvent($store_tip_updated_event)
+    {
+        $this->container['store_tip_updated_event'] = $store_tip_updated_event;
 
         return $this;
     }

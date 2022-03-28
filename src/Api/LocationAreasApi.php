@@ -444,7 +444,7 @@ class LocationAreasApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\LocationAreaWithLocations
+     * @return \Flipdish\\Client\Models\RestApiResultLocationAreaWithLocations
      */
     public function getLocationArea($location_area_id, $app_id, $store_id)
     {
@@ -463,11 +463,11 @@ class LocationAreasApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\LocationAreaWithLocations, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultLocationAreaWithLocations, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLocationAreaWithHttpInfo($location_area_id, $app_id, $store_id)
     {
-        $returnType = '\Flipdish\\Client\Models\LocationAreaWithLocations';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultLocationAreaWithLocations';
         $request = $this->getLocationAreaRequest($location_area_id, $app_id, $store_id);
 
         try {
@@ -519,7 +519,7 @@ class LocationAreasApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\LocationAreaWithLocations',
+                        '\Flipdish\\Client\Models\RestApiResultLocationAreaWithLocations',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -597,7 +597,7 @@ class LocationAreasApi
      */
     public function getLocationAreaAsyncWithHttpInfo($location_area_id, $app_id, $store_id)
     {
-        $returnType = '\Flipdish\\Client\Models\LocationAreaWithLocations';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultLocationAreaWithLocations';
         $request = $this->getLocationAreaRequest($location_area_id, $app_id, $store_id);
 
         return $this->client

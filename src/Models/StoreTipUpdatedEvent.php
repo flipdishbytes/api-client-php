@@ -1,6 +1,6 @@
 <?php
 /**
- * LocationAreaWithLocations
+ * StoreTipUpdatedEvent
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * LocationAreaWithLocations Class Doc Comment
+ * StoreTipUpdatedEvent Class Doc Comment
  *
  * @category Class
- * @description Represents a LocationArea and its Location list
+ * @description Store Tip Updated
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class LocationAreaWithLocations implements ModelInterface, ArrayAccess
+class StoreTipUpdatedEvent implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'LocationAreaWithLocations';
+    protected static $swaggerModelName = 'StoreTipUpdatedEvent';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,11 +58,16 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'location_area_id' => 'int',
+        'event_name' => 'string',
         'store_id' => 'int',
-        'location_area_name' => 'string',
-        'locations' => '\Flipdish\\Client\Models\LocationAreaLocation[]',
-        'is_deleted' => 'bool'
+        'user' => '\Flipdish\\Client\Models\UserEventInfo',
+        'description' => 'string',
+        'config' => '\Flipdish\\Client\Models\UpdateTipConfiguration',
+        'flipdish_event_id' => 'string',
+        'create_time' => '\DateTime',
+        'position' => 'int',
+        'app_id' => 'string',
+        'ip_address' => 'string'
     ];
 
     /**
@@ -71,11 +76,16 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'location_area_id' => 'int32',
+        'event_name' => null,
         'store_id' => 'int32',
-        'location_area_name' => null,
-        'locations' => null,
-        'is_deleted' => null
+        'user' => null,
+        'description' => null,
+        'config' => null,
+        'flipdish_event_id' => 'uuid',
+        'create_time' => 'date-time',
+        'position' => 'int32',
+        'app_id' => null,
+        'ip_address' => null
     ];
 
     /**
@@ -105,11 +115,16 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'location_area_id' => 'LocationAreaId',
+        'event_name' => 'EventName',
         'store_id' => 'StoreId',
-        'location_area_name' => 'LocationAreaName',
-        'locations' => 'Locations',
-        'is_deleted' => 'IsDeleted'
+        'user' => 'User',
+        'description' => 'Description',
+        'config' => 'Config',
+        'flipdish_event_id' => 'FlipdishEventId',
+        'create_time' => 'CreateTime',
+        'position' => 'Position',
+        'app_id' => 'AppId',
+        'ip_address' => 'IpAddress'
     ];
 
     /**
@@ -118,11 +133,16 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'location_area_id' => 'setLocationAreaId',
+        'event_name' => 'setEventName',
         'store_id' => 'setStoreId',
-        'location_area_name' => 'setLocationAreaName',
-        'locations' => 'setLocations',
-        'is_deleted' => 'setIsDeleted'
+        'user' => 'setUser',
+        'description' => 'setDescription',
+        'config' => 'setConfig',
+        'flipdish_event_id' => 'setFlipdishEventId',
+        'create_time' => 'setCreateTime',
+        'position' => 'setPosition',
+        'app_id' => 'setAppId',
+        'ip_address' => 'setIpAddress'
     ];
 
     /**
@@ -131,11 +151,16 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'location_area_id' => 'getLocationAreaId',
+        'event_name' => 'getEventName',
         'store_id' => 'getStoreId',
-        'location_area_name' => 'getLocationAreaName',
-        'locations' => 'getLocations',
-        'is_deleted' => 'getIsDeleted'
+        'user' => 'getUser',
+        'description' => 'getDescription',
+        'config' => 'getConfig',
+        'flipdish_event_id' => 'getFlipdishEventId',
+        'create_time' => 'getCreateTime',
+        'position' => 'getPosition',
+        'app_id' => 'getAppId',
+        'ip_address' => 'getIpAddress'
     ];
 
     /**
@@ -198,11 +223,16 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['location_area_id'] = isset($data['location_area_id']) ? $data['location_area_id'] : null;
+        $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
-        $this->container['location_area_name'] = isset($data['location_area_name']) ? $data['location_area_name'] : null;
-        $this->container['locations'] = isset($data['locations']) ? $data['locations'] : null;
-        $this->container['is_deleted'] = isset($data['is_deleted']) ? $data['is_deleted'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['config'] = isset($data['config']) ? $data['config'] : null;
+        $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
+        $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
+        $this->container['position'] = isset($data['position']) ? $data['position'] : null;
+        $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
+        $this->container['ip_address'] = isset($data['ip_address']) ? $data['ip_address'] : null;
     }
 
     /**
@@ -230,25 +260,25 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets location_area_id
+     * Gets event_name
      *
-     * @return int
+     * @return string
      */
-    public function getLocationAreaId()
+    public function getEventName()
     {
-        return $this->container['location_area_id'];
+        return $this->container['event_name'];
     }
 
     /**
-     * Sets location_area_id
+     * Sets event_name
      *
-     * @param int $location_area_id Id of the LocationArea
+     * @param string $event_name The event name
      *
      * @return $this
      */
-    public function setLocationAreaId($location_area_id)
+    public function setEventName($event_name)
     {
-        $this->container['location_area_id'] = $location_area_id;
+        $this->container['event_name'] = $event_name;
 
         return $this;
     }
@@ -266,7 +296,7 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
     /**
      * Sets store_id
      *
-     * @param int $store_id Id of the Store that this LocationArea belongs to
+     * @param int $store_id Store Id
      *
      * @return $this
      */
@@ -278,73 +308,193 @@ class LocationAreaWithLocations implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets location_area_name
+     * Gets user
+     *
+     * @return \Flipdish\\Client\Models\UserEventInfo
+     */
+    public function getUser()
+    {
+        return $this->container['user'];
+    }
+
+    /**
+     * Sets user
+     *
+     * @param \Flipdish\\Client\Models\UserEventInfo $user User which made the update
+     *
+     * @return $this
+     */
+    public function setUser($user)
+    {
+        $this->container['user'] = $user;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
      *
      * @return string
      */
-    public function getLocationAreaName()
+    public function getDescription()
     {
-        return $this->container['location_area_name'];
+        return $this->container['description'];
     }
 
     /**
-     * Sets location_area_name
+     * Sets description
      *
-     * @param string $location_area_name Descriptive LocationArea name
+     * @param string $description Description
      *
      * @return $this
      */
-    public function setLocationAreaName($location_area_name)
+    public function setDescription($description)
     {
-        $this->container['location_area_name'] = $location_area_name;
+        $this->container['description'] = $description;
 
         return $this;
     }
 
     /**
-     * Gets locations
+     * Gets config
      *
-     * @return \Flipdish\\Client\Models\LocationAreaLocation[]
+     * @return \Flipdish\\Client\Models\UpdateTipConfiguration
      */
-    public function getLocations()
+    public function getConfig()
     {
-        return $this->container['locations'];
+        return $this->container['config'];
     }
 
     /**
-     * Sets locations
+     * Sets config
      *
-     * @param \Flipdish\\Client\Models\LocationAreaLocation[] $locations List of Locations that belongs to this Location Area
+     * @param \Flipdish\\Client\Models\UpdateTipConfiguration $config Configuration change
      *
      * @return $this
      */
-    public function setLocations($locations)
+    public function setConfig($config)
     {
-        $this->container['locations'] = $locations;
+        $this->container['config'] = $config;
 
         return $this;
     }
 
     /**
-     * Gets is_deleted
+     * Gets flipdish_event_id
      *
-     * @return bool
+     * @return string
      */
-    public function getIsDeleted()
+    public function getFlipdishEventId()
     {
-        return $this->container['is_deleted'];
+        return $this->container['flipdish_event_id'];
     }
 
     /**
-     * Sets is_deleted
+     * Sets flipdish_event_id
      *
-     * @param bool $is_deleted Returns if the LocationArea is deleted or not
+     * @param string $flipdish_event_id The identitfier of the event
      *
      * @return $this
      */
-    public function setIsDeleted($is_deleted)
+    public function setFlipdishEventId($flipdish_event_id)
     {
-        $this->container['is_deleted'] = $is_deleted;
+        $this->container['flipdish_event_id'] = $flipdish_event_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets create_time
+     *
+     * @return \DateTime
+     */
+    public function getCreateTime()
+    {
+        return $this->container['create_time'];
+    }
+
+    /**
+     * Sets create_time
+     *
+     * @param \DateTime $create_time The time of creation of the event
+     *
+     * @return $this
+     */
+    public function setCreateTime($create_time)
+    {
+        $this->container['create_time'] = $create_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets position
+     *
+     * @return int
+     */
+    public function getPosition()
+    {
+        return $this->container['position'];
+    }
+
+    /**
+     * Sets position
+     *
+     * @param int $position Position
+     *
+     * @return $this
+     */
+    public function setPosition($position)
+    {
+        $this->container['position'] = $position;
+
+        return $this;
+    }
+
+    /**
+     * Gets app_id
+     *
+     * @return string
+     */
+    public function getAppId()
+    {
+        return $this->container['app_id'];
+    }
+
+    /**
+     * Sets app_id
+     *
+     * @param string $app_id App id
+     *
+     * @return $this
+     */
+    public function setAppId($app_id)
+    {
+        $this->container['app_id'] = $app_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets ip_address
+     *
+     * @return string
+     */
+    public function getIpAddress()
+    {
+        return $this->container['ip_address'];
+    }
+
+    /**
+     * Sets ip_address
+     *
+     * @param string $ip_address Ip Address
+     *
+     * @return $this
+     */
+    public function setIpAddress($ip_address)
+    {
+        $this->container['ip_address'] = $ip_address;
 
         return $this;
     }

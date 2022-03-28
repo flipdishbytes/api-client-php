@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLocationArea**
-> \Flipdish\\Client\Models\LocationAreaWithLocations getLocationArea($location_area_id, $app_id, $store_id)
+> \Flipdish\\Client\Models\RestApiResultLocationAreaWithLocations getLocationArea($location_area_id, $app_id, $store_id)
 
 Retrieve a Location Area
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\LocationAreaWithLocations**](../Model/LocationAreaWithLocations.md)
+[**\Flipdish\\Client\Models\RestApiResultLocationAreaWithLocations**](../Model/RestApiResultLocationAreaWithLocations.md)
 
 ### Authorization
 

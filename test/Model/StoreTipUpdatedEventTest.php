@@ -1,6 +1,6 @@
 <?php
 /**
- * LocationAreaWithLocationsTest
+ * StoreTipUpdatedEventTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * LocationAreaWithLocationsTest Class Doc Comment
+ * StoreTipUpdatedEventTest Class Doc Comment
  *
  * @category    Class
- * @description Represents a LocationArea and its Location list
+ * @description Store Tip Updated
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LocationAreaWithLocationsTest extends \PHPUnit_Framework_TestCase
+class StoreTipUpdatedEventTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,16 @@ class LocationAreaWithLocationsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "LocationAreaWithLocations"
+     * Test "StoreTipUpdatedEvent"
      */
-    public function testLocationAreaWithLocations()
+    public function testStoreTipUpdatedEvent()
     {
     }
 
     /**
-     * Test attribute "location_area_id"
+     * Test attribute "event_name"
      */
-    public function testPropertyLocationAreaId()
+    public function testPropertyEventName()
     {
     }
 
@@ -91,23 +91,58 @@ class LocationAreaWithLocationsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "location_area_name"
+     * Test attribute "user"
      */
-    public function testPropertyLocationAreaName()
+    public function testPropertyUser()
     {
     }
 
     /**
-     * Test attribute "locations"
+     * Test attribute "description"
      */
-    public function testPropertyLocations()
+    public function testPropertyDescription()
     {
     }
 
     /**
-     * Test attribute "is_deleted"
+     * Test attribute "config"
      */
-    public function testPropertyIsDeleted()
+    public function testPropertyConfig()
+    {
+    }
+
+    /**
+     * Test attribute "flipdish_event_id"
+     */
+    public function testPropertyFlipdishEventId()
+    {
+    }
+
+    /**
+     * Test attribute "create_time"
+     */
+    public function testPropertyCreateTime()
+    {
+    }
+
+    /**
+     * Test attribute "position"
+     */
+    public function testPropertyPosition()
+    {
+    }
+
+    /**
+     * Test attribute "app_id"
+     */
+    public function testPropertyAppId()
+    {
+    }
+
+    /**
+     * Test attribute "ip_address"
+     */
+    public function testPropertyIpAddress()
     {
     }
 }

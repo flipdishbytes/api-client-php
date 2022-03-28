@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getChannel**
-> \Flipdish\\Client\Models\Channel getChannel($id, $app_id)
+> \Flipdish\\Client\Models\RestApiResultChannel getChannel($id, $app_id)
 
 Returns a Sales Channel by Id.
 
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\Channel**](../Model/Channel.md)
+[**\Flipdish\\Client\Models\RestApiResultChannel**](../Model/RestApiResultChannel.md)
 
 ### Authorization
 
