@@ -687,15 +687,16 @@ class CardReadersApi
      *
      * Get Location ID for Stripe Terminal
      *
+     * @param  \Flipdish\\Client\Models\GeoPointRequest $geo_point_request geo_point_request (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultStripeTerminalLocation
      */
-    public function generateStripeTerminalLocation($app_id)
+    public function generateStripeTerminalLocation($geo_point_request, $app_id)
     {
-        list($response) = $this->generateStripeTerminalLocationWithHttpInfo($app_id);
+        list($response) = $this->generateStripeTerminalLocationWithHttpInfo($geo_point_request, $app_id);
         return $response;
     }
 
@@ -704,16 +705,17 @@ class CardReadersApi
      *
      * Get Location ID for Stripe Terminal
      *
+     * @param  \Flipdish\\Client\Models\GeoPointRequest $geo_point_request (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultStripeTerminalLocation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function generateStripeTerminalLocationWithHttpInfo($app_id)
+    public function generateStripeTerminalLocationWithHttpInfo($geo_point_request, $app_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultStripeTerminalLocation';
-        $request = $this->generateStripeTerminalLocationRequest($app_id);
+        $request = $this->generateStripeTerminalLocationRequest($geo_point_request, $app_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -803,14 +805,15 @@ class CardReadersApi
      *
      * Get Location ID for Stripe Terminal
      *
+     * @param  \Flipdish\\Client\Models\GeoPointRequest $geo_point_request (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function generateStripeTerminalLocationAsync($app_id)
+    public function generateStripeTerminalLocationAsync($geo_point_request, $app_id)
     {
-        return $this->generateStripeTerminalLocationAsyncWithHttpInfo($app_id)
+        return $this->generateStripeTerminalLocationAsyncWithHttpInfo($geo_point_request, $app_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -823,15 +826,16 @@ class CardReadersApi
      *
      * Get Location ID for Stripe Terminal
      *
+     * @param  \Flipdish\\Client\Models\GeoPointRequest $geo_point_request (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function generateStripeTerminalLocationAsyncWithHttpInfo($app_id)
+    public function generateStripeTerminalLocationAsyncWithHttpInfo($geo_point_request, $app_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultStripeTerminalLocation';
-        $request = $this->generateStripeTerminalLocationRequest($app_id);
+        $request = $this->generateStripeTerminalLocationRequest($geo_point_request, $app_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -873,13 +877,20 @@ class CardReadersApi
     /**
      * Create request for operation 'generateStripeTerminalLocation'
      *
+     * @param  \Flipdish\\Client\Models\GeoPointRequest $geo_point_request (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function generateStripeTerminalLocationRequest($app_id)
+    protected function generateStripeTerminalLocationRequest($geo_point_request, $app_id)
     {
+        // verify the required parameter 'geo_point_request' is set
+        if ($geo_point_request === null || (is_array($geo_point_request) && count($geo_point_request) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $geo_point_request when calling generateStripeTerminalLocation'
+            );
+        }
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -906,6 +917,9 @@ class CardReadersApi
 
         // body params
         $_tempBody = null;
+        if (isset($geo_point_request)) {
+            $_tempBody = $geo_point_request;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -914,7 +928,7 @@ class CardReadersApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                []
+                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
             );
         }
 

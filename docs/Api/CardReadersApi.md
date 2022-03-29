@@ -126,7 +126,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **generateStripeTerminalLocation**
-> \Flipdish\\Client\Models\RestApiResultStripeTerminalLocation generateStripeTerminalLocation($app_id)
+> \Flipdish\\Client\Models\RestApiResultStripeTerminalLocation generateStripeTerminalLocation($geo_point_request, $app_id)
 
 Get Location ID for Stripe Terminal
 
@@ -146,10 +146,11 @@ $apiInstance = new Flipdish\\Client\Api\CardReadersApi(
     new GuzzleHttp\Client(),
     $config
 );
+$geo_point_request = new \Flipdish\\Client\Models\GeoPointRequest(); // \Flipdish\\Client\Models\GeoPointRequest | 
 $app_id = "app_id_example"; // string | 
 
 try {
-    $result = $apiInstance->generateStripeTerminalLocation($app_id);
+    $result = $apiInstance->generateStripeTerminalLocation($geo_point_request, $app_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CardReadersApi->generateStripeTerminalLocation: ', $e->getMessage(), PHP_EOL;
@@ -161,6 +162,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **geo_point_request** | [**\Flipdish\\Client\Models\GeoPointRequest**](../Model/GeoPointRequest.md)|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -173,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
