@@ -261,6 +261,7 @@ Class | Method | HTTP request | Description
 *LightspeedApi* | [**lightspeedGetStoreSettings**](docs/Api/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
 *LightspeedApi* | [**lightspeedSaveStoreSettings**](docs/Api/LightspeedApi.md#lightspeedsavestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
 *LocationApi* | [**createLocation**](docs/Api/LocationApi.md#createlocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location | Create a Location i.e: Table, Hotel Room, Car park space
+*LocationApi* | [**moveLocation**](docs/Api/LocationApi.md#movelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move | Move a Location to a different location Area
 *LocationApi* | [**updateLocation**](docs/Api/LocationApi.md#updatelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update | Update a Location i.e: Table, Hotel Room, Car park space
 *LocationAreasApi* | [**createLocationArea**](docs/Api/LocationAreasApi.md#createlocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | Create a Location Area, i.e: Room, Floor, Parking lot
 *LocationAreasApi* | [**getLocationArea**](docs/Api/LocationAreasApi.md#getlocationarea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | Retrieve a Location Area
@@ -878,6 +879,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultKioskIotConnectionParameters](docs/Model/RestApiResultKioskIotConnectionParameters.md)
  - [RestApiResultKioskStoreSettings](docs/Model/RestApiResultKioskStoreSettings.md)
  - [RestApiResultLightspeedSettings](docs/Model/RestApiResultLightspeedSettings.md)
+ - [RestApiResultLocationAreaLocation](docs/Model/RestApiResultLocationAreaLocation.md)
  - [RestApiResultLocationAreaWithLocations](docs/Model/RestApiResultLocationAreaWithLocations.md)
  - [RestApiResultLoyaltyCampaign](docs/Model/RestApiResultLoyaltyCampaign.md)
  - [RestApiResultMenu](docs/Model/RestApiResultMenu.md)
