@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **city** | **string** | City | [optional] 
 **country_code** | **string** | Country code (ISO-alpha2) | [optional] 
 **display_for_customer** | **string** | Display for customer | [optional] 
+**address_fields** | **map[string,object]** | Dyanmic field/value pairs, defined by the form assigned to the given country code. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

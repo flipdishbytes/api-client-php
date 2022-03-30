@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreAddressBase
+ * DynamicFormField
  *
  * PHP version 5
  *
@@ -33,15 +33,14 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * StoreAddressBase Class Doc Comment
+ * DynamicFormField Class Doc Comment
  *
  * @category Class
- * @description Store address base
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StoreAddressBase implements ModelInterface, ArrayAccess
+class DynamicFormField implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +49,7 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'StoreAddressBase';
+    protected static $swaggerModelName = 'DynamicFormField';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,12 +57,12 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'line1' => 'string',
-        'postcode' => 'string',
-        'city' => 'string',
-        'country_code' => 'string',
-        'display_for_customer' => 'string',
-        'address_fields' => 'map[string,object]'
+        'identifier' => 'string',
+        'label' => 'string',
+        'placeholder' => 'string',
+        'rules' => '\Flipdish\\Client\Models\DynamicFormRules',
+        'mapping' => '\Flipdish\\Client\Models\DynamicFormFieldMapping',
+        'value' => 'object'
     ];
 
     /**
@@ -72,12 +71,12 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'line1' => null,
-        'postcode' => null,
-        'city' => null,
-        'country_code' => null,
-        'display_for_customer' => null,
-        'address_fields' => null
+        'identifier' => null,
+        'label' => null,
+        'placeholder' => null,
+        'rules' => null,
+        'mapping' => null,
+        'value' => null
     ];
 
     /**
@@ -107,12 +106,12 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'line1' => 'Line1',
-        'postcode' => 'Postcode',
-        'city' => 'City',
-        'country_code' => 'CountryCode',
-        'display_for_customer' => 'DisplayForCustomer',
-        'address_fields' => 'AddressFields'
+        'identifier' => 'Identifier',
+        'label' => 'Label',
+        'placeholder' => 'Placeholder',
+        'rules' => 'Rules',
+        'mapping' => 'Mapping',
+        'value' => 'Value'
     ];
 
     /**
@@ -121,12 +120,12 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'line1' => 'setLine1',
-        'postcode' => 'setPostcode',
-        'city' => 'setCity',
-        'country_code' => 'setCountryCode',
-        'display_for_customer' => 'setDisplayForCustomer',
-        'address_fields' => 'setAddressFields'
+        'identifier' => 'setIdentifier',
+        'label' => 'setLabel',
+        'placeholder' => 'setPlaceholder',
+        'rules' => 'setRules',
+        'mapping' => 'setMapping',
+        'value' => 'setValue'
     ];
 
     /**
@@ -135,12 +134,12 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'line1' => 'getLine1',
-        'postcode' => 'getPostcode',
-        'city' => 'getCity',
-        'country_code' => 'getCountryCode',
-        'display_for_customer' => 'getDisplayForCustomer',
-        'address_fields' => 'getAddressFields'
+        'identifier' => 'getIdentifier',
+        'label' => 'getLabel',
+        'placeholder' => 'getPlaceholder',
+        'rules' => 'getRules',
+        'mapping' => 'getMapping',
+        'value' => 'getValue'
     ];
 
     /**
@@ -203,12 +202,12 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['line1'] = isset($data['line1']) ? $data['line1'] : null;
-        $this->container['postcode'] = isset($data['postcode']) ? $data['postcode'] : null;
-        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
-        $this->container['display_for_customer'] = isset($data['display_for_customer']) ? $data['display_for_customer'] : null;
-        $this->container['address_fields'] = isset($data['address_fields']) ? $data['address_fields'] : null;
+        $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
+        $this->container['placeholder'] = isset($data['placeholder']) ? $data['placeholder'] : null;
+        $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
+        $this->container['mapping'] = isset($data['mapping']) ? $data['mapping'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -219,14 +218,6 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if (!is_null($this->container['country_code']) && (mb_strlen($this->container['country_code']) > 2)) {
-            $invalidProperties[] = "invalid value for 'country_code', the character length must be smaller than or equal to 2.";
-        }
-
-        if (!is_null($this->container['country_code']) && (mb_strlen($this->container['country_code']) < 0)) {
-            $invalidProperties[] = "invalid value for 'country_code', the character length must be bigger than or equal to 0.";
-        }
 
         return $invalidProperties;
     }
@@ -244,152 +235,145 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets line1
+     * Gets identifier
      *
      * @return string
      */
-    public function getLine1()
+    public function getIdentifier()
     {
-        return $this->container['line1'];
+        return $this->container['identifier'];
     }
 
     /**
-     * Sets line1
+     * Sets identifier
      *
-     * @param string $line1 Address line 1
+     * @param string $identifier identifier
      *
      * @return $this
      */
-    public function setLine1($line1)
+    public function setIdentifier($identifier)
     {
-        $this->container['line1'] = $line1;
+        $this->container['identifier'] = $identifier;
 
         return $this;
     }
 
     /**
-     * Gets postcode
+     * Gets label
      *
      * @return string
      */
-    public function getPostcode()
+    public function getLabel()
     {
-        return $this->container['postcode'];
+        return $this->container['label'];
     }
 
     /**
-     * Sets postcode
+     * Sets label
      *
-     * @param string $postcode Postcode
+     * @param string $label label
      *
      * @return $this
      */
-    public function setPostcode($postcode)
+    public function setLabel($label)
     {
-        $this->container['postcode'] = $postcode;
+        $this->container['label'] = $label;
 
         return $this;
     }
 
     /**
-     * Gets city
+     * Gets placeholder
      *
      * @return string
      */
-    public function getCity()
+    public function getPlaceholder()
     {
-        return $this->container['city'];
+        return $this->container['placeholder'];
     }
 
     /**
-     * Sets city
+     * Sets placeholder
      *
-     * @param string $city City
+     * @param string $placeholder placeholder
      *
      * @return $this
      */
-    public function setCity($city)
+    public function setPlaceholder($placeholder)
     {
-        $this->container['city'] = $city;
+        $this->container['placeholder'] = $placeholder;
 
         return $this;
     }
 
     /**
-     * Gets country_code
+     * Gets rules
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\DynamicFormRules
      */
-    public function getCountryCode()
+    public function getRules()
     {
-        return $this->container['country_code'];
+        return $this->container['rules'];
     }
 
     /**
-     * Sets country_code
+     * Sets rules
      *
-     * @param string $country_code Country code (ISO-alpha2)
+     * @param \Flipdish\\Client\Models\DynamicFormRules $rules rules
      *
      * @return $this
      */
-    public function setCountryCode($country_code)
+    public function setRules($rules)
     {
-        if (!is_null($country_code) && (mb_strlen($country_code) > 2)) {
-            throw new \InvalidArgumentException('invalid length for $country_code when calling StoreAddressBase., must be smaller than or equal to 2.');
-        }
-        if (!is_null($country_code) && (mb_strlen($country_code) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $country_code when calling StoreAddressBase., must be bigger than or equal to 0.');
-        }
-
-        $this->container['country_code'] = $country_code;
+        $this->container['rules'] = $rules;
 
         return $this;
     }
 
     /**
-     * Gets display_for_customer
+     * Gets mapping
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\DynamicFormFieldMapping
      */
-    public function getDisplayForCustomer()
+    public function getMapping()
     {
-        return $this->container['display_for_customer'];
+        return $this->container['mapping'];
     }
 
     /**
-     * Sets display_for_customer
+     * Sets mapping
      *
-     * @param string $display_for_customer Display for customer
+     * @param \Flipdish\\Client\Models\DynamicFormFieldMapping $mapping mapping
      *
      * @return $this
      */
-    public function setDisplayForCustomer($display_for_customer)
+    public function setMapping($mapping)
     {
-        $this->container['display_for_customer'] = $display_for_customer;
+        $this->container['mapping'] = $mapping;
 
         return $this;
     }
 
     /**
-     * Gets address_fields
+     * Gets value
      *
-     * @return map[string,object]
+     * @return object
      */
-    public function getAddressFields()
+    public function getValue()
     {
-        return $this->container['address_fields'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets address_fields
+     * Sets value
      *
-     * @param map[string,object] $address_fields Dyanmic field/value pairs, defined by the form assigned to the given country code.
+     * @param object $value value
      *
      * @return $this
      */
-    public function setAddressFields($address_fields)
+    public function setValue($value)
     {
-        $this->container['address_fields'] = $address_fields;
+        $this->container['value'] = $value;
 
         return $this;
     }

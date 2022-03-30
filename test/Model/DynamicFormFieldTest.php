@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreAddressTest
+ * DynamicFormFieldTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreAddressTest Class Doc Comment
+ * DynamicFormFieldTest Class Doc Comment
  *
  * @category    Class
- * @description Store address
+ * @description DynamicFormField
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreAddressTest extends \PHPUnit_Framework_TestCase
+class DynamicFormFieldTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,65 +70,51 @@ class StoreAddressTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreAddress"
+     * Test "DynamicFormField"
      */
-    public function testStoreAddress()
+    public function testDynamicFormField()
     {
     }
 
     /**
-     * Test attribute "address_id"
+     * Test attribute "identifier"
      */
-    public function testPropertyAddressId()
+    public function testPropertyIdentifier()
     {
     }
 
     /**
-     * Test attribute "coordinates"
+     * Test attribute "label"
      */
-    public function testPropertyCoordinates()
+    public function testPropertyLabel()
     {
     }
 
     /**
-     * Test attribute "line1"
+     * Test attribute "placeholder"
      */
-    public function testPropertyLine1()
+    public function testPropertyPlaceholder()
     {
     }
 
     /**
-     * Test attribute "postcode"
+     * Test attribute "rules"
      */
-    public function testPropertyPostcode()
+    public function testPropertyRules()
     {
     }
 
     /**
-     * Test attribute "city"
+     * Test attribute "mapping"
      */
-    public function testPropertyCity()
+    public function testPropertyMapping()
     {
     }
 
     /**
-     * Test attribute "country_code"
+     * Test attribute "value"
      */
-    public function testPropertyCountryCode()
-    {
-    }
-
-    /**
-     * Test attribute "display_for_customer"
-     */
-    public function testPropertyDisplayForCustomer()
-    {
-    }
-
-    /**
-     * Test attribute "address_fields"
-     */
-    public function testPropertyAddressFields()
+    public function testPropertyValue()
     {
     }
 }

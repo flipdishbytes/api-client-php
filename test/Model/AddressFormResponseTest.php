@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreAddressTest
+ * AddressFormResponseTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreAddressTest Class Doc Comment
+ * AddressFormResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Store address
+ * @description A response of a dyanmic form definition.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreAddressTest extends \PHPUnit_Framework_TestCase
+class AddressFormResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,44 +70,16 @@ class StoreAddressTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreAddress"
+     * Test "AddressFormResponse"
      */
-    public function testStoreAddress()
+    public function testAddressFormResponse()
     {
     }
 
     /**
-     * Test attribute "address_id"
+     * Test attribute "form_data"
      */
-    public function testPropertyAddressId()
-    {
-    }
-
-    /**
-     * Test attribute "coordinates"
-     */
-    public function testPropertyCoordinates()
-    {
-    }
-
-    /**
-     * Test attribute "line1"
-     */
-    public function testPropertyLine1()
-    {
-    }
-
-    /**
-     * Test attribute "postcode"
-     */
-    public function testPropertyPostcode()
-    {
-    }
-
-    /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
+    public function testPropertyFormData()
     {
     }
 
@@ -119,16 +91,16 @@ class StoreAddressTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "display_for_customer"
+     * Test attribute "language"
      */
-    public function testPropertyDisplayForCustomer()
+    public function testPropertyLanguage()
     {
     }
 
     /**
-     * Test attribute "address_fields"
+     * Test attribute "display_format"
      */
-    public function testPropertyAddressFields()
+    public function testPropertyDisplayFormat()
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreAddressTest
+ * GoogleAddressResultTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreAddressTest Class Doc Comment
+ * GoogleAddressResultTest Class Doc Comment
  *
  * @category    Class
- * @description Store address
+ * @description GoogleAddressResult
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreAddressTest extends \PHPUnit_Framework_TestCase
+class GoogleAddressResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,65 +70,44 @@ class StoreAddressTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreAddress"
+     * Test "GoogleAddressResult"
      */
-    public function testStoreAddress()
+    public function testGoogleAddressResult()
     {
     }
 
     /**
-     * Test attribute "address_id"
+     * Test attribute "address_components"
      */
-    public function testPropertyAddressId()
+    public function testPropertyAddressComponents()
     {
     }
 
     /**
-     * Test attribute "coordinates"
+     * Test attribute "formatted_address"
      */
-    public function testPropertyCoordinates()
+    public function testPropertyFormattedAddress()
     {
     }
 
     /**
-     * Test attribute "line1"
+     * Test attribute "geometry"
      */
-    public function testPropertyLine1()
+    public function testPropertyGeometry()
     {
     }
 
     /**
-     * Test attribute "postcode"
+     * Test attribute "place_id"
      */
-    public function testPropertyPostcode()
+    public function testPropertyPlaceId()
     {
     }
 
     /**
-     * Test attribute "city"
+     * Test attribute "types"
      */
-    public function testPropertyCity()
-    {
-    }
-
-    /**
-     * Test attribute "country_code"
-     */
-    public function testPropertyCountryCode()
-    {
-    }
-
-    /**
-     * Test attribute "display_for_customer"
-     */
-    public function testPropertyDisplayForCustomer()
-    {
-    }
-
-    /**
-     * Test attribute "address_fields"
-     */
-    public function testPropertyAddressFields()
+    public function testPropertyTypes()
     {
     }
 }

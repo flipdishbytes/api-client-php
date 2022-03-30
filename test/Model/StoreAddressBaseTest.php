@@ -110,4 +110,11 @@ class StoreAddressBaseTest extends \PHPUnit_Framework_TestCase
     public function testPropertyDisplayForCustomer()
     {
     }
+
+    /**
+     * Test attribute "address_fields"
+     */
+    public function testPropertyAddressFields()
+    {
+    }
 }

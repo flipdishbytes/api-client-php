@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreAddressTest
+ * GoogleGeometryTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreAddressTest Class Doc Comment
+ * GoogleGeometryTest Class Doc Comment
  *
  * @category    Class
- * @description Store address
+ * @description GoogleGeometry
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreAddressTest extends \PHPUnit_Framework_TestCase
+class GoogleGeometryTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,65 +70,30 @@ class StoreAddressTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreAddress"
+     * Test "GoogleGeometry"
      */
-    public function testStoreAddress()
+    public function testGoogleGeometry()
     {
     }
 
     /**
-     * Test attribute "address_id"
+     * Test attribute "location"
      */
-    public function testPropertyAddressId()
+    public function testPropertyLocation()
     {
     }
 
     /**
-     * Test attribute "coordinates"
+     * Test attribute "location_type"
      */
-    public function testPropertyCoordinates()
+    public function testPropertyLocationType()
     {
     }
 
     /**
-     * Test attribute "line1"
+     * Test attribute "viewport"
      */
-    public function testPropertyLine1()
-    {
-    }
-
-    /**
-     * Test attribute "postcode"
-     */
-    public function testPropertyPostcode()
-    {
-    }
-
-    /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
-    {
-    }
-
-    /**
-     * Test attribute "country_code"
-     */
-    public function testPropertyCountryCode()
-    {
-    }
-
-    /**
-     * Test attribute "display_for_customer"
-     */
-    public function testPropertyDisplayForCustomer()
-    {
-    }
-
-    /**
-     * Test attribute "address_fields"
-     */
-    public function testPropertyAddressFields()
+    public function testPropertyViewport()
     {
     }
 }

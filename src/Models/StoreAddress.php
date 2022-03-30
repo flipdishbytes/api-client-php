@@ -64,7 +64,8 @@ class StoreAddress implements ModelInterface, ArrayAccess
         'postcode' => 'string',
         'city' => 'string',
         'country_code' => 'string',
-        'display_for_customer' => 'string'
+        'display_for_customer' => 'string',
+        'address_fields' => 'map[string,object]'
     ];
 
     /**
@@ -79,7 +80,8 @@ class StoreAddress implements ModelInterface, ArrayAccess
         'postcode' => null,
         'city' => null,
         'country_code' => null,
-        'display_for_customer' => null
+        'display_for_customer' => null,
+        'address_fields' => null
     ];
 
     /**
@@ -115,7 +117,8 @@ class StoreAddress implements ModelInterface, ArrayAccess
         'postcode' => 'Postcode',
         'city' => 'City',
         'country_code' => 'CountryCode',
-        'display_for_customer' => 'DisplayForCustomer'
+        'display_for_customer' => 'DisplayForCustomer',
+        'address_fields' => 'AddressFields'
     ];
 
     /**
@@ -130,7 +133,8 @@ class StoreAddress implements ModelInterface, ArrayAccess
         'postcode' => 'setPostcode',
         'city' => 'setCity',
         'country_code' => 'setCountryCode',
-        'display_for_customer' => 'setDisplayForCustomer'
+        'display_for_customer' => 'setDisplayForCustomer',
+        'address_fields' => 'setAddressFields'
     ];
 
     /**
@@ -145,7 +149,8 @@ class StoreAddress implements ModelInterface, ArrayAccess
         'postcode' => 'getPostcode',
         'city' => 'getCity',
         'country_code' => 'getCountryCode',
-        'display_for_customer' => 'getDisplayForCustomer'
+        'display_for_customer' => 'getDisplayForCustomer',
+        'address_fields' => 'getAddressFields'
     ];
 
     /**
@@ -215,6 +220,7 @@ class StoreAddress implements ModelInterface, ArrayAccess
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
         $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
         $this->container['display_for_customer'] = isset($data['display_for_customer']) ? $data['display_for_customer'] : null;
+        $this->container['address_fields'] = isset($data['address_fields']) ? $data['address_fields'] : null;
     }
 
     /**
@@ -420,6 +426,30 @@ class StoreAddress implements ModelInterface, ArrayAccess
     public function setDisplayForCustomer($display_for_customer)
     {
         $this->container['display_for_customer'] = $display_for_customer;
+
+        return $this;
+    }
+
+    /**
+     * Gets address_fields
+     *
+     * @return map[string,object]
+     */
+    public function getAddressFields()
+    {
+        return $this->container['address_fields'];
+    }
+
+    /**
+     * Sets address_fields
+     *
+     * @param map[string,object] $address_fields Dyanmic field/value pairs, defined by the form assigned to the given country code.
+     *
+     * @return $this
+     */
+    public function setAddressFields($address_fields)
+    {
+        $this->container['address_fields'] = $address_fields;
 
         return $this;
     }

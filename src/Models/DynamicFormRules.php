@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreAddressBase
+ * DynamicFormRules
  *
  * PHP version 5
  *
@@ -33,15 +33,14 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * StoreAddressBase Class Doc Comment
+ * DynamicFormRules Class Doc Comment
  *
  * @category Class
- * @description Store address base
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StoreAddressBase implements ModelInterface, ArrayAccess
+class DynamicFormRules implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +49,7 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'StoreAddressBase';
+    protected static $swaggerModelName = 'DynamicFormRules';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,12 +57,11 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'line1' => 'string',
-        'postcode' => 'string',
-        'city' => 'string',
-        'country_code' => 'string',
-        'display_for_customer' => 'string',
-        'address_fields' => 'map[string,object]'
+        'max_length' => '\Flipdish\\Client\Models\DynamicFormRule',
+        'min_length' => '\Flipdish\\Client\Models\DynamicFormRule',
+        'required' => '\Flipdish\\Client\Models\DynamicFormRule',
+        'pattern' => '\Flipdish\\Client\Models\DynamicFormRule',
+        'predefined' => '\Flipdish\\Client\Models\DynamicFormFieldOption[]'
     ];
 
     /**
@@ -72,12 +70,11 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'line1' => null,
-        'postcode' => null,
-        'city' => null,
-        'country_code' => null,
-        'display_for_customer' => null,
-        'address_fields' => null
+        'max_length' => null,
+        'min_length' => null,
+        'required' => null,
+        'pattern' => null,
+        'predefined' => null
     ];
 
     /**
@@ -107,12 +104,11 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'line1' => 'Line1',
-        'postcode' => 'Postcode',
-        'city' => 'City',
-        'country_code' => 'CountryCode',
-        'display_for_customer' => 'DisplayForCustomer',
-        'address_fields' => 'AddressFields'
+        'max_length' => 'MaxLength',
+        'min_length' => 'MinLength',
+        'required' => 'Required',
+        'pattern' => 'Pattern',
+        'predefined' => 'Predefined'
     ];
 
     /**
@@ -121,12 +117,11 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'line1' => 'setLine1',
-        'postcode' => 'setPostcode',
-        'city' => 'setCity',
-        'country_code' => 'setCountryCode',
-        'display_for_customer' => 'setDisplayForCustomer',
-        'address_fields' => 'setAddressFields'
+        'max_length' => 'setMaxLength',
+        'min_length' => 'setMinLength',
+        'required' => 'setRequired',
+        'pattern' => 'setPattern',
+        'predefined' => 'setPredefined'
     ];
 
     /**
@@ -135,12 +130,11 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'line1' => 'getLine1',
-        'postcode' => 'getPostcode',
-        'city' => 'getCity',
-        'country_code' => 'getCountryCode',
-        'display_for_customer' => 'getDisplayForCustomer',
-        'address_fields' => 'getAddressFields'
+        'max_length' => 'getMaxLength',
+        'min_length' => 'getMinLength',
+        'required' => 'getRequired',
+        'pattern' => 'getPattern',
+        'predefined' => 'getPredefined'
     ];
 
     /**
@@ -203,12 +197,11 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['line1'] = isset($data['line1']) ? $data['line1'] : null;
-        $this->container['postcode'] = isset($data['postcode']) ? $data['postcode'] : null;
-        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
-        $this->container['display_for_customer'] = isset($data['display_for_customer']) ? $data['display_for_customer'] : null;
-        $this->container['address_fields'] = isset($data['address_fields']) ? $data['address_fields'] : null;
+        $this->container['max_length'] = isset($data['max_length']) ? $data['max_length'] : null;
+        $this->container['min_length'] = isset($data['min_length']) ? $data['min_length'] : null;
+        $this->container['required'] = isset($data['required']) ? $data['required'] : null;
+        $this->container['pattern'] = isset($data['pattern']) ? $data['pattern'] : null;
+        $this->container['predefined'] = isset($data['predefined']) ? $data['predefined'] : null;
     }
 
     /**
@@ -219,14 +212,6 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if (!is_null($this->container['country_code']) && (mb_strlen($this->container['country_code']) > 2)) {
-            $invalidProperties[] = "invalid value for 'country_code', the character length must be smaller than or equal to 2.";
-        }
-
-        if (!is_null($this->container['country_code']) && (mb_strlen($this->container['country_code']) < 0)) {
-            $invalidProperties[] = "invalid value for 'country_code', the character length must be bigger than or equal to 0.";
-        }
 
         return $invalidProperties;
     }
@@ -244,152 +229,121 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets line1
+     * Gets max_length
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\DynamicFormRule
      */
-    public function getLine1()
+    public function getMaxLength()
     {
-        return $this->container['line1'];
+        return $this->container['max_length'];
     }
 
     /**
-     * Sets line1
+     * Sets max_length
      *
-     * @param string $line1 Address line 1
+     * @param \Flipdish\\Client\Models\DynamicFormRule $max_length max_length
      *
      * @return $this
      */
-    public function setLine1($line1)
+    public function setMaxLength($max_length)
     {
-        $this->container['line1'] = $line1;
+        $this->container['max_length'] = $max_length;
 
         return $this;
     }
 
     /**
-     * Gets postcode
+     * Gets min_length
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\DynamicFormRule
      */
-    public function getPostcode()
+    public function getMinLength()
     {
-        return $this->container['postcode'];
+        return $this->container['min_length'];
     }
 
     /**
-     * Sets postcode
+     * Sets min_length
      *
-     * @param string $postcode Postcode
+     * @param \Flipdish\\Client\Models\DynamicFormRule $min_length min_length
      *
      * @return $this
      */
-    public function setPostcode($postcode)
+    public function setMinLength($min_length)
     {
-        $this->container['postcode'] = $postcode;
+        $this->container['min_length'] = $min_length;
 
         return $this;
     }
 
     /**
-     * Gets city
+     * Gets required
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\DynamicFormRule
      */
-    public function getCity()
+    public function getRequired()
     {
-        return $this->container['city'];
+        return $this->container['required'];
     }
 
     /**
-     * Sets city
+     * Sets required
      *
-     * @param string $city City
+     * @param \Flipdish\\Client\Models\DynamicFormRule $required required
      *
      * @return $this
      */
-    public function setCity($city)
+    public function setRequired($required)
     {
-        $this->container['city'] = $city;
+        $this->container['required'] = $required;
 
         return $this;
     }
 
     /**
-     * Gets country_code
+     * Gets pattern
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\DynamicFormRule
      */
-    public function getCountryCode()
+    public function getPattern()
     {
-        return $this->container['country_code'];
+        return $this->container['pattern'];
     }
 
     /**
-     * Sets country_code
+     * Sets pattern
      *
-     * @param string $country_code Country code (ISO-alpha2)
+     * @param \Flipdish\\Client\Models\DynamicFormRule $pattern pattern
      *
      * @return $this
      */
-    public function setCountryCode($country_code)
+    public function setPattern($pattern)
     {
-        if (!is_null($country_code) && (mb_strlen($country_code) > 2)) {
-            throw new \InvalidArgumentException('invalid length for $country_code when calling StoreAddressBase., must be smaller than or equal to 2.');
-        }
-        if (!is_null($country_code) && (mb_strlen($country_code) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $country_code when calling StoreAddressBase., must be bigger than or equal to 0.');
-        }
-
-        $this->container['country_code'] = $country_code;
+        $this->container['pattern'] = $pattern;
 
         return $this;
     }
 
     /**
-     * Gets display_for_customer
+     * Gets predefined
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\DynamicFormFieldOption[]
      */
-    public function getDisplayForCustomer()
+    public function getPredefined()
     {
-        return $this->container['display_for_customer'];
+        return $this->container['predefined'];
     }
 
     /**
-     * Sets display_for_customer
+     * Sets predefined
      *
-     * @param string $display_for_customer Display for customer
+     * @param \Flipdish\\Client\Models\DynamicFormFieldOption[] $predefined predefined
      *
      * @return $this
      */
-    public function setDisplayForCustomer($display_for_customer)
+    public function setPredefined($predefined)
     {
-        $this->container['display_for_customer'] = $display_for_customer;
-
-        return $this;
-    }
-
-    /**
-     * Gets address_fields
-     *
-     * @return map[string,object]
-     */
-    public function getAddressFields()
-    {
-        return $this->container['address_fields'];
-    }
-
-    /**
-     * Sets address_fields
-     *
-     * @param map[string,object] $address_fields Dyanmic field/value pairs, defined by the form assigned to the given country code.
-     *
-     * @return $this
-     */
-    public function setAddressFields($address_fields)
-    {
-        $this->container['address_fields'] = $address_fields;
+        $this->container['predefined'] = $predefined;
 
         return $this;
     }

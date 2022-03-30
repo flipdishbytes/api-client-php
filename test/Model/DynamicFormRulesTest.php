@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreAddressTest
+ * DynamicFormRulesTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreAddressTest Class Doc Comment
+ * DynamicFormRulesTest Class Doc Comment
  *
  * @category    Class
- * @description Store address
+ * @description DynamicFormRules
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreAddressTest extends \PHPUnit_Framework_TestCase
+class DynamicFormRulesTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,65 +70,44 @@ class StoreAddressTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreAddress"
+     * Test "DynamicFormRules"
      */
-    public function testStoreAddress()
+    public function testDynamicFormRules()
     {
     }
 
     /**
-     * Test attribute "address_id"
+     * Test attribute "max_length"
      */
-    public function testPropertyAddressId()
+    public function testPropertyMaxLength()
     {
     }
 
     /**
-     * Test attribute "coordinates"
+     * Test attribute "min_length"
      */
-    public function testPropertyCoordinates()
+    public function testPropertyMinLength()
     {
     }
 
     /**
-     * Test attribute "line1"
+     * Test attribute "required"
      */
-    public function testPropertyLine1()
+    public function testPropertyRequired()
     {
     }
 
     /**
-     * Test attribute "postcode"
+     * Test attribute "pattern"
      */
-    public function testPropertyPostcode()
+    public function testPropertyPattern()
     {
     }
 
     /**
-     * Test attribute "city"
+     * Test attribute "predefined"
      */
-    public function testPropertyCity()
-    {
-    }
-
-    /**
-     * Test attribute "country_code"
-     */
-    public function testPropertyCountryCode()
-    {
-    }
-
-    /**
-     * Test attribute "display_for_customer"
-     */
-    public function testPropertyDisplayForCustomer()
-    {
-    }
-
-    /**
-     * Test attribute "address_fields"
-     */
-    public function testPropertyAddressFields()
+    public function testPropertyPredefined()
     {
     }
 }

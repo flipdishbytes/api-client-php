@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreAddressBase
+ * GoogleAddressResult
  *
  * PHP version 5
  *
@@ -33,15 +33,14 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * StoreAddressBase Class Doc Comment
+ * GoogleAddressResult Class Doc Comment
  *
  * @category Class
- * @description Store address base
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StoreAddressBase implements ModelInterface, ArrayAccess
+class GoogleAddressResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +49,7 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'StoreAddressBase';
+    protected static $swaggerModelName = 'GoogleAddressResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,12 +57,11 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'line1' => 'string',
-        'postcode' => 'string',
-        'city' => 'string',
-        'country_code' => 'string',
-        'display_for_customer' => 'string',
-        'address_fields' => 'map[string,object]'
+        'address_components' => '\Flipdish\\Client\Models\GoogleAddressComponent[]',
+        'formatted_address' => 'string',
+        'geometry' => '\Flipdish\\Client\Models\GoogleGeometry',
+        'place_id' => 'string',
+        'types' => 'string[]'
     ];
 
     /**
@@ -72,12 +70,11 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'line1' => null,
-        'postcode' => null,
-        'city' => null,
-        'country_code' => null,
-        'display_for_customer' => null,
-        'address_fields' => null
+        'address_components' => null,
+        'formatted_address' => null,
+        'geometry' => null,
+        'place_id' => null,
+        'types' => null
     ];
 
     /**
@@ -107,12 +104,11 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'line1' => 'Line1',
-        'postcode' => 'Postcode',
-        'city' => 'City',
-        'country_code' => 'CountryCode',
-        'display_for_customer' => 'DisplayForCustomer',
-        'address_fields' => 'AddressFields'
+        'address_components' => 'Address_components',
+        'formatted_address' => 'Formatted_address',
+        'geometry' => 'Geometry',
+        'place_id' => 'Place_id',
+        'types' => 'Types'
     ];
 
     /**
@@ -121,12 +117,11 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'line1' => 'setLine1',
-        'postcode' => 'setPostcode',
-        'city' => 'setCity',
-        'country_code' => 'setCountryCode',
-        'display_for_customer' => 'setDisplayForCustomer',
-        'address_fields' => 'setAddressFields'
+        'address_components' => 'setAddressComponents',
+        'formatted_address' => 'setFormattedAddress',
+        'geometry' => 'setGeometry',
+        'place_id' => 'setPlaceId',
+        'types' => 'setTypes'
     ];
 
     /**
@@ -135,12 +130,11 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'line1' => 'getLine1',
-        'postcode' => 'getPostcode',
-        'city' => 'getCity',
-        'country_code' => 'getCountryCode',
-        'display_for_customer' => 'getDisplayForCustomer',
-        'address_fields' => 'getAddressFields'
+        'address_components' => 'getAddressComponents',
+        'formatted_address' => 'getFormattedAddress',
+        'geometry' => 'getGeometry',
+        'place_id' => 'getPlaceId',
+        'types' => 'getTypes'
     ];
 
     /**
@@ -203,12 +197,11 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['line1'] = isset($data['line1']) ? $data['line1'] : null;
-        $this->container['postcode'] = isset($data['postcode']) ? $data['postcode'] : null;
-        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
-        $this->container['display_for_customer'] = isset($data['display_for_customer']) ? $data['display_for_customer'] : null;
-        $this->container['address_fields'] = isset($data['address_fields']) ? $data['address_fields'] : null;
+        $this->container['address_components'] = isset($data['address_components']) ? $data['address_components'] : null;
+        $this->container['formatted_address'] = isset($data['formatted_address']) ? $data['formatted_address'] : null;
+        $this->container['geometry'] = isset($data['geometry']) ? $data['geometry'] : null;
+        $this->container['place_id'] = isset($data['place_id']) ? $data['place_id'] : null;
+        $this->container['types'] = isset($data['types']) ? $data['types'] : null;
     }
 
     /**
@@ -219,14 +212,6 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if (!is_null($this->container['country_code']) && (mb_strlen($this->container['country_code']) > 2)) {
-            $invalidProperties[] = "invalid value for 'country_code', the character length must be smaller than or equal to 2.";
-        }
-
-        if (!is_null($this->container['country_code']) && (mb_strlen($this->container['country_code']) < 0)) {
-            $invalidProperties[] = "invalid value for 'country_code', the character length must be bigger than or equal to 0.";
-        }
 
         return $invalidProperties;
     }
@@ -244,152 +229,121 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets line1
+     * Gets address_components
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\GoogleAddressComponent[]
      */
-    public function getLine1()
+    public function getAddressComponents()
     {
-        return $this->container['line1'];
+        return $this->container['address_components'];
     }
 
     /**
-     * Sets line1
+     * Sets address_components
      *
-     * @param string $line1 Address line 1
+     * @param \Flipdish\\Client\Models\GoogleAddressComponent[] $address_components address_components
      *
      * @return $this
      */
-    public function setLine1($line1)
+    public function setAddressComponents($address_components)
     {
-        $this->container['line1'] = $line1;
+        $this->container['address_components'] = $address_components;
 
         return $this;
     }
 
     /**
-     * Gets postcode
+     * Gets formatted_address
      *
      * @return string
      */
-    public function getPostcode()
+    public function getFormattedAddress()
     {
-        return $this->container['postcode'];
+        return $this->container['formatted_address'];
     }
 
     /**
-     * Sets postcode
+     * Sets formatted_address
      *
-     * @param string $postcode Postcode
+     * @param string $formatted_address formatted_address
      *
      * @return $this
      */
-    public function setPostcode($postcode)
+    public function setFormattedAddress($formatted_address)
     {
-        $this->container['postcode'] = $postcode;
+        $this->container['formatted_address'] = $formatted_address;
 
         return $this;
     }
 
     /**
-     * Gets city
+     * Gets geometry
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\GoogleGeometry
      */
-    public function getCity()
+    public function getGeometry()
     {
-        return $this->container['city'];
+        return $this->container['geometry'];
     }
 
     /**
-     * Sets city
+     * Sets geometry
      *
-     * @param string $city City
+     * @param \Flipdish\\Client\Models\GoogleGeometry $geometry geometry
      *
      * @return $this
      */
-    public function setCity($city)
+    public function setGeometry($geometry)
     {
-        $this->container['city'] = $city;
+        $this->container['geometry'] = $geometry;
 
         return $this;
     }
 
     /**
-     * Gets country_code
+     * Gets place_id
      *
      * @return string
      */
-    public function getCountryCode()
+    public function getPlaceId()
     {
-        return $this->container['country_code'];
+        return $this->container['place_id'];
     }
 
     /**
-     * Sets country_code
+     * Sets place_id
      *
-     * @param string $country_code Country code (ISO-alpha2)
+     * @param string $place_id place_id
      *
      * @return $this
      */
-    public function setCountryCode($country_code)
+    public function setPlaceId($place_id)
     {
-        if (!is_null($country_code) && (mb_strlen($country_code) > 2)) {
-            throw new \InvalidArgumentException('invalid length for $country_code when calling StoreAddressBase., must be smaller than or equal to 2.');
-        }
-        if (!is_null($country_code) && (mb_strlen($country_code) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $country_code when calling StoreAddressBase., must be bigger than or equal to 0.');
-        }
-
-        $this->container['country_code'] = $country_code;
+        $this->container['place_id'] = $place_id;
 
         return $this;
     }
 
     /**
-     * Gets display_for_customer
+     * Gets types
      *
-     * @return string
+     * @return string[]
      */
-    public function getDisplayForCustomer()
+    public function getTypes()
     {
-        return $this->container['display_for_customer'];
+        return $this->container['types'];
     }
 
     /**
-     * Sets display_for_customer
+     * Sets types
      *
-     * @param string $display_for_customer Display for customer
+     * @param string[] $types types
      *
      * @return $this
      */
-    public function setDisplayForCustomer($display_for_customer)
+    public function setTypes($types)
     {
-        $this->container['display_for_customer'] = $display_for_customer;
-
-        return $this;
-    }
-
-    /**
-     * Gets address_fields
-     *
-     * @return map[string,object]
-     */
-    public function getAddressFields()
-    {
-        return $this->container['address_fields'];
-    }
-
-    /**
-     * Sets address_fields
-     *
-     * @param map[string,object] $address_fields Dyanmic field/value pairs, defined by the form assigned to the given country code.
-     *
-     * @return $this
-     */
-    public function setAddressFields($address_fields)
-    {
-        $this->container['address_fields'] = $address_fields;
+        $this->container['types'] = $types;
 
         return $this;
     }

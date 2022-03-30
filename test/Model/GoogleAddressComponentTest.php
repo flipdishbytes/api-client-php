@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreAddressTest
+ * GoogleAddressComponentTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreAddressTest Class Doc Comment
+ * GoogleAddressComponentTest Class Doc Comment
  *
  * @category    Class
- * @description Store address
+ * @description GoogleAddressComponent
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreAddressTest extends \PHPUnit_Framework_TestCase
+class GoogleAddressComponentTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,65 +70,30 @@ class StoreAddressTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreAddress"
+     * Test "GoogleAddressComponent"
      */
-    public function testStoreAddress()
+    public function testGoogleAddressComponent()
     {
     }
 
     /**
-     * Test attribute "address_id"
+     * Test attribute "long_name"
      */
-    public function testPropertyAddressId()
+    public function testPropertyLongName()
     {
     }
 
     /**
-     * Test attribute "coordinates"
+     * Test attribute "short_name"
      */
-    public function testPropertyCoordinates()
+    public function testPropertyShortName()
     {
     }
 
     /**
-     * Test attribute "line1"
+     * Test attribute "types"
      */
-    public function testPropertyLine1()
-    {
-    }
-
-    /**
-     * Test attribute "postcode"
-     */
-    public function testPropertyPostcode()
-    {
-    }
-
-    /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
-    {
-    }
-
-    /**
-     * Test attribute "country_code"
-     */
-    public function testPropertyCountryCode()
-    {
-    }
-
-    /**
-     * Test attribute "display_for_customer"
-     */
-    public function testPropertyDisplayForCustomer()
-    {
-    }
-
-    /**
-     * Test attribute "address_fields"
-     */
-    public function testPropertyAddressFields()
+    public function testPropertyTypes()
     {
     }
 }
