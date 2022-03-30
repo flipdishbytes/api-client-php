@@ -189,6 +189,13 @@ class PayoutTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "online_sales_service_charges"
+     */
+    public function testPropertyOnlineSalesServiceCharges()
+    {
+    }
+
+    /**
      * Test attribute "online_sales_refunded_fees"
      */
     public function testPropertyOnlineSalesRefundedFees()

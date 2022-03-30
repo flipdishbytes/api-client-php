@@ -74,6 +74,7 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_amount' => 'double',
         'online_sales_delivery_charges' => 'double',
         'online_sales_tips' => 'double',
+        'online_sales_service_charges' => 'double',
         'online_sales_refunded_fees' => 'double',
         'online_sales_fees' => 'double',
         'online_sales_refunded_amount' => 'double',
@@ -115,6 +116,7 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_amount' => 'double',
         'online_sales_delivery_charges' => 'double',
         'online_sales_tips' => 'double',
+        'online_sales_service_charges' => 'double',
         'online_sales_refunded_fees' => 'double',
         'online_sales_fees' => 'double',
         'online_sales_refunded_amount' => 'double',
@@ -177,6 +179,7 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_amount' => 'OnlineSalesAmount',
         'online_sales_delivery_charges' => 'OnlineSalesDeliveryCharges',
         'online_sales_tips' => 'OnlineSalesTips',
+        'online_sales_service_charges' => 'OnlineSalesServiceCharges',
         'online_sales_refunded_fees' => 'OnlineSalesRefundedFees',
         'online_sales_fees' => 'OnlineSalesFees',
         'online_sales_refunded_amount' => 'OnlineSalesRefundedAmount',
@@ -218,6 +221,7 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_amount' => 'setOnlineSalesAmount',
         'online_sales_delivery_charges' => 'setOnlineSalesDeliveryCharges',
         'online_sales_tips' => 'setOnlineSalesTips',
+        'online_sales_service_charges' => 'setOnlineSalesServiceCharges',
         'online_sales_refunded_fees' => 'setOnlineSalesRefundedFees',
         'online_sales_fees' => 'setOnlineSalesFees',
         'online_sales_refunded_amount' => 'setOnlineSalesRefundedAmount',
@@ -259,6 +263,7 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_amount' => 'getOnlineSalesAmount',
         'online_sales_delivery_charges' => 'getOnlineSalesDeliveryCharges',
         'online_sales_tips' => 'getOnlineSalesTips',
+        'online_sales_service_charges' => 'getOnlineSalesServiceCharges',
         'online_sales_refunded_fees' => 'getOnlineSalesRefundedFees',
         'online_sales_fees' => 'getOnlineSalesFees',
         'online_sales_refunded_amount' => 'getOnlineSalesRefundedAmount',
@@ -627,6 +632,7 @@ class Payout implements ModelInterface, ArrayAccess
         $this->container['online_sales_amount'] = isset($data['online_sales_amount']) ? $data['online_sales_amount'] : null;
         $this->container['online_sales_delivery_charges'] = isset($data['online_sales_delivery_charges']) ? $data['online_sales_delivery_charges'] : null;
         $this->container['online_sales_tips'] = isset($data['online_sales_tips']) ? $data['online_sales_tips'] : null;
+        $this->container['online_sales_service_charges'] = isset($data['online_sales_service_charges']) ? $data['online_sales_service_charges'] : null;
         $this->container['online_sales_refunded_fees'] = isset($data['online_sales_refunded_fees']) ? $data['online_sales_refunded_fees'] : null;
         $this->container['online_sales_fees'] = isset($data['online_sales_fees']) ? $data['online_sales_fees'] : null;
         $this->container['online_sales_refunded_amount'] = isset($data['online_sales_refunded_amount']) ? $data['online_sales_refunded_amount'] : null;
@@ -1101,6 +1107,30 @@ class Payout implements ModelInterface, ArrayAccess
     public function setOnlineSalesTips($online_sales_tips)
     {
         $this->container['online_sales_tips'] = $online_sales_tips;
+
+        return $this;
+    }
+
+    /**
+     * Gets online_sales_service_charges
+     *
+     * @return double
+     */
+    public function getOnlineSalesServiceCharges()
+    {
+        return $this->container['online_sales_service_charges'];
+    }
+
+    /**
+     * Sets online_sales_service_charges
+     *
+     * @param double $online_sales_service_charges Payout online sales service charges
+     *
+     * @return $this
+     */
+    public function setOnlineSalesServiceCharges($online_sales_service_charges)
+    {
+        $this->container['online_sales_service_charges'] = $online_sales_service_charges;
 
         return $this;
     }

@@ -84,6 +84,7 @@ class Order implements ModelInterface, ArrayAccess
         'tip_amount' => 'double',
         'delivery_amount' => 'double',
         'order_items_amount' => 'double',
+        'service_charge_amount' => 'double',
         'amount' => 'double',
         'processing_fee' => 'double',
         'payment_account_type' => 'string',
@@ -136,6 +137,7 @@ class Order implements ModelInterface, ArrayAccess
         'tip_amount' => 'double',
         'delivery_amount' => 'double',
         'order_items_amount' => 'double',
+        'service_charge_amount' => 'double',
         'amount' => 'double',
         'processing_fee' => 'double',
         'payment_account_type' => null,
@@ -209,6 +211,7 @@ class Order implements ModelInterface, ArrayAccess
         'tip_amount' => 'TipAmount',
         'delivery_amount' => 'DeliveryAmount',
         'order_items_amount' => 'OrderItemsAmount',
+        'service_charge_amount' => 'ServiceChargeAmount',
         'amount' => 'Amount',
         'processing_fee' => 'ProcessingFee',
         'payment_account_type' => 'PaymentAccountType',
@@ -261,6 +264,7 @@ class Order implements ModelInterface, ArrayAccess
         'tip_amount' => 'setTipAmount',
         'delivery_amount' => 'setDeliveryAmount',
         'order_items_amount' => 'setOrderItemsAmount',
+        'service_charge_amount' => 'setServiceChargeAmount',
         'amount' => 'setAmount',
         'processing_fee' => 'setProcessingFee',
         'payment_account_type' => 'setPaymentAccountType',
@@ -313,6 +317,7 @@ class Order implements ModelInterface, ArrayAccess
         'tip_amount' => 'getTipAmount',
         'delivery_amount' => 'getDeliveryAmount',
         'order_items_amount' => 'getOrderItemsAmount',
+        'service_charge_amount' => 'getServiceChargeAmount',
         'amount' => 'getAmount',
         'processing_fee' => 'getProcessingFee',
         'payment_account_type' => 'getPaymentAccountType',
@@ -654,6 +659,7 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['tip_amount'] = isset($data['tip_amount']) ? $data['tip_amount'] : null;
         $this->container['delivery_amount'] = isset($data['delivery_amount']) ? $data['delivery_amount'] : null;
         $this->container['order_items_amount'] = isset($data['order_items_amount']) ? $data['order_items_amount'] : null;
+        $this->container['service_charge_amount'] = isset($data['service_charge_amount']) ? $data['service_charge_amount'] : null;
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
         $this->container['processing_fee'] = isset($data['processing_fee']) ? $data['processing_fee'] : null;
         $this->container['payment_account_type'] = isset($data['payment_account_type']) ? $data['payment_account_type'] : null;
@@ -1417,6 +1423,30 @@ class Order implements ModelInterface, ArrayAccess
     public function setOrderItemsAmount($order_items_amount)
     {
         $this->container['order_items_amount'] = $order_items_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_charge_amount
+     *
+     * @return double
+     */
+    public function getServiceChargeAmount()
+    {
+        return $this->container['service_charge_amount'];
+    }
+
+    /**
+     * Sets service_charge_amount
+     *
+     * @param double $service_charge_amount Service Charge Amount
+     *
+     * @return $this
+     */
+    public function setServiceChargeAmount($service_charge_amount)
+    {
+        $this->container['service_charge_amount'] = $service_charge_amount;
 
         return $this;
     }
