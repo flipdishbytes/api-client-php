@@ -103,4 +103,11 @@ class LocationAreaLocationTest extends \PHPUnit_Framework_TestCase
     public function testPropertyExternalLocationId()
     {
     }
+
+    /**
+     * Test attribute "is_deleted"
+     */
+    public function testPropertyIsDeleted()
+    {
+    }
 }

@@ -61,7 +61,8 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
         'location_id' => 'int',
         'location_name' => 'string',
         'display_order' => 'int',
-        'external_location_id' => 'string'
+        'external_location_id' => 'string',
+        'is_deleted' => 'bool'
     ];
 
     /**
@@ -73,7 +74,8 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
         'location_id' => 'int32',
         'location_name' => null,
         'display_order' => 'int32',
-        'external_location_id' => null
+        'external_location_id' => null,
+        'is_deleted' => null
     ];
 
     /**
@@ -106,7 +108,8 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
         'location_id' => 'LocationId',
         'location_name' => 'LocationName',
         'display_order' => 'DisplayOrder',
-        'external_location_id' => 'ExternalLocationId'
+        'external_location_id' => 'ExternalLocationId',
+        'is_deleted' => 'IsDeleted'
     ];
 
     /**
@@ -118,7 +121,8 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
         'location_id' => 'setLocationId',
         'location_name' => 'setLocationName',
         'display_order' => 'setDisplayOrder',
-        'external_location_id' => 'setExternalLocationId'
+        'external_location_id' => 'setExternalLocationId',
+        'is_deleted' => 'setIsDeleted'
     ];
 
     /**
@@ -130,7 +134,8 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
         'location_id' => 'getLocationId',
         'location_name' => 'getLocationName',
         'display_order' => 'getDisplayOrder',
-        'external_location_id' => 'getExternalLocationId'
+        'external_location_id' => 'getExternalLocationId',
+        'is_deleted' => 'getIsDeleted'
     ];
 
     /**
@@ -197,6 +202,7 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
         $this->container['location_name'] = isset($data['location_name']) ? $data['location_name'] : null;
         $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
         $this->container['external_location_id'] = isset($data['external_location_id']) ? $data['external_location_id'] : null;
+        $this->container['is_deleted'] = isset($data['is_deleted']) ? $data['is_deleted'] : null;
     }
 
     /**
@@ -315,6 +321,30 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
     public function setExternalLocationId($external_location_id)
     {
         $this->container['external_location_id'] = $external_location_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_deleted
+     *
+     * @return bool
+     */
+    public function getIsDeleted()
+    {
+        return $this->container['is_deleted'];
+    }
+
+    /**
+     * Sets is_deleted
+     *
+     * @param bool $is_deleted Shows if the Location is deleted or not
+     *
+     * @return $this
+     */
+    public function setIsDeleted($is_deleted)
+    {
+        $this->container['is_deleted'] = $is_deleted;
 
         return $this;
     }

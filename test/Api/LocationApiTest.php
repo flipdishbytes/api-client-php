@@ -82,6 +82,16 @@ class LocationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for deleteLocation
+     *
+     * Set a Location as deleted.
+     *
+     */
+    public function testDeleteLocation()
+    {
+    }
+
+    /**
      * Test case for moveLocation
      *
      * Move a Location to a different location Area.

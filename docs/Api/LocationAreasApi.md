@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createLocationArea**](LocationAreasApi.md#createLocationArea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | Create a Location Area, i.e: Room, Floor, Parking lot
 [**getLocationArea**](LocationAreasApi.md#getLocationArea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | Retrieve a Location Area
-[**getLocationsForStore**](LocationAreasApi.md#getLocationsForStore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
+[**getLocationAreasForStore**](LocationAreasApi.md#getLocationAreasForStore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
 [**updateLocationArea**](LocationAreasApi.md#updateLocationArea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/update | Update a Location Area, i.e: Room, Floor, Car park space
 
 
@@ -120,8 +120,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getLocationsForStore**
-> \Flipdish\\Client\Models\RestApiArrayResultLocationAreaWithLocations getLocationsForStore($app_id, $store_id)
+# **getLocationAreasForStore**
+> \Flipdish\\Client\Models\RestApiArrayResultLocationAreaWithLocations getLocationAreasForStore($app_id, $store_id)
 
 Retrieve all Location Areas for a Store
 
@@ -143,10 +143,10 @@ $app_id = "app_id_example"; // string | AppId i.e: (fd1234)
 $store_id = 56; // int | Id of the Store
 
 try {
-    $result = $apiInstance->getLocationsForStore($app_id, $store_id);
+    $result = $apiInstance->getLocationAreasForStore($app_id, $store_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LocationAreasApi->getLocationsForStore: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LocationAreasApi->getLocationAreasForStore: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

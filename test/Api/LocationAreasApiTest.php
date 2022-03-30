@@ -92,12 +92,12 @@ class LocationAreasApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getLocationsForStore
+     * Test case for getLocationAreasForStore
      *
      * Retrieve all Location Areas for a Store.
      *
      */
-    public function testGetLocationsForStore()
+    public function testGetLocationAreasForStore()
     {
     }
 

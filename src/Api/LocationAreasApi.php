@@ -777,7 +777,7 @@ class LocationAreasApi
     }
 
     /**
-     * Operation getLocationsForStore
+     * Operation getLocationAreasForStore
      *
      * Retrieve all Location Areas for a Store
      *
@@ -788,14 +788,14 @@ class LocationAreasApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiArrayResultLocationAreaWithLocations
      */
-    public function getLocationsForStore($app_id, $store_id)
+    public function getLocationAreasForStore($app_id, $store_id)
     {
-        list($response) = $this->getLocationsForStoreWithHttpInfo($app_id, $store_id);
+        list($response) = $this->getLocationAreasForStoreWithHttpInfo($app_id, $store_id);
         return $response;
     }
 
     /**
-     * Operation getLocationsForStoreWithHttpInfo
+     * Operation getLocationAreasForStoreWithHttpInfo
      *
      * Retrieve all Location Areas for a Store
      *
@@ -806,10 +806,10 @@ class LocationAreasApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiArrayResultLocationAreaWithLocations, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getLocationsForStoreWithHttpInfo($app_id, $store_id)
+    public function getLocationAreasForStoreWithHttpInfo($app_id, $store_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultLocationAreaWithLocations';
-        $request = $this->getLocationsForStoreRequest($app_id, $store_id);
+        $request = $this->getLocationAreasForStoreRequest($app_id, $store_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -895,7 +895,7 @@ class LocationAreasApi
     }
 
     /**
-     * Operation getLocationsForStoreAsync
+     * Operation getLocationAreasForStoreAsync
      *
      * Retrieve all Location Areas for a Store
      *
@@ -905,9 +905,9 @@ class LocationAreasApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLocationsForStoreAsync($app_id, $store_id)
+    public function getLocationAreasForStoreAsync($app_id, $store_id)
     {
-        return $this->getLocationsForStoreAsyncWithHttpInfo($app_id, $store_id)
+        return $this->getLocationAreasForStoreAsyncWithHttpInfo($app_id, $store_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -916,7 +916,7 @@ class LocationAreasApi
     }
 
     /**
-     * Operation getLocationsForStoreAsyncWithHttpInfo
+     * Operation getLocationAreasForStoreAsyncWithHttpInfo
      *
      * Retrieve all Location Areas for a Store
      *
@@ -926,10 +926,10 @@ class LocationAreasApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLocationsForStoreAsyncWithHttpInfo($app_id, $store_id)
+    public function getLocationAreasForStoreAsyncWithHttpInfo($app_id, $store_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultLocationAreaWithLocations';
-        $request = $this->getLocationsForStoreRequest($app_id, $store_id);
+        $request = $this->getLocationAreasForStoreRequest($app_id, $store_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -969,7 +969,7 @@ class LocationAreasApi
     }
 
     /**
-     * Create request for operation 'getLocationsForStore'
+     * Create request for operation 'getLocationAreasForStore'
      *
      * @param  string $app_id AppId i.e: (fd1234) (required)
      * @param  int $store_id Id of the Store (required)
@@ -977,18 +977,18 @@ class LocationAreasApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getLocationsForStoreRequest($app_id, $store_id)
+    protected function getLocationAreasForStoreRequest($app_id, $store_id)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling getLocationsForStore'
+                'Missing the required parameter $app_id when calling getLocationAreasForStore'
             );
         }
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling getLocationsForStore'
+                'Missing the required parameter $store_id when calling getLocationAreasForStore'
             );
         }
 
