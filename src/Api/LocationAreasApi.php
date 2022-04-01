@@ -181,7 +181,7 @@ class LocationAreasApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\LocationArea',
+                        '\Flipdish\\Client\Models\RestApiResultLocationArea',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1104,7 +1104,7 @@ class LocationAreasApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\LocationArea
+     * @return \Flipdish\\Client\Models\RestApiResultLocationArea
      */
     public function updateLocationArea($location_area_input, $app_id, $store_id, $location_area_id)
     {
@@ -1124,11 +1124,11 @@ class LocationAreasApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\LocationArea, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultLocationArea, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateLocationAreaWithHttpInfo($location_area_input, $app_id, $store_id, $location_area_id)
     {
-        $returnType = '\Flipdish\\Client\Models\LocationArea';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultLocationArea';
         $request = $this->updateLocationAreaRequest($location_area_input, $app_id, $store_id, $location_area_id);
 
         try {
@@ -1180,7 +1180,7 @@ class LocationAreasApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\LocationArea',
+                        '\Flipdish\\Client\Models\RestApiResultLocationArea',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1260,7 +1260,7 @@ class LocationAreasApi
      */
     public function updateLocationAreaAsyncWithHttpInfo($location_area_input, $app_id, $store_id, $location_area_id)
     {
-        $returnType = '\Flipdish\\Client\Models\LocationArea';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultLocationArea';
         $request = $this->updateLocationAreaRequest($location_area_input, $app_id, $store_id, $location_area_id);
 
         return $this->client

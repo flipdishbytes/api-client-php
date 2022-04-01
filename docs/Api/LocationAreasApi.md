@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateLocationArea**
-> \Flipdish\\Client\Models\LocationArea updateLocationArea($location_area_input, $app_id, $store_id, $location_area_id)
+> \Flipdish\\Client\Models\RestApiResultLocationArea updateLocationArea($location_area_input, $app_id, $store_id, $location_area_id)
 
 Update a Location Area, i.e: Room, Floor, Car park space
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\LocationArea**](../Model/LocationArea.md)
+[**\Flipdish\\Client\Models\RestApiResultLocationArea**](../Model/RestApiResultLocationArea.md)
 
 ### Authorization
 

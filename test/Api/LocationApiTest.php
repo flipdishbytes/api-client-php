@@ -92,6 +92,16 @@ class LocationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for mapLocationToExternalId
+     *
+     * Set or unset External Location Id on a Location.
+     *
+     */
+    public function testMapLocationToExternalId()
+    {
+    }
+
+    /**
      * Test case for moveLocation
      *
      * Move a Location to a different location Area.

@@ -264,7 +264,8 @@ Class | Method | HTTP request | Description
 *LightspeedApi* | [**lightspeedGetStoreSettings**](docs/Api/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
 *LightspeedApi* | [**lightspeedSaveStoreSettings**](docs/Api/LightspeedApi.md#lightspeedsavestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
 *LocationApi* | [**createLocation**](docs/Api/LocationApi.md#createlocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location | Create a Location i.e: Table, Hotel Room, Car park space
-*LocationApi* | [**deleteLocation**](docs/Api/LocationApi.md#deletelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete | Set a Location as deleted
+*LocationApi* | [**deleteLocation**](docs/Api/LocationApi.md#deletelocation) | **DELETE** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete | Set a Location as deleted
+*LocationApi* | [**mapLocationToExternalId**](docs/Api/LocationApi.md#maplocationtoexternalid) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external | Set or unset External Location Id on a Location
 *LocationApi* | [**moveLocation**](docs/Api/LocationApi.md#movelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move | Move a Location to a different location Area
 *LocationApi* | [**updateLocation**](docs/Api/LocationApi.md#updatelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update | Update a Location i.e: Table, Hotel Room, Car park space
 *LocationAreasApi* | [**createLocationArea**](docs/Api/LocationAreasApi.md#createlocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | Create a Location Area, i.e: Room, Floor, Parking lot
@@ -672,6 +673,7 @@ Class | Method | HTTP request | Description
  - [LoyaltyCampaignDeletedEvent](docs/Model/LoyaltyCampaignDeletedEvent.md)
  - [LoyaltyCampaignUpdatedEvent](docs/Model/LoyaltyCampaignUpdatedEvent.md)
  - [LumpDiscountDetails](docs/Model/LumpDiscountDetails.md)
+ - [MappedLocation](docs/Model/MappedLocation.md)
  - [MaskedPhoneNumber](docs/Model/MaskedPhoneNumber.md)
  - [Menu](docs/Model/Menu.md)
  - [MenuBase](docs/Model/MenuBase.md)
@@ -899,9 +901,11 @@ Class | Method | HTTP request | Description
  - [RestApiResultKioskIotConnectionParameters](docs/Model/RestApiResultKioskIotConnectionParameters.md)
  - [RestApiResultKioskStoreSettings](docs/Model/RestApiResultKioskStoreSettings.md)
  - [RestApiResultLightspeedSettings](docs/Model/RestApiResultLightspeedSettings.md)
+ - [RestApiResultLocationArea](docs/Model/RestApiResultLocationArea.md)
  - [RestApiResultLocationAreaLocation](docs/Model/RestApiResultLocationAreaLocation.md)
  - [RestApiResultLocationAreaWithLocations](docs/Model/RestApiResultLocationAreaWithLocations.md)
  - [RestApiResultLoyaltyCampaign](docs/Model/RestApiResultLoyaltyCampaign.md)
+ - [RestApiResultMappedLocation](docs/Model/RestApiResultMappedLocation.md)
  - [RestApiResultMenu](docs/Model/RestApiResultMenu.md)
  - [RestApiResultMenuItemOptionSet](docs/Model/RestApiResultMenuItemOptionSet.md)
  - [RestApiResultMenuItemOptionSetItem](docs/Model/RestApiResultMenuItemOptionSetItem.md)
