@@ -80,4 +80,14 @@ class LookerSingleSignOnApiTest extends \PHPUnit_Framework_TestCase
     public function testGetLookerCustomerReportingEmbedUrl()
     {
     }
+
+    /**
+     * Test case for getLookerPerformanceSummaryEmbedUrl
+     *
+     * Get the single sign on embed URL for PerformanceSummary Dashboard.
+     *
+     */
+    public function testGetLookerPerformanceSummaryEmbedUrl()
+    {
+    }
 }
