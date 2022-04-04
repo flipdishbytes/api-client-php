@@ -592,7 +592,6 @@ Class | Method | HTTP request | Description
  - [DriverRequestLoginPinModel](docs/Model/DriverRequestLoginPinModel.md)
  - [DriverStore](docs/Model/DriverStore.md)
  - [DynamicFormField](docs/Model/DynamicFormField.md)
- - [DynamicFormFieldMapping](docs/Model/DynamicFormFieldMapping.md)
  - [DynamicFormFieldOption](docs/Model/DynamicFormFieldOption.md)
  - [DynamicFormRule](docs/Model/DynamicFormRule.md)
  - [DynamicFormRules](docs/Model/DynamicFormRules.md)

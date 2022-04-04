@@ -61,7 +61,7 @@ class DynamicFormField implements ModelInterface, ArrayAccess
         'label' => 'string',
         'placeholder' => 'string',
         'rules' => '\Flipdish\\Client\Models\DynamicFormRules',
-        'mapping' => '\Flipdish\\Client\Models\DynamicFormFieldMapping',
+        'mapping' => 'map[string,string]',
         'value' => 'object'
     ];
 
@@ -333,7 +333,7 @@ class DynamicFormField implements ModelInterface, ArrayAccess
     /**
      * Gets mapping
      *
-     * @return \Flipdish\\Client\Models\DynamicFormFieldMapping
+     * @return map[string,string]
      */
     public function getMapping()
     {
@@ -343,7 +343,7 @@ class DynamicFormField implements ModelInterface, ArrayAccess
     /**
      * Sets mapping
      *
-     * @param \Flipdish\\Client\Models\DynamicFormFieldMapping $mapping mapping
+     * @param map[string,string] $mapping mapping
      *
      * @return $this
      */
