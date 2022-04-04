@@ -950,4 +950,11 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     public function testPropertyStoreTipUpdatedEvent()
     {
     }
+
+    /**
+     * Test attribute "store_service_charge_updated_event"
+     */
+    public function testPropertyStoreServiceChargeUpdatedEvent()
+    {
+    }
 }

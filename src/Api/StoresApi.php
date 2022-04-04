@@ -984,7 +984,7 @@ class StoresApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return \Flipdish\\Client\Models\RestApiResultServiceCharge
      */
     public function configureStoreServiceCharge($store_id, $service_charge)
     {
@@ -1002,11 +1002,11 @@ class StoresApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultServiceCharge, HTTP status code, HTTP response headers (array of strings)
      */
     public function configureStoreServiceChargeWithHttpInfo($store_id, $service_charge)
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultServiceCharge';
         $request = $this->configureStoreServiceChargeRequest($store_id, $service_charge);
 
         try {
@@ -1058,7 +1058,7 @@ class StoresApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Flipdish\\Client\Models\RestApiResultServiceCharge',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1083,6 +1083,14 @@ class StoresApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1126,7 +1134,7 @@ class StoresApi
      */
     public function configureStoreServiceChargeAsyncWithHttpInfo($store_id, $service_charge)
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultServiceCharge';
         $request = $this->configureStoreServiceChargeRequest($store_id, $service_charge);
 
         return $this->client

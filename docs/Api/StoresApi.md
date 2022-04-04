@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **configureStoreServiceCharge**
-> object configureStoreServiceCharge($store_id, $service_charge)
+> \Flipdish\\Client\Models\RestApiResultServiceCharge configureStoreServiceCharge($store_id, $service_charge)
 
 Configure Store Service Charge; Idempotent Operation
 
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\Flipdish\\Client\Models\RestApiResultServiceCharge**](../Model/RestApiResultServiceCharge.md)
 
 ### Authorization
 

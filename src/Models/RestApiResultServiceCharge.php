@@ -1,6 +1,6 @@
 <?php
 /**
- * ServiceCharge
+ * RestApiResultServiceCharge
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * ServiceCharge Class Doc Comment
+ * RestApiResultServiceCharge Class Doc Comment
  *
  * @category Class
- * @description Store Service Charge
+ * @description Rest api result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ServiceCharge implements ModelInterface, ArrayAccess
+class RestApiResultServiceCharge implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class ServiceCharge implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ServiceCharge';
+    protected static $swaggerModelName = 'RestApiResult[ServiceCharge]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,7 @@ class ServiceCharge implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'store_id' => 'int',
-        'percentage_value' => 'double',
-        'enabled' => 'bool'
+        'data' => '\Flipdish\\Client\Models\ServiceCharge'
     ];
 
     /**
@@ -69,9 +67,7 @@ class ServiceCharge implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'store_id' => 'int32',
-        'percentage_value' => 'double',
-        'enabled' => null
+        'data' => null
     ];
 
     /**
@@ -101,9 +97,7 @@ class ServiceCharge implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_id' => 'StoreId',
-        'percentage_value' => 'PercentageValue',
-        'enabled' => 'Enabled'
+        'data' => 'Data'
     ];
 
     /**
@@ -112,9 +106,7 @@ class ServiceCharge implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_id' => 'setStoreId',
-        'percentage_value' => 'setPercentageValue',
-        'enabled' => 'setEnabled'
+        'data' => 'setData'
     ];
 
     /**
@@ -123,9 +115,7 @@ class ServiceCharge implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_id' => 'getStoreId',
-        'percentage_value' => 'getPercentageValue',
-        'enabled' => 'getEnabled'
+        'data' => 'getData'
     ];
 
     /**
@@ -188,9 +178,7 @@ class ServiceCharge implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
-        $this->container['percentage_value'] = isset($data['percentage_value']) ? $data['percentage_value'] : null;
-        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -202,6 +190,9 @@ class ServiceCharge implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -218,73 +209,25 @@ class ServiceCharge implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_id
+     * Gets data
      *
-     * @return int
+     * @return \Flipdish\\Client\Models\ServiceCharge
      */
-    public function getStoreId()
+    public function getData()
     {
-        return $this->container['store_id'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets store_id
+     * Sets data
      *
-     * @param int $store_id Store identifier
+     * @param \Flipdish\\Client\Models\ServiceCharge $data Generic data object.
      *
      * @return $this
      */
-    public function setStoreId($store_id)
+    public function setData($data)
     {
-        $this->container['store_id'] = $store_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets percentage_value
-     *
-     * @return double
-     */
-    public function getPercentageValue()
-    {
-        return $this->container['percentage_value'];
-    }
-
-    /**
-     * Sets percentage_value
-     *
-     * @param double $percentage_value The Default Service Charge Value
-     *
-     * @return $this
-     */
-    public function setPercentageValue($percentage_value)
-    {
-        $this->container['percentage_value'] = $percentage_value;
-
-        return $this;
-    }
-
-    /**
-     * Gets enabled
-     *
-     * @return bool
-     */
-    public function getEnabled()
-    {
-        return $this->container['enabled'];
-    }
-
-    /**
-     * Sets enabled
-     *
-     * @param bool $enabled Enable Service Charge for store true(on) / false(off)
-     *
-     * @return $this
-     */
-    public function setEnabled($enabled)
-    {
-        $this->container['enabled'] = $enabled;
+        $this->container['data'] = $data;
 
         return $this;
     }

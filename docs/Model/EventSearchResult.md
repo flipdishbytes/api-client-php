@@ -128,6 +128,7 @@ Name | Type | Description | Notes
 **catalog_group_updated_event** | [**\Flipdish\\Client\Models\CatalogGroupUpdatedEvent[]**](CatalogGroupUpdatedEvent.md) | Catalog Group Updated | [optional] 
 **catalog_group_archived_event** | [**\Flipdish\\Client\Models\CatalogGroupArchivedEvent[]**](CatalogGroupArchivedEvent.md) | Catalog Group Archived | [optional] 
 **store_tip_updated_event** | [**\Flipdish\\Client\Models\StoreTipUpdatedEvent[]**](StoreTipUpdatedEvent.md) | Store Tip Updated Event | [optional] 
+**store_service_charge_updated_event** | [**\Flipdish\\Client\Models\StoreServiceChargeUpdatedEvent[]**](StoreServiceChargeUpdatedEvent.md) | Service Charge Updated Event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
