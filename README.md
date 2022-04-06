@@ -165,6 +165,7 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**registerStripeTerminal**](docs/Api/CardReadersApi.md#registerstripeterminal) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/register | 
 *CardReadersApi* | [**unpairCurrentlyPairedBluetoothDevice**](docs/Api/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
 *CatalogChangesApi* | [**getPendingMenuChanges**](docs/Api/CatalogChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | Get menu pending changes from Catalog groups and items
+*CatalogChangesApi* | [**publishPendingMenuChanges**](docs/Api/CatalogChangesApi.md#publishpendingmenuchanges) | **POST** /api/v1.0/{appId}/menus/catalog-changes/publish | Update menus with the pending changes from Catalog groups and items
 *CatalogGroupsApi* | [**archiveCatalogGroup**](docs/Api/CatalogGroupsApi.md#archivecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId}/archive | Archive Catalog Group
 *CatalogGroupsApi* | [**createCatalogGroup**](docs/Api/CatalogGroupsApi.md#createcataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
 *CatalogGroupsApi* | [**duplicateCatalogGroup**](docs/Api/CatalogGroupsApi.md#duplicatecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId}/duplicate | Duplicate Catalog Group
@@ -776,6 +777,7 @@ Class | Method | HTTP request | Description
  - [PrinterTurnedOnEvent](docs/Model/PrinterTurnedOnEvent.md)
  - [PrinterUnassignedFromStoreEvent](docs/Model/PrinterUnassignedFromStoreEvent.md)
  - [ProcessingFeeConfig](docs/Model/ProcessingFeeConfig.md)
+ - [PublishMenuChanges](docs/Model/PublishMenuChanges.md)
  - [PushNotificationDeletedEvent](docs/Model/PushNotificationDeletedEvent.md)
  - [PushNotificationRequest](docs/Model/PushNotificationRequest.md)
  - [PushNotificationResponse](docs/Model/PushNotificationResponse.md)
