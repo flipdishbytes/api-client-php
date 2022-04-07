@@ -1,6 +1,6 @@
 <?php
 /**
- * LookerSingleSignOnApiTest
+ * LookerDashboardApiTest
  * PHP version 5
  *
  * @category Class
@@ -33,14 +33,14 @@ use \Flipdish\\Client\ApiException;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * LookerSingleSignOnApiTest Class Doc Comment
+ * LookerDashboardApiTest Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class LookerSingleSignOnApiTest extends \PHPUnit_Framework_TestCase
+class LookerDashboardApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -72,22 +72,12 @@ class LookerSingleSignOnApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getLookerCustomerReportingEmbedUrl
+     * Test case for lookerDashboardGetAll
      *
-     * .
-     *
-     */
-    public function testGetLookerCustomerReportingEmbedUrl()
-    {
-    }
-
-    /**
-     * Test case for getSSOEndpoint
-     *
-     * Get the single sign on embed URL for PerformanceSummary Dashboard.
+     * Get all dashboards.
      *
      */
-    public function testGetSSOEndpoint()
+    public function testLookerDashboardGetAll()
     {
     }
 }

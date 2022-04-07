@@ -5,7 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getLookerCustomerReportingEmbedUrl**](LookerSingleSignOnApi.md#getLookerCustomerReportingEmbedUrl) | **GET** /api/v1.0/{appId}/looker/sso/CustomerReporting | 
-[**getLookerPerformanceSummaryEmbedUrl**](LookerSingleSignOnApi.md#getLookerPerformanceSummaryEmbedUrl) | **GET** /api/v1.0/{appId}/looker/sso/PerformanceSummary | Get the single sign on embed URL for PerformanceSummary Dashboard
+[**getSSOEndpoint**](LookerSingleSignOnApi.md#getSSOEndpoint) | **GET** /api/v1.0/{appId}/looker/sso | Get the single sign on embed URL for PerformanceSummary Dashboard
 
 
 # **getLookerCustomerReportingEmbedUrl**
@@ -61,8 +61,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getLookerPerformanceSummaryEmbedUrl**
-> \Flipdish\\Client\Models\DashboardEmbed getLookerPerformanceSummaryEmbedUrl($app_id, $embed_path)
+# **getSSOEndpoint**
+> \Flipdish\\Client\Models\DashboardEmbed getSSOEndpoint($app_id, $embed_path)
 
 Get the single sign on embed URL for PerformanceSummary Dashboard
 
@@ -84,10 +84,10 @@ $app_id = "app_id_example"; // string | AppNameId
 $embed_path = "embed_path_example"; // string | Embed URL of the dashboard
 
 try {
-    $result = $apiInstance->getLookerPerformanceSummaryEmbedUrl($app_id, $embed_path);
+    $result = $apiInstance->getSSOEndpoint($app_id, $embed_path);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LookerSingleSignOnApi->getLookerPerformanceSummaryEmbedUrl: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LookerSingleSignOnApi->getSSOEndpoint: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

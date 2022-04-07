@@ -396,7 +396,7 @@ class LookerSingleSignOnApi
     }
 
     /**
-     * Operation getLookerPerformanceSummaryEmbedUrl
+     * Operation getSSOEndpoint
      *
      * Get the single sign on embed URL for PerformanceSummary Dashboard
      *
@@ -407,14 +407,14 @@ class LookerSingleSignOnApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\DashboardEmbed
      */
-    public function getLookerPerformanceSummaryEmbedUrl($app_id, $embed_path)
+    public function getSSOEndpoint($app_id, $embed_path)
     {
-        list($response) = $this->getLookerPerformanceSummaryEmbedUrlWithHttpInfo($app_id, $embed_path);
+        list($response) = $this->getSSOEndpointWithHttpInfo($app_id, $embed_path);
         return $response;
     }
 
     /**
-     * Operation getLookerPerformanceSummaryEmbedUrlWithHttpInfo
+     * Operation getSSOEndpointWithHttpInfo
      *
      * Get the single sign on embed URL for PerformanceSummary Dashboard
      *
@@ -425,10 +425,10 @@ class LookerSingleSignOnApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\DashboardEmbed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getLookerPerformanceSummaryEmbedUrlWithHttpInfo($app_id, $embed_path)
+    public function getSSOEndpointWithHttpInfo($app_id, $embed_path)
     {
         $returnType = '\Flipdish\\Client\Models\DashboardEmbed';
-        $request = $this->getLookerPerformanceSummaryEmbedUrlRequest($app_id, $embed_path);
+        $request = $this->getSSOEndpointRequest($app_id, $embed_path);
 
         try {
             $options = $this->createHttpClientOption();
@@ -514,7 +514,7 @@ class LookerSingleSignOnApi
     }
 
     /**
-     * Operation getLookerPerformanceSummaryEmbedUrlAsync
+     * Operation getSSOEndpointAsync
      *
      * Get the single sign on embed URL for PerformanceSummary Dashboard
      *
@@ -524,9 +524,9 @@ class LookerSingleSignOnApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLookerPerformanceSummaryEmbedUrlAsync($app_id, $embed_path)
+    public function getSSOEndpointAsync($app_id, $embed_path)
     {
-        return $this->getLookerPerformanceSummaryEmbedUrlAsyncWithHttpInfo($app_id, $embed_path)
+        return $this->getSSOEndpointAsyncWithHttpInfo($app_id, $embed_path)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -535,7 +535,7 @@ class LookerSingleSignOnApi
     }
 
     /**
-     * Operation getLookerPerformanceSummaryEmbedUrlAsyncWithHttpInfo
+     * Operation getSSOEndpointAsyncWithHttpInfo
      *
      * Get the single sign on embed URL for PerformanceSummary Dashboard
      *
@@ -545,10 +545,10 @@ class LookerSingleSignOnApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLookerPerformanceSummaryEmbedUrlAsyncWithHttpInfo($app_id, $embed_path)
+    public function getSSOEndpointAsyncWithHttpInfo($app_id, $embed_path)
     {
         $returnType = '\Flipdish\\Client\Models\DashboardEmbed';
-        $request = $this->getLookerPerformanceSummaryEmbedUrlRequest($app_id, $embed_path);
+        $request = $this->getSSOEndpointRequest($app_id, $embed_path);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -588,7 +588,7 @@ class LookerSingleSignOnApi
     }
 
     /**
-     * Create request for operation 'getLookerPerformanceSummaryEmbedUrl'
+     * Create request for operation 'getSSOEndpoint'
      *
      * @param  string $app_id AppNameId (required)
      * @param  string $embed_path Embed URL of the dashboard (required)
@@ -596,22 +596,22 @@ class LookerSingleSignOnApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getLookerPerformanceSummaryEmbedUrlRequest($app_id, $embed_path)
+    protected function getSSOEndpointRequest($app_id, $embed_path)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling getLookerPerformanceSummaryEmbedUrl'
+                'Missing the required parameter $app_id when calling getSSOEndpoint'
             );
         }
         // verify the required parameter 'embed_path' is set
         if ($embed_path === null || (is_array($embed_path) && count($embed_path) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $embed_path when calling getLookerPerformanceSummaryEmbedUrl'
+                'Missing the required parameter $embed_path when calling getSSOEndpoint'
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/looker/sso/PerformanceSummary';
+        $resourcePath = '/api/v1.0/{appId}/looker/sso';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
