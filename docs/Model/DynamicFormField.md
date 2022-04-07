@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **placeholder** | **string** |  | [optional] 
 **rules** | [**\Flipdish\\Client\Models\DynamicFormRules**](DynamicFormRules.md) |  | [optional] 
 **mapping** | **map[string,string]** |  | [optional] 
+**modifiers** | **string[]** |  | [optional] 
 **value** | **object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

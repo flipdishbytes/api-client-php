@@ -112,6 +112,13 @@ class DynamicFormFieldTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "modifiers"
+     */
+    public function testPropertyModifiers()
+    {
+    }
+
+    /**
      * Test attribute "value"
      */
     public function testPropertyValue()

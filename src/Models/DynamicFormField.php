@@ -62,6 +62,7 @@ class DynamicFormField implements ModelInterface, ArrayAccess
         'placeholder' => 'string',
         'rules' => '\Flipdish\\Client\Models\DynamicFormRules',
         'mapping' => 'map[string,string]',
+        'modifiers' => 'string[]',
         'value' => 'object'
     ];
 
@@ -76,6 +77,7 @@ class DynamicFormField implements ModelInterface, ArrayAccess
         'placeholder' => null,
         'rules' => null,
         'mapping' => null,
+        'modifiers' => null,
         'value' => null
     ];
 
@@ -111,6 +113,7 @@ class DynamicFormField implements ModelInterface, ArrayAccess
         'placeholder' => 'Placeholder',
         'rules' => 'Rules',
         'mapping' => 'Mapping',
+        'modifiers' => 'Modifiers',
         'value' => 'Value'
     ];
 
@@ -125,6 +128,7 @@ class DynamicFormField implements ModelInterface, ArrayAccess
         'placeholder' => 'setPlaceholder',
         'rules' => 'setRules',
         'mapping' => 'setMapping',
+        'modifiers' => 'setModifiers',
         'value' => 'setValue'
     ];
 
@@ -139,6 +143,7 @@ class DynamicFormField implements ModelInterface, ArrayAccess
         'placeholder' => 'getPlaceholder',
         'rules' => 'getRules',
         'mapping' => 'getMapping',
+        'modifiers' => 'getModifiers',
         'value' => 'getValue'
     ];
 
@@ -207,6 +212,7 @@ class DynamicFormField implements ModelInterface, ArrayAccess
         $this->container['placeholder'] = isset($data['placeholder']) ? $data['placeholder'] : null;
         $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
         $this->container['mapping'] = isset($data['mapping']) ? $data['mapping'] : null;
+        $this->container['modifiers'] = isset($data['modifiers']) ? $data['modifiers'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
@@ -350,6 +356,30 @@ class DynamicFormField implements ModelInterface, ArrayAccess
     public function setMapping($mapping)
     {
         $this->container['mapping'] = $mapping;
+
+        return $this;
+    }
+
+    /**
+     * Gets modifiers
+     *
+     * @return string[]
+     */
+    public function getModifiers()
+    {
+        return $this->container['modifiers'];
+    }
+
+    /**
+     * Sets modifiers
+     *
+     * @param string[] $modifiers modifiers
+     *
+     * @return $this
+     */
+    public function setModifiers($modifiers)
+    {
+        $this->container['modifiers'] = $modifiers;
 
         return $this;
     }
