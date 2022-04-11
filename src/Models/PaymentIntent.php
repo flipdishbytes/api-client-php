@@ -1,6 +1,6 @@
 <?php
 /**
- * PendingMenuChanges
+ * PaymentIntent
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * PendingMenuChanges Class Doc Comment
+ * PaymentIntent Class Doc Comment
  *
  * @category Class
- * @description Pending Menu Changes
+ * @description Represents stripe PaymentIntent
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PendingMenuChanges implements ModelInterface, ArrayAccess
+class PaymentIntent implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PendingMenuChanges';
+    protected static $swaggerModelName = 'PaymentIntent';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,11 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'catalog_element_id' => 'string',
-        'menu_id' => 'int'
+        'id' => 'string',
+        'description' => 'string',
+        'currency' => 'string',
+        'status' => 'string',
+        'created' => '\DateTime'
     ];
 
     /**
@@ -68,8 +71,11 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'catalog_element_id' => null,
-        'menu_id' => 'int32'
+        'id' => null,
+        'description' => null,
+        'currency' => null,
+        'status' => null,
+        'created' => 'date-time'
     ];
 
     /**
@@ -99,8 +105,11 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'catalog_element_id' => 'CatalogElementId',
-        'menu_id' => 'MenuId'
+        'id' => 'Id',
+        'description' => 'Description',
+        'currency' => 'Currency',
+        'status' => 'Status',
+        'created' => 'Created'
     ];
 
     /**
@@ -109,8 +118,11 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'catalog_element_id' => 'setCatalogElementId',
-        'menu_id' => 'setMenuId'
+        'id' => 'setId',
+        'description' => 'setDescription',
+        'currency' => 'setCurrency',
+        'status' => 'setStatus',
+        'created' => 'setCreated'
     ];
 
     /**
@@ -119,8 +131,11 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'catalog_element_id' => 'getCatalogElementId',
-        'menu_id' => 'getMenuId'
+        'id' => 'getId',
+        'description' => 'getDescription',
+        'currency' => 'getCurrency',
+        'status' => 'getStatus',
+        'created' => 'getCreated'
     ];
 
     /**
@@ -183,8 +198,11 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['catalog_element_id'] = isset($data['catalog_element_id']) ? $data['catalog_element_id'] : null;
-        $this->container['menu_id'] = isset($data['menu_id']) ? $data['menu_id'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
     }
 
     /**
@@ -195,14 +213,6 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if (!is_null($this->container['catalog_element_id']) && (mb_strlen($this->container['catalog_element_id']) > 30)) {
-            $invalidProperties[] = "invalid value for 'catalog_element_id', the character length must be smaller than or equal to 30.";
-        }
-
-        if (!is_null($this->container['catalog_element_id']) && (mb_strlen($this->container['catalog_element_id']) < 0)) {
-            $invalidProperties[] = "invalid value for 'catalog_element_id', the character length must be bigger than or equal to 0.";
-        }
 
         return $invalidProperties;
     }
@@ -220,56 +230,121 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets catalog_element_id
+     * Gets id
      *
      * @return string
      */
-    public function getCatalogElementId()
+    public function getId()
     {
-        return $this->container['catalog_element_id'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets catalog_element_id
+     * Sets id
      *
-     * @param string $catalog_element_id Unique catalog element id
+     * @param string $id Id of payment intent
      *
      * @return $this
      */
-    public function setCatalogElementId($catalog_element_id)
+    public function setId($id)
     {
-        if (!is_null($catalog_element_id) && (mb_strlen($catalog_element_id) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_element_id when calling PendingMenuChanges., must be smaller than or equal to 30.');
-        }
-        if (!is_null($catalog_element_id) && (mb_strlen($catalog_element_id) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_element_id when calling PendingMenuChanges., must be bigger than or equal to 0.');
-        }
-
-        $this->container['catalog_element_id'] = $catalog_element_id;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets menu_id
+     * Gets description
      *
-     * @return int
+     * @return string
      */
-    public function getMenuId()
+    public function getDescription()
     {
-        return $this->container['menu_id'];
+        return $this->container['description'];
     }
 
     /**
-     * Sets menu_id
+     * Sets description
      *
-     * @param int $menu_id Unique menu id
+     * @param string $description An arbitrary string attached to the object. Often useful for displaying to users.
      *
      * @return $this
      */
-    public function setMenuId($menu_id)
+    public function setDescription($description)
     {
-        $this->container['menu_id'] = $menu_id;
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency
+     *
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->container['currency'];
+    }
+
+    /**
+     * Sets currency
+     *
+     * @param string $currency Three-letter <a href=\"https://www.iso.org/iso-4217-currency-codes.html\">ISO currency  code</a>, in lowercase. Must be a <a href=\"https://stripe.com/docs/currencies\">supported  currency</a>.
+     *
+     * @return $this
+     */
+    public function setCurrency($currency)
+    {
+        $this->container['currency'] = $currency;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     *
+     * @param string $status Status of this PaymentIntent, one of requires_payment_method,  requires_confirmation, requires_action, processing,  requires_capture, canceled, or succeeded. Read more about each  PaymentIntent <a href=\"https://stripe.com/docs/payments/intents#intent-statuses\">status</a>.  One of: canceled, processing, requires_action,  requires_capture, requires_confirmation, requires_payment_method,  or succeeded.
+     *
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets created
+     *
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->container['created'];
+    }
+
+    /**
+     * Sets created
+     *
+     * @param \DateTime $created Time at which the object was created. Measured in seconds since the Unix epoch.
+     *
+     * @return $this
+     */
+    public function setCreated($created)
+    {
+        $this->container['created'] = $created;
 
         return $this;
     }

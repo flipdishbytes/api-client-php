@@ -1,6 +1,6 @@
 <?php
 /**
- * PendingMenuChangesTest
+ * RestApiResultPaymentIntentTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * PendingMenuChangesTest Class Doc Comment
+ * RestApiResultPaymentIntentTest Class Doc Comment
  *
  * @category    Class
- * @description Pending Menu Changes
+ * @description Rest api result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PendingMenuChangesTest extends \PHPUnit_Framework_TestCase
+class RestApiResultPaymentIntentTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,23 +70,16 @@ class PendingMenuChangesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PendingMenuChanges"
+     * Test "RestApiResultPaymentIntent"
      */
-    public function testPendingMenuChanges()
+    public function testRestApiResultPaymentIntent()
     {
     }
 
     /**
-     * Test attribute "catalog_element_id"
+     * Test attribute "data"
      */
-    public function testPropertyCatalogElementId()
-    {
-    }
-
-    /**
-     * Test attribute "menu_id"
-     */
-    public function testPropertyMenuId()
+    public function testPropertyData()
     {
     }
 }

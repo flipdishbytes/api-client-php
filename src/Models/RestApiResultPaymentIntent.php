@@ -1,6 +1,6 @@
 <?php
 /**
- * PendingMenuChanges
+ * RestApiResultPaymentIntent
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * PendingMenuChanges Class Doc Comment
+ * RestApiResultPaymentIntent Class Doc Comment
  *
  * @category Class
- * @description Pending Menu Changes
+ * @description Rest api result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PendingMenuChanges implements ModelInterface, ArrayAccess
+class RestApiResultPaymentIntent implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PendingMenuChanges';
+    protected static $swaggerModelName = 'RestApiResult[PaymentIntent]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'catalog_element_id' => 'string',
-        'menu_id' => 'int'
+        'data' => '\Flipdish\\Client\Models\PaymentIntent'
     ];
 
     /**
@@ -68,8 +67,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'catalog_element_id' => null,
-        'menu_id' => 'int32'
+        'data' => null
     ];
 
     /**
@@ -99,8 +97,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'catalog_element_id' => 'CatalogElementId',
-        'menu_id' => 'MenuId'
+        'data' => 'Data'
     ];
 
     /**
@@ -109,8 +106,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'catalog_element_id' => 'setCatalogElementId',
-        'menu_id' => 'setMenuId'
+        'data' => 'setData'
     ];
 
     /**
@@ -119,8 +115,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'catalog_element_id' => 'getCatalogElementId',
-        'menu_id' => 'getMenuId'
+        'data' => 'getData'
     ];
 
     /**
@@ -183,8 +178,7 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['catalog_element_id'] = isset($data['catalog_element_id']) ? $data['catalog_element_id'] : null;
-        $this->container['menu_id'] = isset($data['menu_id']) ? $data['menu_id'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -196,14 +190,9 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['catalog_element_id']) && (mb_strlen($this->container['catalog_element_id']) > 30)) {
-            $invalidProperties[] = "invalid value for 'catalog_element_id', the character length must be smaller than or equal to 30.";
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
         }
-
-        if (!is_null($this->container['catalog_element_id']) && (mb_strlen($this->container['catalog_element_id']) < 0)) {
-            $invalidProperties[] = "invalid value for 'catalog_element_id', the character length must be bigger than or equal to 0.";
-        }
-
         return $invalidProperties;
     }
 
@@ -220,56 +209,25 @@ class PendingMenuChanges implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets catalog_element_id
+     * Gets data
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\PaymentIntent
      */
-    public function getCatalogElementId()
+    public function getData()
     {
-        return $this->container['catalog_element_id'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets catalog_element_id
+     * Sets data
      *
-     * @param string $catalog_element_id Unique catalog element id
+     * @param \Flipdish\\Client\Models\PaymentIntent $data Generic data object.
      *
      * @return $this
      */
-    public function setCatalogElementId($catalog_element_id)
+    public function setData($data)
     {
-        if (!is_null($catalog_element_id) && (mb_strlen($catalog_element_id) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_element_id when calling PendingMenuChanges., must be smaller than or equal to 30.');
-        }
-        if (!is_null($catalog_element_id) && (mb_strlen($catalog_element_id) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_element_id when calling PendingMenuChanges., must be bigger than or equal to 0.');
-        }
-
-        $this->container['catalog_element_id'] = $catalog_element_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets menu_id
-     *
-     * @return int
-     */
-    public function getMenuId()
-    {
-        return $this->container['menu_id'];
-    }
-
-    /**
-     * Sets menu_id
-     *
-     * @param int $menu_id Unique menu id
-     *
-     * @return $this
-     */
-    public function setMenuId($menu_id)
-    {
-        $this->container['menu_id'] = $menu_id;
+        $this->container['data'] = $data;
 
         return $this;
     }

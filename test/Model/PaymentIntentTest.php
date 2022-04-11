@@ -1,6 +1,6 @@
 <?php
 /**
- * PendingMenuChangesTest
+ * PaymentIntentTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * PendingMenuChangesTest Class Doc Comment
+ * PaymentIntentTest Class Doc Comment
  *
  * @category    Class
- * @description Pending Menu Changes
+ * @description Represents stripe PaymentIntent
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PendingMenuChangesTest extends \PHPUnit_Framework_TestCase
+class PaymentIntentTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,23 +70,44 @@ class PendingMenuChangesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PendingMenuChanges"
+     * Test "PaymentIntent"
      */
-    public function testPendingMenuChanges()
+    public function testPaymentIntent()
     {
     }
 
     /**
-     * Test attribute "catalog_element_id"
+     * Test attribute "id"
      */
-    public function testPropertyCatalogElementId()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "menu_id"
+     * Test attribute "description"
      */
-    public function testPropertyMenuId()
+    public function testPropertyDescription()
+    {
+    }
+
+    /**
+     * Test attribute "currency"
+     */
+    public function testPropertyCurrency()
+    {
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+    }
+
+    /**
+     * Test attribute "created"
+     */
+    public function testPropertyCreated()
     {
     }
 }
