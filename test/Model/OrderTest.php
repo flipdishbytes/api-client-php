@@ -203,6 +203,13 @@ class OrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "order_drop_off_location"
+     */
+    public function testPropertyOrderDropOffLocation()
+    {
+    }
+
+    /**
      * Test attribute "order_id"
      */
     public function testPropertyOrderId()

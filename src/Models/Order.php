@@ -76,6 +76,7 @@ class Order implements ModelInterface, ArrayAccess
         'channel_order_display_id' => 'string',
         'channel' => '\Flipdish\\Client\Models\Channel',
         'receipt_code' => 'string',
+        'order_drop_off_location' => '\Flipdish\\Client\Models\OrderDropOffLocation',
         'order_id' => 'int',
         'local_order_id' => 'string',
         'delivery_type' => 'string',
@@ -129,6 +130,7 @@ class Order implements ModelInterface, ArrayAccess
         'channel_order_display_id' => null,
         'channel' => null,
         'receipt_code' => null,
+        'order_drop_off_location' => null,
         'order_id' => 'int32',
         'local_order_id' => null,
         'delivery_type' => null,
@@ -203,6 +205,7 @@ class Order implements ModelInterface, ArrayAccess
         'channel_order_display_id' => 'ChannelOrderDisplayId',
         'channel' => 'Channel',
         'receipt_code' => 'ReceiptCode',
+        'order_drop_off_location' => 'OrderDropOffLocation',
         'order_id' => 'OrderId',
         'local_order_id' => 'LocalOrderId',
         'delivery_type' => 'DeliveryType',
@@ -256,6 +259,7 @@ class Order implements ModelInterface, ArrayAccess
         'channel_order_display_id' => 'setChannelOrderDisplayId',
         'channel' => 'setChannel',
         'receipt_code' => 'setReceiptCode',
+        'order_drop_off_location' => 'setOrderDropOffLocation',
         'order_id' => 'setOrderId',
         'local_order_id' => 'setLocalOrderId',
         'delivery_type' => 'setDeliveryType',
@@ -309,6 +313,7 @@ class Order implements ModelInterface, ArrayAccess
         'channel_order_display_id' => 'getChannelOrderDisplayId',
         'channel' => 'getChannel',
         'receipt_code' => 'getReceiptCode',
+        'order_drop_off_location' => 'getOrderDropOffLocation',
         'order_id' => 'getOrderId',
         'local_order_id' => 'getLocalOrderId',
         'delivery_type' => 'getDeliveryType',
@@ -651,6 +656,7 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['channel_order_display_id'] = isset($data['channel_order_display_id']) ? $data['channel_order_display_id'] : null;
         $this->container['channel'] = isset($data['channel']) ? $data['channel'] : null;
         $this->container['receipt_code'] = isset($data['receipt_code']) ? $data['receipt_code'] : null;
+        $this->container['order_drop_off_location'] = isset($data['order_drop_off_location']) ? $data['order_drop_off_location'] : null;
         $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
         $this->container['local_order_id'] = isset($data['local_order_id']) ? $data['local_order_id'] : null;
         $this->container['delivery_type'] = isset($data['delivery_type']) ? $data['delivery_type'] : null;
@@ -1204,6 +1210,30 @@ class Order implements ModelInterface, ArrayAccess
     public function setReceiptCode($receipt_code)
     {
         $this->container['receipt_code'] = $receipt_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_drop_off_location
+     *
+     * @return \Flipdish\\Client\Models\OrderDropOffLocation
+     */
+    public function getOrderDropOffLocation()
+    {
+        return $this->container['order_drop_off_location'];
+    }
+
+    /**
+     * Sets order_drop_off_location
+     *
+     * @param \Flipdish\\Client\Models\OrderDropOffLocation $order_drop_off_location Order Drop Off Location
+     *
+     * @return $this
+     */
+    public function setOrderDropOffLocation($order_drop_off_location)
+    {
+        $this->container['order_drop_off_location'] = $order_drop_off_location;
 
         return $this;
     }
