@@ -1227,7 +1227,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Sets order_drop_off_location
      *
-     * @param \Flipdish\\Client\Models\OrderDropOffLocation $order_drop_off_location Order Drop Off Location
+     * @param \Flipdish\\Client\Models\OrderDropOffLocation $order_drop_off_location DropOffLocation selected for this order
      *
      * @return $this
      */

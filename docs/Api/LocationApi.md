@@ -30,7 +30,7 @@ $apiInstance = new Flipdish\\Client\Api\LocationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_location_input = new \Flipdish\\Client\Models\CreateLocation(); // \Flipdish\\Client\Models\CreateLocation | Input data for creating the Location
+$create_location_input = array(new \Flipdish\\Client\Models\CreateLocation()); // \Flipdish\\Client\Models\CreateLocation[] | Input data for creating the Location
 $location_area_id = 56; // int | Id of the Location area where the Location belongs
 $app_id = "app_id_example"; // string | AppId i.e: (fd1234)
 $store_id = 56; // int | Id of the Store
@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_location_input** | [**\Flipdish\\Client\Models\CreateLocation**](../Model/CreateLocation.md)| Input data for creating the Location |
+ **create_location_input** | [**\Flipdish\\Client\Models\CreateLocation[]**](../Model/CreateLocation.md)| Input data for creating the Location |
  **location_area_id** | **int**| Id of the Location area where the Location belongs |
  **app_id** | **string**| AppId i.e: (fd1234) |
  **store_id** | **int**| Id of the Store |

@@ -64,7 +64,6 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
         'field_groups' => '\Flipdish\\Client\Models\FieldGroup[]',
         'setup_instructions' => 'string',
         'external_setup_link' => 'string',
-        'o_auth_app_id' => 'string',
         'teammate_app_access_level' => 'string',
         'permissions_type' => 'string',
         'name' => 'string',
@@ -87,7 +86,6 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
         'field_groups' => null,
         'setup_instructions' => null,
         'external_setup_link' => null,
-        'o_auth_app_id' => null,
         'teammate_app_access_level' => null,
         'permissions_type' => null,
         'name' => null,
@@ -131,7 +129,6 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
         'field_groups' => 'FieldGroups',
         'setup_instructions' => 'SetupInstructions',
         'external_setup_link' => 'ExternalSetupLink',
-        'o_auth_app_id' => 'OAuthAppId',
         'teammate_app_access_level' => 'TeammateAppAccessLevel',
         'permissions_type' => 'PermissionsType',
         'name' => 'Name',
@@ -154,7 +151,6 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
         'field_groups' => 'setFieldGroups',
         'setup_instructions' => 'setSetupInstructions',
         'external_setup_link' => 'setExternalSetupLink',
-        'o_auth_app_id' => 'setOAuthAppId',
         'teammate_app_access_level' => 'setTeammateAppAccessLevel',
         'permissions_type' => 'setPermissionsType',
         'name' => 'setName',
@@ -177,7 +173,6 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
         'field_groups' => 'getFieldGroups',
         'setup_instructions' => 'getSetupInstructions',
         'external_setup_link' => 'getExternalSetupLink',
-        'o_auth_app_id' => 'getOAuthAppId',
         'teammate_app_access_level' => 'getTeammateAppAccessLevel',
         'permissions_type' => 'getPermissionsType',
         'name' => 'getName',
@@ -396,7 +391,6 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
         $this->container['field_groups'] = isset($data['field_groups']) ? $data['field_groups'] : null;
         $this->container['setup_instructions'] = isset($data['setup_instructions']) ? $data['setup_instructions'] : null;
         $this->container['external_setup_link'] = isset($data['external_setup_link']) ? $data['external_setup_link'] : null;
-        $this->container['o_auth_app_id'] = isset($data['o_auth_app_id']) ? $data['o_auth_app_id'] : null;
         $this->container['teammate_app_access_level'] = isset($data['teammate_app_access_level']) ? $data['teammate_app_access_level'] : null;
         $this->container['permissions_type'] = isset($data['permissions_type']) ? $data['permissions_type'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -441,9 +435,6 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
             );
         }
 
-        if ($this->container['o_auth_app_id'] === null) {
-            $invalidProperties[] = "'o_auth_app_id' can't be null";
-        }
         $allowedValues = $this->getTeammateAppAccessLevelAllowableValues();
         if (!is_null($this->container['teammate_app_access_level']) && !in_array($this->container['teammate_app_access_level'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -648,30 +639,6 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     public function setExternalSetupLink($external_setup_link)
     {
         $this->container['external_setup_link'] = $external_setup_link;
-
-        return $this;
-    }
-
-    /**
-     * Gets o_auth_app_id
-     *
-     * @return string
-     */
-    public function getOAuthAppId()
-    {
-        return $this->container['o_auth_app_id'];
-    }
-
-    /**
-     * Sets o_auth_app_id
-     *
-     * @param string $o_auth_app_id OAuth app id
-     *
-     * @return $this
-     */
-    public function setOAuthAppId($o_auth_app_id)
-    {
-        $this->container['o_auth_app_id'] = $o_auth_app_id;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * ServiceChargeTest
+ * RestApiArrayResultLocationAreaLocationTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * ServiceChargeTest Class Doc Comment
+ * RestApiArrayResultLocationAreaLocationTest Class Doc Comment
  *
  * @category    Class
- * @description Store Service Charge
+ * @description Rest api array result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ServiceChargeTest extends \PHPUnit_Framework_TestCase
+class RestApiArrayResultLocationAreaLocationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,51 +70,16 @@ class ServiceChargeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ServiceCharge"
+     * Test "RestApiArrayResultLocationAreaLocation"
      */
-    public function testServiceCharge()
+    public function testRestApiArrayResultLocationAreaLocation()
     {
     }
 
     /**
-     * Test attribute "store_id"
+     * Test attribute "data"
      */
-    public function testPropertyStoreId()
-    {
-    }
-
-    /**
-     * Test attribute "percentage_value"
-     */
-    public function testPropertyPercentageValue()
-    {
-    }
-
-    /**
-     * Test attribute "enabled"
-     */
-    public function testPropertyEnabled()
-    {
-    }
-
-    /**
-     * Test attribute "is_optional"
-     */
-    public function testPropertyIsOptional()
-    {
-    }
-
-    /**
-     * Test attribute "display_with_processing_fee"
-     */
-    public function testPropertyDisplayWithProcessingFee()
-    {
-    }
-
-    /**
-     * Test attribute "includes_vouchers"
-     */
-    public function testPropertyIncludesVouchers()
+    public function testPropertyData()
     {
     }
 }

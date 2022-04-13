@@ -1,6 +1,6 @@
 <?php
 /**
- * AppStoreApiTest
+ * AppStoreDeveloperApiTest
  * PHP version 5
  *
  * @category Class
@@ -33,14 +33,14 @@ use \Flipdish\\Client\ApiException;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * AppStoreApiTest Class Doc Comment
+ * AppStoreDeveloperApiTest Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AppStoreApiTest extends \PHPUnit_Framework_TestCase
+class AppStoreDeveloperApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -72,6 +72,36 @@ class AppStoreApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for appVerificationUpdate
+     *
+     * Update App store app verification.
+     *
+     */
+    public function testAppVerificationUpdate()
+    {
+    }
+
+    /**
+     * Test case for createAppStoreApp
+     *
+     * Create App store app.
+     *
+     */
+    public function testCreateAppStoreApp()
+    {
+    }
+
+    /**
+     * Test case for deleteAppStoreApp
+     *
+     * Delete App store app.
+     *
+     */
+    public function testDeleteAppStoreApp()
+    {
+    }
+
+    /**
      * Test case for getAppStoreApp
      *
      * Get App store app.
@@ -82,12 +112,22 @@ class AppStoreApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getAppStoreApps
+     * Test case for updateAppStoreApp
      *
-     * Get list of App store app summaries.
+     * Update App store app.
      *
      */
-    public function testGetAppStoreApps()
+    public function testUpdateAppStoreApp()
+    {
+    }
+
+    /**
+     * Test case for uploadAppStoreAppLogo
+     *
+     * Upload the App store app logo \\ icon.
+     *
+     */
+    public function testUploadAppStoreAppLogo()
     {
     }
 }

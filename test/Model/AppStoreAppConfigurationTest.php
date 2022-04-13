@@ -133,6 +133,13 @@ class AppStoreAppConfigurationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "o_auth_app_id"
+     */
+    public function testPropertyOAuthAppId()
+    {
+    }
+
+    /**
      * Test attribute "details"
      */
     public function testPropertyDetails()
@@ -171,13 +178,6 @@ class AppStoreAppConfigurationTest extends \PHPUnit_Framework_TestCase
      * Test attribute "external_setup_link"
      */
     public function testPropertyExternalSetupLink()
-    {
-    }
-
-    /**
-     * Test attribute "o_auth_app_id"
-     */
-    public function testPropertyOAuthAppId()
     {
     }
 

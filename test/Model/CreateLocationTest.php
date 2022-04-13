@@ -77,6 +77,13 @@ class CreateLocationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "location_id"
+     */
+    public function testPropertyLocationId()
+    {
+    }
+
+    /**
      * Test attribute "location_name"
      */
     public function testPropertyLocationName()

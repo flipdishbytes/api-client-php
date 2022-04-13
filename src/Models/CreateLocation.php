@@ -58,6 +58,7 @@ class CreateLocation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'location_id' => 'int',
         'location_name' => 'string',
         'display_order' => 'int',
         'external_location_id' => 'string'
@@ -69,6 +70,7 @@ class CreateLocation implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'location_id' => 'int32',
         'location_name' => null,
         'display_order' => 'int32',
         'external_location_id' => null
@@ -101,6 +103,7 @@ class CreateLocation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'location_id' => 'LocationId',
         'location_name' => 'LocationName',
         'display_order' => 'DisplayOrder',
         'external_location_id' => 'ExternalLocationId'
@@ -112,6 +115,7 @@ class CreateLocation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'location_id' => 'setLocationId',
         'location_name' => 'setLocationName',
         'display_order' => 'setDisplayOrder',
         'external_location_id' => 'setExternalLocationId'
@@ -123,6 +127,7 @@ class CreateLocation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'location_id' => 'getLocationId',
         'location_name' => 'getLocationName',
         'display_order' => 'getDisplayOrder',
         'external_location_id' => 'getExternalLocationId'
@@ -188,6 +193,7 @@ class CreateLocation implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['location_id'] = isset($data['location_id']) ? $data['location_id'] : null;
         $this->container['location_name'] = isset($data['location_name']) ? $data['location_name'] : null;
         $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
         $this->container['external_location_id'] = isset($data['external_location_id']) ? $data['external_location_id'] : null;
@@ -216,6 +222,30 @@ class CreateLocation implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets location_id
+     *
+     * @return int
+     */
+    public function getLocationId()
+    {
+        return $this->container['location_id'];
+    }
+
+    /**
+     * Sets location_id
+     *
+     * @param int $location_id Location Id
+     *
+     * @return $this
+     */
+    public function setLocationId($location_id)
+    {
+        $this->container['location_id'] = $location_id;
+
+        return $this;
+    }
 
     /**
      * Gets location_name

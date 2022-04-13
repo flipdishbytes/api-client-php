@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **field_groups** | [**\Flipdish\\Client\Models\FieldGroup[]**](FieldGroup.md) | Field groups | [optional] 
 **setup_instructions** | **string** | Setup instructions | [optional] 
 **external_setup_link** | **string** | External setup link | [optional] 
-**o_auth_app_id** | **string** | OAuth app id | 
 **teammate_app_access_level** | **string** | Teammate app access level | [optional] 
 **permissions_type** | **string** | Permissions type | 
 **name** | **string** | Name | 

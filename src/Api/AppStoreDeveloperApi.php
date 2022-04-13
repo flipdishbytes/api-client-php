@@ -1,6 +1,6 @@
 <?php
 /**
- * LocationApi
+ * AppStoreDeveloperApi
  * PHP version 5
  *
  * @category Class
@@ -40,14 +40,14 @@ use Flipdish\\Client\HeaderSelector;
 use Flipdish\\Client\ObjectSerializer;
 
 /**
- * LocationApi Class Doc Comment
+ * AppStoreDeveloperApi Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class LocationApi
+class AppStoreDeveloperApi
 {
     /**
      * @var ClientInterface
@@ -88,43 +88,340 @@ class LocationApi
     }
 
     /**
-     * Operation createLocation
+     * Operation appVerificationUpdate
      *
-     * Create a Location i.e: Table, Hotel Room, Car park space
+     * Update App store app verification
      *
-     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input Input data for creating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $verification_status New verification status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return void
      */
-    public function createLocation($create_location_input, $location_area_id, $app_id, $store_id)
+    public function appVerificationUpdate($oauth_app_id, $app_store_app_id, $verification_status)
     {
-        list($response) = $this->createLocationWithHttpInfo($create_location_input, $location_area_id, $app_id, $store_id);
+        $this->appVerificationUpdateWithHttpInfo($oauth_app_id, $app_store_app_id, $verification_status);
+    }
+
+    /**
+     * Operation appVerificationUpdateWithHttpInfo
+     *
+     * Update App store app verification
+     *
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $verification_status New verification status (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function appVerificationUpdateWithHttpInfo($oauth_app_id, $app_store_app_id, $verification_status)
+    {
+        $returnType = '';
+        $request = $this->appVerificationUpdateRequest($oauth_app_id, $app_store_app_id, $verification_status);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation appVerificationUpdateAsync
+     *
+     * Update App store app verification
+     *
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $verification_status New verification status (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function appVerificationUpdateAsync($oauth_app_id, $app_store_app_id, $verification_status)
+    {
+        return $this->appVerificationUpdateAsyncWithHttpInfo($oauth_app_id, $app_store_app_id, $verification_status)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation appVerificationUpdateAsyncWithHttpInfo
+     *
+     * Update App store app verification
+     *
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $verification_status New verification status (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function appVerificationUpdateAsyncWithHttpInfo($oauth_app_id, $app_store_app_id, $verification_status)
+    {
+        $returnType = '';
+        $request = $this->appVerificationUpdateRequest($oauth_app_id, $app_store_app_id, $verification_status);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'appVerificationUpdate'
+     *
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $verification_status New verification status (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function appVerificationUpdateRequest($oauth_app_id, $app_store_app_id, $verification_status)
+    {
+        // verify the required parameter 'oauth_app_id' is set
+        if ($oauth_app_id === null || (is_array($oauth_app_id) && count($oauth_app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $oauth_app_id when calling appVerificationUpdate'
+            );
+        }
+        // verify the required parameter 'app_store_app_id' is set
+        if ($app_store_app_id === null || (is_array($app_store_app_id) && count($app_store_app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_store_app_id when calling appVerificationUpdate'
+            );
+        }
+        // verify the required parameter 'verification_status' is set
+        if ($verification_status === null || (is_array($verification_status) && count($verification_status) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $verification_status when calling appVerificationUpdate'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($oauth_app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'oauthAppId' . '}',
+                ObjectSerializer::toPathValue($oauth_app_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($app_store_app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appStoreAppId' . '}',
+                ObjectSerializer::toPathValue($app_store_app_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($verification_status)) {
+            $_tempBody = $verification_status;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'PUT',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation createAppStoreApp
+     *
+     * Create App store app
+     *
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiResultAppStoreApp
+     */
+    public function createAppStoreApp($oauth_app_id, $create_app_store_app)
+    {
+        list($response) = $this->createAppStoreAppWithHttpInfo($oauth_app_id, $create_app_store_app);
         return $response;
     }
 
     /**
-     * Operation createLocationWithHttpInfo
+     * Operation createAppStoreAppWithHttpInfo
      *
-     * Create a Location i.e: Table, Hotel Room, Car park space
+     * Create App store app
      *
-     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input Input data for creating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultAppStoreApp, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createLocationWithHttpInfo($create_location_input, $location_area_id, $app_id, $store_id)
+    public function createAppStoreAppWithHttpInfo($oauth_app_id, $create_app_store_app)
     {
-        $returnType = 'object';
-        $request = $this->createLocationRequest($create_location_input, $location_area_id, $app_id, $store_id);
+        $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreApp';
+        $request = $this->createAppStoreAppRequest($oauth_app_id, $create_app_store_app);
 
         try {
             $options = $this->createHttpClientOption();
@@ -175,15 +472,7 @@ class LocationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 201:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiArrayResultLocationAreaLocation',
+                        '\Flipdish\\Client\Models\RestApiResultAppStoreApp',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -212,35 +501,25 @@ class LocationApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation createLocationAsync
+     * Operation createAppStoreAppAsync
      *
-     * Create a Location i.e: Table, Hotel Room, Car park space
+     * Create App store app
      *
-     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input Input data for creating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createLocationAsync($create_location_input, $location_area_id, $app_id, $store_id)
+    public function createAppStoreAppAsync($oauth_app_id, $create_app_store_app)
     {
-        return $this->createLocationAsyncWithHttpInfo($create_location_input, $location_area_id, $app_id, $store_id)
+        return $this->createAppStoreAppAsyncWithHttpInfo($oauth_app_id, $create_app_store_app)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -249,22 +528,20 @@ class LocationApi
     }
 
     /**
-     * Operation createLocationAsyncWithHttpInfo
+     * Operation createAppStoreAppAsyncWithHttpInfo
      *
-     * Create a Location i.e: Table, Hotel Room, Car park space
+     * Create App store app
      *
-     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input Input data for creating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createLocationAsyncWithHttpInfo($create_location_input, $location_area_id, $app_id, $store_id)
+    public function createAppStoreAppAsyncWithHttpInfo($oauth_app_id, $create_app_store_app)
     {
-        $returnType = 'object';
-        $request = $this->createLocationRequest($create_location_input, $location_area_id, $app_id, $store_id);
+        $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreApp';
+        $request = $this->createAppStoreAppRequest($oauth_app_id, $create_app_store_app);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -304,44 +581,30 @@ class LocationApi
     }
 
     /**
-     * Create request for operation 'createLocation'
+     * Create request for operation 'createAppStoreApp'
      *
-     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input Input data for creating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createLocationRequest($create_location_input, $location_area_id, $app_id, $store_id)
+    protected function createAppStoreAppRequest($oauth_app_id, $create_app_store_app)
     {
-        // verify the required parameter 'create_location_input' is set
-        if ($create_location_input === null || (is_array($create_location_input) && count($create_location_input) === 0)) {
+        // verify the required parameter 'oauth_app_id' is set
+        if ($oauth_app_id === null || (is_array($oauth_app_id) && count($oauth_app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $create_location_input when calling createLocation'
+                'Missing the required parameter $oauth_app_id when calling createAppStoreApp'
             );
         }
-        // verify the required parameter 'location_area_id' is set
-        if ($location_area_id === null || (is_array($location_area_id) && count($location_area_id) === 0)) {
+        // verify the required parameter 'create_app_store_app' is set
+        if ($create_app_store_app === null || (is_array($create_app_store_app) && count($create_app_store_app) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $location_area_id when calling createLocation'
-            );
-        }
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling createLocation'
-            );
-        }
-        // verify the required parameter 'store_id' is set
-        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling createLocation'
+                'Missing the required parameter $create_app_store_app when calling createAppStoreApp'
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location';
+        $resourcePath = '/api/v1.0/oauthclients/{oauthAppId}/appstore/apps';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -350,34 +613,18 @@ class LocationApi
 
 
         // path params
-        if ($location_area_id !== null) {
+        if ($oauth_app_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'locationAreaId' . '}',
-                ObjectSerializer::toPathValue($location_area_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($app_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($store_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'storeId' . '}',
-                ObjectSerializer::toPathValue($store_id),
+                '{' . 'oauthAppId' . '}',
+                ObjectSerializer::toPathValue($oauth_app_id),
                 $resourcePath
             );
         }
 
         // body params
         $_tempBody = null;
-        if (isset($create_location_input)) {
-            $_tempBody = $create_location_input;
+        if (isset($create_app_store_app)) {
+            $_tempBody = $create_app_store_app;
         }
 
         if ($multipart) {
@@ -453,43 +700,39 @@ class LocationApi
     }
 
     /**
-     * Operation deleteLocation
+     * Operation deleteAppStoreApp
      *
-     * Set a Location as deleted
+     * Delete App store app
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return \Flipdish\\Client\Models\RestApiStringResult
      */
-    public function deleteLocation($location_id, $location_area_id, $app_id, $store_id)
+    public function deleteAppStoreApp($oauth_app_id, $app_store_app_id)
     {
-        list($response) = $this->deleteLocationWithHttpInfo($location_id, $location_area_id, $app_id, $store_id);
+        list($response) = $this->deleteAppStoreAppWithHttpInfo($oauth_app_id, $app_store_app_id);
         return $response;
     }
 
     /**
-     * Operation deleteLocationWithHttpInfo
+     * Operation deleteAppStoreAppWithHttpInfo
      *
-     * Set a Location as deleted
+     * Delete App store app
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiStringResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteLocationWithHttpInfo($location_id, $location_area_id, $app_id, $store_id)
+    public function deleteAppStoreAppWithHttpInfo($oauth_app_id, $app_store_app_id)
     {
-        $returnType = 'object';
-        $request = $this->deleteLocationRequest($location_id, $location_area_id, $app_id, $store_id);
+        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
+        $request = $this->deleteAppStoreAppRequest($oauth_app_id, $app_store_app_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -540,7 +783,7 @@ class LocationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Flipdish\\Client\Models\RestApiStringResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -583,21 +826,19 @@ class LocationApi
     }
 
     /**
-     * Operation deleteLocationAsync
+     * Operation deleteAppStoreAppAsync
      *
-     * Set a Location as deleted
+     * Delete App store app
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteLocationAsync($location_id, $location_area_id, $app_id, $store_id)
+    public function deleteAppStoreAppAsync($oauth_app_id, $app_store_app_id)
     {
-        return $this->deleteLocationAsyncWithHttpInfo($location_id, $location_area_id, $app_id, $store_id)
+        return $this->deleteAppStoreAppAsyncWithHttpInfo($oauth_app_id, $app_store_app_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -606,22 +847,20 @@ class LocationApi
     }
 
     /**
-     * Operation deleteLocationAsyncWithHttpInfo
+     * Operation deleteAppStoreAppAsyncWithHttpInfo
      *
-     * Set a Location as deleted
+     * Delete App store app
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteLocationAsyncWithHttpInfo($location_id, $location_area_id, $app_id, $store_id)
+    public function deleteAppStoreAppAsyncWithHttpInfo($oauth_app_id, $app_store_app_id)
     {
-        $returnType = 'object';
-        $request = $this->deleteLocationRequest($location_id, $location_area_id, $app_id, $store_id);
+        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
+        $request = $this->deleteAppStoreAppRequest($oauth_app_id, $app_store_app_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -661,44 +900,30 @@ class LocationApi
     }
 
     /**
-     * Create request for operation 'deleteLocation'
+     * Create request for operation 'deleteAppStoreApp'
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function deleteLocationRequest($location_id, $location_area_id, $app_id, $store_id)
+    protected function deleteAppStoreAppRequest($oauth_app_id, $app_store_app_id)
     {
-        // verify the required parameter 'location_id' is set
-        if ($location_id === null || (is_array($location_id) && count($location_id) === 0)) {
+        // verify the required parameter 'oauth_app_id' is set
+        if ($oauth_app_id === null || (is_array($oauth_app_id) && count($oauth_app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $location_id when calling deleteLocation'
+                'Missing the required parameter $oauth_app_id when calling deleteAppStoreApp'
             );
         }
-        // verify the required parameter 'location_area_id' is set
-        if ($location_area_id === null || (is_array($location_area_id) && count($location_area_id) === 0)) {
+        // verify the required parameter 'app_store_app_id' is set
+        if ($app_store_app_id === null || (is_array($app_store_app_id) && count($app_store_app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $location_area_id when calling deleteLocation'
-            );
-        }
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling deleteLocation'
-            );
-        }
-        // verify the required parameter 'store_id' is set
-        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling deleteLocation'
+                'Missing the required parameter $app_store_app_id when calling deleteAppStoreApp'
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete';
+        $resourcePath = '/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -707,34 +932,18 @@ class LocationApi
 
 
         // path params
-        if ($location_id !== null) {
+        if ($oauth_app_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'locationId' . '}',
-                ObjectSerializer::toPathValue($location_id),
+                '{' . 'oauthAppId' . '}',
+                ObjectSerializer::toPathValue($oauth_app_id),
                 $resourcePath
             );
         }
         // path params
-        if ($location_area_id !== null) {
+        if ($app_store_app_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'locationAreaId' . '}',
-                ObjectSerializer::toPathValue($location_area_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($app_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($store_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'storeId' . '}',
-                ObjectSerializer::toPathValue($store_id),
+                '{' . 'appStoreAppId' . '}',
+                ObjectSerializer::toPathValue($app_store_app_id),
                 $resourcePath
             );
         }
@@ -815,45 +1024,39 @@ class LocationApi
     }
 
     /**
-     * Operation mapLocationToExternalId
+     * Operation getAppStoreApp
      *
-     * Set or unset External Location Id on a Location
+     * Get App store app
      *
-     * @param  int $location_id Id of the Location that will be mapped (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     * @param  string $external_location_id External Id to be mapped to the location (optional)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultMappedLocation
+     * @return \Flipdish\\Client\Models\AppStoreApp
      */
-    public function mapLocationToExternalId($location_id, $location_area_id, $app_id, $store_id, $external_location_id = null)
+    public function getAppStoreApp($oauth_app_id, $app_store_app_id)
     {
-        list($response) = $this->mapLocationToExternalIdWithHttpInfo($location_id, $location_area_id, $app_id, $store_id, $external_location_id);
+        list($response) = $this->getAppStoreAppWithHttpInfo($oauth_app_id, $app_store_app_id);
         return $response;
     }
 
     /**
-     * Operation mapLocationToExternalIdWithHttpInfo
+     * Operation getAppStoreAppWithHttpInfo
      *
-     * Set or unset External Location Id on a Location
+     * Get App store app
      *
-     * @param  int $location_id Id of the Location that will be mapped (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     * @param  string $external_location_id External Id to be mapped to the location (optional)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultMappedLocation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\AppStoreApp, HTTP status code, HTTP response headers (array of strings)
      */
-    public function mapLocationToExternalIdWithHttpInfo($location_id, $location_area_id, $app_id, $store_id, $external_location_id = null)
+    public function getAppStoreAppWithHttpInfo($oauth_app_id, $app_store_app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultMappedLocation';
-        $request = $this->mapLocationToExternalIdRequest($location_id, $location_area_id, $app_id, $store_id, $external_location_id);
+        $returnType = '\Flipdish\\Client\Models\AppStoreApp';
+        $request = $this->getAppStoreAppRequest($oauth_app_id, $app_store_app_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -904,7 +1107,7 @@ class LocationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultMappedLocation',
+                        '\Flipdish\\Client\Models\AppStoreApp',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -947,22 +1150,19 @@ class LocationApi
     }
 
     /**
-     * Operation mapLocationToExternalIdAsync
+     * Operation getAppStoreAppAsync
      *
-     * Set or unset External Location Id on a Location
+     * Get App store app
      *
-     * @param  int $location_id Id of the Location that will be mapped (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     * @param  string $external_location_id External Id to be mapped to the location (optional)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function mapLocationToExternalIdAsync($location_id, $location_area_id, $app_id, $store_id, $external_location_id = null)
+    public function getAppStoreAppAsync($oauth_app_id, $app_store_app_id)
     {
-        return $this->mapLocationToExternalIdAsyncWithHttpInfo($location_id, $location_area_id, $app_id, $store_id, $external_location_id)
+        return $this->getAppStoreAppAsyncWithHttpInfo($oauth_app_id, $app_store_app_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -971,23 +1171,20 @@ class LocationApi
     }
 
     /**
-     * Operation mapLocationToExternalIdAsyncWithHttpInfo
+     * Operation getAppStoreAppAsyncWithHttpInfo
      *
-     * Set or unset External Location Id on a Location
+     * Get App store app
      *
-     * @param  int $location_id Id of the Location that will be mapped (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     * @param  string $external_location_id External Id to be mapped to the location (optional)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function mapLocationToExternalIdAsyncWithHttpInfo($location_id, $location_area_id, $app_id, $store_id, $external_location_id = null)
+    public function getAppStoreAppAsyncWithHttpInfo($oauth_app_id, $app_store_app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultMappedLocation';
-        $request = $this->mapLocationToExternalIdRequest($location_id, $location_area_id, $app_id, $store_id, $external_location_id);
+        $returnType = '\Flipdish\\Client\Models\AppStoreApp';
+        $request = $this->getAppStoreAppRequest($oauth_app_id, $app_store_app_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1027,85 +1224,50 @@ class LocationApi
     }
 
     /**
-     * Create request for operation 'mapLocationToExternalId'
+     * Create request for operation 'getAppStoreApp'
      *
-     * @param  int $location_id Id of the Location that will be mapped (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     * @param  string $external_location_id External Id to be mapped to the location (optional)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function mapLocationToExternalIdRequest($location_id, $location_area_id, $app_id, $store_id, $external_location_id = null)
+    protected function getAppStoreAppRequest($oauth_app_id, $app_store_app_id)
     {
-        // verify the required parameter 'location_id' is set
-        if ($location_id === null || (is_array($location_id) && count($location_id) === 0)) {
+        // verify the required parameter 'oauth_app_id' is set
+        if ($oauth_app_id === null || (is_array($oauth_app_id) && count($oauth_app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $location_id when calling mapLocationToExternalId'
+                'Missing the required parameter $oauth_app_id when calling getAppStoreApp'
             );
         }
-        // verify the required parameter 'location_area_id' is set
-        if ($location_area_id === null || (is_array($location_area_id) && count($location_area_id) === 0)) {
+        // verify the required parameter 'app_store_app_id' is set
+        if ($app_store_app_id === null || (is_array($app_store_app_id) && count($app_store_app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $location_area_id when calling mapLocationToExternalId'
-            );
-        }
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling mapLocationToExternalId'
-            );
-        }
-        // verify the required parameter 'store_id' is set
-        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling mapLocationToExternalId'
+                'Missing the required parameter $app_store_app_id when calling getAppStoreApp'
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external';
+        $resourcePath = '/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if ($external_location_id !== null) {
-            $queryParams['externalLocationId'] = ObjectSerializer::toQueryValue($external_location_id);
-        }
 
         // path params
-        if ($location_id !== null) {
+        if ($oauth_app_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'locationId' . '}',
-                ObjectSerializer::toPathValue($location_id),
+                '{' . 'oauthAppId' . '}',
+                ObjectSerializer::toPathValue($oauth_app_id),
                 $resourcePath
             );
         }
         // path params
-        if ($location_area_id !== null) {
+        if ($app_store_app_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'locationAreaId' . '}',
-                ObjectSerializer::toPathValue($location_area_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($app_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($store_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'storeId' . '}',
-                ObjectSerializer::toPathValue($store_id),
+                '{' . 'appStoreAppId' . '}',
+                ObjectSerializer::toPathValue($app_store_app_id),
                 $resourcePath
             );
         }
@@ -1178,7 +1340,7 @@ class LocationApi
 
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
-            'POST',
+            'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
@@ -1186,45 +1348,40 @@ class LocationApi
     }
 
     /**
-     * Operation moveLocation
+     * Operation updateAppStoreApp
      *
-     * Move a Location to a different location Area
+     * Update App store app
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  int $new_location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return void
      */
-    public function moveLocation($location_id, $location_area_id, $new_location_area_id, $app_id, $store_id)
+    public function updateAppStoreApp($oauth_app_id, $app_store_app_id, $app_store_app)
     {
-        list($response) = $this->moveLocationWithHttpInfo($location_id, $location_area_id, $new_location_area_id, $app_id, $store_id);
-        return $response;
+        $this->updateAppStoreAppWithHttpInfo($oauth_app_id, $app_store_app_id, $app_store_app);
     }
 
     /**
-     * Operation moveLocationWithHttpInfo
+     * Operation updateAppStoreAppWithHttpInfo
      *
-     * Move a Location to a different location Area
+     * Update App store app
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  int $new_location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function moveLocationWithHttpInfo($location_id, $location_area_id, $new_location_area_id, $app_id, $store_id)
+    public function updateAppStoreAppWithHttpInfo($oauth_app_id, $app_store_app_id, $app_store_app)
     {
-        $returnType = 'object';
-        $request = $this->moveLocationRequest($location_id, $location_area_id, $new_location_area_id, $app_id, $store_id);
+        $returnType = '';
+        $request = $this->updateAppStoreAppRequest($oauth_app_id, $app_store_app_id, $app_store_app);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1254,32 +1411,10 @@ class LocationApi
                 );
             }
 
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
+            return [null, $statusCode, $response->getHeaders()];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1318,22 +1453,20 @@ class LocationApi
     }
 
     /**
-     * Operation moveLocationAsync
+     * Operation updateAppStoreAppAsync
      *
-     * Move a Location to a different location Area
+     * Update App store app
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  int $new_location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function moveLocationAsync($location_id, $location_area_id, $new_location_area_id, $app_id, $store_id)
+    public function updateAppStoreAppAsync($oauth_app_id, $app_store_app_id, $app_store_app)
     {
-        return $this->moveLocationAsyncWithHttpInfo($location_id, $location_area_id, $new_location_area_id, $app_id, $store_id)
+        return $this->updateAppStoreAppAsyncWithHttpInfo($oauth_app_id, $app_store_app_id, $app_store_app)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1342,43 +1475,27 @@ class LocationApi
     }
 
     /**
-     * Operation moveLocationAsyncWithHttpInfo
+     * Operation updateAppStoreAppAsyncWithHttpInfo
      *
-     * Move a Location to a different location Area
+     * Update App store app
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  int $new_location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function moveLocationAsyncWithHttpInfo($location_id, $location_area_id, $new_location_area_id, $app_id, $store_id)
+    public function updateAppStoreAppAsyncWithHttpInfo($oauth_app_id, $app_store_app_id, $app_store_app)
     {
-        $returnType = 'object';
-        $request = $this->moveLocationRequest($location_id, $location_area_id, $new_location_area_id, $app_id, $store_id);
+        $returnType = '';
+        $request = $this->updateAppStoreAppRequest($oauth_app_id, $app_store_app_id, $app_store_app);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1398,428 +1515,37 @@ class LocationApi
     }
 
     /**
-     * Create request for operation 'moveLocation'
+     * Create request for operation 'updateAppStoreApp'
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  int $new_location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function moveLocationRequest($location_id, $location_area_id, $new_location_area_id, $app_id, $store_id)
+    protected function updateAppStoreAppRequest($oauth_app_id, $app_store_app_id, $app_store_app)
     {
-        // verify the required parameter 'location_id' is set
-        if ($location_id === null || (is_array($location_id) && count($location_id) === 0)) {
+        // verify the required parameter 'oauth_app_id' is set
+        if ($oauth_app_id === null || (is_array($oauth_app_id) && count($oauth_app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $location_id when calling moveLocation'
+                'Missing the required parameter $oauth_app_id when calling updateAppStoreApp'
             );
         }
-        // verify the required parameter 'location_area_id' is set
-        if ($location_area_id === null || (is_array($location_area_id) && count($location_area_id) === 0)) {
+        // verify the required parameter 'app_store_app_id' is set
+        if ($app_store_app_id === null || (is_array($app_store_app_id) && count($app_store_app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $location_area_id when calling moveLocation'
+                'Missing the required parameter $app_store_app_id when calling updateAppStoreApp'
             );
         }
-        // verify the required parameter 'new_location_area_id' is set
-        if ($new_location_area_id === null || (is_array($new_location_area_id) && count($new_location_area_id) === 0)) {
+        // verify the required parameter 'app_store_app' is set
+        if ($app_store_app === null || (is_array($app_store_app) && count($app_store_app) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $new_location_area_id when calling moveLocation'
-            );
-        }
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling moveLocation'
-            );
-        }
-        // verify the required parameter 'store_id' is set
-        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling moveLocation'
+                'Missing the required parameter $app_store_app when calling updateAppStoreApp'
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if ($new_location_area_id !== null) {
-            $queryParams['newLocationAreaId'] = ObjectSerializer::toQueryValue($new_location_area_id);
-        }
-
-        // path params
-        if ($location_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'locationId' . '}',
-                ObjectSerializer::toPathValue($location_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($location_area_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'locationAreaId' . '}',
-                ObjectSerializer::toPathValue($location_area_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($app_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($store_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'storeId' . '}',
-                ObjectSerializer::toPathValue($store_id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation updateLocation
-     *
-     * Update a Location i.e: Table, Hotel Room, Car park space
-     *
-     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input Input data for updating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  int $location_id Id of the Location to be updated (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultLocationAreaLocation
-     */
-    public function updateLocation($update_location_input, $location_area_id, $location_id, $app_id, $store_id)
-    {
-        list($response) = $this->updateLocationWithHttpInfo($update_location_input, $location_area_id, $location_id, $app_id, $store_id);
-        return $response;
-    }
-
-    /**
-     * Operation updateLocationWithHttpInfo
-     *
-     * Update a Location i.e: Table, Hotel Room, Car park space
-     *
-     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input Input data for updating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  int $location_id Id of the Location to be updated (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultLocationAreaLocation, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function updateLocationWithHttpInfo($update_location_input, $location_area_id, $location_id, $app_id, $store_id)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultLocationAreaLocation';
-        $request = $this->updateLocationRequest($update_location_input, $location_area_id, $location_id, $app_id, $store_id);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultLocationAreaLocation',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation updateLocationAsync
-     *
-     * Update a Location i.e: Table, Hotel Room, Car park space
-     *
-     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input Input data for updating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  int $location_id Id of the Location to be updated (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateLocationAsync($update_location_input, $location_area_id, $location_id, $app_id, $store_id)
-    {
-        return $this->updateLocationAsyncWithHttpInfo($update_location_input, $location_area_id, $location_id, $app_id, $store_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation updateLocationAsyncWithHttpInfo
-     *
-     * Update a Location i.e: Table, Hotel Room, Car park space
-     *
-     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input Input data for updating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  int $location_id Id of the Location to be updated (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateLocationAsyncWithHttpInfo($update_location_input, $location_area_id, $location_id, $app_id, $store_id)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultLocationAreaLocation';
-        $request = $this->updateLocationRequest($update_location_input, $location_area_id, $location_id, $app_id, $store_id);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'updateLocation'
-     *
-     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input Input data for updating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  int $location_id Id of the Location to be updated (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function updateLocationRequest($update_location_input, $location_area_id, $location_id, $app_id, $store_id)
-    {
-        // verify the required parameter 'update_location_input' is set
-        if ($update_location_input === null || (is_array($update_location_input) && count($update_location_input) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $update_location_input when calling updateLocation'
-            );
-        }
-        // verify the required parameter 'location_area_id' is set
-        if ($location_area_id === null || (is_array($location_area_id) && count($location_area_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $location_area_id when calling updateLocation'
-            );
-        }
-        // verify the required parameter 'location_id' is set
-        if ($location_id === null || (is_array($location_id) && count($location_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $location_id when calling updateLocation'
-            );
-        }
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling updateLocation'
-            );
-        }
-        // verify the required parameter 'store_id' is set
-        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling updateLocation'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update';
+        $resourcePath = '/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1828,42 +1554,26 @@ class LocationApi
 
 
         // path params
-        if ($location_area_id !== null) {
+        if ($oauth_app_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'locationAreaId' . '}',
-                ObjectSerializer::toPathValue($location_area_id),
+                '{' . 'oauthAppId' . '}',
+                ObjectSerializer::toPathValue($oauth_app_id),
                 $resourcePath
             );
         }
         // path params
-        if ($location_id !== null) {
+        if ($app_store_app_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'locationId' . '}',
-                ObjectSerializer::toPathValue($location_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($app_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($store_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'storeId' . '}',
-                ObjectSerializer::toPathValue($store_id),
+                '{' . 'appStoreAppId' . '}',
+                ObjectSerializer::toPathValue($app_store_app_id),
                 $resourcePath
             );
         }
 
         // body params
         $_tempBody = null;
-        if (isset($update_location_input)) {
-            $_tempBody = $update_location_input;
+        if (isset($app_store_app)) {
+            $_tempBody = $app_store_app;
         }
 
         if ($multipart) {
@@ -1874,6 +1584,301 @@ class LocationApi
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json', 'text/json', 'application/xml', 'text/xml'],
                 ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'PUT',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uploadAppStoreAppLogo
+     *
+     * Upload the App store app logo \\ icon
+     *
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \SplFileObject $image App Store App Logo (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function uploadAppStoreAppLogo($oauth_app_id, $app_store_app_id, $image)
+    {
+        $this->uploadAppStoreAppLogoWithHttpInfo($oauth_app_id, $app_store_app_id, $image);
+    }
+
+    /**
+     * Operation uploadAppStoreAppLogoWithHttpInfo
+     *
+     * Upload the App store app logo \\ icon
+     *
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \SplFileObject $image App Store App Logo (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uploadAppStoreAppLogoWithHttpInfo($oauth_app_id, $app_store_app_id, $image)
+    {
+        $returnType = '';
+        $request = $this->uploadAppStoreAppLogoRequest($oauth_app_id, $app_store_app_id, $image);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uploadAppStoreAppLogoAsync
+     *
+     * Upload the App store app logo \\ icon
+     *
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \SplFileObject $image App Store App Logo (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uploadAppStoreAppLogoAsync($oauth_app_id, $app_store_app_id, $image)
+    {
+        return $this->uploadAppStoreAppLogoAsyncWithHttpInfo($oauth_app_id, $app_store_app_id, $image)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uploadAppStoreAppLogoAsyncWithHttpInfo
+     *
+     * Upload the App store app logo \\ icon
+     *
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \SplFileObject $image App Store App Logo (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uploadAppStoreAppLogoAsyncWithHttpInfo($oauth_app_id, $app_store_app_id, $image)
+    {
+        $returnType = '';
+        $request = $this->uploadAppStoreAppLogoRequest($oauth_app_id, $app_store_app_id, $image);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uploadAppStoreAppLogo'
+     *
+     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $app_store_app_id App store app id (required)
+     * @param  \SplFileObject $image App Store App Logo (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function uploadAppStoreAppLogoRequest($oauth_app_id, $app_store_app_id, $image)
+    {
+        // verify the required parameter 'oauth_app_id' is set
+        if ($oauth_app_id === null || (is_array($oauth_app_id) && count($oauth_app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $oauth_app_id when calling uploadAppStoreAppLogo'
+            );
+        }
+        // verify the required parameter 'app_store_app_id' is set
+        if ($app_store_app_id === null || (is_array($app_store_app_id) && count($app_store_app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_store_app_id when calling uploadAppStoreAppLogo'
+            );
+        }
+        // verify the required parameter 'image' is set
+        if ($image === null || (is_array($image) && count($image) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $image when calling uploadAppStoreAppLogo'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($oauth_app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'oauthAppId' . '}',
+                ObjectSerializer::toPathValue($oauth_app_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($app_store_app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appStoreAppId' . '}',
+                ObjectSerializer::toPathValue($app_store_app_id),
+                $resourcePath
+            );
+        }
+
+        // form params
+        if ($image !== null) {
+            $multipart = true;
+            $formParams['Image'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($image), 'rb');
+        }
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                ['multipart/form-data']
             );
         }
 

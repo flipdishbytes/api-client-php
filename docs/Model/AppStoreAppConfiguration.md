@@ -11,13 +11,13 @@ Name | Type | Description | Notes
 **settings** | [**\Flipdish\\Client\Models\Setting[]**](Setting.md) | Settings | [optional] 
 **verification_status** | **string** | Application verification status | 
 **logo** | **string** | Logo | [optional] 
+**o_auth_app_id** | **string** | OAuth App identifier | 
 **details** | **string** | Details | 
 **configuration_type** | **string** | Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt; | 
 **store_selector_type** | **string** | Store selector type | 
 **field_groups** | [**\Flipdish\\Client\Models\FieldGroup[]**](FieldGroup.md) | Field groups | [optional] 
 **setup_instructions** | **string** | Setup instructions | [optional] 
 **external_setup_link** | **string** | External setup link | [optional] 
-**o_auth_app_id** | **string** | OAuth app id | 
 **teammate_app_access_level** | **string** | Teammate app access level | [optional] 
 **permissions_type** | **string** | Permissions type | 
 **name** | **string** | Name | 

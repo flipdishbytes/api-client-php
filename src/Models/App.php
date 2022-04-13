@@ -377,14 +377,6 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_VIEW_EXTERNAL_AUDIT_LOGS = 'ViewExternalAuditLogs';
     const APP_RESOURCE_SET_CREATE_EXTERNAL_AUDIT_LOG_EVENTS = 'CreateExternalAuditLogEvents';
     const APP_RESOURCE_SET_VIEW_CATALOG_AUDIT_LOGS = 'ViewCatalogAuditLogs';
-    const APP_RESOURCE_SET_CREATE_APP_STORE_APP = 'CreateAppStoreApp';
-    const APP_RESOURCE_SET_VIEW_APP_STORE_APP = 'ViewAppStoreApp';
-    const APP_RESOURCE_SET_UPDATE_APP_STORE_APP = 'UpdateAppStoreApp';
-    const APP_RESOURCE_SET_DELETE_APP_STORE_APP = 'DeleteAppStoreApp';
-    const APP_RESOURCE_SET_CREATE_APP_STORE_APP_CONFIGURATION = 'CreateAppStoreAppConfiguration';
-    const APP_RESOURCE_SET_VIEW_APP_STORE_APP_CONFIGURATION = 'ViewAppStoreAppConfiguration';
-    const APP_RESOURCE_SET_UPDATE_APP_STORE_APP_CONFIGURATION = 'UpdateAppStoreAppConfiguration';
-    const APP_RESOURCE_SET_DELETE_APP_STORE_APP_CONFIGURATION = 'DeleteAppStoreAppConfiguration';
     const APP_RESOURCE_SET_SEND_PUSH_NOTIFICATION_TO_CUSTOMER = 'SendPushNotificationToCustomer';
     const APP_RESOURCE_SET_INVITE_DRIVER_TO_APP = 'InviteDriverToApp';
     const APP_RESOURCE_SET_GET_DRIVER_FOR_APP = 'GetDriverForApp';
@@ -396,6 +388,10 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_VIEW_CHANNELS = 'ViewChannels';
     const APP_RESOURCE_SET_VIEW_ONBOARDING = 'ViewOnboarding';
     const APP_RESOURCE_SET_UPDATE_ONBOARDING = 'UpdateOnboarding';
+    const APP_RESOURCE_SET_CREATE_APP_STORE_APP_CONFIGURATION = 'CreateAppStoreAppConfiguration';
+    const APP_RESOURCE_SET_VIEW_APP_STORE_APP_CONFIGURATION = 'ViewAppStoreAppConfiguration';
+    const APP_RESOURCE_SET_UPDATE_APP_STORE_APP_CONFIGURATION = 'UpdateAppStoreAppConfiguration';
+    const APP_RESOURCE_SET_DELETE_APP_STORE_APP_CONFIGURATION = 'DeleteAppStoreAppConfiguration';
     const APPLICATION_CATEGORY_RESTAURANT = 'Restaurant';
     const APPLICATION_CATEGORY_CAFE = 'Cafe';
     const APPLICATION_CATEGORY_CONVENIENCE = 'Convenience';
@@ -549,14 +545,6 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_VIEW_EXTERNAL_AUDIT_LOGS,
             self::APP_RESOURCE_SET_CREATE_EXTERNAL_AUDIT_LOG_EVENTS,
             self::APP_RESOURCE_SET_VIEW_CATALOG_AUDIT_LOGS,
-            self::APP_RESOURCE_SET_CREATE_APP_STORE_APP,
-            self::APP_RESOURCE_SET_VIEW_APP_STORE_APP,
-            self::APP_RESOURCE_SET_UPDATE_APP_STORE_APP,
-            self::APP_RESOURCE_SET_DELETE_APP_STORE_APP,
-            self::APP_RESOURCE_SET_CREATE_APP_STORE_APP_CONFIGURATION,
-            self::APP_RESOURCE_SET_VIEW_APP_STORE_APP_CONFIGURATION,
-            self::APP_RESOURCE_SET_UPDATE_APP_STORE_APP_CONFIGURATION,
-            self::APP_RESOURCE_SET_DELETE_APP_STORE_APP_CONFIGURATION,
             self::APP_RESOURCE_SET_SEND_PUSH_NOTIFICATION_TO_CUSTOMER,
             self::APP_RESOURCE_SET_INVITE_DRIVER_TO_APP,
             self::APP_RESOURCE_SET_GET_DRIVER_FOR_APP,
@@ -568,6 +556,10 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_VIEW_CHANNELS,
             self::APP_RESOURCE_SET_VIEW_ONBOARDING,
             self::APP_RESOURCE_SET_UPDATE_ONBOARDING,
+            self::APP_RESOURCE_SET_CREATE_APP_STORE_APP_CONFIGURATION,
+            self::APP_RESOURCE_SET_VIEW_APP_STORE_APP_CONFIGURATION,
+            self::APP_RESOURCE_SET_UPDATE_APP_STORE_APP_CONFIGURATION,
+            self::APP_RESOURCE_SET_DELETE_APP_STORE_APP_CONFIGURATION,
         ];
     }
     

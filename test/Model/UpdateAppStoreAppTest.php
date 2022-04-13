@@ -119,13 +119,6 @@ class UpdateAppStoreAppTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "o_auth_app_id"
-     */
-    public function testPropertyOAuthAppId()
-    {
-    }
-
-    /**
      * Test attribute "teammate_app_access_level"
      */
     public function testPropertyTeammateAppAccessLevel()
