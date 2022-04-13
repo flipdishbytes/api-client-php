@@ -154,16 +154,16 @@ class CreateAppStoreAppTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "tags"
+     * Test attribute "categories"
      */
-    public function testPropertyTags()
+    public function testPropertyCategories()
     {
     }
 
     /**
-     * Test attribute "regions"
+     * Test attribute "countries"
      */
-    public function testPropertyRegions()
+    public function testPropertyCountries()
     {
     }
 

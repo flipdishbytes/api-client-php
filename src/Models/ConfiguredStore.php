@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfiguredPhysicalRestaurant
+ * ConfiguredStore
  *
  * PHP version 5
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * ConfiguredPhysicalRestaurant Class Doc Comment
+ * ConfiguredStore Class Doc Comment
  *
  * @category Class
  * @description Configured stores
@@ -41,7 +41,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
+class ConfiguredStore implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class ConfiguredPhysicalRestaurant implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ConfiguredPhysicalRestaurant';
+    protected static $swaggerModelName = 'ConfiguredStore';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -60,7 +60,7 @@ class UpdateAppStoreAppConfigurationWebhookDTO implements ModelInterface, ArrayA
     protected static $swaggerTypes = [
         'id' => 'string',
         'is_enabled' => 'bool',
-        'physical_restaurants' => 'int[]',
+        'store_ids' => 'int[]',
         'settings' => '\Flipdish\\Client\Models\Setting[]'
     ];
 
@@ -72,7 +72,7 @@ class UpdateAppStoreAppConfigurationWebhookDTO implements ModelInterface, ArrayA
     protected static $swaggerFormats = [
         'id' => null,
         'is_enabled' => null,
-        'physical_restaurants' => 'int32',
+        'store_ids' => 'int32',
         'settings' => null
     ];
 
@@ -105,7 +105,7 @@ class UpdateAppStoreAppConfigurationWebhookDTO implements ModelInterface, ArrayA
     protected static $attributeMap = [
         'id' => 'Id',
         'is_enabled' => 'IsEnabled',
-        'physical_restaurants' => 'PhysicalRestaurants',
+        'store_ids' => 'StoreIds',
         'settings' => 'Settings'
     ];
 
@@ -117,7 +117,7 @@ class UpdateAppStoreAppConfigurationWebhookDTO implements ModelInterface, ArrayA
     protected static $setters = [
         'id' => 'setId',
         'is_enabled' => 'setIsEnabled',
-        'physical_restaurants' => 'setPhysicalRestaurants',
+        'store_ids' => 'setStoreIds',
         'settings' => 'setSettings'
     ];
 
@@ -129,7 +129,7 @@ class UpdateAppStoreAppConfigurationWebhookDTO implements ModelInterface, ArrayA
     protected static $getters = [
         'id' => 'getId',
         'is_enabled' => 'getIsEnabled',
-        'physical_restaurants' => 'getPhysicalRestaurants',
+        'store_ids' => 'getStoreIds',
         'settings' => 'getSettings'
     ];
 
@@ -195,7 +195,7 @@ class UpdateAppStoreAppConfigurationWebhookDTO implements ModelInterface, ArrayA
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
-        $this->container['physical_restaurants'] = isset($data['physical_restaurants']) ? $data['physical_restaurants'] : null;
+        $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
         $this->container['settings'] = isset($data['settings']) ? $data['settings'] : null;
     }
 
@@ -278,25 +278,25 @@ class UpdateAppStoreAppConfigurationWebhookDTO implements ModelInterface, ArrayA
     }
 
     /**
-     * Gets physical_restaurants
+     * Gets store_ids
      *
      * @return int[]
      */
-    public function getPhysicalRestaurants()
+    public function getStoreIds()
     {
-        return $this->container['physical_restaurants'];
+        return $this->container['store_ids'];
     }
 
     /**
-     * Sets physical_restaurants
+     * Sets store_ids
      *
-     * @param int[] $physical_restaurants Store id's
+     * @param int[] $store_ids Store id's
      *
      * @return $this
      */
-    public function setPhysicalRestaurants($physical_restaurants)
+    public function setStoreIds($store_ids)
     {
-        $this->container['physical_restaurants'] = $physical_restaurants;
+        $this->container['store_ids'] = $store_ids;
 
         return $this;
     }

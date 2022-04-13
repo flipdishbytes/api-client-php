@@ -62,7 +62,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'app_id' => 'string',
         'app_store_app_id' => 'string',
         'is_enabled' => 'bool',
-        'physical_restaurants' => 'int[]',
+        'store_ids' => 'int[]',
         'settings' => '\Flipdish\\Client\Models\Setting[]',
         'verification_status' => 'string',
         'logo' => 'string',
@@ -77,8 +77,8 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'permissions_type' => 'string',
         'name' => 'string',
         'description' => 'string',
-        'tags' => 'string[]',
-        'regions' => 'string[]',
+        'categories' => 'string[]',
+        'countries' => 'string[]',
         'developer_name' => 'string'
     ];
 
@@ -92,7 +92,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'app_id' => null,
         'app_store_app_id' => null,
         'is_enabled' => null,
-        'physical_restaurants' => 'int32',
+        'store_ids' => 'int32',
         'settings' => null,
         'verification_status' => null,
         'logo' => null,
@@ -107,8 +107,8 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'permissions_type' => null,
         'name' => null,
         'description' => null,
-        'tags' => null,
-        'regions' => null,
+        'categories' => null,
+        'countries' => null,
         'developer_name' => null
     ];
 
@@ -143,7 +143,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'app_id' => 'AppId',
         'app_store_app_id' => 'AppStoreAppId',
         'is_enabled' => 'IsEnabled',
-        'physical_restaurants' => 'PhysicalRestaurants',
+        'store_ids' => 'StoreIds',
         'settings' => 'Settings',
         'verification_status' => 'VerificationStatus',
         'logo' => 'Logo',
@@ -158,8 +158,8 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'permissions_type' => 'PermissionsType',
         'name' => 'Name',
         'description' => 'Description',
-        'tags' => 'Tags',
-        'regions' => 'Regions',
+        'categories' => 'Categories',
+        'countries' => 'Countries',
         'developer_name' => 'DeveloperName'
     ];
 
@@ -173,7 +173,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'app_id' => 'setAppId',
         'app_store_app_id' => 'setAppStoreAppId',
         'is_enabled' => 'setIsEnabled',
-        'physical_restaurants' => 'setPhysicalRestaurants',
+        'store_ids' => 'setStoreIds',
         'settings' => 'setSettings',
         'verification_status' => 'setVerificationStatus',
         'logo' => 'setLogo',
@@ -188,8 +188,8 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'permissions_type' => 'setPermissionsType',
         'name' => 'setName',
         'description' => 'setDescription',
-        'tags' => 'setTags',
-        'regions' => 'setRegions',
+        'categories' => 'setCategories',
+        'countries' => 'setCountries',
         'developer_name' => 'setDeveloperName'
     ];
 
@@ -203,7 +203,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'app_id' => 'getAppId',
         'app_store_app_id' => 'getAppStoreAppId',
         'is_enabled' => 'getIsEnabled',
-        'physical_restaurants' => 'getPhysicalRestaurants',
+        'store_ids' => 'getStoreIds',
         'settings' => 'getSettings',
         'verification_status' => 'getVerificationStatus',
         'logo' => 'getLogo',
@@ -218,8 +218,8 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'permissions_type' => 'getPermissionsType',
         'name' => 'getName',
         'description' => 'getDescription',
-        'tags' => 'getTags',
-        'regions' => 'getRegions',
+        'categories' => 'getCategories',
+        'countries' => 'getCountries',
         'developer_name' => 'getDeveloperName'
     ];
 
@@ -281,30 +281,30 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
     const TEAMMATE_APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS = 'StoreReadOnlyAccess';
     const TEAMMATE_APP_ACCESS_LEVEL_FINANCE_MANGER = 'FinanceManger';
     const PERMISSIONS_TYPE_TEAMMATE = 'Teammate';
-    const TAGS_POINT_OF_SALE = 'PointOfSale';
-    const TAGS_DELIVERY_AND_LOGISTICS = 'DeliveryAndLogistics';
-    const TAGS_CRM = 'CRM';
-    const TAGS_GIFT_CARD = 'GiftCard';
-    const TAGS_ACCOUNTING = 'Accounting';
-    const TAGS_LOYALTY_AND_MARKETING = 'LoyaltyAndMarketing';
-    const TAGS_OTHER = 'Other';
-    const REGIONS_GB = 'GB';
-    const REGIONS_IE = 'IE';
-    const REGIONS_FR = 'FR';
-    const REGIONS_ES = 'ES';
-    const REGIONS_PT = 'PT';
-    const REGIONS_IT = 'IT';
-    const REGIONS_DE = 'DE';
-    const REGIONS_PL = 'PL';
-    const REGIONS_BE = 'BE';
-    const REGIONS_LU = 'LU';
-    const REGIONS_NL = 'NL';
-    const REGIONS_US = 'US';
-    const REGIONS_CA = 'CA';
-    const REGIONS_BG = 'BG';
-    const REGIONS_MX = 'MX';
-    const REGIONS_AU = 'AU';
-    const REGIONS_NZ = 'NZ';
+    const CATEGORIES_POINT_OF_SALE = 'PointOfSale';
+    const CATEGORIES_DELIVERY_AND_LOGISTICS = 'DeliveryAndLogistics';
+    const CATEGORIES_CRM = 'CRM';
+    const CATEGORIES_GIFT_CARD = 'GiftCard';
+    const CATEGORIES_ACCOUNTING = 'Accounting';
+    const CATEGORIES_LOYALTY_AND_MARKETING = 'LoyaltyAndMarketing';
+    const CATEGORIES_OTHER = 'Other';
+    const COUNTRIES_GB = 'GB';
+    const COUNTRIES_IE = 'IE';
+    const COUNTRIES_FR = 'FR';
+    const COUNTRIES_ES = 'ES';
+    const COUNTRIES_PT = 'PT';
+    const COUNTRIES_IT = 'IT';
+    const COUNTRIES_DE = 'DE';
+    const COUNTRIES_PL = 'PL';
+    const COUNTRIES_BE = 'BE';
+    const COUNTRIES_LU = 'LU';
+    const COUNTRIES_NL = 'NL';
+    const COUNTRIES_US = 'US';
+    const COUNTRIES_CA = 'CA';
+    const COUNTRIES_BG = 'BG';
+    const COUNTRIES_MX = 'MX';
+    const COUNTRIES_AU = 'AU';
+    const COUNTRIES_NZ = 'NZ';
     
 
     
@@ -385,16 +385,16 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
      *
      * @return string[]
      */
-    public function getTagsAllowableValues()
+    public function getCategoriesAllowableValues()
     {
         return [
-            self::TAGS_POINT_OF_SALE,
-            self::TAGS_DELIVERY_AND_LOGISTICS,
-            self::TAGS_CRM,
-            self::TAGS_GIFT_CARD,
-            self::TAGS_ACCOUNTING,
-            self::TAGS_LOYALTY_AND_MARKETING,
-            self::TAGS_OTHER,
+            self::CATEGORIES_POINT_OF_SALE,
+            self::CATEGORIES_DELIVERY_AND_LOGISTICS,
+            self::CATEGORIES_CRM,
+            self::CATEGORIES_GIFT_CARD,
+            self::CATEGORIES_ACCOUNTING,
+            self::CATEGORIES_LOYALTY_AND_MARKETING,
+            self::CATEGORIES_OTHER,
         ];
     }
     
@@ -403,26 +403,26 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
      *
      * @return string[]
      */
-    public function getRegionsAllowableValues()
+    public function getCountriesAllowableValues()
     {
         return [
-            self::REGIONS_GB,
-            self::REGIONS_IE,
-            self::REGIONS_FR,
-            self::REGIONS_ES,
-            self::REGIONS_PT,
-            self::REGIONS_IT,
-            self::REGIONS_DE,
-            self::REGIONS_PL,
-            self::REGIONS_BE,
-            self::REGIONS_LU,
-            self::REGIONS_NL,
-            self::REGIONS_US,
-            self::REGIONS_CA,
-            self::REGIONS_BG,
-            self::REGIONS_MX,
-            self::REGIONS_AU,
-            self::REGIONS_NZ,
+            self::COUNTRIES_GB,
+            self::COUNTRIES_IE,
+            self::COUNTRIES_FR,
+            self::COUNTRIES_ES,
+            self::COUNTRIES_PT,
+            self::COUNTRIES_IT,
+            self::COUNTRIES_DE,
+            self::COUNTRIES_PL,
+            self::COUNTRIES_BE,
+            self::COUNTRIES_LU,
+            self::COUNTRIES_NL,
+            self::COUNTRIES_US,
+            self::COUNTRIES_CA,
+            self::COUNTRIES_BG,
+            self::COUNTRIES_MX,
+            self::COUNTRIES_AU,
+            self::COUNTRIES_NZ,
         ];
     }
     
@@ -446,7 +446,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
         $this->container['app_store_app_id'] = isset($data['app_store_app_id']) ? $data['app_store_app_id'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
-        $this->container['physical_restaurants'] = isset($data['physical_restaurants']) ? $data['physical_restaurants'] : null;
+        $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
         $this->container['settings'] = isset($data['settings']) ? $data['settings'] : null;
         $this->container['verification_status'] = isset($data['verification_status']) ? $data['verification_status'] : null;
         $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
@@ -461,8 +461,8 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         $this->container['permissions_type'] = isset($data['permissions_type']) ? $data['permissions_type'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['regions'] = isset($data['regions']) ? $data['regions'] : null;
+        $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
+        $this->container['countries'] = isset($data['countries']) ? $data['countries'] : null;
         $this->container['developer_name'] = isset($data['developer_name']) ? $data['developer_name'] : null;
     }
 
@@ -551,11 +551,11 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
         }
-        if ($this->container['tags'] === null) {
-            $invalidProperties[] = "'tags' can't be null";
+        if ($this->container['categories'] === null) {
+            $invalidProperties[] = "'categories' can't be null";
         }
-        if ($this->container['regions'] === null) {
-            $invalidProperties[] = "'regions' can't be null";
+        if ($this->container['countries'] === null) {
+            $invalidProperties[] = "'countries' can't be null";
         }
         return $invalidProperties;
     }
@@ -669,25 +669,25 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets physical_restaurants
+     * Gets store_ids
      *
      * @return int[]
      */
-    public function getPhysicalRestaurants()
+    public function getStoreIds()
     {
-        return $this->container['physical_restaurants'];
+        return $this->container['store_ids'];
     }
 
     /**
-     * Sets physical_restaurants
+     * Sets store_ids
      *
-     * @param int[] $physical_restaurants Stores id's
+     * @param int[] $store_ids Stores id's
      *
      * @return $this
      */
-    public function setPhysicalRestaurants($physical_restaurants)
+    public function setStoreIds($store_ids)
     {
-        $this->container['physical_restaurants'] = $physical_restaurants;
+        $this->container['store_ids'] = $store_ids;
 
         return $this;
     }
@@ -1074,67 +1074,67 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets tags
+     * Gets categories
      *
      * @return string[]
      */
-    public function getTags()
+    public function getCategories()
     {
-        return $this->container['tags'];
+        return $this->container['categories'];
     }
 
     /**
-     * Sets tags
+     * Sets categories
      *
-     * @param string[] $tags Tags
+     * @param string[] $categories Categories
      *
      * @return $this
      */
-    public function setTags($tags)
+    public function setCategories($categories)
     {
-        $allowedValues = $this->getTagsAllowableValues();
-        if (array_diff($tags, $allowedValues)) {
+        $allowedValues = $this->getCategoriesAllowableValues();
+        if (array_diff($categories, $allowedValues)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'tags', must be one of '%s'",
+                    "Invalid value for 'categories', must be one of '%s'",
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['tags'] = $tags;
+        $this->container['categories'] = $categories;
 
         return $this;
     }
 
     /**
-     * Gets regions
+     * Gets countries
      *
      * @return string[]
      */
-    public function getRegions()
+    public function getCountries()
     {
-        return $this->container['regions'];
+        return $this->container['countries'];
     }
 
     /**
-     * Sets regions
+     * Sets countries
      *
-     * @param string[] $regions Regions
+     * @param string[] $countries Countries
      *
      * @return $this
      */
-    public function setRegions($regions)
+    public function setCountries($countries)
     {
-        $allowedValues = $this->getRegionsAllowableValues();
-        if (array_diff($regions, $allowedValues)) {
+        $allowedValues = $this->getCountriesAllowableValues();
+        if (array_diff($countries, $allowedValues)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'regions', must be one of '%s'",
+                    "Invalid value for 'countries', must be one of '%s'",
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['regions'] = $regions;
+        $this->container['countries'] = $countries;
 
         return $this;
     }

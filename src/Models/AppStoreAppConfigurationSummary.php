@@ -61,7 +61,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         'id' => 'string',
         'app_id' => 'string',
         'is_enabled' => 'bool',
-        'physical_restaurants' => '\Flipdish\\Client\Models\ConfiguredPhysicalRestaurant[]',
+        'stores' => '\Flipdish\\Client\Models\ConfiguredStore[]',
         'configuration_type' => 'string',
         'store_selector_type' => 'string',
         'app_store_app_id' => 'string',
@@ -80,7 +80,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         'id' => null,
         'app_id' => null,
         'is_enabled' => null,
-        'physical_restaurants' => null,
+        'stores' => null,
         'configuration_type' => null,
         'store_selector_type' => null,
         'app_store_app_id' => null,
@@ -120,7 +120,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         'id' => 'Id',
         'app_id' => 'AppId',
         'is_enabled' => 'IsEnabled',
-        'physical_restaurants' => 'PhysicalRestaurants',
+        'stores' => 'Stores',
         'configuration_type' => 'ConfigurationType',
         'store_selector_type' => 'StoreSelectorType',
         'app_store_app_id' => 'AppStoreAppId',
@@ -139,7 +139,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         'id' => 'setId',
         'app_id' => 'setAppId',
         'is_enabled' => 'setIsEnabled',
-        'physical_restaurants' => 'setPhysicalRestaurants',
+        'stores' => 'setStores',
         'configuration_type' => 'setConfigurationType',
         'store_selector_type' => 'setStoreSelectorType',
         'app_store_app_id' => 'setAppStoreAppId',
@@ -158,7 +158,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         'id' => 'getId',
         'app_id' => 'getAppId',
         'is_enabled' => 'getIsEnabled',
-        'physical_restaurants' => 'getPhysicalRestaurants',
+        'stores' => 'getStores',
         'configuration_type' => 'getConfigurationType',
         'store_selector_type' => 'getStoreSelectorType',
         'app_store_app_id' => 'getAppStoreAppId',
@@ -263,7 +263,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
-        $this->container['physical_restaurants'] = isset($data['physical_restaurants']) ? $data['physical_restaurants'] : null;
+        $this->container['stores'] = isset($data['stores']) ? $data['stores'] : null;
         $this->container['configuration_type'] = isset($data['configuration_type']) ? $data['configuration_type'] : null;
         $this->container['store_selector_type'] = isset($data['store_selector_type']) ? $data['store_selector_type'] : null;
         $this->container['app_store_app_id'] = isset($data['app_store_app_id']) ? $data['app_store_app_id'] : null;
@@ -291,8 +291,8 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         if ($this->container['is_enabled'] === null) {
             $invalidProperties[] = "'is_enabled' can't be null";
         }
-        if ($this->container['physical_restaurants'] === null) {
-            $invalidProperties[] = "'physical_restaurants' can't be null";
+        if ($this->container['stores'] === null) {
+            $invalidProperties[] = "'stores' can't be null";
         }
         $allowedValues = $this->getConfigurationTypeAllowableValues();
         if (!is_null($this->container['configuration_type']) && !in_array($this->container['configuration_type'], $allowedValues, true)) {
@@ -407,25 +407,25 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets physical_restaurants
+     * Gets stores
      *
-     * @return \Flipdish\\Client\Models\ConfiguredPhysicalRestaurant[]
+     * @return \Flipdish\\Client\Models\ConfiguredStore[]
      */
-    public function getPhysicalRestaurants()
+    public function getStores()
     {
-        return $this->container['physical_restaurants'];
+        return $this->container['stores'];
     }
 
     /**
-     * Sets physical_restaurants
+     * Sets stores
      *
-     * @param \Flipdish\\Client\Models\ConfiguredPhysicalRestaurant[] $physical_restaurants List of stores
+     * @param \Flipdish\\Client\Models\ConfiguredStore[] $stores List of stores
      *
      * @return $this
      */
-    public function setPhysicalRestaurants($physical_restaurants)
+    public function setStores($stores)
     {
-        $this->container['physical_restaurants'] = $physical_restaurants;
+        $this->container['stores'] = $stores;
 
         return $this;
     }

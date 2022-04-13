@@ -1,4 +1,4 @@
-# ConfiguredPhysicalRestaurant
+# ConfiguredStore
 
 ## Properties
 Name | Type | Description | Notes

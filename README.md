@@ -544,7 +544,7 @@ Class | Method | HTTP request | Description
  - [Channel](docs/Model/Channel.md)
  - [ChannelStoreMapping](docs/Model/ChannelStoreMapping.md)
  - [ChargebackDetails](docs/Model/ChargebackDetails.md)
- - [ConfiguredPhysicalRestaurant](docs/Model/ConfiguredPhysicalRestaurant.md)
+ - [ConfiguredStore](docs/Model/ConfiguredStore.md)
  - [Contact](docs/Model/Contact.md)
  - [Coordinates](docs/Model/Coordinates.md)
  - [CountryWithAccountFieldsDefinitions](docs/Model/CountryWithAccountFieldsDefinitions.md)

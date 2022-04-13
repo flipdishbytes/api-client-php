@@ -59,7 +59,7 @@ class UpdateAppStoreAppConfiguration implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'is_enabled' => 'bool',
-        'physical_restaurants' => 'int[]',
+        'store_ids' => 'int[]',
         'settings' => '\Flipdish\\Client\Models\Setting[]'
     ];
 
@@ -70,7 +70,7 @@ class UpdateAppStoreAppConfiguration implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'is_enabled' => null,
-        'physical_restaurants' => 'int32',
+        'store_ids' => 'int32',
         'settings' => null
     ];
 
@@ -102,7 +102,7 @@ class UpdateAppStoreAppConfiguration implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'is_enabled' => 'IsEnabled',
-        'physical_restaurants' => 'PhysicalRestaurants',
+        'store_ids' => 'StoreIds',
         'settings' => 'Settings'
     ];
 
@@ -113,7 +113,7 @@ class UpdateAppStoreAppConfiguration implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'is_enabled' => 'setIsEnabled',
-        'physical_restaurants' => 'setPhysicalRestaurants',
+        'store_ids' => 'setStoreIds',
         'settings' => 'setSettings'
     ];
 
@@ -124,7 +124,7 @@ class UpdateAppStoreAppConfiguration implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'is_enabled' => 'getIsEnabled',
-        'physical_restaurants' => 'getPhysicalRestaurants',
+        'store_ids' => 'getStoreIds',
         'settings' => 'getSettings'
     ];
 
@@ -189,7 +189,7 @@ class UpdateAppStoreAppConfiguration implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
-        $this->container['physical_restaurants'] = isset($data['physical_restaurants']) ? $data['physical_restaurants'] : null;
+        $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
         $this->container['settings'] = isset($data['settings']) ? $data['settings'] : null;
     }
 
@@ -245,25 +245,25 @@ class UpdateAppStoreAppConfiguration implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets physical_restaurants
+     * Gets store_ids
      *
      * @return int[]
      */
-    public function getPhysicalRestaurants()
+    public function getStoreIds()
     {
-        return $this->container['physical_restaurants'];
+        return $this->container['store_ids'];
     }
 
     /**
-     * Sets physical_restaurants
+     * Sets store_ids
      *
-     * @param int[] $physical_restaurants Stores id's
+     * @param int[] $store_ids Stores id's
      *
      * @return $this
      */
-    public function setPhysicalRestaurants($physical_restaurants)
+    public function setStoreIds($store_ids)
     {
-        $this->container['physical_restaurants'] = $physical_restaurants;
+        $this->container['store_ids'] = $store_ids;
 
         return $this;
     }

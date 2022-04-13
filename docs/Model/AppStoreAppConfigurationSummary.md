@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **string** | Unique App store app configuration id | 
 **app_id** | **string** | App Id | 
 **is_enabled** | **bool** | Is enabled | 
-**physical_restaurants** | [**\Flipdish\\Client\Models\ConfiguredPhysicalRestaurant[]**](ConfiguredPhysicalRestaurant.md) | List of stores | 
+**stores** | [**\Flipdish\\Client\Models\ConfiguredStore[]**](ConfiguredStore.md) | List of stores | 
 **configuration_type** | **string** | Configuration type | [optional] 
 **store_selector_type** | **string** | Store selector type | [optional] 
 **app_store_app_id** | **string** | Unique App store app id | 

@@ -91,9 +91,9 @@ class UpdateAppStoreAppConfigurationWebhookDTOTest extends \PHPUnit_Framework_Te
     }
 
     /**
-     * Test attribute "physical_restaurants"
+     * Test attribute "store_ids"
      */
-    public function testPropertyPhysicalRestaurants()
+    public function testPropertyStoreIds()
     {
     }
 

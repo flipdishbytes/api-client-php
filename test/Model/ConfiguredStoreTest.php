@@ -1,6 +1,6 @@
 <?php
 /**
- * ConfiguredPhysicalRestaurantTest
+ * ConfiguredStoreTest
  *
  * PHP version 5
  *
@@ -30,7 +30,7 @@
 namespace Flipdish\\Client;
 
 /**
- * ConfiguredPhysicalRestaurantTest Class Doc Comment
+ * ConfiguredStoreTest Class Doc Comment
  *
  * @category    Class
  * @description Configured stores
@@ -38,7 +38,7 @@ namespace Flipdish\\Client;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
+class ConfiguredStoreTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class ConfiguredPhysicalRestaurantTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ConfiguredPhysicalRestaurant"
+     * Test "ConfiguredStore"
      */
-    public function testConfiguredPhysicalRestaurant()
+    public function testConfiguredStore()
     {
     }
 

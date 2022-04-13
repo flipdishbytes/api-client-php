@@ -98,9 +98,9 @@ class AppStoreAppConfigurationSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "physical_restaurants"
+     * Test attribute "stores"
      */
-    public function testPropertyPhysicalRestaurants()
+    public function testPropertyStores()
     {
     }
 

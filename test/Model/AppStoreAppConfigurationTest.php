@@ -105,9 +105,9 @@ class AppStoreAppConfigurationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "physical_restaurants"
+     * Test attribute "store_ids"
      */
-    public function testPropertyPhysicalRestaurants()
+    public function testPropertyStoreIds()
     {
     }
 
@@ -210,16 +210,16 @@ class AppStoreAppConfigurationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "tags"
+     * Test attribute "categories"
      */
-    public function testPropertyTags()
+    public function testPropertyCategories()
     {
     }
 
     /**
-     * Test attribute "regions"
+     * Test attribute "countries"
      */
-    public function testPropertyRegions()
+    public function testPropertyCountries()
     {
     }
 
