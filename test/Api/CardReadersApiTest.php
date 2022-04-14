@@ -92,6 +92,16 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for cancelReaderAction
+     *
+     * Cancel terminals action.
+     *
+     */
+    public function testCancelReaderAction()
+    {
+    }
+
+    /**
      * Test case for generateStripeTerminalLocation
      *
      * Get Location ID for Stripe Terminal.
