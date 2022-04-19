@@ -183,6 +183,10 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'catalog_group_updated_event' => '\Flipdish\\Client\Models\CatalogGroupUpdatedEvent[]',
         'catalog_group_archived_event' => '\Flipdish\\Client\Models\CatalogGroupArchivedEvent[]',
         'store_tip_updated_event' => '\Flipdish\\Client\Models\StoreTipUpdatedEvent[]',
+        'location_area_created_event' => '\Flipdish\\Client\Models\LocationAreaCreatedEvent[]',
+        'location_area_updated_event' => '\Flipdish\\Client\Models\LocationAreaUpdatedEvent[]',
+        'location_created_event' => '\Flipdish\\Client\Models\LocationCreatedEvent[]',
+        'location_deleted_event' => '\Flipdish\\Client\Models\LocationDeletedEvent[]',
         'store_service_charge_updated_event' => '\Flipdish\\Client\Models\StoreServiceChargeUpdatedEvent[]'
     ];
 
@@ -317,6 +321,10 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'catalog_group_updated_event' => null,
         'catalog_group_archived_event' => null,
         'store_tip_updated_event' => null,
+        'location_area_created_event' => null,
+        'location_area_updated_event' => null,
+        'location_created_event' => null,
+        'location_deleted_event' => null,
         'store_service_charge_updated_event' => null
     ];
 
@@ -472,6 +480,10 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'catalog_group_updated_event' => 'CatalogGroupUpdatedEvent',
         'catalog_group_archived_event' => 'CatalogGroupArchivedEvent',
         'store_tip_updated_event' => 'StoreTipUpdatedEvent',
+        'location_area_created_event' => 'LocationAreaCreatedEvent',
+        'location_area_updated_event' => 'LocationAreaUpdatedEvent',
+        'location_created_event' => 'LocationCreatedEvent',
+        'location_deleted_event' => 'LocationDeletedEvent',
         'store_service_charge_updated_event' => 'StoreServiceChargeUpdatedEvent'
     ];
 
@@ -606,6 +618,10 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'catalog_group_updated_event' => 'setCatalogGroupUpdatedEvent',
         'catalog_group_archived_event' => 'setCatalogGroupArchivedEvent',
         'store_tip_updated_event' => 'setStoreTipUpdatedEvent',
+        'location_area_created_event' => 'setLocationAreaCreatedEvent',
+        'location_area_updated_event' => 'setLocationAreaUpdatedEvent',
+        'location_created_event' => 'setLocationCreatedEvent',
+        'location_deleted_event' => 'setLocationDeletedEvent',
         'store_service_charge_updated_event' => 'setStoreServiceChargeUpdatedEvent'
     ];
 
@@ -740,6 +756,10 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'catalog_group_updated_event' => 'getCatalogGroupUpdatedEvent',
         'catalog_group_archived_event' => 'getCatalogGroupArchivedEvent',
         'store_tip_updated_event' => 'getStoreTipUpdatedEvent',
+        'location_area_created_event' => 'getLocationAreaCreatedEvent',
+        'location_area_updated_event' => 'getLocationAreaUpdatedEvent',
+        'location_created_event' => 'getLocationCreatedEvent',
+        'location_deleted_event' => 'getLocationDeletedEvent',
         'store_service_charge_updated_event' => 'getStoreServiceChargeUpdatedEvent'
     ];
 
@@ -928,6 +948,10 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         $this->container['catalog_group_updated_event'] = isset($data['catalog_group_updated_event']) ? $data['catalog_group_updated_event'] : null;
         $this->container['catalog_group_archived_event'] = isset($data['catalog_group_archived_event']) ? $data['catalog_group_archived_event'] : null;
         $this->container['store_tip_updated_event'] = isset($data['store_tip_updated_event']) ? $data['store_tip_updated_event'] : null;
+        $this->container['location_area_created_event'] = isset($data['location_area_created_event']) ? $data['location_area_created_event'] : null;
+        $this->container['location_area_updated_event'] = isset($data['location_area_updated_event']) ? $data['location_area_updated_event'] : null;
+        $this->container['location_created_event'] = isset($data['location_created_event']) ? $data['location_created_event'] : null;
+        $this->container['location_deleted_event'] = isset($data['location_deleted_event']) ? $data['location_deleted_event'] : null;
         $this->container['store_service_charge_updated_event'] = isset($data['store_service_charge_updated_event']) ? $data['store_service_charge_updated_event'] : null;
     }
 
@@ -3951,6 +3975,102 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     public function setStoreTipUpdatedEvent($store_tip_updated_event)
     {
         $this->container['store_tip_updated_event'] = $store_tip_updated_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets location_area_created_event
+     *
+     * @return \Flipdish\\Client\Models\LocationAreaCreatedEvent[]
+     */
+    public function getLocationAreaCreatedEvent()
+    {
+        return $this->container['location_area_created_event'];
+    }
+
+    /**
+     * Sets location_area_created_event
+     *
+     * @param \Flipdish\\Client\Models\LocationAreaCreatedEvent[] $location_area_created_event LocationArea created event
+     *
+     * @return $this
+     */
+    public function setLocationAreaCreatedEvent($location_area_created_event)
+    {
+        $this->container['location_area_created_event'] = $location_area_created_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets location_area_updated_event
+     *
+     * @return \Flipdish\\Client\Models\LocationAreaUpdatedEvent[]
+     */
+    public function getLocationAreaUpdatedEvent()
+    {
+        return $this->container['location_area_updated_event'];
+    }
+
+    /**
+     * Sets location_area_updated_event
+     *
+     * @param \Flipdish\\Client\Models\LocationAreaUpdatedEvent[] $location_area_updated_event LocationArea updated event
+     *
+     * @return $this
+     */
+    public function setLocationAreaUpdatedEvent($location_area_updated_event)
+    {
+        $this->container['location_area_updated_event'] = $location_area_updated_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets location_created_event
+     *
+     * @return \Flipdish\\Client\Models\LocationCreatedEvent[]
+     */
+    public function getLocationCreatedEvent()
+    {
+        return $this->container['location_created_event'];
+    }
+
+    /**
+     * Sets location_created_event
+     *
+     * @param \Flipdish\\Client\Models\LocationCreatedEvent[] $location_created_event Location created event
+     *
+     * @return $this
+     */
+    public function setLocationCreatedEvent($location_created_event)
+    {
+        $this->container['location_created_event'] = $location_created_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets location_deleted_event
+     *
+     * @return \Flipdish\\Client\Models\LocationDeletedEvent[]
+     */
+    public function getLocationDeletedEvent()
+    {
+        return $this->container['location_deleted_event'];
+    }
+
+    /**
+     * Sets location_deleted_event
+     *
+     * @param \Flipdish\\Client\Models\LocationDeletedEvent[] $location_deleted_event Location deleted event
+     *
+     * @return $this
+     */
+    public function setLocationDeletedEvent($location_deleted_event)
+    {
+        $this->container['location_deleted_event'] = $location_deleted_event;
 
         return $this;
     }

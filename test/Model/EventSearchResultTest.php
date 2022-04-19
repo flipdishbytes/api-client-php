@@ -952,6 +952,34 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "location_area_created_event"
+     */
+    public function testPropertyLocationAreaCreatedEvent()
+    {
+    }
+
+    /**
+     * Test attribute "location_area_updated_event"
+     */
+    public function testPropertyLocationAreaUpdatedEvent()
+    {
+    }
+
+    /**
+     * Test attribute "location_created_event"
+     */
+    public function testPropertyLocationCreatedEvent()
+    {
+    }
+
+    /**
+     * Test attribute "location_deleted_event"
+     */
+    public function testPropertyLocationDeletedEvent()
+    {
+    }
+
+    /**
      * Test attribute "store_service_charge_updated_event"
      */
     public function testPropertyStoreServiceChargeUpdatedEvent()
