@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**appVerificationUpdate**](AppStoreDeveloperApi.md#appVerificationUpdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | Update App store app verification
 [**createAppStoreApp**](AppStoreDeveloperApi.md#createAppStoreApp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | Create App store app
 [**deleteAppStoreApp**](AppStoreDeveloperApi.md#deleteAppStoreApp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Delete App store app
-[**getAppStoreApp**](AppStoreDeveloperApi.md#getAppStoreApp) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Get App store app
 [**updateAppStoreApp**](AppStoreDeveloperApi.md#updateAppStoreApp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Update App store app
 [**uploadAppStoreAppLogo**](AppStoreDeveloperApi.md#uploadAppStoreAppLogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
 
@@ -166,61 +165,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **getAppStoreApp**
-> \Flipdish\\Client\Models\AppStoreApp getAppStoreApp($oauth_app_id, $app_store_app_id)
-
-Get App store app
-
-[BETA - this endpoint is under development, do not use it in your production system]
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\AppStoreDeveloperApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
-$app_store_app_id = "app_store_app_id_example"; // string | App store app id
-
-try {
-    $result = $apiInstance->getAppStoreApp($oauth_app_id, $app_store_app_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling AppStoreDeveloperApi->getAppStoreApp: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
- **app_store_app_id** | **string**| App store app id |
-
-### Return type
-
-[**\Flipdish\\Client\Models\AppStoreApp**](../Model/AppStoreApp.md)
 
 ### Authorization
 

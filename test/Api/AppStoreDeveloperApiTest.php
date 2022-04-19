@@ -102,16 +102,6 @@ class AppStoreDeveloperApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getAppStoreApp
-     *
-     * Get App store app.
-     *
-     */
-    public function testGetAppStoreApp()
-    {
-    }
-
-    /**
      * Test case for updateAppStoreApp
      *
      * Update App store app.
