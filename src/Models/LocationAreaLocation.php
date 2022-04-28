@@ -214,6 +214,15 @@ class LocationAreaLocation implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['location_id'] === null) {
+            $invalidProperties[] = "'location_id' can't be null";
+        }
+        if ($this->container['location_name'] === null) {
+            $invalidProperties[] = "'location_name' can't be null";
+        }
+        if ($this->container['display_order'] === null) {
+            $invalidProperties[] = "'display_order' can't be null";
+        }
         return $invalidProperties;
     }
 

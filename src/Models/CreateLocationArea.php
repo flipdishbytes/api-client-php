@@ -190,6 +190,9 @@ class CreateLocationArea implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['location_area_name'] === null) {
+            $invalidProperties[] = "'location_area_name' can't be null";
+        }
         return $invalidProperties;
     }
 

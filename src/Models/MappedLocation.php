@@ -196,6 +196,12 @@ class MappedLocation implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['location_id'] === null) {
+            $invalidProperties[] = "'location_id' can't be null";
+        }
+        if ($this->container['external_location_id'] === null) {
+            $invalidProperties[] = "'external_location_id' can't be null";
+        }
         return $invalidProperties;
     }
 

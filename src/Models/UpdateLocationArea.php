@@ -202,6 +202,12 @@ class UpdateLocationArea implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['location_area_id'] === null) {
+            $invalidProperties[] = "'location_area_id' can't be null";
+        }
+        if ($this->container['location_area_name'] === null) {
+            $invalidProperties[] = "'location_area_name' can't be null";
+        }
         return $invalidProperties;
     }
 

@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**location_id** | **int** | Id of the Location | [optional] 
-**location_name** | **string** | Name of the Location | [optional] 
-**display_order** | **int** | The order that the Location should be displayed on the screen | [optional] 
+**location_id** | **int** | Id of the Location | 
+**location_name** | **string** | Name of the Location | 
+**display_order** | **int** | The order that the Location should be displayed on the screen | 
 **external_location_id** | **string** | Id of the Location on an external system | [optional] 
 **is_deleted** | **bool** | Shows if the Location is deleted or not | [optional] 
 
