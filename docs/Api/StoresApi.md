@@ -33,6 +33,7 @@ Method | HTTP request | Description
 [**updateStore**](StoresApi.md#updateStore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
 [**updateStoreAddress**](StoresApi.md#updateStoreAddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
 [**updateStoreAddressCoordinates**](StoresApi.md#updateStoreAddressCoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
+[**updateStoreAddressForm**](StoresApi.md#updateStoreAddressForm) | **POST** /api/v1.0/stores/{storeId}/addressform | Update store address
 
 
 # **archiveStore**
@@ -1591,6 +1592,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiResultCoordinates**](../Model/RestApiResultCoordinates.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateStoreAddressForm**
+> object updateStoreAddressForm($store_id, $address)
+
+Update store address
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+$address = new \Flipdish\\Client\Models\StoreAddressForm(); // \Flipdish\\Client\Models\StoreAddressForm | Store address
+
+try {
+    $result = $apiInstance->updateStoreAddressForm($store_id, $address);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->updateStoreAddressForm: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+ **address** | [**\Flipdish\\Client\Models\StoreAddressForm**](../Model/StoreAddressForm.md)| Store address |
+
+### Return type
+
+**object**
 
 ### Authorization
 

@@ -105,6 +105,13 @@ class StuartSettingsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "override_webhook_url"
+     */
+    public function testPropertyOverrideWebhookUrl()
+    {
+    }
+
+    /**
      * Test attribute "minutes_to_pickup_before_than_delivery_time"
      */
     public function testPropertyMinutesToPickupBeforeThanDeliveryTime()

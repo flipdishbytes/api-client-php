@@ -62,6 +62,7 @@ class StuartSettings implements ModelInterface, ArrayAccess
         'client_secret' => 'string',
         'enabled' => 'bool',
         'webhook_url_basic_authentication' => 'string',
+        'override_webhook_url' => 'bool',
         'minutes_to_pickup_before_than_delivery_time' => 'int',
         'package_type' => 'string',
         'transport_type' => 'string',
@@ -79,6 +80,7 @@ class StuartSettings implements ModelInterface, ArrayAccess
         'client_secret' => null,
         'enabled' => null,
         'webhook_url_basic_authentication' => null,
+        'override_webhook_url' => null,
         'minutes_to_pickup_before_than_delivery_time' => 'int32',
         'package_type' => null,
         'transport_type' => null,
@@ -117,6 +119,7 @@ class StuartSettings implements ModelInterface, ArrayAccess
         'client_secret' => 'ClientSecret',
         'enabled' => 'Enabled',
         'webhook_url_basic_authentication' => 'WebhookUrlBasicAuthentication',
+        'override_webhook_url' => 'OverrideWebhookUrl',
         'minutes_to_pickup_before_than_delivery_time' => 'MinutesToPickupBeforeThanDeliveryTime',
         'package_type' => 'PackageType',
         'transport_type' => 'TransportType',
@@ -134,6 +137,7 @@ class StuartSettings implements ModelInterface, ArrayAccess
         'client_secret' => 'setClientSecret',
         'enabled' => 'setEnabled',
         'webhook_url_basic_authentication' => 'setWebhookUrlBasicAuthentication',
+        'override_webhook_url' => 'setOverrideWebhookUrl',
         'minutes_to_pickup_before_than_delivery_time' => 'setMinutesToPickupBeforeThanDeliveryTime',
         'package_type' => 'setPackageType',
         'transport_type' => 'setTransportType',
@@ -151,6 +155,7 @@ class StuartSettings implements ModelInterface, ArrayAccess
         'client_secret' => 'getClientSecret',
         'enabled' => 'getEnabled',
         'webhook_url_basic_authentication' => 'getWebhookUrlBasicAuthentication',
+        'override_webhook_url' => 'getOverrideWebhookUrl',
         'minutes_to_pickup_before_than_delivery_time' => 'getMinutesToPickupBeforeThanDeliveryTime',
         'package_type' => 'getPackageType',
         'transport_type' => 'getTransportType',
@@ -268,6 +273,7 @@ class StuartSettings implements ModelInterface, ArrayAccess
         $this->container['client_secret'] = isset($data['client_secret']) ? $data['client_secret'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['webhook_url_basic_authentication'] = isset($data['webhook_url_basic_authentication']) ? $data['webhook_url_basic_authentication'] : null;
+        $this->container['override_webhook_url'] = isset($data['override_webhook_url']) ? $data['override_webhook_url'] : null;
         $this->container['minutes_to_pickup_before_than_delivery_time'] = isset($data['minutes_to_pickup_before_than_delivery_time']) ? $data['minutes_to_pickup_before_than_delivery_time'] : null;
         $this->container['package_type'] = isset($data['package_type']) ? $data['package_type'] : null;
         $this->container['transport_type'] = isset($data['transport_type']) ? $data['transport_type'] : null;
@@ -407,6 +413,30 @@ class StuartSettings implements ModelInterface, ArrayAccess
     public function setWebhookUrlBasicAuthentication($webhook_url_basic_authentication)
     {
         $this->container['webhook_url_basic_authentication'] = $webhook_url_basic_authentication;
+
+        return $this;
+    }
+
+    /**
+     * Gets override_webhook_url
+     *
+     * @return bool
+     */
+    public function getOverrideWebhookUrl()
+    {
+        return $this->container['override_webhook_url'];
+    }
+
+    /**
+     * Sets override_webhook_url
+     *
+     * @param bool $override_webhook_url Override Flipdish Webhook Url
+     *
+     * @return $this
+     */
+    public function setOverrideWebhookUrl($override_webhook_url)
+    {
+        $this->container['override_webhook_url'] = $override_webhook_url;
 
         return $this;
     }

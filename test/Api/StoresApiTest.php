@@ -360,4 +360,14 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     public function testUpdateStoreAddressCoordinates()
     {
     }
+
+    /**
+     * Test case for updateStoreAddressForm
+     *
+     * Update store address.
+     *
+     */
+    public function testUpdateStoreAddressForm()
+    {
+    }
 }
