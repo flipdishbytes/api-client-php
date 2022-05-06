@@ -192,6 +192,16 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for sendPinForPasswordReset
+     *
+     * Request Password Reset PIN. The server sends the PIN to the email address..
+     *
+     */
+    public function testSendPinForPasswordReset()
+    {
+    }
+
+    /**
      * Test case for skipSignupStep
      *
      * Skip a signup question.

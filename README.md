@@ -96,6 +96,7 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**passwordResetWithToken**](docs/Api/AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
 *AccountsApi* | [**requestLoginPin**](docs/Api/AccountsApi.md#requestloginpin) | **POST** /api/v1.0/accounts/pin | Request login PIN. The server sends the PIN to the email address.
 *AccountsApi* | [**requestPasswordReset**](docs/Api/AccountsApi.md#requestpasswordreset) | **POST** /api/v1.0/accounts/passwordreset | Request password reset. Flipdish system will send a token via email.
+*AccountsApi* | [**sendPinForPasswordReset**](docs/Api/AccountsApi.md#sendpinforpasswordreset) | **POST** /api/v1.0/accounts/password/resetpin | Request Password Reset PIN. The server sends the PIN to the email address.
 *AccountsApi* | [**skipSignupStep**](docs/Api/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | Skip a signup question
 *AccountsApi* | [**updateAccount**](docs/Api/AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | Update account with name and language
 *AddressApi* | [**formByApp**](docs/Api/AddressApi.md#formbyapp) | **GET** /api/v1.0/app/{appId}/address/form | Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
@@ -800,6 +801,7 @@ Class | Method | HTTP request | Description
  - [RequestLoginPinModel](docs/Model/RequestLoginPinModel.md)
  - [RequestLoginPinResposne](docs/Model/RequestLoginPinResposne.md)
  - [RequestPasswordResetModel](docs/Model/RequestPasswordResetModel.md)
+ - [RequestPasswordResetPinResponse](docs/Model/RequestPasswordResetPinResponse.md)
  - [Response](docs/Model/Response.md)
  - [RestApiArrayResultAllMetadataResult](docs/Model/RestApiArrayResultAllMetadataResult.md)
  - [RestApiArrayResultApmCurrencyDataPoint](docs/Model/RestApiArrayResultApmCurrencyDataPoint.md)

@@ -3204,6 +3204,290 @@ class AccountsApi
     }
 
     /**
+     * Operation sendPinForPasswordReset
+     *
+     * Request Password Reset PIN. The server sends the PIN to the email address.
+     *
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request  (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RequestPasswordResetPinResponse
+     */
+    public function sendPinForPasswordReset($request_password_reset_request)
+    {
+        list($response) = $this->sendPinForPasswordResetWithHttpInfo($request_password_reset_request);
+        return $response;
+    }
+
+    /**
+     * Operation sendPinForPasswordResetWithHttpInfo
+     *
+     * Request Password Reset PIN. The server sends the PIN to the email address.
+     *
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request  (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RequestPasswordResetPinResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function sendPinForPasswordResetWithHttpInfo($request_password_reset_request)
+    {
+        $returnType = '\Flipdish\\Client\Models\RequestPasswordResetPinResponse';
+        $request = $this->sendPinForPasswordResetRequest($request_password_reset_request);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RequestPasswordResetPinResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation sendPinForPasswordResetAsync
+     *
+     * Request Password Reset PIN. The server sends the PIN to the email address.
+     *
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sendPinForPasswordResetAsync($request_password_reset_request)
+    {
+        return $this->sendPinForPasswordResetAsyncWithHttpInfo($request_password_reset_request)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation sendPinForPasswordResetAsyncWithHttpInfo
+     *
+     * Request Password Reset PIN. The server sends the PIN to the email address.
+     *
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function sendPinForPasswordResetAsyncWithHttpInfo($request_password_reset_request)
+    {
+        $returnType = '\Flipdish\\Client\Models\RequestPasswordResetPinResponse';
+        $request = $this->sendPinForPasswordResetRequest($request_password_reset_request);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'sendPinForPasswordReset'
+     *
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function sendPinForPasswordResetRequest($request_password_reset_request)
+    {
+        // verify the required parameter 'request_password_reset_request' is set
+        if ($request_password_reset_request === null || (is_array($request_password_reset_request) && count($request_password_reset_request) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request_password_reset_request when calling sendPinForPasswordReset'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/accounts/password/resetpin';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // body params
+        $_tempBody = null;
+        if (isset($request_password_reset_request)) {
+            $_tempBody = $request_password_reset_request;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation skipSignupStep
      *
      * Skip a signup question

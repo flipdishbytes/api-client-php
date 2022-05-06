@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**passwordResetWithToken**](AccountsApi.md#passwordResetWithToken) | **POST** /api/v1.0/accounts/password | Reset password with token.
 [**requestLoginPin**](AccountsApi.md#requestLoginPin) | **POST** /api/v1.0/accounts/pin | Request login PIN. The server sends the PIN to the email address.
 [**requestPasswordReset**](AccountsApi.md#requestPasswordReset) | **POST** /api/v1.0/accounts/passwordreset | Request password reset. Flipdish system will send a token via email.
+[**sendPinForPasswordReset**](AccountsApi.md#sendPinForPasswordReset) | **POST** /api/v1.0/accounts/password/resetpin | Request Password Reset PIN. The server sends the PIN to the email address.
 [**skipSignupStep**](AccountsApi.md#skipSignupStep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | Skip a signup question
 [**updateAccount**](AccountsApi.md#updateAccount) | **PUT** /api/v1.0/accounts | Update account with name and language
 
@@ -601,6 +602,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **sendPinForPasswordReset**
+> \Flipdish\\Client\Models\RequestPasswordResetPinResponse sendPinForPasswordReset($request_password_reset_request)
+
+Request Password Reset PIN. The server sends the PIN to the email address.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\AccountsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$request_password_reset_request = new \Flipdish\\Client\Models\RequestPasswordResetModel(); // \Flipdish\\Client\Models\RequestPasswordResetModel | 
+
+try {
+    $result = $apiInstance->sendPinForPasswordReset($request_password_reset_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AccountsApi->sendPinForPasswordReset: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_password_reset_request** | [**\Flipdish\\Client\Models\RequestPasswordResetModel**](../Model/RequestPasswordResetModel.md)|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RequestPasswordResetPinResponse**](../Model/RequestPasswordResetPinResponse.md)
 
 ### Authorization
 
