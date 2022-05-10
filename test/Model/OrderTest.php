@@ -273,6 +273,13 @@ class OrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "service_charge_percentage"
+     */
+    public function testPropertyServiceChargePercentage()
+    {
+    }
+
+    /**
      * Test attribute "amount"
      */
     public function testPropertyAmount()

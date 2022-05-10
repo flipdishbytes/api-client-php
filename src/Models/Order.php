@@ -86,6 +86,7 @@ class Order implements ModelInterface, ArrayAccess
         'delivery_amount' => 'double',
         'order_items_amount' => 'double',
         'service_charge_amount' => 'double',
+        'service_charge_percentage' => 'double',
         'amount' => 'double',
         'processing_fee' => 'double',
         'payment_account_type' => 'string',
@@ -140,6 +141,7 @@ class Order implements ModelInterface, ArrayAccess
         'delivery_amount' => 'double',
         'order_items_amount' => 'double',
         'service_charge_amount' => 'double',
+        'service_charge_percentage' => 'double',
         'amount' => 'double',
         'processing_fee' => 'double',
         'payment_account_type' => null,
@@ -215,6 +217,7 @@ class Order implements ModelInterface, ArrayAccess
         'delivery_amount' => 'DeliveryAmount',
         'order_items_amount' => 'OrderItemsAmount',
         'service_charge_amount' => 'ServiceChargeAmount',
+        'service_charge_percentage' => 'ServiceChargePercentage',
         'amount' => 'Amount',
         'processing_fee' => 'ProcessingFee',
         'payment_account_type' => 'PaymentAccountType',
@@ -269,6 +272,7 @@ class Order implements ModelInterface, ArrayAccess
         'delivery_amount' => 'setDeliveryAmount',
         'order_items_amount' => 'setOrderItemsAmount',
         'service_charge_amount' => 'setServiceChargeAmount',
+        'service_charge_percentage' => 'setServiceChargePercentage',
         'amount' => 'setAmount',
         'processing_fee' => 'setProcessingFee',
         'payment_account_type' => 'setPaymentAccountType',
@@ -323,6 +327,7 @@ class Order implements ModelInterface, ArrayAccess
         'delivery_amount' => 'getDeliveryAmount',
         'order_items_amount' => 'getOrderItemsAmount',
         'service_charge_amount' => 'getServiceChargeAmount',
+        'service_charge_percentage' => 'getServiceChargePercentage',
         'amount' => 'getAmount',
         'processing_fee' => 'getProcessingFee',
         'payment_account_type' => 'getPaymentAccountType',
@@ -666,6 +671,7 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['delivery_amount'] = isset($data['delivery_amount']) ? $data['delivery_amount'] : null;
         $this->container['order_items_amount'] = isset($data['order_items_amount']) ? $data['order_items_amount'] : null;
         $this->container['service_charge_amount'] = isset($data['service_charge_amount']) ? $data['service_charge_amount'] : null;
+        $this->container['service_charge_percentage'] = isset($data['service_charge_percentage']) ? $data['service_charge_percentage'] : null;
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
         $this->container['processing_fee'] = isset($data['processing_fee']) ? $data['processing_fee'] : null;
         $this->container['payment_account_type'] = isset($data['payment_account_type']) ? $data['payment_account_type'] : null;
@@ -1477,6 +1483,30 @@ class Order implements ModelInterface, ArrayAccess
     public function setServiceChargeAmount($service_charge_amount)
     {
         $this->container['service_charge_amount'] = $service_charge_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_charge_percentage
+     *
+     * @return double
+     */
+    public function getServiceChargePercentage()
+    {
+        return $this->container['service_charge_percentage'];
+    }
+
+    /**
+     * Sets service_charge_percentage
+     *
+     * @param double $service_charge_percentage Service Charge Percentage
+     *
+     * @return $this
+     */
+    public function setServiceChargePercentage($service_charge_percentage)
+    {
+        $this->container['service_charge_percentage'] = $service_charge_percentage;
 
         return $this;
     }

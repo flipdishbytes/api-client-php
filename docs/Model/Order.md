@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **delivery_amount** | **double** | Delivery amount | [optional] 
 **order_items_amount** | **double** | Ordered items amount | [optional] 
 **service_charge_amount** | **double** | Service Charge Amount | [optional] 
+**service_charge_percentage** | **double** | Service Charge Percentage | [optional] 
 **amount** | **double** | This is the sum of the OrderItemsAmount, DeliveryAmount, TipAmount and Voucher.Amount (which is usually negative) and OnlineOrderingFee for cash orders.  It does not include the OnlineOrderingFee in the case of card orders as this fee is charged by Flipdish directly to the customer. | [optional] 
 **processing_fee** | **double** | This contains the online ordering processing fee. For card payments this is charged directly to the customer and for cash orders it is paid by the customer to the store. It is tax inclusive. | [optional] 
 **payment_account_type** | **string** | Payment account type | [optional] 
