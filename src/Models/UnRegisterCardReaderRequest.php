@@ -1,6 +1,6 @@
 <?php
 /**
- * CardReader
+ * UnRegisterCardReaderRequest
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * CardReader Class Doc Comment
+ * UnRegisterCardReaderRequest Class Doc Comment
  *
  * @category Class
- * @description Card reader
+ * @description Un-Register card reader request
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CardReader implements ModelInterface, ArrayAccess
+class UnRegisterCardReaderRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class CardReader implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'CardReader';
+    protected static $swaggerModelName = 'UnRegisterCardReaderRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,13 +58,8 @@ class CardReader implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'device_software_version' => 'string',
-        'serial_number' => 'string',
-        'status' => 'string',
-        'registration_code' => 'string',
-        'device_type' => 'string',
-        'deleted' => 'bool'
+        'reader_id' => 'string',
+        'kiosk_device_id' => 'string'
     ];
 
     /**
@@ -73,13 +68,8 @@ class CardReader implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'device_software_version' => null,
-        'serial_number' => null,
-        'status' => null,
-        'registration_code' => null,
-        'device_type' => null,
-        'deleted' => null
+        'reader_id' => null,
+        'kiosk_device_id' => null
     ];
 
     /**
@@ -109,13 +99,8 @@ class CardReader implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'Id',
-        'device_software_version' => 'DeviceSoftwareVersion',
-        'serial_number' => 'SerialNumber',
-        'status' => 'Status',
-        'registration_code' => 'RegistrationCode',
-        'device_type' => 'DeviceType',
-        'deleted' => 'Deleted'
+        'reader_id' => 'ReaderId',
+        'kiosk_device_id' => 'KioskDeviceId'
     ];
 
     /**
@@ -124,13 +109,8 @@ class CardReader implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'device_software_version' => 'setDeviceSoftwareVersion',
-        'serial_number' => 'setSerialNumber',
-        'status' => 'setStatus',
-        'registration_code' => 'setRegistrationCode',
-        'device_type' => 'setDeviceType',
-        'deleted' => 'setDeleted'
+        'reader_id' => 'setReaderId',
+        'kiosk_device_id' => 'setKioskDeviceId'
     ];
 
     /**
@@ -139,13 +119,8 @@ class CardReader implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'device_software_version' => 'getDeviceSoftwareVersion',
-        'serial_number' => 'getSerialNumber',
-        'status' => 'getStatus',
-        'registration_code' => 'getRegistrationCode',
-        'device_type' => 'getDeviceType',
-        'deleted' => 'getDeleted'
+        'reader_id' => 'getReaderId',
+        'kiosk_device_id' => 'getKioskDeviceId'
     ];
 
     /**
@@ -208,13 +183,8 @@ class CardReader implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['device_software_version'] = isset($data['device_software_version']) ? $data['device_software_version'] : null;
-        $this->container['serial_number'] = isset($data['serial_number']) ? $data['serial_number'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['registration_code'] = isset($data['registration_code']) ? $data['registration_code'] : null;
-        $this->container['device_type'] = isset($data['device_type']) ? $data['device_type'] : null;
-        $this->container['deleted'] = isset($data['deleted']) ? $data['deleted'] : null;
+        $this->container['reader_id'] = isset($data['reader_id']) ? $data['reader_id'] : null;
+        $this->container['kiosk_device_id'] = isset($data['kiosk_device_id']) ? $data['kiosk_device_id'] : null;
     }
 
     /**
@@ -226,6 +196,12 @@ class CardReader implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['reader_id'] === null) {
+            $invalidProperties[] = "'reader_id' can't be null";
+        }
+        if ($this->container['kiosk_device_id'] === null) {
+            $invalidProperties[] = "'kiosk_device_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -242,169 +218,49 @@ class CardReader implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets reader_id
      *
      * @return string
      */
-    public function getId()
+    public function getReaderId()
     {
-        return $this->container['id'];
+        return $this->container['reader_id'];
     }
 
     /**
-     * Sets id
+     * Sets reader_id
      *
-     * @param string $id Stripe reader id
+     * @param string $reader_id Device card readerid
      *
      * @return $this
      */
-    public function setId($id)
+    public function setReaderId($reader_id)
     {
-        $this->container['id'] = $id;
+        $this->container['reader_id'] = $reader_id;
 
         return $this;
     }
 
     /**
-     * Gets device_software_version
+     * Gets kiosk_device_id
      *
      * @return string
      */
-    public function getDeviceSoftwareVersion()
+    public function getKioskDeviceId()
     {
-        return $this->container['device_software_version'];
+        return $this->container['kiosk_device_id'];
     }
 
     /**
-     * Sets device_software_version
+     * Sets kiosk_device_id
      *
-     * @param string $device_software_version Software version
+     * @param string $kiosk_device_id The kiosk device id
      *
      * @return $this
      */
-    public function setDeviceSoftwareVersion($device_software_version)
+    public function setKioskDeviceId($kiosk_device_id)
     {
-        $this->container['device_software_version'] = $device_software_version;
-
-        return $this;
-    }
-
-    /**
-     * Gets serial_number
-     *
-     * @return string
-     */
-    public function getSerialNumber()
-    {
-        return $this->container['serial_number'];
-    }
-
-    /**
-     * Sets serial_number
-     *
-     * @param string $serial_number Device serial number
-     *
-     * @return $this
-     */
-    public function setSerialNumber($serial_number)
-    {
-        $this->container['serial_number'] = $serial_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string $status Device status online or offline
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets registration_code
-     *
-     * @return string
-     */
-    public function getRegistrationCode()
-    {
-        return $this->container['registration_code'];
-    }
-
-    /**
-     * Sets registration_code
-     *
-     * @param string $registration_code Registration code
-     *
-     * @return $this
-     */
-    public function setRegistrationCode($registration_code)
-    {
-        $this->container['registration_code'] = $registration_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets device_type
-     *
-     * @return string
-     */
-    public function getDeviceType()
-    {
-        return $this->container['device_type'];
-    }
-
-    /**
-     * Sets device_type
-     *
-     * @param string $device_type Device type
-     *
-     * @return $this
-     */
-    public function setDeviceType($device_type)
-    {
-        $this->container['device_type'] = $device_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets deleted
-     *
-     * @return bool
-     */
-    public function getDeleted()
-    {
-        return $this->container['deleted'];
-    }
-
-    /**
-     * Sets deleted
-     *
-     * @param bool $deleted Indicates that the reader is deleted or not
-     *
-     * @return $this
-     */
-    public function setDeleted($deleted)
-    {
-        $this->container['deleted'] = $deleted;
+        $this->container['kiosk_device_id'] = $kiosk_device_id;
 
         return $this;
     }

@@ -172,6 +172,16 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for unRegisterTerminal
+     *
+     * Un-register terminal by deleting it from stripe.
+     *
+     */
+    public function testUnRegisterTerminal()
+    {
+    }
+
+    /**
      * Test case for unpairCurrentlyPairedBluetoothDevice
      *
      * Unpair the currently paired stripe terminal.

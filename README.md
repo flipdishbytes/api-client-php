@@ -165,6 +165,7 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**initiateKioskBluetoothPairingMode**](docs/Api/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
 *CardReadersApi* | [**initiateKioskBluetoothUpdateInstall**](docs/Api/CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
 *CardReadersApi* | [**registerStripeTerminal**](docs/Api/CardReadersApi.md#registerstripeterminal) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/register | 
+*CardReadersApi* | [**unRegisterTerminal**](docs/Api/CardReadersApi.md#unregisterterminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | Un-register terminal by deleting it from stripe
 *CardReadersApi* | [**unpairCurrentlyPairedBluetoothDevice**](docs/Api/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
 *CatalogChangesApi* | [**getPendingMenuChanges**](docs/Api/CatalogChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | Get menu pending changes from Catalog groups and items
 *CatalogChangesApi* | [**publishPendingMenuChanges**](docs/Api/CatalogChangesApi.md#publishpendingmenuchanges) | **POST** /api/v1.0/{appId}/menus/catalog-changes/publish | Update menus with the pending changes from Catalog groups and items
@@ -1045,6 +1046,7 @@ Class | Method | HTTP request | Description
  - [TeammateInviteSentEvent](docs/Model/TeammateInviteSentEvent.md)
  - [TeammateUpdatedEvent](docs/Model/TeammateUpdatedEvent.md)
  - [TipConfiguration](docs/Model/TipConfiguration.md)
+ - [UnRegisterCardReaderRequest](docs/Model/UnRegisterCardReaderRequest.md)
  - [UpdateAppStoreApp](docs/Model/UpdateAppStoreApp.md)
  - [UpdateAppStoreAppConfiguration](docs/Model/UpdateAppStoreAppConfiguration.md)
  - [UpdateAppStoreAppConfigurationWebhookDTO](docs/Model/UpdateAppStoreAppConfigurationWebhookDTO.md)

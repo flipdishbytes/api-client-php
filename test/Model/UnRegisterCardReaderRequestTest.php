@@ -1,6 +1,6 @@
 <?php
 /**
- * CardReaderTest
+ * UnRegisterCardReaderRequestTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * CardReaderTest Class Doc Comment
+ * UnRegisterCardReaderRequestTest Class Doc Comment
  *
  * @category    Class
- * @description Card reader
+ * @description Un-Register card reader request
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CardReaderTest extends \PHPUnit_Framework_TestCase
+class UnRegisterCardReaderRequestTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,58 +70,23 @@ class CardReaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CardReader"
+     * Test "UnRegisterCardReaderRequest"
      */
-    public function testCardReader()
+    public function testUnRegisterCardReaderRequest()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "reader_id"
      */
-    public function testPropertyId()
+    public function testPropertyReaderId()
     {
     }
 
     /**
-     * Test attribute "device_software_version"
+     * Test attribute "kiosk_device_id"
      */
-    public function testPropertyDeviceSoftwareVersion()
-    {
-    }
-
-    /**
-     * Test attribute "serial_number"
-     */
-    public function testPropertySerialNumber()
-    {
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-    }
-
-    /**
-     * Test attribute "registration_code"
-     */
-    public function testPropertyRegistrationCode()
-    {
-    }
-
-    /**
-     * Test attribute "device_type"
-     */
-    public function testPropertyDeviceType()
-    {
-    }
-
-    /**
-     * Test attribute "deleted"
-     */
-    public function testPropertyDeleted()
+    public function testPropertyKioskDeviceId()
     {
     }
 }

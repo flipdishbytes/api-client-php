@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **status** | **string** | Device status online or offline | [optional] 
 **registration_code** | **string** | Registration code | [optional] 
 **device_type** | **string** | Device type | [optional] 
+**deleted** | **bool** | Indicates that the reader is deleted or not | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
