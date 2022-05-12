@@ -424,6 +424,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**getStoreServiceCharge**](docs/Api/StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
 *StoresApi* | [**getStores**](docs/Api/StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores, excluding archived ones
 *StoresApi* | [**getStoresByAppId**](docs/Api/StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
+*StoresApi* | [**getStoresByStoreIdWithValidations**](docs/Api/StoresApi.md#getstoresbystoreidwithvalidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | Get store validation by storeIds
 *StoresApi* | [**publishStore**](docs/Api/StoresApi.md#publishstore) | **POST** /api/v1.0/stores/{storeId}/publish | Publish store
 *StoresApi* | [**setBusinessHours**](docs/Api/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Set Business hours
 *StoresApi* | [**setPreOrdeEnabled**](docs/Api/StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | UPDATE pre order config for a store, by type
@@ -878,6 +879,7 @@ Class | Method | HTTP request | Description
  - [RestApiPaginationResultStoreGroup](docs/Model/RestApiPaginationResultStoreGroup.md)
  - [RestApiPaginationResultStoreGroupExtended](docs/Model/RestApiPaginationResultStoreGroupExtended.md)
  - [RestApiPaginationResultStoreHeader](docs/Model/RestApiPaginationResultStoreHeader.md)
+ - [RestApiPaginationResultStoreValidationConfig](docs/Model/RestApiPaginationResultStoreValidationConfig.md)
  - [RestApiPaginationResultVoucherSummary](docs/Model/RestApiPaginationResultVoucherSummary.md)
  - [RestApiPaginationResultWebhookLog](docs/Model/RestApiPaginationResultWebhookLog.md)
  - [RestApiPaginationResultWebhookSubscription](docs/Model/RestApiPaginationResultWebhookSubscription.md)
@@ -994,6 +996,7 @@ Class | Method | HTTP request | Description
  - [StoreChannelAssignment](docs/Model/StoreChannelAssignment.md)
  - [StoreChannelStoreMapping](docs/Model/StoreChannelStoreMapping.md)
  - [StoreCloneSettings](docs/Model/StoreCloneSettings.md)
+ - [StoreConfig](docs/Model/StoreConfig.md)
  - [StoreCreateBase](docs/Model/StoreCreateBase.md)
  - [StoreCreatedEvent](docs/Model/StoreCreatedEvent.md)
  - [StoreDataPoint](docs/Model/StoreDataPoint.md)
@@ -1030,6 +1033,7 @@ Class | Method | HTTP request | Description
  - [StoreUnarchivedEvent](docs/Model/StoreUnarchivedEvent.md)
  - [StoreUnpublishedEvent](docs/Model/StoreUnpublishedEvent.md)
  - [StoreUpdatedEvent](docs/Model/StoreUpdatedEvent.md)
+ - [StoreValidationConfig](docs/Model/StoreValidationConfig.md)
  - [StripeAccountLinkRequest](docs/Model/StripeAccountLinkRequest.md)
  - [StripeConnectedAccount](docs/Model/StripeConnectedAccount.md)
  - [StripeConnectedAccountInfo](docs/Model/StripeConnectedAccountInfo.md)

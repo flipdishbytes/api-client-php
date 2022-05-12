@@ -282,6 +282,16 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getStoresByStoreIdWithValidations
+     *
+     * Get store validation by storeIds.
+     *
+     */
+    public function testGetStoresByStoreIdWithValidations()
+    {
+    }
+
+    /**
      * Test case for publishStore
      *
      * Publish store.
