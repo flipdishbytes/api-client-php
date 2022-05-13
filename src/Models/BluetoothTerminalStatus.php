@@ -188,6 +188,7 @@ class BluetoothTerminalStatus implements ModelInterface, ArrayAccess
     const DEVICE_TYPE_COTS_DEVICE = 'COTS_DEVICE';
     const DEVICE_TYPE_VERIFONE_P400 = 'VERIFONE_P400';
     const DEVICE_TYPE_WISEPAD_3 = 'WISEPAD_3';
+    const DEVICE_TYPE_WISEPOS_E = 'WISEPOS_E';
     const STATUS_NOT_CONNECTED = 'Not_Connected';
     const STATUS_CONNECTING = 'Connecting';
     const STATUS_CONNECTED = 'Connected';
@@ -206,6 +207,7 @@ class BluetoothTerminalStatus implements ModelInterface, ArrayAccess
             self::DEVICE_TYPE_COTS_DEVICE,
             self::DEVICE_TYPE_VERIFONE_P400,
             self::DEVICE_TYPE_WISEPAD_3,
+            self::DEVICE_TYPE_WISEPOS_E,
         ];
     }
     

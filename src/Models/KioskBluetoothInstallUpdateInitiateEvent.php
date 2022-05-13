@@ -203,6 +203,7 @@ class KioskBluetoothInstallUpdateInitiateEvent implements ModelInterface, ArrayA
     const BLUETOOTH_TERMINAL_TYPE_COTS_DEVICE = 'COTS_DEVICE';
     const BLUETOOTH_TERMINAL_TYPE_VERIFONE_P400 = 'VERIFONE_P400';
     const BLUETOOTH_TERMINAL_TYPE_WISEPAD_3 = 'WISEPAD_3';
+    const BLUETOOTH_TERMINAL_TYPE_WISEPOS_E = 'WISEPOS_E';
     
 
     
@@ -218,6 +219,7 @@ class KioskBluetoothInstallUpdateInitiateEvent implements ModelInterface, ArrayA
             self::BLUETOOTH_TERMINAL_TYPE_COTS_DEVICE,
             self::BLUETOOTH_TERMINAL_TYPE_VERIFONE_P400,
             self::BLUETOOTH_TERMINAL_TYPE_WISEPAD_3,
+            self::BLUETOOTH_TERMINAL_TYPE_WISEPOS_E,
         ];
     }
     
