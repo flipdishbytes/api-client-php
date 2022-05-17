@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **online_sales_delivery_charges** | **double** | Delivery charges on online sales | [optional] 
 **online_sales_tips** | **double** | Tips for online sales | [optional] 
 **total_online_revenue** | **double** | Online sales plus online delivery charges and tips | [optional] 
+**online_sales_service_charges** | **double** | Service charge on online sales | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

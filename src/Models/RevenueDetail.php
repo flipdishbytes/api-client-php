@@ -69,7 +69,8 @@ class RevenueDetail implements ModelInterface, ArrayAccess
         'total_sales_including_tax' => 'double',
         'online_sales_delivery_charges' => 'double',
         'online_sales_tips' => 'double',
-        'total_online_revenue' => 'double'
+        'total_online_revenue' => 'double',
+        'online_sales_service_charges' => 'double'
     ];
 
     /**
@@ -89,7 +90,8 @@ class RevenueDetail implements ModelInterface, ArrayAccess
         'total_sales_including_tax' => 'double',
         'online_sales_delivery_charges' => 'double',
         'online_sales_tips' => 'double',
-        'total_online_revenue' => 'double'
+        'total_online_revenue' => 'double',
+        'online_sales_service_charges' => 'double'
     ];
 
     /**
@@ -130,7 +132,8 @@ class RevenueDetail implements ModelInterface, ArrayAccess
         'total_sales_including_tax' => 'TotalSalesIncludingTax',
         'online_sales_delivery_charges' => 'OnlineSalesDeliveryCharges',
         'online_sales_tips' => 'OnlineSalesTips',
-        'total_online_revenue' => 'TotalOnlineRevenue'
+        'total_online_revenue' => 'TotalOnlineRevenue',
+        'online_sales_service_charges' => 'OnlineSalesServiceCharges'
     ];
 
     /**
@@ -150,7 +153,8 @@ class RevenueDetail implements ModelInterface, ArrayAccess
         'total_sales_including_tax' => 'setTotalSalesIncludingTax',
         'online_sales_delivery_charges' => 'setOnlineSalesDeliveryCharges',
         'online_sales_tips' => 'setOnlineSalesTips',
-        'total_online_revenue' => 'setTotalOnlineRevenue'
+        'total_online_revenue' => 'setTotalOnlineRevenue',
+        'online_sales_service_charges' => 'setOnlineSalesServiceCharges'
     ];
 
     /**
@@ -170,7 +174,8 @@ class RevenueDetail implements ModelInterface, ArrayAccess
         'total_sales_including_tax' => 'getTotalSalesIncludingTax',
         'online_sales_delivery_charges' => 'getOnlineSalesDeliveryCharges',
         'online_sales_tips' => 'getOnlineSalesTips',
-        'total_online_revenue' => 'getTotalOnlineRevenue'
+        'total_online_revenue' => 'getTotalOnlineRevenue',
+        'online_sales_service_charges' => 'getOnlineSalesServiceCharges'
     ];
 
     /**
@@ -245,6 +250,7 @@ class RevenueDetail implements ModelInterface, ArrayAccess
         $this->container['online_sales_delivery_charges'] = isset($data['online_sales_delivery_charges']) ? $data['online_sales_delivery_charges'] : null;
         $this->container['online_sales_tips'] = isset($data['online_sales_tips']) ? $data['online_sales_tips'] : null;
         $this->container['total_online_revenue'] = isset($data['total_online_revenue']) ? $data['total_online_revenue'] : null;
+        $this->container['online_sales_service_charges'] = isset($data['online_sales_service_charges']) ? $data['online_sales_service_charges'] : null;
     }
 
     /**
@@ -555,6 +561,30 @@ class RevenueDetail implements ModelInterface, ArrayAccess
     public function setTotalOnlineRevenue($total_online_revenue)
     {
         $this->container['total_online_revenue'] = $total_online_revenue;
+
+        return $this;
+    }
+
+    /**
+     * Gets online_sales_service_charges
+     *
+     * @return double
+     */
+    public function getOnlineSalesServiceCharges()
+    {
+        return $this->container['online_sales_service_charges'];
+    }
+
+    /**
+     * Sets online_sales_service_charges
+     *
+     * @param double $online_sales_service_charges Service charge on online sales
+     *
+     * @return $this
+     */
+    public function setOnlineSalesServiceCharges($online_sales_service_charges)
+    {
+        $this->container['online_sales_service_charges'] = $online_sales_service_charges;
 
         return $this;
     }

@@ -159,4 +159,11 @@ class RevenueDetailTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTotalOnlineRevenue()
     {
     }
+
+    /**
+     * Test attribute "online_sales_service_charges"
+     */
+    public function testPropertyOnlineSalesServiceCharges()
+    {
+    }
 }
