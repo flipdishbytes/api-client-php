@@ -117,4 +117,11 @@ class BluetoothTerminalStatusTest extends \PHPUnit_Framework_TestCase
     public function testPropertyUpdateTime()
     {
     }
+
+    /**
+     * Test attribute "reader_id"
+     */
+    public function testPropertyReaderId()
+    {
+    }
 }

@@ -63,7 +63,8 @@ class BluetoothTerminalStatus implements ModelInterface, ArrayAccess
         'device_type' => 'string',
         'status' => 'string',
         'battery_level' => 'float',
-        'update_time' => '\DateTime'
+        'update_time' => '\DateTime',
+        'reader_id' => 'string'
     ];
 
     /**
@@ -77,7 +78,8 @@ class BluetoothTerminalStatus implements ModelInterface, ArrayAccess
         'device_type' => null,
         'status' => null,
         'battery_level' => 'float',
-        'update_time' => 'date-time'
+        'update_time' => 'date-time',
+        'reader_id' => null
     ];
 
     /**
@@ -112,7 +114,8 @@ class BluetoothTerminalStatus implements ModelInterface, ArrayAccess
         'device_type' => 'DeviceType',
         'status' => 'Status',
         'battery_level' => 'BatteryLevel',
-        'update_time' => 'UpdateTime'
+        'update_time' => 'UpdateTime',
+        'reader_id' => 'ReaderId'
     ];
 
     /**
@@ -126,7 +129,8 @@ class BluetoothTerminalStatus implements ModelInterface, ArrayAccess
         'device_type' => 'setDeviceType',
         'status' => 'setStatus',
         'battery_level' => 'setBatteryLevel',
-        'update_time' => 'setUpdateTime'
+        'update_time' => 'setUpdateTime',
+        'reader_id' => 'setReaderId'
     ];
 
     /**
@@ -140,7 +144,8 @@ class BluetoothTerminalStatus implements ModelInterface, ArrayAccess
         'device_type' => 'getDeviceType',
         'status' => 'getStatus',
         'battery_level' => 'getBatteryLevel',
-        'update_time' => 'getUpdateTime'
+        'update_time' => 'getUpdateTime',
+        'reader_id' => 'getReaderId'
     ];
 
     /**
@@ -192,6 +197,8 @@ class BluetoothTerminalStatus implements ModelInterface, ArrayAccess
     const STATUS_NOT_CONNECTED = 'Not_Connected';
     const STATUS_CONNECTING = 'Connecting';
     const STATUS_CONNECTED = 'Connected';
+    const STATUS_ONLINE = 'Online';
+    const STATUS_OFFLINE = 'Offline';
     
 
     
@@ -222,6 +229,8 @@ class BluetoothTerminalStatus implements ModelInterface, ArrayAccess
             self::STATUS_NOT_CONNECTED,
             self::STATUS_CONNECTING,
             self::STATUS_CONNECTED,
+            self::STATUS_ONLINE,
+            self::STATUS_OFFLINE,
         ];
     }
     
@@ -247,6 +256,7 @@ class BluetoothTerminalStatus implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['battery_level'] = isset($data['battery_level']) ? $data['battery_level'] : null;
         $this->container['update_time'] = isset($data['update_time']) ? $data['update_time'] : null;
+        $this->container['reader_id'] = isset($data['reader_id']) ? $data['reader_id'] : null;
     }
 
     /**
@@ -447,6 +457,30 @@ class BluetoothTerminalStatus implements ModelInterface, ArrayAccess
     public function setUpdateTime($update_time)
     {
         $this->container['update_time'] = $update_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets reader_id
+     *
+     * @return string
+     */
+    public function getReaderId()
+    {
+        return $this->container['reader_id'];
+    }
+
+    /**
+     * Sets reader_id
+     *
+     * @param string $reader_id ReaderId for Stripe Terminal
+     *
+     * @return $this
+     */
+    public function setReaderId($reader_id)
+    {
+        $this->container['reader_id'] = $reader_id;
 
         return $this;
     }
