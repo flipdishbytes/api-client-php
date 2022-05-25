@@ -67,7 +67,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'tax_rate_id' => 'int',
         'tax_value' => 'double',
         'metadata' => '\Flipdish\\Client\Models\CreateMetadata[]',
-        'product_id' => 'string',
+        'catalog_item_id' => 'string',
         'name' => 'string',
         'description' => 'string',
         'spiciness_rating' => 'string',
@@ -96,7 +96,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'tax_rate_id' => 'int32',
         'tax_value' => 'double',
         'metadata' => null,
-        'product_id' => null,
+        'catalog_item_id' => null,
         'name' => null,
         'description' => null,
         'spiciness_rating' => null,
@@ -146,7 +146,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'tax_rate_id' => 'TaxRateId',
         'tax_value' => 'TaxValue',
         'metadata' => 'Metadata',
-        'product_id' => 'ProductId',
+        'catalog_item_id' => 'CatalogItemId',
         'name' => 'Name',
         'description' => 'Description',
         'spiciness_rating' => 'SpicinessRating',
@@ -175,7 +175,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'tax_rate_id' => 'setTaxRateId',
         'tax_value' => 'setTaxValue',
         'metadata' => 'setMetadata',
-        'product_id' => 'setProductId',
+        'catalog_item_id' => 'setCatalogItemId',
         'name' => 'setName',
         'description' => 'setDescription',
         'spiciness_rating' => 'setSpicinessRating',
@@ -204,7 +204,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'tax_rate_id' => 'getTaxRateId',
         'tax_value' => 'getTaxValue',
         'metadata' => 'getMetadata',
-        'product_id' => 'getProductId',
+        'catalog_item_id' => 'getCatalogItemId',
         'name' => 'getName',
         'description' => 'getDescription',
         'spiciness_rating' => 'getSpicinessRating',
@@ -325,7 +325,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         $this->container['tax_rate_id'] = isset($data['tax_rate_id']) ? $data['tax_rate_id'] : null;
         $this->container['tax_value'] = isset($data['tax_value']) ? $data['tax_value'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
-        $this->container['product_id'] = isset($data['product_id']) ? $data['product_id'] : null;
+        $this->container['catalog_item_id'] = isset($data['catalog_item_id']) ? $data['catalog_item_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['spiciness_rating'] = isset($data['spiciness_rating']) ? $data['spiciness_rating'] : null;
@@ -596,25 +596,25 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets product_id
+     * Gets catalog_item_id
      *
      * @return string
      */
-    public function getProductId()
+    public function getCatalogItemId()
     {
-        return $this->container['product_id'];
+        return $this->container['catalog_item_id'];
     }
 
     /**
-     * Sets product_id
+     * Sets catalog_item_id
      *
-     * @param string $product_id Product Id when the Item is associated to a Product
+     * @param string $catalog_item_id Catalog item Id when the Item is associated to a Product
      *
      * @return $this
      */
-    public function setProductId($product_id)
+    public function setCatalogItemId($catalog_item_id)
     {
-        $this->container['product_id'] = $product_id;
+        $this->container['catalog_item_id'] = $catalog_item_id;
 
         return $this;
     }

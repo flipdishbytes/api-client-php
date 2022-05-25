@@ -112,9 +112,9 @@ class MenuItemOptionSetTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "product_id"
+     * Test attribute "catalog_item_id"
      */
-    public function testPropertyProductId()
+    public function testPropertyCatalogItemId()
     {
     }
 

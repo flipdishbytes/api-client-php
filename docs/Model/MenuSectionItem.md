@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **tax_rate_id** | **int** | TaxRate | [optional] 
 **tax_value** | **double** | TaxValue - the tax associated with this item, based on TaxRate / TaxType and Currency (currency determines decimal point precision) | [optional] 
 **metadata** | [**\Flipdish\\Client\Models\CreateMetadata[]**](CreateMetadata.md) | List of metadata | [optional] 
-**product_id** | **string** | Product Id when the Item is associated to a Product | [optional] 
+**catalog_item_id** | **string** | Catalog item Id when the Item is associated to a Product | [optional] 
 **name** | **string** | Menu item name (like \&quot;Korma\&quot;) | [optional] 
 **description** | **string** | Description (like \&quot;A lovely dish from the east\&quot;) | [optional] 
 **spiciness_rating** | **string** | Spiciness rating | [optional] 

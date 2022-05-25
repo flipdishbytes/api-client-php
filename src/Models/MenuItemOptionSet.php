@@ -63,7 +63,7 @@ class MenuItemOptionSet implements ModelInterface, ArrayAccess
         'image_url' => 'string',
         'menu_item_option_set_items' => '\Flipdish\\Client\Models\MenuItemOptionSetItem[]',
         'public_id' => 'string',
-        'product_id' => 'string',
+        'catalog_item_id' => 'string',
         'name' => 'string',
         'is_master_option_set' => 'bool',
         'display_order' => 'int',
@@ -83,7 +83,7 @@ class MenuItemOptionSet implements ModelInterface, ArrayAccess
         'image_url' => null,
         'menu_item_option_set_items' => null,
         'public_id' => 'uuid',
-        'product_id' => null,
+        'catalog_item_id' => null,
         'name' => null,
         'is_master_option_set' => null,
         'display_order' => 'int32',
@@ -124,7 +124,7 @@ class MenuItemOptionSet implements ModelInterface, ArrayAccess
         'image_url' => 'ImageUrl',
         'menu_item_option_set_items' => 'MenuItemOptionSetItems',
         'public_id' => 'PublicId',
-        'product_id' => 'ProductId',
+        'catalog_item_id' => 'CatalogItemId',
         'name' => 'Name',
         'is_master_option_set' => 'IsMasterOptionSet',
         'display_order' => 'DisplayOrder',
@@ -144,7 +144,7 @@ class MenuItemOptionSet implements ModelInterface, ArrayAccess
         'image_url' => 'setImageUrl',
         'menu_item_option_set_items' => 'setMenuItemOptionSetItems',
         'public_id' => 'setPublicId',
-        'product_id' => 'setProductId',
+        'catalog_item_id' => 'setCatalogItemId',
         'name' => 'setName',
         'is_master_option_set' => 'setIsMasterOptionSet',
         'display_order' => 'setDisplayOrder',
@@ -164,7 +164,7 @@ class MenuItemOptionSet implements ModelInterface, ArrayAccess
         'image_url' => 'getImageUrl',
         'menu_item_option_set_items' => 'getMenuItemOptionSetItems',
         'public_id' => 'getPublicId',
-        'product_id' => 'getProductId',
+        'catalog_item_id' => 'getCatalogItemId',
         'name' => 'getName',
         'is_master_option_set' => 'getIsMasterOptionSet',
         'display_order' => 'getDisplayOrder',
@@ -257,7 +257,7 @@ class MenuItemOptionSet implements ModelInterface, ArrayAccess
         $this->container['image_url'] = isset($data['image_url']) ? $data['image_url'] : null;
         $this->container['menu_item_option_set_items'] = isset($data['menu_item_option_set_items']) ? $data['menu_item_option_set_items'] : null;
         $this->container['public_id'] = isset($data['public_id']) ? $data['public_id'] : null;
-        $this->container['product_id'] = isset($data['product_id']) ? $data['product_id'] : null;
+        $this->container['catalog_item_id'] = isset($data['catalog_item_id']) ? $data['catalog_item_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['is_master_option_set'] = isset($data['is_master_option_set']) ? $data['is_master_option_set'] : null;
         $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
@@ -419,25 +419,25 @@ class MenuItemOptionSet implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets product_id
+     * Gets catalog_item_id
      *
      * @return string
      */
-    public function getProductId()
+    public function getCatalogItemId()
     {
-        return $this->container['product_id'];
+        return $this->container['catalog_item_id'];
     }
 
     /**
-     * Sets product_id
+     * Sets catalog_item_id
      *
-     * @param string $product_id Product Id when the OptionSet is associated to a Product
+     * @param string $catalog_item_id Catalog item Id when the OptionSet is associated to a Product
      *
      * @return $this
      */
-    public function setProductId($product_id)
+    public function setCatalogItemId($catalog_item_id)
     {
-        $this->container['product_id'] = $product_id;
+        $this->container['catalog_item_id'] = $catalog_item_id;
 
         return $this;
     }

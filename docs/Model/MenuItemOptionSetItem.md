@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **public_id** | **string** | Permanent reference to the item. | [optional] 
 **metadata** | [**\Flipdish\\Client\Models\CreateMetadata[]**](CreateMetadata.md) | List of metadata | [optional] 
 **next_menu_item_option_set_id** | **int** | if null, next option set is next. if -1, this is the final option set | [optional] 
-**product_id** | **string** | Product Id when the OptionSet is associated to a Product | [optional] 
+**catalog_item_id** | **string** | Catalog item Id when the OptionSet is associated to a Product | [optional] 
 **tax_rate_name** | **string** | Tax rate name | [optional] 
 **tax_rate_id** | **int** |  | [optional] 
 **tax_value** | **double** |  | [optional] 

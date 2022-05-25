@@ -62,7 +62,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'public_id' => 'string',
         'metadata' => '\Flipdish\\Client\Models\CreateMetadata[]',
         'next_menu_item_option_set_id' => 'int',
-        'product_id' => 'string',
+        'catalog_item_id' => 'string',
         'tax_rate_name' => 'string',
         'tax_rate_id' => 'int',
         'tax_value' => 'double',
@@ -84,7 +84,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'public_id' => 'uuid',
         'metadata' => null,
         'next_menu_item_option_set_id' => 'int32',
-        'product_id' => null,
+        'catalog_item_id' => null,
         'tax_rate_name' => null,
         'tax_rate_id' => 'int32',
         'tax_value' => 'double',
@@ -127,7 +127,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'public_id' => 'PublicId',
         'metadata' => 'Metadata',
         'next_menu_item_option_set_id' => 'NextMenuItemOptionSetId',
-        'product_id' => 'ProductId',
+        'catalog_item_id' => 'CatalogItemId',
         'tax_rate_name' => 'TaxRateName',
         'tax_rate_id' => 'TaxRateId',
         'tax_value' => 'TaxValue',
@@ -149,7 +149,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'public_id' => 'setPublicId',
         'metadata' => 'setMetadata',
         'next_menu_item_option_set_id' => 'setNextMenuItemOptionSetId',
-        'product_id' => 'setProductId',
+        'catalog_item_id' => 'setCatalogItemId',
         'tax_rate_name' => 'setTaxRateName',
         'tax_rate_id' => 'setTaxRateId',
         'tax_value' => 'setTaxValue',
@@ -171,7 +171,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'public_id' => 'getPublicId',
         'metadata' => 'getMetadata',
         'next_menu_item_option_set_id' => 'getNextMenuItemOptionSetId',
-        'product_id' => 'getProductId',
+        'catalog_item_id' => 'getCatalogItemId',
         'tax_rate_name' => 'getTaxRateName',
         'tax_rate_id' => 'getTaxRateId',
         'tax_value' => 'getTaxValue',
@@ -266,7 +266,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
         $this->container['public_id'] = isset($data['public_id']) ? $data['public_id'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
         $this->container['next_menu_item_option_set_id'] = isset($data['next_menu_item_option_set_id']) ? $data['next_menu_item_option_set_id'] : null;
-        $this->container['product_id'] = isset($data['product_id']) ? $data['product_id'] : null;
+        $this->container['catalog_item_id'] = isset($data['catalog_item_id']) ? $data['catalog_item_id'] : null;
         $this->container['tax_rate_name'] = isset($data['tax_rate_name']) ? $data['tax_rate_name'] : null;
         $this->container['tax_rate_id'] = isset($data['tax_rate_id']) ? $data['tax_rate_id'] : null;
         $this->container['tax_value'] = isset($data['tax_value']) ? $data['tax_value'] : null;
@@ -407,25 +407,25 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets product_id
+     * Gets catalog_item_id
      *
      * @return string
      */
-    public function getProductId()
+    public function getCatalogItemId()
     {
-        return $this->container['product_id'];
+        return $this->container['catalog_item_id'];
     }
 
     /**
-     * Sets product_id
+     * Sets catalog_item_id
      *
-     * @param string $product_id Product Id when the OptionSet is associated to a Product
+     * @param string $catalog_item_id Catalog item Id when the OptionSet is associated to a Product
      *
      * @return $this
      */
-    public function setProductId($product_id)
+    public function setCatalogItemId($catalog_item_id)
     {
-        $this->container['product_id'] = $product_id;
+        $this->container['catalog_item_id'] = $catalog_item_id;
 
         return $this;
     }
