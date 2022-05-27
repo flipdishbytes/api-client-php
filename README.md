@@ -182,6 +182,12 @@ Class | Method | HTTP request | Description
 *CatalogItemsApi* | [**getCatalogItemById**](docs/Api/CatalogItemsApi.md#getcatalogitembyid) | **GET** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Get item by Id
 *CatalogItemsApi* | [**getItems**](docs/Api/CatalogItemsApi.md#getitems) | **GET** /api/v1.0/{appId}/catalog/items | Get paginated items by app name id filtered by types
 *CatalogItemsApi* | [**updateCatalogItem**](docs/Api/CatalogItemsApi.md#updatecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId} | Update Catalog Item
+*CatalogProductsApi* | [**archiveProduct**](docs/Api/CatalogProductsApi.md#archiveproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/archive | Archive Product
+*CatalogProductsApi* | [**createProduct**](docs/Api/CatalogProductsApi.md#createproduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a Product
+*CatalogProductsApi* | [**duplicateProduct**](docs/Api/CatalogProductsApi.md#duplicateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/duplicate | Duplicate Product
+*CatalogProductsApi* | [**getProductById**](docs/Api/CatalogProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{catalogItemId} | Get Product by Id
+*CatalogProductsApi* | [**getProducts**](docs/Api/CatalogProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get paginated products by app name id filtered by types
+*CatalogProductsApi* | [**updateProduct**](docs/Api/CatalogProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId} | Update Product
 *ChannelsApi* | [**assignAppIdToSalesChannel**](docs/Api/ChannelsApi.md#assignappidtosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | Assign a given AppId to a Sales Channel
 *ChannelsApi* | [**assignStoreToChannel**](docs/Api/ChannelsApi.md#assignstoretochannel) | **POST** /api/v1.0/{appId}/channels/assign-store | Assign a Store to a Sales Channel
 *ChannelsApi* | [**attachStoreToSalesChannel**](docs/Api/ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
@@ -564,12 +570,14 @@ Class | Method | HTTP request | Description
  - [CreateFullMenuItemOptionSetItem](docs/Model/CreateFullMenuItemOptionSetItem.md)
  - [CreateFullMenuSection](docs/Model/CreateFullMenuSection.md)
  - [CreateFullMenuSectionItem](docs/Model/CreateFullMenuSectionItem.md)
+ - [CreateGroupReference](docs/Model/CreateGroupReference.md)
  - [CreateLocation](docs/Model/CreateLocation.md)
  - [CreateLocationArea](docs/Model/CreateLocationArea.md)
  - [CreateMenuSectionItemFromCatalogItems](docs/Model/CreateMenuSectionItemFromCatalogItems.md)
  - [CreateMenuTaxRate](docs/Model/CreateMenuTaxRate.md)
  - [CreateMetadata](docs/Model/CreateMetadata.md)
  - [CreateMetafieldDefinition](docs/Model/CreateMetafieldDefinition.md)
+ - [CreateProduct](docs/Model/CreateProduct.md)
  - [CreateTeammate](docs/Model/CreateTeammate.md)
  - [CreateVoucher](docs/Model/CreateVoucher.md)
  - [CreatedMenuSectionItems](docs/Model/CreatedMenuSectionItems.md)
@@ -624,6 +632,7 @@ Class | Method | HTTP request | Description
  - [GoogleGeometry](docs/Model/GoogleGeometry.md)
  - [GoogleLocation](docs/Model/GoogleLocation.md)
  - [GoogleViewport](docs/Model/GoogleViewport.md)
+ - [GroupReference](docs/Model/GroupReference.md)
  - [GroupedCoordinates](docs/Model/GroupedCoordinates.md)
  - [HomeAction](docs/Model/HomeAction.md)
  - [HomeStatistics](docs/Model/HomeStatistics.md)
@@ -791,6 +800,7 @@ Class | Method | HTTP request | Description
  - [PrinterTurnedOnEvent](docs/Model/PrinterTurnedOnEvent.md)
  - [PrinterUnassignedFromStoreEvent](docs/Model/PrinterUnassignedFromStoreEvent.md)
  - [ProcessingFeeConfig](docs/Model/ProcessingFeeConfig.md)
+ - [Product](docs/Model/Product.md)
  - [PublishMenuChanges](docs/Model/PublishMenuChanges.md)
  - [PushNotificationDeletedEvent](docs/Model/PushNotificationDeletedEvent.md)
  - [PushNotificationRequest](docs/Model/PushNotificationRequest.md)
@@ -944,6 +954,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultPaymentTerminalTransactionDetails](docs/Model/RestApiResultPaymentTerminalTransactionDetails.md)
  - [RestApiResultPreOrderConfig](docs/Model/RestApiResultPreOrderConfig.md)
  - [RestApiResultProcessingFeeConfig](docs/Model/RestApiResultProcessingFeeConfig.md)
+ - [RestApiResultProduct](docs/Model/RestApiResultProduct.md)
  - [RestApiResultPushNotificationResponse](docs/Model/RestApiResultPushNotificationResponse.md)
  - [RestApiResultRedeemInvitationResult](docs/Model/RestApiResultRedeemInvitationResult.md)
  - [RestApiResultRetentionCampaign](docs/Model/RestApiResultRetentionCampaign.md)
@@ -1061,8 +1072,10 @@ Class | Method | HTTP request | Description
  - [UpdateCatalogItemReference](docs/Model/UpdateCatalogItemReference.md)
  - [UpdateDriverNotificationToken](docs/Model/UpdateDriverNotificationToken.md)
  - [UpdateDriverProfileModel](docs/Model/UpdateDriverProfileModel.md)
+ - [UpdateGroupReference](docs/Model/UpdateGroupReference.md)
  - [UpdateLocationArea](docs/Model/UpdateLocationArea.md)
  - [UpdateMetafieldDefinition](docs/Model/UpdateMetafieldDefinition.md)
+ - [UpdateProduct](docs/Model/UpdateProduct.md)
  - [UpdateTipConfiguration](docs/Model/UpdateTipConfiguration.md)
  - [UserAnsweredSignupQuestionsEvent](docs/Model/UserAnsweredSignupQuestionsEvent.md)
  - [UserCreatedEvent](docs/Model/UserCreatedEvent.md)

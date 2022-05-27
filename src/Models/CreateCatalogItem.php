@@ -278,16 +278,16 @@ class CreateCatalogItem implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-        if ((mb_strlen($this->container['name']) > 200)) {
-            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 200.";
+        if ((mb_strlen($this->container['name']) > 300)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 300.";
         }
 
         if ((mb_strlen($this->container['name']) < 0)) {
             $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 1000)) {
-            $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 1000.";
+        if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 3000)) {
+            $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 3000.";
         }
 
         if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
@@ -455,8 +455,8 @@ class CreateCatalogItem implements ModelInterface, ArrayAccess
      */
     public function setName($name)
     {
-        if ((mb_strlen($name) > 200)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling CreateCatalogItem., must be smaller than or equal to 200.');
+        if ((mb_strlen($name) > 300)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling CreateCatalogItem., must be smaller than or equal to 300.');
         }
         if ((mb_strlen($name) < 0)) {
             throw new \InvalidArgumentException('invalid length for $name when calling CreateCatalogItem., must be bigger than or equal to 0.');
@@ -486,8 +486,8 @@ class CreateCatalogItem implements ModelInterface, ArrayAccess
      */
     public function setDescription($description)
     {
-        if (!is_null($description) && (mb_strlen($description) > 1000)) {
-            throw new \InvalidArgumentException('invalid length for $description when calling CreateCatalogItem., must be smaller than or equal to 1000.');
+        if (!is_null($description) && (mb_strlen($description) > 3000)) {
+            throw new \InvalidArgumentException('invalid length for $description when calling CreateCatalogItem., must be smaller than or equal to 3000.');
         }
         if (!is_null($description) && (mb_strlen($description) < 0)) {
             throw new \InvalidArgumentException('invalid length for $description when calling CreateCatalogItem., must be bigger than or equal to 0.');
