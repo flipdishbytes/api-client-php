@@ -59,6 +59,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'catalog_group_id' => 'string',
+        'catalog_item_id' => 'string',
         'is_archived' => 'bool',
         'min_select_count' => 'int',
         'max_select_count' => 'int',
@@ -78,6 +79,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'catalog_group_id' => null,
+        'catalog_item_id' => null,
         'is_archived' => null,
         'min_select_count' => 'int32',
         'max_select_count' => 'int32',
@@ -118,6 +120,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'catalog_group_id' => 'CatalogGroupId',
+        'catalog_item_id' => 'CatalogItemId',
         'is_archived' => 'IsArchived',
         'min_select_count' => 'MinSelectCount',
         'max_select_count' => 'MaxSelectCount',
@@ -137,6 +140,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'catalog_group_id' => 'setCatalogGroupId',
+        'catalog_item_id' => 'setCatalogItemId',
         'is_archived' => 'setIsArchived',
         'min_select_count' => 'setMinSelectCount',
         'max_select_count' => 'setMaxSelectCount',
@@ -156,6 +160,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'catalog_group_id' => 'getCatalogGroupId',
+        'catalog_item_id' => 'getCatalogItemId',
         'is_archived' => 'getIsArchived',
         'min_select_count' => 'getMinSelectCount',
         'max_select_count' => 'getMaxSelectCount',
@@ -242,6 +247,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['catalog_group_id'] = isset($data['catalog_group_id']) ? $data['catalog_group_id'] : null;
+        $this->container['catalog_item_id'] = isset($data['catalog_item_id']) ? $data['catalog_item_id'] : null;
         $this->container['is_archived'] = isset($data['is_archived']) ? $data['is_archived'] : null;
         $this->container['min_select_count'] = isset($data['min_select_count']) ? $data['min_select_count'] : null;
         $this->container['max_select_count'] = isset($data['max_select_count']) ? $data['max_select_count'] : null;
@@ -269,6 +275,14 @@ class CatalogGroup implements ModelInterface, ArrayAccess
 
         if (!is_null($this->container['catalog_group_id']) && (mb_strlen($this->container['catalog_group_id']) < 0)) {
             $invalidProperties[] = "invalid value for 'catalog_group_id', the character length must be bigger than or equal to 0.";
+        }
+
+        if (!is_null($this->container['catalog_item_id']) && (mb_strlen($this->container['catalog_item_id']) > 30)) {
+            $invalidProperties[] = "invalid value for 'catalog_item_id', the character length must be smaller than or equal to 30.";
+        }
+
+        if (!is_null($this->container['catalog_item_id']) && (mb_strlen($this->container['catalog_item_id']) < 0)) {
+            $invalidProperties[] = "invalid value for 'catalog_item_id', the character length must be bigger than or equal to 0.";
         }
 
         if ($this->container['group_type'] === null) {
@@ -354,6 +368,37 @@ class CatalogGroup implements ModelInterface, ArrayAccess
         }
 
         $this->container['catalog_group_id'] = $catalog_group_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets catalog_item_id
+     *
+     * @return string
+     */
+    public function getCatalogItemId()
+    {
+        return $this->container['catalog_item_id'];
+    }
+
+    /**
+     * Sets catalog_item_id
+     *
+     * @param string $catalog_item_id Unique catalog item id
+     *
+     * @return $this
+     */
+    public function setCatalogItemId($catalog_item_id)
+    {
+        if (!is_null($catalog_item_id) && (mb_strlen($catalog_item_id) > 30)) {
+            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling CatalogGroup., must be smaller than or equal to 30.');
+        }
+        if (!is_null($catalog_item_id) && (mb_strlen($catalog_item_id) < 0)) {
+            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling CatalogGroup., must be bigger than or equal to 0.');
+        }
+
+        $this->container['catalog_item_id'] = $catalog_item_id;
 
         return $this;
     }

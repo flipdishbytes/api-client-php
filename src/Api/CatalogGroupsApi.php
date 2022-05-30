@@ -88,38 +88,38 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation archiveCatalogGroup
+     * Operation archiveGroup
      *
      * Archive Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function archiveCatalogGroup($app_id, $catalog_group_id)
+    public function archiveGroup($app_id, $catalog_item_id)
     {
-        $this->archiveCatalogGroupWithHttpInfo($app_id, $catalog_group_id);
+        $this->archiveGroupWithHttpInfo($app_id, $catalog_item_id);
     }
 
     /**
-     * Operation archiveCatalogGroupWithHttpInfo
+     * Operation archiveGroupWithHttpInfo
      *
      * Archive Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function archiveCatalogGroupWithHttpInfo($app_id, $catalog_group_id)
+    public function archiveGroupWithHttpInfo($app_id, $catalog_item_id)
     {
         $returnType = '';
-        $request = $this->archiveCatalogGroupRequest($app_id, $catalog_group_id);
+        $request = $this->archiveGroupRequest($app_id, $catalog_item_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -183,19 +183,19 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation archiveCatalogGroupAsync
+     * Operation archiveGroupAsync
      *
      * Archive Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function archiveCatalogGroupAsync($app_id, $catalog_group_id)
+    public function archiveGroupAsync($app_id, $catalog_item_id)
     {
-        return $this->archiveCatalogGroupAsyncWithHttpInfo($app_id, $catalog_group_id)
+        return $this->archiveGroupAsyncWithHttpInfo($app_id, $catalog_item_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -204,20 +204,20 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation archiveCatalogGroupAsyncWithHttpInfo
+     * Operation archiveGroupAsyncWithHttpInfo
      *
      * Archive Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function archiveCatalogGroupAsyncWithHttpInfo($app_id, $catalog_group_id)
+    public function archiveGroupAsyncWithHttpInfo($app_id, $catalog_item_id)
     {
         $returnType = '';
-        $request = $this->archiveCatalogGroupRequest($app_id, $catalog_group_id);
+        $request = $this->archiveGroupRequest($app_id, $catalog_item_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -243,30 +243,30 @@ class CatalogGroupsApi
     }
 
     /**
-     * Create request for operation 'archiveCatalogGroup'
+     * Create request for operation 'archiveGroup'
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function archiveCatalogGroupRequest($app_id, $catalog_group_id)
+    protected function archiveGroupRequest($app_id, $catalog_item_id)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling archiveCatalogGroup'
+                'Missing the required parameter $app_id when calling archiveGroup'
             );
         }
-        // verify the required parameter 'catalog_group_id' is set
-        if ($catalog_group_id === null || (is_array($catalog_group_id) && count($catalog_group_id) === 0)) {
+        // verify the required parameter 'catalog_item_id' is set
+        if ($catalog_item_id === null || (is_array($catalog_item_id) && count($catalog_item_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $catalog_group_id when calling archiveCatalogGroup'
+                'Missing the required parameter $catalog_item_id when calling archiveGroup'
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/catalog/groups/{catalogGroupId}/archive';
+        $resourcePath = '/api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -283,10 +283,10 @@ class CatalogGroupsApi
             );
         }
         // path params
-        if ($catalog_group_id !== null) {
+        if ($catalog_item_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'catalogGroupId' . '}',
-                ObjectSerializer::toPathValue($catalog_group_id),
+                '{' . 'catalogItemId' . '}',
+                ObjectSerializer::toPathValue($catalog_item_id),
                 $resourcePath
             );
         }
@@ -678,38 +678,38 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation duplicateCatalogGroup
+     * Operation duplicateGroup
      *
      * Duplicate Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function duplicateCatalogGroup($app_id, $catalog_group_id)
+    public function duplicateGroup($app_id, $catalog_item_id)
     {
-        $this->duplicateCatalogGroupWithHttpInfo($app_id, $catalog_group_id);
+        $this->duplicateGroupWithHttpInfo($app_id, $catalog_item_id);
     }
 
     /**
-     * Operation duplicateCatalogGroupWithHttpInfo
+     * Operation duplicateGroupWithHttpInfo
      *
      * Duplicate Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function duplicateCatalogGroupWithHttpInfo($app_id, $catalog_group_id)
+    public function duplicateGroupWithHttpInfo($app_id, $catalog_item_id)
     {
         $returnType = '';
-        $request = $this->duplicateCatalogGroupRequest($app_id, $catalog_group_id);
+        $request = $this->duplicateGroupRequest($app_id, $catalog_item_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -773,19 +773,19 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation duplicateCatalogGroupAsync
+     * Operation duplicateGroupAsync
      *
      * Duplicate Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function duplicateCatalogGroupAsync($app_id, $catalog_group_id)
+    public function duplicateGroupAsync($app_id, $catalog_item_id)
     {
-        return $this->duplicateCatalogGroupAsyncWithHttpInfo($app_id, $catalog_group_id)
+        return $this->duplicateGroupAsyncWithHttpInfo($app_id, $catalog_item_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -794,20 +794,20 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation duplicateCatalogGroupAsyncWithHttpInfo
+     * Operation duplicateGroupAsyncWithHttpInfo
      *
      * Duplicate Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function duplicateCatalogGroupAsyncWithHttpInfo($app_id, $catalog_group_id)
+    public function duplicateGroupAsyncWithHttpInfo($app_id, $catalog_item_id)
     {
         $returnType = '';
-        $request = $this->duplicateCatalogGroupRequest($app_id, $catalog_group_id);
+        $request = $this->duplicateGroupRequest($app_id, $catalog_item_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -833,30 +833,30 @@ class CatalogGroupsApi
     }
 
     /**
-     * Create request for operation 'duplicateCatalogGroup'
+     * Create request for operation 'duplicateGroup'
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function duplicateCatalogGroupRequest($app_id, $catalog_group_id)
+    protected function duplicateGroupRequest($app_id, $catalog_item_id)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling duplicateCatalogGroup'
+                'Missing the required parameter $app_id when calling duplicateGroup'
             );
         }
-        // verify the required parameter 'catalog_group_id' is set
-        if ($catalog_group_id === null || (is_array($catalog_group_id) && count($catalog_group_id) === 0)) {
+        // verify the required parameter 'catalog_item_id' is set
+        if ($catalog_item_id === null || (is_array($catalog_item_id) && count($catalog_item_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $catalog_group_id when calling duplicateCatalogGroup'
+                'Missing the required parameter $catalog_item_id when calling duplicateGroup'
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/catalog/groups/{catalogGroupId}/duplicate';
+        $resourcePath = '/api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -873,10 +873,10 @@ class CatalogGroupsApi
             );
         }
         // path params
-        if ($catalog_group_id !== null) {
+        if ($catalog_item_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'catalogGroupId' . '}',
-                ObjectSerializer::toPathValue($catalog_group_id),
+                '{' . 'catalogItemId' . '}',
+                ObjectSerializer::toPathValue($catalog_item_id),
                 $resourcePath
             );
         }
@@ -957,39 +957,39 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation getCatalogGroupById
+     * Operation getGroupById
      *
      * Get group by Id
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\CatalogGroup
      */
-    public function getCatalogGroupById($app_id, $catalog_group_id)
+    public function getGroupById($app_id, $catalog_item_id)
     {
-        list($response) = $this->getCatalogGroupByIdWithHttpInfo($app_id, $catalog_group_id);
+        list($response) = $this->getGroupByIdWithHttpInfo($app_id, $catalog_item_id);
         return $response;
     }
 
     /**
-     * Operation getCatalogGroupByIdWithHttpInfo
+     * Operation getGroupByIdWithHttpInfo
      *
      * Get group by Id
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\CatalogGroup, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCatalogGroupByIdWithHttpInfo($app_id, $catalog_group_id)
+    public function getGroupByIdWithHttpInfo($app_id, $catalog_item_id)
     {
         $returnType = '\Flipdish\\Client\Models\CatalogGroup';
-        $request = $this->getCatalogGroupByIdRequest($app_id, $catalog_group_id);
+        $request = $this->getGroupByIdRequest($app_id, $catalog_item_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1075,19 +1075,19 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation getCatalogGroupByIdAsync
+     * Operation getGroupByIdAsync
      *
      * Get group by Id
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCatalogGroupByIdAsync($app_id, $catalog_group_id)
+    public function getGroupByIdAsync($app_id, $catalog_item_id)
     {
-        return $this->getCatalogGroupByIdAsyncWithHttpInfo($app_id, $catalog_group_id)
+        return $this->getGroupByIdAsyncWithHttpInfo($app_id, $catalog_item_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1096,20 +1096,20 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation getCatalogGroupByIdAsyncWithHttpInfo
+     * Operation getGroupByIdAsyncWithHttpInfo
      *
      * Get group by Id
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCatalogGroupByIdAsyncWithHttpInfo($app_id, $catalog_group_id)
+    public function getGroupByIdAsyncWithHttpInfo($app_id, $catalog_item_id)
     {
         $returnType = '\Flipdish\\Client\Models\CatalogGroup';
-        $request = $this->getCatalogGroupByIdRequest($app_id, $catalog_group_id);
+        $request = $this->getGroupByIdRequest($app_id, $catalog_item_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1149,30 +1149,30 @@ class CatalogGroupsApi
     }
 
     /**
-     * Create request for operation 'getCatalogGroupById'
+     * Create request for operation 'getGroupById'
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCatalogGroupByIdRequest($app_id, $catalog_group_id)
+    protected function getGroupByIdRequest($app_id, $catalog_item_id)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling getCatalogGroupById'
+                'Missing the required parameter $app_id when calling getGroupById'
             );
         }
-        // verify the required parameter 'catalog_group_id' is set
-        if ($catalog_group_id === null || (is_array($catalog_group_id) && count($catalog_group_id) === 0)) {
+        // verify the required parameter 'catalog_item_id' is set
+        if ($catalog_item_id === null || (is_array($catalog_item_id) && count($catalog_item_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $catalog_group_id when calling getCatalogGroupById'
+                'Missing the required parameter $catalog_item_id when calling getGroupById'
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/catalog/groups/{catalogGroupId}';
+        $resourcePath = '/api/v1.0/{appId}/catalog/groups/{catalogItemId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1189,10 +1189,10 @@ class CatalogGroupsApi
             );
         }
         // path params
-        if ($catalog_group_id !== null) {
+        if ($catalog_item_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'catalogGroupId' . '}',
-                ObjectSerializer::toPathValue($catalog_group_id),
+                '{' . 'catalogItemId' . '}',
+                ObjectSerializer::toPathValue($catalog_item_id),
                 $resourcePath
             );
         }
@@ -1615,40 +1615,40 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation updateCatalogGroup
+     * Operation updateGroup
      *
      * Update Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      * @param  \Flipdish\\Client\Models\UpdateCatalogGroup $update_catalog_group  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function updateCatalogGroup($app_id, $catalog_group_id, $update_catalog_group)
+    public function updateGroup($app_id, $catalog_item_id, $update_catalog_group)
     {
-        $this->updateCatalogGroupWithHttpInfo($app_id, $catalog_group_id, $update_catalog_group);
+        $this->updateGroupWithHttpInfo($app_id, $catalog_item_id, $update_catalog_group);
     }
 
     /**
-     * Operation updateCatalogGroupWithHttpInfo
+     * Operation updateGroupWithHttpInfo
      *
      * Update Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      * @param  \Flipdish\\Client\Models\UpdateCatalogGroup $update_catalog_group  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateCatalogGroupWithHttpInfo($app_id, $catalog_group_id, $update_catalog_group)
+    public function updateGroupWithHttpInfo($app_id, $catalog_item_id, $update_catalog_group)
     {
         $returnType = '';
-        $request = $this->updateCatalogGroupRequest($app_id, $catalog_group_id, $update_catalog_group);
+        $request = $this->updateGroupRequest($app_id, $catalog_item_id, $update_catalog_group);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1712,20 +1712,20 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation updateCatalogGroupAsync
+     * Operation updateGroupAsync
      *
      * Update Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      * @param  \Flipdish\\Client\Models\UpdateCatalogGroup $update_catalog_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateCatalogGroupAsync($app_id, $catalog_group_id, $update_catalog_group)
+    public function updateGroupAsync($app_id, $catalog_item_id, $update_catalog_group)
     {
-        return $this->updateCatalogGroupAsyncWithHttpInfo($app_id, $catalog_group_id, $update_catalog_group)
+        return $this->updateGroupAsyncWithHttpInfo($app_id, $catalog_item_id, $update_catalog_group)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1734,21 +1734,21 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation updateCatalogGroupAsyncWithHttpInfo
+     * Operation updateGroupAsyncWithHttpInfo
      *
      * Update Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      * @param  \Flipdish\\Client\Models\UpdateCatalogGroup $update_catalog_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateCatalogGroupAsyncWithHttpInfo($app_id, $catalog_group_id, $update_catalog_group)
+    public function updateGroupAsyncWithHttpInfo($app_id, $catalog_item_id, $update_catalog_group)
     {
         $returnType = '';
-        $request = $this->updateCatalogGroupRequest($app_id, $catalog_group_id, $update_catalog_group);
+        $request = $this->updateGroupRequest($app_id, $catalog_item_id, $update_catalog_group);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1774,37 +1774,37 @@ class CatalogGroupsApi
     }
 
     /**
-     * Create request for operation 'updateCatalogGroup'
+     * Create request for operation 'updateGroup'
      *
      * @param  string $app_id  (required)
-     * @param  string $catalog_group_id  (required)
+     * @param  string $catalog_item_id  (required)
      * @param  \Flipdish\\Client\Models\UpdateCatalogGroup $update_catalog_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateCatalogGroupRequest($app_id, $catalog_group_id, $update_catalog_group)
+    protected function updateGroupRequest($app_id, $catalog_item_id, $update_catalog_group)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling updateCatalogGroup'
+                'Missing the required parameter $app_id when calling updateGroup'
             );
         }
-        // verify the required parameter 'catalog_group_id' is set
-        if ($catalog_group_id === null || (is_array($catalog_group_id) && count($catalog_group_id) === 0)) {
+        // verify the required parameter 'catalog_item_id' is set
+        if ($catalog_item_id === null || (is_array($catalog_item_id) && count($catalog_item_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $catalog_group_id when calling updateCatalogGroup'
+                'Missing the required parameter $catalog_item_id when calling updateGroup'
             );
         }
         // verify the required parameter 'update_catalog_group' is set
         if ($update_catalog_group === null || (is_array($update_catalog_group) && count($update_catalog_group) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $update_catalog_group when calling updateCatalogGroup'
+                'Missing the required parameter $update_catalog_group when calling updateGroup'
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/catalog/groups/{catalogGroupId}';
+        $resourcePath = '/api/v1.0/{appId}/catalog/groups/{catalogItemId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1821,10 +1821,10 @@ class CatalogGroupsApi
             );
         }
         // path params
-        if ($catalog_group_id !== null) {
+        if ($catalog_item_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'catalogGroupId' . '}',
-                ObjectSerializer::toPathValue($catalog_group_id),
+                '{' . 'catalogItemId' . '}',
+                ObjectSerializer::toPathValue($catalog_item_id),
                 $resourcePath
             );
         }

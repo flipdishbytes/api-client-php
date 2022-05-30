@@ -84,6 +84,13 @@ class CatalogGroupTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "catalog_item_id"
+     */
+    public function testPropertyCatalogItemId()
+    {
+    }
+
+    /**
      * Test attribute "is_archived"
      */
     public function testPropertyIsArchived()

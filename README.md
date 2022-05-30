@@ -169,12 +169,12 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**unpairCurrentlyPairedBluetoothDevice**](docs/Api/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
 *CatalogChangesApi* | [**getPendingMenuChanges**](docs/Api/CatalogChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | Get menu pending changes from Catalog groups and items
 *CatalogChangesApi* | [**publishPendingMenuChanges**](docs/Api/CatalogChangesApi.md#publishpendingmenuchanges) | **POST** /api/v1.0/{appId}/menus/catalog-changes/publish | Update menus with the pending changes from Catalog groups and items
-*CatalogGroupsApi* | [**archiveCatalogGroup**](docs/Api/CatalogGroupsApi.md#archivecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId}/archive | Archive Catalog Group
+*CatalogGroupsApi* | [**archiveGroup**](docs/Api/CatalogGroupsApi.md#archivegroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | Archive Catalog Group
 *CatalogGroupsApi* | [**createCatalogGroup**](docs/Api/CatalogGroupsApi.md#createcataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
-*CatalogGroupsApi* | [**duplicateCatalogGroup**](docs/Api/CatalogGroupsApi.md#duplicatecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId}/duplicate | Duplicate Catalog Group
-*CatalogGroupsApi* | [**getCatalogGroupById**](docs/Api/CatalogGroupsApi.md#getcataloggroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Get group by Id
+*CatalogGroupsApi* | [**duplicateGroup**](docs/Api/CatalogGroupsApi.md#duplicategroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | Duplicate Catalog Group
+*CatalogGroupsApi* | [**getGroupById**](docs/Api/CatalogGroupsApi.md#getgroupbyid) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Get group by Id
 *CatalogGroupsApi* | [**getGroups**](docs/Api/CatalogGroupsApi.md#getgroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
-*CatalogGroupsApi* | [**updateCatalogGroup**](docs/Api/CatalogGroupsApi.md#updatecataloggroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogGroupId} | Update Catalog Group
+*CatalogGroupsApi* | [**updateGroup**](docs/Api/CatalogGroupsApi.md#updategroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Update Catalog Group
 *CatalogImagesApi* | [**uploadCatalogImage**](docs/Api/CatalogImagesApi.md#uploadcatalogimage) | **POST** /api/v1.0/{appId}/catalog/images | Upload a Catalog Image
 *CatalogItemsApi* | [**archiveCatalogItem**](docs/Api/CatalogItemsApi.md#archivecatalogitem) | **POST** /api/v1.0/{appId}/catalog/items/{catalogItemId}/archive | Archive Catalog Item
 *CatalogItemsApi* | [**createCatalogItem**](docs/Api/CatalogItemsApi.md#createcatalogitem) | **POST** /api/v1.0/{appId}/catalog/items | Create a Catalog Item

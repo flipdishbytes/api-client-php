@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **catalog_group_id** | **string** | Unique catalog group id | [optional] 
+**catalog_item_id** | **string** | Unique catalog item id | [optional] 
 **is_archived** | **bool** | Returns true if the group is archived | [optional] 
 **min_select_count** | **int** | Minimum number of items that the user has to select | [optional] 
 **max_select_count** | **int** | Maximum number of items that the user has to select | [optional] 

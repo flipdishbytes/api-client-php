@@ -72,12 +72,12 @@ class CatalogGroupsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for archiveCatalogGroup
+     * Test case for archiveGroup
      *
      * Archive Catalog Group.
      *
      */
-    public function testArchiveCatalogGroup()
+    public function testArchiveGroup()
     {
     }
 
@@ -92,22 +92,22 @@ class CatalogGroupsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for duplicateCatalogGroup
+     * Test case for duplicateGroup
      *
      * Duplicate Catalog Group.
      *
      */
-    public function testDuplicateCatalogGroup()
+    public function testDuplicateGroup()
     {
     }
 
     /**
-     * Test case for getCatalogGroupById
+     * Test case for getGroupById
      *
      * Get group by Id.
      *
      */
-    public function testGetCatalogGroupById()
+    public function testGetGroupById()
     {
     }
 
@@ -122,12 +122,12 @@ class CatalogGroupsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for updateCatalogGroup
+     * Test case for updateGroup
      *
      * Update Catalog Group.
      *
      */
-    public function testUpdateCatalogGroup()
+    public function testUpdateGroup()
     {
     }
 }

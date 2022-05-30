@@ -84,6 +84,13 @@ class UpdateCatalogGroupReferenceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "catalog_item_id"
+     */
+    public function testPropertyCatalogItemId()
+    {
+    }
+
+    /**
      * Test attribute "group_type"
      */
     public function testPropertyGroupType()
