@@ -335,6 +335,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_UPDATE_HYDRA_CONFIG_MANAGE = 'UpdateHydraConfigManage';
     const APP_RESOURCE_SET_INITIATE_BLUETOOTH_PAIRING_MODE = 'InitiateBluetoothPairingMode';
     const APP_RESOURCE_SET_DELETE_TERMINAL = 'DeleteTerminal';
+    const APP_RESOURCE_SET_VIEW_KIOSK_TELEMETRY = 'ViewKioskTelemetry';
     const APP_RESOURCE_SET_VIEW_CUSTOMERS = 'ViewCustomers';
     const APP_RESOURCE_SET_EDIT_CUSTOMERS = 'EditCustomers';
     const APP_RESOURCE_SET_CREATE_CATALOG_ELEMENTS = 'CreateCatalogElements';
@@ -504,6 +505,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_UPDATE_HYDRA_CONFIG_MANAGE,
             self::APP_RESOURCE_SET_INITIATE_BLUETOOTH_PAIRING_MODE,
             self::APP_RESOURCE_SET_DELETE_TERMINAL,
+            self::APP_RESOURCE_SET_VIEW_KIOSK_TELEMETRY,
             self::APP_RESOURCE_SET_VIEW_CUSTOMERS,
             self::APP_RESOURCE_SET_EDIT_CUSTOMERS,
             self::APP_RESOURCE_SET_CREATE_CATALOG_ELEMENTS,
