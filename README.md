@@ -886,6 +886,7 @@ Class | Method | HTTP request | Description
  - [RestApiPaginationResultPayoutRefund](docs/Model/RestApiPaginationResultPayoutRefund.md)
  - [RestApiPaginationResultPendingMenuChanges](docs/Model/RestApiPaginationResultPendingMenuChanges.md)
  - [RestApiPaginationResultPhoneCall](docs/Model/RestApiPaginationResultPhoneCall.md)
+ - [RestApiPaginationResultProduct](docs/Model/RestApiPaginationResultProduct.md)
  - [RestApiPaginationResultPushNotificationResponse](docs/Model/RestApiPaginationResultPushNotificationResponse.md)
  - [RestApiPaginationResultStore](docs/Model/RestApiPaginationResultStore.md)
  - [RestApiPaginationResultStoreGroup](docs/Model/RestApiPaginationResultStoreGroup.md)

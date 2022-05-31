@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **groups** | [**\Flipdish\\Client\Models\CreateGroupReference[]**](CreateGroupReference.md) | Collection of groups associated with this item | [optional] 
 **metafields** | [**\Flipdish\\Client\Models\Metafield[]**](Metafield.md) | Collection of metafields | [optional] 
-**item_type** | **string** | Type of item (Product, Modifier, etc) | 
+**product_type** | **string** | Type of item (Product, Modifier, etc) | 
 **sku** | **string** | Stock Keeping Unit (SKU) | 
 **name** | **string** | Item name | 
 **description** | **string** | Item description | [optional] 

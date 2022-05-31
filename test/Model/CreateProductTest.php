@@ -91,9 +91,9 @@ class CreateProductTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "item_type"
+     * Test attribute "product_type"
      */
-    public function testPropertyItemType()
+    public function testPropertyProductType()
     {
     }
 

@@ -1278,18 +1278,18 @@ class CatalogProductsApi
      * Get paginated products by app name id filtered by types
      *
      * @param  string $app_id  (required)
-     * @param  string[] $item_types  (required)
+     * @param  string[] $product_types  (required)
      * @param  string $search_term  (optional)
      * @param  int $page  (optional)
      * @param  int $limit  (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiPaginationResultCatalogItem
+     * @return \Flipdish\\Client\Models\RestApiPaginationResultProduct
      */
-    public function getProducts($app_id, $item_types, $search_term = null, $page = null, $limit = null)
+    public function getProducts($app_id, $product_types, $search_term = null, $page = null, $limit = null)
     {
-        list($response) = $this->getProductsWithHttpInfo($app_id, $item_types, $search_term, $page, $limit);
+        list($response) = $this->getProductsWithHttpInfo($app_id, $product_types, $search_term, $page, $limit);
         return $response;
     }
 
@@ -1299,19 +1299,19 @@ class CatalogProductsApi
      * Get paginated products by app name id filtered by types
      *
      * @param  string $app_id  (required)
-     * @param  string[] $item_types  (required)
+     * @param  string[] $product_types  (required)
      * @param  string $search_term  (optional)
      * @param  int $page  (optional)
      * @param  int $limit  (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiPaginationResultCatalogItem, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiPaginationResultProduct, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductsWithHttpInfo($app_id, $item_types, $search_term = null, $page = null, $limit = null)
+    public function getProductsWithHttpInfo($app_id, $product_types, $search_term = null, $page = null, $limit = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultCatalogItem';
-        $request = $this->getProductsRequest($app_id, $item_types, $search_term, $page, $limit);
+        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultProduct';
+        $request = $this->getProductsRequest($app_id, $product_types, $search_term, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1362,7 +1362,7 @@ class CatalogProductsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiPaginationResultCatalogItem',
+                        '\Flipdish\\Client\Models\RestApiPaginationResultProduct',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1402,7 +1402,7 @@ class CatalogProductsApi
      * Get paginated products by app name id filtered by types
      *
      * @param  string $app_id  (required)
-     * @param  string[] $item_types  (required)
+     * @param  string[] $product_types  (required)
      * @param  string $search_term  (optional)
      * @param  int $page  (optional)
      * @param  int $limit  (optional)
@@ -1410,9 +1410,9 @@ class CatalogProductsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductsAsync($app_id, $item_types, $search_term = null, $page = null, $limit = null)
+    public function getProductsAsync($app_id, $product_types, $search_term = null, $page = null, $limit = null)
     {
-        return $this->getProductsAsyncWithHttpInfo($app_id, $item_types, $search_term, $page, $limit)
+        return $this->getProductsAsyncWithHttpInfo($app_id, $product_types, $search_term, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1426,7 +1426,7 @@ class CatalogProductsApi
      * Get paginated products by app name id filtered by types
      *
      * @param  string $app_id  (required)
-     * @param  string[] $item_types  (required)
+     * @param  string[] $product_types  (required)
      * @param  string $search_term  (optional)
      * @param  int $page  (optional)
      * @param  int $limit  (optional)
@@ -1434,10 +1434,10 @@ class CatalogProductsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductsAsyncWithHttpInfo($app_id, $item_types, $search_term = null, $page = null, $limit = null)
+    public function getProductsAsyncWithHttpInfo($app_id, $product_types, $search_term = null, $page = null, $limit = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultCatalogItem';
-        $request = $this->getProductsRequest($app_id, $item_types, $search_term, $page, $limit);
+        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultProduct';
+        $request = $this->getProductsRequest($app_id, $product_types, $search_term, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1480,7 +1480,7 @@ class CatalogProductsApi
      * Create request for operation 'getProducts'
      *
      * @param  string $app_id  (required)
-     * @param  string[] $item_types  (required)
+     * @param  string[] $product_types  (required)
      * @param  string $search_term  (optional)
      * @param  int $page  (optional)
      * @param  int $limit  (optional)
@@ -1488,7 +1488,7 @@ class CatalogProductsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductsRequest($app_id, $item_types, $search_term = null, $page = null, $limit = null)
+    protected function getProductsRequest($app_id, $product_types, $search_term = null, $page = null, $limit = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -1496,10 +1496,10 @@ class CatalogProductsApi
                 'Missing the required parameter $app_id when calling getProducts'
             );
         }
-        // verify the required parameter 'item_types' is set
-        if ($item_types === null || (is_array($item_types) && count($item_types) === 0)) {
+        // verify the required parameter 'product_types' is set
+        if ($product_types === null || (is_array($product_types) && count($product_types) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $item_types when calling getProducts'
+                'Missing the required parameter $product_types when calling getProducts'
             );
         }
 
@@ -1511,11 +1511,11 @@ class CatalogProductsApi
         $multipart = false;
 
         // query params
-        if (is_array($item_types)) {
-            $queryParams['itemTypes'] = $item_types;
+        if (is_array($product_types)) {
+            $queryParams['productTypes'] = $product_types;
         } else
-        if ($item_types !== null) {
-            $queryParams['itemTypes'] = ObjectSerializer::toQueryValue($item_types);
+        if ($product_types !== null) {
+            $queryParams['productTypes'] = ObjectSerializer::toQueryValue($product_types);
         }
         // query params
         if ($search_term !== null) {

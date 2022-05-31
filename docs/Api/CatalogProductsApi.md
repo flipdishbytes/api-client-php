@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProducts**
-> \Flipdish\\Client\Models\RestApiPaginationResultCatalogItem getProducts($app_id, $item_types, $search_term, $page, $limit)
+> \Flipdish\\Client\Models\RestApiPaginationResultProduct getProducts($app_id, $product_types, $search_term, $page, $limit)
 
 Get paginated products by app name id filtered by types
 
@@ -252,13 +252,13 @@ $apiInstance = new Flipdish\\Client\Api\CatalogProductsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$item_types = array("item_types_example"); // string[] | 
+$product_types = array("product_types_example"); // string[] | 
 $search_term = "search_term_example"; // string | 
 $page = 56; // int | 
 $limit = 56; // int | 
 
 try {
-    $result = $apiInstance->getProducts($app_id, $item_types, $search_term, $page, $limit);
+    $result = $apiInstance->getProducts($app_id, $product_types, $search_term, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CatalogProductsApi->getProducts: ', $e->getMessage(), PHP_EOL;
@@ -271,14 +271,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **item_types** | [**string[]**](../Model/string.md)|  |
+ **product_types** | [**string[]**](../Model/string.md)|  |
  **search_term** | **string**|  | [optional]
  **page** | **int**|  | [optional]
  **limit** | **int**|  | [optional]
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiPaginationResultCatalogItem**](../Model/RestApiPaginationResultCatalogItem.md)
+[**\Flipdish\\Client\Models\RestApiPaginationResultProduct**](../Model/RestApiPaginationResultProduct.md)
 
 ### Authorization
 

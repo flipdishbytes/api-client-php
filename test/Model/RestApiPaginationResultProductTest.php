@@ -1,6 +1,6 @@
 <?php
 /**
- * ProductTest
+ * RestApiPaginationResultProductTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * ProductTest Class Doc Comment
+ * RestApiPaginationResultProductTest Class Doc Comment
  *
  * @category    Class
- * @description Product
+ * @description Rest api pagination result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProductTest extends \PHPUnit_Framework_TestCase
+class RestApiPaginationResultProductTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,86 +70,37 @@ class ProductTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Product"
+     * Test "RestApiPaginationResultProduct"
      */
-    public function testProduct()
+    public function testRestApiPaginationResultProduct()
     {
     }
 
     /**
-     * Test attribute "catalog_item_id"
+     * Test attribute "page"
      */
-    public function testPropertyCatalogItemId()
+    public function testPropertyPage()
     {
     }
 
     /**
-     * Test attribute "is_archived"
+     * Test attribute "limit"
      */
-    public function testPropertyIsArchived()
+    public function testPropertyLimit()
     {
     }
 
     /**
-     * Test attribute "groups"
+     * Test attribute "total_record_count"
      */
-    public function testPropertyGroups()
+    public function testPropertyTotalRecordCount()
     {
     }
 
     /**
-     * Test attribute "metafields"
+     * Test attribute "data"
      */
-    public function testPropertyMetafields()
-    {
-    }
-
-    /**
-     * Test attribute "product_type"
-     */
-    public function testPropertyProductType()
-    {
-    }
-
-    /**
-     * Test attribute "sku"
-     */
-    public function testPropertySku()
-    {
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-    }
-
-    /**
-     * Test attribute "price"
-     */
-    public function testPropertyPrice()
-    {
-    }
-
-    /**
-     * Test attribute "image_file_name"
-     */
-    public function testPropertyImageFileName()
-    {
-    }
-
-    /**
-     * Test attribute "alcohol"
-     */
-    public function testPropertyAlcohol()
+    public function testPropertyData()
     {
     }
 }

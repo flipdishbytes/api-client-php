@@ -62,7 +62,7 @@ class Product implements ModelInterface, ArrayAccess
         'is_archived' => 'bool',
         'groups' => '\Flipdish\\Client\Models\GroupReference[]',
         'metafields' => '\Flipdish\\Client\Models\Metafield[]',
-        'item_type' => 'string',
+        'product_type' => 'string',
         'sku' => 'string',
         'name' => 'string',
         'description' => 'string',
@@ -81,7 +81,7 @@ class Product implements ModelInterface, ArrayAccess
         'is_archived' => null,
         'groups' => null,
         'metafields' => null,
-        'item_type' => null,
+        'product_type' => null,
         'sku' => null,
         'name' => null,
         'description' => null,
@@ -121,7 +121,7 @@ class Product implements ModelInterface, ArrayAccess
         'is_archived' => 'IsArchived',
         'groups' => 'Groups',
         'metafields' => 'Metafields',
-        'item_type' => 'ItemType',
+        'product_type' => 'ProductType',
         'sku' => 'Sku',
         'name' => 'Name',
         'description' => 'Description',
@@ -140,7 +140,7 @@ class Product implements ModelInterface, ArrayAccess
         'is_archived' => 'setIsArchived',
         'groups' => 'setGroups',
         'metafields' => 'setMetafields',
-        'item_type' => 'setItemType',
+        'product_type' => 'setProductType',
         'sku' => 'setSku',
         'name' => 'setName',
         'description' => 'setDescription',
@@ -159,7 +159,7 @@ class Product implements ModelInterface, ArrayAccess
         'is_archived' => 'getIsArchived',
         'groups' => 'getGroups',
         'metafields' => 'getMetafields',
-        'item_type' => 'getItemType',
+        'product_type' => 'getProductType',
         'sku' => 'getSku',
         'name' => 'getName',
         'description' => 'getDescription',
@@ -209,8 +209,8 @@ class Product implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const ITEM_TYPE_PRODUCT = 'Product';
-    const ITEM_TYPE_MODIFIER = 'Modifier';
+    const PRODUCT_TYPE_PRODUCT = 'Product';
+    const PRODUCT_TYPE_MODIFIER = 'Modifier';
     
 
     
@@ -219,11 +219,11 @@ class Product implements ModelInterface, ArrayAccess
      *
      * @return string[]
      */
-    public function getItemTypeAllowableValues()
+    public function getProductTypeAllowableValues()
     {
         return [
-            self::ITEM_TYPE_PRODUCT,
-            self::ITEM_TYPE_MODIFIER,
+            self::PRODUCT_TYPE_PRODUCT,
+            self::PRODUCT_TYPE_MODIFIER,
         ];
     }
     
@@ -247,7 +247,7 @@ class Product implements ModelInterface, ArrayAccess
         $this->container['is_archived'] = isset($data['is_archived']) ? $data['is_archived'] : null;
         $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
         $this->container['metafields'] = isset($data['metafields']) ? $data['metafields'] : null;
-        $this->container['item_type'] = isset($data['item_type']) ? $data['item_type'] : null;
+        $this->container['product_type'] = isset($data['product_type']) ? $data['product_type'] : null;
         $this->container['sku'] = isset($data['sku']) ? $data['sku'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -273,13 +273,13 @@ class Product implements ModelInterface, ArrayAccess
             $invalidProperties[] = "invalid value for 'catalog_item_id', the character length must be bigger than or equal to 0.";
         }
 
-        if ($this->container['item_type'] === null) {
-            $invalidProperties[] = "'item_type' can't be null";
+        if ($this->container['product_type'] === null) {
+            $invalidProperties[] = "'product_type' can't be null";
         }
-        $allowedValues = $this->getItemTypeAllowableValues();
-        if (!is_null($this->container['item_type']) && !in_array($this->container['item_type'], $allowedValues, true)) {
+        $allowedValues = $this->getProductTypeAllowableValues();
+        if (!is_null($this->container['product_type']) && !in_array($this->container['product_type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'item_type', must be one of '%s'",
+                "invalid value for 'product_type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -448,34 +448,34 @@ class Product implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets item_type
+     * Gets product_type
      *
      * @return string
      */
-    public function getItemType()
+    public function getProductType()
     {
-        return $this->container['item_type'];
+        return $this->container['product_type'];
     }
 
     /**
-     * Sets item_type
+     * Sets product_type
      *
-     * @param string $item_type Type of item (Product, Modifier, etc)
+     * @param string $product_type Type of item (Product, Modifier, etc)
      *
      * @return $this
      */
-    public function setItemType($item_type)
+    public function setProductType($product_type)
     {
-        $allowedValues = $this->getItemTypeAllowableValues();
-        if (!in_array($item_type, $allowedValues, true)) {
+        $allowedValues = $this->getProductTypeAllowableValues();
+        if (!in_array($product_type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'item_type', must be one of '%s'",
+                    "Invalid value for 'product_type', must be one of '%s'",
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['item_type'] = $item_type;
+        $this->container['product_type'] = $product_type;
 
         return $this;
     }
