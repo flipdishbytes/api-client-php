@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * OnboardingItemUpdate Class Doc Comment
  *
  * @category Class
+ * @description 
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -242,7 +243,7 @@ class OnboardingItemUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status status
+     * @param string $status Completion Status for Onboarding Item
      *
      * @return $this
      */

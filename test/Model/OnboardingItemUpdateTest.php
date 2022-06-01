@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * OnboardingItemUpdateTest Class Doc Comment
  *
  * @category    Class
- * @description OnboardingItemUpdate
+ * @description 
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
