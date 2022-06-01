@@ -229,4 +229,11 @@ class LightspeedSettingsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyChefNoteModifierId()
     {
     }
+
+    /**
+     * Test attribute "service_charge_id"
+     */
+    public function testPropertyServiceChargeId()
+    {
+    }
 }

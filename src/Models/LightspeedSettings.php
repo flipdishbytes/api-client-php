@@ -79,7 +79,8 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
         'send_table_number_to_table_id' => 'bool',
         'add_chef_note_to_product' => 'bool',
         'chef_note_item_id' => 'string',
-        'chef_note_modifier_id' => 'string'
+        'chef_note_modifier_id' => 'string',
+        'service_charge_id' => 'string'
     ];
 
     /**
@@ -109,7 +110,8 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
         'send_table_number_to_table_id' => null,
         'add_chef_note_to_product' => null,
         'chef_note_item_id' => null,
-        'chef_note_modifier_id' => null
+        'chef_note_modifier_id' => null,
+        'service_charge_id' => null
     ];
 
     /**
@@ -160,7 +162,8 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
         'send_table_number_to_table_id' => 'SendTableNumberToTableId',
         'add_chef_note_to_product' => 'AddChefNoteToProduct',
         'chef_note_item_id' => 'ChefNoteItemId',
-        'chef_note_modifier_id' => 'ChefNoteModifierId'
+        'chef_note_modifier_id' => 'ChefNoteModifierId',
+        'service_charge_id' => 'ServiceChargeId'
     ];
 
     /**
@@ -190,7 +193,8 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
         'send_table_number_to_table_id' => 'setSendTableNumberToTableId',
         'add_chef_note_to_product' => 'setAddChefNoteToProduct',
         'chef_note_item_id' => 'setChefNoteItemId',
-        'chef_note_modifier_id' => 'setChefNoteModifierId'
+        'chef_note_modifier_id' => 'setChefNoteModifierId',
+        'service_charge_id' => 'setServiceChargeId'
     ];
 
     /**
@@ -220,7 +224,8 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
         'send_table_number_to_table_id' => 'getSendTableNumberToTableId',
         'add_chef_note_to_product' => 'getAddChefNoteToProduct',
         'chef_note_item_id' => 'getChefNoteItemId',
-        'chef_note_modifier_id' => 'getChefNoteModifierId'
+        'chef_note_modifier_id' => 'getChefNoteModifierId',
+        'service_charge_id' => 'getServiceChargeId'
     ];
 
     /**
@@ -322,6 +327,7 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
         $this->container['add_chef_note_to_product'] = isset($data['add_chef_note_to_product']) ? $data['add_chef_note_to_product'] : null;
         $this->container['chef_note_item_id'] = isset($data['chef_note_item_id']) ? $data['chef_note_item_id'] : null;
         $this->container['chef_note_modifier_id'] = isset($data['chef_note_modifier_id']) ? $data['chef_note_modifier_id'] : null;
+        $this->container['service_charge_id'] = isset($data['service_charge_id']) ? $data['service_charge_id'] : null;
     }
 
     /**
@@ -889,6 +895,30 @@ class LightspeedSettings implements ModelInterface, ArrayAccess
     public function setChefNoteModifierId($chef_note_modifier_id)
     {
         $this->container['chef_note_modifier_id'] = $chef_note_modifier_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_charge_id
+     *
+     * @return string
+     */
+    public function getServiceChargeId()
+    {
+        return $this->container['service_charge_id'];
+    }
+
+    /**
+     * Sets service_charge_id
+     *
+     * @param string $service_charge_id The Lightspeed Service Charge Id to map
+     *
+     * @return $this
+     */
+    public function setServiceChargeId($service_charge_id)
+    {
+        $this->container['service_charge_id'] = $service_charge_id;
 
         return $this;
     }
