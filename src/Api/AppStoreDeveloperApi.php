@@ -292,6 +292,10 @@ class AppStoreDeveloperApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($verification_status !== null) {
+            $queryParams['verificationStatus'] = ObjectSerializer::toQueryValue($verification_status);
+        }
 
         // path params
         if ($oauth_app_id !== null) {
@@ -312,9 +316,6 @@ class AppStoreDeveloperApi
 
         // body params
         $_tempBody = null;
-        if (isset($verification_status)) {
-            $_tempBody = $verification_status;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -323,7 +324,7 @@ class AppStoreDeveloperApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
+                []
             );
         }
 
