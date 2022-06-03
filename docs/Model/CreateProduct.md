@@ -7,11 +7,11 @@ Name | Type | Description | Notes
 **metafields** | [**\Flipdish\\Client\Models\Metafield[]**](Metafield.md) | Collection of metafields | [optional] 
 **product_type** | **string** | Type of item (Product, Modifier, etc) | 
 **sku** | **string** | Stock Keeping Unit (SKU) | 
-**name** | **string** | Item name | 
-**description** | **string** | Item description | [optional] 
-**price** | **double** | Item price | 
+**name** | **string** | Product name | 
+**description** | **string** | Product description | [optional] 
+**price** | **double** | Product price | 
 **image_file_name** | **string** | Image File Name | [optional] 
-**alcohol** | **bool** | item contains alcohol | [optional] 
+**alcohol** | **bool** | Product contains alcohol | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
