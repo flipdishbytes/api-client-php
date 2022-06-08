@@ -198,6 +198,14 @@ class TipsApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
@@ -493,6 +501,14 @@ class TipsApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

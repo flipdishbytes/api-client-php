@@ -61,6 +61,7 @@ class TipConfiguration implements ModelInterface, ArrayAccess
         'store_id' => 'int',
         'is_enabled' => 'bool',
         'allow_custom_tips' => 'bool',
+        'allow_round_up' => 'bool',
         'percentages' => 'double[]',
         'default_percentage' => 'double'
     ];
@@ -74,6 +75,7 @@ class TipConfiguration implements ModelInterface, ArrayAccess
         'store_id' => 'int32',
         'is_enabled' => null,
         'allow_custom_tips' => null,
+        'allow_round_up' => null,
         'percentages' => 'double',
         'default_percentage' => 'double'
     ];
@@ -108,6 +110,7 @@ class TipConfiguration implements ModelInterface, ArrayAccess
         'store_id' => 'StoreId',
         'is_enabled' => 'IsEnabled',
         'allow_custom_tips' => 'AllowCustomTips',
+        'allow_round_up' => 'AllowRoundUp',
         'percentages' => 'Percentages',
         'default_percentage' => 'DefaultPercentage'
     ];
@@ -121,6 +124,7 @@ class TipConfiguration implements ModelInterface, ArrayAccess
         'store_id' => 'setStoreId',
         'is_enabled' => 'setIsEnabled',
         'allow_custom_tips' => 'setAllowCustomTips',
+        'allow_round_up' => 'setAllowRoundUp',
         'percentages' => 'setPercentages',
         'default_percentage' => 'setDefaultPercentage'
     ];
@@ -134,6 +138,7 @@ class TipConfiguration implements ModelInterface, ArrayAccess
         'store_id' => 'getStoreId',
         'is_enabled' => 'getIsEnabled',
         'allow_custom_tips' => 'getAllowCustomTips',
+        'allow_round_up' => 'getAllowRoundUp',
         'percentages' => 'getPercentages',
         'default_percentage' => 'getDefaultPercentage'
     ];
@@ -201,6 +206,7 @@ class TipConfiguration implements ModelInterface, ArrayAccess
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
         $this->container['allow_custom_tips'] = isset($data['allow_custom_tips']) ? $data['allow_custom_tips'] : null;
+        $this->container['allow_round_up'] = isset($data['allow_round_up']) ? $data['allow_round_up'] : null;
         $this->container['percentages'] = isset($data['percentages']) ? $data['percentages'] : null;
         $this->container['default_percentage'] = isset($data['default_percentage']) ? $data['default_percentage'] : null;
     }
@@ -297,6 +303,30 @@ class TipConfiguration implements ModelInterface, ArrayAccess
     public function setAllowCustomTips($allow_custom_tips)
     {
         $this->container['allow_custom_tips'] = $allow_custom_tips;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_round_up
+     *
+     * @return bool
+     */
+    public function getAllowRoundUp()
+    {
+        return $this->container['allow_round_up'];
+    }
+
+    /**
+     * Sets allow_round_up
+     *
+     * @param bool $allow_round_up Is round up allowed?
+     *
+     * @return $this
+     */
+    public function setAllowRoundUp($allow_round_up)
+    {
+        $this->container['allow_round_up'] = $allow_round_up;
 
         return $this;
     }

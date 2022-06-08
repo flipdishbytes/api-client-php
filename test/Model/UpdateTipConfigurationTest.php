@@ -91,6 +91,13 @@ class UpdateTipConfigurationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "allow_round_up"
+     */
+    public function testPropertyAllowRoundUp()
+    {
+    }
+
+    /**
      * Test attribute "percentages"
      */
     public function testPropertyPercentages()
