@@ -208,4 +208,18 @@ class PayoutOrderTest extends \PHPUnit_Framework_TestCase
     public function testPropertyStoreId()
     {
     }
+
+    /**
+     * Test attribute "service_charge_amount"
+     */
+    public function testPropertyServiceChargeAmount()
+    {
+    }
+
+    /**
+     * Test attribute "service_charge_percentage"
+     */
+    public function testPropertyServiceChargePercentage()
+    {
+    }
 }

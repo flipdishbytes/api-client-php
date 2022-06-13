@@ -76,7 +76,9 @@ class PayoutOrder implements ModelInterface, ArrayAccess
         'total_fees' => 'double',
         'cash_fee_charged_to_customer' => 'double',
         'net_sales' => 'double',
-        'store_id' => 'int'
+        'store_id' => 'int',
+        'service_charge_amount' => 'double',
+        'service_charge_percentage' => 'double'
     ];
 
     /**
@@ -103,7 +105,9 @@ class PayoutOrder implements ModelInterface, ArrayAccess
         'total_fees' => 'double',
         'cash_fee_charged_to_customer' => 'double',
         'net_sales' => 'double',
-        'store_id' => 'int32'
+        'store_id' => 'int32',
+        'service_charge_amount' => 'double',
+        'service_charge_percentage' => 'double'
     ];
 
     /**
@@ -151,7 +155,9 @@ class PayoutOrder implements ModelInterface, ArrayAccess
         'total_fees' => 'TotalFees',
         'cash_fee_charged_to_customer' => 'CashFeeChargedToCustomer',
         'net_sales' => 'NetSales',
-        'store_id' => 'StoreId'
+        'store_id' => 'StoreId',
+        'service_charge_amount' => 'ServiceChargeAmount',
+        'service_charge_percentage' => 'ServiceChargePercentage'
     ];
 
     /**
@@ -178,7 +184,9 @@ class PayoutOrder implements ModelInterface, ArrayAccess
         'total_fees' => 'setTotalFees',
         'cash_fee_charged_to_customer' => 'setCashFeeChargedToCustomer',
         'net_sales' => 'setNetSales',
-        'store_id' => 'setStoreId'
+        'store_id' => 'setStoreId',
+        'service_charge_amount' => 'setServiceChargeAmount',
+        'service_charge_percentage' => 'setServiceChargePercentage'
     ];
 
     /**
@@ -205,7 +213,9 @@ class PayoutOrder implements ModelInterface, ArrayAccess
         'total_fees' => 'getTotalFees',
         'cash_fee_charged_to_customer' => 'getCashFeeChargedToCustomer',
         'net_sales' => 'getNetSales',
-        'store_id' => 'getStoreId'
+        'store_id' => 'getStoreId',
+        'service_charge_amount' => 'getServiceChargeAmount',
+        'service_charge_percentage' => 'getServiceChargePercentage'
     ];
 
     /**
@@ -539,6 +549,8 @@ class PayoutOrder implements ModelInterface, ArrayAccess
         $this->container['cash_fee_charged_to_customer'] = isset($data['cash_fee_charged_to_customer']) ? $data['cash_fee_charged_to_customer'] : null;
         $this->container['net_sales'] = isset($data['net_sales']) ? $data['net_sales'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
+        $this->container['service_charge_amount'] = isset($data['service_charge_amount']) ? $data['service_charge_amount'] : null;
+        $this->container['service_charge_percentage'] = isset($data['service_charge_percentage']) ? $data['service_charge_percentage'] : null;
     }
 
     /**
@@ -1051,6 +1063,54 @@ class PayoutOrder implements ModelInterface, ArrayAccess
     public function setStoreId($store_id)
     {
         $this->container['store_id'] = $store_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_charge_amount
+     *
+     * @return double
+     */
+    public function getServiceChargeAmount()
+    {
+        return $this->container['service_charge_amount'];
+    }
+
+    /**
+     * Sets service_charge_amount
+     *
+     * @param double $service_charge_amount Order ServiceChargeAmount amount
+     *
+     * @return $this
+     */
+    public function setServiceChargeAmount($service_charge_amount)
+    {
+        $this->container['service_charge_amount'] = $service_charge_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets service_charge_percentage
+     *
+     * @return double
+     */
+    public function getServiceChargePercentage()
+    {
+        return $this->container['service_charge_percentage'];
+    }
+
+    /**
+     * Sets service_charge_percentage
+     *
+     * @param double $service_charge_percentage Order ServiceChargePercentage amount
+     *
+     * @return $this
+     */
+    public function setServiceChargePercentage($service_charge_percentage)
+    {
+        $this->container['service_charge_percentage'] = $service_charge_percentage;
 
         return $this;
     }
