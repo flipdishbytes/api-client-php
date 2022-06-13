@@ -82,12 +82,12 @@ class CatalogGroupsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createCatalogGroup
+     * Test case for createGroup
      *
      * Create a Catalog Group.
      *
      */
-    public function testCreateCatalogGroup()
+    public function testCreateGroup()
     {
     }
 

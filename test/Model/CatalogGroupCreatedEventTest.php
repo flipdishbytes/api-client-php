@@ -98,9 +98,9 @@ class CatalogGroupCreatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "catalog_group"
+     * Test attribute "group"
      */
-    public function testPropertyCatalogGroup()
+    public function testPropertyGroup()
     {
     }
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiResultCatalogGroup
+ * RestApiResultGroup
  *
  * PHP version 5
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * RestApiResultCatalogGroup Class Doc Comment
+ * RestApiResultGroup Class Doc Comment
  *
  * @category Class
  * @description Rest api result
@@ -41,7 +41,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RestApiResultCatalogGroup implements ModelInterface, ArrayAccess
+class RestApiResultGroup implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class RestApiResultCatalogGroup implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiResult[CatalogGroup]';
+    protected static $swaggerModelName = 'RestApiResult[Group]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class RestApiResultCatalogGroup implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => '\Flipdish\\Client\Models\CatalogGroup'
+        'data' => '\Flipdish\\Client\Models\Group'
     ];
 
     /**
@@ -211,7 +211,7 @@ class RestApiResultCatalogGroup implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Flipdish\\Client\Models\CatalogGroup
+     * @return \Flipdish\\Client\Models\Group
      */
     public function getData()
     {
@@ -221,7 +221,7 @@ class RestApiResultCatalogGroup implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Flipdish\\Client\Models\CatalogGroup $data Generic data object.
+     * @param \Flipdish\\Client\Models\Group $data Generic data object.
      *
      * @return $this
      */

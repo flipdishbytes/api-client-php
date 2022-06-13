@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **getPendingMenuChanges**
-> \Flipdish\\Client\Models\RestApiPaginationResultPendingMenuChanges getPendingMenuChanges($app_id, $menu_id, $catalog_element_id, $page, $limit)
+> \Flipdish\\Client\Models\RestApiPaginationResultPendingMenuChanges getPendingMenuChanges($app_id, $menu_id, $catalog_item_id, $page, $limit)
 
 Get menu pending changes from Catalog groups and items
 
@@ -31,12 +31,12 @@ $apiInstance = new Flipdish\\Client\Api\CatalogChangesApi(
 );
 $app_id = "app_id_example"; // string | 
 $menu_id = 56; // int | 
-$catalog_element_id = "catalog_element_id_example"; // string | 
+$catalog_item_id = "catalog_item_id_example"; // string | 
 $page = 56; // int | 
 $limit = 56; // int | 
 
 try {
-    $result = $apiInstance->getPendingMenuChanges($app_id, $menu_id, $catalog_element_id, $page, $limit);
+    $result = $apiInstance->getPendingMenuChanges($app_id, $menu_id, $catalog_item_id, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CatalogChangesApi->getPendingMenuChanges: ', $e->getMessage(), PHP_EOL;
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
  **menu_id** | **int**|  | [optional]
- **catalog_element_id** | **string**|  | [optional]
+ **catalog_item_id** | **string**|  | [optional]
  **page** | **int**|  | [optional]
  **limit** | **int**|  | [optional]
 

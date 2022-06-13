@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * CreateCatalogGroupReferenceTest Class Doc Comment
  *
  * @category    Class
- * @description Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Groups.CatalogGroup}
+ * @description Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Groups.Group}
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

@@ -1,6 +1,6 @@
 <?php
 /**
- * CreateCatalogGroupTest
+ * UpdateGroupTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * CreateCatalogGroupTest Class Doc Comment
+ * UpdateGroupTest Class Doc Comment
  *
  * @category    Class
- * @description Create a Catalog Group
+ * @description Update Catalog Group
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CreateCatalogGroupTest extends \PHPUnit_Framework_TestCase
+class UpdateGroupTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,44 +70,9 @@ class CreateCatalogGroupTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CreateCatalogGroup"
+     * Test "UpdateGroup"
      */
-    public function testCreateCatalogGroup()
-    {
-    }
-
-    /**
-     * Test attribute "min_select_count"
-     */
-    public function testPropertyMinSelectCount()
-    {
-    }
-
-    /**
-     * Test attribute "max_select_count"
-     */
-    public function testPropertyMaxSelectCount()
-    {
-    }
-
-    /**
-     * Test attribute "items"
-     */
-    public function testPropertyItems()
-    {
-    }
-
-    /**
-     * Test attribute "metafields"
-     */
-    public function testPropertyMetafields()
-    {
-    }
-
-    /**
-     * Test attribute "group_type"
-     */
-    public function testPropertyGroupType()
+    public function testUpdateGroup()
     {
     }
 
@@ -136,6 +101,34 @@ class CreateCatalogGroupTest extends \PHPUnit_Framework_TestCase
      * Test attribute "image_file_name"
      */
     public function testPropertyImageFileName()
+    {
+    }
+
+    /**
+     * Test attribute "min_select_count"
+     */
+    public function testPropertyMinSelectCount()
+    {
+    }
+
+    /**
+     * Test attribute "max_select_count"
+     */
+    public function testPropertyMaxSelectCount()
+    {
+    }
+
+    /**
+     * Test attribute "products"
+     */
+    public function testPropertyProducts()
+    {
+    }
+
+    /**
+     * Test attribute "metafields"
+     */
+    public function testPropertyMetafields()
     {
     }
 }

@@ -5,7 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**archiveGroup**](CatalogGroupsApi.md#archiveGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | Archive Catalog Group
-[**createCatalogGroup**](CatalogGroupsApi.md#createCatalogGroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
+[**createGroup**](CatalogGroupsApi.md#createGroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
 [**duplicateGroup**](CatalogGroupsApi.md#duplicateGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | Duplicate Catalog Group
 [**getGroupById**](CatalogGroupsApi.md#getGroupById) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Get group by Id
 [**getGroups**](CatalogGroupsApi.md#getGroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
@@ -66,8 +66,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **createCatalogGroup**
-> \Flipdish\\Client\Models\RestApiResultCatalogGroup createCatalogGroup($app_id, $create_catalog_group)
+# **createGroup**
+> \Flipdish\\Client\Models\RestApiResultGroup createGroup($app_id, $create_group)
 
 Create a Catalog Group
 
@@ -88,13 +88,13 @@ $apiInstance = new Flipdish\\Client\Api\CatalogGroupsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$create_catalog_group = new \Flipdish\\Client\Models\CreateCatalogGroup(); // \Flipdish\\Client\Models\CreateCatalogGroup | 
+$create_group = new \Flipdish\\Client\Models\CreateGroup(); // \Flipdish\\Client\Models\CreateGroup | 
 
 try {
-    $result = $apiInstance->createCatalogGroup($app_id, $create_catalog_group);
+    $result = $apiInstance->createGroup($app_id, $create_group);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CatalogGroupsApi->createCatalogGroup: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CatalogGroupsApi->createGroup: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -104,11 +104,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **create_catalog_group** | [**\Flipdish\\Client\Models\CreateCatalogGroup**](../Model/CreateCatalogGroup.md)|  |
+ **create_group** | [**\Flipdish\\Client\Models\CreateGroup**](../Model/CreateGroup.md)|  |
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiResultCatalogGroup**](../Model/RestApiResultCatalogGroup.md)
+[**\Flipdish\\Client\Models\RestApiResultGroup**](../Model/RestApiResultGroup.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGroupById**
-> \Flipdish\\Client\Models\CatalogGroup getGroupById($app_id, $catalog_item_id)
+> \Flipdish\\Client\Models\Group getGroupById($app_id, $catalog_item_id)
 
 Get group by Id
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\CatalogGroup**](../Model/CatalogGroup.md)
+[**\Flipdish\\Client\Models\Group**](../Model/Group.md)
 
 ### Authorization
 
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGroups**
-> \Flipdish\\Client\Models\RestApiPaginationResultCatalogGroup getGroups($app_id, $group_types, $search_term, $page, $limit)
+> \Flipdish\\Client\Models\RestApiPaginationResultGroup getGroups($app_id, $group_types, $search_term, $page, $limit)
 
 Get paginated groups by app name id filtered by types
 
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiPaginationResultCatalogGroup**](../Model/RestApiPaginationResultCatalogGroup.md)
+[**\Flipdish\\Client\Models\RestApiPaginationResultGroup**](../Model/RestApiPaginationResultGroup.md)
 
 ### Authorization
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateGroup**
-> updateGroup($app_id, $catalog_item_id, $update_catalog_group)
+> updateGroup($app_id, $catalog_item_id, $update_group)
 
 Update Catalog Group
 
@@ -314,10 +314,10 @@ $apiInstance = new Flipdish\\Client\Api\CatalogGroupsApi(
 );
 $app_id = "app_id_example"; // string | 
 $catalog_item_id = "catalog_item_id_example"; // string | 
-$update_catalog_group = new \Flipdish\\Client\Models\UpdateCatalogGroup(); // \Flipdish\\Client\Models\UpdateCatalogGroup | 
+$update_group = new \Flipdish\\Client\Models\UpdateGroup(); // \Flipdish\\Client\Models\UpdateGroup | 
 
 try {
-    $apiInstance->updateGroup($app_id, $catalog_item_id, $update_catalog_group);
+    $apiInstance->updateGroup($app_id, $catalog_item_id, $update_group);
 } catch (Exception $e) {
     echo 'Exception when calling CatalogGroupsApi->updateGroup: ', $e->getMessage(), PHP_EOL;
 }
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
  **catalog_item_id** | **string**|  |
- **update_catalog_group** | [**\Flipdish\\Client\Models\UpdateCatalogGroup**](../Model/UpdateCatalogGroup.md)|  |
+ **update_group** | [**\Flipdish\\Client\Models\UpdateGroup**](../Model/UpdateGroup.md)|  |
 
 ### Return type
 

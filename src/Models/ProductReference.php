@@ -1,6 +1,6 @@
 <?php
 /**
- * CatalogItemReference
+ * ProductReference
  *
  * PHP version 5
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * CatalogItemReference Class Doc Comment
+ * ProductReference Class Doc Comment
  *
  * @category Class
  * @description Catalog Item associated
@@ -41,7 +41,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CatalogItemReference implements ModelInterface, ArrayAccess
+class ProductReference implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'CatalogItemReference';
+    protected static $swaggerModelName = 'ProductReference';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,10 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'item' => '\Flipdish\\Client\Models\CatalogItem',
+        'item' => '\Flipdish\\Client\Models\Product',
+        'product' => '\Flipdish\\Client\Models\Product',
         'catalog_item_id' => 'string',
-        'item_type' => 'string',
+        'product_type' => 'string',
         'preselected_quantity' => 'int'
     ];
 
@@ -71,8 +72,9 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'item' => null,
+        'product' => null,
         'catalog_item_id' => null,
-        'item_type' => null,
+        'product_type' => null,
         'preselected_quantity' => 'int32'
     ];
 
@@ -104,8 +106,9 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'item' => 'Item',
+        'product' => 'Product',
         'catalog_item_id' => 'CatalogItemId',
-        'item_type' => 'ItemType',
+        'product_type' => 'ProductType',
         'preselected_quantity' => 'PreselectedQuantity'
     ];
 
@@ -116,8 +119,9 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'item' => 'setItem',
+        'product' => 'setProduct',
         'catalog_item_id' => 'setCatalogItemId',
-        'item_type' => 'setItemType',
+        'product_type' => 'setProductType',
         'preselected_quantity' => 'setPreselectedQuantity'
     ];
 
@@ -128,8 +132,9 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'item' => 'getItem',
+        'product' => 'getProduct',
         'catalog_item_id' => 'getCatalogItemId',
-        'item_type' => 'getItemType',
+        'product_type' => 'getProductType',
         'preselected_quantity' => 'getPreselectedQuantity'
     ];
 
@@ -174,8 +179,8 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const ITEM_TYPE_PRODUCT = 'Product';
-    const ITEM_TYPE_MODIFIER = 'Modifier';
+    const PRODUCT_TYPE_PRODUCT = 'Product';
+    const PRODUCT_TYPE_MODIFIER = 'Modifier';
     
 
     
@@ -184,11 +189,11 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
      *
      * @return string[]
      */
-    public function getItemTypeAllowableValues()
+    public function getProductTypeAllowableValues()
     {
         return [
-            self::ITEM_TYPE_PRODUCT,
-            self::ITEM_TYPE_MODIFIER,
+            self::PRODUCT_TYPE_PRODUCT,
+            self::PRODUCT_TYPE_MODIFIER,
         ];
     }
     
@@ -209,8 +214,9 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['item'] = isset($data['item']) ? $data['item'] : null;
+        $this->container['product'] = isset($data['product']) ? $data['product'] : null;
         $this->container['catalog_item_id'] = isset($data['catalog_item_id']) ? $data['catalog_item_id'] : null;
-        $this->container['item_type'] = isset($data['item_type']) ? $data['item_type'] : null;
+        $this->container['product_type'] = isset($data['product_type']) ? $data['product_type'] : null;
         $this->container['preselected_quantity'] = isset($data['preselected_quantity']) ? $data['preselected_quantity'] : null;
     }
 
@@ -234,13 +240,13 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
             $invalidProperties[] = "invalid value for 'catalog_item_id', the character length must be bigger than or equal to 0.";
         }
 
-        if ($this->container['item_type'] === null) {
-            $invalidProperties[] = "'item_type' can't be null";
+        if ($this->container['product_type'] === null) {
+            $invalidProperties[] = "'product_type' can't be null";
         }
-        $allowedValues = $this->getItemTypeAllowableValues();
-        if (!is_null($this->container['item_type']) && !in_array($this->container['item_type'], $allowedValues, true)) {
+        $allowedValues = $this->getProductTypeAllowableValues();
+        if (!is_null($this->container['product_type']) && !in_array($this->container['product_type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'item_type', must be one of '%s'",
+                "invalid value for 'product_type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -263,7 +269,7 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
     /**
      * Gets item
      *
-     * @return \Flipdish\\Client\Models\CatalogItem
+     * @return \Flipdish\\Client\Models\Product
      */
     public function getItem()
     {
@@ -273,13 +279,37 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
     /**
      * Sets item
      *
-     * @param \Flipdish\\Client\Models\CatalogItem $item Details of the referenced {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}
+     * @param \Flipdish\\Client\Models\Product $item Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}
      *
      * @return $this
      */
     public function setItem($item)
     {
         $this->container['item'] = $item;
+
+        return $this;
+    }
+
+    /**
+     * Gets product
+     *
+     * @return \Flipdish\\Client\Models\Product
+     */
+    public function getProduct()
+    {
+        return $this->container['product'];
+    }
+
+    /**
+     * Sets product
+     *
+     * @param \Flipdish\\Client\Models\Product $product Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}
+     *
+     * @return $this
+     */
+    public function setProduct($product)
+    {
+        $this->container['product'] = $product;
 
         return $this;
     }
@@ -304,10 +334,10 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
     public function setCatalogItemId($catalog_item_id)
     {
         if ((mb_strlen($catalog_item_id) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling CatalogItemReference., must be smaller than or equal to 30.');
+            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling ProductReference., must be smaller than or equal to 30.');
         }
         if ((mb_strlen($catalog_item_id) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling CatalogItemReference., must be bigger than or equal to 0.');
+            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling ProductReference., must be bigger than or equal to 0.');
         }
 
         $this->container['catalog_item_id'] = $catalog_item_id;
@@ -316,34 +346,34 @@ class CatalogItemReference implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets item_type
+     * Gets product_type
      *
      * @return string
      */
-    public function getItemType()
+    public function getProductType()
     {
-        return $this->container['item_type'];
+        return $this->container['product_type'];
     }
 
     /**
-     * Sets item_type
+     * Sets product_type
      *
-     * @param string $item_type Type of the SupProduct
+     * @param string $product_type Type of the SupProduct
      *
      * @return $this
      */
-    public function setItemType($item_type)
+    public function setProductType($product_type)
     {
-        $allowedValues = $this->getItemTypeAllowableValues();
-        if (!in_array($item_type, $allowedValues, true)) {
+        $allowedValues = $this->getProductTypeAllowableValues();
+        if (!in_array($product_type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'item_type', must be one of '%s'",
+                    "Invalid value for 'product_type', must be one of '%s'",
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['item_type'] = $item_type;
+        $this->container['product_type'] = $product_type;
 
         return $this;
     }

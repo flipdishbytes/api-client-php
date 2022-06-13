@@ -77,13 +77,6 @@ class CreateGroupReferenceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "catalog_group_id"
-     */
-    public function testPropertyCatalogGroupId()
-    {
-    }
-
-    /**
      * Test attribute "catalog_item_id"
      */
     public function testPropertyCatalogItemId()

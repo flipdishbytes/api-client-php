@@ -367,39 +367,39 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation createCatalogGroup
+     * Operation createGroup
      *
      * Create a Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\CreateCatalogGroup $create_catalog_group  (required)
+     * @param  \Flipdish\\Client\Models\CreateGroup $create_group  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultCatalogGroup
+     * @return \Flipdish\\Client\Models\RestApiResultGroup
      */
-    public function createCatalogGroup($app_id, $create_catalog_group)
+    public function createGroup($app_id, $create_group)
     {
-        list($response) = $this->createCatalogGroupWithHttpInfo($app_id, $create_catalog_group);
+        list($response) = $this->createGroupWithHttpInfo($app_id, $create_group);
         return $response;
     }
 
     /**
-     * Operation createCatalogGroupWithHttpInfo
+     * Operation createGroupWithHttpInfo
      *
      * Create a Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\CreateCatalogGroup $create_catalog_group  (required)
+     * @param  \Flipdish\\Client\Models\CreateGroup $create_group  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultCatalogGroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultGroup, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCatalogGroupWithHttpInfo($app_id, $create_catalog_group)
+    public function createGroupWithHttpInfo($app_id, $create_group)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultCatalogGroup';
-        $request = $this->createCatalogGroupRequest($app_id, $create_catalog_group);
+        $returnType = '\Flipdish\\Client\Models\RestApiResultGroup';
+        $request = $this->createGroupRequest($app_id, $create_group);
 
         try {
             $options = $this->createHttpClientOption();
@@ -450,7 +450,7 @@ class CatalogGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultCatalogGroup',
+                        '\Flipdish\\Client\Models\RestApiResultGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -485,19 +485,19 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation createCatalogGroupAsync
+     * Operation createGroupAsync
      *
      * Create a Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\CreateCatalogGroup $create_catalog_group  (required)
+     * @param  \Flipdish\\Client\Models\CreateGroup $create_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCatalogGroupAsync($app_id, $create_catalog_group)
+    public function createGroupAsync($app_id, $create_group)
     {
-        return $this->createCatalogGroupAsyncWithHttpInfo($app_id, $create_catalog_group)
+        return $this->createGroupAsyncWithHttpInfo($app_id, $create_group)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -506,20 +506,20 @@ class CatalogGroupsApi
     }
 
     /**
-     * Operation createCatalogGroupAsyncWithHttpInfo
+     * Operation createGroupAsyncWithHttpInfo
      *
      * Create a Catalog Group
      *
      * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\CreateCatalogGroup $create_catalog_group  (required)
+     * @param  \Flipdish\\Client\Models\CreateGroup $create_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCatalogGroupAsyncWithHttpInfo($app_id, $create_catalog_group)
+    public function createGroupAsyncWithHttpInfo($app_id, $create_group)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultCatalogGroup';
-        $request = $this->createCatalogGroupRequest($app_id, $create_catalog_group);
+        $returnType = '\Flipdish\\Client\Models\RestApiResultGroup';
+        $request = $this->createGroupRequest($app_id, $create_group);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -559,26 +559,26 @@ class CatalogGroupsApi
     }
 
     /**
-     * Create request for operation 'createCatalogGroup'
+     * Create request for operation 'createGroup'
      *
      * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\CreateCatalogGroup $create_catalog_group  (required)
+     * @param  \Flipdish\\Client\Models\CreateGroup $create_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createCatalogGroupRequest($app_id, $create_catalog_group)
+    protected function createGroupRequest($app_id, $create_group)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling createCatalogGroup'
+                'Missing the required parameter $app_id when calling createGroup'
             );
         }
-        // verify the required parameter 'create_catalog_group' is set
-        if ($create_catalog_group === null || (is_array($create_catalog_group) && count($create_catalog_group) === 0)) {
+        // verify the required parameter 'create_group' is set
+        if ($create_group === null || (is_array($create_group) && count($create_group) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $create_catalog_group when calling createCatalogGroup'
+                'Missing the required parameter $create_group when calling createGroup'
             );
         }
 
@@ -601,8 +601,8 @@ class CatalogGroupsApi
 
         // body params
         $_tempBody = null;
-        if (isset($create_catalog_group)) {
-            $_tempBody = $create_catalog_group;
+        if (isset($create_group)) {
+            $_tempBody = $create_group;
         }
 
         if ($multipart) {
@@ -966,7 +966,7 @@ class CatalogGroupsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\CatalogGroup
+     * @return \Flipdish\\Client\Models\Group
      */
     public function getGroupById($app_id, $catalog_item_id)
     {
@@ -984,11 +984,11 @@ class CatalogGroupsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\CatalogGroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\Group, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGroupByIdWithHttpInfo($app_id, $catalog_item_id)
     {
-        $returnType = '\Flipdish\\Client\Models\CatalogGroup';
+        $returnType = '\Flipdish\\Client\Models\Group';
         $request = $this->getGroupByIdRequest($app_id, $catalog_item_id);
 
         try {
@@ -1040,7 +1040,7 @@ class CatalogGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\CatalogGroup',
+                        '\Flipdish\\Client\Models\Group',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1108,7 +1108,7 @@ class CatalogGroupsApi
      */
     public function getGroupByIdAsyncWithHttpInfo($app_id, $catalog_item_id)
     {
-        $returnType = '\Flipdish\\Client\Models\CatalogGroup';
+        $returnType = '\Flipdish\\Client\Models\Group';
         $request = $this->getGroupByIdRequest($app_id, $catalog_item_id);
 
         return $this->client
@@ -1285,7 +1285,7 @@ class CatalogGroupsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiPaginationResultCatalogGroup
+     * @return \Flipdish\\Client\Models\RestApiPaginationResultGroup
      */
     public function getGroups($app_id, $group_types, $search_term = null, $page = null, $limit = null)
     {
@@ -1306,11 +1306,11 @@ class CatalogGroupsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiPaginationResultCatalogGroup, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiPaginationResultGroup, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGroupsWithHttpInfo($app_id, $group_types, $search_term = null, $page = null, $limit = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultCatalogGroup';
+        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultGroup';
         $request = $this->getGroupsRequest($app_id, $group_types, $search_term, $page, $limit);
 
         try {
@@ -1362,7 +1362,7 @@ class CatalogGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiPaginationResultCatalogGroup',
+                        '\Flipdish\\Client\Models\RestApiPaginationResultGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1436,7 +1436,7 @@ class CatalogGroupsApi
      */
     public function getGroupsAsyncWithHttpInfo($app_id, $group_types, $search_term = null, $page = null, $limit = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultCatalogGroup';
+        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultGroup';
         $request = $this->getGroupsRequest($app_id, $group_types, $search_term, $page, $limit);
 
         return $this->client
@@ -1621,15 +1621,15 @@ class CatalogGroupsApi
      *
      * @param  string $app_id  (required)
      * @param  string $catalog_item_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateCatalogGroup $update_catalog_group  (required)
+     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function updateGroup($app_id, $catalog_item_id, $update_catalog_group)
+    public function updateGroup($app_id, $catalog_item_id, $update_group)
     {
-        $this->updateGroupWithHttpInfo($app_id, $catalog_item_id, $update_catalog_group);
+        $this->updateGroupWithHttpInfo($app_id, $catalog_item_id, $update_group);
     }
 
     /**
@@ -1639,16 +1639,16 @@ class CatalogGroupsApi
      *
      * @param  string $app_id  (required)
      * @param  string $catalog_item_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateCatalogGroup $update_catalog_group  (required)
+     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateGroupWithHttpInfo($app_id, $catalog_item_id, $update_catalog_group)
+    public function updateGroupWithHttpInfo($app_id, $catalog_item_id, $update_group)
     {
         $returnType = '';
-        $request = $this->updateGroupRequest($app_id, $catalog_item_id, $update_catalog_group);
+        $request = $this->updateGroupRequest($app_id, $catalog_item_id, $update_group);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1718,14 +1718,14 @@ class CatalogGroupsApi
      *
      * @param  string $app_id  (required)
      * @param  string $catalog_item_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateCatalogGroup $update_catalog_group  (required)
+     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateGroupAsync($app_id, $catalog_item_id, $update_catalog_group)
+    public function updateGroupAsync($app_id, $catalog_item_id, $update_group)
     {
-        return $this->updateGroupAsyncWithHttpInfo($app_id, $catalog_item_id, $update_catalog_group)
+        return $this->updateGroupAsyncWithHttpInfo($app_id, $catalog_item_id, $update_group)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1740,15 +1740,15 @@ class CatalogGroupsApi
      *
      * @param  string $app_id  (required)
      * @param  string $catalog_item_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateCatalogGroup $update_catalog_group  (required)
+     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateGroupAsyncWithHttpInfo($app_id, $catalog_item_id, $update_catalog_group)
+    public function updateGroupAsyncWithHttpInfo($app_id, $catalog_item_id, $update_group)
     {
         $returnType = '';
-        $request = $this->updateGroupRequest($app_id, $catalog_item_id, $update_catalog_group);
+        $request = $this->updateGroupRequest($app_id, $catalog_item_id, $update_group);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1778,12 +1778,12 @@ class CatalogGroupsApi
      *
      * @param  string $app_id  (required)
      * @param  string $catalog_item_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateCatalogGroup $update_catalog_group  (required)
+     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateGroupRequest($app_id, $catalog_item_id, $update_catalog_group)
+    protected function updateGroupRequest($app_id, $catalog_item_id, $update_group)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -1797,10 +1797,10 @@ class CatalogGroupsApi
                 'Missing the required parameter $catalog_item_id when calling updateGroup'
             );
         }
-        // verify the required parameter 'update_catalog_group' is set
-        if ($update_catalog_group === null || (is_array($update_catalog_group) && count($update_catalog_group) === 0)) {
+        // verify the required parameter 'update_group' is set
+        if ($update_group === null || (is_array($update_group) && count($update_group) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $update_catalog_group when calling updateGroup'
+                'Missing the required parameter $update_group when calling updateGroup'
             );
         }
 
@@ -1831,8 +1831,8 @@ class CatalogGroupsApi
 
         // body params
         $_tempBody = null;
-        if (isset($update_catalog_group)) {
-            $_tempBody = $update_catalog_group;
+        if (isset($update_group)) {
+            $_tempBody = $update_group;
         }
 
         if ($multipart) {

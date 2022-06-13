@@ -1,6 +1,6 @@
 <?php
 /**
- * CatalogItemReferenceTest
+ * ProductReferenceTest
  *
  * PHP version 5
  *
@@ -30,7 +30,7 @@
 namespace Flipdish\\Client;
 
 /**
- * CatalogItemReferenceTest Class Doc Comment
+ * ProductReferenceTest Class Doc Comment
  *
  * @category    Class
  * @description Catalog Item associated
@@ -38,7 +38,7 @@ namespace Flipdish\\Client;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CatalogItemReferenceTest extends \PHPUnit_Framework_TestCase
+class ProductReferenceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class CatalogItemReferenceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CatalogItemReference"
+     * Test "ProductReference"
      */
-    public function testCatalogItemReference()
+    public function testProductReference()
     {
     }
 
@@ -84,6 +84,13 @@ class CatalogItemReferenceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "product"
+     */
+    public function testPropertyProduct()
+    {
+    }
+
+    /**
      * Test attribute "catalog_item_id"
      */
     public function testPropertyCatalogItemId()
@@ -91,9 +98,9 @@ class CatalogItemReferenceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "item_type"
+     * Test attribute "product_type"
      */
-    public function testPropertyItemType()
+    public function testPropertyProductType()
     {
     }
 

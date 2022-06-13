@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * GroupReferenceTest Class Doc Comment
  *
  * @category    Class
- * @description Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.CatalogGroup}
+ * @description Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.Group}
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -80,13 +80,6 @@ class GroupReferenceTest extends \PHPUnit_Framework_TestCase
      * Test attribute "group"
      */
     public function testPropertyGroup()
-    {
-    }
-
-    /**
-     * Test attribute "catalog_group_id"
-     */
-    public function testPropertyCatalogGroupId()
     {
     }
 

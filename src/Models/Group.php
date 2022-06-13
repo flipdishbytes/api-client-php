@@ -1,6 +1,6 @@
 <?php
 /**
- * CatalogGroup
+ * Group
  *
  * PHP version 5
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * CatalogGroup Class Doc Comment
+ * Group Class Doc Comment
  *
  * @category Class
  * @description CatalogGroup
@@ -41,7 +41,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CatalogGroup implements ModelInterface, ArrayAccess
+class Group implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'CatalogGroup';
+    protected static $swaggerModelName = 'Group';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -63,7 +63,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
         'is_archived' => 'bool',
         'min_select_count' => 'int',
         'max_select_count' => 'int',
-        'items' => '\Flipdish\\Client\Models\CatalogItemReference[]',
+        'products' => '\Flipdish\\Client\Models\ProductReference[]',
         'metafields' => '\Flipdish\\Client\Models\Metafield[]',
         'group_type' => 'string',
         'sku' => 'string',
@@ -83,7 +83,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
         'is_archived' => null,
         'min_select_count' => 'int32',
         'max_select_count' => 'int32',
-        'items' => null,
+        'products' => null,
         'metafields' => null,
         'group_type' => null,
         'sku' => null,
@@ -124,7 +124,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
         'is_archived' => 'IsArchived',
         'min_select_count' => 'MinSelectCount',
         'max_select_count' => 'MaxSelectCount',
-        'items' => 'Items',
+        'products' => 'Products',
         'metafields' => 'Metafields',
         'group_type' => 'GroupType',
         'sku' => 'Sku',
@@ -144,7 +144,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
         'is_archived' => 'setIsArchived',
         'min_select_count' => 'setMinSelectCount',
         'max_select_count' => 'setMaxSelectCount',
-        'items' => 'setItems',
+        'products' => 'setProducts',
         'metafields' => 'setMetafields',
         'group_type' => 'setGroupType',
         'sku' => 'setSku',
@@ -164,7 +164,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
         'is_archived' => 'getIsArchived',
         'min_select_count' => 'getMinSelectCount',
         'max_select_count' => 'getMaxSelectCount',
-        'items' => 'getItems',
+        'products' => 'getProducts',
         'metafields' => 'getMetafields',
         'group_type' => 'getGroupType',
         'sku' => 'getSku',
@@ -251,7 +251,7 @@ class CatalogGroup implements ModelInterface, ArrayAccess
         $this->container['is_archived'] = isset($data['is_archived']) ? $data['is_archived'] : null;
         $this->container['min_select_count'] = isset($data['min_select_count']) ? $data['min_select_count'] : null;
         $this->container['max_select_count'] = isset($data['max_select_count']) ? $data['max_select_count'] : null;
-        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['products'] = isset($data['products']) ? $data['products'] : null;
         $this->container['metafields'] = isset($data['metafields']) ? $data['metafields'] : null;
         $this->container['group_type'] = isset($data['group_type']) ? $data['group_type'] : null;
         $this->container['sku'] = isset($data['sku']) ? $data['sku'] : null;
@@ -361,10 +361,10 @@ class CatalogGroup implements ModelInterface, ArrayAccess
     public function setCatalogGroupId($catalog_group_id)
     {
         if (!is_null($catalog_group_id) && (mb_strlen($catalog_group_id) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_group_id when calling CatalogGroup., must be smaller than or equal to 30.');
+            throw new \InvalidArgumentException('invalid length for $catalog_group_id when calling Group., must be smaller than or equal to 30.');
         }
         if (!is_null($catalog_group_id) && (mb_strlen($catalog_group_id) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_group_id when calling CatalogGroup., must be bigger than or equal to 0.');
+            throw new \InvalidArgumentException('invalid length for $catalog_group_id when calling Group., must be bigger than or equal to 0.');
         }
 
         $this->container['catalog_group_id'] = $catalog_group_id;
@@ -392,10 +392,10 @@ class CatalogGroup implements ModelInterface, ArrayAccess
     public function setCatalogItemId($catalog_item_id)
     {
         if (!is_null($catalog_item_id) && (mb_strlen($catalog_item_id) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling CatalogGroup., must be smaller than or equal to 30.');
+            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling Group., must be smaller than or equal to 30.');
         }
         if (!is_null($catalog_item_id) && (mb_strlen($catalog_item_id) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling CatalogGroup., must be bigger than or equal to 0.');
+            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling Group., must be bigger than or equal to 0.');
         }
 
         $this->container['catalog_item_id'] = $catalog_item_id;
@@ -476,25 +476,25 @@ class CatalogGroup implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets items
+     * Gets products
      *
-     * @return \Flipdish\\Client\Models\CatalogItemReference[]
+     * @return \Flipdish\\Client\Models\ProductReference[]
      */
-    public function getItems()
+    public function getProducts()
     {
-        return $this->container['items'];
+        return $this->container['products'];
     }
 
     /**
-     * Sets items
+     * Sets products
      *
-     * @param \Flipdish\\Client\Models\CatalogItemReference[] $items Collection of items associated with this product
+     * @param \Flipdish\\Client\Models\ProductReference[] $products Collection of items associated with this product
      *
      * @return $this
      */
-    public function setItems($items)
+    public function setProducts($products)
     {
-        $this->container['items'] = $items;
+        $this->container['products'] = $products;
 
         return $this;
     }
@@ -576,10 +576,10 @@ class CatalogGroup implements ModelInterface, ArrayAccess
     public function setSku($sku)
     {
         if ((mb_strlen($sku) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $sku when calling CatalogGroup., must be smaller than or equal to 30.');
+            throw new \InvalidArgumentException('invalid length for $sku when calling Group., must be smaller than or equal to 30.');
         }
         if ((mb_strlen($sku) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $sku when calling CatalogGroup., must be bigger than or equal to 0.');
+            throw new \InvalidArgumentException('invalid length for $sku when calling Group., must be bigger than or equal to 0.');
         }
 
         $this->container['sku'] = $sku;
@@ -607,10 +607,10 @@ class CatalogGroup implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         if ((mb_strlen($name) > 300)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling CatalogGroup., must be smaller than or equal to 300.');
+            throw new \InvalidArgumentException('invalid length for $name when calling Group., must be smaller than or equal to 300.');
         }
         if ((mb_strlen($name) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling CatalogGroup., must be bigger than or equal to 0.');
+            throw new \InvalidArgumentException('invalid length for $name when calling Group., must be bigger than or equal to 0.');
         }
 
         $this->container['name'] = $name;
@@ -662,10 +662,10 @@ class CatalogGroup implements ModelInterface, ArrayAccess
     public function setImageFileName($image_file_name)
     {
         if (!is_null($image_file_name) && (mb_strlen($image_file_name) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $image_file_name when calling CatalogGroup., must be smaller than or equal to 512.');
+            throw new \InvalidArgumentException('invalid length for $image_file_name when calling Group., must be smaller than or equal to 512.');
         }
         if (!is_null($image_file_name) && (mb_strlen($image_file_name) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $image_file_name when calling CatalogGroup., must be bigger than or equal to 0.');
+            throw new \InvalidArgumentException('invalid length for $image_file_name when calling Group., must be bigger than or equal to 0.');
         }
 
         $this->container['image_file_name'] = $image_file_name;

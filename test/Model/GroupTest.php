@@ -1,6 +1,6 @@
 <?php
 /**
- * CatalogGroupTest
+ * GroupTest
  *
  * PHP version 5
  *
@@ -30,7 +30,7 @@
 namespace Flipdish\\Client;
 
 /**
- * CatalogGroupTest Class Doc Comment
+ * GroupTest Class Doc Comment
  *
  * @category    Class
  * @description CatalogGroup
@@ -38,7 +38,7 @@ namespace Flipdish\\Client;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CatalogGroupTest extends \PHPUnit_Framework_TestCase
+class GroupTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class CatalogGroupTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CatalogGroup"
+     * Test "Group"
      */
-    public function testCatalogGroup()
+    public function testGroup()
     {
     }
 
@@ -112,9 +112,9 @@ class CatalogGroupTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "items"
+     * Test attribute "products"
      */
-    public function testPropertyItems()
+    public function testPropertyProducts()
     {
     }
 

@@ -1,14 +1,11 @@
-# CatalogGroup
+# CreateGroup
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**catalog_group_id** | **string** | Unique catalog group id | [optional] 
-**catalog_item_id** | **string** | Unique catalog item id | [optional] 
-**is_archived** | **bool** | Returns true if the group is archived | [optional] 
 **min_select_count** | **int** | Minimum number of items that the user has to select | [optional] 
 **max_select_count** | **int** | Maximum number of items that the user has to select | [optional] 
-**items** | [**\Flipdish\\Client\Models\CatalogItemReference[]**](CatalogItemReference.md) | Collection of items associated with this product | [optional] 
+**products** | [**\Flipdish\\Client\Models\CreateProductReference[]**](CreateProductReference.md) | Collection of items associated with this group | [optional] 
 **metafields** | [**\Flipdish\\Client\Models\Metafield[]**](Metafield.md) | Collection of metafields | [optional] 
 **group_type** | **string** | Type of group (ModifierGroup, etc) | 
 **sku** | **string** | Stock Keeping Unit (SKU) | 

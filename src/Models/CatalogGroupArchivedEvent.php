@@ -61,7 +61,7 @@ class CatalogGroupArchivedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'string',
         'description' => 'string',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
-        'catalog_group' => '\Flipdish\\Client\Models\CatalogGroup',
+        'group' => '\Flipdish\\Client\Models\Group',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -78,7 +78,7 @@ class CatalogGroupArchivedEvent implements ModelInterface, ArrayAccess
         'event_name' => null,
         'description' => null,
         'user' => null,
-        'catalog_group' => null,
+        'group' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -116,7 +116,7 @@ class CatalogGroupArchivedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'EventName',
         'description' => 'Description',
         'user' => 'User',
-        'catalog_group' => 'CatalogGroup',
+        'group' => 'Group',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -133,7 +133,7 @@ class CatalogGroupArchivedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'setEventName',
         'description' => 'setDescription',
         'user' => 'setUser',
-        'catalog_group' => 'setCatalogGroup',
+        'group' => 'setGroup',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -150,7 +150,7 @@ class CatalogGroupArchivedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'getEventName',
         'description' => 'getDescription',
         'user' => 'getUser',
-        'catalog_group' => 'getCatalogGroup',
+        'group' => 'getGroup',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -221,7 +221,7 @@ class CatalogGroupArchivedEvent implements ModelInterface, ArrayAccess
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
-        $this->container['catalog_group'] = isset($data['catalog_group']) ? $data['catalog_group'] : null;
+        $this->container['group'] = isset($data['group']) ? $data['group'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -326,25 +326,25 @@ class CatalogGroupArchivedEvent implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets catalog_group
+     * Gets group
      *
-     * @return \Flipdish\\Client\Models\CatalogGroup
+     * @return \Flipdish\\Client\Models\Group
      */
-    public function getCatalogGroup()
+    public function getGroup()
     {
-        return $this->container['catalog_group'];
+        return $this->container['group'];
     }
 
     /**
-     * Sets catalog_group
+     * Sets group
      *
-     * @param \Flipdish\\Client\Models\CatalogGroup $catalog_group Catalog group created
+     * @param \Flipdish\\Client\Models\Group $group Catalog group created
      *
      * @return $this
      */
-    public function setCatalogGroup($catalog_group)
+    public function setGroup($group)
     {
-        $this->container['catalog_group'] = $catalog_group;
+        $this->container['group'] = $group;
 
         return $this;
     }

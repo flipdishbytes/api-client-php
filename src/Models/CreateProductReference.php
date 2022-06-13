@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiPaginationResultCatalogGroup
+ * CreateProductReference
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * RestApiPaginationResultCatalogGroup Class Doc Comment
+ * CreateProductReference Class Doc Comment
  *
  * @category Class
- * @description Rest api pagination result
+ * @description Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Product}
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RestApiPaginationResultCatalogGroup implements ModelInterface, ArrayAccess
+class CreateProductReference implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class RestApiPaginationResultCatalogGroup implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult[CatalogGroup]';
+    protected static $swaggerModelName = 'CreateProductReference';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +58,9 @@ class RestApiPaginationResultCatalogGroup implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page' => 'int',
-        'limit' => 'int',
-        'total_record_count' => 'int',
-        'data' => '\Flipdish\\Client\Models\CatalogGroup[]'
+        'catalog_item_id' => 'string',
+        'product_type' => 'string',
+        'preselected_quantity' => 'int'
     ];
 
     /**
@@ -70,10 +69,9 @@ class RestApiPaginationResultCatalogGroup implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'page' => 'int32',
-        'limit' => 'int32',
-        'total_record_count' => 'int32',
-        'data' => null
+        'catalog_item_id' => null,
+        'product_type' => null,
+        'preselected_quantity' => 'int32'
     ];
 
     /**
@@ -103,10 +101,9 @@ class RestApiPaginationResultCatalogGroup implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'page' => 'Page',
-        'limit' => 'Limit',
-        'total_record_count' => 'TotalRecordCount',
-        'data' => 'Data'
+        'catalog_item_id' => 'CatalogItemId',
+        'product_type' => 'ProductType',
+        'preselected_quantity' => 'PreselectedQuantity'
     ];
 
     /**
@@ -115,10 +112,9 @@ class RestApiPaginationResultCatalogGroup implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'page' => 'setPage',
-        'limit' => 'setLimit',
-        'total_record_count' => 'setTotalRecordCount',
-        'data' => 'setData'
+        'catalog_item_id' => 'setCatalogItemId',
+        'product_type' => 'setProductType',
+        'preselected_quantity' => 'setPreselectedQuantity'
     ];
 
     /**
@@ -127,10 +123,9 @@ class RestApiPaginationResultCatalogGroup implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'page' => 'getPage',
-        'limit' => 'getLimit',
-        'total_record_count' => 'getTotalRecordCount',
-        'data' => 'getData'
+        'catalog_item_id' => 'getCatalogItemId',
+        'product_type' => 'getProductType',
+        'preselected_quantity' => 'getPreselectedQuantity'
     ];
 
     /**
@@ -174,8 +169,23 @@ class RestApiPaginationResultCatalogGroup implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const PRODUCT_TYPE_PRODUCT = 'Product';
+    const PRODUCT_TYPE_MODIFIER = 'Modifier';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getProductTypeAllowableValues()
+    {
+        return [
+            self::PRODUCT_TYPE_PRODUCT,
+            self::PRODUCT_TYPE_MODIFIER,
+        ];
+    }
     
 
     /**
@@ -193,10 +203,9 @@ class RestApiPaginationResultCatalogGroup implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['total_record_count'] = isset($data['total_record_count']) ? $data['total_record_count'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['catalog_item_id'] = isset($data['catalog_item_id']) ? $data['catalog_item_id'] : null;
+        $this->container['product_type'] = isset($data['product_type']) ? $data['product_type'] : null;
+        $this->container['preselected_quantity'] = isset($data['preselected_quantity']) ? $data['preselected_quantity'] : null;
     }
 
     /**
@@ -208,18 +217,28 @@ class RestApiPaginationResultCatalogGroup implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['page'] === null) {
-            $invalidProperties[] = "'page' can't be null";
+        if ($this->container['catalog_item_id'] === null) {
+            $invalidProperties[] = "'catalog_item_id' can't be null";
         }
-        if ($this->container['limit'] === null) {
-            $invalidProperties[] = "'limit' can't be null";
+        if ((mb_strlen($this->container['catalog_item_id']) > 30)) {
+            $invalidProperties[] = "invalid value for 'catalog_item_id', the character length must be smaller than or equal to 30.";
         }
-        if ($this->container['total_record_count'] === null) {
-            $invalidProperties[] = "'total_record_count' can't be null";
+
+        if ((mb_strlen($this->container['catalog_item_id']) < 0)) {
+            $invalidProperties[] = "invalid value for 'catalog_item_id', the character length must be bigger than or equal to 0.";
         }
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+
+        if ($this->container['product_type'] === null) {
+            $invalidProperties[] = "'product_type' can't be null";
         }
+        $allowedValues = $this->getProductTypeAllowableValues();
+        if (!is_null($this->container['product_type']) && !in_array($this->container['product_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'product_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
         return $invalidProperties;
     }
 
@@ -236,97 +255,89 @@ class RestApiPaginationResultCatalogGroup implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets page
+     * Gets catalog_item_id
      *
-     * @return int
+     * @return string
      */
-    public function getPage()
+    public function getCatalogItemId()
     {
-        return $this->container['page'];
+        return $this->container['catalog_item_id'];
     }
 
     /**
-     * Sets page
+     * Sets catalog_item_id
      *
-     * @param int $page Current page index
+     * @param string $catalog_item_id Identifier of the CatalogItemId to use as SubProduct
      *
      * @return $this
      */
-    public function setPage($page)
+    public function setCatalogItemId($catalog_item_id)
     {
-        $this->container['page'] = $page;
+        if ((mb_strlen($catalog_item_id) > 30)) {
+            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling CreateProductReference., must be smaller than or equal to 30.');
+        }
+        if ((mb_strlen($catalog_item_id) < 0)) {
+            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling CreateProductReference., must be bigger than or equal to 0.');
+        }
+
+        $this->container['catalog_item_id'] = $catalog_item_id;
 
         return $this;
     }
 
     /**
-     * Gets limit
+     * Gets product_type
      *
-     * @return int
+     * @return string
      */
-    public function getLimit()
+    public function getProductType()
     {
-        return $this->container['limit'];
+        return $this->container['product_type'];
     }
 
     /**
-     * Sets limit
+     * Sets product_type
      *
-     * @param int $limit Current page size
+     * @param string $product_type Type of the SupProduct
      *
      * @return $this
      */
-    public function setLimit($limit)
+    public function setProductType($product_type)
     {
-        $this->container['limit'] = $limit;
+        $allowedValues = $this->getProductTypeAllowableValues();
+        if (!in_array($product_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'product_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['product_type'] = $product_type;
 
         return $this;
     }
 
     /**
-     * Gets total_record_count
+     * Gets preselected_quantity
      *
      * @return int
      */
-    public function getTotalRecordCount()
+    public function getPreselectedQuantity()
     {
-        return $this->container['total_record_count'];
+        return $this->container['preselected_quantity'];
     }
 
     /**
-     * Sets total_record_count
+     * Sets preselected_quantity
      *
-     * @param int $total_record_count Total record count
+     * @param int $preselected_quantity Quantity of the modifier that will be set when the parent product is placed in the basket
      *
      * @return $this
      */
-    public function setTotalRecordCount($total_record_count)
+    public function setPreselectedQuantity($preselected_quantity)
     {
-        $this->container['total_record_count'] = $total_record_count;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     *
-     * @return \Flipdish\\Client\Models\CatalogGroup[]
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     *
-     * @param \Flipdish\\Client\Models\CatalogGroup[] $data Generic data object.
-     *
-     * @return $this
-     */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
+        $this->container['preselected_quantity'] = $preselected_quantity;
 
         return $this;
     }

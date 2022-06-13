@@ -1,6 +1,6 @@
 <?php
 /**
- * CreateCatalogItemReferenceTest
+ * RestApiResultGroupTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * CreateCatalogItemReferenceTest Class Doc Comment
+ * RestApiResultGroupTest Class Doc Comment
  *
  * @category    Class
- * @description Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Items.CatalogItem}
+ * @description Rest api result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CreateCatalogItemReferenceTest extends \PHPUnit_Framework_TestCase
+class RestApiResultGroupTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,30 +70,16 @@ class CreateCatalogItemReferenceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CreateCatalogItemReference"
+     * Test "RestApiResultGroup"
      */
-    public function testCreateCatalogItemReference()
+    public function testRestApiResultGroup()
     {
     }
 
     /**
-     * Test attribute "catalog_item_id"
+     * Test attribute "data"
      */
-    public function testPropertyCatalogItemId()
-    {
-    }
-
-    /**
-     * Test attribute "item_type"
-     */
-    public function testPropertyItemType()
-    {
-    }
-
-    /**
-     * Test attribute "preselected_quantity"
-     */
-    public function testPropertyPreselectedQuantity()
+    public function testPropertyData()
     {
     }
 }

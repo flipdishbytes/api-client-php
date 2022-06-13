@@ -36,7 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * GroupReference Class Doc Comment
  *
  * @category Class
- * @description Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.CatalogGroup}
+ * @description Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.Group}
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -58,8 +58,7 @@ class GroupReference implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'group' => '\Flipdish\\Client\Models\CatalogGroup',
-        'catalog_group_id' => 'string',
+        'group' => '\Flipdish\\Client\Models\Group',
         'catalog_item_id' => 'string',
         'group_type' => 'string'
     ];
@@ -71,7 +70,6 @@ class GroupReference implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'group' => null,
-        'catalog_group_id' => null,
         'catalog_item_id' => null,
         'group_type' => null
     ];
@@ -104,7 +102,6 @@ class GroupReference implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'group' => 'Group',
-        'catalog_group_id' => 'CatalogGroupId',
         'catalog_item_id' => 'CatalogItemId',
         'group_type' => 'GroupType'
     ];
@@ -116,7 +113,6 @@ class GroupReference implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'group' => 'setGroup',
-        'catalog_group_id' => 'setCatalogGroupId',
         'catalog_item_id' => 'setCatalogItemId',
         'group_type' => 'setGroupType'
     ];
@@ -128,7 +124,6 @@ class GroupReference implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'group' => 'getGroup',
-        'catalog_group_id' => 'getCatalogGroupId',
         'catalog_item_id' => 'getCatalogItemId',
         'group_type' => 'getGroupType'
     ];
@@ -207,7 +202,6 @@ class GroupReference implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['group'] = isset($data['group']) ? $data['group'] : null;
-        $this->container['catalog_group_id'] = isset($data['catalog_group_id']) ? $data['catalog_group_id'] : null;
         $this->container['catalog_item_id'] = isset($data['catalog_item_id']) ? $data['catalog_item_id'] : null;
         $this->container['group_type'] = isset($data['group_type']) ? $data['group_type'] : null;
     }
@@ -221,22 +215,14 @@ class GroupReference implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['catalog_group_id'] === null) {
-            $invalidProperties[] = "'catalog_group_id' can't be null";
+        if ($this->container['catalog_item_id'] === null) {
+            $invalidProperties[] = "'catalog_item_id' can't be null";
         }
-        if ((mb_strlen($this->container['catalog_group_id']) > 30)) {
-            $invalidProperties[] = "invalid value for 'catalog_group_id', the character length must be smaller than or equal to 30.";
-        }
-
-        if ((mb_strlen($this->container['catalog_group_id']) < 0)) {
-            $invalidProperties[] = "invalid value for 'catalog_group_id', the character length must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['catalog_item_id']) && (mb_strlen($this->container['catalog_item_id']) > 30)) {
+        if ((mb_strlen($this->container['catalog_item_id']) > 30)) {
             $invalidProperties[] = "invalid value for 'catalog_item_id', the character length must be smaller than or equal to 30.";
         }
 
-        if (!is_null($this->container['catalog_item_id']) && (mb_strlen($this->container['catalog_item_id']) < 0)) {
+        if ((mb_strlen($this->container['catalog_item_id']) < 0)) {
             $invalidProperties[] = "invalid value for 'catalog_item_id', the character length must be bigger than or equal to 0.";
         }
 
@@ -269,7 +255,7 @@ class GroupReference implements ModelInterface, ArrayAccess
     /**
      * Gets group
      *
-     * @return \Flipdish\\Client\Models\CatalogGroup
+     * @return \Flipdish\\Client\Models\Group
      */
     public function getGroup()
     {
@@ -279,44 +265,13 @@ class GroupReference implements ModelInterface, ArrayAccess
     /**
      * Sets group
      *
-     * @param \Flipdish\\Client\Models\CatalogGroup $group Details of the referenced {Flipdish.PublicModels.V1.Catalog.Products.Product}
+     * @param \Flipdish\\Client\Models\Group $group Details of the referenced {Flipdish.PublicModels.V1.Catalog.Products.GroupReference.Group}
      *
      * @return $this
      */
     public function setGroup($group)
     {
         $this->container['group'] = $group;
-
-        return $this;
-    }
-
-    /**
-     * Gets catalog_group_id
-     *
-     * @return string
-     */
-    public function getCatalogGroupId()
-    {
-        return $this->container['catalog_group_id'];
-    }
-
-    /**
-     * Sets catalog_group_id
-     *
-     * @param string $catalog_group_id Identifier of the ProductId to use as SubProduct
-     *
-     * @return $this
-     */
-    public function setCatalogGroupId($catalog_group_id)
-    {
-        if ((mb_strlen($catalog_group_id) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_group_id when calling GroupReference., must be smaller than or equal to 30.');
-        }
-        if ((mb_strlen($catalog_group_id) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_group_id when calling GroupReference., must be bigger than or equal to 0.');
-        }
-
-        $this->container['catalog_group_id'] = $catalog_group_id;
 
         return $this;
     }
@@ -340,10 +295,10 @@ class GroupReference implements ModelInterface, ArrayAccess
      */
     public function setCatalogItemId($catalog_item_id)
     {
-        if (!is_null($catalog_item_id) && (mb_strlen($catalog_item_id) > 30)) {
+        if ((mb_strlen($catalog_item_id) > 30)) {
             throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling GroupReference., must be smaller than or equal to 30.');
         }
-        if (!is_null($catalog_item_id) && (mb_strlen($catalog_item_id) < 0)) {
+        if ((mb_strlen($catalog_item_id) < 0)) {
             throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling GroupReference., must be bigger than or equal to 0.');
         }
 

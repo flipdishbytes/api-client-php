@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiResultCatalogGroupTest
+ * UpdateProductReferenceTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * RestApiResultCatalogGroupTest Class Doc Comment
+ * UpdateProductReferenceTest Class Doc Comment
  *
  * @category    Class
- * @description Rest api result
+ * @description Data to update a {Flipdish.PublicModels.V1.Catalog.Groups.UpdateProductReference}
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RestApiResultCatalogGroupTest extends \PHPUnit_Framework_TestCase
+class UpdateProductReferenceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,30 @@ class RestApiResultCatalogGroupTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RestApiResultCatalogGroup"
+     * Test "UpdateProductReference"
      */
-    public function testRestApiResultCatalogGroup()
+    public function testUpdateProductReference()
     {
     }
 
     /**
-     * Test attribute "data"
+     * Test attribute "catalog_item_id"
      */
-    public function testPropertyData()
+    public function testPropertyCatalogItemId()
+    {
+    }
+
+    /**
+     * Test attribute "product_type"
+     */
+    public function testPropertyProductType()
+    {
+    }
+
+    /**
+     * Test attribute "preselected_quantity"
+     */
+    public function testPropertyPreselectedQuantity()
     {
     }
 }

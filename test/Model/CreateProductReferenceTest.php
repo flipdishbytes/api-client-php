@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiPaginationResultCatalogGroupTest
+ * CreateProductReferenceTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * RestApiPaginationResultCatalogGroupTest Class Doc Comment
+ * CreateProductReferenceTest Class Doc Comment
  *
  * @category    Class
- * @description Rest api pagination result
+ * @description Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Product}
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RestApiPaginationResultCatalogGroupTest extends \PHPUnit_Framework_TestCase
+class CreateProductReferenceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,30 @@ class RestApiPaginationResultCatalogGroupTest extends \PHPUnit_Framework_TestCas
     }
 
     /**
-     * Test "RestApiPaginationResultCatalogGroup"
+     * Test "CreateProductReference"
      */
-    public function testRestApiPaginationResultCatalogGroup()
+    public function testCreateProductReference()
     {
     }
 
     /**
-     * Test attribute "page"
+     * Test attribute "catalog_item_id"
      */
-    public function testPropertyPage()
+    public function testPropertyCatalogItemId()
     {
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "product_type"
      */
-    public function testPropertyLimit()
+    public function testPropertyProductType()
     {
     }
 
     /**
-     * Test attribute "total_record_count"
+     * Test attribute "preselected_quantity"
      */
-    public function testPropertyTotalRecordCount()
-    {
-    }
-
-    /**
-     * Test attribute "data"
-     */
-    public function testPropertyData()
+    public function testPropertyPreselectedQuantity()
     {
     }
 }

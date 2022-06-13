@@ -58,7 +58,7 @@ class PublishMenuChanges implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'catalog_element_id' => 'string',
+        'catalog_item_id' => 'string',
         'menu_ids' => 'int[]'
     ];
 
@@ -68,7 +68,7 @@ class PublishMenuChanges implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'catalog_element_id' => null,
+        'catalog_item_id' => null,
         'menu_ids' => 'int32'
     ];
 
@@ -99,7 +99,7 @@ class PublishMenuChanges implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'catalog_element_id' => 'CatalogElementId',
+        'catalog_item_id' => 'CatalogItemId',
         'menu_ids' => 'MenuIds'
     ];
 
@@ -109,7 +109,7 @@ class PublishMenuChanges implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'catalog_element_id' => 'setCatalogElementId',
+        'catalog_item_id' => 'setCatalogItemId',
         'menu_ids' => 'setMenuIds'
     ];
 
@@ -119,7 +119,7 @@ class PublishMenuChanges implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'catalog_element_id' => 'getCatalogElementId',
+        'catalog_item_id' => 'getCatalogItemId',
         'menu_ids' => 'getMenuIds'
     ];
 
@@ -183,7 +183,7 @@ class PublishMenuChanges implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['catalog_element_id'] = isset($data['catalog_element_id']) ? $data['catalog_element_id'] : null;
+        $this->container['catalog_item_id'] = isset($data['catalog_item_id']) ? $data['catalog_item_id'] : null;
         $this->container['menu_ids'] = isset($data['menu_ids']) ? $data['menu_ids'] : null;
     }
 
@@ -196,12 +196,12 @@ class PublishMenuChanges implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['catalog_element_id']) && (mb_strlen($this->container['catalog_element_id']) > 30)) {
-            $invalidProperties[] = "invalid value for 'catalog_element_id', the character length must be smaller than or equal to 30.";
+        if (!is_null($this->container['catalog_item_id']) && (mb_strlen($this->container['catalog_item_id']) > 30)) {
+            $invalidProperties[] = "invalid value for 'catalog_item_id', the character length must be smaller than or equal to 30.";
         }
 
-        if (!is_null($this->container['catalog_element_id']) && (mb_strlen($this->container['catalog_element_id']) < 0)) {
-            $invalidProperties[] = "invalid value for 'catalog_element_id', the character length must be bigger than or equal to 0.";
+        if (!is_null($this->container['catalog_item_id']) && (mb_strlen($this->container['catalog_item_id']) < 0)) {
+            $invalidProperties[] = "invalid value for 'catalog_item_id', the character length must be bigger than or equal to 0.";
         }
 
         return $invalidProperties;
@@ -220,32 +220,32 @@ class PublishMenuChanges implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets catalog_element_id
+     * Gets catalog_item_id
      *
      * @return string
      */
-    public function getCatalogElementId()
+    public function getCatalogItemId()
     {
-        return $this->container['catalog_element_id'];
+        return $this->container['catalog_item_id'];
     }
 
     /**
-     * Sets catalog_element_id
+     * Sets catalog_item_id
      *
-     * @param string $catalog_element_id Optional Catalog element id
+     * @param string $catalog_item_id Optional Catalog item id
      *
      * @return $this
      */
-    public function setCatalogElementId($catalog_element_id)
+    public function setCatalogItemId($catalog_item_id)
     {
-        if (!is_null($catalog_element_id) && (mb_strlen($catalog_element_id) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_element_id when calling PublishMenuChanges., must be smaller than or equal to 30.');
+        if (!is_null($catalog_item_id) && (mb_strlen($catalog_item_id) > 30)) {
+            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling PublishMenuChanges., must be smaller than or equal to 30.');
         }
-        if (!is_null($catalog_element_id) && (mb_strlen($catalog_element_id) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_element_id when calling PublishMenuChanges., must be bigger than or equal to 0.');
+        if (!is_null($catalog_item_id) && (mb_strlen($catalog_item_id) < 0)) {
+            throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling PublishMenuChanges., must be bigger than or equal to 0.');
         }
 
-        $this->container['catalog_element_id'] = $catalog_element_id;
+        $this->container['catalog_item_id'] = $catalog_item_id;
 
         return $this;
     }

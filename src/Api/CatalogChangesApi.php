@@ -94,7 +94,7 @@ class CatalogChangesApi
      *
      * @param  string $app_id  (required)
      * @param  int $menu_id  (optional)
-     * @param  string $catalog_element_id  (optional)
+     * @param  string $catalog_item_id  (optional)
      * @param  int $page  (optional)
      * @param  int $limit  (optional)
      *
@@ -102,9 +102,9 @@ class CatalogChangesApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiPaginationResultPendingMenuChanges
      */
-    public function getPendingMenuChanges($app_id, $menu_id = null, $catalog_element_id = null, $page = null, $limit = null)
+    public function getPendingMenuChanges($app_id, $menu_id = null, $catalog_item_id = null, $page = null, $limit = null)
     {
-        list($response) = $this->getPendingMenuChangesWithHttpInfo($app_id, $menu_id, $catalog_element_id, $page, $limit);
+        list($response) = $this->getPendingMenuChangesWithHttpInfo($app_id, $menu_id, $catalog_item_id, $page, $limit);
         return $response;
     }
 
@@ -115,7 +115,7 @@ class CatalogChangesApi
      *
      * @param  string $app_id  (required)
      * @param  int $menu_id  (optional)
-     * @param  string $catalog_element_id  (optional)
+     * @param  string $catalog_item_id  (optional)
      * @param  int $page  (optional)
      * @param  int $limit  (optional)
      *
@@ -123,10 +123,10 @@ class CatalogChangesApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiPaginationResultPendingMenuChanges, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPendingMenuChangesWithHttpInfo($app_id, $menu_id = null, $catalog_element_id = null, $page = null, $limit = null)
+    public function getPendingMenuChangesWithHttpInfo($app_id, $menu_id = null, $catalog_item_id = null, $page = null, $limit = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultPendingMenuChanges';
-        $request = $this->getPendingMenuChangesRequest($app_id, $menu_id, $catalog_element_id, $page, $limit);
+        $request = $this->getPendingMenuChangesRequest($app_id, $menu_id, $catalog_item_id, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -218,16 +218,16 @@ class CatalogChangesApi
      *
      * @param  string $app_id  (required)
      * @param  int $menu_id  (optional)
-     * @param  string $catalog_element_id  (optional)
+     * @param  string $catalog_item_id  (optional)
      * @param  int $page  (optional)
      * @param  int $limit  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPendingMenuChangesAsync($app_id, $menu_id = null, $catalog_element_id = null, $page = null, $limit = null)
+    public function getPendingMenuChangesAsync($app_id, $menu_id = null, $catalog_item_id = null, $page = null, $limit = null)
     {
-        return $this->getPendingMenuChangesAsyncWithHttpInfo($app_id, $menu_id, $catalog_element_id, $page, $limit)
+        return $this->getPendingMenuChangesAsyncWithHttpInfo($app_id, $menu_id, $catalog_item_id, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -242,17 +242,17 @@ class CatalogChangesApi
      *
      * @param  string $app_id  (required)
      * @param  int $menu_id  (optional)
-     * @param  string $catalog_element_id  (optional)
+     * @param  string $catalog_item_id  (optional)
      * @param  int $page  (optional)
      * @param  int $limit  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPendingMenuChangesAsyncWithHttpInfo($app_id, $menu_id = null, $catalog_element_id = null, $page = null, $limit = null)
+    public function getPendingMenuChangesAsyncWithHttpInfo($app_id, $menu_id = null, $catalog_item_id = null, $page = null, $limit = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultPendingMenuChanges';
-        $request = $this->getPendingMenuChangesRequest($app_id, $menu_id, $catalog_element_id, $page, $limit);
+        $request = $this->getPendingMenuChangesRequest($app_id, $menu_id, $catalog_item_id, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -296,14 +296,14 @@ class CatalogChangesApi
      *
      * @param  string $app_id  (required)
      * @param  int $menu_id  (optional)
-     * @param  string $catalog_element_id  (optional)
+     * @param  string $catalog_item_id  (optional)
      * @param  int $page  (optional)
      * @param  int $limit  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getPendingMenuChangesRequest($app_id, $menu_id = null, $catalog_element_id = null, $page = null, $limit = null)
+    protected function getPendingMenuChangesRequest($app_id, $menu_id = null, $catalog_item_id = null, $page = null, $limit = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -324,8 +324,8 @@ class CatalogChangesApi
             $queryParams['menuId'] = ObjectSerializer::toQueryValue($menu_id);
         }
         // query params
-        if ($catalog_element_id !== null) {
-            $queryParams['catalogElementId'] = ObjectSerializer::toQueryValue($catalog_element_id);
+        if ($catalog_item_id !== null) {
+            $queryParams['catalogItemId'] = ObjectSerializer::toQueryValue($catalog_item_id);
         }
         // query params
         if ($page !== null) {

@@ -58,7 +58,6 @@ class CreateGroupReference implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'catalog_group_id' => 'string',
         'catalog_item_id' => 'string',
         'group_type' => 'string'
     ];
@@ -69,7 +68,6 @@ class CreateGroupReference implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'catalog_group_id' => null,
         'catalog_item_id' => null,
         'group_type' => null
     ];
@@ -101,7 +99,6 @@ class CreateGroupReference implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'catalog_group_id' => 'CatalogGroupId',
         'catalog_item_id' => 'CatalogItemId',
         'group_type' => 'GroupType'
     ];
@@ -112,7 +109,6 @@ class CreateGroupReference implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'catalog_group_id' => 'setCatalogGroupId',
         'catalog_item_id' => 'setCatalogItemId',
         'group_type' => 'setGroupType'
     ];
@@ -123,7 +119,6 @@ class CreateGroupReference implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'catalog_group_id' => 'getCatalogGroupId',
         'catalog_item_id' => 'getCatalogItemId',
         'group_type' => 'getGroupType'
     ];
@@ -201,7 +196,6 @@ class CreateGroupReference implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['catalog_group_id'] = isset($data['catalog_group_id']) ? $data['catalog_group_id'] : null;
         $this->container['catalog_item_id'] = isset($data['catalog_item_id']) ? $data['catalog_item_id'] : null;
         $this->container['group_type'] = isset($data['group_type']) ? $data['group_type'] : null;
     }
@@ -215,22 +209,14 @@ class CreateGroupReference implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['catalog_group_id'] === null) {
-            $invalidProperties[] = "'catalog_group_id' can't be null";
+        if ($this->container['catalog_item_id'] === null) {
+            $invalidProperties[] = "'catalog_item_id' can't be null";
         }
-        if ((mb_strlen($this->container['catalog_group_id']) > 30)) {
-            $invalidProperties[] = "invalid value for 'catalog_group_id', the character length must be smaller than or equal to 30.";
-        }
-
-        if ((mb_strlen($this->container['catalog_group_id']) < 0)) {
-            $invalidProperties[] = "invalid value for 'catalog_group_id', the character length must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['catalog_item_id']) && (mb_strlen($this->container['catalog_item_id']) > 30)) {
+        if ((mb_strlen($this->container['catalog_item_id']) > 30)) {
             $invalidProperties[] = "invalid value for 'catalog_item_id', the character length must be smaller than or equal to 30.";
         }
 
-        if (!is_null($this->container['catalog_item_id']) && (mb_strlen($this->container['catalog_item_id']) < 0)) {
+        if ((mb_strlen($this->container['catalog_item_id']) < 0)) {
             $invalidProperties[] = "invalid value for 'catalog_item_id', the character length must be bigger than or equal to 0.";
         }
 
@@ -261,37 +247,6 @@ class CreateGroupReference implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets catalog_group_id
-     *
-     * @return string
-     */
-    public function getCatalogGroupId()
-    {
-        return $this->container['catalog_group_id'];
-    }
-
-    /**
-     * Sets catalog_group_id
-     *
-     * @param string $catalog_group_id Identifier of the ProductId to use as SubProduct
-     *
-     * @return $this
-     */
-    public function setCatalogGroupId($catalog_group_id)
-    {
-        if ((mb_strlen($catalog_group_id) > 30)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_group_id when calling CreateGroupReference., must be smaller than or equal to 30.');
-        }
-        if ((mb_strlen($catalog_group_id) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $catalog_group_id when calling CreateGroupReference., must be bigger than or equal to 0.');
-        }
-
-        $this->container['catalog_group_id'] = $catalog_group_id;
-
-        return $this;
-    }
-
-    /**
      * Gets catalog_item_id
      *
      * @return string
@@ -310,10 +265,10 @@ class CreateGroupReference implements ModelInterface, ArrayAccess
      */
     public function setCatalogItemId($catalog_item_id)
     {
-        if (!is_null($catalog_item_id) && (mb_strlen($catalog_item_id) > 30)) {
+        if ((mb_strlen($catalog_item_id) > 30)) {
             throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling CreateGroupReference., must be smaller than or equal to 30.');
         }
-        if (!is_null($catalog_item_id) && (mb_strlen($catalog_item_id) < 0)) {
+        if ((mb_strlen($catalog_item_id) < 0)) {
             throw new \InvalidArgumentException('invalid length for $catalog_item_id when calling CreateGroupReference., must be bigger than or equal to 0.');
         }
 
