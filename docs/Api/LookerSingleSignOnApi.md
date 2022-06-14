@@ -5,7 +5,7 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getLookerCustomerReportingEmbedUrl**](LookerSingleSignOnApi.md#getLookerCustomerReportingEmbedUrl) | **GET** /api/v1.0/{appId}/looker/sso/CustomerReporting | 
-[**getSSOEndpoint**](LookerSingleSignOnApi.md#getSSOEndpoint) | **GET** /api/v1.0/{appId}/looker/sso | Get the single sign on embed URL for PerformanceSummary Dashboard
+[**getSSOEndpoint**](LookerSingleSignOnApi.md#getSSOEndpoint) | **GET** /api/v1.0/{appId}/looker/sso | Get the generic single sign on embed URL for Looker dashboards
 
 
 # **getLookerCustomerReportingEmbedUrl**
@@ -62,9 +62,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSSOEndpoint**
-> \Flipdish\\Client\Models\DashboardEmbed getSSOEndpoint($app_id, $embed_path)
+> \Flipdish\\Client\Models\DashboardEmbed getSSOEndpoint($app_id, $embed_path, $filters)
 
-Get the single sign on embed URL for PerformanceSummary Dashboard
+Get the generic single sign on embed URL for Looker dashboards
 
 ### Example
 ```php
@@ -82,9 +82,10 @@ $apiInstance = new Flipdish\\Client\Api\LookerSingleSignOnApi(
 );
 $app_id = "app_id_example"; // string | AppNameId
 $embed_path = "embed_path_example"; // string | Embed URL of the dashboard
+$filters = "filters_example"; // string | Filters that will be passed to the dashboard
 
 try {
-    $result = $apiInstance->getSSOEndpoint($app_id, $embed_path);
+    $result = $apiInstance->getSSOEndpoint($app_id, $embed_path, $filters);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LookerSingleSignOnApi->getSSOEndpoint: ', $e->getMessage(), PHP_EOL;
@@ -98,6 +99,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| AppNameId |
  **embed_path** | **string**| Embed URL of the dashboard |
+ **filters** | **string**| Filters that will be passed to the dashboard | [optional]
 
 ### Return type
 

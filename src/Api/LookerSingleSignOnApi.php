@@ -398,37 +398,39 @@ class LookerSingleSignOnApi
     /**
      * Operation getSSOEndpoint
      *
-     * Get the single sign on embed URL for PerformanceSummary Dashboard
+     * Get the generic single sign on embed URL for Looker dashboards
      *
      * @param  string $app_id AppNameId (required)
      * @param  string $embed_path Embed URL of the dashboard (required)
+     * @param  string $filters Filters that will be passed to the dashboard (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\DashboardEmbed
      */
-    public function getSSOEndpoint($app_id, $embed_path)
+    public function getSSOEndpoint($app_id, $embed_path, $filters = null)
     {
-        list($response) = $this->getSSOEndpointWithHttpInfo($app_id, $embed_path);
+        list($response) = $this->getSSOEndpointWithHttpInfo($app_id, $embed_path, $filters);
         return $response;
     }
 
     /**
      * Operation getSSOEndpointWithHttpInfo
      *
-     * Get the single sign on embed URL for PerformanceSummary Dashboard
+     * Get the generic single sign on embed URL for Looker dashboards
      *
      * @param  string $app_id AppNameId (required)
      * @param  string $embed_path Embed URL of the dashboard (required)
+     * @param  string $filters Filters that will be passed to the dashboard (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\DashboardEmbed, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSSOEndpointWithHttpInfo($app_id, $embed_path)
+    public function getSSOEndpointWithHttpInfo($app_id, $embed_path, $filters = null)
     {
         $returnType = '\Flipdish\\Client\Models\DashboardEmbed';
-        $request = $this->getSSOEndpointRequest($app_id, $embed_path);
+        $request = $this->getSSOEndpointRequest($app_id, $embed_path, $filters);
 
         try {
             $options = $this->createHttpClientOption();
@@ -516,17 +518,18 @@ class LookerSingleSignOnApi
     /**
      * Operation getSSOEndpointAsync
      *
-     * Get the single sign on embed URL for PerformanceSummary Dashboard
+     * Get the generic single sign on embed URL for Looker dashboards
      *
      * @param  string $app_id AppNameId (required)
      * @param  string $embed_path Embed URL of the dashboard (required)
+     * @param  string $filters Filters that will be passed to the dashboard (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSSOEndpointAsync($app_id, $embed_path)
+    public function getSSOEndpointAsync($app_id, $embed_path, $filters = null)
     {
-        return $this->getSSOEndpointAsyncWithHttpInfo($app_id, $embed_path)
+        return $this->getSSOEndpointAsyncWithHttpInfo($app_id, $embed_path, $filters)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -537,18 +540,19 @@ class LookerSingleSignOnApi
     /**
      * Operation getSSOEndpointAsyncWithHttpInfo
      *
-     * Get the single sign on embed URL for PerformanceSummary Dashboard
+     * Get the generic single sign on embed URL for Looker dashboards
      *
      * @param  string $app_id AppNameId (required)
      * @param  string $embed_path Embed URL of the dashboard (required)
+     * @param  string $filters Filters that will be passed to the dashboard (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSSOEndpointAsyncWithHttpInfo($app_id, $embed_path)
+    public function getSSOEndpointAsyncWithHttpInfo($app_id, $embed_path, $filters = null)
     {
         $returnType = '\Flipdish\\Client\Models\DashboardEmbed';
-        $request = $this->getSSOEndpointRequest($app_id, $embed_path);
+        $request = $this->getSSOEndpointRequest($app_id, $embed_path, $filters);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -592,11 +596,12 @@ class LookerSingleSignOnApi
      *
      * @param  string $app_id AppNameId (required)
      * @param  string $embed_path Embed URL of the dashboard (required)
+     * @param  string $filters Filters that will be passed to the dashboard (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getSSOEndpointRequest($app_id, $embed_path)
+    protected function getSSOEndpointRequest($app_id, $embed_path, $filters = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -621,6 +626,10 @@ class LookerSingleSignOnApi
         // query params
         if ($embed_path !== null) {
             $queryParams['embedPath'] = ObjectSerializer::toQueryValue($embed_path);
+        }
+        // query params
+        if ($filters !== null) {
+            $queryParams['filters'] = ObjectSerializer::toQueryValue($filters);
         }
 
         // path params
