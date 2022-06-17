@@ -448,6 +448,7 @@ Class | Method | HTTP request | Description
 *StripeCustomConnectApi* | [**setBankAccountBusinessType**](docs/Api/StripeCustomConnectApi.md#setbankaccountbusinesstype) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | Update bank account&#39;s BusinessType and create a Stripe Connected Account
 *StripeCustomConnectApi* | [**stripeCustomConnectRefresh**](docs/Api/StripeCustomConnectApi.md#stripecustomconnectrefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
 *StripeCustomConnectApi* | [**updateBankAccountDetails**](docs/Api/StripeCustomConnectApi.md#updatebankaccountdetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | Update bank account details
+*StripeCustomConnectApi* | [**updatePayoutSchedule**](docs/Api/StripeCustomConnectApi.md#updatepayoutschedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | Update Stripe Connection Account&#39;s payout schedule
 *StripeCustomConnectAdminApi* | [**initializeBankAccountConnectedAccount**](docs/Api/StripeCustomConnectAdminApi.md#initializebankaccountconnectedaccount) | **POST** /api/v1.0/customconnect/initialize-bank-account | Create a new Bank Account and Stripe connected account
 *StuartApi* | [**stuartCancelJob**](docs/Api/StuartApi.md#stuartcanceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | Cancel a stuart job
 *StuartApi* | [**stuartGetJob**](docs/Api/StuartApi.md#stuartgetjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | Get start job details
@@ -742,6 +743,7 @@ Class | Method | HTTP request | Description
  - [Metafield](docs/Model/Metafield.md)
  - [MetafieldDefinition](docs/Model/MetafieldDefinition.md)
  - [MetafieldDefinitionRecommendation](docs/Model/MetafieldDefinitionRecommendation.md)
+ - [ModelBase](docs/Model/ModelBase.md)
  - [OAuthApp](docs/Model/OAuthApp.md)
  - [OAuthTokenModel](docs/Model/OAuthTokenModel.md)
  - [OauthClientRedirectUri](docs/Model/OauthClientRedirectUri.md)
@@ -946,6 +948,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultMenuSectionItem](docs/Model/RestApiResultMenuSectionItem.md)
  - [RestApiResultMetadata](docs/Model/RestApiResultMetadata.md)
  - [RestApiResultMetafieldDefinition](docs/Model/RestApiResultMetafieldDefinition.md)
+ - [RestApiResultModelBase](docs/Model/RestApiResultModelBase.md)
  - [RestApiResultOAuthApp](docs/Model/RestApiResultOAuthApp.md)
  - [RestApiResultOauthClientRedirectUri](docs/Model/RestApiResultOauthClientRedirectUri.md)
  - [RestApiResultOrder](docs/Model/RestApiResultOrder.md)

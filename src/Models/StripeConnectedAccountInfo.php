@@ -60,7 +60,8 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'account_status' => 'string',
         'stripe_id' => 'string',
-        'card_payment_status' => 'string'
+        'card_payment_status' => 'string',
+        'payout_schedule_interval' => 'string'
     ];
 
     /**
@@ -71,7 +72,8 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'account_status' => null,
         'stripe_id' => null,
-        'card_payment_status' => null
+        'card_payment_status' => null,
+        'payout_schedule_interval' => null
     ];
 
     /**
@@ -103,7 +105,8 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'account_status' => 'AccountStatus',
         'stripe_id' => 'StripeId',
-        'card_payment_status' => 'CardPaymentStatus'
+        'card_payment_status' => 'CardPaymentStatus',
+        'payout_schedule_interval' => 'PayoutScheduleInterval'
     ];
 
     /**
@@ -114,7 +117,8 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
         'account_status' => 'setAccountStatus',
         'stripe_id' => 'setStripeId',
-        'card_payment_status' => 'setCardPaymentStatus'
+        'card_payment_status' => 'setCardPaymentStatus',
+        'payout_schedule_interval' => 'setPayoutScheduleInterval'
     ];
 
     /**
@@ -125,7 +129,8 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
         'account_status' => 'getAccountStatus',
         'stripe_id' => 'getStripeId',
-        'card_payment_status' => 'getCardPaymentStatus'
+        'card_payment_status' => 'getCardPaymentStatus',
+        'payout_schedule_interval' => 'getPayoutScheduleInterval'
     ];
 
     /**
@@ -180,6 +185,10 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
     const CARD_PAYMENT_STATUS_PENDING = 'Pending';
     const CARD_PAYMENT_STATUS_ACTIVE = 'Active';
     const CARD_PAYMENT_STATUS_UNREQUESTED = 'Unrequested';
+    const PAYOUT_SCHEDULE_INTERVAL_MANUAL = 'Manual';
+    const PAYOUT_SCHEDULE_INTERVAL_DAILY = 'Daily';
+    const PAYOUT_SCHEDULE_INTERVAL_WEEKLY = 'Weekly';
+    const PAYOUT_SCHEDULE_INTERVAL_MONTHLY = 'Monthly';
     
 
     
@@ -216,6 +225,21 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         ];
     }
     
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getPayoutScheduleIntervalAllowableValues()
+    {
+        return [
+            self::PAYOUT_SCHEDULE_INTERVAL_MANUAL,
+            self::PAYOUT_SCHEDULE_INTERVAL_DAILY,
+            self::PAYOUT_SCHEDULE_INTERVAL_WEEKLY,
+            self::PAYOUT_SCHEDULE_INTERVAL_MONTHLY,
+        ];
+    }
+    
 
     /**
      * Associative array for storing property values
@@ -235,6 +259,7 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         $this->container['account_status'] = isset($data['account_status']) ? $data['account_status'] : null;
         $this->container['stripe_id'] = isset($data['stripe_id']) ? $data['stripe_id'] : null;
         $this->container['card_payment_status'] = isset($data['card_payment_status']) ? $data['card_payment_status'] : null;
+        $this->container['payout_schedule_interval'] = isset($data['payout_schedule_interval']) ? $data['payout_schedule_interval'] : null;
     }
 
     /**
@@ -258,6 +283,14 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         if (!is_null($this->container['card_payment_status']) && !in_array($this->container['card_payment_status'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'card_payment_status', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getPayoutScheduleIntervalAllowableValues();
+        if (!is_null($this->container['payout_schedule_interval']) && !in_array($this->container['payout_schedule_interval'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'payout_schedule_interval', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -363,6 +396,39 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
             );
         }
         $this->container['card_payment_status'] = $card_payment_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets payout_schedule_interval
+     *
+     * @return string
+     */
+    public function getPayoutScheduleInterval()
+    {
+        return $this->container['payout_schedule_interval'];
+    }
+
+    /**
+     * Sets payout_schedule_interval
+     *
+     * @param string $payout_schedule_interval Payouts Schedule Interval
+     *
+     * @return $this
+     */
+    public function setPayoutScheduleInterval($payout_schedule_interval)
+    {
+        $allowedValues = $this->getPayoutScheduleIntervalAllowableValues();
+        if (!is_null($payout_schedule_interval) && !in_array($payout_schedule_interval, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'payout_schedule_interval', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['payout_schedule_interval'] = $payout_schedule_interval;
 
         return $this;
     }

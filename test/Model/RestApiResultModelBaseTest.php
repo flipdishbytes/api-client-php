@@ -1,6 +1,6 @@
 <?php
 /**
- * StripeConnectedAccountInfoTest
+ * RestApiResultModelBaseTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StripeConnectedAccountInfoTest Class Doc Comment
+ * RestApiResultModelBaseTest Class Doc Comment
  *
  * @category    Class
- * @description Represents information about a Stripe connected account associated with a bank account
+ * @description Rest api result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StripeConnectedAccountInfoTest extends \PHPUnit_Framework_TestCase
+class RestApiResultModelBaseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,16 @@ class StripeConnectedAccountInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StripeConnectedAccountInfo"
+     * Test "RestApiResultModelBase"
      */
-    public function testStripeConnectedAccountInfo()
+    public function testRestApiResultModelBase()
     {
     }
 
     /**
-     * Test attribute "account_status"
+     * Test attribute "data"
      */
-    public function testPropertyAccountStatus()
-    {
-    }
-
-    /**
-     * Test attribute "stripe_id"
-     */
-    public function testPropertyStripeId()
-    {
-    }
-
-    /**
-     * Test attribute "card_payment_status"
-     */
-    public function testPropertyCardPaymentStatus()
-    {
-    }
-
-    /**
-     * Test attribute "payout_schedule_interval"
-     */
-    public function testPropertyPayoutScheduleInterval()
+    public function testPropertyData()
     {
     }
 }

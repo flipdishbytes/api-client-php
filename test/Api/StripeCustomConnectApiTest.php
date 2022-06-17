@@ -140,4 +140,14 @@ class StripeCustomConnectApiTest extends \PHPUnit_Framework_TestCase
     public function testUpdateBankAccountDetails()
     {
     }
+
+    /**
+     * Test case for updatePayoutSchedule
+     *
+     * Update Stripe Connection Account's payout schedule.
+     *
+     */
+    public function testUpdatePayoutSchedule()
+    {
+    }
 }

@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**setBankAccountBusinessType**](StripeCustomConnectApi.md#setBankAccountBusinessType) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | Update bank account&#39;s BusinessType and create a Stripe Connected Account
 [**stripeCustomConnectRefresh**](StripeCustomConnectApi.md#stripeCustomConnectRefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
 [**updateBankAccountDetails**](StripeCustomConnectApi.md#updateBankAccountDetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | Update bank account details
+[**updatePayoutSchedule**](StripeCustomConnectApi.md#updatePayoutSchedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | Update Stripe Connection Account&#39;s payout schedule
 
 
 # **createBankAccountAndConnectedAccount**
@@ -386,6 +387,61 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updatePayoutSchedule**
+> \Flipdish\\Client\Models\RestApiResultModelBase updatePayoutSchedule($app_id, $stripe_connected_account_id, $interval)
+
+Update Stripe Connection Account's payout schedule
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\StripeCustomConnectApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$stripe_connected_account_id = "stripe_connected_account_id_example"; // string | 
+$interval = "interval_example"; // string | 
+
+try {
+    $result = $apiInstance->updatePayoutSchedule($app_id, $stripe_connected_account_id, $interval);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StripeCustomConnectApi->updatePayoutSchedule: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **stripe_connected_account_id** | **string**|  |
+ **interval** | **string**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultModelBase**](../Model/RestApiResultModelBase.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
