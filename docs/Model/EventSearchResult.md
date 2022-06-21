@@ -118,6 +118,7 @@ Name | Type | Description | Notes
 **website_updated_event** | [**\Flipdish\\Client\Models\WebsiteUpdatedEvent[]**](WebsiteUpdatedEvent.md) | Website updated | [optional] 
 **order_capacity_updated_event** | [**\Flipdish\\Client\Models\OrderCapacityConfigUpdatedEvent[]**](OrderCapacityConfigUpdatedEvent.md) | Order capacity config updated | [optional] 
 **external_store_event** | [**\Flipdish\\Client\Models\ExternalStoreEvent[]**](ExternalStoreEvent.md) | External event | [optional] 
+**order_fulfillment_status_updated_event** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusUpdatedEvent[]**](OrderFulfillmentStatusUpdatedEvent.md) | Fulfillment status updated event | [optional] 
 **app_store_config_created_event** | [**\Flipdish\\Client\Models\AppStoreConfigCreatedEvent[]**](AppStoreConfigCreatedEvent.md) | App Store Config Created | [optional] 
 **app_store_config_updated_event** | [**\Flipdish\\Client\Models\AppStoreConfigUpdatedEvent[]**](AppStoreConfigUpdatedEvent.md) | App Store Config Updated | [optional] 
 **app_store_config_deleted_event** | [**\Flipdish\\Client\Models\AppStoreConfigDeletedEvent[]**](AppStoreConfigDeletedEvent.md) | App Store Config Deleted | [optional] 

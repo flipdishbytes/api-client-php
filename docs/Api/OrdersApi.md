@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**acceptOrder**](OrdersApi.md#acceptOrder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 [**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 [**getDeliveryInformation**](OrdersApi.md#getDeliveryInformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
-[**getFulfillmentStatus**](OrdersApi.md#getFulfillmentStatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order delivery information
+[**getFulfillmentStatus**](OrdersApi.md#getFulfillmentStatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order fulfillment status
 [**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | Get orders by filter
 [**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 # **getFulfillmentStatus**
 > \Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatus getFulfillmentStatus($order_id)
 
-Get order delivery information
+Get order fulfillment status
 
 [BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment status.
 
@@ -590,7 +590,7 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     $config
 );
 $order_id = 56; // int | Flipdish Order Id
-$fulfillment_status_request = new \Flipdish\\Client\Models\OrderFulfillmentStatusBase(); // \Flipdish\\Client\Models\OrderFulfillmentStatusBase | 
+$fulfillment_status_request = new \Flipdish\\Client\Models\OrderFulfillmentStatusBase(); // \Flipdish\\Client\Models\OrderFulfillmentStatusBase | Fulfillment Status
 
 try {
     $apiInstance->updateFulfillmentStatus($order_id, $fulfillment_status_request);
@@ -605,7 +605,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_id** | **int**| Flipdish Order Id |
- **fulfillment_status_request** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusBase**](../Model/OrderFulfillmentStatusBase.md)|  |
+ **fulfillment_status_request** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusBase**](../Model/OrderFulfillmentStatusBase.md)| Fulfillment Status |
 
 ### Return type
 

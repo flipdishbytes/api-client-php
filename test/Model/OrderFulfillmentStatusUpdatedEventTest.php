@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderFulfillmentStatusTest
+ * OrderFulfillmentStatusUpdatedEventTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * OrderFulfillmentStatusTest Class Doc Comment
+ * OrderFulfillmentStatusUpdatedEventTest Class Doc Comment
  *
  * @category    Class
- * @description Order Fulfillment Status Information
+ * @description Fulfillment status updated event
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class OrderFulfillmentStatusTest extends \PHPUnit_Framework_TestCase
+class OrderFulfillmentStatusUpdatedEventTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,30 @@ class OrderFulfillmentStatusTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "OrderFulfillmentStatus"
+     * Test "OrderFulfillmentStatusUpdatedEvent"
      */
-    public function testOrderFulfillmentStatus()
+    public function testOrderFulfillmentStatusUpdatedEvent()
+    {
+    }
+
+    /**
+     * Test attribute "event_name"
+     */
+    public function testPropertyEventName()
+    {
+    }
+
+    /**
+     * Test attribute "store_id"
+     */
+    public function testPropertyStoreId()
+    {
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
     {
     }
 
@@ -84,9 +105,51 @@ class OrderFulfillmentStatusTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "status_name"
+     */
+    public function testPropertyStatusName()
+    {
+    }
+
+    /**
      * Test attribute "status_id"
      */
     public function testPropertyStatusId()
+    {
+    }
+
+    /**
+     * Test attribute "flipdish_event_id"
+     */
+    public function testPropertyFlipdishEventId()
+    {
+    }
+
+    /**
+     * Test attribute "create_time"
+     */
+    public function testPropertyCreateTime()
+    {
+    }
+
+    /**
+     * Test attribute "position"
+     */
+    public function testPropertyPosition()
+    {
+    }
+
+    /**
+     * Test attribute "app_id"
+     */
+    public function testPropertyAppId()
+    {
+    }
+
+    /**
+     * Test attribute "ip_address"
+     */
+    public function testPropertyIpAddress()
     {
     }
 }

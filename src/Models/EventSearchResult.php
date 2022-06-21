@@ -173,6 +173,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'website_updated_event' => '\Flipdish\\Client\Models\WebsiteUpdatedEvent[]',
         'order_capacity_updated_event' => '\Flipdish\\Client\Models\OrderCapacityConfigUpdatedEvent[]',
         'external_store_event' => '\Flipdish\\Client\Models\ExternalStoreEvent[]',
+        'order_fulfillment_status_updated_event' => '\Flipdish\\Client\Models\OrderFulfillmentStatusUpdatedEvent[]',
         'app_store_config_created_event' => '\Flipdish\\Client\Models\AppStoreConfigCreatedEvent[]',
         'app_store_config_updated_event' => '\Flipdish\\Client\Models\AppStoreConfigUpdatedEvent[]',
         'app_store_config_deleted_event' => '\Flipdish\\Client\Models\AppStoreConfigDeletedEvent[]',
@@ -311,6 +312,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'website_updated_event' => null,
         'order_capacity_updated_event' => null,
         'external_store_event' => null,
+        'order_fulfillment_status_updated_event' => null,
         'app_store_config_created_event' => null,
         'app_store_config_updated_event' => null,
         'app_store_config_deleted_event' => null,
@@ -470,6 +472,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'website_updated_event' => 'WebsiteUpdatedEvent',
         'order_capacity_updated_event' => 'OrderCapacityUpdatedEvent',
         'external_store_event' => 'ExternalStoreEvent',
+        'order_fulfillment_status_updated_event' => 'OrderFulfillmentStatusUpdatedEvent',
         'app_store_config_created_event' => 'AppStoreConfigCreatedEvent',
         'app_store_config_updated_event' => 'AppStoreConfigUpdatedEvent',
         'app_store_config_deleted_event' => 'AppStoreConfigDeletedEvent',
@@ -608,6 +611,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'website_updated_event' => 'setWebsiteUpdatedEvent',
         'order_capacity_updated_event' => 'setOrderCapacityUpdatedEvent',
         'external_store_event' => 'setExternalStoreEvent',
+        'order_fulfillment_status_updated_event' => 'setOrderFulfillmentStatusUpdatedEvent',
         'app_store_config_created_event' => 'setAppStoreConfigCreatedEvent',
         'app_store_config_updated_event' => 'setAppStoreConfigUpdatedEvent',
         'app_store_config_deleted_event' => 'setAppStoreConfigDeletedEvent',
@@ -746,6 +750,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'website_updated_event' => 'getWebsiteUpdatedEvent',
         'order_capacity_updated_event' => 'getOrderCapacityUpdatedEvent',
         'external_store_event' => 'getExternalStoreEvent',
+        'order_fulfillment_status_updated_event' => 'getOrderFulfillmentStatusUpdatedEvent',
         'app_store_config_created_event' => 'getAppStoreConfigCreatedEvent',
         'app_store_config_updated_event' => 'getAppStoreConfigUpdatedEvent',
         'app_store_config_deleted_event' => 'getAppStoreConfigDeletedEvent',
@@ -938,6 +943,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         $this->container['website_updated_event'] = isset($data['website_updated_event']) ? $data['website_updated_event'] : null;
         $this->container['order_capacity_updated_event'] = isset($data['order_capacity_updated_event']) ? $data['order_capacity_updated_event'] : null;
         $this->container['external_store_event'] = isset($data['external_store_event']) ? $data['external_store_event'] : null;
+        $this->container['order_fulfillment_status_updated_event'] = isset($data['order_fulfillment_status_updated_event']) ? $data['order_fulfillment_status_updated_event'] : null;
         $this->container['app_store_config_created_event'] = isset($data['app_store_config_created_event']) ? $data['app_store_config_created_event'] : null;
         $this->container['app_store_config_updated_event'] = isset($data['app_store_config_updated_event']) ? $data['app_store_config_updated_event'] : null;
         $this->container['app_store_config_deleted_event'] = isset($data['app_store_config_deleted_event']) ? $data['app_store_config_deleted_event'] : null;
@@ -3735,6 +3741,30 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     public function setExternalStoreEvent($external_store_event)
     {
         $this->container['external_store_event'] = $external_store_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_fulfillment_status_updated_event
+     *
+     * @return \Flipdish\\Client\Models\OrderFulfillmentStatusUpdatedEvent[]
+     */
+    public function getOrderFulfillmentStatusUpdatedEvent()
+    {
+        return $this->container['order_fulfillment_status_updated_event'];
+    }
+
+    /**
+     * Sets order_fulfillment_status_updated_event
+     *
+     * @param \Flipdish\\Client\Models\OrderFulfillmentStatusUpdatedEvent[] $order_fulfillment_status_updated_event Fulfillment status updated event
+     *
+     * @return $this
+     */
+    public function setOrderFulfillmentStatusUpdatedEvent($order_fulfillment_status_updated_event)
+    {
+        $this->container['order_fulfillment_status_updated_event'] = $order_fulfillment_status_updated_event;
 
         return $this;
     }

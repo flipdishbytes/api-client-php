@@ -882,6 +882,13 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "order_fulfillment_status_updated_event"
+     */
+    public function testPropertyOrderFulfillmentStatusUpdatedEvent()
+    {
+    }
+
+    /**
      * Test attribute "app_store_config_created_event"
      */
     public function testPropertyAppStoreConfigCreatedEvent()

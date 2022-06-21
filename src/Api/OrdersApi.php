@@ -961,7 +961,7 @@ class OrdersApi
     /**
      * Operation getFulfillmentStatus
      *
-     * Get order delivery information
+     * Get order fulfillment status
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
@@ -978,7 +978,7 @@ class OrdersApi
     /**
      * Operation getFulfillmentStatusWithHttpInfo
      *
-     * Get order delivery information
+     * Get order fulfillment status
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
@@ -1085,7 +1085,7 @@ class OrdersApi
     /**
      * Operation getFulfillmentStatusAsync
      *
-     * Get order delivery information
+     * Get order fulfillment status
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
@@ -1105,7 +1105,7 @@ class OrdersApi
     /**
      * Operation getFulfillmentStatusAsyncWithHttpInfo
      *
-     * Get order delivery information
+     * Get order fulfillment status
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
@@ -3127,7 +3127,7 @@ class OrdersApi
      * Add/update fulfillment status information to an order
      *
      * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request fulfillment_status_request (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request Fulfillment Status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3144,7 +3144,7 @@ class OrdersApi
      * Add/update fulfillment status information to an order
      *
      * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request Fulfillment Status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3222,7 +3222,7 @@ class OrdersApi
      * Add/update fulfillment status information to an order
      *
      * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request Fulfillment Status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3243,7 +3243,7 @@ class OrdersApi
      * Add/update fulfillment status information to an order
      *
      * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request Fulfillment Status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3280,7 +3280,7 @@ class OrdersApi
      * Create request for operation 'updateFulfillmentStatus'
      *
      * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request Fulfillment Status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
