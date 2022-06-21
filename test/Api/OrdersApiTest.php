@@ -102,6 +102,16 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getFulfillmentStatus
+     *
+     * Get order delivery information.
+     *
+     */
+    public function testGetFulfillmentStatus()
+    {
+    }
+
+    /**
      * Test case for getOrderById
      *
      * Get order by ID.
@@ -158,6 +168,16 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testUpdateDeliveryInformation()
+    {
+    }
+
+    /**
+     * Test case for updateFulfillmentStatus
+     *
+     * Add/update fulfillment status information to an order.
+     *
+     */
+    public function testUpdateFulfillmentStatus()
     {
     }
 }

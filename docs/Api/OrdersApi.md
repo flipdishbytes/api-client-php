@@ -7,12 +7,14 @@ Method | HTTP request | Description
 [**acceptOrder**](OrdersApi.md#acceptOrder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 [**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 [**getDeliveryInformation**](OrdersApi.md#getDeliveryInformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
+[**getFulfillmentStatus**](OrdersApi.md#getFulfillmentStatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order delivery information
 [**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | Get orders by filter
 [**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
 [**refundOrder**](OrdersApi.md#refundOrder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
 [**rejectOrder**](OrdersApi.md#rejectOrder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 [**updateDeliveryInformation**](OrdersApi.md#updateDeliveryInformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
+[**updateFulfillmentStatus**](OrdersApi.md#updateFulfillmentStatus) | **POST** /api/v1.0/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
 
 
 # **acceptOrder**
@@ -162,6 +164,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiResultOrderDeliveryInformation**](../Model/RestApiResultOrderDeliveryInformation.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getFulfillmentStatus**
+> \Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatus getFulfillmentStatus($order_id)
+
+Get order delivery information
+
+[BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment status.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\OrdersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$order_id = 56; // int | Flipdish Order Id
+
+try {
+    $result = $apiInstance->getFulfillmentStatus($order_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersApi->getFulfillmentStatus: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order_id** | **int**| Flipdish Order Id |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatus**](../Model/RestApiResultOrderFulfillmentStatus.md)
 
 ### Authorization
 
@@ -497,6 +552,60 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_id** | **int**| Flipdish Order Id |
  **delivery_information** | [**\Flipdish\\Client\Models\OrderDeliveryInformationBase**](../Model/OrderDeliveryInformationBase.md)| Delivery Information |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateFulfillmentStatus**
+> updateFulfillmentStatus($order_id, $fulfillment_status_request)
+
+Add/update fulfillment status information to an order
+
+[BETA - this endpoint is under development, do not use it in your production system] Updates an order's fulfillment status.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\OrdersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$order_id = 56; // int | Flipdish Order Id
+$fulfillment_status_request = new \Flipdish\\Client\Models\OrderFulfillmentStatusBase(); // \Flipdish\\Client\Models\OrderFulfillmentStatusBase | 
+
+try {
+    $apiInstance->updateFulfillmentStatus($order_id, $fulfillment_status_request);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersApi->updateFulfillmentStatus: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order_id** | **int**| Flipdish Order Id |
+ **fulfillment_status_request** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusBase**](../Model/OrderFulfillmentStatusBase.md)|  |
 
 ### Return type
 

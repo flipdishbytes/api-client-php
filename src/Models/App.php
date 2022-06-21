@@ -386,6 +386,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_ASSIGN_DRIVER_TO_ORDER = 'AssignDriverToOrder';
     const APP_RESOURCE_SET_UNASSIGN_DRIVER_FROM_ORDER = 'UnassignDriverFromOrder';
     const APP_RESOURCE_SET_UPDATE_ORDERS_DELIVERY_TRACKING_STATUS = 'UpdateOrdersDeliveryTrackingStatus';
+    const APP_RESOURCE_SET_UPDATE_ORDER_FULFILLMENT_STATUS = 'UpdateOrderFulfillmentStatus';
     const APP_RESOURCE_SET_VIEW_PAYOUTS = 'ViewPayouts';
     const APP_RESOURCE_SET_VIEW_CHANNELS = 'ViewChannels';
     const APP_RESOURCE_SET_VIEW_ONBOARDING = 'ViewOnboarding';
@@ -556,6 +557,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_ASSIGN_DRIVER_TO_ORDER,
             self::APP_RESOURCE_SET_UNASSIGN_DRIVER_FROM_ORDER,
             self::APP_RESOURCE_SET_UPDATE_ORDERS_DELIVERY_TRACKING_STATUS,
+            self::APP_RESOURCE_SET_UPDATE_ORDER_FULFILLMENT_STATUS,
             self::APP_RESOURCE_SET_VIEW_PAYOUTS,
             self::APP_RESOURCE_SET_VIEW_CHANNELS,
             self::APP_RESOURCE_SET_VIEW_ONBOARDING,
