@@ -63,6 +63,7 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
         'description' => 'string',
         'pre_order_config' => '\Flipdish\\Client\Models\PreOrderConfig',
+        'old_pre_order_config' => '\Flipdish\\Client\Models\PreOrderConfig',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -81,6 +82,7 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'user' => null,
         'description' => null,
         'pre_order_config' => null,
+        'old_pre_order_config' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -120,6 +122,7 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'user' => 'User',
         'description' => 'Description',
         'pre_order_config' => 'PreOrderConfig',
+        'old_pre_order_config' => 'OldPreOrderConfig',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -138,6 +141,7 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'user' => 'setUser',
         'description' => 'setDescription',
         'pre_order_config' => 'setPreOrderConfig',
+        'old_pre_order_config' => 'setOldPreOrderConfig',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -156,6 +160,7 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'user' => 'getUser',
         'description' => 'getDescription',
         'pre_order_config' => 'getPreOrderConfig',
+        'old_pre_order_config' => 'getOldPreOrderConfig',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -228,6 +233,7 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['pre_order_config'] = isset($data['pre_order_config']) ? $data['pre_order_config'] : null;
+        $this->container['old_pre_order_config'] = isset($data['old_pre_order_config']) ? $data['old_pre_order_config'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -375,6 +381,30 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
     public function setPreOrderConfig($pre_order_config)
     {
         $this->container['pre_order_config'] = $pre_order_config;
+
+        return $this;
+    }
+
+    /**
+     * Gets old_pre_order_config
+     *
+     * @return \Flipdish\\Client\Models\PreOrderConfig
+     */
+    public function getOldPreOrderConfig()
+    {
+        return $this->container['old_pre_order_config'];
+    }
+
+    /**
+     * Sets old_pre_order_config
+     *
+     * @param \Flipdish\\Client\Models\PreOrderConfig $old_pre_order_config Old Pre Order Configuration
+     *
+     * @return $this
+     */
+    public function setOldPreOrderConfig($old_pre_order_config)
+    {
+        $this->container['old_pre_order_config'] = $old_pre_order_config;
 
         return $this;
     }

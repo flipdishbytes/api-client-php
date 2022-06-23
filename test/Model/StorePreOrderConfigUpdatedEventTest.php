@@ -112,6 +112,13 @@ class StorePreOrderConfigUpdatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "old_pre_order_config"
+     */
+    public function testPropertyOldPreOrderConfig()
+    {
+    }
+
+    /**
      * Test attribute "flipdish_event_id"
      */
     public function testPropertyFlipdishEventId()
