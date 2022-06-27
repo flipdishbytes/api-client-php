@@ -26,7 +26,7 @@ $apiInstance = new Flipdish\\Client\Api\PaymentIntentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$payment_intent_id = "payment_intent_id_example"; // string | Stripes payment intent indentifier
+$payment_intent_id = "payment_intent_id_example"; // string | Stripe payment intent identifier
 
 try {
     $result = $apiInstance->getPaymentIntent($payment_intent_id);
@@ -41,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **payment_intent_id** | **string**| Stripes payment intent indentifier |
+ **payment_intent_id** | **string**| Stripe payment intent identifier |
 
 ### Return type
 

@@ -92,7 +92,7 @@ class PaymentIntentsApi
      *
      * Returns stripe payment intent for a given id
      *
-     * @param  string $payment_intent_id Stripes payment intent indentifier (required)
+     * @param  string $payment_intent_id Stripe payment intent identifier (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -109,7 +109,7 @@ class PaymentIntentsApi
      *
      * Returns stripe payment intent for a given id
      *
-     * @param  string $payment_intent_id Stripes payment intent indentifier (required)
+     * @param  string $payment_intent_id Stripe payment intent identifier (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -208,7 +208,7 @@ class PaymentIntentsApi
      *
      * Returns stripe payment intent for a given id
      *
-     * @param  string $payment_intent_id Stripes payment intent indentifier (required)
+     * @param  string $payment_intent_id Stripe payment intent identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -228,7 +228,7 @@ class PaymentIntentsApi
      *
      * Returns stripe payment intent for a given id
      *
-     * @param  string $payment_intent_id Stripes payment intent indentifier (required)
+     * @param  string $payment_intent_id Stripe payment intent identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -278,7 +278,7 @@ class PaymentIntentsApi
     /**
      * Create request for operation 'getPaymentIntent'
      *
-     * @param  string $payment_intent_id Stripes payment intent indentifier (required)
+     * @param  string $payment_intent_id Stripe payment intent identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
