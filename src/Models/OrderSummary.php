@@ -293,6 +293,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     const TABLE_SERVICE_CATAGORY_PARKING_BAY = 'ParkingBay';
     const TABLE_SERVICE_CATAGORY_GATE = 'Gate';
     const TABLE_SERVICE_CATAGORY_DRIVE_THROUGH = 'DriveThrough';
+    const TABLE_SERVICE_CATAGORY_TEAM = 'Team';
     const ORDER_STATE_CREATED = 'Created';
     const ORDER_STATE_PLACED_CAN_BE_CANCELLED = 'PlacedCanBeCancelled';
     const ORDER_STATE_READY_TO_PROCESS = 'ReadyToProcess';
@@ -490,6 +491,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
             self::TABLE_SERVICE_CATAGORY_PARKING_BAY,
             self::TABLE_SERVICE_CATAGORY_GATE,
             self::TABLE_SERVICE_CATAGORY_DRIVE_THROUGH,
+            self::TABLE_SERVICE_CATAGORY_TEAM,
         ];
     }
     

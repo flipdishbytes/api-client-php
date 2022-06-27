@@ -403,6 +403,7 @@ class Order implements ModelInterface, ArrayAccess
     const TABLE_SERVICE_CATAGORY_PARKING_BAY = 'ParkingBay';
     const TABLE_SERVICE_CATAGORY_GATE = 'Gate';
     const TABLE_SERVICE_CATAGORY_DRIVE_THROUGH = 'DriveThrough';
+    const TABLE_SERVICE_CATAGORY_TEAM = 'Team';
     const PAYMENT_ACCOUNT_TYPE_CARD = 'Card';
     const PAYMENT_ACCOUNT_TYPE_CASH = 'Cash';
     const PAYMENT_ACCOUNT_TYPE_IDEAL = 'Ideal';
@@ -504,6 +505,7 @@ class Order implements ModelInterface, ArrayAccess
             self::TABLE_SERVICE_CATAGORY_PARKING_BAY,
             self::TABLE_SERVICE_CATAGORY_GATE,
             self::TABLE_SERVICE_CATAGORY_DRIVE_THROUGH,
+            self::TABLE_SERVICE_CATAGORY_TEAM,
         ];
     }
     
