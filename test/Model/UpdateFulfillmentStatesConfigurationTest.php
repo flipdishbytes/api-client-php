@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreListItemTest
+ * UpdateFulfillmentStatesConfigurationTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreListItemTest Class Doc Comment
+ * UpdateFulfillmentStatesConfigurationTest Class Doc Comment
  *
  * @category    Class
- * @description Store id and name
+ * @description Update fulfillment states configuration
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreListItemTest extends \PHPUnit_Framework_TestCase
+class UpdateFulfillmentStatesConfigurationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,58 +70,30 @@ class StoreListItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreListItem"
+     * Test "UpdateFulfillmentStatesConfiguration"
      */
-    public function testStoreListItem()
+    public function testUpdateFulfillmentStatesConfiguration()
     {
     }
 
     /**
-     * Test attribute "store_id"
+     * Test attribute "store_ids"
      */
-    public function testPropertyStoreId()
+    public function testPropertyStoreIds()
     {
     }
 
     /**
-     * Test attribute "store_name"
+     * Test attribute "store_selector_type"
      */
-    public function testPropertyStoreName()
+    public function testPropertyStoreSelectorType()
     {
     }
 
     /**
-     * Test attribute "store_group_id"
+     * Test attribute "states"
      */
-    public function testPropertyStoreGroupId()
-    {
-    }
-
-    /**
-     * Test attribute "store_group_name"
-     */
-    public function testPropertyStoreGroupName()
-    {
-    }
-
-    /**
-     * Test attribute "has_loyalty_campaign"
-     */
-    public function testPropertyHasLoyaltyCampaign()
-    {
-    }
-
-    /**
-     * Test attribute "has_retention_campaign"
-     */
-    public function testPropertyHasRetentionCampaign()
-    {
-    }
-
-    /**
-     * Test attribute "is_published"
-     */
-    public function testPropertyIsPublished()
+    public function testPropertyStates()
     {
     }
 }

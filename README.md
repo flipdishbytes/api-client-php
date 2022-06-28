@@ -236,6 +236,11 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**getUserEvents**](docs/Api/EventsApi.md#getuserevents) | **GET** /api/v1.0/events/user/{userId} | Get user events  For technical reasons, the number of records returned is limited to 100.
 *EventsApi* | [**getWhiteLabelEvents**](docs/Api/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 *FilesApi* | [**downloadFile**](docs/Api/FilesApi.md#downloadfile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | Get file from storage
+*FulfillmentStateConfigurationApi* | [**createFulfillmentStatesConfig**](docs/Api/FulfillmentStateConfigurationApi.md#createfulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states | Create fulfillment configuration
+*FulfillmentStateConfigurationApi* | [**deleteFulfillmentStatesConfig**](docs/Api/FulfillmentStateConfigurationApi.md#deletefulfillmentstatesconfig) | **DELETE** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Delete fulfillment states configuration
+*FulfillmentStateConfigurationApi* | [**getFulfillmentStatesConfiguration**](docs/Api/FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfiguration) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Get fulfillment configuration
+*FulfillmentStateConfigurationApi* | [**searchFulfillmentStatesConfigurations**](docs/Api/FulfillmentStateConfigurationApi.md#searchfulfillmentstatesconfigurations) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states | List fulfillment configurations for AppId
+*FulfillmentStateConfigurationApi* | [**updateFulfillmentStatesConfig**](docs/Api/FulfillmentStateConfigurationApi.md#updatefulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Update fulfillment configuration
 *HeartbeatApi* | [**headHostname**](docs/Api/HeartbeatApi.md#headhostname) | **HEAD** /api/v1.0/heartbeat/Hostname | 
 *HeartbeatApi* | [**headPing**](docs/Api/HeartbeatApi.md#headping) | **HEAD** /api/v1.0/heartbeat | 
 *HeartbeatApi* | [**hostname**](docs/Api/HeartbeatApi.md#hostname) | **GET** /api/v1.0/heartbeat/Hostname | 
@@ -629,6 +634,10 @@ Class | Method | HTTP request | Description
  - [FlipdishEventBase](docs/Model/FlipdishEventBase.md)
  - [FlipdishFeesDetails](docs/Model/FlipdishFeesDetails.md)
  - [FulfillmentInfo](docs/Model/FulfillmentInfo.md)
+ - [FulfillmentStatesConfiguration](docs/Model/FulfillmentStatesConfiguration.md)
+ - [FulfillmentStatesConfigurationSummary](docs/Model/FulfillmentStatesConfigurationSummary.md)
+ - [FulfillmentStatesConfiguredStore](docs/Model/FulfillmentStatesConfiguredStore.md)
+ - [FulfillmentStatusConfigurationItem](docs/Model/FulfillmentStatusConfigurationItem.md)
  - [GeoPointRequest](docs/Model/GeoPointRequest.md)
  - [GoogleAddress](docs/Model/GoogleAddress.md)
  - [GoogleAddressComponent](docs/Model/GoogleAddressComponent.md)
@@ -842,6 +851,7 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultDriver](docs/Model/RestApiArrayResultDriver.md)
  - [RestApiArrayResultDriverStore](docs/Model/RestApiArrayResultDriverStore.md)
  - [RestApiArrayResultEmvTerminalWithAssignments](docs/Model/RestApiArrayResultEmvTerminalWithAssignments.md)
+ - [RestApiArrayResultFulfillmentStatesConfigurationSummary](docs/Model/RestApiArrayResultFulfillmentStatesConfigurationSummary.md)
  - [RestApiArrayResultHomeAction](docs/Model/RestApiArrayResultHomeAction.md)
  - [RestApiArrayResultKioskCashPaymentSettings](docs/Model/RestApiArrayResultKioskCashPaymentSettings.md)
  - [RestApiArrayResultLocalisedTimeZone](docs/Model/RestApiArrayResultLocalisedTimeZone.md)
@@ -1089,6 +1099,7 @@ Class | Method | HTTP request | Description
  - [UpdateCatalogItem](docs/Model/UpdateCatalogItem.md)
  - [UpdateDriverNotificationToken](docs/Model/UpdateDriverNotificationToken.md)
  - [UpdateDriverProfileModel](docs/Model/UpdateDriverProfileModel.md)
+ - [UpdateFulfillmentStatesConfiguration](docs/Model/UpdateFulfillmentStatesConfiguration.md)
  - [UpdateGroup](docs/Model/UpdateGroup.md)
  - [UpdateGroupReference](docs/Model/UpdateGroupReference.md)
  - [UpdateLocationArea](docs/Model/UpdateLocationArea.md)

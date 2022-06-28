@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreListItemTest
+ * FulfillmentStatesConfigurationTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreListItemTest Class Doc Comment
+ * FulfillmentStatesConfigurationTest Class Doc Comment
  *
  * @category    Class
- * @description Store id and name
+ * @description Fulfillment States Configuration
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreListItemTest extends \PHPUnit_Framework_TestCase
+class FulfillmentStatesConfigurationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,58 +70,44 @@ class StoreListItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreListItem"
+     * Test "FulfillmentStatesConfiguration"
      */
-    public function testStoreListItem()
+    public function testFulfillmentStatesConfiguration()
     {
     }
 
     /**
-     * Test attribute "store_id"
+     * Test attribute "states"
      */
-    public function testPropertyStoreId()
+    public function testPropertyStates()
     {
     }
 
     /**
-     * Test attribute "store_name"
+     * Test attribute "app_id"
      */
-    public function testPropertyStoreName()
+    public function testPropertyAppId()
     {
     }
 
     /**
-     * Test attribute "store_group_id"
+     * Test attribute "configuration_uid"
      */
-    public function testPropertyStoreGroupId()
+    public function testPropertyConfigurationUid()
     {
     }
 
     /**
-     * Test attribute "store_group_name"
+     * Test attribute "store_selector_type"
      */
-    public function testPropertyStoreGroupName()
+    public function testPropertyStoreSelectorType()
     {
     }
 
     /**
-     * Test attribute "has_loyalty_campaign"
+     * Test attribute "store_ids"
      */
-    public function testPropertyHasLoyaltyCampaign()
-    {
-    }
-
-    /**
-     * Test attribute "has_retention_campaign"
-     */
-    public function testPropertyHasRetentionCampaign()
-    {
-    }
-
-    /**
-     * Test attribute "is_published"
-     */
-    public function testPropertyIsPublished()
+    public function testPropertyStoreIds()
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreListItem
+ * UpdateFulfillmentStatesConfiguration
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * StoreListItem Class Doc Comment
+ * UpdateFulfillmentStatesConfiguration Class Doc Comment
  *
  * @category Class
- * @description Store id and name
+ * @description Update fulfillment states configuration
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StoreListItem implements ModelInterface, ArrayAccess
+class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class StoreListItem implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'StoreListItem';
+    protected static $swaggerModelName = 'UpdateFulfillmentStatesConfiguration';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,13 +58,9 @@ class StoreListItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'store_id' => 'int',
-        'store_name' => 'string',
-        'store_group_id' => 'int',
-        'store_group_name' => 'string',
-        'has_loyalty_campaign' => 'bool',
-        'has_retention_campaign' => 'bool',
-        'is_published' => 'bool'
+        'store_ids' => 'int[]',
+        'store_selector_type' => 'string',
+        'states' => '\Flipdish\\Client\Models\FulfillmentStatusConfigurationItem[]'
     ];
 
     /**
@@ -73,13 +69,9 @@ class StoreListItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'store_id' => 'int32',
-        'store_name' => null,
-        'store_group_id' => 'int32',
-        'store_group_name' => null,
-        'has_loyalty_campaign' => null,
-        'has_retention_campaign' => null,
-        'is_published' => null
+        'store_ids' => 'int32',
+        'store_selector_type' => null,
+        'states' => null
     ];
 
     /**
@@ -109,13 +101,9 @@ class StoreListItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_id' => 'StoreId',
-        'store_name' => 'StoreName',
-        'store_group_id' => 'StoreGroupId',
-        'store_group_name' => 'StoreGroupName',
-        'has_loyalty_campaign' => 'HasLoyaltyCampaign',
-        'has_retention_campaign' => 'HasRetentionCampaign',
-        'is_published' => 'IsPublished'
+        'store_ids' => 'StoreIds',
+        'store_selector_type' => 'StoreSelectorType',
+        'states' => 'States'
     ];
 
     /**
@@ -124,13 +112,9 @@ class StoreListItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_id' => 'setStoreId',
-        'store_name' => 'setStoreName',
-        'store_group_id' => 'setStoreGroupId',
-        'store_group_name' => 'setStoreGroupName',
-        'has_loyalty_campaign' => 'setHasLoyaltyCampaign',
-        'has_retention_campaign' => 'setHasRetentionCampaign',
-        'is_published' => 'setIsPublished'
+        'store_ids' => 'setStoreIds',
+        'store_selector_type' => 'setStoreSelectorType',
+        'states' => 'setStates'
     ];
 
     /**
@@ -139,13 +123,9 @@ class StoreListItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_id' => 'getStoreId',
-        'store_name' => 'getStoreName',
-        'store_group_id' => 'getStoreGroupId',
-        'store_group_name' => 'getStoreGroupName',
-        'has_loyalty_campaign' => 'getHasLoyaltyCampaign',
-        'has_retention_campaign' => 'getHasRetentionCampaign',
-        'is_published' => 'getIsPublished'
+        'store_ids' => 'getStoreIds',
+        'store_selector_type' => 'getStoreSelectorType',
+        'states' => 'getStates'
     ];
 
     /**
@@ -189,8 +169,25 @@ class StoreListItem implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const STORE_SELECTOR_TYPE_NONE = 'None';
+    const STORE_SELECTOR_TYPE_SINGLE = 'Single';
+    const STORE_SELECTOR_TYPE_MULTIPLE = 'Multiple';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getStoreSelectorTypeAllowableValues()
+    {
+        return [
+            self::STORE_SELECTOR_TYPE_NONE,
+            self::STORE_SELECTOR_TYPE_SINGLE,
+            self::STORE_SELECTOR_TYPE_MULTIPLE,
+        ];
+    }
     
 
     /**
@@ -208,13 +205,9 @@ class StoreListItem implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
-        $this->container['store_name'] = isset($data['store_name']) ? $data['store_name'] : null;
-        $this->container['store_group_id'] = isset($data['store_group_id']) ? $data['store_group_id'] : null;
-        $this->container['store_group_name'] = isset($data['store_group_name']) ? $data['store_group_name'] : null;
-        $this->container['has_loyalty_campaign'] = isset($data['has_loyalty_campaign']) ? $data['has_loyalty_campaign'] : null;
-        $this->container['has_retention_campaign'] = isset($data['has_retention_campaign']) ? $data['has_retention_campaign'] : null;
-        $this->container['is_published'] = isset($data['is_published']) ? $data['is_published'] : null;
+        $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
+        $this->container['store_selector_type'] = isset($data['store_selector_type']) ? $data['store_selector_type'] : null;
+        $this->container['states'] = isset($data['states']) ? $data['states'] : null;
     }
 
     /**
@@ -225,6 +218,14 @@ class StoreListItem implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getStoreSelectorTypeAllowableValues();
+        if (!is_null($this->container['store_selector_type']) && !in_array($this->container['store_selector_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'store_selector_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -242,169 +243,82 @@ class StoreListItem implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_id
+     * Gets store_ids
      *
-     * @return int
+     * @return int[]
      */
-    public function getStoreId()
+    public function getStoreIds()
     {
-        return $this->container['store_id'];
+        return $this->container['store_ids'];
     }
 
     /**
-     * Sets store_id
+     * Sets store_ids
      *
-     * @param int $store_id Store Id
+     * @param int[] $store_ids Stores id's
      *
      * @return $this
      */
-    public function setStoreId($store_id)
+    public function setStoreIds($store_ids)
     {
-        $this->container['store_id'] = $store_id;
+        $this->container['store_ids'] = $store_ids;
 
         return $this;
     }
 
     /**
-     * Gets store_name
+     * Gets store_selector_type
      *
      * @return string
      */
-    public function getStoreName()
+    public function getStoreSelectorType()
     {
-        return $this->container['store_name'];
+        return $this->container['store_selector_type'];
     }
 
     /**
-     * Sets store_name
+     * Sets store_selector_type
      *
-     * @param string $store_name Store Name
+     * @param string $store_selector_type Store Selector Type
      *
      * @return $this
      */
-    public function setStoreName($store_name)
+    public function setStoreSelectorType($store_selector_type)
     {
-        $this->container['store_name'] = $store_name;
+        $allowedValues = $this->getStoreSelectorTypeAllowableValues();
+        if (!is_null($store_selector_type) && !in_array($store_selector_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'store_selector_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['store_selector_type'] = $store_selector_type;
 
         return $this;
     }
 
     /**
-     * Gets store_group_id
+     * Gets states
      *
-     * @return int
+     * @return \Flipdish\\Client\Models\FulfillmentStatusConfigurationItem[]
      */
-    public function getStoreGroupId()
+    public function getStates()
     {
-        return $this->container['store_group_id'];
+        return $this->container['states'];
     }
 
     /**
-     * Sets store_group_id
+     * Sets states
      *
-     * @param int $store_group_id Store Group Id
+     * @param \Flipdish\\Client\Models\FulfillmentStatusConfigurationItem[] $states Settings
      *
      * @return $this
      */
-    public function setStoreGroupId($store_group_id)
+    public function setStates($states)
     {
-        $this->container['store_group_id'] = $store_group_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets store_group_name
-     *
-     * @return string
-     */
-    public function getStoreGroupName()
-    {
-        return $this->container['store_group_name'];
-    }
-
-    /**
-     * Sets store_group_name
-     *
-     * @param string $store_group_name Store Group Name
-     *
-     * @return $this
-     */
-    public function setStoreGroupName($store_group_name)
-    {
-        $this->container['store_group_name'] = $store_group_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets has_loyalty_campaign
-     *
-     * @return bool
-     */
-    public function getHasLoyaltyCampaign()
-    {
-        return $this->container['has_loyalty_campaign'];
-    }
-
-    /**
-     * Sets has_loyalty_campaign
-     *
-     * @param bool $has_loyalty_campaign Store has loyalty campaign
-     *
-     * @return $this
-     */
-    public function setHasLoyaltyCampaign($has_loyalty_campaign)
-    {
-        $this->container['has_loyalty_campaign'] = $has_loyalty_campaign;
-
-        return $this;
-    }
-
-    /**
-     * Gets has_retention_campaign
-     *
-     * @return bool
-     */
-    public function getHasRetentionCampaign()
-    {
-        return $this->container['has_retention_campaign'];
-    }
-
-    /**
-     * Sets has_retention_campaign
-     *
-     * @param bool $has_retention_campaign Store has retention campaign
-     *
-     * @return $this
-     */
-    public function setHasRetentionCampaign($has_retention_campaign)
-    {
-        $this->container['has_retention_campaign'] = $has_retention_campaign;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_published
-     *
-     * @return bool
-     */
-    public function getIsPublished()
-    {
-        return $this->container['is_published'];
-    }
-
-    /**
-     * Sets is_published
-     *
-     * @param bool $is_published Is Published store
-     *
-     * @return $this
-     */
-    public function setIsPublished($is_published)
-    {
-        $this->container['is_published'] = $is_published;
+        $this->container['states'] = $states;
 
         return $this;
     }

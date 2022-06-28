@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreListItemTest
+ * FulfillmentStatesConfigurationSummaryTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreListItemTest Class Doc Comment
+ * FulfillmentStatesConfigurationSummaryTest Class Doc Comment
  *
  * @category    Class
- * @description Store id and name
+ * @description App store app configuration header information
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreListItemTest extends \PHPUnit_Framework_TestCase
+class FulfillmentStatesConfigurationSummaryTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,58 +70,37 @@ class StoreListItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreListItem"
+     * Test "FulfillmentStatesConfigurationSummary"
      */
-    public function testStoreListItem()
+    public function testFulfillmentStatesConfigurationSummary()
     {
     }
 
     /**
-     * Test attribute "store_id"
+     * Test attribute "app_id"
      */
-    public function testPropertyStoreId()
+    public function testPropertyAppId()
     {
     }
 
     /**
-     * Test attribute "store_name"
+     * Test attribute "configuration_uid"
      */
-    public function testPropertyStoreName()
+    public function testPropertyConfigurationUid()
     {
     }
 
     /**
-     * Test attribute "store_group_id"
+     * Test attribute "store_selector_type"
      */
-    public function testPropertyStoreGroupId()
+    public function testPropertyStoreSelectorType()
     {
     }
 
     /**
-     * Test attribute "store_group_name"
+     * Test attribute "stores"
      */
-    public function testPropertyStoreGroupName()
-    {
-    }
-
-    /**
-     * Test attribute "has_loyalty_campaign"
-     */
-    public function testPropertyHasLoyaltyCampaign()
-    {
-    }
-
-    /**
-     * Test attribute "has_retention_campaign"
-     */
-    public function testPropertyHasRetentionCampaign()
-    {
-    }
-
-    /**
-     * Test attribute "is_published"
-     */
-    public function testPropertyIsPublished()
+    public function testPropertyStores()
     {
     }
 }

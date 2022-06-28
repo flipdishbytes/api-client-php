@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStoreList**
-> \Flipdish\\Client\Models\RestApiArrayResultStoreListItem getStoreList($app_id)
+> \Flipdish\\Client\Models\RestApiArrayResultStoreListItem getStoreList($app_id, $only_published)
 
 Gets list of stores for app
 
@@ -350,9 +350,10 @@ $apiInstance = new Flipdish\\Client\Api\CampaignsApi(
     $config
 );
 $app_id = "app_id_example"; // string | App Name Id
+$only_published = true; // bool | 
 
 try {
-    $result = $apiInstance->getStoreList($app_id);
+    $result = $apiInstance->getStoreList($app_id, $only_published);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CampaignsApi->getStoreList: ', $e->getMessage(), PHP_EOL;
@@ -365,6 +366,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| App Name Id |
+ **only_published** | **bool**|  | [optional]
 
 ### Return type
 

@@ -1989,14 +1989,15 @@ class CampaignsApi
      * Gets list of stores for app
      *
      * @param  string $app_id App Name Id (required)
+     * @param  bool $only_published  (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiArrayResultStoreListItem
      */
-    public function getStoreList($app_id)
+    public function getStoreList($app_id, $only_published = null)
     {
-        list($response) = $this->getStoreListWithHttpInfo($app_id);
+        list($response) = $this->getStoreListWithHttpInfo($app_id, $only_published);
         return $response;
     }
 
@@ -2006,15 +2007,16 @@ class CampaignsApi
      * Gets list of stores for app
      *
      * @param  string $app_id App Name Id (required)
+     * @param  bool $only_published  (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiArrayResultStoreListItem, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStoreListWithHttpInfo($app_id)
+    public function getStoreListWithHttpInfo($app_id, $only_published = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultStoreListItem';
-        $request = $this->getStoreListRequest($app_id);
+        $request = $this->getStoreListRequest($app_id, $only_published);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2113,13 +2115,14 @@ class CampaignsApi
      * Gets list of stores for app
      *
      * @param  string $app_id App Name Id (required)
+     * @param  bool $only_published  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStoreListAsync($app_id)
+    public function getStoreListAsync($app_id, $only_published = null)
     {
-        return $this->getStoreListAsyncWithHttpInfo($app_id)
+        return $this->getStoreListAsyncWithHttpInfo($app_id, $only_published)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2133,14 +2136,15 @@ class CampaignsApi
      * Gets list of stores for app
      *
      * @param  string $app_id App Name Id (required)
+     * @param  bool $only_published  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStoreListAsyncWithHttpInfo($app_id)
+    public function getStoreListAsyncWithHttpInfo($app_id, $only_published = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultStoreListItem';
-        $request = $this->getStoreListRequest($app_id);
+        $request = $this->getStoreListRequest($app_id, $only_published);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2183,11 +2187,12 @@ class CampaignsApi
      * Create request for operation 'getStoreList'
      *
      * @param  string $app_id App Name Id (required)
+     * @param  bool $only_published  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getStoreListRequest($app_id)
+    protected function getStoreListRequest($app_id, $only_published = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -2203,6 +2208,10 @@ class CampaignsApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($only_published !== null) {
+            $queryParams['onlyPublished'] = ObjectSerializer::toQueryValue($only_published);
+        }
 
         // path params
         if ($app_id !== null) {

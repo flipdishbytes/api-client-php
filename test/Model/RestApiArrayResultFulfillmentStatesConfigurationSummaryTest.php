@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreListItemTest
+ * RestApiArrayResultFulfillmentStatesConfigurationSummaryTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreListItemTest Class Doc Comment
+ * RestApiArrayResultFulfillmentStatesConfigurationSummaryTest Class Doc Comment
  *
  * @category    Class
- * @description Store id and name
+ * @description Rest api array result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreListItemTest extends \PHPUnit_Framework_TestCase
+class RestApiArrayResultFulfillmentStatesConfigurationSummaryTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,58 +70,16 @@ class StoreListItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreListItem"
+     * Test "RestApiArrayResultFulfillmentStatesConfigurationSummary"
      */
-    public function testStoreListItem()
+    public function testRestApiArrayResultFulfillmentStatesConfigurationSummary()
     {
     }
 
     /**
-     * Test attribute "store_id"
+     * Test attribute "data"
      */
-    public function testPropertyStoreId()
-    {
-    }
-
-    /**
-     * Test attribute "store_name"
-     */
-    public function testPropertyStoreName()
-    {
-    }
-
-    /**
-     * Test attribute "store_group_id"
-     */
-    public function testPropertyStoreGroupId()
-    {
-    }
-
-    /**
-     * Test attribute "store_group_name"
-     */
-    public function testPropertyStoreGroupName()
-    {
-    }
-
-    /**
-     * Test attribute "has_loyalty_campaign"
-     */
-    public function testPropertyHasLoyaltyCampaign()
-    {
-    }
-
-    /**
-     * Test attribute "has_retention_campaign"
-     */
-    public function testPropertyHasRetentionCampaign()
-    {
-    }
-
-    /**
-     * Test attribute "is_published"
-     */
-    public function testPropertyIsPublished()
+    public function testPropertyData()
     {
     }
 }
