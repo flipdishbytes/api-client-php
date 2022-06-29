@@ -210,6 +210,13 @@ class OrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "fulfillment_status"
+     */
+    public function testPropertyFulfillmentStatus()
+    {
+    }
+
+    /**
      * Test attribute "order_id"
      */
     public function testPropertyOrderId()

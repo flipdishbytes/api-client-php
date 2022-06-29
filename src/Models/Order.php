@@ -77,6 +77,7 @@ class Order implements ModelInterface, ArrayAccess
         'channel' => '\Flipdish\\Client\Models\Channel',
         'receipt_code' => 'string',
         'order_drop_off_location' => '\Flipdish\\Client\Models\OrderDropOffLocation',
+        'fulfillment_status' => '\Flipdish\\Client\Models\OrderFulfillmentStatusBase',
         'order_id' => 'int',
         'local_order_id' => 'string',
         'delivery_type' => 'string',
@@ -132,6 +133,7 @@ class Order implements ModelInterface, ArrayAccess
         'channel' => null,
         'receipt_code' => null,
         'order_drop_off_location' => null,
+        'fulfillment_status' => null,
         'order_id' => 'int32',
         'local_order_id' => null,
         'delivery_type' => null,
@@ -208,6 +210,7 @@ class Order implements ModelInterface, ArrayAccess
         'channel' => 'Channel',
         'receipt_code' => 'ReceiptCode',
         'order_drop_off_location' => 'OrderDropOffLocation',
+        'fulfillment_status' => 'FulfillmentStatus',
         'order_id' => 'OrderId',
         'local_order_id' => 'LocalOrderId',
         'delivery_type' => 'DeliveryType',
@@ -263,6 +266,7 @@ class Order implements ModelInterface, ArrayAccess
         'channel' => 'setChannel',
         'receipt_code' => 'setReceiptCode',
         'order_drop_off_location' => 'setOrderDropOffLocation',
+        'fulfillment_status' => 'setFulfillmentStatus',
         'order_id' => 'setOrderId',
         'local_order_id' => 'setLocalOrderId',
         'delivery_type' => 'setDeliveryType',
@@ -318,6 +322,7 @@ class Order implements ModelInterface, ArrayAccess
         'channel' => 'getChannel',
         'receipt_code' => 'getReceiptCode',
         'order_drop_off_location' => 'getOrderDropOffLocation',
+        'fulfillment_status' => 'getFulfillmentStatus',
         'order_id' => 'getOrderId',
         'local_order_id' => 'getLocalOrderId',
         'delivery_type' => 'getDeliveryType',
@@ -664,6 +669,7 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['channel'] = isset($data['channel']) ? $data['channel'] : null;
         $this->container['receipt_code'] = isset($data['receipt_code']) ? $data['receipt_code'] : null;
         $this->container['order_drop_off_location'] = isset($data['order_drop_off_location']) ? $data['order_drop_off_location'] : null;
+        $this->container['fulfillment_status'] = isset($data['fulfillment_status']) ? $data['fulfillment_status'] : null;
         $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
         $this->container['local_order_id'] = isset($data['local_order_id']) ? $data['local_order_id'] : null;
         $this->container['delivery_type'] = isset($data['delivery_type']) ? $data['delivery_type'] : null;
@@ -1242,6 +1248,30 @@ class Order implements ModelInterface, ArrayAccess
     public function setOrderDropOffLocation($order_drop_off_location)
     {
         $this->container['order_drop_off_location'] = $order_drop_off_location;
+
+        return $this;
+    }
+
+    /**
+     * Gets fulfillment_status
+     *
+     * @return \Flipdish\\Client\Models\OrderFulfillmentStatusBase
+     */
+    public function getFulfillmentStatus()
+    {
+        return $this->container['fulfillment_status'];
+    }
+
+    /**
+     * Sets fulfillment_status
+     *
+     * @param \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status Fulfillment status for this order
+     *
+     * @return $this
+     */
+    public function setFulfillmentStatus($fulfillment_status)
+    {
+        $this->container['fulfillment_status'] = $fulfillment_status;
 
         return $this;
     }

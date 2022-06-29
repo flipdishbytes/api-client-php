@@ -58,7 +58,9 @@ class OrderFulfillmentStatusBase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'status_id' => 'string'
+        'status_id' => 'string',
+        'status_name' => 'string',
+        'icon' => 'string'
     ];
 
     /**
@@ -67,7 +69,9 @@ class OrderFulfillmentStatusBase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'status_id' => null
+        'status_id' => null,
+        'status_name' => null,
+        'icon' => null
     ];
 
     /**
@@ -97,7 +101,9 @@ class OrderFulfillmentStatusBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'status_id' => 'StatusId'
+        'status_id' => 'StatusId',
+        'status_name' => 'StatusName',
+        'icon' => 'Icon'
     ];
 
     /**
@@ -106,7 +112,9 @@ class OrderFulfillmentStatusBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'status_id' => 'setStatusId'
+        'status_id' => 'setStatusId',
+        'status_name' => 'setStatusName',
+        'icon' => 'setIcon'
     ];
 
     /**
@@ -115,7 +123,9 @@ class OrderFulfillmentStatusBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'status_id' => 'getStatusId'
+        'status_id' => 'getStatusId',
+        'status_name' => 'getStatusName',
+        'icon' => 'getIcon'
     ];
 
     /**
@@ -179,6 +189,8 @@ class OrderFulfillmentStatusBase implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
+        $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
+        $this->container['icon'] = isset($data['icon']) ? $data['icon'] : null;
     }
 
     /**
@@ -225,6 +237,54 @@ class OrderFulfillmentStatusBase implements ModelInterface, ArrayAccess
     public function setStatusId($status_id)
     {
         $this->container['status_id'] = $status_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_name
+     *
+     * @return string
+     */
+    public function getStatusName()
+    {
+        return $this->container['status_name'];
+    }
+
+    /**
+     * Sets status_name
+     *
+     * @param string $status_name Fulfillment Status Name
+     *
+     * @return $this
+     */
+    public function setStatusName($status_name)
+    {
+        $this->container['status_name'] = $status_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets icon
+     *
+     * @return string
+     */
+    public function getIcon()
+    {
+        return $this->container['icon'];
+    }
+
+    /**
+     * Sets icon
+     *
+     * @param string $icon Status Icon
+     *
+     * @return $this
+     */
+    public function setIcon($icon)
+    {
+        $this->container['icon'] = $icon;
 
         return $this;
     }

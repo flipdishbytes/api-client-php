@@ -82,4 +82,18 @@ class OrderFulfillmentStatusBaseTest extends \PHPUnit_Framework_TestCase
     public function testPropertyStatusId()
     {
     }
+
+    /**
+     * Test attribute "status_name"
+     */
+    public function testPropertyStatusName()
+    {
+    }
+
+    /**
+     * Test attribute "icon"
+     */
+    public function testPropertyIcon()
+    {
+    }
 }

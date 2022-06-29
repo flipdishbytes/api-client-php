@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **channel** | [**\Flipdish\\Client\Models\Channel**](Channel.md) | Channel where the Order comes from | [optional] 
 **receipt_code** | **string** | Generated receipt code for an order | [optional] 
 **order_drop_off_location** | [**\Flipdish\\Client\Models\OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order | [optional] 
+**fulfillment_status** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md) | Fulfillment status for this order | [optional] 
 **order_id** | **int** | Order identifier | [optional] 
 **local_order_id** | **string** | Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders) | [optional] 
 **delivery_type** | **string** | Delivery type | [optional] 
