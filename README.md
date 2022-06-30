@@ -389,6 +389,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**getOrdersSummary**](docs/Api/OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
 *OrdersApi* | [**refundOrder**](docs/Api/OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
 *OrdersApi* | [**rejectOrder**](docs/Api/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
+*OrdersApi* | [**searchFulfillmentStatuses**](docs/Api/OrdersApi.md#searchfulfillmentstatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
 *OrdersApi* | [**updateDeliveryInformation**](docs/Api/OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
 *OrdersApi* | [**updateFulfillmentStatus**](docs/Api/OrdersApi.md#updatefulfillmentstatus) | **POST** /api/v1.0/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
 *PaymentIntentsApi* | [**getPaymentIntent**](docs/Api/PaymentIntentsApi.md#getpaymentintent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | Returns stripe payment intent for a given id
@@ -871,6 +872,7 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultMetadata](docs/Model/RestApiArrayResultMetadata.md)
  - [RestApiArrayResultOAuthApp](docs/Model/RestApiArrayResultOAuthApp.md)
  - [RestApiArrayResultOauthClientRedirectUri](docs/Model/RestApiArrayResultOauthClientRedirectUri.md)
+ - [RestApiArrayResultOrderFulfillmentStatus](docs/Model/RestApiArrayResultOrderFulfillmentStatus.md)
  - [RestApiArrayResultPayoutSummary](docs/Model/RestApiArrayResultPayoutSummary.md)
  - [RestApiArrayResultPreOrderTime](docs/Model/RestApiArrayResultPreOrderTime.md)
  - [RestApiArrayResultProcessingFeeConfig](docs/Model/RestApiArrayResultProcessingFeeConfig.md)

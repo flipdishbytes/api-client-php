@@ -162,6 +162,16 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for searchFulfillmentStatuses
+     *
+     * Get fulfillment status for a list of orders.
+     *
+     */
+    public function testSearchFulfillmentStatuses()
+    {
+    }
+
+    /**
      * Test case for updateDeliveryInformation
      *
      * Add/update delivery-related information to an order.
