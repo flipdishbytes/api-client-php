@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **external_setup_link** | **string** | External setup link | [optional] 
 **teammate_app_access_level** | **string** | Teammate app access level | [optional] 
 **permissions_type** | **string** | Permissions type | 
+**support** | [**\Flipdish\\Client\Models\AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) | Support information | [optional] 
 **name** | **string** | Name | 
 **description** | **string** | Description | 
 **categories** | **string[]** | Categories | 

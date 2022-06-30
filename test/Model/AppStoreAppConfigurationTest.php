@@ -196,6 +196,13 @@ class AppStoreAppConfigurationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "support"
+     */
+    public function testPropertySupport()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

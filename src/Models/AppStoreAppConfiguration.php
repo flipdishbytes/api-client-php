@@ -75,6 +75,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'external_setup_link' => 'string',
         'teammate_app_access_level' => 'string',
         'permissions_type' => 'string',
+        'support' => '\Flipdish\\Client\Models\AppStoreAppSupportInfo',
         'name' => 'string',
         'description' => 'string',
         'categories' => 'string[]',
@@ -105,6 +106,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'external_setup_link' => null,
         'teammate_app_access_level' => null,
         'permissions_type' => null,
+        'support' => null,
         'name' => null,
         'description' => null,
         'categories' => null,
@@ -156,6 +158,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'external_setup_link' => 'ExternalSetupLink',
         'teammate_app_access_level' => 'TeammateAppAccessLevel',
         'permissions_type' => 'PermissionsType',
+        'support' => 'Support',
         'name' => 'Name',
         'description' => 'Description',
         'categories' => 'Categories',
@@ -186,6 +189,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'external_setup_link' => 'setExternalSetupLink',
         'teammate_app_access_level' => 'setTeammateAppAccessLevel',
         'permissions_type' => 'setPermissionsType',
+        'support' => 'setSupport',
         'name' => 'setName',
         'description' => 'setDescription',
         'categories' => 'setCategories',
@@ -216,6 +220,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'external_setup_link' => 'getExternalSetupLink',
         'teammate_app_access_level' => 'getTeammateAppAccessLevel',
         'permissions_type' => 'getPermissionsType',
+        'support' => 'getSupport',
         'name' => 'getName',
         'description' => 'getDescription',
         'categories' => 'getCategories',
@@ -459,6 +464,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         $this->container['external_setup_link'] = isset($data['external_setup_link']) ? $data['external_setup_link'] : null;
         $this->container['teammate_app_access_level'] = isset($data['teammate_app_access_level']) ? $data['teammate_app_access_level'] : null;
         $this->container['permissions_type'] = isset($data['permissions_type']) ? $data['permissions_type'] : null;
+        $this->container['support'] = isset($data['support']) ? $data['support'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
@@ -1021,6 +1027,30 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
             );
         }
         $this->container['permissions_type'] = $permissions_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets support
+     *
+     * @return \Flipdish\\Client\Models\AppStoreAppSupportInfo
+     */
+    public function getSupport()
+    {
+        return $this->container['support'];
+    }
+
+    /**
+     * Sets support
+     *
+     * @param \Flipdish\\Client\Models\AppStoreAppSupportInfo $support Support information
+     *
+     * @return $this
+     */
+    public function setSupport($support)
+    {
+        $this->container['support'] = $support;
 
         return $this;
     }
