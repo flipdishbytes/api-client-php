@@ -82,4 +82,11 @@ class OnboardingConfigUpdateTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIsEnabled()
     {
     }
+
+    /**
+     * Test attribute "is_welcome_screen_enabled"
+     */
+    public function testPropertyIsWelcomeScreenEnabled()
+    {
+    }
 }

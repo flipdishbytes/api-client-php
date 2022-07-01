@@ -58,7 +58,8 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'is_enabled' => 'bool'
+        'is_enabled' => 'bool',
+        'is_welcome_screen_enabled' => 'bool'
     ];
 
     /**
@@ -67,7 +68,8 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'is_enabled' => null
+        'is_enabled' => null,
+        'is_welcome_screen_enabled' => null
     ];
 
     /**
@@ -97,7 +99,8 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_enabled' => 'IsEnabled'
+        'is_enabled' => 'IsEnabled',
+        'is_welcome_screen_enabled' => 'IsWelcomeScreenEnabled'
     ];
 
     /**
@@ -106,7 +109,8 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'is_enabled' => 'setIsEnabled'
+        'is_enabled' => 'setIsEnabled',
+        'is_welcome_screen_enabled' => 'setIsWelcomeScreenEnabled'
     ];
 
     /**
@@ -115,7 +119,8 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'is_enabled' => 'getIsEnabled'
+        'is_enabled' => 'getIsEnabled',
+        'is_welcome_screen_enabled' => 'getIsWelcomeScreenEnabled'
     ];
 
     /**
@@ -179,6 +184,7 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
+        $this->container['is_welcome_screen_enabled'] = isset($data['is_welcome_screen_enabled']) ? $data['is_welcome_screen_enabled'] : null;
     }
 
     /**
@@ -225,6 +231,30 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
     public function setIsEnabled($is_enabled)
     {
         $this->container['is_enabled'] = $is_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_welcome_screen_enabled
+     *
+     * @return bool
+     */
+    public function getIsWelcomeScreenEnabled()
+    {
+        return $this->container['is_welcome_screen_enabled'];
+    }
+
+    /**
+     * Sets is_welcome_screen_enabled
+     *
+     * @param bool $is_welcome_screen_enabled is_welcome_screen_enabled
+     *
+     * @return $this
+     */
+    public function setIsWelcomeScreenEnabled($is_welcome_screen_enabled)
+    {
+        $this->container['is_welcome_screen_enabled'] = $is_welcome_screen_enabled;
 
         return $this;
     }
