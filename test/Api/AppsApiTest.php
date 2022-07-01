@@ -72,6 +72,16 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for editAppConfigSalesChannel
+     *
+     * Set the application sales channel configuration.
+     *
+     */
+    public function testEditAppConfigSalesChannel()
+    {
+    }
+
+    /**
      * Test case for getApp
      *
      * Get the application configuration.
