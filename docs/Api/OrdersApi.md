@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**rejectOrder**](OrdersApi.md#rejectOrder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 [**searchFulfillmentStatuses**](OrdersApi.md#searchFulfillmentStatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
 [**updateDeliveryInformation**](OrdersApi.md#updateDeliveryInformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
-[**updateFulfillmentStatus**](OrdersApi.md#updateFulfillmentStatus) | **POST** /api/v1.0/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
+[**updateFulfillmentStatus**](OrdersApi.md#updateFulfillmentStatus) | **POST** /api/v1.0/{appId}/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
 
 
 # **acceptOrder**
@@ -625,7 +625,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateFulfillmentStatus**
-> updateFulfillmentStatus($order_id, $fulfillment_status_request)
+> updateFulfillmentStatus($app_id, $order_id, $fulfillment_status_request)
 
 Add/update fulfillment status information to an order
 
@@ -645,11 +645,12 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
+$app_id = "app_id_example"; // string | 
 $order_id = 56; // int | Flipdish Order Id
 $fulfillment_status_request = new \Flipdish\\Client\Models\OrderFulfillmentStatusBase(); // \Flipdish\\Client\Models\OrderFulfillmentStatusBase | Fulfillment Status
 
 try {
-    $apiInstance->updateFulfillmentStatus($order_id, $fulfillment_status_request);
+    $apiInstance->updateFulfillmentStatus($app_id, $order_id, $fulfillment_status_request);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->updateFulfillmentStatus: ', $e->getMessage(), PHP_EOL;
 }
@@ -660,6 +661,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
  **order_id** | **int**| Flipdish Order Id |
  **fulfillment_status_request** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusBase**](../Model/OrderFulfillmentStatusBase.md)| Fulfillment Status |
 
