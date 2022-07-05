@@ -1,6 +1,6 @@
 <?php
 /**
- * AppConfigSalesChannelTest
+ * RestApiResultOrderFulfillmentStatusWithConfigurationActionsTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * AppConfigSalesChannelTest Class Doc Comment
+ * RestApiResultOrderFulfillmentStatusWithConfigurationActionsTest Class Doc Comment
  *
  * @category    Class
- * @description App Config Sales Channel
+ * @description Rest api result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AppConfigSalesChannelTest extends \PHPUnit_Framework_TestCase
+class RestApiResultOrderFulfillmentStatusWithConfigurationActionsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,16 @@ class AppConfigSalesChannelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AppConfigSalesChannel"
+     * Test "RestApiResultOrderFulfillmentStatusWithConfigurationActions"
      */
-    public function testAppConfigSalesChannel()
+    public function testRestApiResultOrderFulfillmentStatusWithConfigurationActions()
     {
     }
 
     /**
-     * Test attribute "email_request_mode"
+     * Test attribute "data"
      */
-    public function testPropertyEmailRequestMode()
-    {
-    }
-
-    /**
-     * Test attribute "web_to_app_redirect"
-     */
-    public function testPropertyWebToAppRedirect()
-    {
-    }
-
-    /**
-     * Test attribute "address_entry_type"
-     */
-    public function testPropertyAddressEntryType()
-    {
-    }
-
-    /**
-     * Test attribute "display_delivery_restaurant_list_screen"
-     */
-    public function testPropertyDisplayDeliveryRestaurantListScreen()
+    public function testPropertyData()
     {
     }
 }

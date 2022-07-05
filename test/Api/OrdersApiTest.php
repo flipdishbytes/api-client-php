@@ -112,6 +112,16 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getFulfillmentStatus_0
+     *
+     * Get order fulfillment status with actionable details like default next status.
+     *
+     */
+    public function testGetFulfillmentStatus0()
+    {
+    }
+
+    /**
      * Test case for getOrderById
      *
      * Get order by ID.

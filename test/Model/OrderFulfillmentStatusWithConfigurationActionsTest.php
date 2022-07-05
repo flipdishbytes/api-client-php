@@ -1,6 +1,6 @@
 <?php
 /**
- * AppConfigSalesChannelTest
+ * OrderFulfillmentStatusWithConfigurationActionsTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * AppConfigSalesChannelTest Class Doc Comment
+ * OrderFulfillmentStatusWithConfigurationActionsTest Class Doc Comment
  *
  * @category    Class
- * @description App Config Sales Channel
+ * @description Order Fulfillment status with configured next actions
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AppConfigSalesChannelTest extends \PHPUnit_Framework_TestCase
+class OrderFulfillmentStatusWithConfigurationActionsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,51 @@ class AppConfigSalesChannelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AppConfigSalesChannel"
+     * Test "OrderFulfillmentStatusWithConfigurationActions"
      */
-    public function testAppConfigSalesChannel()
+    public function testOrderFulfillmentStatusWithConfigurationActions()
     {
     }
 
     /**
-     * Test attribute "email_request_mode"
+     * Test attribute "default_next_status"
      */
-    public function testPropertyEmailRequestMode()
+    public function testPropertyDefaultNextStatus()
     {
     }
 
     /**
-     * Test attribute "web_to_app_redirect"
+     * Test attribute "next_statuses"
      */
-    public function testPropertyWebToAppRedirect()
+    public function testPropertyNextStatuses()
     {
     }
 
     /**
-     * Test attribute "address_entry_type"
+     * Test attribute "order_id"
      */
-    public function testPropertyAddressEntryType()
+    public function testPropertyOrderId()
     {
     }
 
     /**
-     * Test attribute "display_delivery_restaurant_list_screen"
+     * Test attribute "status_id"
      */
-    public function testPropertyDisplayDeliveryRestaurantListScreen()
+    public function testPropertyStatusId()
+    {
+    }
+
+    /**
+     * Test attribute "status_name"
+     */
+    public function testPropertyStatusName()
+    {
+    }
+
+    /**
+     * Test attribute "icon"
+     */
+    public function testPropertyIcon()
     {
     }
 }

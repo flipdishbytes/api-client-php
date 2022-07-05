@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 [**getDeliveryInformation**](OrdersApi.md#getDeliveryInformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
 [**getFulfillmentStatus**](OrdersApi.md#getFulfillmentStatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order fulfillment status
+[**getFulfillmentStatus_0**](OrdersApi.md#getFulfillmentStatus_0) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatusdetails | Get order fulfillment status with actionable details like default next status
 [**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | Get orders by filter
 [**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -218,6 +219,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatus**](../Model/RestApiResultOrderFulfillmentStatus.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getFulfillmentStatus_0**
+> \Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatusWithConfigurationActions getFulfillmentStatus_0($order_id)
+
+Get order fulfillment status with actionable details like default next status
+
+[BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment status and details about possible states.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\OrdersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$order_id = 56; // int | Flipdish Order Id
+
+try {
+    $result = $apiInstance->getFulfillmentStatus_0($order_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersApi->getFulfillmentStatus_0: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order_id** | **int**| Flipdish Order Id |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatusWithConfigurationActions**](../Model/RestApiResultOrderFulfillmentStatusWithConfigurationActions.md)
 
 ### Authorization
 

@@ -385,6 +385,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**dispatchOrder**](docs/Api/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 *OrdersApi* | [**getDeliveryInformation**](docs/Api/OrdersApi.md#getdeliveryinformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
 *OrdersApi* | [**getFulfillmentStatus**](docs/Api/OrdersApi.md#getfulfillmentstatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order fulfillment status
+*OrdersApi* | [**getFulfillmentStatus_0**](docs/Api/OrdersApi.md#getfulfillmentstatus_0) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatusdetails | Get order fulfillment status with actionable details like default next status
 *OrdersApi* | [**getOrderById**](docs/Api/OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
 *OrdersApi* | [**getOrders**](docs/Api/OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
 *OrdersApi* | [**getOrdersSummary**](docs/Api/OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -637,6 +638,7 @@ Class | Method | HTTP request | Description
  - [FieldGroup](docs/Model/FieldGroup.md)
  - [FlipdishEventBase](docs/Model/FlipdishEventBase.md)
  - [FlipdishFeesDetails](docs/Model/FlipdishFeesDetails.md)
+ - [FulfillentStatusActionItem](docs/Model/FulfillentStatusActionItem.md)
  - [FulfillmentInfo](docs/Model/FulfillmentInfo.md)
  - [FulfillmentStatesConfiguration](docs/Model/FulfillmentStatesConfiguration.md)
  - [FulfillmentStatesConfigurationSummary](docs/Model/FulfillmentStatesConfigurationSummary.md)
@@ -780,6 +782,7 @@ Class | Method | HTTP request | Description
  - [OrderFulfillmentStatus](docs/Model/OrderFulfillmentStatus.md)
  - [OrderFulfillmentStatusBase](docs/Model/OrderFulfillmentStatusBase.md)
  - [OrderFulfillmentStatusUpdatedEvent](docs/Model/OrderFulfillmentStatusUpdatedEvent.md)
+ - [OrderFulfillmentStatusWithConfigurationActions](docs/Model/OrderFulfillmentStatusWithConfigurationActions.md)
  - [OrderIdAndSequenceNumber](docs/Model/OrderIdAndSequenceNumber.md)
  - [OrderIngestSubmitOrderRequest](docs/Model/OrderIngestSubmitOrderRequest.md)
  - [OrderIngestSubmitOrderResponse](docs/Model/OrderIngestSubmitOrderResponse.md)
@@ -978,6 +981,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultOrder](docs/Model/RestApiResultOrder.md)
  - [RestApiResultOrderDeliveryInformation](docs/Model/RestApiResultOrderDeliveryInformation.md)
  - [RestApiResultOrderFulfillmentStatus](docs/Model/RestApiResultOrderFulfillmentStatus.md)
+ - [RestApiResultOrderFulfillmentStatusWithConfigurationActions](docs/Model/RestApiResultOrderFulfillmentStatusWithConfigurationActions.md)
  - [RestApiResultOrderIngestSubmitOrderResponse](docs/Model/RestApiResultOrderIngestSubmitOrderResponse.md)
  - [RestApiResultOrderPaymentInformation](docs/Model/RestApiResultOrderPaymentInformation.md)
  - [RestApiResultPaymentIntent](docs/Model/RestApiResultPaymentIntent.md)

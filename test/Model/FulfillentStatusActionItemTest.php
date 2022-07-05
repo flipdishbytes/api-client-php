@@ -1,6 +1,6 @@
 <?php
 /**
- * AppConfigSalesChannelTest
+ * FulfillentStatusActionItemTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * AppConfigSalesChannelTest Class Doc Comment
+ * FulfillentStatusActionItemTest Class Doc Comment
  *
  * @category    Class
- * @description App Config Sales Channel
+ * @description Action item for next fulfillment status selector
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AppConfigSalesChannelTest extends \PHPUnit_Framework_TestCase
+class FulfillentStatusActionItemTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,23 @@ class AppConfigSalesChannelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AppConfigSalesChannel"
+     * Test "FulfillentStatusActionItem"
      */
-    public function testAppConfigSalesChannel()
+    public function testFulfillentStatusActionItem()
     {
     }
 
     /**
-     * Test attribute "email_request_mode"
+     * Test attribute "id"
      */
-    public function testPropertyEmailRequestMode()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "web_to_app_redirect"
+     * Test attribute "name"
      */
-    public function testPropertyWebToAppRedirect()
-    {
-    }
-
-    /**
-     * Test attribute "address_entry_type"
-     */
-    public function testPropertyAddressEntryType()
-    {
-    }
-
-    /**
-     * Test attribute "display_delivery_restaurant_list_screen"
-     */
-    public function testPropertyDisplayDeliveryRestaurantListScreen()
+    public function testPropertyName()
     {
     }
 }

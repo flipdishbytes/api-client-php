@@ -60,6 +60,7 @@ class AppConfigSalesChannel implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'email_request_mode' => 'string',
         'web_to_app_redirect' => 'string',
+        'address_entry_type' => 'string',
         'display_delivery_restaurant_list_screen' => 'bool'
     ];
 
@@ -71,6 +72,7 @@ class AppConfigSalesChannel implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'email_request_mode' => null,
         'web_to_app_redirect' => null,
+        'address_entry_type' => null,
         'display_delivery_restaurant_list_screen' => null
     ];
 
@@ -103,6 +105,7 @@ class AppConfigSalesChannel implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'email_request_mode' => 'EmailRequestMode',
         'web_to_app_redirect' => 'WebToAppRedirect',
+        'address_entry_type' => 'AddressEntryType',
         'display_delivery_restaurant_list_screen' => 'DisplayDeliveryRestaurantListScreen'
     ];
 
@@ -114,6 +117,7 @@ class AppConfigSalesChannel implements ModelInterface, ArrayAccess
     protected static $setters = [
         'email_request_mode' => 'setEmailRequestMode',
         'web_to_app_redirect' => 'setWebToAppRedirect',
+        'address_entry_type' => 'setAddressEntryType',
         'display_delivery_restaurant_list_screen' => 'setDisplayDeliveryRestaurantListScreen'
     ];
 
@@ -125,6 +129,7 @@ class AppConfigSalesChannel implements ModelInterface, ArrayAccess
     protected static $getters = [
         'email_request_mode' => 'getEmailRequestMode',
         'web_to_app_redirect' => 'getWebToAppRedirect',
+        'address_entry_type' => 'getAddressEntryType',
         'display_delivery_restaurant_list_screen' => 'getDisplayDeliveryRestaurantListScreen'
     ];
 
@@ -177,6 +182,9 @@ class AppConfigSalesChannel implements ModelInterface, ArrayAccess
     const WEB_TO_APP_REDIRECT_REDIRECT_ALWAYS = 'RedirectAlways';
     const WEB_TO_APP_REDIRECT_SUGGEST_PWA = 'SuggestPwa';
     const WEB_TO_APP_REDIRECT_FORCE_PWA = 'ForcePwa';
+    const ADDRESS_ENTRY_TYPE_MAP_FIRST = 'MapFirst';
+    const ADDRESS_ENTRY_TYPE_TEXT_ENTRY_MANUAL_ALLOWED = 'TextEntryManualAllowed';
+    const ADDRESS_ENTRY_TYPE_TEXT_ENTRY_MANUAL_DISALLOWED = 'TextEntryManualDisallowed';
     
 
     
@@ -210,6 +218,20 @@ class AppConfigSalesChannel implements ModelInterface, ArrayAccess
         ];
     }
     
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getAddressEntryTypeAllowableValues()
+    {
+        return [
+            self::ADDRESS_ENTRY_TYPE_MAP_FIRST,
+            self::ADDRESS_ENTRY_TYPE_TEXT_ENTRY_MANUAL_ALLOWED,
+            self::ADDRESS_ENTRY_TYPE_TEXT_ENTRY_MANUAL_DISALLOWED,
+        ];
+    }
+    
 
     /**
      * Associative array for storing property values
@@ -228,6 +250,7 @@ class AppConfigSalesChannel implements ModelInterface, ArrayAccess
     {
         $this->container['email_request_mode'] = isset($data['email_request_mode']) ? $data['email_request_mode'] : null;
         $this->container['web_to_app_redirect'] = isset($data['web_to_app_redirect']) ? $data['web_to_app_redirect'] : null;
+        $this->container['address_entry_type'] = isset($data['address_entry_type']) ? $data['address_entry_type'] : null;
         $this->container['display_delivery_restaurant_list_screen'] = isset($data['display_delivery_restaurant_list_screen']) ? $data['display_delivery_restaurant_list_screen'] : null;
     }
 
@@ -252,6 +275,14 @@ class AppConfigSalesChannel implements ModelInterface, ArrayAccess
         if (!is_null($this->container['web_to_app_redirect']) && !in_array($this->container['web_to_app_redirect'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'web_to_app_redirect', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getAddressEntryTypeAllowableValues();
+        if (!is_null($this->container['address_entry_type']) && !in_array($this->container['address_entry_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'address_entry_type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -333,6 +364,39 @@ class AppConfigSalesChannel implements ModelInterface, ArrayAccess
             );
         }
         $this->container['web_to_app_redirect'] = $web_to_app_redirect;
+
+        return $this;
+    }
+
+    /**
+     * Gets address_entry_type
+     *
+     * @return string
+     */
+    public function getAddressEntryType()
+    {
+        return $this->container['address_entry_type'];
+    }
+
+    /**
+     * Sets address_entry_type
+     *
+     * @param string $address_entry_type Address entry type
+     *
+     * @return $this
+     */
+    public function setAddressEntryType($address_entry_type)
+    {
+        $allowedValues = $this->getAddressEntryTypeAllowableValues();
+        if (!is_null($address_entry_type) && !in_array($address_entry_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'address_entry_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['address_entry_type'] = $address_entry_type;
 
         return $this;
     }
