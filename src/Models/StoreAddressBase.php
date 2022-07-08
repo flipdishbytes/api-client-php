@@ -63,7 +63,9 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
         'city' => 'string',
         'country_code' => 'string',
         'display_for_customer' => 'string',
-        'address_fields' => 'map[string,object]'
+        'address_fields' => 'map[string,object]',
+        'single_line_display' => 'string',
+        'two_lines_display' => 'string[]'
     ];
 
     /**
@@ -77,7 +79,9 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
         'city' => null,
         'country_code' => null,
         'display_for_customer' => null,
-        'address_fields' => null
+        'address_fields' => null,
+        'single_line_display' => null,
+        'two_lines_display' => null
     ];
 
     /**
@@ -112,7 +116,9 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
         'city' => 'City',
         'country_code' => 'CountryCode',
         'display_for_customer' => 'DisplayForCustomer',
-        'address_fields' => 'AddressFields'
+        'address_fields' => 'AddressFields',
+        'single_line_display' => 'SingleLineDisplay',
+        'two_lines_display' => 'TwoLinesDisplay'
     ];
 
     /**
@@ -126,7 +132,9 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
         'city' => 'setCity',
         'country_code' => 'setCountryCode',
         'display_for_customer' => 'setDisplayForCustomer',
-        'address_fields' => 'setAddressFields'
+        'address_fields' => 'setAddressFields',
+        'single_line_display' => 'setSingleLineDisplay',
+        'two_lines_display' => 'setTwoLinesDisplay'
     ];
 
     /**
@@ -140,7 +148,9 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
         'city' => 'getCity',
         'country_code' => 'getCountryCode',
         'display_for_customer' => 'getDisplayForCustomer',
-        'address_fields' => 'getAddressFields'
+        'address_fields' => 'getAddressFields',
+        'single_line_display' => 'getSingleLineDisplay',
+        'two_lines_display' => 'getTwoLinesDisplay'
     ];
 
     /**
@@ -209,6 +219,8 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
         $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
         $this->container['display_for_customer'] = isset($data['display_for_customer']) ? $data['display_for_customer'] : null;
         $this->container['address_fields'] = isset($data['address_fields']) ? $data['address_fields'] : null;
+        $this->container['single_line_display'] = isset($data['single_line_display']) ? $data['single_line_display'] : null;
+        $this->container['two_lines_display'] = isset($data['two_lines_display']) ? $data['two_lines_display'] : null;
     }
 
     /**
@@ -390,6 +402,54 @@ class StoreAddressBase implements ModelInterface, ArrayAccess
     public function setAddressFields($address_fields)
     {
         $this->container['address_fields'] = $address_fields;
+
+        return $this;
+    }
+
+    /**
+     * Gets single_line_display
+     *
+     * @return string
+     */
+    public function getSingleLineDisplay()
+    {
+        return $this->container['single_line_display'];
+    }
+
+    /**
+     * Sets single_line_display
+     *
+     * @param string $single_line_display Single line display i18n, may be empty for not supported countries
+     *
+     * @return $this
+     */
+    public function setSingleLineDisplay($single_line_display)
+    {
+        $this->container['single_line_display'] = $single_line_display;
+
+        return $this;
+    }
+
+    /**
+     * Gets two_lines_display
+     *
+     * @return string[]
+     */
+    public function getTwoLinesDisplay()
+    {
+        return $this->container['two_lines_display'];
+    }
+
+    /**
+     * Sets two_lines_display
+     *
+     * @param string[] $two_lines_display Two line display i18n, may be empty for not supported countries
+     *
+     * @return $this
+     */
+    public function setTwoLinesDisplay($two_lines_display)
+    {
+        $this->container['two_lines_display'] = $two_lines_display;
 
         return $this;
     }

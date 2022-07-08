@@ -117,4 +117,18 @@ class StoreAddressBaseTest extends \PHPUnit_Framework_TestCase
     public function testPropertyAddressFields()
     {
     }
+
+    /**
+     * Test attribute "single_line_display"
+     */
+    public function testPropertySingleLineDisplay()
+    {
+    }
+
+    /**
+     * Test attribute "two_lines_display"
+     */
+    public function testPropertyTwoLinesDisplay()
+    {
+    }
 }
