@@ -366,6 +366,7 @@ Class | Method | HTTP request | Description
 *MetafieldDefinitionsApi* | [**updateMetafieldDefinition**](docs/Api/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
 *MobileAppsApi* | [**editAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#editappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 *MobileAppsApi* | [**editAppConfigSalesChannel_0**](docs/Api/MobileAppsApi.md#editappconfigsaleschannel_0) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
+*MobileAppsApi* | [**uploadMobileAppsImage**](docs/Api/MobileAppsApi.md#uploadmobileappsimage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
 *OAuthClientsApi* | [**addRedirectUri**](docs/Api/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**createOAuthApp**](docs/Api/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
 *OAuthClientsApi* | [**deleteOAuthApp**](docs/Api/OAuthClientsApi.md#deleteoauthapp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Delete OAuth App
@@ -763,6 +764,7 @@ Class | Method | HTTP request | Description
  - [Metafield](docs/Model/Metafield.md)
  - [MetafieldDefinition](docs/Model/MetafieldDefinition.md)
  - [MetafieldDefinitionRecommendation](docs/Model/MetafieldDefinitionRecommendation.md)
+ - [MobileAppsImage](docs/Model/MobileAppsImage.md)
  - [MobileAppsSubmission](docs/Model/MobileAppsSubmission.md)
  - [ModelBase](docs/Model/ModelBase.md)
  - [OAuthApp](docs/Model/OAuthApp.md)
@@ -977,6 +979,8 @@ Class | Method | HTTP request | Description
  - [RestApiResultMenuSectionItem](docs/Model/RestApiResultMenuSectionItem.md)
  - [RestApiResultMetadata](docs/Model/RestApiResultMetadata.md)
  - [RestApiResultMetafieldDefinition](docs/Model/RestApiResultMetafieldDefinition.md)
+ - [RestApiResultMobileAppsImage](docs/Model/RestApiResultMobileAppsImage.md)
+ - [RestApiResultMobileAppsSubmission](docs/Model/RestApiResultMobileAppsSubmission.md)
  - [RestApiResultModelBase](docs/Model/RestApiResultModelBase.md)
  - [RestApiResultOAuthApp](docs/Model/RestApiResultOAuthApp.md)
  - [RestApiResultOauthClientRedirectUri](docs/Model/RestApiResultOauthClientRedirectUri.md)
