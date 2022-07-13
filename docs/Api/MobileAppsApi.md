@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**editAppConfigSalesChannel**](MobileAppsApi.md#editAppConfigSalesChannel) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 [**editAppConfigSalesChannel_0**](MobileAppsApi.md#editAppConfigSalesChannel_0) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
+[**getAppDetails**](MobileAppsApi.md#getAppDetails) | **GET** /api/v1.0/mobileapps/{appId}/details | Get mobile app details
 [**uploadMobileAppsImage**](MobileAppsApi.md#uploadMobileAppsImage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
 
 
@@ -111,6 +112,57 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getAppDetails**
+> \Flipdish\\Client\Models\RestApiResultMobileAppsDetails getAppDetails($app_id)
+
+Get mobile app details
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MobileAppsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+
+try {
+    $result = $apiInstance->getAppDetails($app_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MobileAppsApi->getAppDetails: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultMobileAppsDetails**](../Model/RestApiResultMobileAppsDetails.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
