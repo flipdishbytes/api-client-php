@@ -400,6 +400,8 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_VIEW_APP_STORE_APP_CONFIGURATION = 'ViewAppStoreAppConfiguration';
     const APP_RESOURCE_SET_UPDATE_APP_STORE_APP_CONFIGURATION = 'UpdateAppStoreAppConfiguration';
     const APP_RESOURCE_SET_DELETE_APP_STORE_APP_CONFIGURATION = 'DeleteAppStoreAppConfiguration';
+    const APP_RESOURCE_SET_VIEW_SALES_CHANNELS = 'ViewSalesChannels';
+    const APP_RESOURCE_SET_EDIT_SALES_CHANNELS = 'EditSalesChannels';
     const APPLICATION_CATEGORY_RESTAURANT = 'Restaurant';
     const APPLICATION_CATEGORY_CAFE = 'Cafe';
     const APPLICATION_CATEGORY_CONVENIENCE = 'Convenience';
@@ -576,6 +578,8 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_VIEW_APP_STORE_APP_CONFIGURATION,
             self::APP_RESOURCE_SET_UPDATE_APP_STORE_APP_CONFIGURATION,
             self::APP_RESOURCE_SET_DELETE_APP_STORE_APP_CONFIGURATION,
+            self::APP_RESOURCE_SET_VIEW_SALES_CHANNELS,
+            self::APP_RESOURCE_SET_EDIT_SALES_CHANNELS,
         ];
     }
     
