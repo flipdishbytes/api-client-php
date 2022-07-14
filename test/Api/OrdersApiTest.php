@@ -102,22 +102,22 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getFulfillmentStatus
+     * Test case for getFulfillmentState
      *
-     * Get order fulfillment status.
+     * Get order fulfillment state.
      *
      */
-    public function testGetFulfillmentStatus()
+    public function testGetFulfillmentState()
     {
     }
 
     /**
-     * Test case for getFulfillmentStatus_0
+     * Test case for getFulfillmentStatusWithDetailsAndActions
      *
-     * Get order fulfillment status with actionable details like default next status.
+     * Get order fulfillment state with actionable details like default next state.
      *
      */
-    public function testGetFulfillmentStatus0()
+    public function testGetFulfillmentStatusWithDetailsAndActions()
     {
     }
 
@@ -192,12 +192,12 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for updateFulfillmentStatus
+     * Test case for updateFulfillmentState
      *
-     * Add/update fulfillment status information to an order.
+     * Update fulfillment status information to an order.
      *
      */
-    public function testUpdateFulfillmentStatus()
+    public function testUpdateFulfillmentState()
     {
     }
 }

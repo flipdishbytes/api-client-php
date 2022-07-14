@@ -1265,7 +1265,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Sets fulfillment_status
      *
-     * @param \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status Fulfillment status for this order
+     * @param \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status [BETA - this is a new field in development] Fulfillment status for this order
      *
      * @return $this
      */

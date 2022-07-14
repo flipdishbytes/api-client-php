@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**acceptOrder**](OrdersApi.md#acceptOrder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 [**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
 [**getDeliveryInformation**](OrdersApi.md#getDeliveryInformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
-[**getFulfillmentStatus**](OrdersApi.md#getFulfillmentStatus) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatus | Get order fulfillment status
-[**getFulfillmentStatus_0**](OrdersApi.md#getFulfillmentStatus_0) | **GET** /api/v1.0/orders/{orderId}/fulfillmentstatusdetails | Get order fulfillment status with actionable details like default next status
+[**getFulfillmentState**](OrdersApi.md#getFulfillmentState) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state | Get order fulfillment state
+[**getFulfillmentStatusWithDetailsAndActions**](OrdersApi.md#getFulfillmentStatusWithDetailsAndActions) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state/details | Get order fulfillment state with actionable details like default next state
 [**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | Get order by ID
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | Get orders by filter
 [**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**rejectOrder**](OrdersApi.md#rejectOrder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
 [**searchFulfillmentStatuses**](OrdersApi.md#searchFulfillmentStatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
 [**updateDeliveryInformation**](OrdersApi.md#updateDeliveryInformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
-[**updateFulfillmentStatus**](OrdersApi.md#updateFulfillmentStatus) | **POST** /api/v1.0/{appId}/orders/{orderId}/fulfillmentstatus | Add/update fulfillment status information to an order
+[**updateFulfillmentState**](OrdersApi.md#updateFulfillmentState) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | Update fulfillment status information to an order
 
 
 # **acceptOrder**
@@ -178,12 +178,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getFulfillmentStatus**
-> \Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatus getFulfillmentStatus($order_id)
+# **getFulfillmentState**
+> \Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatus getFulfillmentState($order_id)
 
-Get order fulfillment status
+Get order fulfillment state
 
-[BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment status.
+[BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment state.
 
 ### Example
 ```php
@@ -202,10 +202,10 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
 $order_id = 56; // int | Flipdish Order Id
 
 try {
-    $result = $apiInstance->getFulfillmentStatus($order_id);
+    $result = $apiInstance->getFulfillmentState($order_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->getFulfillmentStatus: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->getFulfillmentState: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -231,10 +231,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getFulfillmentStatus_0**
-> \Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatusWithConfigurationActions getFulfillmentStatus_0($order_id)
+# **getFulfillmentStatusWithDetailsAndActions**
+> \Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatusWithConfigurationActions getFulfillmentStatusWithDetailsAndActions($order_id)
 
-Get order fulfillment status with actionable details like default next status
+Get order fulfillment state with actionable details like default next state
 
 [BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment status and details about possible states.
 
@@ -255,10 +255,10 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
 $order_id = 56; // int | Flipdish Order Id
 
 try {
-    $result = $apiInstance->getFulfillmentStatus_0($order_id);
+    $result = $apiInstance->getFulfillmentStatusWithDetailsAndActions($order_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->getFulfillmentStatus_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->getFulfillmentStatusWithDetailsAndActions: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -678,12 +678,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateFulfillmentStatus**
-> updateFulfillmentStatus($app_id, $order_id, $fulfillment_status_request)
+# **updateFulfillmentState**
+> updateFulfillmentState($order_id, $fulfillment_status_request)
 
-Add/update fulfillment status information to an order
+Update fulfillment status information to an order
 
-[BETA - this endpoint is under development, do not use it in your production system] Updates an order's fulfillment status.
+[BETA - this endpoint is under development, do not use it in your production system] Updates an order's fulfillment states.
 
 ### Example
 ```php
@@ -699,14 +699,13 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | 
 $order_id = 56; // int | Flipdish Order Id
-$fulfillment_status_request = new \Flipdish\\Client\Models\OrderFulfillmentStatusBase(); // \Flipdish\\Client\Models\OrderFulfillmentStatusBase | Fulfillment Status
+$fulfillment_status_request = new \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate(); // \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate | Fulfillment Status
 
 try {
-    $apiInstance->updateFulfillmentStatus($app_id, $order_id, $fulfillment_status_request);
+    $apiInstance->updateFulfillmentState($order_id, $fulfillment_status_request);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->updateFulfillmentStatus: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->updateFulfillmentState: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -715,9 +714,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
  **order_id** | **int**| Flipdish Order Id |
- **fulfillment_status_request** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusBase**](../Model/OrderFulfillmentStatusBase.md)| Fulfillment Status |
+ **fulfillment_status_request** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusUpdate**](../Model/OrderFulfillmentStatusUpdate.md)| Fulfillment Status |
 
 ### Return type
 

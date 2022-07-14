@@ -959,9 +959,9 @@ class OrdersApi
     }
 
     /**
-     * Operation getFulfillmentStatus
+     * Operation getFulfillmentState
      *
-     * Get order fulfillment status
+     * Get order fulfillment state
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
@@ -969,16 +969,16 @@ class OrdersApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatus
      */
-    public function getFulfillmentStatus($order_id)
+    public function getFulfillmentState($order_id)
     {
-        list($response) = $this->getFulfillmentStatusWithHttpInfo($order_id);
+        list($response) = $this->getFulfillmentStateWithHttpInfo($order_id);
         return $response;
     }
 
     /**
-     * Operation getFulfillmentStatusWithHttpInfo
+     * Operation getFulfillmentStateWithHttpInfo
      *
-     * Get order fulfillment status
+     * Get order fulfillment state
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
@@ -986,10 +986,10 @@ class OrdersApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatus, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFulfillmentStatusWithHttpInfo($order_id)
+    public function getFulfillmentStateWithHttpInfo($order_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatus';
-        $request = $this->getFulfillmentStatusRequest($order_id);
+        $request = $this->getFulfillmentStateRequest($order_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1083,18 +1083,18 @@ class OrdersApi
     }
 
     /**
-     * Operation getFulfillmentStatusAsync
+     * Operation getFulfillmentStateAsync
      *
-     * Get order fulfillment status
+     * Get order fulfillment state
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFulfillmentStatusAsync($order_id)
+    public function getFulfillmentStateAsync($order_id)
     {
-        return $this->getFulfillmentStatusAsyncWithHttpInfo($order_id)
+        return $this->getFulfillmentStateAsyncWithHttpInfo($order_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1103,19 +1103,19 @@ class OrdersApi
     }
 
     /**
-     * Operation getFulfillmentStatusAsyncWithHttpInfo
+     * Operation getFulfillmentStateAsyncWithHttpInfo
      *
-     * Get order fulfillment status
+     * Get order fulfillment state
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFulfillmentStatusAsyncWithHttpInfo($order_id)
+    public function getFulfillmentStateAsyncWithHttpInfo($order_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatus';
-        $request = $this->getFulfillmentStatusRequest($order_id);
+        $request = $this->getFulfillmentStateRequest($order_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1155,23 +1155,23 @@ class OrdersApi
     }
 
     /**
-     * Create request for operation 'getFulfillmentStatus'
+     * Create request for operation 'getFulfillmentState'
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getFulfillmentStatusRequest($order_id)
+    protected function getFulfillmentStateRequest($order_id)
     {
         // verify the required parameter 'order_id' is set
         if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $order_id when calling getFulfillmentStatus'
+                'Missing the required parameter $order_id when calling getFulfillmentState'
             );
         }
 
-        $resourcePath = '/api/v1.0/orders/{orderId}/fulfillmentstatus';
+        $resourcePath = '/api/v1.0/orders/{orderId}/fulfillment/state';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1264,9 +1264,9 @@ class OrdersApi
     }
 
     /**
-     * Operation getFulfillmentStatus_0
+     * Operation getFulfillmentStatusWithDetailsAndActions
      *
-     * Get order fulfillment status with actionable details like default next status
+     * Get order fulfillment state with actionable details like default next state
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
@@ -1274,16 +1274,16 @@ class OrdersApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatusWithConfigurationActions
      */
-    public function getFulfillmentStatus_0($order_id)
+    public function getFulfillmentStatusWithDetailsAndActions($order_id)
     {
-        list($response) = $this->getFulfillmentStatus_0WithHttpInfo($order_id);
+        list($response) = $this->getFulfillmentStatusWithDetailsAndActionsWithHttpInfo($order_id);
         return $response;
     }
 
     /**
-     * Operation getFulfillmentStatus_0WithHttpInfo
+     * Operation getFulfillmentStatusWithDetailsAndActionsWithHttpInfo
      *
-     * Get order fulfillment status with actionable details like default next status
+     * Get order fulfillment state with actionable details like default next state
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
@@ -1291,10 +1291,10 @@ class OrdersApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatusWithConfigurationActions, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFulfillmentStatus_0WithHttpInfo($order_id)
+    public function getFulfillmentStatusWithDetailsAndActionsWithHttpInfo($order_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatusWithConfigurationActions';
-        $request = $this->getFulfillmentStatus_0Request($order_id);
+        $request = $this->getFulfillmentStatusWithDetailsAndActionsRequest($order_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1388,18 +1388,18 @@ class OrdersApi
     }
 
     /**
-     * Operation getFulfillmentStatus_0Async
+     * Operation getFulfillmentStatusWithDetailsAndActionsAsync
      *
-     * Get order fulfillment status with actionable details like default next status
+     * Get order fulfillment state with actionable details like default next state
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFulfillmentStatus_0Async($order_id)
+    public function getFulfillmentStatusWithDetailsAndActionsAsync($order_id)
     {
-        return $this->getFulfillmentStatus_0AsyncWithHttpInfo($order_id)
+        return $this->getFulfillmentStatusWithDetailsAndActionsAsyncWithHttpInfo($order_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1408,19 +1408,19 @@ class OrdersApi
     }
 
     /**
-     * Operation getFulfillmentStatus_0AsyncWithHttpInfo
+     * Operation getFulfillmentStatusWithDetailsAndActionsAsyncWithHttpInfo
      *
-     * Get order fulfillment status with actionable details like default next status
+     * Get order fulfillment state with actionable details like default next state
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFulfillmentStatus_0AsyncWithHttpInfo($order_id)
+    public function getFulfillmentStatusWithDetailsAndActionsAsyncWithHttpInfo($order_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatusWithConfigurationActions';
-        $request = $this->getFulfillmentStatus_0Request($order_id);
+        $request = $this->getFulfillmentStatusWithDetailsAndActionsRequest($order_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1460,23 +1460,23 @@ class OrdersApi
     }
 
     /**
-     * Create request for operation 'getFulfillmentStatus_0'
+     * Create request for operation 'getFulfillmentStatusWithDetailsAndActions'
      *
      * @param  int $order_id Flipdish Order Id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getFulfillmentStatus_0Request($order_id)
+    protected function getFulfillmentStatusWithDetailsAndActionsRequest($order_id)
     {
         // verify the required parameter 'order_id' is set
         if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $order_id when calling getFulfillmentStatus_0'
+                'Missing the required parameter $order_id when calling getFulfillmentStatusWithDetailsAndActions'
             );
         }
 
-        $resourcePath = '/api/v1.0/orders/{orderId}/fulfillmentstatusdetails';
+        $resourcePath = '/api/v1.0/orders/{orderId}/fulfillment/state/details';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3747,40 +3747,38 @@ class OrdersApi
     }
 
     /**
-     * Operation updateFulfillmentStatus
+     * Operation updateFulfillmentState
      *
-     * Add/update fulfillment status information to an order
+     * Update fulfillment status information to an order
      *
-     * @param  string $app_id app_id (required)
      * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request Fulfillment Status (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request Fulfillment Status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function updateFulfillmentStatus($app_id, $order_id, $fulfillment_status_request)
+    public function updateFulfillmentState($order_id, $fulfillment_status_request)
     {
-        $this->updateFulfillmentStatusWithHttpInfo($app_id, $order_id, $fulfillment_status_request);
+        $this->updateFulfillmentStateWithHttpInfo($order_id, $fulfillment_status_request);
     }
 
     /**
-     * Operation updateFulfillmentStatusWithHttpInfo
+     * Operation updateFulfillmentStateWithHttpInfo
      *
-     * Add/update fulfillment status information to an order
+     * Update fulfillment status information to an order
      *
-     * @param  string $app_id (required)
      * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request Fulfillment Status (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request Fulfillment Status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateFulfillmentStatusWithHttpInfo($app_id, $order_id, $fulfillment_status_request)
+    public function updateFulfillmentStateWithHttpInfo($order_id, $fulfillment_status_request)
     {
         $returnType = '';
-        $request = $this->updateFulfillmentStatusRequest($app_id, $order_id, $fulfillment_status_request);
+        $request = $this->updateFulfillmentStateRequest($order_id, $fulfillment_status_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3844,20 +3842,19 @@ class OrdersApi
     }
 
     /**
-     * Operation updateFulfillmentStatusAsync
+     * Operation updateFulfillmentStateAsync
      *
-     * Add/update fulfillment status information to an order
+     * Update fulfillment status information to an order
      *
-     * @param  string $app_id (required)
      * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request Fulfillment Status (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request Fulfillment Status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateFulfillmentStatusAsync($app_id, $order_id, $fulfillment_status_request)
+    public function updateFulfillmentStateAsync($order_id, $fulfillment_status_request)
     {
-        return $this->updateFulfillmentStatusAsyncWithHttpInfo($app_id, $order_id, $fulfillment_status_request)
+        return $this->updateFulfillmentStateAsyncWithHttpInfo($order_id, $fulfillment_status_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3866,21 +3863,20 @@ class OrdersApi
     }
 
     /**
-     * Operation updateFulfillmentStatusAsyncWithHttpInfo
+     * Operation updateFulfillmentStateAsyncWithHttpInfo
      *
-     * Add/update fulfillment status information to an order
+     * Update fulfillment status information to an order
      *
-     * @param  string $app_id (required)
      * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request Fulfillment Status (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request Fulfillment Status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateFulfillmentStatusAsyncWithHttpInfo($app_id, $order_id, $fulfillment_status_request)
+    public function updateFulfillmentStateAsyncWithHttpInfo($order_id, $fulfillment_status_request)
     {
         $returnType = '';
-        $request = $this->updateFulfillmentStatusRequest($app_id, $order_id, $fulfillment_status_request);
+        $request = $this->updateFulfillmentStateRequest($order_id, $fulfillment_status_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3906,37 +3902,30 @@ class OrdersApi
     }
 
     /**
-     * Create request for operation 'updateFulfillmentStatus'
+     * Create request for operation 'updateFulfillmentState'
      *
-     * @param  string $app_id (required)
      * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusBase $fulfillment_status_request Fulfillment Status (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request Fulfillment Status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateFulfillmentStatusRequest($app_id, $order_id, $fulfillment_status_request)
+    protected function updateFulfillmentStateRequest($order_id, $fulfillment_status_request)
     {
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling updateFulfillmentStatus'
-            );
-        }
         // verify the required parameter 'order_id' is set
         if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $order_id when calling updateFulfillmentStatus'
+                'Missing the required parameter $order_id when calling updateFulfillmentState'
             );
         }
         // verify the required parameter 'fulfillment_status_request' is set
         if ($fulfillment_status_request === null || (is_array($fulfillment_status_request) && count($fulfillment_status_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $fulfillment_status_request when calling updateFulfillmentStatus'
+                'Missing the required parameter $fulfillment_status_request when calling updateFulfillmentState'
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/orders/{orderId}/fulfillmentstatus';
+        $resourcePath = '/api/v1.0/orders/{orderId}/fulfillment/state';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3944,14 +3933,6 @@ class OrdersApi
         $multipart = false;
 
 
-        // path params
-        if ($app_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
         // path params
         if ($order_id !== null) {
             $resourcePath = str_replace(
