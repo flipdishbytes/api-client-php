@@ -92,6 +92,16 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getAppConfig
+     *
+     * Get mobile app configuration.
+     *
+     */
+    public function testGetAppConfig()
+    {
+    }
+
+    /**
      * Test case for getAppDetails
      *
      * Get mobile app details.

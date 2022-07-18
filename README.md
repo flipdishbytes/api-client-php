@@ -366,6 +366,7 @@ Class | Method | HTTP request | Description
 *MetafieldDefinitionsApi* | [**updateMetafieldDefinition**](docs/Api/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
 *MobileAppsApi* | [**editAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#editappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 *MobileAppsApi* | [**editAppConfigSalesChannel_0**](docs/Api/MobileAppsApi.md#editappconfigsaleschannel_0) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
+*MobileAppsApi* | [**getAppConfig**](docs/Api/MobileAppsApi.md#getappconfig) | **GET** /api/v1.0/mobileapps/{appId}/config | Get mobile app configuration
 *MobileAppsApi* | [**getAppDetails**](docs/Api/MobileAppsApi.md#getappdetails) | **GET** /api/v1.0/mobileapps/{appId}/details | Get mobile app details
 *MobileAppsApi* | [**uploadMobileAppsImage**](docs/Api/MobileAppsApi.md#uploadmobileappsimage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
 *OAuthClientsApi* | [**addRedirectUri**](docs/Api/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
