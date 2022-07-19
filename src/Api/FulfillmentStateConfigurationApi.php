@@ -96,7 +96,7 @@ class FulfillmentStateConfigurationApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return \Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration
      */
     public function createFulfillmentStatesConfig($app_id)
     {
@@ -113,11 +113,11 @@ class FulfillmentStateConfigurationApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function createFulfillmentStatesConfigWithHttpInfo($app_id)
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration';
         $request = $this->createFulfillmentStatesConfigRequest($app_id);
 
         try {
@@ -169,7 +169,7 @@ class FulfillmentStateConfigurationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -243,7 +243,7 @@ class FulfillmentStateConfigurationApi
      */
     public function createFulfillmentStatesConfigAsyncWithHttpInfo($app_id)
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration';
         $request = $this->createFulfillmentStatesConfigRequest($app_id);
 
         return $this->client

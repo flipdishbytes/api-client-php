@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createFulfillmentStatesConfig**
-> object createFulfillmentStatesConfig($app_id)
+> \Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration createFulfillmentStatesConfig($app_id)
 
 Create fulfillment configuration
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration**](../Model/RestApiResultFulfillmentStatesConfiguration.md)
 
 ### Authorization
 

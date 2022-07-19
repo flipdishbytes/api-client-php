@@ -368,6 +368,7 @@ Class | Method | HTTP request | Description
 *MobileAppsApi* | [**editAppConfigSalesChannel_0**](docs/Api/MobileAppsApi.md#editappconfigsaleschannel_0) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
 *MobileAppsApi* | [**getAppConfig**](docs/Api/MobileAppsApi.md#getappconfig) | **GET** /api/v1.0/mobileapps/{appId}/config | Get mobile app configuration
 *MobileAppsApi* | [**getAppDetails**](docs/Api/MobileAppsApi.md#getappdetails) | **GET** /api/v1.0/mobileapps/{appId}/details | Get mobile app details
+*MobileAppsApi* | [**getMobileAppsSubmissionStatus**](docs/Api/MobileAppsApi.md#getmobileappssubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submissionstatus{plataformType} | Get mobile app submitted status
 *MobileAppsApi* | [**uploadMobileAppsImage**](docs/Api/MobileAppsApi.md#uploadmobileappsimage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
 *OAuthClientsApi* | [**addRedirectUri**](docs/Api/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**createOAuthApp**](docs/Api/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
@@ -769,6 +770,7 @@ Class | Method | HTTP request | Description
  - [MobileAppsDetails](docs/Model/MobileAppsDetails.md)
  - [MobileAppsImage](docs/Model/MobileAppsImage.md)
  - [MobileAppsSubmission](docs/Model/MobileAppsSubmission.md)
+ - [MobileAppsSubmissionStatus](docs/Model/MobileAppsSubmissionStatus.md)
  - [ModelBase](docs/Model/ModelBase.md)
  - [OAuthApp](docs/Model/OAuthApp.md)
  - [OAuthTokenModel](docs/Model/OAuthTokenModel.md)
@@ -958,6 +960,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultDeliveryZone](docs/Model/RestApiResultDeliveryZone.md)
  - [RestApiResultDnsRecordInformation](docs/Model/RestApiResultDnsRecordInformation.md)
  - [RestApiResultDriver](docs/Model/RestApiResultDriver.md)
+ - [RestApiResultFulfillmentStatesConfiguration](docs/Model/RestApiResultFulfillmentStatesConfiguration.md)
  - [RestApiResultGroup](docs/Model/RestApiResultGroup.md)
  - [RestApiResultHomeStatistics](docs/Model/RestApiResultHomeStatistics.md)
  - [RestApiResultHydraConfig](docs/Model/RestApiResultHydraConfig.md)
@@ -986,6 +989,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultMobileAppsDetails](docs/Model/RestApiResultMobileAppsDetails.md)
  - [RestApiResultMobileAppsImage](docs/Model/RestApiResultMobileAppsImage.md)
  - [RestApiResultMobileAppsSubmission](docs/Model/RestApiResultMobileAppsSubmission.md)
+ - [RestApiResultMobileAppsSubmissionStatus](docs/Model/RestApiResultMobileAppsSubmissionStatus.md)
  - [RestApiResultModelBase](docs/Model/RestApiResultModelBase.md)
  - [RestApiResultOAuthApp](docs/Model/RestApiResultOAuthApp.md)
  - [RestApiResultOauthClientRedirectUri](docs/Model/RestApiResultOauthClientRedirectUri.md)
