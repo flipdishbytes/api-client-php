@@ -369,6 +369,7 @@ Class | Method | HTTP request | Description
 *MobileAppsApi* | [**getAppConfig**](docs/Api/MobileAppsApi.md#getappconfig) | **GET** /api/v1.0/mobileapps/{appId}/config | Get mobile app configuration
 *MobileAppsApi* | [**getAppDetails**](docs/Api/MobileAppsApi.md#getappdetails) | **GET** /api/v1.0/mobileapps/{appId}/details | Get mobile app details
 *MobileAppsApi* | [**getMobileAppsSubmissionStatus**](docs/Api/MobileAppsApi.md#getmobileappssubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submissionstatus{plataformType} | Get mobile app submitted status
+*MobileAppsApi* | [**setAppConfig**](docs/Api/MobileAppsApi.md#setappconfig) | **POST** /api/v1.0/mobileapps/{appId}/config | Set mobile app configuration
 *MobileAppsApi* | [**uploadMobileAppsImage**](docs/Api/MobileAppsApi.md#uploadmobileappsimage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
 *OAuthClientsApi* | [**addRedirectUri**](docs/Api/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**createOAuthApp**](docs/Api/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
@@ -767,6 +768,7 @@ Class | Method | HTTP request | Description
  - [Metafield](docs/Model/Metafield.md)
  - [MetafieldDefinition](docs/Model/MetafieldDefinition.md)
  - [MetafieldDefinitionRecommendation](docs/Model/MetafieldDefinitionRecommendation.md)
+ - [MobileAppConfig](docs/Model/MobileAppConfig.md)
  - [MobileAppsDetails](docs/Model/MobileAppsDetails.md)
  - [MobileAppsImage](docs/Model/MobileAppsImage.md)
  - [MobileAppsSubmission](docs/Model/MobileAppsSubmission.md)
@@ -935,6 +937,7 @@ Class | Method | HTTP request | Description
  - [RestApiPaginationResultVoucherSummary](docs/Model/RestApiPaginationResultVoucherSummary.md)
  - [RestApiPaginationResultWebhookLog](docs/Model/RestApiPaginationResultWebhookLog.md)
  - [RestApiPaginationResultWebhookSubscription](docs/Model/RestApiPaginationResultWebhookSubscription.md)
+ - [RestApiResult](docs/Model/RestApiResult.md)
  - [RestApiResultAccountDetail](docs/Model/RestApiResultAccountDetail.md)
  - [RestApiResultAccountFieldsDefinitions](docs/Model/RestApiResultAccountFieldsDefinitions.md)
  - [RestApiResultAddressFormResponse](docs/Model/RestApiResultAddressFormResponse.md)

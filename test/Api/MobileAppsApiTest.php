@@ -122,6 +122,16 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for setAppConfig
+     *
+     * Set mobile app configuration.
+     *
+     */
+    public function testSetAppConfig()
+    {
+    }
+
+    /**
      * Test case for uploadMobileAppsImage
      *
      * Upload a Mobile Apps Image.
