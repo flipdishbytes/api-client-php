@@ -90,317 +90,6 @@ class MobileAppsApi
     /**
      * Operation editAppConfigSalesChannel
      *
-     * Submission form mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultMobileAppsSubmission
-     */
-    public function editAppConfigSalesChannel($app_id, $mobile_apps_submission)
-    {
-        list($response) = $this->editAppConfigSalesChannelWithHttpInfo($app_id, $mobile_apps_submission);
-        return $response;
-    }
-
-    /**
-     * Operation editAppConfigSalesChannelWithHttpInfo
-     *
-     * Submission form mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultMobileAppsSubmission, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function editAppConfigSalesChannelWithHttpInfo($app_id, $mobile_apps_submission)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmission';
-        $request = $this->editAppConfigSalesChannelRequest($app_id, $mobile_apps_submission);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmission',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation editAppConfigSalesChannelAsync
-     *
-     * Submission form mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function editAppConfigSalesChannelAsync($app_id, $mobile_apps_submission)
-    {
-        return $this->editAppConfigSalesChannelAsyncWithHttpInfo($app_id, $mobile_apps_submission)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation editAppConfigSalesChannelAsyncWithHttpInfo
-     *
-     * Submission form mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function editAppConfigSalesChannelAsyncWithHttpInfo($app_id, $mobile_apps_submission)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmission';
-        $request = $this->editAppConfigSalesChannelRequest($app_id, $mobile_apps_submission);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'editAppConfigSalesChannel'
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function editAppConfigSalesChannelRequest($app_id, $mobile_apps_submission)
-    {
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling editAppConfigSalesChannel'
-            );
-        }
-        // verify the required parameter 'mobile_apps_submission' is set
-        if ($mobile_apps_submission === null || (is_array($mobile_apps_submission) && count($mobile_apps_submission) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $mobile_apps_submission when calling editAppConfigSalesChannel'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/mobileapps/{appId}/submission';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-        // path params
-        if ($app_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-        if (isset($mobile_apps_submission)) {
-            $_tempBody = $mobile_apps_submission;
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation editAppConfigSalesChannel_0
-     *
      * Set the application sales channel configuration
      *
      * @param  string $app_id  (required)
@@ -410,14 +99,14 @@ class MobileAppsApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel
      */
-    public function editAppConfigSalesChannel_0($app_id, $app_config_sales_channel)
+    public function editAppConfigSalesChannel($app_id, $app_config_sales_channel)
     {
-        list($response) = $this->editAppConfigSalesChannel_0WithHttpInfo($app_id, $app_config_sales_channel);
+        list($response) = $this->editAppConfigSalesChannelWithHttpInfo($app_id, $app_config_sales_channel);
         return $response;
     }
 
     /**
-     * Operation editAppConfigSalesChannel_0WithHttpInfo
+     * Operation editAppConfigSalesChannelWithHttpInfo
      *
      * Set the application sales channel configuration
      *
@@ -428,10 +117,10 @@ class MobileAppsApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function editAppConfigSalesChannel_0WithHttpInfo($app_id, $app_config_sales_channel)
+    public function editAppConfigSalesChannelWithHttpInfo($app_id, $app_config_sales_channel)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel';
-        $request = $this->editAppConfigSalesChannel_0Request($app_id, $app_config_sales_channel);
+        $request = $this->editAppConfigSalesChannelRequest($app_id, $app_config_sales_channel);
 
         try {
             $options = $this->createHttpClientOption();
@@ -517,7 +206,7 @@ class MobileAppsApi
     }
 
     /**
-     * Operation editAppConfigSalesChannel_0Async
+     * Operation editAppConfigSalesChannelAsync
      *
      * Set the application sales channel configuration
      *
@@ -527,9 +216,9 @@ class MobileAppsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editAppConfigSalesChannel_0Async($app_id, $app_config_sales_channel)
+    public function editAppConfigSalesChannelAsync($app_id, $app_config_sales_channel)
     {
-        return $this->editAppConfigSalesChannel_0AsyncWithHttpInfo($app_id, $app_config_sales_channel)
+        return $this->editAppConfigSalesChannelAsyncWithHttpInfo($app_id, $app_config_sales_channel)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -538,7 +227,7 @@ class MobileAppsApi
     }
 
     /**
-     * Operation editAppConfigSalesChannel_0AsyncWithHttpInfo
+     * Operation editAppConfigSalesChannelAsyncWithHttpInfo
      *
      * Set the application sales channel configuration
      *
@@ -548,10 +237,10 @@ class MobileAppsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function editAppConfigSalesChannel_0AsyncWithHttpInfo($app_id, $app_config_sales_channel)
+    public function editAppConfigSalesChannelAsyncWithHttpInfo($app_id, $app_config_sales_channel)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel';
-        $request = $this->editAppConfigSalesChannel_0Request($app_id, $app_config_sales_channel);
+        $request = $this->editAppConfigSalesChannelRequest($app_id, $app_config_sales_channel);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -591,7 +280,7 @@ class MobileAppsApi
     }
 
     /**
-     * Create request for operation 'editAppConfigSalesChannel_0'
+     * Create request for operation 'editAppConfigSalesChannel'
      *
      * @param  string $app_id  (required)
      * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel  (required)
@@ -599,18 +288,18 @@ class MobileAppsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function editAppConfigSalesChannel_0Request($app_id, $app_config_sales_channel)
+    protected function editAppConfigSalesChannelRequest($app_id, $app_config_sales_channel)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling editAppConfigSalesChannel_0'
+                'Missing the required parameter $app_id when calling editAppConfigSalesChannel'
             );
         }
         // verify the required parameter 'app_config_sales_channel' is set
         if ($app_config_sales_channel === null || (is_array($app_config_sales_channel) && count($app_config_sales_channel) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_config_sales_channel when calling editAppConfigSalesChannel_0'
+                'Missing the required parameter $app_config_sales_channel when calling editAppConfigSalesChannel'
             );
         }
 
@@ -1620,6 +1309,321 @@ class MobileAppsApi
     }
 
     /**
+     * Operation getStatistics
+     *
+     * Get statistics mobile apps
+     *
+     * @param  string $app_id  (required)
+     * @param  string[] $platform_types platform_types (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiArrayResultMobileAppsStatistics
+     */
+    public function getStatistics($app_id, $platform_types)
+    {
+        list($response) = $this->getStatisticsWithHttpInfo($app_id, $platform_types);
+        return $response;
+    }
+
+    /**
+     * Operation getStatisticsWithHttpInfo
+     *
+     * Get statistics mobile apps
+     *
+     * @param  string $app_id  (required)
+     * @param  string[] $platform_types (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultMobileAppsStatistics, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getStatisticsWithHttpInfo($app_id, $platform_types)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultMobileAppsStatistics';
+        $request = $this->getStatisticsRequest($app_id, $platform_types);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiArrayResultMobileAppsStatistics',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getStatisticsAsync
+     *
+     * Get statistics mobile apps
+     *
+     * @param  string $app_id  (required)
+     * @param  string[] $platform_types (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getStatisticsAsync($app_id, $platform_types)
+    {
+        return $this->getStatisticsAsyncWithHttpInfo($app_id, $platform_types)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getStatisticsAsyncWithHttpInfo
+     *
+     * Get statistics mobile apps
+     *
+     * @param  string $app_id  (required)
+     * @param  string[] $platform_types (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getStatisticsAsyncWithHttpInfo($app_id, $platform_types)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultMobileAppsStatistics';
+        $request = $this->getStatisticsRequest($app_id, $platform_types);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getStatistics'
+     *
+     * @param  string $app_id  (required)
+     * @param  string[] $platform_types (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getStatisticsRequest($app_id, $platform_types)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling getStatistics'
+            );
+        }
+        // verify the required parameter 'platform_types' is set
+        if ($platform_types === null || (is_array($platform_types) && count($platform_types) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $platform_types when calling getStatistics'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/mobileapps/{appId}/statistics';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if (is_array($platform_types)) {
+            $queryParams['platformTypes'] = $platform_types;
+        } else
+        if ($platform_types !== null) {
+            $queryParams['platformTypes'] = ObjectSerializer::toQueryValue($platform_types);
+        }
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation setAppConfig
      *
      * Set mobile app configuration
@@ -1856,6 +1860,317 @@ class MobileAppsApi
         $_tempBody = null;
         if (isset($config_update)) {
             $_tempBody = $config_update;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation submission
+     *
+     * Submission form mobile apps
+     *
+     * @param  string $app_id  (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiResultMobileAppsSubmission
+     */
+    public function submission($app_id, $mobile_apps_submission)
+    {
+        list($response) = $this->submissionWithHttpInfo($app_id, $mobile_apps_submission);
+        return $response;
+    }
+
+    /**
+     * Operation submissionWithHttpInfo
+     *
+     * Submission form mobile apps
+     *
+     * @param  string $app_id  (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiResultMobileAppsSubmission, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function submissionWithHttpInfo($app_id, $mobile_apps_submission)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmission';
+        $request = $this->submissionRequest($app_id, $mobile_apps_submission);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmission',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation submissionAsync
+     *
+     * Submission form mobile apps
+     *
+     * @param  string $app_id  (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function submissionAsync($app_id, $mobile_apps_submission)
+    {
+        return $this->submissionAsyncWithHttpInfo($app_id, $mobile_apps_submission)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation submissionAsyncWithHttpInfo
+     *
+     * Submission form mobile apps
+     *
+     * @param  string $app_id  (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function submissionAsyncWithHttpInfo($app_id, $mobile_apps_submission)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmission';
+        $request = $this->submissionRequest($app_id, $mobile_apps_submission);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'submission'
+     *
+     * @param  string $app_id  (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function submissionRequest($app_id, $mobile_apps_submission)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling submission'
+            );
+        }
+        // verify the required parameter 'mobile_apps_submission' is set
+        if ($mobile_apps_submission === null || (is_array($mobile_apps_submission) && count($mobile_apps_submission) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $mobile_apps_submission when calling submission'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/mobileapps/{appId}/submission';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($mobile_apps_submission)) {
+            $_tempBody = $mobile_apps_submission;
         }
 
         if ($multipart) {

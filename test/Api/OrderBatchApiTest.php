@@ -1,6 +1,6 @@
 <?php
 /**
- * MobileAppsApiTest
+ * OrderBatchApiTest
  * PHP version 5
  *
  * @category Class
@@ -33,14 +33,14 @@ use \Flipdish\\Client\ApiException;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * MobileAppsApiTest Class Doc Comment
+ * OrderBatchApiTest Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
+class OrderBatchApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -72,82 +72,12 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for editAppConfigSalesChannel
+     * Test case for getAllOrderBatches
      *
-     * Set the application sales channel configuration.
-     *
-     */
-    public function testEditAppConfigSalesChannel()
-    {
-    }
-
-    /**
-     * Test case for getAppConfig
-     *
-     * Get mobile app configuration.
+     * Returns order batches created in a given time range.
      *
      */
-    public function testGetAppConfig()
-    {
-    }
-
-    /**
-     * Test case for getAppDetails
-     *
-     * Get mobile app details.
-     *
-     */
-    public function testGetAppDetails()
-    {
-    }
-
-    /**
-     * Test case for getMobileAppsSubmissionStatus
-     *
-     * Get mobile app submitted status.
-     *
-     */
-    public function testGetMobileAppsSubmissionStatus()
-    {
-    }
-
-    /**
-     * Test case for getStatistics
-     *
-     * Get statistics mobile apps.
-     *
-     */
-    public function testGetStatistics()
-    {
-    }
-
-    /**
-     * Test case for setAppConfig
-     *
-     * Set mobile app configuration.
-     *
-     */
-    public function testSetAppConfig()
-    {
-    }
-
-    /**
-     * Test case for submission
-     *
-     * Submission form mobile apps.
-     *
-     */
-    public function testSubmission()
-    {
-    }
-
-    /**
-     * Test case for uploadMobileAppsImage
-     *
-     * Upload a Mobile Apps Image.
-     *
-     */
-    public function testUploadMobileAppsImage()
+    public function testGetAllOrderBatches()
     {
     }
 }

@@ -4,70 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**editAppConfigSalesChannel**](MobileAppsApi.md#editAppConfigSalesChannel) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
-[**editAppConfigSalesChannel_0**](MobileAppsApi.md#editAppConfigSalesChannel_0) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
+[**editAppConfigSalesChannel**](MobileAppsApi.md#editAppConfigSalesChannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
 [**getAppConfig**](MobileAppsApi.md#getAppConfig) | **GET** /api/v1.0/mobileapps/{appId}/config | Get mobile app configuration
 [**getAppDetails**](MobileAppsApi.md#getAppDetails) | **GET** /api/v1.0/mobileapps/{appId}/details | Get mobile app details
 [**getMobileAppsSubmissionStatus**](MobileAppsApi.md#getMobileAppsSubmissionStatus) | **GET** /api/v1.0/mobileapps/{appId}/submissionstatus{plataformType} | Get mobile app submitted status
+[**getStatistics**](MobileAppsApi.md#getStatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
 [**setAppConfig**](MobileAppsApi.md#setAppConfig) | **POST** /api/v1.0/mobileapps/{appId}/config | Set mobile app configuration
+[**submission**](MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 [**uploadMobileAppsImage**](MobileAppsApi.md#uploadMobileAppsImage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
 
 
 # **editAppConfigSalesChannel**
-> \Flipdish\\Client\Models\RestApiResultMobileAppsSubmission editAppConfigSalesChannel($app_id, $mobile_apps_submission)
-
-Submission form mobile apps
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\MobileAppsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$app_id = "app_id_example"; // string | 
-$mobile_apps_submission = new \Flipdish\\Client\Models\MobileAppsSubmission(); // \Flipdish\\Client\Models\MobileAppsSubmission | 
-
-try {
-    $result = $apiInstance->editAppConfigSalesChannel($app_id, $mobile_apps_submission);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling MobileAppsApi->editAppConfigSalesChannel: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
- **mobile_apps_submission** | [**\Flipdish\\Client\Models\MobileAppsSubmission**](../Model/MobileAppsSubmission.md)|  |
-
-### Return type
-
-[**\Flipdish\\Client\Models\RestApiResultMobileAppsSubmission**](../Model/RestApiResultMobileAppsSubmission.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **editAppConfigSalesChannel_0**
-> \Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel editAppConfigSalesChannel_0($app_id, $app_config_sales_channel)
+> \Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel editAppConfigSalesChannel($app_id, $app_config_sales_channel)
 
 Set the application sales channel configuration
 
@@ -89,10 +37,10 @@ $app_id = "app_id_example"; // string |
 $app_config_sales_channel = new \Flipdish\\Client\Models\AppConfigSalesChannel(); // \Flipdish\\Client\Models\AppConfigSalesChannel | 
 
 try {
-    $result = $apiInstance->editAppConfigSalesChannel_0($app_id, $app_config_sales_channel);
+    $result = $apiInstance->editAppConfigSalesChannel($app_id, $app_config_sales_channel);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MobileAppsApi->editAppConfigSalesChannel_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MobileAppsApi->editAppConfigSalesChannel: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -274,6 +222,59 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getStatistics**
+> \Flipdish\\Client\Models\RestApiArrayResultMobileAppsStatistics getStatistics($app_id, $platform_types)
+
+Get statistics mobile apps
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MobileAppsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$platform_types = array("platform_types_example"); // string[] | 
+
+try {
+    $result = $apiInstance->getStatistics($app_id, $platform_types);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MobileAppsApi->getStatistics: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **platform_types** | [**string[]**](../Model/string.md)|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiArrayResultMobileAppsStatistics**](../Model/RestApiArrayResultMobileAppsStatistics.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **setAppConfig**
 > \Flipdish\\Client\Models\RestApiResult setAppConfig($app_id, $config_update)
 
@@ -315,6 +316,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiResult**](../Model/RestApiResult.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **submission**
+> \Flipdish\\Client\Models\RestApiResultMobileAppsSubmission submission($app_id, $mobile_apps_submission)
+
+Submission form mobile apps
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MobileAppsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$mobile_apps_submission = new \Flipdish\\Client\Models\MobileAppsSubmission(); // \Flipdish\\Client\Models\MobileAppsSubmission | 
+
+try {
+    $result = $apiInstance->submission($app_id, $mobile_apps_submission);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MobileAppsApi->submission: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **mobile_apps_submission** | [**\Flipdish\\Client\Models\MobileAppsSubmission**](../Model/MobileAppsSubmission.md)|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultMobileAppsSubmission**](../Model/RestApiResultMobileAppsSubmission.md)
 
 ### Authorization
 

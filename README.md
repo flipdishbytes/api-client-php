@@ -364,12 +364,13 @@ Class | Method | HTTP request | Description
 *MetafieldDefinitionsApi* | [**getOwnerEntityConfigurations**](docs/Api/MetafieldDefinitionsApi.md#getownerentityconfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
 *MetafieldDefinitionsApi* | [**getOwnerEntityRecommendations**](docs/Api/MetafieldDefinitionsApi.md#getownerentityrecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | Get OwnerEntity Definition Recommendations
 *MetafieldDefinitionsApi* | [**updateMetafieldDefinition**](docs/Api/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
-*MobileAppsApi* | [**editAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#editappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
-*MobileAppsApi* | [**editAppConfigSalesChannel_0**](docs/Api/MobileAppsApi.md#editappconfigsaleschannel_0) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
+*MobileAppsApi* | [**editAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#editappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
 *MobileAppsApi* | [**getAppConfig**](docs/Api/MobileAppsApi.md#getappconfig) | **GET** /api/v1.0/mobileapps/{appId}/config | Get mobile app configuration
 *MobileAppsApi* | [**getAppDetails**](docs/Api/MobileAppsApi.md#getappdetails) | **GET** /api/v1.0/mobileapps/{appId}/details | Get mobile app details
 *MobileAppsApi* | [**getMobileAppsSubmissionStatus**](docs/Api/MobileAppsApi.md#getmobileappssubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submissionstatus{plataformType} | Get mobile app submitted status
+*MobileAppsApi* | [**getStatistics**](docs/Api/MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
 *MobileAppsApi* | [**setAppConfig**](docs/Api/MobileAppsApi.md#setappconfig) | **POST** /api/v1.0/mobileapps/{appId}/config | Set mobile app configuration
+*MobileAppsApi* | [**submission**](docs/Api/MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 *MobileAppsApi* | [**uploadMobileAppsImage**](docs/Api/MobileAppsApi.md#uploadmobileappsimage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
 *OAuthClientsApi* | [**addRedirectUri**](docs/Api/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**createOAuthApp**](docs/Api/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
@@ -386,6 +387,7 @@ Class | Method | HTTP request | Description
 *OnboardingApi* | [**onboardingGetOnboardingItems**](docs/Api/OnboardingApi.md#onboardinggetonboardingitems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
 *OnboardingApi* | [**onboardingUpdateOnboardingConfig**](docs/Api/OnboardingApi.md#onboardingupdateonboardingconfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
 *OnboardingApi* | [**onboardingUpdateOnboardingItem**](docs/Api/OnboardingApi.md#onboardingupdateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
+*OrderBatchApi* | [**getAllOrderBatches**](docs/Api/OrderBatchApi.md#getallorderbatches) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches | Returns order batches created in a given time range
 *OrderIngestApi* | [**orderIngestSubmitNewOrder**](docs/Api/OrderIngestApi.md#orderingestsubmitneworder) | **POST** /api/v1.0/{appNameId}/order-ingest/submit | Provides an ability to ingest a 3rd party order into Flipdish ecosystem
 *OrdersApi* | [**acceptOrder**](docs/Api/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
 *OrdersApi* | [**dispatchOrder**](docs/Api/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
@@ -771,6 +773,7 @@ Class | Method | HTTP request | Description
  - [MobileAppConfig](docs/Model/MobileAppConfig.md)
  - [MobileAppsDetails](docs/Model/MobileAppsDetails.md)
  - [MobileAppsImage](docs/Model/MobileAppsImage.md)
+ - [MobileAppsStatistics](docs/Model/MobileAppsStatistics.md)
  - [MobileAppsSubmission](docs/Model/MobileAppsSubmission.md)
  - [MobileAppsSubmissionStatus](docs/Model/MobileAppsSubmissionStatus.md)
  - [ModelBase](docs/Model/ModelBase.md)
@@ -782,6 +785,7 @@ Class | Method | HTTP request | Description
  - [OnboardingItemUpdate](docs/Model/OnboardingItemUpdate.md)
  - [Order](docs/Model/Order.md)
  - [OrderAcceptedEvent](docs/Model/OrderAcceptedEvent.md)
+ - [OrderBatchItem](docs/Model/OrderBatchItem.md)
  - [OrderCapacityConfigUpdatedEvent](docs/Model/OrderCapacityConfigUpdatedEvent.md)
  - [OrderCreatedEvent](docs/Model/OrderCreatedEvent.md)
  - [OrderCustomerTrackingCreatedEvent](docs/Model/OrderCustomerTrackingCreatedEvent.md)
@@ -888,8 +892,10 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultMenuSummary](docs/Model/RestApiArrayResultMenuSummary.md)
  - [RestApiArrayResultMenuTaxDetails](docs/Model/RestApiArrayResultMenuTaxDetails.md)
  - [RestApiArrayResultMetadata](docs/Model/RestApiArrayResultMetadata.md)
+ - [RestApiArrayResultMobileAppsStatistics](docs/Model/RestApiArrayResultMobileAppsStatistics.md)
  - [RestApiArrayResultOAuthApp](docs/Model/RestApiArrayResultOAuthApp.md)
  - [RestApiArrayResultOauthClientRedirectUri](docs/Model/RestApiArrayResultOauthClientRedirectUri.md)
+ - [RestApiArrayResultOrderBatchItem](docs/Model/RestApiArrayResultOrderBatchItem.md)
  - [RestApiArrayResultOrderFulfillmentStatus](docs/Model/RestApiArrayResultOrderFulfillmentStatus.md)
  - [RestApiArrayResultPayoutSummary](docs/Model/RestApiArrayResultPayoutSummary.md)
  - [RestApiArrayResultPreOrderTime](docs/Model/RestApiArrayResultPreOrderTime.md)
