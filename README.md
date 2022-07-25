@@ -402,6 +402,15 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**searchFulfillmentStatuses**](docs/Api/OrdersApi.md#searchfulfillmentstatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
 *OrdersApi* | [**updateDeliveryInformation**](docs/Api/OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
 *OrdersApi* | [**updateFulfillmentState**](docs/Api/OrdersApi.md#updatefulfillmentstate) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | Update fulfillment status information to an order
+*PaygreenApi* | [**createPayGreenConfiguration**](docs/Api/PaygreenApi.md#createpaygreenconfiguration) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen | 
+*PaygreenApi* | [**deletePaygreenConfiguration**](docs/Api/PaygreenApi.md#deletepaygreenconfiguration) | **DELETE** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
+*PaygreenApi* | [**getPaygreenConfigurations**](docs/Api/PaygreenApi.md#getpaygreenconfigurations) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen | 
+*PaygreenApi* | [**getStoreAvailablePayGreenConfigurations**](docs/Api/PaygreenApi.md#getstoreavailablepaygreenconfigurations) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId}/available-configurations | 
+*PaygreenApi* | [**getStorePayGreenConfiguration**](docs/Api/PaygreenApi.md#getstorepaygreenconfiguration) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores | 
+*PaygreenApi* | [**getStorePayGreenConfiguration_**](docs/Api/PaygreenApi.md#getstorepaygreenconfiguration_) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId} | 
+*PaygreenApi* | [**listPayGreenConfigurations**](docs/Api/PaygreenApi.md#listpaygreenconfigurations) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
+*PaygreenApi* | [**updatePayGreenConfiguration**](docs/Api/PaygreenApi.md#updatepaygreenconfiguration) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
+*PaygreenApi* | [**updateStorePayGreenConfiguration_**](docs/Api/PaygreenApi.md#updatestorepaygreenconfiguration_) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId} | 
 *PaymentIntentsApi* | [**getPaymentIntent**](docs/Api/PaymentIntentsApi.md#getpaymentintent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | Returns stripe payment intent for a given id
 *PaymentsApi* | [**getOrderPaymentInformation**](docs/Api/PaymentsApi.md#getorderpaymentinformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | Returns payment refund information related to the order with the order id
 *PayoutsApi* | [**getPayout**](docs/Api/PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | Get Payout details broken down by Store
@@ -599,6 +608,7 @@ Class | Method | HTTP request | Description
  - [CreateMenuTaxRate](docs/Model/CreateMenuTaxRate.md)
  - [CreateMetadata](docs/Model/CreateMetadata.md)
  - [CreateMetafieldDefinition](docs/Model/CreateMetafieldDefinition.md)
+ - [CreatePayGreenConfigurationRequest](docs/Model/CreatePayGreenConfigurationRequest.md)
  - [CreateProduct](docs/Model/CreateProduct.md)
  - [CreateProductReference](docs/Model/CreateProductReference.md)
  - [CreateTeammate](docs/Model/CreateTeammate.md)
@@ -901,6 +911,9 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultPreOrderTime](docs/Model/RestApiArrayResultPreOrderTime.md)
  - [RestApiArrayResultProcessingFeeConfig](docs/Model/RestApiArrayResultProcessingFeeConfig.md)
  - [RestApiArrayResultRestApiDefaultResponse](docs/Model/RestApiArrayResultRestApiDefaultResponse.md)
+ - [RestApiArrayResultRestaurantVoucherEligibleStore](docs/Model/RestApiArrayResultRestaurantVoucherEligibleStore.md)
+ - [RestApiArrayResultRestaurantVoucherPaygreenConfiguration](docs/Model/RestApiArrayResultRestaurantVoucherPaygreenConfiguration.md)
+ - [RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary](docs/Model/RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary.md)
  - [RestApiArrayResultRetentionCampaign](docs/Model/RestApiArrayResultRetentionCampaign.md)
  - [RestApiArrayResultStoreChannelAssignment](docs/Model/RestApiArrayResultStoreChannelAssignment.md)
  - [RestApiArrayResultStoreChannelStoreMapping](docs/Model/RestApiArrayResultStoreChannelStoreMapping.md)
@@ -1016,6 +1029,8 @@ Class | Method | HTTP request | Description
  - [RestApiResultProduct](docs/Model/RestApiResultProduct.md)
  - [RestApiResultPushNotificationResponse](docs/Model/RestApiResultPushNotificationResponse.md)
  - [RestApiResultRedeemInvitationResult](docs/Model/RestApiResultRedeemInvitationResult.md)
+ - [RestApiResultRestaurantVoucherPaygreenConfiguration](docs/Model/RestApiResultRestaurantVoucherPaygreenConfiguration.md)
+ - [RestApiResultRestaurantVoucherPaygreenStoreConfiguration](docs/Model/RestApiResultRestaurantVoucherPaygreenStoreConfiguration.md)
  - [RestApiResultRetentionCampaign](docs/Model/RestApiResultRetentionCampaign.md)
  - [RestApiResultServiceCharge](docs/Model/RestApiResultServiceCharge.md)
  - [RestApiResultStore](docs/Model/RestApiResultStore.md)
@@ -1040,6 +1055,11 @@ Class | Method | HTTP request | Description
  - [RestApiStringArrayResult](docs/Model/RestApiStringArrayResult.md)
  - [RestApiStringResult](docs/Model/RestApiStringResult.md)
  - [RestApiUnauthorizedResult](docs/Model/RestApiUnauthorizedResult.md)
+ - [RestaurantVoucherAssignedStore](docs/Model/RestaurantVoucherAssignedStore.md)
+ - [RestaurantVoucherEligibleStore](docs/Model/RestaurantVoucherEligibleStore.md)
+ - [RestaurantVoucherPaygreenConfiguration](docs/Model/RestaurantVoucherPaygreenConfiguration.md)
+ - [RestaurantVoucherPaygreenConfigurationSummary](docs/Model/RestaurantVoucherPaygreenConfigurationSummary.md)
+ - [RestaurantVoucherPaygreenStoreConfiguration](docs/Model/RestaurantVoucherPaygreenStoreConfiguration.md)
  - [RetentionCampaign](docs/Model/RetentionCampaign.md)
  - [RetentionCampaignBase](docs/Model/RetentionCampaignBase.md)
  - [RetentionCampaignCreatedEvent](docs/Model/RetentionCampaignCreatedEvent.md)
@@ -1138,8 +1158,10 @@ Class | Method | HTTP request | Description
  - [UpdateGroupReference](docs/Model/UpdateGroupReference.md)
  - [UpdateLocationArea](docs/Model/UpdateLocationArea.md)
  - [UpdateMetafieldDefinition](docs/Model/UpdateMetafieldDefinition.md)
+ - [UpdatePayGreenConfigurationRequest](docs/Model/UpdatePayGreenConfigurationRequest.md)
  - [UpdateProduct](docs/Model/UpdateProduct.md)
  - [UpdateProductReference](docs/Model/UpdateProductReference.md)
+ - [UpdateStorePaygreenConfigurationRequest](docs/Model/UpdateStorePaygreenConfigurationRequest.md)
  - [UpdateTipConfiguration](docs/Model/UpdateTipConfiguration.md)
  - [UserAnsweredSignupQuestionsEvent](docs/Model/UserAnsweredSignupQuestionsEvent.md)
  - [UserCreatedEvent](docs/Model/UserCreatedEvent.md)
