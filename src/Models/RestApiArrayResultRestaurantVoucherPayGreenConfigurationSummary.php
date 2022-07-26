@@ -1,6 +1,6 @@
 <?php
 /**
- * MobileAppsSubmissionStatus
+ * RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * MobileAppsSubmissionStatus Class Doc Comment
+ * RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary Class Doc Comment
  *
  * @category Class
- * @description Mobile Apps Status
+ * @description Rest api array result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
+class RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'MobileAppsSubmissionStatus';
+    protected static $swaggerModelName = 'RestApiArrayResult[RestaurantVoucherPayGreenConfigurationSummary]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'status' => 'string'
+        'data' => '\Flipdish\\Client\Models\RestaurantVoucherPayGreenConfigurationSummary[]'
     ];
 
     /**
@@ -67,7 +67,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'status' => null
+        'data' => null
     ];
 
     /**
@@ -97,7 +97,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'status' => 'Status'
+        'data' => 'Data'
     ];
 
     /**
@@ -106,7 +106,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'status' => 'setStatus'
+        'data' => 'setData'
     ];
 
     /**
@@ -115,7 +115,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'status' => 'getStatus'
+        'data' => 'getData'
     ];
 
     /**
@@ -159,31 +159,8 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const STATUS_NONE = 'None';
-    const STATUS_IN_PROGRESS = 'InProgress';
-    const STATUS_SUBMITTED = 'Submitted';
-    const STATUS_APP_STORE_REVIEW = 'AppStoreReview';
-    const STATUS_SUCESSFULL = 'Sucessfull';
-    const STATUS_UNSUCCESFUL = 'Unsuccesful';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_NONE,
-            self::STATUS_IN_PROGRESS,
-            self::STATUS_SUBMITTED,
-            self::STATUS_APP_STORE_REVIEW,
-            self::STATUS_SUCESSFULL,
-            self::STATUS_UNSUCCESFUL,
-        ];
-    }
     
 
     /**
@@ -201,7 +178,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -213,14 +190,9 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
         }
-
         return $invalidProperties;
     }
 
@@ -237,34 +209,25 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets status
+     * Gets data
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\RestaurantVoucherPayGreenConfigurationSummary[]
      */
-    public function getStatus()
+    public function getData()
     {
-        return $this->container['status'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets status
+     * Sets data
      *
-     * @param string $status Mobile App Status
+     * @param \Flipdish\\Client\Models\RestaurantVoucherPayGreenConfigurationSummary[] $data Generic data object.
      *
      * @return $this
      */
-    public function setStatus($status)
+    public function setData($data)
     {
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($status) && !in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'status', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['status'] = $status;
+        $this->container['data'] = $data;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * CreatePayGreenConfigurationRequestTest
+ * MobileAppsSubmissionDetailsTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * CreatePayGreenConfigurationRequestTest Class Doc Comment
+ * MobileAppsSubmissionDetailsTest Class Doc Comment
  *
  * @category    Class
- * @description CreatePayGreenConfigurationRequest
+ * @description Mobile Apps form submission
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CreatePayGreenConfigurationRequestTest extends \PHPUnit_Framework_TestCase
+class MobileAppsSubmissionDetailsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,58 @@ class CreatePayGreenConfigurationRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CreatePayGreenConfigurationRequest"
+     * Test "MobileAppsSubmissionDetails"
      */
-    public function testCreatePayGreenConfigurationRequest()
+    public function testMobileAppsSubmissionDetails()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "app_name"
      */
-    public function testPropertyName()
+    public function testPropertyAppName()
     {
     }
 
     /**
-     * Test attribute "pay_green_id"
+     * Test attribute "app_description"
      */
-    public function testPropertyPayGreenId()
+    public function testPropertyAppDescription()
     {
     }
 
     /**
-     * Test attribute "pay_green_private_key"
+     * Test attribute "app_short_description"
      */
-    public function testPropertyPayGreenPrivateKey()
+    public function testPropertyAppShortDescription()
     {
     }
 
     /**
-     * Test attribute "assigned_stores"
+     * Test attribute "keywords"
      */
-    public function testPropertyAssignedStores()
+    public function testPropertyKeywords()
+    {
+    }
+
+    /**
+     * Test attribute "app_logo_url"
+     */
+    public function testPropertyAppLogoUrl()
+    {
+    }
+
+    /**
+     * Test attribute "auto_publish"
+     */
+    public function testPropertyAutoPublish()
+    {
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
     {
     }
 }

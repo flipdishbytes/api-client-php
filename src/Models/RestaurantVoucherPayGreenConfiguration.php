@@ -1,6 +1,6 @@
 <?php
 /**
- * MobileAppsSubmissionStatus
+ * RestaurantVoucherPayGreenConfiguration
  *
  * PHP version 5
  *
@@ -33,15 +33,14 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * MobileAppsSubmissionStatus Class Doc Comment
+ * RestaurantVoucherPayGreenConfiguration Class Doc Comment
  *
  * @category Class
- * @description Mobile Apps Status
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
+class RestaurantVoucherPayGreenConfiguration implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +49,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'MobileAppsSubmissionStatus';
+    protected static $swaggerModelName = 'RestaurantVoucherPayGreenConfiguration';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +57,10 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'status' => 'string'
+        'name' => 'string',
+        'pay_green_id' => 'string',
+        'pay_green_configuration_id' => 'int',
+        'assigned_stores' => '\Flipdish\\Client\Models\RestaurantVoucherAssignedStore[]'
     ];
 
     /**
@@ -67,7 +69,10 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'status' => null
+        'name' => null,
+        'pay_green_id' => null,
+        'pay_green_configuration_id' => 'int32',
+        'assigned_stores' => null
     ];
 
     /**
@@ -97,7 +102,10 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'status' => 'Status'
+        'name' => 'Name',
+        'pay_green_id' => 'PayGreenId',
+        'pay_green_configuration_id' => 'PayGreenConfigurationId',
+        'assigned_stores' => 'AssignedStores'
     ];
 
     /**
@@ -106,7 +114,10 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'status' => 'setStatus'
+        'name' => 'setName',
+        'pay_green_id' => 'setPayGreenId',
+        'pay_green_configuration_id' => 'setPayGreenConfigurationId',
+        'assigned_stores' => 'setAssignedStores'
     ];
 
     /**
@@ -115,7 +126,10 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'status' => 'getStatus'
+        'name' => 'getName',
+        'pay_green_id' => 'getPayGreenId',
+        'pay_green_configuration_id' => 'getPayGreenConfigurationId',
+        'assigned_stores' => 'getAssignedStores'
     ];
 
     /**
@@ -159,31 +173,8 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const STATUS_NONE = 'None';
-    const STATUS_IN_PROGRESS = 'InProgress';
-    const STATUS_SUBMITTED = 'Submitted';
-    const STATUS_APP_STORE_REVIEW = 'AppStoreReview';
-    const STATUS_SUCESSFULL = 'Sucessfull';
-    const STATUS_UNSUCCESFUL = 'Unsuccesful';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_NONE,
-            self::STATUS_IN_PROGRESS,
-            self::STATUS_SUBMITTED,
-            self::STATUS_APP_STORE_REVIEW,
-            self::STATUS_SUCESSFULL,
-            self::STATUS_UNSUCCESFUL,
-        ];
-    }
     
 
     /**
@@ -201,7 +192,10 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['pay_green_id'] = isset($data['pay_green_id']) ? $data['pay_green_id'] : null;
+        $this->container['pay_green_configuration_id'] = isset($data['pay_green_configuration_id']) ? $data['pay_green_configuration_id'] : null;
+        $this->container['assigned_stores'] = isset($data['assigned_stores']) ? $data['assigned_stores'] : null;
     }
 
     /**
@@ -212,14 +206,6 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -237,34 +223,97 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets status
+     * Gets name
      *
      * @return string
      */
-    public function getStatus()
+    public function getName()
     {
-        return $this->container['status'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets status
+     * Sets name
      *
-     * @param string $status Mobile App Status
+     * @param string $name name
      *
      * @return $this
      */
-    public function setStatus($status)
+    public function setName($name)
     {
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($status) && !in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'status', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['status'] = $status;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets pay_green_id
+     *
+     * @return string
+     */
+    public function getPayGreenId()
+    {
+        return $this->container['pay_green_id'];
+    }
+
+    /**
+     * Sets pay_green_id
+     *
+     * @param string $pay_green_id pay_green_id
+     *
+     * @return $this
+     */
+    public function setPayGreenId($pay_green_id)
+    {
+        $this->container['pay_green_id'] = $pay_green_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets pay_green_configuration_id
+     *
+     * @return int
+     */
+    public function getPayGreenConfigurationId()
+    {
+        return $this->container['pay_green_configuration_id'];
+    }
+
+    /**
+     * Sets pay_green_configuration_id
+     *
+     * @param int $pay_green_configuration_id pay_green_configuration_id
+     *
+     * @return $this
+     */
+    public function setPayGreenConfigurationId($pay_green_configuration_id)
+    {
+        $this->container['pay_green_configuration_id'] = $pay_green_configuration_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets assigned_stores
+     *
+     * @return \Flipdish\\Client\Models\RestaurantVoucherAssignedStore[]
+     */
+    public function getAssignedStores()
+    {
+        return $this->container['assigned_stores'];
+    }
+
+    /**
+     * Sets assigned_stores
+     *
+     * @param \Flipdish\\Client\Models\RestaurantVoucherAssignedStore[] $assigned_stores assigned_stores
+     *
+     * @return $this
+     */
+    public function setAssignedStores($assigned_stores)
+    {
+        $this->container['assigned_stores'] = $assigned_stores;
 
         return $this;
     }

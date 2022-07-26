@@ -1,6 +1,6 @@
 <?php
 /**
- * MobileAppsApi
+ * RestaurantVouchersPayGreenApi
  * PHP version 5
  *
  * @category Class
@@ -40,14 +40,14 @@ use Flipdish\\Client\HeaderSelector;
 use Flipdish\\Client\ObjectSerializer;
 
 /**
- * MobileAppsApi Class Doc Comment
+ * RestaurantVouchersPayGreenApi Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MobileAppsApi
+class RestaurantVouchersPayGreenApi
 {
     /**
      * @var ClientInterface
@@ -88,39 +88,35 @@ class MobileAppsApi
     }
 
     /**
-     * Operation getStatistics
+     * Operation createPayGreenConfiguration
      *
-     * Get statistics mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  string[] $platform_types  (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\CreatePayGreenConfigurationRequest $request request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiArrayResultMobileAppsStatistics
+     * @return \Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration
      */
-    public function getStatistics($app_id, $platform_types)
+    public function createPayGreenConfiguration($app_id, $request)
     {
-        list($response) = $this->getStatisticsWithHttpInfo($app_id, $platform_types);
+        list($response) = $this->createPayGreenConfigurationWithHttpInfo($app_id, $request);
         return $response;
     }
 
     /**
-     * Operation getStatisticsWithHttpInfo
+     * Operation createPayGreenConfigurationWithHttpInfo
      *
-     * Get statistics mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  string[] $platform_types  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreatePayGreenConfigurationRequest $request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiArrayResultMobileAppsStatistics, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStatisticsWithHttpInfo($app_id, $platform_types)
+    public function createPayGreenConfigurationWithHttpInfo($app_id, $request)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultMobileAppsStatistics';
-        $request = $this->getStatisticsRequest($app_id, $platform_types);
+        $returnType = '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration';
+        $request = $this->createPayGreenConfigurationRequest($app_id, $request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -171,7 +167,7 @@ class MobileAppsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiArrayResultMobileAppsStatistics',
+                        '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,19 +202,19 @@ class MobileAppsApi
     }
 
     /**
-     * Operation getStatisticsAsync
+     * Operation createPayGreenConfigurationAsync
      *
-     * Get statistics mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string[] $platform_types  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreatePayGreenConfigurationRequest $request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStatisticsAsync($app_id, $platform_types)
+    public function createPayGreenConfigurationAsync($app_id, $request)
     {
-        return $this->getStatisticsAsyncWithHttpInfo($app_id, $platform_types)
+        return $this->createPayGreenConfigurationAsyncWithHttpInfo($app_id, $request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -227,20 +223,20 @@ class MobileAppsApi
     }
 
     /**
-     * Operation getStatisticsAsyncWithHttpInfo
+     * Operation createPayGreenConfigurationAsyncWithHttpInfo
      *
-     * Get statistics mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string[] $platform_types  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreatePayGreenConfigurationRequest $request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStatisticsAsyncWithHttpInfo($app_id, $platform_types)
+    public function createPayGreenConfigurationAsyncWithHttpInfo($app_id, $request)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultMobileAppsStatistics';
-        $request = $this->getStatisticsRequest($app_id, $platform_types);
+        $returnType = '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration';
+        $request = $this->createPayGreenConfigurationRequest($app_id, $request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -280,334 +276,30 @@ class MobileAppsApi
     }
 
     /**
-     * Create request for operation 'getStatistics'
+     * Create request for operation 'createPayGreenConfiguration'
      *
-     * @param  string $app_id  (required)
-     * @param  string[] $platform_types  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getStatisticsRequest($app_id, $platform_types)
-    {
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling getStatistics'
-            );
-        }
-        // verify the required parameter 'platform_types' is set
-        if ($platform_types === null || (is_array($platform_types) && count($platform_types) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $platform_types when calling getStatistics'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/mobileapps/{appId}/statistics';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if (is_array($platform_types)) {
-            $queryParams['platformTypes'] = $platform_types;
-        } else
-        if ($platform_types !== null) {
-            $queryParams['platformTypes'] = ObjectSerializer::toQueryValue($platform_types);
-        }
-
-        // path params
-        if ($app_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation getSubmissionDetails
-     *
-     * Get submission details mobile apps
-     *
-     * @param  string $app_id  (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionDetails
-     */
-    public function getSubmissionDetails($app_id)
-    {
-        list($response) = $this->getSubmissionDetailsWithHttpInfo($app_id);
-        return $response;
-    }
-
-    /**
-     * Operation getSubmissionDetailsWithHttpInfo
-     *
-     * Get submission details mobile apps
-     *
-     * @param  string $app_id  (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionDetails, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getSubmissionDetailsWithHttpInfo($app_id)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionDetails';
-        $request = $this->getSubmissionDetailsRequest($app_id);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionDetails',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getSubmissionDetailsAsync
-     *
-     * Get submission details mobile apps
-     *
-     * @param  string $app_id  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getSubmissionDetailsAsync($app_id)
-    {
-        return $this->getSubmissionDetailsAsyncWithHttpInfo($app_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getSubmissionDetailsAsyncWithHttpInfo
-     *
-     * Get submission details mobile apps
-     *
-     * @param  string $app_id  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getSubmissionDetailsAsyncWithHttpInfo($app_id)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionDetails';
-        $request = $this->getSubmissionDetailsRequest($app_id);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'getSubmissionDetails'
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreatePayGreenConfigurationRequest $request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getSubmissionDetailsRequest($app_id)
+    protected function createPayGreenConfigurationRequest($app_id, $request)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling getSubmissionDetails'
+                'Missing the required parameter $app_id when calling createPayGreenConfiguration'
+            );
+        }
+        // verify the required parameter 'request' is set
+        if ($request === null || (is_array($request) && count($request) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request when calling createPayGreenConfiguration'
             );
         }
 
-        $resourcePath = '/api/v1.0/mobileapps/{appId}/submission/details';
+        $resourcePath = '/api/v1.0/{appId}/restaurant-vouchers/paygreen';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -626,628 +318,8 @@ class MobileAppsApi
 
         // body params
         $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation getSubmissionStatus
-     *
-     * Get submission status mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  string $type  (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus
-     */
-    public function getSubmissionStatus($app_id, $type)
-    {
-        list($response) = $this->getSubmissionStatusWithHttpInfo($app_id, $type);
-        return $response;
-    }
-
-    /**
-     * Operation getSubmissionStatusWithHttpInfo
-     *
-     * Get submission status mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  string $type  (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getSubmissionStatusWithHttpInfo($app_id, $type)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus';
-        $request = $this->getSubmissionStatusRequest($app_id, $type);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getSubmissionStatusAsync
-     *
-     * Get submission status mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  string $type  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getSubmissionStatusAsync($app_id, $type)
-    {
-        return $this->getSubmissionStatusAsyncWithHttpInfo($app_id, $type)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getSubmissionStatusAsyncWithHttpInfo
-     *
-     * Get submission status mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  string $type  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getSubmissionStatusAsyncWithHttpInfo($app_id, $type)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus';
-        $request = $this->getSubmissionStatusRequest($app_id, $type);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'getSubmissionStatus'
-     *
-     * @param  string $app_id  (required)
-     * @param  string $type  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getSubmissionStatusRequest($app_id, $type)
-    {
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling getSubmissionStatus'
-            );
-        }
-        // verify the required parameter 'type' is set
-        if ($type === null || (is_array($type) && count($type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $type when calling getSubmissionStatus'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/mobileapps/{appId}/submission/status';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if ($type !== null) {
-            $queryParams['type'] = ObjectSerializer::toQueryValue($type);
-        }
-
-        // path params
-        if ($app_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation submission
-     *
-     * Submission form mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultMobileAppsSubmission
-     */
-    public function submission($app_id, $mobile_apps_submission)
-    {
-        list($response) = $this->submissionWithHttpInfo($app_id, $mobile_apps_submission);
-        return $response;
-    }
-
-    /**
-     * Operation submissionWithHttpInfo
-     *
-     * Submission form mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultMobileAppsSubmission, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function submissionWithHttpInfo($app_id, $mobile_apps_submission)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmission';
-        $request = $this->submissionRequest($app_id, $mobile_apps_submission);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmission',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation submissionAsync
-     *
-     * Submission form mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function submissionAsync($app_id, $mobile_apps_submission)
-    {
-        return $this->submissionAsyncWithHttpInfo($app_id, $mobile_apps_submission)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation submissionAsyncWithHttpInfo
-     *
-     * Submission form mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function submissionAsyncWithHttpInfo($app_id, $mobile_apps_submission)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmission';
-        $request = $this->submissionRequest($app_id, $mobile_apps_submission);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'submission'
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function submissionRequest($app_id, $mobile_apps_submission)
-    {
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling submission'
-            );
-        }
-        // verify the required parameter 'mobile_apps_submission' is set
-        if ($mobile_apps_submission === null || (is_array($mobile_apps_submission) && count($mobile_apps_submission) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $mobile_apps_submission when calling submission'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/mobileapps/{appId}/submission';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-        // path params
-        if ($app_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'appId' . '}',
-                ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-        if (isset($mobile_apps_submission)) {
-            $_tempBody = $mobile_apps_submission;
+        if (isset($request)) {
+            $_tempBody = $request;
         }
 
         if ($multipart) {
@@ -1323,39 +395,35 @@ class MobileAppsApi
     }
 
     /**
-     * Operation updateAppConfigSalesChannel
+     * Operation deletePayGreenConfiguration
      *
-     * Update the application sales channel configuration
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel  (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $paygreen_configuration_id paygreen_configuration_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel
+     * @return object
      */
-    public function updateAppConfigSalesChannel($app_id, $app_config_sales_channel)
+    public function deletePayGreenConfiguration($app_id, $paygreen_configuration_id)
     {
-        list($response) = $this->updateAppConfigSalesChannelWithHttpInfo($app_id, $app_config_sales_channel);
+        list($response) = $this->deletePayGreenConfigurationWithHttpInfo($app_id, $paygreen_configuration_id);
         return $response;
     }
 
     /**
-     * Operation updateAppConfigSalesChannelWithHttpInfo
+     * Operation deletePayGreenConfigurationWithHttpInfo
      *
-     * Update the application sales channel configuration
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel  (required)
+     * @param  string $app_id (required)
+     * @param  int $paygreen_configuration_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAppConfigSalesChannelWithHttpInfo($app_id, $app_config_sales_channel)
+    public function deletePayGreenConfigurationWithHttpInfo($app_id, $paygreen_configuration_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel';
-        $request = $this->updateAppConfigSalesChannelRequest($app_id, $app_config_sales_channel);
+        $returnType = 'object';
+        $request = $this->deletePayGreenConfigurationRequest($app_id, $paygreen_configuration_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1406,7 +474,7 @@ class MobileAppsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel',
+                        'object',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1441,19 +509,19 @@ class MobileAppsApi
     }
 
     /**
-     * Operation updateAppConfigSalesChannelAsync
+     * Operation deletePayGreenConfigurationAsync
      *
-     * Update the application sales channel configuration
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel  (required)
+     * @param  string $app_id (required)
+     * @param  int $paygreen_configuration_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAppConfigSalesChannelAsync($app_id, $app_config_sales_channel)
+    public function deletePayGreenConfigurationAsync($app_id, $paygreen_configuration_id)
     {
-        return $this->updateAppConfigSalesChannelAsyncWithHttpInfo($app_id, $app_config_sales_channel)
+        return $this->deletePayGreenConfigurationAsyncWithHttpInfo($app_id, $paygreen_configuration_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1462,20 +530,20 @@ class MobileAppsApi
     }
 
     /**
-     * Operation updateAppConfigSalesChannelAsyncWithHttpInfo
+     * Operation deletePayGreenConfigurationAsyncWithHttpInfo
      *
-     * Update the application sales channel configuration
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel  (required)
+     * @param  string $app_id (required)
+     * @param  int $paygreen_configuration_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateAppConfigSalesChannelAsyncWithHttpInfo($app_id, $app_config_sales_channel)
+    public function deletePayGreenConfigurationAsyncWithHttpInfo($app_id, $paygreen_configuration_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel';
-        $request = $this->updateAppConfigSalesChannelRequest($app_id, $app_config_sales_channel);
+        $returnType = 'object';
+        $request = $this->deletePayGreenConfigurationRequest($app_id, $paygreen_configuration_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1515,30 +583,331 @@ class MobileAppsApi
     }
 
     /**
-     * Create request for operation 'updateAppConfigSalesChannel'
+     * Create request for operation 'deletePayGreenConfiguration'
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel  (required)
+     * @param  string $app_id (required)
+     * @param  int $paygreen_configuration_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateAppConfigSalesChannelRequest($app_id, $app_config_sales_channel)
+    protected function deletePayGreenConfigurationRequest($app_id, $paygreen_configuration_id)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling updateAppConfigSalesChannel'
+                'Missing the required parameter $app_id when calling deletePayGreenConfiguration'
             );
         }
-        // verify the required parameter 'app_config_sales_channel' is set
-        if ($app_config_sales_channel === null || (is_array($app_config_sales_channel) && count($app_config_sales_channel) === 0)) {
+        // verify the required parameter 'paygreen_configuration_id' is set
+        if ($paygreen_configuration_id === null || (is_array($paygreen_configuration_id) && count($paygreen_configuration_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_config_sales_channel when calling updateAppConfigSalesChannel'
+                'Missing the required parameter $paygreen_configuration_id when calling deletePayGreenConfiguration'
             );
         }
 
-        $resourcePath = '/api/v1.0/mobileapps/{appId}/saleschannel';
+        $resourcePath = '/api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($paygreen_configuration_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'paygreenConfigurationId' . '}',
+                ObjectSerializer::toPathValue($paygreen_configuration_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'DELETE',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getElegibleStores
+     *
+     * @param  string $app_id app_id (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherEligibleStore
+     */
+    public function getElegibleStores($app_id)
+    {
+        list($response) = $this->getElegibleStoresWithHttpInfo($app_id);
+        return $response;
+    }
+
+    /**
+     * Operation getElegibleStoresWithHttpInfo
+     *
+     * @param  string $app_id (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherEligibleStore, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getElegibleStoresWithHttpInfo($app_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherEligibleStore';
+        $request = $this->getElegibleStoresRequest($app_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherEligibleStore',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getElegibleStoresAsync
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getElegibleStoresAsync($app_id)
+    {
+        return $this->getElegibleStoresAsyncWithHttpInfo($app_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getElegibleStoresAsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getElegibleStoresAsyncWithHttpInfo($app_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherEligibleStore';
+        $request = $this->getElegibleStoresRequest($app_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getElegibleStores'
+     *
+     * @param  string $app_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getElegibleStoresRequest($app_id)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling getElegibleStores'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/{appId}/restaurant-vouchers/paygreen/stores';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1557,8 +926,1560 @@ class MobileAppsApi
 
         // body params
         $_tempBody = null;
-        if (isset($app_config_sales_channel)) {
-            $_tempBody = $app_config_sales_channel;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getPayGreenConfigurations
+     *
+     * @param  string $app_id app_id (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherPayGreenConfiguration
+     */
+    public function getPayGreenConfigurations($app_id)
+    {
+        list($response) = $this->getPayGreenConfigurationsWithHttpInfo($app_id);
+        return $response;
+    }
+
+    /**
+     * Operation getPayGreenConfigurationsWithHttpInfo
+     *
+     * @param  string $app_id (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherPayGreenConfiguration, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getPayGreenConfigurationsWithHttpInfo($app_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherPayGreenConfiguration';
+        $request = $this->getPayGreenConfigurationsRequest($app_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherPayGreenConfiguration',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getPayGreenConfigurationsAsync
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getPayGreenConfigurationsAsync($app_id)
+    {
+        return $this->getPayGreenConfigurationsAsyncWithHttpInfo($app_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getPayGreenConfigurationsAsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getPayGreenConfigurationsAsyncWithHttpInfo($app_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherPayGreenConfiguration';
+        $request = $this->getPayGreenConfigurationsRequest($app_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getPayGreenConfigurations'
+     *
+     * @param  string $app_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getPayGreenConfigurationsRequest($app_id)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling getPayGreenConfigurations'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/{appId}/restaurant-vouchers/paygreen';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getStoreAvailablePayGreenConfigurations
+     *
+     * @param  string $app_id app_id (required)
+     * @param  int $store_id store_id (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary
+     */
+    public function getStoreAvailablePayGreenConfigurations($app_id, $store_id)
+    {
+        list($response) = $this->getStoreAvailablePayGreenConfigurationsWithHttpInfo($app_id, $store_id);
+        return $response;
+    }
+
+    /**
+     * Operation getStoreAvailablePayGreenConfigurationsWithHttpInfo
+     *
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getStoreAvailablePayGreenConfigurationsWithHttpInfo($app_id, $store_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary';
+        $request = $this->getStoreAvailablePayGreenConfigurationsRequest($app_id, $store_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getStoreAvailablePayGreenConfigurationsAsync
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getStoreAvailablePayGreenConfigurationsAsync($app_id, $store_id)
+    {
+        return $this->getStoreAvailablePayGreenConfigurationsAsyncWithHttpInfo($app_id, $store_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getStoreAvailablePayGreenConfigurationsAsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getStoreAvailablePayGreenConfigurationsAsyncWithHttpInfo($app_id, $store_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary';
+        $request = $this->getStoreAvailablePayGreenConfigurationsRequest($app_id, $store_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getStoreAvailablePayGreenConfigurations'
+     *
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getStoreAvailablePayGreenConfigurationsRequest($app_id, $store_id)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling getStoreAvailablePayGreenConfigurations'
+            );
+        }
+        // verify the required parameter 'store_id' is set
+        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $store_id when calling getStoreAvailablePayGreenConfigurations'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId}/available-configurations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($store_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'storeId' . '}',
+                ObjectSerializer::toPathValue($store_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getStorePayGreenConfiguration_
+     *
+     * @param  string $app_id app_id (required)
+     * @param  int $store_id store_id (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenStoreConfiguration
+     */
+    public function getStorePayGreenConfiguration_($app_id, $store_id)
+    {
+        list($response) = $this->getStorePayGreenConfiguration_WithHttpInfo($app_id, $store_id);
+        return $response;
+    }
+
+    /**
+     * Operation getStorePayGreenConfiguration_WithHttpInfo
+     *
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenStoreConfiguration, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getStorePayGreenConfiguration_WithHttpInfo($app_id, $store_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenStoreConfiguration';
+        $request = $this->getStorePayGreenConfiguration_Request($app_id, $store_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenStoreConfiguration',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getStorePayGreenConfiguration_Async
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getStorePayGreenConfiguration_Async($app_id, $store_id)
+    {
+        return $this->getStorePayGreenConfiguration_AsyncWithHttpInfo($app_id, $store_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getStorePayGreenConfiguration_AsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getStorePayGreenConfiguration_AsyncWithHttpInfo($app_id, $store_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenStoreConfiguration';
+        $request = $this->getStorePayGreenConfiguration_Request($app_id, $store_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getStorePayGreenConfiguration_'
+     *
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getStorePayGreenConfiguration_Request($app_id, $store_id)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling getStorePayGreenConfiguration_'
+            );
+        }
+        // verify the required parameter 'store_id' is set
+        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $store_id when calling getStorePayGreenConfiguration_'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($store_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'storeId' . '}',
+                ObjectSerializer::toPathValue($store_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation listPayGreenConfigurations
+     *
+     * @param  string $app_id app_id (required)
+     * @param  int $paygreen_configuration_id paygreen_configuration_id (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration
+     */
+    public function listPayGreenConfigurations($app_id, $paygreen_configuration_id)
+    {
+        list($response) = $this->listPayGreenConfigurationsWithHttpInfo($app_id, $paygreen_configuration_id);
+        return $response;
+    }
+
+    /**
+     * Operation listPayGreenConfigurationsWithHttpInfo
+     *
+     * @param  string $app_id (required)
+     * @param  int $paygreen_configuration_id (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function listPayGreenConfigurationsWithHttpInfo($app_id, $paygreen_configuration_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration';
+        $request = $this->listPayGreenConfigurationsRequest($app_id, $paygreen_configuration_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation listPayGreenConfigurationsAsync
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     * @param  int $paygreen_configuration_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listPayGreenConfigurationsAsync($app_id, $paygreen_configuration_id)
+    {
+        return $this->listPayGreenConfigurationsAsyncWithHttpInfo($app_id, $paygreen_configuration_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation listPayGreenConfigurationsAsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     * @param  int $paygreen_configuration_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listPayGreenConfigurationsAsyncWithHttpInfo($app_id, $paygreen_configuration_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration';
+        $request = $this->listPayGreenConfigurationsRequest($app_id, $paygreen_configuration_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'listPayGreenConfigurations'
+     *
+     * @param  string $app_id (required)
+     * @param  int $paygreen_configuration_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function listPayGreenConfigurationsRequest($app_id, $paygreen_configuration_id)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling listPayGreenConfigurations'
+            );
+        }
+        // verify the required parameter 'paygreen_configuration_id' is set
+        if ($paygreen_configuration_id === null || (is_array($paygreen_configuration_id) && count($paygreen_configuration_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $paygreen_configuration_id when calling listPayGreenConfigurations'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($paygreen_configuration_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'paygreenConfigurationId' . '}',
+                ObjectSerializer::toPathValue($paygreen_configuration_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation updatePayGreenConfiguration
+     *
+     * @param  string $app_id app_id (required)
+     * @param  int $paygreen_configuration_id paygreen_configuration_id (required)
+     * @param  \Flipdish\\Client\Models\UpdatePayGreenConfigurationRequest $request request (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration
+     */
+    public function updatePayGreenConfiguration($app_id, $paygreen_configuration_id, $request)
+    {
+        list($response) = $this->updatePayGreenConfigurationWithHttpInfo($app_id, $paygreen_configuration_id, $request);
+        return $response;
+    }
+
+    /**
+     * Operation updatePayGreenConfigurationWithHttpInfo
+     *
+     * @param  string $app_id (required)
+     * @param  int $paygreen_configuration_id (required)
+     * @param  \Flipdish\\Client\Models\UpdatePayGreenConfigurationRequest $request (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updatePayGreenConfigurationWithHttpInfo($app_id, $paygreen_configuration_id, $request)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration';
+        $request = $this->updatePayGreenConfigurationRequest($app_id, $paygreen_configuration_id, $request);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updatePayGreenConfigurationAsync
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     * @param  int $paygreen_configuration_id (required)
+     * @param  \Flipdish\\Client\Models\UpdatePayGreenConfigurationRequest $request (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updatePayGreenConfigurationAsync($app_id, $paygreen_configuration_id, $request)
+    {
+        return $this->updatePayGreenConfigurationAsyncWithHttpInfo($app_id, $paygreen_configuration_id, $request)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation updatePayGreenConfigurationAsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     * @param  int $paygreen_configuration_id (required)
+     * @param  \Flipdish\\Client\Models\UpdatePayGreenConfigurationRequest $request (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updatePayGreenConfigurationAsyncWithHttpInfo($app_id, $paygreen_configuration_id, $request)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenConfiguration';
+        $request = $this->updatePayGreenConfigurationRequest($app_id, $paygreen_configuration_id, $request);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'updatePayGreenConfiguration'
+     *
+     * @param  string $app_id (required)
+     * @param  int $paygreen_configuration_id (required)
+     * @param  \Flipdish\\Client\Models\UpdatePayGreenConfigurationRequest $request (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function updatePayGreenConfigurationRequest($app_id, $paygreen_configuration_id, $request)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling updatePayGreenConfiguration'
+            );
+        }
+        // verify the required parameter 'paygreen_configuration_id' is set
+        if ($paygreen_configuration_id === null || (is_array($paygreen_configuration_id) && count($paygreen_configuration_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $paygreen_configuration_id when calling updatePayGreenConfiguration'
+            );
+        }
+        // verify the required parameter 'request' is set
+        if ($request === null || (is_array($request) && count($request) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request when calling updatePayGreenConfiguration'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($paygreen_configuration_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'paygreenConfigurationId' . '}',
+                ObjectSerializer::toPathValue($paygreen_configuration_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($request)) {
+            $_tempBody = $request;
         }
 
         if ($multipart) {
@@ -1634,39 +2555,37 @@ class MobileAppsApi
     }
 
     /**
-     * Operation uploadImage
+     * Operation updateStorePayGreenConfiguration_
      *
-     * Upload image mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \SplFileObject $image Mobile Apps image (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $store_id store_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateStorePayGreenConfigurationRequest $request request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultMobileAppsImage
+     * @return \Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenStoreConfiguration
      */
-    public function uploadImage($app_id, $image)
+    public function updateStorePayGreenConfiguration_($app_id, $store_id, $request)
     {
-        list($response) = $this->uploadImageWithHttpInfo($app_id, $image);
+        list($response) = $this->updateStorePayGreenConfiguration_WithHttpInfo($app_id, $store_id, $request);
         return $response;
     }
 
     /**
-     * Operation uploadImageWithHttpInfo
+     * Operation updateStorePayGreenConfiguration_WithHttpInfo
      *
-     * Upload image mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \SplFileObject $image Mobile Apps image (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateStorePayGreenConfigurationRequest $request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultMobileAppsImage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenStoreConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
-    public function uploadImageWithHttpInfo($app_id, $image)
+    public function updateStorePayGreenConfiguration_WithHttpInfo($app_id, $store_id, $request)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsImage';
-        $request = $this->uploadImageRequest($app_id, $image);
+        $returnType = '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenStoreConfiguration';
+        $request = $this->updateStorePayGreenConfiguration_Request($app_id, $store_id, $request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1717,7 +2636,7 @@ class MobileAppsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultMobileAppsImage',
+                        '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenStoreConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1752,19 +2671,20 @@ class MobileAppsApi
     }
 
     /**
-     * Operation uploadImageAsync
+     * Operation updateStorePayGreenConfiguration_Async
      *
-     * Upload image mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \SplFileObject $image Mobile Apps image (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateStorePayGreenConfigurationRequest $request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uploadImageAsync($app_id, $image)
+    public function updateStorePayGreenConfiguration_Async($app_id, $store_id, $request)
     {
-        return $this->uploadImageAsyncWithHttpInfo($app_id, $image)
+        return $this->updateStorePayGreenConfiguration_AsyncWithHttpInfo($app_id, $store_id, $request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1773,20 +2693,21 @@ class MobileAppsApi
     }
 
     /**
-     * Operation uploadImageAsyncWithHttpInfo
+     * Operation updateStorePayGreenConfiguration_AsyncWithHttpInfo
      *
-     * Upload image mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \SplFileObject $image Mobile Apps image (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateStorePayGreenConfigurationRequest $request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uploadImageAsyncWithHttpInfo($app_id, $image)
+    public function updateStorePayGreenConfiguration_AsyncWithHttpInfo($app_id, $store_id, $request)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsImage';
-        $request = $this->uploadImageRequest($app_id, $image);
+        $returnType = '\Flipdish\\Client\Models\RestApiResultRestaurantVoucherPayGreenStoreConfiguration';
+        $request = $this->updateStorePayGreenConfiguration_Request($app_id, $store_id, $request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1826,30 +2747,37 @@ class MobileAppsApi
     }
 
     /**
-     * Create request for operation 'uploadImage'
+     * Create request for operation 'updateStorePayGreenConfiguration_'
      *
-     * @param  string $app_id  (required)
-     * @param  \SplFileObject $image Mobile Apps image (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateStorePayGreenConfigurationRequest $request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function uploadImageRequest($app_id, $image)
+    protected function updateStorePayGreenConfiguration_Request($app_id, $store_id, $request)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling uploadImage'
+                'Missing the required parameter $app_id when calling updateStorePayGreenConfiguration_'
             );
         }
-        // verify the required parameter 'image' is set
-        if ($image === null || (is_array($image) && count($image) === 0)) {
+        // verify the required parameter 'store_id' is set
+        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $image when calling uploadImage'
+                'Missing the required parameter $store_id when calling updateStorePayGreenConfiguration_'
+            );
+        }
+        // verify the required parameter 'request' is set
+        if ($request === null || (is_array($request) && count($request) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request when calling updateStorePayGreenConfiguration_'
             );
         }
 
-        $resourcePath = '/api/v1.0/mobileapps/{appId}/submission/image';
+        $resourcePath = '/api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1865,14 +2793,20 @@ class MobileAppsApi
                 $resourcePath
             );
         }
-
-        // form params
-        if ($image !== null) {
-            $multipart = true;
-            $formParams['Image'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($image), 'rb');
+        // path params
+        if ($store_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'storeId' . '}',
+                ObjectSerializer::toPathValue($store_id),
+                $resourcePath
+            );
         }
+
         // body params
         $_tempBody = null;
+        if (isset($request)) {
+            $_tempBody = $request;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1881,7 +2815,7 @@ class MobileAppsApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                ['multipart/form-data']
+                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
             );
         }
 

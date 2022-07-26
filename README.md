@@ -364,14 +364,12 @@ Class | Method | HTTP request | Description
 *MetafieldDefinitionsApi* | [**getOwnerEntityConfigurations**](docs/Api/MetafieldDefinitionsApi.md#getownerentityconfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
 *MetafieldDefinitionsApi* | [**getOwnerEntityRecommendations**](docs/Api/MetafieldDefinitionsApi.md#getownerentityrecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | Get OwnerEntity Definition Recommendations
 *MetafieldDefinitionsApi* | [**updateMetafieldDefinition**](docs/Api/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
-*MobileAppsApi* | [**editAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#editappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Set the application sales channel configuration
-*MobileAppsApi* | [**getAppConfig**](docs/Api/MobileAppsApi.md#getappconfig) | **GET** /api/v1.0/mobileapps/{appId}/config | Get mobile app configuration
-*MobileAppsApi* | [**getAppDetails**](docs/Api/MobileAppsApi.md#getappdetails) | **GET** /api/v1.0/mobileapps/{appId}/details | Get mobile app details
-*MobileAppsApi* | [**getMobileAppsSubmissionStatus**](docs/Api/MobileAppsApi.md#getmobileappssubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submissionstatus{plataformType} | Get mobile app submitted status
 *MobileAppsApi* | [**getStatistics**](docs/Api/MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
-*MobileAppsApi* | [**setAppConfig**](docs/Api/MobileAppsApi.md#setappconfig) | **POST** /api/v1.0/mobileapps/{appId}/config | Set mobile app configuration
+*MobileAppsApi* | [**getSubmissionDetails**](docs/Api/MobileAppsApi.md#getsubmissiondetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | Get submission details mobile apps
+*MobileAppsApi* | [**getSubmissionStatus**](docs/Api/MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/status | Get submission status mobile apps
 *MobileAppsApi* | [**submission**](docs/Api/MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
-*MobileAppsApi* | [**uploadMobileAppsImage**](docs/Api/MobileAppsApi.md#uploadmobileappsimage) | **POST** /api/v1.0/mobileapps/{appId}/image | Upload a Mobile Apps Image
+*MobileAppsApi* | [**updateAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#updateappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
+*MobileAppsApi* | [**uploadImage**](docs/Api/MobileAppsApi.md#uploadimage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | Upload image mobile apps
 *OAuthClientsApi* | [**addRedirectUri**](docs/Api/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**createOAuthApp**](docs/Api/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
 *OAuthClientsApi* | [**deleteOAuthApp**](docs/Api/OAuthClientsApi.md#deleteoauthapp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Delete OAuth App
@@ -402,15 +400,6 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**searchFulfillmentStatuses**](docs/Api/OrdersApi.md#searchfulfillmentstatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
 *OrdersApi* | [**updateDeliveryInformation**](docs/Api/OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
 *OrdersApi* | [**updateFulfillmentState**](docs/Api/OrdersApi.md#updatefulfillmentstate) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | Update fulfillment status information to an order
-*PaygreenApi* | [**createPayGreenConfiguration**](docs/Api/PaygreenApi.md#createpaygreenconfiguration) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen | 
-*PaygreenApi* | [**deletePaygreenConfiguration**](docs/Api/PaygreenApi.md#deletepaygreenconfiguration) | **DELETE** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
-*PaygreenApi* | [**getPaygreenConfigurations**](docs/Api/PaygreenApi.md#getpaygreenconfigurations) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen | 
-*PaygreenApi* | [**getStoreAvailablePayGreenConfigurations**](docs/Api/PaygreenApi.md#getstoreavailablepaygreenconfigurations) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId}/available-configurations | 
-*PaygreenApi* | [**getStorePayGreenConfiguration**](docs/Api/PaygreenApi.md#getstorepaygreenconfiguration) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores | 
-*PaygreenApi* | [**getStorePayGreenConfiguration_**](docs/Api/PaygreenApi.md#getstorepaygreenconfiguration_) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId} | 
-*PaygreenApi* | [**listPayGreenConfigurations**](docs/Api/PaygreenApi.md#listpaygreenconfigurations) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
-*PaygreenApi* | [**updatePayGreenConfiguration**](docs/Api/PaygreenApi.md#updatepaygreenconfiguration) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
-*PaygreenApi* | [**updateStorePayGreenConfiguration_**](docs/Api/PaygreenApi.md#updatestorepaygreenconfiguration_) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId} | 
 *PaymentIntentsApi* | [**getPaymentIntent**](docs/Api/PaymentIntentsApi.md#getpaymentintent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | Returns stripe payment intent for a given id
 *PaymentsApi* | [**getOrderPaymentInformation**](docs/Api/PaymentsApi.md#getorderpaymentinformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | Returns payment refund information related to the order with the order id
 *PayoutsApi* | [**getPayout**](docs/Api/PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | Get Payout details broken down by Store
@@ -431,6 +420,15 @@ Class | Method | HTTP request | Description
 *PushNotificationsApi* | [**getPushNotifications**](docs/Api/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**schedulePushNotification**](docs/Api/PushNotificationsApi.md#schedulepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**updatePushNotification**](docs/Api/PushNotificationsApi.md#updatepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Update the push notification
+*RestaurantVouchersPayGreenApi* | [**createPayGreenConfiguration**](docs/Api/RestaurantVouchersPayGreenApi.md#createpaygreenconfiguration) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen | 
+*RestaurantVouchersPayGreenApi* | [**deletePayGreenConfiguration**](docs/Api/RestaurantVouchersPayGreenApi.md#deletepaygreenconfiguration) | **DELETE** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
+*RestaurantVouchersPayGreenApi* | [**getElegibleStores**](docs/Api/RestaurantVouchersPayGreenApi.md#getelegiblestores) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores | 
+*RestaurantVouchersPayGreenApi* | [**getPayGreenConfigurations**](docs/Api/RestaurantVouchersPayGreenApi.md#getpaygreenconfigurations) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen | 
+*RestaurantVouchersPayGreenApi* | [**getStoreAvailablePayGreenConfigurations**](docs/Api/RestaurantVouchersPayGreenApi.md#getstoreavailablepaygreenconfigurations) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId}/available-configurations | 
+*RestaurantVouchersPayGreenApi* | [**getStorePayGreenConfiguration_**](docs/Api/RestaurantVouchersPayGreenApi.md#getstorepaygreenconfiguration_) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId} | 
+*RestaurantVouchersPayGreenApi* | [**listPayGreenConfigurations**](docs/Api/RestaurantVouchersPayGreenApi.md#listpaygreenconfigurations) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
+*RestaurantVouchersPayGreenApi* | [**updatePayGreenConfiguration**](docs/Api/RestaurantVouchersPayGreenApi.md#updatepaygreenconfiguration) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
+*RestaurantVouchersPayGreenApi* | [**updateStorePayGreenConfiguration_**](docs/Api/RestaurantVouchersPayGreenApi.md#updatestorepaygreenconfiguration_) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId} | 
 *StoreGroupsApi* | [**createStoreGroup**](docs/Api/StoreGroupsApi.md#createstoregroup) | **POST** /api/v1.0/{appNameId}/storegroups | Creates a Store Group  It will be attached to an existing App
 *StoreGroupsApi* | [**getStoreGroup**](docs/Api/StoreGroupsApi.md#getstoregroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | Returns a Store Groups
 *StoreGroupsApi* | [**getStoreGroups**](docs/Api/StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | Returns a paginated list of Store Groups
@@ -780,11 +778,10 @@ Class | Method | HTTP request | Description
  - [Metafield](docs/Model/Metafield.md)
  - [MetafieldDefinition](docs/Model/MetafieldDefinition.md)
  - [MetafieldDefinitionRecommendation](docs/Model/MetafieldDefinitionRecommendation.md)
- - [MobileAppConfig](docs/Model/MobileAppConfig.md)
- - [MobileAppsDetails](docs/Model/MobileAppsDetails.md)
  - [MobileAppsImage](docs/Model/MobileAppsImage.md)
  - [MobileAppsStatistics](docs/Model/MobileAppsStatistics.md)
  - [MobileAppsSubmission](docs/Model/MobileAppsSubmission.md)
+ - [MobileAppsSubmissionDetails](docs/Model/MobileAppsSubmissionDetails.md)
  - [MobileAppsSubmissionStatus](docs/Model/MobileAppsSubmissionStatus.md)
  - [ModelBase](docs/Model/ModelBase.md)
  - [OAuthApp](docs/Model/OAuthApp.md)
@@ -912,8 +909,8 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultProcessingFeeConfig](docs/Model/RestApiArrayResultProcessingFeeConfig.md)
  - [RestApiArrayResultRestApiDefaultResponse](docs/Model/RestApiArrayResultRestApiDefaultResponse.md)
  - [RestApiArrayResultRestaurantVoucherEligibleStore](docs/Model/RestApiArrayResultRestaurantVoucherEligibleStore.md)
- - [RestApiArrayResultRestaurantVoucherPaygreenConfiguration](docs/Model/RestApiArrayResultRestaurantVoucherPaygreenConfiguration.md)
- - [RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary](docs/Model/RestApiArrayResultRestaurantVoucherPaygreenConfigurationSummary.md)
+ - [RestApiArrayResultRestaurantVoucherPayGreenConfiguration](docs/Model/RestApiArrayResultRestaurantVoucherPayGreenConfiguration.md)
+ - [RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary](docs/Model/RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary.md)
  - [RestApiArrayResultRetentionCampaign](docs/Model/RestApiArrayResultRetentionCampaign.md)
  - [RestApiArrayResultStoreChannelAssignment](docs/Model/RestApiArrayResultStoreChannelAssignment.md)
  - [RestApiArrayResultStoreChannelStoreMapping](docs/Model/RestApiArrayResultStoreChannelStoreMapping.md)
@@ -956,7 +953,6 @@ Class | Method | HTTP request | Description
  - [RestApiPaginationResultVoucherSummary](docs/Model/RestApiPaginationResultVoucherSummary.md)
  - [RestApiPaginationResultWebhookLog](docs/Model/RestApiPaginationResultWebhookLog.md)
  - [RestApiPaginationResultWebhookSubscription](docs/Model/RestApiPaginationResultWebhookSubscription.md)
- - [RestApiResult](docs/Model/RestApiResult.md)
  - [RestApiResultAccountDetail](docs/Model/RestApiResultAccountDetail.md)
  - [RestApiResultAccountFieldsDefinitions](docs/Model/RestApiResultAccountFieldsDefinitions.md)
  - [RestApiResultAddressFormResponse](docs/Model/RestApiResultAddressFormResponse.md)
@@ -1008,9 +1004,9 @@ Class | Method | HTTP request | Description
  - [RestApiResultMenuSectionItem](docs/Model/RestApiResultMenuSectionItem.md)
  - [RestApiResultMetadata](docs/Model/RestApiResultMetadata.md)
  - [RestApiResultMetafieldDefinition](docs/Model/RestApiResultMetafieldDefinition.md)
- - [RestApiResultMobileAppsDetails](docs/Model/RestApiResultMobileAppsDetails.md)
  - [RestApiResultMobileAppsImage](docs/Model/RestApiResultMobileAppsImage.md)
  - [RestApiResultMobileAppsSubmission](docs/Model/RestApiResultMobileAppsSubmission.md)
+ - [RestApiResultMobileAppsSubmissionDetails](docs/Model/RestApiResultMobileAppsSubmissionDetails.md)
  - [RestApiResultMobileAppsSubmissionStatus](docs/Model/RestApiResultMobileAppsSubmissionStatus.md)
  - [RestApiResultModelBase](docs/Model/RestApiResultModelBase.md)
  - [RestApiResultOAuthApp](docs/Model/RestApiResultOAuthApp.md)
@@ -1029,8 +1025,8 @@ Class | Method | HTTP request | Description
  - [RestApiResultProduct](docs/Model/RestApiResultProduct.md)
  - [RestApiResultPushNotificationResponse](docs/Model/RestApiResultPushNotificationResponse.md)
  - [RestApiResultRedeemInvitationResult](docs/Model/RestApiResultRedeemInvitationResult.md)
- - [RestApiResultRestaurantVoucherPaygreenConfiguration](docs/Model/RestApiResultRestaurantVoucherPaygreenConfiguration.md)
- - [RestApiResultRestaurantVoucherPaygreenStoreConfiguration](docs/Model/RestApiResultRestaurantVoucherPaygreenStoreConfiguration.md)
+ - [RestApiResultRestaurantVoucherPayGreenConfiguration](docs/Model/RestApiResultRestaurantVoucherPayGreenConfiguration.md)
+ - [RestApiResultRestaurantVoucherPayGreenStoreConfiguration](docs/Model/RestApiResultRestaurantVoucherPayGreenStoreConfiguration.md)
  - [RestApiResultRetentionCampaign](docs/Model/RestApiResultRetentionCampaign.md)
  - [RestApiResultServiceCharge](docs/Model/RestApiResultServiceCharge.md)
  - [RestApiResultStore](docs/Model/RestApiResultStore.md)
@@ -1057,9 +1053,9 @@ Class | Method | HTTP request | Description
  - [RestApiUnauthorizedResult](docs/Model/RestApiUnauthorizedResult.md)
  - [RestaurantVoucherAssignedStore](docs/Model/RestaurantVoucherAssignedStore.md)
  - [RestaurantVoucherEligibleStore](docs/Model/RestaurantVoucherEligibleStore.md)
- - [RestaurantVoucherPaygreenConfiguration](docs/Model/RestaurantVoucherPaygreenConfiguration.md)
- - [RestaurantVoucherPaygreenConfigurationSummary](docs/Model/RestaurantVoucherPaygreenConfigurationSummary.md)
- - [RestaurantVoucherPaygreenStoreConfiguration](docs/Model/RestaurantVoucherPaygreenStoreConfiguration.md)
+ - [RestaurantVoucherPayGreenConfiguration](docs/Model/RestaurantVoucherPayGreenConfiguration.md)
+ - [RestaurantVoucherPayGreenConfigurationSummary](docs/Model/RestaurantVoucherPayGreenConfigurationSummary.md)
+ - [RestaurantVoucherPayGreenStoreConfiguration](docs/Model/RestaurantVoucherPayGreenStoreConfiguration.md)
  - [RetentionCampaign](docs/Model/RetentionCampaign.md)
  - [RetentionCampaignBase](docs/Model/RetentionCampaignBase.md)
  - [RetentionCampaignCreatedEvent](docs/Model/RetentionCampaignCreatedEvent.md)
@@ -1161,7 +1157,7 @@ Class | Method | HTTP request | Description
  - [UpdatePayGreenConfigurationRequest](docs/Model/UpdatePayGreenConfigurationRequest.md)
  - [UpdateProduct](docs/Model/UpdateProduct.md)
  - [UpdateProductReference](docs/Model/UpdateProductReference.md)
- - [UpdateStorePaygreenConfigurationRequest](docs/Model/UpdateStorePaygreenConfigurationRequest.md)
+ - [UpdateStorePayGreenConfigurationRequest](docs/Model/UpdateStorePayGreenConfigurationRequest.md)
  - [UpdateTipConfiguration](docs/Model/UpdateTipConfiguration.md)
  - [UserAnsweredSignupQuestionsEvent](docs/Model/UserAnsweredSignupQuestionsEvent.md)
  - [UserCreatedEvent](docs/Model/UserCreatedEvent.md)

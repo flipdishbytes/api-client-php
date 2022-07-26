@@ -58,8 +58,8 @@ class CreatePayGreenConfigurationRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'name' => 'string',
-        'paygreen_id' => 'string',
-        'paygreen_private_key' => 'string',
+        'pay_green_id' => 'string',
+        'pay_green_private_key' => 'string',
         'assigned_stores' => 'int[]'
     ];
 
@@ -70,8 +70,8 @@ class CreatePayGreenConfigurationRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'name' => null,
-        'paygreen_id' => null,
-        'paygreen_private_key' => null,
+        'pay_green_id' => null,
+        'pay_green_private_key' => null,
         'assigned_stores' => 'int32'
     ];
 
@@ -103,8 +103,8 @@ class CreatePayGreenConfigurationRequest implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'name' => 'Name',
-        'paygreen_id' => 'PaygreenId',
-        'paygreen_private_key' => 'PaygreenPrivateKey',
+        'pay_green_id' => 'PayGreenId',
+        'pay_green_private_key' => 'PayGreenPrivateKey',
         'assigned_stores' => 'AssignedStores'
     ];
 
@@ -115,8 +115,8 @@ class CreatePayGreenConfigurationRequest implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'name' => 'setName',
-        'paygreen_id' => 'setPaygreenId',
-        'paygreen_private_key' => 'setPaygreenPrivateKey',
+        'pay_green_id' => 'setPayGreenId',
+        'pay_green_private_key' => 'setPayGreenPrivateKey',
         'assigned_stores' => 'setAssignedStores'
     ];
 
@@ -127,8 +127,8 @@ class CreatePayGreenConfigurationRequest implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'name' => 'getName',
-        'paygreen_id' => 'getPaygreenId',
-        'paygreen_private_key' => 'getPaygreenPrivateKey',
+        'pay_green_id' => 'getPayGreenId',
+        'pay_green_private_key' => 'getPayGreenPrivateKey',
         'assigned_stores' => 'getAssignedStores'
     ];
 
@@ -193,8 +193,8 @@ class CreatePayGreenConfigurationRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['paygreen_id'] = isset($data['paygreen_id']) ? $data['paygreen_id'] : null;
-        $this->container['paygreen_private_key'] = isset($data['paygreen_private_key']) ? $data['paygreen_private_key'] : null;
+        $this->container['pay_green_id'] = isset($data['pay_green_id']) ? $data['pay_green_id'] : null;
+        $this->container['pay_green_private_key'] = isset($data['pay_green_private_key']) ? $data['pay_green_private_key'] : null;
         $this->container['assigned_stores'] = isset($data['assigned_stores']) ? $data['assigned_stores'] : null;
     }
 
@@ -247,49 +247,49 @@ class CreatePayGreenConfigurationRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets paygreen_id
+     * Gets pay_green_id
      *
      * @return string
      */
-    public function getPaygreenId()
+    public function getPayGreenId()
     {
-        return $this->container['paygreen_id'];
+        return $this->container['pay_green_id'];
     }
 
     /**
-     * Sets paygreen_id
+     * Sets pay_green_id
      *
-     * @param string $paygreen_id paygreen_id
+     * @param string $pay_green_id pay_green_id
      *
      * @return $this
      */
-    public function setPaygreenId($paygreen_id)
+    public function setPayGreenId($pay_green_id)
     {
-        $this->container['paygreen_id'] = $paygreen_id;
+        $this->container['pay_green_id'] = $pay_green_id;
 
         return $this;
     }
 
     /**
-     * Gets paygreen_private_key
+     * Gets pay_green_private_key
      *
      * @return string
      */
-    public function getPaygreenPrivateKey()
+    public function getPayGreenPrivateKey()
     {
-        return $this->container['paygreen_private_key'];
+        return $this->container['pay_green_private_key'];
     }
 
     /**
-     * Sets paygreen_private_key
+     * Sets pay_green_private_key
      *
-     * @param string $paygreen_private_key paygreen_private_key
+     * @param string $pay_green_private_key pay_green_private_key
      *
      * @return $this
      */
-    public function setPaygreenPrivateKey($paygreen_private_key)
+    public function setPayGreenPrivateKey($pay_green_private_key)
     {
-        $this->container['paygreen_private_key'] = $paygreen_private_key;
+        $this->container['pay_green_private_key'] = $pay_green_private_key;
 
         return $this;
     }

@@ -1,4 +1,4 @@
-# MobileAppsSubmission
+# MobileAppsSubmissionDetails
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **app_description** | **string** | App Description | [optional] 
 **app_short_description** | **string** | App Description | [optional] 
 **keywords** | **string[]** | Keywords | [optional] 
+**app_logo_url** | **string** | Logo URL | [optional] 
 **auto_publish** | **bool** | Publish automatically | [optional] 
 **status** | **string** | Mobile App Status | [optional] 
 

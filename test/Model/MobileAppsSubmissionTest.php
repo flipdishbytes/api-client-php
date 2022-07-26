@@ -103,4 +103,18 @@ class MobileAppsSubmissionTest extends \PHPUnit_Framework_TestCase
     public function testPropertyKeywords()
     {
     }
+
+    /**
+     * Test attribute "auto_publish"
+     */
+    public function testPropertyAutoPublish()
+    {
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+    }
 }

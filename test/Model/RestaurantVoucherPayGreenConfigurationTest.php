@@ -1,6 +1,6 @@
 <?php
 /**
- * CreatePayGreenConfigurationRequestTest
+ * RestaurantVoucherPayGreenConfigurationTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * CreatePayGreenConfigurationRequestTest Class Doc Comment
+ * RestaurantVoucherPayGreenConfigurationTest Class Doc Comment
  *
  * @category    Class
- * @description CreatePayGreenConfigurationRequest
+ * @description RestaurantVoucherPayGreenConfiguration
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CreatePayGreenConfigurationRequestTest extends \PHPUnit_Framework_TestCase
+class RestaurantVoucherPayGreenConfigurationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class CreatePayGreenConfigurationRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CreatePayGreenConfigurationRequest"
+     * Test "RestaurantVoucherPayGreenConfiguration"
      */
-    public function testCreatePayGreenConfigurationRequest()
+    public function testRestaurantVoucherPayGreenConfiguration()
     {
     }
 
@@ -91,9 +91,9 @@ class CreatePayGreenConfigurationRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "pay_green_private_key"
+     * Test attribute "pay_green_configuration_id"
      */
-    public function testPropertyPayGreenPrivateKey()
+    public function testPropertyPayGreenConfigurationId()
     {
     }
 

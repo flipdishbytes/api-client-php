@@ -1,6 +1,6 @@
 <?php
 /**
- * MobileAppsApiTest
+ * RestaurantVouchersPayGreenApiTest
  * PHP version 5
  *
  * @category Class
@@ -33,14 +33,14 @@ use \Flipdish\\Client\ApiException;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * MobileAppsApiTest Class Doc Comment
+ * RestaurantVouchersPayGreenApiTest Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
+class RestaurantVouchersPayGreenApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -72,62 +72,92 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getStatistics
+     * Test case for createPayGreenConfiguration
      *
-     * Get statistics mobile apps.
+     * .
      *
      */
-    public function testGetStatistics()
+    public function testCreatePayGreenConfiguration()
     {
     }
 
     /**
-     * Test case for getSubmissionDetails
+     * Test case for deletePayGreenConfiguration
      *
-     * Get submission details mobile apps.
+     * .
      *
      */
-    public function testGetSubmissionDetails()
+    public function testDeletePayGreenConfiguration()
     {
     }
 
     /**
-     * Test case for getSubmissionStatus
+     * Test case for getElegibleStores
      *
-     * Get submission status mobile apps.
+     * .
      *
      */
-    public function testGetSubmissionStatus()
+    public function testGetElegibleStores()
     {
     }
 
     /**
-     * Test case for submission
+     * Test case for getPayGreenConfigurations
      *
-     * Submission form mobile apps.
+     * .
      *
      */
-    public function testSubmission()
+    public function testGetPayGreenConfigurations()
     {
     }
 
     /**
-     * Test case for updateAppConfigSalesChannel
+     * Test case for getStoreAvailablePayGreenConfigurations
      *
-     * Update the application sales channel configuration.
+     * .
      *
      */
-    public function testUpdateAppConfigSalesChannel()
+    public function testGetStoreAvailablePayGreenConfigurations()
     {
     }
 
     /**
-     * Test case for uploadImage
+     * Test case for getStorePayGreenConfiguration_
      *
-     * Upload image mobile apps.
+     * .
      *
      */
-    public function testUploadImage()
+    public function testGetStorePayGreenConfiguration_()
+    {
+    }
+
+    /**
+     * Test case for listPayGreenConfigurations
+     *
+     * .
+     *
+     */
+    public function testListPayGreenConfigurations()
+    {
+    }
+
+    /**
+     * Test case for updatePayGreenConfiguration
+     *
+     * .
+     *
+     */
+    public function testUpdatePayGreenConfiguration()
+    {
+    }
+
+    /**
+     * Test case for updateStorePayGreenConfiguration_
+     *
+     * .
+     *
+     */
+    public function testUpdateStorePayGreenConfiguration_()
     {
     }
 }

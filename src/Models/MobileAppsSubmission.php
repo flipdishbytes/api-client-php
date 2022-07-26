@@ -61,7 +61,9 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         'app_name' => 'string',
         'app_description' => 'string',
         'app_short_description' => 'string',
-        'keywords' => 'string[]'
+        'keywords' => 'string[]',
+        'auto_publish' => 'bool',
+        'status' => 'string'
     ];
 
     /**
@@ -73,7 +75,9 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         'app_name' => null,
         'app_description' => null,
         'app_short_description' => null,
-        'keywords' => null
+        'keywords' => null,
+        'auto_publish' => null,
+        'status' => null
     ];
 
     /**
@@ -106,7 +110,9 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         'app_name' => 'AppName',
         'app_description' => 'AppDescription',
         'app_short_description' => 'AppShortDescription',
-        'keywords' => 'Keywords'
+        'keywords' => 'Keywords',
+        'auto_publish' => 'AutoPublish',
+        'status' => 'Status'
     ];
 
     /**
@@ -118,7 +124,9 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         'app_name' => 'setAppName',
         'app_description' => 'setAppDescription',
         'app_short_description' => 'setAppShortDescription',
-        'keywords' => 'setKeywords'
+        'keywords' => 'setKeywords',
+        'auto_publish' => 'setAutoPublish',
+        'status' => 'setStatus'
     ];
 
     /**
@@ -130,7 +138,9 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         'app_name' => 'getAppName',
         'app_description' => 'getAppDescription',
         'app_short_description' => 'getAppShortDescription',
-        'keywords' => 'getKeywords'
+        'keywords' => 'getKeywords',
+        'auto_publish' => 'getAutoPublish',
+        'status' => 'getStatus'
     ];
 
     /**
@@ -174,8 +184,31 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const STATUS_NONE = 'None';
+    const STATUS_IN_PROGRESS = 'InProgress';
+    const STATUS_SUBMITTED = 'Submitted';
+    const STATUS_APP_STORE_REVIEW = 'AppStoreReview';
+    const STATUS_SUCESSFULL = 'Sucessfull';
+    const STATUS_UNSUCCESFUL = 'Unsuccesful';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_NONE,
+            self::STATUS_IN_PROGRESS,
+            self::STATUS_SUBMITTED,
+            self::STATUS_APP_STORE_REVIEW,
+            self::STATUS_SUCESSFULL,
+            self::STATUS_UNSUCCESFUL,
+        ];
+    }
     
 
     /**
@@ -197,6 +230,8 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         $this->container['app_description'] = isset($data['app_description']) ? $data['app_description'] : null;
         $this->container['app_short_description'] = isset($data['app_short_description']) ? $data['app_short_description'] : null;
         $this->container['keywords'] = isset($data['keywords']) ? $data['keywords'] : null;
+        $this->container['auto_publish'] = isset($data['auto_publish']) ? $data['auto_publish'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -207,6 +242,14 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getStatusAllowableValues();
+        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -315,6 +358,63 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
     public function setKeywords($keywords)
     {
         $this->container['keywords'] = $keywords;
+
+        return $this;
+    }
+
+    /**
+     * Gets auto_publish
+     *
+     * @return bool
+     */
+    public function getAutoPublish()
+    {
+        return $this->container['auto_publish'];
+    }
+
+    /**
+     * Sets auto_publish
+     *
+     * @param bool $auto_publish Publish automatically
+     *
+     * @return $this
+     */
+    public function setAutoPublish($auto_publish)
+    {
+        $this->container['auto_publish'] = $auto_publish;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     *
+     * @param string $status Mobile App Status
+     *
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $allowedValues = $this->getStatusAllowableValues();
+        if (!is_null($status) && !in_array($status, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'status', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['status'] = $status;
 
         return $this;
     }
