@@ -168,6 +168,7 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**unRegisterTerminal**](docs/Api/CardReadersApi.md#unregisterterminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | Un-register terminal by deleting it from stripe
 *CardReadersApi* | [**unpairCurrentlyPairedBluetoothDevice**](docs/Api/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
 *CatalogChangesApi* | [**getPendingMenuChanges**](docs/Api/CatalogChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | Get menu pending changes from Catalog groups and items
+*CatalogChangesApi* | [**getPendingMenuChangesSummaries**](docs/Api/CatalogChangesApi.md#getpendingmenuchangessummaries) | **GET** /api/v1.0/{appId}/menus/catalog-changes/summaries | Get menu pending changes summaries by appId
 *CatalogChangesApi* | [**publishPendingMenuChanges**](docs/Api/CatalogChangesApi.md#publishpendingmenuchanges) | **POST** /api/v1.0/{appId}/menus/catalog-changes/publish | Update menus with the pending changes from Catalog groups and items
 *CatalogGroupsApi* | [**archiveGroup**](docs/Api/CatalogGroupsApi.md#archivegroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | Archive Catalog Group
 *CatalogGroupsApi* | [**createGroup**](docs/Api/CatalogGroupsApi.md#creategroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
@@ -836,6 +837,7 @@ Class | Method | HTTP request | Description
  - [PayoutStore](docs/Model/PayoutStore.md)
  - [PayoutSummary](docs/Model/PayoutSummary.md)
  - [PendingMenuChanges](docs/Model/PendingMenuChanges.md)
+ - [PendingMenuChangesSummaries](docs/Model/PendingMenuChangesSummaries.md)
  - [PercentDiscountDetails](docs/Model/PercentDiscountDetails.md)
  - [PhoneCall](docs/Model/PhoneCall.md)
  - [PhoneCallEndedEvent](docs/Model/PhoneCallEndedEvent.md)
@@ -905,6 +907,7 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultOrderBatchItem](docs/Model/RestApiArrayResultOrderBatchItem.md)
  - [RestApiArrayResultOrderFulfillmentStatus](docs/Model/RestApiArrayResultOrderFulfillmentStatus.md)
  - [RestApiArrayResultPayoutSummary](docs/Model/RestApiArrayResultPayoutSummary.md)
+ - [RestApiArrayResultPendingMenuChangesSummaries](docs/Model/RestApiArrayResultPendingMenuChangesSummaries.md)
  - [RestApiArrayResultPreOrderTime](docs/Model/RestApiArrayResultPreOrderTime.md)
  - [RestApiArrayResultProcessingFeeConfig](docs/Model/RestApiArrayResultProcessingFeeConfig.md)
  - [RestApiArrayResultRestApiDefaultResponse](docs/Model/RestApiArrayResultRestApiDefaultResponse.md)
