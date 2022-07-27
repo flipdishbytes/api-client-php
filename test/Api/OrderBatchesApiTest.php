@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderBatchApiTest
+ * OrderBatchesApiTest
  * PHP version 5
  *
  * @category Class
@@ -33,14 +33,14 @@ use \Flipdish\\Client\ApiException;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * OrderBatchApiTest Class Doc Comment
+ * OrderBatchesApiTest Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class OrderBatchApiTest extends \PHPUnit_Framework_TestCase
+class OrderBatchesApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -74,10 +74,20 @@ class OrderBatchApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAllOrderBatches
      *
-     * Returns order batches created in a given time range.
+     * Returns order batches.
      *
      */
     public function testGetAllOrderBatches()
+    {
+    }
+
+    /**
+     * Test case for getOrderBatch
+     *
+     * Returns the order batch details.
+     *
+     */
+    public function testGetOrderBatch()
     {
     }
 }
