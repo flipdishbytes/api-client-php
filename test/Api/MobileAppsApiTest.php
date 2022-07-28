@@ -72,6 +72,16 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getAppConfigSalesChannel
+     *
+     * Get sales channel configuration.
+     *
+     */
+    public function testGetAppConfigSalesChannel()
+    {
+    }
+
+    /**
      * Test case for getStatistics
      *
      * Get statistics mobile apps.

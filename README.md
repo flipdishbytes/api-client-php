@@ -365,6 +365,7 @@ Class | Method | HTTP request | Description
 *MetafieldDefinitionsApi* | [**getOwnerEntityConfigurations**](docs/Api/MetafieldDefinitionsApi.md#getownerentityconfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
 *MetafieldDefinitionsApi* | [**getOwnerEntityRecommendations**](docs/Api/MetafieldDefinitionsApi.md#getownerentityrecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | Get OwnerEntity Definition Recommendations
 *MetafieldDefinitionsApi* | [**updateMetafieldDefinition**](docs/Api/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
+*MobileAppsApi* | [**getAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#getappconfigsaleschannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | Get sales channel configuration
 *MobileAppsApi* | [**getStatistics**](docs/Api/MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
 *MobileAppsApi* | [**getSubmissionDetails**](docs/Api/MobileAppsApi.md#getsubmissiondetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | Get submission details mobile apps
 *MobileAppsApi* | [**getSubmissionStatus**](docs/Api/MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/status | Get submission status mobile apps

@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **unusual_high_value_order** | **bool** | Is order of unusually high value | [optional] 
 **channel_order_id** | **string** | ChannelOrderId from external channel | [optional] 
 **channel_order_display_id** | **string** | ChannelOrderDisplayId from external channel | [optional] 
+**order_drop_off_location** | [**\Flipdish\\Client\Models\OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

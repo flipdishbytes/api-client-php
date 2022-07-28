@@ -82,7 +82,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'in_fraud_zone' => 'bool',
         'unusual_high_value_order' => 'bool',
         'channel_order_id' => 'string',
-        'channel_order_display_id' => 'string'
+        'channel_order_display_id' => 'string',
+        'order_drop_off_location' => '\Flipdish\\Client\Models\OrderDropOffLocation'
     ];
 
     /**
@@ -115,7 +116,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'in_fraud_zone' => null,
         'unusual_high_value_order' => null,
         'channel_order_id' => null,
-        'channel_order_display_id' => null
+        'channel_order_display_id' => null,
+        'order_drop_off_location' => null
     ];
 
     /**
@@ -169,7 +171,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'in_fraud_zone' => 'InFraudZone',
         'unusual_high_value_order' => 'UnusualHighValueOrder',
         'channel_order_id' => 'ChannelOrderId',
-        'channel_order_display_id' => 'ChannelOrderDisplayId'
+        'channel_order_display_id' => 'ChannelOrderDisplayId',
+        'order_drop_off_location' => 'OrderDropOffLocation'
     ];
 
     /**
@@ -202,7 +205,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'in_fraud_zone' => 'setInFraudZone',
         'unusual_high_value_order' => 'setUnusualHighValueOrder',
         'channel_order_id' => 'setChannelOrderId',
-        'channel_order_display_id' => 'setChannelOrderDisplayId'
+        'channel_order_display_id' => 'setChannelOrderDisplayId',
+        'order_drop_off_location' => 'setOrderDropOffLocation'
     ];
 
     /**
@@ -235,7 +239,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'in_fraud_zone' => 'getInFraudZone',
         'unusual_high_value_order' => 'getUnusualHighValueOrder',
         'channel_order_id' => 'getChannelOrderId',
-        'channel_order_display_id' => 'getChannelOrderDisplayId'
+        'channel_order_display_id' => 'getChannelOrderDisplayId',
+        'order_drop_off_location' => 'getOrderDropOffLocation'
     ];
 
     /**
@@ -741,6 +746,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
         $this->container['unusual_high_value_order'] = isset($data['unusual_high_value_order']) ? $data['unusual_high_value_order'] : null;
         $this->container['channel_order_id'] = isset($data['channel_order_id']) ? $data['channel_order_id'] : null;
         $this->container['channel_order_display_id'] = isset($data['channel_order_display_id']) ? $data['channel_order_display_id'] : null;
+        $this->container['order_drop_off_location'] = isset($data['order_drop_off_location']) ? $data['order_drop_off_location'] : null;
     }
 
     /**
@@ -1499,6 +1505,30 @@ class OrderSummary implements ModelInterface, ArrayAccess
     public function setChannelOrderDisplayId($channel_order_display_id)
     {
         $this->container['channel_order_display_id'] = $channel_order_display_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_drop_off_location
+     *
+     * @return \Flipdish\\Client\Models\OrderDropOffLocation
+     */
+    public function getOrderDropOffLocation()
+    {
+        return $this->container['order_drop_off_location'];
+    }
+
+    /**
+     * Sets order_drop_off_location
+     *
+     * @param \Flipdish\\Client\Models\OrderDropOffLocation $order_drop_off_location DropOffLocation selected for this order
+     *
+     * @return $this
+     */
+    public function setOrderDropOffLocation($order_drop_off_location)
+    {
+        $this->container['order_drop_off_location'] = $order_drop_off_location;
 
         return $this;
     }

@@ -250,4 +250,11 @@ class OrderSummaryTest extends \PHPUnit_Framework_TestCase
     public function testPropertyChannelOrderDisplayId()
     {
     }
+
+    /**
+     * Test attribute "order_drop_off_location"
+     */
+    public function testPropertyOrderDropOffLocation()
+    {
+    }
 }
