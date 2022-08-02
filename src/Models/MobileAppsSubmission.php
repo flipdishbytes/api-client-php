@@ -243,6 +243,15 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['app_name'] === null) {
+            $invalidProperties[] = "'app_name' can't be null";
+        }
+        if ($this->container['app_description'] === null) {
+            $invalidProperties[] = "'app_description' can't be null";
+        }
+        if ($this->container['app_short_description'] === null) {
+            $invalidProperties[] = "'app_short_description' can't be null";
+        }
         $allowedValues = $this->getStatusAllowableValues();
         if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
