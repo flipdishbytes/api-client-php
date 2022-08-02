@@ -62,6 +62,7 @@ class TipConfiguration implements ModelInterface, ArrayAccess
         'is_enabled' => 'bool',
         'allow_custom_tips' => 'bool',
         'allow_round_up' => 'bool',
+        'allow_emojis' => 'bool',
         'percentages' => 'double[]',
         'default_percentage' => 'double'
     ];
@@ -76,6 +77,7 @@ class TipConfiguration implements ModelInterface, ArrayAccess
         'is_enabled' => null,
         'allow_custom_tips' => null,
         'allow_round_up' => null,
+        'allow_emojis' => null,
         'percentages' => 'double',
         'default_percentage' => 'double'
     ];
@@ -111,6 +113,7 @@ class TipConfiguration implements ModelInterface, ArrayAccess
         'is_enabled' => 'IsEnabled',
         'allow_custom_tips' => 'AllowCustomTips',
         'allow_round_up' => 'AllowRoundUp',
+        'allow_emojis' => 'AllowEmojis',
         'percentages' => 'Percentages',
         'default_percentage' => 'DefaultPercentage'
     ];
@@ -125,6 +128,7 @@ class TipConfiguration implements ModelInterface, ArrayAccess
         'is_enabled' => 'setIsEnabled',
         'allow_custom_tips' => 'setAllowCustomTips',
         'allow_round_up' => 'setAllowRoundUp',
+        'allow_emojis' => 'setAllowEmojis',
         'percentages' => 'setPercentages',
         'default_percentage' => 'setDefaultPercentage'
     ];
@@ -139,6 +143,7 @@ class TipConfiguration implements ModelInterface, ArrayAccess
         'is_enabled' => 'getIsEnabled',
         'allow_custom_tips' => 'getAllowCustomTips',
         'allow_round_up' => 'getAllowRoundUp',
+        'allow_emojis' => 'getAllowEmojis',
         'percentages' => 'getPercentages',
         'default_percentage' => 'getDefaultPercentage'
     ];
@@ -207,6 +212,7 @@ class TipConfiguration implements ModelInterface, ArrayAccess
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
         $this->container['allow_custom_tips'] = isset($data['allow_custom_tips']) ? $data['allow_custom_tips'] : null;
         $this->container['allow_round_up'] = isset($data['allow_round_up']) ? $data['allow_round_up'] : null;
+        $this->container['allow_emojis'] = isset($data['allow_emojis']) ? $data['allow_emojis'] : null;
         $this->container['percentages'] = isset($data['percentages']) ? $data['percentages'] : null;
         $this->container['default_percentage'] = isset($data['default_percentage']) ? $data['default_percentage'] : null;
     }
@@ -327,6 +333,30 @@ class TipConfiguration implements ModelInterface, ArrayAccess
     public function setAllowRoundUp($allow_round_up)
     {
         $this->container['allow_round_up'] = $allow_round_up;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_emojis
+     *
+     * @return bool
+     */
+    public function getAllowEmojis()
+    {
+        return $this->container['allow_emojis'];
+    }
+
+    /**
+     * Sets allow_emojis
+     *
+     * @param bool $allow_emojis Are emojis allowed?
+     *
+     * @return $this
+     */
+    public function setAllowEmojis($allow_emojis)
+    {
+        $this->container['allow_emojis'] = $allow_emojis;
 
         return $this;
     }

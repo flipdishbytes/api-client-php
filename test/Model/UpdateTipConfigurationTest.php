@@ -98,6 +98,13 @@ class UpdateTipConfigurationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "allow_emojis"
+     */
+    public function testPropertyAllowEmojis()
+    {
+    }
+
+    /**
      * Test attribute "percentages"
      */
     public function testPropertyPercentages()
