@@ -60,7 +60,8 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
     protected static $swaggerTypes = [
         'store_ids' => 'int[]',
         'store_selector_type' => 'string',
-        'states' => '\Flipdish\\Client\Models\FulfillmentStatusConfigurationItem[]'
+        'states' => '\Flipdish\\Client\Models\FulfillmentStatusConfigurationItem[]',
+        'name' => 'string'
     ];
 
     /**
@@ -71,7 +72,8 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
     protected static $swaggerFormats = [
         'store_ids' => 'int32',
         'store_selector_type' => null,
-        'states' => null
+        'states' => null,
+        'name' => null
     ];
 
     /**
@@ -103,7 +105,8 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
     protected static $attributeMap = [
         'store_ids' => 'StoreIds',
         'store_selector_type' => 'StoreSelectorType',
-        'states' => 'States'
+        'states' => 'States',
+        'name' => 'Name'
     ];
 
     /**
@@ -114,7 +117,8 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
     protected static $setters = [
         'store_ids' => 'setStoreIds',
         'store_selector_type' => 'setStoreSelectorType',
-        'states' => 'setStates'
+        'states' => 'setStates',
+        'name' => 'setName'
     ];
 
     /**
@@ -125,7 +129,8 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
     protected static $getters = [
         'store_ids' => 'getStoreIds',
         'store_selector_type' => 'getStoreSelectorType',
-        'states' => 'getStates'
+        'states' => 'getStates',
+        'name' => 'getName'
     ];
 
     /**
@@ -208,6 +213,7 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
         $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
         $this->container['store_selector_type'] = isset($data['store_selector_type']) ? $data['store_selector_type'] : null;
         $this->container['states'] = isset($data['states']) ? $data['states'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -319,6 +325,30 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
     public function setStates($states)
     {
         $this->container['states'] = $states;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name Name
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
 
         return $this;
     }

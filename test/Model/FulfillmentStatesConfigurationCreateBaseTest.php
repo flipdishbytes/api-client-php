@@ -1,6 +1,6 @@
 <?php
 /**
- * FulfillmentStatesConfigurationSummaryTest
+ * FulfillmentStatesConfigurationCreateBaseTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * FulfillmentStatesConfigurationSummaryTest Class Doc Comment
+ * FulfillmentStatesConfigurationCreateBaseTest Class Doc Comment
  *
  * @category    Class
- * @description App store app configuration header information
+ * @description Fulfillment States Configuration Create Base
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class FulfillmentStatesConfigurationSummaryTest extends \PHPUnit_Framework_TestCase
+class FulfillmentStatesConfigurationCreateBaseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,23 +70,9 @@ class FulfillmentStatesConfigurationSummaryTest extends \PHPUnit_Framework_TestC
     }
 
     /**
-     * Test "FulfillmentStatesConfigurationSummary"
+     * Test "FulfillmentStatesConfigurationCreateBase"
      */
-    public function testFulfillmentStatesConfigurationSummary()
-    {
-    }
-
-    /**
-     * Test attribute "app_id"
-     */
-    public function testPropertyAppId()
-    {
-    }
-
-    /**
-     * Test attribute "configuration_uid"
-     */
-    public function testPropertyConfigurationUid()
+    public function testFulfillmentStatesConfigurationCreateBase()
     {
     }
 
@@ -94,20 +80,6 @@ class FulfillmentStatesConfigurationSummaryTest extends \PHPUnit_Framework_TestC
      * Test attribute "name"
      */
     public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "store_selector_type"
-     */
-    public function testPropertyStoreSelectorType()
-    {
-    }
-
-    /**
-     * Test attribute "stores"
-     */
-    public function testPropertyStores()
     {
     }
 }

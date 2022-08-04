@@ -666,6 +666,7 @@ Class | Method | HTTP request | Description
  - [FulfillentStatusActionItem](docs/Model/FulfillentStatusActionItem.md)
  - [FulfillmentInfo](docs/Model/FulfillmentInfo.md)
  - [FulfillmentStatesConfiguration](docs/Model/FulfillmentStatesConfiguration.md)
+ - [FulfillmentStatesConfigurationCreateBase](docs/Model/FulfillmentStatesConfigurationCreateBase.md)
  - [FulfillmentStatesConfigurationSummary](docs/Model/FulfillmentStatesConfigurationSummary.md)
  - [FulfillmentStatesConfiguredStore](docs/Model/FulfillmentStatesConfiguredStore.md)
  - [FulfillmentStatusConfigurationItem](docs/Model/FulfillmentStatusConfigurationItem.md)

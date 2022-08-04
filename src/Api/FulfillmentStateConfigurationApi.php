@@ -93,14 +93,15 @@ class FulfillmentStateConfigurationApi
      * Create fulfillment configuration
      *
      * @param  string $app_id App id (required)
+     * @param  \Flipdish\\Client\Models\FulfillmentStatesConfigurationCreateBase $fulfillment_state_configuration Fulfillment state configuration (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration
      */
-    public function createFulfillmentStatesConfig($app_id)
+    public function createFulfillmentStatesConfig($app_id, $fulfillment_state_configuration)
     {
-        list($response) = $this->createFulfillmentStatesConfigWithHttpInfo($app_id);
+        list($response) = $this->createFulfillmentStatesConfigWithHttpInfo($app_id, $fulfillment_state_configuration);
         return $response;
     }
 
@@ -110,15 +111,16 @@ class FulfillmentStateConfigurationApi
      * Create fulfillment configuration
      *
      * @param  string $app_id App id (required)
+     * @param  \Flipdish\\Client\Models\FulfillmentStatesConfigurationCreateBase $fulfillment_state_configuration Fulfillment state configuration (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createFulfillmentStatesConfigWithHttpInfo($app_id)
+    public function createFulfillmentStatesConfigWithHttpInfo($app_id, $fulfillment_state_configuration)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration';
-        $request = $this->createFulfillmentStatesConfigRequest($app_id);
+        $request = $this->createFulfillmentStatesConfigRequest($app_id, $fulfillment_state_configuration);
 
         try {
             $options = $this->createHttpClientOption();
@@ -217,13 +219,14 @@ class FulfillmentStateConfigurationApi
      * Create fulfillment configuration
      *
      * @param  string $app_id App id (required)
+     * @param  \Flipdish\\Client\Models\FulfillmentStatesConfigurationCreateBase $fulfillment_state_configuration Fulfillment state configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFulfillmentStatesConfigAsync($app_id)
+    public function createFulfillmentStatesConfigAsync($app_id, $fulfillment_state_configuration)
     {
-        return $this->createFulfillmentStatesConfigAsyncWithHttpInfo($app_id)
+        return $this->createFulfillmentStatesConfigAsyncWithHttpInfo($app_id, $fulfillment_state_configuration)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -237,14 +240,15 @@ class FulfillmentStateConfigurationApi
      * Create fulfillment configuration
      *
      * @param  string $app_id App id (required)
+     * @param  \Flipdish\\Client\Models\FulfillmentStatesConfigurationCreateBase $fulfillment_state_configuration Fulfillment state configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createFulfillmentStatesConfigAsyncWithHttpInfo($app_id)
+    public function createFulfillmentStatesConfigAsyncWithHttpInfo($app_id, $fulfillment_state_configuration)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration';
-        $request = $this->createFulfillmentStatesConfigRequest($app_id);
+        $request = $this->createFulfillmentStatesConfigRequest($app_id, $fulfillment_state_configuration);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -287,16 +291,23 @@ class FulfillmentStateConfigurationApi
      * Create request for operation 'createFulfillmentStatesConfig'
      *
      * @param  string $app_id App id (required)
+     * @param  \Flipdish\\Client\Models\FulfillmentStatesConfigurationCreateBase $fulfillment_state_configuration Fulfillment state configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createFulfillmentStatesConfigRequest($app_id)
+    protected function createFulfillmentStatesConfigRequest($app_id, $fulfillment_state_configuration)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $app_id when calling createFulfillmentStatesConfig'
+            );
+        }
+        // verify the required parameter 'fulfillment_state_configuration' is set
+        if ($fulfillment_state_configuration === null || (is_array($fulfillment_state_configuration) && count($fulfillment_state_configuration) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $fulfillment_state_configuration when calling createFulfillmentStatesConfig'
             );
         }
 
@@ -319,6 +330,9 @@ class FulfillmentStateConfigurationApi
 
         // body params
         $_tempBody = null;
+        if (isset($fulfillment_state_configuration)) {
+            $_tempBody = $fulfillment_state_configuration;
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -327,7 +341,7 @@ class FulfillmentStateConfigurationApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                []
+                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
             );
         }
 

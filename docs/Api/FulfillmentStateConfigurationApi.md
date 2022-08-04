@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createFulfillmentStatesConfig**
-> \Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration createFulfillmentStatesConfig($app_id)
+> \Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration createFulfillmentStatesConfig($app_id, $fulfillment_state_configuration)
 
 Create fulfillment configuration
 
@@ -33,9 +33,10 @@ $apiInstance = new Flipdish\\Client\Api\FulfillmentStateConfigurationApi(
     $config
 );
 $app_id = "app_id_example"; // string | App id
+$fulfillment_state_configuration = new \Flipdish\\Client\Models\FulfillmentStatesConfigurationCreateBase(); // \Flipdish\\Client\Models\FulfillmentStatesConfigurationCreateBase | Fulfillment state configuration
 
 try {
-    $result = $apiInstance->createFulfillmentStatesConfig($app_id);
+    $result = $apiInstance->createFulfillmentStatesConfig($app_id, $fulfillment_state_configuration);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FulfillmentStateConfigurationApi->createFulfillmentStatesConfig: ', $e->getMessage(), PHP_EOL;
@@ -48,6 +49,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| App id |
+ **fulfillment_state_configuration** | [**\Flipdish\\Client\Models\FulfillmentStatesConfigurationCreateBase**](../Model/FulfillmentStatesConfigurationCreateBase.md)| Fulfillment state configuration |
 
 ### Return type
 
@@ -59,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

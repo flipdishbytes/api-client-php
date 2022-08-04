@@ -96,4 +96,11 @@ class UpdateFulfillmentStatesConfigurationTest extends \PHPUnit_Framework_TestCa
     public function testPropertyStates()
     {
     }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+    }
 }

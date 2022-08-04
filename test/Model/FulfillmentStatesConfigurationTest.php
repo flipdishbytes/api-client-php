@@ -110,4 +110,11 @@ class FulfillmentStatesConfigurationTest extends \PHPUnit_Framework_TestCase
     public function testPropertyStoreIds()
     {
     }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+    }
 }

@@ -62,7 +62,8 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
         'app_id' => 'string',
         'configuration_uid' => 'string',
         'store_selector_type' => 'string',
-        'store_ids' => 'int[]'
+        'store_ids' => 'int[]',
+        'name' => 'string'
     ];
 
     /**
@@ -75,7 +76,8 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
         'app_id' => null,
         'configuration_uid' => null,
         'store_selector_type' => null,
-        'store_ids' => 'int32'
+        'store_ids' => 'int32',
+        'name' => null
     ];
 
     /**
@@ -109,7 +111,8 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
         'app_id' => 'AppId',
         'configuration_uid' => 'ConfigurationUid',
         'store_selector_type' => 'StoreSelectorType',
-        'store_ids' => 'StoreIds'
+        'store_ids' => 'StoreIds',
+        'name' => 'Name'
     ];
 
     /**
@@ -122,7 +125,8 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
         'app_id' => 'setAppId',
         'configuration_uid' => 'setConfigurationUid',
         'store_selector_type' => 'setStoreSelectorType',
-        'store_ids' => 'setStoreIds'
+        'store_ids' => 'setStoreIds',
+        'name' => 'setName'
     ];
 
     /**
@@ -135,7 +139,8 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
         'app_id' => 'getAppId',
         'configuration_uid' => 'getConfigurationUid',
         'store_selector_type' => 'getStoreSelectorType',
-        'store_ids' => 'getStoreIds'
+        'store_ids' => 'getStoreIds',
+        'name' => 'getName'
     ];
 
     /**
@@ -220,6 +225,7 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
         $this->container['configuration_uid'] = isset($data['configuration_uid']) ? $data['configuration_uid'] : null;
         $this->container['store_selector_type'] = isset($data['store_selector_type']) ? $data['store_selector_type'] : null;
         $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -379,6 +385,30 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
     public function setStoreIds($store_ids)
     {
         $this->container['store_ids'] = $store_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name Name
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
 
         return $this;
     }
