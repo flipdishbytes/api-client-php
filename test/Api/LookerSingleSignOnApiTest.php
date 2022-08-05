@@ -72,16 +72,6 @@ class LookerSingleSignOnApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getLookerCustomerReportingEmbedUrl
-     *
-     * .
-     *
-     */
-    public function testGetLookerCustomerReportingEmbedUrl()
-    {
-    }
-
-    /**
      * Test case for getSSOEndpoint
      *
      * Get the generic single sign on embed URL for Looker dashboards.
