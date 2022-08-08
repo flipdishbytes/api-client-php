@@ -461,7 +461,8 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**getStoreById**](docs/Api/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
 *StoresApi* | [**getStoreHeadersByAppId**](docs/Api/StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | Get all stores by app name id
 *StoresApi* | [**getStoreNetSales**](docs/Api/StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | Get stores statistics by app name id and storeIds
-*StoresApi* | [**getStoreServiceCharge**](docs/Api/StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
+*StoresApi* | [**getStoreServiceCharge**](docs/Api/StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/feeConfig | Retrieve Store feeConfig
+*StoresApi* | [**getStoreServiceCharge_0**](docs/Api/StoresApi.md#getstoreservicecharge_0) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
 *StoresApi* | [**getStores**](docs/Api/StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores, excluding archived ones
 *StoresApi* | [**getStoresByAppId**](docs/Api/StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
 *StoresApi* | [**getStoresByStoreIdWithValidations**](docs/Api/StoresApi.md#getstoresbystoreidwithvalidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | Get store validation by storeIds
@@ -1106,6 +1107,7 @@ Class | Method | HTTP request | Description
  - [StoreDataPoint](docs/Model/StoreDataPoint.md)
  - [StoreDeletedEvent](docs/Model/StoreDeletedEvent.md)
  - [StoreEndOfDayReport](docs/Model/StoreEndOfDayReport.md)
+ - [StoreFeeConfig](docs/Model/StoreFeeConfig.md)
  - [StoreGroup](docs/Model/StoreGroup.md)
  - [StoreGroupBase](docs/Model/StoreGroupBase.md)
  - [StoreGroupCreatedEvent](docs/Model/StoreGroupCreatedEvent.md)
