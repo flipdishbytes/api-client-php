@@ -250,6 +250,14 @@ class MenuSection implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 4000)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 4000.";
+        }
+
+        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+        }
+
         return $invalidProperties;
     }
 
@@ -404,6 +412,13 @@ class MenuSection implements ModelInterface, ArrayAccess
      */
     public function setName($name)
     {
+        if (!is_null($name) && (mb_strlen($name) > 4000)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling MenuSection., must be smaller than or equal to 4000.');
+        }
+        if (!is_null($name) && (mb_strlen($name) < 0)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling MenuSection., must be bigger than or equal to 0.');
+        }
+
         $this->container['name'] = $name;
 
         return $this;

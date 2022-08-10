@@ -210,8 +210,8 @@ class Metadata implements ModelInterface, ArrayAccess
             $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 0.";
         }
 
-        if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 128)) {
-            $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 128.";
+        if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 4000)) {
+            $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 4000.";
         }
 
         if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 0)) {
@@ -307,8 +307,8 @@ class Metadata implements ModelInterface, ArrayAccess
      */
     public function setValue($value)
     {
-        if (!is_null($value) && (mb_strlen($value) > 128)) {
-            throw new \InvalidArgumentException('invalid length for $value when calling Metadata., must be smaller than or equal to 128.');
+        if (!is_null($value) && (mb_strlen($value) > 4000)) {
+            throw new \InvalidArgumentException('invalid length for $value when calling Metadata., must be smaller than or equal to 4000.');
         }
         if (!is_null($value) && (mb_strlen($value) < 0)) {
             throw new \InvalidArgumentException('invalid length for $value when calling Metadata., must be bigger than or equal to 0.');
