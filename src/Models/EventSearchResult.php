@@ -157,6 +157,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'kiosk_bluetooth_pairing_mode_event' => '\Flipdish\\Client\Models\KioskBluetoothPairingModeEvent[]',
         'kiosk_bluetooth_unpairing_mode_event' => '\Flipdish\\Client\Models\KioskBluetoothUnpairingModeEvent[]',
         'kiosk_bluetooth_terminal_unpaired_event' => '\Flipdish\\Client\Models\KioskBluetoothTerminalUnpairedEvent[]',
+        'kiosk_terminal_action_state_changed_event' => '\Flipdish\\Client\Models\KioskTerminalActionStateChangedEvent[]',
         'kiosk_bluetooth_terminal_updated_event' => '\Flipdish\\Client\Models\KioskBluetoothTerminalUpdatedEvent[]',
         'kiosk_bluetooth_terminal_initiate_update_check_event' => '\Flipdish\\Client\Models\KioskBluetoothTerminalInitiateUpdateCheckEvent[]',
         'kiosk_bluetooth_install_update_initiate_event' => '\Flipdish\\Client\Models\KioskBluetoothInstallUpdateInitiateEvent[]',
@@ -296,6 +297,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'kiosk_bluetooth_pairing_mode_event' => null,
         'kiosk_bluetooth_unpairing_mode_event' => null,
         'kiosk_bluetooth_terminal_unpaired_event' => null,
+        'kiosk_terminal_action_state_changed_event' => null,
         'kiosk_bluetooth_terminal_updated_event' => null,
         'kiosk_bluetooth_terminal_initiate_update_check_event' => null,
         'kiosk_bluetooth_install_update_initiate_event' => null,
@@ -456,6 +458,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'kiosk_bluetooth_pairing_mode_event' => 'KioskBluetoothPairingModeEvent',
         'kiosk_bluetooth_unpairing_mode_event' => 'KioskBluetoothUnpairingModeEvent',
         'kiosk_bluetooth_terminal_unpaired_event' => 'KioskBluetoothTerminalUnpairedEvent',
+        'kiosk_terminal_action_state_changed_event' => 'KioskTerminalActionStateChangedEvent',
         'kiosk_bluetooth_terminal_updated_event' => 'KioskBluetoothTerminalUpdatedEvent',
         'kiosk_bluetooth_terminal_initiate_update_check_event' => 'KioskBluetoothTerminalInitiateUpdateCheckEvent',
         'kiosk_bluetooth_install_update_initiate_event' => 'KioskBluetoothInstallUpdateInitiateEvent',
@@ -595,6 +598,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'kiosk_bluetooth_pairing_mode_event' => 'setKioskBluetoothPairingModeEvent',
         'kiosk_bluetooth_unpairing_mode_event' => 'setKioskBluetoothUnpairingModeEvent',
         'kiosk_bluetooth_terminal_unpaired_event' => 'setKioskBluetoothTerminalUnpairedEvent',
+        'kiosk_terminal_action_state_changed_event' => 'setKioskTerminalActionStateChangedEvent',
         'kiosk_bluetooth_terminal_updated_event' => 'setKioskBluetoothTerminalUpdatedEvent',
         'kiosk_bluetooth_terminal_initiate_update_check_event' => 'setKioskBluetoothTerminalInitiateUpdateCheckEvent',
         'kiosk_bluetooth_install_update_initiate_event' => 'setKioskBluetoothInstallUpdateInitiateEvent',
@@ -734,6 +738,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'kiosk_bluetooth_pairing_mode_event' => 'getKioskBluetoothPairingModeEvent',
         'kiosk_bluetooth_unpairing_mode_event' => 'getKioskBluetoothUnpairingModeEvent',
         'kiosk_bluetooth_terminal_unpaired_event' => 'getKioskBluetoothTerminalUnpairedEvent',
+        'kiosk_terminal_action_state_changed_event' => 'getKioskTerminalActionStateChangedEvent',
         'kiosk_bluetooth_terminal_updated_event' => 'getKioskBluetoothTerminalUpdatedEvent',
         'kiosk_bluetooth_terminal_initiate_update_check_event' => 'getKioskBluetoothTerminalInitiateUpdateCheckEvent',
         'kiosk_bluetooth_install_update_initiate_event' => 'getKioskBluetoothInstallUpdateInitiateEvent',
@@ -927,6 +932,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         $this->container['kiosk_bluetooth_pairing_mode_event'] = isset($data['kiosk_bluetooth_pairing_mode_event']) ? $data['kiosk_bluetooth_pairing_mode_event'] : null;
         $this->container['kiosk_bluetooth_unpairing_mode_event'] = isset($data['kiosk_bluetooth_unpairing_mode_event']) ? $data['kiosk_bluetooth_unpairing_mode_event'] : null;
         $this->container['kiosk_bluetooth_terminal_unpaired_event'] = isset($data['kiosk_bluetooth_terminal_unpaired_event']) ? $data['kiosk_bluetooth_terminal_unpaired_event'] : null;
+        $this->container['kiosk_terminal_action_state_changed_event'] = isset($data['kiosk_terminal_action_state_changed_event']) ? $data['kiosk_terminal_action_state_changed_event'] : null;
         $this->container['kiosk_bluetooth_terminal_updated_event'] = isset($data['kiosk_bluetooth_terminal_updated_event']) ? $data['kiosk_bluetooth_terminal_updated_event'] : null;
         $this->container['kiosk_bluetooth_terminal_initiate_update_check_event'] = isset($data['kiosk_bluetooth_terminal_initiate_update_check_event']) ? $data['kiosk_bluetooth_terminal_initiate_update_check_event'] : null;
         $this->container['kiosk_bluetooth_install_update_initiate_event'] = isset($data['kiosk_bluetooth_install_update_initiate_event']) ? $data['kiosk_bluetooth_install_update_initiate_event'] : null;
@@ -3357,6 +3363,30 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     public function setKioskBluetoothTerminalUnpairedEvent($kiosk_bluetooth_terminal_unpaired_event)
     {
         $this->container['kiosk_bluetooth_terminal_unpaired_event'] = $kiosk_bluetooth_terminal_unpaired_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets kiosk_terminal_action_state_changed_event
+     *
+     * @return \Flipdish\\Client\Models\KioskTerminalActionStateChangedEvent[]
+     */
+    public function getKioskTerminalActionStateChangedEvent()
+    {
+        return $this->container['kiosk_terminal_action_state_changed_event'];
+    }
+
+    /**
+     * Sets kiosk_terminal_action_state_changed_event
+     *
+     * @param \Flipdish\\Client\Models\KioskTerminalActionStateChangedEvent[] $kiosk_terminal_action_state_changed_event Terminal actionstate change
+     *
+     * @return $this
+     */
+    public function setKioskTerminalActionStateChangedEvent($kiosk_terminal_action_state_changed_event)
+    {
+        $this->container['kiosk_terminal_action_state_changed_event'] = $kiosk_terminal_action_state_changed_event;
 
         return $this;
     }

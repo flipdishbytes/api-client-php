@@ -102,6 +102,7 @@ Name | Type | Description | Notes
 **kiosk_bluetooth_pairing_mode_event** | [**\Flipdish\\Client\Models\KioskBluetoothPairingModeEvent[]**](KioskBluetoothPairingModeEvent.md) | Bluetooth Pairing Mode initiated | [optional] 
 **kiosk_bluetooth_unpairing_mode_event** | [**\Flipdish\\Client\Models\KioskBluetoothUnpairingModeEvent[]**](KioskBluetoothUnpairingModeEvent.md) | Bluetooth Unpairing Mode initiated | [optional] 
 **kiosk_bluetooth_terminal_unpaired_event** | [**\Flipdish\\Client\Models\KioskBluetoothTerminalUnpairedEvent[]**](KioskBluetoothTerminalUnpairedEvent.md) | Bluetooth Terminal Unpaired with Kiosk | [optional] 
+**kiosk_terminal_action_state_changed_event** | [**\Flipdish\\Client\Models\KioskTerminalActionStateChangedEvent[]**](KioskTerminalActionStateChangedEvent.md) | Terminal actionstate change | [optional] 
 **kiosk_bluetooth_terminal_updated_event** | [**\Flipdish\\Client\Models\KioskBluetoothTerminalUpdatedEvent[]**](KioskBluetoothTerminalUpdatedEvent.md) | Bluetooth Terminal Updated | [optional] 
 **kiosk_bluetooth_terminal_initiate_update_check_event** | [**\Flipdish\\Client\Models\KioskBluetoothTerminalInitiateUpdateCheckEvent[]**](KioskBluetoothTerminalInitiateUpdateCheckEvent.md) | Trigger bluetooth payment terminal update checker | [optional] 
 **kiosk_bluetooth_install_update_initiate_event** | [**\Flipdish\\Client\Models\KioskBluetoothInstallUpdateInitiateEvent[]**](KioskBluetoothInstallUpdateInitiateEvent.md) | Bluetooth Terminal Initiate Update | [optional] 

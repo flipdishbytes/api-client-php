@@ -770,6 +770,13 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "kiosk_terminal_action_state_changed_event"
+     */
+    public function testPropertyKioskTerminalActionStateChangedEvent()
+    {
+    }
+
+    /**
      * Test attribute "kiosk_bluetooth_terminal_updated_event"
      */
     public function testPropertyKioskBluetoothTerminalUpdatedEvent()
