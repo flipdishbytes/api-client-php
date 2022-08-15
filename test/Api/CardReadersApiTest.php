@@ -102,6 +102,16 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for cardReadersGetReader
+     *
+     * Get reader.
+     *
+     */
+    public function testCardReadersGetReader()
+    {
+    }
+
+    /**
      * Test case for generateStripeTerminalLocation
      *
      * Get Location ID for Stripe Terminal.
@@ -158,6 +168,16 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testInitiateKioskBluetoothUpdateInstall()
+    {
+    }
+
+    /**
+     * Test case for initiateReaderProcessPaymentIntent
+     *
+     * Initiate Stripe terminal to Process Payment Intent.
+     *
+     */
+    public function testInitiateReaderProcessPaymentIntent()
     {
     }
 

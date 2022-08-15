@@ -1,6 +1,6 @@
 <?php
 /**
- * CardReaderTest
+ * ProcessPaymentIntentRequestTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * CardReaderTest Class Doc Comment
+ * ProcessPaymentIntentRequestTest Class Doc Comment
  *
  * @category    Class
- * @description Card reader
+ * @description Initiate card reader Payment process request
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CardReaderTest extends \PHPUnit_Framework_TestCase
+class ProcessPaymentIntentRequestTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,65 +70,16 @@ class CardReaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CardReader"
+     * Test "ProcessPaymentIntentRequest"
      */
-    public function testCardReader()
+    public function testProcessPaymentIntentRequest()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "payment_intent_id"
      */
-    public function testPropertyId()
-    {
-    }
-
-    /**
-     * Test attribute "device_software_version"
-     */
-    public function testPropertyDeviceSoftwareVersion()
-    {
-    }
-
-    /**
-     * Test attribute "serial_number"
-     */
-    public function testPropertySerialNumber()
-    {
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-    }
-
-    /**
-     * Test attribute "registration_code"
-     */
-    public function testPropertyRegistrationCode()
-    {
-    }
-
-    /**
-     * Test attribute "device_type"
-     */
-    public function testPropertyDeviceType()
-    {
-    }
-
-    /**
-     * Test attribute "deleted"
-     */
-    public function testPropertyDeleted()
-    {
-    }
-
-    /**
-     * Test attribute "action"
-     */
-    public function testPropertyAction()
+    public function testPropertyPaymentIntentId()
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * CardReader
+ * ReaderActionStateInfo
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * CardReader Class Doc Comment
+ * ReaderActionStateInfo Class Doc Comment
  *
  * @category Class
- * @description Card reader
+ * @description Card reader state information
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CardReader implements ModelInterface, ArrayAccess
+class ReaderActionStateInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class CardReader implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'CardReader';
+    protected static $swaggerModelName = 'ReaderActionStateInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,14 +58,9 @@ class CardReader implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'device_software_version' => 'string',
-        'serial_number' => 'string',
-        'status' => 'string',
-        'registration_code' => 'string',
-        'device_type' => 'string',
-        'deleted' => 'bool',
-        'action' => '\Flipdish\\Client\Models\ReaderActionStateInfo'
+        'action_state' => 'string',
+        'failure_code' => 'string',
+        'type' => 'string'
     ];
 
     /**
@@ -74,14 +69,9 @@ class CardReader implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'device_software_version' => null,
-        'serial_number' => null,
-        'status' => null,
-        'registration_code' => null,
-        'device_type' => null,
-        'deleted' => null,
-        'action' => null
+        'action_state' => null,
+        'failure_code' => null,
+        'type' => null
     ];
 
     /**
@@ -111,14 +101,9 @@ class CardReader implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'Id',
-        'device_software_version' => 'DeviceSoftwareVersion',
-        'serial_number' => 'SerialNumber',
-        'status' => 'Status',
-        'registration_code' => 'RegistrationCode',
-        'device_type' => 'DeviceType',
-        'deleted' => 'Deleted',
-        'action' => 'Action'
+        'action_state' => 'ActionState',
+        'failure_code' => 'FailureCode',
+        'type' => 'Type'
     ];
 
     /**
@@ -127,14 +112,9 @@ class CardReader implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'device_software_version' => 'setDeviceSoftwareVersion',
-        'serial_number' => 'setSerialNumber',
-        'status' => 'setStatus',
-        'registration_code' => 'setRegistrationCode',
-        'device_type' => 'setDeviceType',
-        'deleted' => 'setDeleted',
-        'action' => 'setAction'
+        'action_state' => 'setActionState',
+        'failure_code' => 'setFailureCode',
+        'type' => 'setType'
     ];
 
     /**
@@ -143,14 +123,9 @@ class CardReader implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'device_software_version' => 'getDeviceSoftwareVersion',
-        'serial_number' => 'getSerialNumber',
-        'status' => 'getStatus',
-        'registration_code' => 'getRegistrationCode',
-        'device_type' => 'getDeviceType',
-        'deleted' => 'getDeleted',
-        'action' => 'getAction'
+        'action_state' => 'getActionState',
+        'failure_code' => 'getFailureCode',
+        'type' => 'getType'
     ];
 
     /**
@@ -213,14 +188,9 @@ class CardReader implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['device_software_version'] = isset($data['device_software_version']) ? $data['device_software_version'] : null;
-        $this->container['serial_number'] = isset($data['serial_number']) ? $data['serial_number'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['registration_code'] = isset($data['registration_code']) ? $data['registration_code'] : null;
-        $this->container['device_type'] = isset($data['device_type']) ? $data['device_type'] : null;
-        $this->container['deleted'] = isset($data['deleted']) ? $data['deleted'] : null;
-        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['action_state'] = isset($data['action_state']) ? $data['action_state'] : null;
+        $this->container['failure_code'] = isset($data['failure_code']) ? $data['failure_code'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -248,193 +218,73 @@ class CardReader implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets action_state
      *
      * @return string
      */
-    public function getId()
+    public function getActionState()
     {
-        return $this->container['id'];
+        return $this->container['action_state'];
     }
 
     /**
-     * Sets id
+     * Sets action_state
      *
-     * @param string $id Stripe reader id
+     * @param string $action_state Action state
      *
      * @return $this
      */
-    public function setId($id)
+    public function setActionState($action_state)
     {
-        $this->container['id'] = $id;
+        $this->container['action_state'] = $action_state;
 
         return $this;
     }
 
     /**
-     * Gets device_software_version
+     * Gets failure_code
      *
      * @return string
      */
-    public function getDeviceSoftwareVersion()
+    public function getFailureCode()
     {
-        return $this->container['device_software_version'];
+        return $this->container['failure_code'];
     }
 
     /**
-     * Sets device_software_version
+     * Sets failure_code
      *
-     * @param string $device_software_version Software version
+     * @param string $failure_code Failure code
      *
      * @return $this
      */
-    public function setDeviceSoftwareVersion($device_software_version)
+    public function setFailureCode($failure_code)
     {
-        $this->container['device_software_version'] = $device_software_version;
+        $this->container['failure_code'] = $failure_code;
 
         return $this;
     }
 
     /**
-     * Gets serial_number
+     * Gets type
      *
      * @return string
      */
-    public function getSerialNumber()
+    public function getType()
     {
-        return $this->container['serial_number'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets serial_number
+     * Sets type
      *
-     * @param string $serial_number Device serial number
+     * @param string $type Type
      *
      * @return $this
      */
-    public function setSerialNumber($serial_number)
+    public function setType($type)
     {
-        $this->container['serial_number'] = $serial_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string $status Device status online or offline
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets registration_code
-     *
-     * @return string
-     */
-    public function getRegistrationCode()
-    {
-        return $this->container['registration_code'];
-    }
-
-    /**
-     * Sets registration_code
-     *
-     * @param string $registration_code Registration code
-     *
-     * @return $this
-     */
-    public function setRegistrationCode($registration_code)
-    {
-        $this->container['registration_code'] = $registration_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets device_type
-     *
-     * @return string
-     */
-    public function getDeviceType()
-    {
-        return $this->container['device_type'];
-    }
-
-    /**
-     * Sets device_type
-     *
-     * @param string $device_type Device type
-     *
-     * @return $this
-     */
-    public function setDeviceType($device_type)
-    {
-        $this->container['device_type'] = $device_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets deleted
-     *
-     * @return bool
-     */
-    public function getDeleted()
-    {
-        return $this->container['deleted'];
-    }
-
-    /**
-     * Sets deleted
-     *
-     * @param bool $deleted Indicates that the reader is deleted or not
-     *
-     * @return $this
-     */
-    public function setDeleted($deleted)
-    {
-        $this->container['deleted'] = $deleted;
-
-        return $this;
-    }
-
-    /**
-     * Gets action
-     *
-     * @return \Flipdish\\Client\Models\ReaderActionStateInfo
-     */
-    public function getAction()
-    {
-        return $this->container['action'];
-    }
-
-    /**
-     * Sets action
-     *
-     * @param \Flipdish\\Client\Models\ReaderActionStateInfo $action Action status
-     *
-     * @return $this
-     */
-    public function setAction($action)
-    {
-        $this->container['action'] = $action;
+        $this->container['type'] = $type;
 
         return $this;
     }
