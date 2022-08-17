@@ -58,7 +58,15 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'status' => 'string'
+        'mobile_apps_submission_status_id' => 'int',
+        'mobile_apps_submission_id' => 'int',
+        'type' => 'string',
+        'app_status' => 'string',
+        'status' => 'string',
+        'last_update_status_time' => '\DateTime',
+        'create_time' => '\DateTime',
+        'update_time' => '\DateTime',
+        'notes' => 'string'
     ];
 
     /**
@@ -67,7 +75,15 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'status' => null
+        'mobile_apps_submission_status_id' => 'int32',
+        'mobile_apps_submission_id' => 'int32',
+        'type' => null,
+        'app_status' => null,
+        'status' => null,
+        'last_update_status_time' => 'date-time',
+        'create_time' => 'date-time',
+        'update_time' => 'date-time',
+        'notes' => null
     ];
 
     /**
@@ -97,7 +113,15 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'status' => 'Status'
+        'mobile_apps_submission_status_id' => 'MobileAppsSubmissionStatusId',
+        'mobile_apps_submission_id' => 'MobileAppsSubmissionId',
+        'type' => 'Type',
+        'app_status' => 'AppStatus',
+        'status' => 'Status',
+        'last_update_status_time' => 'LastUpdateStatusTime',
+        'create_time' => 'CreateTime',
+        'update_time' => 'UpdateTime',
+        'notes' => 'Notes'
     ];
 
     /**
@@ -106,7 +130,15 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'status' => 'setStatus'
+        'mobile_apps_submission_status_id' => 'setMobileAppsSubmissionStatusId',
+        'mobile_apps_submission_id' => 'setMobileAppsSubmissionId',
+        'type' => 'setType',
+        'app_status' => 'setAppStatus',
+        'status' => 'setStatus',
+        'last_update_status_time' => 'setLastUpdateStatusTime',
+        'create_time' => 'setCreateTime',
+        'update_time' => 'setUpdateTime',
+        'notes' => 'setNotes'
     ];
 
     /**
@@ -115,7 +147,15 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'status' => 'getStatus'
+        'mobile_apps_submission_status_id' => 'getMobileAppsSubmissionStatusId',
+        'mobile_apps_submission_id' => 'getMobileAppsSubmissionId',
+        'type' => 'getType',
+        'app_status' => 'getAppStatus',
+        'status' => 'getStatus',
+        'last_update_status_time' => 'getLastUpdateStatusTime',
+        'create_time' => 'getCreateTime',
+        'update_time' => 'getUpdateTime',
+        'notes' => 'getNotes'
     ];
 
     /**
@@ -159,6 +199,11 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const TYPE_ANDROID = 'Android';
+    const TYPE_IOS = 'IOS';
+    const APP_STATUS_NONE = 'None';
+    const APP_STATUS_PUBLISHED = 'Published';
+    const APP_STATUS_UNPUBLISHED = 'Unpublished';
     const STATUS_NONE = 'None';
     const STATUS_IN_PROGRESS = 'InProgress';
     const STATUS_SUBMITTED = 'Submitted';
@@ -167,6 +212,33 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
     const STATUS_UNSUCCESFUL = 'Unsuccesful';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_ANDROID,
+            self::TYPE_IOS,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getAppStatusAllowableValues()
+    {
+        return [
+            self::APP_STATUS_NONE,
+            self::APP_STATUS_PUBLISHED,
+            self::APP_STATUS_UNPUBLISHED,
+        ];
+    }
     
     /**
      * Gets allowable values of the enum
@@ -201,7 +273,15 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['mobile_apps_submission_status_id'] = isset($data['mobile_apps_submission_status_id']) ? $data['mobile_apps_submission_status_id'] : null;
+        $this->container['mobile_apps_submission_id'] = isset($data['mobile_apps_submission_id']) ? $data['mobile_apps_submission_id'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['app_status'] = isset($data['app_status']) ? $data['app_status'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['last_update_status_time'] = isset($data['last_update_status_time']) ? $data['last_update_status_time'] : null;
+        $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
+        $this->container['update_time'] = isset($data['update_time']) ? $data['update_time'] : null;
+        $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
     }
 
     /**
@@ -212,6 +292,22 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getAppStatusAllowableValues();
+        if (!is_null($this->container['app_status']) && !in_array($this->container['app_status'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'app_status', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         $allowedValues = $this->getStatusAllowableValues();
         if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
@@ -235,6 +331,120 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets mobile_apps_submission_status_id
+     *
+     * @return int
+     */
+    public function getMobileAppsSubmissionStatusId()
+    {
+        return $this->container['mobile_apps_submission_status_id'];
+    }
+
+    /**
+     * Sets mobile_apps_submission_status_id
+     *
+     * @param int $mobile_apps_submission_status_id Mobile Apps Submission Status Id
+     *
+     * @return $this
+     */
+    public function setMobileAppsSubmissionStatusId($mobile_apps_submission_status_id)
+    {
+        $this->container['mobile_apps_submission_status_id'] = $mobile_apps_submission_status_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets mobile_apps_submission_id
+     *
+     * @return int
+     */
+    public function getMobileAppsSubmissionId()
+    {
+        return $this->container['mobile_apps_submission_id'];
+    }
+
+    /**
+     * Sets mobile_apps_submission_id
+     *
+     * @param int $mobile_apps_submission_id Mobile Apps Submission Id
+     *
+     * @return $this
+     */
+    public function setMobileAppsSubmissionId($mobile_apps_submission_id)
+    {
+        $this->container['mobile_apps_submission_id'] = $mobile_apps_submission_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type Mobile Type
+     *
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets app_status
+     *
+     * @return string
+     */
+    public function getAppStatus()
+    {
+        return $this->container['app_status'];
+    }
+
+    /**
+     * Sets app_status
+     *
+     * @param string $app_status Mobile App Status
+     *
+     * @return $this
+     */
+    public function setAppStatus($app_status)
+    {
+        $allowedValues = $this->getAppStatusAllowableValues();
+        if (!is_null($app_status) && !in_array($app_status, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'app_status', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['app_status'] = $app_status;
+
+        return $this;
+    }
 
     /**
      * Gets status
@@ -265,6 +475,102 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
             );
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_update_status_time
+     *
+     * @return \DateTime
+     */
+    public function getLastUpdateStatusTime()
+    {
+        return $this->container['last_update_status_time'];
+    }
+
+    /**
+     * Sets last_update_status_time
+     *
+     * @param \DateTime $last_update_status_time Mobile LastUpdateStatusTime
+     *
+     * @return $this
+     */
+    public function setLastUpdateStatusTime($last_update_status_time)
+    {
+        $this->container['last_update_status_time'] = $last_update_status_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets create_time
+     *
+     * @return \DateTime
+     */
+    public function getCreateTime()
+    {
+        return $this->container['create_time'];
+    }
+
+    /**
+     * Sets create_time
+     *
+     * @param \DateTime $create_time Mobile CreateTime
+     *
+     * @return $this
+     */
+    public function setCreateTime($create_time)
+    {
+        $this->container['create_time'] = $create_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets update_time
+     *
+     * @return \DateTime
+     */
+    public function getUpdateTime()
+    {
+        return $this->container['update_time'];
+    }
+
+    /**
+     * Sets update_time
+     *
+     * @param \DateTime $update_time Mobile UpdateTime
+     *
+     * @return $this
+     */
+    public function setUpdateTime($update_time)
+    {
+        $this->container['update_time'] = $update_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets notes
+     *
+     * @return string
+     */
+    public function getNotes()
+    {
+        return $this->container['notes'];
+    }
+
+    /**
+     * Sets notes
+     *
+     * @param string $notes Mobile Notes
+     *
+     * @return $this
+     */
+    public function setNotes($notes)
+    {
+        $this->container['notes'] = $notes;
 
         return $this;
     }

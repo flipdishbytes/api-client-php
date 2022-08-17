@@ -77,9 +77,65 @@ class MobileAppsSubmissionStatusTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "mobile_apps_submission_status_id"
+     */
+    public function testPropertyMobileAppsSubmissionStatusId()
+    {
+    }
+
+    /**
+     * Test attribute "mobile_apps_submission_id"
+     */
+    public function testPropertyMobileAppsSubmissionId()
+    {
+    }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+    }
+
+    /**
+     * Test attribute "app_status"
+     */
+    public function testPropertyAppStatus()
+    {
+    }
+
+    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()
+    {
+    }
+
+    /**
+     * Test attribute "last_update_status_time"
+     */
+    public function testPropertyLastUpdateStatusTime()
+    {
+    }
+
+    /**
+     * Test attribute "create_time"
+     */
+    public function testPropertyCreateTime()
+    {
+    }
+
+    /**
+     * Test attribute "update_time"
+     */
+    public function testPropertyUpdateTime()
+    {
+    }
+
+    /**
+     * Test attribute "notes"
+     */
+    public function testPropertyNotes()
     {
     }
 }

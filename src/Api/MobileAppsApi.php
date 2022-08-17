@@ -1002,15 +1002,15 @@ class MobileAppsApi
      * Get submission status mobile apps
      *
      * @param  string $app_id  (required)
-     * @param  string $type  (required)
+     * @param  int $mobile_apps_submission_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus
      */
-    public function getSubmissionStatus($app_id, $type)
+    public function getSubmissionStatus($app_id, $mobile_apps_submission_id)
     {
-        list($response) = $this->getSubmissionStatusWithHttpInfo($app_id, $type);
+        list($response) = $this->getSubmissionStatusWithHttpInfo($app_id, $mobile_apps_submission_id);
         return $response;
     }
 
@@ -1020,16 +1020,16 @@ class MobileAppsApi
      * Get submission status mobile apps
      *
      * @param  string $app_id  (required)
-     * @param  string $type  (required)
+     * @param  int $mobile_apps_submission_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSubmissionStatusWithHttpInfo($app_id, $type)
+    public function getSubmissionStatusWithHttpInfo($app_id, $mobile_apps_submission_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus';
-        $request = $this->getSubmissionStatusRequest($app_id, $type);
+        $request = $this->getSubmissionStatusRequest($app_id, $mobile_apps_submission_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1120,14 +1120,14 @@ class MobileAppsApi
      * Get submission status mobile apps
      *
      * @param  string $app_id  (required)
-     * @param  string $type  (required)
+     * @param  int $mobile_apps_submission_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSubmissionStatusAsync($app_id, $type)
+    public function getSubmissionStatusAsync($app_id, $mobile_apps_submission_id)
     {
-        return $this->getSubmissionStatusAsyncWithHttpInfo($app_id, $type)
+        return $this->getSubmissionStatusAsyncWithHttpInfo($app_id, $mobile_apps_submission_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1141,15 +1141,15 @@ class MobileAppsApi
      * Get submission status mobile apps
      *
      * @param  string $app_id  (required)
-     * @param  string $type  (required)
+     * @param  int $mobile_apps_submission_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSubmissionStatusAsyncWithHttpInfo($app_id, $type)
+    public function getSubmissionStatusAsyncWithHttpInfo($app_id, $mobile_apps_submission_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus';
-        $request = $this->getSubmissionStatusRequest($app_id, $type);
+        $request = $this->getSubmissionStatusRequest($app_id, $mobile_apps_submission_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1192,12 +1192,12 @@ class MobileAppsApi
      * Create request for operation 'getSubmissionStatus'
      *
      * @param  string $app_id  (required)
-     * @param  string $type  (required)
+     * @param  int $mobile_apps_submission_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getSubmissionStatusRequest($app_id, $type)
+    protected function getSubmissionStatusRequest($app_id, $mobile_apps_submission_id)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -1205,10 +1205,10 @@ class MobileAppsApi
                 'Missing the required parameter $app_id when calling getSubmissionStatus'
             );
         }
-        // verify the required parameter 'type' is set
-        if ($type === null || (is_array($type) && count($type) === 0)) {
+        // verify the required parameter 'mobile_apps_submission_id' is set
+        if ($mobile_apps_submission_id === null || (is_array($mobile_apps_submission_id) && count($mobile_apps_submission_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $type when calling getSubmissionStatus'
+                'Missing the required parameter $mobile_apps_submission_id when calling getSubmissionStatus'
             );
         }
 
@@ -1220,8 +1220,8 @@ class MobileAppsApi
         $multipart = false;
 
         // query params
-        if ($type !== null) {
-            $queryParams['type'] = ObjectSerializer::toQueryValue($type);
+        if ($mobile_apps_submission_id !== null) {
+            $queryParams['mobileAppsSubmissionId'] = ObjectSerializer::toQueryValue($mobile_apps_submission_id);
         }
 
         // path params

@@ -64,7 +64,7 @@ class MobileAppsSubmissionDetails implements ModelInterface, ArrayAccess
         'keywords' => 'string[]',
         'app_logo_url' => 'string',
         'auto_publish' => 'bool',
-        'status' => 'string'
+        'status' => '\Flipdish\\Client\Models\MobileAppsSubmissionStatus[]'
     ];
 
     /**
@@ -189,31 +189,8 @@ class MobileAppsSubmissionDetails implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const STATUS_NONE = 'None';
-    const STATUS_IN_PROGRESS = 'InProgress';
-    const STATUS_SUBMITTED = 'Submitted';
-    const STATUS_APP_STORE_REVIEW = 'AppStoreReview';
-    const STATUS_SUCESSFULL = 'Sucessfull';
-    const STATUS_UNSUCCESFUL = 'Unsuccesful';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_NONE,
-            self::STATUS_IN_PROGRESS,
-            self::STATUS_SUBMITTED,
-            self::STATUS_APP_STORE_REVIEW,
-            self::STATUS_SUCESSFULL,
-            self::STATUS_UNSUCCESFUL,
-        ];
-    }
     
 
     /**
@@ -248,14 +225,6 @@ class MobileAppsSubmissionDetails implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -419,7 +388,7 @@ class MobileAppsSubmissionDetails implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\MobileAppsSubmissionStatus[]
      */
     public function getStatus()
     {
@@ -429,21 +398,12 @@ class MobileAppsSubmissionDetails implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Mobile App Status
+     * @param \Flipdish\\Client\Models\MobileAppsSubmissionStatus[] $status Mobile App Status
      *
      * @return $this
      */
     public function setStatus($status)
     {
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($status) && !in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'status', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['status'] = $status;
 
         return $this;

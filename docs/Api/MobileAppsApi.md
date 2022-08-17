@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubmissionStatus**
-> \Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus getSubmissionStatus($app_id, $type)
+> \Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus getSubmissionStatus($app_id, $mobile_apps_submission_id)
 
 Get submission status mobile apps
 
@@ -188,10 +188,10 @@ $apiInstance = new Flipdish\\Client\Api\MobileAppsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$type = "type_example"; // string | 
+$mobile_apps_submission_id = 56; // int | 
 
 try {
-    $result = $apiInstance->getSubmissionStatus($app_id, $type);
+    $result = $apiInstance->getSubmissionStatus($app_id, $mobile_apps_submission_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MobileAppsApi->getSubmissionStatus: ', $e->getMessage(), PHP_EOL;
@@ -204,7 +204,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **type** | **string**|  |
+ **mobile_apps_submission_id** | **int**|  |
 
 ### Return type
 
