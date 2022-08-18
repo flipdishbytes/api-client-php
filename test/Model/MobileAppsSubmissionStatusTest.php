@@ -105,9 +105,9 @@ class MobileAppsSubmissionStatusTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "update_status"
      */
-    public function testPropertyStatus()
+    public function testPropertyUpdateStatus()
     {
     }
 

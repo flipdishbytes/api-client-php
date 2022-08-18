@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **app_short_description** | **string** | App Description | 
 **keywords** | **string[]** | Keywords | [optional] 
 **auto_publish** | **bool** | Publish automatically | [optional] 
-**status** | **string** | Mobile App Status | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

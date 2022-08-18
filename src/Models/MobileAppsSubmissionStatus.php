@@ -62,7 +62,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
         'mobile_apps_submission_id' => 'int',
         'type' => 'string',
         'app_status' => 'string',
-        'status' => 'string',
+        'update_status' => 'string',
         'last_update_status_time' => '\DateTime',
         'create_time' => '\DateTime',
         'update_time' => '\DateTime',
@@ -79,7 +79,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
         'mobile_apps_submission_id' => 'int32',
         'type' => null,
         'app_status' => null,
-        'status' => null,
+        'update_status' => null,
         'last_update_status_time' => 'date-time',
         'create_time' => 'date-time',
         'update_time' => 'date-time',
@@ -117,7 +117,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
         'mobile_apps_submission_id' => 'MobileAppsSubmissionId',
         'type' => 'Type',
         'app_status' => 'AppStatus',
-        'status' => 'Status',
+        'update_status' => 'UpdateStatus',
         'last_update_status_time' => 'LastUpdateStatusTime',
         'create_time' => 'CreateTime',
         'update_time' => 'UpdateTime',
@@ -134,7 +134,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
         'mobile_apps_submission_id' => 'setMobileAppsSubmissionId',
         'type' => 'setType',
         'app_status' => 'setAppStatus',
-        'status' => 'setStatus',
+        'update_status' => 'setUpdateStatus',
         'last_update_status_time' => 'setLastUpdateStatusTime',
         'create_time' => 'setCreateTime',
         'update_time' => 'setUpdateTime',
@@ -151,7 +151,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
         'mobile_apps_submission_id' => 'getMobileAppsSubmissionId',
         'type' => 'getType',
         'app_status' => 'getAppStatus',
-        'status' => 'getStatus',
+        'update_status' => 'getUpdateStatus',
         'last_update_status_time' => 'getLastUpdateStatusTime',
         'create_time' => 'getCreateTime',
         'update_time' => 'getUpdateTime',
@@ -204,12 +204,12 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
     const APP_STATUS_NONE = 'None';
     const APP_STATUS_PUBLISHED = 'Published';
     const APP_STATUS_UNPUBLISHED = 'Unpublished';
-    const STATUS_NONE = 'None';
-    const STATUS_IN_PROGRESS = 'InProgress';
-    const STATUS_SUBMITTED = 'Submitted';
-    const STATUS_APP_STORE_REVIEW = 'AppStoreReview';
-    const STATUS_SUCESSFULL = 'Sucessfull';
-    const STATUS_UNSUCCESFUL = 'Unsuccesful';
+    const UPDATE_STATUS_NONE = 'None';
+    const UPDATE_STATUS_SUBMITTED = 'Submitted';
+    const UPDATE_STATUS_IN_REVIEW = 'InReview';
+    const UPDATE_STATUS_REJECTED = 'Rejected';
+    const UPDATE_STATUS_APPROVED = 'Approved';
+    const UPDATE_STATUS_PUBLISHED = 'Published';
     
 
     
@@ -245,15 +245,15 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
      *
      * @return string[]
      */
-    public function getStatusAllowableValues()
+    public function getUpdateStatusAllowableValues()
     {
         return [
-            self::STATUS_NONE,
-            self::STATUS_IN_PROGRESS,
-            self::STATUS_SUBMITTED,
-            self::STATUS_APP_STORE_REVIEW,
-            self::STATUS_SUCESSFULL,
-            self::STATUS_UNSUCCESFUL,
+            self::UPDATE_STATUS_NONE,
+            self::UPDATE_STATUS_SUBMITTED,
+            self::UPDATE_STATUS_IN_REVIEW,
+            self::UPDATE_STATUS_REJECTED,
+            self::UPDATE_STATUS_APPROVED,
+            self::UPDATE_STATUS_PUBLISHED,
         ];
     }
     
@@ -277,7 +277,7 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
         $this->container['mobile_apps_submission_id'] = isset($data['mobile_apps_submission_id']) ? $data['mobile_apps_submission_id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['app_status'] = isset($data['app_status']) ? $data['app_status'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['update_status'] = isset($data['update_status']) ? $data['update_status'] : null;
         $this->container['last_update_status_time'] = isset($data['last_update_status_time']) ? $data['last_update_status_time'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['update_time'] = isset($data['update_time']) ? $data['update_time'] : null;
@@ -309,10 +309,10 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
             );
         }
 
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+        $allowedValues = $this->getUpdateStatusAllowableValues();
+        if (!is_null($this->container['update_status']) && !in_array($this->container['update_status'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
+                "invalid value for 'update_status', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -447,34 +447,34 @@ class MobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets status
+     * Gets update_status
      *
      * @return string
      */
-    public function getStatus()
+    public function getUpdateStatus()
     {
-        return $this->container['status'];
+        return $this->container['update_status'];
     }
 
     /**
-     * Sets status
+     * Sets update_status
      *
-     * @param string $status Mobile App Status
+     * @param string $update_status Mobile App Status
      *
      * @return $this
      */
-    public function setStatus($status)
+    public function setUpdateStatus($update_status)
     {
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($status) && !in_array($status, $allowedValues, true)) {
+        $allowedValues = $this->getUpdateStatusAllowableValues();
+        if (!is_null($update_status) && !in_array($update_status, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'status', must be one of '%s'",
+                    "Invalid value for 'update_status', must be one of '%s'",
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['status'] = $status;
+        $this->container['update_status'] = $update_status;
 
         return $this;
     }

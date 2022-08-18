@@ -62,8 +62,7 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         'app_description' => 'string',
         'app_short_description' => 'string',
         'keywords' => 'string[]',
-        'auto_publish' => 'bool',
-        'status' => 'string'
+        'auto_publish' => 'bool'
     ];
 
     /**
@@ -76,8 +75,7 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         'app_description' => null,
         'app_short_description' => null,
         'keywords' => null,
-        'auto_publish' => null,
-        'status' => null
+        'auto_publish' => null
     ];
 
     /**
@@ -111,8 +109,7 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         'app_description' => 'AppDescription',
         'app_short_description' => 'AppShortDescription',
         'keywords' => 'Keywords',
-        'auto_publish' => 'AutoPublish',
-        'status' => 'Status'
+        'auto_publish' => 'AutoPublish'
     ];
 
     /**
@@ -125,8 +122,7 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         'app_description' => 'setAppDescription',
         'app_short_description' => 'setAppShortDescription',
         'keywords' => 'setKeywords',
-        'auto_publish' => 'setAutoPublish',
-        'status' => 'setStatus'
+        'auto_publish' => 'setAutoPublish'
     ];
 
     /**
@@ -139,8 +135,7 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         'app_description' => 'getAppDescription',
         'app_short_description' => 'getAppShortDescription',
         'keywords' => 'getKeywords',
-        'auto_publish' => 'getAutoPublish',
-        'status' => 'getStatus'
+        'auto_publish' => 'getAutoPublish'
     ];
 
     /**
@@ -184,31 +179,8 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const STATUS_NONE = 'None';
-    const STATUS_IN_PROGRESS = 'InProgress';
-    const STATUS_SUBMITTED = 'Submitted';
-    const STATUS_APP_STORE_REVIEW = 'AppStoreReview';
-    const STATUS_SUCESSFULL = 'Sucessfull';
-    const STATUS_UNSUCCESFUL = 'Unsuccesful';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_NONE,
-            self::STATUS_IN_PROGRESS,
-            self::STATUS_SUBMITTED,
-            self::STATUS_APP_STORE_REVIEW,
-            self::STATUS_SUCESSFULL,
-            self::STATUS_UNSUCCESFUL,
-        ];
-    }
     
 
     /**
@@ -231,7 +203,6 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         $this->container['app_short_description'] = isset($data['app_short_description']) ? $data['app_short_description'] : null;
         $this->container['keywords'] = isset($data['keywords']) ? $data['keywords'] : null;
         $this->container['auto_publish'] = isset($data['auto_publish']) ? $data['auto_publish'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -252,14 +223,6 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         if ($this->container['app_short_description'] === null) {
             $invalidProperties[] = "'app_short_description' can't be null";
         }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -391,39 +354,6 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
     public function setAutoPublish($auto_publish)
     {
         $this->container['auto_publish'] = $auto_publish;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string $status Mobile App Status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($status) && !in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'status', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['status'] = $status;
 
         return $this;
     }
