@@ -58,7 +58,8 @@ class DynamicFormRule implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'value' => 'object',
-        'message' => 'string'
+        'message' => 'string',
+        'scopes' => 'string'
     ];
 
     /**
@@ -68,7 +69,8 @@ class DynamicFormRule implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'value' => null,
-        'message' => null
+        'message' => null,
+        'scopes' => null
     ];
 
     /**
@@ -99,7 +101,8 @@ class DynamicFormRule implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'value' => 'Value',
-        'message' => 'Message'
+        'message' => 'Message',
+        'scopes' => 'Scopes'
     ];
 
     /**
@@ -109,7 +112,8 @@ class DynamicFormRule implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'value' => 'setValue',
-        'message' => 'setMessage'
+        'message' => 'setMessage',
+        'scopes' => 'setScopes'
     ];
 
     /**
@@ -119,7 +123,8 @@ class DynamicFormRule implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'value' => 'getValue',
-        'message' => 'getMessage'
+        'message' => 'getMessage',
+        'scopes' => 'getScopes'
     ];
 
     /**
@@ -184,6 +189,7 @@ class DynamicFormRule implements ModelInterface, ArrayAccess
     {
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['scopes'] = isset($data['scopes']) ? $data['scopes'] : null;
     }
 
     /**
@@ -254,6 +260,30 @@ class DynamicFormRule implements ModelInterface, ArrayAccess
     public function setMessage($message)
     {
         $this->container['message'] = $message;
+
+        return $this;
+    }
+
+    /**
+     * Gets scopes
+     *
+     * @return string
+     */
+    public function getScopes()
+    {
+        return $this->container['scopes'];
+    }
+
+    /**
+     * Sets scopes
+     *
+     * @param string $scopes scopes
+     *
+     * @return $this
+     */
+    public function setScopes($scopes)
+    {
+        $this->container['scopes'] = $scopes;
 
         return $this;
     }

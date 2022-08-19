@@ -89,4 +89,11 @@ class DynamicFormRuleTest extends \PHPUnit_Framework_TestCase
     public function testPropertyMessage()
     {
     }
+
+    /**
+     * Test attribute "scopes"
+     */
+    public function testPropertyScopes()
+    {
+    }
 }
