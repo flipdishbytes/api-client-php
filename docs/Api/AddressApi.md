@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **formatGoogleAddress**
-> \Flipdish\\Client\Models\RestApiResultAddressFormResponse formatGoogleAddress($google_address)
+> \Flipdish\\Client\Models\RestApiResultAddressFormResponse formatGoogleAddress($google_address, $language)
 
 Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
 
@@ -135,9 +135,10 @@ $apiInstance = new Flipdish\\Client\Api\AddressApi(
     $config
 );
 $google_address = new \Flipdish\\Client\Models\GoogleAddress(); // \Flipdish\\Client\Models\GoogleAddress | A Google address object, as it is retuned from the maps API.
+$language = "language_example"; // string | (Optional) ISO culture info code, e.g.: en-IE, the default is en-US.
 
 try {
-    $result = $apiInstance->formatGoogleAddress($google_address);
+    $result = $apiInstance->formatGoogleAddress($google_address, $language);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AddressApi->formatGoogleAddress: ', $e->getMessage(), PHP_EOL;
@@ -150,6 +151,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **google_address** | [**\Flipdish\\Client\Models\GoogleAddress**](../Model/GoogleAddress.md)| A Google address object, as it is retuned from the maps API. |
+ **language** | **string**| (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. | [optional]
 
 ### Return type
 

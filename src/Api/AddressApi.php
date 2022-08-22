@@ -705,14 +705,15 @@ class AddressApi
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      *
      * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is retuned from the maps API. (required)
+     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultAddressFormResponse
      */
-    public function formatGoogleAddress($google_address)
+    public function formatGoogleAddress($google_address, $language = null)
     {
-        list($response) = $this->formatGoogleAddressWithHttpInfo($google_address);
+        list($response) = $this->formatGoogleAddressWithHttpInfo($google_address, $language);
         return $response;
     }
 
@@ -722,15 +723,16 @@ class AddressApi
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      *
      * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is retuned from the maps API. (required)
+     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultAddressFormResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function formatGoogleAddressWithHttpInfo($google_address)
+    public function formatGoogleAddressWithHttpInfo($google_address, $language = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultAddressFormResponse';
-        $request = $this->formatGoogleAddressRequest($google_address);
+        $request = $this->formatGoogleAddressRequest($google_address, $language);
 
         try {
             $options = $this->createHttpClientOption();
@@ -821,13 +823,14 @@ class AddressApi
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      *
      * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is retuned from the maps API. (required)
+     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function formatGoogleAddressAsync($google_address)
+    public function formatGoogleAddressAsync($google_address, $language = null)
     {
-        return $this->formatGoogleAddressAsyncWithHttpInfo($google_address)
+        return $this->formatGoogleAddressAsyncWithHttpInfo($google_address, $language)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -841,14 +844,15 @@ class AddressApi
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      *
      * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is retuned from the maps API. (required)
+     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function formatGoogleAddressAsyncWithHttpInfo($google_address)
+    public function formatGoogleAddressAsyncWithHttpInfo($google_address, $language = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultAddressFormResponse';
-        $request = $this->formatGoogleAddressRequest($google_address);
+        $request = $this->formatGoogleAddressRequest($google_address, $language);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -891,11 +895,12 @@ class AddressApi
      * Create request for operation 'formatGoogleAddress'
      *
      * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is retuned from the maps API. (required)
+     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function formatGoogleAddressRequest($google_address)
+    protected function formatGoogleAddressRequest($google_address, $language = null)
     {
         // verify the required parameter 'google_address' is set
         if ($google_address === null || (is_array($google_address) && count($google_address) === 0)) {
@@ -911,6 +916,10 @@ class AddressApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($language !== null) {
+            $queryParams['language'] = ObjectSerializer::toQueryValue($language);
+        }
 
 
         // body params
