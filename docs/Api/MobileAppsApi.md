@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**getSubmissionStatus**](MobileAppsApi.md#getSubmissionStatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/status | Get submission status mobile apps
 [**submission**](MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 [**updateAppConfigSalesChannel**](MobileAppsApi.md#updateAppConfigSalesChannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
+[**updateSubmissionStatus**](MobileAppsApi.md#updateSubmissionStatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{mobileAppsSubmissionId}/status | Update submission status
 [**uploadImage**](MobileAppsApi.md#uploadImage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | Upload image mobile apps
 
 
@@ -315,6 +316,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel**](../Model/RestApiResultAppConfigSalesChannel.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateSubmissionStatus**
+> \Flipdish\\Client\Models\RestApiResultUpdateMobileAppsSubmissionStatus updateSubmissionStatus($app_id, $mobile_apps_submission_id, $update_mobile_apps_submission_status)
+
+Update submission status
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MobileAppsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$mobile_apps_submission_id = 56; // int | 
+$update_mobile_apps_submission_status = new \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus(); // \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus | 
+
+try {
+    $result = $apiInstance->updateSubmissionStatus($app_id, $mobile_apps_submission_id, $update_mobile_apps_submission_status);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MobileAppsApi->updateSubmissionStatus: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **mobile_apps_submission_id** | **int**|  |
+ **update_mobile_apps_submission_status** | [**\Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus**](../Model/UpdateMobileAppsSubmissionStatus.md)|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultUpdateMobileAppsSubmissionStatus**](../Model/RestApiResultUpdateMobileAppsSubmissionStatus.md)
 
 ### Authorization
 

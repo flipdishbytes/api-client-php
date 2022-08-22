@@ -374,6 +374,7 @@ Class | Method | HTTP request | Description
 *MobileAppsApi* | [**getSubmissionStatus**](docs/Api/MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/status | Get submission status mobile apps
 *MobileAppsApi* | [**submission**](docs/Api/MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
 *MobileAppsApi* | [**updateAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#updateappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
+*MobileAppsApi* | [**updateSubmissionStatus**](docs/Api/MobileAppsApi.md#updatesubmissionstatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{mobileAppsSubmissionId}/status | Update submission status
 *MobileAppsApi* | [**uploadImage**](docs/Api/MobileAppsApi.md#uploadimage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | Upload image mobile apps
 *OAuthClientsApi* | [**addRedirectUri**](docs/Api/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**createOAuthApp**](docs/Api/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
@@ -1066,6 +1067,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultTeammate](docs/Model/RestApiResultTeammate.md)
  - [RestApiResultTelemetrySeriesResult](docs/Model/RestApiResultTelemetrySeriesResult.md)
  - [RestApiResultTipConfiguration](docs/Model/RestApiResultTipConfiguration.md)
+ - [RestApiResultUpdateMobileAppsSubmissionStatus](docs/Model/RestApiResultUpdateMobileAppsSubmissionStatus.md)
  - [RestApiResultVoucherWithStats](docs/Model/RestApiResultVoucherWithStats.md)
  - [RestApiResultWebsiteImage](docs/Model/RestApiResultWebsiteImage.md)
  - [RestApiResultWebsiteTestimonial](docs/Model/RestApiResultWebsiteTestimonial.md)
@@ -1177,6 +1179,7 @@ Class | Method | HTTP request | Description
  - [UpdateGroupReference](docs/Model/UpdateGroupReference.md)
  - [UpdateLocationArea](docs/Model/UpdateLocationArea.md)
  - [UpdateMetafieldDefinition](docs/Model/UpdateMetafieldDefinition.md)
+ - [UpdateMobileAppsSubmissionStatus](docs/Model/UpdateMobileAppsSubmissionStatus.md)
  - [UpdatePayGreenConfigurationRequest](docs/Model/UpdatePayGreenConfigurationRequest.md)
  - [UpdateProduct](docs/Model/UpdateProduct.md)
  - [UpdateProductReference](docs/Model/UpdateProductReference.md)

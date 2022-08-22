@@ -132,6 +132,16 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for updateSubmissionStatus
+     *
+     * Update submission status.
+     *
+     */
+    public function testUpdateSubmissionStatus()
+    {
+    }
+
+    /**
      * Test case for uploadImage
      *
      * Upload image mobile apps.
