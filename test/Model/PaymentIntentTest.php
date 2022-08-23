@@ -110,4 +110,11 @@ class PaymentIntentTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCreated()
     {
     }
+
+    /**
+     * Test attribute "last_payment_error"
+     */
+    public function testPropertyLastPaymentError()
+    {
+    }
 }

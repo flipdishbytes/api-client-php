@@ -1,6 +1,6 @@
 <?php
 /**
- * ReaderActionStateInfoTest
+ * LastPaymentErrorTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * ReaderActionStateInfoTest Class Doc Comment
+ * LastPaymentErrorTest Class Doc Comment
  *
  * @category    Class
- * @description Card reader state information
+ * @description List&#39;s the issues with the last failed payment intent
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ReaderActionStateInfoTest extends \PHPUnit_Framework_TestCase
+class LastPaymentErrorTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,30 @@ class ReaderActionStateInfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ReaderActionStateInfo"
+     * Test "LastPaymentError"
      */
-    public function testReaderActionStateInfo()
+    public function testLastPaymentError()
     {
     }
 
     /**
-     * Test attribute "action_state"
+     * Test attribute "code"
      */
-    public function testPropertyActionState()
+    public function testPropertyCode()
     {
     }
 
     /**
-     * Test attribute "failure_code"
+     * Test attribute "decline_code"
      */
-    public function testPropertyFailureCode()
+    public function testPropertyDeclineCode()
     {
     }
 
     /**
-     * Test attribute "failure_message"
+     * Test attribute "message"
      */
-    public function testPropertyFailureMessage()
-    {
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
+    public function testPropertyMessage()
     {
     }
 }

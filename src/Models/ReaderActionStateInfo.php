@@ -60,6 +60,7 @@ class ReaderActionStateInfo implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'action_state' => 'string',
         'failure_code' => 'string',
+        'failure_message' => 'string',
         'type' => 'string'
     ];
 
@@ -71,6 +72,7 @@ class ReaderActionStateInfo implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'action_state' => null,
         'failure_code' => null,
+        'failure_message' => null,
         'type' => null
     ];
 
@@ -103,6 +105,7 @@ class ReaderActionStateInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'action_state' => 'ActionState',
         'failure_code' => 'FailureCode',
+        'failure_message' => 'FailureMessage',
         'type' => 'Type'
     ];
 
@@ -114,6 +117,7 @@ class ReaderActionStateInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
         'action_state' => 'setActionState',
         'failure_code' => 'setFailureCode',
+        'failure_message' => 'setFailureMessage',
         'type' => 'setType'
     ];
 
@@ -125,6 +129,7 @@ class ReaderActionStateInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
         'action_state' => 'getActionState',
         'failure_code' => 'getFailureCode',
+        'failure_message' => 'getFailureMessage',
         'type' => 'getType'
     ];
 
@@ -190,6 +195,7 @@ class ReaderActionStateInfo implements ModelInterface, ArrayAccess
     {
         $this->container['action_state'] = isset($data['action_state']) ? $data['action_state'] : null;
         $this->container['failure_code'] = isset($data['failure_code']) ? $data['failure_code'] : null;
+        $this->container['failure_message'] = isset($data['failure_message']) ? $data['failure_message'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
@@ -261,6 +267,30 @@ class ReaderActionStateInfo implements ModelInterface, ArrayAccess
     public function setFailureCode($failure_code)
     {
         $this->container['failure_code'] = $failure_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets failure_message
+     *
+     * @return string
+     */
+    public function getFailureMessage()
+    {
+        return $this->container['failure_message'];
+    }
+
+    /**
+     * Sets failure_message
+     *
+     * @param string $failure_message Failure Message
+     *
+     * @return $this
+     */
+    public function setFailureMessage($failure_message)
+    {
+        $this->container['failure_message'] = $failure_message;
 
         return $this;
     }

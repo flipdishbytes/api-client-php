@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentIntent
+ * LastPaymentError
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * PaymentIntent Class Doc Comment
+ * LastPaymentError Class Doc Comment
  *
  * @category Class
- * @description Represents stripe PaymentIntent
+ * @description List&#39;s the issues with the last failed payment intent
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PaymentIntent implements ModelInterface, ArrayAccess
+class LastPaymentError implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class PaymentIntent implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PaymentIntent';
+    protected static $swaggerModelName = 'LastPaymentError';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,12 +58,9 @@ class PaymentIntent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'description' => 'string',
-        'currency' => 'string',
-        'status' => 'string',
-        'created' => '\DateTime',
-        'last_payment_error' => '\Flipdish\\Client\Models\LastPaymentError'
+        'code' => 'string',
+        'decline_code' => 'string',
+        'message' => 'string'
     ];
 
     /**
@@ -72,12 +69,9 @@ class PaymentIntent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'description' => null,
-        'currency' => null,
-        'status' => null,
-        'created' => 'date-time',
-        'last_payment_error' => null
+        'code' => null,
+        'decline_code' => null,
+        'message' => null
     ];
 
     /**
@@ -107,12 +101,9 @@ class PaymentIntent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'Id',
-        'description' => 'Description',
-        'currency' => 'Currency',
-        'status' => 'Status',
-        'created' => 'Created',
-        'last_payment_error' => 'LastPaymentError'
+        'code' => 'Code',
+        'decline_code' => 'DeclineCode',
+        'message' => 'Message'
     ];
 
     /**
@@ -121,12 +112,9 @@ class PaymentIntent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'description' => 'setDescription',
-        'currency' => 'setCurrency',
-        'status' => 'setStatus',
-        'created' => 'setCreated',
-        'last_payment_error' => 'setLastPaymentError'
+        'code' => 'setCode',
+        'decline_code' => 'setDeclineCode',
+        'message' => 'setMessage'
     ];
 
     /**
@@ -135,12 +123,9 @@ class PaymentIntent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'description' => 'getDescription',
-        'currency' => 'getCurrency',
-        'status' => 'getStatus',
-        'created' => 'getCreated',
-        'last_payment_error' => 'getLastPaymentError'
+        'code' => 'getCode',
+        'decline_code' => 'getDeclineCode',
+        'message' => 'getMessage'
     ];
 
     /**
@@ -203,12 +188,9 @@ class PaymentIntent implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
-        $this->container['last_payment_error'] = isset($data['last_payment_error']) ? $data['last_payment_error'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['decline_code'] = isset($data['decline_code']) ? $data['decline_code'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
     }
 
     /**
@@ -236,145 +218,73 @@ class PaymentIntent implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets code
      *
      * @return string
      */
-    public function getId()
+    public function getCode()
     {
-        return $this->container['id'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets id
+     * Sets code
      *
-     * @param string $id Id of payment intent
+     * @param string $code For some errors that could be handled programmatically, a short string indicating the error code reported.
      *
      * @return $this
      */
-    public function setId($id)
+    public function setCode($code)
     {
-        $this->container['id'] = $id;
+        $this->container['code'] = $code;
 
         return $this;
     }
 
     /**
-     * Gets description
+     * Gets decline_code
      *
      * @return string
      */
-    public function getDescription()
+    public function getDeclineCode()
     {
-        return $this->container['description'];
+        return $this->container['decline_code'];
     }
 
     /**
-     * Sets description
+     * Sets decline_code
      *
-     * @param string $description An arbitrary string attached to the object. Often useful for displaying to users.
+     * @param string $decline_code For card errors resulting from a card issuer decline, a short string indicating the card issuer’s reason for the decline if they provide one.
      *
      * @return $this
      */
-    public function setDescription($description)
+    public function setDeclineCode($decline_code)
     {
-        $this->container['description'] = $description;
+        $this->container['decline_code'] = $decline_code;
 
         return $this;
     }
 
     /**
-     * Gets currency
+     * Gets message
      *
      * @return string
      */
-    public function getCurrency()
+    public function getMessage()
     {
-        return $this->container['currency'];
+        return $this->container['message'];
     }
 
     /**
-     * Sets currency
+     * Sets message
      *
-     * @param string $currency Three-letter <a href=\"https://www.iso.org/iso-4217-currency-codes.html\">ISO currency  code</a>, in lowercase. Must be a <a href=\"https://stripe.com/docs/currencies\">supported  currency</a>.
+     * @param string $message A human-readable message providing more details about the error. For card errors, these messages can be shown to your users.
      *
      * @return $this
      */
-    public function setCurrency($currency)
+    public function setMessage($message)
     {
-        $this->container['currency'] = $currency;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string $status Status of this PaymentIntent, one of requires_payment_method,  requires_confirmation, requires_action, processing,  requires_capture, canceled, or succeeded. Read more about each  PaymentIntent <a href=\"https://stripe.com/docs/payments/intents#intent-statuses\">status</a>.  One of: canceled, processing, requires_action,  requires_capture, requires_confirmation, requires_payment_method,  or succeeded.
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets created
-     *
-     * @return \DateTime
-     */
-    public function getCreated()
-    {
-        return $this->container['created'];
-    }
-
-    /**
-     * Sets created
-     *
-     * @param \DateTime $created Time at which the object was created. Measured in seconds since the Unix epoch.
-     *
-     * @return $this
-     */
-    public function setCreated($created)
-    {
-        $this->container['created'] = $created;
-
-        return $this;
-    }
-
-    /**
-     * Gets last_payment_error
-     *
-     * @return \Flipdish\\Client\Models\LastPaymentError
-     */
-    public function getLastPaymentError()
-    {
-        return $this->container['last_payment_error'];
-    }
-
-    /**
-     * Sets last_payment_error
-     *
-     * @param \Flipdish\\Client\Models\LastPaymentError $last_payment_error Failed payment intent Errors
-     *
-     * @return $this
-     */
-    public function setLastPaymentError($last_payment_error)
-    {
-        $this->container['last_payment_error'] = $last_payment_error;
+        $this->container['message'] = $message;
 
         return $this;
     }
