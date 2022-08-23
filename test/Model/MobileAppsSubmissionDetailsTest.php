@@ -77,6 +77,13 @@ class MobileAppsSubmissionDetailsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "mobile_apps_submission_id"
+     */
+    public function testPropertyMobileAppsSubmissionId()
+    {
+    }
+
+    /**
      * Test attribute "app_name"
      */
     public function testPropertyAppName()

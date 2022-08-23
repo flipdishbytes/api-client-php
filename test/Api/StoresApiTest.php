@@ -232,6 +232,16 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getStoreFeeConfig
+     *
+     * Retrieve Store feeConfig.
+     *
+     */
+    public function testGetStoreFeeConfig()
+    {
+    }
+
+    /**
      * Test case for getStoreHeadersByAppId
      *
      * Get all stores by app name id.
@@ -254,20 +264,10 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoreServiceCharge
      *
-     * Retrieve Store feeConfig.
-     *
-     */
-    public function testGetStoreServiceCharge()
-    {
-    }
-
-    /**
-     * Test case for getStoreServiceCharge_0
-     *
      * Retrieve Store Service Charge.
      *
      */
-    public function testGetStoreServiceCharge0()
+    public function testGetStoreServiceCharge()
     {
     }
 

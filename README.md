@@ -462,10 +462,10 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**getProcessingFeeConfigsByStoreId**](docs/Api/StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
 *StoresApi* | [**getProcessingFeeConfigsByStoreIdAndPaymentAccountType**](docs/Api/StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 *StoresApi* | [**getStoreById**](docs/Api/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
+*StoresApi* | [**getStoreFeeConfig**](docs/Api/StoresApi.md#getstorefeeconfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | Retrieve Store feeConfig
 *StoresApi* | [**getStoreHeadersByAppId**](docs/Api/StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | Get all stores by app name id
 *StoresApi* | [**getStoreNetSales**](docs/Api/StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | Get stores statistics by app name id and storeIds
-*StoresApi* | [**getStoreServiceCharge**](docs/Api/StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/feeConfig | Retrieve Store feeConfig
-*StoresApi* | [**getStoreServiceCharge_0**](docs/Api/StoresApi.md#getstoreservicecharge_0) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
+*StoresApi* | [**getStoreServiceCharge**](docs/Api/StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
 *StoresApi* | [**getStores**](docs/Api/StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores, excluding archived ones
 *StoresApi* | [**getStoresByAppId**](docs/Api/StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
 *StoresApi* | [**getStoresByStoreIdWithValidations**](docs/Api/StoresApi.md#getstoresbystoreidwithvalidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | Get store validation by storeIds

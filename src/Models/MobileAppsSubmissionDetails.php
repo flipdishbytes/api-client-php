@@ -58,6 +58,7 @@ class MobileAppsSubmissionDetails implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'mobile_apps_submission_id' => 'int',
         'app_name' => 'string',
         'app_description' => 'string',
         'app_short_description' => 'string',
@@ -73,6 +74,7 @@ class MobileAppsSubmissionDetails implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'mobile_apps_submission_id' => 'int32',
         'app_name' => null,
         'app_description' => null,
         'app_short_description' => null,
@@ -109,6 +111,7 @@ class MobileAppsSubmissionDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'mobile_apps_submission_id' => 'MobileAppsSubmissionId',
         'app_name' => 'AppName',
         'app_description' => 'AppDescription',
         'app_short_description' => 'AppShortDescription',
@@ -124,6 +127,7 @@ class MobileAppsSubmissionDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'mobile_apps_submission_id' => 'setMobileAppsSubmissionId',
         'app_name' => 'setAppName',
         'app_description' => 'setAppDescription',
         'app_short_description' => 'setAppShortDescription',
@@ -139,6 +143,7 @@ class MobileAppsSubmissionDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'mobile_apps_submission_id' => 'getMobileAppsSubmissionId',
         'app_name' => 'getAppName',
         'app_description' => 'getAppDescription',
         'app_short_description' => 'getAppShortDescription',
@@ -208,6 +213,7 @@ class MobileAppsSubmissionDetails implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['mobile_apps_submission_id'] = isset($data['mobile_apps_submission_id']) ? $data['mobile_apps_submission_id'] : null;
         $this->container['app_name'] = isset($data['app_name']) ? $data['app_name'] : null;
         $this->container['app_description'] = isset($data['app_description']) ? $data['app_description'] : null;
         $this->container['app_short_description'] = isset($data['app_short_description']) ? $data['app_short_description'] : null;
@@ -240,6 +246,30 @@ class MobileAppsSubmissionDetails implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets mobile_apps_submission_id
+     *
+     * @return int
+     */
+    public function getMobileAppsSubmissionId()
+    {
+        return $this->container['mobile_apps_submission_id'];
+    }
+
+    /**
+     * Sets mobile_apps_submission_id
+     *
+     * @param int $mobile_apps_submission_id Mobile Apps Submission Id
+     *
+     * @return $this
+     */
+    public function setMobileAppsSubmissionId($mobile_apps_submission_id)
+    {
+        $this->container['mobile_apps_submission_id'] = $mobile_apps_submission_id;
+
+        return $this;
+    }
 
     /**
      * Gets app_name
