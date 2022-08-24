@@ -100,4 +100,14 @@ class AddressApiTest extends \PHPUnit_Framework_TestCase
     public function testFormatGoogleAddress()
     {
     }
+
+    /**
+     * Test case for getCountries
+     *
+     * Retuns a list of localised countries.
+     *
+     */
+    public function testGetCountries()
+    {
+    }
 }

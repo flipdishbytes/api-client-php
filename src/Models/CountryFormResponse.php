@@ -1,6 +1,6 @@
 <?php
 /**
- * ProcessingFeeConfig
+ * CountryFormResponse
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * ProcessingFeeConfig Class Doc Comment
+ * CountryFormResponse Class Doc Comment
  *
  * @category Class
- * @description Processing fee config
+ * @description Country
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProcessingFeeConfig implements ModelInterface, ArrayAccess
+class CountryFormResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ProcessingFeeConfig';
+    protected static $swaggerModelName = 'CountryFormResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +58,8 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'store_id' => 'int',
-        'payment_account_type' => 'string',
-        'percent_fee' => 'double',
-        'fixed_fee' => 'double'
+        'value' => 'string',
+        'label' => 'string'
     ];
 
     /**
@@ -70,10 +68,8 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'store_id' => 'int32',
-        'payment_account_type' => null,
-        'percent_fee' => 'double',
-        'fixed_fee' => 'double'
+        'value' => null,
+        'label' => null
     ];
 
     /**
@@ -103,10 +99,8 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_id' => 'StoreId',
-        'payment_account_type' => 'PaymentAccountType',
-        'percent_fee' => 'PercentFee',
-        'fixed_fee' => 'FixedFee'
+        'value' => 'Value',
+        'label' => 'Label'
     ];
 
     /**
@@ -115,10 +109,8 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_id' => 'setStoreId',
-        'payment_account_type' => 'setPaymentAccountType',
-        'percent_fee' => 'setPercentFee',
-        'fixed_fee' => 'setFixedFee'
+        'value' => 'setValue',
+        'label' => 'setLabel'
     ];
 
     /**
@@ -127,10 +119,8 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_id' => 'getStoreId',
-        'payment_account_type' => 'getPaymentAccountType',
-        'percent_fee' => 'getPercentFee',
-        'fixed_fee' => 'getFixedFee'
+        'value' => 'getValue',
+        'label' => 'getLabel'
     ];
 
     /**
@@ -174,37 +164,8 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const PAYMENT_ACCOUNT_TYPE_CARD = 'Card';
-    const PAYMENT_ACCOUNT_TYPE_CASH = 'Cash';
-    const PAYMENT_ACCOUNT_TYPE_IDEAL = 'Ideal';
-    const PAYMENT_ACCOUNT_TYPE_BANCONTACT = 'Bancontact';
-    const PAYMENT_ACCOUNT_TYPE_GIROPAY = 'Giropay';
-    const PAYMENT_ACCOUNT_TYPE_EPS = 'Eps';
-    const PAYMENT_ACCOUNT_TYPE_EMV = 'Emv';
-    const PAYMENT_ACCOUNT_TYPE_PAY_PAL = 'PayPal';
-    const PAYMENT_ACCOUNT_TYPE_PAY_GREEN = 'PayGreen';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getPaymentAccountTypeAllowableValues()
-    {
-        return [
-            self::PAYMENT_ACCOUNT_TYPE_CARD,
-            self::PAYMENT_ACCOUNT_TYPE_CASH,
-            self::PAYMENT_ACCOUNT_TYPE_IDEAL,
-            self::PAYMENT_ACCOUNT_TYPE_BANCONTACT,
-            self::PAYMENT_ACCOUNT_TYPE_GIROPAY,
-            self::PAYMENT_ACCOUNT_TYPE_EPS,
-            self::PAYMENT_ACCOUNT_TYPE_EMV,
-            self::PAYMENT_ACCOUNT_TYPE_PAY_PAL,
-            self::PAYMENT_ACCOUNT_TYPE_PAY_GREEN,
-        ];
-    }
     
 
     /**
@@ -222,10 +183,8 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
-        $this->container['payment_account_type'] = isset($data['payment_account_type']) ? $data['payment_account_type'] : null;
-        $this->container['percent_fee'] = isset($data['percent_fee']) ? $data['percent_fee'] : null;
-        $this->container['fixed_fee'] = isset($data['fixed_fee']) ? $data['fixed_fee'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
     }
 
     /**
@@ -236,14 +195,6 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getPaymentAccountTypeAllowableValues();
-        if (!is_null($this->container['payment_account_type']) && !in_array($this->container['payment_account_type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'payment_account_type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -261,106 +212,49 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_id
-     *
-     * @return int
-     */
-    public function getStoreId()
-    {
-        return $this->container['store_id'];
-    }
-
-    /**
-     * Sets store_id
-     *
-     * @param int $store_id Store Id
-     *
-     * @return $this
-     */
-    public function setStoreId($store_id)
-    {
-        $this->container['store_id'] = $store_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets payment_account_type
+     * Gets value
      *
      * @return string
      */
-    public function getPaymentAccountType()
+    public function getValue()
     {
-        return $this->container['payment_account_type'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets payment_account_type
+     * Sets value
      *
-     * @param string $payment_account_type Payment account type
+     * @param string $value ISO two letter code.
      *
      * @return $this
      */
-    public function setPaymentAccountType($payment_account_type)
+    public function setValue($value)
     {
-        $allowedValues = $this->getPaymentAccountTypeAllowableValues();
-        if (!is_null($payment_account_type) && !in_array($payment_account_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'payment_account_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['payment_account_type'] = $payment_account_type;
+        $this->container['value'] = $value;
 
         return $this;
     }
 
     /**
-     * Gets percent_fee
+     * Gets label
      *
-     * @return double
+     * @return string
      */
-    public function getPercentFee()
+    public function getLabel()
     {
-        return $this->container['percent_fee'];
+        return $this->container['label'];
     }
 
     /**
-     * Sets percent_fee
+     * Sets label
      *
-     * @param double $percent_fee Percent fee to customer, including VAT
+     * @param string $label Label
      *
      * @return $this
      */
-    public function setPercentFee($percent_fee)
+    public function setLabel($label)
     {
-        $this->container['percent_fee'] = $percent_fee;
-
-        return $this;
-    }
-
-    /**
-     * Gets fixed_fee
-     *
-     * @return double
-     */
-    public function getFixedFee()
-    {
-        return $this->container['fixed_fee'];
-    }
-
-    /**
-     * Sets fixed_fee
-     *
-     * @param double $fixed_fee Fixed fee to customer, including VAT
-     *
-     * @return $this
-     */
-    public function setFixedFee($fixed_fee)
-    {
-        $this->container['fixed_fee'] = $fixed_fee;
+        $this->container['label'] = $label;
 
         return $this;
     }

@@ -320,6 +320,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     const PAYMENT_ACCOUNT_TYPE_EPS = 'Eps';
     const PAYMENT_ACCOUNT_TYPE_EMV = 'Emv';
     const PAYMENT_ACCOUNT_TYPE_PAY_PAL = 'PayPal';
+    const PAYMENT_ACCOUNT_TYPE_PAY_GREEN = 'PayGreen';
     const PAYMENT_STATUS_PAID = 'Paid';
     const PAYMENT_STATUS_UNPAID = 'Unpaid';
     const PAYMENT_STATUS_REFUNDED = 'Refunded';
@@ -540,6 +541,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
             self::PAYMENT_ACCOUNT_TYPE_EPS,
             self::PAYMENT_ACCOUNT_TYPE_EMV,
             self::PAYMENT_ACCOUNT_TYPE_PAY_PAL,
+            self::PAYMENT_ACCOUNT_TYPE_PAY_GREEN,
         ];
     }
     

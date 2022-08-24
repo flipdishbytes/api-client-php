@@ -417,6 +417,7 @@ class Order implements ModelInterface, ArrayAccess
     const PAYMENT_ACCOUNT_TYPE_EPS = 'Eps';
     const PAYMENT_ACCOUNT_TYPE_EMV = 'Emv';
     const PAYMENT_ACCOUNT_TYPE_PAY_PAL = 'PayPal';
+    const PAYMENT_ACCOUNT_TYPE_PAY_GREEN = 'PayGreen';
     const ORDER_STATE_CREATED = 'Created';
     const ORDER_STATE_PLACED_CAN_BE_CANCELLED = 'PlacedCanBeCancelled';
     const ORDER_STATE_READY_TO_PROCESS = 'ReadyToProcess';
@@ -530,6 +531,7 @@ class Order implements ModelInterface, ArrayAccess
             self::PAYMENT_ACCOUNT_TYPE_EPS,
             self::PAYMENT_ACCOUNT_TYPE_EMV,
             self::PAYMENT_ACCOUNT_TYPE_PAY_PAL,
+            self::PAYMENT_ACCOUNT_TYPE_PAY_GREEN,
         ];
     }
     
