@@ -801,6 +801,7 @@ Class | Method | HTTP request | Description
  - [MobileAppsSubmissionDetails](docs/Model/MobileAppsSubmissionDetails.md)
  - [MobileAppsSubmissionStatus](docs/Model/MobileAppsSubmissionStatus.md)
  - [ModelBase](docs/Model/ModelBase.md)
+ - [NextStatusWithOrderType](docs/Model/NextStatusWithOrderType.md)
  - [OAuthApp](docs/Model/OAuthApp.md)
  - [OAuthTokenModel](docs/Model/OAuthTokenModel.md)
  - [OauthClientRedirectUri](docs/Model/OauthClientRedirectUri.md)

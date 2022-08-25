@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **public_description** | **string** | A string which could be used in notification templates with a placeholder (SMS, email, push, web page with status) | [optional] 
 **internal** | **bool** | Is internal state (internal states not shown to customers) | [optional] 
 **next_statuses** | **string[]** | list of statuses that this status can move to (can be back or forth) | [optional] 
-**default_next_status** | **string** | The default next status (on a dropdown or quick button on terminal or portal) | [optional] 
+**default_next_status** | [**\Flipdish\\Client\Models\NextStatusWithOrderType[]**](NextStatusWithOrderType.md) | The default next status (on a dropdown or quick button on terminal or portal) | [optional] 
 **change_type** | **string** | How will state change (manually or automated, including timed) | [optional] 
 **include_in_reports** | **bool** | Include in reports | [optional] 
 **is_custom** | **bool** | Is custom state. If not, then it&#39;s a system state | [optional] 

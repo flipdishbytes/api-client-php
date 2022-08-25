@@ -66,7 +66,7 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
         'public_description' => 'string',
         'internal' => 'bool',
         'next_statuses' => 'string[]',
-        'default_next_status' => 'string',
+        'default_next_status' => '\Flipdish\\Client\Models\NextStatusWithOrderType[]',
         'change_type' => 'string',
         'include_in_reports' => 'bool',
         'is_custom' => 'bool',
@@ -232,6 +232,10 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
     const CHANGE_TYPE_MANUAL = 'Manual';
     const CHANGE_TYPE_AUTOMATED = 'Automated';
     const CHANGE_TYPE_INTEGRATED = 'Integrated';
+    const ORDER_TYPES_ALL = 'All';
+    const ORDER_TYPES_DELIVERY = 'Delivery';
+    const ORDER_TYPES_COLLECTION = 'Collection';
+    const ORDER_TYPES_DINE_IN = 'DineIn';
     
 
     
@@ -246,6 +250,21 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
             self::CHANGE_TYPE_MANUAL,
             self::CHANGE_TYPE_AUTOMATED,
             self::CHANGE_TYPE_INTEGRATED,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getOrderTypesAllowableValues()
+    {
+        return [
+            self::ORDER_TYPES_ALL,
+            self::ORDER_TYPES_DELIVERY,
+            self::ORDER_TYPES_COLLECTION,
+            self::ORDER_TYPES_DINE_IN,
         ];
     }
     
@@ -509,7 +528,7 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
     /**
      * Gets default_next_status
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\NextStatusWithOrderType[]
      */
     public function getDefaultNextStatus()
     {
@@ -519,7 +538,7 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
     /**
      * Sets default_next_status
      *
-     * @param string $default_next_status The default next status (on a dropdown or quick button on terminal or portal)
+     * @param \Flipdish\\Client\Models\NextStatusWithOrderType[] $default_next_status The default next status (on a dropdown or quick button on terminal or portal)
      *
      * @return $this
      */
@@ -630,6 +649,15 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
      */
     public function setOrderTypes($order_types)
     {
+        $allowedValues = $this->getOrderTypesAllowableValues();
+        if (!is_null($order_types) && array_diff($order_types, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'order_types', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
         $this->container['order_types'] = $order_types;
 
         return $this;
