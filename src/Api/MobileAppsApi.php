@@ -1212,23 +1212,27 @@ class MobileAppsApi
             );
         }
 
-        $resourcePath = '/api/v1.0/mobileapps/{appId}/submission/status';
+        $resourcePath = '/api/v1.0/mobileapps/{appId}/submission/status/{mobileAppsSubmissionId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if ($mobile_apps_submission_id !== null) {
-            $queryParams['mobileAppsSubmissionId'] = ObjectSerializer::toQueryValue($mobile_apps_submission_id);
-        }
 
         // path params
         if ($app_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'appId' . '}',
                 ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($mobile_apps_submission_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'mobileAppsSubmissionId' . '}',
+                ObjectSerializer::toPathValue($mobile_apps_submission_id),
                 $resourcePath
             );
         }
