@@ -217,6 +217,13 @@ class OrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "order_batch_info"
+     */
+    public function testPropertyOrderBatchInfo()
+    {
+    }
+
+    /**
      * Test attribute "order_id"
      */
     public function testPropertyOrderId()

@@ -811,6 +811,7 @@ Class | Method | HTTP request | Description
  - [Order](docs/Model/Order.md)
  - [OrderAcceptedEvent](docs/Model/OrderAcceptedEvent.md)
  - [OrderBatch](docs/Model/OrderBatch.md)
+ - [OrderBatchDetails](docs/Model/OrderBatchDetails.md)
  - [OrderBatchItem](docs/Model/OrderBatchItem.md)
  - [OrderBatchingConfiguration](docs/Model/OrderBatchingConfiguration.md)
  - [OrderCapacityConfigUpdatedEvent](docs/Model/OrderCapacityConfigUpdatedEvent.md)

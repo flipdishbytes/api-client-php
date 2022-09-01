@@ -78,6 +78,7 @@ class Order implements ModelInterface, ArrayAccess
         'receipt_code' => 'string',
         'order_drop_off_location' => '\Flipdish\\Client\Models\OrderDropOffLocation',
         'fulfillment_status' => '\Flipdish\\Client\Models\OrderFulfillmentStatusBase',
+        'order_batch_info' => '\Flipdish\\Client\Models\OrderBatchDetails',
         'order_id' => 'int',
         'local_order_id' => 'string',
         'delivery_type' => 'string',
@@ -134,6 +135,7 @@ class Order implements ModelInterface, ArrayAccess
         'receipt_code' => null,
         'order_drop_off_location' => null,
         'fulfillment_status' => null,
+        'order_batch_info' => null,
         'order_id' => 'int32',
         'local_order_id' => null,
         'delivery_type' => null,
@@ -211,6 +213,7 @@ class Order implements ModelInterface, ArrayAccess
         'receipt_code' => 'ReceiptCode',
         'order_drop_off_location' => 'OrderDropOffLocation',
         'fulfillment_status' => 'FulfillmentStatus',
+        'order_batch_info' => 'OrderBatchInfo',
         'order_id' => 'OrderId',
         'local_order_id' => 'LocalOrderId',
         'delivery_type' => 'DeliveryType',
@@ -267,6 +270,7 @@ class Order implements ModelInterface, ArrayAccess
         'receipt_code' => 'setReceiptCode',
         'order_drop_off_location' => 'setOrderDropOffLocation',
         'fulfillment_status' => 'setFulfillmentStatus',
+        'order_batch_info' => 'setOrderBatchInfo',
         'order_id' => 'setOrderId',
         'local_order_id' => 'setLocalOrderId',
         'delivery_type' => 'setDeliveryType',
@@ -323,6 +327,7 @@ class Order implements ModelInterface, ArrayAccess
         'receipt_code' => 'getReceiptCode',
         'order_drop_off_location' => 'getOrderDropOffLocation',
         'fulfillment_status' => 'getFulfillmentStatus',
+        'order_batch_info' => 'getOrderBatchInfo',
         'order_id' => 'getOrderId',
         'local_order_id' => 'getLocalOrderId',
         'delivery_type' => 'getDeliveryType',
@@ -672,6 +677,7 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['receipt_code'] = isset($data['receipt_code']) ? $data['receipt_code'] : null;
         $this->container['order_drop_off_location'] = isset($data['order_drop_off_location']) ? $data['order_drop_off_location'] : null;
         $this->container['fulfillment_status'] = isset($data['fulfillment_status']) ? $data['fulfillment_status'] : null;
+        $this->container['order_batch_info'] = isset($data['order_batch_info']) ? $data['order_batch_info'] : null;
         $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
         $this->container['local_order_id'] = isset($data['local_order_id']) ? $data['local_order_id'] : null;
         $this->container['delivery_type'] = isset($data['delivery_type']) ? $data['delivery_type'] : null;
@@ -1274,6 +1280,30 @@ class Order implements ModelInterface, ArrayAccess
     public function setFulfillmentStatus($fulfillment_status)
     {
         $this->container['fulfillment_status'] = $fulfillment_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_batch_info
+     *
+     * @return \Flipdish\\Client\Models\OrderBatchDetails
+     */
+    public function getOrderBatchInfo()
+    {
+        return $this->container['order_batch_info'];
+    }
+
+    /**
+     * Sets order_batch_info
+     *
+     * @param \Flipdish\\Client\Models\OrderBatchDetails $order_batch_info OrderBatch info. This property is not populated in the API
+     *
+     * @return $this
+     */
+    public function setOrderBatchInfo($order_batch_info)
+    {
+        $this->container['order_batch_info'] = $order_batch_info;
 
         return $this;
     }
