@@ -112,12 +112,42 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for publish
+     *
+     * Publish mobile apps.
+     *
+     */
+    public function testPublish()
+    {
+    }
+
+    /**
+     * Test case for resubmission
+     *
+     * Re-submission form mobile apps.
+     *
+     */
+    public function testResubmission()
+    {
+    }
+
+    /**
      * Test case for submission
      *
      * Submission form mobile apps.
      *
      */
     public function testSubmission()
+    {
+    }
+
+    /**
+     * Test case for unpublish
+     *
+     * Unpublish mobile apps.
+     *
+     */
+    public function testUnpublish()
     {
     }
 

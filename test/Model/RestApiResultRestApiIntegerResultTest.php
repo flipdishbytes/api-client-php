@@ -1,6 +1,6 @@
 <?php
 /**
- * MobileAppsSubmissionTest
+ * RestApiResultRestApiIntegerResultTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * MobileAppsSubmissionTest Class Doc Comment
+ * RestApiResultRestApiIntegerResultTest Class Doc Comment
  *
  * @category    Class
- * @description Mobile Apps form submission
+ * @description Rest api result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MobileAppsSubmissionTest extends \PHPUnit_Framework_TestCase
+class RestApiResultRestApiIntegerResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,51 +70,16 @@ class MobileAppsSubmissionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "MobileAppsSubmission"
+     * Test "RestApiResultRestApiIntegerResult"
      */
-    public function testMobileAppsSubmission()
+    public function testRestApiResultRestApiIntegerResult()
     {
     }
 
     /**
-     * Test attribute "submission_id"
+     * Test attribute "data"
      */
-    public function testPropertySubmissionId()
-    {
-    }
-
-    /**
-     * Test attribute "app_name"
-     */
-    public function testPropertyAppName()
-    {
-    }
-
-    /**
-     * Test attribute "app_description"
-     */
-    public function testPropertyAppDescription()
-    {
-    }
-
-    /**
-     * Test attribute "app_short_description"
-     */
-    public function testPropertyAppShortDescription()
-    {
-    }
-
-    /**
-     * Test attribute "keywords"
-     */
-    public function testPropertyKeywords()
-    {
-    }
-
-    /**
-     * Test attribute "auto_publish"
-     */
-    public function testPropertyAutoPublish()
+    public function testPropertyData()
     {
     }
 }

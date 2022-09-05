@@ -7,10 +7,13 @@ Method | HTTP request | Description
 [**getAppConfigSalesChannel**](MobileAppsApi.md#getAppConfigSalesChannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | Get sales channel configuration
 [**getStatistics**](MobileAppsApi.md#getStatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
 [**getSubmissionDetails**](MobileAppsApi.md#getSubmissionDetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | Get submission details mobile apps
-[**getSubmissionStatus**](MobileAppsApi.md#getSubmissionStatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/status/{mobileAppsSubmissionId} | Get submission status mobile apps
+[**getSubmissionStatus**](MobileAppsApi.md#getSubmissionStatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Get submission status mobile apps
+[**publish**](MobileAppsApi.md#publish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/publish | Publish mobile apps
+[**resubmission**](MobileAppsApi.md#resubmission) | **POST** /api/v1.0/mobileapps/{appId}/resubmission | Re-submission form mobile apps
 [**submission**](MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
+[**unpublish**](MobileAppsApi.md#unpublish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/unpublish | Unpublish mobile apps
 [**updateAppConfigSalesChannel**](MobileAppsApi.md#updateAppConfigSalesChannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
-[**updateSubmissionStatus**](MobileAppsApi.md#updateSubmissionStatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{mobileAppsSubmissionId}/status | Update submission status
+[**updateSubmissionStatus**](MobileAppsApi.md#updateSubmissionStatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Update submission status
 [**uploadImage**](MobileAppsApi.md#uploadImage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | Upload image mobile apps
 
 
@@ -170,7 +173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubmissionStatus**
-> \Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus getSubmissionStatus($app_id, $mobile_apps_submission_id)
+> \Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus getSubmissionStatus($app_id, $submission_id)
 
 Get submission status mobile apps
 
@@ -189,10 +192,10 @@ $apiInstance = new Flipdish\\Client\Api\MobileAppsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$mobile_apps_submission_id = 56; // int | 
+$submission_id = 56; // int | 
 
 try {
-    $result = $apiInstance->getSubmissionStatus($app_id, $mobile_apps_submission_id);
+    $result = $apiInstance->getSubmissionStatus($app_id, $submission_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MobileAppsApi->getSubmissionStatus: ', $e->getMessage(), PHP_EOL;
@@ -205,7 +208,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **mobile_apps_submission_id** | **int**|  |
+ **submission_id** | **int**|  |
 
 ### Return type
 
@@ -218,6 +221,114 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **publish**
+> \Flipdish\\Client\Models\RestApiResultRestApiIntegerResult publish($app_id, $submission_id, $platform_type)
+
+Publish mobile apps
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MobileAppsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$submission_id = 56; // int | 
+$platform_type = "platform_type_example"; // string | 
+
+try {
+    $result = $apiInstance->publish($app_id, $submission_id, $platform_type);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MobileAppsApi->publish: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **submission_id** | **int**|  |
+ **platform_type** | **string**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultRestApiIntegerResult**](../Model/RestApiResultRestApiIntegerResult.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **resubmission**
+> \Flipdish\\Client\Models\RestApiResultMobileAppsSubmission resubmission($app_id, $mobile_apps_submission)
+
+Re-submission form mobile apps
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MobileAppsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$mobile_apps_submission = new \Flipdish\\Client\Models\MobileAppsSubmission(); // \Flipdish\\Client\Models\MobileAppsSubmission | 
+
+try {
+    $result = $apiInstance->resubmission($app_id, $mobile_apps_submission);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MobileAppsApi->resubmission: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **mobile_apps_submission** | [**\Flipdish\\Client\Models\MobileAppsSubmission**](../Model/MobileAppsSubmission.md)|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultMobileAppsSubmission**](../Model/RestApiResultMobileAppsSubmission.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -271,6 +382,61 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **unpublish**
+> \Flipdish\\Client\Models\RestApiIntegerResult unpublish($app_id, $submission_id, $platform_type)
+
+Unpublish mobile apps
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MobileAppsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$submission_id = 56; // int | 
+$platform_type = "platform_type_example"; // string | 
+
+try {
+    $result = $apiInstance->unpublish($app_id, $submission_id, $platform_type);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MobileAppsApi->unpublish: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **submission_id** | **int**|  |
+ **platform_type** | **string**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiIntegerResult**](../Model/RestApiIntegerResult.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -329,7 +495,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSubmissionStatus**
-> \Flipdish\\Client\Models\RestApiResultUpdateMobileAppsSubmissionStatus updateSubmissionStatus($app_id, $mobile_apps_submission_id, $update_mobile_apps_submission_status)
+> \Flipdish\\Client\Models\RestApiResultUpdateMobileAppsSubmissionStatus updateSubmissionStatus($app_id, $submission_id, $update_mobile_apps_submission_status)
 
 Update submission status
 
@@ -348,11 +514,11 @@ $apiInstance = new Flipdish\\Client\Api\MobileAppsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$mobile_apps_submission_id = 56; // int | 
+$submission_id = 56; // int | 
 $update_mobile_apps_submission_status = new \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus(); // \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus | 
 
 try {
-    $result = $apiInstance->updateSubmissionStatus($app_id, $mobile_apps_submission_id, $update_mobile_apps_submission_status);
+    $result = $apiInstance->updateSubmissionStatus($app_id, $submission_id, $update_mobile_apps_submission_status);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MobileAppsApi->updateSubmissionStatus: ', $e->getMessage(), PHP_EOL;
@@ -365,7 +531,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **mobile_apps_submission_id** | **int**|  |
+ **submission_id** | **int**|  |
  **update_mobile_apps_submission_status** | [**\Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus**](../Model/UpdateMobileAppsSubmissionStatus.md)|  |
 
 ### Return type

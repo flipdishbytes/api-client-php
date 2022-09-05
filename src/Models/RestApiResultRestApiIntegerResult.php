@@ -1,6 +1,6 @@
 <?php
 /**
- * MobileAppsSubmission
+ * RestApiResultRestApiIntegerResult
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * MobileAppsSubmission Class Doc Comment
+ * RestApiResultRestApiIntegerResult Class Doc Comment
  *
  * @category Class
- * @description Mobile Apps form submission
+ * @description Rest api result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MobileAppsSubmission implements ModelInterface, ArrayAccess
+class RestApiResultRestApiIntegerResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'MobileAppsSubmission';
+    protected static $swaggerModelName = 'RestApiResult[RestApiIntegerResult]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,12 +58,7 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'submission_id' => 'int',
-        'app_name' => 'string',
-        'app_description' => 'string',
-        'app_short_description' => 'string',
-        'keywords' => 'string[]',
-        'auto_publish' => 'bool'
+        'data' => '\Flipdish\\Client\Models\RestApiIntegerResult'
     ];
 
     /**
@@ -72,12 +67,7 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'submission_id' => 'int32',
-        'app_name' => null,
-        'app_description' => null,
-        'app_short_description' => null,
-        'keywords' => null,
-        'auto_publish' => null
+        'data' => null
     ];
 
     /**
@@ -107,12 +97,7 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'submission_id' => 'SubmissionId',
-        'app_name' => 'AppName',
-        'app_description' => 'AppDescription',
-        'app_short_description' => 'AppShortDescription',
-        'keywords' => 'Keywords',
-        'auto_publish' => 'AutoPublish'
+        'data' => 'Data'
     ];
 
     /**
@@ -121,12 +106,7 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'submission_id' => 'setSubmissionId',
-        'app_name' => 'setAppName',
-        'app_description' => 'setAppDescription',
-        'app_short_description' => 'setAppShortDescription',
-        'keywords' => 'setKeywords',
-        'auto_publish' => 'setAutoPublish'
+        'data' => 'setData'
     ];
 
     /**
@@ -135,12 +115,7 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'submission_id' => 'getSubmissionId',
-        'app_name' => 'getAppName',
-        'app_description' => 'getAppDescription',
-        'app_short_description' => 'getAppShortDescription',
-        'keywords' => 'getKeywords',
-        'auto_publish' => 'getAutoPublish'
+        'data' => 'getData'
     ];
 
     /**
@@ -203,12 +178,7 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['submission_id'] = isset($data['submission_id']) ? $data['submission_id'] : null;
-        $this->container['app_name'] = isset($data['app_name']) ? $data['app_name'] : null;
-        $this->container['app_description'] = isset($data['app_description']) ? $data['app_description'] : null;
-        $this->container['app_short_description'] = isset($data['app_short_description']) ? $data['app_short_description'] : null;
-        $this->container['keywords'] = isset($data['keywords']) ? $data['keywords'] : null;
-        $this->container['auto_publish'] = isset($data['auto_publish']) ? $data['auto_publish'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -220,14 +190,8 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['app_name'] === null) {
-            $invalidProperties[] = "'app_name' can't be null";
-        }
-        if ($this->container['app_description'] === null) {
-            $invalidProperties[] = "'app_description' can't be null";
-        }
-        if ($this->container['app_short_description'] === null) {
-            $invalidProperties[] = "'app_short_description' can't be null";
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
         }
         return $invalidProperties;
     }
@@ -245,145 +209,25 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets submission_id
+     * Gets data
      *
-     * @return int
+     * @return \Flipdish\\Client\Models\RestApiIntegerResult
      */
-    public function getSubmissionId()
+    public function getData()
     {
-        return $this->container['submission_id'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets submission_id
+     * Sets data
      *
-     * @param int $submission_id Mobile Apps Submission Id
+     * @param \Flipdish\\Client\Models\RestApiIntegerResult $data Generic data object.
      *
      * @return $this
      */
-    public function setSubmissionId($submission_id)
+    public function setData($data)
     {
-        $this->container['submission_id'] = $submission_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets app_name
-     *
-     * @return string
-     */
-    public function getAppName()
-    {
-        return $this->container['app_name'];
-    }
-
-    /**
-     * Sets app_name
-     *
-     * @param string $app_name App Name
-     *
-     * @return $this
-     */
-    public function setAppName($app_name)
-    {
-        $this->container['app_name'] = $app_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets app_description
-     *
-     * @return string
-     */
-    public function getAppDescription()
-    {
-        return $this->container['app_description'];
-    }
-
-    /**
-     * Sets app_description
-     *
-     * @param string $app_description App Description
-     *
-     * @return $this
-     */
-    public function setAppDescription($app_description)
-    {
-        $this->container['app_description'] = $app_description;
-
-        return $this;
-    }
-
-    /**
-     * Gets app_short_description
-     *
-     * @return string
-     */
-    public function getAppShortDescription()
-    {
-        return $this->container['app_short_description'];
-    }
-
-    /**
-     * Sets app_short_description
-     *
-     * @param string $app_short_description App Description
-     *
-     * @return $this
-     */
-    public function setAppShortDescription($app_short_description)
-    {
-        $this->container['app_short_description'] = $app_short_description;
-
-        return $this;
-    }
-
-    /**
-     * Gets keywords
-     *
-     * @return string[]
-     */
-    public function getKeywords()
-    {
-        return $this->container['keywords'];
-    }
-
-    /**
-     * Sets keywords
-     *
-     * @param string[] $keywords Keywords
-     *
-     * @return $this
-     */
-    public function setKeywords($keywords)
-    {
-        $this->container['keywords'] = $keywords;
-
-        return $this;
-    }
-
-    /**
-     * Gets auto_publish
-     *
-     * @return bool
-     */
-    public function getAutoPublish()
-    {
-        return $this->container['auto_publish'];
-    }
-
-    /**
-     * Sets auto_publish
-     *
-     * @param bool $auto_publish Publish automatically
-     *
-     * @return $this
-     */
-    public function setAutoPublish($auto_publish)
-    {
-        $this->container['auto_publish'] = $auto_publish;
+        $this->container['data'] = $data;
 
         return $this;
     }

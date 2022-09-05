@@ -372,10 +372,13 @@ Class | Method | HTTP request | Description
 *MobileAppsApi* | [**getAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#getappconfigsaleschannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | Get sales channel configuration
 *MobileAppsApi* | [**getStatistics**](docs/Api/MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
 *MobileAppsApi* | [**getSubmissionDetails**](docs/Api/MobileAppsApi.md#getsubmissiondetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | Get submission details mobile apps
-*MobileAppsApi* | [**getSubmissionStatus**](docs/Api/MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/status/{mobileAppsSubmissionId} | Get submission status mobile apps
+*MobileAppsApi* | [**getSubmissionStatus**](docs/Api/MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Get submission status mobile apps
+*MobileAppsApi* | [**publish**](docs/Api/MobileAppsApi.md#publish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/publish | Publish mobile apps
+*MobileAppsApi* | [**resubmission**](docs/Api/MobileAppsApi.md#resubmission) | **POST** /api/v1.0/mobileapps/{appId}/resubmission | Re-submission form mobile apps
 *MobileAppsApi* | [**submission**](docs/Api/MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
+*MobileAppsApi* | [**unpublish**](docs/Api/MobileAppsApi.md#unpublish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/unpublish | Unpublish mobile apps
 *MobileAppsApi* | [**updateAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#updateappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
-*MobileAppsApi* | [**updateSubmissionStatus**](docs/Api/MobileAppsApi.md#updatesubmissionstatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{mobileAppsSubmissionId}/status | Update submission status
+*MobileAppsApi* | [**updateSubmissionStatus**](docs/Api/MobileAppsApi.md#updatesubmissionstatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Update submission status
 *MobileAppsApi* | [**uploadImage**](docs/Api/MobileAppsApi.md#uploadimage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | Upload image mobile apps
 *OAuthClientsApi* | [**addRedirectUri**](docs/Api/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
 *OAuthClientsApi* | [**createOAuthApp**](docs/Api/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
@@ -1053,6 +1056,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultProduct](docs/Model/RestApiResultProduct.md)
  - [RestApiResultPushNotificationResponse](docs/Model/RestApiResultPushNotificationResponse.md)
  - [RestApiResultRedeemInvitationResult](docs/Model/RestApiResultRedeemInvitationResult.md)
+ - [RestApiResultRestApiIntegerResult](docs/Model/RestApiResultRestApiIntegerResult.md)
  - [RestApiResultRestaurantVoucherPayGreenConfiguration](docs/Model/RestApiResultRestaurantVoucherPayGreenConfiguration.md)
  - [RestApiResultRestaurantVoucherPayGreenStoreConfiguration](docs/Model/RestApiResultRestaurantVoucherPayGreenStoreConfiguration.md)
  - [RestApiResultRetentionCampaign](docs/Model/RestApiResultRetentionCampaign.md)
