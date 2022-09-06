@@ -221,6 +221,10 @@ Class | Method | HTTP request | Description
 *DeliveryZoneApi* | [**getDeliveryZones**](docs/Api/DeliveryZoneApi.md#getdeliveryzones) | **GET** /api/v1.0/stores/{storeId}/deliveryzones | Get all the delivery zones associated with a store
 *DeliveryZoneApi* | [**removeDeliveryZone**](docs/Api/DeliveryZoneApi.md#removedeliveryzone) | **DELETE** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | Removes the existing delivery zone
 *DeliveryZoneApi* | [**updateDeliveryZone**](docs/Api/DeliveryZoneApi.md#updatedeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | Updates the existing delivery zone
+*DeviceApi* | [**assignDevice**](docs/Api/DeviceApi.md#assigndevice) | **POST** /api/v1.0/{appId}/devices/assign | Assign device to AppId. Device must have been enrolled before
+*DeviceApi* | [**enrollDevice**](docs/Api/DeviceApi.md#enrolldevice) | **POST** /api/v1.0/{appId}/devices/enroll | Enroll a new device - this returns a PIN code for actually assigning it later
+*DeviceApi* | [**getDeviceDetails**](docs/Api/DeviceApi.md#getdevicedetails) | **GET** /api/v1.0/{appId}/devices/device/{deviceModel}/{deviceId} | Get details for a device by model and deviceid
+*DeviceApi* | [**searchDevices**](docs/Api/DeviceApi.md#searchdevices) | **GET** /api/v1.0/{appId}/devices/search | Search devices by AppId and optionally storeId
 *DriversApi* | [**addDriverNotificationToken**](docs/Api/DriversApi.md#adddrivernotificationtoken) | **POST** /api/v1.0/drivers/token | Add driver token
 *DriversApi* | [**deleteDriverProfileImage**](docs/Api/DriversApi.md#deletedriverprofileimage) | **DELETE** /api/v1.0/drivers/profile/image | Delete driver profile image
 *DriversApi* | [**driverLogin**](docs/Api/DriversApi.md#driverlogin) | **POST** /api/v1.0/drivers/login | [PRIVATE] Login with phone number and pin
@@ -600,6 +604,11 @@ Class | Method | HTTP request | Description
  - [Channel](docs/Model/Channel.md)
  - [ChannelStoreMapping](docs/Model/ChannelStoreMapping.md)
  - [ChargebackDetails](docs/Model/ChargebackDetails.md)
+ - [ClientDevice](docs/Model/ClientDevice.md)
+ - [ClientDeviceAssignEnrolledDevice](docs/Model/ClientDeviceAssignEnrolledDevice.md)
+ - [ClientDeviceEnroll](docs/Model/ClientDeviceEnroll.md)
+ - [ClientDeviceEnrollmentResult](docs/Model/ClientDeviceEnrollmentResult.md)
+ - [ClientDeviceSummary](docs/Model/ClientDeviceSummary.md)
  - [ConfiguredStore](docs/Model/ConfiguredStore.md)
  - [Contact](docs/Model/Contact.md)
  - [Coordinates](docs/Model/Coordinates.md)
@@ -903,6 +912,7 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultBankAccountSummary](docs/Model/RestApiArrayResultBankAccountSummary.md)
  - [RestApiArrayResultBusinessHoursPeriod](docs/Model/RestApiArrayResultBusinessHoursPeriod.md)
  - [RestApiArrayResultChannel](docs/Model/RestApiArrayResultChannel.md)
+ - [RestApiArrayResultClientDeviceSummary](docs/Model/RestApiArrayResultClientDeviceSummary.md)
  - [RestApiArrayResultCountryWithAccountFieldsDefinitions](docs/Model/RestApiArrayResultCountryWithAccountFieldsDefinitions.md)
  - [RestApiArrayResultDeliveryZone](docs/Model/RestApiArrayResultDeliveryZone.md)
  - [RestApiArrayResultDriver](docs/Model/RestApiArrayResultDriver.md)
@@ -1000,6 +1010,8 @@ Class | Method | HTTP request | Description
  - [RestApiResultCardReader](docs/Model/RestApiResultCardReader.md)
  - [RestApiResultCatalogItem](docs/Model/RestApiResultCatalogItem.md)
  - [RestApiResultChannel](docs/Model/RestApiResultChannel.md)
+ - [RestApiResultClientDevice](docs/Model/RestApiResultClientDevice.md)
+ - [RestApiResultClientDeviceEnrollmentResult](docs/Model/RestApiResultClientDeviceEnrollmentResult.md)
  - [RestApiResultCoordinates](docs/Model/RestApiResultCoordinates.md)
  - [RestApiResultCountryFormResponse](docs/Model/RestApiResultCountryFormResponse.md)
  - [RestApiResultCreatedMenuSectionItems](docs/Model/RestApiResultCreatedMenuSectionItems.md)

@@ -396,6 +396,10 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_VIEW_CHANNELS = 'ViewChannels';
     const APP_RESOURCE_SET_VIEW_ONBOARDING = 'ViewOnboarding';
     const APP_RESOURCE_SET_UPDATE_ONBOARDING = 'UpdateOnboarding';
+    const APP_RESOURCE_SET_VIEW_CLIENT_DEVICES = 'ViewClientDevices';
+    const APP_RESOURCE_SET_UPDATE_CLIENT_DEVICES = 'UpdateClientDevices';
+    const APP_RESOURCE_SET_ENROLL_CLIENT_DEVICES = 'EnrollClientDevices';
+    const APP_RESOURCE_SET_ASSIGN_CLIENT_DEVICES = 'AssignClientDevices';
     const APP_RESOURCE_SET_CREATE_APP_STORE_APP_CONFIGURATION = 'CreateAppStoreAppConfiguration';
     const APP_RESOURCE_SET_VIEW_APP_STORE_APP_CONFIGURATION = 'ViewAppStoreAppConfiguration';
     const APP_RESOURCE_SET_UPDATE_APP_STORE_APP_CONFIGURATION = 'UpdateAppStoreAppConfiguration';
@@ -578,6 +582,10 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_VIEW_CHANNELS,
             self::APP_RESOURCE_SET_VIEW_ONBOARDING,
             self::APP_RESOURCE_SET_UPDATE_ONBOARDING,
+            self::APP_RESOURCE_SET_VIEW_CLIENT_DEVICES,
+            self::APP_RESOURCE_SET_UPDATE_CLIENT_DEVICES,
+            self::APP_RESOURCE_SET_ENROLL_CLIENT_DEVICES,
+            self::APP_RESOURCE_SET_ASSIGN_CLIENT_DEVICES,
             self::APP_RESOURCE_SET_CREATE_APP_STORE_APP_CONFIGURATION,
             self::APP_RESOURCE_SET_VIEW_APP_STORE_APP_CONFIGURATION,
             self::APP_RESOURCE_SET_UPDATE_APP_STORE_APP_CONFIGURATION,
