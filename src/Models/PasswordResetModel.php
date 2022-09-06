@@ -58,6 +58,7 @@ class PasswordResetModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'token_id' => 'string',
         'email' => 'string',
         'password' => 'string',
         'password_confirmation' => 'string',
@@ -70,6 +71,7 @@ class PasswordResetModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'token_id' => null,
         'email' => null,
         'password' => null,
         'password_confirmation' => null,
@@ -103,6 +105,7 @@ class PasswordResetModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'token_id' => 'TokenId',
         'email' => 'Email',
         'password' => 'Password',
         'password_confirmation' => 'PasswordConfirmation',
@@ -115,6 +118,7 @@ class PasswordResetModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'token_id' => 'setTokenId',
         'email' => 'setEmail',
         'password' => 'setPassword',
         'password_confirmation' => 'setPasswordConfirmation',
@@ -127,6 +131,7 @@ class PasswordResetModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'token_id' => 'getTokenId',
         'email' => 'getEmail',
         'password' => 'getPassword',
         'password_confirmation' => 'getPasswordConfirmation',
@@ -193,6 +198,7 @@ class PasswordResetModel implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['token_id'] = isset($data['token_id']) ? $data['token_id'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['password_confirmation'] = isset($data['password_confirmation']) ? $data['password_confirmation'] : null;
@@ -228,6 +234,30 @@ class PasswordResetModel implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets token_id
+     *
+     * @return string
+     */
+    public function getTokenId()
+    {
+        return $this->container['token_id'];
+    }
+
+    /**
+     * Sets token_id
+     *
+     * @param string $token_id Token Id
+     *
+     * @return $this
+     */
+    public function setTokenId($token_id)
+    {
+        $this->container['token_id'] = $token_id;
+
+        return $this;
+    }
 
     /**
      * Gets email

@@ -77,6 +77,13 @@ class PasswordResetModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "token_id"
+     */
+    public function testPropertyTokenId()
+    {
+    }
+
+    /**
      * Test attribute "email"
      */
     public function testPropertyEmail()

@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**token_id** | **string** | Token Id | [optional] 
 **email** | **string** | Email address | [optional] 
 **password** | **string** | Password | 
 **password_confirmation** | **string** | Password confirmation | 
