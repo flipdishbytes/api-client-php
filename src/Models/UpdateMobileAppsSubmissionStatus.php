@@ -184,6 +184,7 @@ class UpdateMobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const TYPE_NONE = 'None';
     const TYPE_ANDROID = 'Android';
     const TYPE_IOS = 'IOS';
     const APP_STATUS_NONE = 'None';
@@ -206,6 +207,7 @@ class UpdateMobileAppsSubmissionStatus implements ModelInterface, ArrayAccess
     public function getTypeAllowableValues()
     {
         return [
+            self::TYPE_NONE,
             self::TYPE_ANDROID,
             self::TYPE_IOS,
         ];

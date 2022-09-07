@@ -2882,15 +2882,15 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_mobile_apps_submission_status  (required)
+     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultUpdateMobileAppsSubmissionStatus
      */
-    public function updateSubmissionStatus($app_id, $submission_id, $update_mobile_apps_submission_status)
+    public function updateSubmissionStatus($app_id, $submission_id, $update_submission_status)
     {
-        list($response) = $this->updateSubmissionStatusWithHttpInfo($app_id, $submission_id, $update_mobile_apps_submission_status);
+        list($response) = $this->updateSubmissionStatusWithHttpInfo($app_id, $submission_id, $update_submission_status);
         return $response;
     }
 
@@ -2901,16 +2901,16 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_mobile_apps_submission_status  (required)
+     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultUpdateMobileAppsSubmissionStatus, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateSubmissionStatusWithHttpInfo($app_id, $submission_id, $update_mobile_apps_submission_status)
+    public function updateSubmissionStatusWithHttpInfo($app_id, $submission_id, $update_submission_status)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultUpdateMobileAppsSubmissionStatus';
-        $request = $this->updateSubmissionStatusRequest($app_id, $submission_id, $update_mobile_apps_submission_status);
+        $request = $this->updateSubmissionStatusRequest($app_id, $submission_id, $update_submission_status);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3002,14 +3002,14 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_mobile_apps_submission_status  (required)
+     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateSubmissionStatusAsync($app_id, $submission_id, $update_mobile_apps_submission_status)
+    public function updateSubmissionStatusAsync($app_id, $submission_id, $update_submission_status)
     {
-        return $this->updateSubmissionStatusAsyncWithHttpInfo($app_id, $submission_id, $update_mobile_apps_submission_status)
+        return $this->updateSubmissionStatusAsyncWithHttpInfo($app_id, $submission_id, $update_submission_status)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3024,15 +3024,15 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_mobile_apps_submission_status  (required)
+     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateSubmissionStatusAsyncWithHttpInfo($app_id, $submission_id, $update_mobile_apps_submission_status)
+    public function updateSubmissionStatusAsyncWithHttpInfo($app_id, $submission_id, $update_submission_status)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultUpdateMobileAppsSubmissionStatus';
-        $request = $this->updateSubmissionStatusRequest($app_id, $submission_id, $update_mobile_apps_submission_status);
+        $request = $this->updateSubmissionStatusRequest($app_id, $submission_id, $update_submission_status);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3076,12 +3076,12 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_mobile_apps_submission_status  (required)
+     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateSubmissionStatusRequest($app_id, $submission_id, $update_mobile_apps_submission_status)
+    protected function updateSubmissionStatusRequest($app_id, $submission_id, $update_submission_status)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -3095,10 +3095,10 @@ class MobileAppsApi
                 'Missing the required parameter $submission_id when calling updateSubmissionStatus'
             );
         }
-        // verify the required parameter 'update_mobile_apps_submission_status' is set
-        if ($update_mobile_apps_submission_status === null || (is_array($update_mobile_apps_submission_status) && count($update_mobile_apps_submission_status) === 0)) {
+        // verify the required parameter 'update_submission_status' is set
+        if ($update_submission_status === null || (is_array($update_submission_status) && count($update_submission_status) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $update_mobile_apps_submission_status when calling updateSubmissionStatus'
+                'Missing the required parameter $update_submission_status when calling updateSubmissionStatus'
             );
         }
 
@@ -3129,8 +3129,8 @@ class MobileAppsApi
 
         // body params
         $_tempBody = null;
-        if (isset($update_mobile_apps_submission_status)) {
-            $_tempBody = $update_mobile_apps_submission_status;
+        if (isset($update_submission_status)) {
+            $_tempBody = $update_submission_status;
         }
 
         if ($multipart) {

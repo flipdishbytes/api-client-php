@@ -199,6 +199,7 @@ class MobileAppsStatistics implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const PLATFORM_TYPE_NONE = 'None';
     const PLATFORM_TYPE_ANDROID = 'Android';
     const PLATFORM_TYPE_IOS = 'IOS';
     
@@ -212,6 +213,7 @@ class MobileAppsStatistics implements ModelInterface, ArrayAccess
     public function getPlatformTypeAllowableValues()
     {
         return [
+            self::PLATFORM_TYPE_NONE,
             self::PLATFORM_TYPE_ANDROID,
             self::PLATFORM_TYPE_IOS,
         ];

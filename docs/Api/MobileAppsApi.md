@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSubmissionStatus**
-> \Flipdish\\Client\Models\RestApiResultUpdateMobileAppsSubmissionStatus updateSubmissionStatus($app_id, $submission_id, $update_mobile_apps_submission_status)
+> \Flipdish\\Client\Models\RestApiResultUpdateMobileAppsSubmissionStatus updateSubmissionStatus($app_id, $submission_id, $update_submission_status)
 
 Update submission status
 
@@ -515,10 +515,10 @@ $apiInstance = new Flipdish\\Client\Api\MobileAppsApi(
 );
 $app_id = "app_id_example"; // string | 
 $submission_id = 56; // int | 
-$update_mobile_apps_submission_status = new \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus(); // \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus | 
+$update_submission_status = new \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus(); // \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus | 
 
 try {
-    $result = $apiInstance->updateSubmissionStatus($app_id, $submission_id, $update_mobile_apps_submission_status);
+    $result = $apiInstance->updateSubmissionStatus($app_id, $submission_id, $update_submission_status);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MobileAppsApi->updateSubmissionStatus: ', $e->getMessage(), PHP_EOL;
@@ -532,7 +532,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
  **submission_id** | **int**|  |
- **update_mobile_apps_submission_status** | [**\Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus**](../Model/UpdateMobileAppsSubmissionStatus.md)|  |
+ **update_submission_status** | [**\Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus**](../Model/UpdateMobileAppsSubmissionStatus.md)|  |
 
 ### Return type
 
