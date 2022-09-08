@@ -197,6 +197,7 @@ class CreateMetafieldDefinition implements ModelInterface, ArrayAccess
     const OWNER_ENTITY_CATALOG_ITEM = 'CatalogItem';
     const OWNER_ENTITY_CATALOG_GROUP = 'CatalogGroup';
     const OWNER_ENTITY_MENU = 'Menu';
+    const VALUE_TYPE_BOOLEAN = 'Boolean';
     const VALUE_TYPE_JSON = 'Json';
     const VALUE_TYPE_SINGLE_LINE_STRING = 'SingleLineString';
     const VALUE_TYPE_MULTI_LINE_STRING = 'MultiLineString';
@@ -227,6 +228,7 @@ class CreateMetafieldDefinition implements ModelInterface, ArrayAccess
     public function getValueTypeAllowableValues()
     {
         return [
+            self::VALUE_TYPE_BOOLEAN,
             self::VALUE_TYPE_JSON,
             self::VALUE_TYPE_SINGLE_LINE_STRING,
             self::VALUE_TYPE_MULTI_LINE_STRING,
