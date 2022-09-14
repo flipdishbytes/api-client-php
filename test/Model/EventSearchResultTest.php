@@ -126,6 +126,13 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "order_batch_published_event"
+     */
+    public function testPropertyOrderBatchPublishedEvent()
+    {
+    }
+
+    /**
      * Test attribute "order_created_event"
      */
     public function testPropertyOrderCreatedEvent()

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **order_dispatched_event** | [**\Flipdish\\Client\Models\OrderDispatchedEvent[]**](OrderDispatchedEvent.md) | Order dispatched events | [optional] 
 **order_customer_tracking_created_event** | [**\Flipdish\\Client\Models\OrderCustomerTrackingCreatedEvent[]**](OrderCustomerTrackingCreatedEvent.md) | Order delivery tracking created events | [optional] 
 **order_delivery_tracking_status_updated_event** | [**\Flipdish\\Client\Models\OrderDeliveryTrackingStatusUpdatedEvent[]**](OrderDeliveryTrackingStatusUpdatedEvent.md) | Order delivery tracking updated events | [optional] 
+**order_batch_published_event** | [**\Flipdish\\Client\Models\OrderBatchPublishedEvent[]**](OrderBatchPublishedEvent.md) | Order Batch published event | [optional] 
 **order_created_event** | [**\Flipdish\\Client\Models\OrderCreatedEvent[]**](OrderCreatedEvent.md) | Order created events | [optional] 
 **order_rating_updated_event** | [**\Flipdish\\Client\Models\OrderRatingUpdatedEvent[]**](OrderRatingUpdatedEvent.md) | Order rating updated events | [optional] 
 **order_refunded_event** | [**\Flipdish\\Client\Models\OrderRefundedEvent[]**](OrderRefundedEvent.md) | Order refunded events | [optional] 

@@ -825,6 +825,7 @@ Class | Method | HTTP request | Description
  - [OrderBatch](docs/Model/OrderBatch.md)
  - [OrderBatchDetails](docs/Model/OrderBatchDetails.md)
  - [OrderBatchItem](docs/Model/OrderBatchItem.md)
+ - [OrderBatchPublishedEvent](docs/Model/OrderBatchPublishedEvent.md)
  - [OrderBatchingConfiguration](docs/Model/OrderBatchingConfiguration.md)
  - [OrderCapacityConfigUpdatedEvent](docs/Model/OrderCapacityConfigUpdatedEvent.md)
  - [OrderCreatedEvent](docs/Model/OrderCreatedEvent.md)

@@ -65,6 +65,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'order_dispatched_event' => '\Flipdish\\Client\Models\OrderDispatchedEvent[]',
         'order_customer_tracking_created_event' => '\Flipdish\\Client\Models\OrderCustomerTrackingCreatedEvent[]',
         'order_delivery_tracking_status_updated_event' => '\Flipdish\\Client\Models\OrderDeliveryTrackingStatusUpdatedEvent[]',
+        'order_batch_published_event' => '\Flipdish\\Client\Models\OrderBatchPublishedEvent[]',
         'order_created_event' => '\Flipdish\\Client\Models\OrderCreatedEvent[]',
         'order_rating_updated_event' => '\Flipdish\\Client\Models\OrderRatingUpdatedEvent[]',
         'order_refunded_event' => '\Flipdish\\Client\Models\OrderRefundedEvent[]',
@@ -205,6 +206,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'order_dispatched_event' => null,
         'order_customer_tracking_created_event' => null,
         'order_delivery_tracking_status_updated_event' => null,
+        'order_batch_published_event' => null,
         'order_created_event' => null,
         'order_rating_updated_event' => null,
         'order_refunded_event' => null,
@@ -366,6 +368,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'order_dispatched_event' => 'OrderDispatchedEvent',
         'order_customer_tracking_created_event' => 'OrderCustomerTrackingCreatedEvent',
         'order_delivery_tracking_status_updated_event' => 'OrderDeliveryTrackingStatusUpdatedEvent',
+        'order_batch_published_event' => 'OrderBatchPublishedEvent',
         'order_created_event' => 'OrderCreatedEvent',
         'order_rating_updated_event' => 'OrderRatingUpdatedEvent',
         'order_refunded_event' => 'OrderRefundedEvent',
@@ -506,6 +509,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'order_dispatched_event' => 'setOrderDispatchedEvent',
         'order_customer_tracking_created_event' => 'setOrderCustomerTrackingCreatedEvent',
         'order_delivery_tracking_status_updated_event' => 'setOrderDeliveryTrackingStatusUpdatedEvent',
+        'order_batch_published_event' => 'setOrderBatchPublishedEvent',
         'order_created_event' => 'setOrderCreatedEvent',
         'order_rating_updated_event' => 'setOrderRatingUpdatedEvent',
         'order_refunded_event' => 'setOrderRefundedEvent',
@@ -646,6 +650,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'order_dispatched_event' => 'getOrderDispatchedEvent',
         'order_customer_tracking_created_event' => 'getOrderCustomerTrackingCreatedEvent',
         'order_delivery_tracking_status_updated_event' => 'getOrderDeliveryTrackingStatusUpdatedEvent',
+        'order_batch_published_event' => 'getOrderBatchPublishedEvent',
         'order_created_event' => 'getOrderCreatedEvent',
         'order_rating_updated_event' => 'getOrderRatingUpdatedEvent',
         'order_refunded_event' => 'getOrderRefundedEvent',
@@ -840,6 +845,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         $this->container['order_dispatched_event'] = isset($data['order_dispatched_event']) ? $data['order_dispatched_event'] : null;
         $this->container['order_customer_tracking_created_event'] = isset($data['order_customer_tracking_created_event']) ? $data['order_customer_tracking_created_event'] : null;
         $this->container['order_delivery_tracking_status_updated_event'] = isset($data['order_delivery_tracking_status_updated_event']) ? $data['order_delivery_tracking_status_updated_event'] : null;
+        $this->container['order_batch_published_event'] = isset($data['order_batch_published_event']) ? $data['order_batch_published_event'] : null;
         $this->container['order_created_event'] = isset($data['order_created_event']) ? $data['order_created_event'] : null;
         $this->container['order_rating_updated_event'] = isset($data['order_rating_updated_event']) ? $data['order_rating_updated_event'] : null;
         $this->container['order_refunded_event'] = isset($data['order_refunded_event']) ? $data['order_refunded_event'] : null;
@@ -1155,6 +1161,30 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     public function setOrderDeliveryTrackingStatusUpdatedEvent($order_delivery_tracking_status_updated_event)
     {
         $this->container['order_delivery_tracking_status_updated_event'] = $order_delivery_tracking_status_updated_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_batch_published_event
+     *
+     * @return \Flipdish\\Client\Models\OrderBatchPublishedEvent[]
+     */
+    public function getOrderBatchPublishedEvent()
+    {
+        return $this->container['order_batch_published_event'];
+    }
+
+    /**
+     * Sets order_batch_published_event
+     *
+     * @param \Flipdish\\Client\Models\OrderBatchPublishedEvent[] $order_batch_published_event Order Batch published event
+     *
+     * @return $this
+     */
+    public function setOrderBatchPublishedEvent($order_batch_published_event)
+    {
+        $this->container['order_batch_published_event'] = $order_batch_published_event;
 
         return $this;
     }
