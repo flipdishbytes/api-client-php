@@ -59,6 +59,7 @@ class SetOrderBatchingConfiguration implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'batch_interval_in_minutes' => 'int',
+        'batch_interval_in_seconds' => 'int',
         'enabled' => 'bool'
     ];
 
@@ -69,6 +70,7 @@ class SetOrderBatchingConfiguration implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'batch_interval_in_minutes' => 'int32',
+        'batch_interval_in_seconds' => 'int32',
         'enabled' => null
     ];
 
@@ -100,6 +102,7 @@ class SetOrderBatchingConfiguration implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'batch_interval_in_minutes' => 'BatchIntervalInMinutes',
+        'batch_interval_in_seconds' => 'BatchIntervalInSeconds',
         'enabled' => 'Enabled'
     ];
 
@@ -110,6 +113,7 @@ class SetOrderBatchingConfiguration implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'batch_interval_in_minutes' => 'setBatchIntervalInMinutes',
+        'batch_interval_in_seconds' => 'setBatchIntervalInSeconds',
         'enabled' => 'setEnabled'
     ];
 
@@ -120,6 +124,7 @@ class SetOrderBatchingConfiguration implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'batch_interval_in_minutes' => 'getBatchIntervalInMinutes',
+        'batch_interval_in_seconds' => 'getBatchIntervalInSeconds',
         'enabled' => 'getEnabled'
     ];
 
@@ -184,6 +189,7 @@ class SetOrderBatchingConfiguration implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['batch_interval_in_minutes'] = isset($data['batch_interval_in_minutes']) ? $data['batch_interval_in_minutes'] : null;
+        $this->container['batch_interval_in_seconds'] = isset($data['batch_interval_in_seconds']) ? $data['batch_interval_in_seconds'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
     }
 
@@ -231,6 +237,30 @@ class SetOrderBatchingConfiguration implements ModelInterface, ArrayAccess
     public function setBatchIntervalInMinutes($batch_interval_in_minutes)
     {
         $this->container['batch_interval_in_minutes'] = $batch_interval_in_minutes;
+
+        return $this;
+    }
+
+    /**
+     * Gets batch_interval_in_seconds
+     *
+     * @return int
+     */
+    public function getBatchIntervalInSeconds()
+    {
+        return $this->container['batch_interval_in_seconds'];
+    }
+
+    /**
+     * Sets batch_interval_in_seconds
+     *
+     * @param int $batch_interval_in_seconds Batch sending interval in seconds
+     *
+     * @return $this
+     */
+    public function setBatchIntervalInSeconds($batch_interval_in_seconds)
+    {
+        $this->container['batch_interval_in_seconds'] = $batch_interval_in_seconds;
 
         return $this;
     }
