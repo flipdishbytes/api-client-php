@@ -136,6 +136,8 @@ Name | Type | Description | Notes
 **location_created_event** | [**\Flipdish\\Client\Models\LocationCreatedEvent[]**](LocationCreatedEvent.md) | Location created event | [optional] 
 **location_deleted_event** | [**\Flipdish\\Client\Models\LocationDeletedEvent[]**](LocationDeletedEvent.md) | Location deleted event | [optional] 
 **store_service_charge_updated_event** | [**\Flipdish\\Client\Models\StoreServiceChargeUpdatedEvent[]**](StoreServiceChargeUpdatedEvent.md) | Service Charge Updated Event | [optional] 
+**mobile_apps_submission_status_updated_event** | [**\Flipdish\\Client\Models\MobileAppsSubmissionStatusUpdatedEvent[]**](MobileAppsSubmissionStatusUpdatedEvent.md) | Mobile Submission Status Updated Event | [optional] 
+**mobile_apps_submission_updated_event** | [**\Flipdish\\Client\Models\MobileAppsSubmissionUpdatedEvent[]**](MobileAppsSubmissionUpdatedEvent.md) | Mobile Submission Updated Event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -812,6 +812,8 @@ Class | Method | HTTP request | Description
  - [MobileAppsSubmission](docs/Model/MobileAppsSubmission.md)
  - [MobileAppsSubmissionDetails](docs/Model/MobileAppsSubmissionDetails.md)
  - [MobileAppsSubmissionStatus](docs/Model/MobileAppsSubmissionStatus.md)
+ - [MobileAppsSubmissionStatusUpdatedEvent](docs/Model/MobileAppsSubmissionStatusUpdatedEvent.md)
+ - [MobileAppsSubmissionUpdatedEvent](docs/Model/MobileAppsSubmissionUpdatedEvent.md)
  - [ModelBase](docs/Model/ModelBase.md)
  - [NextStatusWithOrderType](docs/Model/NextStatusWithOrderType.md)
  - [OAuthApp](docs/Model/OAuthApp.md)

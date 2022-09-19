@@ -190,7 +190,9 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'location_area_updated_event' => '\Flipdish\\Client\Models\LocationAreaUpdatedEvent[]',
         'location_created_event' => '\Flipdish\\Client\Models\LocationCreatedEvent[]',
         'location_deleted_event' => '\Flipdish\\Client\Models\LocationDeletedEvent[]',
-        'store_service_charge_updated_event' => '\Flipdish\\Client\Models\StoreServiceChargeUpdatedEvent[]'
+        'store_service_charge_updated_event' => '\Flipdish\\Client\Models\StoreServiceChargeUpdatedEvent[]',
+        'mobile_apps_submission_status_updated_event' => '\Flipdish\\Client\Models\MobileAppsSubmissionStatusUpdatedEvent[]',
+        'mobile_apps_submission_updated_event' => '\Flipdish\\Client\Models\MobileAppsSubmissionUpdatedEvent[]'
     ];
 
     /**
@@ -331,7 +333,9 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'location_area_updated_event' => null,
         'location_created_event' => null,
         'location_deleted_event' => null,
-        'store_service_charge_updated_event' => null
+        'store_service_charge_updated_event' => null,
+        'mobile_apps_submission_status_updated_event' => null,
+        'mobile_apps_submission_updated_event' => null
     ];
 
     /**
@@ -493,7 +497,9 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'location_area_updated_event' => 'LocationAreaUpdatedEvent',
         'location_created_event' => 'LocationCreatedEvent',
         'location_deleted_event' => 'LocationDeletedEvent',
-        'store_service_charge_updated_event' => 'StoreServiceChargeUpdatedEvent'
+        'store_service_charge_updated_event' => 'StoreServiceChargeUpdatedEvent',
+        'mobile_apps_submission_status_updated_event' => 'MobileAppsSubmissionStatusUpdatedEvent',
+        'mobile_apps_submission_updated_event' => 'MobileAppsSubmissionUpdatedEvent'
     ];
 
     /**
@@ -634,7 +640,9 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'location_area_updated_event' => 'setLocationAreaUpdatedEvent',
         'location_created_event' => 'setLocationCreatedEvent',
         'location_deleted_event' => 'setLocationDeletedEvent',
-        'store_service_charge_updated_event' => 'setStoreServiceChargeUpdatedEvent'
+        'store_service_charge_updated_event' => 'setStoreServiceChargeUpdatedEvent',
+        'mobile_apps_submission_status_updated_event' => 'setMobileAppsSubmissionStatusUpdatedEvent',
+        'mobile_apps_submission_updated_event' => 'setMobileAppsSubmissionUpdatedEvent'
     ];
 
     /**
@@ -775,7 +783,9 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'location_area_updated_event' => 'getLocationAreaUpdatedEvent',
         'location_created_event' => 'getLocationCreatedEvent',
         'location_deleted_event' => 'getLocationDeletedEvent',
-        'store_service_charge_updated_event' => 'getStoreServiceChargeUpdatedEvent'
+        'store_service_charge_updated_event' => 'getStoreServiceChargeUpdatedEvent',
+        'mobile_apps_submission_status_updated_event' => 'getMobileAppsSubmissionStatusUpdatedEvent',
+        'mobile_apps_submission_updated_event' => 'getMobileAppsSubmissionUpdatedEvent'
     ];
 
     /**
@@ -971,6 +981,8 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         $this->container['location_created_event'] = isset($data['location_created_event']) ? $data['location_created_event'] : null;
         $this->container['location_deleted_event'] = isset($data['location_deleted_event']) ? $data['location_deleted_event'] : null;
         $this->container['store_service_charge_updated_event'] = isset($data['store_service_charge_updated_event']) ? $data['store_service_charge_updated_event'] : null;
+        $this->container['mobile_apps_submission_status_updated_event'] = isset($data['mobile_apps_submission_status_updated_event']) ? $data['mobile_apps_submission_status_updated_event'] : null;
+        $this->container['mobile_apps_submission_updated_event'] = isset($data['mobile_apps_submission_updated_event']) ? $data['mobile_apps_submission_updated_event'] : null;
     }
 
     /**
@@ -4185,6 +4197,54 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     public function setStoreServiceChargeUpdatedEvent($store_service_charge_updated_event)
     {
         $this->container['store_service_charge_updated_event'] = $store_service_charge_updated_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets mobile_apps_submission_status_updated_event
+     *
+     * @return \Flipdish\\Client\Models\MobileAppsSubmissionStatusUpdatedEvent[]
+     */
+    public function getMobileAppsSubmissionStatusUpdatedEvent()
+    {
+        return $this->container['mobile_apps_submission_status_updated_event'];
+    }
+
+    /**
+     * Sets mobile_apps_submission_status_updated_event
+     *
+     * @param \Flipdish\\Client\Models\MobileAppsSubmissionStatusUpdatedEvent[] $mobile_apps_submission_status_updated_event Mobile Submission Status Updated Event
+     *
+     * @return $this
+     */
+    public function setMobileAppsSubmissionStatusUpdatedEvent($mobile_apps_submission_status_updated_event)
+    {
+        $this->container['mobile_apps_submission_status_updated_event'] = $mobile_apps_submission_status_updated_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets mobile_apps_submission_updated_event
+     *
+     * @return \Flipdish\\Client\Models\MobileAppsSubmissionUpdatedEvent[]
+     */
+    public function getMobileAppsSubmissionUpdatedEvent()
+    {
+        return $this->container['mobile_apps_submission_updated_event'];
+    }
+
+    /**
+     * Sets mobile_apps_submission_updated_event
+     *
+     * @param \Flipdish\\Client\Models\MobileAppsSubmissionUpdatedEvent[] $mobile_apps_submission_updated_event Mobile Submission Updated Event
+     *
+     * @return $this
+     */
+    public function setMobileAppsSubmissionUpdatedEvent($mobile_apps_submission_updated_event)
+    {
+        $this->container['mobile_apps_submission_updated_event'] = $mobile_apps_submission_updated_event;
 
         return $this;
     }

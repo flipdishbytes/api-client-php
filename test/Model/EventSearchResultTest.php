@@ -1006,4 +1006,18 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     public function testPropertyStoreServiceChargeUpdatedEvent()
     {
     }
+
+    /**
+     * Test attribute "mobile_apps_submission_status_updated_event"
+     */
+    public function testPropertyMobileAppsSubmissionStatusUpdatedEvent()
+    {
+    }
+
+    /**
+     * Test attribute "mobile_apps_submission_updated_event"
+     */
+    public function testPropertyMobileAppsSubmissionUpdatedEvent()
+    {
+    }
 }
