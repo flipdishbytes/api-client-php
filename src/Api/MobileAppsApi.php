@@ -1319,13 +1319,13 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  string $platform_type  (required)
+     * @param  string $platform_type  (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultRestApiIntegerResult
      */
-    public function publish($app_id, $submission_id, $platform_type)
+    public function publish($app_id, $submission_id, $platform_type = null)
     {
         list($response) = $this->publishWithHttpInfo($app_id, $submission_id, $platform_type);
         return $response;
@@ -1338,13 +1338,13 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  string $platform_type  (required)
+     * @param  string $platform_type  (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultRestApiIntegerResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function publishWithHttpInfo($app_id, $submission_id, $platform_type)
+    public function publishWithHttpInfo($app_id, $submission_id, $platform_type = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultRestApiIntegerResult';
         $request = $this->publishRequest($app_id, $submission_id, $platform_type);
@@ -1431,12 +1431,12 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  string $platform_type  (required)
+     * @param  string $platform_type  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function publishAsync($app_id, $submission_id, $platform_type)
+    public function publishAsync($app_id, $submission_id, $platform_type = null)
     {
         return $this->publishAsyncWithHttpInfo($app_id, $submission_id, $platform_type)
             ->then(
@@ -1453,12 +1453,12 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  string $platform_type  (required)
+     * @param  string $platform_type  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function publishAsyncWithHttpInfo($app_id, $submission_id, $platform_type)
+    public function publishAsyncWithHttpInfo($app_id, $submission_id, $platform_type = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultRestApiIntegerResult';
         $request = $this->publishRequest($app_id, $submission_id, $platform_type);
@@ -1505,12 +1505,12 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  string $platform_type  (required)
+     * @param  string $platform_type  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function publishRequest($app_id, $submission_id, $platform_type)
+    protected function publishRequest($app_id, $submission_id, $platform_type = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -1522,12 +1522,6 @@ class MobileAppsApi
         if ($submission_id === null || (is_array($submission_id) && count($submission_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $submission_id when calling publish'
-            );
-        }
-        // verify the required parameter 'platform_type' is set
-        if ($platform_type === null || (is_array($platform_type) && count($platform_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $platform_type when calling publish'
             );
         }
 
@@ -2248,13 +2242,13 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  string $platform_type  (required)
+     * @param  string $platform_type  (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiIntegerResult
      */
-    public function unpublish($app_id, $submission_id, $platform_type)
+    public function unpublish($app_id, $submission_id, $platform_type = null)
     {
         list($response) = $this->unpublishWithHttpInfo($app_id, $submission_id, $platform_type);
         return $response;
@@ -2267,13 +2261,13 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  string $platform_type  (required)
+     * @param  string $platform_type  (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiIntegerResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function unpublishWithHttpInfo($app_id, $submission_id, $platform_type)
+    public function unpublishWithHttpInfo($app_id, $submission_id, $platform_type = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiIntegerResult';
         $request = $this->unpublishRequest($app_id, $submission_id, $platform_type);
@@ -2360,12 +2354,12 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  string $platform_type  (required)
+     * @param  string $platform_type  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function unpublishAsync($app_id, $submission_id, $platform_type)
+    public function unpublishAsync($app_id, $submission_id, $platform_type = null)
     {
         return $this->unpublishAsyncWithHttpInfo($app_id, $submission_id, $platform_type)
             ->then(
@@ -2382,12 +2376,12 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  string $platform_type  (required)
+     * @param  string $platform_type  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function unpublishAsyncWithHttpInfo($app_id, $submission_id, $platform_type)
+    public function unpublishAsyncWithHttpInfo($app_id, $submission_id, $platform_type = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiIntegerResult';
         $request = $this->unpublishRequest($app_id, $submission_id, $platform_type);
@@ -2434,12 +2428,12 @@ class MobileAppsApi
      *
      * @param  string $app_id  (required)
      * @param  int $submission_id  (required)
-     * @param  string $platform_type  (required)
+     * @param  string $platform_type  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function unpublishRequest($app_id, $submission_id, $platform_type)
+    protected function unpublishRequest($app_id, $submission_id, $platform_type = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -2451,12 +2445,6 @@ class MobileAppsApi
         if ($submission_id === null || (is_array($submission_id) && count($submission_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $submission_id when calling unpublish'
-            );
-        }
-        // verify the required parameter 'platform_type' is set
-        if ($platform_type === null || (is_array($platform_type) && count($platform_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $platform_type when calling unpublish'
             );
         }
 

@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
  **submission_id** | **int**|  |
- **platform_type** | **string**|  |
+ **platform_type** | **string**|  | [optional]
 
 ### Return type
 
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
  **submission_id** | **int**|  |
- **platform_type** | **string**|  |
+ **platform_type** | **string**|  | [optional]
 
 ### Return type
 
