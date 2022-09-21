@@ -58,7 +58,6 @@ class OrderBatchingConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'batch_interval_in_minutes' => 'int',
         'batch_interval_in_seconds' => 'int',
         'is_enabled' => 'bool'
     ];
@@ -69,7 +68,6 @@ class OrderBatchingConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'batch_interval_in_minutes' => 'int32',
         'batch_interval_in_seconds' => 'int32',
         'is_enabled' => null
     ];
@@ -101,7 +99,6 @@ class OrderBatchingConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'batch_interval_in_minutes' => 'BatchIntervalInMinutes',
         'batch_interval_in_seconds' => 'BatchIntervalInSeconds',
         'is_enabled' => 'IsEnabled'
     ];
@@ -112,7 +109,6 @@ class OrderBatchingConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'batch_interval_in_minutes' => 'setBatchIntervalInMinutes',
         'batch_interval_in_seconds' => 'setBatchIntervalInSeconds',
         'is_enabled' => 'setIsEnabled'
     ];
@@ -123,7 +119,6 @@ class OrderBatchingConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'batch_interval_in_minutes' => 'getBatchIntervalInMinutes',
         'batch_interval_in_seconds' => 'getBatchIntervalInSeconds',
         'is_enabled' => 'getIsEnabled'
     ];
@@ -188,7 +183,6 @@ class OrderBatchingConfiguration implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['batch_interval_in_minutes'] = isset($data['batch_interval_in_minutes']) ? $data['batch_interval_in_minutes'] : null;
         $this->container['batch_interval_in_seconds'] = isset($data['batch_interval_in_seconds']) ? $data['batch_interval_in_seconds'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
     }
@@ -216,30 +210,6 @@ class OrderBatchingConfiguration implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets batch_interval_in_minutes
-     *
-     * @return int
-     */
-    public function getBatchIntervalInMinutes()
-    {
-        return $this->container['batch_interval_in_minutes'];
-    }
-
-    /**
-     * Sets batch_interval_in_minutes
-     *
-     * @param int $batch_interval_in_minutes Batch sending interval in minutes
-     *
-     * @return $this
-     */
-    public function setBatchIntervalInMinutes($batch_interval_in_minutes)
-    {
-        $this->container['batch_interval_in_minutes'] = $batch_interval_in_minutes;
-
-        return $this;
-    }
 
     /**
      * Gets batch_interval_in_seconds

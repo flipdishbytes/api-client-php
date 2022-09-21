@@ -77,13 +77,6 @@ class OrderBatchingConfigurationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "batch_interval_in_minutes"
-     */
-    public function testPropertyBatchIntervalInMinutes()
-    {
-    }
-
-    /**
      * Test attribute "batch_interval_in_seconds"
      */
     public function testPropertyBatchIntervalInSeconds()
