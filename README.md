@@ -94,6 +94,7 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**loginWithPin**](docs/Api/AccountsApi.md#loginwithpin) | **POST** /api/v1.0/accounts/login/pin | Login with username and password
 *AccountsApi* | [**logout**](docs/Api/AccountsApi.md#logout) | **POST** /api/v1.0/accounts/logout | Log out. It removes Flipdish authorization Cookie.
 *AccountsApi* | [**passwordResetWithToken**](docs/Api/AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
+*AccountsApi* | [**recaptchaValidate**](docs/Api/AccountsApi.md#recaptchavalidate) | **POST** /api/v1.0/accounts/recaptcha | Validate recaptcha from flipdish portal
 *AccountsApi* | [**requestLoginPin**](docs/Api/AccountsApi.md#requestloginpin) | **POST** /api/v1.0/accounts/pin | Request login PIN. The server sends the PIN to the email address.
 *AccountsApi* | [**requestPasswordReset**](docs/Api/AccountsApi.md#requestpasswordreset) | **POST** /api/v1.0/accounts/passwordreset | Request password reset. Flipdish system will send a token via email.
 *AccountsApi* | [**sendPinForPasswordReset**](docs/Api/AccountsApi.md#sendpinforpasswordreset) | **POST** /api/v1.0/accounts/password/resetpin | Request Password Reset PIN. The server sends the PIN to the email address.

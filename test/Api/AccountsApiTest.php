@@ -172,6 +172,16 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for recaptchaValidate
+     *
+     * Validate recaptcha from flipdish portal.
+     *
+     */
+    public function testRecaptchaValidate()
+    {
+    }
+
+    /**
      * Test case for requestLoginPin
      *
      * Request login PIN. The server sends the PIN to the email address..
