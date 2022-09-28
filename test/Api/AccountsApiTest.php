@@ -72,6 +72,16 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for accountsIsRecaptchaOn
+     *
+     * [PRIVATE API] Temporary endpoint to return recaptcha FF.
+     *
+     */
+    public function testAccountsIsRecaptchaOn()
+    {
+    }
+
+    /**
      * Test case for answerSignUpQuestion
      *
      * Answer a signup question.
