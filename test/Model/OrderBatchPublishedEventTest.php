@@ -98,6 +98,13 @@ class OrderBatchPublishedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "order_ids"
+     */
+    public function testPropertyOrderIds()
+    {
+    }
+
+    /**
      * Test attribute "flipdish_event_id"
      */
     public function testPropertyFlipdishEventId()

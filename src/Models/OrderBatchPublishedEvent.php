@@ -61,6 +61,7 @@ class OrderBatchPublishedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'string',
         'batch_id' => 'int',
         'store_id' => 'int',
+        'order_ids' => 'int[]',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -77,6 +78,7 @@ class OrderBatchPublishedEvent implements ModelInterface, ArrayAccess
         'event_name' => null,
         'batch_id' => 'int32',
         'store_id' => 'int32',
+        'order_ids' => 'int32',
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -114,6 +116,7 @@ class OrderBatchPublishedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'EventName',
         'batch_id' => 'BatchId',
         'store_id' => 'StoreId',
+        'order_ids' => 'OrderIds',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -130,6 +133,7 @@ class OrderBatchPublishedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'setEventName',
         'batch_id' => 'setBatchId',
         'store_id' => 'setStoreId',
+        'order_ids' => 'setOrderIds',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -146,6 +150,7 @@ class OrderBatchPublishedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'getEventName',
         'batch_id' => 'getBatchId',
         'store_id' => 'getStoreId',
+        'order_ids' => 'getOrderIds',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -216,6 +221,7 @@ class OrderBatchPublishedEvent implements ModelInterface, ArrayAccess
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
         $this->container['batch_id'] = isset($data['batch_id']) ? $data['batch_id'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
+        $this->container['order_ids'] = isset($data['order_ids']) ? $data['order_ids'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -315,6 +321,30 @@ class OrderBatchPublishedEvent implements ModelInterface, ArrayAccess
     public function setStoreId($store_id)
     {
         $this->container['store_id'] = $store_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_ids
+     *
+     * @return int[]
+     */
+    public function getOrderIds()
+    {
+        return $this->container['order_ids'];
+    }
+
+    /**
+     * Sets order_ids
+     *
+     * @param int[] $order_ids Orders' ids on the batch
+     *
+     * @return $this
+     */
+    public function setOrderIds($order_ids)
+    {
+        $this->container['order_ids'] = $order_ids;
 
         return $this;
     }

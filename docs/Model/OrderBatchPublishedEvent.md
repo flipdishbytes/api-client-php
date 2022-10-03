@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **event_name** | **string** | The event name | [optional] 
 **batch_id** | **int** | Order Batch Id | [optional] 
 **store_id** | **int** | Store id the order batch belogs to | [optional] 
+**order_ids** | **int[]** | Orders&#39; ids on the batch | [optional] 
 **flipdish_event_id** | **string** | The identitfier of the event | [optional] 
 **create_time** | [**\DateTime**](\DateTime.md) | The time of creation of the event | [optional] 
 **position** | **int** | Position | [optional] 
