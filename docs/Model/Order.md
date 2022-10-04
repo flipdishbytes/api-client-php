@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **receipt_code** | **string** | Generated receipt code for an order | [optional] 
 **order_drop_off_location** | [**\Flipdish\\Client\Models\OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order | [optional] 
 **fulfillment_status** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md) | [BETA - this is a new field in development] Fulfillment status for this order | [optional] 
-**order_batch_info** | [**\Flipdish\\Client\Models\OrderBatchDetails**](OrderBatchDetails.md) | OrderBatch info. This property is not populated in the API | [optional] 
+**order_batch_info** | [**\Flipdish\\Client\Models\OrderBatchSummary**](OrderBatchSummary.md) | OrderBatch information | [optional] 
 **order_id** | **int** | Order identifier | [optional] 
 **local_order_id** | **string** | Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders) | [optional] 
 **delivery_type** | **string** | Delivery type | [optional] 

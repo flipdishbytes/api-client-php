@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderBatchDetails
+ * OrderBatchSummary
  *
  * PHP version 5
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * OrderBatchDetails Class Doc Comment
+ * OrderBatchSummary Class Doc Comment
  *
  * @category Class
  * @description Order batch info
@@ -41,7 +41,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class OrderBatchDetails implements ModelInterface, ArrayAccess
+class OrderBatchSummary implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class OrderBatchDetails implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'OrderBatchDetails';
+    protected static $swaggerModelName = 'OrderBatchSummary';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class OrderBatchDetails implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'order_batch_id' => 'int',
+        'id' => 'int',
         'display_code' => 'string',
         'create_time' => '\DateTime',
         'is_published' => 'bool'
@@ -70,7 +70,7 @@ class OrderBatchDetails implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'order_batch_id' => 'int32',
+        'id' => 'int32',
         'display_code' => null,
         'create_time' => 'date-time',
         'is_published' => null
@@ -103,7 +103,7 @@ class OrderBatchDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'order_batch_id' => 'OrderBatchId',
+        'id' => 'Id',
         'display_code' => 'DisplayCode',
         'create_time' => 'CreateTime',
         'is_published' => 'IsPublished'
@@ -115,7 +115,7 @@ class OrderBatchDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'order_batch_id' => 'setOrderBatchId',
+        'id' => 'setId',
         'display_code' => 'setDisplayCode',
         'create_time' => 'setCreateTime',
         'is_published' => 'setIsPublished'
@@ -127,7 +127,7 @@ class OrderBatchDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'order_batch_id' => 'getOrderBatchId',
+        'id' => 'getId',
         'display_code' => 'getDisplayCode',
         'create_time' => 'getCreateTime',
         'is_published' => 'getIsPublished'
@@ -193,7 +193,7 @@ class OrderBatchDetails implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['order_batch_id'] = isset($data['order_batch_id']) ? $data['order_batch_id'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['display_code'] = isset($data['display_code']) ? $data['display_code'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['is_published'] = isset($data['is_published']) ? $data['is_published'] : null;
@@ -224,25 +224,25 @@ class OrderBatchDetails implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets order_batch_id
+     * Gets id
      *
      * @return int
      */
-    public function getOrderBatchId()
+    public function getId()
     {
-        return $this->container['order_batch_id'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets order_batch_id
+     * Sets id
      *
-     * @param int $order_batch_id Order batch id
+     * @param int $id Order batch id
      *
      * @return $this
      */
-    public function setOrderBatchId($order_batch_id)
+    public function setId($id)
     {
-        $this->container['order_batch_id'] = $order_batch_id;
+        $this->container['id'] = $id;
 
         return $this;
     }

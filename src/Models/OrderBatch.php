@@ -36,7 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * OrderBatch Class Doc Comment
  *
  * @category Class
- * @description Order batch
+ * @description Order batch detailed information
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -58,11 +58,11 @@ class OrderBatch implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'order_ids' => 'int[]',
         'id' => 'int',
         'display_code' => 'string',
         'create_time' => '\DateTime',
-        'is_published' => 'bool',
-        'order_ids' => 'int[]'
+        'is_published' => 'bool'
     ];
 
     /**
@@ -71,11 +71,11 @@ class OrderBatch implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'order_ids' => 'int32',
         'id' => 'int32',
         'display_code' => null,
         'create_time' => 'date-time',
-        'is_published' => null,
-        'order_ids' => 'int32'
+        'is_published' => null
     ];
 
     /**
@@ -105,11 +105,11 @@ class OrderBatch implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'order_ids' => 'OrderIds',
         'id' => 'Id',
         'display_code' => 'DisplayCode',
         'create_time' => 'CreateTime',
-        'is_published' => 'IsPublished',
-        'order_ids' => 'OrderIds'
+        'is_published' => 'IsPublished'
     ];
 
     /**
@@ -118,11 +118,11 @@ class OrderBatch implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'order_ids' => 'setOrderIds',
         'id' => 'setId',
         'display_code' => 'setDisplayCode',
         'create_time' => 'setCreateTime',
-        'is_published' => 'setIsPublished',
-        'order_ids' => 'setOrderIds'
+        'is_published' => 'setIsPublished'
     ];
 
     /**
@@ -131,11 +131,11 @@ class OrderBatch implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'order_ids' => 'getOrderIds',
         'id' => 'getId',
         'display_code' => 'getDisplayCode',
         'create_time' => 'getCreateTime',
-        'is_published' => 'getIsPublished',
-        'order_ids' => 'getOrderIds'
+        'is_published' => 'getIsPublished'
     ];
 
     /**
@@ -198,11 +198,11 @@ class OrderBatch implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['order_ids'] = isset($data['order_ids']) ? $data['order_ids'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['display_code'] = isset($data['display_code']) ? $data['display_code'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['is_published'] = isset($data['is_published']) ? $data['is_published'] : null;
-        $this->container['order_ids'] = isset($data['order_ids']) ? $data['order_ids'] : null;
     }
 
     /**
@@ -228,6 +228,30 @@ class OrderBatch implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets order_ids
+     *
+     * @return int[]
+     */
+    public function getOrderIds()
+    {
+        return $this->container['order_ids'];
+    }
+
+    /**
+     * Sets order_ids
+     *
+     * @param int[] $order_ids Orders' ids on the batch
+     *
+     * @return $this
+     */
+    public function setOrderIds($order_ids)
+    {
+        $this->container['order_ids'] = $order_ids;
+
+        return $this;
+    }
 
     /**
      * Gets id
@@ -321,30 +345,6 @@ class OrderBatch implements ModelInterface, ArrayAccess
     public function setIsPublished($is_published)
     {
         $this->container['is_published'] = $is_published;
-
-        return $this;
-    }
-
-    /**
-     * Gets order_ids
-     *
-     * @return int[]
-     */
-    public function getOrderIds()
-    {
-        return $this->container['order_ids'];
-    }
-
-    /**
-     * Sets order_ids
-     *
-     * @param int[] $order_ids Orders' ids on the batch
-     *
-     * @return $this
-     */
-    public function setOrderIds($order_ids)
-    {
-        $this->container['order_ids'] = $order_ids;
 
         return $this;
     }

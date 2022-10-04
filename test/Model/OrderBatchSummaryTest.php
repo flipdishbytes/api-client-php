@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderBatchDetailsTest
+ * OrderBatchSummaryTest
  *
  * PHP version 5
  *
@@ -30,7 +30,7 @@
 namespace Flipdish\\Client;
 
 /**
- * OrderBatchDetailsTest Class Doc Comment
+ * OrderBatchSummaryTest Class Doc Comment
  *
  * @category    Class
  * @description Order batch info
@@ -38,7 +38,7 @@ namespace Flipdish\\Client;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class OrderBatchDetailsTest extends \PHPUnit_Framework_TestCase
+class OrderBatchSummaryTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,16 @@ class OrderBatchDetailsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "OrderBatchDetails"
+     * Test "OrderBatchSummary"
      */
-    public function testOrderBatchDetails()
+    public function testOrderBatchSummary()
     {
     }
 
     /**
-     * Test attribute "order_batch_id"
+     * Test attribute "id"
      */
-    public function testPropertyOrderBatchId()
+    public function testPropertyId()
     {
     }
 

@@ -257,4 +257,11 @@ class OrderSummaryTest extends \PHPUnit_Framework_TestCase
     public function testPropertyOrderDropOffLocation()
     {
     }
+
+    /**
+     * Test attribute "order_batch_info"
+     */
+    public function testPropertyOrderBatchInfo()
+    {
+    }
 }

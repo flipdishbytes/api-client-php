@@ -83,7 +83,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'unusual_high_value_order' => 'bool',
         'channel_order_id' => 'string',
         'channel_order_display_id' => 'string',
-        'order_drop_off_location' => '\Flipdish\\Client\Models\OrderDropOffLocation'
+        'order_drop_off_location' => '\Flipdish\\Client\Models\OrderDropOffLocation',
+        'order_batch_info' => '\Flipdish\\Client\Models\OrderBatchSummary'
     ];
 
     /**
@@ -117,7 +118,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'unusual_high_value_order' => null,
         'channel_order_id' => null,
         'channel_order_display_id' => null,
-        'order_drop_off_location' => null
+        'order_drop_off_location' => null,
+        'order_batch_info' => null
     ];
 
     /**
@@ -172,7 +174,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'unusual_high_value_order' => 'UnusualHighValueOrder',
         'channel_order_id' => 'ChannelOrderId',
         'channel_order_display_id' => 'ChannelOrderDisplayId',
-        'order_drop_off_location' => 'OrderDropOffLocation'
+        'order_drop_off_location' => 'OrderDropOffLocation',
+        'order_batch_info' => 'OrderBatchInfo'
     ];
 
     /**
@@ -206,7 +209,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'unusual_high_value_order' => 'setUnusualHighValueOrder',
         'channel_order_id' => 'setChannelOrderId',
         'channel_order_display_id' => 'setChannelOrderDisplayId',
-        'order_drop_off_location' => 'setOrderDropOffLocation'
+        'order_drop_off_location' => 'setOrderDropOffLocation',
+        'order_batch_info' => 'setOrderBatchInfo'
     ];
 
     /**
@@ -240,7 +244,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'unusual_high_value_order' => 'getUnusualHighValueOrder',
         'channel_order_id' => 'getChannelOrderId',
         'channel_order_display_id' => 'getChannelOrderDisplayId',
-        'order_drop_off_location' => 'getOrderDropOffLocation'
+        'order_drop_off_location' => 'getOrderDropOffLocation',
+        'order_batch_info' => 'getOrderBatchInfo'
     ];
 
     /**
@@ -749,6 +754,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
         $this->container['channel_order_id'] = isset($data['channel_order_id']) ? $data['channel_order_id'] : null;
         $this->container['channel_order_display_id'] = isset($data['channel_order_display_id']) ? $data['channel_order_display_id'] : null;
         $this->container['order_drop_off_location'] = isset($data['order_drop_off_location']) ? $data['order_drop_off_location'] : null;
+        $this->container['order_batch_info'] = isset($data['order_batch_info']) ? $data['order_batch_info'] : null;
     }
 
     /**
@@ -1531,6 +1537,30 @@ class OrderSummary implements ModelInterface, ArrayAccess
     public function setOrderDropOffLocation($order_drop_off_location)
     {
         $this->container['order_drop_off_location'] = $order_drop_off_location;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_batch_info
+     *
+     * @return \Flipdish\\Client\Models\OrderBatchSummary
+     */
+    public function getOrderBatchInfo()
+    {
+        return $this->container['order_batch_info'];
+    }
+
+    /**
+     * Sets order_batch_info
+     *
+     * @param \Flipdish\\Client\Models\OrderBatchSummary $order_batch_info OrderBatch information
+     *
+     * @return $this
+     */
+    public function setOrderBatchInfo($order_batch_info)
+    {
+        $this->container['order_batch_info'] = $order_batch_info;
 
         return $this;
     }

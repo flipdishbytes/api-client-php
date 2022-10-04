@@ -1,9 +1,9 @@
-# OrderBatchDetails
+# OrderBatchSummary
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**order_batch_id** | **int** | Order batch id | [optional] 
+**id** | **int** | Order batch id | [optional] 
 **display_code** | **string** | Order batch 6-sign human readable code | [optional] 
 **create_time** | [**\DateTime**](\DateTime.md) | Batch creation date and time | [optional] 
 **is_published** | **bool** | If the batch is already published | [optional] 

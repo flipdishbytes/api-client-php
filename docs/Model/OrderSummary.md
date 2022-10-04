@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **channel_order_id** | **string** | ChannelOrderId from external channel | [optional] 
 **channel_order_display_id** | **string** | ChannelOrderDisplayId from external channel | [optional] 
 **order_drop_off_location** | [**\Flipdish\\Client\Models\OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order | [optional] 
+**order_batch_info** | [**\Flipdish\\Client\Models\OrderBatchSummary**](OrderBatchSummary.md) | OrderBatch information | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

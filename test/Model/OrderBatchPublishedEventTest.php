@@ -84,9 +84,9 @@ class OrderBatchPublishedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "batch_id"
+     * Test attribute "order_batch_id"
      */
-    public function testPropertyBatchId()
+    public function testPropertyOrderBatchId()
     {
     }
 

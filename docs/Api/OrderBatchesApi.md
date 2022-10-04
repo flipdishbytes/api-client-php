@@ -5,11 +5,11 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAllOrderBatches**](OrderBatchesApi.md#getAllOrderBatches) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches | Returns order batches
-[**getOrderBatch**](OrderBatchesApi.md#getOrderBatch) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches/{batchId} | Returns the order batch details
+[**getOrderBatch**](OrderBatchesApi.md#getOrderBatch) | **GET** /api/v1.0/{appId}/stores/{storeId}/order-batches/{orderBatchId} | Returns the order batch details
 
 
 # **getAllOrderBatches**
-> \Flipdish\\Client\Models\RestApiArrayResultOrderBatchItem getAllOrderBatches($app_id, $store_id, $created_from, $created_to)
+> \Flipdish\\Client\Models\RestApiArrayResultOrderBatchSummary getAllOrderBatches($app_id, $store_id, $created_from, $created_to)
 
 Returns order batches
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiArrayResultOrderBatchItem**](../Model/RestApiArrayResultOrderBatchItem.md)
+[**\Flipdish\\Client\Models\RestApiArrayResultOrderBatchSummary**](../Model/RestApiArrayResultOrderBatchSummary.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrderBatch**
-> \Flipdish\\Client\Models\RestApiResultOrderBatch getOrderBatch($app_id, $store_id, $batch_id)
+> \Flipdish\\Client\Models\RestApiResultOrderBatch getOrderBatch($app_id, $store_id, $order_batch_id)
 
 Returns the order batch details
 
@@ -88,10 +88,10 @@ $apiInstance = new Flipdish\\Client\Api\OrderBatchesApi(
 );
 $app_id = "app_id_example"; // string | App Id
 $store_id = 56; // int | Store Id
-$batch_id = 56; // int | Order Batch Id
+$order_batch_id = 56; // int | Order Batch Id
 
 try {
-    $result = $apiInstance->getOrderBatch($app_id, $store_id, $batch_id);
+    $result = $apiInstance->getOrderBatch($app_id, $store_id, $order_batch_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrderBatchesApi->getOrderBatch: ', $e->getMessage(), PHP_EOL;
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| App Id |
  **store_id** | **int**| Store Id |
- **batch_id** | **int**| Order Batch Id |
+ **order_batch_id** | **int**| Order Batch Id |
 
 ### Return type
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderBatchItem
+ * RestApiArrayResultOrderBatchSummary
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * OrderBatchItem Class Doc Comment
+ * RestApiArrayResultOrderBatchSummary Class Doc Comment
  *
  * @category Class
- * @description Represents order batches
+ * @description Rest api array result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class OrderBatchItem implements ModelInterface, ArrayAccess
+class RestApiArrayResultOrderBatchSummary implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class OrderBatchItem implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'OrderBatchItem';
+    protected static $swaggerModelName = 'RestApiArrayResult[OrderBatchSummary]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,7 @@ class OrderBatchItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'batch_id' => 'int',
-        'created_at' => '\DateTime',
-        'is_published' => 'bool'
+        'data' => '\Flipdish\\Client\Models\OrderBatchSummary[]'
     ];
 
     /**
@@ -69,9 +67,7 @@ class OrderBatchItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'batch_id' => 'int32',
-        'created_at' => 'date-time',
-        'is_published' => null
+        'data' => null
     ];
 
     /**
@@ -101,9 +97,7 @@ class OrderBatchItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'batch_id' => 'BatchId',
-        'created_at' => 'CreatedAt',
-        'is_published' => 'IsPublished'
+        'data' => 'Data'
     ];
 
     /**
@@ -112,9 +106,7 @@ class OrderBatchItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'batch_id' => 'setBatchId',
-        'created_at' => 'setCreatedAt',
-        'is_published' => 'setIsPublished'
+        'data' => 'setData'
     ];
 
     /**
@@ -123,9 +115,7 @@ class OrderBatchItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'batch_id' => 'getBatchId',
-        'created_at' => 'getCreatedAt',
-        'is_published' => 'getIsPublished'
+        'data' => 'getData'
     ];
 
     /**
@@ -188,9 +178,7 @@ class OrderBatchItem implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['batch_id'] = isset($data['batch_id']) ? $data['batch_id'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['is_published'] = isset($data['is_published']) ? $data['is_published'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -202,6 +190,9 @@ class OrderBatchItem implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -218,73 +209,25 @@ class OrderBatchItem implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets batch_id
+     * Gets data
      *
-     * @return int
+     * @return \Flipdish\\Client\Models\OrderBatchSummary[]
      */
-    public function getBatchId()
+    public function getData()
     {
-        return $this->container['batch_id'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets batch_id
+     * Sets data
      *
-     * @param int $batch_id Unique identifier
+     * @param \Flipdish\\Client\Models\OrderBatchSummary[] $data Generic data object.
      *
      * @return $this
      */
-    public function setBatchId($batch_id)
+    public function setData($data)
     {
-        $this->container['batch_id'] = $batch_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     *
-     * @return \DateTime
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     *
-     * @param \DateTime $created_at Creation date
-     *
-     * @return $this
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_published
-     *
-     * @return bool
-     */
-    public function getIsPublished()
-    {
-        return $this->container['is_published'];
-    }
-
-    /**
-     * Sets is_published
-     *
-     * @param bool $is_published Is dispatched
-     *
-     * @return $this
-     */
-    public function setIsPublished($is_published)
-    {
-        $this->container['is_published'] = $is_published;
+        $this->container['data'] = $data;
 
         return $this;
     }

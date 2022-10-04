@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * OrderBatchTest Class Doc Comment
  *
  * @category    Class
- * @description Order batch
+ * @description Order batch detailed information
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -77,6 +77,13 @@ class OrderBatchTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "order_ids"
+     */
+    public function testPropertyOrderIds()
+    {
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()
@@ -101,13 +108,6 @@ class OrderBatchTest extends \PHPUnit_Framework_TestCase
      * Test attribute "is_published"
      */
     public function testPropertyIsPublished()
-    {
-    }
-
-    /**
-     * Test attribute "order_ids"
-     */
-    public function testPropertyOrderIds()
     {
     }
 }

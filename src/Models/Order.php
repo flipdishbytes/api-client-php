@@ -78,7 +78,7 @@ class Order implements ModelInterface, ArrayAccess
         'receipt_code' => 'string',
         'order_drop_off_location' => '\Flipdish\\Client\Models\OrderDropOffLocation',
         'fulfillment_status' => '\Flipdish\\Client\Models\OrderFulfillmentStatusBase',
-        'order_batch_info' => '\Flipdish\\Client\Models\OrderBatchDetails',
+        'order_batch_info' => '\Flipdish\\Client\Models\OrderBatchSummary',
         'order_id' => 'int',
         'local_order_id' => 'string',
         'delivery_type' => 'string',
@@ -1287,7 +1287,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Gets order_batch_info
      *
-     * @return \Flipdish\\Client\Models\OrderBatchDetails
+     * @return \Flipdish\\Client\Models\OrderBatchSummary
      */
     public function getOrderBatchInfo()
     {
@@ -1297,7 +1297,7 @@ class Order implements ModelInterface, ArrayAccess
     /**
      * Sets order_batch_info
      *
-     * @param \Flipdish\\Client\Models\OrderBatchDetails $order_batch_info OrderBatch info. This property is not populated in the API
+     * @param \Flipdish\\Client\Models\OrderBatchSummary $order_batch_info OrderBatch information
      *
      * @return $this
      */
