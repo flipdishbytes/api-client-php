@@ -209,6 +209,7 @@ Class | Method | HTTP request | Description
 *ChannelsStoreMappingApi* | [**channelsGetStoreChannelStoreMapping**](docs/Api/ChannelsStoreMappingApi.md#channelsgetstorechannelstoremapping) | **GET** /api/v1.0/{appId}/channels/storemappings | 
 *ChannelsStoreMappingApi* | [**channelsSetStoreChannelStoreMapping**](docs/Api/ChannelsStoreMappingApi.md#channelssetstorechannelstoremapping) | **POST** /api/v1.0/{appId}/channels/storemappings | 
 *ContentSecurityPolicyApi* | [**contentSecurityPolicyReport**](docs/Api/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
+*CrossSellApi* | [**getCrossSellMenuItems**](docs/Api/CrossSellApi.md#getcrosssellmenuitems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | Get all Menu items by MenuId for cross sells
 *CustomersApi* | [**getCustomerById**](docs/Api/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | Get customer of an app by Id
 *CustomersApi* | [**updateCustomerById**](docs/Api/CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | Update customer of an app by Id
 *DeliveryTrackingApi* | [**assignDriverToOrder**](docs/Api/DeliveryTrackingApi.md#assigndrivertoorder) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders/{orderId} | [PRIVATE] Assign driver to order
@@ -638,6 +639,7 @@ Class | Method | HTTP request | Description
  - [CreateVoucher](docs/Model/CreateVoucher.md)
  - [CreatedMenuSectionItems](docs/Model/CreatedMenuSectionItems.md)
  - [CreditNoteDetails](docs/Model/CreditNoteDetails.md)
+ - [CrossSellMenuItems](docs/Model/CrossSellMenuItems.md)
  - [CspReport](docs/Model/CspReport.md)
  - [CspReportRequest](docs/Model/CspReportRequest.md)
  - [CurrencyData](docs/Model/CurrencyData.md)
@@ -1018,6 +1020,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultCoordinates](docs/Model/RestApiResultCoordinates.md)
  - [RestApiResultCountryFormResponse](docs/Model/RestApiResultCountryFormResponse.md)
  - [RestApiResultCreatedMenuSectionItems](docs/Model/RestApiResultCreatedMenuSectionItems.md)
+ - [RestApiResultCrossSellMenuItems](docs/Model/RestApiResultCrossSellMenuItems.md)
  - [RestApiResultCustomer](docs/Model/RestApiResultCustomer.md)
  - [RestApiResultDeliveryZone](docs/Model/RestApiResultDeliveryZone.md)
  - [RestApiResultDnsRecordInformation](docs/Model/RestApiResultDnsRecordInformation.md)
