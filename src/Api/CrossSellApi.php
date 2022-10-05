@@ -95,15 +95,16 @@ class CrossSellApi
      * @param  int $menu_id Requested MenuId (required)
      * @param  int[] $menu_item_id Selected Menu items (required)
      * @param  int $limit Set the limit of items returned (required)
+     * @param  double $total_value Get the total cost of items in the basket (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultCrossSellMenuItems
      */
-    public function getCrossSellMenuItems($menu_id, $menu_item_id, $limit, $app_id)
+    public function getCrossSellMenuItems($menu_id, $menu_item_id, $limit, $total_value, $app_id)
     {
-        list($response) = $this->getCrossSellMenuItemsWithHttpInfo($menu_id, $menu_item_id, $limit, $app_id);
+        list($response) = $this->getCrossSellMenuItemsWithHttpInfo($menu_id, $menu_item_id, $limit, $total_value, $app_id);
         return $response;
     }
 
@@ -115,16 +116,17 @@ class CrossSellApi
      * @param  int $menu_id Requested MenuId (required)
      * @param  int[] $menu_item_id Selected Menu items (required)
      * @param  int $limit Set the limit of items returned (required)
+     * @param  double $total_value Get the total cost of items in the basket (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultCrossSellMenuItems, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCrossSellMenuItemsWithHttpInfo($menu_id, $menu_item_id, $limit, $app_id)
+    public function getCrossSellMenuItemsWithHttpInfo($menu_id, $menu_item_id, $limit, $total_value, $app_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultCrossSellMenuItems';
-        $request = $this->getCrossSellMenuItemsRequest($menu_id, $menu_item_id, $limit, $app_id);
+        $request = $this->getCrossSellMenuItemsRequest($menu_id, $menu_item_id, $limit, $total_value, $app_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -217,14 +219,15 @@ class CrossSellApi
      * @param  int $menu_id Requested MenuId (required)
      * @param  int[] $menu_item_id Selected Menu items (required)
      * @param  int $limit Set the limit of items returned (required)
+     * @param  double $total_value Get the total cost of items in the basket (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCrossSellMenuItemsAsync($menu_id, $menu_item_id, $limit, $app_id)
+    public function getCrossSellMenuItemsAsync($menu_id, $menu_item_id, $limit, $total_value, $app_id)
     {
-        return $this->getCrossSellMenuItemsAsyncWithHttpInfo($menu_id, $menu_item_id, $limit, $app_id)
+        return $this->getCrossSellMenuItemsAsyncWithHttpInfo($menu_id, $menu_item_id, $limit, $total_value, $app_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -240,15 +243,16 @@ class CrossSellApi
      * @param  int $menu_id Requested MenuId (required)
      * @param  int[] $menu_item_id Selected Menu items (required)
      * @param  int $limit Set the limit of items returned (required)
+     * @param  double $total_value Get the total cost of items in the basket (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCrossSellMenuItemsAsyncWithHttpInfo($menu_id, $menu_item_id, $limit, $app_id)
+    public function getCrossSellMenuItemsAsyncWithHttpInfo($menu_id, $menu_item_id, $limit, $total_value, $app_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultCrossSellMenuItems';
-        $request = $this->getCrossSellMenuItemsRequest($menu_id, $menu_item_id, $limit, $app_id);
+        $request = $this->getCrossSellMenuItemsRequest($menu_id, $menu_item_id, $limit, $total_value, $app_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -293,12 +297,13 @@ class CrossSellApi
      * @param  int $menu_id Requested MenuId (required)
      * @param  int[] $menu_item_id Selected Menu items (required)
      * @param  int $limit Set the limit of items returned (required)
+     * @param  double $total_value Get the total cost of items in the basket (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCrossSellMenuItemsRequest($menu_id, $menu_item_id, $limit, $app_id)
+    protected function getCrossSellMenuItemsRequest($menu_id, $menu_item_id, $limit, $total_value, $app_id)
     {
         // verify the required parameter 'menu_id' is set
         if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
@@ -316,6 +321,12 @@ class CrossSellApi
         if ($limit === null || (is_array($limit) && count($limit) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $limit when calling getCrossSellMenuItems'
+            );
+        }
+        // verify the required parameter 'total_value' is set
+        if ($total_value === null || (is_array($total_value) && count($total_value) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $total_value when calling getCrossSellMenuItems'
             );
         }
         // verify the required parameter 'app_id' is set
@@ -346,6 +357,10 @@ class CrossSellApi
         // query params
         if ($limit !== null) {
             $queryParams['limit'] = ObjectSerializer::toQueryValue($limit);
+        }
+        // query params
+        if ($total_value !== null) {
+            $queryParams['totalValue'] = ObjectSerializer::toQueryValue($total_value);
         }
 
         // path params
