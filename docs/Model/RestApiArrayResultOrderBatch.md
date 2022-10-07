@@ -1,9 +1,9 @@
-# RestApiArrayResultOrderBatchSummary
+# RestApiArrayResultOrderBatch
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\Flipdish\\Client\Models\OrderBatchSummary[]**](OrderBatchSummary.md) | Generic data object. | 
+**data** | [**\Flipdish\\Client\Models\OrderBatch[]**](OrderBatch.md) | Generic data object. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

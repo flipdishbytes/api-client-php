@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiArrayResultOrderBatchSummaryTest
+ * RestApiArrayResultOrderBatchTest
  *
  * PHP version 5
  *
@@ -30,7 +30,7 @@
 namespace Flipdish\\Client;
 
 /**
- * RestApiArrayResultOrderBatchSummaryTest Class Doc Comment
+ * RestApiArrayResultOrderBatchTest Class Doc Comment
  *
  * @category    Class
  * @description Rest api array result
@@ -38,7 +38,7 @@ namespace Flipdish\\Client;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RestApiArrayResultOrderBatchSummaryTest extends \PHPUnit_Framework_TestCase
+class RestApiArrayResultOrderBatchTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class RestApiArrayResultOrderBatchSummaryTest extends \PHPUnit_Framework_TestCas
     }
 
     /**
-     * Test "RestApiArrayResultOrderBatchSummary"
+     * Test "RestApiArrayResultOrderBatch"
      */
-    public function testRestApiArrayResultOrderBatchSummary()
+    public function testRestApiArrayResultOrderBatch()
     {
     }
 

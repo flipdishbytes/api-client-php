@@ -93,17 +93,17 @@ class OrderBatchesApi
      * Returns order batches
      *
      * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  int[] $store_ids List of store Ids (optional)
      * @param  \DateTime $created_from Start date for retrieving the entries (optional)
      * @param  \DateTime $created_to End date for retrieving the entries (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiArrayResultOrderBatchSummary
+     * @return \Flipdish\\Client\Models\RestApiArrayResultOrderBatch
      */
-    public function getAllOrderBatches($app_id, $store_id, $created_from = null, $created_to = null)
+    public function getAllOrderBatches($app_id, $store_ids = null, $created_from = null, $created_to = null)
     {
-        list($response) = $this->getAllOrderBatchesWithHttpInfo($app_id, $store_id, $created_from, $created_to);
+        list($response) = $this->getAllOrderBatchesWithHttpInfo($app_id, $store_ids, $created_from, $created_to);
         return $response;
     }
 
@@ -113,18 +113,18 @@ class OrderBatchesApi
      * Returns order batches
      *
      * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  int[] $store_ids List of store Ids (optional)
      * @param  \DateTime $created_from Start date for retrieving the entries (optional)
      * @param  \DateTime $created_to End date for retrieving the entries (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiArrayResultOrderBatchSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultOrderBatch, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAllOrderBatchesWithHttpInfo($app_id, $store_id, $created_from = null, $created_to = null)
+    public function getAllOrderBatchesWithHttpInfo($app_id, $store_ids = null, $created_from = null, $created_to = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultOrderBatchSummary';
-        $request = $this->getAllOrderBatchesRequest($app_id, $store_id, $created_from, $created_to);
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultOrderBatch';
+        $request = $this->getAllOrderBatchesRequest($app_id, $store_ids, $created_from, $created_to);
 
         try {
             $options = $this->createHttpClientOption();
@@ -175,7 +175,7 @@ class OrderBatchesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiArrayResultOrderBatchSummary',
+                        '\Flipdish\\Client\Models\RestApiArrayResultOrderBatch',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -223,16 +223,16 @@ class OrderBatchesApi
      * Returns order batches
      *
      * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  int[] $store_ids List of store Ids (optional)
      * @param  \DateTime $created_from Start date for retrieving the entries (optional)
      * @param  \DateTime $created_to End date for retrieving the entries (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAllOrderBatchesAsync($app_id, $store_id, $created_from = null, $created_to = null)
+    public function getAllOrderBatchesAsync($app_id, $store_ids = null, $created_from = null, $created_to = null)
     {
-        return $this->getAllOrderBatchesAsyncWithHttpInfo($app_id, $store_id, $created_from, $created_to)
+        return $this->getAllOrderBatchesAsyncWithHttpInfo($app_id, $store_ids, $created_from, $created_to)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -246,17 +246,17 @@ class OrderBatchesApi
      * Returns order batches
      *
      * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  int[] $store_ids List of store Ids (optional)
      * @param  \DateTime $created_from Start date for retrieving the entries (optional)
      * @param  \DateTime $created_to End date for retrieving the entries (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAllOrderBatchesAsyncWithHttpInfo($app_id, $store_id, $created_from = null, $created_to = null)
+    public function getAllOrderBatchesAsyncWithHttpInfo($app_id, $store_ids = null, $created_from = null, $created_to = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultOrderBatchSummary';
-        $request = $this->getAllOrderBatchesRequest($app_id, $store_id, $created_from, $created_to);
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultOrderBatch';
+        $request = $this->getAllOrderBatchesRequest($app_id, $store_ids, $created_from, $created_to);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -299,14 +299,14 @@ class OrderBatchesApi
      * Create request for operation 'getAllOrderBatches'
      *
      * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  int[] $store_ids List of store Ids (optional)
      * @param  \DateTime $created_from Start date for retrieving the entries (optional)
      * @param  \DateTime $created_to End date for retrieving the entries (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAllOrderBatchesRequest($app_id, $store_id, $created_from = null, $created_to = null)
+    protected function getAllOrderBatchesRequest($app_id, $store_ids = null, $created_from = null, $created_to = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -314,20 +314,21 @@ class OrderBatchesApi
                 'Missing the required parameter $app_id when calling getAllOrderBatches'
             );
         }
-        // verify the required parameter 'store_id' is set
-        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling getAllOrderBatches'
-            );
-        }
 
-        $resourcePath = '/api/v1.0/{appId}/stores/{storeId}/order-batches';
+        $resourcePath = '/api/v1.0/{appId}/order-batches';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if (is_array($store_ids)) {
+            $queryParams['storeIds'] = $store_ids;
+        } else
+        if ($store_ids !== null) {
+            $queryParams['storeIds'] = ObjectSerializer::toQueryValue($store_ids);
+        }
         // query params
         if ($created_from !== null) {
             $queryParams['createdFrom'] = ObjectSerializer::toQueryValue($created_from);
@@ -342,14 +343,6 @@ class OrderBatchesApi
             $resourcePath = str_replace(
                 '{' . 'appId' . '}',
                 ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($store_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'storeId' . '}',
-                ObjectSerializer::toPathValue($store_id),
                 $resourcePath
             );
         }
@@ -435,16 +428,15 @@ class OrderBatchesApi
      * Returns the order batch details
      *
      * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (required)
      * @param  int $order_batch_id Order Batch Id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultOrderBatch
      */
-    public function getOrderBatch($app_id, $store_id, $order_batch_id)
+    public function getOrderBatch($app_id, $order_batch_id)
     {
-        list($response) = $this->getOrderBatchWithHttpInfo($app_id, $store_id, $order_batch_id);
+        list($response) = $this->getOrderBatchWithHttpInfo($app_id, $order_batch_id);
         return $response;
     }
 
@@ -454,17 +446,16 @@ class OrderBatchesApi
      * Returns the order batch details
      *
      * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (required)
      * @param  int $order_batch_id Order Batch Id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultOrderBatch, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrderBatchWithHttpInfo($app_id, $store_id, $order_batch_id)
+    public function getOrderBatchWithHttpInfo($app_id, $order_batch_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultOrderBatch';
-        $request = $this->getOrderBatchRequest($app_id, $store_id, $order_batch_id);
+        $request = $this->getOrderBatchRequest($app_id, $order_batch_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -571,15 +562,14 @@ class OrderBatchesApi
      * Returns the order batch details
      *
      * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (required)
      * @param  int $order_batch_id Order Batch Id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderBatchAsync($app_id, $store_id, $order_batch_id)
+    public function getOrderBatchAsync($app_id, $order_batch_id)
     {
-        return $this->getOrderBatchAsyncWithHttpInfo($app_id, $store_id, $order_batch_id)
+        return $this->getOrderBatchAsyncWithHttpInfo($app_id, $order_batch_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -593,16 +583,15 @@ class OrderBatchesApi
      * Returns the order batch details
      *
      * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (required)
      * @param  int $order_batch_id Order Batch Id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderBatchAsyncWithHttpInfo($app_id, $store_id, $order_batch_id)
+    public function getOrderBatchAsyncWithHttpInfo($app_id, $order_batch_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultOrderBatch';
-        $request = $this->getOrderBatchRequest($app_id, $store_id, $order_batch_id);
+        $request = $this->getOrderBatchRequest($app_id, $order_batch_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -645,24 +634,17 @@ class OrderBatchesApi
      * Create request for operation 'getOrderBatch'
      *
      * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (required)
      * @param  int $order_batch_id Order Batch Id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOrderBatchRequest($app_id, $store_id, $order_batch_id)
+    protected function getOrderBatchRequest($app_id, $order_batch_id)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $app_id when calling getOrderBatch'
-            );
-        }
-        // verify the required parameter 'store_id' is set
-        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling getOrderBatch'
             );
         }
         // verify the required parameter 'order_batch_id' is set
@@ -672,7 +654,7 @@ class OrderBatchesApi
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/stores/{storeId}/order-batches/{orderBatchId}';
+        $resourcePath = '/api/v1.0/{appId}/order-batches/{orderBatchId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -685,14 +667,6 @@ class OrderBatchesApi
             $resourcePath = str_replace(
                 '{' . 'appId' . '}',
                 ObjectSerializer::toPathValue($app_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($store_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'storeId' . '}',
-                ObjectSerializer::toPathValue($store_id),
                 $resourcePath
             );
         }

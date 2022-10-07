@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiArrayResultOrderBatchSummary
+ * RestApiArrayResultOrderBatch
  *
  * PHP version 5
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * RestApiArrayResultOrderBatchSummary Class Doc Comment
+ * RestApiArrayResultOrderBatch Class Doc Comment
  *
  * @category Class
  * @description Rest api array result
@@ -41,7 +41,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RestApiArrayResultOrderBatchSummary implements ModelInterface, ArrayAccess
+class RestApiArrayResultOrderBatch implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class RestApiArrayResultOrderBatchSummary implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiArrayResult[OrderBatchSummary]';
+    protected static $swaggerModelName = 'RestApiArrayResult[OrderBatch]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class RestApiArrayResultOrderBatchSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => '\Flipdish\\Client\Models\OrderBatchSummary[]'
+        'data' => '\Flipdish\\Client\Models\OrderBatch[]'
     ];
 
     /**
@@ -211,7 +211,7 @@ class RestApiArrayResultOrderBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Flipdish\\Client\Models\OrderBatchSummary[]
+     * @return \Flipdish\\Client\Models\OrderBatch[]
      */
     public function getData()
     {
@@ -221,7 +221,7 @@ class RestApiArrayResultOrderBatchSummary implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Flipdish\\Client\Models\OrderBatchSummary[] $data Generic data object.
+     * @param \Flipdish\\Client\Models\OrderBatch[] $data Generic data object.
      *
      * @return $this
      */
