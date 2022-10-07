@@ -135,7 +135,7 @@ $apiInstance = new Flipdish\\Client\Api\AddressApi(
     new GuzzleHttp\Client(),
     $config
 );
-$google_address = new \Flipdish\\Client\Models\GoogleAddress(); // \Flipdish\\Client\Models\GoogleAddress | A Google address object, as it is retuned from the maps API.
+$google_address = new \Flipdish\\Client\Models\GoogleAddress(); // \Flipdish\\Client\Models\GoogleAddress | A Google address object, as it is returned from the maps API.
 $language = "language_example"; // string | (Optional) ISO culture info code, e.g.: en-IE, the default is en-US.
 
 try {
@@ -151,7 +151,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **google_address** | [**\Flipdish\\Client\Models\GoogleAddress**](../Model/GoogleAddress.md)| A Google address object, as it is retuned from the maps API. |
+ **google_address** | [**\Flipdish\\Client\Models\GoogleAddress**](../Model/GoogleAddress.md)| A Google address object, as it is returned from the maps API. |
  **language** | **string**| (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. | [optional]
 
 ### Return type

@@ -704,7 +704,7 @@ class AddressApi
      *
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      *
-     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is retuned from the maps API. (required)
+     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is returned from the maps API. (required)
      * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -722,7 +722,7 @@ class AddressApi
      *
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      *
-     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is retuned from the maps API. (required)
+     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is returned from the maps API. (required)
      * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -822,7 +822,7 @@ class AddressApi
      *
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      *
-     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is retuned from the maps API. (required)
+     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is returned from the maps API. (required)
      * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      *
      * @throws \InvalidArgumentException
@@ -843,7 +843,7 @@ class AddressApi
      *
      * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
      *
-     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is retuned from the maps API. (required)
+     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is returned from the maps API. (required)
      * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      *
      * @throws \InvalidArgumentException
@@ -894,7 +894,7 @@ class AddressApi
     /**
      * Create request for operation 'formatGoogleAddress'
      *
-     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is retuned from the maps API. (required)
+     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is returned from the maps API. (required)
      * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
      *
      * @throws \InvalidArgumentException
