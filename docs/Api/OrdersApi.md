@@ -397,7 +397,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrdersSummary**
-> \Flipdish\\Client\Models\RestApiPaginationResultOrderSummary getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels)
+> \Flipdish\\Client\Models\RestApiPaginationResultOrderSummary getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids)
 
 [PRIVATE API] Get summary of orders by filter
 
@@ -423,9 +423,10 @@ $page = 56; // int | Requested page number
 $limit = 56; // int | Requested page limit
 $order_by_requested_for_time = true; // bool | 
 $channels = array("channels_example"); // string[] | 
+$order_ids = array(56); // int[] | Filter by the given orders
 
 try {
-    $result = $apiInstance->getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels);
+    $result = $apiInstance->getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->getOrdersSummary: ', $e->getMessage(), PHP_EOL;
@@ -445,6 +446,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| Requested page limit | [optional]
  **order_by_requested_for_time** | **bool**|  | [optional]
  **channels** | [**string[]**](../Model/string.md)|  | [optional]
+ **order_ids** | [**int[]**](../Model/int.md)| Filter by the given orders | [optional]
 
 ### Return type
 
