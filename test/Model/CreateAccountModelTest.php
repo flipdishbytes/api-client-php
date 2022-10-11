@@ -110,4 +110,11 @@ class CreateAccountModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCid()
     {
     }
+
+    /**
+     * Test attribute "recaptcha_token"
+     */
+    public function testPropertyRecaptchaToken()
+    {
+    }
 }

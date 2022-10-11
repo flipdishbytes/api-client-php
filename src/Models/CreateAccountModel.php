@@ -62,7 +62,8 @@ class CreateAccountModel implements ModelInterface, ArrayAccess
         'store_name' => 'string',
         'language_id' => 'string',
         'rid' => 'int',
-        'cid' => 'string'
+        'cid' => 'string',
+        'recaptcha_token' => 'string'
     ];
 
     /**
@@ -75,7 +76,8 @@ class CreateAccountModel implements ModelInterface, ArrayAccess
         'store_name' => null,
         'language_id' => null,
         'rid' => 'int32',
-        'cid' => null
+        'cid' => null,
+        'recaptcha_token' => null
     ];
 
     /**
@@ -109,7 +111,8 @@ class CreateAccountModel implements ModelInterface, ArrayAccess
         'store_name' => 'StoreName',
         'language_id' => 'LanguageId',
         'rid' => 'Rid',
-        'cid' => 'Cid'
+        'cid' => 'Cid',
+        'recaptcha_token' => 'RecaptchaToken'
     ];
 
     /**
@@ -122,7 +125,8 @@ class CreateAccountModel implements ModelInterface, ArrayAccess
         'store_name' => 'setStoreName',
         'language_id' => 'setLanguageId',
         'rid' => 'setRid',
-        'cid' => 'setCid'
+        'cid' => 'setCid',
+        'recaptcha_token' => 'setRecaptchaToken'
     ];
 
     /**
@@ -135,7 +139,8 @@ class CreateAccountModel implements ModelInterface, ArrayAccess
         'store_name' => 'getStoreName',
         'language_id' => 'getLanguageId',
         'rid' => 'getRid',
-        'cid' => 'getCid'
+        'cid' => 'getCid',
+        'recaptcha_token' => 'getRecaptchaToken'
     ];
 
     /**
@@ -203,6 +208,7 @@ class CreateAccountModel implements ModelInterface, ArrayAccess
         $this->container['language_id'] = isset($data['language_id']) ? $data['language_id'] : null;
         $this->container['rid'] = isset($data['rid']) ? $data['rid'] : null;
         $this->container['cid'] = isset($data['cid']) ? $data['cid'] : null;
+        $this->container['recaptcha_token'] = isset($data['recaptcha_token']) ? $data['recaptcha_token'] : null;
     }
 
     /**
@@ -248,7 +254,7 @@ class CreateAccountModel implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email Email addres
+     * @param string $email Email address
      *
      * @return $this
      */
@@ -351,6 +357,30 @@ class CreateAccountModel implements ModelInterface, ArrayAccess
     public function setCid($cid)
     {
         $this->container['cid'] = $cid;
+
+        return $this;
+    }
+
+    /**
+     * Gets recaptcha_token
+     *
+     * @return string
+     */
+    public function getRecaptchaToken()
+    {
+        return $this->container['recaptcha_token'];
+    }
+
+    /**
+     * Sets recaptcha_token
+     *
+     * @param string $recaptcha_token Google Recaptcha Token
+     *
+     * @return $this
+     */
+    public function setRecaptchaToken($recaptcha_token)
+    {
+        $this->container['recaptcha_token'] = $recaptcha_token;
 
         return $this;
     }
