@@ -208,6 +208,7 @@ class Field implements ModelInterface, ArrayAccess
     const FIELD_TYPE_TIME = 'Time';
     const FIELD_TYPE_SELECT = 'Select';
     const FIELD_TYPE_BOOLEAN = 'Boolean';
+    const FIELD_TYPE_ACTION_BUTTON = 'ActionButton';
     
 
     
@@ -228,6 +229,7 @@ class Field implements ModelInterface, ArrayAccess
             self::FIELD_TYPE_TIME,
             self::FIELD_TYPE_SELECT,
             self::FIELD_TYPE_BOOLEAN,
+            self::FIELD_TYPE_ACTION_BUTTON,
         ];
     }
     

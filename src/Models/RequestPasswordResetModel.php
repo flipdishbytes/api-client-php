@@ -58,7 +58,8 @@ class RequestPasswordResetModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'email' => 'string'
+        'email' => 'string',
+        'recaptcha_token' => 'string'
     ];
 
     /**
@@ -67,7 +68,8 @@ class RequestPasswordResetModel implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'email' => null
+        'email' => null,
+        'recaptcha_token' => null
     ];
 
     /**
@@ -97,7 +99,8 @@ class RequestPasswordResetModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'email' => 'Email'
+        'email' => 'Email',
+        'recaptcha_token' => 'RecaptchaToken'
     ];
 
     /**
@@ -106,7 +109,8 @@ class RequestPasswordResetModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'email' => 'setEmail'
+        'email' => 'setEmail',
+        'recaptcha_token' => 'setRecaptchaToken'
     ];
 
     /**
@@ -115,7 +119,8 @@ class RequestPasswordResetModel implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'email' => 'getEmail'
+        'email' => 'getEmail',
+        'recaptcha_token' => 'getRecaptchaToken'
     ];
 
     /**
@@ -179,6 +184,7 @@ class RequestPasswordResetModel implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['recaptcha_token'] = isset($data['recaptcha_token']) ? $data['recaptcha_token'] : null;
     }
 
     /**
@@ -225,6 +231,30 @@ class RequestPasswordResetModel implements ModelInterface, ArrayAccess
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets recaptcha_token
+     *
+     * @return string
+     */
+    public function getRecaptchaToken()
+    {
+        return $this->container['recaptcha_token'];
+    }
+
+    /**
+     * Sets recaptcha_token
+     *
+     * @param string $recaptcha_token Google Recaptcha Token
+     *
+     * @return $this
+     */
+    public function setRecaptchaToken($recaptcha_token)
+    {
+        $this->container['recaptcha_token'] = $recaptcha_token;
 
         return $this;
     }

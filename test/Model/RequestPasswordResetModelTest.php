@@ -82,4 +82,11 @@ class RequestPasswordResetModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyEmail()
     {
     }
+
+    /**
+     * Test attribute "recaptcha_token"
+     */
+    public function testPropertyRecaptchaToken()
+    {
+    }
 }
