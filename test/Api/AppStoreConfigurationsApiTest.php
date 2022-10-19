@@ -72,6 +72,16 @@ class AppStoreConfigurationsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for appStoreConfigurationsAppStoreHandleOauthResponseCode
+     *
+     * Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code.
+     *
+     */
+    public function testAppStoreConfigurationsAppStoreHandleOauthResponseCode()
+    {
+    }
+
+    /**
      * Test case for createAppStoreConfig
      *
      * Create App store app configuration.
@@ -88,6 +98,16 @@ class AppStoreConfigurationsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testDeleteAppStoreConfig()
+    {
+    }
+
+    /**
+     * Test case for executeConfigurationAction
+     *
+     * Execute configuration action on a configuration item (eg. handle button press).
+     *
+     */
+    public function testExecuteConfigurationAction()
     {
     }
 

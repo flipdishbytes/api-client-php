@@ -4,13 +4,66 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**appStoreConfigurationsAppStoreHandleOauthResponseCode**](AppStoreConfigurationsApi.md#appStoreConfigurationsAppStoreHandleOauthResponseCode) | **GET** /api/v1.0/appstore/oauthresponse/{appStoreAppId}/responsecode | Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
 [**createAppStoreConfig**](AppStoreConfigurationsApi.md#createAppStoreConfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create App store app configuration
 [**deleteAppStoreConfig**](AppStoreConfigurationsApi.md#deleteAppStoreConfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete App store app configuration
+[**executeConfigurationAction**](AppStoreConfigurationsApi.md#executeConfigurationAction) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action | Execute configuration action on a configuration item (eg. handle button press)
 [**getAppStoreConfig**](AppStoreConfigurationsApi.md#getAppStoreConfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get App store app configuration
 [**getConfiguredAppSingleApp**](AppStoreConfigurationsApi.md#getConfiguredAppSingleApp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of App store app configurations for one App store app
 [**getConfiguredApps**](AppStoreConfigurationsApi.md#getConfiguredApps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of App store apps which have been configured
 [**updateAppStoreConfig**](AppStoreConfigurationsApi.md#updateAppStoreConfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update App store app configuration
 
+
+# **appStoreConfigurationsAppStoreHandleOauthResponseCode**
+> object appStoreConfigurationsAppStoreHandleOauthResponseCode($app_store_app_id)
+
+Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\AppStoreConfigurationsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_store_app_id = "app_store_app_id_example"; // string | 
+
+try {
+    $result = $apiInstance->appStoreConfigurationsAppStoreHandleOauthResponseCode($app_store_app_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AppStoreConfigurationsApi->appStoreConfigurationsAppStoreHandleOauthResponseCode: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_store_app_id** | **string**|  |
+
+### Return type
+
+**object**
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createAppStoreConfig**
 > \Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration createAppStoreConfig($app_id, $app_store_app_id)
@@ -120,6 +173,63 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **executeConfigurationAction**
+> \Flipdish\\Client\Models\ExecuteConfigurationActionResult executeConfigurationAction($app_id, $app_store_app_id, $config_id, $execute_configuration_action_request)
+
+Execute configuration action on a configuration item (eg. handle button press)
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\AppStoreConfigurationsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | App Id
+$app_store_app_id = "app_store_app_id_example"; // string | AppStore App Id
+$config_id = "config_id_example"; // string | AppStore App configuration Id
+$execute_configuration_action_request = new \Flipdish\\Client\Models\ExecuteConfigurationActionRequest(); // \Flipdish\\Client\Models\ExecuteConfigurationActionRequest | Action request details
+
+try {
+    $result = $apiInstance->executeConfigurationAction($app_id, $app_store_app_id, $config_id, $execute_configuration_action_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AppStoreConfigurationsApi->executeConfigurationAction: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**| App Id |
+ **app_store_app_id** | **string**| AppStore App Id |
+ **config_id** | **string**| AppStore App configuration Id |
+ **execute_configuration_action_request** | [**\Flipdish\\Client\Models\ExecuteConfigurationActionRequest**](../Model/ExecuteConfigurationActionRequest.md)| Action request details |
+
+### Return type
+
+[**\Flipdish\\Client\Models\ExecuteConfigurationActionResult**](../Model/ExecuteConfigurationActionResult.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
