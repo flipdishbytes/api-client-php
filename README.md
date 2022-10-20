@@ -119,6 +119,7 @@ Class | Method | HTTP request | Description
 *AppStoreConfigurationsApi* | [**getConfiguredAppSingleApp**](docs/Api/AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of App store app configurations for one App store app
 *AppStoreConfigurationsApi* | [**getConfiguredApps**](docs/Api/AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of App store apps which have been configured
 *AppStoreConfigurationsApi* | [**updateAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#updateappstoreconfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update App store app configuration
+*AppStoreConfigurationsApi* | [**updateAppStoreConfigSettingValues**](docs/Api/AppStoreConfigurationsApi.md#updateappstoreconfigsettingvalues) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/updatesettings | Update AppStore App Configuration values, specified settings only
 *AppStoreDeveloperApi* | [**appVerificationUpdate**](docs/Api/AppStoreDeveloperApi.md#appverificationupdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | Update App store app verification
 *AppStoreDeveloperApi* | [**createAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#createappstoreapp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | Create App store app
 *AppStoreDeveloperApi* | [**deleteAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Delete App store app
@@ -1200,6 +1201,7 @@ Class | Method | HTTP request | Description
  - [UnRegisterCardReaderRequest](docs/Model/UnRegisterCardReaderRequest.md)
  - [UpdateAppStoreApp](docs/Model/UpdateAppStoreApp.md)
  - [UpdateAppStoreAppConfiguration](docs/Model/UpdateAppStoreAppConfiguration.md)
+ - [UpdateAppStoreAppConfigurationValuesBatch](docs/Model/UpdateAppStoreAppConfigurationValuesBatch.md)
  - [UpdateAppStoreAppConfigurationWebhookDTO](docs/Model/UpdateAppStoreAppConfigurationWebhookDTO.md)
  - [UpdateCatalogGroupReference](docs/Model/UpdateCatalogGroupReference.md)
  - [UpdateCatalogItem](docs/Model/UpdateCatalogItem.md)

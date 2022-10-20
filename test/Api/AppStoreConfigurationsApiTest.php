@@ -150,4 +150,14 @@ class AppStoreConfigurationsApiTest extends \PHPUnit_Framework_TestCase
     public function testUpdateAppStoreConfig()
     {
     }
+
+    /**
+     * Test case for updateAppStoreConfigSettingValues
+     *
+     * Update AppStore App Configuration values, specified settings only.
+     *
+     */
+    public function testUpdateAppStoreConfigSettingValues()
+    {
+    }
 }
