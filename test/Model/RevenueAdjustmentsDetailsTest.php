@@ -105,6 +105,20 @@ class RevenueAdjustmentsDetailsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "pay_green_sales_amount"
+     */
+    public function testPropertyPayGreenSalesAmount()
+    {
+    }
+
+    /**
+     * Test attribute "pay_green_processing_fees"
+     */
+    public function testPropertyPayGreenProcessingFees()
+    {
+    }
+
+    /**
      * Test attribute "total_online_revenue_adjustments"
      */
     public function testPropertyTotalOnlineRevenueAdjustments()

@@ -62,6 +62,8 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
         'cash_sales_refunded_amount' => 'double',
         'customer_cash_fees' => 'double',
         'refunds_count' => 'int',
+        'pay_green_sales_amount' => 'double',
+        'pay_green_processing_fees' => 'double',
         'total_online_revenue_adjustments' => 'double'
     ];
 
@@ -75,6 +77,8 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
         'cash_sales_refunded_amount' => 'double',
         'customer_cash_fees' => 'double',
         'refunds_count' => 'int32',
+        'pay_green_sales_amount' => 'double',
+        'pay_green_processing_fees' => 'double',
         'total_online_revenue_adjustments' => 'double'
     ];
 
@@ -109,6 +113,8 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
         'cash_sales_refunded_amount' => 'CashSalesRefundedAmount',
         'customer_cash_fees' => 'CustomerCashFees',
         'refunds_count' => 'RefundsCount',
+        'pay_green_sales_amount' => 'PayGreenSalesAmount',
+        'pay_green_processing_fees' => 'PayGreenProcessingFees',
         'total_online_revenue_adjustments' => 'TotalOnlineRevenueAdjustments'
     ];
 
@@ -122,6 +128,8 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
         'cash_sales_refunded_amount' => 'setCashSalesRefundedAmount',
         'customer_cash_fees' => 'setCustomerCashFees',
         'refunds_count' => 'setRefundsCount',
+        'pay_green_sales_amount' => 'setPayGreenSalesAmount',
+        'pay_green_processing_fees' => 'setPayGreenProcessingFees',
         'total_online_revenue_adjustments' => 'setTotalOnlineRevenueAdjustments'
     ];
 
@@ -135,6 +143,8 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
         'cash_sales_refunded_amount' => 'getCashSalesRefundedAmount',
         'customer_cash_fees' => 'getCustomerCashFees',
         'refunds_count' => 'getRefundsCount',
+        'pay_green_sales_amount' => 'getPayGreenSalesAmount',
+        'pay_green_processing_fees' => 'getPayGreenProcessingFees',
         'total_online_revenue_adjustments' => 'getTotalOnlineRevenueAdjustments'
     ];
 
@@ -202,6 +212,8 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
         $this->container['cash_sales_refunded_amount'] = isset($data['cash_sales_refunded_amount']) ? $data['cash_sales_refunded_amount'] : null;
         $this->container['customer_cash_fees'] = isset($data['customer_cash_fees']) ? $data['customer_cash_fees'] : null;
         $this->container['refunds_count'] = isset($data['refunds_count']) ? $data['refunds_count'] : null;
+        $this->container['pay_green_sales_amount'] = isset($data['pay_green_sales_amount']) ? $data['pay_green_sales_amount'] : null;
+        $this->container['pay_green_processing_fees'] = isset($data['pay_green_processing_fees']) ? $data['pay_green_processing_fees'] : null;
         $this->container['total_online_revenue_adjustments'] = isset($data['total_online_revenue_adjustments']) ? $data['total_online_revenue_adjustments'] : null;
     }
 
@@ -321,6 +333,54 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
     public function setRefundsCount($refunds_count)
     {
         $this->container['refunds_count'] = $refunds_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets pay_green_sales_amount
+     *
+     * @return double
+     */
+    public function getPayGreenSalesAmount()
+    {
+        return $this->container['pay_green_sales_amount'];
+    }
+
+    /**
+     * Sets pay_green_sales_amount
+     *
+     * @param double $pay_green_sales_amount PayGreen sales
+     *
+     * @return $this
+     */
+    public function setPayGreenSalesAmount($pay_green_sales_amount)
+    {
+        $this->container['pay_green_sales_amount'] = $pay_green_sales_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets pay_green_processing_fees
+     *
+     * @return double
+     */
+    public function getPayGreenProcessingFees()
+    {
+        return $this->container['pay_green_processing_fees'];
+    }
+
+    /**
+     * Sets pay_green_processing_fees
+     *
+     * @param double $pay_green_processing_fees PayGreen processing fees charged to end-user
+     *
+     * @return $this
+     */
+    public function setPayGreenProcessingFees($pay_green_processing_fees)
+    {
+        $this->container['pay_green_processing_fees'] = $pay_green_processing_fees;
 
         return $this;
     }

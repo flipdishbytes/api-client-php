@@ -313,4 +313,11 @@ class PayoutTest extends \PHPUnit_Framework_TestCase
     public function testPropertyClosingBalance()
     {
     }
+
+    /**
+     * Test attribute "pay_green_sales_amount"
+     */
+    public function testPropertyPayGreenSalesAmount()
+    {
+    }
 }

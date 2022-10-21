@@ -91,7 +91,8 @@ class Payout implements ModelInterface, ArrayAccess
         'total_chargeback_cost' => 'double',
         'total_other_charges' => 'double',
         'opening_balance' => 'double',
-        'closing_balance' => 'double'
+        'closing_balance' => 'double',
+        'pay_green_sales_amount' => 'double'
     ];
 
     /**
@@ -133,7 +134,8 @@ class Payout implements ModelInterface, ArrayAccess
         'total_chargeback_cost' => 'double',
         'total_other_charges' => 'double',
         'opening_balance' => 'double',
-        'closing_balance' => 'double'
+        'closing_balance' => 'double',
+        'pay_green_sales_amount' => 'double'
     ];
 
     /**
@@ -196,7 +198,8 @@ class Payout implements ModelInterface, ArrayAccess
         'total_chargeback_cost' => 'TotalChargebackCost',
         'total_other_charges' => 'TotalOtherCharges',
         'opening_balance' => 'OpeningBalance',
-        'closing_balance' => 'ClosingBalance'
+        'closing_balance' => 'ClosingBalance',
+        'pay_green_sales_amount' => 'PayGreenSalesAmount'
     ];
 
     /**
@@ -238,7 +241,8 @@ class Payout implements ModelInterface, ArrayAccess
         'total_chargeback_cost' => 'setTotalChargebackCost',
         'total_other_charges' => 'setTotalOtherCharges',
         'opening_balance' => 'setOpeningBalance',
-        'closing_balance' => 'setClosingBalance'
+        'closing_balance' => 'setClosingBalance',
+        'pay_green_sales_amount' => 'setPayGreenSalesAmount'
     ];
 
     /**
@@ -280,7 +284,8 @@ class Payout implements ModelInterface, ArrayAccess
         'total_chargeback_cost' => 'getTotalChargebackCost',
         'total_other_charges' => 'getTotalOtherCharges',
         'opening_balance' => 'getOpeningBalance',
-        'closing_balance' => 'getClosingBalance'
+        'closing_balance' => 'getClosingBalance',
+        'pay_green_sales_amount' => 'getPayGreenSalesAmount'
     ];
 
     /**
@@ -650,6 +655,7 @@ class Payout implements ModelInterface, ArrayAccess
         $this->container['total_other_charges'] = isset($data['total_other_charges']) ? $data['total_other_charges'] : null;
         $this->container['opening_balance'] = isset($data['opening_balance']) ? $data['opening_balance'] : null;
         $this->container['closing_balance'] = isset($data['closing_balance']) ? $data['closing_balance'] : null;
+        $this->container['pay_green_sales_amount'] = isset($data['pay_green_sales_amount']) ? $data['pay_green_sales_amount'] : null;
     }
 
     /**
@@ -1539,6 +1545,30 @@ class Payout implements ModelInterface, ArrayAccess
     public function setClosingBalance($closing_balance)
     {
         $this->container['closing_balance'] = $closing_balance;
+
+        return $this;
+    }
+
+    /**
+     * Gets pay_green_sales_amount
+     *
+     * @return double
+     */
+    public function getPayGreenSalesAmount()
+    {
+        return $this->container['pay_green_sales_amount'];
+    }
+
+    /**
+     * Sets pay_green_sales_amount
+     *
+     * @param double $pay_green_sales_amount Amount of sales through PayGreen (restaurant vouchers)
+     *
+     * @return $this
+     */
+    public function setPayGreenSalesAmount($pay_green_sales_amount)
+    {
+        $this->container['pay_green_sales_amount'] = $pay_green_sales_amount;
 
         return $this;
     }
