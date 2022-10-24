@@ -89,4 +89,11 @@ class AppComplianceTest extends \PHPUnit_Framework_TestCase
     public function testPropertyComplianceType()
     {
     }
+
+    /**
+     * Test attribute "allow_disabling_of_gdpr"
+     */
+    public function testPropertyAllowDisablingOfGdpr()
+    {
+    }
 }

@@ -59,7 +59,8 @@ class AppCompliance implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'app_id' => 'string',
-        'compliance_type' => 'string'
+        'compliance_type' => 'string',
+        'allow_disabling_of_gdpr' => 'bool'
     ];
 
     /**
@@ -69,7 +70,8 @@ class AppCompliance implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'app_id' => null,
-        'compliance_type' => null
+        'compliance_type' => null,
+        'allow_disabling_of_gdpr' => null
     ];
 
     /**
@@ -100,7 +102,8 @@ class AppCompliance implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'app_id' => 'AppId',
-        'compliance_type' => 'ComplianceType'
+        'compliance_type' => 'ComplianceType',
+        'allow_disabling_of_gdpr' => 'AllowDisablingOfGdpr'
     ];
 
     /**
@@ -110,7 +113,8 @@ class AppCompliance implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'app_id' => 'setAppId',
-        'compliance_type' => 'setComplianceType'
+        'compliance_type' => 'setComplianceType',
+        'allow_disabling_of_gdpr' => 'setAllowDisablingOfGdpr'
     ];
 
     /**
@@ -120,7 +124,8 @@ class AppCompliance implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'app_id' => 'getAppId',
-        'compliance_type' => 'getComplianceType'
+        'compliance_type' => 'getComplianceType',
+        'allow_disabling_of_gdpr' => 'getAllowDisablingOfGdpr'
     ];
 
     /**
@@ -200,6 +205,7 @@ class AppCompliance implements ModelInterface, ArrayAccess
     {
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
         $this->container['compliance_type'] = isset($data['compliance_type']) ? $data['compliance_type'] : null;
+        $this->container['allow_disabling_of_gdpr'] = isset($data['allow_disabling_of_gdpr']) ? $data['allow_disabling_of_gdpr'] : null;
     }
 
     /**
@@ -287,6 +293,30 @@ class AppCompliance implements ModelInterface, ArrayAccess
             );
         }
         $this->container['compliance_type'] = $compliance_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_disabling_of_gdpr
+     *
+     * @return bool
+     */
+    public function getAllowDisablingOfGdpr()
+    {
+        return $this->container['allow_disabling_of_gdpr'];
+    }
+
+    /**
+     * Sets allow_disabling_of_gdpr
+     *
+     * @param bool $allow_disabling_of_gdpr For EU countries, we should not allow to change the option to “Default banner”, but all other countries should be able to do so.
+     *
+     * @return $this
+     */
+    public function setAllowDisablingOfGdpr($allow_disabling_of_gdpr)
+    {
+        $this->container['allow_disabling_of_gdpr'] = $allow_disabling_of_gdpr;
 
         return $this;
     }
