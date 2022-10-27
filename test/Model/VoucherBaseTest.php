@@ -91,6 +91,13 @@ class VoucherBaseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "stores"
+     */
+    public function testPropertyStores()
+    {
+    }
+
+    /**
      * Test attribute "valid_on_orders_over"
      */
     public function testPropertyValidOnOrdersOver()

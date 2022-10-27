@@ -59,13 +59,13 @@ class CreateVoucher implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'voucher_type' => 'string',
-        'stores' => 'int[]',
         'add_item_details' => '\Flipdish\\Client\Models\AddItemDetails',
         'credit_note_details' => '\Flipdish\\Client\Models\CreditNoteDetails',
         'lump_discount_details' => '\Flipdish\\Client\Models\LumpDiscountDetails',
         'percent_discount_details' => '\Flipdish\\Client\Models\PercentDiscountDetails',
         'code' => 'string',
         'description' => 'string',
+        'stores' => 'int[]',
         'valid_on_orders_over' => 'double',
         'takes_priority' => 'bool',
         'is_enabled' => 'bool',
@@ -89,13 +89,13 @@ class CreateVoucher implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'voucher_type' => null,
-        'stores' => 'int32',
         'add_item_details' => null,
         'credit_note_details' => null,
         'lump_discount_details' => null,
         'percent_discount_details' => null,
         'code' => null,
         'description' => null,
+        'stores' => 'int32',
         'valid_on_orders_over' => 'double',
         'takes_priority' => null,
         'is_enabled' => null,
@@ -140,13 +140,13 @@ class CreateVoucher implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'voucher_type' => 'VoucherType',
-        'stores' => 'Stores',
         'add_item_details' => 'AddItemDetails',
         'credit_note_details' => 'CreditNoteDetails',
         'lump_discount_details' => 'LumpDiscountDetails',
         'percent_discount_details' => 'PercentDiscountDetails',
         'code' => 'Code',
         'description' => 'Description',
+        'stores' => 'Stores',
         'valid_on_orders_over' => 'ValidOnOrdersOver',
         'takes_priority' => 'TakesPriority',
         'is_enabled' => 'IsEnabled',
@@ -170,13 +170,13 @@ class CreateVoucher implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'voucher_type' => 'setVoucherType',
-        'stores' => 'setStores',
         'add_item_details' => 'setAddItemDetails',
         'credit_note_details' => 'setCreditNoteDetails',
         'lump_discount_details' => 'setLumpDiscountDetails',
         'percent_discount_details' => 'setPercentDiscountDetails',
         'code' => 'setCode',
         'description' => 'setDescription',
+        'stores' => 'setStores',
         'valid_on_orders_over' => 'setValidOnOrdersOver',
         'takes_priority' => 'setTakesPriority',
         'is_enabled' => 'setIsEnabled',
@@ -200,13 +200,13 @@ class CreateVoucher implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'voucher_type' => 'getVoucherType',
-        'stores' => 'getStores',
         'add_item_details' => 'getAddItemDetails',
         'credit_note_details' => 'getCreditNoteDetails',
         'lump_discount_details' => 'getLumpDiscountDetails',
         'percent_discount_details' => 'getPercentDiscountDetails',
         'code' => 'getCode',
         'description' => 'getDescription',
+        'stores' => 'getStores',
         'valid_on_orders_over' => 'getValidOnOrdersOver',
         'takes_priority' => 'getTakesPriority',
         'is_enabled' => 'getIsEnabled',
@@ -303,13 +303,13 @@ class CreateVoucher implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['voucher_type'] = isset($data['voucher_type']) ? $data['voucher_type'] : null;
-        $this->container['stores'] = isset($data['stores']) ? $data['stores'] : null;
         $this->container['add_item_details'] = isset($data['add_item_details']) ? $data['add_item_details'] : null;
         $this->container['credit_note_details'] = isset($data['credit_note_details']) ? $data['credit_note_details'] : null;
         $this->container['lump_discount_details'] = isset($data['lump_discount_details']) ? $data['lump_discount_details'] : null;
         $this->container['percent_discount_details'] = isset($data['percent_discount_details']) ? $data['percent_discount_details'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['stores'] = isset($data['stores']) ? $data['stores'] : null;
         $this->container['valid_on_orders_over'] = isset($data['valid_on_orders_over']) ? $data['valid_on_orders_over'] : null;
         $this->container['takes_priority'] = isset($data['takes_priority']) ? $data['takes_priority'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
@@ -387,30 +387,6 @@ class CreateVoucher implements ModelInterface, ArrayAccess
             );
         }
         $this->container['voucher_type'] = $voucher_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets stores
-     *
-     * @return int[]
-     */
-    public function getStores()
-    {
-        return $this->container['stores'];
-    }
-
-    /**
-     * Sets stores
-     *
-     * @param int[] $stores Stores that this voucher applies to
-     *
-     * @return $this
-     */
-    public function setStores($stores)
-    {
-        $this->container['stores'] = $stores;
 
         return $this;
     }
@@ -555,6 +531,30 @@ class CreateVoucher implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets stores
+     *
+     * @return int[]
+     */
+    public function getStores()
+    {
+        return $this->container['stores'];
+    }
+
+    /**
+     * Sets stores
+     *
+     * @param int[] $stores Stores that this voucher applies to
+     *
+     * @return $this
+     */
+    public function setStores($stores)
+    {
+        $this->container['stores'] = $stores;
 
         return $this;
     }

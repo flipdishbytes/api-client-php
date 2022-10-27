@@ -256,7 +256,7 @@ $apiInstance = new Flipdish\\Client\Api\VouchersApi(
 );
 $voucher_id = 56; // int | Id of the voucher
 $voucher = new \Flipdish\\Client\Models\VoucherBase(); // \Flipdish\\Client\Models\VoucherBase | Updated details for the voucher
-$store_id = array(56); // int[] | List of store ids associated
+$store_id = array(56); // int[] | List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility.
 $percent_value = 56; // int | Percent voucher value (can have 1 of 3)
 $lump_value = 1.2; // double | Lump voucher value (can have 1 of 3)
 $free_item_id = 56; // int | Free Item Id (can have 1 of 3)
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **voucher_id** | **int**| Id of the voucher |
  **voucher** | [**\Flipdish\\Client\Models\VoucherBase**](../Model/VoucherBase.md)| Updated details for the voucher |
- **store_id** | [**int[]**](../Model/int.md)| List of store ids associated | [optional]
+ **store_id** | [**int[]**](../Model/int.md)| List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. | [optional]
  **percent_value** | **int**| Percent voucher value (can have 1 of 3) | [optional]
  **lump_value** | **double**| Lump voucher value (can have 1 of 3) | [optional]
  **free_item_id** | **int**| Free Item Id (can have 1 of 3) | [optional]

@@ -66,11 +66,13 @@ $apiInstance = new Flipdish\\Client\Api\AccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$signup_step_action = "signup_step_action_example"; // string | Signup step action
+$answer_id = 56; // int | Identifier of the answer
 
 try {
-    $apiInstance->accountsIsRecaptchaOn();
+    $apiInstance->answerSignUpQuestion($signup_step_action, $answer_id);
 } catch (Exception $e) {
-    echo 'Exception when calling AccountsApi->accountsIsRecaptchaOn: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AccountsApi->answerSignUpQuestion: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -82,7 +84,6 @@ All URIs are relative to *https://api.flipdish.co*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccountsApi* | [**accountsIsRecaptchaOn**](docs/Api/AccountsApi.md#accountsisrecaptchaon) | **GET** /api/v1.0/accounts/recaptcha/check | [PRIVATE API] Temporary endpoint to return recaptcha FF
 *AccountsApi* | [**answerSignUpQuestion**](docs/Api/AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | Answer a signup question
 *AccountsApi* | [**changePassword**](docs/Api/AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | Change password
 *AccountsApi* | [**changePasswordWithPin**](docs/Api/AccountsApi.md#changepasswordwithpin) | **PUT** /api/v1.0/accounts/password/pin | Change password

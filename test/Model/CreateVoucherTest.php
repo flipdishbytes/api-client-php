@@ -84,13 +84,6 @@ class CreateVoucherTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "stores"
-     */
-    public function testPropertyStores()
-    {
-    }
-
-    /**
      * Test attribute "add_item_details"
      */
     public function testPropertyAddItemDetails()
@@ -129,6 +122,13 @@ class CreateVoucherTest extends \PHPUnit_Framework_TestCase
      * Test attribute "description"
      */
     public function testPropertyDescription()
+    {
+    }
+
+    /**
+     * Test attribute "stores"
+     */
+    public function testPropertyStores()
     {
     }
 

@@ -4,13 +4,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **voucher_type** | **string** | Voucher Type | [optional] 
-**stores** | **int[]** | Stores that this voucher applies to | [optional] 
 **add_item_details** | [**\Flipdish\\Client\Models\AddItemDetails**](AddItemDetails.md) | Add item details | [optional] 
 **credit_note_details** | [**\Flipdish\\Client\Models\CreditNoteDetails**](CreditNoteDetails.md) | Credit note details | [optional] 
 **lump_discount_details** | [**\Flipdish\\Client\Models\LumpDiscountDetails**](LumpDiscountDetails.md) | Lump discount details | [optional] 
 **percent_discount_details** | [**\Flipdish\\Client\Models\PercentDiscountDetails**](PercentDiscountDetails.md) | Percent discount details | [optional] 
 **code** | **string** | Voucher Code | [optional] 
 **description** | **string** | Voucher Description (Visible on printout) | [optional] 
+**stores** | **int[]** | Stores that this voucher applies to | [optional] 
 **valid_on_orders_over** | **double** | Valid on orders on or above | [optional] 
 **takes_priority** | **bool** | Takes priority | [optional] 
 **is_enabled** | **bool** | Is voucher enabled | [optional] 

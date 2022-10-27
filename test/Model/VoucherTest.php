@@ -112,13 +112,6 @@ class VoucherTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "stores"
-     */
-    public function testPropertyStores()
-    {
-    }
-
-    /**
      * Test attribute "store_names"
      */
     public function testPropertyStoreNames()
@@ -164,6 +157,13 @@ class VoucherTest extends \PHPUnit_Framework_TestCase
      * Test attribute "description"
      */
     public function testPropertyDescription()
+    {
+    }
+
+    /**
+     * Test attribute "stores"
+     */
+    public function testPropertyStores()
     {
     }
 

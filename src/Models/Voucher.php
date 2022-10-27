@@ -63,7 +63,6 @@ class Voucher implements ModelInterface, ArrayAccess
         'voucher_type' => 'string',
         'voucher_sub_type' => 'string',
         'currency' => 'string',
-        'stores' => 'int[]',
         'store_names' => 'string[]',
         'add_item_details' => '\Flipdish\\Client\Models\AddItemDetails',
         'credit_note_details' => '\Flipdish\\Client\Models\CreditNoteDetails',
@@ -71,6 +70,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'percent_discount_details' => '\Flipdish\\Client\Models\PercentDiscountDetails',
         'code' => 'string',
         'description' => 'string',
+        'stores' => 'int[]',
         'valid_on_orders_over' => 'double',
         'takes_priority' => 'bool',
         'is_enabled' => 'bool',
@@ -98,7 +98,6 @@ class Voucher implements ModelInterface, ArrayAccess
         'voucher_type' => null,
         'voucher_sub_type' => null,
         'currency' => null,
-        'stores' => 'int32',
         'store_names' => null,
         'add_item_details' => null,
         'credit_note_details' => null,
@@ -106,6 +105,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'percent_discount_details' => null,
         'code' => null,
         'description' => null,
+        'stores' => 'int32',
         'valid_on_orders_over' => 'double',
         'takes_priority' => null,
         'is_enabled' => null,
@@ -154,7 +154,6 @@ class Voucher implements ModelInterface, ArrayAccess
         'voucher_type' => 'VoucherType',
         'voucher_sub_type' => 'VoucherSubType',
         'currency' => 'Currency',
-        'stores' => 'Stores',
         'store_names' => 'StoreNames',
         'add_item_details' => 'AddItemDetails',
         'credit_note_details' => 'CreditNoteDetails',
@@ -162,6 +161,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'percent_discount_details' => 'PercentDiscountDetails',
         'code' => 'Code',
         'description' => 'Description',
+        'stores' => 'Stores',
         'valid_on_orders_over' => 'ValidOnOrdersOver',
         'takes_priority' => 'TakesPriority',
         'is_enabled' => 'IsEnabled',
@@ -189,7 +189,6 @@ class Voucher implements ModelInterface, ArrayAccess
         'voucher_type' => 'setVoucherType',
         'voucher_sub_type' => 'setVoucherSubType',
         'currency' => 'setCurrency',
-        'stores' => 'setStores',
         'store_names' => 'setStoreNames',
         'add_item_details' => 'setAddItemDetails',
         'credit_note_details' => 'setCreditNoteDetails',
@@ -197,6 +196,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'percent_discount_details' => 'setPercentDiscountDetails',
         'code' => 'setCode',
         'description' => 'setDescription',
+        'stores' => 'setStores',
         'valid_on_orders_over' => 'setValidOnOrdersOver',
         'takes_priority' => 'setTakesPriority',
         'is_enabled' => 'setIsEnabled',
@@ -224,7 +224,6 @@ class Voucher implements ModelInterface, ArrayAccess
         'voucher_type' => 'getVoucherType',
         'voucher_sub_type' => 'getVoucherSubType',
         'currency' => 'getCurrency',
-        'stores' => 'getStores',
         'store_names' => 'getStoreNames',
         'add_item_details' => 'getAddItemDetails',
         'credit_note_details' => 'getCreditNoteDetails',
@@ -232,6 +231,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'percent_discount_details' => 'getPercentDiscountDetails',
         'code' => 'getCode',
         'description' => 'getDescription',
+        'stores' => 'getStores',
         'valid_on_orders_over' => 'getValidOnOrdersOver',
         'takes_priority' => 'getTakesPriority',
         'is_enabled' => 'getIsEnabled',
@@ -615,7 +615,6 @@ class Voucher implements ModelInterface, ArrayAccess
         $this->container['voucher_type'] = isset($data['voucher_type']) ? $data['voucher_type'] : null;
         $this->container['voucher_sub_type'] = isset($data['voucher_sub_type']) ? $data['voucher_sub_type'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
-        $this->container['stores'] = isset($data['stores']) ? $data['stores'] : null;
         $this->container['store_names'] = isset($data['store_names']) ? $data['store_names'] : null;
         $this->container['add_item_details'] = isset($data['add_item_details']) ? $data['add_item_details'] : null;
         $this->container['credit_note_details'] = isset($data['credit_note_details']) ? $data['credit_note_details'] : null;
@@ -623,6 +622,7 @@ class Voucher implements ModelInterface, ArrayAccess
         $this->container['percent_discount_details'] = isset($data['percent_discount_details']) ? $data['percent_discount_details'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['stores'] = isset($data['stores']) ? $data['stores'] : null;
         $this->container['valid_on_orders_over'] = isset($data['valid_on_orders_over']) ? $data['valid_on_orders_over'] : null;
         $this->container['takes_priority'] = isset($data['takes_priority']) ? $data['takes_priority'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
@@ -852,30 +852,6 @@ class Voucher implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets stores
-     *
-     * @return int[]
-     */
-    public function getStores()
-    {
-        return $this->container['stores'];
-    }
-
-    /**
-     * Sets stores
-     *
-     * @param int[] $stores Stores that this voucher applies to
-     *
-     * @return $this
-     */
-    public function setStores($stores)
-    {
-        $this->container['stores'] = $stores;
-
-        return $this;
-    }
-
-    /**
      * Gets store_names
      *
      * @return string[]
@@ -1039,6 +1015,30 @@ class Voucher implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets stores
+     *
+     * @return int[]
+     */
+    public function getStores()
+    {
+        return $this->container['stores'];
+    }
+
+    /**
+     * Sets stores
+     *
+     * @param int[] $stores Stores that this voucher applies to
+     *
+     * @return $this
+     */
+    public function setStores($stores)
+    {
+        $this->container['stores'] = $stores;
 
         return $this;
     }

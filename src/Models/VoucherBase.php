@@ -60,6 +60,7 @@ class VoucherBase implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'code' => 'string',
         'description' => 'string',
+        'stores' => 'int[]',
         'valid_on_orders_over' => 'double',
         'takes_priority' => 'bool',
         'is_enabled' => 'bool',
@@ -84,6 +85,7 @@ class VoucherBase implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'code' => null,
         'description' => null,
+        'stores' => 'int32',
         'valid_on_orders_over' => 'double',
         'takes_priority' => null,
         'is_enabled' => null,
@@ -129,6 +131,7 @@ class VoucherBase implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'code' => 'Code',
         'description' => 'Description',
+        'stores' => 'Stores',
         'valid_on_orders_over' => 'ValidOnOrdersOver',
         'takes_priority' => 'TakesPriority',
         'is_enabled' => 'IsEnabled',
@@ -153,6 +156,7 @@ class VoucherBase implements ModelInterface, ArrayAccess
     protected static $setters = [
         'code' => 'setCode',
         'description' => 'setDescription',
+        'stores' => 'setStores',
         'valid_on_orders_over' => 'setValidOnOrdersOver',
         'takes_priority' => 'setTakesPriority',
         'is_enabled' => 'setIsEnabled',
@@ -177,6 +181,7 @@ class VoucherBase implements ModelInterface, ArrayAccess
     protected static $getters = [
         'code' => 'getCode',
         'description' => 'getDescription',
+        'stores' => 'getStores',
         'valid_on_orders_over' => 'getValidOnOrdersOver',
         'takes_priority' => 'getTakesPriority',
         'is_enabled' => 'getIsEnabled',
@@ -255,6 +260,7 @@ class VoucherBase implements ModelInterface, ArrayAccess
     {
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['stores'] = isset($data['stores']) ? $data['stores'] : null;
         $this->container['valid_on_orders_over'] = isset($data['valid_on_orders_over']) ? $data['valid_on_orders_over'] : null;
         $this->container['takes_priority'] = isset($data['takes_priority']) ? $data['takes_priority'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
@@ -339,6 +345,30 @@ class VoucherBase implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets stores
+     *
+     * @return int[]
+     */
+    public function getStores()
+    {
+        return $this->container['stores'];
+    }
+
+    /**
+     * Sets stores
+     *
+     * @param int[] $stores Stores that this voucher applies to
+     *
+     * @return $this
+     */
+    public function setStores($stores)
+    {
+        $this->container['stores'] = $stores;
 
         return $this;
     }

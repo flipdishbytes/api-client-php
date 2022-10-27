@@ -1422,7 +1422,7 @@ class VouchersApi
      *
      * @param  int $voucher_id Id of the voucher (required)
      * @param  \Flipdish\\Client\Models\VoucherBase $voucher Updated details for the voucher (required)
-     * @param  int[] $store_id List of store ids associated (optional)
+     * @param  int[] $store_id List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
      * @param  int $percent_value Percent voucher value (can have 1 of 3) (optional)
      * @param  double $lump_value Lump voucher value (can have 1 of 3) (optional)
      * @param  int $free_item_id Free Item Id (can have 1 of 3) (optional)
@@ -1444,7 +1444,7 @@ class VouchersApi
      *
      * @param  int $voucher_id Id of the voucher (required)
      * @param  \Flipdish\\Client\Models\VoucherBase $voucher Updated details for the voucher (required)
-     * @param  int[] $store_id List of store ids associated (optional)
+     * @param  int[] $store_id List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
      * @param  int $percent_value Percent voucher value (can have 1 of 3) (optional)
      * @param  double $lump_value Lump voucher value (can have 1 of 3) (optional)
      * @param  int $free_item_id Free Item Id (can have 1 of 3) (optional)
@@ -1556,7 +1556,7 @@ class VouchersApi
      *
      * @param  int $voucher_id Id of the voucher (required)
      * @param  \Flipdish\\Client\Models\VoucherBase $voucher Updated details for the voucher (required)
-     * @param  int[] $store_id List of store ids associated (optional)
+     * @param  int[] $store_id List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
      * @param  int $percent_value Percent voucher value (can have 1 of 3) (optional)
      * @param  double $lump_value Lump voucher value (can have 1 of 3) (optional)
      * @param  int $free_item_id Free Item Id (can have 1 of 3) (optional)
@@ -1581,7 +1581,7 @@ class VouchersApi
      *
      * @param  int $voucher_id Id of the voucher (required)
      * @param  \Flipdish\\Client\Models\VoucherBase $voucher Updated details for the voucher (required)
-     * @param  int[] $store_id List of store ids associated (optional)
+     * @param  int[] $store_id List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
      * @param  int $percent_value Percent voucher value (can have 1 of 3) (optional)
      * @param  double $lump_value Lump voucher value (can have 1 of 3) (optional)
      * @param  int $free_item_id Free Item Id (can have 1 of 3) (optional)
@@ -1636,7 +1636,7 @@ class VouchersApi
      *
      * @param  int $voucher_id Id of the voucher (required)
      * @param  \Flipdish\\Client\Models\VoucherBase $voucher Updated details for the voucher (required)
-     * @param  int[] $store_id List of store ids associated (optional)
+     * @param  int[] $store_id List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
      * @param  int $percent_value Percent voucher value (can have 1 of 3) (optional)
      * @param  double $lump_value Lump voucher value (can have 1 of 3) (optional)
      * @param  int $free_item_id Free Item Id (can have 1 of 3) (optional)
