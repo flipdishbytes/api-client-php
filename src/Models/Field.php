@@ -66,7 +66,8 @@ class Field implements ModelInterface, ArrayAccess
         'default_value' => 'string',
         'valid_values' => '\Flipdish\\Client\Models\ValidValue[]',
         'validation_regex' => 'string',
-        'field_type' => 'string'
+        'field_type' => 'string',
+        'is_flipdish_restricted' => 'bool'
     ];
 
     /**
@@ -83,7 +84,8 @@ class Field implements ModelInterface, ArrayAccess
         'default_value' => null,
         'valid_values' => null,
         'validation_regex' => null,
-        'field_type' => null
+        'field_type' => null,
+        'is_flipdish_restricted' => null
     ];
 
     /**
@@ -121,7 +123,8 @@ class Field implements ModelInterface, ArrayAccess
         'default_value' => 'DefaultValue',
         'valid_values' => 'ValidValues',
         'validation_regex' => 'ValidationRegex',
-        'field_type' => 'FieldType'
+        'field_type' => 'FieldType',
+        'is_flipdish_restricted' => 'IsFlipdishRestricted'
     ];
 
     /**
@@ -138,7 +141,8 @@ class Field implements ModelInterface, ArrayAccess
         'default_value' => 'setDefaultValue',
         'valid_values' => 'setValidValues',
         'validation_regex' => 'setValidationRegex',
-        'field_type' => 'setFieldType'
+        'field_type' => 'setFieldType',
+        'is_flipdish_restricted' => 'setIsFlipdishRestricted'
     ];
 
     /**
@@ -155,7 +159,8 @@ class Field implements ModelInterface, ArrayAccess
         'default_value' => 'getDefaultValue',
         'valid_values' => 'getValidValues',
         'validation_regex' => 'getValidationRegex',
-        'field_type' => 'getFieldType'
+        'field_type' => 'getFieldType',
+        'is_flipdish_restricted' => 'getIsFlipdishRestricted'
     ];
 
     /**
@@ -258,6 +263,7 @@ class Field implements ModelInterface, ArrayAccess
         $this->container['valid_values'] = isset($data['valid_values']) ? $data['valid_values'] : null;
         $this->container['validation_regex'] = isset($data['validation_regex']) ? $data['validation_regex'] : null;
         $this->container['field_type'] = isset($data['field_type']) ? $data['field_type'] : null;
+        $this->container['is_flipdish_restricted'] = isset($data['is_flipdish_restricted']) ? $data['is_flipdish_restricted'] : null;
     }
 
     /**
@@ -544,6 +550,30 @@ class Field implements ModelInterface, ArrayAccess
             );
         }
         $this->container['field_type'] = $field_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_flipdish_restricted
+     *
+     * @return bool
+     */
+    public function getIsFlipdishRestricted()
+    {
+        return $this->container['is_flipdish_restricted'];
+    }
+
+    /**
+     * Sets is_flipdish_restricted
+     *
+     * @param bool $is_flipdish_restricted Is this field only editable by Flipdish?
+     *
+     * @return $this
+     */
+    public function setIsFlipdishRestricted($is_flipdish_restricted)
+    {
+        $this->container['is_flipdish_restricted'] = $is_flipdish_restricted;
 
         return $this;
     }

@@ -138,4 +138,11 @@ class FieldTest extends \PHPUnit_Framework_TestCase
     public function testPropertyFieldType()
     {
     }
+
+    /**
+     * Test attribute "is_flipdish_restricted"
+     */
+    public function testPropertyIsFlipdishRestricted()
+    {
+    }
 }
