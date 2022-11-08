@@ -72,12 +72,12 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for craeteWebhookSubscription
+     * Test case for createWebhookSubscription
      *
      * Create a webhook subscription for you Oauth App.
      *
      */
-    public function testCraeteWebhookSubscription()
+    public function testCreateWebhookSubscription()
     {
     }
 

@@ -4,7 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**craeteWebhookSubscription**](WebhooksApi.md#craeteWebhookSubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Create a webhook subscription for you Oauth App
+[**createWebhookSubscription**](WebhooksApi.md#createWebhookSubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Create a webhook subscription for you Oauth App
 [**createWebhookSubscriptionEventNames**](WebhooksApi.md#createWebhookSubscriptionEventNames) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
 [**deleteWebhookSubscription**](WebhooksApi.md#deleteWebhookSubscription) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
 [**deleteWebhookSubscriptionEventName**](WebhooksApi.md#deleteWebhookSubscriptionEventName) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
@@ -16,8 +16,8 @@ Method | HTTP request | Description
 [**updateWebhookSubscription**](WebhooksApi.md#updateWebhookSubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
 
 
-# **craeteWebhookSubscription**
-> \Flipdish\\Client\Models\RestApiIntegerResult craeteWebhookSubscription($oauth_app_id, $webhook_subscription, $app_id)
+# **createWebhookSubscription**
+> \Flipdish\\Client\Models\RestApiIntegerResult createWebhookSubscription($oauth_app_id, $webhook_subscription, $app_id)
 
 Create a webhook subscription for you Oauth App
 
@@ -40,10 +40,10 @@ $webhook_subscription = new \Flipdish\\Client\Models\WebhookSubscription(); // \
 $app_id = "app_id_example"; // string | 
 
 try {
-    $result = $apiInstance->craeteWebhookSubscription($oauth_app_id, $webhook_subscription, $app_id);
+    $result = $apiInstance->createWebhookSubscription($oauth_app_id, $webhook_subscription, $app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WebhooksApi->craeteWebhookSubscription: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling WebhooksApi->createWebhookSubscription: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

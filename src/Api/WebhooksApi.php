@@ -88,7 +88,7 @@ class WebhooksApi
     }
 
     /**
-     * Operation craeteWebhookSubscription
+     * Operation createWebhookSubscription
      *
      * Create a webhook subscription for you Oauth App
      *
@@ -100,14 +100,14 @@ class WebhooksApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiIntegerResult
      */
-    public function craeteWebhookSubscription($oauth_app_id, $webhook_subscription, $app_id)
+    public function createWebhookSubscription($oauth_app_id, $webhook_subscription, $app_id)
     {
-        list($response) = $this->craeteWebhookSubscriptionWithHttpInfo($oauth_app_id, $webhook_subscription, $app_id);
+        list($response) = $this->createWebhookSubscriptionWithHttpInfo($oauth_app_id, $webhook_subscription, $app_id);
         return $response;
     }
 
     /**
-     * Operation craeteWebhookSubscriptionWithHttpInfo
+     * Operation createWebhookSubscriptionWithHttpInfo
      *
      * Create a webhook subscription for you Oauth App
      *
@@ -119,10 +119,10 @@ class WebhooksApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiIntegerResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function craeteWebhookSubscriptionWithHttpInfo($oauth_app_id, $webhook_subscription, $app_id)
+    public function createWebhookSubscriptionWithHttpInfo($oauth_app_id, $webhook_subscription, $app_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiIntegerResult';
-        $request = $this->craeteWebhookSubscriptionRequest($oauth_app_id, $webhook_subscription, $app_id);
+        $request = $this->createWebhookSubscriptionRequest($oauth_app_id, $webhook_subscription, $app_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -208,7 +208,7 @@ class WebhooksApi
     }
 
     /**
-     * Operation craeteWebhookSubscriptionAsync
+     * Operation createWebhookSubscriptionAsync
      *
      * Create a webhook subscription for you Oauth App
      *
@@ -219,9 +219,9 @@ class WebhooksApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function craeteWebhookSubscriptionAsync($oauth_app_id, $webhook_subscription, $app_id)
+    public function createWebhookSubscriptionAsync($oauth_app_id, $webhook_subscription, $app_id)
     {
-        return $this->craeteWebhookSubscriptionAsyncWithHttpInfo($oauth_app_id, $webhook_subscription, $app_id)
+        return $this->createWebhookSubscriptionAsyncWithHttpInfo($oauth_app_id, $webhook_subscription, $app_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -230,7 +230,7 @@ class WebhooksApi
     }
 
     /**
-     * Operation craeteWebhookSubscriptionAsyncWithHttpInfo
+     * Operation createWebhookSubscriptionAsyncWithHttpInfo
      *
      * Create a webhook subscription for you Oauth App
      *
@@ -241,10 +241,10 @@ class WebhooksApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function craeteWebhookSubscriptionAsyncWithHttpInfo($oauth_app_id, $webhook_subscription, $app_id)
+    public function createWebhookSubscriptionAsyncWithHttpInfo($oauth_app_id, $webhook_subscription, $app_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiIntegerResult';
-        $request = $this->craeteWebhookSubscriptionRequest($oauth_app_id, $webhook_subscription, $app_id);
+        $request = $this->createWebhookSubscriptionRequest($oauth_app_id, $webhook_subscription, $app_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -284,7 +284,7 @@ class WebhooksApi
     }
 
     /**
-     * Create request for operation 'craeteWebhookSubscription'
+     * Create request for operation 'createWebhookSubscription'
      *
      * @param  string $oauth_app_id Oauth App identifier (required)
      * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription Webhook subscription object (required)
@@ -293,24 +293,24 @@ class WebhooksApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function craeteWebhookSubscriptionRequest($oauth_app_id, $webhook_subscription, $app_id)
+    protected function createWebhookSubscriptionRequest($oauth_app_id, $webhook_subscription, $app_id)
     {
         // verify the required parameter 'oauth_app_id' is set
         if ($oauth_app_id === null || (is_array($oauth_app_id) && count($oauth_app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $oauth_app_id when calling craeteWebhookSubscription'
+                'Missing the required parameter $oauth_app_id when calling createWebhookSubscription'
             );
         }
         // verify the required parameter 'webhook_subscription' is set
         if ($webhook_subscription === null || (is_array($webhook_subscription) && count($webhook_subscription) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $webhook_subscription when calling craeteWebhookSubscription'
+                'Missing the required parameter $webhook_subscription when calling createWebhookSubscription'
             );
         }
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling craeteWebhookSubscription'
+                'Missing the required parameter $app_id when calling createWebhookSubscription'
             );
         }
 
