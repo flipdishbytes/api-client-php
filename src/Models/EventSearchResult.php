@@ -147,7 +147,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'bank_account_created_event' => '\Flipdish\\Client\Models\BankAccountCreatedEvent[]',
         'bank_account_updated_event' => '\Flipdish\\Client\Models\BankAccountUpdatedEvent[]',
         'bank_account_deleted_event' => '\Flipdish\\Client\Models\BankAccountDeletedEvent[]',
-        'bank_account_assigned_event' => '\Flipdish\\Client\Models\BankAccountDeletedEvent[]',
+        'bank_account_assigned_event' => '\Flipdish\\Client\Models\BankAccountAssignedEvent[]',
         'hydra_assigned_event' => '\Flipdish\\Client\Models\HydraAssignedEvent[]',
         'hydra_request_reset_event' => '\Flipdish\\Client\Models\HydraRequestResetEvent[]',
         'hydra_store_assigned_event' => '\Flipdish\\Client\Models\HydraStoreAssignedEvent[]',
@@ -3148,7 +3148,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     /**
      * Gets bank_account_assigned_event
      *
-     * @return \Flipdish\\Client\Models\BankAccountDeletedEvent[]
+     * @return \Flipdish\\Client\Models\BankAccountAssignedEvent[]
      */
     public function getBankAccountAssignedEvent()
     {
@@ -3158,7 +3158,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     /**
      * Sets bank_account_assigned_event
      *
-     * @param \Flipdish\\Client\Models\BankAccountDeletedEvent[] $bank_account_assigned_event Bank account assigned event
+     * @param \Flipdish\\Client\Models\BankAccountAssignedEvent[] $bank_account_assigned_event Bank account assigned event
      *
      * @return $this
      */

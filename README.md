@@ -578,6 +578,7 @@ Class | Method | HTTP request | Description
  - [AuditLogFieldChangeInformation](docs/Model/AuditLogFieldChangeInformation.md)
  - [BalanceDetails](docs/Model/BalanceDetails.md)
  - [BankAccount](docs/Model/BankAccount.md)
+ - [BankAccountAssignedEvent](docs/Model/BankAccountAssignedEvent.md)
  - [BankAccountCreate](docs/Model/BankAccountCreate.md)
  - [BankAccountCreatedEvent](docs/Model/BankAccountCreatedEvent.md)
  - [BankAccountDeletedEvent](docs/Model/BankAccountDeletedEvent.md)
