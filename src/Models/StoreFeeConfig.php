@@ -80,6 +80,8 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_cash_orders_charged_to_customer_including_vat' => 'double',
         'fixed_fee_cash_orders_charged_to_customer_including_vat' => 'double',
         'percent_fee_tips' => 'double',
+        'percent_fee_tips_collection' => 'double',
+        'percent_fee_tips_delivery' => 'double',
         'tax_rate_percent' => 'double',
         'percent_fee_card_orders_location_service' => 'double',
         'percent_fee_cash_orders_location_service' => 'double',
@@ -123,6 +125,8 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_cash_orders_charged_to_customer_including_vat' => 'double',
         'fixed_fee_cash_orders_charged_to_customer_including_vat' => 'double',
         'percent_fee_tips' => 'double',
+        'percent_fee_tips_collection' => 'double',
+        'percent_fee_tips_delivery' => 'double',
         'tax_rate_percent' => 'double',
         'percent_fee_card_orders_location_service' => 'double',
         'percent_fee_cash_orders_location_service' => 'double',
@@ -187,6 +191,8 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_cash_orders_charged_to_customer_including_vat' => 'PercentFeeCashOrdersChargedToCustomerIncludingVat',
         'fixed_fee_cash_orders_charged_to_customer_including_vat' => 'FixedFeeCashOrdersChargedToCustomerIncludingVat',
         'percent_fee_tips' => 'PercentFeeTips',
+        'percent_fee_tips_collection' => 'PercentFeeTipsCollection',
+        'percent_fee_tips_delivery' => 'PercentFeeTipsDelivery',
         'tax_rate_percent' => 'TaxRatePercent',
         'percent_fee_card_orders_location_service' => 'PercentFeeCardOrdersLocationService',
         'percent_fee_cash_orders_location_service' => 'PercentFeeCashOrdersLocationService',
@@ -230,6 +236,8 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_cash_orders_charged_to_customer_including_vat' => 'setPercentFeeCashOrdersChargedToCustomerIncludingVat',
         'fixed_fee_cash_orders_charged_to_customer_including_vat' => 'setFixedFeeCashOrdersChargedToCustomerIncludingVat',
         'percent_fee_tips' => 'setPercentFeeTips',
+        'percent_fee_tips_collection' => 'setPercentFeeTipsCollection',
+        'percent_fee_tips_delivery' => 'setPercentFeeTipsDelivery',
         'tax_rate_percent' => 'setTaxRatePercent',
         'percent_fee_card_orders_location_service' => 'setPercentFeeCardOrdersLocationService',
         'percent_fee_cash_orders_location_service' => 'setPercentFeeCashOrdersLocationService',
@@ -273,6 +281,8 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_cash_orders_charged_to_customer_including_vat' => 'getPercentFeeCashOrdersChargedToCustomerIncludingVat',
         'fixed_fee_cash_orders_charged_to_customer_including_vat' => 'getFixedFeeCashOrdersChargedToCustomerIncludingVat',
         'percent_fee_tips' => 'getPercentFeeTips',
+        'percent_fee_tips_collection' => 'getPercentFeeTipsCollection',
+        'percent_fee_tips_delivery' => 'getPercentFeeTipsDelivery',
         'tax_rate_percent' => 'getTaxRatePercent',
         'percent_fee_card_orders_location_service' => 'getPercentFeeCardOrdersLocationService',
         'percent_fee_cash_orders_location_service' => 'getPercentFeeCashOrdersLocationService',
@@ -370,6 +380,8 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         $this->container['percent_fee_cash_orders_charged_to_customer_including_vat'] = isset($data['percent_fee_cash_orders_charged_to_customer_including_vat']) ? $data['percent_fee_cash_orders_charged_to_customer_including_vat'] : null;
         $this->container['fixed_fee_cash_orders_charged_to_customer_including_vat'] = isset($data['fixed_fee_cash_orders_charged_to_customer_including_vat']) ? $data['fixed_fee_cash_orders_charged_to_customer_including_vat'] : null;
         $this->container['percent_fee_tips'] = isset($data['percent_fee_tips']) ? $data['percent_fee_tips'] : null;
+        $this->container['percent_fee_tips_collection'] = isset($data['percent_fee_tips_collection']) ? $data['percent_fee_tips_collection'] : null;
+        $this->container['percent_fee_tips_delivery'] = isset($data['percent_fee_tips_delivery']) ? $data['percent_fee_tips_delivery'] : null;
         $this->container['tax_rate_percent'] = isset($data['tax_rate_percent']) ? $data['tax_rate_percent'] : null;
         $this->container['percent_fee_card_orders_location_service'] = isset($data['percent_fee_card_orders_location_service']) ? $data['percent_fee_card_orders_location_service'] : null;
         $this->container['percent_fee_cash_orders_location_service'] = isset($data['percent_fee_cash_orders_location_service']) ? $data['percent_fee_cash_orders_location_service'] : null;
@@ -933,6 +945,54 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
     public function setPercentFeeTips($percent_fee_tips)
     {
         $this->container['percent_fee_tips'] = $percent_fee_tips;
+
+        return $this;
+    }
+
+    /**
+     * Gets percent_fee_tips_collection
+     *
+     * @return double
+     */
+    public function getPercentFeeTipsCollection()
+    {
+        return $this->container['percent_fee_tips_collection'];
+    }
+
+    /**
+     * Sets percent_fee_tips_collection
+     *
+     * @param double $percent_fee_tips_collection Gets or sets the percent fee tips for collection.
+     *
+     * @return $this
+     */
+    public function setPercentFeeTipsCollection($percent_fee_tips_collection)
+    {
+        $this->container['percent_fee_tips_collection'] = $percent_fee_tips_collection;
+
+        return $this;
+    }
+
+    /**
+     * Gets percent_fee_tips_delivery
+     *
+     * @return double
+     */
+    public function getPercentFeeTipsDelivery()
+    {
+        return $this->container['percent_fee_tips_delivery'];
+    }
+
+    /**
+     * Sets percent_fee_tips_delivery
+     *
+     * @param double $percent_fee_tips_delivery Gets or sets the percent fee tips for delivery.
+     *
+     * @return $this
+     */
+    public function setPercentFeeTipsDelivery($percent_fee_tips_delivery)
+    {
+        $this->container['percent_fee_tips_delivery'] = $percent_fee_tips_delivery;
 
         return $this;
     }

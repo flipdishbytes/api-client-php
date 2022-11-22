@@ -231,6 +231,20 @@ class StoreFeeConfigTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "percent_fee_tips_collection"
+     */
+    public function testPropertyPercentFeeTipsCollection()
+    {
+    }
+
+    /**
+     * Test attribute "percent_fee_tips_delivery"
+     */
+    public function testPropertyPercentFeeTipsDelivery()
+    {
+    }
+
+    /**
      * Test attribute "tax_rate_percent"
      */
     public function testPropertyTaxRatePercent()
