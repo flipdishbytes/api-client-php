@@ -71,8 +71,7 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
         'include_in_reports' => 'bool',
         'is_custom' => 'bool',
         'order_types' => 'string[]',
-        'communication' => 'bool',
-        'visual_order' => 'int'
+        'communication' => 'bool'
     ];
 
     /**
@@ -94,8 +93,7 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
         'include_in_reports' => null,
         'is_custom' => null,
         'order_types' => null,
-        'communication' => null,
-        'visual_order' => 'int32'
+        'communication' => null
     ];
 
     /**
@@ -138,8 +136,7 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
         'include_in_reports' => 'IncludeInReports',
         'is_custom' => 'IsCustom',
         'order_types' => 'OrderTypes',
-        'communication' => 'Communication',
-        'visual_order' => 'VisualOrder'
+        'communication' => 'Communication'
     ];
 
     /**
@@ -161,8 +158,7 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
         'include_in_reports' => 'setIncludeInReports',
         'is_custom' => 'setIsCustom',
         'order_types' => 'setOrderTypes',
-        'communication' => 'setCommunication',
-        'visual_order' => 'setVisualOrder'
+        'communication' => 'setCommunication'
     ];
 
     /**
@@ -184,8 +180,7 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
         'include_in_reports' => 'getIncludeInReports',
         'is_custom' => 'getIsCustom',
         'order_types' => 'getOrderTypes',
-        'communication' => 'getCommunication',
-        'visual_order' => 'getVisualOrder'
+        'communication' => 'getCommunication'
     ];
 
     /**
@@ -298,7 +293,6 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
         $this->container['is_custom'] = isset($data['is_custom']) ? $data['is_custom'] : null;
         $this->container['order_types'] = isset($data['order_types']) ? $data['order_types'] : null;
         $this->container['communication'] = isset($data['communication']) ? $data['communication'] : null;
-        $this->container['visual_order'] = isset($data['visual_order']) ? $data['visual_order'] : null;
     }
 
     /**
@@ -683,30 +677,6 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
     public function setCommunication($communication)
     {
         $this->container['communication'] = $communication;
-
-        return $this;
-    }
-
-    /**
-     * Gets visual_order
-     *
-     * @return int
-     */
-    public function getVisualOrder()
-    {
-        return $this->container['visual_order'];
-    }
-
-    /**
-     * Sets visual_order
-     *
-     * @param int $visual_order Integer for ordering results in choices (eg. dropdowns)
-     *
-     * @return $this
-     */
-    public function setVisualOrder($visual_order)
-    {
-        $this->container['visual_order'] = $visual_order;
 
         return $this;
     }

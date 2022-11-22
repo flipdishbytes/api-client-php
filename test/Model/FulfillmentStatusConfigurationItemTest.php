@@ -173,11 +173,4 @@ class FulfillmentStatusConfigurationItemTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCommunication()
     {
     }
-
-    /**
-     * Test attribute "visual_order"
-     */
-    public function testPropertyVisualOrder()
-    {
-    }
 }
