@@ -378,7 +378,7 @@ class FirebaseAppsApi
     /**
      * Operation firebaseAppsGetFirebaseApp
      *
-     * @param  string $whitelabel_id whitelabel_id (required)
+     * @param  int $whitelabel_id whitelabel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -393,7 +393,7 @@ class FirebaseAppsApi
     /**
      * Operation firebaseAppsGetFirebaseAppWithHttpInfo
      *
-     * @param  string $whitelabel_id (required)
+     * @param  int $whitelabel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -492,7 +492,7 @@ class FirebaseAppsApi
      *
      * 
      *
-     * @param  string $whitelabel_id (required)
+     * @param  int $whitelabel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -512,7 +512,7 @@ class FirebaseAppsApi
      *
      * 
      *
-     * @param  string $whitelabel_id (required)
+     * @param  int $whitelabel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -562,7 +562,7 @@ class FirebaseAppsApi
     /**
      * Create request for operation 'firebaseAppsGetFirebaseApp'
      *
-     * @param  string $whitelabel_id (required)
+     * @param  int $whitelabel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -78,7 +78,7 @@ $apiInstance = new Flipdish\\Client\Api\FirebaseAppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$whitelabel_id = "whitelabel_id_example"; // string | 
+$whitelabel_id = 56; // int | 
 
 try {
     $result = $apiInstance->firebaseAppsGetFirebaseApp($whitelabel_id);
@@ -93,7 +93,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **whitelabel_id** | **string**|  |
+ **whitelabel_id** | **int**|  |
 
 ### Return type
 
