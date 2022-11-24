@@ -454,6 +454,9 @@ Class | Method | HTTP request | Description
 *RestaurantVouchersPayGreenApi* | [**listPayGreenConfigurations**](docs/Api/RestaurantVouchersPayGreenApi.md#listpaygreenconfigurations) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
 *RestaurantVouchersPayGreenApi* | [**updatePayGreenConfiguration**](docs/Api/RestaurantVouchersPayGreenApi.md#updatepaygreenconfiguration) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
 *RestaurantVouchersPayGreenApi* | [**updateStorePayGreenConfiguration_**](docs/Api/RestaurantVouchersPayGreenApi.md#updatestorepaygreenconfiguration_) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId} | 
+*StoreFeeConfigsApi* | [**getProcessingFeeConfigsByStoreId**](docs/Api/StoreFeeConfigsApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
+*StoreFeeConfigsApi* | [**getProcessingFeeConfigsByStoreIdAndPaymentAccountType**](docs/Api/StoreFeeConfigsApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier and paymentAccountType
+*StoreFeeConfigsApi* | [**getStoreFeeConfig**](docs/Api/StoreFeeConfigsApi.md#getstorefeeconfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | Get Store feeConfig
 *StoreGroupsApi* | [**createStoreGroup**](docs/Api/StoreGroupsApi.md#createstoregroup) | **POST** /api/v1.0/{appNameId}/storegroups | Creates a Store Group  It will be attached to an existing App
 *StoreGroupsApi* | [**getStoreGroup**](docs/Api/StoreGroupsApi.md#getstoregroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | Returns a Store Groups
 *StoreGroupsApi* | [**getStoreGroups**](docs/Api/StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | Returns a paginated list of Store Groups
@@ -475,10 +478,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**getEndOfDayReport**](docs/Api/StoresApi.md#getendofdayreport) | **GET** /api/v1.0/stores/{storeId}/endofdayreport | Get store end of day report
 *StoresApi* | [**getPreOrderConfig**](docs/Api/StoresApi.md#getpreorderconfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | Get the pre order config for a store, by type
 *StoresApi* | [**getPreOrderPreview**](docs/Api/StoresApi.md#getpreorderpreview) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/preview | Get the Preview times of the pre-order configuration
-*StoresApi* | [**getProcessingFeeConfigsByStoreId**](docs/Api/StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
-*StoresApi* | [**getProcessingFeeConfigsByStoreIdAndPaymentAccountType**](docs/Api/StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 *StoresApi* | [**getStoreById**](docs/Api/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
-*StoresApi* | [**getStoreFeeConfig**](docs/Api/StoresApi.md#getstorefeeconfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | Retrieve Store feeConfig
 *StoresApi* | [**getStoreHeadersByAppId**](docs/Api/StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | Get all stores by app name id
 *StoresApi* | [**getStoreNetSales**](docs/Api/StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | Get stores statistics by app name id and storeIds
 *StoresApi* | [**getStoreServiceCharge**](docs/Api/StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
