@@ -17,7 +17,10 @@ Method | HTTP request | Description
 [**getEndOfDayReport**](StoresApi.md#getEndOfDayReport) | **GET** /api/v1.0/stores/{storeId}/endofdayreport | Get store end of day report
 [**getPreOrderConfig**](StoresApi.md#getPreOrderConfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | Get the pre order config for a store, by type
 [**getPreOrderPreview**](StoresApi.md#getPreOrderPreview) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/preview | Get the Preview times of the pre-order configuration
+[**getProcessingFeeConfigsByStoreId**](StoresApi.md#getProcessingFeeConfigsByStoreId) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
+[**getProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getProcessingFeeConfigsByStoreIdAndPaymentAccountType) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
 [**getStoreById**](StoresApi.md#getStoreById) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
+[**getStoreFeeConfig**](StoresApi.md#getStoreFeeConfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | Retrieve Store feeConfig
 [**getStoreHeadersByAppId**](StoresApi.md#getStoreHeadersByAppId) | **GET** /api/v1.0/{appId}/stores/header | Get all stores by app name id
 [**getStoreNetSales**](StoresApi.md#getStoreNetSales) | **GET** /api/v1.0/{appId}/stores/stats | Get stores statistics by app name id and storeIds
 [**getStoreServiceCharge**](StoresApi.md#getStoreServiceCharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
@@ -743,6 +746,114 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getProcessingFeeConfigsByStoreId**
+> \Flipdish\\Client\Models\RestApiArrayResultProcessingFeeConfig getProcessingFeeConfigsByStoreId($store_id, $app_name_id)
+
+Get processing fee configs by store identifier
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+$app_name_id = "app_name_id_example"; // string | App Name Id(Not used, still here for compatability reasons)
+
+try {
+    $result = $apiInstance->getProcessingFeeConfigsByStoreId($store_id, $app_name_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->getProcessingFeeConfigsByStoreId: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+ **app_name_id** | **string**| App Name Id(Not used, still here for compatability reasons) | [optional]
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiArrayResultProcessingFeeConfig**](../Model/RestApiArrayResultProcessingFeeConfig.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getProcessingFeeConfigsByStoreIdAndPaymentAccountType**
+> \Flipdish\\Client\Models\RestApiResultProcessingFeeConfig getProcessingFeeConfigsByStoreIdAndPaymentAccountType($store_id, $payment_account_type, $app_name_id)
+
+Get processing fee configs by store identifier
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+$payment_account_type = "payment_account_type_example"; // string | 
+$app_name_id = "app_name_id_example"; // string | App Name Id(Not used, still here for compatability reasons)
+
+try {
+    $result = $apiInstance->getProcessingFeeConfigsByStoreIdAndPaymentAccountType($store_id, $payment_account_type, $app_name_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->getProcessingFeeConfigsByStoreIdAndPaymentAccountType: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+ **payment_account_type** | **string**|  |
+ **app_name_id** | **string**| App Name Id(Not used, still here for compatability reasons) | [optional]
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultProcessingFeeConfig**](../Model/RestApiResultProcessingFeeConfig.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getStoreById**
 > \Flipdish\\Client\Models\RestApiResultStore getStoreById($store_id)
 
@@ -782,6 +893,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiResultStore**](../Model/RestApiResultStore.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getStoreFeeConfig**
+> \Flipdish\\Client\Models\StoreFeeConfig getStoreFeeConfig($store_id)
+
+Retrieve Store feeConfig
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | Store identifier
+
+try {
+    $result = $apiInstance->getStoreFeeConfig($store_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->getStoreFeeConfig: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**| Store identifier |
+
+### Return type
+
+[**\Flipdish\\Client\Models\StoreFeeConfig**](../Model/StoreFeeConfig.md)
 
 ### Authorization
 

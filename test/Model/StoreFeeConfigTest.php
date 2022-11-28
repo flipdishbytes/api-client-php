@@ -334,18 +334,4 @@ class StoreFeeConfigTest extends \PHPUnit_Framework_TestCase
     public function testPropertyFixedFeeCashOrdersIngest()
     {
     }
-
-    /**
-     * Test attribute "percent_fee_delivery"
-     */
-    public function testPropertyPercentFeeDelivery()
-    {
-    }
-
-    /**
-     * Test attribute "fixed_fee_delivery"
-     */
-    public function testPropertyFixedFeeDelivery()
-    {
-    }
 }

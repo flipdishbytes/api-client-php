@@ -94,9 +94,7 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_card_orders_ingest' => 'double',
         'percent_fee_cash_orders_ingest' => 'double',
         'fixed_fee_card_orders_ingest' => 'double',
-        'fixed_fee_cash_orders_ingest' => 'double',
-        'percent_fee_delivery' => 'double',
-        'fixed_fee_delivery' => 'double'
+        'fixed_fee_cash_orders_ingest' => 'double'
     ];
 
     /**
@@ -141,9 +139,7 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_card_orders_ingest' => 'double',
         'percent_fee_cash_orders_ingest' => 'double',
         'fixed_fee_card_orders_ingest' => 'double',
-        'fixed_fee_cash_orders_ingest' => 'double',
-        'percent_fee_delivery' => 'double',
-        'fixed_fee_delivery' => 'double'
+        'fixed_fee_cash_orders_ingest' => 'double'
     ];
 
     /**
@@ -209,9 +205,7 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_card_orders_ingest' => 'PercentFeeCardOrdersIngest',
         'percent_fee_cash_orders_ingest' => 'PercentFeeCashOrdersIngest',
         'fixed_fee_card_orders_ingest' => 'FixedFeeCardOrdersIngest',
-        'fixed_fee_cash_orders_ingest' => 'FixedFeeCashOrdersIngest',
-        'percent_fee_delivery' => 'PercentFeeDelivery',
-        'fixed_fee_delivery' => 'FixedFeeDelivery'
+        'fixed_fee_cash_orders_ingest' => 'FixedFeeCashOrdersIngest'
     ];
 
     /**
@@ -256,9 +250,7 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_card_orders_ingest' => 'setPercentFeeCardOrdersIngest',
         'percent_fee_cash_orders_ingest' => 'setPercentFeeCashOrdersIngest',
         'fixed_fee_card_orders_ingest' => 'setFixedFeeCardOrdersIngest',
-        'fixed_fee_cash_orders_ingest' => 'setFixedFeeCashOrdersIngest',
-        'percent_fee_delivery' => 'setPercentFeeDelivery',
-        'fixed_fee_delivery' => 'setFixedFeeDelivery'
+        'fixed_fee_cash_orders_ingest' => 'setFixedFeeCashOrdersIngest'
     ];
 
     /**
@@ -303,9 +295,7 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_card_orders_ingest' => 'getPercentFeeCardOrdersIngest',
         'percent_fee_cash_orders_ingest' => 'getPercentFeeCashOrdersIngest',
         'fixed_fee_card_orders_ingest' => 'getFixedFeeCardOrdersIngest',
-        'fixed_fee_cash_orders_ingest' => 'getFixedFeeCashOrdersIngest',
-        'percent_fee_delivery' => 'getPercentFeeDelivery',
-        'fixed_fee_delivery' => 'getFixedFeeDelivery'
+        'fixed_fee_cash_orders_ingest' => 'getFixedFeeCashOrdersIngest'
     ];
 
     /**
@@ -405,8 +395,6 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         $this->container['percent_fee_cash_orders_ingest'] = isset($data['percent_fee_cash_orders_ingest']) ? $data['percent_fee_cash_orders_ingest'] : null;
         $this->container['fixed_fee_card_orders_ingest'] = isset($data['fixed_fee_card_orders_ingest']) ? $data['fixed_fee_card_orders_ingest'] : null;
         $this->container['fixed_fee_cash_orders_ingest'] = isset($data['fixed_fee_cash_orders_ingest']) ? $data['fixed_fee_cash_orders_ingest'] : null;
-        $this->container['percent_fee_delivery'] = isset($data['percent_fee_delivery']) ? $data['percent_fee_delivery'] : null;
-        $this->container['fixed_fee_delivery'] = isset($data['fixed_fee_delivery']) ? $data['fixed_fee_delivery'] : null;
     }
 
     /**
@@ -1317,54 +1305,6 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
     public function setFixedFeeCashOrdersIngest($fixed_fee_cash_orders_ingest)
     {
         $this->container['fixed_fee_cash_orders_ingest'] = $fixed_fee_cash_orders_ingest;
-
-        return $this;
-    }
-
-    /**
-     * Gets percent_fee_delivery
-     *
-     * @return double
-     */
-    public function getPercentFeeDelivery()
-    {
-        return $this->container['percent_fee_delivery'];
-    }
-
-    /**
-     * Sets percent_fee_delivery
-     *
-     * @param double $percent_fee_delivery Gets or sets the percent fee for delivery orders.
-     *
-     * @return $this
-     */
-    public function setPercentFeeDelivery($percent_fee_delivery)
-    {
-        $this->container['percent_fee_delivery'] = $percent_fee_delivery;
-
-        return $this;
-    }
-
-    /**
-     * Gets fixed_fee_delivery
-     *
-     * @return double
-     */
-    public function getFixedFeeDelivery()
-    {
-        return $this->container['fixed_fee_delivery'];
-    }
-
-    /**
-     * Sets fixed_fee_delivery
-     *
-     * @param double $fixed_fee_delivery Gets or sets the fixed fee for delivery orders.
-     *
-     * @return $this
-     */
-    public function setFixedFeeDelivery($fixed_fee_delivery)
-    {
-        $this->container['fixed_fee_delivery'] = $fixed_fee_delivery;
 
         return $this;
     }

@@ -4193,6 +4193,637 @@ class StoresApi
     }
 
     /**
+     * Operation getProcessingFeeConfigsByStoreId
+     *
+     * Get processing fee configs by store identifier
+     *
+     * @param  int $store_id Store identifier (required)
+     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiArrayResultProcessingFeeConfig
+     */
+    public function getProcessingFeeConfigsByStoreId($store_id, $app_name_id = null)
+    {
+        list($response) = $this->getProcessingFeeConfigsByStoreIdWithHttpInfo($store_id, $app_name_id);
+        return $response;
+    }
+
+    /**
+     * Operation getProcessingFeeConfigsByStoreIdWithHttpInfo
+     *
+     * Get processing fee configs by store identifier
+     *
+     * @param  int $store_id Store identifier (required)
+     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultProcessingFeeConfig, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getProcessingFeeConfigsByStoreIdWithHttpInfo($store_id, $app_name_id = null)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultProcessingFeeConfig';
+        $request = $this->getProcessingFeeConfigsByStoreIdRequest($store_id, $app_name_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiArrayResultProcessingFeeConfig',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getProcessingFeeConfigsByStoreIdAsync
+     *
+     * Get processing fee configs by store identifier
+     *
+     * @param  int $store_id Store identifier (required)
+     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProcessingFeeConfigsByStoreIdAsync($store_id, $app_name_id = null)
+    {
+        return $this->getProcessingFeeConfigsByStoreIdAsyncWithHttpInfo($store_id, $app_name_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getProcessingFeeConfigsByStoreIdAsyncWithHttpInfo
+     *
+     * Get processing fee configs by store identifier
+     *
+     * @param  int $store_id Store identifier (required)
+     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProcessingFeeConfigsByStoreIdAsyncWithHttpInfo($store_id, $app_name_id = null)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultProcessingFeeConfig';
+        $request = $this->getProcessingFeeConfigsByStoreIdRequest($store_id, $app_name_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getProcessingFeeConfigsByStoreId'
+     *
+     * @param  int $store_id Store identifier (required)
+     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getProcessingFeeConfigsByStoreIdRequest($store_id, $app_name_id = null)
+    {
+        // verify the required parameter 'store_id' is set
+        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $store_id when calling getProcessingFeeConfigsByStoreId'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/stores/{storeId}/processingfeeconfigs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($app_name_id !== null) {
+            $queryParams['appNameId'] = ObjectSerializer::toQueryValue($app_name_id);
+        }
+
+        // path params
+        if ($store_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'storeId' . '}',
+                ObjectSerializer::toPathValue($store_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getProcessingFeeConfigsByStoreIdAndPaymentAccountType
+     *
+     * Get processing fee configs by store identifier
+     *
+     * @param  int $store_id Store identifier (required)
+     * @param  string $payment_account_type  (required)
+     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiResultProcessingFeeConfig
+     */
+    public function getProcessingFeeConfigsByStoreIdAndPaymentAccountType($store_id, $payment_account_type, $app_name_id = null)
+    {
+        list($response) = $this->getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo($store_id, $payment_account_type, $app_name_id);
+        return $response;
+    }
+
+    /**
+     * Operation getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo
+     *
+     * Get processing fee configs by store identifier
+     *
+     * @param  int $store_id Store identifier (required)
+     * @param  string $payment_account_type  (required)
+     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiResultProcessingFeeConfig, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo($store_id, $payment_account_type, $app_name_id = null)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultProcessingFeeConfig';
+        $request = $this->getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeRequest($store_id, $payment_account_type, $app_name_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiResultProcessingFeeConfig',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync
+     *
+     * Get processing fee configs by store identifier
+     *
+     * @param  int $store_id Store identifier (required)
+     * @param  string $payment_account_type  (required)
+     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync($store_id, $payment_account_type, $app_name_id = null)
+    {
+        return $this->getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo($store_id, $payment_account_type, $app_name_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo
+     *
+     * Get processing fee configs by store identifier
+     *
+     * @param  int $store_id Store identifier (required)
+     * @param  string $payment_account_type  (required)
+     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo($store_id, $payment_account_type, $app_name_id = null)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiResultProcessingFeeConfig';
+        $request = $this->getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeRequest($store_id, $payment_account_type, $app_name_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getProcessingFeeConfigsByStoreIdAndPaymentAccountType'
+     *
+     * @param  int $store_id Store identifier (required)
+     * @param  string $payment_account_type  (required)
+     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeRequest($store_id, $payment_account_type, $app_name_id = null)
+    {
+        // verify the required parameter 'store_id' is set
+        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $store_id when calling getProcessingFeeConfigsByStoreIdAndPaymentAccountType'
+            );
+        }
+        // verify the required parameter 'payment_account_type' is set
+        if ($payment_account_type === null || (is_array($payment_account_type) && count($payment_account_type) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $payment_account_type when calling getProcessingFeeConfigsByStoreIdAndPaymentAccountType'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($app_name_id !== null) {
+            $queryParams['appNameId'] = ObjectSerializer::toQueryValue($app_name_id);
+        }
+
+        // path params
+        if ($store_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'storeId' . '}',
+                ObjectSerializer::toPathValue($store_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($payment_account_type !== null) {
+            $resourcePath = str_replace(
+                '{' . 'paymentAccountType' . '}',
+                ObjectSerializer::toPathValue($payment_account_type),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation getStoreById
      *
      * Get store by identifier
@@ -4398,6 +5029,303 @@ class StoresApi
         }
 
         $resourcePath = '/api/v1.0/stores/{storeId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($store_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'storeId' . '}',
+                ObjectSerializer::toPathValue($store_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getStoreFeeConfig
+     *
+     * Retrieve Store feeConfig
+     *
+     * @param  int $store_id Store identifier (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\StoreFeeConfig
+     */
+    public function getStoreFeeConfig($store_id)
+    {
+        list($response) = $this->getStoreFeeConfigWithHttpInfo($store_id);
+        return $response;
+    }
+
+    /**
+     * Operation getStoreFeeConfigWithHttpInfo
+     *
+     * Retrieve Store feeConfig
+     *
+     * @param  int $store_id Store identifier (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\StoreFeeConfig, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getStoreFeeConfigWithHttpInfo($store_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\StoreFeeConfig';
+        $request = $this->getStoreFeeConfigRequest($store_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\StoreFeeConfig',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getStoreFeeConfigAsync
+     *
+     * Retrieve Store feeConfig
+     *
+     * @param  int $store_id Store identifier (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getStoreFeeConfigAsync($store_id)
+    {
+        return $this->getStoreFeeConfigAsyncWithHttpInfo($store_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getStoreFeeConfigAsyncWithHttpInfo
+     *
+     * Retrieve Store feeConfig
+     *
+     * @param  int $store_id Store identifier (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getStoreFeeConfigAsyncWithHttpInfo($store_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\StoreFeeConfig';
+        $request = $this->getStoreFeeConfigRequest($store_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getStoreFeeConfig'
+     *
+     * @param  int $store_id Store identifier (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getStoreFeeConfigRequest($store_id)
+    {
+        // verify the required parameter 'store_id' is set
+        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $store_id when calling getStoreFeeConfig'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/stores/{storeId}/feeConfig';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

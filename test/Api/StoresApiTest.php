@@ -202,12 +202,42 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getProcessingFeeConfigsByStoreId
+     *
+     * Get processing fee configs by store identifier.
+     *
+     */
+    public function testGetProcessingFeeConfigsByStoreId()
+    {
+    }
+
+    /**
+     * Test case for getProcessingFeeConfigsByStoreIdAndPaymentAccountType
+     *
+     * Get processing fee configs by store identifier.
+     *
+     */
+    public function testGetProcessingFeeConfigsByStoreIdAndPaymentAccountType()
+    {
+    }
+
+    /**
      * Test case for getStoreById
      *
      * Get store by identifier.
      *
      */
     public function testGetStoreById()
+    {
+    }
+
+    /**
+     * Test case for getStoreFeeConfig
+     *
+     * Retrieve Store feeConfig.
+     *
+     */
+    public function testGetStoreFeeConfig()
     {
     }
 
