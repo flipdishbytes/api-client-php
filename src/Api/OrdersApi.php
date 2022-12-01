@@ -2217,14 +2217,16 @@ class OrdersApi
      * @param  bool $order_by_requested_for_time  (optional)
      * @param  string[] $channels  (optional)
      * @param  int[] $order_ids Filter by the given orders (optional)
+     * @param  \DateTime $from Filter by date from (optional)
+     * @param  \DateTime $to Filter by date to (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiPaginationResultOrderSummary
      */
-    public function getOrdersSummary($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null)
+    public function getOrdersSummary($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null)
     {
-        list($response) = $this->getOrdersSummaryWithHttpInfo($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids);
+        list($response) = $this->getOrdersSummaryWithHttpInfo($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to);
         return $response;
     }
 
@@ -2242,15 +2244,17 @@ class OrdersApi
      * @param  bool $order_by_requested_for_time  (optional)
      * @param  string[] $channels  (optional)
      * @param  int[] $order_ids Filter by the given orders (optional)
+     * @param  \DateTime $from Filter by date from (optional)
+     * @param  \DateTime $to Filter by date to (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiPaginationResultOrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrdersSummaryWithHttpInfo($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null)
+    public function getOrdersSummaryWithHttpInfo($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultOrderSummary';
-        $request = $this->getOrdersSummaryRequest($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids);
+        $request = $this->getOrdersSummaryRequest($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2349,13 +2353,15 @@ class OrdersApi
      * @param  bool $order_by_requested_for_time  (optional)
      * @param  string[] $channels  (optional)
      * @param  int[] $order_ids Filter by the given orders (optional)
+     * @param  \DateTime $from Filter by date from (optional)
+     * @param  \DateTime $to Filter by date to (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrdersSummaryAsync($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null)
+    public function getOrdersSummaryAsync($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null)
     {
-        return $this->getOrdersSummaryAsyncWithHttpInfo($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids)
+        return $this->getOrdersSummaryAsyncWithHttpInfo($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2377,14 +2383,16 @@ class OrdersApi
      * @param  bool $order_by_requested_for_time  (optional)
      * @param  string[] $channels  (optional)
      * @param  int[] $order_ids Filter by the given orders (optional)
+     * @param  \DateTime $from Filter by date from (optional)
+     * @param  \DateTime $to Filter by date to (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrdersSummaryAsyncWithHttpInfo($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null)
+    public function getOrdersSummaryAsyncWithHttpInfo($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultOrderSummary';
-        $request = $this->getOrdersSummaryRequest($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids);
+        $request = $this->getOrdersSummaryRequest($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2435,11 +2443,13 @@ class OrdersApi
      * @param  bool $order_by_requested_for_time  (optional)
      * @param  string[] $channels  (optional)
      * @param  int[] $order_ids Filter by the given orders (optional)
+     * @param  \DateTime $from Filter by date from (optional)
+     * @param  \DateTime $to Filter by date to (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOrdersSummaryRequest($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null)
+    protected function getOrdersSummaryRequest($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -2498,6 +2508,14 @@ class OrdersApi
         } else
         if ($order_ids !== null) {
             $queryParams['orderIds'] = ObjectSerializer::toQueryValue($order_ids);
+        }
+        // query params
+        if ($from !== null) {
+            $queryParams['from'] = ObjectSerializer::toQueryValue($from);
+        }
+        // query params
+        if ($to !== null) {
+            $queryParams['to'] = ObjectSerializer::toQueryValue($to);
         }
 
         // path params

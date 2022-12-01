@@ -397,7 +397,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrdersSummary**
-> \Flipdish\\Client\Models\RestApiPaginationResultOrderSummary getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids)
+> \Flipdish\\Client\Models\RestApiPaginationResultOrderSummary getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to)
 
 [PRIVATE API] Get summary of orders by filter
 
@@ -424,9 +424,11 @@ $limit = 56; // int | Requested page limit
 $order_by_requested_for_time = true; // bool | 
 $channels = array("channels_example"); // string[] | 
 $order_ids = array(56); // int[] | Filter by the given orders
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter by date from
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter by date to
 
 try {
-    $result = $apiInstance->getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids);
+    $result = $apiInstance->getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->getOrdersSummary: ', $e->getMessage(), PHP_EOL;
@@ -447,6 +449,8 @@ Name | Type | Description  | Notes
  **order_by_requested_for_time** | **bool**|  | [optional]
  **channels** | [**string[]**](../Model/string.md)|  | [optional]
  **order_ids** | [**int[]**](../Model/int.md)| Filter by the given orders | [optional]
+ **from** | **\DateTime**| Filter by date from | [optional]
+ **to** | **\DateTime**| Filter by date to | [optional]
 
 ### Return type
 
