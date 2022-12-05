@@ -98,6 +98,13 @@ class UpdateFulfillmentStatesConfigurationTest extends \PHPUnit_Framework_TestCa
     }
 
     /**
+     * Test attribute "automatic_transitions_enabled"
+     */
+    public function testPropertyAutomaticTransitionsEnabled()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

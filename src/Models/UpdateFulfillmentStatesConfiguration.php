@@ -61,6 +61,7 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
         'store_ids' => 'int[]',
         'store_selector_type' => 'string',
         'states' => '\Flipdish\\Client\Models\FulfillmentStatusConfigurationItem[]',
+        'automatic_transitions_enabled' => 'bool',
         'name' => 'string'
     ];
 
@@ -73,6 +74,7 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
         'store_ids' => 'int32',
         'store_selector_type' => null,
         'states' => null,
+        'automatic_transitions_enabled' => null,
         'name' => null
     ];
 
@@ -106,6 +108,7 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
         'store_ids' => 'StoreIds',
         'store_selector_type' => 'StoreSelectorType',
         'states' => 'States',
+        'automatic_transitions_enabled' => 'AutomaticTransitionsEnabled',
         'name' => 'Name'
     ];
 
@@ -118,6 +121,7 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
         'store_ids' => 'setStoreIds',
         'store_selector_type' => 'setStoreSelectorType',
         'states' => 'setStates',
+        'automatic_transitions_enabled' => 'setAutomaticTransitionsEnabled',
         'name' => 'setName'
     ];
 
@@ -130,6 +134,7 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
         'store_ids' => 'getStoreIds',
         'store_selector_type' => 'getStoreSelectorType',
         'states' => 'getStates',
+        'automatic_transitions_enabled' => 'getAutomaticTransitionsEnabled',
         'name' => 'getName'
     ];
 
@@ -213,6 +218,7 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
         $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
         $this->container['store_selector_type'] = isset($data['store_selector_type']) ? $data['store_selector_type'] : null;
         $this->container['states'] = isset($data['states']) ? $data['states'] : null;
+        $this->container['automatic_transitions_enabled'] = isset($data['automatic_transitions_enabled']) ? $data['automatic_transitions_enabled'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
@@ -325,6 +331,30 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
     public function setStates($states)
     {
         $this->container['states'] = $states;
+
+        return $this;
+    }
+
+    /**
+     * Gets automatic_transitions_enabled
+     *
+     * @return bool
+     */
+    public function getAutomaticTransitionsEnabled()
+    {
+        return $this->container['automatic_transitions_enabled'];
+    }
+
+    /**
+     * Sets automatic_transitions_enabled
+     *
+     * @param bool $automatic_transitions_enabled Enable automatic transitions
+     *
+     * @return $this
+     */
+    public function setAutomaticTransitionsEnabled($automatic_transitions_enabled)
+    {
+        $this->container['automatic_transitions_enabled'] = $automatic_transitions_enabled;
 
         return $this;
     }

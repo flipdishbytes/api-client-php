@@ -84,6 +84,13 @@ class FulfillmentStatesConfigurationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "automatic_transitions_enabled"
+     */
+    public function testPropertyAutomaticTransitionsEnabled()
+    {
+    }
+
+    /**
      * Test attribute "app_id"
      */
     public function testPropertyAppId()

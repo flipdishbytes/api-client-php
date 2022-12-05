@@ -59,6 +59,7 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'states' => '\Flipdish\\Client\Models\FulfillmentStatusConfigurationItem[]',
+        'automatic_transitions_enabled' => 'bool',
         'app_id' => 'string',
         'configuration_uid' => 'string',
         'store_selector_type' => 'string',
@@ -73,6 +74,7 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'states' => null,
+        'automatic_transitions_enabled' => null,
         'app_id' => null,
         'configuration_uid' => null,
         'store_selector_type' => null,
@@ -108,6 +110,7 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'states' => 'States',
+        'automatic_transitions_enabled' => 'AutomaticTransitionsEnabled',
         'app_id' => 'AppId',
         'configuration_uid' => 'ConfigurationUid',
         'store_selector_type' => 'StoreSelectorType',
@@ -122,6 +125,7 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'states' => 'setStates',
+        'automatic_transitions_enabled' => 'setAutomaticTransitionsEnabled',
         'app_id' => 'setAppId',
         'configuration_uid' => 'setConfigurationUid',
         'store_selector_type' => 'setStoreSelectorType',
@@ -136,6 +140,7 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'states' => 'getStates',
+        'automatic_transitions_enabled' => 'getAutomaticTransitionsEnabled',
         'app_id' => 'getAppId',
         'configuration_uid' => 'getConfigurationUid',
         'store_selector_type' => 'getStoreSelectorType',
@@ -221,6 +226,7 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['states'] = isset($data['states']) ? $data['states'] : null;
+        $this->container['automatic_transitions_enabled'] = isset($data['automatic_transitions_enabled']) ? $data['automatic_transitions_enabled'] : null;
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
         $this->container['configuration_uid'] = isset($data['configuration_uid']) ? $data['configuration_uid'] : null;
         $this->container['store_selector_type'] = isset($data['store_selector_type']) ? $data['store_selector_type'] : null;
@@ -280,6 +286,30 @@ class FulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
     public function setStates($states)
     {
         $this->container['states'] = $states;
+
+        return $this;
+    }
+
+    /**
+     * Gets automatic_transitions_enabled
+     *
+     * @return bool
+     */
+    public function getAutomaticTransitionsEnabled()
+    {
+        return $this->container['automatic_transitions_enabled'];
+    }
+
+    /**
+     * Sets automatic_transitions_enabled
+     *
+     * @param bool $automatic_transitions_enabled Enable automatic transitions
+     *
+     * @return $this
+     */
+    public function setAutomaticTransitionsEnabled($automatic_transitions_enabled)
+    {
+        $this->container['automatic_transitions_enabled'] = $automatic_transitions_enabled;
 
         return $this;
     }
