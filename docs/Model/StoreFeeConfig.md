@@ -40,6 +40,8 @@ Name | Type | Description | Notes
 **percent_fee_cash_orders_ingest** | **double** | Gets or sets the percent fee cash orders ingest. | [optional] 
 **fixed_fee_card_orders_ingest** | **double** | Gets or sets the fixed fee card orders ingest. | [optional] 
 **fixed_fee_cash_orders_ingest** | **double** | Gets or sets the fixed fee cash orders ingest. | [optional] 
+**percent_fee_delivery** | **double** | Gets or sets the percent fee for delivery orders. | [optional] 
+**fixed_fee_delivery** | **double** | Gets or sets the fixed fee for delivery orders. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
