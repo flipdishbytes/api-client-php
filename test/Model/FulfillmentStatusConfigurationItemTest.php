@@ -173,4 +173,11 @@ class FulfillmentStatusConfigurationItemTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCommunication()
     {
     }
+
+    /**
+     * Test attribute "image"
+     */
+    public function testPropertyImage()
+    {
+    }
 }

@@ -71,7 +71,8 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
         'include_in_reports' => 'bool',
         'is_custom' => 'bool',
         'order_types' => 'string[]',
-        'communication' => 'bool'
+        'communication' => 'bool',
+        'image' => 'string'
     ];
 
     /**
@@ -93,7 +94,8 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
         'include_in_reports' => null,
         'is_custom' => null,
         'order_types' => null,
-        'communication' => null
+        'communication' => null,
+        'image' => null
     ];
 
     /**
@@ -136,7 +138,8 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
         'include_in_reports' => 'IncludeInReports',
         'is_custom' => 'IsCustom',
         'order_types' => 'OrderTypes',
-        'communication' => 'Communication'
+        'communication' => 'Communication',
+        'image' => 'Image'
     ];
 
     /**
@@ -158,7 +161,8 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
         'include_in_reports' => 'setIncludeInReports',
         'is_custom' => 'setIsCustom',
         'order_types' => 'setOrderTypes',
-        'communication' => 'setCommunication'
+        'communication' => 'setCommunication',
+        'image' => 'setImage'
     ];
 
     /**
@@ -180,7 +184,8 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
         'include_in_reports' => 'getIncludeInReports',
         'is_custom' => 'getIsCustom',
         'order_types' => 'getOrderTypes',
-        'communication' => 'getCommunication'
+        'communication' => 'getCommunication',
+        'image' => 'getImage'
     ];
 
     /**
@@ -293,6 +298,7 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
         $this->container['is_custom'] = isset($data['is_custom']) ? $data['is_custom'] : null;
         $this->container['order_types'] = isset($data['order_types']) ? $data['order_types'] : null;
         $this->container['communication'] = isset($data['communication']) ? $data['communication'] : null;
+        $this->container['image'] = isset($data['image']) ? $data['image'] : null;
     }
 
     /**
@@ -677,6 +683,30 @@ class FulfillmentStatusConfigurationItem implements ModelInterface, ArrayAccess
     public function setCommunication($communication)
     {
         $this->container['communication'] = $communication;
+
+        return $this;
+    }
+
+    /**
+     * Gets image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->container['image'];
+    }
+
+    /**
+     * Sets image
+     *
+     * @param string $image Image (image filename, relative, not absolute URL)
+     *
+     * @return $this
+     */
+    public function setImage($image)
+    {
+        $this->container['image'] = $image;
 
         return $this;
     }
