@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * OwnerEntityConfigurationTest Class Doc Comment
  *
  * @category    Class
- * @description OwnerEntity information to configure its {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}s
+ * @description OwnerEntity information to configure its {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}s
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

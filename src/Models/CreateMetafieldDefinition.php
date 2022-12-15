@@ -36,7 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * CreateMetafieldDefinition Class Doc Comment
  *
  * @category Class
- * @description Information to create a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}
+ * @description Information to create a {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -357,7 +357,7 @@ class CreateMetafieldDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets owner_entity
      *
-     * @param string $owner_entity The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}
+     * @param string $owner_entity The Metafield will extend the specified {Flipdish.Metafields.PublicModels.V1.MetafieldDefinitionBase.OwnerEntity}
      *
      * @return $this
      */

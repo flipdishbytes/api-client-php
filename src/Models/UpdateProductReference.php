@@ -36,7 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * UpdateProductReference Class Doc Comment
  *
  * @category Class
- * @description Data to update a {Flipdish.PublicModels.V1.Catalog.Groups.UpdateProductReference}
+ * @description Data to update a {Flipdish.Menus.PublicModels.V1.Catalog.Groups.UpdateProductReference}
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen

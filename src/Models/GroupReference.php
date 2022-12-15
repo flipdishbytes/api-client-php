@@ -36,7 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * GroupReference Class Doc Comment
  *
  * @category Class
- * @description Reference to an existing {Flipdish.PublicModels.V1.Catalog.Groups.Group}
+ * @description Reference to an existing {Flipdish.Menus.PublicModels.V1.Catalog.Groups.Group}
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -265,7 +265,7 @@ class GroupReference implements ModelInterface, ArrayAccess
     /**
      * Sets group
      *
-     * @param \Flipdish\\Client\Models\Group $group Details of the referenced {Flipdish.PublicModels.V1.Catalog.Products.GroupReference.Group}
+     * @param \Flipdish\\Client\Models\Group $group Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Products.GroupReference.Group}
      *
      * @return $this
      */

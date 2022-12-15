@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * CreateMetafieldDefinitionTest Class Doc Comment
  *
  * @category    Class
- * @description Information to create a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}
+ * @description Information to create a {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

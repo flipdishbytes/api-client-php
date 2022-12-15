@@ -36,7 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * UpdateMetafieldDefinition Class Doc Comment
  *
  * @category Class
- * @description Information to update a {Flipdish.PublicModels.V1.Metafields.MetafieldDefinition}
+ * @description Information to update a {Flipdish.Metafields.PublicModels.V1.MetafieldDefinition}
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen

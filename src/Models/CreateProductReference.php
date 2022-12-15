@@ -36,7 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * CreateProductReference Class Doc Comment
  *
  * @category Class
- * @description Information to create a reference to a {Flipdish.PublicModels.V1.Catalog.Product}
+ * @description Information to create a reference to a {Flipdish.Menus.PublicModels.V1.Catalog.Product}
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen

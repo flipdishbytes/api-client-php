@@ -279,7 +279,7 @@ class ProductReference implements ModelInterface, ArrayAccess
     /**
      * Sets item
      *
-     * @param \Flipdish\\Client\Models\Product $item Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}
+     * @param \Flipdish\\Client\Models\Product $item Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product}
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class ProductReference implements ModelInterface, ArrayAccess
     /**
      * Sets product
      *
-     * @param \Flipdish\\Client\Models\Product $product Details of the referenced {Flipdish.PublicModels.V1.Catalog.Groups.ProductReference.Product}
+     * @param \Flipdish\\Client\Models\Product $product Details of the referenced {Flipdish.Menus.PublicModels.V1.Catalog.Groups.ProductReference.Product}
      *
      * @return $this
      */

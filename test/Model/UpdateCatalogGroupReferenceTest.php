@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * UpdateCatalogGroupReferenceTest Class Doc Comment
  *
  * @category    Class
- * @description Data to update a {Flipdish.PublicModels.V1.Catalog.Items.CatalogGroupReference}
+ * @description Data to update a {Flipdish.Menus.PublicModels.V1.Catalog.Items.CatalogGroupReference}
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

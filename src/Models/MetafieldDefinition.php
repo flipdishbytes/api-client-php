@@ -357,7 +357,7 @@ class MetafieldDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets owner_entity
      *
-     * @param string $owner_entity The Metafield will extend the specified {Flipdish.PublicModels.V1.Metafields.MetafieldDefinitionBase.OwnerEntity}
+     * @param string $owner_entity The Metafield will extend the specified {Flipdish.Metafields.PublicModels.V1.MetafieldDefinitionBase.OwnerEntity}
      *
      * @return $this
      */
