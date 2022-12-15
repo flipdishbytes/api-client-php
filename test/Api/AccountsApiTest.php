@@ -142,9 +142,19 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for loginSso
+     *
+     * Login with SSO token.
+     *
+     */
+    public function testLoginSso()
+    {
+    }
+
+    /**
      * Test case for loginWithPin
      *
-     * Login with username and password.
+     * Login with email and pin.
      *
      */
     public function testLoginWithPin()

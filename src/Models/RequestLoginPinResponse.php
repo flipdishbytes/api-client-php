@@ -1,6 +1,6 @@
 <?php
 /**
- * RequestLoginPinResposne
+ * RequestLoginPinResponse
  *
  * PHP version 5
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * RequestLoginPinResposne Class Doc Comment
+ * RequestLoginPinResponse Class Doc Comment
  *
  * @category Class
  * @description Request login PIN response
@@ -41,7 +41,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RequestLoginPinResposne implements ModelInterface, ArrayAccess
+class RequestLoginPinResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class RequestLoginPinResposne implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RequestLoginPinResposne';
+    protected static $swaggerModelName = 'RequestLoginPinResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,8 @@ class RequestLoginPinResposne implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'login_pin_sent_via_email' => 'bool'
+        'login_pin_sent_via_email' => 'bool',
+        'force_okta_login' => 'bool'
     ];
 
     /**
@@ -67,7 +68,8 @@ class RequestLoginPinResposne implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'login_pin_sent_via_email' => null
+        'login_pin_sent_via_email' => null,
+        'force_okta_login' => null
     ];
 
     /**
@@ -97,7 +99,8 @@ class RequestLoginPinResposne implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'login_pin_sent_via_email' => 'LoginPinSentViaEmail'
+        'login_pin_sent_via_email' => 'LoginPinSentViaEmail',
+        'force_okta_login' => 'ForceOktaLogin'
     ];
 
     /**
@@ -106,7 +109,8 @@ class RequestLoginPinResposne implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'login_pin_sent_via_email' => 'setLoginPinSentViaEmail'
+        'login_pin_sent_via_email' => 'setLoginPinSentViaEmail',
+        'force_okta_login' => 'setForceOktaLogin'
     ];
 
     /**
@@ -115,7 +119,8 @@ class RequestLoginPinResposne implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'login_pin_sent_via_email' => 'getLoginPinSentViaEmail'
+        'login_pin_sent_via_email' => 'getLoginPinSentViaEmail',
+        'force_okta_login' => 'getForceOktaLogin'
     ];
 
     /**
@@ -179,6 +184,7 @@ class RequestLoginPinResposne implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['login_pin_sent_via_email'] = isset($data['login_pin_sent_via_email']) ? $data['login_pin_sent_via_email'] : null;
+        $this->container['force_okta_login'] = isset($data['force_okta_login']) ? $data['force_okta_login'] : null;
     }
 
     /**
@@ -225,6 +231,30 @@ class RequestLoginPinResposne implements ModelInterface, ArrayAccess
     public function setLoginPinSentViaEmail($login_pin_sent_via_email)
     {
         $this->container['login_pin_sent_via_email'] = $login_pin_sent_via_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets force_okta_login
+     *
+     * @return bool
+     */
+    public function getForceOktaLogin()
+    {
+        return $this->container['force_okta_login'];
+    }
+
+    /**
+     * Sets force_okta_login
+     *
+     * @param bool $force_okta_login All flipdishers must login via Okta
+     *
+     * @return $this
+     */
+    public function setForceOktaLogin($force_okta_login)
+    {
+        $this->container['force_okta_login'] = $force_okta_login;
 
         return $this;
     }

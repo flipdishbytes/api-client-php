@@ -11,7 +11,8 @@ Method | HTTP request | Description
 [**getAccountDetails**](AccountsApi.md#getAccountDetails) | **GET** /api/v1.0/accounts | Gets the current account detail
 [**getLocalisedTimeZones**](AccountsApi.md#getLocalisedTimeZones) | **GET** /api/v1.0/accounts/timezones | [PRIVATE API] Get timezones localised to users language
 [**login**](AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | Login with username and password
-[**loginWithPin**](AccountsApi.md#loginWithPin) | **POST** /api/v1.0/accounts/login/pin | Login with username and password
+[**loginSso**](AccountsApi.md#loginSso) | **POST** /api/v1.0/accounts/login/sso | Login with SSO token
+[**loginWithPin**](AccountsApi.md#loginWithPin) | **POST** /api/v1.0/accounts/login/pin | Login with email and pin
 [**logout**](AccountsApi.md#logout) | **POST** /api/v1.0/accounts/logout | Log out. It removes Flipdish authorization Cookie.
 [**passwordResetWithToken**](AccountsApi.md#passwordResetWithToken) | **POST** /api/v1.0/accounts/password | Reset password with token.
 [**recaptchaValidate**](AccountsApi.md#recaptchaValidate) | **POST** /api/v1.0/accounts/recaptcha | Validate recaptcha from flipdish portal
@@ -368,10 +369,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **loginWithPin**
-> loginWithPin($login_model)
+# **loginSso**
+> loginSso()
 
-Login with username and password
+Login with SSO token
 
 ### Example
 ```php
@@ -387,7 +388,53 @@ $apiInstance = new Flipdish\\Client\Api\AccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$login_model = new \Flipdish\\Client\Models\LoginWithPinModel(); // \Flipdish\\Client\Models\LoginWithPinModel | Login model
+
+try {
+    $apiInstance->loginSso();
+} catch (Exception $e) {
+    echo 'Exception when calling AccountsApi->loginSso: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **loginWithPin**
+> loginWithPin($login_model)
+
+Login with email and pin
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\AccountsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$login_model = new \Flipdish\\Client\Models\LoginWithPinModel(); // \Flipdish\\Client\Models\LoginWithPinModel | Login with pin model
 
 try {
     $apiInstance->loginWithPin($login_model);
@@ -401,7 +448,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **login_model** | [**\Flipdish\\Client\Models\LoginWithPinModel**](../Model/LoginWithPinModel.md)| Login model |
+ **login_model** | [**\Flipdish\\Client\Models\LoginWithPinModel**](../Model/LoginWithPinModel.md)| Login with pin model |
 
 ### Return type
 
@@ -565,7 +612,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **requestLoginPin**
-> \Flipdish\\Client\Models\RequestLoginPinResposne requestLoginPin($request_login_pin_request)
+> \Flipdish\\Client\Models\RequestLoginPinResponse requestLoginPin($request_login_pin_request)
 
 Request login PIN. The server sends the PIN to the email address.
 
@@ -602,7 +649,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RequestLoginPinResposne**](../Model/RequestLoginPinResposne.md)
+[**\Flipdish\\Client\Models\RequestLoginPinResponse**](../Model/RequestLoginPinResponse.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * RequestLoginPinResposneTest
+ * RequestLoginPinResponseTest
  *
  * PHP version 5
  *
@@ -30,7 +30,7 @@
 namespace Flipdish\\Client;
 
 /**
- * RequestLoginPinResposneTest Class Doc Comment
+ * RequestLoginPinResponseTest Class Doc Comment
  *
  * @category    Class
  * @description Request login PIN response
@@ -38,7 +38,7 @@ namespace Flipdish\\Client;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RequestLoginPinResposneTest extends \PHPUnit_Framework_TestCase
+class RequestLoginPinResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class RequestLoginPinResposneTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RequestLoginPinResposne"
+     * Test "RequestLoginPinResponse"
      */
-    public function testRequestLoginPinResposne()
+    public function testRequestLoginPinResponse()
     {
     }
 
@@ -80,6 +80,13 @@ class RequestLoginPinResposneTest extends \PHPUnit_Framework_TestCase
      * Test attribute "login_pin_sent_via_email"
      */
     public function testPropertyLoginPinSentViaEmail()
+    {
+    }
+
+    /**
+     * Test attribute "force_okta_login"
+     */
+    public function testPropertyForceOktaLogin()
     {
     }
 }
