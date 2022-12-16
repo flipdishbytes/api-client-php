@@ -110,4 +110,14 @@ class HomeApiTest extends \PHPUnit_Framework_TestCase
     public function testGetHomeStatistics()
     {
     }
+
+    /**
+     * Test case for getOktaPortalFeatureFlag
+     *
+     * [PRIVATE API] Get Okta Portal feature flag value.
+     *
+     */
+    public function testGetOktaPortalFeatureFlag()
+    {
+    }
 }

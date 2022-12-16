@@ -267,6 +267,7 @@ Class | Method | HTTP request | Description
 *HomeApi* | [**dismissOldPortalAction**](docs/Api/HomeApi.md#dismissoldportalaction) | **POST** /api/v1.0/home/dismissoldportalaction | [PRIVATE API] Complete Home Action
 *HomeApi* | [**getHomeActions**](docs/Api/HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
 *HomeApi* | [**getHomeStatistics**](docs/Api/HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
+*HomeApi* | [**getOktaPortalFeatureFlag**](docs/Api/HomeApi.md#getoktaportalfeatureflag) | **GET** /api/v1.0/home/okta-portal | [PRIVATE API] Get Okta Portal feature flag value
 *HttpRequestResponseLogsApi* | [**getLogs**](docs/Api/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/{appId}/interactions/logs | Get API interaction logs
 *HydraApi* | [**assignEmv**](docs/Api/HydraApi.md#assignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | Assign an EMV terminal to a kiosk
 *HydraApi* | [**attachStoreToKiosk**](docs/Api/HydraApi.md#attachstoretokiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | [Private]
@@ -835,6 +836,7 @@ Class | Method | HTTP request | Description
  - [OAuthTokenModel](docs/Model/OAuthTokenModel.md)
  - [OauthClientRedirectUri](docs/Model/OauthClientRedirectUri.md)
  - [ObjectDisplayOrder](docs/Model/ObjectDisplayOrder.md)
+ - [OktaPortalFeatureFlag](docs/Model/OktaPortalFeatureFlag.md)
  - [OnboardingConfigUpdate](docs/Model/OnboardingConfigUpdate.md)
  - [OnboardingItemUpdate](docs/Model/OnboardingItemUpdate.md)
  - [Order](docs/Model/Order.md)
@@ -1071,6 +1073,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultModelBase](docs/Model/RestApiResultModelBase.md)
  - [RestApiResultOAuthApp](docs/Model/RestApiResultOAuthApp.md)
  - [RestApiResultOauthClientRedirectUri](docs/Model/RestApiResultOauthClientRedirectUri.md)
+ - [RestApiResultOktaPortalFeatureFlag](docs/Model/RestApiResultOktaPortalFeatureFlag.md)
  - [RestApiResultOrder](docs/Model/RestApiResultOrder.md)
  - [RestApiResultOrderBatch](docs/Model/RestApiResultOrderBatch.md)
  - [RestApiResultOrderBatchingConfiguration](docs/Model/RestApiResultOrderBatchingConfiguration.md)
