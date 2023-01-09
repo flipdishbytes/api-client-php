@@ -348,4 +348,18 @@ class StoreFeeConfigTest extends \PHPUnit_Framework_TestCase
     public function testPropertyFixedFeeDelivery()
     {
     }
+
+    /**
+     * Test attribute "percent_fee_card_pos_transaction"
+     */
+    public function testPropertyPercentFeeCardPosTransaction()
+    {
+    }
+
+    /**
+     * Test attribute "fixed_fee_card_pos_transaction"
+     */
+    public function testPropertyFixedFeeCardPosTransaction()
+    {
+    }
 }

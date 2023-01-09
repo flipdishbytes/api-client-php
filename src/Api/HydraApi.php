@@ -2969,7 +2969,7 @@ class HydraApi
     /**
      * Operation getKioskCashPaymentSettings
      *
-     * Get the status of Cash Payment Methon on Kisok
+     * Get the status of Cash Payment Method on Kiosk
      *
      * @param  string $app_id app_id (required)
      * @param  string $device_id device_id (required)
@@ -2987,7 +2987,7 @@ class HydraApi
     /**
      * Operation getKioskCashPaymentSettingsWithHttpInfo
      *
-     * Get the status of Cash Payment Methon on Kisok
+     * Get the status of Cash Payment Method on Kiosk
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -3087,7 +3087,7 @@ class HydraApi
     /**
      * Operation getKioskCashPaymentSettingsAsync
      *
-     * Get the status of Cash Payment Methon on Kisok
+     * Get the status of Cash Payment Method on Kiosk
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -3108,7 +3108,7 @@ class HydraApi
     /**
      * Operation getKioskCashPaymentSettingsAsyncWithHttpInfo
      *
-     * Get the status of Cash Payment Methon on Kisok
+     * Get the status of Cash Payment Method on Kiosk
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -6243,7 +6243,7 @@ class HydraApi
     /**
      * Operation updateKioskCashVisibilitySettings
      *
-     * Update the Cash Payment Methon Visiability on Kisok
+     * Update the Cash Payment Method Visibility on Kiosk
      *
      * @param  string $app_id app_id (required)
      * @param  string $device_id device_id (required)
@@ -6261,7 +6261,7 @@ class HydraApi
     /**
      * Operation updateKioskCashVisibilitySettingsWithHttpInfo
      *
-     * Update the Cash Payment Methon Visiability on Kisok
+     * Update the Cash Payment Method Visibility on Kiosk
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -6340,7 +6340,7 @@ class HydraApi
     /**
      * Operation updateKioskCashVisibilitySettingsAsync
      *
-     * Update the Cash Payment Methon Visiability on Kisok
+     * Update the Cash Payment Method Visibility on Kiosk
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -6362,7 +6362,7 @@ class HydraApi
     /**
      * Operation updateKioskCashVisibilitySettingsAsyncWithHttpInfo
      *
-     * Update the Cash Payment Methon Visiability on Kisok
+     * Update the Cash Payment Method Visibility on Kiosk
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)

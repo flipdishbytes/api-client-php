@@ -278,7 +278,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**getAttachedDevices**](docs/Api/HydraApi.md#getattacheddevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | [Private]
 *HydraApi* | [**getEMVTerminalDetails**](docs/Api/HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | [Private]
 *HydraApi* | [**getEmvOrderState**](docs/Api/HydraApi.md#getemvorderstate) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | [Private]
-*HydraApi* | [**getKioskCashPaymentSettings**](docs/Api/HydraApi.md#getkioskcashpaymentsettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | Get the status of Cash Payment Methon on Kisok
+*HydraApi* | [**getKioskCashPaymentSettings**](docs/Api/HydraApi.md#getkioskcashpaymentsettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | Get the status of Cash Payment Method on Kiosk
 *HydraApi* | [**getRegistration**](docs/Api/HydraApi.md#getregistration) | **GET** /api/v1.0/hydra/registration | 
 *HydraApi* | [**getSettings**](docs/Api/HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | [Private]
 *HydraApi* | [**hydraCreateEmv**](docs/Api/HydraApi.md#hydracreateemv) | **POST** /api/v1.0/{appId}/emvterminals | [Private]
@@ -289,7 +289,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**register**](docs/Api/HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | [Private]
 *HydraApi* | [**unAssign**](docs/Api/HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | [Private]
 *HydraApi* | [**unassignEmv**](docs/Api/HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | Unassign the currently assigned EMV terminal from a kiosk
-*HydraApi* | [**updateKioskCashVisibilitySettings**](docs/Api/HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | Update the Cash Payment Methon Visiability on Kisok
+*HydraApi* | [**updateKioskCashVisibilitySettings**](docs/Api/HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | Update the Cash Payment Method Visibility on Kiosk
 *IntercomApi* | [**userHash**](docs/Api/IntercomApi.md#userhash) | **GET** /api/v1.0/intercom/userHash | 
 *KioskIotApi* | [**getKioskIotConnection**](docs/Api/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
 *KioskIotApi* | [**queryTelemetrySeries**](docs/Api/KioskIotApi.md#querytelemetryseries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | Get the IoT time series values for a given Kiosk Id, properties and time range

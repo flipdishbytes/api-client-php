@@ -96,7 +96,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'fixed_fee_card_orders_ingest' => 'double',
         'fixed_fee_cash_orders_ingest' => 'double',
         'percent_fee_delivery' => 'double',
-        'fixed_fee_delivery' => 'double'
+        'fixed_fee_delivery' => 'double',
+        'percent_fee_card_pos_transaction' => 'double',
+        'fixed_fee_card_pos_transaction' => 'double'
     ];
 
     /**
@@ -143,7 +145,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'fixed_fee_card_orders_ingest' => 'double',
         'fixed_fee_cash_orders_ingest' => 'double',
         'percent_fee_delivery' => 'double',
-        'fixed_fee_delivery' => 'double'
+        'fixed_fee_delivery' => 'double',
+        'percent_fee_card_pos_transaction' => 'double',
+        'fixed_fee_card_pos_transaction' => 'double'
     ];
 
     /**
@@ -211,7 +215,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'fixed_fee_card_orders_ingest' => 'FixedFeeCardOrdersIngest',
         'fixed_fee_cash_orders_ingest' => 'FixedFeeCashOrdersIngest',
         'percent_fee_delivery' => 'PercentFeeDelivery',
-        'fixed_fee_delivery' => 'FixedFeeDelivery'
+        'fixed_fee_delivery' => 'FixedFeeDelivery',
+        'percent_fee_card_pos_transaction' => 'PercentFeeCardPosTransaction',
+        'fixed_fee_card_pos_transaction' => 'FixedFeeCardPosTransaction'
     ];
 
     /**
@@ -258,7 +264,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'fixed_fee_card_orders_ingest' => 'setFixedFeeCardOrdersIngest',
         'fixed_fee_cash_orders_ingest' => 'setFixedFeeCashOrdersIngest',
         'percent_fee_delivery' => 'setPercentFeeDelivery',
-        'fixed_fee_delivery' => 'setFixedFeeDelivery'
+        'fixed_fee_delivery' => 'setFixedFeeDelivery',
+        'percent_fee_card_pos_transaction' => 'setPercentFeeCardPosTransaction',
+        'fixed_fee_card_pos_transaction' => 'setFixedFeeCardPosTransaction'
     ];
 
     /**
@@ -305,7 +313,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'fixed_fee_card_orders_ingest' => 'getFixedFeeCardOrdersIngest',
         'fixed_fee_cash_orders_ingest' => 'getFixedFeeCashOrdersIngest',
         'percent_fee_delivery' => 'getPercentFeeDelivery',
-        'fixed_fee_delivery' => 'getFixedFeeDelivery'
+        'fixed_fee_delivery' => 'getFixedFeeDelivery',
+        'percent_fee_card_pos_transaction' => 'getPercentFeeCardPosTransaction',
+        'fixed_fee_card_pos_transaction' => 'getFixedFeeCardPosTransaction'
     ];
 
     /**
@@ -407,6 +417,8 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         $this->container['fixed_fee_cash_orders_ingest'] = isset($data['fixed_fee_cash_orders_ingest']) ? $data['fixed_fee_cash_orders_ingest'] : null;
         $this->container['percent_fee_delivery'] = isset($data['percent_fee_delivery']) ? $data['percent_fee_delivery'] : null;
         $this->container['fixed_fee_delivery'] = isset($data['fixed_fee_delivery']) ? $data['fixed_fee_delivery'] : null;
+        $this->container['percent_fee_card_pos_transaction'] = isset($data['percent_fee_card_pos_transaction']) ? $data['percent_fee_card_pos_transaction'] : null;
+        $this->container['fixed_fee_card_pos_transaction'] = isset($data['fixed_fee_card_pos_transaction']) ? $data['fixed_fee_card_pos_transaction'] : null;
     }
 
     /**
@@ -1365,6 +1377,54 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
     public function setFixedFeeDelivery($fixed_fee_delivery)
     {
         $this->container['fixed_fee_delivery'] = $fixed_fee_delivery;
+
+        return $this;
+    }
+
+    /**
+     * Gets percent_fee_card_pos_transaction
+     *
+     * @return double
+     */
+    public function getPercentFeeCardPosTransaction()
+    {
+        return $this->container['percent_fee_card_pos_transaction'];
+    }
+
+    /**
+     * Sets percent_fee_card_pos_transaction
+     *
+     * @param double $percent_fee_card_pos_transaction Gets or sets the percent fee for POS transactions.
+     *
+     * @return $this
+     */
+    public function setPercentFeeCardPosTransaction($percent_fee_card_pos_transaction)
+    {
+        $this->container['percent_fee_card_pos_transaction'] = $percent_fee_card_pos_transaction;
+
+        return $this;
+    }
+
+    /**
+     * Gets fixed_fee_card_pos_transaction
+     *
+     * @return double
+     */
+    public function getFixedFeeCardPosTransaction()
+    {
+        return $this->container['fixed_fee_card_pos_transaction'];
+    }
+
+    /**
+     * Sets fixed_fee_card_pos_transaction
+     *
+     * @param double $fixed_fee_card_pos_transaction Gets or sets the fixed fee for POS transactions.
+     *
+     * @return $this
+     */
+    public function setFixedFeeCardPosTransaction($fixed_fee_card_pos_transaction)
+    {
+        $this->container['fixed_fee_card_pos_transaction'] = $fixed_fee_card_pos_transaction;
 
         return $this;
     }

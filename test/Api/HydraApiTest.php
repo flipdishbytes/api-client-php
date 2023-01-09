@@ -164,7 +164,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getKioskCashPaymentSettings
      *
-     * Get the status of Cash Payment Methon on Kisok.
+     * Get the status of Cash Payment Method on Kiosk.
      *
      */
     public function testGetKioskCashPaymentSettings()
@@ -274,7 +274,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateKioskCashVisibilitySettings
      *
-     * Update the Cash Payment Methon Visiability on Kisok.
+     * Update the Cash Payment Method Visibility on Kiosk.
      *
      */
     public function testUpdateKioskCashVisibilitySettings()
