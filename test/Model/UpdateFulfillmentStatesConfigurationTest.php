@@ -77,6 +77,13 @@ class UpdateFulfillmentStatesConfigurationTest extends \PHPUnit_Framework_TestCa
     }
 
     /**
+     * Test attribute "overwrite_system_template"
+     */
+    public function testPropertyOverwriteSystemTemplate()
+    {
+    }
+
+    /**
      * Test attribute "store_ids"
      */
     public function testPropertyStoreIds()
@@ -101,13 +108,6 @@ class UpdateFulfillmentStatesConfigurationTest extends \PHPUnit_Framework_TestCa
      * Test attribute "automatic_transitions_enabled"
      */
     public function testPropertyAutomaticTransitionsEnabled()
-    {
-    }
-
-    /**
-     * Test attribute "overwrite_system_template"
-     */
-    public function testPropertyOverwriteSystemTemplate()
     {
     }
 

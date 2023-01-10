@@ -1,9 +1,8 @@
-# UpdateFulfillmentStatesConfiguration
+# CreateFulfillmentStatesConfiguration
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**overwrite_system_template** | **bool** | Set to true if a system configuration template is to be updated (permissions also needed) | [optional] 
 **store_ids** | **int[]** | Stores id&#39;s | [optional] 
 **store_selector_type** | **string** | Store Selector Type | [optional] 
 **states** | [**\Flipdish\\Client\Models\FulfillmentStatusConfigurationItem[]**](FulfillmentStatusConfigurationItem.md) | Settings | [optional] 

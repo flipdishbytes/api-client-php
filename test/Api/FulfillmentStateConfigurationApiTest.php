@@ -102,6 +102,16 @@ class FulfillmentStateConfigurationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getFulfillmentStatesConfigurationTemplate
+     *
+     * Get fulfillment configuration template.
+     *
+     */
+    public function testGetFulfillmentStatesConfigurationTemplate()
+    {
+    }
+
+    /**
      * Test case for searchFulfillmentStatesConfigurations
      *
      * List fulfillment configurations for AppId.

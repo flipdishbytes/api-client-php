@@ -58,11 +58,11 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'overwrite_system_template' => 'bool',
         'store_ids' => 'int[]',
         'store_selector_type' => 'string',
         'states' => '\Flipdish\\Client\Models\FulfillmentStatusConfigurationItem[]',
         'automatic_transitions_enabled' => 'bool',
-        'overwrite_system_template' => 'bool',
         'name' => 'string'
     ];
 
@@ -72,11 +72,11 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'overwrite_system_template' => null,
         'store_ids' => 'int32',
         'store_selector_type' => null,
         'states' => null,
         'automatic_transitions_enabled' => null,
-        'overwrite_system_template' => null,
         'name' => null
     ];
 
@@ -107,11 +107,11 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
+        'overwrite_system_template' => 'OverwriteSystemTemplate',
         'store_ids' => 'StoreIds',
         'store_selector_type' => 'StoreSelectorType',
         'states' => 'States',
         'automatic_transitions_enabled' => 'AutomaticTransitionsEnabled',
-        'overwrite_system_template' => 'OverwriteSystemTemplate',
         'name' => 'Name'
     ];
 
@@ -121,11 +121,11 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
+        'overwrite_system_template' => 'setOverwriteSystemTemplate',
         'store_ids' => 'setStoreIds',
         'store_selector_type' => 'setStoreSelectorType',
         'states' => 'setStates',
         'automatic_transitions_enabled' => 'setAutomaticTransitionsEnabled',
-        'overwrite_system_template' => 'setOverwriteSystemTemplate',
         'name' => 'setName'
     ];
 
@@ -135,11 +135,11 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
+        'overwrite_system_template' => 'getOverwriteSystemTemplate',
         'store_ids' => 'getStoreIds',
         'store_selector_type' => 'getStoreSelectorType',
         'states' => 'getStates',
         'automatic_transitions_enabled' => 'getAutomaticTransitionsEnabled',
-        'overwrite_system_template' => 'getOverwriteSystemTemplate',
         'name' => 'getName'
     ];
 
@@ -220,11 +220,11 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
+        $this->container['overwrite_system_template'] = isset($data['overwrite_system_template']) ? $data['overwrite_system_template'] : null;
         $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
         $this->container['store_selector_type'] = isset($data['store_selector_type']) ? $data['store_selector_type'] : null;
         $this->container['states'] = isset($data['states']) ? $data['states'] : null;
         $this->container['automatic_transitions_enabled'] = isset($data['automatic_transitions_enabled']) ? $data['automatic_transitions_enabled'] : null;
-        $this->container['overwrite_system_template'] = isset($data['overwrite_system_template']) ? $data['overwrite_system_template'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
@@ -259,6 +259,30 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets overwrite_system_template
+     *
+     * @return bool
+     */
+    public function getOverwriteSystemTemplate()
+    {
+        return $this->container['overwrite_system_template'];
+    }
+
+    /**
+     * Sets overwrite_system_template
+     *
+     * @param bool $overwrite_system_template Set to true if a system configuration template is to be updated (permissions also needed)
+     *
+     * @return $this
+     */
+    public function setOverwriteSystemTemplate($overwrite_system_template)
+    {
+        $this->container['overwrite_system_template'] = $overwrite_system_template;
+
+        return $this;
+    }
 
     /**
      * Gets store_ids
@@ -361,30 +385,6 @@ class UpdateFulfillmentStatesConfiguration implements ModelInterface, ArrayAcces
     public function setAutomaticTransitionsEnabled($automatic_transitions_enabled)
     {
         $this->container['automatic_transitions_enabled'] = $automatic_transitions_enabled;
-
-        return $this;
-    }
-
-    /**
-     * Gets overwrite_system_template
-     *
-     * @return bool
-     */
-    public function getOverwriteSystemTemplate()
-    {
-        return $this->container['overwrite_system_template'];
-    }
-
-    /**
-     * Sets overwrite_system_template
-     *
-     * @param bool $overwrite_system_template Set to true if a system configuration template is to be updated (permissions also needed)
-     *
-     * @return $this
-     */
-    public function setOverwriteSystemTemplate($overwrite_system_template)
-    {
-        $this->container['overwrite_system_template'] = $overwrite_system_template;
 
         return $this;
     }

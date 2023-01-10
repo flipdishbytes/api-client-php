@@ -257,6 +257,7 @@ Class | Method | HTTP request | Description
 *FulfillmentStateConfigurationApi* | [**createFulfillmentStatesConfig**](docs/Api/FulfillmentStateConfigurationApi.md#createfulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states | Create fulfillment configuration
 *FulfillmentStateConfigurationApi* | [**deleteFulfillmentStatesConfig**](docs/Api/FulfillmentStateConfigurationApi.md#deletefulfillmentstatesconfig) | **DELETE** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Delete fulfillment states configuration
 *FulfillmentStateConfigurationApi* | [**getFulfillmentStatesConfiguration**](docs/Api/FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfiguration) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Get fulfillment configuration
+*FulfillmentStateConfigurationApi* | [**getFulfillmentStatesConfigurationTemplate**](docs/Api/FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfigurationtemplate) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states_template | Get fulfillment configuration template
 *FulfillmentStateConfigurationApi* | [**searchFulfillmentStatesConfigurations**](docs/Api/FulfillmentStateConfigurationApi.md#searchfulfillmentstatesconfigurations) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states | List fulfillment configurations for AppId
 *FulfillmentStateConfigurationApi* | [**updateFulfillmentStatesConfig**](docs/Api/FulfillmentStateConfigurationApi.md#updatefulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Update fulfillment configuration
 *HeartbeatApi* | [**headHostname**](docs/Api/HeartbeatApi.md#headhostname) | **HEAD** /api/v1.0/heartbeat/Hostname | 
@@ -629,6 +630,7 @@ Class | Method | HTTP request | Description
  - [CreateAppStoreApp](docs/Model/CreateAppStoreApp.md)
  - [CreateCatalogGroupReference](docs/Model/CreateCatalogGroupReference.md)
  - [CreateCatalogItem](docs/Model/CreateCatalogItem.md)
+ - [CreateFulfillmentStatesConfiguration](docs/Model/CreateFulfillmentStatesConfiguration.md)
  - [CreateFullMenu](docs/Model/CreateFullMenu.md)
  - [CreateFullMenuItemOptionSet](docs/Model/CreateFullMenuItemOptionSet.md)
  - [CreateFullMenuItemOptionSetItem](docs/Model/CreateFullMenuItemOptionSetItem.md)
@@ -698,7 +700,6 @@ Class | Method | HTTP request | Description
  - [FulfillentStatusActionItem](docs/Model/FulfillentStatusActionItem.md)
  - [FulfillmentInfo](docs/Model/FulfillmentInfo.md)
  - [FulfillmentStatesConfiguration](docs/Model/FulfillmentStatesConfiguration.md)
- - [FulfillmentStatesConfigurationCreateBase](docs/Model/FulfillmentStatesConfigurationCreateBase.md)
  - [FulfillmentStatesConfigurationSummary](docs/Model/FulfillmentStatesConfigurationSummary.md)
  - [FulfillmentStatesConfiguredStore](docs/Model/FulfillmentStatesConfiguredStore.md)
  - [FulfillmentStatusConfigurationItem](docs/Model/FulfillmentStatusConfigurationItem.md)

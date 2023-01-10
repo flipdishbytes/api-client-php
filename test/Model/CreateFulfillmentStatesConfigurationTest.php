@@ -1,6 +1,6 @@
 <?php
 /**
- * FulfillmentStatesConfigurationCreateBaseTest
+ * CreateFulfillmentStatesConfigurationTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * FulfillmentStatesConfigurationCreateBaseTest Class Doc Comment
+ * CreateFulfillmentStatesConfigurationTest Class Doc Comment
  *
  * @category    Class
- * @description Fulfillment States Configuration Create Base
+ * @description Create fulfillment states configuration
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class FulfillmentStatesConfigurationCreateBaseTest extends \PHPUnit_Framework_TestCase
+class CreateFulfillmentStatesConfigurationTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,37 @@ class FulfillmentStatesConfigurationCreateBaseTest extends \PHPUnit_Framework_Te
     }
 
     /**
-     * Test "FulfillmentStatesConfigurationCreateBase"
+     * Test "CreateFulfillmentStatesConfiguration"
      */
-    public function testFulfillmentStatesConfigurationCreateBase()
+    public function testCreateFulfillmentStatesConfiguration()
+    {
+    }
+
+    /**
+     * Test attribute "store_ids"
+     */
+    public function testPropertyStoreIds()
+    {
+    }
+
+    /**
+     * Test attribute "store_selector_type"
+     */
+    public function testPropertyStoreSelectorType()
+    {
+    }
+
+    /**
+     * Test attribute "states"
+     */
+    public function testPropertyStates()
+    {
+    }
+
+    /**
+     * Test attribute "automatic_transitions_enabled"
+     */
+    public function testPropertyAutomaticTransitionsEnabled()
     {
     }
 

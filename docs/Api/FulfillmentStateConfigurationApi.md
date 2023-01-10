@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**createFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#createFulfillmentStatesConfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states | Create fulfillment configuration
 [**deleteFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#deleteFulfillmentStatesConfig) | **DELETE** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Delete fulfillment states configuration
 [**getFulfillmentStatesConfiguration**](FulfillmentStateConfigurationApi.md#getFulfillmentStatesConfiguration) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Get fulfillment configuration
+[**getFulfillmentStatesConfigurationTemplate**](FulfillmentStateConfigurationApi.md#getFulfillmentStatesConfigurationTemplate) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states_template | Get fulfillment configuration template
 [**searchFulfillmentStatesConfigurations**](FulfillmentStateConfigurationApi.md#searchFulfillmentStatesConfigurations) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states | List fulfillment configurations for AppId
 [**updateFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#updateFulfillmentStatesConfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Update fulfillment configuration
 
@@ -33,7 +34,7 @@ $apiInstance = new Flipdish\\Client\Api\FulfillmentStateConfigurationApi(
     $config
 );
 $app_id = "app_id_example"; // string | App id
-$fulfillment_state_configuration = new \Flipdish\\Client\Models\FulfillmentStatesConfigurationCreateBase(); // \Flipdish\\Client\Models\FulfillmentStatesConfigurationCreateBase | Fulfillment state configuration
+$fulfillment_state_configuration = new \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration(); // \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration | Fulfillment state configuration
 
 try {
     $result = $apiInstance->createFulfillmentStatesConfig($app_id, $fulfillment_state_configuration);
@@ -49,7 +50,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| App id |
- **fulfillment_state_configuration** | [**\Flipdish\\Client\Models\FulfillmentStatesConfigurationCreateBase**](../Model/FulfillmentStatesConfigurationCreateBase.md)| Fulfillment state configuration |
+ **fulfillment_state_configuration** | [**\Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration**](../Model/CreateFulfillmentStatesConfiguration.md)| Fulfillment state configuration |
 
 ### Return type
 
@@ -160,6 +161,59 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| App id |
  **config_id** | **string**| App store app configuration id |
+
+### Return type
+
+[**\Flipdish\\Client\Models\FulfillmentStatesConfiguration**](../Model/FulfillmentStatesConfiguration.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getFulfillmentStatesConfigurationTemplate**
+> \Flipdish\\Client\Models\FulfillmentStatesConfiguration getFulfillmentStatesConfigurationTemplate($app_id)
+
+Get fulfillment configuration template
+
+[BETA - this endpoint is under development, do not use it in your production system]
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\FulfillmentStateConfigurationApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | App id
+
+try {
+    $result = $apiInstance->getFulfillmentStatesConfigurationTemplate($app_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FulfillmentStateConfigurationApi->getFulfillmentStatesConfigurationTemplate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**| App id |
 
 ### Return type
 

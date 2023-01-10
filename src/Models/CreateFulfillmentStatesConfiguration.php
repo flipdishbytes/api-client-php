@@ -1,6 +1,6 @@
 <?php
 /**
- * FulfillmentStatesConfigurationCreateBase
+ * CreateFulfillmentStatesConfiguration
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * FulfillmentStatesConfigurationCreateBase Class Doc Comment
+ * CreateFulfillmentStatesConfiguration Class Doc Comment
  *
  * @category Class
- * @description Fulfillment States Configuration Create Base
+ * @description Create fulfillment states configuration
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class FulfillmentStatesConfigurationCreateBase implements ModelInterface, ArrayAccess
+class CreateFulfillmentStatesConfiguration implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class FulfillmentStatesConfigurationCreateBase implements ModelInterface, ArrayA
       *
       * @var string
       */
-    protected static $swaggerModelName = 'FulfillmentStatesConfigurationCreateBase';
+    protected static $swaggerModelName = 'CreateFulfillmentStatesConfiguration';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,6 +58,10 @@ class FulfillmentStatesConfigurationCreateBase implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'store_ids' => 'int[]',
+        'store_selector_type' => 'string',
+        'states' => '\Flipdish\\Client\Models\FulfillmentStatusConfigurationItem[]',
+        'automatic_transitions_enabled' => 'bool',
         'name' => 'string'
     ];
 
@@ -67,6 +71,10 @@ class FulfillmentStatesConfigurationCreateBase implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'store_ids' => 'int32',
+        'store_selector_type' => null,
+        'states' => null,
+        'automatic_transitions_enabled' => null,
         'name' => null
     ];
 
@@ -97,6 +105,10 @@ class FulfillmentStatesConfigurationCreateBase implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
+        'store_ids' => 'StoreIds',
+        'store_selector_type' => 'StoreSelectorType',
+        'states' => 'States',
+        'automatic_transitions_enabled' => 'AutomaticTransitionsEnabled',
         'name' => 'Name'
     ];
 
@@ -106,6 +118,10 @@ class FulfillmentStatesConfigurationCreateBase implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
+        'store_ids' => 'setStoreIds',
+        'store_selector_type' => 'setStoreSelectorType',
+        'states' => 'setStates',
+        'automatic_transitions_enabled' => 'setAutomaticTransitionsEnabled',
         'name' => 'setName'
     ];
 
@@ -115,6 +131,10 @@ class FulfillmentStatesConfigurationCreateBase implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
+        'store_ids' => 'getStoreIds',
+        'store_selector_type' => 'getStoreSelectorType',
+        'states' => 'getStates',
+        'automatic_transitions_enabled' => 'getAutomaticTransitionsEnabled',
         'name' => 'getName'
     ];
 
@@ -159,8 +179,25 @@ class FulfillmentStatesConfigurationCreateBase implements ModelInterface, ArrayA
         return self::$swaggerModelName;
     }
 
+    const STORE_SELECTOR_TYPE_NONE = 'None';
+    const STORE_SELECTOR_TYPE_SINGLE = 'Single';
+    const STORE_SELECTOR_TYPE_MULTIPLE = 'Multiple';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getStoreSelectorTypeAllowableValues()
+    {
+        return [
+            self::STORE_SELECTOR_TYPE_NONE,
+            self::STORE_SELECTOR_TYPE_SINGLE,
+            self::STORE_SELECTOR_TYPE_MULTIPLE,
+        ];
+    }
     
 
     /**
@@ -178,6 +215,10 @@ class FulfillmentStatesConfigurationCreateBase implements ModelInterface, ArrayA
      */
     public function __construct(array $data = null)
     {
+        $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
+        $this->container['store_selector_type'] = isset($data['store_selector_type']) ? $data['store_selector_type'] : null;
+        $this->container['states'] = isset($data['states']) ? $data['states'] : null;
+        $this->container['automatic_transitions_enabled'] = isset($data['automatic_transitions_enabled']) ? $data['automatic_transitions_enabled'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
@@ -189,6 +230,14 @@ class FulfillmentStatesConfigurationCreateBase implements ModelInterface, ArrayA
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getStoreSelectorTypeAllowableValues();
+        if (!is_null($this->container['store_selector_type']) && !in_array($this->container['store_selector_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'store_selector_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -204,6 +253,111 @@ class FulfillmentStatesConfigurationCreateBase implements ModelInterface, ArrayA
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets store_ids
+     *
+     * @return int[]
+     */
+    public function getStoreIds()
+    {
+        return $this->container['store_ids'];
+    }
+
+    /**
+     * Sets store_ids
+     *
+     * @param int[] $store_ids Stores id's
+     *
+     * @return $this
+     */
+    public function setStoreIds($store_ids)
+    {
+        $this->container['store_ids'] = $store_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets store_selector_type
+     *
+     * @return string
+     */
+    public function getStoreSelectorType()
+    {
+        return $this->container['store_selector_type'];
+    }
+
+    /**
+     * Sets store_selector_type
+     *
+     * @param string $store_selector_type Store Selector Type
+     *
+     * @return $this
+     */
+    public function setStoreSelectorType($store_selector_type)
+    {
+        $allowedValues = $this->getStoreSelectorTypeAllowableValues();
+        if (!is_null($store_selector_type) && !in_array($store_selector_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'store_selector_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['store_selector_type'] = $store_selector_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets states
+     *
+     * @return \Flipdish\\Client\Models\FulfillmentStatusConfigurationItem[]
+     */
+    public function getStates()
+    {
+        return $this->container['states'];
+    }
+
+    /**
+     * Sets states
+     *
+     * @param \Flipdish\\Client\Models\FulfillmentStatusConfigurationItem[] $states Settings
+     *
+     * @return $this
+     */
+    public function setStates($states)
+    {
+        $this->container['states'] = $states;
+
+        return $this;
+    }
+
+    /**
+     * Gets automatic_transitions_enabled
+     *
+     * @return bool
+     */
+    public function getAutomaticTransitionsEnabled()
+    {
+        return $this->container['automatic_transitions_enabled'];
+    }
+
+    /**
+     * Sets automatic_transitions_enabled
+     *
+     * @param bool $automatic_transitions_enabled Enable automatic transitions
+     *
+     * @return $this
+     */
+    public function setAutomaticTransitionsEnabled($automatic_transitions_enabled)
+    {
+        $this->container['automatic_transitions_enabled'] = $automatic_transitions_enabled;
+
+        return $this;
+    }
 
     /**
      * Gets name
