@@ -105,6 +105,13 @@ class UpdateFulfillmentStatesConfigurationTest extends \PHPUnit_Framework_TestCa
     }
 
     /**
+     * Test attribute "overwrite_system_template"
+     */
+    public function testPropertyOverwriteSystemTemplate()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

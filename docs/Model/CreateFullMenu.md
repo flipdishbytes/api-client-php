@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** | Name of Menu, only shown in portal | [optional] 
 **image_url** | **string** | Image url | [optional] 
-**menu_sections** | [**\Flipdish\\Client\Models\CreateFullMenuSection[]**](CreateFullMenuSection.md) | Menu sections (startes, main etc) | [optional] 
+**menu_sections** | [**\Flipdish\\Client\Models\CreateFullMenuSection[]**](CreateFullMenuSection.md) | Menu sections (starters, main etc) | [optional] 
 **tax_rates** | [**\Flipdish\\Client\Models\CreateMenuTaxRate[]**](CreateMenuTaxRate.md) | Menu tax rates | [optional] 
 **display_section_links** | **bool** | Display menu section link on UI | [optional] 
 **menu_section_behaviour** | **string** | Menu section behaviour | [optional] 

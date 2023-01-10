@@ -348,7 +348,7 @@ class CreateFullMenu implements ModelInterface, ArrayAccess
     /**
      * Sets menu_sections
      *
-     * @param \Flipdish\\Client\Models\CreateFullMenuSection[] $menu_sections Menu sections (startes, main etc)
+     * @param \Flipdish\\Client\Models\CreateFullMenuSection[] $menu_sections Menu sections (starters, main etc)
      *
      * @return $this
      */
