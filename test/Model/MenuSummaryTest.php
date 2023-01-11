@@ -98,6 +98,13 @@ class MenuSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "menu_url"
+     */
+    public function testPropertyMenuUrl()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

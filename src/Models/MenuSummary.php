@@ -61,6 +61,7 @@ class MenuSummary implements ModelInterface, ArrayAccess
         'menu_id' => 'int',
         'modified_time' => '\DateTime',
         'version_number' => 'int',
+        'menu_url' => 'string',
         'name' => 'string',
         'locked' => 'bool',
         'store_names' => 'string[]'
@@ -75,6 +76,7 @@ class MenuSummary implements ModelInterface, ArrayAccess
         'menu_id' => 'int32',
         'modified_time' => 'date-time',
         'version_number' => 'int32',
+        'menu_url' => null,
         'name' => null,
         'locked' => null,
         'store_names' => null
@@ -110,6 +112,7 @@ class MenuSummary implements ModelInterface, ArrayAccess
         'menu_id' => 'MenuId',
         'modified_time' => 'ModifiedTime',
         'version_number' => 'VersionNumber',
+        'menu_url' => 'MenuUrl',
         'name' => 'Name',
         'locked' => 'Locked',
         'store_names' => 'StoreNames'
@@ -124,6 +127,7 @@ class MenuSummary implements ModelInterface, ArrayAccess
         'menu_id' => 'setMenuId',
         'modified_time' => 'setModifiedTime',
         'version_number' => 'setVersionNumber',
+        'menu_url' => 'setMenuUrl',
         'name' => 'setName',
         'locked' => 'setLocked',
         'store_names' => 'setStoreNames'
@@ -138,6 +142,7 @@ class MenuSummary implements ModelInterface, ArrayAccess
         'menu_id' => 'getMenuId',
         'modified_time' => 'getModifiedTime',
         'version_number' => 'getVersionNumber',
+        'menu_url' => 'getMenuUrl',
         'name' => 'getName',
         'locked' => 'getLocked',
         'store_names' => 'getStoreNames'
@@ -206,6 +211,7 @@ class MenuSummary implements ModelInterface, ArrayAccess
         $this->container['menu_id'] = isset($data['menu_id']) ? $data['menu_id'] : null;
         $this->container['modified_time'] = isset($data['modified_time']) ? $data['modified_time'] : null;
         $this->container['version_number'] = isset($data['version_number']) ? $data['version_number'] : null;
+        $this->container['menu_url'] = isset($data['menu_url']) ? $data['menu_url'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['store_names'] = isset($data['store_names']) ? $data['store_names'] : null;
@@ -303,6 +309,30 @@ class MenuSummary implements ModelInterface, ArrayAccess
     public function setVersionNumber($version_number)
     {
         $this->container['version_number'] = $version_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets menu_url
+     *
+     * @return string
+     */
+    public function getMenuUrl()
+    {
+        return $this->container['menu_url'];
+    }
+
+    /**
+     * Sets menu_url
+     *
+     * @param string $menu_url Menu Url
+     *
+     * @return $this
+     */
+    public function setMenuUrl($menu_url)
+    {
+        $this->container['menu_url'] = $menu_url;
 
         return $this;
     }
