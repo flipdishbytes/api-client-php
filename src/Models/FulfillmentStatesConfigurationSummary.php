@@ -36,7 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * FulfillmentStatesConfigurationSummary Class Doc Comment
  *
  * @category Class
- * @description App store app configuration header information
+ * @description Fulfillment configuration header information
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen

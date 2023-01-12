@@ -736,7 +736,7 @@ class FulfillmentStateConfigurationApi
      * Get fulfillment configuration
      *
      * @param  string $app_id App id (required)
-     * @param  string $config_id App store app configuration id (required)
+     * @param  string $config_id Fulfillment configuration id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -754,7 +754,7 @@ class FulfillmentStateConfigurationApi
      * Get fulfillment configuration
      *
      * @param  string $app_id App id (required)
-     * @param  string $config_id App store app configuration id (required)
+     * @param  string $config_id Fulfillment configuration id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -862,7 +862,7 @@ class FulfillmentStateConfigurationApi
      * Get fulfillment configuration
      *
      * @param  string $app_id App id (required)
-     * @param  string $config_id App store app configuration id (required)
+     * @param  string $config_id Fulfillment configuration id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -883,7 +883,7 @@ class FulfillmentStateConfigurationApi
      * Get fulfillment configuration
      *
      * @param  string $app_id App id (required)
-     * @param  string $config_id App store app configuration id (required)
+     * @param  string $config_id Fulfillment configuration id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -934,7 +934,7 @@ class FulfillmentStateConfigurationApi
      * Create request for operation 'getFulfillmentStatesConfiguration'
      *
      * @param  string $app_id App id (required)
-     * @param  string $config_id App store app configuration id (required)
+     * @param  string $config_id Fulfillment configuration id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

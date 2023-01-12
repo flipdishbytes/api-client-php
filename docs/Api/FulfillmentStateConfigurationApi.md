@@ -144,7 +144,7 @@ $apiInstance = new Flipdish\\Client\Api\FulfillmentStateConfigurationApi(
     $config
 );
 $app_id = "app_id_example"; // string | App id
-$config_id = "config_id_example"; // string | App store app configuration id
+$config_id = "config_id_example"; // string | Fulfillment configuration id
 
 try {
     $result = $apiInstance->getFulfillmentStatesConfiguration($app_id, $config_id);
@@ -160,7 +160,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| App id |
- **config_id** | **string**| App store app configuration id |
+ **config_id** | **string**| Fulfillment configuration id |
 
 ### Return type
 
