@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **map_center** | [**\Flipdish\\Client\Models\Coordinates**](Coordinates.md) | Center of the map coordinates. This is used to center the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App. | [optional] 
 **map_north_east** | [**\Flipdish\\Client\Models\Coordinates**](Coordinates.md) | North East(Top Right) Corner of the map coordinates. This is used to frame the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App. | [optional] 
 **map_south_west** | [**\Flipdish\\Client\Models\Coordinates**](Coordinates.md) | South West (Bottom Left) Corner of the map coordinates. This is used to frame the map when the iOS and Android app first open.  This value is automatically set based on the locations of the Stores in the App. | [optional] 
+**google_maps_api_key_web** | **string** | Key to be passed with Google Maps requests | [optional] 
 **name** | **string** | App name.   This is used in various places on the Apple App Store, Google Play Store, mobile apps and websites. | [optional] 
 **host_name** | **string** | HostName on which the web-ordering system is allowed to be hosted or that a Flipdish website is hosted on. | [optional] 
 **main_color** | **string** | Main color of the web / Android / iOS applications | [optional] 

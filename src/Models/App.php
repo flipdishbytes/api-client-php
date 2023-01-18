@@ -71,6 +71,7 @@ class App implements ModelInterface, ArrayAccess
         'map_center' => '\Flipdish\\Client\Models\Coordinates',
         'map_north_east' => '\Flipdish\\Client\Models\Coordinates',
         'map_south_west' => '\Flipdish\\Client\Models\Coordinates',
+        'google_maps_api_key_web' => 'string',
         'name' => 'string',
         'host_name' => 'string',
         'main_color' => 'string',
@@ -98,6 +99,7 @@ class App implements ModelInterface, ArrayAccess
         'map_center' => null,
         'map_north_east' => null,
         'map_south_west' => null,
+        'google_maps_api_key_web' => null,
         'name' => null,
         'host_name' => null,
         'main_color' => null,
@@ -146,6 +148,7 @@ class App implements ModelInterface, ArrayAccess
         'map_center' => 'MapCenter',
         'map_north_east' => 'MapNorthEast',
         'map_south_west' => 'MapSouthWest',
+        'google_maps_api_key_web' => 'GoogleMapsApiKeyWeb',
         'name' => 'Name',
         'host_name' => 'HostName',
         'main_color' => 'MainColor',
@@ -173,6 +176,7 @@ class App implements ModelInterface, ArrayAccess
         'map_center' => 'setMapCenter',
         'map_north_east' => 'setMapNorthEast',
         'map_south_west' => 'setMapSouthWest',
+        'google_maps_api_key_web' => 'setGoogleMapsApiKeyWeb',
         'name' => 'setName',
         'host_name' => 'setHostName',
         'main_color' => 'setMainColor',
@@ -200,6 +204,7 @@ class App implements ModelInterface, ArrayAccess
         'map_center' => 'getMapCenter',
         'map_north_east' => 'getMapNorthEast',
         'map_south_west' => 'getMapSouthWest',
+        'google_maps_api_key_web' => 'getGoogleMapsApiKeyWeb',
         'name' => 'getName',
         'host_name' => 'getHostName',
         'main_color' => 'getMainColor',
@@ -644,6 +649,7 @@ class App implements ModelInterface, ArrayAccess
         $this->container['map_center'] = isset($data['map_center']) ? $data['map_center'] : null;
         $this->container['map_north_east'] = isset($data['map_north_east']) ? $data['map_north_east'] : null;
         $this->container['map_south_west'] = isset($data['map_south_west']) ? $data['map_south_west'] : null;
+        $this->container['google_maps_api_key_web'] = isset($data['google_maps_api_key_web']) ? $data['google_maps_api_key_web'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['host_name'] = isset($data['host_name']) ? $data['host_name'] : null;
         $this->container['main_color'] = isset($data['main_color']) ? $data['main_color'] : null;
@@ -1033,6 +1039,30 @@ class App implements ModelInterface, ArrayAccess
     public function setMapSouthWest($map_south_west)
     {
         $this->container['map_south_west'] = $map_south_west;
+
+        return $this;
+    }
+
+    /**
+     * Gets google_maps_api_key_web
+     *
+     * @return string
+     */
+    public function getGoogleMapsApiKeyWeb()
+    {
+        return $this->container['google_maps_api_key_web'];
+    }
+
+    /**
+     * Sets google_maps_api_key_web
+     *
+     * @param string $google_maps_api_key_web Key to be passed with Google Maps requests
+     *
+     * @return $this
+     */
+    public function setGoogleMapsApiKeyWeb($google_maps_api_key_web)
+    {
+        $this->container['google_maps_api_key_web'] = $google_maps_api_key_web;
 
         return $this;
     }

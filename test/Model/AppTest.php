@@ -168,6 +168,13 @@ class AppTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "google_maps_api_key_web"
+     */
+    public function testPropertyGoogleMapsApiKeyWeb()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
