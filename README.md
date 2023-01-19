@@ -510,6 +510,7 @@ Class | Method | HTTP request | Description
 *StuartApi* | [**stuartGetJob**](docs/Api/StuartApi.md#stuartgetjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | Get start job details
 *StuartApi* | [**stuartGetStuartSettings**](docs/Api/StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | Get stuart settings for a store
 *StuartApi* | [**stuartPostStuartSettings**](docs/Api/StuartApi.md#stuartpoststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | Set stuart settings for a store
+*SubscriptionsApi* | [**getSubscriptionById**](docs/Api/SubscriptionsApi.md#getsubscriptionbyid) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | Get subscription by id
 *SubscriptionsApi* | [**getSubscriptionsForApp**](docs/Api/SubscriptionsApi.md#getsubscriptionsforapp) | **GET** /api/v1.0/{appId}/subscriptions | Get list of subscriptions for an App
 *TeammatesApi* | [**createTeammate**](docs/Api/TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | Create teammate and send an invite.
 *TeammatesApi* | [**deleteTeammate**](docs/Api/TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
@@ -1111,6 +1112,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultStripeTerminalLocation](docs/Model/RestApiResultStripeTerminalLocation.md)
  - [RestApiResultStripeTerminalPrivateKey](docs/Model/RestApiResultStripeTerminalPrivateKey.md)
  - [RestApiResultStuartSettings](docs/Model/RestApiResultStuartSettings.md)
+ - [RestApiResultSubscription](docs/Model/RestApiResultSubscription.md)
  - [RestApiResultTeammate](docs/Model/RestApiResultTeammate.md)
  - [RestApiResultTelemetrySeriesResult](docs/Model/RestApiResultTelemetrySeriesResult.md)
  - [RestApiResultTipConfiguration](docs/Model/RestApiResultTipConfiguration.md)
@@ -1202,6 +1204,7 @@ Class | Method | HTTP request | Description
  - [StripeTerminalPrivateKey](docs/Model/StripeTerminalPrivateKey.md)
  - [StuartSettings](docs/Model/StuartSettings.md)
  - [StuartSettingsTransportPrices](docs/Model/StuartSettingsTransportPrices.md)
+ - [Subscription](docs/Model/Subscription.md)
  - [SubscriptionSummary](docs/Model/SubscriptionSummary.md)
  - [SupportedCountry](docs/Model/SupportedCountry.md)
  - [Teammate](docs/Model/Teammate.md)
