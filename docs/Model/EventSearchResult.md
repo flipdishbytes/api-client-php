@@ -138,6 +138,7 @@ Name | Type | Description | Notes
 **store_service_charge_updated_event** | [**\Flipdish\\Client\Models\StoreServiceChargeUpdatedEvent[]**](StoreServiceChargeUpdatedEvent.md) | Service Charge Updated Event | [optional] 
 **mobile_apps_submission_status_updated_event** | [**\Flipdish\\Client\Models\MobileAppsSubmissionStatusUpdatedEvent[]**](MobileAppsSubmissionStatusUpdatedEvent.md) | Mobile Submission Status Updated Event | [optional] 
 **mobile_apps_submission_updated_event** | [**\Flipdish\\Client\Models\MobileAppsSubmissionUpdatedEvent[]**](MobileAppsSubmissionUpdatedEvent.md) | Mobile Submission Updated Event | [optional] 
+**store_fee_config_updated_event** | [**\Flipdish\\Client\Models\StoreFeeConfigUpdatedEvent[]**](StoreFeeConfigUpdatedEvent.md) | Store Fee Config Updated Event | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

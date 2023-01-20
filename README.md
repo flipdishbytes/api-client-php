@@ -1164,6 +1164,7 @@ Class | Method | HTTP request | Description
  - [StoreDeletedEvent](docs/Model/StoreDeletedEvent.md)
  - [StoreEndOfDayReport](docs/Model/StoreEndOfDayReport.md)
  - [StoreFeeConfig](docs/Model/StoreFeeConfig.md)
+ - [StoreFeeConfigUpdatedEvent](docs/Model/StoreFeeConfigUpdatedEvent.md)
  - [StoreGroup](docs/Model/StoreGroup.md)
  - [StoreGroupBase](docs/Model/StoreGroupBase.md)
  - [StoreGroupCreatedEvent](docs/Model/StoreGroupCreatedEvent.md)

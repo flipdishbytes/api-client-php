@@ -192,7 +192,8 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'location_deleted_event' => '\Flipdish\\Client\Models\LocationDeletedEvent[]',
         'store_service_charge_updated_event' => '\Flipdish\\Client\Models\StoreServiceChargeUpdatedEvent[]',
         'mobile_apps_submission_status_updated_event' => '\Flipdish\\Client\Models\MobileAppsSubmissionStatusUpdatedEvent[]',
-        'mobile_apps_submission_updated_event' => '\Flipdish\\Client\Models\MobileAppsSubmissionUpdatedEvent[]'
+        'mobile_apps_submission_updated_event' => '\Flipdish\\Client\Models\MobileAppsSubmissionUpdatedEvent[]',
+        'store_fee_config_updated_event' => '\Flipdish\\Client\Models\StoreFeeConfigUpdatedEvent[]'
     ];
 
     /**
@@ -335,7 +336,8 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'location_deleted_event' => null,
         'store_service_charge_updated_event' => null,
         'mobile_apps_submission_status_updated_event' => null,
-        'mobile_apps_submission_updated_event' => null
+        'mobile_apps_submission_updated_event' => null,
+        'store_fee_config_updated_event' => null
     ];
 
     /**
@@ -499,7 +501,8 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'location_deleted_event' => 'LocationDeletedEvent',
         'store_service_charge_updated_event' => 'StoreServiceChargeUpdatedEvent',
         'mobile_apps_submission_status_updated_event' => 'MobileAppsSubmissionStatusUpdatedEvent',
-        'mobile_apps_submission_updated_event' => 'MobileAppsSubmissionUpdatedEvent'
+        'mobile_apps_submission_updated_event' => 'MobileAppsSubmissionUpdatedEvent',
+        'store_fee_config_updated_event' => 'StoreFeeConfigUpdatedEvent'
     ];
 
     /**
@@ -642,7 +645,8 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'location_deleted_event' => 'setLocationDeletedEvent',
         'store_service_charge_updated_event' => 'setStoreServiceChargeUpdatedEvent',
         'mobile_apps_submission_status_updated_event' => 'setMobileAppsSubmissionStatusUpdatedEvent',
-        'mobile_apps_submission_updated_event' => 'setMobileAppsSubmissionUpdatedEvent'
+        'mobile_apps_submission_updated_event' => 'setMobileAppsSubmissionUpdatedEvent',
+        'store_fee_config_updated_event' => 'setStoreFeeConfigUpdatedEvent'
     ];
 
     /**
@@ -785,7 +789,8 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'location_deleted_event' => 'getLocationDeletedEvent',
         'store_service_charge_updated_event' => 'getStoreServiceChargeUpdatedEvent',
         'mobile_apps_submission_status_updated_event' => 'getMobileAppsSubmissionStatusUpdatedEvent',
-        'mobile_apps_submission_updated_event' => 'getMobileAppsSubmissionUpdatedEvent'
+        'mobile_apps_submission_updated_event' => 'getMobileAppsSubmissionUpdatedEvent',
+        'store_fee_config_updated_event' => 'getStoreFeeConfigUpdatedEvent'
     ];
 
     /**
@@ -983,6 +988,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         $this->container['store_service_charge_updated_event'] = isset($data['store_service_charge_updated_event']) ? $data['store_service_charge_updated_event'] : null;
         $this->container['mobile_apps_submission_status_updated_event'] = isset($data['mobile_apps_submission_status_updated_event']) ? $data['mobile_apps_submission_status_updated_event'] : null;
         $this->container['mobile_apps_submission_updated_event'] = isset($data['mobile_apps_submission_updated_event']) ? $data['mobile_apps_submission_updated_event'] : null;
+        $this->container['store_fee_config_updated_event'] = isset($data['store_fee_config_updated_event']) ? $data['store_fee_config_updated_event'] : null;
     }
 
     /**
@@ -4245,6 +4251,30 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     public function setMobileAppsSubmissionUpdatedEvent($mobile_apps_submission_updated_event)
     {
         $this->container['mobile_apps_submission_updated_event'] = $mobile_apps_submission_updated_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets store_fee_config_updated_event
+     *
+     * @return \Flipdish\\Client\Models\StoreFeeConfigUpdatedEvent[]
+     */
+    public function getStoreFeeConfigUpdatedEvent()
+    {
+        return $this->container['store_fee_config_updated_event'];
+    }
+
+    /**
+     * Sets store_fee_config_updated_event
+     *
+     * @param \Flipdish\\Client\Models\StoreFeeConfigUpdatedEvent[] $store_fee_config_updated_event Store Fee Config Updated Event
+     *
+     * @return $this
+     */
+    public function setStoreFeeConfigUpdatedEvent($store_fee_config_updated_event)
+    {
+        $this->container['store_fee_config_updated_event'] = $store_fee_config_updated_event;
 
         return $this;
     }

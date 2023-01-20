@@ -1020,4 +1020,11 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     public function testPropertyMobileAppsSubmissionUpdatedEvent()
     {
     }
+
+    /**
+     * Test attribute "store_fee_config_updated_event"
+     */
+    public function testPropertyStoreFeeConfigUpdatedEvent()
+    {
+    }
 }
