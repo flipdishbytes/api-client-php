@@ -102,6 +102,16 @@ class StripeCustomConnectApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getCustomConnect
+     *
+     * Gets a list of stripe custom connect ids information.
+     *
+     */
+    public function testGetCustomConnect()
+    {
+    }
+
+    /**
      * Test case for getVerificationStatus
      *
      * Gets the current verification status of the given connected account.

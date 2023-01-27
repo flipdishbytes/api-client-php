@@ -500,6 +500,7 @@ Class | Method | HTTP request | Description
 *StripeCustomConnectApi* | [**createBankAccountAndConnectedAccount**](docs/Api/StripeCustomConnectApi.md#createbankaccountandconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/bank-account | Create a new Bank Account and Stripe connected account
 *StripeCustomConnectApi* | [**createStripeConnectedAccount**](docs/Api/StripeCustomConnectApi.md#createstripeconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account | Create or update a Stripe connected account associated with the bank account of bankAccountId
 *StripeCustomConnectApi* | [**createStripeConnectedAccountLink**](docs/Api/StripeCustomConnectApi.md#createstripeconnectedaccountlink) | **POST** /api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link | Gets a single-use Stripe URL for the given account
+*StripeCustomConnectApi* | [**getCustomConnect**](docs/Api/StripeCustomConnectApi.md#getcustomconnect) | **GET** /api/v1.0/{appId}/customconnect/{storeId} | Gets a list of stripe custom connect ids information
 *StripeCustomConnectApi* | [**getVerificationStatus**](docs/Api/StripeCustomConnectApi.md#getverificationstatus) | **GET** /api/v1.0/{appId}/customconnect/verification-status | Gets the current verification status of the given connected account
 *StripeCustomConnectApi* | [**setBankAccountBusinessType**](docs/Api/StripeCustomConnectApi.md#setbankaccountbusinesstype) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | Update bank account&#39;s BusinessType and create a Stripe Connected Account
 *StripeCustomConnectApi* | [**stripeCustomConnectRefresh**](docs/Api/StripeCustomConnectApi.md#stripecustomconnectrefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
@@ -976,6 +977,7 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultStoreChannelStoreMapping](docs/Model/RestApiArrayResultStoreChannelStoreMapping.md)
  - [RestApiArrayResultStoreListItem](docs/Model/RestApiArrayResultStoreListItem.md)
  - [RestApiArrayResultStoreStatistics](docs/Model/RestApiArrayResultStoreStatistics.md)
+ - [RestApiArrayResultStripeCustomConnectedAccount](docs/Model/RestApiArrayResultStripeCustomConnectedAccount.md)
  - [RestApiArrayResultSubscriptionSummary](docs/Model/RestApiArrayResultSubscriptionSummary.md)
  - [RestApiArrayResultSupportedCountry](docs/Model/RestApiArrayResultSupportedCountry.md)
  - [RestApiArrayResultTeammate](docs/Model/RestApiArrayResultTeammate.md)
@@ -1200,6 +1202,7 @@ Class | Method | HTTP request | Description
  - [StripeAccountLinkRequest](docs/Model/StripeAccountLinkRequest.md)
  - [StripeConnectedAccount](docs/Model/StripeConnectedAccount.md)
  - [StripeConnectedAccountInfo](docs/Model/StripeConnectedAccountInfo.md)
+ - [StripeCustomConnectedAccount](docs/Model/StripeCustomConnectedAccount.md)
  - [StripeTerminalConnectionToken](docs/Model/StripeTerminalConnectionToken.md)
  - [StripeTerminalLocation](docs/Model/StripeTerminalLocation.md)
  - [StripeTerminalPrivateKey](docs/Model/StripeTerminalPrivateKey.md)
