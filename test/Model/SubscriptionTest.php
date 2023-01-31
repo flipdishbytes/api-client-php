@@ -82,4 +82,18 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
     public function testPropertySubscriptionId()
     {
     }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+    }
+
+    /**
+     * Test attribute "currency"
+     */
+    public function testPropertyCurrency()
+    {
+    }
 }

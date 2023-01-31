@@ -58,7 +58,9 @@ class Subscription implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'subscription_id' => 'string'
+        'subscription_id' => 'string',
+        'status' => 'string',
+        'currency' => 'string'
     ];
 
     /**
@@ -67,7 +69,9 @@ class Subscription implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'subscription_id' => null
+        'subscription_id' => null,
+        'status' => null,
+        'currency' => null
     ];
 
     /**
@@ -97,7 +101,9 @@ class Subscription implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'subscription_id' => 'SubscriptionId'
+        'subscription_id' => 'SubscriptionId',
+        'status' => 'Status',
+        'currency' => 'Currency'
     ];
 
     /**
@@ -106,7 +112,9 @@ class Subscription implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'subscription_id' => 'setSubscriptionId'
+        'subscription_id' => 'setSubscriptionId',
+        'status' => 'setStatus',
+        'currency' => 'setCurrency'
     ];
 
     /**
@@ -115,7 +123,9 @@ class Subscription implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'subscription_id' => 'getSubscriptionId'
+        'subscription_id' => 'getSubscriptionId',
+        'status' => 'getStatus',
+        'currency' => 'getCurrency'
     ];
 
     /**
@@ -159,8 +169,270 @@ class Subscription implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const STATUS_INCOMPLETE = 'incomplete';
+    const STATUS_INCOMPLETE_EXPIRED = 'incomplete_expired';
+    const STATUS_TRIALING = 'trialing';
+    const STATUS_ACTIVE = 'active';
+    const STATUS_PAST_DUE = 'past_due';
+    const STATUS_CANCELED = 'canceled';
+    const STATUS_UNPAID = 'unpaid';
+    const CURRENCY_EUR = 'EUR';
+    const CURRENCY_USD = 'USD';
+    const CURRENCY_GBP = 'GBP';
+    const CURRENCY_CAD = 'CAD';
+    const CURRENCY_AUD = 'AUD';
+    const CURRENCY_DJF = 'DJF';
+    const CURRENCY_ZAR = 'ZAR';
+    const CURRENCY_ETB = 'ETB';
+    const CURRENCY_AED = 'AED';
+    const CURRENCY_BHD = 'BHD';
+    const CURRENCY_DZD = 'DZD';
+    const CURRENCY_EGP = 'EGP';
+    const CURRENCY_IQD = 'IQD';
+    const CURRENCY_JOD = 'JOD';
+    const CURRENCY_KWD = 'KWD';
+    const CURRENCY_LBP = 'LBP';
+    const CURRENCY_LYD = 'LYD';
+    const CURRENCY_MAD = 'MAD';
+    const CURRENCY_OMR = 'OMR';
+    const CURRENCY_QAR = 'QAR';
+    const CURRENCY_SAR = 'SAR';
+    const CURRENCY_SYP = 'SYP';
+    const CURRENCY_TND = 'TND';
+    const CURRENCY_YER = 'YER';
+    const CURRENCY_CLP = 'CLP';
+    const CURRENCY_INR = 'INR';
+    const CURRENCY_AZN = 'AZN';
+    const CURRENCY_RUB = 'RUB';
+    const CURRENCY_BYN = 'BYN';
+    const CURRENCY_BGN = 'BGN';
+    const CURRENCY_NGN = 'NGN';
+    const CURRENCY_BDT = 'BDT';
+    const CURRENCY_CNY = 'CNY';
+    const CURRENCY_BAM = 'BAM';
+    const CURRENCY_CZK = 'CZK';
+    const CURRENCY_DKK = 'DKK';
+    const CURRENCY_CHF = 'CHF';
+    const CURRENCY_MVR = 'MVR';
+    const CURRENCY_BTN = 'BTN';
+    const CURRENCY_XCD = 'XCD';
+    const CURRENCY_BZD = 'BZD';
+    const CURRENCY_HKD = 'HKD';
+    const CURRENCY_IDR = 'IDR';
+    const CURRENCY_JMD = 'JMD';
+    const CURRENCY_MYR = 'MYR';
+    const CURRENCY_NZD = 'NZD';
+    const CURRENCY_PHP = 'PHP';
+    const CURRENCY_SGD = 'SGD';
+    const CURRENCY_TTD = 'TTD';
+    const CURRENCY_XDR = 'XDR';
+    const CURRENCY_ARS = 'ARS';
+    const CURRENCY_BOB = 'BOB';
+    const CURRENCY_COP = 'COP';
+    const CURRENCY_CRC = 'CRC';
+    const CURRENCY_CUP = 'CUP';
+    const CURRENCY_DOP = 'DOP';
+    const CURRENCY_GTQ = 'GTQ';
+    const CURRENCY_HNL = 'HNL';
+    const CURRENCY_MXN = 'MXN';
+    const CURRENCY_NIO = 'NIO';
+    const CURRENCY_PAB = 'PAB';
+    const CURRENCY_PEN = 'PEN';
+    const CURRENCY_PYG = 'PYG';
+    const CURRENCY_UYU = 'UYU';
+    const CURRENCY_VEF = 'VEF';
+    const CURRENCY_IRR = 'IRR';
+    const CURRENCY_XOF = 'XOF';
+    const CURRENCY_CDF = 'CDF';
+    const CURRENCY_XAF = 'XAF';
+    const CURRENCY_HTG = 'HTG';
+    const CURRENCY_ILS = 'ILS';
+    const CURRENCY_HRK = 'HRK';
+    const CURRENCY_HUF = 'HUF';
+    const CURRENCY_AMD = 'AMD';
+    const CURRENCY_ISK = 'ISK';
+    const CURRENCY_JPY = 'JPY';
+    const CURRENCY_GEL = 'GEL';
+    const CURRENCY_KZT = 'KZT';
+    const CURRENCY_KHR = 'KHR';
+    const CURRENCY_KRW = 'KRW';
+    const CURRENCY_KGS = 'KGS';
+    const CURRENCY_LAK = 'LAK';
+    const CURRENCY_MKD = 'MKD';
+    const CURRENCY_MNT = 'MNT';
+    const CURRENCY_BND = 'BND';
+    const CURRENCY_MMK = 'MMK';
+    const CURRENCY_NOK = 'NOK';
+    const CURRENCY_NPR = 'NPR';
+    const CURRENCY_PKR = 'PKR';
+    const CURRENCY_PLN = 'PLN';
+    const CURRENCY_AFN = 'AFN';
+    const CURRENCY_BRL = 'BRL';
+    const CURRENCY_MDL = 'MDL';
+    const CURRENCY_RON = 'RON';
+    const CURRENCY_RWF = 'RWF';
+    const CURRENCY_SEK = 'SEK';
+    const CURRENCY_LKR = 'LKR';
+    const CURRENCY_SOS = 'SOS';
+    const CURRENCY_ALL = 'ALL';
+    const CURRENCY_RSD = 'RSD';
+    const CURRENCY_KES = 'KES';
+    const CURRENCY_TJS = 'TJS';
+    const CURRENCY_THB = 'THB';
+    const CURRENCY_ERN = 'ERN';
+    const CURRENCY_TMT = 'TMT';
+    const CURRENCY_BWP = 'BWP';
+    const CURRENCY__TRY = 'TRY';
+    const CURRENCY_UAH = 'UAH';
+    const CURRENCY_UZS = 'UZS';
+    const CURRENCY_VND = 'VND';
+    const CURRENCY_MOP = 'MOP';
+    const CURRENCY_TWD = 'TWD';
+    const CURRENCY_BMD = 'BMD';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_INCOMPLETE,
+            self::STATUS_INCOMPLETE_EXPIRED,
+            self::STATUS_TRIALING,
+            self::STATUS_ACTIVE,
+            self::STATUS_PAST_DUE,
+            self::STATUS_CANCELED,
+            self::STATUS_UNPAID,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getCurrencyAllowableValues()
+    {
+        return [
+            self::CURRENCY_EUR,
+            self::CURRENCY_USD,
+            self::CURRENCY_GBP,
+            self::CURRENCY_CAD,
+            self::CURRENCY_AUD,
+            self::CURRENCY_DJF,
+            self::CURRENCY_ZAR,
+            self::CURRENCY_ETB,
+            self::CURRENCY_AED,
+            self::CURRENCY_BHD,
+            self::CURRENCY_DZD,
+            self::CURRENCY_EGP,
+            self::CURRENCY_IQD,
+            self::CURRENCY_JOD,
+            self::CURRENCY_KWD,
+            self::CURRENCY_LBP,
+            self::CURRENCY_LYD,
+            self::CURRENCY_MAD,
+            self::CURRENCY_OMR,
+            self::CURRENCY_QAR,
+            self::CURRENCY_SAR,
+            self::CURRENCY_SYP,
+            self::CURRENCY_TND,
+            self::CURRENCY_YER,
+            self::CURRENCY_CLP,
+            self::CURRENCY_INR,
+            self::CURRENCY_AZN,
+            self::CURRENCY_RUB,
+            self::CURRENCY_BYN,
+            self::CURRENCY_BGN,
+            self::CURRENCY_NGN,
+            self::CURRENCY_BDT,
+            self::CURRENCY_CNY,
+            self::CURRENCY_BAM,
+            self::CURRENCY_CZK,
+            self::CURRENCY_DKK,
+            self::CURRENCY_CHF,
+            self::CURRENCY_MVR,
+            self::CURRENCY_BTN,
+            self::CURRENCY_XCD,
+            self::CURRENCY_BZD,
+            self::CURRENCY_HKD,
+            self::CURRENCY_IDR,
+            self::CURRENCY_JMD,
+            self::CURRENCY_MYR,
+            self::CURRENCY_NZD,
+            self::CURRENCY_PHP,
+            self::CURRENCY_SGD,
+            self::CURRENCY_TTD,
+            self::CURRENCY_XDR,
+            self::CURRENCY_ARS,
+            self::CURRENCY_BOB,
+            self::CURRENCY_COP,
+            self::CURRENCY_CRC,
+            self::CURRENCY_CUP,
+            self::CURRENCY_DOP,
+            self::CURRENCY_GTQ,
+            self::CURRENCY_HNL,
+            self::CURRENCY_MXN,
+            self::CURRENCY_NIO,
+            self::CURRENCY_PAB,
+            self::CURRENCY_PEN,
+            self::CURRENCY_PYG,
+            self::CURRENCY_UYU,
+            self::CURRENCY_VEF,
+            self::CURRENCY_IRR,
+            self::CURRENCY_XOF,
+            self::CURRENCY_CDF,
+            self::CURRENCY_XAF,
+            self::CURRENCY_HTG,
+            self::CURRENCY_ILS,
+            self::CURRENCY_HRK,
+            self::CURRENCY_HUF,
+            self::CURRENCY_AMD,
+            self::CURRENCY_ISK,
+            self::CURRENCY_JPY,
+            self::CURRENCY_GEL,
+            self::CURRENCY_KZT,
+            self::CURRENCY_KHR,
+            self::CURRENCY_KRW,
+            self::CURRENCY_KGS,
+            self::CURRENCY_LAK,
+            self::CURRENCY_MKD,
+            self::CURRENCY_MNT,
+            self::CURRENCY_BND,
+            self::CURRENCY_MMK,
+            self::CURRENCY_NOK,
+            self::CURRENCY_NPR,
+            self::CURRENCY_PKR,
+            self::CURRENCY_PLN,
+            self::CURRENCY_AFN,
+            self::CURRENCY_BRL,
+            self::CURRENCY_MDL,
+            self::CURRENCY_RON,
+            self::CURRENCY_RWF,
+            self::CURRENCY_SEK,
+            self::CURRENCY_LKR,
+            self::CURRENCY_SOS,
+            self::CURRENCY_ALL,
+            self::CURRENCY_RSD,
+            self::CURRENCY_KES,
+            self::CURRENCY_TJS,
+            self::CURRENCY_THB,
+            self::CURRENCY_ERN,
+            self::CURRENCY_TMT,
+            self::CURRENCY_BWP,
+            self::CURRENCY__TRY,
+            self::CURRENCY_UAH,
+            self::CURRENCY_UZS,
+            self::CURRENCY_VND,
+            self::CURRENCY_MOP,
+            self::CURRENCY_TWD,
+            self::CURRENCY_BMD,
+        ];
+    }
     
 
     /**
@@ -179,6 +451,8 @@ class Subscription implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['subscription_id'] = isset($data['subscription_id']) ? $data['subscription_id'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
     }
 
     /**
@@ -189,6 +463,31 @@ class Subscription implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        if ($this->container['subscription_id'] === null) {
+            $invalidProperties[] = "'subscription_id' can't be null";
+        }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
+        $allowedValues = $this->getStatusAllowableValues();
+        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        if ($this->container['currency'] === null) {
+            $invalidProperties[] = "'currency' can't be null";
+        }
+        $allowedValues = $this->getCurrencyAllowableValues();
+        if (!is_null($this->container['currency']) && !in_array($this->container['currency'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'currency', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -225,6 +524,72 @@ class Subscription implements ModelInterface, ArrayAccess
     public function setSubscriptionId($subscription_id)
     {
         $this->container['subscription_id'] = $subscription_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     *
+     * @param string $status Status
+     *
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $allowedValues = $this->getStatusAllowableValues();
+        if (!in_array($status, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'status', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency
+     *
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->container['currency'];
+    }
+
+    /**
+     * Sets currency
+     *
+     * @param string $currency Currency
+     *
+     * @return $this
+     */
+    public function setCurrency($currency)
+    {
+        $allowedValues = $this->getCurrencyAllowableValues();
+        if (!in_array($currency, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'currency', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['currency'] = $currency;
 
         return $this;
     }
