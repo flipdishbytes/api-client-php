@@ -67,6 +67,7 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
         'teammate_app_access_level' => 'string',
         'permissions_type' => 'string',
         'support' => '\Flipdish\\Client\Models\AppStoreAppSupportInfo',
+        'external_function_action_url' => 'string',
         'name' => 'string',
         'description' => 'string',
         'is_enabled' => 'bool',
@@ -90,6 +91,7 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
         'teammate_app_access_level' => null,
         'permissions_type' => null,
         'support' => null,
+        'external_function_action_url' => null,
         'name' => null,
         'description' => null,
         'is_enabled' => null,
@@ -134,6 +136,7 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
         'teammate_app_access_level' => 'TeammateAppAccessLevel',
         'permissions_type' => 'PermissionsType',
         'support' => 'Support',
+        'external_function_action_url' => 'ExternalFunctionActionUrl',
         'name' => 'Name',
         'description' => 'Description',
         'is_enabled' => 'IsEnabled',
@@ -157,6 +160,7 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
         'teammate_app_access_level' => 'setTeammateAppAccessLevel',
         'permissions_type' => 'setPermissionsType',
         'support' => 'setSupport',
+        'external_function_action_url' => 'setExternalFunctionActionUrl',
         'name' => 'setName',
         'description' => 'setDescription',
         'is_enabled' => 'setIsEnabled',
@@ -180,6 +184,7 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
         'teammate_app_access_level' => 'getTeammateAppAccessLevel',
         'permissions_type' => 'getPermissionsType',
         'support' => 'getSupport',
+        'external_function_action_url' => 'getExternalFunctionActionUrl',
         'name' => 'getName',
         'description' => 'getDescription',
         'is_enabled' => 'getIsEnabled',
@@ -399,6 +404,7 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
         $this->container['teammate_app_access_level'] = isset($data['teammate_app_access_level']) ? $data['teammate_app_access_level'] : null;
         $this->container['permissions_type'] = isset($data['permissions_type']) ? $data['permissions_type'] : null;
         $this->container['support'] = isset($data['support']) ? $data['support'] : null;
+        $this->container['external_function_action_url'] = isset($data['external_function_action_url']) ? $data['external_function_action_url'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
@@ -735,6 +741,30 @@ class UpdateAppStoreApp implements ModelInterface, ArrayAccess
     public function setSupport($support)
     {
         $this->container['support'] = $support;
+
+        return $this;
+    }
+
+    /**
+     * Gets external_function_action_url
+     *
+     * @return string
+     */
+    public function getExternalFunctionActionUrl()
+    {
+        return $this->container['external_function_action_url'];
+    }
+
+    /**
+     * Sets external_function_action_url
+     *
+     * @param string $external_function_action_url Action URL for external functions, used for handling Portal configuration action buttons
+     *
+     * @return $this
+     */
+    public function setExternalFunctionActionUrl($external_function_action_url)
+    {
+        $this->container['external_function_action_url'] = $external_function_action_url;
 
         return $this;
     }

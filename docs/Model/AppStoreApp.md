@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **teammate_app_access_level** | **string** | Teammate app access level | [optional] 
 **permissions_type** | **string** | Permissions type | 
 **support** | [**\Flipdish\\Client\Models\AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) | Support information | [optional] 
+**external_function_action_url** | **string** | Action URL for external functions, used for handling Portal configuration action buttons | [optional] 
 **name** | **string** | Name | 
 **description** | **string** | Description | 
 **is_enabled** | **bool** | Is application enabled | [optional] 

@@ -140,6 +140,13 @@ class CreateAppStoreAppTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "external_function_action_url"
+     */
+    public function testPropertyExternalFunctionActionUrl()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
