@@ -60,7 +60,9 @@ class Subscription implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'subscription_id' => 'string',
         'status' => 'string',
-        'currency' => 'string'
+        'currency' => 'string',
+        'next_invoice_amount' => 'int',
+        'next_invoice_billing_date' => '\DateTime'
     ];
 
     /**
@@ -71,7 +73,9 @@ class Subscription implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'subscription_id' => null,
         'status' => null,
-        'currency' => null
+        'currency' => null,
+        'next_invoice_amount' => 'int64',
+        'next_invoice_billing_date' => 'date-time'
     ];
 
     /**
@@ -103,7 +107,9 @@ class Subscription implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'subscription_id' => 'SubscriptionId',
         'status' => 'Status',
-        'currency' => 'Currency'
+        'currency' => 'Currency',
+        'next_invoice_amount' => 'NextInvoiceAmount',
+        'next_invoice_billing_date' => 'NextInvoiceBillingDate'
     ];
 
     /**
@@ -114,7 +120,9 @@ class Subscription implements ModelInterface, ArrayAccess
     protected static $setters = [
         'subscription_id' => 'setSubscriptionId',
         'status' => 'setStatus',
-        'currency' => 'setCurrency'
+        'currency' => 'setCurrency',
+        'next_invoice_amount' => 'setNextInvoiceAmount',
+        'next_invoice_billing_date' => 'setNextInvoiceBillingDate'
     ];
 
     /**
@@ -125,7 +133,9 @@ class Subscription implements ModelInterface, ArrayAccess
     protected static $getters = [
         'subscription_id' => 'getSubscriptionId',
         'status' => 'getStatus',
-        'currency' => 'getCurrency'
+        'currency' => 'getCurrency',
+        'next_invoice_amount' => 'getNextInvoiceAmount',
+        'next_invoice_billing_date' => 'getNextInvoiceBillingDate'
     ];
 
     /**
@@ -453,6 +463,8 @@ class Subscription implements ModelInterface, ArrayAccess
         $this->container['subscription_id'] = isset($data['subscription_id']) ? $data['subscription_id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
+        $this->container['next_invoice_amount'] = isset($data['next_invoice_amount']) ? $data['next_invoice_amount'] : null;
+        $this->container['next_invoice_billing_date'] = isset($data['next_invoice_billing_date']) ? $data['next_invoice_billing_date'] : null;
     }
 
     /**
@@ -590,6 +602,54 @@ class Subscription implements ModelInterface, ArrayAccess
             );
         }
         $this->container['currency'] = $currency;
+
+        return $this;
+    }
+
+    /**
+     * Gets next_invoice_amount
+     *
+     * @return int
+     */
+    public function getNextInvoiceAmount()
+    {
+        return $this->container['next_invoice_amount'];
+    }
+
+    /**
+     * Sets next_invoice_amount
+     *
+     * @param int $next_invoice_amount Next invoice amount
+     *
+     * @return $this
+     */
+    public function setNextInvoiceAmount($next_invoice_amount)
+    {
+        $this->container['next_invoice_amount'] = $next_invoice_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets next_invoice_billing_date
+     *
+     * @return \DateTime
+     */
+    public function getNextInvoiceBillingDate()
+    {
+        return $this->container['next_invoice_billing_date'];
+    }
+
+    /**
+     * Sets next_invoice_billing_date
+     *
+     * @param \DateTime $next_invoice_billing_date Next invoice billing date
+     *
+     * @return $this
+     */
+    public function setNextInvoiceBillingDate($next_invoice_billing_date)
+    {
+        $this->container['next_invoice_billing_date'] = $next_invoice_billing_date;
 
         return $this;
     }

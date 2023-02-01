@@ -96,4 +96,18 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCurrency()
     {
     }
+
+    /**
+     * Test attribute "next_invoice_amount"
+     */
+    public function testPropertyNextInvoiceAmount()
+    {
+    }
+
+    /**
+     * Test attribute "next_invoice_billing_date"
+     */
+    public function testPropertyNextInvoiceBillingDate()
+    {
+    }
 }
