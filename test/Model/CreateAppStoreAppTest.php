@@ -147,6 +147,13 @@ class CreateAppStoreAppTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "external_function_signature_key"
+     */
+    public function testPropertyExternalFunctionSignatureKey()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

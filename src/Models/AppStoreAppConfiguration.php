@@ -77,6 +77,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'permissions_type' => 'string',
         'support' => '\Flipdish\\Client\Models\AppStoreAppSupportInfo',
         'external_function_action_url' => 'string',
+        'external_function_signature_key' => 'string',
         'name' => 'string',
         'description' => 'string',
         'categories' => 'string[]',
@@ -109,6 +110,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'permissions_type' => null,
         'support' => null,
         'external_function_action_url' => null,
+        'external_function_signature_key' => null,
         'name' => null,
         'description' => null,
         'categories' => null,
@@ -162,6 +164,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'permissions_type' => 'PermissionsType',
         'support' => 'Support',
         'external_function_action_url' => 'ExternalFunctionActionUrl',
+        'external_function_signature_key' => 'ExternalFunctionSignatureKey',
         'name' => 'Name',
         'description' => 'Description',
         'categories' => 'Categories',
@@ -194,6 +197,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'permissions_type' => 'setPermissionsType',
         'support' => 'setSupport',
         'external_function_action_url' => 'setExternalFunctionActionUrl',
+        'external_function_signature_key' => 'setExternalFunctionSignatureKey',
         'name' => 'setName',
         'description' => 'setDescription',
         'categories' => 'setCategories',
@@ -226,6 +230,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'permissions_type' => 'getPermissionsType',
         'support' => 'getSupport',
         'external_function_action_url' => 'getExternalFunctionActionUrl',
+        'external_function_signature_key' => 'getExternalFunctionSignatureKey',
         'name' => 'getName',
         'description' => 'getDescription',
         'categories' => 'getCategories',
@@ -471,6 +476,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         $this->container['permissions_type'] = isset($data['permissions_type']) ? $data['permissions_type'] : null;
         $this->container['support'] = isset($data['support']) ? $data['support'] : null;
         $this->container['external_function_action_url'] = isset($data['external_function_action_url']) ? $data['external_function_action_url'] : null;
+        $this->container['external_function_signature_key'] = isset($data['external_function_signature_key']) ? $data['external_function_signature_key'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
@@ -1081,6 +1087,30 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
     public function setExternalFunctionActionUrl($external_function_action_url)
     {
         $this->container['external_function_action_url'] = $external_function_action_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets external_function_signature_key
+     *
+     * @return string
+     */
+    public function getExternalFunctionSignatureKey()
+    {
+        return $this->container['external_function_signature_key'];
+    }
+
+    /**
+     * Sets external_function_signature_key
+     *
+     * @param string $external_function_signature_key Signing key for external function action calls
+     *
+     * @return $this
+     */
+    public function setExternalFunctionSignatureKey($external_function_signature_key)
+    {
+        $this->container['external_function_signature_key'] = $external_function_signature_key;
 
         return $this;
     }
