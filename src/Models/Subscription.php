@@ -59,6 +59,7 @@ class Subscription implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'subscription_id' => 'string',
+        'name' => 'string',
         'status' => 'string',
         'currency' => 'string',
         'next_invoice_amount' => 'int',
@@ -72,6 +73,7 @@ class Subscription implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'subscription_id' => null,
+        'name' => null,
         'status' => null,
         'currency' => null,
         'next_invoice_amount' => 'int64',
@@ -106,6 +108,7 @@ class Subscription implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'subscription_id' => 'SubscriptionId',
+        'name' => 'Name',
         'status' => 'Status',
         'currency' => 'Currency',
         'next_invoice_amount' => 'NextInvoiceAmount',
@@ -119,6 +122,7 @@ class Subscription implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'subscription_id' => 'setSubscriptionId',
+        'name' => 'setName',
         'status' => 'setStatus',
         'currency' => 'setCurrency',
         'next_invoice_amount' => 'setNextInvoiceAmount',
@@ -132,6 +136,7 @@ class Subscription implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'subscription_id' => 'getSubscriptionId',
+        'name' => 'getName',
         'status' => 'getStatus',
         'currency' => 'getCurrency',
         'next_invoice_amount' => 'getNextInvoiceAmount',
@@ -461,6 +466,7 @@ class Subscription implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['subscription_id'] = isset($data['subscription_id']) ? $data['subscription_id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['next_invoice_amount'] = isset($data['next_invoice_amount']) ? $data['next_invoice_amount'] : null;
@@ -478,6 +484,9 @@ class Subscription implements ModelInterface, ArrayAccess
 
         if ($this->container['subscription_id'] === null) {
             $invalidProperties[] = "'subscription_id' can't be null";
+        }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
         }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
@@ -536,6 +545,30 @@ class Subscription implements ModelInterface, ArrayAccess
     public function setSubscriptionId($subscription_id)
     {
         $this->container['subscription_id'] = $subscription_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name name
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
 
         return $this;
     }
