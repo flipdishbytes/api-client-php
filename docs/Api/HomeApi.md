@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**dismissOldPortalAction**](HomeApi.md#dismissOldPortalAction) | **POST** /api/v1.0/home/dismissoldportalaction | [PRIVATE API] Complete Home Action
 [**getHomeActions**](HomeApi.md#getHomeActions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
 [**getHomeStatistics**](HomeApi.md#getHomeStatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
-[**getOktaPortalFeatureFlag**](HomeApi.md#getOktaPortalFeatureFlag) | **GET** /api/v1.0/home/okta-portal | [PRIVATE API] Get Okta Portal feature flag value
+[**getOktaPortalFeatureFlag**](HomeApi.md#getOktaPortalFeatureFlag) | **GET** /api/v1.0/home/okta-portal | [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
 
 
 # **completeHomeAction**
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 # **getOktaPortalFeatureFlag**
 > \Flipdish\\Client\Models\RestApiResultOktaPortalFeatureFlag getOktaPortalFeatureFlag()
 
-[PRIVATE API] Get Okta Portal feature flag value
+[PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
 
 ### Example
 ```php

@@ -114,7 +114,7 @@ class HomeApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOktaPortalFeatureFlag
      *
-     * [PRIVATE API] Get Okta Portal feature flag value.
+     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired.
      *
      */
     public function testGetOktaPortalFeatureFlag()

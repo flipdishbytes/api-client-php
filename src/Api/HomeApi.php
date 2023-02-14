@@ -1317,7 +1317,7 @@ class HomeApi
     /**
      * Operation getOktaPortalFeatureFlag
      *
-     * [PRIVATE API] Get Okta Portal feature flag value
+     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1333,7 +1333,7 @@ class HomeApi
     /**
      * Operation getOktaPortalFeatureFlagWithHttpInfo
      *
-     * [PRIVATE API] Get Okta Portal feature flag value
+     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1439,7 +1439,7 @@ class HomeApi
     /**
      * Operation getOktaPortalFeatureFlagAsync
      *
-     * [PRIVATE API] Get Okta Portal feature flag value
+     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
      *
      *
      * @throws \InvalidArgumentException
@@ -1458,7 +1458,7 @@ class HomeApi
     /**
      * Operation getOktaPortalFeatureFlagAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get Okta Portal feature flag value
+     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
      *
      *
      * @throws \InvalidArgumentException

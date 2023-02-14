@@ -117,4 +117,11 @@ class SubscriptionSummaryTest extends \PHPUnit_Framework_TestCase
     public function testPropertyNextInvoiceBillingDate()
     {
     }
+
+    /**
+     * Test attribute "user"
+     */
+    public function testPropertyUser()
+    {
+    }
 }

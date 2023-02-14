@@ -63,7 +63,8 @@ class Subscription implements ModelInterface, ArrayAccess
         'status' => 'string',
         'currency' => 'string',
         'next_invoice_amount' => 'int',
-        'next_invoice_billing_date' => '\DateTime'
+        'next_invoice_billing_date' => '\DateTime',
+        'user' => 'string'
     ];
 
     /**
@@ -77,7 +78,8 @@ class Subscription implements ModelInterface, ArrayAccess
         'status' => null,
         'currency' => null,
         'next_invoice_amount' => 'int64',
-        'next_invoice_billing_date' => 'date-time'
+        'next_invoice_billing_date' => 'date-time',
+        'user' => null
     ];
 
     /**
@@ -112,7 +114,8 @@ class Subscription implements ModelInterface, ArrayAccess
         'status' => 'Status',
         'currency' => 'Currency',
         'next_invoice_amount' => 'NextInvoiceAmount',
-        'next_invoice_billing_date' => 'NextInvoiceBillingDate'
+        'next_invoice_billing_date' => 'NextInvoiceBillingDate',
+        'user' => 'User'
     ];
 
     /**
@@ -126,7 +129,8 @@ class Subscription implements ModelInterface, ArrayAccess
         'status' => 'setStatus',
         'currency' => 'setCurrency',
         'next_invoice_amount' => 'setNextInvoiceAmount',
-        'next_invoice_billing_date' => 'setNextInvoiceBillingDate'
+        'next_invoice_billing_date' => 'setNextInvoiceBillingDate',
+        'user' => 'setUser'
     ];
 
     /**
@@ -140,7 +144,8 @@ class Subscription implements ModelInterface, ArrayAccess
         'status' => 'getStatus',
         'currency' => 'getCurrency',
         'next_invoice_amount' => 'getNextInvoiceAmount',
-        'next_invoice_billing_date' => 'getNextInvoiceBillingDate'
+        'next_invoice_billing_date' => 'getNextInvoiceBillingDate',
+        'user' => 'getUser'
     ];
 
     /**
@@ -471,6 +476,7 @@ class Subscription implements ModelInterface, ArrayAccess
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['next_invoice_amount'] = isset($data['next_invoice_amount']) ? $data['next_invoice_amount'] : null;
         $this->container['next_invoice_billing_date'] = isset($data['next_invoice_billing_date']) ? $data['next_invoice_billing_date'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
     }
 
     /**
@@ -683,6 +689,30 @@ class Subscription implements ModelInterface, ArrayAccess
     public function setNextInvoiceBillingDate($next_invoice_billing_date)
     {
         $this->container['next_invoice_billing_date'] = $next_invoice_billing_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets user
+     *
+     * @return string
+     */
+    public function getUser()
+    {
+        return $this->container['user'];
+    }
+
+    /**
+     * Sets user
+     *
+     * @param string $user User
+     *
+     * @return $this
+     */
+    public function setUser($user)
+    {
+        $this->container['user'] = $user;
 
         return $this;
     }

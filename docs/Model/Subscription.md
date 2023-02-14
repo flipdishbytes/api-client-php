@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **currency** | **string** | Currency | 
 **next_invoice_amount** | **int** | Next invoice amount | [optional] 
 **next_invoice_billing_date** | [**\DateTime**](\DateTime.md) | Next invoice billing date | [optional] 
+**user** | **string** | User | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
