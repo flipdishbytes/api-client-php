@@ -4,20 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createMetafieldDefinition**](MetafieldDefinitionsApi.md#createMetafieldDefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Create a Metafield Definition
-[**getMetafieldDefinitionByKey**](MetafieldDefinitionsApi.md#getMetafieldDefinitionByKey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Get a Metafield Definition for the specified owner entity and key.
-[**getMetafieldDefinitions**](MetafieldDefinitionsApi.md#getMetafieldDefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | Get Metafield Definitions for the specified owner entity.
-[**getOwnerEntityConfigurations**](MetafieldDefinitionsApi.md#getOwnerEntityConfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | Get OwnerEntity Configurations which contain information to manage Metafield Definitions
-[**getOwnerEntityRecommendations**](MetafieldDefinitionsApi.md#getOwnerEntityRecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | Get OwnerEntity Definition Recommendations
-[**updateMetafieldDefinition**](MetafieldDefinitionsApi.md#updateMetafieldDefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | Update a Metafield Definition
+[**createMetafieldDefinition**](MetafieldDefinitionsApi.md#createMetafieldDefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
+[**getMetafieldDefinitionByKey**](MetafieldDefinitionsApi.md#getMetafieldDefinitionByKey) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | 
+[**getMetafieldDefinitions**](MetafieldDefinitionsApi.md#getMetafieldDefinitions) | **GET** /api/v1.0/{appId}/metafields/definitions/{ownerEntity} | 
+[**getOwnerEntityConfigurations**](MetafieldDefinitionsApi.md#getOwnerEntityConfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | 
+[**getOwnerEntityRecommendations**](MetafieldDefinitionsApi.md#getOwnerEntityRecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | 
+[**updateMetafieldDefinition**](MetafieldDefinitionsApi.md#updateMetafieldDefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | 
 
 
 # **createMetafieldDefinition**
 > \Flipdish\\Client\Models\RestApiResultMetafieldDefinition createMetafieldDefinition($app_id, $owner_entity, $create_metafield_definition)
 
-Create a Metafield Definition
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -72,9 +70,7 @@ Name | Type | Description  | Notes
 # **getMetafieldDefinitionByKey**
 > \Flipdish\\Client\Models\RestApiResultMetafieldDefinition getMetafieldDefinitionByKey($app_id, $owner_entity, $key)
 
-Get a Metafield Definition for the specified owner entity and key.
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -129,9 +125,7 @@ Name | Type | Description  | Notes
 # **getMetafieldDefinitions**
 > \Flipdish\\Client\Models\RestApiPaginationResultMetafieldDefinition getMetafieldDefinitions($app_id, $owner_entity, $search_term, $page, $limit)
 
-Get Metafield Definitions for the specified owner entity.
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -190,9 +184,7 @@ Name | Type | Description  | Notes
 # **getOwnerEntityConfigurations**
 > \Flipdish\\Client\Models\OwnerEntityConfigurations getOwnerEntityConfigurations($app_id)
 
-Get OwnerEntity Configurations which contain information to manage Metafield Definitions
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -243,9 +235,7 @@ Name | Type | Description  | Notes
 # **getOwnerEntityRecommendations**
 > \Flipdish\\Client\Models\RestApiPaginationResultMetafieldDefinitionRecommendation getOwnerEntityRecommendations($app_id, $owner_entity, $search_term, $page, $limit)
 
-Get OwnerEntity Definition Recommendations
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -304,9 +294,7 @@ Name | Type | Description  | Notes
 # **updateMetafieldDefinition**
 > \Flipdish\\Client\Models\RestApiResultMetafieldDefinition updateMetafieldDefinition($app_id, $owner_entity, $key, $update_metafield_definition)
 
-Update a Metafield Definition
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php

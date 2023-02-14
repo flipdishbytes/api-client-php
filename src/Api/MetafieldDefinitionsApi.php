@@ -90,11 +90,9 @@ class MetafieldDefinitionsApi
     /**
      * Operation createMetafieldDefinition
      *
-     * Create a Metafield Definition
-     *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition  (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $owner_entity owner_entity (required)
+     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition create_metafield_definition (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -109,11 +107,9 @@ class MetafieldDefinitionsApi
     /**
      * Operation createMetafieldDefinitionWithHttpInfo
      *
-     * Create a Metafield Definition
-     *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition  (required)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -210,11 +206,11 @@ class MetafieldDefinitionsApi
     /**
      * Operation createMetafieldDefinitionAsync
      *
-     * Create a Metafield Definition
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition  (required)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -232,11 +228,11 @@ class MetafieldDefinitionsApi
     /**
      * Operation createMetafieldDefinitionAsyncWithHttpInfo
      *
-     * Create a Metafield Definition
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition  (required)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -286,9 +282,9 @@ class MetafieldDefinitionsApi
     /**
      * Create request for operation 'createMetafieldDefinition'
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition  (required)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  \Flipdish\\Client\Models\CreateMetafieldDefinition $create_metafield_definition (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -420,11 +416,9 @@ class MetafieldDefinitionsApi
     /**
      * Operation getMetafieldDefinitionByKey
      *
-     * Get a Metafield Definition for the specified owner entity and key.
-     *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $key  (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $owner_entity owner_entity (required)
+     * @param  string $key key (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -439,11 +433,9 @@ class MetafieldDefinitionsApi
     /**
      * Operation getMetafieldDefinitionByKeyWithHttpInfo
      *
-     * Get a Metafield Definition for the specified owner entity and key.
-     *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $key  (required)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $key (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -540,11 +532,11 @@ class MetafieldDefinitionsApi
     /**
      * Operation getMetafieldDefinitionByKeyAsync
      *
-     * Get a Metafield Definition for the specified owner entity and key.
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $key  (required)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $key (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -562,11 +554,11 @@ class MetafieldDefinitionsApi
     /**
      * Operation getMetafieldDefinitionByKeyAsyncWithHttpInfo
      *
-     * Get a Metafield Definition for the specified owner entity and key.
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $key  (required)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $key (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -616,9 +608,9 @@ class MetafieldDefinitionsApi
     /**
      * Create request for operation 'getMetafieldDefinitionByKey'
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $key  (required)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $key (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -755,13 +747,11 @@ class MetafieldDefinitionsApi
     /**
      * Operation getMetafieldDefinitions
      *
-     * Get Metafield Definitions for the specified owner entity.
-     *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  string $owner_entity owner_entity (required)
+     * @param  string $search_term search_term (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -776,13 +766,11 @@ class MetafieldDefinitionsApi
     /**
      * Operation getMetafieldDefinitionsWithHttpInfo
      *
-     * Get Metafield Definitions for the specified owner entity.
-     *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $search_term (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -879,13 +867,13 @@ class MetafieldDefinitionsApi
     /**
      * Operation getMetafieldDefinitionsAsync
      *
-     * Get Metafield Definitions for the specified owner entity.
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $search_term (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -903,13 +891,13 @@ class MetafieldDefinitionsApi
     /**
      * Operation getMetafieldDefinitionsAsyncWithHttpInfo
      *
-     * Get Metafield Definitions for the specified owner entity.
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $search_term (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -959,11 +947,11 @@ class MetafieldDefinitionsApi
     /**
      * Create request for operation 'getMetafieldDefinitions'
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $search_term (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1098,9 +1086,7 @@ class MetafieldDefinitionsApi
     /**
      * Operation getOwnerEntityConfigurations
      *
-     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1115,9 +1101,7 @@ class MetafieldDefinitionsApi
     /**
      * Operation getOwnerEntityConfigurationsWithHttpInfo
      *
-     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1214,9 +1198,9 @@ class MetafieldDefinitionsApi
     /**
      * Operation getOwnerEntityConfigurationsAsync
      *
-     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1234,9 +1218,9 @@ class MetafieldDefinitionsApi
     /**
      * Operation getOwnerEntityConfigurationsAsyncWithHttpInfo
      *
-     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1286,7 +1270,7 @@ class MetafieldDefinitionsApi
     /**
      * Create request for operation 'getOwnerEntityConfigurations'
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1395,13 +1379,11 @@ class MetafieldDefinitionsApi
     /**
      * Operation getOwnerEntityRecommendations
      *
-     * Get OwnerEntity Definition Recommendations
-     *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  string $owner_entity owner_entity (required)
+     * @param  string $search_term search_term (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1416,13 +1398,11 @@ class MetafieldDefinitionsApi
     /**
      * Operation getOwnerEntityRecommendationsWithHttpInfo
      *
-     * Get OwnerEntity Definition Recommendations
-     *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $search_term (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1519,13 +1499,13 @@ class MetafieldDefinitionsApi
     /**
      * Operation getOwnerEntityRecommendationsAsync
      *
-     * Get OwnerEntity Definition Recommendations
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $search_term (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1543,13 +1523,13 @@ class MetafieldDefinitionsApi
     /**
      * Operation getOwnerEntityRecommendationsAsyncWithHttpInfo
      *
-     * Get OwnerEntity Definition Recommendations
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $search_term (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1599,11 +1579,11 @@ class MetafieldDefinitionsApi
     /**
      * Create request for operation 'getOwnerEntityRecommendations'
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $search_term (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1738,12 +1718,10 @@ class MetafieldDefinitionsApi
     /**
      * Operation updateMetafieldDefinition
      *
-     * Update a Metafield Definition
-     *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $key  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition  (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $owner_entity owner_entity (required)
+     * @param  string $key key (required)
+     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition update_metafield_definition (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1758,12 +1736,10 @@ class MetafieldDefinitionsApi
     /**
      * Operation updateMetafieldDefinitionWithHttpInfo
      *
-     * Update a Metafield Definition
-     *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $key  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition  (required)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $key (required)
+     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1860,12 +1836,12 @@ class MetafieldDefinitionsApi
     /**
      * Operation updateMetafieldDefinitionAsync
      *
-     * Update a Metafield Definition
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $key  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition  (required)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $key (required)
+     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1883,12 +1859,12 @@ class MetafieldDefinitionsApi
     /**
      * Operation updateMetafieldDefinitionAsyncWithHttpInfo
      *
-     * Update a Metafield Definition
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $key  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition  (required)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $key (required)
+     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1938,10 +1914,10 @@ class MetafieldDefinitionsApi
     /**
      * Create request for operation 'updateMetafieldDefinition'
      *
-     * @param  string $app_id  (required)
-     * @param  string $owner_entity  (required)
-     * @param  string $key  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition  (required)
+     * @param  string $app_id (required)
+     * @param  string $owner_entity (required)
+     * @param  string $key (required)
+     * @param  \Flipdish\\Client\Models\UpdateMetafieldDefinition $update_metafield_definition (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

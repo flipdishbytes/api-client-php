@@ -74,7 +74,7 @@ class MetafieldDefinitionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createMetafieldDefinition
      *
-     * Create a Metafield Definition.
+     * .
      *
      */
     public function testCreateMetafieldDefinition()
@@ -84,7 +84,7 @@ class MetafieldDefinitionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getMetafieldDefinitionByKey
      *
-     * Get a Metafield Definition for the specified owner entity and key..
+     * .
      *
      */
     public function testGetMetafieldDefinitionByKey()
@@ -94,7 +94,7 @@ class MetafieldDefinitionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getMetafieldDefinitions
      *
-     * Get Metafield Definitions for the specified owner entity..
+     * .
      *
      */
     public function testGetMetafieldDefinitions()
@@ -104,7 +104,7 @@ class MetafieldDefinitionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOwnerEntityConfigurations
      *
-     * Get OwnerEntity Configurations which contain information to manage Metafield Definitions.
+     * .
      *
      */
     public function testGetOwnerEntityConfigurations()
@@ -114,7 +114,7 @@ class MetafieldDefinitionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOwnerEntityRecommendations
      *
-     * Get OwnerEntity Definition Recommendations.
+     * .
      *
      */
     public function testGetOwnerEntityRecommendations()
@@ -124,7 +124,7 @@ class MetafieldDefinitionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateMetafieldDefinition
      *
-     * Update a Metafield Definition.
+     * .
      *
      */
     public function testUpdateMetafieldDefinition()
