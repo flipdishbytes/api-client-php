@@ -64,7 +64,8 @@ class Subscription implements ModelInterface, ArrayAccess
         'currency' => 'string',
         'next_invoice_amount' => 'int',
         'next_invoice_billing_date' => '\DateTime',
-        'user' => 'string'
+        'user' => 'string',
+        'default_payment_description' => 'string'
     ];
 
     /**
@@ -79,7 +80,8 @@ class Subscription implements ModelInterface, ArrayAccess
         'currency' => null,
         'next_invoice_amount' => 'int64',
         'next_invoice_billing_date' => 'date-time',
-        'user' => null
+        'user' => null,
+        'default_payment_description' => null
     ];
 
     /**
@@ -115,7 +117,8 @@ class Subscription implements ModelInterface, ArrayAccess
         'currency' => 'Currency',
         'next_invoice_amount' => 'NextInvoiceAmount',
         'next_invoice_billing_date' => 'NextInvoiceBillingDate',
-        'user' => 'User'
+        'user' => 'User',
+        'default_payment_description' => 'DefaultPaymentDescription'
     ];
 
     /**
@@ -130,7 +133,8 @@ class Subscription implements ModelInterface, ArrayAccess
         'currency' => 'setCurrency',
         'next_invoice_amount' => 'setNextInvoiceAmount',
         'next_invoice_billing_date' => 'setNextInvoiceBillingDate',
-        'user' => 'setUser'
+        'user' => 'setUser',
+        'default_payment_description' => 'setDefaultPaymentDescription'
     ];
 
     /**
@@ -145,7 +149,8 @@ class Subscription implements ModelInterface, ArrayAccess
         'currency' => 'getCurrency',
         'next_invoice_amount' => 'getNextInvoiceAmount',
         'next_invoice_billing_date' => 'getNextInvoiceBillingDate',
-        'user' => 'getUser'
+        'user' => 'getUser',
+        'default_payment_description' => 'getDefaultPaymentDescription'
     ];
 
     /**
@@ -477,6 +482,7 @@ class Subscription implements ModelInterface, ArrayAccess
         $this->container['next_invoice_amount'] = isset($data['next_invoice_amount']) ? $data['next_invoice_amount'] : null;
         $this->container['next_invoice_billing_date'] = isset($data['next_invoice_billing_date']) ? $data['next_invoice_billing_date'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
+        $this->container['default_payment_description'] = isset($data['default_payment_description']) ? $data['default_payment_description'] : null;
     }
 
     /**
@@ -516,6 +522,12 @@ class Subscription implements ModelInterface, ArrayAccess
             );
         }
 
+        if ($this->container['user'] === null) {
+            $invalidProperties[] = "'user' can't be null";
+        }
+        if ($this->container['default_payment_description'] === null) {
+            $invalidProperties[] = "'default_payment_description' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -713,6 +725,30 @@ class Subscription implements ModelInterface, ArrayAccess
     public function setUser($user)
     {
         $this->container['user'] = $user;
+
+        return $this;
+    }
+
+    /**
+     * Gets default_payment_description
+     *
+     * @return string
+     */
+    public function getDefaultPaymentDescription()
+    {
+        return $this->container['default_payment_description'];
+    }
+
+    /**
+     * Sets default_payment_description
+     *
+     * @param string $default_payment_description Default payment description
+     *
+     * @return $this
+     */
+    public function setDefaultPaymentDescription($default_payment_description)
+    {
+        $this->container['default_payment_description'] = $default_payment_description;
 
         return $this;
     }

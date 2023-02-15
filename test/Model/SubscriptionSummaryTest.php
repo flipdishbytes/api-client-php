@@ -124,4 +124,11 @@ class SubscriptionSummaryTest extends \PHPUnit_Framework_TestCase
     public function testPropertyUser()
     {
     }
+
+    /**
+     * Test attribute "default_payment_description"
+     */
+    public function testPropertyDefaultPaymentDescription()
+    {
+    }
 }
