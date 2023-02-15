@@ -101,6 +101,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -111,9 +113,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiEventSearchPaginationResult
      */
-    public function getCustomerEvents($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getCustomerEvents($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        list($response) = $this->getCustomerEventsWithHttpInfo($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        list($response) = $this->getCustomerEventsWithHttpInfo($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
         return $response;
     }
 
@@ -131,6 +133,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -141,10 +145,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiEventSearchPaginationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCustomerEventsWithHttpInfo($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getCustomerEventsWithHttpInfo($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getCustomerEventsRequest($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getCustomerEventsRequest($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -243,6 +247,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -252,9 +258,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerEventsAsync($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getCustomerEventsAsync($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        return $this->getCustomerEventsAsyncWithHttpInfo($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+        return $this->getCustomerEventsAsyncWithHttpInfo($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -276,6 +282,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -285,10 +293,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerEventsAsyncWithHttpInfo($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getCustomerEventsAsyncWithHttpInfo($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getCustomerEventsRequest($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getCustomerEventsRequest($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -339,6 +347,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -348,7 +358,7 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCustomerEventsRequest($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    protected function getCustomerEventsRequest($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         // verify the required parameter 'customer_id' is set
         if ($customer_id === null || (is_array($customer_id) && count($customer_id) === 0)) {
@@ -395,6 +405,14 @@ class EventsApi
         // query params
         if ($user_id !== null) {
             $queryParams['userId'] = ObjectSerializer::toQueryValue($user_id);
+        }
+        // query params
+        if ($menu_id !== null) {
+            $queryParams['menuId'] = ObjectSerializer::toQueryValue($menu_id);
+        }
+        // query params
+        if ($campaign_id !== null) {
+            $queryParams['campaignId'] = ObjectSerializer::toQueryValue($campaign_id);
         }
         // query params
         if ($user_email !== null) {
@@ -519,6 +537,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -529,9 +549,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiEventSearchPaginationResult
      */
-    public function getEvents($white_label_id = null, $customer_id = null, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getEvents($white_label_id = null, $customer_id = null, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        list($response) = $this->getEventsWithHttpInfo($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        list($response) = $this->getEventsWithHttpInfo($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
         return $response;
     }
 
@@ -550,6 +570,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -560,10 +582,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiEventSearchPaginationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getEventsWithHttpInfo($white_label_id = null, $customer_id = null, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getEventsWithHttpInfo($white_label_id = null, $customer_id = null, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getEventsRequest($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getEventsRequest($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -663,6 +685,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -672,9 +696,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getEventsAsync($white_label_id = null, $customer_id = null, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getEventsAsync($white_label_id = null, $customer_id = null, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        return $this->getEventsAsyncWithHttpInfo($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+        return $this->getEventsAsyncWithHttpInfo($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -697,6 +721,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -706,10 +732,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getEventsAsyncWithHttpInfo($white_label_id = null, $customer_id = null, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getEventsAsyncWithHttpInfo($white_label_id = null, $customer_id = null, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getEventsRequest($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getEventsRequest($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -761,6 +787,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -770,7 +798,7 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getEventsRequest($white_label_id = null, $customer_id = null, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    protected function getEventsRequest($white_label_id = null, $customer_id = null, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
 
         $resourcePath = '/api/v1.0/events';
@@ -819,6 +847,14 @@ class EventsApi
         // query params
         if ($user_id !== null) {
             $queryParams['userId'] = ObjectSerializer::toQueryValue($user_id);
+        }
+        // query params
+        if ($menu_id !== null) {
+            $queryParams['menuId'] = ObjectSerializer::toQueryValue($menu_id);
+        }
+        // query params
+        if ($campaign_id !== null) {
+            $queryParams['campaignId'] = ObjectSerializer::toQueryValue($campaign_id);
         }
         // query params
         if ($user_email !== null) {
@@ -1231,6 +1267,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id2 Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -1241,9 +1279,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiEventSearchPaginationResult
      */
-    public function getMenuEvents($menu_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getMenuEvents($menu_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id2 = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        list($response) = $this->getMenuEventsWithHttpInfo($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        list($response) = $this->getMenuEventsWithHttpInfo($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id2, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
         return $response;
     }
 
@@ -1261,6 +1299,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id2 Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -1271,10 +1311,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiEventSearchPaginationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getMenuEventsWithHttpInfo($menu_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getMenuEventsWithHttpInfo($menu_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id2 = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getMenuEventsRequest($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getMenuEventsRequest($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id2, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1373,6 +1413,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id2 Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -1382,9 +1424,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMenuEventsAsync($menu_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getMenuEventsAsync($menu_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id2 = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        return $this->getMenuEventsAsyncWithHttpInfo($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+        return $this->getMenuEventsAsyncWithHttpInfo($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id2, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1406,6 +1448,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id2 Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -1415,10 +1459,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getMenuEventsAsyncWithHttpInfo($menu_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getMenuEventsAsyncWithHttpInfo($menu_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id2 = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getMenuEventsRequest($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getMenuEventsRequest($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id2, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1469,6 +1513,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id2 Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -1478,7 +1524,7 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getMenuEventsRequest($menu_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    protected function getMenuEventsRequest($menu_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id2 = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         // verify the required parameter 'menu_id' is set
         if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
@@ -1525,6 +1571,14 @@ class EventsApi
         // query params
         if ($user_id !== null) {
             $queryParams['userId'] = ObjectSerializer::toQueryValue($user_id);
+        }
+        // query params
+        if ($menu_id2 !== null) {
+            $queryParams['menuId'] = ObjectSerializer::toQueryValue($menu_id2);
+        }
+        // query params
+        if ($campaign_id !== null) {
+            $queryParams['campaignId'] = ObjectSerializer::toQueryValue($campaign_id);
         }
         // query params
         if ($user_email !== null) {
@@ -1648,6 +1702,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -1658,9 +1714,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiEventSearchPaginationResult
      */
-    public function getOrderEvents($order_id, $limit = null, $page = null, $start = null, $end = null, $order_id2 = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getOrderEvents($order_id, $limit = null, $page = null, $start = null, $end = null, $order_id2 = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        list($response) = $this->getOrderEventsWithHttpInfo($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        list($response) = $this->getOrderEventsWithHttpInfo($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
         return $response;
     }
 
@@ -1678,6 +1734,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -1688,10 +1746,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiEventSearchPaginationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrderEventsWithHttpInfo($order_id, $limit = null, $page = null, $start = null, $end = null, $order_id2 = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getOrderEventsWithHttpInfo($order_id, $limit = null, $page = null, $start = null, $end = null, $order_id2 = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getOrderEventsRequest($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getOrderEventsRequest($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1790,6 +1848,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -1799,9 +1859,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderEventsAsync($order_id, $limit = null, $page = null, $start = null, $end = null, $order_id2 = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getOrderEventsAsync($order_id, $limit = null, $page = null, $start = null, $end = null, $order_id2 = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        return $this->getOrderEventsAsyncWithHttpInfo($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+        return $this->getOrderEventsAsyncWithHttpInfo($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1823,6 +1883,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -1832,10 +1894,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderEventsAsyncWithHttpInfo($order_id, $limit = null, $page = null, $start = null, $end = null, $order_id2 = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getOrderEventsAsyncWithHttpInfo($order_id, $limit = null, $page = null, $start = null, $end = null, $order_id2 = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getOrderEventsRequest($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getOrderEventsRequest($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1886,6 +1948,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -1895,7 +1959,7 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOrderEventsRequest($order_id, $limit = null, $page = null, $start = null, $end = null, $order_id2 = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    protected function getOrderEventsRequest($order_id, $limit = null, $page = null, $start = null, $end = null, $order_id2 = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         // verify the required parameter 'order_id' is set
         if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
@@ -1942,6 +2006,14 @@ class EventsApi
         // query params
         if ($user_id !== null) {
             $queryParams['userId'] = ObjectSerializer::toQueryValue($user_id);
+        }
+        // query params
+        if ($menu_id !== null) {
+            $queryParams['menuId'] = ObjectSerializer::toQueryValue($menu_id);
+        }
+        // query params
+        if ($campaign_id !== null) {
+            $queryParams['campaignId'] = ObjectSerializer::toQueryValue($campaign_id);
         }
         // query params
         if ($user_email !== null) {
@@ -2065,6 +2137,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -2075,9 +2149,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiEventSearchPaginationResult
      */
-    public function getOrderEventsByCustomer($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getOrderEventsByCustomer($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        list($response) = $this->getOrderEventsByCustomerWithHttpInfo($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        list($response) = $this->getOrderEventsByCustomerWithHttpInfo($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
         return $response;
     }
 
@@ -2095,6 +2169,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -2105,10 +2181,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiEventSearchPaginationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrderEventsByCustomerWithHttpInfo($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getOrderEventsByCustomerWithHttpInfo($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getOrderEventsByCustomerRequest($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getOrderEventsByCustomerRequest($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2207,6 +2283,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -2216,9 +2294,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderEventsByCustomerAsync($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getOrderEventsByCustomerAsync($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        return $this->getOrderEventsByCustomerAsyncWithHttpInfo($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+        return $this->getOrderEventsByCustomerAsyncWithHttpInfo($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2240,6 +2318,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -2249,10 +2329,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderEventsByCustomerAsyncWithHttpInfo($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getOrderEventsByCustomerAsyncWithHttpInfo($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getOrderEventsByCustomerRequest($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getOrderEventsByCustomerRequest($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2303,6 +2383,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -2312,7 +2394,7 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOrderEventsByCustomerRequest($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    protected function getOrderEventsByCustomerRequest($customer_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         // verify the required parameter 'customer_id' is set
         if ($customer_id === null || (is_array($customer_id) && count($customer_id) === 0)) {
@@ -2363,6 +2445,14 @@ class EventsApi
         // query params
         if ($user_id !== null) {
             $queryParams['userId'] = ObjectSerializer::toQueryValue($user_id);
+        }
+        // query params
+        if ($menu_id !== null) {
+            $queryParams['menuId'] = ObjectSerializer::toQueryValue($menu_id);
+        }
+        // query params
+        if ($campaign_id !== null) {
+            $queryParams['campaignId'] = ObjectSerializer::toQueryValue($campaign_id);
         }
         // query params
         if ($user_email !== null) {
@@ -2478,6 +2568,8 @@ class EventsApi
      * @param  int $store_id2 Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -2488,9 +2580,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiEventSearchPaginationResult
      */
-    public function getStoreEvents($store_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id2 = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getStoreEvents($store_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id2 = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        list($response) = $this->getStoreEventsWithHttpInfo($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        list($response) = $this->getStoreEventsWithHttpInfo($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
         return $response;
     }
 
@@ -2508,6 +2600,8 @@ class EventsApi
      * @param  int $store_id2 Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -2518,10 +2612,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiEventSearchPaginationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStoreEventsWithHttpInfo($store_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id2 = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getStoreEventsWithHttpInfo($store_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id2 = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getStoreEventsRequest($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getStoreEventsRequest($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2620,6 +2714,8 @@ class EventsApi
      * @param  int $store_id2 Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -2629,9 +2725,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStoreEventsAsync($store_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id2 = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getStoreEventsAsync($store_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id2 = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        return $this->getStoreEventsAsyncWithHttpInfo($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+        return $this->getStoreEventsAsyncWithHttpInfo($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2653,6 +2749,8 @@ class EventsApi
      * @param  int $store_id2 Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -2662,10 +2760,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStoreEventsAsyncWithHttpInfo($store_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id2 = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getStoreEventsAsyncWithHttpInfo($store_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id2 = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getStoreEventsRequest($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getStoreEventsRequest($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2716,6 +2814,8 @@ class EventsApi
      * @param  int $store_id2 Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -2725,7 +2825,7 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getStoreEventsRequest($store_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id2 = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    protected function getStoreEventsRequest($store_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id2 = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
@@ -2772,6 +2872,14 @@ class EventsApi
         // query params
         if ($user_id !== null) {
             $queryParams['userId'] = ObjectSerializer::toQueryValue($user_id);
+        }
+        // query params
+        if ($menu_id !== null) {
+            $queryParams['menuId'] = ObjectSerializer::toQueryValue($menu_id);
+        }
+        // query params
+        if ($campaign_id !== null) {
+            $queryParams['campaignId'] = ObjectSerializer::toQueryValue($campaign_id);
         }
         // query params
         if ($user_email !== null) {
@@ -2895,6 +3003,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id2 Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -2905,9 +3015,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiEventSearchPaginationResult
      */
-    public function getUserEvents($user_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id2 = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getUserEvents($user_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id2 = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        list($response) = $this->getUserEventsWithHttpInfo($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id2, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        list($response) = $this->getUserEventsWithHttpInfo($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id2, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
         return $response;
     }
 
@@ -2925,6 +3035,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id2 Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -2935,10 +3047,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiEventSearchPaginationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getUserEventsWithHttpInfo($user_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id2 = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getUserEventsWithHttpInfo($user_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id2 = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getUserEventsRequest($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id2, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getUserEventsRequest($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id2, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3037,6 +3149,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id2 Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -3046,9 +3160,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserEventsAsync($user_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id2 = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getUserEventsAsync($user_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id2 = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        return $this->getUserEventsAsyncWithHttpInfo($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id2, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+        return $this->getUserEventsAsyncWithHttpInfo($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id2, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3070,6 +3184,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id2 Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -3079,10 +3195,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserEventsAsyncWithHttpInfo($user_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id2 = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getUserEventsAsyncWithHttpInfo($user_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id2 = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getUserEventsRequest($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id2, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getUserEventsRequest($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id2, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3133,6 +3249,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id2 Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -3142,7 +3260,7 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getUserEventsRequest($user_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id2 = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    protected function getUserEventsRequest($user_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id2 = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         // verify the required parameter 'user_id' is set
         if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
@@ -3189,6 +3307,14 @@ class EventsApi
         // query params
         if ($user_id2 !== null) {
             $queryParams['userId'] = ObjectSerializer::toQueryValue($user_id2);
+        }
+        // query params
+        if ($menu_id !== null) {
+            $queryParams['menuId'] = ObjectSerializer::toQueryValue($menu_id);
+        }
+        // query params
+        if ($campaign_id !== null) {
+            $queryParams['campaignId'] = ObjectSerializer::toQueryValue($campaign_id);
         }
         // query params
         if ($user_email !== null) {
@@ -3312,6 +3438,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -3322,9 +3450,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiEventSearchPaginationResult
      */
-    public function getWhiteLabelEvents($whitelabel_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getWhiteLabelEvents($whitelabel_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        list($response) = $this->getWhiteLabelEventsWithHttpInfo($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        list($response) = $this->getWhiteLabelEventsWithHttpInfo($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
         return $response;
     }
 
@@ -3342,6 +3470,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -3352,10 +3482,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiEventSearchPaginationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWhiteLabelEventsWithHttpInfo($whitelabel_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getWhiteLabelEventsWithHttpInfo($whitelabel_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getWhiteLabelEventsRequest($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getWhiteLabelEventsRequest($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3454,6 +3584,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -3463,9 +3595,9 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWhiteLabelEventsAsync($whitelabel_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getWhiteLabelEventsAsync($whitelabel_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
-        return $this->getWhiteLabelEventsAsyncWithHttpInfo($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+        return $this->getWhiteLabelEventsAsyncWithHttpInfo($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3487,6 +3619,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -3496,10 +3630,10 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWhiteLabelEventsAsyncWithHttpInfo($whitelabel_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    public function getWhiteLabelEventsAsyncWithHttpInfo($whitelabel_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiEventSearchPaginationResult';
-        $request = $this->getWhiteLabelEventsRequest($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+        $request = $this->getWhiteLabelEventsRequest($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3550,6 +3684,8 @@ class EventsApi
      * @param  int $store_id Events that have Store Id (optional)
      * @param  int $store_group_id Events that have Store Group Id (optional)
      * @param  int $user_id Events that have User Id (optional)
+     * @param  int $menu_id Events that have Menu Id (optional)
+     * @param  int $campaign_id Events that have Campaign Id (optional)
      * @param  string $user_email Events that have User Email (optional)
      * @param  string $user_name Events that have User Name (optional)
      * @param  string $voucher_code Events that have voucher code (optional)
@@ -3559,7 +3695,7 @@ class EventsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getWhiteLabelEventsRequest($whitelabel_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
+    protected function getWhiteLabelEventsRequest($whitelabel_id, $limit = null, $page = null, $start = null, $end = null, $order_id = null, $store_id = null, $store_group_id = null, $user_id = null, $menu_id = null, $campaign_id = null, $user_email = null, $user_name = null, $voucher_code = null, $event_type = null, $flipdish_event_id = null)
     {
         // verify the required parameter 'whitelabel_id' is set
         if ($whitelabel_id === null || (is_array($whitelabel_id) && count($whitelabel_id) === 0)) {
@@ -3606,6 +3742,14 @@ class EventsApi
         // query params
         if ($user_id !== null) {
             $queryParams['userId'] = ObjectSerializer::toQueryValue($user_id);
+        }
+        // query params
+        if ($menu_id !== null) {
+            $queryParams['menuId'] = ObjectSerializer::toQueryValue($menu_id);
+        }
+        // query params
+        if ($campaign_id !== null) {
+            $queryParams['campaignId'] = ObjectSerializer::toQueryValue($campaign_id);
         }
         // query params
         if ($user_email !== null) {

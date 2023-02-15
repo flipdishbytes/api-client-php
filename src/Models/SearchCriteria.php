@@ -66,6 +66,8 @@ class SearchCriteria implements ModelInterface, ArrayAccess
         'store_id' => 'int',
         'store_group_id' => 'int',
         'user_id' => 'int',
+        'menu_id' => 'int',
+        'campaign_id' => 'int',
         'user_email' => 'string',
         'user_name' => 'string',
         'voucher_code' => 'string',
@@ -87,6 +89,8 @@ class SearchCriteria implements ModelInterface, ArrayAccess
         'store_id' => 'int32',
         'store_group_id' => 'int32',
         'user_id' => 'int32',
+        'menu_id' => 'int32',
+        'campaign_id' => 'int32',
         'user_email' => null,
         'user_name' => null,
         'voucher_code' => null,
@@ -129,6 +133,8 @@ class SearchCriteria implements ModelInterface, ArrayAccess
         'store_id' => 'StoreId',
         'store_group_id' => 'StoreGroupId',
         'user_id' => 'UserId',
+        'menu_id' => 'MenuId',
+        'campaign_id' => 'CampaignId',
         'user_email' => 'UserEmail',
         'user_name' => 'UserName',
         'voucher_code' => 'VoucherCode',
@@ -150,6 +156,8 @@ class SearchCriteria implements ModelInterface, ArrayAccess
         'store_id' => 'setStoreId',
         'store_group_id' => 'setStoreGroupId',
         'user_id' => 'setUserId',
+        'menu_id' => 'setMenuId',
+        'campaign_id' => 'setCampaignId',
         'user_email' => 'setUserEmail',
         'user_name' => 'setUserName',
         'voucher_code' => 'setVoucherCode',
@@ -171,6 +179,8 @@ class SearchCriteria implements ModelInterface, ArrayAccess
         'store_id' => 'getStoreId',
         'store_group_id' => 'getStoreGroupId',
         'user_id' => 'getUserId',
+        'menu_id' => 'getMenuId',
+        'campaign_id' => 'getCampaignId',
         'user_email' => 'getUserEmail',
         'user_name' => 'getUserName',
         'voucher_code' => 'getVoucherCode',
@@ -246,6 +256,8 @@ class SearchCriteria implements ModelInterface, ArrayAccess
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
         $this->container['store_group_id'] = isset($data['store_group_id']) ? $data['store_group_id'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
+        $this->container['menu_id'] = isset($data['menu_id']) ? $data['menu_id'] : null;
+        $this->container['campaign_id'] = isset($data['campaign_id']) ? $data['campaign_id'] : null;
         $this->container['user_email'] = isset($data['user_email']) ? $data['user_email'] : null;
         $this->container['user_name'] = isset($data['user_name']) ? $data['user_name'] : null;
         $this->container['voucher_code'] = isset($data['voucher_code']) ? $data['voucher_code'] : null;
@@ -465,6 +477,54 @@ class SearchCriteria implements ModelInterface, ArrayAccess
     public function setUserId($user_id)
     {
         $this->container['user_id'] = $user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets menu_id
+     *
+     * @return int
+     */
+    public function getMenuId()
+    {
+        return $this->container['menu_id'];
+    }
+
+    /**
+     * Sets menu_id
+     *
+     * @param int $menu_id Events that have Menu Id
+     *
+     * @return $this
+     */
+    public function setMenuId($menu_id)
+    {
+        $this->container['menu_id'] = $menu_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets campaign_id
+     *
+     * @return int
+     */
+    public function getCampaignId()
+    {
+        return $this->container['campaign_id'];
+    }
+
+    /**
+     * Sets campaign_id
+     *
+     * @param int $campaign_id Events that have Campaign Id
+     *
+     * @return $this
+     */
+    public function setCampaignId($campaign_id)
+    {
+        $this->container['campaign_id'] = $campaign_id;
 
         return $this;
     }

@@ -133,6 +133,20 @@ class SearchCriteriaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "menu_id"
+     */
+    public function testPropertyMenuId()
+    {
+    }
+
+    /**
+     * Test attribute "campaign_id"
+     */
+    public function testPropertyCampaignId()
+    {
+    }
+
+    /**
      * Test attribute "user_email"
      */
     public function testPropertyUserEmail()
