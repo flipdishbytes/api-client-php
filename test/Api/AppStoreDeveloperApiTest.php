@@ -102,6 +102,16 @@ class AppStoreDeveloperApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getExternalFunctionSigningKey
+     *
+     * Get external function action signing key for app.
+     *
+     */
+    public function testGetExternalFunctionSigningKey()
+    {
+    }
+
+    /**
      * Test case for updateAppStoreApp
      *
      * Update App store app.
