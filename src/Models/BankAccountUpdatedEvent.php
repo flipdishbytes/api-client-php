@@ -59,6 +59,7 @@ class BankAccountUpdatedEvent implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'bank_account' => '\Flipdish\\Client\Models\BankAccount',
+        'user' => '\Flipdish\\Client\Models\UserEventInfo',
         'event_name' => 'string',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
@@ -74,6 +75,7 @@ class BankAccountUpdatedEvent implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'bank_account' => null,
+        'user' => null,
         'event_name' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
@@ -110,6 +112,7 @@ class BankAccountUpdatedEvent implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'bank_account' => 'BankAccount',
+        'user' => 'User',
         'event_name' => 'EventName',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
@@ -125,6 +128,7 @@ class BankAccountUpdatedEvent implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'bank_account' => 'setBankAccount',
+        'user' => 'setUser',
         'event_name' => 'setEventName',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
@@ -140,6 +144,7 @@ class BankAccountUpdatedEvent implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'bank_account' => 'getBankAccount',
+        'user' => 'getUser',
         'event_name' => 'getEventName',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
@@ -209,6 +214,7 @@ class BankAccountUpdatedEvent implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['bank_account'] = isset($data['bank_account']) ? $data['bank_account'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
@@ -261,6 +267,30 @@ class BankAccountUpdatedEvent implements ModelInterface, ArrayAccess
     public function setBankAccount($bank_account)
     {
         $this->container['bank_account'] = $bank_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets user
+     *
+     * @return \Flipdish\\Client\Models\UserEventInfo
+     */
+    public function getUser()
+    {
+        return $this->container['user'];
+    }
+
+    /**
+     * Sets user
+     *
+     * @param \Flipdish\\Client\Models\UserEventInfo $user Updated by user
+     *
+     * @return $this
+     */
+    public function setUser($user)
+    {
+        $this->container['user'] = $user;
 
         return $this;
     }
