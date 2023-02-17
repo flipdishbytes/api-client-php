@@ -91,6 +91,13 @@ class FlipdishFeesDetailsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "pos_sales_fees"
+     */
+    public function testPropertyPosSalesFees()
+    {
+    }
+
+    /**
      * Test attribute "total_sales_fees"
      */
     public function testPropertyTotalSalesFees()
@@ -108,6 +115,13 @@ class FlipdishFeesDetailsTest extends \PHPUnit_Framework_TestCase
      * Test attribute "cash_sales_refunded_fees"
      */
     public function testPropertyCashSalesRefundedFees()
+    {
+    }
+
+    /**
+     * Test attribute "pos_sales_refunded_fees"
+     */
+    public function testPropertyPosSalesRefundedFees()
     {
     }
 

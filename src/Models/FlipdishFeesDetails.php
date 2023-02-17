@@ -60,9 +60,11 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'online_sales_fees' => 'double',
         'cash_sales_fees' => 'double',
+        'pos_sales_fees' => 'double',
         'total_sales_fees' => 'double',
         'online_sales_refunded_fees' => 'double',
         'cash_sales_refunded_fees' => 'double',
+        'pos_sales_refunded_fees' => 'double',
         'sales_fees_vat' => 'double',
         'total_fees' => 'double'
     ];
@@ -75,9 +77,11 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'online_sales_fees' => 'double',
         'cash_sales_fees' => 'double',
+        'pos_sales_fees' => 'double',
         'total_sales_fees' => 'double',
         'online_sales_refunded_fees' => 'double',
         'cash_sales_refunded_fees' => 'double',
+        'pos_sales_refunded_fees' => 'double',
         'sales_fees_vat' => 'double',
         'total_fees' => 'double'
     ];
@@ -111,9 +115,11 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'online_sales_fees' => 'OnlineSalesFees',
         'cash_sales_fees' => 'CashSalesFees',
+        'pos_sales_fees' => 'PosSalesFees',
         'total_sales_fees' => 'TotalSalesFees',
         'online_sales_refunded_fees' => 'OnlineSalesRefundedFees',
         'cash_sales_refunded_fees' => 'CashSalesRefundedFees',
+        'pos_sales_refunded_fees' => 'PosSalesRefundedFees',
         'sales_fees_vat' => 'SalesFeesVat',
         'total_fees' => 'TotalFees'
     ];
@@ -126,9 +132,11 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
     protected static $setters = [
         'online_sales_fees' => 'setOnlineSalesFees',
         'cash_sales_fees' => 'setCashSalesFees',
+        'pos_sales_fees' => 'setPosSalesFees',
         'total_sales_fees' => 'setTotalSalesFees',
         'online_sales_refunded_fees' => 'setOnlineSalesRefundedFees',
         'cash_sales_refunded_fees' => 'setCashSalesRefundedFees',
+        'pos_sales_refunded_fees' => 'setPosSalesRefundedFees',
         'sales_fees_vat' => 'setSalesFeesVat',
         'total_fees' => 'setTotalFees'
     ];
@@ -141,9 +149,11 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
     protected static $getters = [
         'online_sales_fees' => 'getOnlineSalesFees',
         'cash_sales_fees' => 'getCashSalesFees',
+        'pos_sales_fees' => 'getPosSalesFees',
         'total_sales_fees' => 'getTotalSalesFees',
         'online_sales_refunded_fees' => 'getOnlineSalesRefundedFees',
         'cash_sales_refunded_fees' => 'getCashSalesRefundedFees',
+        'pos_sales_refunded_fees' => 'getPosSalesRefundedFees',
         'sales_fees_vat' => 'getSalesFeesVat',
         'total_fees' => 'getTotalFees'
     ];
@@ -210,9 +220,11 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
     {
         $this->container['online_sales_fees'] = isset($data['online_sales_fees']) ? $data['online_sales_fees'] : null;
         $this->container['cash_sales_fees'] = isset($data['cash_sales_fees']) ? $data['cash_sales_fees'] : null;
+        $this->container['pos_sales_fees'] = isset($data['pos_sales_fees']) ? $data['pos_sales_fees'] : null;
         $this->container['total_sales_fees'] = isset($data['total_sales_fees']) ? $data['total_sales_fees'] : null;
         $this->container['online_sales_refunded_fees'] = isset($data['online_sales_refunded_fees']) ? $data['online_sales_refunded_fees'] : null;
         $this->container['cash_sales_refunded_fees'] = isset($data['cash_sales_refunded_fees']) ? $data['cash_sales_refunded_fees'] : null;
+        $this->container['pos_sales_refunded_fees'] = isset($data['pos_sales_refunded_fees']) ? $data['pos_sales_refunded_fees'] : null;
         $this->container['sales_fees_vat'] = isset($data['sales_fees_vat']) ? $data['sales_fees_vat'] : null;
         $this->container['total_fees'] = isset($data['total_fees']) ? $data['total_fees'] : null;
     }
@@ -290,6 +302,30 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets pos_sales_fees
+     *
+     * @return double
+     */
+    public function getPosSalesFees()
+    {
+        return $this->container['pos_sales_fees'];
+    }
+
+    /**
+     * Sets pos_sales_fees
+     *
+     * @param double $pos_sales_fees Fees of POS sales
+     *
+     * @return $this
+     */
+    public function setPosSalesFees($pos_sales_fees)
+    {
+        $this->container['pos_sales_fees'] = $pos_sales_fees;
+
+        return $this;
+    }
+
+    /**
      * Gets total_sales_fees
      *
      * @return double
@@ -357,6 +393,30 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
     public function setCashSalesRefundedFees($cash_sales_refunded_fees)
     {
         $this->container['cash_sales_refunded_fees'] = $cash_sales_refunded_fees;
+
+        return $this;
+    }
+
+    /**
+     * Gets pos_sales_refunded_fees
+     *
+     * @return double
+     */
+    public function getPosSalesRefundedFees()
+    {
+        return $this->container['pos_sales_refunded_fees'];
+    }
+
+    /**
+     * Sets pos_sales_refunded_fees
+     *
+     * @param double $pos_sales_refunded_fees Fees on refunds for POS sales
+     *
+     * @return $this
+     */
+    public function setPosSalesRefundedFees($pos_sales_refunded_fees)
+    {
+        $this->container['pos_sales_refunded_fees'] = $pos_sales_refunded_fees;
 
         return $this;
     }
