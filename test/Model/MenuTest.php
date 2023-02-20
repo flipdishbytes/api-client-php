@@ -140,6 +140,13 @@ class MenuTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "app_id"
+     */
+    public function testPropertyAppId()
+    {
+    }
+
+    /**
      * Test attribute "display_section_links"
      */
     public function testPropertyDisplaySectionLinks()

@@ -67,6 +67,7 @@ class Menu implements ModelInterface, ArrayAccess
         'locked' => 'bool',
         'menu_sections' => '\Flipdish\\Client\Models\MenuSection[]',
         'tax_rates' => '\Flipdish\\Client\Models\MenuTaxRate[]',
+        'app_id' => 'string',
         'display_section_links' => 'bool',
         'menu_section_behaviour' => 'string',
         'tax_type' => 'string'
@@ -87,6 +88,7 @@ class Menu implements ModelInterface, ArrayAccess
         'locked' => null,
         'menu_sections' => null,
         'tax_rates' => null,
+        'app_id' => null,
         'display_section_links' => null,
         'menu_section_behaviour' => null,
         'tax_type' => null
@@ -128,6 +130,7 @@ class Menu implements ModelInterface, ArrayAccess
         'locked' => 'Locked',
         'menu_sections' => 'MenuSections',
         'tax_rates' => 'TaxRates',
+        'app_id' => 'AppId',
         'display_section_links' => 'DisplaySectionLinks',
         'menu_section_behaviour' => 'MenuSectionBehaviour',
         'tax_type' => 'TaxType'
@@ -148,6 +151,7 @@ class Menu implements ModelInterface, ArrayAccess
         'locked' => 'setLocked',
         'menu_sections' => 'setMenuSections',
         'tax_rates' => 'setTaxRates',
+        'app_id' => 'setAppId',
         'display_section_links' => 'setDisplaySectionLinks',
         'menu_section_behaviour' => 'setMenuSectionBehaviour',
         'tax_type' => 'setTaxType'
@@ -168,6 +172,7 @@ class Menu implements ModelInterface, ArrayAccess
         'locked' => 'getLocked',
         'menu_sections' => 'getMenuSections',
         'tax_rates' => 'getTaxRates',
+        'app_id' => 'getAppId',
         'display_section_links' => 'getDisplaySectionLinks',
         'menu_section_behaviour' => 'getMenuSectionBehaviour',
         'tax_type' => 'getTaxType'
@@ -272,6 +277,7 @@ class Menu implements ModelInterface, ArrayAccess
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['menu_sections'] = isset($data['menu_sections']) ? $data['menu_sections'] : null;
         $this->container['tax_rates'] = isset($data['tax_rates']) ? $data['tax_rates'] : null;
+        $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
         $this->container['display_section_links'] = isset($data['display_section_links']) ? $data['display_section_links'] : null;
         $this->container['menu_section_behaviour'] = isset($data['menu_section_behaviour']) ? $data['menu_section_behaviour'] : null;
         $this->container['tax_type'] = isset($data['tax_type']) ? $data['tax_type'] : null;
@@ -529,6 +535,30 @@ class Menu implements ModelInterface, ArrayAccess
     public function setTaxRates($tax_rates)
     {
         $this->container['tax_rates'] = $tax_rates;
+
+        return $this;
+    }
+
+    /**
+     * Gets app_id
+     *
+     * @return string
+     */
+    public function getAppId()
+    {
+        return $this->container['app_id'];
+    }
+
+    /**
+     * Sets app_id
+     *
+     * @param string $app_id Identifier of App the menu is attached to
+     *
+     * @return $this
+     */
+    public function setAppId($app_id)
+    {
+        $this->container['app_id'] = $app_id;
 
         return $this;
     }

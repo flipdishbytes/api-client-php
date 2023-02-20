@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **locked** | **bool** | Locked: is menu locked against modifcation | [optional] 
 **menu_sections** | [**\Flipdish\\Client\Models\MenuSection[]**](MenuSection.md) | Menu sections (startes, main etc) | [optional] 
 **tax_rates** | [**\Flipdish\\Client\Models\MenuTaxRate[]**](MenuTaxRate.md) | Menu tax rates | [optional] 
+**app_id** | **string** | Identifier of App the menu is attached to | [optional] 
 **display_section_links** | **bool** | Display menu section link on UI | [optional] 
 **menu_section_behaviour** | **string** | Menu section behaviour | [optional] 
 **tax_type** | **string** | Tax type | [optional] 
