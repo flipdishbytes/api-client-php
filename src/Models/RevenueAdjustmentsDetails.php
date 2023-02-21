@@ -59,6 +59,7 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'online_sales_refunded_amount' => 'double',
+        'pos_sales_refunded_amount' => 'double',
         'cash_sales_refunded_amount' => 'double',
         'customer_cash_fees' => 'double',
         'refunds_count' => 'int',
@@ -74,6 +75,7 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'online_sales_refunded_amount' => 'double',
+        'pos_sales_refunded_amount' => 'double',
         'cash_sales_refunded_amount' => 'double',
         'customer_cash_fees' => 'double',
         'refunds_count' => 'int32',
@@ -110,6 +112,7 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'online_sales_refunded_amount' => 'OnlineSalesRefundedAmount',
+        'pos_sales_refunded_amount' => 'PosSalesRefundedAmount',
         'cash_sales_refunded_amount' => 'CashSalesRefundedAmount',
         'customer_cash_fees' => 'CustomerCashFees',
         'refunds_count' => 'RefundsCount',
@@ -125,6 +128,7 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'online_sales_refunded_amount' => 'setOnlineSalesRefundedAmount',
+        'pos_sales_refunded_amount' => 'setPosSalesRefundedAmount',
         'cash_sales_refunded_amount' => 'setCashSalesRefundedAmount',
         'customer_cash_fees' => 'setCustomerCashFees',
         'refunds_count' => 'setRefundsCount',
@@ -140,6 +144,7 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'online_sales_refunded_amount' => 'getOnlineSalesRefundedAmount',
+        'pos_sales_refunded_amount' => 'getPosSalesRefundedAmount',
         'cash_sales_refunded_amount' => 'getCashSalesRefundedAmount',
         'customer_cash_fees' => 'getCustomerCashFees',
         'refunds_count' => 'getRefundsCount',
@@ -209,6 +214,7 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['online_sales_refunded_amount'] = isset($data['online_sales_refunded_amount']) ? $data['online_sales_refunded_amount'] : null;
+        $this->container['pos_sales_refunded_amount'] = isset($data['pos_sales_refunded_amount']) ? $data['pos_sales_refunded_amount'] : null;
         $this->container['cash_sales_refunded_amount'] = isset($data['cash_sales_refunded_amount']) ? $data['cash_sales_refunded_amount'] : null;
         $this->container['customer_cash_fees'] = isset($data['customer_cash_fees']) ? $data['customer_cash_fees'] : null;
         $this->container['refunds_count'] = isset($data['refunds_count']) ? $data['refunds_count'] : null;
@@ -261,6 +267,30 @@ class RevenueAdjustmentsDetails implements ModelInterface, ArrayAccess
     public function setOnlineSalesRefundedAmount($online_sales_refunded_amount)
     {
         $this->container['online_sales_refunded_amount'] = $online_sales_refunded_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets pos_sales_refunded_amount
+     *
+     * @return double
+     */
+    public function getPosSalesRefundedAmount()
+    {
+        return $this->container['pos_sales_refunded_amount'];
+    }
+
+    /**
+     * Sets pos_sales_refunded_amount
+     *
+     * @param double $pos_sales_refunded_amount POS Online sales refunds
+     *
+     * @return $this
+     */
+    public function setPosSalesRefundedAmount($pos_sales_refunded_amount)
+    {
+        $this->container['pos_sales_refunded_amount'] = $pos_sales_refunded_amount;
 
         return $this;
     }

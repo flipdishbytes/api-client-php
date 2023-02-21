@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptionsForApp**
-> \Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary getSubscriptionsForApp($app_id, $store_id)
+> \Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary getSubscriptionsForApp($app_id)
 
 Get list of subscriptions for an App
 
@@ -85,10 +85,9 @@ $apiInstance = new Flipdish\\Client\Api\SubscriptionsApi(
     $config
 );
 $app_id = "app_id_example"; // string | App Id
-$store_id = array(56); // int[] | Store id to filter subscriptions (optional)
 
 try {
-    $result = $apiInstance->getSubscriptionsForApp($app_id, $store_id);
+    $result = $apiInstance->getSubscriptionsForApp($app_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SubscriptionsApi->getSubscriptionsForApp: ', $e->getMessage(), PHP_EOL;
@@ -101,7 +100,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| App Id |
- **store_id** | [**int[]**](../Model/int.md)| Store id to filter subscriptions (optional) |
 
 ### Return type
 

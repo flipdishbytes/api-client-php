@@ -84,6 +84,13 @@ class RevenueAdjustmentsDetailsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "pos_sales_refunded_amount"
+     */
+    public function testPropertyPosSalesRefundedAmount()
+    {
+    }
+
+    /**
      * Test attribute "cash_sales_refunded_amount"
      */
     public function testPropertyCashSalesRefundedAmount()

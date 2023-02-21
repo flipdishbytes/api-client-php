@@ -409,15 +409,14 @@ class SubscriptionsApi
      * Get list of subscriptions for an App
      *
      * @param  string $app_id App Id (required)
-     * @param  int[] $store_id Store id to filter subscriptions (optional) (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary
      */
-    public function getSubscriptionsForApp($app_id, $store_id)
+    public function getSubscriptionsForApp($app_id)
     {
-        list($response) = $this->getSubscriptionsForAppWithHttpInfo($app_id, $store_id);
+        list($response) = $this->getSubscriptionsForAppWithHttpInfo($app_id);
         return $response;
     }
 
@@ -427,16 +426,15 @@ class SubscriptionsApi
      * Get list of subscriptions for an App
      *
      * @param  string $app_id App Id (required)
-     * @param  int[] $store_id Store id to filter subscriptions (optional) (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSubscriptionsForAppWithHttpInfo($app_id, $store_id)
+    public function getSubscriptionsForAppWithHttpInfo($app_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary';
-        $request = $this->getSubscriptionsForAppRequest($app_id, $store_id);
+        $request = $this->getSubscriptionsForAppRequest($app_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -527,14 +525,13 @@ class SubscriptionsApi
      * Get list of subscriptions for an App
      *
      * @param  string $app_id App Id (required)
-     * @param  int[] $store_id Store id to filter subscriptions (optional) (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSubscriptionsForAppAsync($app_id, $store_id)
+    public function getSubscriptionsForAppAsync($app_id)
     {
-        return $this->getSubscriptionsForAppAsyncWithHttpInfo($app_id, $store_id)
+        return $this->getSubscriptionsForAppAsyncWithHttpInfo($app_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -548,15 +545,14 @@ class SubscriptionsApi
      * Get list of subscriptions for an App
      *
      * @param  string $app_id App Id (required)
-     * @param  int[] $store_id Store id to filter subscriptions (optional) (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSubscriptionsForAppAsyncWithHttpInfo($app_id, $store_id)
+    public function getSubscriptionsForAppAsyncWithHttpInfo($app_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary';
-        $request = $this->getSubscriptionsForAppRequest($app_id, $store_id);
+        $request = $this->getSubscriptionsForAppRequest($app_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -599,23 +595,16 @@ class SubscriptionsApi
      * Create request for operation 'getSubscriptionsForApp'
      *
      * @param  string $app_id App Id (required)
-     * @param  int[] $store_id Store id to filter subscriptions (optional) (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getSubscriptionsForAppRequest($app_id, $store_id)
+    protected function getSubscriptionsForAppRequest($app_id)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $app_id when calling getSubscriptionsForApp'
-            );
-        }
-        // verify the required parameter 'store_id' is set
-        if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling getSubscriptionsForApp'
             );
         }
 
@@ -626,13 +615,6 @@ class SubscriptionsApi
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if (is_array($store_id)) {
-            $queryParams['storeId'] = $store_id;
-        } else
-        if ($store_id !== null) {
-            $queryParams['storeId'] = ObjectSerializer::toQueryValue($store_id);
-        }
 
         // path params
         if ($app_id !== null) {
