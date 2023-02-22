@@ -82,6 +82,16 @@ class SubscriptionsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getSubscriptionInvoices
+     *
+     * Get list of invoices for a subscription by id.
+     *
+     */
+    public function testGetSubscriptionInvoices()
+    {
+    }
+
+    /**
      * Test case for getSubscriptionsForApp
      *
      * Get list of subscriptions for an App.
