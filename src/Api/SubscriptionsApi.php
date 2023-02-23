@@ -410,14 +410,16 @@ class SubscriptionsApi
      *
      * @param  string $app_id App Id (required)
      * @param  string $subscription_id Subscription Id (required)
+     * @param  int $limit Limit of invoices to return (optional)
+     * @param  string $starting_after_id Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultSubscription
+     * @return \Flipdish\\Client\Models\RestApiPaginationResultInvoice
      */
-    public function getSubscriptionInvoices($app_id, $subscription_id)
+    public function getSubscriptionInvoices($app_id, $subscription_id, $limit = null, $starting_after_id = null)
     {
-        list($response) = $this->getSubscriptionInvoicesWithHttpInfo($app_id, $subscription_id);
+        list($response) = $this->getSubscriptionInvoicesWithHttpInfo($app_id, $subscription_id, $limit, $starting_after_id);
         return $response;
     }
 
@@ -428,15 +430,17 @@ class SubscriptionsApi
      *
      * @param  string $app_id App Id (required)
      * @param  string $subscription_id Subscription Id (required)
+     * @param  int $limit Limit of invoices to return (optional)
+     * @param  string $starting_after_id Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultSubscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiPaginationResultInvoice, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSubscriptionInvoicesWithHttpInfo($app_id, $subscription_id)
+    public function getSubscriptionInvoicesWithHttpInfo($app_id, $subscription_id, $limit = null, $starting_after_id = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultSubscription';
-        $request = $this->getSubscriptionInvoicesRequest($app_id, $subscription_id);
+        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultInvoice';
+        $request = $this->getSubscriptionInvoicesRequest($app_id, $subscription_id, $limit, $starting_after_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -487,15 +491,7 @@ class SubscriptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultSubscription',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        '\Flipdish\\Client\Models\RestApiPaginationResultInvoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -528,13 +524,15 @@ class SubscriptionsApi
      *
      * @param  string $app_id App Id (required)
      * @param  string $subscription_id Subscription Id (required)
+     * @param  int $limit Limit of invoices to return (optional)
+     * @param  string $starting_after_id Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSubscriptionInvoicesAsync($app_id, $subscription_id)
+    public function getSubscriptionInvoicesAsync($app_id, $subscription_id, $limit = null, $starting_after_id = null)
     {
-        return $this->getSubscriptionInvoicesAsyncWithHttpInfo($app_id, $subscription_id)
+        return $this->getSubscriptionInvoicesAsyncWithHttpInfo($app_id, $subscription_id, $limit, $starting_after_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -549,14 +547,16 @@ class SubscriptionsApi
      *
      * @param  string $app_id App Id (required)
      * @param  string $subscription_id Subscription Id (required)
+     * @param  int $limit Limit of invoices to return (optional)
+     * @param  string $starting_after_id Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSubscriptionInvoicesAsyncWithHttpInfo($app_id, $subscription_id)
+    public function getSubscriptionInvoicesAsyncWithHttpInfo($app_id, $subscription_id, $limit = null, $starting_after_id = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultSubscription';
-        $request = $this->getSubscriptionInvoicesRequest($app_id, $subscription_id);
+        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultInvoice';
+        $request = $this->getSubscriptionInvoicesRequest($app_id, $subscription_id, $limit, $starting_after_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -600,11 +600,13 @@ class SubscriptionsApi
      *
      * @param  string $app_id App Id (required)
      * @param  string $subscription_id Subscription Id (required)
+     * @param  int $limit Limit of invoices to return (optional)
+     * @param  string $starting_after_id Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getSubscriptionInvoicesRequest($app_id, $subscription_id)
+    protected function getSubscriptionInvoicesRequest($app_id, $subscription_id, $limit = null, $starting_after_id = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -626,6 +628,14 @@ class SubscriptionsApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($limit !== null) {
+            $queryParams['limit'] = ObjectSerializer::toQueryValue($limit);
+        }
+        // query params
+        if ($starting_after_id !== null) {
+            $queryParams['startingAfterId'] = ObjectSerializer::toQueryValue($starting_after_id);
+        }
 
         // path params
         if ($app_id !== null) {

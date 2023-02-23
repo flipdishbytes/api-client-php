@@ -65,11 +65,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptionInvoices**
-> \Flipdish\\Client\Models\RestApiResultSubscription getSubscriptionInvoices($app_id, $subscription_id)
+> \Flipdish\\Client\Models\RestApiPaginationResultInvoice getSubscriptionInvoices($app_id, $subscription_id, $limit, $starting_after_id)
 
 Get list of invoices for a subscription by id
 
-[BETA - this endpoint is under development, do not use it in your production system]
+[BETA - this endpoint is under development, do not use it in your production system] Due to the nature of this request, page will always remain as 0.
 
 ### Example
 ```php
@@ -87,9 +87,11 @@ $apiInstance = new Flipdish\\Client\Api\SubscriptionsApi(
 );
 $app_id = "app_id_example"; // string | App Id
 $subscription_id = "subscription_id_example"; // string | Subscription Id
+$limit = 56; // int | Limit of invoices to return
+$starting_after_id = "starting_after_id_example"; // string | Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId=in_xxx in order to fetch the next page of the invoices list.
 
 try {
-    $result = $apiInstance->getSubscriptionInvoices($app_id, $subscription_id);
+    $result = $apiInstance->getSubscriptionInvoices($app_id, $subscription_id, $limit, $starting_after_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SubscriptionsApi->getSubscriptionInvoices: ', $e->getMessage(), PHP_EOL;
@@ -103,10 +105,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| App Id |
  **subscription_id** | **string**| Subscription Id |
+ **limit** | **int**| Limit of invoices to return | [optional]
+ **starting_after_id** | **string**| Id for use in pagination. This defines your last known invoice in the list. For instance, if you make a list request and receive 10 invoices, last invoice ends with in_xxx, your subsequent call should include startingAfterId&#x3D;in_xxx in order to fetch the next page of the invoices list. | [optional]
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiResultSubscription**](../Model/RestApiResultSubscription.md)
+[**\Flipdish\\Client\Models\RestApiPaginationResultInvoice**](../Model/RestApiPaginationResultInvoice.md)
 
 ### Authorization
 
