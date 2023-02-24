@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptionsForApp**
-> \Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary getSubscriptionsForApp($app_id)
+> \Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary getSubscriptionsForApp($app_id, $exclude_not_owned_subscriptions)
 
 Get list of subscriptions for an App
 
@@ -145,9 +145,10 @@ $apiInstance = new Flipdish\\Client\Api\SubscriptionsApi(
     $config
 );
 $app_id = "app_id_example"; // string | App Id
+$exclude_not_owned_subscriptions = true; // bool | Exclude not owned subscriptions. Set to true to only view your subscriptions
 
 try {
-    $result = $apiInstance->getSubscriptionsForApp($app_id);
+    $result = $apiInstance->getSubscriptionsForApp($app_id, $exclude_not_owned_subscriptions);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SubscriptionsApi->getSubscriptionsForApp: ', $e->getMessage(), PHP_EOL;
@@ -160,6 +161,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| App Id |
+ **exclude_not_owned_subscriptions** | **bool**| Exclude not owned subscriptions. Set to true to only view your subscriptions | [optional]
 
 ### Return type
 

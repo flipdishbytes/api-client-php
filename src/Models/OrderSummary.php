@@ -84,7 +84,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'channel_order_id' => 'string',
         'channel_order_display_id' => 'string',
         'order_drop_off_location' => '\Flipdish\\Client\Models\OrderDropOffLocation',
-        'order_batch_info' => '\Flipdish\\Client\Models\OrderBatchSummary'
+        'order_batch_info' => '\Flipdish\\Client\Models\OrderBatchSummary',
+        'delivery_location' => '\Flipdish\\Client\Models\DeliveryLocation'
     ];
 
     /**
@@ -119,7 +120,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'channel_order_id' => null,
         'channel_order_display_id' => null,
         'order_drop_off_location' => null,
-        'order_batch_info' => null
+        'order_batch_info' => null,
+        'delivery_location' => null
     ];
 
     /**
@@ -175,7 +177,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'channel_order_id' => 'ChannelOrderId',
         'channel_order_display_id' => 'ChannelOrderDisplayId',
         'order_drop_off_location' => 'OrderDropOffLocation',
-        'order_batch_info' => 'OrderBatchInfo'
+        'order_batch_info' => 'OrderBatchInfo',
+        'delivery_location' => 'DeliveryLocation'
     ];
 
     /**
@@ -210,7 +213,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'channel_order_id' => 'setChannelOrderId',
         'channel_order_display_id' => 'setChannelOrderDisplayId',
         'order_drop_off_location' => 'setOrderDropOffLocation',
-        'order_batch_info' => 'setOrderBatchInfo'
+        'order_batch_info' => 'setOrderBatchInfo',
+        'delivery_location' => 'setDeliveryLocation'
     ];
 
     /**
@@ -245,7 +249,8 @@ class OrderSummary implements ModelInterface, ArrayAccess
         'channel_order_id' => 'getChannelOrderId',
         'channel_order_display_id' => 'getChannelOrderDisplayId',
         'order_drop_off_location' => 'getOrderDropOffLocation',
-        'order_batch_info' => 'getOrderBatchInfo'
+        'order_batch_info' => 'getOrderBatchInfo',
+        'delivery_location' => 'getDeliveryLocation'
     ];
 
     /**
@@ -755,6 +760,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
         $this->container['channel_order_display_id'] = isset($data['channel_order_display_id']) ? $data['channel_order_display_id'] : null;
         $this->container['order_drop_off_location'] = isset($data['order_drop_off_location']) ? $data['order_drop_off_location'] : null;
         $this->container['order_batch_info'] = isset($data['order_batch_info']) ? $data['order_batch_info'] : null;
+        $this->container['delivery_location'] = isset($data['delivery_location']) ? $data['delivery_location'] : null;
     }
 
     /**
@@ -1561,6 +1567,30 @@ class OrderSummary implements ModelInterface, ArrayAccess
     public function setOrderBatchInfo($order_batch_info)
     {
         $this->container['order_batch_info'] = $order_batch_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_location
+     *
+     * @return \Flipdish\\Client\Models\DeliveryLocation
+     */
+    public function getDeliveryLocation()
+    {
+        return $this->container['delivery_location'];
+    }
+
+    /**
+     * Sets delivery_location
+     *
+     * @param \Flipdish\\Client\Models\DeliveryLocation $delivery_location delivery_location
+     *
+     * @return $this
+     */
+    public function setDeliveryLocation($delivery_location)
+    {
+        $this->container['delivery_location'] = $delivery_location;
 
         return $this;
     }

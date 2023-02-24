@@ -264,4 +264,11 @@ class OrderSummaryTest extends \PHPUnit_Framework_TestCase
     public function testPropertyOrderBatchInfo()
     {
     }
+
+    /**
+     * Test attribute "delivery_location"
+     */
+    public function testPropertyDeliveryLocation()
+    {
+    }
 }
