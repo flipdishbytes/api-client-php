@@ -210,9 +210,23 @@ class PayoutTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "pos_sales_fees"
+     */
+    public function testPropertyPosSalesFees()
+    {
+    }
+
+    /**
      * Test attribute "online_sales_refunded_amount"
      */
     public function testPropertyOnlineSalesRefundedAmount()
+    {
+    }
+
+    /**
+     * Test attribute "pos_sales_refunded_amount"
+     */
+    public function testPropertyPosSalesRefundedAmount()
     {
     }
 
@@ -276,6 +290,13 @@ class PayoutTest extends \PHPUnit_Framework_TestCase
      * Test attribute "chargeback_amount"
      */
     public function testPropertyChargebackAmount()
+    {
+    }
+
+    /**
+     * Test attribute "pos_sales_chargeback_amount"
+     */
+    public function testPropertyPosSalesChargebackAmount()
     {
     }
 

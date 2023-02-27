@@ -59,6 +59,7 @@ class ChargebackDetails implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'chargeback_amount' => 'double',
+        'pos_sales_chargeback_amount' => 'double',
         'chargeback_refunded_fees' => 'double',
         'chargebacks_count' => 'int',
         'total_chargeback_cost' => 'double'
@@ -71,6 +72,7 @@ class ChargebackDetails implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'chargeback_amount' => 'double',
+        'pos_sales_chargeback_amount' => 'double',
         'chargeback_refunded_fees' => 'double',
         'chargebacks_count' => 'int32',
         'total_chargeback_cost' => 'double'
@@ -104,6 +106,7 @@ class ChargebackDetails implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'chargeback_amount' => 'ChargebackAmount',
+        'pos_sales_chargeback_amount' => 'PosSalesChargebackAmount',
         'chargeback_refunded_fees' => 'ChargebackRefundedFees',
         'chargebacks_count' => 'ChargebacksCount',
         'total_chargeback_cost' => 'TotalChargebackCost'
@@ -116,6 +119,7 @@ class ChargebackDetails implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'chargeback_amount' => 'setChargebackAmount',
+        'pos_sales_chargeback_amount' => 'setPosSalesChargebackAmount',
         'chargeback_refunded_fees' => 'setChargebackRefundedFees',
         'chargebacks_count' => 'setChargebacksCount',
         'total_chargeback_cost' => 'setTotalChargebackCost'
@@ -128,6 +132,7 @@ class ChargebackDetails implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'chargeback_amount' => 'getChargebackAmount',
+        'pos_sales_chargeback_amount' => 'getPosSalesChargebackAmount',
         'chargeback_refunded_fees' => 'getChargebackRefundedFees',
         'chargebacks_count' => 'getChargebacksCount',
         'total_chargeback_cost' => 'getTotalChargebackCost'
@@ -194,6 +199,7 @@ class ChargebackDetails implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['chargeback_amount'] = isset($data['chargeback_amount']) ? $data['chargeback_amount'] : null;
+        $this->container['pos_sales_chargeback_amount'] = isset($data['pos_sales_chargeback_amount']) ? $data['pos_sales_chargeback_amount'] : null;
         $this->container['chargeback_refunded_fees'] = isset($data['chargeback_refunded_fees']) ? $data['chargeback_refunded_fees'] : null;
         $this->container['chargebacks_count'] = isset($data['chargebacks_count']) ? $data['chargebacks_count'] : null;
         $this->container['total_chargeback_cost'] = isset($data['total_chargeback_cost']) ? $data['total_chargeback_cost'] : null;
@@ -243,6 +249,30 @@ class ChargebackDetails implements ModelInterface, ArrayAccess
     public function setChargebackAmount($chargeback_amount)
     {
         $this->container['chargeback_amount'] = $chargeback_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets pos_sales_chargeback_amount
+     *
+     * @return double
+     */
+    public function getPosSalesChargebackAmount()
+    {
+        return $this->container['pos_sales_chargeback_amount'];
+    }
+
+    /**
+     * Sets pos_sales_chargeback_amount
+     *
+     * @param double $pos_sales_chargeback_amount POS Chargeback amount
+     *
+     * @return $this
+     */
+    public function setPosSalesChargebackAmount($pos_sales_chargeback_amount)
+    {
+        $this->container['pos_sales_chargeback_amount'] = $pos_sales_chargeback_amount;
 
         return $this;
     }

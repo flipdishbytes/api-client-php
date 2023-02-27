@@ -77,7 +77,9 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_service_charges' => 'double',
         'online_sales_refunded_fees' => 'double',
         'online_sales_fees' => 'double',
+        'pos_sales_fees' => 'double',
         'online_sales_refunded_amount' => 'double',
+        'pos_sales_refunded_amount' => 'double',
         'online_sales_tax' => 'double',
         'total_online_revenue' => 'double',
         'cash_sales_fees' => 'double',
@@ -87,6 +89,7 @@ class Payout implements ModelInterface, ArrayAccess
         'total_fees' => 'double',
         'total_online_revenue_adjustments' => 'double',
         'chargeback_amount' => 'double',
+        'pos_sales_chargeback_amount' => 'double',
         'chargeback_refunded_fees' => 'double',
         'total_chargeback_cost' => 'double',
         'total_other_charges' => 'double',
@@ -120,7 +123,9 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_service_charges' => 'double',
         'online_sales_refunded_fees' => 'double',
         'online_sales_fees' => 'double',
+        'pos_sales_fees' => 'double',
         'online_sales_refunded_amount' => 'double',
+        'pos_sales_refunded_amount' => 'double',
         'online_sales_tax' => 'double',
         'total_online_revenue' => 'double',
         'cash_sales_fees' => 'double',
@@ -130,6 +135,7 @@ class Payout implements ModelInterface, ArrayAccess
         'total_fees' => 'double',
         'total_online_revenue_adjustments' => 'double',
         'chargeback_amount' => 'double',
+        'pos_sales_chargeback_amount' => 'double',
         'chargeback_refunded_fees' => 'double',
         'total_chargeback_cost' => 'double',
         'total_other_charges' => 'double',
@@ -184,7 +190,9 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_service_charges' => 'OnlineSalesServiceCharges',
         'online_sales_refunded_fees' => 'OnlineSalesRefundedFees',
         'online_sales_fees' => 'OnlineSalesFees',
+        'pos_sales_fees' => 'PosSalesFees',
         'online_sales_refunded_amount' => 'OnlineSalesRefundedAmount',
+        'pos_sales_refunded_amount' => 'PosSalesRefundedAmount',
         'online_sales_tax' => 'OnlineSalesTax',
         'total_online_revenue' => 'TotalOnlineRevenue',
         'cash_sales_fees' => 'CashSalesFees',
@@ -194,6 +202,7 @@ class Payout implements ModelInterface, ArrayAccess
         'total_fees' => 'TotalFees',
         'total_online_revenue_adjustments' => 'TotalOnlineRevenueAdjustments',
         'chargeback_amount' => 'ChargebackAmount',
+        'pos_sales_chargeback_amount' => 'PosSalesChargebackAmount',
         'chargeback_refunded_fees' => 'ChargebackRefundedFees',
         'total_chargeback_cost' => 'TotalChargebackCost',
         'total_other_charges' => 'TotalOtherCharges',
@@ -227,7 +236,9 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_service_charges' => 'setOnlineSalesServiceCharges',
         'online_sales_refunded_fees' => 'setOnlineSalesRefundedFees',
         'online_sales_fees' => 'setOnlineSalesFees',
+        'pos_sales_fees' => 'setPosSalesFees',
         'online_sales_refunded_amount' => 'setOnlineSalesRefundedAmount',
+        'pos_sales_refunded_amount' => 'setPosSalesRefundedAmount',
         'online_sales_tax' => 'setOnlineSalesTax',
         'total_online_revenue' => 'setTotalOnlineRevenue',
         'cash_sales_fees' => 'setCashSalesFees',
@@ -237,6 +248,7 @@ class Payout implements ModelInterface, ArrayAccess
         'total_fees' => 'setTotalFees',
         'total_online_revenue_adjustments' => 'setTotalOnlineRevenueAdjustments',
         'chargeback_amount' => 'setChargebackAmount',
+        'pos_sales_chargeback_amount' => 'setPosSalesChargebackAmount',
         'chargeback_refunded_fees' => 'setChargebackRefundedFees',
         'total_chargeback_cost' => 'setTotalChargebackCost',
         'total_other_charges' => 'setTotalOtherCharges',
@@ -270,7 +282,9 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_service_charges' => 'getOnlineSalesServiceCharges',
         'online_sales_refunded_fees' => 'getOnlineSalesRefundedFees',
         'online_sales_fees' => 'getOnlineSalesFees',
+        'pos_sales_fees' => 'getPosSalesFees',
         'online_sales_refunded_amount' => 'getOnlineSalesRefundedAmount',
+        'pos_sales_refunded_amount' => 'getPosSalesRefundedAmount',
         'online_sales_tax' => 'getOnlineSalesTax',
         'total_online_revenue' => 'getTotalOnlineRevenue',
         'cash_sales_fees' => 'getCashSalesFees',
@@ -280,6 +294,7 @@ class Payout implements ModelInterface, ArrayAccess
         'total_fees' => 'getTotalFees',
         'total_online_revenue_adjustments' => 'getTotalOnlineRevenueAdjustments',
         'chargeback_amount' => 'getChargebackAmount',
+        'pos_sales_chargeback_amount' => 'getPosSalesChargebackAmount',
         'chargeback_refunded_fees' => 'getChargebackRefundedFees',
         'total_chargeback_cost' => 'getTotalChargebackCost',
         'total_other_charges' => 'getTotalOtherCharges',
@@ -640,7 +655,9 @@ class Payout implements ModelInterface, ArrayAccess
         $this->container['online_sales_service_charges'] = isset($data['online_sales_service_charges']) ? $data['online_sales_service_charges'] : null;
         $this->container['online_sales_refunded_fees'] = isset($data['online_sales_refunded_fees']) ? $data['online_sales_refunded_fees'] : null;
         $this->container['online_sales_fees'] = isset($data['online_sales_fees']) ? $data['online_sales_fees'] : null;
+        $this->container['pos_sales_fees'] = isset($data['pos_sales_fees']) ? $data['pos_sales_fees'] : null;
         $this->container['online_sales_refunded_amount'] = isset($data['online_sales_refunded_amount']) ? $data['online_sales_refunded_amount'] : null;
+        $this->container['pos_sales_refunded_amount'] = isset($data['pos_sales_refunded_amount']) ? $data['pos_sales_refunded_amount'] : null;
         $this->container['online_sales_tax'] = isset($data['online_sales_tax']) ? $data['online_sales_tax'] : null;
         $this->container['total_online_revenue'] = isset($data['total_online_revenue']) ? $data['total_online_revenue'] : null;
         $this->container['cash_sales_fees'] = isset($data['cash_sales_fees']) ? $data['cash_sales_fees'] : null;
@@ -650,6 +667,7 @@ class Payout implements ModelInterface, ArrayAccess
         $this->container['total_fees'] = isset($data['total_fees']) ? $data['total_fees'] : null;
         $this->container['total_online_revenue_adjustments'] = isset($data['total_online_revenue_adjustments']) ? $data['total_online_revenue_adjustments'] : null;
         $this->container['chargeback_amount'] = isset($data['chargeback_amount']) ? $data['chargeback_amount'] : null;
+        $this->container['pos_sales_chargeback_amount'] = isset($data['pos_sales_chargeback_amount']) ? $data['pos_sales_chargeback_amount'] : null;
         $this->container['chargeback_refunded_fees'] = isset($data['chargeback_refunded_fees']) ? $data['chargeback_refunded_fees'] : null;
         $this->container['total_chargeback_cost'] = isset($data['total_chargeback_cost']) ? $data['total_chargeback_cost'] : null;
         $this->container['total_other_charges'] = isset($data['total_other_charges']) ? $data['total_other_charges'] : null;
@@ -1190,6 +1208,30 @@ class Payout implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets pos_sales_fees
+     *
+     * @return double
+     */
+    public function getPosSalesFees()
+    {
+        return $this->container['pos_sales_fees'];
+    }
+
+    /**
+     * Sets pos_sales_fees
+     *
+     * @param double $pos_sales_fees Payout online sales fees
+     *
+     * @return $this
+     */
+    public function setPosSalesFees($pos_sales_fees)
+    {
+        $this->container['pos_sales_fees'] = $pos_sales_fees;
+
+        return $this;
+    }
+
+    /**
      * Gets online_sales_refunded_amount
      *
      * @return double
@@ -1209,6 +1251,30 @@ class Payout implements ModelInterface, ArrayAccess
     public function setOnlineSalesRefundedAmount($online_sales_refunded_amount)
     {
         $this->container['online_sales_refunded_amount'] = $online_sales_refunded_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets pos_sales_refunded_amount
+     *
+     * @return double
+     */
+    public function getPosSalesRefundedAmount()
+    {
+        return $this->container['pos_sales_refunded_amount'];
+    }
+
+    /**
+     * Sets pos_sales_refunded_amount
+     *
+     * @param double $pos_sales_refunded_amount POS Payout online sales refunded amount
+     *
+     * @return $this
+     */
+    public function setPosSalesRefundedAmount($pos_sales_refunded_amount)
+    {
+        $this->container['pos_sales_refunded_amount'] = $pos_sales_refunded_amount;
 
         return $this;
     }
@@ -1425,6 +1491,30 @@ class Payout implements ModelInterface, ArrayAccess
     public function setChargebackAmount($chargeback_amount)
     {
         $this->container['chargeback_amount'] = $chargeback_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets pos_sales_chargeback_amount
+     *
+     * @return double
+     */
+    public function getPosSalesChargebackAmount()
+    {
+        return $this->container['pos_sales_chargeback_amount'];
+    }
+
+    /**
+     * Sets pos_sales_chargeback_amount
+     *
+     * @param double $pos_sales_chargeback_amount POS Payout chargeback amount
+     *
+     * @return $this
+     */
+    public function setPosSalesChargebackAmount($pos_sales_chargeback_amount)
+    {
+        $this->container['pos_sales_chargeback_amount'] = $pos_sales_chargeback_amount;
 
         return $this;
     }

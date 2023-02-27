@@ -84,6 +84,13 @@ class ChargebackDetailsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "pos_sales_chargeback_amount"
+     */
+    public function testPropertyPosSalesChargebackAmount()
+    {
+    }
+
+    /**
      * Test attribute "chargeback_refunded_fees"
      */
     public function testPropertyChargebackRefundedFees()

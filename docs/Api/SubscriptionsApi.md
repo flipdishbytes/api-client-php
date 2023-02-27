@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **getSubscriptionById**
-> \Flipdish\\Client\Models\RestApiResultSubscription getSubscriptionById($app_id, $subscription_id)
+> \Flipdish\\Client\Models\Subscription getSubscriptionById($app_id, $subscription_id)
 
 Get subscription by id
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiResultSubscription**](../Model/RestApiResultSubscription.md)
+[**\Flipdish\\Client\Models\Subscription**](../Model/Subscription.md)
 
 ### Authorization
 
