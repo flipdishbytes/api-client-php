@@ -97,7 +97,7 @@ class SubscriptionsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\Subscription
+     * @return \Flipdish\\Client\Models\RestApiResultSubscription
      */
     public function getSubscriptionById($app_id, $subscription_id)
     {
@@ -115,11 +115,11 @@ class SubscriptionsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\Subscription, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultSubscription, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionByIdWithHttpInfo($app_id, $subscription_id)
     {
-        $returnType = '\Flipdish\\Client\Models\Subscription';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultSubscription';
         $request = $this->getSubscriptionByIdRequest($app_id, $subscription_id);
 
         try {
@@ -171,7 +171,7 @@ class SubscriptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\Subscription',
+                        '\Flipdish\\Client\Models\RestApiResultSubscription',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -247,7 +247,7 @@ class SubscriptionsApi
      */
     public function getSubscriptionByIdAsyncWithHttpInfo($app_id, $subscription_id)
     {
-        $returnType = '\Flipdish\\Client\Models\Subscription';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultSubscription';
         $request = $this->getSubscriptionByIdRequest($app_id, $subscription_id);
 
         return $this->client

@@ -1118,6 +1118,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultStripeTerminalLocation](docs/Model/RestApiResultStripeTerminalLocation.md)
  - [RestApiResultStripeTerminalPrivateKey](docs/Model/RestApiResultStripeTerminalPrivateKey.md)
  - [RestApiResultStuartSettings](docs/Model/RestApiResultStuartSettings.md)
+ - [RestApiResultSubscription](docs/Model/RestApiResultSubscription.md)
  - [RestApiResultTeammate](docs/Model/RestApiResultTeammate.md)
  - [RestApiResultTelemetrySeriesResult](docs/Model/RestApiResultTelemetrySeriesResult.md)
  - [RestApiResultTipConfiguration](docs/Model/RestApiResultTipConfiguration.md)
