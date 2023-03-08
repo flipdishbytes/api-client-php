@@ -293,6 +293,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**unassignEmv**](docs/Api/HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | Unassign the currently assigned EMV terminal from a kiosk
 *HydraApi* | [**updateKioskCashVisibilitySettings**](docs/Api/HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | Update the Cash Payment Method Visibility on Kiosk
 *IntercomApi* | [**userHash**](docs/Api/IntercomApi.md#userhash) | **GET** /api/v1.0/intercom/userHash | 
+*InvoicesApi* | [**getInvoices**](docs/Api/InvoicesApi.md#getinvoices) | **GET** /api/v1.0/{appId}/invoices | Get list of invoices
 *KioskIotApi* | [**getKioskIotConnection**](docs/Api/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
 *KioskIotApi* | [**queryTelemetrySeries**](docs/Api/KioskIotApi.md#querytelemetryseries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | Get the IoT time series values for a given Kiosk Id, properties and time range
 *KioskStoreSettingsApi* | [**getAllKioskSettingsForStore**](docs/Api/KioskStoreSettingsApi.md#getallkiosksettingsforstore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | Get all kiosk settings associated with a store
@@ -513,7 +514,6 @@ Class | Method | HTTP request | Description
 *StuartApi* | [**stuartGetStuartSettings**](docs/Api/StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | Get stuart settings for a store
 *StuartApi* | [**stuartPostStuartSettings**](docs/Api/StuartApi.md#stuartpoststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | Set stuart settings for a store
 *SubscriptionsApi* | [**getSubscriptionById**](docs/Api/SubscriptionsApi.md#getsubscriptionbyid) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | Get subscription by id
-*SubscriptionsApi* | [**getSubscriptionInvoices**](docs/Api/SubscriptionsApi.md#getsubscriptioninvoices) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId}/invoices | Get list of invoices for a subscription by id
 *SubscriptionsApi* | [**getSubscriptionsForApp**](docs/Api/SubscriptionsApi.md#getsubscriptionsforapp) | **GET** /api/v1.0/{appId}/subscriptions | Get list of subscriptions for an App
 *TeammatesApi* | [**createTeammate**](docs/Api/TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | Create teammate and send an invite.
 *TeammatesApi* | [**deleteTeammate**](docs/Api/TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
@@ -988,6 +988,7 @@ Class | Method | HTTP request | Description
  - [RestApiDefaultResponse](docs/Model/RestApiDefaultResponse.md)
  - [RestApiErrorResult](docs/Model/RestApiErrorResult.md)
  - [RestApiEventSearchPaginationResult](docs/Model/RestApiEventSearchPaginationResult.md)
+ - [RestApiFinanceSearchPaginationResultInvoice](docs/Model/RestApiFinanceSearchPaginationResultInvoice.md)
  - [RestApiForbiddenResult](docs/Model/RestApiForbiddenResult.md)
  - [RestApiIntegerResult](docs/Model/RestApiIntegerResult.md)
  - [RestApiPaginationResultApp](docs/Model/RestApiPaginationResultApp.md)
@@ -997,7 +998,6 @@ Class | Method | HTTP request | Description
  - [RestApiPaginationResultGroup](docs/Model/RestApiPaginationResultGroup.md)
  - [RestApiPaginationResultHttpRequestAndResponseLog](docs/Model/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [RestApiPaginationResultHydraDeviceDetails](docs/Model/RestApiPaginationResultHydraDeviceDetails.md)
- - [RestApiPaginationResultInvoice](docs/Model/RestApiPaginationResultInvoice.md)
  - [RestApiPaginationResultMetafieldDefinition](docs/Model/RestApiPaginationResultMetafieldDefinition.md)
  - [RestApiPaginationResultMetafieldDefinitionRecommendation](docs/Model/RestApiPaginationResultMetafieldDefinitionRecommendation.md)
  - [RestApiPaginationResultOAuthTokenModel](docs/Model/RestApiPaginationResultOAuthTokenModel.md)

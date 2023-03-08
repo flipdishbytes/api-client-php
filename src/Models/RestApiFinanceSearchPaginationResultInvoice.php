@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiPaginationResultInvoice
+ * RestApiFinanceSearchPaginationResultInvoice
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * RestApiPaginationResultInvoice Class Doc Comment
+ * RestApiFinanceSearchPaginationResultInvoice Class Doc Comment
  *
  * @category Class
- * @description Rest api pagination result
+ * @description Rest api finance search pagination result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RestApiPaginationResultInvoice implements ModelInterface, ArrayAccess
+class RestApiFinanceSearchPaginationResultInvoice implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class RestApiPaginationResultInvoice implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult[Invoice]';
+    protected static $swaggerModelName = 'RestApiFinanceSearchPaginationResult[Invoice]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +58,7 @@ class RestApiPaginationResultInvoice implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'page' => 'int',
+        'next_page' => 'string',
         'limit' => 'int',
         'total_record_count' => 'int',
         'data' => '\Flipdish\\Client\Models\Invoice[]'
@@ -70,7 +70,7 @@ class RestApiPaginationResultInvoice implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'page' => 'int32',
+        'next_page' => null,
         'limit' => 'int32',
         'total_record_count' => 'int32',
         'data' => null
@@ -103,7 +103,7 @@ class RestApiPaginationResultInvoice implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'page' => 'Page',
+        'next_page' => 'NextPage',
         'limit' => 'Limit',
         'total_record_count' => 'TotalRecordCount',
         'data' => 'Data'
@@ -115,7 +115,7 @@ class RestApiPaginationResultInvoice implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'page' => 'setPage',
+        'next_page' => 'setNextPage',
         'limit' => 'setLimit',
         'total_record_count' => 'setTotalRecordCount',
         'data' => 'setData'
@@ -127,7 +127,7 @@ class RestApiPaginationResultInvoice implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'page' => 'getPage',
+        'next_page' => 'getNextPage',
         'limit' => 'getLimit',
         'total_record_count' => 'getTotalRecordCount',
         'data' => 'getData'
@@ -193,7 +193,7 @@ class RestApiPaginationResultInvoice implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['next_page'] = isset($data['next_page']) ? $data['next_page'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['total_record_count'] = isset($data['total_record_count']) ? $data['total_record_count'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
@@ -208,8 +208,8 @@ class RestApiPaginationResultInvoice implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['page'] === null) {
-            $invalidProperties[] = "'page' can't be null";
+        if ($this->container['next_page'] === null) {
+            $invalidProperties[] = "'next_page' can't be null";
         }
         if ($this->container['limit'] === null) {
             $invalidProperties[] = "'limit' can't be null";
@@ -236,25 +236,25 @@ class RestApiPaginationResultInvoice implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets page
+     * Gets next_page
      *
-     * @return int
+     * @return string
      */
-    public function getPage()
+    public function getNextPage()
     {
-        return $this->container['page'];
+        return $this->container['next_page'];
     }
 
     /**
-     * Sets page
+     * Sets next_page
      *
-     * @param int $page Current page index
+     * @param string $next_page Next page
      *
      * @return $this
      */
-    public function setPage($page)
+    public function setNextPage($next_page)
     {
-        $this->container['page'] = $page;
+        $this->container['next_page'] = $next_page;
 
         return $this;
     }

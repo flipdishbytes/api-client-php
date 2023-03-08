@@ -112,6 +112,13 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "subscription_id"
+     */
+    public function testPropertySubscriptionId()
+    {
+    }
+
+    /**
      * Test attribute "due_date"
      */
     public function testPropertyDueDate()

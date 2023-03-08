@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **total** | **int** | Total | [optional] 
 **currency** | **string** | Currency | 
 **status** | **string** | Status | 
+**subscription_id** | **string** | The subscription identifier | [optional] 
 **due_date** | [**\DateTime**](\DateTime.md) | Due Date | [optional] 
 **pdf_link** | **string** | Pdf Link | 
 

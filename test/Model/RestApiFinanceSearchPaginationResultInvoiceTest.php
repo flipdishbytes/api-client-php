@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiPaginationResultInvoiceTest
+ * RestApiFinanceSearchPaginationResultInvoiceTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * RestApiPaginationResultInvoiceTest Class Doc Comment
+ * RestApiFinanceSearchPaginationResultInvoiceTest Class Doc Comment
  *
  * @category    Class
- * @description Rest api pagination result
+ * @description Rest api finance search pagination result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RestApiPaginationResultInvoiceTest extends \PHPUnit_Framework_TestCase
+class RestApiFinanceSearchPaginationResultInvoiceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,16 @@ class RestApiPaginationResultInvoiceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RestApiPaginationResultInvoice"
+     * Test "RestApiFinanceSearchPaginationResultInvoice"
      */
-    public function testRestApiPaginationResultInvoice()
+    public function testRestApiFinanceSearchPaginationResultInvoice()
     {
     }
 
     /**
-     * Test attribute "page"
+     * Test attribute "next_page"
      */
-    public function testPropertyPage()
+    public function testPropertyNextPage()
     {
     }
 

@@ -63,6 +63,7 @@ class Invoice implements ModelInterface, ArrayAccess
         'total' => 'int',
         'currency' => 'string',
         'status' => 'string',
+        'subscription_id' => 'string',
         'due_date' => '\DateTime',
         'pdf_link' => 'string'
     ];
@@ -78,6 +79,7 @@ class Invoice implements ModelInterface, ArrayAccess
         'total' => 'int64',
         'currency' => null,
         'status' => null,
+        'subscription_id' => null,
         'due_date' => 'date-time',
         'pdf_link' => null
     ];
@@ -114,6 +116,7 @@ class Invoice implements ModelInterface, ArrayAccess
         'total' => 'Total',
         'currency' => 'Currency',
         'status' => 'Status',
+        'subscription_id' => 'SubscriptionId',
         'due_date' => 'DueDate',
         'pdf_link' => 'PdfLink'
     ];
@@ -129,6 +132,7 @@ class Invoice implements ModelInterface, ArrayAccess
         'total' => 'setTotal',
         'currency' => 'setCurrency',
         'status' => 'setStatus',
+        'subscription_id' => 'setSubscriptionId',
         'due_date' => 'setDueDate',
         'pdf_link' => 'setPdfLink'
     ];
@@ -144,6 +148,7 @@ class Invoice implements ModelInterface, ArrayAccess
         'total' => 'getTotal',
         'currency' => 'getCurrency',
         'status' => 'getStatus',
+        'subscription_id' => 'getSubscriptionId',
         'due_date' => 'getDueDate',
         'pdf_link' => 'getPdfLink'
     ];
@@ -471,6 +476,7 @@ class Invoice implements ModelInterface, ArrayAccess
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['subscription_id'] = isset($data['subscription_id']) ? $data['subscription_id'] : null;
         $this->container['due_date'] = isset($data['due_date']) ? $data['due_date'] : null;
         $this->container['pdf_link'] = isset($data['pdf_link']) ? $data['pdf_link'] : null;
     }
@@ -664,6 +670,30 @@ class Invoice implements ModelInterface, ArrayAccess
             );
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets subscription_id
+     *
+     * @return string
+     */
+    public function getSubscriptionId()
+    {
+        return $this->container['subscription_id'];
+    }
+
+    /**
+     * Sets subscription_id
+     *
+     * @param string $subscription_id The subscription identifier
+     *
+     * @return $this
+     */
+    public function setSubscriptionId($subscription_id)
+    {
+        $this->container['subscription_id'] = $subscription_id;
 
         return $this;
     }

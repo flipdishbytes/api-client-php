@@ -1,9 +1,9 @@
-# RestApiPaginationResultInvoice
+# RestApiFinanceSearchPaginationResultInvoice
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**page** | **int** | Current page index | 
+**next_page** | **string** | Next page | 
 **limit** | **int** | Current page size | 
 **total_record_count** | **int** | Total record count | 
 **data** | [**\Flipdish\\Client\Models\Invoice[]**](Invoice.md) | Generic data object. | 

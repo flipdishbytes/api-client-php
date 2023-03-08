@@ -1,6 +1,6 @@
 <?php
 /**
- * SubscriptionsApiTest
+ * InvoicesApiTest
  * PHP version 5
  *
  * @category Class
@@ -33,14 +33,14 @@ use \Flipdish\\Client\ApiException;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * SubscriptionsApiTest Class Doc Comment
+ * InvoicesApiTest Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class SubscriptionsApiTest extends \PHPUnit_Framework_TestCase
+class InvoicesApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -72,22 +72,12 @@ class SubscriptionsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getSubscriptionById
+     * Test case for getInvoices
      *
-     * Get subscription by id.
-     *
-     */
-    public function testGetSubscriptionById()
-    {
-    }
-
-    /**
-     * Test case for getSubscriptionsForApp
-     *
-     * Get list of subscriptions for an App.
+     * Get list of invoices.
      *
      */
-    public function testGetSubscriptionsForApp()
+    public function testGetInvoices()
     {
     }
 }
