@@ -62,7 +62,7 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         'name' => 'string',
         'status' => 'string',
         'currency' => 'string',
-        'next_invoice_amount' => 'int',
+        'next_invoice_amount' => 'double',
         'next_invoice_billing_date' => '\DateTime',
         'user' => 'string',
         'default_payment_description' => 'string'
@@ -78,7 +78,7 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         'name' => null,
         'status' => null,
         'currency' => null,
-        'next_invoice_amount' => 'int64',
+        'next_invoice_amount' => 'double',
         'next_invoice_billing_date' => 'date-time',
         'user' => null,
         'default_payment_description' => null
@@ -660,7 +660,7 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
     /**
      * Gets next_invoice_amount
      *
-     * @return int
+     * @return double
      */
     public function getNextInvoiceAmount()
     {
@@ -670,7 +670,7 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
     /**
      * Sets next_invoice_amount
      *
-     * @param int $next_invoice_amount Next invoice amount
+     * @param double $next_invoice_amount Next invoice amount
      *
      * @return $this
      */

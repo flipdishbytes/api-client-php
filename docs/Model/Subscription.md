@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **name** | **string** |  | 
 **status** | **string** | Status | 
 **currency** | **string** | Currency | 
-**next_invoice_amount** | **int** | Next invoice amount | [optional] 
+**next_invoice_amount** | **double** | Next invoice amount | [optional] 
 **next_invoice_billing_date** | [**\DateTime**](\DateTime.md) | Next invoice billing date | [optional] 
 **user** | **string** | User | 
 **default_payment_description** | **string** | Default payment description | 

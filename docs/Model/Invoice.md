@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **invoice_id** | **string** | The invoice identifier | 
 **number** | **string** | Invoice number | 
-**total** | **int** | Total | [optional] 
+**total** | **double** | Total | [optional] 
 **currency** | **string** | Currency | 
 **status** | **string** | Status | 
 **subscription_id** | **string** | The subscription identifier | [optional] 

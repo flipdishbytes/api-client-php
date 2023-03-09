@@ -60,7 +60,7 @@ class Invoice implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'invoice_id' => 'string',
         'number' => 'string',
-        'total' => 'int',
+        'total' => 'double',
         'currency' => 'string',
         'status' => 'string',
         'subscription_id' => 'string',
@@ -76,7 +76,7 @@ class Invoice implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'invoice_id' => null,
         'number' => null,
-        'total' => 'int64',
+        'total' => 'double',
         'currency' => null,
         'status' => null,
         'subscription_id' => null,
@@ -587,7 +587,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Gets total
      *
-     * @return int
+     * @return double
      */
     public function getTotal()
     {
@@ -597,7 +597,7 @@ class Invoice implements ModelInterface, ArrayAccess
     /**
      * Sets total
      *
-     * @param int $total Total
+     * @param double $total Total
      *
      * @return $this
      */
