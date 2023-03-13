@@ -59,7 +59,8 @@ class SetPasswordWithPinModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'pin' => 'int',
-        'new_password' => 'string'
+        'new_password' => 'string',
+        'recaptcha_token' => 'string'
     ];
 
     /**
@@ -69,7 +70,8 @@ class SetPasswordWithPinModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'pin' => 'int32',
-        'new_password' => null
+        'new_password' => null,
+        'recaptcha_token' => null
     ];
 
     /**
@@ -100,7 +102,8 @@ class SetPasswordWithPinModel implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'pin' => 'Pin',
-        'new_password' => 'NewPassword'
+        'new_password' => 'NewPassword',
+        'recaptcha_token' => 'RecaptchaToken'
     ];
 
     /**
@@ -110,7 +113,8 @@ class SetPasswordWithPinModel implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'pin' => 'setPin',
-        'new_password' => 'setNewPassword'
+        'new_password' => 'setNewPassword',
+        'recaptcha_token' => 'setRecaptchaToken'
     ];
 
     /**
@@ -120,7 +124,8 @@ class SetPasswordWithPinModel implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'pin' => 'getPin',
-        'new_password' => 'getNewPassword'
+        'new_password' => 'getNewPassword',
+        'recaptcha_token' => 'getRecaptchaToken'
     ];
 
     /**
@@ -185,6 +190,7 @@ class SetPasswordWithPinModel implements ModelInterface, ArrayAccess
     {
         $this->container['pin'] = isset($data['pin']) ? $data['pin'] : null;
         $this->container['new_password'] = isset($data['new_password']) ? $data['new_password'] : null;
+        $this->container['recaptcha_token'] = isset($data['recaptcha_token']) ? $data['recaptcha_token'] : null;
     }
 
     /**
@@ -261,6 +267,30 @@ class SetPasswordWithPinModel implements ModelInterface, ArrayAccess
     public function setNewPassword($new_password)
     {
         $this->container['new_password'] = $new_password;
+
+        return $this;
+    }
+
+    /**
+     * Gets recaptcha_token
+     *
+     * @return string
+     */
+    public function getRecaptchaToken()
+    {
+        return $this->container['recaptcha_token'];
+    }
+
+    /**
+     * Sets recaptcha_token
+     *
+     * @param string $recaptcha_token Google Recaptcha Token
+     *
+     * @return $this
+     */
+    public function setRecaptchaToken($recaptcha_token)
+    {
+        $this->container['recaptcha_token'] = $recaptcha_token;
 
         return $this;
     }

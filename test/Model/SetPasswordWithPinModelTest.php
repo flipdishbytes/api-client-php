@@ -89,4 +89,11 @@ class SetPasswordWithPinModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyNewPassword()
     {
     }
+
+    /**
+     * Test attribute "recaptcha_token"
+     */
+    public function testPropertyRecaptchaToken()
+    {
+    }
 }
