@@ -1213,6 +1213,7 @@ Class | Method | HTTP request | Description
  - [StuartSettings](docs/Model/StuartSettings.md)
  - [StuartSettingsTransportPrices](docs/Model/StuartSettingsTransportPrices.md)
  - [Subscription](docs/Model/Subscription.md)
+ - [SubscriptionProduct](docs/Model/SubscriptionProduct.md)
  - [SubscriptionSummary](docs/Model/SubscriptionSummary.md)
  - [SupportedCountry](docs/Model/SupportedCountry.md)
  - [Teammate](docs/Model/Teammate.md)

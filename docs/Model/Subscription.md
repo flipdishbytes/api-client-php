@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**products** | [**\Flipdish\\Client\Models\SubscriptionProduct[]**](SubscriptionProduct.md) | Products | 
 **subscription_id** | **string** | The subscription identifier | 
 **name** | **string** |  | 
 **status** | **string** | Status | 

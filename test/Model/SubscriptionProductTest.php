@@ -1,6 +1,6 @@
 <?php
 /**
- * SubscriptionTest
+ * SubscriptionProductTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * SubscriptionTest Class Doc Comment
+ * SubscriptionProductTest Class Doc Comment
  *
  * @category    Class
- * @description Subscription
+ * @description Product
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SubscriptionTest extends \PHPUnit_Framework_TestCase
+class SubscriptionProductTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,23 +70,16 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Subscription"
+     * Test "SubscriptionProduct"
      */
-    public function testSubscription()
+    public function testSubscriptionProduct()
     {
     }
 
     /**
-     * Test attribute "products"
+     * Test attribute "product_id"
      */
-    public function testPropertyProducts()
-    {
-    }
-
-    /**
-     * Test attribute "subscription_id"
-     */
-    public function testPropertySubscriptionId()
+    public function testPropertyProductId()
     {
     }
 
@@ -98,44 +91,30 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "quantity"
      */
-    public function testPropertyStatus()
+    public function testPropertyQuantity()
     {
     }
 
     /**
-     * Test attribute "currency"
+     * Test attribute "price_per_unit"
      */
-    public function testPropertyCurrency()
+    public function testPropertyPricePerUnit()
     {
     }
 
     /**
-     * Test attribute "next_invoice_amount"
+     * Test attribute "price_total"
      */
-    public function testPropertyNextInvoiceAmount()
+    public function testPropertyPriceTotal()
     {
     }
 
     /**
-     * Test attribute "next_invoice_billing_date"
+     * Test attribute "payment_frequency"
      */
-    public function testPropertyNextInvoiceBillingDate()
-    {
-    }
-
-    /**
-     * Test attribute "user"
-     */
-    public function testPropertyUser()
-    {
-    }
-
-    /**
-     * Test attribute "default_payment_description"
-     */
-    public function testPropertyDefaultPaymentDescription()
+    public function testPropertyPaymentFrequency()
     {
     }
 }
