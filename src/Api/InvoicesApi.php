@@ -96,14 +96,15 @@ class InvoicesApi
      * @param  string $subscription_id Subscription Id (optional) (optional)
      * @param  int $limit Limit of invoices to return (optional)
      * @param  string $page_id Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)
+     * @param  bool $exclude_not_owned_invoices Exclude not owned invoices. Set to true to only view your invoices (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice
      */
-    public function getInvoices($app_id, $subscription_id = null, $limit = null, $page_id = null)
+    public function getInvoices($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null)
     {
-        list($response) = $this->getInvoicesWithHttpInfo($app_id, $subscription_id, $limit, $page_id);
+        list($response) = $this->getInvoicesWithHttpInfo($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices);
         return $response;
     }
 
@@ -116,15 +117,16 @@ class InvoicesApi
      * @param  string $subscription_id Subscription Id (optional) (optional)
      * @param  int $limit Limit of invoices to return (optional)
      * @param  string $page_id Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)
+     * @param  bool $exclude_not_owned_invoices Exclude not owned invoices. Set to true to only view your invoices (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getInvoicesWithHttpInfo($app_id, $subscription_id = null, $limit = null, $page_id = null)
+    public function getInvoicesWithHttpInfo($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice';
-        $request = $this->getInvoicesRequest($app_id, $subscription_id, $limit, $page_id);
+        $request = $this->getInvoicesRequest($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices);
 
         try {
             $options = $this->createHttpClientOption();
@@ -210,13 +212,14 @@ class InvoicesApi
      * @param  string $subscription_id Subscription Id (optional) (optional)
      * @param  int $limit Limit of invoices to return (optional)
      * @param  string $page_id Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)
+     * @param  bool $exclude_not_owned_invoices Exclude not owned invoices. Set to true to only view your invoices (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getInvoicesAsync($app_id, $subscription_id = null, $limit = null, $page_id = null)
+    public function getInvoicesAsync($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null)
     {
-        return $this->getInvoicesAsyncWithHttpInfo($app_id, $subscription_id, $limit, $page_id)
+        return $this->getInvoicesAsyncWithHttpInfo($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -233,14 +236,15 @@ class InvoicesApi
      * @param  string $subscription_id Subscription Id (optional) (optional)
      * @param  int $limit Limit of invoices to return (optional)
      * @param  string $page_id Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)
+     * @param  bool $exclude_not_owned_invoices Exclude not owned invoices. Set to true to only view your invoices (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getInvoicesAsyncWithHttpInfo($app_id, $subscription_id = null, $limit = null, $page_id = null)
+    public function getInvoicesAsyncWithHttpInfo($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice';
-        $request = $this->getInvoicesRequest($app_id, $subscription_id, $limit, $page_id);
+        $request = $this->getInvoicesRequest($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -286,11 +290,12 @@ class InvoicesApi
      * @param  string $subscription_id Subscription Id (optional) (optional)
      * @param  int $limit Limit of invoices to return (optional)
      * @param  string $page_id Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)
+     * @param  bool $exclude_not_owned_invoices Exclude not owned invoices. Set to true to only view your invoices (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getInvoicesRequest($app_id, $subscription_id = null, $limit = null, $page_id = null)
+    protected function getInvoicesRequest($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -317,6 +322,10 @@ class InvoicesApi
         // query params
         if ($page_id !== null) {
             $queryParams['pageId'] = ObjectSerializer::toQueryValue($page_id);
+        }
+        // query params
+        if ($exclude_not_owned_invoices !== null) {
+            $queryParams['excludeNotOwnedInvoices'] = ObjectSerializer::toQueryValue($exclude_not_owned_invoices);
         }
 
         // path params

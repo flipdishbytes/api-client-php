@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getInvoices**
-> \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice getInvoices($app_id, $subscription_id, $limit, $page_id)
+> \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice getInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices)
 
 Get list of invoices
 
@@ -32,9 +32,10 @@ $app_id = "app_id_example"; // string | App Id
 $subscription_id = "subscription_id_example"; // string | Subscription Id (optional)
 $limit = 56; // int | Limit of invoices to return
 $page_id = "page_id_example"; // string | Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call
+$exclude_not_owned_invoices = true; // bool | Exclude not owned invoices. Set to true to only view your invoices
 
 try {
-    $result = $apiInstance->getInvoices($app_id, $subscription_id, $limit, $page_id);
+    $result = $apiInstance->getInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoicesApi->getInvoices: ', $e->getMessage(), PHP_EOL;
@@ -50,6 +51,7 @@ Name | Type | Description  | Notes
  **subscription_id** | **string**| Subscription Id (optional) | [optional]
  **limit** | **int**| Limit of invoices to return | [optional]
  **page_id** | **string**| Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call | [optional]
+ **exclude_not_owned_invoices** | **bool**| Exclude not owned invoices. Set to true to only view your invoices | [optional]
 
 ### Return type
 
