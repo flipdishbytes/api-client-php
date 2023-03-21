@@ -63,7 +63,8 @@ class SubscriptionProduct implements ModelInterface, ArrayAccess
         'quantity' => 'int',
         'price_per_unit' => 'double',
         'price_total' => 'double',
-        'payment_frequency' => 'string'
+        'payment_frequency' => 'string',
+        'stores' => '\Flipdish\\Client\Models\SubscriptionStore[]'
     ];
 
     /**
@@ -77,7 +78,8 @@ class SubscriptionProduct implements ModelInterface, ArrayAccess
         'quantity' => 'int64',
         'price_per_unit' => 'double',
         'price_total' => 'double',
-        'payment_frequency' => null
+        'payment_frequency' => null,
+        'stores' => null
     ];
 
     /**
@@ -112,7 +114,8 @@ class SubscriptionProduct implements ModelInterface, ArrayAccess
         'quantity' => 'Quantity',
         'price_per_unit' => 'PricePerUnit',
         'price_total' => 'PriceTotal',
-        'payment_frequency' => 'PaymentFrequency'
+        'payment_frequency' => 'PaymentFrequency',
+        'stores' => 'Stores'
     ];
 
     /**
@@ -126,7 +129,8 @@ class SubscriptionProduct implements ModelInterface, ArrayAccess
         'quantity' => 'setQuantity',
         'price_per_unit' => 'setPricePerUnit',
         'price_total' => 'setPriceTotal',
-        'payment_frequency' => 'setPaymentFrequency'
+        'payment_frequency' => 'setPaymentFrequency',
+        'stores' => 'setStores'
     ];
 
     /**
@@ -140,7 +144,8 @@ class SubscriptionProduct implements ModelInterface, ArrayAccess
         'quantity' => 'getQuantity',
         'price_per_unit' => 'getPricePerUnit',
         'price_total' => 'getPriceTotal',
-        'payment_frequency' => 'getPaymentFrequency'
+        'payment_frequency' => 'getPaymentFrequency',
+        'stores' => 'getStores'
     ];
 
     /**
@@ -228,6 +233,7 @@ class SubscriptionProduct implements ModelInterface, ArrayAccess
         $this->container['price_per_unit'] = isset($data['price_per_unit']) ? $data['price_per_unit'] : null;
         $this->container['price_total'] = isset($data['price_total']) ? $data['price_total'] : null;
         $this->container['payment_frequency'] = isset($data['payment_frequency']) ? $data['payment_frequency'] : null;
+        $this->container['stores'] = isset($data['stores']) ? $data['stores'] : null;
     }
 
     /**
@@ -423,6 +429,30 @@ class SubscriptionProduct implements ModelInterface, ArrayAccess
             );
         }
         $this->container['payment_frequency'] = $payment_frequency;
+
+        return $this;
+    }
+
+    /**
+     * Gets stores
+     *
+     * @return \Flipdish\\Client\Models\SubscriptionStore[]
+     */
+    public function getStores()
+    {
+        return $this->container['stores'];
+    }
+
+    /**
+     * Sets stores
+     *
+     * @param \Flipdish\\Client\Models\SubscriptionStore[] $stores Stores
+     *
+     * @return $this
+     */
+    public function setStores($stores)
+    {
+        $this->container['stores'] = $stores;
 
         return $this;
     }

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getInvoices**
-> \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice getInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices)
+> \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice getInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to)
 
 Get list of invoices
 
@@ -30,12 +30,14 @@ $apiInstance = new Flipdish\\Client\Api\InvoicesApi(
 );
 $app_id = "app_id_example"; // string | App Id
 $subscription_id = "subscription_id_example"; // string | Subscription Id (optional)
-$limit = 56; // int | Limit of invoices to return
-$page_id = "page_id_example"; // string | Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call
-$exclude_not_owned_invoices = true; // bool | Exclude not owned invoices. Set to true to only view your invoices
+$limit = 56; // int | Limit of invoices to return (optional)
+$page_id = "page_id_example"; // string | Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional)
+$exclude_not_owned_invoices = true; // bool | Exclude not owned invoices. Set to true to only view your invoices (optional)
+$date_from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter starting from this date (optional)
+$date_to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter ending from this date (optional)
 
 try {
-    $result = $apiInstance->getInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices);
+    $result = $apiInstance->getInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoicesApi->getInvoices: ', $e->getMessage(), PHP_EOL;
@@ -49,9 +51,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| App Id |
  **subscription_id** | **string**| Subscription Id (optional) | [optional]
- **limit** | **int**| Limit of invoices to return | [optional]
- **page_id** | **string**| Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call | [optional]
- **exclude_not_owned_invoices** | **bool**| Exclude not owned invoices. Set to true to only view your invoices | [optional]
+ **limit** | **int**| Limit of invoices to return (optional) | [optional]
+ **page_id** | **string**| Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) | [optional]
+ **exclude_not_owned_invoices** | **bool**| Exclude not owned invoices. Set to true to only view your invoices (optional) | [optional]
+ **date_from** | **\DateTime**| Filter starting from this date (optional) | [optional]
+ **date_to** | **\DateTime**| Filter ending from this date (optional) | [optional]
 
 ### Return type
 

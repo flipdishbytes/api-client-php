@@ -1,6 +1,6 @@
 <?php
 /**
- * SubscriptionProductTest
+ * SubscriptionStoreTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * SubscriptionProductTest Class Doc Comment
+ * SubscriptionStoreTest Class Doc Comment
  *
  * @category    Class
- * @description Product
+ * @description Subscription Store
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SubscriptionProductTest extends \PHPUnit_Framework_TestCase
+class SubscriptionStoreTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,16 @@ class SubscriptionProductTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SubscriptionProduct"
+     * Test "SubscriptionStore"
      */
-    public function testSubscriptionProduct()
+    public function testSubscriptionStore()
     {
     }
 
     /**
-     * Test attribute "product_id"
+     * Test attribute "id"
      */
-    public function testPropertyProductId()
+    public function testPropertyId()
     {
     }
 
@@ -87,41 +87,6 @@ class SubscriptionProductTest extends \PHPUnit_Framework_TestCase
      * Test attribute "name"
      */
     public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "quantity"
-     */
-    public function testPropertyQuantity()
-    {
-    }
-
-    /**
-     * Test attribute "price_per_unit"
-     */
-    public function testPropertyPricePerUnit()
-    {
-    }
-
-    /**
-     * Test attribute "price_total"
-     */
-    public function testPropertyPriceTotal()
-    {
-    }
-
-    /**
-     * Test attribute "payment_frequency"
-     */
-    public function testPropertyPaymentFrequency()
-    {
-    }
-
-    /**
-     * Test attribute "stores"
-     */
-    public function testPropertyStores()
     {
     }
 }
