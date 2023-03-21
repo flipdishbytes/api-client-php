@@ -1,6 +1,6 @@
 <?php
 /**
- * SubscriptionTest
+ * InvoicePeriodTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * SubscriptionTest Class Doc Comment
+ * InvoicePeriodTest Class Doc Comment
  *
  * @category    Class
- * @description Subscription
+ * @description Invoice Period
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SubscriptionTest extends \PHPUnit_Framework_TestCase
+class InvoicePeriodTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,79 +70,23 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Subscription"
+     * Test "InvoicePeriod"
      */
-    public function testSubscription()
+    public function testInvoicePeriod()
     {
     }
 
     /**
-     * Test attribute "products"
+     * Test attribute "start"
      */
-    public function testPropertyProducts()
+    public function testPropertyStart()
     {
     }
 
     /**
-     * Test attribute "upcoming_invoice_items"
+     * Test attribute "end"
      */
-    public function testPropertyUpcomingInvoiceItems()
-    {
-    }
-
-    /**
-     * Test attribute "subscription_id"
-     */
-    public function testPropertySubscriptionId()
-    {
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-    }
-
-    /**
-     * Test attribute "currency"
-     */
-    public function testPropertyCurrency()
-    {
-    }
-
-    /**
-     * Test attribute "next_invoice_amount"
-     */
-    public function testPropertyNextInvoiceAmount()
-    {
-    }
-
-    /**
-     * Test attribute "next_invoice_billing_date"
-     */
-    public function testPropertyNextInvoiceBillingDate()
-    {
-    }
-
-    /**
-     * Test attribute "user"
-     */
-    public function testPropertyUser()
-    {
-    }
-
-    /**
-     * Test attribute "default_payment_description"
-     */
-    public function testPropertyDefaultPaymentDescription()
+    public function testPropertyEnd()
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * SubscriptionTest
+ * InvoiceItemTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * SubscriptionTest Class Doc Comment
+ * InvoiceItemTest Class Doc Comment
  *
  * @category    Class
- * @description Subscription
+ * @description Invoice Item
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SubscriptionTest extends \PHPUnit_Framework_TestCase
+class InvoiceItemTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,79 +70,51 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Subscription"
+     * Test "InvoiceItem"
      */
-    public function testSubscription()
+    public function testInvoiceItem()
     {
     }
 
     /**
-     * Test attribute "products"
+     * Test attribute "description"
      */
-    public function testPropertyProducts()
+    public function testPropertyDescription()
     {
     }
 
     /**
-     * Test attribute "upcoming_invoice_items"
+     * Test attribute "quantity"
      */
-    public function testPropertyUpcomingInvoiceItems()
+    public function testPropertyQuantity()
     {
     }
 
     /**
-     * Test attribute "subscription_id"
+     * Test attribute "unit_amount_excluding_tax"
      */
-    public function testPropertySubscriptionId()
+    public function testPropertyUnitAmountExcludingTax()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "tax"
      */
-    public function testPropertyName()
+    public function testPropertyTax()
     {
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "amount"
      */
-    public function testPropertyStatus()
+    public function testPropertyAmount()
     {
     }
 
     /**
-     * Test attribute "currency"
+     * Test attribute "period"
      */
-    public function testPropertyCurrency()
-    {
-    }
-
-    /**
-     * Test attribute "next_invoice_amount"
-     */
-    public function testPropertyNextInvoiceAmount()
-    {
-    }
-
-    /**
-     * Test attribute "next_invoice_billing_date"
-     */
-    public function testPropertyNextInvoiceBillingDate()
-    {
-    }
-
-    /**
-     * Test attribute "user"
-     */
-    public function testPropertyUser()
-    {
-    }
-
-    /**
-     * Test attribute "default_payment_description"
-     */
-    public function testPropertyDefaultPaymentDescription()
+    public function testPropertyPeriod()
     {
     }
 }

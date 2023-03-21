@@ -738,6 +738,8 @@ Class | Method | HTTP request | Description
  - [IndexPageBase](docs/Model/IndexPageBase.md)
  - [IntercomUserHash](docs/Model/IntercomUserHash.md)
  - [Invoice](docs/Model/Invoice.md)
+ - [InvoiceItem](docs/Model/InvoiceItem.md)
+ - [InvoicePeriod](docs/Model/InvoicePeriod.md)
  - [JobAddress](docs/Model/JobAddress.md)
  - [JobCancellation](docs/Model/JobCancellation.md)
  - [JobContact](docs/Model/JobContact.md)

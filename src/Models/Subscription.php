@@ -59,6 +59,7 @@ class Subscription implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'products' => '\Flipdish\\Client\Models\SubscriptionProduct[]',
+        'upcoming_invoice_items' => '\Flipdish\\Client\Models\InvoiceItem[]',
         'subscription_id' => 'string',
         'name' => 'string',
         'status' => 'string',
@@ -76,6 +77,7 @@ class Subscription implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'products' => null,
+        'upcoming_invoice_items' => null,
         'subscription_id' => null,
         'name' => null,
         'status' => null,
@@ -114,6 +116,7 @@ class Subscription implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'products' => 'Products',
+        'upcoming_invoice_items' => 'UpcomingInvoiceItems',
         'subscription_id' => 'SubscriptionId',
         'name' => 'Name',
         'status' => 'Status',
@@ -131,6 +134,7 @@ class Subscription implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'products' => 'setProducts',
+        'upcoming_invoice_items' => 'setUpcomingInvoiceItems',
         'subscription_id' => 'setSubscriptionId',
         'name' => 'setName',
         'status' => 'setStatus',
@@ -148,6 +152,7 @@ class Subscription implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'products' => 'getProducts',
+        'upcoming_invoice_items' => 'getUpcomingInvoiceItems',
         'subscription_id' => 'getSubscriptionId',
         'name' => 'getName',
         'status' => 'getStatus',
@@ -481,6 +486,7 @@ class Subscription implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['products'] = isset($data['products']) ? $data['products'] : null;
+        $this->container['upcoming_invoice_items'] = isset($data['upcoming_invoice_items']) ? $data['upcoming_invoice_items'] : null;
         $this->container['subscription_id'] = isset($data['subscription_id']) ? $data['subscription_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -502,6 +508,9 @@ class Subscription implements ModelInterface, ArrayAccess
 
         if ($this->container['products'] === null) {
             $invalidProperties[] = "'products' can't be null";
+        }
+        if ($this->container['upcoming_invoice_items'] === null) {
+            $invalidProperties[] = "'upcoming_invoice_items' can't be null";
         }
         if ($this->container['subscription_id'] === null) {
             $invalidProperties[] = "'subscription_id' can't be null";
@@ -572,6 +581,30 @@ class Subscription implements ModelInterface, ArrayAccess
     public function setProducts($products)
     {
         $this->container['products'] = $products;
+
+        return $this;
+    }
+
+    /**
+     * Gets upcoming_invoice_items
+     *
+     * @return \Flipdish\\Client\Models\InvoiceItem[]
+     */
+    public function getUpcomingInvoiceItems()
+    {
+        return $this->container['upcoming_invoice_items'];
+    }
+
+    /**
+     * Sets upcoming_invoice_items
+     *
+     * @param \Flipdish\\Client\Models\InvoiceItem[] $upcoming_invoice_items Upcoming invoice items
+     *
+     * @return $this
+     */
+    public function setUpcomingInvoiceItems($upcoming_invoice_items)
+    {
+        $this->container['upcoming_invoice_items'] = $upcoming_invoice_items;
 
         return $this;
     }
