@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getInvoices**
-> \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice getInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to)
+> \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice getInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number)
 
 Get list of invoices
 
@@ -35,9 +35,10 @@ $page_id = "page_id_example"; // string | Id for use in pagination. Use the next
 $exclude_not_owned_invoices = true; // bool | Exclude not owned invoices. Set to true to only view your invoices (optional)
 $date_from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter starting from this date (optional)
 $date_to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter ending from this date (optional)
+$invoice_number = "invoice_number_example"; // string | Invoice number (optional)
 
 try {
-    $result = $apiInstance->getInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to);
+    $result = $apiInstance->getInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoicesApi->getInvoices: ', $e->getMessage(), PHP_EOL;
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
  **exclude_not_owned_invoices** | **bool**| Exclude not owned invoices. Set to true to only view your invoices (optional) | [optional]
  **date_from** | **\DateTime**| Filter starting from this date (optional) | [optional]
  **date_to** | **\DateTime**| Filter ending from this date (optional) | [optional]
+ **invoice_number** | **string**| Invoice number (optional) | [optional]
 
 ### Return type
 
