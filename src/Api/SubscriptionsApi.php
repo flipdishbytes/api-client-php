@@ -418,14 +418,15 @@ class SubscriptionsApi
      *
      * @param  string $app_id App Id (required)
      * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
+     * @param  int[] $store_id Store Ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary
      */
-    public function getSubscriptionsForApp($app_id, $exclude_not_owned_subscriptions = null)
+    public function getSubscriptionsForApp($app_id, $exclude_not_owned_subscriptions = null, $store_id = null)
     {
-        list($response) = $this->getSubscriptionsForAppWithHttpInfo($app_id, $exclude_not_owned_subscriptions);
+        list($response) = $this->getSubscriptionsForAppWithHttpInfo($app_id, $exclude_not_owned_subscriptions, $store_id);
         return $response;
     }
 
@@ -436,15 +437,16 @@ class SubscriptionsApi
      *
      * @param  string $app_id App Id (required)
      * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
+     * @param  int[] $store_id Store Ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSubscriptionsForAppWithHttpInfo($app_id, $exclude_not_owned_subscriptions = null)
+    public function getSubscriptionsForAppWithHttpInfo($app_id, $exclude_not_owned_subscriptions = null, $store_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary';
-        $request = $this->getSubscriptionsForAppRequest($app_id, $exclude_not_owned_subscriptions);
+        $request = $this->getSubscriptionsForAppRequest($app_id, $exclude_not_owned_subscriptions, $store_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -536,13 +538,14 @@ class SubscriptionsApi
      *
      * @param  string $app_id App Id (required)
      * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
+     * @param  int[] $store_id Store Ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSubscriptionsForAppAsync($app_id, $exclude_not_owned_subscriptions = null)
+    public function getSubscriptionsForAppAsync($app_id, $exclude_not_owned_subscriptions = null, $store_id = null)
     {
-        return $this->getSubscriptionsForAppAsyncWithHttpInfo($app_id, $exclude_not_owned_subscriptions)
+        return $this->getSubscriptionsForAppAsyncWithHttpInfo($app_id, $exclude_not_owned_subscriptions, $store_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -557,14 +560,15 @@ class SubscriptionsApi
      *
      * @param  string $app_id App Id (required)
      * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
+     * @param  int[] $store_id Store Ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSubscriptionsForAppAsyncWithHttpInfo($app_id, $exclude_not_owned_subscriptions = null)
+    public function getSubscriptionsForAppAsyncWithHttpInfo($app_id, $exclude_not_owned_subscriptions = null, $store_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary';
-        $request = $this->getSubscriptionsForAppRequest($app_id, $exclude_not_owned_subscriptions);
+        $request = $this->getSubscriptionsForAppRequest($app_id, $exclude_not_owned_subscriptions, $store_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -608,11 +612,12 @@ class SubscriptionsApi
      *
      * @param  string $app_id App Id (required)
      * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
+     * @param  int[] $store_id Store Ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getSubscriptionsForAppRequest($app_id, $exclude_not_owned_subscriptions = null)
+    protected function getSubscriptionsForAppRequest($app_id, $exclude_not_owned_subscriptions = null, $store_id = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -631,6 +636,13 @@ class SubscriptionsApi
         // query params
         if ($exclude_not_owned_subscriptions !== null) {
             $queryParams['excludeNotOwnedSubscriptions'] = ObjectSerializer::toQueryValue($exclude_not_owned_subscriptions);
+        }
+        // query params
+        if (is_array($store_id)) {
+            $queryParams['storeId'] = $store_id;
+        } else
+        if ($store_id !== null) {
+            $queryParams['storeId'] = ObjectSerializer::toQueryValue($store_id);
         }
 
         // path params
