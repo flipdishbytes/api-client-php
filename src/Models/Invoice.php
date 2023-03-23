@@ -64,7 +64,8 @@ class Invoice implements ModelInterface, ArrayAccess
         'currency' => 'string',
         'status' => 'string',
         'subscription_id' => 'string',
-        'due_date' => '\DateTime',
+        'paid_at' => '\DateTime',
+        'finalised_at' => '\DateTime',
         'pdf_link' => 'string'
     ];
 
@@ -80,7 +81,8 @@ class Invoice implements ModelInterface, ArrayAccess
         'currency' => null,
         'status' => null,
         'subscription_id' => null,
-        'due_date' => 'date-time',
+        'paid_at' => 'date-time',
+        'finalised_at' => 'date-time',
         'pdf_link' => null
     ];
 
@@ -117,7 +119,8 @@ class Invoice implements ModelInterface, ArrayAccess
         'currency' => 'Currency',
         'status' => 'Status',
         'subscription_id' => 'SubscriptionId',
-        'due_date' => 'DueDate',
+        'paid_at' => 'PaidAt',
+        'finalised_at' => 'FinalisedAt',
         'pdf_link' => 'PdfLink'
     ];
 
@@ -133,7 +136,8 @@ class Invoice implements ModelInterface, ArrayAccess
         'currency' => 'setCurrency',
         'status' => 'setStatus',
         'subscription_id' => 'setSubscriptionId',
-        'due_date' => 'setDueDate',
+        'paid_at' => 'setPaidAt',
+        'finalised_at' => 'setFinalisedAt',
         'pdf_link' => 'setPdfLink'
     ];
 
@@ -149,7 +153,8 @@ class Invoice implements ModelInterface, ArrayAccess
         'currency' => 'getCurrency',
         'status' => 'getStatus',
         'subscription_id' => 'getSubscriptionId',
-        'due_date' => 'getDueDate',
+        'paid_at' => 'getPaidAt',
+        'finalised_at' => 'getFinalisedAt',
         'pdf_link' => 'getPdfLink'
     ];
 
@@ -477,7 +482,8 @@ class Invoice implements ModelInterface, ArrayAccess
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['subscription_id'] = isset($data['subscription_id']) ? $data['subscription_id'] : null;
-        $this->container['due_date'] = isset($data['due_date']) ? $data['due_date'] : null;
+        $this->container['paid_at'] = isset($data['paid_at']) ? $data['paid_at'] : null;
+        $this->container['finalised_at'] = isset($data['finalised_at']) ? $data['finalised_at'] : null;
         $this->container['pdf_link'] = isset($data['pdf_link']) ? $data['pdf_link'] : null;
     }
 
@@ -699,25 +705,49 @@ class Invoice implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets due_date
+     * Gets paid_at
      *
      * @return \DateTime
      */
-    public function getDueDate()
+    public function getPaidAt()
     {
-        return $this->container['due_date'];
+        return $this->container['paid_at'];
     }
 
     /**
-     * Sets due_date
+     * Sets paid_at
      *
-     * @param \DateTime $due_date Due Date
+     * @param \DateTime $paid_at Paid At
      *
      * @return $this
      */
-    public function setDueDate($due_date)
+    public function setPaidAt($paid_at)
     {
-        $this->container['due_date'] = $due_date;
+        $this->container['paid_at'] = $paid_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets finalised_at
+     *
+     * @return \DateTime
+     */
+    public function getFinalisedAt()
+    {
+        return $this->container['finalised_at'];
+    }
+
+    /**
+     * Sets finalised_at
+     *
+     * @param \DateTime $finalised_at Finalised At
+     *
+     * @return $this
+     */
+    public function setFinalisedAt($finalised_at)
+    {
+        $this->container['finalised_at'] = $finalised_at;
 
         return $this;
     }
