@@ -417,8 +417,8 @@ class SubscriptionsApi
      * Get list of subscriptions for an App
      *
      * @param  string $app_id App Id (required)
-     * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
-     * @param  int[] $store_id Store Ids (optional)
+     * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)
+     * @param  int[] $store_id Store Ids (optional) (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -436,8 +436,8 @@ class SubscriptionsApi
      * Get list of subscriptions for an App
      *
      * @param  string $app_id App Id (required)
-     * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
-     * @param  int[] $store_id Store Ids (optional)
+     * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)
+     * @param  int[] $store_id Store Ids (optional) (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -537,8 +537,8 @@ class SubscriptionsApi
      * Get list of subscriptions for an App
      *
      * @param  string $app_id App Id (required)
-     * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
-     * @param  int[] $store_id Store Ids (optional)
+     * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)
+     * @param  int[] $store_id Store Ids (optional) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -559,8 +559,8 @@ class SubscriptionsApi
      * Get list of subscriptions for an App
      *
      * @param  string $app_id App Id (required)
-     * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
-     * @param  int[] $store_id Store Ids (optional)
+     * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)
+     * @param  int[] $store_id Store Ids (optional) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -611,8 +611,8 @@ class SubscriptionsApi
      * Create request for operation 'getSubscriptionsForApp'
      *
      * @param  string $app_id App Id (required)
-     * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
-     * @param  int[] $store_id Store Ids (optional)
+     * @param  bool $exclude_not_owned_subscriptions Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) (optional)
+     * @param  int[] $store_id Store Ids (optional) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

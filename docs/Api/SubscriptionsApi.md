@@ -85,8 +85,8 @@ $apiInstance = new Flipdish\\Client\Api\SubscriptionsApi(
     $config
 );
 $app_id = "app_id_example"; // string | App Id
-$exclude_not_owned_subscriptions = true; // bool | Exclude not owned subscriptions. Set to true to only view your subscriptions
-$store_id = array(56); // int[] | Store Ids
+$exclude_not_owned_subscriptions = true; // bool | Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
+$store_id = array(56); // int[] | Store Ids (optional)
 
 try {
     $result = $apiInstance->getSubscriptionsForApp($app_id, $exclude_not_owned_subscriptions, $store_id);
@@ -102,8 +102,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| App Id |
- **exclude_not_owned_subscriptions** | **bool**| Exclude not owned subscriptions. Set to true to only view your subscriptions | [optional]
- **store_id** | [**int[]**](../Model/int.md)| Store Ids | [optional]
+ **exclude_not_owned_subscriptions** | **bool**| Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) | [optional]
+ **store_id** | [**int[]**](../Model/int.md)| Store Ids (optional) | [optional]
 
 ### Return type
 

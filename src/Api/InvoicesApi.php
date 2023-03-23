@@ -100,14 +100,15 @@ class InvoicesApi
      * @param  \DateTime $date_from Filter starting from this date (optional) (optional)
      * @param  \DateTime $date_to Filter ending from this date (optional) (optional)
      * @param  string $invoice_number Invoice number (optional) (optional)
+     * @param  int[] $store_id Store Ids (optional) (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice
      */
-    public function getInvoices($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null, $date_from = null, $date_to = null, $invoice_number = null)
+    public function getInvoices($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null, $date_from = null, $date_to = null, $invoice_number = null, $store_id = null)
     {
-        list($response) = $this->getInvoicesWithHttpInfo($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number);
+        list($response) = $this->getInvoicesWithHttpInfo($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number, $store_id);
         return $response;
     }
 
@@ -124,15 +125,16 @@ class InvoicesApi
      * @param  \DateTime $date_from Filter starting from this date (optional) (optional)
      * @param  \DateTime $date_to Filter ending from this date (optional) (optional)
      * @param  string $invoice_number Invoice number (optional) (optional)
+     * @param  int[] $store_id Store Ids (optional) (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getInvoicesWithHttpInfo($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null, $date_from = null, $date_to = null, $invoice_number = null)
+    public function getInvoicesWithHttpInfo($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null, $date_from = null, $date_to = null, $invoice_number = null, $store_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice';
-        $request = $this->getInvoicesRequest($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number);
+        $request = $this->getInvoicesRequest($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number, $store_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -222,13 +224,14 @@ class InvoicesApi
      * @param  \DateTime $date_from Filter starting from this date (optional) (optional)
      * @param  \DateTime $date_to Filter ending from this date (optional) (optional)
      * @param  string $invoice_number Invoice number (optional) (optional)
+     * @param  int[] $store_id Store Ids (optional) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getInvoicesAsync($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null, $date_from = null, $date_to = null, $invoice_number = null)
+    public function getInvoicesAsync($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null, $date_from = null, $date_to = null, $invoice_number = null, $store_id = null)
     {
-        return $this->getInvoicesAsyncWithHttpInfo($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number)
+        return $this->getInvoicesAsyncWithHttpInfo($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number, $store_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -249,14 +252,15 @@ class InvoicesApi
      * @param  \DateTime $date_from Filter starting from this date (optional) (optional)
      * @param  \DateTime $date_to Filter ending from this date (optional) (optional)
      * @param  string $invoice_number Invoice number (optional) (optional)
+     * @param  int[] $store_id Store Ids (optional) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getInvoicesAsyncWithHttpInfo($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null, $date_from = null, $date_to = null, $invoice_number = null)
+    public function getInvoicesAsyncWithHttpInfo($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null, $date_from = null, $date_to = null, $invoice_number = null, $store_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice';
-        $request = $this->getInvoicesRequest($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number);
+        $request = $this->getInvoicesRequest($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number, $store_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -306,11 +310,12 @@ class InvoicesApi
      * @param  \DateTime $date_from Filter starting from this date (optional) (optional)
      * @param  \DateTime $date_to Filter ending from this date (optional) (optional)
      * @param  string $invoice_number Invoice number (optional) (optional)
+     * @param  int[] $store_id Store Ids (optional) (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getInvoicesRequest($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null, $date_from = null, $date_to = null, $invoice_number = null)
+    protected function getInvoicesRequest($app_id, $subscription_id = null, $limit = null, $page_id = null, $exclude_not_owned_invoices = null, $date_from = null, $date_to = null, $invoice_number = null, $store_id = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -353,6 +358,13 @@ class InvoicesApi
         // query params
         if ($invoice_number !== null) {
             $queryParams['invoiceNumber'] = ObjectSerializer::toQueryValue($invoice_number);
+        }
+        // query params
+        if (is_array($store_id)) {
+            $queryParams['storeId'] = $store_id;
+        } else
+        if ($store_id !== null) {
+            $queryParams['storeId'] = ObjectSerializer::toQueryValue($store_id);
         }
 
         // path params
