@@ -119,6 +119,13 @@ class SearchCriteriaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "store_id_list"
+     */
+    public function testPropertyStoreIdList()
+    {
+    }
+
+    /**
      * Test attribute "store_group_id"
      */
     public function testPropertyStoreGroupId()

@@ -138,4 +138,18 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPdfLink()
     {
     }
+
+    /**
+     * Test attribute "hosted_url"
+     */
+    public function testPropertyHostedUrl()
+    {
+    }
+
+    /**
+     * Test attribute "overdue"
+     */
+    public function testPropertyOverdue()
+    {
+    }
 }

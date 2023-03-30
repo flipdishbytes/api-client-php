@@ -66,7 +66,9 @@ class Invoice implements ModelInterface, ArrayAccess
         'subscription_id' => 'string',
         'paid_at' => '\DateTime',
         'finalised_at' => '\DateTime',
-        'pdf_link' => 'string'
+        'pdf_link' => 'string',
+        'hosted_url' => 'string',
+        'overdue' => 'bool'
     ];
 
     /**
@@ -83,7 +85,9 @@ class Invoice implements ModelInterface, ArrayAccess
         'subscription_id' => null,
         'paid_at' => 'date-time',
         'finalised_at' => 'date-time',
-        'pdf_link' => null
+        'pdf_link' => null,
+        'hosted_url' => null,
+        'overdue' => null
     ];
 
     /**
@@ -121,7 +125,9 @@ class Invoice implements ModelInterface, ArrayAccess
         'subscription_id' => 'SubscriptionId',
         'paid_at' => 'PaidAt',
         'finalised_at' => 'FinalisedAt',
-        'pdf_link' => 'PdfLink'
+        'pdf_link' => 'PdfLink',
+        'hosted_url' => 'HostedUrl',
+        'overdue' => 'Overdue'
     ];
 
     /**
@@ -138,7 +144,9 @@ class Invoice implements ModelInterface, ArrayAccess
         'subscription_id' => 'setSubscriptionId',
         'paid_at' => 'setPaidAt',
         'finalised_at' => 'setFinalisedAt',
-        'pdf_link' => 'setPdfLink'
+        'pdf_link' => 'setPdfLink',
+        'hosted_url' => 'setHostedUrl',
+        'overdue' => 'setOverdue'
     ];
 
     /**
@@ -155,7 +163,9 @@ class Invoice implements ModelInterface, ArrayAccess
         'subscription_id' => 'getSubscriptionId',
         'paid_at' => 'getPaidAt',
         'finalised_at' => 'getFinalisedAt',
-        'pdf_link' => 'getPdfLink'
+        'pdf_link' => 'getPdfLink',
+        'hosted_url' => 'getHostedUrl',
+        'overdue' => 'getOverdue'
     ];
 
     /**
@@ -485,6 +495,8 @@ class Invoice implements ModelInterface, ArrayAccess
         $this->container['paid_at'] = isset($data['paid_at']) ? $data['paid_at'] : null;
         $this->container['finalised_at'] = isset($data['finalised_at']) ? $data['finalised_at'] : null;
         $this->container['pdf_link'] = isset($data['pdf_link']) ? $data['pdf_link'] : null;
+        $this->container['hosted_url'] = isset($data['hosted_url']) ? $data['hosted_url'] : null;
+        $this->container['overdue'] = isset($data['overdue']) ? $data['overdue'] : null;
     }
 
     /**
@@ -526,6 +538,12 @@ class Invoice implements ModelInterface, ArrayAccess
 
         if ($this->container['pdf_link'] === null) {
             $invalidProperties[] = "'pdf_link' can't be null";
+        }
+        if ($this->container['hosted_url'] === null) {
+            $invalidProperties[] = "'hosted_url' can't be null";
+        }
+        if ($this->container['overdue'] === null) {
+            $invalidProperties[] = "'overdue' can't be null";
         }
         return $invalidProperties;
     }
@@ -772,6 +790,54 @@ class Invoice implements ModelInterface, ArrayAccess
     public function setPdfLink($pdf_link)
     {
         $this->container['pdf_link'] = $pdf_link;
+
+        return $this;
+    }
+
+    /**
+     * Gets hosted_url
+     *
+     * @return string
+     */
+    public function getHostedUrl()
+    {
+        return $this->container['hosted_url'];
+    }
+
+    /**
+     * Sets hosted_url
+     *
+     * @param string $hosted_url Hosted Url
+     *
+     * @return $this
+     */
+    public function setHostedUrl($hosted_url)
+    {
+        $this->container['hosted_url'] = $hosted_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets overdue
+     *
+     * @return bool
+     */
+    public function getOverdue()
+    {
+        return $this->container['overdue'];
+    }
+
+    /**
+     * Sets overdue
+     *
+     * @param bool $overdue Overdue
+     *
+     * @return $this
+     */
+    public function setOverdue($overdue)
+    {
+        $this->container['overdue'] = $overdue;
 
         return $this;
     }

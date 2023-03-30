@@ -64,6 +64,7 @@ class SearchCriteria implements ModelInterface, ArrayAccess
         'end' => '\DateTime',
         'order_id' => 'int',
         'store_id' => 'int',
+        'store_id_list' => 'int[]',
         'store_group_id' => 'int',
         'user_id' => 'int',
         'menu_id' => 'int',
@@ -87,6 +88,7 @@ class SearchCriteria implements ModelInterface, ArrayAccess
         'end' => 'date-time',
         'order_id' => 'int32',
         'store_id' => 'int32',
+        'store_id_list' => 'int32',
         'store_group_id' => 'int32',
         'user_id' => 'int32',
         'menu_id' => 'int32',
@@ -131,6 +133,7 @@ class SearchCriteria implements ModelInterface, ArrayAccess
         'end' => 'End',
         'order_id' => 'OrderId',
         'store_id' => 'StoreId',
+        'store_id_list' => 'StoreIdList',
         'store_group_id' => 'StoreGroupId',
         'user_id' => 'UserId',
         'menu_id' => 'MenuId',
@@ -154,6 +157,7 @@ class SearchCriteria implements ModelInterface, ArrayAccess
         'end' => 'setEnd',
         'order_id' => 'setOrderId',
         'store_id' => 'setStoreId',
+        'store_id_list' => 'setStoreIdList',
         'store_group_id' => 'setStoreGroupId',
         'user_id' => 'setUserId',
         'menu_id' => 'setMenuId',
@@ -177,6 +181,7 @@ class SearchCriteria implements ModelInterface, ArrayAccess
         'end' => 'getEnd',
         'order_id' => 'getOrderId',
         'store_id' => 'getStoreId',
+        'store_id_list' => 'getStoreIdList',
         'store_group_id' => 'getStoreGroupId',
         'user_id' => 'getUserId',
         'menu_id' => 'getMenuId',
@@ -254,6 +259,7 @@ class SearchCriteria implements ModelInterface, ArrayAccess
         $this->container['end'] = isset($data['end']) ? $data['end'] : null;
         $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
+        $this->container['store_id_list'] = isset($data['store_id_list']) ? $data['store_id_list'] : null;
         $this->container['store_group_id'] = isset($data['store_group_id']) ? $data['store_group_id'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['menu_id'] = isset($data['menu_id']) ? $data['menu_id'] : null;
@@ -429,6 +435,30 @@ class SearchCriteria implements ModelInterface, ArrayAccess
     public function setStoreId($store_id)
     {
         $this->container['store_id'] = $store_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets store_id_list
+     *
+     * @return int[]
+     */
+    public function getStoreIdList()
+    {
+        return $this->container['store_id_list'];
+    }
+
+    /**
+     * Sets store_id_list
+     *
+     * @param int[] $store_id_list Events that have Store Id List
+     *
+     * @return $this
+     */
+    public function setStoreIdList($store_id_list)
+    {
+        $this->container['store_id_list'] = $store_id_list;
 
         return $this;
     }

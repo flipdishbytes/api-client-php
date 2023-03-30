@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **end** | [**\DateTime**](\DateTime.md) | End date | [optional] 
 **order_id** | **int** | Events that have Order Id | [optional] 
 **store_id** | **int** | Events that have Store Id | [optional] 
+**store_id_list** | **int[]** | Events that have Store Id List | [optional] 
 **store_group_id** | **int** | Events that have Store Group Id | [optional] 
 **user_id** | **int** | Events that have User Id | [optional] 
 **menu_id** | **int** | Events that have Menu Id | [optional] 

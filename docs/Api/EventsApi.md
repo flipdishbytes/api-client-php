@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **getCustomerEvents**
-> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getCustomerEvents($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getCustomerEvents($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get customer events  For technical reasons, the number of records returned is limited to 100.
 
@@ -41,6 +41,7 @@ $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
 $order_id = 56; // int | Events that have Order Id
 $store_id = 56; // int | Events that have Store Id
+$store_id_list = array(56); // int[] | Events that have Store Id List
 $store_group_id = 56; // int | Events that have Store Group Id
 $user_id = 56; // int | Events that have User Id
 $menu_id = 56; // int | Events that have Menu Id
@@ -52,7 +53,7 @@ $event_type = array("event_type_example"); // string[] | Events that have event 
 $flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getCustomerEvents($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+    $result = $apiInstance->getCustomerEvents($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getCustomerEvents: ', $e->getMessage(), PHP_EOL;
@@ -71,6 +72,7 @@ Name | Type | Description  | Notes
  **end** | **\DateTime**| End date | [optional]
  **order_id** | **int**| Events that have Order Id | [optional]
  **store_id** | **int**| Events that have Store Id | [optional]
+ **store_id_list** | [**int[]**](../Model/int.md)| Events that have Store Id List | [optional]
  **store_group_id** | **int**| Events that have Store Group Id | [optional]
  **user_id** | **int**| Events that have User Id | [optional]
  **menu_id** | **int**| Events that have Menu Id | [optional]
@@ -97,7 +99,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEvents**
-> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getEvents($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getEvents($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get events  For technical reasons, the number of records returned is limited to 100.
 
@@ -123,6 +125,7 @@ $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
 $order_id = 56; // int | Events that have Order Id
 $store_id = 56; // int | Events that have Store Id
+$store_id_list = array(56); // int[] | Events that have Store Id List
 $store_group_id = 56; // int | Events that have Store Group Id
 $user_id = 56; // int | Events that have User Id
 $menu_id = 56; // int | Events that have Menu Id
@@ -134,7 +137,7 @@ $event_type = array("event_type_example"); // string[] | Events that have event 
 $flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getEvents($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+    $result = $apiInstance->getEvents($white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getEvents: ', $e->getMessage(), PHP_EOL;
@@ -154,6 +157,7 @@ Name | Type | Description  | Notes
  **end** | **\DateTime**| End date | [optional]
  **order_id** | **int**| Events that have Order Id | [optional]
  **store_id** | **int**| Events that have Store Id | [optional]
+ **store_id_list** | [**int[]**](../Model/int.md)| Events that have Store Id List | [optional]
  **store_group_id** | **int**| Events that have Store Group Id | [optional]
  **user_id** | **int**| Events that have User Id | [optional]
  **menu_id** | **int**| Events that have Menu Id | [optional]
@@ -231,7 +235,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMenuEvents**
-> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getMenuEvents($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id2, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getMenuEvents($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id2, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get menu events  For technical reasons, the number of records returned is limited to 100.
 
@@ -256,6 +260,7 @@ $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
 $order_id = 56; // int | Events that have Order Id
 $store_id = 56; // int | Events that have Store Id
+$store_id_list = array(56); // int[] | Events that have Store Id List
 $store_group_id = 56; // int | Events that have Store Group Id
 $user_id = 56; // int | Events that have User Id
 $menu_id2 = 56; // int | Events that have Menu Id
@@ -267,7 +272,7 @@ $event_type = array("event_type_example"); // string[] | Events that have event 
 $flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getMenuEvents($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id2, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+    $result = $apiInstance->getMenuEvents($menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id2, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getMenuEvents: ', $e->getMessage(), PHP_EOL;
@@ -286,6 +291,7 @@ Name | Type | Description  | Notes
  **end** | **\DateTime**| End date | [optional]
  **order_id** | **int**| Events that have Order Id | [optional]
  **store_id** | **int**| Events that have Store Id | [optional]
+ **store_id_list** | [**int[]**](../Model/int.md)| Events that have Store Id List | [optional]
  **store_group_id** | **int**| Events that have Store Group Id | [optional]
  **user_id** | **int**| Events that have User Id | [optional]
  **menu_id2** | **int**| Events that have Menu Id | [optional]
@@ -312,7 +318,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrderEvents**
-> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getOrderEvents($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getOrderEvents($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get order events  For technical reasons, the number of records returned is limited to 100.
 
@@ -337,6 +343,7 @@ $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
 $order_id2 = 56; // int | Events that have Order Id
 $store_id = 56; // int | Events that have Store Id
+$store_id_list = array(56); // int[] | Events that have Store Id List
 $store_group_id = 56; // int | Events that have Store Group Id
 $user_id = 56; // int | Events that have User Id
 $menu_id = 56; // int | Events that have Menu Id
@@ -348,7 +355,7 @@ $event_type = array("event_type_example"); // string[] | Events that have event 
 $flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getOrderEvents($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+    $result = $apiInstance->getOrderEvents($order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getOrderEvents: ', $e->getMessage(), PHP_EOL;
@@ -367,6 +374,7 @@ Name | Type | Description  | Notes
  **end** | **\DateTime**| End date | [optional]
  **order_id2** | **int**| Events that have Order Id | [optional]
  **store_id** | **int**| Events that have Store Id | [optional]
+ **store_id_list** | [**int[]**](../Model/int.md)| Events that have Store Id List | [optional]
  **store_group_id** | **int**| Events that have Store Group Id | [optional]
  **user_id** | **int**| Events that have User Id | [optional]
  **menu_id** | **int**| Events that have Menu Id | [optional]
@@ -393,7 +401,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrderEventsByCustomer**
-> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getOrderEventsByCustomer($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getOrderEventsByCustomer($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get order events by customer  For technical reasons, the number of records returned is limited to 100.
 
@@ -418,6 +426,7 @@ $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
 $order_id = 56; // int | Events that have Order Id
 $store_id = 56; // int | Events that have Store Id
+$store_id_list = array(56); // int[] | Events that have Store Id List
 $store_group_id = 56; // int | Events that have Store Group Id
 $user_id = 56; // int | Events that have User Id
 $menu_id = 56; // int | Events that have Menu Id
@@ -429,7 +438,7 @@ $event_type = array("event_type_example"); // string[] | Events that have event 
 $flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getOrderEventsByCustomer($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+    $result = $apiInstance->getOrderEventsByCustomer($customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getOrderEventsByCustomer: ', $e->getMessage(), PHP_EOL;
@@ -448,6 +457,7 @@ Name | Type | Description  | Notes
  **end** | **\DateTime**| End date | [optional]
  **order_id** | **int**| Events that have Order Id | [optional]
  **store_id** | **int**| Events that have Store Id | [optional]
+ **store_id_list** | [**int[]**](../Model/int.md)| Events that have Store Id List | [optional]
  **store_group_id** | **int**| Events that have Store Group Id | [optional]
  **user_id** | **int**| Events that have User Id | [optional]
  **menu_id** | **int**| Events that have Menu Id | [optional]
@@ -474,7 +484,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStoreEvents**
-> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getStoreEvents($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getStoreEvents($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get store events  For technical reasons, the number of records returned is limited to 100.
 
@@ -499,6 +509,7 @@ $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
 $order_id = 56; // int | Events that have Order Id
 $store_id2 = 56; // int | Events that have Store Id
+$store_id_list = array(56); // int[] | Events that have Store Id List
 $store_group_id = 56; // int | Events that have Store Group Id
 $user_id = 56; // int | Events that have User Id
 $menu_id = 56; // int | Events that have Menu Id
@@ -510,7 +521,7 @@ $event_type = array("event_type_example"); // string[] | Events that have event 
 $flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getStoreEvents($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+    $result = $apiInstance->getStoreEvents($store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getStoreEvents: ', $e->getMessage(), PHP_EOL;
@@ -529,6 +540,7 @@ Name | Type | Description  | Notes
  **end** | **\DateTime**| End date | [optional]
  **order_id** | **int**| Events that have Order Id | [optional]
  **store_id2** | **int**| Events that have Store Id | [optional]
+ **store_id_list** | [**int[]**](../Model/int.md)| Events that have Store Id List | [optional]
  **store_group_id** | **int**| Events that have Store Group Id | [optional]
  **user_id** | **int**| Events that have User Id | [optional]
  **menu_id** | **int**| Events that have Menu Id | [optional]
@@ -555,7 +567,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserEvents**
-> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getUserEvents($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id2, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getUserEvents($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id2, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get user events  For technical reasons, the number of records returned is limited to 100.
 
@@ -580,6 +592,7 @@ $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
 $order_id = 56; // int | Events that have Order Id
 $store_id = 56; // int | Events that have Store Id
+$store_id_list = array(56); // int[] | Events that have Store Id List
 $store_group_id = 56; // int | Events that have Store Group Id
 $user_id2 = 56; // int | Events that have User Id
 $menu_id = 56; // int | Events that have Menu Id
@@ -591,7 +604,7 @@ $event_type = array("event_type_example"); // string[] | Events that have event 
 $flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getUserEvents($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id2, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+    $result = $apiInstance->getUserEvents($user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id2, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getUserEvents: ', $e->getMessage(), PHP_EOL;
@@ -610,6 +623,7 @@ Name | Type | Description  | Notes
  **end** | **\DateTime**| End date | [optional]
  **order_id** | **int**| Events that have Order Id | [optional]
  **store_id** | **int**| Events that have Store Id | [optional]
+ **store_id_list** | [**int[]**](../Model/int.md)| Events that have Store Id List | [optional]
  **store_group_id** | **int**| Events that have Store Group Id | [optional]
  **user_id2** | **int**| Events that have User Id | [optional]
  **menu_id** | **int**| Events that have Menu Id | [optional]
@@ -636,7 +650,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWhiteLabelEvents**
-> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getWhiteLabelEvents($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
+> \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getWhiteLabelEvents($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
 Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
 
@@ -661,6 +675,7 @@ $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
 $end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date
 $order_id = 56; // int | Events that have Order Id
 $store_id = 56; // int | Events that have Store Id
+$store_id_list = array(56); // int[] | Events that have Store Id List
 $store_group_id = 56; // int | Events that have Store Group Id
 $user_id = 56; // int | Events that have User Id
 $menu_id = 56; // int | Events that have Menu Id
@@ -672,7 +687,7 @@ $event_type = array("event_type_example"); // string[] | Events that have event 
 $flipdish_event_id = "flipdish_event_id_example"; // string | Unique Identifier of Event, if this is specified, all other criteria are ignored.
 
 try {
-    $result = $apiInstance->getWhiteLabelEvents($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
+    $result = $apiInstance->getWhiteLabelEvents($whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getWhiteLabelEvents: ', $e->getMessage(), PHP_EOL;
@@ -691,6 +706,7 @@ Name | Type | Description  | Notes
  **end** | **\DateTime**| End date | [optional]
  **order_id** | **int**| Events that have Order Id | [optional]
  **store_id** | **int**| Events that have Store Id | [optional]
+ **store_id_list** | [**int[]**](../Model/int.md)| Events that have Store Id List | [optional]
  **store_group_id** | **int**| Events that have Store Group Id | [optional]
  **user_id** | **int**| Events that have User Id | [optional]
  **menu_id** | **int**| Events that have Menu Id | [optional]
