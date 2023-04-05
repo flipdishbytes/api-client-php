@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setAppHostname**
-> \Flipdish\\Client\Models\RestApiStringResult setAppHostname($app_id, $hostname, $is_embed)
+> \Flipdish\\Client\Models\RestApiStringResult setAppHostname($app_id, $hostname, $is_embed, $is_next_gen_web)
 
 Set the application hostname.
 
@@ -459,9 +459,10 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
 $app_id = "app_id_example"; // string | Application identifier.
 $hostname = "hostname_example"; // string | The new Hostname.
 $is_embed = true; // bool | Will the website be embedded
+$is_next_gen_web = true; // bool | Enables the NextGen web editor
 
 try {
-    $result = $apiInstance->setAppHostname($app_id, $hostname, $is_embed);
+    $result = $apiInstance->setAppHostname($app_id, $hostname, $is_embed, $is_next_gen_web);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AppsApi->setAppHostname: ', $e->getMessage(), PHP_EOL;
@@ -476,6 +477,7 @@ Name | Type | Description  | Notes
  **app_id** | **string**| Application identifier. |
  **hostname** | **string**| The new Hostname. |
  **is_embed** | **bool**| Will the website be embedded | [optional]
+ **is_next_gen_web** | **bool**| Enables the NextGen web editor | [optional]
 
 ### Return type
 

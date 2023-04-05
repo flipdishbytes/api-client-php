@@ -525,9 +525,6 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         if ($this->container['user'] === null) {
             $invalidProperties[] = "'user' can't be null";
         }
-        if ($this->container['default_payment_description'] === null) {
-            $invalidProperties[] = "'default_payment_description' can't be null";
-        }
         return $invalidProperties;
     }
 

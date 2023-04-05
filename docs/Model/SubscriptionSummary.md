@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **next_invoice_amount** | **double** | Next invoice amount | [optional] 
 **next_invoice_billing_date** | [**\DateTime**](\DateTime.md) | Next invoice billing date | [optional] 
 **user** | **string** | User | 
-**default_payment_description** | **string** | Default payment description | 
+**default_payment_description** | **string** | Default payment description | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

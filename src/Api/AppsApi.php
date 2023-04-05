@@ -2473,14 +2473,15 @@ class AppsApi
      * @param  string $app_id Application identifier. (required)
      * @param  string $hostname The new Hostname. (required)
      * @param  bool $is_embed Will the website be embedded (optional)
+     * @param  bool $is_next_gen_web Enables the NextGen web editor (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiStringResult
      */
-    public function setAppHostname($app_id, $hostname, $is_embed = null)
+    public function setAppHostname($app_id, $hostname, $is_embed = null, $is_next_gen_web = null)
     {
-        list($response) = $this->setAppHostnameWithHttpInfo($app_id, $hostname, $is_embed);
+        list($response) = $this->setAppHostnameWithHttpInfo($app_id, $hostname, $is_embed, $is_next_gen_web);
         return $response;
     }
 
@@ -2492,15 +2493,16 @@ class AppsApi
      * @param  string $app_id Application identifier. (required)
      * @param  string $hostname The new Hostname. (required)
      * @param  bool $is_embed Will the website be embedded (optional)
+     * @param  bool $is_next_gen_web Enables the NextGen web editor (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiStringResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function setAppHostnameWithHttpInfo($app_id, $hostname, $is_embed = null)
+    public function setAppHostnameWithHttpInfo($app_id, $hostname, $is_embed = null, $is_next_gen_web = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
-        $request = $this->setAppHostnameRequest($app_id, $hostname, $is_embed);
+        $request = $this->setAppHostnameRequest($app_id, $hostname, $is_embed, $is_next_gen_web);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2585,13 +2587,14 @@ class AppsApi
      * @param  string $app_id Application identifier. (required)
      * @param  string $hostname The new Hostname. (required)
      * @param  bool $is_embed Will the website be embedded (optional)
+     * @param  bool $is_next_gen_web Enables the NextGen web editor (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function setAppHostnameAsync($app_id, $hostname, $is_embed = null)
+    public function setAppHostnameAsync($app_id, $hostname, $is_embed = null, $is_next_gen_web = null)
     {
-        return $this->setAppHostnameAsyncWithHttpInfo($app_id, $hostname, $is_embed)
+        return $this->setAppHostnameAsyncWithHttpInfo($app_id, $hostname, $is_embed, $is_next_gen_web)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2607,14 +2610,15 @@ class AppsApi
      * @param  string $app_id Application identifier. (required)
      * @param  string $hostname The new Hostname. (required)
      * @param  bool $is_embed Will the website be embedded (optional)
+     * @param  bool $is_next_gen_web Enables the NextGen web editor (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function setAppHostnameAsyncWithHttpInfo($app_id, $hostname, $is_embed = null)
+    public function setAppHostnameAsyncWithHttpInfo($app_id, $hostname, $is_embed = null, $is_next_gen_web = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
-        $request = $this->setAppHostnameRequest($app_id, $hostname, $is_embed);
+        $request = $this->setAppHostnameRequest($app_id, $hostname, $is_embed, $is_next_gen_web);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2659,11 +2663,12 @@ class AppsApi
      * @param  string $app_id Application identifier. (required)
      * @param  string $hostname The new Hostname. (required)
      * @param  bool $is_embed Will the website be embedded (optional)
+     * @param  bool $is_next_gen_web Enables the NextGen web editor (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function setAppHostnameRequest($app_id, $hostname, $is_embed = null)
+    protected function setAppHostnameRequest($app_id, $hostname, $is_embed = null, $is_next_gen_web = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -2692,6 +2697,10 @@ class AppsApi
         // query params
         if ($is_embed !== null) {
             $queryParams['isEmbed'] = ObjectSerializer::toQueryValue($is_embed);
+        }
+        // query params
+        if ($is_next_gen_web !== null) {
+            $queryParams['isNextGenWeb'] = ObjectSerializer::toQueryValue($is_next_gen_web);
         }
 
         // path params
