@@ -450,6 +450,7 @@ Class | Method | HTTP request | Description
 *PushNotificationsApi* | [**getPushNotifications**](docs/Api/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**schedulePushNotification**](docs/Api/PushNotificationsApi.md#schedulepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
 *PushNotificationsApi* | [**updatePushNotification**](docs/Api/PushNotificationsApi.md#updatepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Update the push notification
+*ReceiptsApi* | [**getReceipt**](docs/Api/ReceiptsApi.md#getreceipt) | **GET** /api/v1.0/receipts/{orderId} | Returns all receipt information for a given orderId
 *RestaurantVouchersPayGreenApi* | [**createPayGreenConfiguration**](docs/Api/RestaurantVouchersPayGreenApi.md#createpaygreenconfiguration) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen | 
 *RestaurantVouchersPayGreenApi* | [**deletePayGreenConfiguration**](docs/Api/RestaurantVouchersPayGreenApi.md#deletepaygreenconfiguration) | **DELETE** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
 *RestaurantVouchersPayGreenApi* | [**getElegibleStores**](docs/Api/RestaurantVouchersPayGreenApi.md#getelegiblestores) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores | 
@@ -709,6 +710,7 @@ Class | Method | HTTP request | Description
  - [FulfillmentStatesConfiguredStore](docs/Model/FulfillmentStatesConfiguredStore.md)
  - [FulfillmentStatusConfigurationItem](docs/Model/FulfillmentStatusConfigurationItem.md)
  - [GeoPointRequest](docs/Model/GeoPointRequest.md)
+ - [GetReceiptByOrderIdQueryResponse](docs/Model/GetReceiptByOrderIdQueryResponse.md)
  - [GoogleAddress](docs/Model/GoogleAddress.md)
  - [GoogleAddressComponent](docs/Model/GoogleAddressComponent.md)
  - [GoogleAddressResult](docs/Model/GoogleAddressResult.md)
@@ -905,6 +907,9 @@ Class | Method | HTTP request | Description
  - [PreOrderConfig](docs/Model/PreOrderConfig.md)
  - [PreOrderTime](docs/Model/PreOrderTime.md)
  - [PredefinedAnswer](docs/Model/PredefinedAnswer.md)
+ - [PreviousOrder](docs/Model/PreviousOrder.md)
+ - [PreviousOrderItem](docs/Model/PreviousOrderItem.md)
+ - [PreviousOrderItemOption](docs/Model/PreviousOrderItemOption.md)
  - [Price](docs/Model/Price.md)
  - [Printer](docs/Model/Printer.md)
  - [PrinterAssignedToStoreEvent](docs/Model/PrinterAssignedToStoreEvent.md)
@@ -1219,6 +1224,7 @@ Class | Method | HTTP request | Description
  - [SubscriptionStore](docs/Model/SubscriptionStore.md)
  - [SubscriptionSummary](docs/Model/SubscriptionSummary.md)
  - [SupportedCountry](docs/Model/SupportedCountry.md)
+ - [TaxRate](docs/Model/TaxRate.md)
  - [Teammate](docs/Model/Teammate.md)
  - [TeammateBase](docs/Model/TeammateBase.md)
  - [TeammateDeletedEvent](docs/Model/TeammateDeletedEvent.md)
