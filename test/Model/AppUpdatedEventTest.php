@@ -119,6 +119,13 @@ class AppUpdatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "app"
+     */
+    public function testPropertyApp()
+    {
+    }
+
+    /**
      * Test attribute "flipdish_event_id"
      */
     public function testPropertyFlipdishEventId()
