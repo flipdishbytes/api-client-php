@@ -67,7 +67,8 @@ class PayoutStore implements ModelInterface, ArrayAccess
         'flipdish_fees' => '\Flipdish\\Client\Models\FlipdishFeesDetails',
         'chargebacks' => '\Flipdish\\Client\Models\ChargebackDetails',
         'other_charges' => '\Flipdish\\Client\Models\OtherChargesDetails',
-        'balance' => '\Flipdish\\Client\Models\BalanceDetails'
+        'balance' => '\Flipdish\\Client\Models\BalanceDetails',
+        'pos_revenue' => '\Flipdish\\Client\Models\PosRevenueDetails'
     ];
 
     /**
@@ -85,7 +86,8 @@ class PayoutStore implements ModelInterface, ArrayAccess
         'flipdish_fees' => null,
         'chargebacks' => null,
         'other_charges' => null,
-        'balance' => null
+        'balance' => null,
+        'pos_revenue' => null
     ];
 
     /**
@@ -124,7 +126,8 @@ class PayoutStore implements ModelInterface, ArrayAccess
         'flipdish_fees' => 'FlipdishFees',
         'chargebacks' => 'Chargebacks',
         'other_charges' => 'OtherCharges',
-        'balance' => 'Balance'
+        'balance' => 'Balance',
+        'pos_revenue' => 'PosRevenue'
     ];
 
     /**
@@ -142,7 +145,8 @@ class PayoutStore implements ModelInterface, ArrayAccess
         'flipdish_fees' => 'setFlipdishFees',
         'chargebacks' => 'setChargebacks',
         'other_charges' => 'setOtherCharges',
-        'balance' => 'setBalance'
+        'balance' => 'setBalance',
+        'pos_revenue' => 'setPosRevenue'
     ];
 
     /**
@@ -160,7 +164,8 @@ class PayoutStore implements ModelInterface, ArrayAccess
         'flipdish_fees' => 'getFlipdishFees',
         'chargebacks' => 'getChargebacks',
         'other_charges' => 'getOtherCharges',
-        'balance' => 'getBalance'
+        'balance' => 'getBalance',
+        'pos_revenue' => 'getPosRevenue'
     ];
 
     /**
@@ -233,6 +238,7 @@ class PayoutStore implements ModelInterface, ArrayAccess
         $this->container['chargebacks'] = isset($data['chargebacks']) ? $data['chargebacks'] : null;
         $this->container['other_charges'] = isset($data['other_charges']) ? $data['other_charges'] : null;
         $this->container['balance'] = isset($data['balance']) ? $data['balance'] : null;
+        $this->container['pos_revenue'] = isset($data['pos_revenue']) ? $data['pos_revenue'] : null;
     }
 
     /**
@@ -495,6 +501,30 @@ class PayoutStore implements ModelInterface, ArrayAccess
     public function setBalance($balance)
     {
         $this->container['balance'] = $balance;
+
+        return $this;
+    }
+
+    /**
+     * Gets pos_revenue
+     *
+     * @return \Flipdish\\Client\Models\PosRevenueDetails
+     */
+    public function getPosRevenue()
+    {
+        return $this->container['pos_revenue'];
+    }
+
+    /**
+     * Sets pos_revenue
+     *
+     * @param \Flipdish\\Client\Models\PosRevenueDetails $pos_revenue Breakdown of POS charges
+     *
+     * @return $this
+     */
+    public function setPosRevenue($pos_revenue)
+    {
+        $this->container['pos_revenue'] = $pos_revenue;
 
         return $this;
     }

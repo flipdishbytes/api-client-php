@@ -904,6 +904,7 @@ Class | Method | HTTP request | Description
  - [PhoneCall](docs/Model/PhoneCall.md)
  - [PhoneCallEndedEvent](docs/Model/PhoneCallEndedEvent.md)
  - [PhoneCallStartedEvent](docs/Model/PhoneCallStartedEvent.md)
+ - [PosRevenueDetails](docs/Model/PosRevenueDetails.md)
  - [PreOrderConfig](docs/Model/PreOrderConfig.md)
  - [PreOrderTime](docs/Model/PreOrderTime.md)
  - [PredefinedAnswer](docs/Model/PredefinedAnswer.md)

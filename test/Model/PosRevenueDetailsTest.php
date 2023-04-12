@@ -1,6 +1,6 @@
 <?php
 /**
- * PayoutStoreTest
+ * PosRevenueDetailsTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * PayoutStoreTest Class Doc Comment
+ * PosRevenueDetailsTest Class Doc Comment
  *
  * @category    Class
- * @description Payout details for a single store
+ * @description Breakdown of POS charges
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PayoutStoreTest extends \PHPUnit_Framework_TestCase
+class PosRevenueDetailsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,86 +70,23 @@ class PayoutStoreTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PayoutStore"
+     * Test "PosRevenueDetails"
      */
-    public function testPayoutStore()
+    public function testPosRevenueDetails()
     {
     }
 
     /**
-     * Test attribute "store_id"
+     * Test attribute "pos_sales_amount"
      */
-    public function testPropertyStoreId()
+    public function testPropertyPosSalesAmount()
     {
     }
 
     /**
-     * Test attribute "store_name"
+     * Test attribute "pos_sales_tips"
      */
-    public function testPropertyStoreName()
-    {
-    }
-
-    /**
-     * Test attribute "amount"
-     */
-    public function testPropertyAmount()
-    {
-    }
-
-    /**
-     * Test attribute "online_revenue"
-     */
-    public function testPropertyOnlineRevenue()
-    {
-    }
-
-    /**
-     * Test attribute "revenue"
-     */
-    public function testPropertyRevenue()
-    {
-    }
-
-    /**
-     * Test attribute "revenue_adjustments"
-     */
-    public function testPropertyRevenueAdjustments()
-    {
-    }
-
-    /**
-     * Test attribute "flipdish_fees"
-     */
-    public function testPropertyFlipdishFees()
-    {
-    }
-
-    /**
-     * Test attribute "chargebacks"
-     */
-    public function testPropertyChargebacks()
-    {
-    }
-
-    /**
-     * Test attribute "other_charges"
-     */
-    public function testPropertyOtherCharges()
-    {
-    }
-
-    /**
-     * Test attribute "balance"
-     */
-    public function testPropertyBalance()
-    {
-    }
-
-    /**
-     * Test attribute "pos_revenue"
-     */
-    public function testPropertyPosRevenue()
+    public function testPropertyPosSalesTips()
     {
     }
 }

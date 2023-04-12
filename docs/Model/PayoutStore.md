@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **chargebacks** | [**\Flipdish\\Client\Models\ChargebackDetails**](ChargebackDetails.md) | Chargebacks breakdown | [optional] 
 **other_charges** | [**\Flipdish\\Client\Models\OtherChargesDetails**](OtherChargesDetails.md) | Breakdown of other charges | [optional] 
 **balance** | [**\Flipdish\\Client\Models\BalanceDetails**](BalanceDetails.md) | Period opening and closing balance | [optional] 
+**pos_revenue** | [**\Flipdish\\Client\Models\PosRevenueDetails**](PosRevenueDetails.md) | Breakdown of POS charges | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
