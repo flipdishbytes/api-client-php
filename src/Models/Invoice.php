@@ -322,11 +322,11 @@ class Invoice implements ModelInterface, ArrayAccess
     const CURRENCY_MOP = 'MOP';
     const CURRENCY_TWD = 'TWD';
     const CURRENCY_BMD = 'BMD';
-    const STATUS_DRAFT = 'draft';
-    const STATUS_OPEN = 'open';
-    const STATUS_PAID = 'paid';
-    const STATUS_UNCOLLECTIBLE = 'uncollectible';
-    const STATUS_VOID = 'void';
+    const STATUS_DRAFT = 'Draft';
+    const STATUS_OPEN = 'Open';
+    const STATUS_PAID = 'Paid';
+    const STATUS_UN_COLLECTIBLE = 'UnCollectible';
+    const STATUS_VOID = 'Void';
     
 
     
@@ -465,7 +465,7 @@ class Invoice implements ModelInterface, ArrayAccess
             self::STATUS_DRAFT,
             self::STATUS_OPEN,
             self::STATUS_PAID,
-            self::STATUS_UNCOLLECTIBLE,
+            self::STATUS_UN_COLLECTIBLE,
             self::STATUS_VOID,
         ];
     }

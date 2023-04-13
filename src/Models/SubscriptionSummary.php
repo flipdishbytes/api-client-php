@@ -194,13 +194,13 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const STATUS_INCOMPLETE = 'incomplete';
-    const STATUS_INCOMPLETE_EXPIRED = 'incomplete_expired';
-    const STATUS_TRIALING = 'trialing';
-    const STATUS_ACTIVE = 'active';
-    const STATUS_PAST_DUE = 'past_due';
-    const STATUS_CANCELED = 'canceled';
-    const STATUS_UNPAID = 'unpaid';
+    const STATUS_INCOMPLETE = 'Incomplete';
+    const STATUS_INCOMPLETE_EXPIRED = 'IncompleteExpired';
+    const STATUS_TRIALING = 'Trialing';
+    const STATUS_ACTIVE = 'Active';
+    const STATUS_PAST_DUE = 'PastDue';
+    const STATUS_CANCELED = 'Canceled';
+    const STATUS_UNPAID = 'Unpaid';
     const CURRENCY_EUR = 'EUR';
     const CURRENCY_USD = 'USD';
     const CURRENCY_GBP = 'GBP';
