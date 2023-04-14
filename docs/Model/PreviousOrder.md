@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **total_amount** | **double** |  | [optional] 
 **items** | [**\Flipdish\\Client\Models\PreviousOrderItem[]**](PreviousOrderItem.md) |  | [optional] 
 **tax_rates** | [**\Flipdish\\Client\Models\TaxRate[]**](TaxRate.md) |  | [optional] 
+**white_label_id** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -77,7 +77,8 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'total_tax' => 'double',
         'total_amount' => 'double',
         'items' => '\Flipdish\\Client\Models\PreviousOrderItem[]',
-        'tax_rates' => '\Flipdish\\Client\Models\TaxRate[]'
+        'tax_rates' => '\Flipdish\\Client\Models\TaxRate[]',
+        'white_label_id' => 'int'
     ];
 
     /**
@@ -106,7 +107,8 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'total_tax' => 'double',
         'total_amount' => 'double',
         'items' => null,
-        'tax_rates' => null
+        'tax_rates' => null,
+        'white_label_id' => 'int32'
     ];
 
     /**
@@ -156,7 +158,8 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'total_tax' => 'TotalTax',
         'total_amount' => 'TotalAmount',
         'items' => 'Items',
-        'tax_rates' => 'TaxRates'
+        'tax_rates' => 'TaxRates',
+        'white_label_id' => 'WhiteLabelId'
     ];
 
     /**
@@ -185,7 +188,8 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'total_tax' => 'setTotalTax',
         'total_amount' => 'setTotalAmount',
         'items' => 'setItems',
-        'tax_rates' => 'setTaxRates'
+        'tax_rates' => 'setTaxRates',
+        'white_label_id' => 'setWhiteLabelId'
     ];
 
     /**
@@ -214,7 +218,8 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'total_tax' => 'getTotalTax',
         'total_amount' => 'getTotalAmount',
         'items' => 'getItems',
-        'tax_rates' => 'getTaxRates'
+        'tax_rates' => 'getTaxRates',
+        'white_label_id' => 'getWhiteLabelId'
     ];
 
     /**
@@ -535,6 +540,7 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         $this->container['total_amount'] = isset($data['total_amount']) ? $data['total_amount'] : null;
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
         $this->container['tax_rates'] = isset($data['tax_rates']) ? $data['tax_rates'] : null;
+        $this->container['white_label_id'] = isset($data['white_label_id']) ? $data['white_label_id'] : null;
     }
 
     /**
@@ -1078,6 +1084,30 @@ class PreviousOrder implements ModelInterface, ArrayAccess
     public function setTaxRates($tax_rates)
     {
         $this->container['tax_rates'] = $tax_rates;
+
+        return $this;
+    }
+
+    /**
+     * Gets white_label_id
+     *
+     * @return int
+     */
+    public function getWhiteLabelId()
+    {
+        return $this->container['white_label_id'];
+    }
+
+    /**
+     * Sets white_label_id
+     *
+     * @param int $white_label_id white_label_id
+     *
+     * @return $this
+     */
+    public function setWhiteLabelId($white_label_id)
+    {
+        $this->container['white_label_id'] = $white_label_id;
 
         return $this;
     }

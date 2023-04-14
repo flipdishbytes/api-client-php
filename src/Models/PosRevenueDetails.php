@@ -59,7 +59,9 @@ class PosRevenueDetails implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'pos_sales_amount' => 'double',
-        'pos_sales_tips' => 'double'
+        'pos_sales_tax' => 'double',
+        'pos_sales_tips' => 'double',
+        'total_pos_revenue' => 'double'
     ];
 
     /**
@@ -69,7 +71,9 @@ class PosRevenueDetails implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'pos_sales_amount' => 'double',
-        'pos_sales_tips' => 'double'
+        'pos_sales_tax' => 'double',
+        'pos_sales_tips' => 'double',
+        'total_pos_revenue' => 'double'
     ];
 
     /**
@@ -100,7 +104,9 @@ class PosRevenueDetails implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'pos_sales_amount' => 'PosSalesAmount',
-        'pos_sales_tips' => 'PosSalesTips'
+        'pos_sales_tax' => 'PosSalesTax',
+        'pos_sales_tips' => 'PosSalesTips',
+        'total_pos_revenue' => 'TotalPosRevenue'
     ];
 
     /**
@@ -110,7 +116,9 @@ class PosRevenueDetails implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'pos_sales_amount' => 'setPosSalesAmount',
-        'pos_sales_tips' => 'setPosSalesTips'
+        'pos_sales_tax' => 'setPosSalesTax',
+        'pos_sales_tips' => 'setPosSalesTips',
+        'total_pos_revenue' => 'setTotalPosRevenue'
     ];
 
     /**
@@ -120,7 +128,9 @@ class PosRevenueDetails implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'pos_sales_amount' => 'getPosSalesAmount',
-        'pos_sales_tips' => 'getPosSalesTips'
+        'pos_sales_tax' => 'getPosSalesTax',
+        'pos_sales_tips' => 'getPosSalesTips',
+        'total_pos_revenue' => 'getTotalPosRevenue'
     ];
 
     /**
@@ -184,7 +194,9 @@ class PosRevenueDetails implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['pos_sales_amount'] = isset($data['pos_sales_amount']) ? $data['pos_sales_amount'] : null;
+        $this->container['pos_sales_tax'] = isset($data['pos_sales_tax']) ? $data['pos_sales_tax'] : null;
         $this->container['pos_sales_tips'] = isset($data['pos_sales_tips']) ? $data['pos_sales_tips'] : null;
+        $this->container['total_pos_revenue'] = isset($data['total_pos_revenue']) ? $data['total_pos_revenue'] : null;
     }
 
     /**
@@ -236,6 +248,30 @@ class PosRevenueDetails implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets pos_sales_tax
+     *
+     * @return double
+     */
+    public function getPosSalesTax()
+    {
+        return $this->container['pos_sales_tax'];
+    }
+
+    /**
+     * Sets pos_sales_tax
+     *
+     * @param double $pos_sales_tax POS sale Tax for the store
+     *
+     * @return $this
+     */
+    public function setPosSalesTax($pos_sales_tax)
+    {
+        $this->container['pos_sales_tax'] = $pos_sales_tax;
+
+        return $this;
+    }
+
+    /**
      * Gets pos_sales_tips
      *
      * @return double
@@ -255,6 +291,30 @@ class PosRevenueDetails implements ModelInterface, ArrayAccess
     public function setPosSalesTips($pos_sales_tips)
     {
         $this->container['pos_sales_tips'] = $pos_sales_tips;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_pos_revenue
+     *
+     * @return double
+     */
+    public function getTotalPosRevenue()
+    {
+        return $this->container['total_pos_revenue'];
+    }
+
+    /**
+     * Sets total_pos_revenue
+     *
+     * @param double $total_pos_revenue POS Total Revenue for the store
+     *
+     * @return $this
+     */
+    public function setTotalPosRevenue($total_pos_revenue)
+    {
+        $this->container['total_pos_revenue'] = $total_pos_revenue;
 
         return $this;
     }

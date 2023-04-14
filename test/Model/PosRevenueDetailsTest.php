@@ -84,9 +84,23 @@ class PosRevenueDetailsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "pos_sales_tax"
+     */
+    public function testPropertyPosSalesTax()
+    {
+    }
+
+    /**
      * Test attribute "pos_sales_tips"
      */
     public function testPropertyPosSalesTips()
+    {
+    }
+
+    /**
+     * Test attribute "total_pos_revenue"
+     */
+    public function testPropertyTotalPosRevenue()
     {
     }
 }

@@ -222,4 +222,11 @@ class PreviousOrderTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTaxRates()
     {
     }
+
+    /**
+     * Test attribute "white_label_id"
+     */
+    public function testPropertyWhiteLabelId()
+    {
+    }
 }
