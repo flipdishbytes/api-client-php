@@ -196,14 +196,6 @@ class CreateMenuTaxRate implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 2048)) {
-            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 2048.";
-        }
-
-        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
-            $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
-        }
-
         return $invalidProperties;
     }
 
@@ -238,13 +230,6 @@ class CreateMenuTaxRate implements ModelInterface, ArrayAccess
      */
     public function setName($name)
     {
-        if (!is_null($name) && (mb_strlen($name) > 2048)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling CreateMenuTaxRate., must be smaller than or equal to 2048.');
-        }
-        if (!is_null($name) && (mb_strlen($name) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling CreateMenuTaxRate., must be bigger than or equal to 0.');
-        }
-
         $this->container['name'] = $name;
 
         return $this;
