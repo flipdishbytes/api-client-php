@@ -256,6 +256,14 @@ class CreateFullMenu implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
+        }
+
+        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+        }
+
         $allowedValues = $this->getMenuSectionBehaviourAllowableValues();
         if (!is_null($this->container['menu_section_behaviour']) && !in_array($this->container['menu_section_behaviour'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -306,6 +314,13 @@ class CreateFullMenu implements ModelInterface, ArrayAccess
      */
     public function setName($name)
     {
+        if (!is_null($name) && (mb_strlen($name) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling CreateFullMenu., must be smaller than or equal to 255.');
+        }
+        if (!is_null($name) && (mb_strlen($name) < 0)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling CreateFullMenu., must be bigger than or equal to 0.');
+        }
+
         $this->container['name'] = $name;
 
         return $this;

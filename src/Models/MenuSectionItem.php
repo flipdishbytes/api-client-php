@@ -356,6 +356,14 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
             $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
         }
 
+        if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 4000)) {
+            $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 4000.";
+        }
+
+        if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+            $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
+        }
+
         $allowedValues = $this->getSpicinessRatingAllowableValues();
         if (!is_null($this->container['spiciness_rating']) && !in_array($this->container['spiciness_rating'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -677,6 +685,13 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
      */
     public function setDescription($description)
     {
+        if (!is_null($description) && (mb_strlen($description) > 4000)) {
+            throw new \InvalidArgumentException('invalid length for $description when calling MenuSectionItem., must be smaller than or equal to 4000.');
+        }
+        if (!is_null($description) && (mb_strlen($description) < 0)) {
+            throw new \InvalidArgumentException('invalid length for $description when calling MenuSectionItem., must be bigger than or equal to 0.');
+        }
+
         $this->container['description'] = $description;
 
         return $this;
