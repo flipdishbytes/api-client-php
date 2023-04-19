@@ -192,6 +192,16 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for toggleNextGenWeb
+     *
+     * Toggle Next Gen Web.
+     *
+     */
+    public function testToggleNextGenWeb()
+    {
+    }
+
+    /**
      * Test case for uploadAppLogo
      *
      * Set the application logo \\ icon.
