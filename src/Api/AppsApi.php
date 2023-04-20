@@ -3721,15 +3721,16 @@ class AppsApi
      *
      * @param  string $app_id  (required)
      * @param  string $hostname  (required)
+     * @param  string $vanity_url  (required)
      * @param  bool $is_next_gen_web  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiStringResult
      */
-    public function toggleNextGenWeb($app_id, $hostname, $is_next_gen_web)
+    public function toggleNextGenWeb($app_id, $hostname, $vanity_url, $is_next_gen_web)
     {
-        list($response) = $this->toggleNextGenWebWithHttpInfo($app_id, $hostname, $is_next_gen_web);
+        list($response) = $this->toggleNextGenWebWithHttpInfo($app_id, $hostname, $vanity_url, $is_next_gen_web);
         return $response;
     }
 
@@ -3740,16 +3741,17 @@ class AppsApi
      *
      * @param  string $app_id  (required)
      * @param  string $hostname  (required)
+     * @param  string $vanity_url  (required)
      * @param  bool $is_next_gen_web  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiStringResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function toggleNextGenWebWithHttpInfo($app_id, $hostname, $is_next_gen_web)
+    public function toggleNextGenWebWithHttpInfo($app_id, $hostname, $vanity_url, $is_next_gen_web)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
-        $request = $this->toggleNextGenWebRequest($app_id, $hostname, $is_next_gen_web);
+        $request = $this->toggleNextGenWebRequest($app_id, $hostname, $vanity_url, $is_next_gen_web);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3833,14 +3835,15 @@ class AppsApi
      *
      * @param  string $app_id  (required)
      * @param  string $hostname  (required)
+     * @param  string $vanity_url  (required)
      * @param  bool $is_next_gen_web  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function toggleNextGenWebAsync($app_id, $hostname, $is_next_gen_web)
+    public function toggleNextGenWebAsync($app_id, $hostname, $vanity_url, $is_next_gen_web)
     {
-        return $this->toggleNextGenWebAsyncWithHttpInfo($app_id, $hostname, $is_next_gen_web)
+        return $this->toggleNextGenWebAsyncWithHttpInfo($app_id, $hostname, $vanity_url, $is_next_gen_web)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3855,15 +3858,16 @@ class AppsApi
      *
      * @param  string $app_id  (required)
      * @param  string $hostname  (required)
+     * @param  string $vanity_url  (required)
      * @param  bool $is_next_gen_web  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function toggleNextGenWebAsyncWithHttpInfo($app_id, $hostname, $is_next_gen_web)
+    public function toggleNextGenWebAsyncWithHttpInfo($app_id, $hostname, $vanity_url, $is_next_gen_web)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
-        $request = $this->toggleNextGenWebRequest($app_id, $hostname, $is_next_gen_web);
+        $request = $this->toggleNextGenWebRequest($app_id, $hostname, $vanity_url, $is_next_gen_web);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3907,12 +3911,13 @@ class AppsApi
      *
      * @param  string $app_id  (required)
      * @param  string $hostname  (required)
+     * @param  string $vanity_url  (required)
      * @param  bool $is_next_gen_web  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function toggleNextGenWebRequest($app_id, $hostname, $is_next_gen_web)
+    protected function toggleNextGenWebRequest($app_id, $hostname, $vanity_url, $is_next_gen_web)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -3924,6 +3929,12 @@ class AppsApi
         if ($hostname === null || (is_array($hostname) && count($hostname) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $hostname when calling toggleNextGenWeb'
+            );
+        }
+        // verify the required parameter 'vanity_url' is set
+        if ($vanity_url === null || (is_array($vanity_url) && count($vanity_url) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $vanity_url when calling toggleNextGenWeb'
             );
         }
         // verify the required parameter 'is_next_gen_web' is set
@@ -3943,6 +3954,10 @@ class AppsApi
         // query params
         if ($hostname !== null) {
             $queryParams['hostname'] = ObjectSerializer::toQueryValue($hostname);
+        }
+        // query params
+        if ($vanity_url !== null) {
+            $queryParams['vanityUrl'] = ObjectSerializer::toQueryValue($vanity_url);
         }
         // query params
         if ($is_next_gen_web !== null) {

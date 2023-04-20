@@ -657,7 +657,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **toggleNextGenWeb**
-> \Flipdish\\Client\Models\RestApiStringResult toggleNextGenWeb($app_id, $hostname, $is_next_gen_web)
+> \Flipdish\\Client\Models\RestApiStringResult toggleNextGenWeb($app_id, $hostname, $vanity_url, $is_next_gen_web)
 
 Toggle Next Gen Web
 
@@ -677,10 +677,11 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
 );
 $app_id = "app_id_example"; // string | 
 $hostname = "hostname_example"; // string | 
+$vanity_url = "vanity_url_example"; // string | 
 $is_next_gen_web = true; // bool | 
 
 try {
-    $result = $apiInstance->toggleNextGenWeb($app_id, $hostname, $is_next_gen_web);
+    $result = $apiInstance->toggleNextGenWeb($app_id, $hostname, $vanity_url, $is_next_gen_web);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AppsApi->toggleNextGenWeb: ', $e->getMessage(), PHP_EOL;
@@ -694,6 +695,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
  **hostname** | **string**|  |
+ **vanity_url** | **string**|  |
  **is_next_gen_web** | **bool**|  |
 
 ### Return type
