@@ -131,4 +131,11 @@ class SubscriptionSummaryTest extends \PHPUnit_Framework_TestCase
     public function testPropertyDefaultPaymentDescription()
     {
     }
+
+    /**
+     * Test attribute "cancellation_date"
+     */
+    public function testPropertyCancellationDate()
+    {
+    }
 }

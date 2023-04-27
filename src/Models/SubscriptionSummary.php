@@ -65,7 +65,8 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         'next_invoice_amount' => 'double',
         'next_invoice_billing_date' => '\DateTime',
         'user' => 'string',
-        'default_payment_description' => 'string'
+        'default_payment_description' => 'string',
+        'cancellation_date' => '\DateTime'
     ];
 
     /**
@@ -81,7 +82,8 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         'next_invoice_amount' => 'double',
         'next_invoice_billing_date' => 'date-time',
         'user' => null,
-        'default_payment_description' => null
+        'default_payment_description' => null,
+        'cancellation_date' => 'date-time'
     ];
 
     /**
@@ -118,7 +120,8 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         'next_invoice_amount' => 'NextInvoiceAmount',
         'next_invoice_billing_date' => 'NextInvoiceBillingDate',
         'user' => 'User',
-        'default_payment_description' => 'DefaultPaymentDescription'
+        'default_payment_description' => 'DefaultPaymentDescription',
+        'cancellation_date' => 'CancellationDate'
     ];
 
     /**
@@ -134,7 +137,8 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         'next_invoice_amount' => 'setNextInvoiceAmount',
         'next_invoice_billing_date' => 'setNextInvoiceBillingDate',
         'user' => 'setUser',
-        'default_payment_description' => 'setDefaultPaymentDescription'
+        'default_payment_description' => 'setDefaultPaymentDescription',
+        'cancellation_date' => 'setCancellationDate'
     ];
 
     /**
@@ -150,7 +154,8 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         'next_invoice_amount' => 'getNextInvoiceAmount',
         'next_invoice_billing_date' => 'getNextInvoiceBillingDate',
         'user' => 'getUser',
-        'default_payment_description' => 'getDefaultPaymentDescription'
+        'default_payment_description' => 'getDefaultPaymentDescription',
+        'cancellation_date' => 'getCancellationDate'
     ];
 
     /**
@@ -483,6 +488,7 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         $this->container['next_invoice_billing_date'] = isset($data['next_invoice_billing_date']) ? $data['next_invoice_billing_date'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['default_payment_description'] = isset($data['default_payment_description']) ? $data['default_payment_description'] : null;
+        $this->container['cancellation_date'] = isset($data['cancellation_date']) ? $data['cancellation_date'] : null;
     }
 
     /**
@@ -746,6 +752,30 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
     public function setDefaultPaymentDescription($default_payment_description)
     {
         $this->container['default_payment_description'] = $default_payment_description;
+
+        return $this;
+    }
+
+    /**
+     * Gets cancellation_date
+     *
+     * @return \DateTime
+     */
+    public function getCancellationDate()
+    {
+        return $this->container['cancellation_date'];
+    }
+
+    /**
+     * Sets cancellation_date
+     *
+     * @param \DateTime $cancellation_date Cancellation Date
+     *
+     * @return $this
+     */
+    public function setCancellationDate($cancellation_date)
+    {
+        $this->container['cancellation_date'] = $cancellation_date;
 
         return $this;
     }
