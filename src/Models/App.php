@@ -292,6 +292,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_UPDATE_ORDERS_REFUND = 'UpdateOrdersRefund';
     const APP_RESOURCE_SET_UPDATE_ORDERS_DISPATCH = 'UpdateOrdersDispatch';
     const APP_RESOURCE_SET_VIEW_STORES = 'ViewStores';
+    const APP_RESOURCE_SET_CREATE_STORES = 'CreateStores';
     const APP_RESOURCE_SET_EDIT_STORES = 'EditStores';
     const APP_RESOURCE_SET_VIEW_STORES_OPENING_HOURS = 'ViewStoresOpeningHours';
     const APP_RESOURCE_SET_UPDATE_STORES_OPEN_FOR_COLLECTION_OR_DELIVERY = 'UpdateStoresOpenForCollectionOrDelivery';
@@ -481,6 +482,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_UPDATE_ORDERS_REFUND,
             self::APP_RESOURCE_SET_UPDATE_ORDERS_DISPATCH,
             self::APP_RESOURCE_SET_VIEW_STORES,
+            self::APP_RESOURCE_SET_CREATE_STORES,
             self::APP_RESOURCE_SET_EDIT_STORES,
             self::APP_RESOURCE_SET_VIEW_STORES_OPENING_HOURS,
             self::APP_RESOURCE_SET_UPDATE_STORES_OPEN_FOR_COLLECTION_OR_DELIVERY,
