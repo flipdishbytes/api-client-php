@@ -122,6 +122,16 @@ class StoreGroupsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for setMenuMessagePerDeliveryType
+     *
+     * .
+     *
+     */
+    public function testSetMenuMessagePerDeliveryType()
+    {
+    }
+
+    /**
      * Test case for updateStoreGroup
      *
      * Updates Store Group.

@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**delivery_menu_message** | **string** | Delivery Menu Message | [optional] 
+**pickup_menu_message** | **string** | Pickup Menu Message | [optional] 
 **total_stores** | **int** | Total Amount of Stores | [optional] 
 **grouped_coordinates** | [**\Flipdish\\Client\Models\GroupedCoordinates[]**](GroupedCoordinates.md) | Grouped store coordinates | [optional] 
 **store_headers** | [**\Flipdish\\Client\Models\StoreHeader[]**](StoreHeader.md) | Store Headers associated with Store Group | [optional] 

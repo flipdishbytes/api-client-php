@@ -77,6 +77,20 @@ class StoreGroupExtendedTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "delivery_menu_message"
+     */
+    public function testPropertyDeliveryMenuMessage()
+    {
+    }
+
+    /**
+     * Test attribute "pickup_menu_message"
+     */
+    public function testPropertyPickupMenuMessage()
+    {
+    }
+
+    /**
      * Test attribute "total_stores"
      */
     public function testPropertyTotalStores()
