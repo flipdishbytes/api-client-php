@@ -165,7 +165,6 @@ Class | Method | HTTP request | Description
 *CampaignsApi* | [**removeCampaign**](docs/Api/CampaignsApi.md#removecampaign) | **DELETE** /api/v1.0/{appId}/campaigns/{campaignId} | Deletes a campaign
 *CampaignsApi* | [**updateLoyaltyCampaign**](docs/Api/CampaignsApi.md#updateloyaltycampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty/{campaignId} | Updates loyalty campaign
 *CampaignsApi* | [**updateRetentionCampaign**](docs/Api/CampaignsApi.md#updateretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention/{campaignId} | Updates retention campaign
-*CardReadersApi* | [**authorizeStripeTerminal**](docs/Api/CardReadersApi.md#authorizestripeterminal) | **POST** /api/v1.0/{appId}/stripeterminal/authorize | Get Authorization Key for Stripe Terminal
 *CardReadersApi* | [**cancelCurrentlyInitiatedBluetoothDeviceUpdate**](docs/Api/CardReadersApi.md#cancelcurrentlyinitiatedbluetoothdeviceupdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | Cancel currently initiated install update for bluetooth terminal
 *CardReadersApi* | [**cancelReaderAction**](docs/Api/CardReadersApi.md#cancelreaderaction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | Cancel terminals action
 *CardReadersApi* | [**cardReadersGetReader**](docs/Api/CardReadersApi.md#cardreadersgetreader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | Get reader
@@ -1126,7 +1125,6 @@ Class | Method | HTTP request | Description
  - [RestApiResultStripeConnectedAccount](docs/Model/RestApiResultStripeConnectedAccount.md)
  - [RestApiResultStripeTerminalConnectionToken](docs/Model/RestApiResultStripeTerminalConnectionToken.md)
  - [RestApiResultStripeTerminalLocation](docs/Model/RestApiResultStripeTerminalLocation.md)
- - [RestApiResultStripeTerminalPrivateKey](docs/Model/RestApiResultStripeTerminalPrivateKey.md)
  - [RestApiResultStuartSettings](docs/Model/RestApiResultStuartSettings.md)
  - [RestApiResultSubscription](docs/Model/RestApiResultSubscription.md)
  - [RestApiResultTeammate](docs/Model/RestApiResultTeammate.md)
@@ -1219,7 +1217,6 @@ Class | Method | HTTP request | Description
  - [StripeCustomConnectedAccount](docs/Model/StripeCustomConnectedAccount.md)
  - [StripeTerminalConnectionToken](docs/Model/StripeTerminalConnectionToken.md)
  - [StripeTerminalLocation](docs/Model/StripeTerminalLocation.md)
- - [StripeTerminalPrivateKey](docs/Model/StripeTerminalPrivateKey.md)
  - [StuartSettings](docs/Model/StuartSettings.md)
  - [StuartSettingsTransportPrices](docs/Model/StuartSettingsTransportPrices.md)
  - [Subscription](docs/Model/Subscription.md)

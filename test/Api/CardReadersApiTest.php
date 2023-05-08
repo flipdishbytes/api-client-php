@@ -72,16 +72,6 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for authorizeStripeTerminal
-     *
-     * Get Authorization Key for Stripe Terminal.
-     *
-     */
-    public function testAuthorizeStripeTerminal()
-    {
-    }
-
-    /**
      * Test case for cancelCurrentlyInitiatedBluetoothDeviceUpdate
      *
      * Cancel currently initiated install update for bluetooth terminal.
