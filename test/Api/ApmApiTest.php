@@ -74,7 +74,7 @@ class ApmApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getApmStatus
      *
-     * [PRIVATE API] Returns true if APM is enabled on at least one store in an application.
+     * .
      *
      */
     public function testGetApmStatus()
@@ -84,7 +84,7 @@ class ApmApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getBasicStatistics
      *
-     * [PRIVATE API] Get Basic Statistics.
+     * .
      *
      */
     public function testGetBasicStatistics()
@@ -94,7 +94,7 @@ class ApmApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getCalendarWeekStatistics
      *
-     * [PRIVATE API] Get Calendar statistics.
+     * .
      *
      */
     public function testGetCalendarWeekStatistics()
@@ -104,7 +104,7 @@ class ApmApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getCallsStatistics
      *
-     * [PRIVATE API] Get Calls Statistics.
+     * .
      *
      */
     public function testGetCallsStatistics()
@@ -114,7 +114,7 @@ class ApmApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOrderStatistics
      *
-     * [PRIVATE API] Get Order Statistics (Value of Orders).
+     * .
      *
      */
     public function testGetOrderStatistics()
@@ -124,7 +124,7 @@ class ApmApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPaginatedCallList
      *
-     * [PRIVATE API] Get paginated APM call list.
+     * .
      *
      */
     public function testGetPaginatedCallList()

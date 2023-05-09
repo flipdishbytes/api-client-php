@@ -74,7 +74,7 @@ class FulfillmentStateConfigurationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createFulfillmentStatesConfig
      *
-     * Create fulfillment configuration.
+     * .
      *
      */
     public function testCreateFulfillmentStatesConfig()
@@ -84,7 +84,7 @@ class FulfillmentStateConfigurationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteFulfillmentStatesConfig
      *
-     * Delete fulfillment states configuration.
+     * .
      *
      */
     public function testDeleteFulfillmentStatesConfig()
@@ -94,7 +94,7 @@ class FulfillmentStateConfigurationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getFulfillmentStatesConfiguration
      *
-     * Get fulfillment configuration.
+     * .
      *
      */
     public function testGetFulfillmentStatesConfiguration()
@@ -104,7 +104,7 @@ class FulfillmentStateConfigurationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getFulfillmentStatesConfigurationTemplate
      *
-     * Get fulfillment configuration template.
+     * .
      *
      */
     public function testGetFulfillmentStatesConfigurationTemplate()
@@ -114,7 +114,7 @@ class FulfillmentStateConfigurationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for searchFulfillmentStatesConfigurations
      *
-     * List fulfillment configurations for AppId.
+     * .
      *
      */
     public function testSearchFulfillmentStatesConfigurations()
@@ -124,7 +124,7 @@ class FulfillmentStateConfigurationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateFulfillmentStatesConfig
      *
-     * Update fulfillment configuration.
+     * .
      *
      */
     public function testUpdateFulfillmentStatesConfig()

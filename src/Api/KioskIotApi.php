@@ -90,8 +90,6 @@ class KioskIotApi
     /**
      * Operation getKioskIotConnection
      *
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -105,8 +103,6 @@ class KioskIotApi
 
     /**
      * Operation getKioskIotConnectionWithHttpInfo
-     *
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -204,7 +200,7 @@ class KioskIotApi
     /**
      * Operation getKioskIotConnectionAsync
      *
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -223,7 +219,7 @@ class KioskIotApi
     /**
      * Operation getKioskIotConnectionAsyncWithHttpInfo
      *
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -368,8 +364,6 @@ class KioskIotApi
     /**
      * Operation queryTelemetrySeries
      *
-     * Get the IoT time series values for a given Kiosk Id, properties and time range
-     *
      * @param  string $app_id app_id (required)
      * @param  \Flipdish\\Client\Models\TelemetrySeriesQueryParameters $query_params query_params (required)
      *
@@ -385,8 +379,6 @@ class KioskIotApi
 
     /**
      * Operation queryTelemetrySeriesWithHttpInfo
-     *
-     * Get the IoT time series values for a given Kiosk Id, properties and time range
      *
      * @param  string $app_id (required)
      * @param  \Flipdish\\Client\Models\TelemetrySeriesQueryParameters $query_params (required)
@@ -486,7 +478,7 @@ class KioskIotApi
     /**
      * Operation queryTelemetrySeriesAsync
      *
-     * Get the IoT time series values for a given Kiosk Id, properties and time range
+     * 
      *
      * @param  string $app_id (required)
      * @param  \Flipdish\\Client\Models\TelemetrySeriesQueryParameters $query_params (required)
@@ -507,7 +499,7 @@ class KioskIotApi
     /**
      * Operation queryTelemetrySeriesAsyncWithHttpInfo
      *
-     * Get the IoT time series values for a given Kiosk Id, properties and time range
+     * 
      *
      * @param  string $app_id (required)
      * @param  \Flipdish\\Client\Models\TelemetrySeriesQueryParameters $query_params (required)

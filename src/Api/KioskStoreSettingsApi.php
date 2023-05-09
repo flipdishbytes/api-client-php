@@ -90,10 +90,8 @@ class KioskStoreSettingsApi
     /**
      * Operation getAllKioskSettingsForStore
      *
-     * Get all kiosk settings associated with a store
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $app_id App Name Id (required)
+     * @param  int $store_id store_id (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class KioskStoreSettingsApi
     /**
      * Operation getAllKioskSettingsForStoreWithHttpInfo
      *
-     * Get all kiosk settings associated with a store
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $app_id App Name Id (required)
+     * @param  int $store_id (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -208,10 +204,10 @@ class KioskStoreSettingsApi
     /**
      * Operation getAllKioskSettingsForStoreAsync
      *
-     * Get all kiosk settings associated with a store
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $app_id App Name Id (required)
+     * @param  int $store_id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -229,10 +225,10 @@ class KioskStoreSettingsApi
     /**
      * Operation getAllKioskSettingsForStoreAsyncWithHttpInfo
      *
-     * Get all kiosk settings associated with a store
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $app_id App Name Id (required)
+     * @param  int $store_id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -282,8 +278,8 @@ class KioskStoreSettingsApi
     /**
      * Create request for operation 'getAllKioskSettingsForStore'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $app_id App Name Id (required)
+     * @param  int $store_id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -406,8 +402,6 @@ class KioskStoreSettingsApi
     /**
      * Operation getAllStoreSettingsForKioskHydra
      *
-     * [For Kiosk use only] Get all stores connected to a Kiosk
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -421,8 +415,6 @@ class KioskStoreSettingsApi
 
     /**
      * Operation getAllStoreSettingsForKioskHydraWithHttpInfo
-     *
-     * [For Kiosk use only] Get all stores connected to a Kiosk
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -520,7 +512,7 @@ class KioskStoreSettingsApi
     /**
      * Operation getAllStoreSettingsForKioskHydraAsync
      *
-     * [For Kiosk use only] Get all stores connected to a Kiosk
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -539,7 +531,7 @@ class KioskStoreSettingsApi
     /**
      * Operation getAllStoreSettingsForKioskHydraAsyncWithHttpInfo
      *
-     * [For Kiosk use only] Get all stores connected to a Kiosk
+     * 
      *
      *
      * @throws \InvalidArgumentException

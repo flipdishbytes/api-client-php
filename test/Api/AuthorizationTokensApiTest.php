@@ -74,7 +74,7 @@ class AuthorizationTokensApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAuthorizationTokens
      *
-     * Get authorization tokens.
+     * .
      *
      */
     public function testGetAuthorizationTokens()
@@ -84,7 +84,7 @@ class AuthorizationTokensApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for revokeToken
      *
-     * Revoke token.
+     * .
      *
      */
     public function testRevokeToken()

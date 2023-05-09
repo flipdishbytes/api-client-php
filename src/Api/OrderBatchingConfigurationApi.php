@@ -90,9 +90,7 @@ class OrderBatchingConfigurationApi
     /**
      * Operation get
      *
-     * Returns order batching configuration for a specific store
-     *
-     * @param  int $store_id Store Id (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,9 +105,7 @@ class OrderBatchingConfigurationApi
     /**
      * Operation getWithHttpInfo
      *
-     * Returns order batching configuration for a specific store
-     *
-     * @param  int $store_id Store Id (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -214,9 +210,9 @@ class OrderBatchingConfigurationApi
     /**
      * Operation getAsync
      *
-     * Returns order batching configuration for a specific store
+     * 
      *
-     * @param  int $store_id Store Id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -234,9 +230,9 @@ class OrderBatchingConfigurationApi
     /**
      * Operation getAsyncWithHttpInfo
      *
-     * Returns order batching configuration for a specific store
+     * 
      *
-     * @param  int $store_id Store Id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -286,7 +282,7 @@ class OrderBatchingConfigurationApi
     /**
      * Create request for operation 'get'
      *
-     * @param  int $store_id Store Id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -395,10 +391,8 @@ class OrderBatchingConfigurationApi
     /**
      * Operation post
      *
-     * Sets order batching configuration for a specific store
-     *
-     * @param  int $store_id Store Id (required)
-     * @param  \Flipdish\\Client\Models\SetOrderBatchingConfiguration $set_order_batching_configuration SetOrderBatchingConfiguration (required)
+     * @param  int $store_id store_id (required)
+     * @param  \Flipdish\\Client\Models\SetOrderBatchingConfiguration $set_order_batching_configuration set_order_batching_configuration (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -412,10 +406,8 @@ class OrderBatchingConfigurationApi
     /**
      * Operation postWithHttpInfo
      *
-     * Sets order batching configuration for a specific store
-     *
-     * @param  int $store_id Store Id (required)
-     * @param  \Flipdish\\Client\Models\SetOrderBatchingConfiguration $set_order_batching_configuration SetOrderBatchingConfiguration (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\SetOrderBatchingConfiguration $set_order_batching_configuration (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -498,10 +490,10 @@ class OrderBatchingConfigurationApi
     /**
      * Operation postAsync
      *
-     * Sets order batching configuration for a specific store
+     * 
      *
-     * @param  int $store_id Store Id (required)
-     * @param  \Flipdish\\Client\Models\SetOrderBatchingConfiguration $set_order_batching_configuration SetOrderBatchingConfiguration (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\SetOrderBatchingConfiguration $set_order_batching_configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -519,10 +511,10 @@ class OrderBatchingConfigurationApi
     /**
      * Operation postAsyncWithHttpInfo
      *
-     * Sets order batching configuration for a specific store
+     * 
      *
-     * @param  int $store_id Store Id (required)
-     * @param  \Flipdish\\Client\Models\SetOrderBatchingConfiguration $set_order_batching_configuration SetOrderBatchingConfiguration (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\SetOrderBatchingConfiguration $set_order_batching_configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -558,8 +550,8 @@ class OrderBatchingConfigurationApi
     /**
      * Create request for operation 'post'
      *
-     * @param  int $store_id Store Id (required)
-     * @param  \Flipdish\\Client\Models\SetOrderBatchingConfiguration $set_order_batching_configuration SetOrderBatchingConfiguration (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\SetOrderBatchingConfiguration $set_order_batching_configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

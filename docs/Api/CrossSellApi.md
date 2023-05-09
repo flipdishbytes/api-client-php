@@ -4,15 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCrossSellMenuItems**](CrossSellApi.md#getCrossSellMenuItems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | Get all Menu items by MenuId for cross sells
+[**getCrossSellMenuItems**](CrossSellApi.md#getCrossSellMenuItems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | 
 
 
 # **getCrossSellMenuItems**
 > \Flipdish\\Client\Models\RestApiResultCrossSellMenuItems getCrossSellMenuItems($menu_id, $menu_item_id, $limit, $total_value, $app_id)
 
-Get all Menu items by MenuId for cross sells
 
-Can be called by any flipdish kiosk  [BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -28,10 +26,10 @@ $apiInstance = new Flipdish\\Client\Api\CrossSellApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Requested MenuId
-$menu_item_id = array(56); // int[] | Selected Menu items
-$limit = 56; // int | Set the limit of items returned
-$total_value = 1.2; // double | Get the total cost of items in the basket
+$menu_id = 56; // int | 
+$menu_item_id = array(56); // int[] | 
+$limit = 56; // int | 
+$total_value = 1.2; // double | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -47,10 +45,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Requested MenuId |
- **menu_item_id** | [**int[]**](../Model/int.md)| Selected Menu items |
- **limit** | **int**| Set the limit of items returned |
- **total_value** | **double**| Get the total cost of items in the basket |
+ **menu_id** | **int**|  |
+ **menu_item_id** | [**int[]**](../Model/int.md)|  |
+ **limit** | **int**|  |
+ **total_value** | **double**|  |
  **app_id** | **string**|  |
 
 ### Return type

@@ -4,21 +4,21 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**attachBankAccountToStore**](BankAccountApi.md#attachBankAccountToStore) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/store/{storeId} | [PRIVATE API] Attach Bank Account to Store
-[**createBankAccount**](BankAccountApi.md#createBankAccount) | **POST** /api/v1.0/{appId}/bankaccounts | Create a new Bank Account and attach to this App
-[**deleteBankAccount**](BankAccountApi.md#deleteBankAccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Delete BankAccount
-[**getBankAccountById**](BankAccountApi.md#getBankAccountById) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Get BankAccount Detail by Id
-[**getBankAccounts**](BankAccountApi.md#getBankAccounts) | **GET** /api/v1.0/{appId}/bankaccounts | Get List of BankAccounts for WL
-[**getCountriesWithFieldDefinitions**](BankAccountApi.md#getCountriesWithFieldDefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/countries-field-definitions | Get bank account fields definitions
-[**getFieldDefinitions**](BankAccountApi.md#getFieldDefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/field-definitions | Get bank account fields definitions
-[**updateBankAccount**](BankAccountApi.md#updateBankAccount) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Update BankAccount
-[**updateBankAccountState**](BankAccountApi.md#updateBankAccountState) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/state/{state} | [PRIVATE API] Update State of Bank Account
+[**attachBankAccountToStore**](BankAccountApi.md#attachBankAccountToStore) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/store/{storeId} | 
+[**createBankAccount**](BankAccountApi.md#createBankAccount) | **POST** /api/v1.0/{appId}/bankaccounts | 
+[**deleteBankAccount**](BankAccountApi.md#deleteBankAccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | 
+[**getBankAccountById**](BankAccountApi.md#getBankAccountById) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | 
+[**getBankAccounts**](BankAccountApi.md#getBankAccounts) | **GET** /api/v1.0/{appId}/bankaccounts | 
+[**getCountriesWithFieldDefinitions**](BankAccountApi.md#getCountriesWithFieldDefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/countries-field-definitions | 
+[**getFieldDefinitions**](BankAccountApi.md#getFieldDefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/field-definitions | 
+[**updateBankAccount**](BankAccountApi.md#updateBankAccount) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | 
+[**updateBankAccountState**](BankAccountApi.md#updateBankAccountState) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/state/{state} | 
 
 
 # **attachBankAccountToStore**
 > attachBankAccountToStore($app_id, $bank_account_id, $store_id)
 
-[PRIVATE API] Attach Bank Account to Store
+
 
 ### Example
 ```php
@@ -34,9 +34,9 @@ $apiInstance = new Flipdish\\Client\Api\BankAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name
-$bank_account_id = 56; // int | Id of account to be updated
-$store_id = 56; // int | Store to be attached to Bank account
+$app_id = "app_id_example"; // string | 
+$bank_account_id = 56; // int | 
+$store_id = 56; // int | 
 
 try {
     $apiInstance->attachBankAccountToStore($app_id, $bank_account_id, $store_id);
@@ -50,9 +50,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name |
- **bank_account_id** | **int**| Id of account to be updated |
- **store_id** | **int**| Store to be attached to Bank account |
+ **app_id** | **string**|  |
+ **bank_account_id** | **int**|  |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -72,7 +72,7 @@ void (empty response body)
 # **createBankAccount**
 > \Flipdish\\Client\Models\RestApiResultBankAccountDetail createBankAccount($app_id, $account)
 
-Create a new Bank Account and attach to this App
+
 
 ### Example
 ```php
@@ -88,8 +88,8 @@ $apiInstance = new Flipdish\\Client\Api\BankAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name
-$account = new \Flipdish\\Client\Models\BankAccountCreate(); // \Flipdish\\Client\Models\BankAccountCreate | Account to be created
+$app_id = "app_id_example"; // string | 
+$account = new \Flipdish\\Client\Models\BankAccountCreate(); // \Flipdish\\Client\Models\BankAccountCreate | 
 
 try {
     $result = $apiInstance->createBankAccount($app_id, $account);
@@ -104,8 +104,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name |
- **account** | [**\Flipdish\\Client\Models\BankAccountCreate**](../Model/BankAccountCreate.md)| Account to be created |
+ **app_id** | **string**|  |
+ **account** | [**\Flipdish\\Client\Models\BankAccountCreate**](../Model/BankAccountCreate.md)|  |
 
 ### Return type
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 # **deleteBankAccount**
 > deleteBankAccount($app_id, $bank_account_id)
 
-Delete BankAccount
+
 
 ### Example
 ```php
@@ -141,8 +141,8 @@ $apiInstance = new Flipdish\\Client\Api\BankAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name
-$bank_account_id = 56; // int | Id of account to be marked as deleted
+$app_id = "app_id_example"; // string | 
+$bank_account_id = 56; // int | 
 
 try {
     $apiInstance->deleteBankAccount($app_id, $bank_account_id);
@@ -156,8 +156,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name |
- **bank_account_id** | **int**| Id of account to be marked as deleted |
+ **app_id** | **string**|  |
+ **bank_account_id** | **int**|  |
 
 ### Return type
 
@@ -177,7 +177,7 @@ void (empty response body)
 # **getBankAccountById**
 > \Flipdish\\Client\Models\RestApiResultBankAccountDetail getBankAccountById($bank_account_id, $app_id)
 
-Get BankAccount Detail by Id
+
 
 ### Example
 ```php
@@ -193,7 +193,7 @@ $apiInstance = new Flipdish\\Client\Api\BankAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$bank_account_id = 56; // int | Id of account
+$bank_account_id = 56; // int | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -209,7 +209,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bank_account_id** | **int**| Id of account |
+ **bank_account_id** | **int**|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 # **getBankAccounts**
 > \Flipdish\\Client\Models\RestApiArrayResultBankAccountSummary getBankAccounts($app_id)
 
-Get List of BankAccounts for WL
+
 
 ### Example
 ```php
@@ -246,7 +246,7 @@ $apiInstance = new Flipdish\\Client\Api\BankAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getBankAccounts($app_id);
@@ -261,7 +261,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 # **getCountriesWithFieldDefinitions**
 > \Flipdish\\Client\Models\RestApiArrayResultCountryWithAccountFieldsDefinitions getCountriesWithFieldDefinitions($app_id)
 
-Get bank account fields definitions
+
 
 ### Example
 ```php
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 # **getFieldDefinitions**
 > \Flipdish\\Client\Models\RestApiResultAccountFieldsDefinitions getFieldDefinitions($app_id)
 
-Get bank account fields definitions
+
 
 ### Example
 ```php
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 # **updateBankAccount**
 > updateBankAccount($app_id, $bank_account_id, $account)
 
-Update BankAccount
+
 
 ### Example
 ```php
@@ -399,9 +399,9 @@ $apiInstance = new Flipdish\\Client\Api\BankAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name
-$bank_account_id = 56; // int | Id of account to be updated
-$account = new \Flipdish\\Client\Models\BankAccountCreate(); // \Flipdish\\Client\Models\BankAccountCreate | Details to update account with
+$app_id = "app_id_example"; // string | 
+$bank_account_id = 56; // int | 
+$account = new \Flipdish\\Client\Models\BankAccountCreate(); // \Flipdish\\Client\Models\BankAccountCreate | 
 
 try {
     $apiInstance->updateBankAccount($app_id, $bank_account_id, $account);
@@ -415,9 +415,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name |
- **bank_account_id** | **int**| Id of account to be updated |
- **account** | [**\Flipdish\\Client\Models\BankAccountCreate**](../Model/BankAccountCreate.md)| Details to update account with |
+ **app_id** | **string**|  |
+ **bank_account_id** | **int**|  |
+ **account** | [**\Flipdish\\Client\Models\BankAccountCreate**](../Model/BankAccountCreate.md)|  |
 
 ### Return type
 
@@ -437,7 +437,7 @@ void (empty response body)
 # **updateBankAccountState**
 > updateBankAccountState($app_id, $bank_account_id, $state, $reason)
 
-[PRIVATE API] Update State of Bank Account
+
 
 ### Example
 ```php
@@ -453,10 +453,10 @@ $apiInstance = new Flipdish\\Client\Api\BankAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name
-$bank_account_id = 56; // int | Id of account to be updated
-$state = "state_example"; // string | New state
-$reason = "reason_example"; // string | Reason for state change, Mandatory for rejections
+$app_id = "app_id_example"; // string | 
+$bank_account_id = 56; // int | 
+$state = "state_example"; // string | 
+$reason = "reason_example"; // string | 
 
 try {
     $apiInstance->updateBankAccountState($app_id, $bank_account_id, $state, $reason);
@@ -470,10 +470,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name |
- **bank_account_id** | **int**| Id of account to be updated |
- **state** | **string**| New state |
- **reason** | **string**| Reason for state change, Mandatory for rejections |
+ **app_id** | **string**|  |
+ **bank_account_id** | **int**|  |
+ **state** | **string**|  |
+ **reason** | **string**|  |
 
 ### Return type
 

@@ -4,16 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAppStoreApp**](AppStoreApi.md#getAppStoreApp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get App store app
-[**getAppStoreApps**](AppStoreApi.md#getAppStoreApps) | **GET** /api/v1.0/appstore/apps | Get list of App store app summaries
+[**getAppStoreApp**](AppStoreApi.md#getAppStoreApp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | 
+[**getAppStoreApps**](AppStoreApi.md#getAppStoreApps) | **GET** /api/v1.0/appstore/apps | 
 
 
 # **getAppStoreApp**
 > \Flipdish\\Client\Models\AppStoreApp getAppStoreApp($app_store_app_id)
 
-Get App store app
 
-App store app must be verified or you are the owner [BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -29,7 +27,7 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_store_app_id = "app_store_app_id_example"; // string | App store app id
+$app_store_app_id = "app_store_app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getAppStoreApp($app_store_app_id);
@@ -44,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_store_app_id** | **string**| App store app id |
+ **app_store_app_id** | **string**|  |
 
 ### Return type
 
@@ -64,9 +62,7 @@ Name | Type | Description  | Notes
 # **getAppStoreApps**
 > \Flipdish\\Client\Models\RestApiPaginationResultAppStoreAppSummary getAppStoreApps($search, $page, $limit, $exclude_not_owned)
 
-Get list of App store app summaries
 
-Only returns verified applications [BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -82,10 +78,10 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreApi(
     new GuzzleHttp\Client(),
     $config
 );
-$search = "search_example"; // string | Query App store app name
-$page = 56; // int | Requested page index
-$limit = 56; // int | Requested page limit
-$exclude_not_owned = true; // bool | Exclude App store apps that user is not the owner off
+$search = "search_example"; // string | 
+$page = 56; // int | 
+$limit = 56; // int | 
+$exclude_not_owned = true; // bool | 
 
 try {
     $result = $apiInstance->getAppStoreApps($search, $page, $limit, $exclude_not_owned);
@@ -100,10 +96,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **search** | **string**| Query App store app name |
- **page** | **int**| Requested page index | [optional]
- **limit** | **int**| Requested page limit | [optional]
- **exclude_not_owned** | **bool**| Exclude App store apps that user is not the owner off | [optional]
+ **search** | **string**|  |
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
+ **exclude_not_owned** | **bool**|  | [optional]
 
 ### Return type
 

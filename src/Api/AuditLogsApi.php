@@ -90,10 +90,8 @@ class AuditLogsApi
     /**
      * Operation addOrderAuditLog
      *
-     * Create an order audit log event
-     *
-     * @param  int $order_id  (required)
-     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create  (required)
+     * @param  int $order_id order_id (required)
+     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create external_event_create (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,10 +105,8 @@ class AuditLogsApi
     /**
      * Operation addOrderAuditLogWithHttpInfo
      *
-     * Create an order audit log event
-     *
-     * @param  int $order_id  (required)
-     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create  (required)
+     * @param  int $order_id (required)
+     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -185,10 +181,10 @@ class AuditLogsApi
     /**
      * Operation addOrderAuditLogAsync
      *
-     * Create an order audit log event
+     * 
      *
-     * @param  int $order_id  (required)
-     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create  (required)
+     * @param  int $order_id (required)
+     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -206,10 +202,10 @@ class AuditLogsApi
     /**
      * Operation addOrderAuditLogAsyncWithHttpInfo
      *
-     * Create an order audit log event
+     * 
      *
-     * @param  int $order_id  (required)
-     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create  (required)
+     * @param  int $order_id (required)
+     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -245,8 +241,8 @@ class AuditLogsApi
     /**
      * Create request for operation 'addOrderAuditLog'
      *
-     * @param  int $order_id  (required)
-     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create  (required)
+     * @param  int $order_id (required)
+     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -364,10 +360,8 @@ class AuditLogsApi
     /**
      * Operation addStoreAuditLogEvent
      *
-     * Create a store audit log event
-     *
-     * @param  int $store_id  (required)
-     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create  (required)
+     * @param  int $store_id store_id (required)
+     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create external_event_create (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -381,10 +375,8 @@ class AuditLogsApi
     /**
      * Operation addStoreAuditLogEventWithHttpInfo
      *
-     * Create a store audit log event
-     *
-     * @param  int $store_id  (required)
-     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create  (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -459,10 +451,10 @@ class AuditLogsApi
     /**
      * Operation addStoreAuditLogEventAsync
      *
-     * Create a store audit log event
+     * 
      *
-     * @param  int $store_id  (required)
-     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create  (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -480,10 +472,10 @@ class AuditLogsApi
     /**
      * Operation addStoreAuditLogEventAsyncWithHttpInfo
      *
-     * Create a store audit log event
+     * 
      *
-     * @param  int $store_id  (required)
-     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create  (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -519,8 +511,8 @@ class AuditLogsApi
     /**
      * Create request for operation 'addStoreAuditLogEvent'
      *
-     * @param  int $store_id  (required)
-     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create  (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\ExternalStoreAuditLog[] $external_event_create (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

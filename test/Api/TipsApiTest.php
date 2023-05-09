@@ -74,7 +74,7 @@ class TipsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tipConfigGet
      *
-     * Returns current tip configuration for a store.
+     * .
      *
      */
     public function testTipConfigGet()
@@ -84,7 +84,7 @@ class TipsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for tipConfigUpsert
      *
-     * Update or insert current tip configuration for a store.
+     * .
      *
      */
     public function testTipConfigUpsert()

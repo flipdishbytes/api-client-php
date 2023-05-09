@@ -74,7 +74,7 @@ class InvoicesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getInvoices
      *
-     * Get list of invoices.
+     * .
      *
      */
     public function testGetInvoices()

@@ -74,7 +74,7 @@ class CrossSellApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getCrossSellMenuItems
      *
-     * Get all Menu items by MenuId for cross sells.
+     * .
      *
      */
     public function testGetCrossSellMenuItems()

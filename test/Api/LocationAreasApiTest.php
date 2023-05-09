@@ -74,7 +74,7 @@ class LocationAreasApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createLocationArea
      *
-     * Create a Location Area, i.e: Room, Floor, Parking lot.
+     * .
      *
      */
     public function testCreateLocationArea()
@@ -84,7 +84,7 @@ class LocationAreasApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getLocationArea
      *
-     * Retrieve a Location Area.
+     * .
      *
      */
     public function testGetLocationArea()
@@ -94,7 +94,7 @@ class LocationAreasApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getLocationAreasForStore
      *
-     * Retrieve all Location Areas for a Store.
+     * .
      *
      */
     public function testGetLocationAreasForStore()
@@ -104,7 +104,7 @@ class LocationAreasApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateLocationArea
      *
-     * Update a Location Area, i.e: Room, Floor, Car park space.
+     * .
      *
      */
     public function testUpdateLocationArea()

@@ -74,7 +74,7 @@ class AppStoreApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAppStoreApp
      *
-     * Get App store app.
+     * .
      *
      */
     public function testGetAppStoreApp()
@@ -84,7 +84,7 @@ class AppStoreApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAppStoreApps
      *
-     * Get list of App store app summaries.
+     * .
      *
      */
     public function testGetAppStoreApps()

@@ -90,10 +90,8 @@ class AccountsApi
     /**
      * Operation answerSignUpQuestion
      *
-     * Answer a signup question
-     *
-     * @param  string $signup_step_action Signup step action (required)
-     * @param  int $answer_id Identifier of the answer (required)
+     * @param  string $signup_step_action signup_step_action (required)
+     * @param  int $answer_id answer_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,10 +105,8 @@ class AccountsApi
     /**
      * Operation answerSignUpQuestionWithHttpInfo
      *
-     * Answer a signup question
-     *
-     * @param  string $signup_step_action Signup step action (required)
-     * @param  int $answer_id Identifier of the answer (required)
+     * @param  string $signup_step_action (required)
+     * @param  int $answer_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -185,10 +181,10 @@ class AccountsApi
     /**
      * Operation answerSignUpQuestionAsync
      *
-     * Answer a signup question
+     * 
      *
-     * @param  string $signup_step_action Signup step action (required)
-     * @param  int $answer_id Identifier of the answer (required)
+     * @param  string $signup_step_action (required)
+     * @param  int $answer_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -206,10 +202,10 @@ class AccountsApi
     /**
      * Operation answerSignUpQuestionAsyncWithHttpInfo
      *
-     * Answer a signup question
+     * 
      *
-     * @param  string $signup_step_action Signup step action (required)
-     * @param  int $answer_id Identifier of the answer (required)
+     * @param  string $signup_step_action (required)
+     * @param  int $answer_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -245,8 +241,8 @@ class AccountsApi
     /**
      * Create request for operation 'answerSignUpQuestion'
      *
-     * @param  string $signup_step_action Signup step action (required)
-     * @param  int $answer_id Identifier of the answer (required)
+     * @param  string $signup_step_action (required)
+     * @param  int $answer_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -364,9 +360,7 @@ class AccountsApi
     /**
      * Operation changePassword
      *
-     * Change password
-     *
-     * @param  \Flipdish\\Client\Models\ChangePasswordModel $change_password_model Change password model (required)
+     * @param  \Flipdish\\Client\Models\ChangePasswordModel $change_password_model change_password_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -380,9 +374,7 @@ class AccountsApi
     /**
      * Operation changePasswordWithHttpInfo
      *
-     * Change password
-     *
-     * @param  \Flipdish\\Client\Models\ChangePasswordModel $change_password_model Change password model (required)
+     * @param  \Flipdish\\Client\Models\ChangePasswordModel $change_password_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -457,9 +449,9 @@ class AccountsApi
     /**
      * Operation changePasswordAsync
      *
-     * Change password
+     * 
      *
-     * @param  \Flipdish\\Client\Models\ChangePasswordModel $change_password_model Change password model (required)
+     * @param  \Flipdish\\Client\Models\ChangePasswordModel $change_password_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -477,9 +469,9 @@ class AccountsApi
     /**
      * Operation changePasswordAsyncWithHttpInfo
      *
-     * Change password
+     * 
      *
-     * @param  \Flipdish\\Client\Models\ChangePasswordModel $change_password_model Change password model (required)
+     * @param  \Flipdish\\Client\Models\ChangePasswordModel $change_password_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -515,7 +507,7 @@ class AccountsApi
     /**
      * Create request for operation 'changePassword'
      *
-     * @param  \Flipdish\\Client\Models\ChangePasswordModel $change_password_model Change password model (required)
+     * @param  \Flipdish\\Client\Models\ChangePasswordModel $change_password_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -619,9 +611,7 @@ class AccountsApi
     /**
      * Operation changePasswordWithPin
      *
-     * Change password
-     *
-     * @param  \Flipdish\\Client\Models\SetPasswordWithPinModel $change_password_model Change password model (required)
+     * @param  \Flipdish\\Client\Models\SetPasswordWithPinModel $change_password_model change_password_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -635,9 +625,7 @@ class AccountsApi
     /**
      * Operation changePasswordWithPinWithHttpInfo
      *
-     * Change password
-     *
-     * @param  \Flipdish\\Client\Models\SetPasswordWithPinModel $change_password_model Change password model (required)
+     * @param  \Flipdish\\Client\Models\SetPasswordWithPinModel $change_password_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -712,9 +700,9 @@ class AccountsApi
     /**
      * Operation changePasswordWithPinAsync
      *
-     * Change password
+     * 
      *
-     * @param  \Flipdish\\Client\Models\SetPasswordWithPinModel $change_password_model Change password model (required)
+     * @param  \Flipdish\\Client\Models\SetPasswordWithPinModel $change_password_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -732,9 +720,9 @@ class AccountsApi
     /**
      * Operation changePasswordWithPinAsyncWithHttpInfo
      *
-     * Change password
+     * 
      *
-     * @param  \Flipdish\\Client\Models\SetPasswordWithPinModel $change_password_model Change password model (required)
+     * @param  \Flipdish\\Client\Models\SetPasswordWithPinModel $change_password_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -770,7 +758,7 @@ class AccountsApi
     /**
      * Create request for operation 'changePasswordWithPin'
      *
-     * @param  \Flipdish\\Client\Models\SetPasswordWithPinModel $change_password_model Change password model (required)
+     * @param  \Flipdish\\Client\Models\SetPasswordWithPinModel $change_password_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -874,9 +862,7 @@ class AccountsApi
     /**
      * Operation createAccount
      *
-     * Create account with email address and store name
-     *
-     * @param  \Flipdish\\Client\Models\CreateAccountModel $create_account_model Create account model (required)
+     * @param  \Flipdish\\Client\Models\CreateAccountModel $create_account_model create_account_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -890,9 +876,7 @@ class AccountsApi
     /**
      * Operation createAccountWithHttpInfo
      *
-     * Create account with email address and store name
-     *
-     * @param  \Flipdish\\Client\Models\CreateAccountModel $create_account_model Create account model (required)
+     * @param  \Flipdish\\Client\Models\CreateAccountModel $create_account_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -959,9 +943,9 @@ class AccountsApi
     /**
      * Operation createAccountAsync
      *
-     * Create account with email address and store name
+     * 
      *
-     * @param  \Flipdish\\Client\Models\CreateAccountModel $create_account_model Create account model (required)
+     * @param  \Flipdish\\Client\Models\CreateAccountModel $create_account_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -979,9 +963,9 @@ class AccountsApi
     /**
      * Operation createAccountAsyncWithHttpInfo
      *
-     * Create account with email address and store name
+     * 
      *
-     * @param  \Flipdish\\Client\Models\CreateAccountModel $create_account_model Create account model (required)
+     * @param  \Flipdish\\Client\Models\CreateAccountModel $create_account_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1017,7 +1001,7 @@ class AccountsApi
     /**
      * Create request for operation 'createAccount'
      *
-     * @param  \Flipdish\\Client\Models\CreateAccountModel $create_account_model Create account model (required)
+     * @param  \Flipdish\\Client\Models\CreateAccountModel $create_account_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1121,8 +1105,6 @@ class AccountsApi
     /**
      * Operation getAccountDetails
      *
-     * Gets the current account detail
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1136,8 +1118,6 @@ class AccountsApi
 
     /**
      * Operation getAccountDetailsWithHttpInfo
-     *
-     * Gets the current account detail
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1235,7 +1215,7 @@ class AccountsApi
     /**
      * Operation getAccountDetailsAsync
      *
-     * Gets the current account detail
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -1254,7 +1234,7 @@ class AccountsApi
     /**
      * Operation getAccountDetailsAsyncWithHttpInfo
      *
-     * Gets the current account detail
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -1399,8 +1379,6 @@ class AccountsApi
     /**
      * Operation getLocalisedTimeZones
      *
-     * [PRIVATE API] Get timezones localised to users language
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1414,8 +1392,6 @@ class AccountsApi
 
     /**
      * Operation getLocalisedTimeZonesWithHttpInfo
-     *
-     * [PRIVATE API] Get timezones localised to users language
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1513,7 +1489,7 @@ class AccountsApi
     /**
      * Operation getLocalisedTimeZonesAsync
      *
-     * [PRIVATE API] Get timezones localised to users language
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -1532,7 +1508,7 @@ class AccountsApi
     /**
      * Operation getLocalisedTimeZonesAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get timezones localised to users language
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -1677,9 +1653,7 @@ class AccountsApi
     /**
      * Operation login
      *
-     * Login with username and password
-     *
-     * @param  \Flipdish\\Client\Models\LoginModel $login_model Login model (required)
+     * @param  \Flipdish\\Client\Models\LoginModel $login_model login_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1693,9 +1667,7 @@ class AccountsApi
     /**
      * Operation loginWithHttpInfo
      *
-     * Login with username and password
-     *
-     * @param  \Flipdish\\Client\Models\LoginModel $login_model Login model (required)
+     * @param  \Flipdish\\Client\Models\LoginModel $login_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1770,9 +1742,9 @@ class AccountsApi
     /**
      * Operation loginAsync
      *
-     * Login with username and password
+     * 
      *
-     * @param  \Flipdish\\Client\Models\LoginModel $login_model Login model (required)
+     * @param  \Flipdish\\Client\Models\LoginModel $login_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1790,9 +1762,9 @@ class AccountsApi
     /**
      * Operation loginAsyncWithHttpInfo
      *
-     * Login with username and password
+     * 
      *
-     * @param  \Flipdish\\Client\Models\LoginModel $login_model Login model (required)
+     * @param  \Flipdish\\Client\Models\LoginModel $login_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1828,7 +1800,7 @@ class AccountsApi
     /**
      * Create request for operation 'login'
      *
-     * @param  \Flipdish\\Client\Models\LoginModel $login_model Login model (required)
+     * @param  \Flipdish\\Client\Models\LoginModel $login_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1932,8 +1904,6 @@ class AccountsApi
     /**
      * Operation loginSso
      *
-     * Login with SSO token
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1946,8 +1916,6 @@ class AccountsApi
 
     /**
      * Operation loginSsoWithHttpInfo
-     *
-     * Login with SSO token
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -2023,7 +1991,7 @@ class AccountsApi
     /**
      * Operation loginSsoAsync
      *
-     * Login with SSO token
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -2042,7 +2010,7 @@ class AccountsApi
     /**
      * Operation loginSsoAsyncWithHttpInfo
      *
-     * Login with SSO token
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -2173,9 +2141,7 @@ class AccountsApi
     /**
      * Operation loginWithPin
      *
-     * Login with email and pin
-     *
-     * @param  \Flipdish\\Client\Models\LoginWithPinModel $login_model Login with pin model (required)
+     * @param  \Flipdish\\Client\Models\LoginWithPinModel $login_model login_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2189,9 +2155,7 @@ class AccountsApi
     /**
      * Operation loginWithPinWithHttpInfo
      *
-     * Login with email and pin
-     *
-     * @param  \Flipdish\\Client\Models\LoginWithPinModel $login_model Login with pin model (required)
+     * @param  \Flipdish\\Client\Models\LoginWithPinModel $login_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2266,9 +2230,9 @@ class AccountsApi
     /**
      * Operation loginWithPinAsync
      *
-     * Login with email and pin
+     * 
      *
-     * @param  \Flipdish\\Client\Models\LoginWithPinModel $login_model Login with pin model (required)
+     * @param  \Flipdish\\Client\Models\LoginWithPinModel $login_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2286,9 +2250,9 @@ class AccountsApi
     /**
      * Operation loginWithPinAsyncWithHttpInfo
      *
-     * Login with email and pin
+     * 
      *
-     * @param  \Flipdish\\Client\Models\LoginWithPinModel $login_model Login with pin model (required)
+     * @param  \Flipdish\\Client\Models\LoginWithPinModel $login_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2324,7 +2288,7 @@ class AccountsApi
     /**
      * Create request for operation 'loginWithPin'
      *
-     * @param  \Flipdish\\Client\Models\LoginWithPinModel $login_model Login with pin model (required)
+     * @param  \Flipdish\\Client\Models\LoginWithPinModel $login_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2428,8 +2392,6 @@ class AccountsApi
     /**
      * Operation logout
      *
-     * Log out. It removes Flipdish authorization Cookie.
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2442,8 +2404,6 @@ class AccountsApi
 
     /**
      * Operation logoutWithHttpInfo
-     *
-     * Log out. It removes Flipdish authorization Cookie.
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -2519,7 +2479,7 @@ class AccountsApi
     /**
      * Operation logoutAsync
      *
-     * Log out. It removes Flipdish authorization Cookie.
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -2538,7 +2498,7 @@ class AccountsApi
     /**
      * Operation logoutAsyncWithHttpInfo
      *
-     * Log out. It removes Flipdish authorization Cookie.
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -2669,9 +2629,7 @@ class AccountsApi
     /**
      * Operation passwordResetWithToken
      *
-     * Reset password with token.
-     *
-     * @param  \Flipdish\\Client\Models\PasswordResetModel $password_reset_model Password reset model (required)
+     * @param  \Flipdish\\Client\Models\PasswordResetModel $password_reset_model password_reset_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2685,9 +2643,7 @@ class AccountsApi
     /**
      * Operation passwordResetWithTokenWithHttpInfo
      *
-     * Reset password with token.
-     *
-     * @param  \Flipdish\\Client\Models\PasswordResetModel $password_reset_model Password reset model (required)
+     * @param  \Flipdish\\Client\Models\PasswordResetModel $password_reset_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2754,9 +2710,9 @@ class AccountsApi
     /**
      * Operation passwordResetWithTokenAsync
      *
-     * Reset password with token.
+     * 
      *
-     * @param  \Flipdish\\Client\Models\PasswordResetModel $password_reset_model Password reset model (required)
+     * @param  \Flipdish\\Client\Models\PasswordResetModel $password_reset_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2774,9 +2730,9 @@ class AccountsApi
     /**
      * Operation passwordResetWithTokenAsyncWithHttpInfo
      *
-     * Reset password with token.
+     * 
      *
-     * @param  \Flipdish\\Client\Models\PasswordResetModel $password_reset_model Password reset model (required)
+     * @param  \Flipdish\\Client\Models\PasswordResetModel $password_reset_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2812,7 +2768,7 @@ class AccountsApi
     /**
      * Create request for operation 'passwordResetWithToken'
      *
-     * @param  \Flipdish\\Client\Models\PasswordResetModel $password_reset_model Password reset model (required)
+     * @param  \Flipdish\\Client\Models\PasswordResetModel $password_reset_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2916,9 +2872,7 @@ class AccountsApi
     /**
      * Operation recaptchaValidate
      *
-     * Validate recaptcha from flipdish portal
-     *
-     * @param  string $token Request token (required)
+     * @param  string $token token (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2932,9 +2886,7 @@ class AccountsApi
     /**
      * Operation recaptchaValidateWithHttpInfo
      *
-     * Validate recaptcha from flipdish portal
-     *
-     * @param  string $token Request token (required)
+     * @param  string $token (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3001,9 +2953,9 @@ class AccountsApi
     /**
      * Operation recaptchaValidateAsync
      *
-     * Validate recaptcha from flipdish portal
+     * 
      *
-     * @param  string $token Request token (required)
+     * @param  string $token (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3021,9 +2973,9 @@ class AccountsApi
     /**
      * Operation recaptchaValidateAsyncWithHttpInfo
      *
-     * Validate recaptcha from flipdish portal
+     * 
      *
-     * @param  string $token Request token (required)
+     * @param  string $token (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3059,7 +3011,7 @@ class AccountsApi
     /**
      * Create request for operation 'recaptchaValidate'
      *
-     * @param  string $token Request token (required)
+     * @param  string $token (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3164,9 +3116,7 @@ class AccountsApi
     /**
      * Operation requestLoginPin
      *
-     * Request login PIN. The server sends the PIN to the email address.
-     *
-     * @param  \Flipdish\\Client\Models\RequestLoginPinModel $request_login_pin_request Request login PIN request (required)
+     * @param  \Flipdish\\Client\Models\RequestLoginPinModel $request_login_pin_request request_login_pin_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3181,9 +3131,7 @@ class AccountsApi
     /**
      * Operation requestLoginPinWithHttpInfo
      *
-     * Request login PIN. The server sends the PIN to the email address.
-     *
-     * @param  \Flipdish\\Client\Models\RequestLoginPinModel $request_login_pin_request Request login PIN request (required)
+     * @param  \Flipdish\\Client\Models\RequestLoginPinModel $request_login_pin_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3272,9 +3220,9 @@ class AccountsApi
     /**
      * Operation requestLoginPinAsync
      *
-     * Request login PIN. The server sends the PIN to the email address.
+     * 
      *
-     * @param  \Flipdish\\Client\Models\RequestLoginPinModel $request_login_pin_request Request login PIN request (required)
+     * @param  \Flipdish\\Client\Models\RequestLoginPinModel $request_login_pin_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3292,9 +3240,9 @@ class AccountsApi
     /**
      * Operation requestLoginPinAsyncWithHttpInfo
      *
-     * Request login PIN. The server sends the PIN to the email address.
+     * 
      *
-     * @param  \Flipdish\\Client\Models\RequestLoginPinModel $request_login_pin_request Request login PIN request (required)
+     * @param  \Flipdish\\Client\Models\RequestLoginPinModel $request_login_pin_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3344,7 +3292,7 @@ class AccountsApi
     /**
      * Create request for operation 'requestLoginPin'
      *
-     * @param  \Flipdish\\Client\Models\RequestLoginPinModel $request_login_pin_request Request login PIN request (required)
+     * @param  \Flipdish\\Client\Models\RequestLoginPinModel $request_login_pin_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3448,9 +3396,7 @@ class AccountsApi
     /**
      * Operation requestPasswordReset
      *
-     * Request password reset. Flipdish system will send a token via email.
-     *
-     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_model Request password reset model (required)
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_model request_password_reset_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3464,9 +3410,7 @@ class AccountsApi
     /**
      * Operation requestPasswordResetWithHttpInfo
      *
-     * Request password reset. Flipdish system will send a token via email.
-     *
-     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_model Request password reset model (required)
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3533,9 +3477,9 @@ class AccountsApi
     /**
      * Operation requestPasswordResetAsync
      *
-     * Request password reset. Flipdish system will send a token via email.
+     * 
      *
-     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_model Request password reset model (required)
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3553,9 +3497,9 @@ class AccountsApi
     /**
      * Operation requestPasswordResetAsyncWithHttpInfo
      *
-     * Request password reset. Flipdish system will send a token via email.
+     * 
      *
-     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_model Request password reset model (required)
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3591,7 +3535,7 @@ class AccountsApi
     /**
      * Create request for operation 'requestPasswordReset'
      *
-     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_model Request password reset model (required)
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3695,9 +3639,7 @@ class AccountsApi
     /**
      * Operation sendPinForPasswordReset
      *
-     * Request Password Reset PIN. The server sends the PIN to the email address.
-     *
-     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request  (required)
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request request_password_reset_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3712,9 +3654,7 @@ class AccountsApi
     /**
      * Operation sendPinForPasswordResetWithHttpInfo
      *
-     * Request Password Reset PIN. The server sends the PIN to the email address.
-     *
-     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request  (required)
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3803,9 +3743,9 @@ class AccountsApi
     /**
      * Operation sendPinForPasswordResetAsync
      *
-     * Request Password Reset PIN. The server sends the PIN to the email address.
+     * 
      *
-     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request  (required)
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3823,9 +3763,9 @@ class AccountsApi
     /**
      * Operation sendPinForPasswordResetAsyncWithHttpInfo
      *
-     * Request Password Reset PIN. The server sends the PIN to the email address.
+     * 
      *
-     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request  (required)
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3875,7 +3815,7 @@ class AccountsApi
     /**
      * Create request for operation 'sendPinForPasswordReset'
      *
-     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request  (required)
+     * @param  \Flipdish\\Client\Models\RequestPasswordResetModel $request_password_reset_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3979,9 +3919,7 @@ class AccountsApi
     /**
      * Operation skipSignupStep
      *
-     * Skip a signup question
-     *
-     * @param  string $signup_step_action Signup step action (required)
+     * @param  string $signup_step_action signup_step_action (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3995,9 +3933,7 @@ class AccountsApi
     /**
      * Operation skipSignupStepWithHttpInfo
      *
-     * Skip a signup question
-     *
-     * @param  string $signup_step_action Signup step action (required)
+     * @param  string $signup_step_action (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4072,9 +4008,9 @@ class AccountsApi
     /**
      * Operation skipSignupStepAsync
      *
-     * Skip a signup question
+     * 
      *
-     * @param  string $signup_step_action Signup step action (required)
+     * @param  string $signup_step_action (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4092,9 +4028,9 @@ class AccountsApi
     /**
      * Operation skipSignupStepAsyncWithHttpInfo
      *
-     * Skip a signup question
+     * 
      *
-     * @param  string $signup_step_action Signup step action (required)
+     * @param  string $signup_step_action (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4130,7 +4066,7 @@ class AccountsApi
     /**
      * Create request for operation 'skipSignupStep'
      *
-     * @param  string $signup_step_action Signup step action (required)
+     * @param  string $signup_step_action (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4239,9 +4175,7 @@ class AccountsApi
     /**
      * Operation updateAccount
      *
-     * Update account with name and language
-     *
-     * @param  \Flipdish\\Client\Models\AccountDetailBase $update_account_model Update account model (required)
+     * @param  \Flipdish\\Client\Models\AccountDetailBase $update_account_model update_account_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4255,9 +4189,7 @@ class AccountsApi
     /**
      * Operation updateAccountWithHttpInfo
      *
-     * Update account with name and language
-     *
-     * @param  \Flipdish\\Client\Models\AccountDetailBase $update_account_model Update account model (required)
+     * @param  \Flipdish\\Client\Models\AccountDetailBase $update_account_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4324,9 +4256,9 @@ class AccountsApi
     /**
      * Operation updateAccountAsync
      *
-     * Update account with name and language
+     * 
      *
-     * @param  \Flipdish\\Client\Models\AccountDetailBase $update_account_model Update account model (required)
+     * @param  \Flipdish\\Client\Models\AccountDetailBase $update_account_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4344,9 +4276,9 @@ class AccountsApi
     /**
      * Operation updateAccountAsyncWithHttpInfo
      *
-     * Update account with name and language
+     * 
      *
-     * @param  \Flipdish\\Client\Models\AccountDetailBase $update_account_model Update account model (required)
+     * @param  \Flipdish\\Client\Models\AccountDetailBase $update_account_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4382,7 +4314,7 @@ class AccountsApi
     /**
      * Create request for operation 'updateAccount'
      *
-     * @param  \Flipdish\\Client\Models\AccountDetailBase $update_account_model Update account model (required)
+     * @param  \Flipdish\\Client\Models\AccountDetailBase $update_account_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

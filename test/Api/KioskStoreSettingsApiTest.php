@@ -74,7 +74,7 @@ class KioskStoreSettingsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAllKioskSettingsForStore
      *
-     * Get all kiosk settings associated with a store.
+     * .
      *
      */
     public function testGetAllKioskSettingsForStore()
@@ -84,7 +84,7 @@ class KioskStoreSettingsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAllStoreSettingsForKioskHydra
      *
-     * [For Kiosk use only] Get all stores connected to a Kiosk.
+     * .
      *
      */
     public function testGetAllStoreSettingsForKioskHydra()

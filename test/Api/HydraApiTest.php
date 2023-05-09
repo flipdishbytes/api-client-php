@@ -74,7 +74,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for assignEmv
      *
-     * Assign an EMV terminal to a kiosk.
+     * .
      *
      */
     public function testAssignEmv()
@@ -84,7 +84,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for attachStoreToKiosk
      *
-     * [Private].
+     * .
      *
      */
     public function testAttachStoreToKiosk()
@@ -94,7 +94,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for attachStoreToTerminal
      *
-     * [Private].
+     * .
      *
      */
     public function testAttachStoreToTerminal()
@@ -114,7 +114,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for detachStoreFromTerminal
      *
-     * [Private].
+     * .
      *
      */
     public function testDetachStoreFromTerminal()
@@ -124,7 +124,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAttachedDevice
      *
-     * [Private].
+     * .
      *
      */
     public function testGetAttachedDevice()
@@ -134,7 +134,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAttachedDevices
      *
-     * [Private].
+     * .
      *
      */
     public function testGetAttachedDevices()
@@ -144,7 +144,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getEMVTerminalDetails
      *
-     * [Private].
+     * .
      *
      */
     public function testGetEMVTerminalDetails()
@@ -154,7 +154,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getEmvOrderState
      *
-     * [Private].
+     * .
      *
      */
     public function testGetEmvOrderState()
@@ -164,7 +164,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getKioskCashPaymentSettings
      *
-     * Get the status of Cash Payment Method on Kiosk.
+     * .
      *
      */
     public function testGetKioskCashPaymentSettings()
@@ -184,7 +184,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getSettings
      *
-     * [Private].
+     * .
      *
      */
     public function testGetSettings()
@@ -194,7 +194,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for hydraCreateEmv
      *
-     * [Private].
+     * .
      *
      */
     public function testHydraCreateEmv()
@@ -204,7 +204,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for hydraDeleteEmv
      *
-     * [Private].
+     * .
      *
      */
     public function testHydraDeleteEmv()
@@ -214,7 +214,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for hydraDetachStoreFromKiosk
      *
-     * [Private].
+     * .
      *
      */
     public function testHydraDetachStoreFromKiosk()
@@ -224,7 +224,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for hydraGetEmvsForAppId
      *
-     * List EMV terminals belonging to the given AppNameId.
+     * .
      *
      */
     public function testHydraGetEmvsForAppId()
@@ -234,7 +234,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for loginWithDeviceId
      *
-     * [Private].
+     * .
      *
      */
     public function testLoginWithDeviceId()
@@ -244,7 +244,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for register
      *
-     * [Private].
+     * .
      *
      */
     public function testRegister()
@@ -254,7 +254,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for unAssign
      *
-     * [Private].
+     * .
      *
      */
     public function testUnAssign()
@@ -264,7 +264,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for unassignEmv
      *
-     * Unassign the currently assigned EMV terminal from a kiosk.
+     * .
      *
      */
     public function testUnassignEmv()
@@ -274,7 +274,7 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateKioskCashVisibilitySettings
      *
-     * Update the Cash Payment Method Visibility on Kiosk.
+     * .
      *
      */
     public function testUpdateKioskCashVisibilitySettings()

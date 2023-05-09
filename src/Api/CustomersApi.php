@@ -90,10 +90,8 @@ class CustomersApi
     /**
      * Operation getCustomerById
      *
-     * Get customer of an app by Id
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $customer_id Customer Id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $customer_id customer_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class CustomersApi
     /**
      * Operation getCustomerByIdWithHttpInfo
      *
-     * Get customer of an app by Id
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $customer_id Customer Id (required)
+     * @param  string $app_id (required)
+     * @param  int $customer_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -208,10 +204,10 @@ class CustomersApi
     /**
      * Operation getCustomerByIdAsync
      *
-     * Get customer of an app by Id
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $customer_id Customer Id (required)
+     * @param  string $app_id (required)
+     * @param  int $customer_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -229,10 +225,10 @@ class CustomersApi
     /**
      * Operation getCustomerByIdAsyncWithHttpInfo
      *
-     * Get customer of an app by Id
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $customer_id Customer Id (required)
+     * @param  string $app_id (required)
+     * @param  int $customer_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -282,8 +278,8 @@ class CustomersApi
     /**
      * Create request for operation 'getCustomerById'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $customer_id Customer Id (required)
+     * @param  string $app_id (required)
+     * @param  int $customer_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -406,11 +402,9 @@ class CustomersApi
     /**
      * Operation updateCustomerById
      *
-     * Update customer of an app by Id
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $customer_id Customer Id (required)
-     * @param  \Flipdish\\Client\Models\CustomerUpdateModel $update_customer Updated customer information (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $customer_id customer_id (required)
+     * @param  \Flipdish\\Client\Models\CustomerUpdateModel $update_customer update_customer (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -425,11 +419,9 @@ class CustomersApi
     /**
      * Operation updateCustomerByIdWithHttpInfo
      *
-     * Update customer of an app by Id
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $customer_id Customer Id (required)
-     * @param  \Flipdish\\Client\Models\CustomerUpdateModel $update_customer Updated customer information (required)
+     * @param  string $app_id (required)
+     * @param  int $customer_id (required)
+     * @param  \Flipdish\\Client\Models\CustomerUpdateModel $update_customer (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -526,11 +518,11 @@ class CustomersApi
     /**
      * Operation updateCustomerByIdAsync
      *
-     * Update customer of an app by Id
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $customer_id Customer Id (required)
-     * @param  \Flipdish\\Client\Models\CustomerUpdateModel $update_customer Updated customer information (required)
+     * @param  string $app_id (required)
+     * @param  int $customer_id (required)
+     * @param  \Flipdish\\Client\Models\CustomerUpdateModel $update_customer (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -548,11 +540,11 @@ class CustomersApi
     /**
      * Operation updateCustomerByIdAsyncWithHttpInfo
      *
-     * Update customer of an app by Id
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $customer_id Customer Id (required)
-     * @param  \Flipdish\\Client\Models\CustomerUpdateModel $update_customer Updated customer information (required)
+     * @param  string $app_id (required)
+     * @param  int $customer_id (required)
+     * @param  \Flipdish\\Client\Models\CustomerUpdateModel $update_customer (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -602,9 +594,9 @@ class CustomersApi
     /**
      * Create request for operation 'updateCustomerById'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $customer_id Customer Id (required)
-     * @param  \Flipdish\\Client\Models\CustomerUpdateModel $update_customer Updated customer information (required)
+     * @param  string $app_id (required)
+     * @param  int $customer_id (required)
+     * @param  \Flipdish\\Client\Models\CustomerUpdateModel $update_customer (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

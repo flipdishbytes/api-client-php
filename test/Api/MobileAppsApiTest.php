@@ -74,7 +74,7 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAppConfigSalesChannel
      *
-     * Get sales channel configuration.
+     * .
      *
      */
     public function testGetAppConfigSalesChannel()
@@ -84,7 +84,7 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStatistics
      *
-     * Get statistics mobile apps.
+     * .
      *
      */
     public function testGetStatistics()
@@ -94,7 +94,7 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getSubmissionDetails
      *
-     * Get submission details mobile apps.
+     * .
      *
      */
     public function testGetSubmissionDetails()
@@ -104,7 +104,7 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getSubmissionStatus
      *
-     * Get submission status mobile apps.
+     * .
      *
      */
     public function testGetSubmissionStatus()
@@ -114,7 +114,7 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for publish
      *
-     * Publish mobile apps.
+     * .
      *
      */
     public function testPublish()
@@ -124,7 +124,7 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for resubmission
      *
-     * Re-submission form mobile apps.
+     * .
      *
      */
     public function testResubmission()
@@ -134,7 +134,7 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for submission
      *
-     * Submission form mobile apps.
+     * .
      *
      */
     public function testSubmission()
@@ -144,7 +144,7 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for unpublish
      *
-     * Unpublish mobile apps.
+     * .
      *
      */
     public function testUnpublish()
@@ -154,7 +154,7 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateAppConfigSalesChannel
      *
-     * Update the application sales channel configuration.
+     * .
      *
      */
     public function testUpdateAppConfigSalesChannel()
@@ -164,7 +164,7 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateSubmissionStatus
      *
-     * Update submission status.
+     * .
      *
      */
     public function testUpdateSubmissionStatus()
@@ -174,7 +174,7 @@ class MobileAppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for uploadImage
      *
-     * Upload image mobile apps.
+     * .
      *
      */
     public function testUploadImage()

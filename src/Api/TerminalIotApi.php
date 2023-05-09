@@ -90,8 +90,6 @@ class TerminalIotApi
     /**
      * Operation getTerminalIotConnection
      *
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -105,8 +103,6 @@ class TerminalIotApi
 
     /**
      * Operation getTerminalIotConnectionWithHttpInfo
-     *
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -204,7 +200,7 @@ class TerminalIotApi
     /**
      * Operation getTerminalIotConnectionAsync
      *
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -223,7 +219,7 @@ class TerminalIotApi
     /**
      * Operation getTerminalIotConnectionAsyncWithHttpInfo
      *
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
+     * 
      *
      *
      * @throws \InvalidArgumentException

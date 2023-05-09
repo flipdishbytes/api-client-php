@@ -74,7 +74,7 @@ class PayoutsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPayout
      *
-     * Get Payout details broken down by Store.
+     * .
      *
      */
     public function testGetPayout()
@@ -84,7 +84,7 @@ class PayoutsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPayoutChargebacks
      *
-     * Get list of payout's chargebacks.
+     * .
      *
      */
     public function testGetPayoutChargebacks()
@@ -94,7 +94,7 @@ class PayoutsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPayoutOrders
      *
-     * Get list of payout's orders.
+     * .
      *
      */
     public function testGetPayoutOrders()
@@ -104,7 +104,7 @@ class PayoutsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPayoutOtherCharges
      *
-     * Get list of payout's other charges.
+     * .
      *
      */
     public function testGetPayoutOtherCharges()
@@ -114,7 +114,7 @@ class PayoutsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPayoutRefunds
      *
-     * Get list of payout's refunds.
+     * .
      *
      */
     public function testGetPayoutRefunds()
@@ -124,7 +124,7 @@ class PayoutsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPayoutSummaries
      *
-     * Get list of payout summaries.
+     * .
      *
      */
     public function testGetPayoutSummaries()
@@ -134,7 +134,7 @@ class PayoutsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPayouts
      *
-     * Get list of payouts.
+     * .
      *
      */
     public function testGetPayouts()

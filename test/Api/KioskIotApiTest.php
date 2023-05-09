@@ -74,7 +74,7 @@ class KioskIotApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getKioskIotConnection
      *
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context.
+     * .
      *
      */
     public function testGetKioskIotConnection()
@@ -84,7 +84,7 @@ class KioskIotApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for queryTelemetrySeries
      *
-     * Get the IoT time series values for a given Kiosk Id, properties and time range.
+     * .
      *
      */
     public function testQueryTelemetrySeries()

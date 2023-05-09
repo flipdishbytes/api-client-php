@@ -74,7 +74,7 @@ class AuditLogsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for addOrderAuditLog
      *
-     * Create an order audit log event.
+     * .
      *
      */
     public function testAddOrderAuditLog()
@@ -84,7 +84,7 @@ class AuditLogsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for addStoreAuditLogEvent
      *
-     * Create a store audit log event.
+     * .
      *
      */
     public function testAddStoreAuditLogEvent()

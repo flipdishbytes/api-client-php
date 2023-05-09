@@ -90,9 +90,7 @@ class AppStoreApi
     /**
      * Operation getAppStoreApp
      *
-     * Get App store app
-     *
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $app_store_app_id app_store_app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,9 +105,7 @@ class AppStoreApi
     /**
      * Operation getAppStoreAppWithHttpInfo
      *
-     * Get App store app
-     *
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $app_store_app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -214,9 +210,9 @@ class AppStoreApi
     /**
      * Operation getAppStoreAppAsync
      *
-     * Get App store app
+     * 
      *
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $app_store_app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -234,9 +230,9 @@ class AppStoreApi
     /**
      * Operation getAppStoreAppAsyncWithHttpInfo
      *
-     * Get App store app
+     * 
      *
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $app_store_app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -286,7 +282,7 @@ class AppStoreApi
     /**
      * Create request for operation 'getAppStoreApp'
      *
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $app_store_app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -395,12 +391,10 @@ class AppStoreApi
     /**
      * Operation getAppStoreApps
      *
-     * Get list of App store app summaries
-     *
-     * @param  string $search Query App store app name (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  bool $exclude_not_owned Exclude App store apps that user is not the owner off (optional)
+     * @param  string $search search (required)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
+     * @param  bool $exclude_not_owned exclude_not_owned (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -415,12 +409,10 @@ class AppStoreApi
     /**
      * Operation getAppStoreAppsWithHttpInfo
      *
-     * Get list of App store app summaries
-     *
-     * @param  string $search Query App store app name (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  bool $exclude_not_owned Exclude App store apps that user is not the owner off (optional)
+     * @param  string $search (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  bool $exclude_not_owned (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -517,12 +509,12 @@ class AppStoreApi
     /**
      * Operation getAppStoreAppsAsync
      *
-     * Get list of App store app summaries
+     * 
      *
-     * @param  string $search Query App store app name (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  bool $exclude_not_owned Exclude App store apps that user is not the owner off (optional)
+     * @param  string $search (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  bool $exclude_not_owned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -540,12 +532,12 @@ class AppStoreApi
     /**
      * Operation getAppStoreAppsAsyncWithHttpInfo
      *
-     * Get list of App store app summaries
+     * 
      *
-     * @param  string $search Query App store app name (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  bool $exclude_not_owned Exclude App store apps that user is not the owner off (optional)
+     * @param  string $search (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  bool $exclude_not_owned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -595,10 +587,10 @@ class AppStoreApi
     /**
      * Create request for operation 'getAppStoreApps'
      *
-     * @param  string $search Query App store app name (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  bool $exclude_not_owned Exclude App store apps that user is not the owner off (optional)
+     * @param  string $search (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  bool $exclude_not_owned (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

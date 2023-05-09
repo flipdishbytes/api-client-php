@@ -74,7 +74,7 @@ class CustomersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getCustomerById
      *
-     * Get customer of an app by Id.
+     * .
      *
      */
     public function testGetCustomerById()
@@ -84,7 +84,7 @@ class CustomersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateCustomerById
      *
-     * Update customer of an app by Id.
+     * .
      *
      */
     public function testUpdateCustomerById()

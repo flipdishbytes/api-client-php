@@ -90,12 +90,10 @@ class AuthorizationTokensApi
     /**
      * Operation getAuthorizationTokens
      *
-     * Get authorization tokens
-     *
-     * @param  string $oauth_app_id Client identifier (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
      * @param  string $app_id app_id (required)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -110,12 +108,10 @@ class AuthorizationTokensApi
     /**
      * Operation getAuthorizationTokensWithHttpInfo
      *
-     * Get authorization tokens
-     *
-     * @param  string $oauth_app_id Client identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -220,12 +216,12 @@ class AuthorizationTokensApi
     /**
      * Operation getAuthorizationTokensAsync
      *
-     * Get authorization tokens
+     * 
      *
-     * @param  string $oauth_app_id Client identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -243,12 +239,12 @@ class AuthorizationTokensApi
     /**
      * Operation getAuthorizationTokensAsyncWithHttpInfo
      *
-     * Get authorization tokens
+     * 
      *
-     * @param  string $oauth_app_id Client identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -298,10 +294,10 @@ class AuthorizationTokensApi
     /**
      * Create request for operation 'getAuthorizationTokens'
      *
-     * @param  string $oauth_app_id Client identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -432,9 +428,7 @@ class AuthorizationTokensApi
     /**
      * Operation revokeToken
      *
-     * Revoke token
-     *
-     * @param  string $key Token identifier key (required)
+     * @param  string $key key (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -449,9 +443,7 @@ class AuthorizationTokensApi
     /**
      * Operation revokeTokenWithHttpInfo
      *
-     * Revoke token
-     *
-     * @param  string $key Token identifier key (required)
+     * @param  string $key (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -535,9 +527,9 @@ class AuthorizationTokensApi
     /**
      * Operation revokeTokenAsync
      *
-     * Revoke token
+     * 
      *
-     * @param  string $key Token identifier key (required)
+     * @param  string $key (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -556,9 +548,9 @@ class AuthorizationTokensApi
     /**
      * Operation revokeTokenAsyncWithHttpInfo
      *
-     * Revoke token
+     * 
      *
-     * @param  string $key Token identifier key (required)
+     * @param  string $key (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -595,7 +587,7 @@ class AuthorizationTokensApi
     /**
      * Create request for operation 'revokeToken'
      *
-     * @param  string $key Token identifier key (required)
+     * @param  string $key (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException

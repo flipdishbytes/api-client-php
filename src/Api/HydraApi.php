@@ -90,8 +90,6 @@ class HydraApi
     /**
      * Operation assignEmv
      *
-     * Assign an EMV terminal to a kiosk
-     *
      * @param  string $app_id app_id (required)
      * @param  int $hydra_config_id hydra_config_id (required)
      * @param  int $emv_terminal_id emv_terminal_id (required)
@@ -107,8 +105,6 @@ class HydraApi
 
     /**
      * Operation assignEmvWithHttpInfo
-     *
-     * Assign an EMV terminal to a kiosk
      *
      * @param  string $app_id (required)
      * @param  int $hydra_config_id (required)
@@ -179,7 +175,7 @@ class HydraApi
     /**
      * Operation assignEmvAsync
      *
-     * Assign an EMV terminal to a kiosk
+     * 
      *
      * @param  string $app_id (required)
      * @param  int $hydra_config_id (required)
@@ -201,7 +197,7 @@ class HydraApi
     /**
      * Operation assignEmvAsyncWithHttpInfo
      *
-     * Assign an EMV terminal to a kiosk
+     * 
      *
      * @param  string $app_id (required)
      * @param  int $hydra_config_id (required)
@@ -380,8 +376,6 @@ class HydraApi
     /**
      * Operation attachStoreToKiosk
      *
-     * [Private]
-     *
      * @param  string $app_id app_id (required)
      * @param  int $store_id store_id (required)
      * @param  string $device_id device_id (required)
@@ -398,8 +392,6 @@ class HydraApi
 
     /**
      * Operation attachStoreToKioskWithHttpInfo
-     *
-     * [Private]
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
@@ -500,7 +492,7 @@ class HydraApi
     /**
      * Operation attachStoreToKioskAsync
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
@@ -522,7 +514,7 @@ class HydraApi
     /**
      * Operation attachStoreToKioskAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
@@ -715,8 +707,6 @@ class HydraApi
     /**
      * Operation attachStoreToTerminal
      *
-     * [Private]
-     *
      * @param  string $app_id app_id (required)
      * @param  string $device_id device_id (required)
      * @param  int $store_id store_id (required)
@@ -733,8 +723,6 @@ class HydraApi
 
     /**
      * Operation attachStoreToTerminalWithHttpInfo
-     *
-     * [Private]
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -835,7 +823,7 @@ class HydraApi
     /**
      * Operation attachStoreToTerminalAsync
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -857,7 +845,7 @@ class HydraApi
     /**
      * Operation attachStoreToTerminalAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -1325,8 +1313,6 @@ class HydraApi
     /**
      * Operation detachStoreFromTerminal
      *
-     * [Private]
-     *
      * @param  string $app_id app_id (required)
      * @param  string $device_id device_id (required)
      * @param  int $store_id store_id (required)
@@ -1343,8 +1329,6 @@ class HydraApi
 
     /**
      * Operation detachStoreFromTerminalWithHttpInfo
-     *
-     * [Private]
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -1445,7 +1429,7 @@ class HydraApi
     /**
      * Operation detachStoreFromTerminalAsync
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -1467,7 +1451,7 @@ class HydraApi
     /**
      * Operation detachStoreFromTerminalAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -1660,8 +1644,6 @@ class HydraApi
     /**
      * Operation getAttachedDevice
      *
-     * [Private]
-     *
      * @param  string $app_id app_id (required)
      * @param  string $device_type device_type (required)
      * @param  string $device_id device_id (required)
@@ -1678,8 +1660,6 @@ class HydraApi
 
     /**
      * Operation getAttachedDeviceWithHttpInfo
-     *
-     * [Private]
      *
      * @param  string $app_id (required)
      * @param  string $device_type (required)
@@ -1780,7 +1760,7 @@ class HydraApi
     /**
      * Operation getAttachedDeviceAsync
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_type (required)
@@ -1802,7 +1782,7 @@ class HydraApi
     /**
      * Operation getAttachedDeviceAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_type (required)
@@ -1995,8 +1975,6 @@ class HydraApi
     /**
      * Operation getAttachedDevices
      *
-     * [Private]
-     *
      * @param  string $app_id app_id (required)
      * @param  string $device_type device_type (required)
      * @param  int $page_index page_index (optional)
@@ -2017,8 +1995,6 @@ class HydraApi
 
     /**
      * Operation getAttachedDevicesWithHttpInfo
-     *
-     * [Private]
      *
      * @param  string $app_id (required)
      * @param  string $device_type (required)
@@ -2123,7 +2099,7 @@ class HydraApi
     /**
      * Operation getAttachedDevicesAsync
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_type (required)
@@ -2149,7 +2125,7 @@ class HydraApi
     /**
      * Operation getAttachedDevicesAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_type (required)
@@ -2356,8 +2332,6 @@ class HydraApi
     /**
      * Operation getEMVTerminalDetails
      *
-     * [Private]
-     *
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -2372,8 +2346,6 @@ class HydraApi
 
     /**
      * Operation getEMVTerminalDetailsWithHttpInfo
-     *
-     * [Private]
      *
      * @param  string $app_id (required)
      *
@@ -2472,7 +2444,7 @@ class HydraApi
     /**
      * Operation getEMVTerminalDetailsAsync
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -2492,7 +2464,7 @@ class HydraApi
     /**
      * Operation getEMVTerminalDetailsAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -2653,8 +2625,6 @@ class HydraApi
     /**
      * Operation getEmvOrderState
      *
-     * [Private]
-     *
      * @param  int $order_id order_id (required)
      * @param  string $app_id app_id (required)
      *
@@ -2670,8 +2640,6 @@ class HydraApi
 
     /**
      * Operation getEmvOrderStateWithHttpInfo
-     *
-     * [Private]
      *
      * @param  int $order_id (required)
      * @param  string $app_id (required)
@@ -2771,7 +2739,7 @@ class HydraApi
     /**
      * Operation getEmvOrderStateAsync
      *
-     * [Private]
+     * 
      *
      * @param  int $order_id (required)
      * @param  string $app_id (required)
@@ -2792,7 +2760,7 @@ class HydraApi
     /**
      * Operation getEmvOrderStateAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      * @param  int $order_id (required)
      * @param  string $app_id (required)
@@ -2969,8 +2937,6 @@ class HydraApi
     /**
      * Operation getKioskCashPaymentSettings
      *
-     * Get the status of Cash Payment Method on Kiosk
-     *
      * @param  string $app_id app_id (required)
      * @param  string $device_id device_id (required)
      *
@@ -2986,8 +2952,6 @@ class HydraApi
 
     /**
      * Operation getKioskCashPaymentSettingsWithHttpInfo
-     *
-     * Get the status of Cash Payment Method on Kiosk
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -3087,7 +3051,7 @@ class HydraApi
     /**
      * Operation getKioskCashPaymentSettingsAsync
      *
-     * Get the status of Cash Payment Method on Kiosk
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -3108,7 +3072,7 @@ class HydraApi
     /**
      * Operation getKioskCashPaymentSettingsAsyncWithHttpInfo
      *
-     * Get the status of Cash Payment Method on Kiosk
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -3559,8 +3523,6 @@ class HydraApi
     /**
      * Operation getSettings
      *
-     * [Private]
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3574,8 +3536,6 @@ class HydraApi
 
     /**
      * Operation getSettingsWithHttpInfo
-     *
-     * [Private]
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -3673,7 +3633,7 @@ class HydraApi
     /**
      * Operation getSettingsAsync
      *
-     * [Private]
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -3692,7 +3652,7 @@ class HydraApi
     /**
      * Operation getSettingsAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -3837,8 +3797,6 @@ class HydraApi
     /**
      * Operation hydraCreateEmv
      *
-     * [Private]
-     *
      * @param  string $app_id app_id (required)
      * @param  \Flipdish\\Client\Models\EmvTerminal $emv emv (required)
      *
@@ -3854,8 +3812,6 @@ class HydraApi
 
     /**
      * Operation hydraCreateEmvWithHttpInfo
-     *
-     * [Private]
      *
      * @param  string $app_id (required)
      * @param  \Flipdish\\Client\Models\EmvTerminal $emv (required)
@@ -3955,7 +3911,7 @@ class HydraApi
     /**
      * Operation hydraCreateEmvAsync
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  \Flipdish\\Client\Models\EmvTerminal $emv (required)
@@ -3976,7 +3932,7 @@ class HydraApi
     /**
      * Operation hydraCreateEmvAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  \Flipdish\\Client\Models\EmvTerminal $emv (required)
@@ -4148,8 +4104,6 @@ class HydraApi
     /**
      * Operation hydraDeleteEmv
      *
-     * [Private]
-     *
      * @param  string $app_id app_id (required)
      * @param  int $id id (required)
      *
@@ -4165,8 +4119,6 @@ class HydraApi
 
     /**
      * Operation hydraDeleteEmvWithHttpInfo
-     *
-     * [Private]
      *
      * @param  string $app_id (required)
      * @param  int $id (required)
@@ -4266,7 +4218,7 @@ class HydraApi
     /**
      * Operation hydraDeleteEmvAsync
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  int $id (required)
@@ -4287,7 +4239,7 @@ class HydraApi
     /**
      * Operation hydraDeleteEmvAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  int $id (required)
@@ -4464,8 +4416,6 @@ class HydraApi
     /**
      * Operation hydraDetachStoreFromKiosk
      *
-     * [Private]
-     *
      * @param  string $app_id app_id (required)
      * @param  int $store_id store_id (required)
      * @param  string $device_id device_id (required)
@@ -4482,8 +4432,6 @@ class HydraApi
 
     /**
      * Operation hydraDetachStoreFromKioskWithHttpInfo
-     *
-     * [Private]
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
@@ -4584,7 +4532,7 @@ class HydraApi
     /**
      * Operation hydraDetachStoreFromKioskAsync
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
@@ -4606,7 +4554,7 @@ class HydraApi
     /**
      * Operation hydraDetachStoreFromKioskAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
@@ -4799,8 +4747,6 @@ class HydraApi
     /**
      * Operation hydraGetEmvsForAppId
      *
-     * List EMV terminals belonging to the given AppNameId
-     *
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -4815,8 +4761,6 @@ class HydraApi
 
     /**
      * Operation hydraGetEmvsForAppIdWithHttpInfo
-     *
-     * List EMV terminals belonging to the given AppNameId
      *
      * @param  string $app_id (required)
      *
@@ -4915,7 +4859,7 @@ class HydraApi
     /**
      * Operation hydraGetEmvsForAppIdAsync
      *
-     * List EMV terminals belonging to the given AppNameId
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -4935,7 +4879,7 @@ class HydraApi
     /**
      * Operation hydraGetEmvsForAppIdAsyncWithHttpInfo
      *
-     * List EMV terminals belonging to the given AppNameId
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -5096,8 +5040,6 @@ class HydraApi
     /**
      * Operation loginWithDeviceId
      *
-     * [Private]
-     *
      * @param  string $device_id device_id (required)
      * @param  string $hydra_user_type hydra_user_type (optional)
      * @param  string $serial_number serial_number (optional)
@@ -5113,8 +5055,6 @@ class HydraApi
 
     /**
      * Operation loginWithDeviceIdWithHttpInfo
-     *
-     * [Private]
      *
      * @param  string $device_id (required)
      * @param  string $hydra_user_type (optional)
@@ -5193,7 +5133,7 @@ class HydraApi
     /**
      * Operation loginWithDeviceIdAsync
      *
-     * [Private]
+     * 
      *
      * @param  string $device_id (required)
      * @param  string $hydra_user_type (optional)
@@ -5215,7 +5155,7 @@ class HydraApi
     /**
      * Operation loginWithDeviceIdAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      * @param  string $device_id (required)
      * @param  string $hydra_user_type (optional)
@@ -5374,8 +5314,6 @@ class HydraApi
     /**
      * Operation register
      *
-     * [Private]
-     *
      * @param  string $app_id app_id (required)
      * @param  \Flipdish\\Client\Models\HydraRegistrationRequest $hydra_registration hydra_registration (required)
      *
@@ -5391,8 +5329,6 @@ class HydraApi
 
     /**
      * Operation registerWithHttpInfo
-     *
-     * [Private]
      *
      * @param  string $app_id (required)
      * @param  \Flipdish\\Client\Models\HydraRegistrationRequest $hydra_registration (required)
@@ -5492,7 +5428,7 @@ class HydraApi
     /**
      * Operation registerAsync
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  \Flipdish\\Client\Models\HydraRegistrationRequest $hydra_registration (required)
@@ -5513,7 +5449,7 @@ class HydraApi
     /**
      * Operation registerAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  \Flipdish\\Client\Models\HydraRegistrationRequest $hydra_registration (required)
@@ -5685,8 +5621,6 @@ class HydraApi
     /**
      * Operation unAssign
      *
-     * [Private]
-     *
      * @param  string $app_id app_id (required)
      * @param  string $device_id device_id (required)
      *
@@ -5701,8 +5635,6 @@ class HydraApi
 
     /**
      * Operation unAssignWithHttpInfo
-     *
-     * [Private]
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -5780,7 +5712,7 @@ class HydraApi
     /**
      * Operation unAssignAsync
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -5801,7 +5733,7 @@ class HydraApi
     /**
      * Operation unAssignAsyncWithHttpInfo
      *
-     * [Private]
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -5964,8 +5896,6 @@ class HydraApi
     /**
      * Operation unassignEmv
      *
-     * Unassign the currently assigned EMV terminal from a kiosk
-     *
      * @param  string $app_id app_id (required)
      * @param  int $hydra_config_id hydra_config_id (required)
      *
@@ -5980,8 +5910,6 @@ class HydraApi
 
     /**
      * Operation unassignEmvWithHttpInfo
-     *
-     * Unassign the currently assigned EMV terminal from a kiosk
      *
      * @param  string $app_id (required)
      * @param  int $hydra_config_id (required)
@@ -6059,7 +5987,7 @@ class HydraApi
     /**
      * Operation unassignEmvAsync
      *
-     * Unassign the currently assigned EMV terminal from a kiosk
+     * 
      *
      * @param  string $app_id (required)
      * @param  int $hydra_config_id (required)
@@ -6080,7 +6008,7 @@ class HydraApi
     /**
      * Operation unassignEmvAsyncWithHttpInfo
      *
-     * Unassign the currently assigned EMV terminal from a kiosk
+     * 
      *
      * @param  string $app_id (required)
      * @param  int $hydra_config_id (required)
@@ -6243,8 +6171,6 @@ class HydraApi
     /**
      * Operation updateKioskCashVisibilitySettings
      *
-     * Update the Cash Payment Method Visibility on Kiosk
-     *
      * @param  string $app_id app_id (required)
      * @param  string $device_id device_id (required)
      * @param  bool $is_cash_enabled is_cash_enabled (required)
@@ -6260,8 +6186,6 @@ class HydraApi
 
     /**
      * Operation updateKioskCashVisibilitySettingsWithHttpInfo
-     *
-     * Update the Cash Payment Method Visibility on Kiosk
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -6340,7 +6264,7 @@ class HydraApi
     /**
      * Operation updateKioskCashVisibilitySettingsAsync
      *
-     * Update the Cash Payment Method Visibility on Kiosk
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -6362,7 +6286,7 @@ class HydraApi
     /**
      * Operation updateKioskCashVisibilitySettingsAsyncWithHttpInfo
      *
-     * Update the Cash Payment Method Visibility on Kiosk
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)

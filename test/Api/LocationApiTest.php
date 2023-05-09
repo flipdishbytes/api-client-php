@@ -74,7 +74,7 @@ class LocationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createLocation
      *
-     * Create a Location i.e: Table, Hotel Room, Car park space.
+     * .
      *
      */
     public function testCreateLocation()
@@ -84,7 +84,7 @@ class LocationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteLocation
      *
-     * Set a Location as deleted.
+     * .
      *
      */
     public function testDeleteLocation()
@@ -94,7 +94,7 @@ class LocationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for mapLocationToExternalId
      *
-     * Set or unset External Location Id on a Location.
+     * .
      *
      */
     public function testMapLocationToExternalId()
@@ -104,7 +104,7 @@ class LocationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for moveLocation
      *
-     * Move a Location to a different location Area.
+     * .
      *
      */
     public function testMoveLocation()
@@ -114,7 +114,7 @@ class LocationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateLocation
      *
-     * Update a Location i.e: Table, Hotel Room, Car park space.
+     * .
      *
      */
     public function testUpdateLocation()

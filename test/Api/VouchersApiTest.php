@@ -74,7 +74,7 @@ class VouchersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createVoucher
      *
-     * [PRIVATE API] Create voucher.
+     * .
      *
      */
     public function testCreateVoucher()
@@ -84,7 +84,7 @@ class VouchersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getVoucherById
      *
-     * [PRIVATE API] Get voucher by identifier.
+     * .
      *
      */
     public function testGetVoucherById()
@@ -94,7 +94,7 @@ class VouchersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getVoucherStatsById
      *
-     * [PRIVATE API] Get voucher stats by identifier.
+     * .
      *
      */
     public function testGetVoucherStatsById()
@@ -104,7 +104,7 @@ class VouchersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getVouchers
      *
-     * [PRIVATE API] Get vouchers summaries for App Id.
+     * .
      *
      */
     public function testGetVouchers()
@@ -114,7 +114,7 @@ class VouchersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateVoucher
      *
-     * [PRIVATE API] Updates voucher.
+     * .
      *
      */
     public function testUpdateVoucher()

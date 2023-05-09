@@ -90,9 +90,7 @@ class MobileAppsApi
     /**
      * Operation getAppConfigSalesChannel
      *
-     * Get sales channel configuration
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,9 +105,7 @@ class MobileAppsApi
     /**
      * Operation getAppConfigSalesChannelWithHttpInfo
      *
-     * Get sales channel configuration
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -206,9 +202,9 @@ class MobileAppsApi
     /**
      * Operation getAppConfigSalesChannelAsync
      *
-     * Get sales channel configuration
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -226,9 +222,9 @@ class MobileAppsApi
     /**
      * Operation getAppConfigSalesChannelAsyncWithHttpInfo
      *
-     * Get sales channel configuration
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -278,7 +274,7 @@ class MobileAppsApi
     /**
      * Create request for operation 'getAppConfigSalesChannel'
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -387,10 +383,8 @@ class MobileAppsApi
     /**
      * Operation getStatistics
      *
-     * Get statistics mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  string[] $platform_types  (required)
+     * @param  string $app_id app_id (required)
+     * @param  string[] $platform_types platform_types (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -405,10 +399,8 @@ class MobileAppsApi
     /**
      * Operation getStatisticsWithHttpInfo
      *
-     * Get statistics mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  string[] $platform_types  (required)
+     * @param  string $app_id (required)
+     * @param  string[] $platform_types (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -505,10 +497,10 @@ class MobileAppsApi
     /**
      * Operation getStatisticsAsync
      *
-     * Get statistics mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string[] $platform_types  (required)
+     * @param  string $app_id (required)
+     * @param  string[] $platform_types (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -526,10 +518,10 @@ class MobileAppsApi
     /**
      * Operation getStatisticsAsyncWithHttpInfo
      *
-     * Get statistics mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string[] $platform_types  (required)
+     * @param  string $app_id (required)
+     * @param  string[] $platform_types (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -579,8 +571,8 @@ class MobileAppsApi
     /**
      * Create request for operation 'getStatistics'
      *
-     * @param  string $app_id  (required)
-     * @param  string[] $platform_types  (required)
+     * @param  string $app_id (required)
+     * @param  string[] $platform_types (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -702,9 +694,7 @@ class MobileAppsApi
     /**
      * Operation getSubmissionDetails
      *
-     * Get submission details mobile apps
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -719,9 +709,7 @@ class MobileAppsApi
     /**
      * Operation getSubmissionDetailsWithHttpInfo
      *
-     * Get submission details mobile apps
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -818,9 +806,9 @@ class MobileAppsApi
     /**
      * Operation getSubmissionDetailsAsync
      *
-     * Get submission details mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -838,9 +826,9 @@ class MobileAppsApi
     /**
      * Operation getSubmissionDetailsAsyncWithHttpInfo
      *
-     * Get submission details mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -890,7 +878,7 @@ class MobileAppsApi
     /**
      * Create request for operation 'getSubmissionDetails'
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -999,10 +987,8 @@ class MobileAppsApi
     /**
      * Operation getSubmissionStatus
      *
-     * Get submission status mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $submission_id submission_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1017,10 +1003,8 @@ class MobileAppsApi
     /**
      * Operation getSubmissionStatusWithHttpInfo
      *
-     * Get submission status mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1117,10 +1101,10 @@ class MobileAppsApi
     /**
      * Operation getSubmissionStatusAsync
      *
-     * Get submission status mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1138,10 +1122,10 @@ class MobileAppsApi
     /**
      * Operation getSubmissionStatusAsyncWithHttpInfo
      *
-     * Get submission status mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1191,8 +1175,8 @@ class MobileAppsApi
     /**
      * Create request for operation 'getSubmissionStatus'
      *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1315,11 +1299,9 @@ class MobileAppsApi
     /**
      * Operation publish
      *
-     * Publish mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  string $platform_type  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $submission_id submission_id (required)
+     * @param  string $platform_type platform_type (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1334,11 +1316,9 @@ class MobileAppsApi
     /**
      * Operation publishWithHttpInfo
      *
-     * Publish mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  string $platform_type  (optional)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
+     * @param  string $platform_type (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1427,11 +1407,11 @@ class MobileAppsApi
     /**
      * Operation publishAsync
      *
-     * Publish mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  string $platform_type  (optional)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
+     * @param  string $platform_type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1449,11 +1429,11 @@ class MobileAppsApi
     /**
      * Operation publishAsyncWithHttpInfo
      *
-     * Publish mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  string $platform_type  (optional)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
+     * @param  string $platform_type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1503,9 +1483,9 @@ class MobileAppsApi
     /**
      * Create request for operation 'publish'
      *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  string $platform_type  (optional)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
+     * @param  string $platform_type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1632,10 +1612,8 @@ class MobileAppsApi
     /**
      * Operation resubmission
      *
-     * Re-submission form mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission mobile_apps_submission (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1650,10 +1628,8 @@ class MobileAppsApi
     /**
      * Operation resubmissionWithHttpInfo
      *
-     * Re-submission form mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1742,10 +1718,10 @@ class MobileAppsApi
     /**
      * Operation resubmissionAsync
      *
-     * Re-submission form mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1763,10 +1739,10 @@ class MobileAppsApi
     /**
      * Operation resubmissionAsyncWithHttpInfo
      *
-     * Re-submission form mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1816,8 +1792,8 @@ class MobileAppsApi
     /**
      * Create request for operation 'resubmission'
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1935,10 +1911,8 @@ class MobileAppsApi
     /**
      * Operation submission
      *
-     * Submission form mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission mobile_apps_submission (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1953,10 +1927,8 @@ class MobileAppsApi
     /**
      * Operation submissionWithHttpInfo
      *
-     * Submission form mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2045,10 +2017,10 @@ class MobileAppsApi
     /**
      * Operation submissionAsync
      *
-     * Submission form mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2066,10 +2038,10 @@ class MobileAppsApi
     /**
      * Operation submissionAsyncWithHttpInfo
      *
-     * Submission form mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2119,8 +2091,8 @@ class MobileAppsApi
     /**
      * Create request for operation 'submission'
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\MobileAppsSubmission $mobile_apps_submission (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2238,11 +2210,9 @@ class MobileAppsApi
     /**
      * Operation unpublish
      *
-     * Unpublish mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  string $platform_type  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $submission_id submission_id (required)
+     * @param  string $platform_type platform_type (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2257,11 +2227,9 @@ class MobileAppsApi
     /**
      * Operation unpublishWithHttpInfo
      *
-     * Unpublish mobile apps
-     *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  string $platform_type  (optional)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
+     * @param  string $platform_type (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2350,11 +2318,11 @@ class MobileAppsApi
     /**
      * Operation unpublishAsync
      *
-     * Unpublish mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  string $platform_type  (optional)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
+     * @param  string $platform_type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2372,11 +2340,11 @@ class MobileAppsApi
     /**
      * Operation unpublishAsyncWithHttpInfo
      *
-     * Unpublish mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  string $platform_type  (optional)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
+     * @param  string $platform_type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2426,9 +2394,9 @@ class MobileAppsApi
     /**
      * Create request for operation 'unpublish'
      *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  string $platform_type  (optional)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
+     * @param  string $platform_type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2555,10 +2523,8 @@ class MobileAppsApi
     /**
      * Operation updateAppConfigSalesChannel
      *
-     * Update the application sales channel configuration
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel  (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel app_config_sales_channel (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2573,10 +2539,8 @@ class MobileAppsApi
     /**
      * Operation updateAppConfigSalesChannelWithHttpInfo
      *
-     * Update the application sales channel configuration
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2673,10 +2637,10 @@ class MobileAppsApi
     /**
      * Operation updateAppConfigSalesChannelAsync
      *
-     * Update the application sales channel configuration
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2694,10 +2658,10 @@ class MobileAppsApi
     /**
      * Operation updateAppConfigSalesChannelAsyncWithHttpInfo
      *
-     * Update the application sales channel configuration
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2747,8 +2711,8 @@ class MobileAppsApi
     /**
      * Create request for operation 'updateAppConfigSalesChannel'
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\AppConfigSalesChannel $app_config_sales_channel (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2866,11 +2830,9 @@ class MobileAppsApi
     /**
      * Operation updateSubmissionStatus
      *
-     * Update submission status
-     *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status  (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $submission_id submission_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status update_submission_status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2885,11 +2847,9 @@ class MobileAppsApi
     /**
      * Operation updateSubmissionStatusWithHttpInfo
      *
-     * Update submission status
-     *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status  (required)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2986,11 +2946,11 @@ class MobileAppsApi
     /**
      * Operation updateSubmissionStatusAsync
      *
-     * Update submission status
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status  (required)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3008,11 +2968,11 @@ class MobileAppsApi
     /**
      * Operation updateSubmissionStatusAsyncWithHttpInfo
      *
-     * Update submission status
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status  (required)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3062,9 +3022,9 @@ class MobileAppsApi
     /**
      * Create request for operation 'updateSubmissionStatus'
      *
-     * @param  string $app_id  (required)
-     * @param  int $submission_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status  (required)
+     * @param  string $app_id (required)
+     * @param  int $submission_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateMobileAppsSubmissionStatus $update_submission_status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3196,9 +3156,7 @@ class MobileAppsApi
     /**
      * Operation uploadImage
      *
-     * Upload image mobile apps
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id app_id (required)
      * @param  \SplFileObject $image Mobile Apps image (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -3214,9 +3172,7 @@ class MobileAppsApi
     /**
      * Operation uploadImageWithHttpInfo
      *
-     * Upload image mobile apps
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      * @param  \SplFileObject $image Mobile Apps image (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -3314,9 +3270,9 @@ class MobileAppsApi
     /**
      * Operation uploadImageAsync
      *
-     * Upload image mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      * @param  \SplFileObject $image Mobile Apps image (required)
      *
      * @throws \InvalidArgumentException
@@ -3335,9 +3291,9 @@ class MobileAppsApi
     /**
      * Operation uploadImageAsyncWithHttpInfo
      *
-     * Upload image mobile apps
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      * @param  \SplFileObject $image Mobile Apps image (required)
      *
      * @throws \InvalidArgumentException
@@ -3388,7 +3344,7 @@ class MobileAppsApi
     /**
      * Create request for operation 'uploadImage'
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      * @param  \SplFileObject $image Mobile Apps image (required)
      *
      * @throws \InvalidArgumentException

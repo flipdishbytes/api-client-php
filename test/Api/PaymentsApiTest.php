@@ -74,7 +74,7 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOrderPaymentInformation
      *
-     * Returns payment refund information related to the order with the order id.
+     * .
      *
      */
     public function testGetOrderPaymentInformation()

@@ -90,15 +90,13 @@ class HttpRequestResponseLogsApi
     /**
      * Operation getLogs
      *
-     * Get API interaction logs
-     *
-     * @param  \DateTime $start Start date time (required)
-     * @param  \DateTime $end End date time (required)
+     * @param  \DateTime $start start (required)
+     * @param  \DateTime $end end (required)
      * @param  string $app_id app_id (required)
-     * @param  int $filter_by_user_id User id (optional) (optional)
-     * @param  string $guid Id of the log (optional)
-     * @param  int $page Page number (optional)
-     * @param  int $limit Page size (optional)
+     * @param  int $filter_by_user_id filter_by_user_id (optional)
+     * @param  string $guid guid (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -113,15 +111,13 @@ class HttpRequestResponseLogsApi
     /**
      * Operation getLogsWithHttpInfo
      *
-     * Get API interaction logs
-     *
-     * @param  \DateTime $start Start date time (required)
-     * @param  \DateTime $end End date time (required)
+     * @param  \DateTime $start (required)
+     * @param  \DateTime $end (required)
      * @param  string $app_id (required)
-     * @param  int $filter_by_user_id User id (optional) (optional)
-     * @param  string $guid Id of the log (optional)
-     * @param  int $page Page number (optional)
-     * @param  int $limit Page size (optional)
+     * @param  int $filter_by_user_id (optional)
+     * @param  string $guid (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -218,15 +214,15 @@ class HttpRequestResponseLogsApi
     /**
      * Operation getLogsAsync
      *
-     * Get API interaction logs
+     * 
      *
-     * @param  \DateTime $start Start date time (required)
-     * @param  \DateTime $end End date time (required)
+     * @param  \DateTime $start (required)
+     * @param  \DateTime $end (required)
      * @param  string $app_id (required)
-     * @param  int $filter_by_user_id User id (optional) (optional)
-     * @param  string $guid Id of the log (optional)
-     * @param  int $page Page number (optional)
-     * @param  int $limit Page size (optional)
+     * @param  int $filter_by_user_id (optional)
+     * @param  string $guid (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -244,15 +240,15 @@ class HttpRequestResponseLogsApi
     /**
      * Operation getLogsAsyncWithHttpInfo
      *
-     * Get API interaction logs
+     * 
      *
-     * @param  \DateTime $start Start date time (required)
-     * @param  \DateTime $end End date time (required)
+     * @param  \DateTime $start (required)
+     * @param  \DateTime $end (required)
      * @param  string $app_id (required)
-     * @param  int $filter_by_user_id User id (optional) (optional)
-     * @param  string $guid Id of the log (optional)
-     * @param  int $page Page number (optional)
-     * @param  int $limit Page size (optional)
+     * @param  int $filter_by_user_id (optional)
+     * @param  string $guid (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -302,13 +298,13 @@ class HttpRequestResponseLogsApi
     /**
      * Create request for operation 'getLogs'
      *
-     * @param  \DateTime $start Start date time (required)
-     * @param  \DateTime $end End date time (required)
+     * @param  \DateTime $start (required)
+     * @param  \DateTime $end (required)
      * @param  string $app_id (required)
-     * @param  int $filter_by_user_id User id (optional) (optional)
-     * @param  string $guid Id of the log (optional)
-     * @param  int $page Page number (optional)
-     * @param  int $limit Page size (optional)
+     * @param  int $filter_by_user_id (optional)
+     * @param  string $guid (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

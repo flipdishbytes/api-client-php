@@ -74,7 +74,7 @@ class DeliveryTrackingApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for assignDriverToOrder
      *
-     * [PRIVATE] Assign driver to order.
+     * .
      *
      */
     public function testAssignDriverToOrder()
@@ -84,7 +84,7 @@ class DeliveryTrackingApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for assignDriverToOrders
      *
-     * Assign driver to multiple orders.
+     * .
      *
      */
     public function testAssignDriverToOrders()
@@ -94,7 +94,7 @@ class DeliveryTrackingApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getDrivers
      *
-     * [PRIVATE] Get drivers by App.
+     * .
      *
      */
     public function testGetDrivers()
@@ -104,7 +104,7 @@ class DeliveryTrackingApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for inviteDriverToApp
      *
-     * [PRIVATE] Invite driver.
+     * .
      *
      */
     public function testInviteDriverToApp()
@@ -114,7 +114,7 @@ class DeliveryTrackingApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for removeDriverFromApp
      *
-     * [PRIVATE] Unassign driver from app.
+     * .
      *
      */
     public function testRemoveDriverFromApp()
@@ -124,7 +124,7 @@ class DeliveryTrackingApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for unassignDriverFromOrder
      *
-     * [PRIVATE] Unassign driver from order.
+     * .
      *
      */
     public function testUnassignDriverFromOrder()

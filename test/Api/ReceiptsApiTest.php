@@ -74,7 +74,7 @@ class ReceiptsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getReceipt
      *
-     * Returns all receipt information for a given orderId.
+     * .
      *
      */
     public function testGetReceipt()

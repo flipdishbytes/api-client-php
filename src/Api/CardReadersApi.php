@@ -90,8 +90,6 @@ class CardReadersApi
     /**
      * Operation cancelCurrentlyInitiatedBluetoothDeviceUpdate
      *
-     * Cancel currently initiated install update for bluetooth terminal
-     *
      * @param  string $app_id app_id (required)
      * @param  string $device_id device_id (required)
      * @param  string $terminal_type terminal_type (required)
@@ -107,8 +105,6 @@ class CardReadersApi
 
     /**
      * Operation cancelCurrentlyInitiatedBluetoothDeviceUpdateWithHttpInfo
-     *
-     * Cancel currently initiated install update for bluetooth terminal
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -187,7 +183,7 @@ class CardReadersApi
     /**
      * Operation cancelCurrentlyInitiatedBluetoothDeviceUpdateAsync
      *
-     * Cancel currently initiated install update for bluetooth terminal
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -209,7 +205,7 @@ class CardReadersApi
     /**
      * Operation cancelCurrentlyInitiatedBluetoothDeviceUpdateAsyncWithHttpInfo
      *
-     * Cancel currently initiated install update for bluetooth terminal
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -388,8 +384,6 @@ class CardReadersApi
     /**
      * Operation cancelReaderAction
      *
-     * Cancel terminals action
-     *
      * @param  string $reader_id reader_id (required)
      * @param  string $app_id app_id (required)
      *
@@ -405,8 +399,6 @@ class CardReadersApi
 
     /**
      * Operation cancelReaderActionWithHttpInfo
-     *
-     * Cancel terminals action
      *
      * @param  string $reader_id (required)
      * @param  string $app_id (required)
@@ -506,7 +498,7 @@ class CardReadersApi
     /**
      * Operation cancelReaderActionAsync
      *
-     * Cancel terminals action
+     * 
      *
      * @param  string $reader_id (required)
      * @param  string $app_id (required)
@@ -527,7 +519,7 @@ class CardReadersApi
     /**
      * Operation cancelReaderActionAsyncWithHttpInfo
      *
-     * Cancel terminals action
+     * 
      *
      * @param  string $reader_id (required)
      * @param  string $app_id (required)
@@ -704,8 +696,6 @@ class CardReadersApi
     /**
      * Operation cardReadersGetReader
      *
-     * Get reader
-     *
      * @param  string $reader_id reader_id (required)
      * @param  string $app_id app_id (required)
      *
@@ -721,8 +711,6 @@ class CardReadersApi
 
     /**
      * Operation cardReadersGetReaderWithHttpInfo
-     *
-     * Get reader
      *
      * @param  string $reader_id (required)
      * @param  string $app_id (required)
@@ -822,7 +810,7 @@ class CardReadersApi
     /**
      * Operation cardReadersGetReaderAsync
      *
-     * Get reader
+     * 
      *
      * @param  string $reader_id (required)
      * @param  string $app_id (required)
@@ -843,7 +831,7 @@ class CardReadersApi
     /**
      * Operation cardReadersGetReaderAsyncWithHttpInfo
      *
-     * Get reader
+     * 
      *
      * @param  string $reader_id (required)
      * @param  string $app_id (required)
@@ -1020,8 +1008,6 @@ class CardReadersApi
     /**
      * Operation generateStripeTerminalLocation
      *
-     * Get Location ID for Stripe Terminal
-     *
      * @param  \Flipdish\\Client\Models\GeoPointRequest $geo_point_request geo_point_request (required)
      * @param  string $app_id app_id (required)
      *
@@ -1037,8 +1023,6 @@ class CardReadersApi
 
     /**
      * Operation generateStripeTerminalLocationWithHttpInfo
-     *
-     * Get Location ID for Stripe Terminal
      *
      * @param  \Flipdish\\Client\Models\GeoPointRequest $geo_point_request (required)
      * @param  string $app_id (required)
@@ -1138,7 +1122,7 @@ class CardReadersApi
     /**
      * Operation generateStripeTerminalLocationAsync
      *
-     * Get Location ID for Stripe Terminal
+     * 
      *
      * @param  \Flipdish\\Client\Models\GeoPointRequest $geo_point_request (required)
      * @param  string $app_id (required)
@@ -1159,7 +1143,7 @@ class CardReadersApi
     /**
      * Operation generateStripeTerminalLocationAsyncWithHttpInfo
      *
-     * Get Location ID for Stripe Terminal
+     * 
      *
      * @param  \Flipdish\\Client\Models\GeoPointRequest $geo_point_request (required)
      * @param  string $app_id (required)
@@ -1331,8 +1315,6 @@ class CardReadersApi
     /**
      * Operation getBluetoothTerminalStatus
      *
-     * Get the status of the bluetooth terminal
-     *
      * @param  string $app_id app_id (required)
      * @param  string $device_id device_id (required)
      *
@@ -1348,8 +1330,6 @@ class CardReadersApi
 
     /**
      * Operation getBluetoothTerminalStatusWithHttpInfo
-     *
-     * Get the status of the bluetooth terminal
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -1449,7 +1429,7 @@ class CardReadersApi
     /**
      * Operation getBluetoothTerminalStatusAsync
      *
-     * Get the status of the bluetooth terminal
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -1470,7 +1450,7 @@ class CardReadersApi
     /**
      * Operation getBluetoothTerminalStatusAsyncWithHttpInfo
      *
-     * Get the status of the bluetooth terminal
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -1647,8 +1627,6 @@ class CardReadersApi
     /**
      * Operation getStripeConnectionToken
      *
-     * Get Connection Token For a Stripe Terminal
-     *
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1663,8 +1641,6 @@ class CardReadersApi
 
     /**
      * Operation getStripeConnectionTokenWithHttpInfo
-     *
-     * Get Connection Token For a Stripe Terminal
      *
      * @param  string $app_id (required)
      *
@@ -1763,7 +1739,7 @@ class CardReadersApi
     /**
      * Operation getStripeConnectionTokenAsync
      *
-     * Get Connection Token For a Stripe Terminal
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -1783,7 +1759,7 @@ class CardReadersApi
     /**
      * Operation getStripeConnectionTokenAsyncWithHttpInfo
      *
-     * Get Connection Token For a Stripe Terminal
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -1944,8 +1920,6 @@ class CardReadersApi
     /**
      * Operation initiateBluetoothTerminalDeviceUpdateCheck
      *
-     * Trigger check for Bluetooth device update on Kiosk
-     *
      * @param  string $app_id app_id (required)
      * @param  string $device_id device_id (required)
      * @param  string $terminal_type terminal_type (required)
@@ -1961,8 +1935,6 @@ class CardReadersApi
 
     /**
      * Operation initiateBluetoothTerminalDeviceUpdateCheckWithHttpInfo
-     *
-     * Trigger check for Bluetooth device update on Kiosk
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -2041,7 +2013,7 @@ class CardReadersApi
     /**
      * Operation initiateBluetoothTerminalDeviceUpdateCheckAsync
      *
-     * Trigger check for Bluetooth device update on Kiosk
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -2063,7 +2035,7 @@ class CardReadersApi
     /**
      * Operation initiateBluetoothTerminalDeviceUpdateCheckAsyncWithHttpInfo
      *
-     * Trigger check for Bluetooth device update on Kiosk
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -2242,8 +2214,6 @@ class CardReadersApi
     /**
      * Operation initiateKioskBluetoothPairingMode
      *
-     * Initiate stripe terminal pairing mode
-     *
      * @param  string $app_id app_id (required)
      * @param  string $device_id device_id (required)
      * @param  string $terminal_type terminal_type (required)
@@ -2259,8 +2229,6 @@ class CardReadersApi
 
     /**
      * Operation initiateKioskBluetoothPairingModeWithHttpInfo
-     *
-     * Initiate stripe terminal pairing mode
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -2339,7 +2307,7 @@ class CardReadersApi
     /**
      * Operation initiateKioskBluetoothPairingModeAsync
      *
-     * Initiate stripe terminal pairing mode
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -2361,7 +2329,7 @@ class CardReadersApi
     /**
      * Operation initiateKioskBluetoothPairingModeAsyncWithHttpInfo
      *
-     * Initiate stripe terminal pairing mode
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -2540,8 +2508,6 @@ class CardReadersApi
     /**
      * Operation initiateKioskBluetoothUpdateInstall
      *
-     * Initiate Kiosk Update Install for bluetooth terminal
-     *
      * @param  string $app_id app_id (required)
      * @param  string $device_id device_id (required)
      * @param  string $terminal_type terminal_type (required)
@@ -2557,8 +2523,6 @@ class CardReadersApi
 
     /**
      * Operation initiateKioskBluetoothUpdateInstallWithHttpInfo
-     *
-     * Initiate Kiosk Update Install for bluetooth terminal
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -2637,7 +2601,7 @@ class CardReadersApi
     /**
      * Operation initiateKioskBluetoothUpdateInstallAsync
      *
-     * Initiate Kiosk Update Install for bluetooth terminal
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -2659,7 +2623,7 @@ class CardReadersApi
     /**
      * Operation initiateKioskBluetoothUpdateInstallAsyncWithHttpInfo
      *
-     * Initiate Kiosk Update Install for bluetooth terminal
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -2838,8 +2802,6 @@ class CardReadersApi
     /**
      * Operation initiateReaderProcessPaymentIntent
      *
-     * Initiate Stripe terminal to Process Payment Intent
-     *
      * @param  \Flipdish\\Client\Models\ProcessPaymentIntentRequest $request request (required)
      * @param  string $reader_id reader_id (required)
      * @param  string $app_id app_id (required)
@@ -2856,8 +2818,6 @@ class CardReadersApi
 
     /**
      * Operation initiateReaderProcessPaymentIntentWithHttpInfo
-     *
-     * Initiate Stripe terminal to Process Payment Intent
      *
      * @param  \Flipdish\\Client\Models\ProcessPaymentIntentRequest $request (required)
      * @param  string $reader_id (required)
@@ -2958,7 +2918,7 @@ class CardReadersApi
     /**
      * Operation initiateReaderProcessPaymentIntentAsync
      *
-     * Initiate Stripe terminal to Process Payment Intent
+     * 
      *
      * @param  \Flipdish\\Client\Models\ProcessPaymentIntentRequest $request (required)
      * @param  string $reader_id (required)
@@ -2980,7 +2940,7 @@ class CardReadersApi
     /**
      * Operation initiateReaderProcessPaymentIntentAsyncWithHttpInfo
      *
-     * Initiate Stripe terminal to Process Payment Intent
+     * 
      *
      * @param  \Flipdish\\Client\Models\ProcessPaymentIntentRequest $request (required)
      * @param  string $reader_id (required)
@@ -3475,8 +3435,6 @@ class CardReadersApi
     /**
      * Operation unRegisterTerminal
      *
-     * Un-register terminal by deleting it from stripe
-     *
      * @param  \Flipdish\\Client\Models\UnRegisterCardReaderRequest $request request (required)
      * @param  string $app_id app_id (required)
      *
@@ -3492,8 +3450,6 @@ class CardReadersApi
 
     /**
      * Operation unRegisterTerminalWithHttpInfo
-     *
-     * Un-register terminal by deleting it from stripe
      *
      * @param  \Flipdish\\Client\Models\UnRegisterCardReaderRequest $request (required)
      * @param  string $app_id (required)
@@ -3593,7 +3549,7 @@ class CardReadersApi
     /**
      * Operation unRegisterTerminalAsync
      *
-     * Un-register terminal by deleting it from stripe
+     * 
      *
      * @param  \Flipdish\\Client\Models\UnRegisterCardReaderRequest $request (required)
      * @param  string $app_id (required)
@@ -3614,7 +3570,7 @@ class CardReadersApi
     /**
      * Operation unRegisterTerminalAsyncWithHttpInfo
      *
-     * Un-register terminal by deleting it from stripe
+     * 
      *
      * @param  \Flipdish\\Client\Models\UnRegisterCardReaderRequest $request (required)
      * @param  string $app_id (required)
@@ -3786,8 +3742,6 @@ class CardReadersApi
     /**
      * Operation unpairCurrentlyPairedBluetoothDevice
      *
-     * Unpair the currently paired stripe terminal
-     *
      * @param  string $app_id app_id (required)
      * @param  string $device_id device_id (required)
      *
@@ -3802,8 +3756,6 @@ class CardReadersApi
 
     /**
      * Operation unpairCurrentlyPairedBluetoothDeviceWithHttpInfo
-     *
-     * Unpair the currently paired stripe terminal
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -3881,7 +3833,7 @@ class CardReadersApi
     /**
      * Operation unpairCurrentlyPairedBluetoothDeviceAsync
      *
-     * Unpair the currently paired stripe terminal
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)
@@ -3902,7 +3854,7 @@ class CardReadersApi
     /**
      * Operation unpairCurrentlyPairedBluetoothDeviceAsyncWithHttpInfo
      *
-     * Unpair the currently paired stripe terminal
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $device_id (required)

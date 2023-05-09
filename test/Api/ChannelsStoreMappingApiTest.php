@@ -74,7 +74,7 @@ class ChannelsStoreMappingApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for channelsGetStoreChannelStoreMapping
      *
-     * Gets the relationship between Flipdish Store and Channel Store.
+     * .
      *
      */
     public function testChannelsGetStoreChannelStoreMapping()
@@ -84,7 +84,7 @@ class ChannelsStoreMappingApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for channelsSetStoreChannelStoreMapping
      *
-     * Sets the relationship between Flipdish Store and Channel Store.
+     * .
      *
      */
     public function testChannelsSetStoreChannelStoreMapping()

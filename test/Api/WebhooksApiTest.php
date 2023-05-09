@@ -74,7 +74,7 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createWebhookSubscription
      *
-     * Create a webhook subscription for you Oauth App.
+     * .
      *
      */
     public function testCreateWebhookSubscription()
@@ -84,7 +84,7 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createWebhookSubscriptionEventNames
      *
-     * Add event name to your webhook subscription.
+     * .
      *
      */
     public function testCreateWebhookSubscriptionEventNames()
@@ -94,7 +94,7 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteWebhookSubscription
      *
-     * Delete you webhook subscription.
+     * .
      *
      */
     public function testDeleteWebhookSubscription()
@@ -104,7 +104,7 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteWebhookSubscriptionEventName
      *
-     * Remove event name to your webhook subscription.
+     * .
      *
      */
     public function testDeleteWebhookSubscriptionEventName()
@@ -114,7 +114,7 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getWebhookEventNames
      *
-     * Get all webhook subscription event names.
+     * .
      *
      */
     public function testGetWebhookEventNames()
@@ -124,7 +124,7 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getWebhookEventNamesBySubscriptionId
      *
-     * Get your webhook subscriptions selected event names.
+     * .
      *
      */
     public function testGetWebhookEventNamesBySubscriptionId()
@@ -134,7 +134,7 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getWebhookEventSample
      *
-     * Get a sample event from a webhook subscription.
+     * .
      *
      */
     public function testGetWebhookEventSample()
@@ -144,7 +144,7 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getWebhookLogs
      *
-     * Get logs for your webhook subscription.
+     * .
      *
      */
     public function testGetWebhookLogs()
@@ -154,7 +154,7 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getWebhookSubscriptions
      *
-     * Get all webhook subscriptions by your Oauth App id.
+     * .
      *
      */
     public function testGetWebhookSubscriptions()
@@ -164,7 +164,7 @@ class WebhooksApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateWebhookSubscription
      *
-     * Update a webhook subscription object.
+     * .
      *
      */
     public function testUpdateWebhookSubscription()

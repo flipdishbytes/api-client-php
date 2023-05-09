@@ -4,16 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getSubscriptionById**](SubscriptionsApi.md#getSubscriptionById) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | Get subscription by id
-[**getSubscriptionsForApp**](SubscriptionsApi.md#getSubscriptionsForApp) | **GET** /api/v1.0/{appId}/subscriptions | Get list of subscriptions for an App
+[**getSubscriptionById**](SubscriptionsApi.md#getSubscriptionById) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | 
+[**getSubscriptionsForApp**](SubscriptionsApi.md#getSubscriptionsForApp) | **GET** /api/v1.0/{appId}/subscriptions | 
 
 
 # **getSubscriptionById**
 > \Flipdish\\Client\Models\RestApiResultSubscription getSubscriptionById($app_id, $subscription_id)
 
-Get subscription by id
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -29,8 +27,8 @@ $apiInstance = new Flipdish\\Client\Api\SubscriptionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Id
-$subscription_id = "subscription_id_example"; // string | Subscription Id
+$app_id = "app_id_example"; // string | 
+$subscription_id = "subscription_id_example"; // string | 
 
 try {
     $result = $apiInstance->getSubscriptionById($app_id, $subscription_id);
@@ -45,8 +43,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Id |
- **subscription_id** | **string**| Subscription Id |
+ **app_id** | **string**|  |
+ **subscription_id** | **string**|  |
 
 ### Return type
 
@@ -66,9 +64,7 @@ Name | Type | Description  | Notes
 # **getSubscriptionsForApp**
 > \Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary getSubscriptionsForApp($app_id, $exclude_not_owned_subscriptions, $store_id)
 
-Get list of subscriptions for an App
 
-[BETA - this endpoint is under development, do not use it in your production system] Full list of subscriptions returned. No need for pagination
 
 ### Example
 ```php
@@ -84,9 +80,9 @@ $apiInstance = new Flipdish\\Client\Api\SubscriptionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Id
-$exclude_not_owned_subscriptions = true; // bool | Exclude not owned subscriptions. Set to true to only view your subscriptions (optional)
-$store_id = array(56); // int[] | Store Ids (optional)
+$app_id = "app_id_example"; // string | 
+$exclude_not_owned_subscriptions = true; // bool | 
+$store_id = array(56); // int[] | 
 
 try {
     $result = $apiInstance->getSubscriptionsForApp($app_id, $exclude_not_owned_subscriptions, $store_id);
@@ -101,9 +97,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Id |
- **exclude_not_owned_subscriptions** | **bool**| Exclude not owned subscriptions. Set to true to only view your subscriptions (optional) | [optional]
- **store_id** | [**int[]**](../Model/int.md)| Store Ids (optional) | [optional]
+ **app_id** | **string**|  |
+ **exclude_not_owned_subscriptions** | **bool**|  | [optional]
+ **store_id** | [**int[]**](../Model/int.md)|  | [optional]
 
 ### Return type
 

@@ -74,7 +74,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for answerSignUpQuestion
      *
-     * Answer a signup question.
+     * .
      *
      */
     public function testAnswerSignUpQuestion()
@@ -84,7 +84,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for changePassword
      *
-     * Change password.
+     * .
      *
      */
     public function testChangePassword()
@@ -94,7 +94,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for changePasswordWithPin
      *
-     * Change password.
+     * .
      *
      */
     public function testChangePasswordWithPin()
@@ -104,7 +104,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createAccount
      *
-     * Create account with email address and store name.
+     * .
      *
      */
     public function testCreateAccount()
@@ -114,7 +114,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAccountDetails
      *
-     * Gets the current account detail.
+     * .
      *
      */
     public function testGetAccountDetails()
@@ -124,7 +124,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getLocalisedTimeZones
      *
-     * [PRIVATE API] Get timezones localised to users language.
+     * .
      *
      */
     public function testGetLocalisedTimeZones()
@@ -134,7 +134,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for login
      *
-     * Login with username and password.
+     * .
      *
      */
     public function testLogin()
@@ -144,7 +144,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for loginSso
      *
-     * Login with SSO token.
+     * .
      *
      */
     public function testLoginSso()
@@ -154,7 +154,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for loginWithPin
      *
-     * Login with email and pin.
+     * .
      *
      */
     public function testLoginWithPin()
@@ -164,7 +164,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for logout
      *
-     * Log out. It removes Flipdish authorization Cookie..
+     * .
      *
      */
     public function testLogout()
@@ -174,7 +174,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for passwordResetWithToken
      *
-     * Reset password with token..
+     * .
      *
      */
     public function testPasswordResetWithToken()
@@ -184,7 +184,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for recaptchaValidate
      *
-     * Validate recaptcha from flipdish portal.
+     * .
      *
      */
     public function testRecaptchaValidate()
@@ -194,7 +194,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for requestLoginPin
      *
-     * Request login PIN. The server sends the PIN to the email address..
+     * .
      *
      */
     public function testRequestLoginPin()
@@ -204,7 +204,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for requestPasswordReset
      *
-     * Request password reset. Flipdish system will send a token via email..
+     * .
      *
      */
     public function testRequestPasswordReset()
@@ -214,7 +214,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for sendPinForPasswordReset
      *
-     * Request Password Reset PIN. The server sends the PIN to the email address..
+     * .
      *
      */
     public function testSendPinForPasswordReset()
@@ -224,7 +224,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for skipSignupStep
      *
-     * Skip a signup question.
+     * .
      *
      */
     public function testSkipSignupStep()
@@ -234,7 +234,7 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateAccount
      *
-     * Update account with name and language.
+     * .
      *
      */
     public function testUpdateAccount()

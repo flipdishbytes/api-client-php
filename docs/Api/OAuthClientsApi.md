@@ -4,23 +4,23 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addRedirectUri**](OAuthClientsApi.md#addRedirectUri) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
-[**createOAuthApp**](OAuthClientsApi.md#createOAuthApp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
-[**deleteOAuthApp**](OAuthClientsApi.md#deleteOAuthApp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Delete OAuth App
-[**getOAuthApps**](OAuthClientsApi.md#getOAuthApps) | **GET** /api/v1.0/{appId}/oauthclients | Get all OAuth Apps
-[**getOAuthClientByClientId**](OAuthClientsApi.md#getOAuthClientByClientId) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Get OAuth App by identifier
-[**getOAuthClientSecret**](OAuthClientsApi.md#getOAuthClientSecret) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/secret | Get OAuth App secret key
-[**getOauthAccessToken**](OAuthClientsApi.md#getOauthAccessToken) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/accesstoken | Get OAuth access token for App
-[**getRedirectUris**](OAuthClientsApi.md#getRedirectUris) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Get OAuth App redirect uris
+[**addRedirectUri**](OAuthClientsApi.md#addRedirectUri) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | 
+[**createOAuthApp**](OAuthClientsApi.md#createOAuthApp) | **POST** /api/v1.0/{appId}/oauthclients | 
+[**deleteOAuthApp**](OAuthClientsApi.md#deleteOAuthApp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | 
+[**getOAuthApps**](OAuthClientsApi.md#getOAuthApps) | **GET** /api/v1.0/{appId}/oauthclients | 
+[**getOAuthClientByClientId**](OAuthClientsApi.md#getOAuthClientByClientId) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId} | 
+[**getOAuthClientSecret**](OAuthClientsApi.md#getOAuthClientSecret) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/secret | 
+[**getOauthAccessToken**](OAuthClientsApi.md#getOauthAccessToken) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/accesstoken | 
+[**getRedirectUris**](OAuthClientsApi.md#getRedirectUris) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | 
 [**oAuthClientsGetApplications**](OAuthClientsApi.md#oAuthClientsGetApplications) | **GET** /api/v1.0/{appId}/oauthclients/appnames | 
-[**removeRedirectUri**](OAuthClientsApi.md#removeRedirectUri) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId} | Delete OAuth App redirect uri
-[**updateOAuthApp**](OAuthClientsApi.md#updateOAuthApp) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Update OAuth App
+[**removeRedirectUri**](OAuthClientsApi.md#removeRedirectUri) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId} | 
+[**updateOAuthApp**](OAuthClientsApi.md#updateOAuthApp) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId} | 
 
 
 # **addRedirectUri**
 > \Flipdish\\Client\Models\RestApiResultOauthClientRedirectUri addRedirectUri($oauth_app_id, $uri, $app_id)
 
-Create OAuth App redirect uri
+
 
 ### Example
 ```php
@@ -36,8 +36,8 @@ $apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
-$uri = "uri_example"; // string | Redirect uri
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$uri = "uri_example"; // string | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -53,8 +53,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
- **uri** | **string**| Redirect uri |
+ **oauth_app_id** | **string**|  |
+ **uri** | **string**|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 # **createOAuthApp**
 > createOAuthApp($o_auth_app, $app_id)
 
-Create OAuth App
+
 
 ### Example
 ```php
@@ -91,7 +91,7 @@ $apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$o_auth_app = new \Flipdish\\Client\Models\OAuthApp(); // \Flipdish\\Client\Models\OAuthApp | OAuth App
+$o_auth_app = new \Flipdish\\Client\Models\OAuthApp(); // \Flipdish\\Client\Models\OAuthApp | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -106,7 +106,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **o_auth_app** | [**\Flipdish\\Client\Models\OAuthApp**](../Model/OAuthApp.md)| OAuth App |
+ **o_auth_app** | [**\Flipdish\\Client\Models\OAuthApp**](../Model/OAuthApp.md)|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -127,7 +127,7 @@ void (empty response body)
 # **deleteOAuthApp**
 > deleteOAuthApp($oauth_app_id, $app_id)
 
-Delete OAuth App
+
 
 ### Example
 ```php
@@ -143,7 +143,7 @@ $apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
+$oauth_app_id = "oauth_app_id_example"; // string | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -158,7 +158,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
+ **oauth_app_id** | **string**|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -179,7 +179,7 @@ void (empty response body)
 # **getOAuthApps**
 > \Flipdish\\Client\Models\RestApiArrayResultOAuthApp getOAuthApps($app_id, $oauth_app_name)
 
-Get all OAuth Apps
+
 
 ### Example
 ```php
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 # **getOAuthClientByClientId**
 > \Flipdish\\Client\Models\RestApiResultOAuthApp getOAuthClientByClientId($oauth_app_id, $app_id)
 
-Get OAuth App by identifier
+
 
 ### Example
 ```php
@@ -248,7 +248,7 @@ $apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
+$oauth_app_id = "oauth_app_id_example"; // string | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -264,7 +264,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
+ **oauth_app_id** | **string**|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 # **getOAuthClientSecret**
 > \Flipdish\\Client\Models\RestApiStringResult getOAuthClientSecret($oauth_app_id, $app_id)
 
-Get OAuth App secret key
+
 
 ### Example
 ```php
@@ -301,7 +301,7 @@ $apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
+$oauth_app_id = "oauth_app_id_example"; // string | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -317,7 +317,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
+ **oauth_app_id** | **string**|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 # **getOauthAccessToken**
 > \Flipdish\\Client\Models\RestApiStringResult getOauthAccessToken($oauth_app_id, $app_id)
 
-Get OAuth access token for App
+
 
 ### Example
 ```php
@@ -354,7 +354,7 @@ $apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
+$oauth_app_id = "oauth_app_id_example"; // string | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -370,7 +370,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
+ **oauth_app_id** | **string**|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 # **getRedirectUris**
 > \Flipdish\\Client\Models\RestApiArrayResultOauthClientRedirectUri getRedirectUris($oauth_app_id, $app_id)
 
-Get OAuth App redirect uris
+
 
 ### Example
 ```php
@@ -407,7 +407,7 @@ $apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
+$oauth_app_id = "oauth_app_id_example"; // string | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -423,7 +423,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
+ **oauth_app_id** | **string**|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 # **removeRedirectUri**
 > removeRedirectUri($oauth_app_id, $uri_id, $app_id)
 
-Delete OAuth App redirect uri
+
 
 ### Example
 ```php
@@ -511,8 +511,8 @@ $apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
-$uri_id = 56; // int | Redirect uri identifier
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$uri_id = 56; // int | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -527,8 +527,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
- **uri_id** | **int**| Redirect uri identifier |
+ **oauth_app_id** | **string**|  |
+ **uri_id** | **int**|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -549,7 +549,7 @@ void (empty response body)
 # **updateOAuthApp**
 > updateOAuthApp($oauth_app_id, $o_auth_app, $app_id)
 
-Update OAuth App
+
 
 ### Example
 ```php
@@ -565,8 +565,8 @@ $apiInstance = new Flipdish\\Client\Api\OAuthClientsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
-$o_auth_app = new \Flipdish\\Client\Models\OAuthApp(); // \Flipdish\\Client\Models\OAuthApp | OAuth App
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$o_auth_app = new \Flipdish\\Client\Models\OAuthApp(); // \Flipdish\\Client\Models\OAuthApp | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -581,8 +581,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
- **o_auth_app** | [**\Flipdish\\Client\Models\OAuthApp**](../Model/OAuthApp.md)| OAuth App |
+ **oauth_app_id** | **string**|  |
+ **o_auth_app** | [**\Flipdish\\Client\Models\OAuthApp**](../Model/OAuthApp.md)|  |
  **app_id** | **string**|  |
 
 ### Return type

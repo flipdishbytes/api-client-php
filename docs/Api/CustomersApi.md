@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCustomerById**](CustomersApi.md#getCustomerById) | **GET** /api/v1.0/{appId}/customers/{customerId} | Get customer of an app by Id
-[**updateCustomerById**](CustomersApi.md#updateCustomerById) | **POST** /api/v1.0/{appId}/customers/{customerId} | Update customer of an app by Id
+[**getCustomerById**](CustomersApi.md#getCustomerById) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
+[**updateCustomerById**](CustomersApi.md#updateCustomerById) | **POST** /api/v1.0/{appId}/customers/{customerId} | 
 
 
 # **getCustomerById**
 > \Flipdish\\Client\Models\RestApiResultCustomer getCustomerById($app_id, $customer_id)
 
-Get customer of an app by Id
+
 
 ### Example
 ```php
@@ -27,8 +27,8 @@ $apiInstance = new Flipdish\\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$customer_id = 56; // int | Customer Id
+$app_id = "app_id_example"; // string | 
+$customer_id = 56; // int | 
 
 try {
     $result = $apiInstance->getCustomerById($app_id, $customer_id);
@@ -43,8 +43,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **customer_id** | **int**| Customer Id |
+ **app_id** | **string**|  |
+ **customer_id** | **int**|  |
 
 ### Return type
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 # **updateCustomerById**
 > \Flipdish\\Client\Models\RestApiResultCustomer updateCustomerById($app_id, $customer_id, $update_customer)
 
-Update customer of an app by Id
+
 
 ### Example
 ```php
@@ -80,9 +80,9 @@ $apiInstance = new Flipdish\\Client\Api\CustomersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$customer_id = 56; // int | Customer Id
-$update_customer = new \Flipdish\\Client\Models\CustomerUpdateModel(); // \Flipdish\\Client\Models\CustomerUpdateModel | Updated customer information
+$app_id = "app_id_example"; // string | 
+$customer_id = 56; // int | 
+$update_customer = new \Flipdish\\Client\Models\CustomerUpdateModel(); // \Flipdish\\Client\Models\CustomerUpdateModel | 
 
 try {
     $result = $apiInstance->updateCustomerById($app_id, $customer_id, $update_customer);
@@ -97,9 +97,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **customer_id** | **int**| Customer Id |
- **update_customer** | [**\Flipdish\\Client\Models\CustomerUpdateModel**](../Model/CustomerUpdateModel.md)| Updated customer information |
+ **app_id** | **string**|  |
+ **customer_id** | **int**|  |
+ **update_customer** | [**\Flipdish\\Client\Models\CustomerUpdateModel**](../Model/CustomerUpdateModel.md)|  |
 
 ### Return type
 

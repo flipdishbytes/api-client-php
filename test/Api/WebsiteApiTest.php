@@ -74,7 +74,7 @@ class WebsiteApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for addTestimonial
      *
-     * Add a testimonial.
+     * .
      *
      */
     public function testAddTestimonial()
@@ -84,7 +84,7 @@ class WebsiteApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteTestimonial
      *
-     * Delete a testimonial.
+     * .
      *
      */
     public function testDeleteTestimonial()
@@ -94,7 +94,7 @@ class WebsiteApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteWebsiteImage
      *
-     * Delete Website Image.
+     * .
      *
      */
     public function testDeleteWebsiteImage()
@@ -104,7 +104,7 @@ class WebsiteApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for editTestimonial
      *
-     * Edit a testimonial.
+     * .
      *
      */
     public function testEditTestimonial()
@@ -114,7 +114,7 @@ class WebsiteApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getIndexConfiguration
      *
-     * Get Index Configuration.
+     * .
      *
      */
     public function testGetIndexConfiguration()
@@ -124,7 +124,7 @@ class WebsiteApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setIndexConfiguration
      *
-     * Set Index Configuration.
+     * .
      *
      */
     public function testSetIndexConfiguration()
@@ -134,7 +134,7 @@ class WebsiteApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for uploadWebsiteImage
      *
-     * Upload Website Image.
+     * .
      *
      */
     public function testUploadWebsiteImage()
@@ -144,7 +144,7 @@ class WebsiteApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for websiteCheckNow
      *
-     * Triggers a Check DNS Process.
+     * .
      *
      */
     public function testWebsiteCheckNow()

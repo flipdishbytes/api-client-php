@@ -4,20 +4,20 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addTestimonial**](WebsiteApi.md#addTestimonial) | **POST** /api/v1.0/{appId}/website/testimonial | Add a testimonial
-[**deleteTestimonial**](WebsiteApi.md#deleteTestimonial) | **DELETE** /api/v1.0/{appId}/website/testimonial/{testimonialId} | Delete a testimonial
-[**deleteWebsiteImage**](WebsiteApi.md#deleteWebsiteImage) | **DELETE** /api/v1.0/{appId}/website/image/{imageId} | Delete Website Image
-[**editTestimonial**](WebsiteApi.md#editTestimonial) | **POST** /api/v1.0/{appId}/website/testimonial/{testimonialId} | Edit a testimonial
-[**getIndexConfiguration**](WebsiteApi.md#getIndexConfiguration) | **GET** /api/v1.0/{appId}/website/index | Get Index Configuration
-[**setIndexConfiguration**](WebsiteApi.md#setIndexConfiguration) | **POST** /api/v1.0/{appId}/website/index | Set Index Configuration
-[**uploadWebsiteImage**](WebsiteApi.md#uploadWebsiteImage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | Upload Website Image
-[**websiteCheckNow**](WebsiteApi.md#websiteCheckNow) | **GET** /api/v1.0/{appId}/website/dnscheck | Triggers a Check DNS Process
+[**addTestimonial**](WebsiteApi.md#addTestimonial) | **POST** /api/v1.0/{appId}/website/testimonial | 
+[**deleteTestimonial**](WebsiteApi.md#deleteTestimonial) | **DELETE** /api/v1.0/{appId}/website/testimonial/{testimonialId} | 
+[**deleteWebsiteImage**](WebsiteApi.md#deleteWebsiteImage) | **DELETE** /api/v1.0/{appId}/website/image/{imageId} | 
+[**editTestimonial**](WebsiteApi.md#editTestimonial) | **POST** /api/v1.0/{appId}/website/testimonial/{testimonialId} | 
+[**getIndexConfiguration**](WebsiteApi.md#getIndexConfiguration) | **GET** /api/v1.0/{appId}/website/index | 
+[**setIndexConfiguration**](WebsiteApi.md#setIndexConfiguration) | **POST** /api/v1.0/{appId}/website/index | 
+[**uploadWebsiteImage**](WebsiteApi.md#uploadWebsiteImage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | 
+[**websiteCheckNow**](WebsiteApi.md#websiteCheckNow) | **GET** /api/v1.0/{appId}/website/dnscheck | 
 
 
 # **addTestimonial**
 > \Flipdish\\Client\Models\RestApiResultWebsiteTestimonial addTestimonial($app_id, $testimonial)
 
-Add a testimonial
+
 
 ### Example
 ```php
@@ -33,8 +33,8 @@ $apiInstance = new Flipdish\\Client\Api\WebsiteApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$testimonial = new \Flipdish\\Client\Models\WebsiteTestimonialBase(); // \Flipdish\\Client\Models\WebsiteTestimonialBase | Testimonial to be added
+$app_id = "app_id_example"; // string | 
+$testimonial = new \Flipdish\\Client\Models\WebsiteTestimonialBase(); // \Flipdish\\Client\Models\WebsiteTestimonialBase | 
 
 try {
     $result = $apiInstance->addTestimonial($app_id, $testimonial);
@@ -49,8 +49,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **testimonial** | [**\Flipdish\\Client\Models\WebsiteTestimonialBase**](../Model/WebsiteTestimonialBase.md)| Testimonial to be added |
+ **app_id** | **string**|  |
+ **testimonial** | [**\Flipdish\\Client\Models\WebsiteTestimonialBase**](../Model/WebsiteTestimonialBase.md)|  |
 
 ### Return type
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 # **deleteTestimonial**
 > deleteTestimonial($app_id, $testimonial_id)
 
-Delete a testimonial
+
 
 ### Example
 ```php
@@ -86,8 +86,8 @@ $apiInstance = new Flipdish\\Client\Api\WebsiteApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$testimonial_id = 56; // int | Id of the testimonial to delete
+$app_id = "app_id_example"; // string | 
+$testimonial_id = 56; // int | 
 
 try {
     $apiInstance->deleteTestimonial($app_id, $testimonial_id);
@@ -101,8 +101,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **testimonial_id** | **int**| Id of the testimonial to delete |
+ **app_id** | **string**|  |
+ **testimonial_id** | **int**|  |
 
 ### Return type
 
@@ -122,7 +122,7 @@ void (empty response body)
 # **deleteWebsiteImage**
 > deleteWebsiteImage($app_id, $image_id)
 
-Delete Website Image
+
 
 ### Example
 ```php
@@ -138,8 +138,8 @@ $apiInstance = new Flipdish\\Client\Api\WebsiteApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$image_id = 56; // int | Id of the image
+$app_id = "app_id_example"; // string | 
+$image_id = 56; // int | 
 
 try {
     $apiInstance->deleteWebsiteImage($app_id, $image_id);
@@ -153,8 +153,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **image_id** | **int**| Id of the image |
+ **app_id** | **string**|  |
+ **image_id** | **int**|  |
 
 ### Return type
 
@@ -174,7 +174,7 @@ void (empty response body)
 # **editTestimonial**
 > \Flipdish\\Client\Models\RestApiResultWebsiteTestimonial editTestimonial($app_id, $testimonial_id, $testimonial)
 
-Edit a testimonial
+
 
 ### Example
 ```php
@@ -190,9 +190,9 @@ $apiInstance = new Flipdish\\Client\Api\WebsiteApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$testimonial_id = 56; // int | Id of the testimonial to edit
-$testimonial = new \Flipdish\\Client\Models\WebsiteTestimonialBase(); // \Flipdish\\Client\Models\WebsiteTestimonialBase | New values of the testimonial
+$app_id = "app_id_example"; // string | 
+$testimonial_id = 56; // int | 
+$testimonial = new \Flipdish\\Client\Models\WebsiteTestimonialBase(); // \Flipdish\\Client\Models\WebsiteTestimonialBase | 
 
 try {
     $result = $apiInstance->editTestimonial($app_id, $testimonial_id, $testimonial);
@@ -207,9 +207,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **testimonial_id** | **int**| Id of the testimonial to edit |
- **testimonial** | [**\Flipdish\\Client\Models\WebsiteTestimonialBase**](../Model/WebsiteTestimonialBase.md)| New values of the testimonial |
+ **app_id** | **string**|  |
+ **testimonial_id** | **int**|  |
+ **testimonial** | [**\Flipdish\\Client\Models\WebsiteTestimonialBase**](../Model/WebsiteTestimonialBase.md)|  |
 
 ### Return type
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 # **getIndexConfiguration**
 > \Flipdish\\Client\Models\RestApiResultIndexPage getIndexConfiguration($app_id)
 
-Get Index Configuration
+
 
 ### Example
 ```php
@@ -245,7 +245,7 @@ $apiInstance = new Flipdish\\Client\Api\WebsiteApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getIndexConfiguration($app_id);
@@ -260,7 +260,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
 # **setIndexConfiguration**
 > \Flipdish\\Client\Models\RestApiResultIndexPageBase setIndexConfiguration($app_id, $index_page)
 
-Set Index Configuration
+
 
 ### Example
 ```php
@@ -296,8 +296,8 @@ $apiInstance = new Flipdish\\Client\Api\WebsiteApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$index_page = new \Flipdish\\Client\Models\IndexPageBase(); // \Flipdish\\Client\Models\IndexPageBase | New index page definition
+$app_id = "app_id_example"; // string | 
+$index_page = new \Flipdish\\Client\Models\IndexPageBase(); // \Flipdish\\Client\Models\IndexPageBase | 
 
 try {
     $result = $apiInstance->setIndexConfiguration($app_id, $index_page);
@@ -312,8 +312,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **index_page** | [**\Flipdish\\Client\Models\IndexPageBase**](../Model/IndexPageBase.md)| New index page definition |
+ **app_id** | **string**|  |
+ **index_page** | [**\Flipdish\\Client\Models\IndexPageBase**](../Model/IndexPageBase.md)|  |
 
 ### Return type
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 # **uploadWebsiteImage**
 > \Flipdish\\Client\Models\RestApiResultWebsiteImage uploadWebsiteImage($app_id, $image_location, $image)
 
-Upload Website Image
+
 
 ### Example
 ```php
@@ -349,8 +349,8 @@ $apiInstance = new Flipdish\\Client\Api\WebsiteApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$image_location = "image_location_example"; // string | Section for which to upload the image
+$app_id = "app_id_example"; // string | 
+$image_location = "image_location_example"; // string | 
 $image = "/path/to/file.txt"; // \SplFileObject | App Logo
 
 try {
@@ -366,8 +366,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **image_location** | **string**| Section for which to upload the image |
+ **app_id** | **string**|  |
+ **image_location** | **string**|  |
  **image** | **\SplFileObject**| App Logo |
 
 ### Return type
@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 # **websiteCheckNow**
 > websiteCheckNow($app_id)
 
-Triggers a Check DNS Process
+
 
 ### Example
 ```php

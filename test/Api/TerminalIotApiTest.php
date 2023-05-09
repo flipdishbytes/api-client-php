@@ -74,7 +74,7 @@ class TerminalIotApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getTerminalIotConnection
      *
-     * Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context.
+     * .
      *
      */
     public function testGetTerminalIotConnection()

@@ -4,16 +4,16 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createLocationArea**](LocationAreasApi.md#createLocationArea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | Create a Location Area, i.e: Room, Floor, Parking lot
-[**getLocationArea**](LocationAreasApi.md#getLocationArea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | Retrieve a Location Area
-[**getLocationAreasForStore**](LocationAreasApi.md#getLocationAreasForStore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
-[**updateLocationArea**](LocationAreasApi.md#updateLocationArea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/update | Update a Location Area, i.e: Room, Floor, Car park space
+[**createLocationArea**](LocationAreasApi.md#createLocationArea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | 
+[**getLocationArea**](LocationAreasApi.md#getLocationArea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | 
+[**getLocationAreasForStore**](LocationAreasApi.md#getLocationAreasForStore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | 
+[**updateLocationArea**](LocationAreasApi.md#updateLocationArea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/update | 
 
 
 # **createLocationArea**
 > object createLocationArea($location_area_input, $app_id, $store_id)
 
-Create a Location Area, i.e: Room, Floor, Parking lot
+
 
 ### Example
 ```php
@@ -29,9 +29,9 @@ $apiInstance = new Flipdish\\Client\Api\LocationAreasApi(
     new GuzzleHttp\Client(),
     $config
 );
-$location_area_input = new \Flipdish\\Client\Models\CreateLocationArea(); // \Flipdish\\Client\Models\CreateLocationArea | Input data for creating the Location Area
-$app_id = "app_id_example"; // string | AppId i.e: (fd1234)
-$store_id = 56; // int | Id of the Store
+$location_area_input = new \Flipdish\\Client\Models\CreateLocationArea(); // \Flipdish\\Client\Models\CreateLocationArea | 
+$app_id = "app_id_example"; // string | 
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->createLocationArea($location_area_input, $app_id, $store_id);
@@ -46,9 +46,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **location_area_input** | [**\Flipdish\\Client\Models\CreateLocationArea**](../Model/CreateLocationArea.md)| Input data for creating the Location Area |
- **app_id** | **string**| AppId i.e: (fd1234) |
- **store_id** | **int**| Id of the Store |
+ **location_area_input** | [**\Flipdish\\Client\Models\CreateLocationArea**](../Model/CreateLocationArea.md)|  |
+ **app_id** | **string**|  |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 # **getLocationArea**
 > \Flipdish\\Client\Models\RestApiResultLocationAreaWithLocations getLocationArea($location_area_id, $app_id, $store_id)
 
-Retrieve a Location Area
+
 
 ### Example
 ```php
@@ -84,9 +84,9 @@ $apiInstance = new Flipdish\\Client\Api\LocationAreasApi(
     new GuzzleHttp\Client(),
     $config
 );
-$location_area_id = 56; // int | Id of the Location Area
-$app_id = "app_id_example"; // string | AppId i.e: (fd1234)
-$store_id = 56; // int | Id of the Store
+$location_area_id = 56; // int | 
+$app_id = "app_id_example"; // string | 
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->getLocationArea($location_area_id, $app_id, $store_id);
@@ -101,9 +101,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **location_area_id** | **int**| Id of the Location Area |
- **app_id** | **string**| AppId i.e: (fd1234) |
- **store_id** | **int**| Id of the Store |
+ **location_area_id** | **int**|  |
+ **app_id** | **string**|  |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 # **getLocationAreasForStore**
 > \Flipdish\\Client\Models\RestApiArrayResultLocationAreaWithLocations getLocationAreasForStore($app_id, $store_id)
 
-Retrieve all Location Areas for a Store
+
 
 ### Example
 ```php
@@ -139,8 +139,8 @@ $apiInstance = new Flipdish\\Client\Api\LocationAreasApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | AppId i.e: (fd1234)
-$store_id = 56; // int | Id of the Store
+$app_id = "app_id_example"; // string | 
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->getLocationAreasForStore($app_id, $store_id);
@@ -155,8 +155,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| AppId i.e: (fd1234) |
- **store_id** | **int**| Id of the Store |
+ **app_id** | **string**|  |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 # **updateLocationArea**
 > \Flipdish\\Client\Models\RestApiResultLocationArea updateLocationArea($location_area_input, $app_id, $store_id, $location_area_id)
 
-Update a Location Area, i.e: Room, Floor, Car park space
+
 
 ### Example
 ```php
@@ -192,9 +192,9 @@ $apiInstance = new Flipdish\\Client\Api\LocationAreasApi(
     new GuzzleHttp\Client(),
     $config
 );
-$location_area_input = new \Flipdish\\Client\Models\UpdateLocationArea(); // \Flipdish\\Client\Models\UpdateLocationArea | Input data for updating the Location Area
-$app_id = "app_id_example"; // string | AppId i.e: (fd1234)
-$store_id = 56; // int | Id of the Store
+$location_area_input = new \Flipdish\\Client\Models\UpdateLocationArea(); // \Flipdish\\Client\Models\UpdateLocationArea | 
+$app_id = "app_id_example"; // string | 
+$store_id = 56; // int | 
 $location_area_id = "location_area_id_example"; // string | 
 
 try {
@@ -210,9 +210,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **location_area_input** | [**\Flipdish\\Client\Models\UpdateLocationArea**](../Model/UpdateLocationArea.md)| Input data for updating the Location Area |
- **app_id** | **string**| AppId i.e: (fd1234) |
- **store_id** | **int**| Id of the Store |
+ **location_area_input** | [**\Flipdish\\Client\Models\UpdateLocationArea**](../Model/UpdateLocationArea.md)|  |
+ **app_id** | **string**|  |
+ **store_id** | **int**|  |
  **location_area_id** | **string**|  |
 
 ### Return type

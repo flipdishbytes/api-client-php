@@ -4,23 +4,23 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addDriverNotificationToken**](DriversApi.md#addDriverNotificationToken) | **POST** /api/v1.0/drivers/token | Add driver token
-[**deleteDriverProfileImage**](DriversApi.md#deleteDriverProfileImage) | **DELETE** /api/v1.0/drivers/profile/image | Delete driver profile image
-[**driverLogin**](DriversApi.md#driverLogin) | **POST** /api/v1.0/drivers/login | [PRIVATE] Login with phone number and pin
-[**driverRequestLoginCodeSms**](DriversApi.md#driverRequestLoginCodeSms) | **POST** /api/v1.0/drivers/pin | [PRIVATE] Request an SMS to be sent to the driver with their login code
-[**getDriverProfile**](DriversApi.md#getDriverProfile) | **GET** /api/v1.0/drivers/profile | Get driver profile
-[**getStoresForDriver**](DriversApi.md#getStoresForDriver) | **GET** /api/v1.0/drivers/assignedstores | Get stores for driver
-[**removeDriverNotificationToken**](DriversApi.md#removeDriverNotificationToken) | **DELETE** /api/v1.0/drivers/token | Delete driver token
+[**addDriverNotificationToken**](DriversApi.md#addDriverNotificationToken) | **POST** /api/v1.0/drivers/token | 
+[**deleteDriverProfileImage**](DriversApi.md#deleteDriverProfileImage) | **DELETE** /api/v1.0/drivers/profile/image | 
+[**driverLogin**](DriversApi.md#driverLogin) | **POST** /api/v1.0/drivers/login | 
+[**driverRequestLoginCodeSms**](DriversApi.md#driverRequestLoginCodeSms) | **POST** /api/v1.0/drivers/pin | 
+[**getDriverProfile**](DriversApi.md#getDriverProfile) | **GET** /api/v1.0/drivers/profile | 
+[**getStoresForDriver**](DriversApi.md#getStoresForDriver) | **GET** /api/v1.0/drivers/assignedstores | 
+[**removeDriverNotificationToken**](DriversApi.md#removeDriverNotificationToken) | **DELETE** /api/v1.0/drivers/token | 
 [**setDriverPresenceForStore**](DriversApi.md#setDriverPresenceForStore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
-[**setDriverProfileImage**](DriversApi.md#setDriverProfileImage) | **POST** /api/v1.0/drivers/profile/image | Set driver profile image and returns it&#39;s url
-[**updateDeliveryTrackingStatus**](DriversApi.md#updateDeliveryTrackingStatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | Change delivery tracking status and return the updated status.
-[**updateDriverProfile**](DriversApi.md#updateDriverProfile) | **POST** /api/v1.0/drivers/profile | Update driver profile
+[**setDriverProfileImage**](DriversApi.md#setDriverProfileImage) | **POST** /api/v1.0/drivers/profile/image | 
+[**updateDeliveryTrackingStatus**](DriversApi.md#updateDeliveryTrackingStatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
+[**updateDriverProfile**](DriversApi.md#updateDriverProfile) | **POST** /api/v1.0/drivers/profile | 
 
 
 # **addDriverNotificationToken**
 > addDriverNotificationToken($update_driver_token)
 
-Add driver token
+
 
 ### Example
 ```php
@@ -70,7 +70,7 @@ void (empty response body)
 # **deleteDriverProfileImage**
 > deleteDriverProfileImage()
 
-Delete driver profile image
+
 
 ### Example
 ```php
@@ -116,7 +116,7 @@ void (empty response body)
 # **driverLogin**
 > driverLogin($driver_login_model)
 
-[PRIVATE] Login with phone number and pin
+
 
 ### Example
 ```php
@@ -132,7 +132,7 @@ $apiInstance = new Flipdish\\Client\Api\DriversApi(
     new GuzzleHttp\Client(),
     $config
 );
-$driver_login_model = new \Flipdish\\Client\Models\DriverLoginModel(); // \Flipdish\\Client\Models\DriverLoginModel | Driver request login code model
+$driver_login_model = new \Flipdish\\Client\Models\DriverLoginModel(); // \Flipdish\\Client\Models\DriverLoginModel | 
 
 try {
     $apiInstance->driverLogin($driver_login_model);
@@ -146,7 +146,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **driver_login_model** | [**\Flipdish\\Client\Models\DriverLoginModel**](../Model/DriverLoginModel.md)| Driver request login code model |
+ **driver_login_model** | [**\Flipdish\\Client\Models\DriverLoginModel**](../Model/DriverLoginModel.md)|  |
 
 ### Return type
 
@@ -166,7 +166,7 @@ void (empty response body)
 # **driverRequestLoginCodeSms**
 > driverRequestLoginCodeSms($driver_request_login_pin_model)
 
-[PRIVATE] Request an SMS to be sent to the driver with their login code
+
 
 ### Example
 ```php
@@ -182,7 +182,7 @@ $apiInstance = new Flipdish\\Client\Api\DriversApi(
     new GuzzleHttp\Client(),
     $config
 );
-$driver_request_login_pin_model = new \Flipdish\\Client\Models\DriverRequestLoginPinModel(); // \Flipdish\\Client\Models\DriverRequestLoginPinModel | Driver request login code model
+$driver_request_login_pin_model = new \Flipdish\\Client\Models\DriverRequestLoginPinModel(); // \Flipdish\\Client\Models\DriverRequestLoginPinModel | 
 
 try {
     $apiInstance->driverRequestLoginCodeSms($driver_request_login_pin_model);
@@ -196,7 +196,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **driver_request_login_pin_model** | [**\Flipdish\\Client\Models\DriverRequestLoginPinModel**](../Model/DriverRequestLoginPinModel.md)| Driver request login code model |
+ **driver_request_login_pin_model** | [**\Flipdish\\Client\Models\DriverRequestLoginPinModel**](../Model/DriverRequestLoginPinModel.md)|  |
 
 ### Return type
 
@@ -216,7 +216,7 @@ void (empty response body)
 # **getDriverProfile**
 > \Flipdish\\Client\Models\RestApiResultDriver getDriverProfile()
 
-Get driver profile
+
 
 ### Example
 ```php
@@ -263,7 +263,7 @@ This endpoint does not need any parameter.
 # **getStoresForDriver**
 > \Flipdish\\Client\Models\RestApiArrayResultDriverStore getStoresForDriver()
 
-Get stores for driver
+
 
 ### Example
 ```php
@@ -310,7 +310,7 @@ This endpoint does not need any parameter.
 # **removeDriverNotificationToken**
 > removeDriverNotificationToken($remove_driver_token)
 
-Delete driver token
+
 
 ### Example
 ```php
@@ -412,7 +412,7 @@ void (empty response body)
 # **setDriverProfileImage**
 > \Flipdish\\Client\Models\RestApiStringResult setDriverProfileImage()
 
-Set driver profile image and returns it's url
+
 
 ### Example
 ```php
@@ -459,9 +459,7 @@ This endpoint does not need any parameter.
 # **updateDeliveryTrackingStatus**
 > \Flipdish\\Client\Models\RestApiStringResult updateDeliveryTrackingStatus($order_id, $delivery_tracking_status)
 
-Change delivery tracking status and return the updated status.
 
-...
 
 ### Example
 ```php
@@ -477,7 +475,7 @@ $apiInstance = new Flipdish\\Client\Api\DriversApi(
     new GuzzleHttp\Client(),
     $config
 );
-$order_id = 56; // int | Order identifier
+$order_id = 56; // int | 
 $delivery_tracking_status = "delivery_tracking_status_example"; // string | 
 
 try {
@@ -493,7 +491,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_id** | **int**| Order identifier |
+ **order_id** | **int**|  |
  **delivery_tracking_status** | **string**|  |
 
 ### Return type
@@ -514,7 +512,7 @@ Name | Type | Description  | Notes
 # **updateDriverProfile**
 > updateDriverProfile($update_driver_profile)
 
-Update driver profile
+
 
 ### Example
 ```php
@@ -530,7 +528,7 @@ $apiInstance = new Flipdish\\Client\Api\DriversApi(
     new GuzzleHttp\Client(),
     $config
 );
-$update_driver_profile = new \Flipdish\\Client\Models\UpdateDriverProfileModel(); // \Flipdish\\Client\Models\UpdateDriverProfileModel | Update the driver profile (i.e Name)
+$update_driver_profile = new \Flipdish\\Client\Models\UpdateDriverProfileModel(); // \Flipdish\\Client\Models\UpdateDriverProfileModel | 
 
 try {
     $apiInstance->updateDriverProfile($update_driver_profile);
@@ -544,7 +542,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **update_driver_profile** | [**\Flipdish\\Client\Models\UpdateDriverProfileModel**](../Model/UpdateDriverProfileModel.md)| Update the driver profile (i.e Name) |
+ **update_driver_profile** | [**\Flipdish\\Client\Models\UpdateDriverProfileModel**](../Model/UpdateDriverProfileModel.md)|  |
 
 ### Return type
 

@@ -4,20 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#createFulfillmentStatesConfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states | Create fulfillment configuration
-[**deleteFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#deleteFulfillmentStatesConfig) | **DELETE** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Delete fulfillment states configuration
-[**getFulfillmentStatesConfiguration**](FulfillmentStateConfigurationApi.md#getFulfillmentStatesConfiguration) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Get fulfillment configuration
-[**getFulfillmentStatesConfigurationTemplate**](FulfillmentStateConfigurationApi.md#getFulfillmentStatesConfigurationTemplate) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states_template | Get fulfillment configuration template
-[**searchFulfillmentStatesConfigurations**](FulfillmentStateConfigurationApi.md#searchFulfillmentStatesConfigurations) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states | List fulfillment configurations for AppId
-[**updateFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#updateFulfillmentStatesConfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Update fulfillment configuration
+[**createFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#createFulfillmentStatesConfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states | 
+[**deleteFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#deleteFulfillmentStatesConfig) | **DELETE** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | 
+[**getFulfillmentStatesConfiguration**](FulfillmentStateConfigurationApi.md#getFulfillmentStatesConfiguration) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | 
+[**getFulfillmentStatesConfigurationTemplate**](FulfillmentStateConfigurationApi.md#getFulfillmentStatesConfigurationTemplate) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states_template | 
+[**searchFulfillmentStatesConfigurations**](FulfillmentStateConfigurationApi.md#searchFulfillmentStatesConfigurations) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states | 
+[**updateFulfillmentStatesConfig**](FulfillmentStateConfigurationApi.md#updateFulfillmentStatesConfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | 
 
 
 # **createFulfillmentStatesConfig**
 > \Flipdish\\Client\Models\RestApiResultFulfillmentStatesConfiguration createFulfillmentStatesConfig($app_id, $fulfillment_state_configuration)
 
-Create fulfillment configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -33,8 +31,8 @@ $apiInstance = new Flipdish\\Client\Api\FulfillmentStateConfigurationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App id
-$fulfillment_state_configuration = new \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration(); // \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration | Fulfillment state configuration
+$app_id = "app_id_example"; // string | 
+$fulfillment_state_configuration = new \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration(); // \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration | 
 
 try {
     $result = $apiInstance->createFulfillmentStatesConfig($app_id, $fulfillment_state_configuration);
@@ -49,8 +47,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App id |
- **fulfillment_state_configuration** | [**\Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration**](../Model/CreateFulfillmentStatesConfiguration.md)| Fulfillment state configuration |
+ **app_id** | **string**|  |
+ **fulfillment_state_configuration** | [**\Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration**](../Model/CreateFulfillmentStatesConfiguration.md)|  |
 
 ### Return type
 
@@ -70,9 +68,7 @@ Name | Type | Description  | Notes
 # **deleteFulfillmentStatesConfig**
 > \Flipdish\\Client\Models\RestApiStringResult deleteFulfillmentStatesConfig($app_id, $config_id)
 
-Delete fulfillment states configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -88,8 +84,8 @@ $apiInstance = new Flipdish\\Client\Api\FulfillmentStateConfigurationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App id
-$config_id = "config_id_example"; // string | Fulfillment states configuration id
+$app_id = "app_id_example"; // string | 
+$config_id = "config_id_example"; // string | 
 
 try {
     $result = $apiInstance->deleteFulfillmentStatesConfig($app_id, $config_id);
@@ -104,8 +100,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App id |
- **config_id** | **string**| Fulfillment states configuration id |
+ **app_id** | **string**|  |
+ **config_id** | **string**|  |
 
 ### Return type
 
@@ -125,9 +121,7 @@ Name | Type | Description  | Notes
 # **getFulfillmentStatesConfiguration**
 > \Flipdish\\Client\Models\FulfillmentStatesConfiguration getFulfillmentStatesConfiguration($app_id, $config_id)
 
-Get fulfillment configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -143,8 +137,8 @@ $apiInstance = new Flipdish\\Client\Api\FulfillmentStateConfigurationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App id
-$config_id = "config_id_example"; // string | Fulfillment configuration id
+$app_id = "app_id_example"; // string | 
+$config_id = "config_id_example"; // string | 
 
 try {
     $result = $apiInstance->getFulfillmentStatesConfiguration($app_id, $config_id);
@@ -159,8 +153,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App id |
- **config_id** | **string**| Fulfillment configuration id |
+ **app_id** | **string**|  |
+ **config_id** | **string**|  |
 
 ### Return type
 
@@ -180,9 +174,7 @@ Name | Type | Description  | Notes
 # **getFulfillmentStatesConfigurationTemplate**
 > \Flipdish\\Client\Models\FulfillmentStatesConfiguration getFulfillmentStatesConfigurationTemplate($app_id)
 
-Get fulfillment configuration template
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -198,7 +190,7 @@ $apiInstance = new Flipdish\\Client\Api\FulfillmentStateConfigurationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App id
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getFulfillmentStatesConfigurationTemplate($app_id);
@@ -213,7 +205,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App id |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -233,9 +225,7 @@ Name | Type | Description  | Notes
 # **searchFulfillmentStatesConfigurations**
 > \Flipdish\\Client\Models\RestApiArrayResultFulfillmentStatesConfigurationSummary searchFulfillmentStatesConfigurations($app_id)
 
-List fulfillment configurations for AppId
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -251,7 +241,7 @@ $apiInstance = new Flipdish\\Client\Api\FulfillmentStateConfigurationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App id
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->searchFulfillmentStatesConfigurations($app_id);
@@ -266,7 +256,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App id |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -286,9 +276,7 @@ Name | Type | Description  | Notes
 # **updateFulfillmentStatesConfig**
 > updateFulfillmentStatesConfig($app_id, $config_id, $update_fulfillment_states_configuration)
 
-Update fulfillment configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -304,9 +292,9 @@ $apiInstance = new Flipdish\\Client\Api\FulfillmentStateConfigurationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App id
-$config_id = "config_id_example"; // string | Fulfillment states configuration id
-$update_fulfillment_states_configuration = new \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration(); // \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration | Update fulfillment states configuration
+$app_id = "app_id_example"; // string | 
+$config_id = "config_id_example"; // string | 
+$update_fulfillment_states_configuration = new \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration(); // \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration | 
 
 try {
     $apiInstance->updateFulfillmentStatesConfig($app_id, $config_id, $update_fulfillment_states_configuration);
@@ -320,9 +308,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App id |
- **config_id** | **string**| Fulfillment states configuration id |
- **update_fulfillment_states_configuration** | [**\Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration**](../Model/UpdateFulfillmentStatesConfiguration.md)| Update fulfillment states configuration |
+ **app_id** | **string**|  |
+ **config_id** | **string**|  |
+ **update_fulfillment_states_configuration** | [**\Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration**](../Model/UpdateFulfillmentStatesConfiguration.md)|  |
 
 ### Return type
 

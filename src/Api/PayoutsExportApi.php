@@ -90,12 +90,10 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutChargebacks
      *
-     * Export a list of payout's chargebacks as CSV
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  int $payout_id payout_id (required)
+     * @param  int[] $store_ids store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -110,12 +108,10 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutChargebacksWithHttpInfo
      *
-     * Export a list of payout's chargebacks as CSV
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -212,12 +208,12 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutChargebacksAsync
      *
-     * Export a list of payout's chargebacks as CSV
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -235,12 +231,12 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutChargebacksAsyncWithHttpInfo
      *
-     * Export a list of payout's chargebacks as CSV
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -290,10 +286,10 @@ class PayoutsExportApi
     /**
      * Create request for operation 'exportPayoutChargebacks'
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -437,12 +433,10 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutOrders
      *
-     * Export a list of payout's orders as CSV
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  int $payout_id payout_id (required)
+     * @param  int[] $store_ids store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -457,12 +451,10 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutOrdersWithHttpInfo
      *
-     * Export a list of payout's orders as CSV
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -559,12 +551,12 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutOrdersAsync
      *
-     * Export a list of payout's orders as CSV
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -582,12 +574,12 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutOrdersAsyncWithHttpInfo
      *
-     * Export a list of payout's orders as CSV
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -637,10 +629,10 @@ class PayoutsExportApi
     /**
      * Create request for operation 'exportPayoutOrders'
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -784,12 +776,10 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutOtherCharges
      *
-     * Export a list of payout's other charges as CSV
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  int $payout_id payout_id (required)
+     * @param  int[] $store_ids store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -804,12 +794,10 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutOtherChargesWithHttpInfo
      *
-     * Export a list of payout's other charges as CSV
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -906,12 +894,12 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutOtherChargesAsync
      *
-     * Export a list of payout's other charges as CSV
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -929,12 +917,12 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutOtherChargesAsyncWithHttpInfo
      *
-     * Export a list of payout's other charges as CSV
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -984,10 +972,10 @@ class PayoutsExportApi
     /**
      * Create request for operation 'exportPayoutOtherCharges'
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1131,12 +1119,10 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutRefunds
      *
-     * Export a list of payout's refunds as CSV
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  int $payout_id payout_id (required)
+     * @param  int[] $store_ids store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1151,12 +1137,10 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutRefundsWithHttpInfo
      *
-     * Export a list of payout's refunds as CSV
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1253,12 +1237,12 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutRefundsAsync
      *
-     * Export a list of payout's refunds as CSV
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1276,12 +1260,12 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutRefundsAsyncWithHttpInfo
      *
-     * Export a list of payout's refunds as CSV
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1331,10 +1315,10 @@ class PayoutsExportApi
     /**
      * Create request for operation 'exportPayoutRefunds'
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1478,12 +1462,10 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutStores
      *
-     * Export payout's details as CSV
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  int $payout_id payout_id (required)
+     * @param  int[] $store_ids store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1498,12 +1480,10 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutStoresWithHttpInfo
      *
-     * Export payout's details as CSV
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1600,12 +1580,12 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutStoresAsync
      *
-     * Export payout's details as CSV
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1623,12 +1603,12 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutStoresAsyncWithHttpInfo
      *
-     * Export payout's details as CSV
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1678,10 +1658,10 @@ class PayoutsExportApi
     /**
      * Create request for operation 'exportPayoutStores'
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1825,11 +1805,9 @@ class PayoutsExportApi
     /**
      * Operation exportPayouts
      *
-     * Export payouts as CSV
-     *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *
@@ -1846,11 +1824,9 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutsWithHttpInfo
      *
-     * Export payouts as CSV
-     *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
+     * @param  string $app_id (required)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *
@@ -1949,11 +1925,11 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutsAsync
      *
-     * Export payouts as CSV
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
+     * @param  string $app_id (required)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *
@@ -1973,11 +1949,11 @@ class PayoutsExportApi
     /**
      * Operation exportPayoutsAsyncWithHttpInfo
      *
-     * Export payouts as CSV
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
+     * @param  string $app_id (required)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *
@@ -2029,9 +2005,9 @@ class PayoutsExportApi
     /**
      * Create request for operation 'exportPayouts'
      *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
+     * @param  string $app_id (required)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *

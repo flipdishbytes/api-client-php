@@ -90,10 +90,8 @@ class DeviceApi
     /**
      * Operation assignDevice
      *
-     * Assign device to AppId. Device must have been enrolled before
-     *
-     * @param  string $app_id App Id (required)
-     * @param  \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice $assign_device_request Assign request (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice $assign_device_request assign_device_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class DeviceApi
     /**
      * Operation assignDeviceWithHttpInfo
      *
-     * Assign device to AppId. Device must have been enrolled before
-     *
-     * @param  string $app_id App Id (required)
-     * @param  \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice $assign_device_request Assign request (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice $assign_device_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -208,10 +204,10 @@ class DeviceApi
     /**
      * Operation assignDeviceAsync
      *
-     * Assign device to AppId. Device must have been enrolled before
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice $assign_device_request Assign request (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice $assign_device_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -229,10 +225,10 @@ class DeviceApi
     /**
      * Operation assignDeviceAsyncWithHttpInfo
      *
-     * Assign device to AppId. Device must have been enrolled before
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice $assign_device_request Assign request (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice $assign_device_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -282,8 +278,8 @@ class DeviceApi
     /**
      * Create request for operation 'assignDevice'
      *
-     * @param  string $app_id App Id (required)
-     * @param  \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice $assign_device_request Assign request (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice $assign_device_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -401,10 +397,8 @@ class DeviceApi
     /**
      * Operation enrollDevice
      *
-     * Enroll a new device - this returns a PIN code for actually assigning it later
-     *
-     * @param  string $app_id App Id - not for the device, only for permission checking (required)
-     * @param  \Flipdish\\Client\Models\ClientDeviceEnroll $device_enrollment_request Request object for enrolling device (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\ClientDeviceEnroll $device_enrollment_request device_enrollment_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -419,10 +413,8 @@ class DeviceApi
     /**
      * Operation enrollDeviceWithHttpInfo
      *
-     * Enroll a new device - this returns a PIN code for actually assigning it later
-     *
-     * @param  string $app_id App Id - not for the device, only for permission checking (required)
-     * @param  \Flipdish\\Client\Models\ClientDeviceEnroll $device_enrollment_request Request object for enrolling device (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\ClientDeviceEnroll $device_enrollment_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -519,10 +511,10 @@ class DeviceApi
     /**
      * Operation enrollDeviceAsync
      *
-     * Enroll a new device - this returns a PIN code for actually assigning it later
+     * 
      *
-     * @param  string $app_id App Id - not for the device, only for permission checking (required)
-     * @param  \Flipdish\\Client\Models\ClientDeviceEnroll $device_enrollment_request Request object for enrolling device (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\ClientDeviceEnroll $device_enrollment_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -540,10 +532,10 @@ class DeviceApi
     /**
      * Operation enrollDeviceAsyncWithHttpInfo
      *
-     * Enroll a new device - this returns a PIN code for actually assigning it later
+     * 
      *
-     * @param  string $app_id App Id - not for the device, only for permission checking (required)
-     * @param  \Flipdish\\Client\Models\ClientDeviceEnroll $device_enrollment_request Request object for enrolling device (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\ClientDeviceEnroll $device_enrollment_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -593,8 +585,8 @@ class DeviceApi
     /**
      * Create request for operation 'enrollDevice'
      *
-     * @param  string $app_id App Id - not for the device, only for permission checking (required)
-     * @param  \Flipdish\\Client\Models\ClientDeviceEnroll $device_enrollment_request Request object for enrolling device (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\ClientDeviceEnroll $device_enrollment_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -712,11 +704,9 @@ class DeviceApi
     /**
      * Operation getDeviceDetails
      *
-     * Get details for a device by model and deviceid
-     *
-     * @param  string $app_id App Id (required)
-     * @param  string $device_model Device Model (required)
-     * @param  string $device_id Device Id (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $device_model device_model (required)
+     * @param  string $device_id device_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -731,11 +721,9 @@ class DeviceApi
     /**
      * Operation getDeviceDetailsWithHttpInfo
      *
-     * Get details for a device by model and deviceid
-     *
-     * @param  string $app_id App Id (required)
-     * @param  string $device_model Device Model (required)
-     * @param  string $device_id Device Id (required)
+     * @param  string $app_id (required)
+     * @param  string $device_model (required)
+     * @param  string $device_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -832,11 +820,11 @@ class DeviceApi
     /**
      * Operation getDeviceDetailsAsync
      *
-     * Get details for a device by model and deviceid
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $device_model Device Model (required)
-     * @param  string $device_id Device Id (required)
+     * @param  string $app_id (required)
+     * @param  string $device_model (required)
+     * @param  string $device_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -854,11 +842,11 @@ class DeviceApi
     /**
      * Operation getDeviceDetailsAsyncWithHttpInfo
      *
-     * Get details for a device by model and deviceid
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $device_model Device Model (required)
-     * @param  string $device_id Device Id (required)
+     * @param  string $app_id (required)
+     * @param  string $device_model (required)
+     * @param  string $device_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -908,9 +896,9 @@ class DeviceApi
     /**
      * Create request for operation 'getDeviceDetails'
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $device_model Device Model (required)
-     * @param  string $device_id Device Id (required)
+     * @param  string $app_id (required)
+     * @param  string $device_model (required)
+     * @param  string $device_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1047,11 +1035,9 @@ class DeviceApi
     /**
      * Operation searchDevices
      *
-     * Search devices by AppId and optionally storeId
-     *
-     * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (optional) (optional)
-     * @param  string $device_model Device Model (optional) (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $store_id store_id (optional)
+     * @param  string $device_model device_model (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1066,11 +1052,9 @@ class DeviceApi
     /**
      * Operation searchDevicesWithHttpInfo
      *
-     * Search devices by AppId and optionally storeId
-     *
-     * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (optional) (optional)
-     * @param  string $device_model Device Model (optional) (optional)
+     * @param  string $app_id (required)
+     * @param  int $store_id (optional)
+     * @param  string $device_model (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1167,11 +1151,11 @@ class DeviceApi
     /**
      * Operation searchDevicesAsync
      *
-     * Search devices by AppId and optionally storeId
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (optional) (optional)
-     * @param  string $device_model Device Model (optional) (optional)
+     * @param  string $app_id (required)
+     * @param  int $store_id (optional)
+     * @param  string $device_model (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1189,11 +1173,11 @@ class DeviceApi
     /**
      * Operation searchDevicesAsyncWithHttpInfo
      *
-     * Search devices by AppId and optionally storeId
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (optional) (optional)
-     * @param  string $device_model Device Model (optional) (optional)
+     * @param  string $app_id (required)
+     * @param  int $store_id (optional)
+     * @param  string $device_model (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1243,9 +1227,9 @@ class DeviceApi
     /**
      * Create request for operation 'searchDevices'
      *
-     * @param  string $app_id App Id (required)
-     * @param  int $store_id Store Id (optional) (optional)
-     * @param  string $device_model Device Model (optional) (optional)
+     * @param  string $app_id (required)
+     * @param  int $store_id (optional)
+     * @param  string $device_model (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

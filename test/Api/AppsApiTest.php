@@ -74,7 +74,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getApp
      *
-     * Get the application configuration.
+     * .
      *
      */
     public function testGetApp()
@@ -84,7 +84,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAppHostnameStatus
      *
-     * Get the application hostname DNS delegation states for A and CNAME records..
+     * .
      *
      */
     public function testGetAppHostnameStatus()
@@ -94,7 +94,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getApps
      *
-     * Get Apps.
+     * .
      *
      */
     public function testGetApps()
@@ -104,7 +104,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getCompliance
      *
-     * Get the application compliance configuration.
+     * .
      *
      */
     public function testGetCompliance()
@@ -114,7 +114,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPanaceaVanityUrl
      *
-     * Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl].
+     * .
      *
      */
     public function testGetPanaceaVanityUrl()
@@ -124,7 +124,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getSupportedCountries
      *
-     * Get all supported countries..
+     * .
      *
      */
     public function testGetSupportedCountries()
@@ -134,7 +134,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for isPanaceaVanityUrlAvailable
      *
-     * Is panacea vanity url available.
+     * .
      *
      */
     public function testIsPanaceaVanityUrlAvailable()
@@ -144,7 +144,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setAppConfig
      *
-     * Set the application configuration.
+     * .
      *
      */
     public function testSetAppConfig()
@@ -154,7 +154,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setAppHostname
      *
-     * Set the application hostname..
+     * .
      *
      */
     public function testSetAppHostname()
@@ -164,7 +164,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setAppLanguages
      *
-     * Set the application languages.
+     * .
      *
      */
     public function testSetAppLanguages()
@@ -174,7 +174,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setCompliance
      *
-     * Set the application compliance configuration.
+     * .
      *
      */
     public function testSetCompliance()
@@ -184,7 +184,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setPanaceaVanityUrl
      *
-     * Set panacea vanity url.
+     * .
      *
      */
     public function testSetPanaceaVanityUrl()
@@ -194,7 +194,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for toggleNextGenWeb
      *
-     * Toggle Next Gen Web.
+     * .
      *
      */
     public function testToggleNextGenWeb()
@@ -204,7 +204,7 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for uploadAppLogo
      *
-     * Set the application logo \\ icon.
+     * .
      *
      */
     public function testUploadAppLogo()

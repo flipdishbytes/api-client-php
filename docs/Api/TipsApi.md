@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**tipConfigGet**](TipsApi.md#tipConfigGet) | **GET** /api/v1.0/stores/{storeId}/tipconfig | Returns current tip configuration for a store
-[**tipConfigUpsert**](TipsApi.md#tipConfigUpsert) | **POST** /api/v1.0/stores/{storeId}/tipconfig | Update or insert current tip configuration for a store
+[**tipConfigGet**](TipsApi.md#tipConfigGet) | **GET** /api/v1.0/stores/{storeId}/tipconfig | 
+[**tipConfigUpsert**](TipsApi.md#tipConfigUpsert) | **POST** /api/v1.0/stores/{storeId}/tipconfig | 
 
 
 # **tipConfigGet**
 > \Flipdish\\Client\Models\RestApiResultTipConfiguration tipConfigGet($store_id)
 
-Returns current tip configuration for a store
+
 
 ### Example
 ```php
@@ -27,7 +27,7 @@ $apiInstance = new Flipdish\\Client\Api\TipsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store Id
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->tipConfigGet($store_id);
@@ -42,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store Id |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 # **tipConfigUpsert**
 > \Flipdish\\Client\Models\RestApiResultTipConfiguration tipConfigUpsert($store_id, $update_config)
 
-Update or insert current tip configuration for a store
+
 
 ### Example
 ```php
@@ -78,8 +78,8 @@ $apiInstance = new Flipdish\\Client\Api\TipsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store Id
-$update_config = new \Flipdish\\Client\Models\UpdateTipConfiguration(); // \Flipdish\\Client\Models\UpdateTipConfiguration | Update Configuration
+$store_id = 56; // int | 
+$update_config = new \Flipdish\\Client\Models\UpdateTipConfiguration(); // \Flipdish\\Client\Models\UpdateTipConfiguration | 
 
 try {
     $result = $apiInstance->tipConfigUpsert($store_id, $update_config);
@@ -94,8 +94,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store Id |
- **update_config** | [**\Flipdish\\Client\Models\UpdateTipConfiguration**](../Model/UpdateTipConfiguration.md)| Update Configuration |
+ **store_id** | **int**|  |
+ **update_config** | [**\Flipdish\\Client\Models\UpdateTipConfiguration**](../Model/UpdateTipConfiguration.md)|  |
 
 ### Return type
 

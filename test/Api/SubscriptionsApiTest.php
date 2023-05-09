@@ -74,7 +74,7 @@ class SubscriptionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getSubscriptionById
      *
-     * Get subscription by id.
+     * .
      *
      */
     public function testGetSubscriptionById()
@@ -84,7 +84,7 @@ class SubscriptionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getSubscriptionsForApp
      *
-     * Get list of subscriptions for an App.
+     * .
      *
      */
     public function testGetSubscriptionsForApp()

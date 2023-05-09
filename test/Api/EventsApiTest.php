@@ -74,7 +74,7 @@ class EventsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getCustomerEvents
      *
-     * Get customer events  For technical reasons, the number of records returned is limited to 100..
+     * .
      *
      */
     public function testGetCustomerEvents()
@@ -84,7 +84,7 @@ class EventsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getEvents
      *
-     * Get events  For technical reasons, the number of records returned is limited to 100..
+     * .
      *
      */
     public function testGetEvents()
@@ -94,7 +94,7 @@ class EventsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getEventsById
      *
-     * Get event by Id  For technical reasons, the number of records returned is limited to 100..
+     * .
      *
      */
     public function testGetEventsById()
@@ -104,7 +104,7 @@ class EventsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getMenuEvents
      *
-     * Get menu events  For technical reasons, the number of records returned is limited to 100..
+     * .
      *
      */
     public function testGetMenuEvents()
@@ -114,7 +114,7 @@ class EventsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOrderEvents
      *
-     * Get order events  For technical reasons, the number of records returned is limited to 100..
+     * .
      *
      */
     public function testGetOrderEvents()
@@ -124,7 +124,7 @@ class EventsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOrderEventsByCustomer
      *
-     * Get order events by customer  For technical reasons, the number of records returned is limited to 100..
+     * .
      *
      */
     public function testGetOrderEventsByCustomer()
@@ -134,7 +134,7 @@ class EventsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoreEvents
      *
-     * Get store events  For technical reasons, the number of records returned is limited to 100..
+     * .
      *
      */
     public function testGetStoreEvents()
@@ -144,7 +144,7 @@ class EventsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getUserEvents
      *
-     * Get user events  For technical reasons, the number of records returned is limited to 100..
+     * .
      *
      */
     public function testGetUserEvents()
@@ -154,7 +154,7 @@ class EventsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getWhiteLabelEvents
      *
-     * Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100..
+     * .
      *
      */
     public function testGetWhiteLabelEvents()

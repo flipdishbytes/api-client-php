@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getSSOEndpoint**](LookerSingleSignOnApi.md#getSSOEndpoint) | **GET** /api/v1.0/{appId}/looker/sso | Get the generic single sign on embed URL for Looker dashboards
+[**getSSOEndpoint**](LookerSingleSignOnApi.md#getSSOEndpoint) | **GET** /api/v1.0/{appId}/looker/sso | 
 
 
 # **getSSOEndpoint**
 > \Flipdish\\Client\Models\DashboardEmbed getSSOEndpoint($app_id, $embed_path, $filters)
 
-Get the generic single sign on embed URL for Looker dashboards
+
 
 ### Example
 ```php
@@ -26,9 +26,9 @@ $apiInstance = new Flipdish\\Client\Api\LookerSingleSignOnApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | AppNameId
-$embed_path = "embed_path_example"; // string | Embed URL of the dashboard
-$filters = "filters_example"; // string | Filters that will be passed to the dashboard
+$app_id = "app_id_example"; // string | 
+$embed_path = "embed_path_example"; // string | 
+$filters = "filters_example"; // string | 
 
 try {
     $result = $apiInstance->getSSOEndpoint($app_id, $embed_path, $filters);
@@ -43,9 +43,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| AppNameId |
- **embed_path** | **string**| Embed URL of the dashboard |
- **filters** | **string**| Filters that will be passed to the dashboard | [optional]
+ **app_id** | **string**|  |
+ **embed_path** | **string**|  |
+ **filters** | **string**|  | [optional]
 
 ### Return type
 

@@ -74,7 +74,7 @@ class OrderBatchesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAllOrderBatches
      *
-     * Returns order batches.
+     * .
      *
      */
     public function testGetAllOrderBatches()
@@ -84,7 +84,7 @@ class OrderBatchesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOrderBatch
      *
-     * Returns the order batch details.
+     * .
      *
      */
     public function testGetOrderBatch()

@@ -402,8 +402,6 @@ class UsersApi
     /**
      * Operation getRoles
      *
-     * Get role names
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -417,8 +415,6 @@ class UsersApi
 
     /**
      * Operation getRolesWithHttpInfo
-     *
-     * Get role names
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -516,7 +512,7 @@ class UsersApi
     /**
      * Operation getRolesAsync
      *
-     * Get role names
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -535,7 +531,7 @@ class UsersApi
     /**
      * Operation getRolesAsyncWithHttpInfo
      *
-     * Get role names
+     * 
      *
      *
      * @throws \InvalidArgumentException

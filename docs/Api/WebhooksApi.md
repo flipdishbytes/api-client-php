@@ -4,22 +4,22 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createWebhookSubscription**](WebhooksApi.md#createWebhookSubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Create a webhook subscription for you Oauth App
-[**createWebhookSubscriptionEventNames**](WebhooksApi.md#createWebhookSubscriptionEventNames) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
-[**deleteWebhookSubscription**](WebhooksApi.md#deleteWebhookSubscription) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
-[**deleteWebhookSubscriptionEventName**](WebhooksApi.md#deleteWebhookSubscriptionEventName) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
-[**getWebhookEventNames**](WebhooksApi.md#getWebhookEventNames) | **GET** /api/v1.0/{appId}/webhooks/events | Get all webhook subscription event names
-[**getWebhookEventNamesBySubscriptionId**](WebhooksApi.md#getWebhookEventNamesBySubscriptionId) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events | Get your webhook subscriptions selected event names
-[**getWebhookEventSample**](WebhooksApi.md#getWebhookEventSample) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test | Get a sample event from a webhook subscription
-[**getWebhookLogs**](WebhooksApi.md#getWebhookLogs) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs | Get logs for your webhook subscription
-[**getWebhookSubscriptions**](WebhooksApi.md#getWebhookSubscriptions) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Get all webhook subscriptions by your Oauth App id
-[**updateWebhookSubscription**](WebhooksApi.md#updateWebhookSubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
+[**createWebhookSubscription**](WebhooksApi.md#createWebhookSubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | 
+[**createWebhookSubscriptionEventNames**](WebhooksApi.md#createWebhookSubscriptionEventNames) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | 
+[**deleteWebhookSubscription**](WebhooksApi.md#deleteWebhookSubscription) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | 
+[**deleteWebhookSubscriptionEventName**](WebhooksApi.md#deleteWebhookSubscriptionEventName) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | 
+[**getWebhookEventNames**](WebhooksApi.md#getWebhookEventNames) | **GET** /api/v1.0/{appId}/webhooks/events | 
+[**getWebhookEventNamesBySubscriptionId**](WebhooksApi.md#getWebhookEventNamesBySubscriptionId) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events | 
+[**getWebhookEventSample**](WebhooksApi.md#getWebhookEventSample) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test | 
+[**getWebhookLogs**](WebhooksApi.md#getWebhookLogs) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs | 
+[**getWebhookSubscriptions**](WebhooksApi.md#getWebhookSubscriptions) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | 
+[**updateWebhookSubscription**](WebhooksApi.md#updateWebhookSubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | 
 
 
 # **createWebhookSubscription**
 > \Flipdish\\Client\Models\RestApiIntegerResult createWebhookSubscription($oauth_app_id, $webhook_subscription, $app_id)
 
-Create a webhook subscription for you Oauth App
+
 
 ### Example
 ```php
@@ -35,8 +35,8 @@ $apiInstance = new Flipdish\\Client\Api\WebhooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | Oauth App identifier
-$webhook_subscription = new \Flipdish\\Client\Models\WebhookSubscription(); // \Flipdish\\Client\Models\WebhookSubscription | Webhook subscription object
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$webhook_subscription = new \Flipdish\\Client\Models\WebhookSubscription(); // \Flipdish\\Client\Models\WebhookSubscription | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -52,8 +52,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| Oauth App identifier |
- **webhook_subscription** | [**\Flipdish\\Client\Models\WebhookSubscription**](../Model/WebhookSubscription.md)| Webhook subscription object |
+ **oauth_app_id** | **string**|  |
+ **webhook_subscription** | [**\Flipdish\\Client\Models\WebhookSubscription**](../Model/WebhookSubscription.md)|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 # **createWebhookSubscriptionEventNames**
 > createWebhookSubscriptionEventNames($oauth_app_id, $webhook_subscription_id, $event_name, $app_id)
 
-Add event name to your webhook subscription
+
 
 ### Example
 ```php
@@ -90,9 +90,9 @@ $apiInstance = new Flipdish\\Client\Api\WebhooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | Oauth App identifier
-$webhook_subscription_id = 56; // int | Webhook subscription identifier
-$event_name = "event_name_example"; // string | Webhook subscription event name
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$webhook_subscription_id = 56; // int | 
+$event_name = "event_name_example"; // string | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -107,9 +107,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| Oauth App identifier |
- **webhook_subscription_id** | **int**| Webhook subscription identifier |
- **event_name** | **string**| Webhook subscription event name |
+ **oauth_app_id** | **string**|  |
+ **webhook_subscription_id** | **int**|  |
+ **event_name** | **string**|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -130,7 +130,7 @@ void (empty response body)
 # **deleteWebhookSubscription**
 > deleteWebhookSubscription($oauth_app_id, $webhook_subscription_id, $app_id)
 
-Delete you webhook subscription
+
 
 ### Example
 ```php
@@ -146,8 +146,8 @@ $apiInstance = new Flipdish\\Client\Api\WebhooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | Oauth App identifier
-$webhook_subscription_id = 56; // int | Webhook subscription identifier
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$webhook_subscription_id = 56; // int | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -162,8 +162,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| Oauth App identifier |
- **webhook_subscription_id** | **int**| Webhook subscription identifier |
+ **oauth_app_id** | **string**|  |
+ **webhook_subscription_id** | **int**|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -184,7 +184,7 @@ void (empty response body)
 # **deleteWebhookSubscriptionEventName**
 > deleteWebhookSubscriptionEventName($oauth_app_id, $webhook_subscription_id, $event_name, $app_id)
 
-Remove event name to your webhook subscription
+
 
 ### Example
 ```php
@@ -200,9 +200,9 @@ $apiInstance = new Flipdish\\Client\Api\WebhooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | Oauth App identifier
-$webhook_subscription_id = 56; // int | Webhook subscription identifier
-$event_name = "event_name_example"; // string | Webhook subscription event name
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$webhook_subscription_id = 56; // int | 
+$event_name = "event_name_example"; // string | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -217,9 +217,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| Oauth App identifier |
- **webhook_subscription_id** | **int**| Webhook subscription identifier |
- **event_name** | **string**| Webhook subscription event name |
+ **oauth_app_id** | **string**|  |
+ **webhook_subscription_id** | **int**|  |
+ **event_name** | **string**|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -240,7 +240,7 @@ void (empty response body)
 # **getWebhookEventNames**
 > \Flipdish\\Client\Models\RestApiStringArrayResult getWebhookEventNames($app_id)
 
-Get all webhook subscription event names
+
 
 ### Example
 ```php
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 # **getWebhookEventNamesBySubscriptionId**
 > \Flipdish\\Client\Models\RestApiStringArrayResult getWebhookEventNamesBySubscriptionId($oauth_app_id, $webhook_subscription_id, $app_id)
 
-Get your webhook subscriptions selected event names
+
 
 ### Example
 ```php
@@ -307,8 +307,8 @@ $apiInstance = new Flipdish\\Client\Api\WebhooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | Oauth App identifier
-$webhook_subscription_id = 56; // int | Webhook subscription identifier
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$webhook_subscription_id = 56; // int | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -324,8 +324,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| Oauth App identifier |
- **webhook_subscription_id** | **int**| Webhook subscription identifier |
+ **oauth_app_id** | **string**|  |
+ **webhook_subscription_id** | **int**|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -346,7 +346,7 @@ Name | Type | Description  | Notes
 # **getWebhookEventSample**
 > \Flipdish\\Client\Models\WebhookEventSample getWebhookEventSample($event_name, $app_id, $oauth_app_id, $webhook_subscription_id, $version)
 
-Get a sample event from a webhook subscription
+
 
 ### Example
 ```php
@@ -405,7 +405,7 @@ Name | Type | Description  | Notes
 # **getWebhookLogs**
 > \Flipdish\\Client\Models\RestApiPaginationResultWebhookLog getWebhookLogs($oauth_app_id, $webhook_subscription_id, $start, $end, $app_id, $page, $limit)
 
-Get logs for your webhook subscription
+
 
 ### Example
 ```php
@@ -421,13 +421,13 @@ $apiInstance = new Flipdish\\Client\Api\WebhooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | Oauth App identifier
-$webhook_subscription_id = 56; // int | Webhook subscription identifier
-$start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start time
-$end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End time
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$webhook_subscription_id = 56; // int | 
+$start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 $app_id = "app_id_example"; // string | 
-$page = 56; // int | Page number
-$limit = 56; // int | Page size
+$page = 56; // int | 
+$limit = 56; // int | 
 
 try {
     $result = $apiInstance->getWebhookLogs($oauth_app_id, $webhook_subscription_id, $start, $end, $app_id, $page, $limit);
@@ -442,13 +442,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| Oauth App identifier |
- **webhook_subscription_id** | **int**| Webhook subscription identifier |
- **start** | **\DateTime**| Start time |
- **end** | **\DateTime**| End time |
+ **oauth_app_id** | **string**|  |
+ **webhook_subscription_id** | **int**|  |
+ **start** | **\DateTime**|  |
+ **end** | **\DateTime**|  |
  **app_id** | **string**|  |
- **page** | **int**| Page number | [optional]
- **limit** | **int**| Page size | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
 
 ### Return type
 
@@ -468,7 +468,7 @@ Name | Type | Description  | Notes
 # **getWebhookSubscriptions**
 > \Flipdish\\Client\Models\RestApiPaginationResultWebhookSubscription getWebhookSubscriptions($oauth_app_id, $app_id, $page, $limit)
 
-Get all webhook subscriptions by your Oauth App id
+
 
 ### Example
 ```php
@@ -484,7 +484,7 @@ $apiInstance = new Flipdish\\Client\Api\WebhooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | Oauth App identifier
+$oauth_app_id = "oauth_app_id_example"; // string | 
 $app_id = "app_id_example"; // string | 
 $page = 56; // int | 
 $limit = 56; // int | 
@@ -502,7 +502,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| Oauth App identifier |
+ **oauth_app_id** | **string**|  |
  **app_id** | **string**|  |
  **page** | **int**|  | [optional]
  **limit** | **int**|  | [optional]
@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 # **updateWebhookSubscription**
 > updateWebhookSubscription($oauth_app_id, $webhook_subscription_id, $webhook_subscription, $app_id)
 
-Update a webhook subscription object
+
 
 ### Example
 ```php
@@ -541,9 +541,9 @@ $apiInstance = new Flipdish\\Client\Api\WebhooksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | Oauth App identifier
-$webhook_subscription_id = 56; // int | Webhook subscription identifier
-$webhook_subscription = new \Flipdish\\Client\Models\WebhookSubscription(); // \Flipdish\\Client\Models\WebhookSubscription | Webhook subscription object
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$webhook_subscription_id = 56; // int | 
+$webhook_subscription = new \Flipdish\\Client\Models\WebhookSubscription(); // \Flipdish\\Client\Models\WebhookSubscription | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -558,9 +558,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| Oauth App identifier |
- **webhook_subscription_id** | **int**| Webhook subscription identifier |
- **webhook_subscription** | [**\Flipdish\\Client\Models\WebhookSubscription**](../Model/WebhookSubscription.md)| Webhook subscription object |
+ **oauth_app_id** | **string**|  |
+ **webhook_subscription_id** | **int**|  |
+ **webhook_subscription** | [**\Flipdish\\Client\Models\WebhookSubscription**](../Model/WebhookSubscription.md)|  |
  **app_id** | **string**|  |
 
 ### Return type

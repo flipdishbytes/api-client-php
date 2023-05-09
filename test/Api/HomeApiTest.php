@@ -74,7 +74,7 @@ class HomeApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for completeHomeAction
      *
-     * [PRIVATE API] Complete Home Action.
+     * .
      *
      */
     public function testCompleteHomeAction()
@@ -84,7 +84,7 @@ class HomeApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for dismissOldPortalAction
      *
-     * [PRIVATE API] Complete Home Action.
+     * .
      *
      */
     public function testDismissOldPortalAction()
@@ -94,7 +94,7 @@ class HomeApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getHomeActions
      *
-     * [PRIVATE API] Get Home Actions.
+     * .
      *
      */
     public function testGetHomeActions()
@@ -104,7 +104,7 @@ class HomeApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getHomeStatistics
      *
-     * [PRIVATE API] Get Home Statistics.
+     * .
      *
      */
     public function testGetHomeStatistics()
@@ -114,7 +114,7 @@ class HomeApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOktaPortalFeatureFlag
      *
-     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired.
+     * .
      *
      */
     public function testGetOktaPortalFeatureFlag()

@@ -4,19 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createStoreGroup**](StoreGroupsApi.md#createStoreGroup) | **POST** /api/v1.0/{appNameId}/storegroups | Creates a Store Group  It will be attached to an existing App
-[**getStoreGroup**](StoreGroupsApi.md#getStoreGroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | Returns a Store Groups
-[**getStoreGroups**](StoreGroupsApi.md#getStoreGroups) | **GET** /api/v1.0/{appNameId}/storegroups | Returns a paginated list of Store Groups
-[**getStoreGroupsExtended**](StoreGroupsApi.md#getStoreGroupsExtended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | [PRIVATE API] Returns a paginated list of Extended Store Groups
-[**removeStoreGroup**](StoreGroupsApi.md#removeStoreGroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+[**createStoreGroup**](StoreGroupsApi.md#createStoreGroup) | **POST** /api/v1.0/{appNameId}/storegroups | 
+[**getStoreGroup**](StoreGroupsApi.md#getStoreGroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | 
+[**getStoreGroups**](StoreGroupsApi.md#getStoreGroups) | **GET** /api/v1.0/{appNameId}/storegroups | 
+[**getStoreGroupsExtended**](StoreGroupsApi.md#getStoreGroupsExtended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | 
+[**removeStoreGroup**](StoreGroupsApi.md#removeStoreGroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | 
 [**setMenuMessagePerDeliveryType**](StoreGroupsApi.md#setMenuMessagePerDeliveryType) | **POST** /api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType | 
-[**updateStoreGroup**](StoreGroupsApi.md#updateStoreGroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | Updates Store Group
+[**updateStoreGroup**](StoreGroupsApi.md#updateStoreGroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | 
 
 
 # **createStoreGroup**
 > \Flipdish\\Client\Models\RestApiResultStoreGroup createStoreGroup($app_name_id, $store_group)
 
-Creates a Store Group  It will be attached to an existing App
+
 
 ### Example
 ```php
@@ -32,8 +32,8 @@ $apiInstance = new Flipdish\\Client\Api\StoreGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_name_id = "app_name_id_example"; // string | App Name Id
-$store_group = new \Flipdish\\Client\Models\StoreGroupBase(); // \Flipdish\\Client\Models\StoreGroupBase | Store group definition
+$app_name_id = "app_name_id_example"; // string | 
+$store_group = new \Flipdish\\Client\Models\StoreGroupBase(); // \Flipdish\\Client\Models\StoreGroupBase | 
 
 try {
     $result = $apiInstance->createStoreGroup($app_name_id, $store_group);
@@ -48,8 +48,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_name_id** | **string**| App Name Id |
- **store_group** | [**\Flipdish\\Client\Models\StoreGroupBase**](../Model/StoreGroupBase.md)| Store group definition |
+ **app_name_id** | **string**|  |
+ **store_group** | [**\Flipdish\\Client\Models\StoreGroupBase**](../Model/StoreGroupBase.md)|  |
 
 ### Return type
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 # **getStoreGroup**
 > \Flipdish\\Client\Models\RestApiResultStoreGroup getStoreGroup($store_group_id)
 
-Returns a Store Groups
+
 
 ### Example
 ```php
@@ -85,7 +85,7 @@ $apiInstance = new Flipdish\\Client\Api\StoreGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_group_id = 56; // int | Store Group Id
+$store_group_id = 56; // int | 
 
 try {
     $result = $apiInstance->getStoreGroup($store_group_id);
@@ -100,7 +100,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_group_id** | **int**| Store Group Id |
+ **store_group_id** | **int**|  |
 
 ### Return type
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 # **getStoreGroups**
 > \Flipdish\\Client\Models\RestApiPaginationResultStoreGroup getStoreGroups($app_name_id, $search_query, $page, $limit)
 
-Returns a paginated list of Store Groups
+
 
 ### Example
 ```php
@@ -136,10 +136,10 @@ $apiInstance = new Flipdish\\Client\Api\StoreGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_name_id = "app_name_id_example"; // string | App Name Id
-$search_query = "search_query_example"; // string | Search query
-$page = 56; // int | Requested page index
-$limit = 56; // int | Requested page limit
+$app_name_id = "app_name_id_example"; // string | 
+$search_query = "search_query_example"; // string | 
+$page = 56; // int | 
+$limit = 56; // int | 
 
 try {
     $result = $apiInstance->getStoreGroups($app_name_id, $search_query, $page, $limit);
@@ -154,10 +154,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_name_id** | **string**| App Name Id |
- **search_query** | **string**| Search query | [optional]
- **page** | **int**| Requested page index | [optional]
- **limit** | **int**| Requested page limit | [optional]
+ **app_name_id** | **string**|  |
+ **search_query** | **string**|  | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
 
 ### Return type
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 # **getStoreGroupsExtended**
 > \Flipdish\\Client\Models\RestApiPaginationResultStoreGroupExtended getStoreGroupsExtended($app_name_id, $search_query, $page, $limit, $grouping_radius)
 
-[PRIVATE API] Returns a paginated list of Extended Store Groups
+
 
 ### Example
 ```php
@@ -193,10 +193,10 @@ $apiInstance = new Flipdish\\Client\Api\StoreGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_name_id = "app_name_id_example"; // string | App Name Id
-$search_query = "search_query_example"; // string | Search query
-$page = 56; // int | Requested page index
-$limit = 56; // int | Requested page limit
+$app_name_id = "app_name_id_example"; // string | 
+$search_query = "search_query_example"; // string | 
+$page = 56; // int | 
+$limit = 56; // int | 
 $grouping_radius = 56; // int | 
 
 try {
@@ -212,10 +212,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_name_id** | **string**| App Name Id |
- **search_query** | **string**| Search query | [optional]
- **page** | **int**| Requested page index | [optional]
- **limit** | **int**| Requested page limit | [optional]
+ **app_name_id** | **string**|  |
+ **search_query** | **string**|  | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
  **grouping_radius** | **int**|  | [optional]
 
 ### Return type
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 # **removeStoreGroup**
 > removeStoreGroup($store_group_id)
 
-Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+
 
 ### Example
 ```php
@@ -252,7 +252,7 @@ $apiInstance = new Flipdish\\Client\Api\StoreGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_group_id = 56; // int | Store Group Id
+$store_group_id = 56; // int | 
 
 try {
     $apiInstance->removeStoreGroup($store_group_id);
@@ -266,7 +266,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_group_id** | **int**| Store Group Id |
+ **store_group_id** | **int**|  |
 
 ### Return type
 
@@ -340,7 +340,7 @@ void (empty response body)
 # **updateStoreGroup**
 > \Flipdish\\Client\Models\RestApiResultStoreGroupBase updateStoreGroup($store_group_id, $store_group)
 
-Updates Store Group
+
 
 ### Example
 ```php
@@ -356,8 +356,8 @@ $apiInstance = new Flipdish\\Client\Api\StoreGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_group_id = 56; // int | Store Group Id
-$store_group = new \Flipdish\\Client\Models\StoreGroupBase(); // \Flipdish\\Client\Models\StoreGroupBase | Store Group Delta
+$store_group_id = 56; // int | 
+$store_group = new \Flipdish\\Client\Models\StoreGroupBase(); // \Flipdish\\Client\Models\StoreGroupBase | 
 
 try {
     $result = $apiInstance->updateStoreGroup($store_group_id, $store_group);
@@ -372,8 +372,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_group_id** | **int**| Store Group Id |
- **store_group** | [**\Flipdish\\Client\Models\StoreGroupBase**](../Model/StoreGroupBase.md)| Store Group Delta |
+ **store_group_id** | **int**|  |
+ **store_group** | [**\Flipdish\\Client\Models\StoreGroupBase**](../Model/StoreGroupBase.md)|  |
 
 ### Return type
 

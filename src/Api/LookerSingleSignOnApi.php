@@ -90,11 +90,9 @@ class LookerSingleSignOnApi
     /**
      * Operation getSSOEndpoint
      *
-     * Get the generic single sign on embed URL for Looker dashboards
-     *
-     * @param  string $app_id AppNameId (required)
-     * @param  string $embed_path Embed URL of the dashboard (required)
-     * @param  string $filters Filters that will be passed to the dashboard (optional)
+     * @param  string $app_id app_id (required)
+     * @param  string $embed_path embed_path (required)
+     * @param  string $filters filters (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -109,11 +107,9 @@ class LookerSingleSignOnApi
     /**
      * Operation getSSOEndpointWithHttpInfo
      *
-     * Get the generic single sign on embed URL for Looker dashboards
-     *
-     * @param  string $app_id AppNameId (required)
-     * @param  string $embed_path Embed URL of the dashboard (required)
-     * @param  string $filters Filters that will be passed to the dashboard (optional)
+     * @param  string $app_id (required)
+     * @param  string $embed_path (required)
+     * @param  string $filters (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -210,11 +206,11 @@ class LookerSingleSignOnApi
     /**
      * Operation getSSOEndpointAsync
      *
-     * Get the generic single sign on embed URL for Looker dashboards
+     * 
      *
-     * @param  string $app_id AppNameId (required)
-     * @param  string $embed_path Embed URL of the dashboard (required)
-     * @param  string $filters Filters that will be passed to the dashboard (optional)
+     * @param  string $app_id (required)
+     * @param  string $embed_path (required)
+     * @param  string $filters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -232,11 +228,11 @@ class LookerSingleSignOnApi
     /**
      * Operation getSSOEndpointAsyncWithHttpInfo
      *
-     * Get the generic single sign on embed URL for Looker dashboards
+     * 
      *
-     * @param  string $app_id AppNameId (required)
-     * @param  string $embed_path Embed URL of the dashboard (required)
-     * @param  string $filters Filters that will be passed to the dashboard (optional)
+     * @param  string $app_id (required)
+     * @param  string $embed_path (required)
+     * @param  string $filters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -286,9 +282,9 @@ class LookerSingleSignOnApi
     /**
      * Create request for operation 'getSSOEndpoint'
      *
-     * @param  string $app_id AppNameId (required)
-     * @param  string $embed_path Embed URL of the dashboard (required)
-     * @param  string $filters Filters that will be passed to the dashboard (optional)
+     * @param  string $app_id (required)
+     * @param  string $embed_path (required)
+     * @param  string $filters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

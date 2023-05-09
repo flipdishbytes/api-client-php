@@ -74,7 +74,7 @@ class OrderIngestApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for orderIngestSubmitNewOrder
      *
-     * Provides an ability to ingest a 3rd party order into Flipdish ecosystem.
+     * .
      *
      */
     public function testOrderIngestSubmitNewOrder()

@@ -90,9 +90,7 @@ class PaymentsApi
     /**
      * Operation getOrderPaymentInformation
      *
-     * Returns payment refund information related to the order with the order id
-     *
-     * @param  int $order_id Order identifier (required)
+     * @param  int $order_id order_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,9 +105,7 @@ class PaymentsApi
     /**
      * Operation getOrderPaymentInformationWithHttpInfo
      *
-     * Returns payment refund information related to the order with the order id
-     *
-     * @param  int $order_id Order identifier (required)
+     * @param  int $order_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -206,9 +202,9 @@ class PaymentsApi
     /**
      * Operation getOrderPaymentInformationAsync
      *
-     * Returns payment refund information related to the order with the order id
+     * 
      *
-     * @param  int $order_id Order identifier (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -226,9 +222,9 @@ class PaymentsApi
     /**
      * Operation getOrderPaymentInformationAsyncWithHttpInfo
      *
-     * Returns payment refund information related to the order with the order id
+     * 
      *
-     * @param  int $order_id Order identifier (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -278,7 +274,7 @@ class PaymentsApi
     /**
      * Create request for operation 'getOrderPaymentInformation'
      *
-     * @param  int $order_id Order identifier (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

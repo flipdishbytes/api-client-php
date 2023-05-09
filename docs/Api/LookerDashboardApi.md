@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**lookerDashboardGetAll**](LookerDashboardApi.md#lookerDashboardGetAll) | **GET** /api/v1.0/{appId}/looker/dashboards | Get all dashboards
+[**lookerDashboardGetAll**](LookerDashboardApi.md#lookerDashboardGetAll) | **GET** /api/v1.0/{appId}/looker/dashboards | 
 
 
 # **lookerDashboardGetAll**
 > lookerDashboardGetAll($app_id)
 
-Get all dashboards
+
 
 ### Example
 ```php

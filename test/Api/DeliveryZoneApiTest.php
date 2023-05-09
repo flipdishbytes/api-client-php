@@ -74,7 +74,7 @@ class DeliveryZoneApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for addDeliveryZone
      *
-     * Adds a delivery zone to the store id.
+     * .
      *
      */
     public function testAddDeliveryZone()
@@ -84,7 +84,7 @@ class DeliveryZoneApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getDeliveryZones
      *
-     * Get all the delivery zones associated with a store.
+     * .
      *
      */
     public function testGetDeliveryZones()
@@ -94,7 +94,7 @@ class DeliveryZoneApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for removeDeliveryZone
      *
-     * Removes the existing delivery zone.
+     * .
      *
      */
     public function testRemoveDeliveryZone()
@@ -104,7 +104,7 @@ class DeliveryZoneApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateDeliveryZone
      *
-     * Updates the existing delivery zone.
+     * .
      *
      */
     public function testUpdateDeliveryZone()

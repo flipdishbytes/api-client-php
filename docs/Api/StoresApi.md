@@ -4,44 +4,44 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**archiveStore**](StoresApi.md#archiveStore) | **POST** /api/v1.0/stores/{storeId}/archive | Archive store
-[**assignMenu**](StoresApi.md#assignMenu) | **POST** /api/v1.0/stores/{storeId}/menu/{menuId} | Assign Menu to Store
-[**cloneStore**](StoresApi.md#cloneStore) | **POST** /api/v1.0/stores/{storeId}/clone | Clone store with store clone settings
-[**configureStoreServiceCharge**](StoresApi.md#configureStoreServiceCharge) | **POST** /api/v1.0/stores/{storeId}/servicecharge | Configure Store Service Charge; Idempotent Operation
-[**createBusinessHoursOverrideByStoreId**](StoresApi.md#createBusinessHoursOverrideByStoreId) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | Create Business Hours Override for a store
-[**createStore**](StoresApi.md#createStore) | **POST** /api/v1.0/stores | Create store with Store Group identifier
-[**deleteBusinessHoursOverride**](StoresApi.md#deleteBusinessHoursOverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | Delete Business Hours Override for a store
-[**getBankAccountForStore**](StoresApi.md#getBankAccountForStore) | **GET** /api/v1.0/stores/{storeId}/bankaccount | Get Stores Bank Account Id
-[**getBusinessHours**](StoresApi.md#getBusinessHours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Get Business hours
-[**getBusinessHoursOverrideByStoreId**](StoresApi.md#getBusinessHoursOverrideByStoreId) | **GET** /api/v1.0/stores/{storeId}/businesshoursoverrides | Get business hours overrides by store identifier
-[**getEndOfDayReport**](StoresApi.md#getEndOfDayReport) | **GET** /api/v1.0/stores/{storeId}/endofdayreport | Get store end of day report
-[**getPreOrderConfig**](StoresApi.md#getPreOrderConfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | Get the pre order config for a store, by type
-[**getPreOrderPreview**](StoresApi.md#getPreOrderPreview) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/preview | Get the Preview times of the pre-order configuration
-[**getProcessingFeeConfigsByStoreId**](StoresApi.md#getProcessingFeeConfigsByStoreId) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
-[**getProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getProcessingFeeConfigsByStoreIdAndPaymentAccountType) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
-[**getStoreById**](StoresApi.md#getStoreById) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
-[**getStoreFeeConfig**](StoresApi.md#getStoreFeeConfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | Retrieve Store feeConfig
-[**getStoreHeadersByAppId**](StoresApi.md#getStoreHeadersByAppId) | **GET** /api/v1.0/{appId}/stores/header | Get all stores by app name id
-[**getStoreNetSales**](StoresApi.md#getStoreNetSales) | **GET** /api/v1.0/{appId}/stores/stats | Get stores statistics by app name id and storeIds
-[**getStoreServiceCharge**](StoresApi.md#getStoreServiceCharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
-[**getStores**](StoresApi.md#getStores) | **GET** /api/v1.0/stores | Get all stores, excluding archived ones
-[**getStoresByAppId**](StoresApi.md#getStoresByAppId) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
-[**getStoresByStoreIdWithValidations**](StoresApi.md#getStoresByStoreIdWithValidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | Get store validation by storeIds
-[**publishStore**](StoresApi.md#publishStore) | **POST** /api/v1.0/stores/{storeId}/publish | Publish store
-[**setBusinessHours**](StoresApi.md#setBusinessHours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Set Business hours
-[**setPreOrdeEnabled**](StoresApi.md#setPreOrdeEnabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | UPDATE pre order config for a store, by type
-[**unpublishStore**](StoresApi.md#unpublishStore) | **POST** /api/v1.0/stores/{storeId}/unpublish | Unpublish store
-[**updatePreOrderConfig**](StoresApi.md#updatePreOrderConfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | UPDATE pre order config for a store, by type
-[**updateStore**](StoresApi.md#updateStore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
-[**updateStoreAddress**](StoresApi.md#updateStoreAddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
-[**updateStoreAddressCoordinates**](StoresApi.md#updateStoreAddressCoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
-[**updateStoreAddressForm**](StoresApi.md#updateStoreAddressForm) | **POST** /api/v1.0/stores/{storeId}/addressform | Update store address
+[**archiveStore**](StoresApi.md#archiveStore) | **POST** /api/v1.0/stores/{storeId}/archive | 
+[**assignMenu**](StoresApi.md#assignMenu) | **POST** /api/v1.0/stores/{storeId}/menu/{menuId} | 
+[**cloneStore**](StoresApi.md#cloneStore) | **POST** /api/v1.0/stores/{storeId}/clone | 
+[**configureStoreServiceCharge**](StoresApi.md#configureStoreServiceCharge) | **POST** /api/v1.0/stores/{storeId}/servicecharge | 
+[**createBusinessHoursOverrideByStoreId**](StoresApi.md#createBusinessHoursOverrideByStoreId) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | 
+[**createStore**](StoresApi.md#createStore) | **POST** /api/v1.0/stores | 
+[**deleteBusinessHoursOverride**](StoresApi.md#deleteBusinessHoursOverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | 
+[**getBankAccountForStore**](StoresApi.md#getBankAccountForStore) | **GET** /api/v1.0/stores/{storeId}/bankaccount | 
+[**getBusinessHours**](StoresApi.md#getBusinessHours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
+[**getBusinessHoursOverrideByStoreId**](StoresApi.md#getBusinessHoursOverrideByStoreId) | **GET** /api/v1.0/stores/{storeId}/businesshoursoverrides | 
+[**getEndOfDayReport**](StoresApi.md#getEndOfDayReport) | **GET** /api/v1.0/stores/{storeId}/endofdayreport | 
+[**getPreOrderConfig**](StoresApi.md#getPreOrderConfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 
+[**getPreOrderPreview**](StoresApi.md#getPreOrderPreview) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/preview | 
+[**getProcessingFeeConfigsByStoreId**](StoresApi.md#getProcessingFeeConfigsByStoreId) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | 
+[**getProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getProcessingFeeConfigsByStoreIdAndPaymentAccountType) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | 
+[**getStoreById**](StoresApi.md#getStoreById) | **GET** /api/v1.0/stores/{storeId} | 
+[**getStoreFeeConfig**](StoresApi.md#getStoreFeeConfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | 
+[**getStoreHeadersByAppId**](StoresApi.md#getStoreHeadersByAppId) | **GET** /api/v1.0/{appId}/stores/header | 
+[**getStoreNetSales**](StoresApi.md#getStoreNetSales) | **GET** /api/v1.0/{appId}/stores/stats | 
+[**getStoreServiceCharge**](StoresApi.md#getStoreServiceCharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | 
+[**getStores**](StoresApi.md#getStores) | **GET** /api/v1.0/stores | 
+[**getStoresByAppId**](StoresApi.md#getStoresByAppId) | **GET** /api/v1.0/{appId}/stores | 
+[**getStoresByStoreIdWithValidations**](StoresApi.md#getStoresByStoreIdWithValidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | 
+[**publishStore**](StoresApi.md#publishStore) | **POST** /api/v1.0/stores/{storeId}/publish | 
+[**setBusinessHours**](StoresApi.md#setBusinessHours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
+[**setPreOrdeEnabled**](StoresApi.md#setPreOrdeEnabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
+[**unpublishStore**](StoresApi.md#unpublishStore) | **POST** /api/v1.0/stores/{storeId}/unpublish | 
+[**updatePreOrderConfig**](StoresApi.md#updatePreOrderConfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 
+[**updateStore**](StoresApi.md#updateStore) | **POST** /api/v1.0/stores/{storeId} | 
+[**updateStoreAddress**](StoresApi.md#updateStoreAddress) | **POST** /api/v1.0/stores/{storeId}/address | 
+[**updateStoreAddressCoordinates**](StoresApi.md#updateStoreAddressCoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | 
+[**updateStoreAddressForm**](StoresApi.md#updateStoreAddressForm) | **POST** /api/v1.0/stores/{storeId}/addressform | 
 
 
 # **archiveStore**
 > archiveStore($store_id)
 
-Archive store
+
 
 ### Example
 ```php
@@ -57,7 +57,7 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
+$store_id = 56; // int | 
 
 try {
     $apiInstance->archiveStore($store_id);
@@ -71,7 +71,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -91,7 +91,7 @@ void (empty response body)
 # **assignMenu**
 > \Flipdish\\Client\Models\RestApiArrayResultRestApiDefaultResponse assignMenu($store_id, $menu_id)
 
-Assign Menu to Store
+
 
 ### Example
 ```php
@@ -107,8 +107,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$menu_id = 56; // int | Id of Menu to assign to store
+$store_id = 56; // int | 
+$menu_id = 56; // int | 
 
 try {
     $result = $apiInstance->assignMenu($store_id, $menu_id);
@@ -123,8 +123,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **menu_id** | **int**| Id of Menu to assign to store |
+ **store_id** | **int**|  |
+ **menu_id** | **int**|  |
 
 ### Return type
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 # **cloneStore**
 > \Flipdish\\Client\Models\RestApiResultStore cloneStore($store_id, $settings)
 
-Clone store with store clone settings
+
 
 ### Example
 ```php
@@ -160,8 +160,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$settings = new \Flipdish\\Client\Models\StoreCloneSettings(); // \Flipdish\\Client\Models\StoreCloneSettings | Settings for cloning the store
+$store_id = 56; // int | 
+$settings = new \Flipdish\\Client\Models\StoreCloneSettings(); // \Flipdish\\Client\Models\StoreCloneSettings | 
 
 try {
     $result = $apiInstance->cloneStore($store_id, $settings);
@@ -176,8 +176,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **settings** | [**\Flipdish\\Client\Models\StoreCloneSettings**](../Model/StoreCloneSettings.md)| Settings for cloning the store |
+ **store_id** | **int**|  |
+ **settings** | [**\Flipdish\\Client\Models\StoreCloneSettings**](../Model/StoreCloneSettings.md)|  |
 
 ### Return type
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 # **configureStoreServiceCharge**
 > \Flipdish\\Client\Models\RestApiResultServiceCharge configureStoreServiceCharge($store_id, $service_charge)
 
-Configure Store Service Charge; Idempotent Operation
+
 
 ### Example
 ```php
@@ -213,8 +213,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$service_charge = new \Flipdish\\Client\Models\ServiceCharge(); // \Flipdish\\Client\Models\ServiceCharge | Service charge
+$store_id = 56; // int | 
+$service_charge = new \Flipdish\\Client\Models\ServiceCharge(); // \Flipdish\\Client\Models\ServiceCharge | 
 
 try {
     $result = $apiInstance->configureStoreServiceCharge($store_id, $service_charge);
@@ -229,8 +229,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **service_charge** | [**\Flipdish\\Client\Models\ServiceCharge**](../Model/ServiceCharge.md)| Service charge |
+ **store_id** | **int**|  |
+ **service_charge** | [**\Flipdish\\Client\Models\ServiceCharge**](../Model/ServiceCharge.md)|  |
 
 ### Return type
 
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 # **createBusinessHoursOverrideByStoreId**
 > \Flipdish\\Client\Models\RestApiResultBusinessHoursOverride createBusinessHoursOverrideByStoreId($store_id, $business_hours_override)
 
-Create Business Hours Override for a store
+
 
 ### Example
 ```php
@@ -266,8 +266,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$business_hours_override = new \Flipdish\\Client\Models\BusinessHoursOverrideBase(); // \Flipdish\\Client\Models\BusinessHoursOverrideBase | Business Hours Override
+$store_id = 56; // int | 
+$business_hours_override = new \Flipdish\\Client\Models\BusinessHoursOverrideBase(); // \Flipdish\\Client\Models\BusinessHoursOverrideBase | 
 
 try {
     $result = $apiInstance->createBusinessHoursOverrideByStoreId($store_id, $business_hours_override);
@@ -282,8 +282,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **business_hours_override** | [**\Flipdish\\Client\Models\BusinessHoursOverrideBase**](../Model/BusinessHoursOverrideBase.md)| Business Hours Override |
+ **store_id** | **int**|  |
+ **business_hours_override** | [**\Flipdish\\Client\Models\BusinessHoursOverrideBase**](../Model/BusinessHoursOverrideBase.md)|  |
 
 ### Return type
 
@@ -303,7 +303,7 @@ Name | Type | Description  | Notes
 # **createStore**
 > \Flipdish\\Client\Models\RestApiResultStore createStore($store_group_id, $store)
 
-Create store with Store Group identifier
+
 
 ### Example
 ```php
@@ -319,8 +319,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_group_id = 56; // int | Store Group identifier
-$store = new \Flipdish\\Client\Models\StoreCreateBase(); // \Flipdish\\Client\Models\StoreCreateBase | Store
+$store_group_id = 56; // int | 
+$store = new \Flipdish\\Client\Models\StoreCreateBase(); // \Flipdish\\Client\Models\StoreCreateBase | 
 
 try {
     $result = $apiInstance->createStore($store_group_id, $store);
@@ -335,8 +335,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_group_id** | **int**| Store Group identifier |
- **store** | [**\Flipdish\\Client\Models\StoreCreateBase**](../Model/StoreCreateBase.md)| Store |
+ **store_group_id** | **int**|  |
+ **store** | [**\Flipdish\\Client\Models\StoreCreateBase**](../Model/StoreCreateBase.md)|  |
 
 ### Return type
 
@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 # **deleteBusinessHoursOverride**
 > \Flipdish\\Client\Models\RestApiArrayResultRestApiDefaultResponse deleteBusinessHoursOverride($store_id, $business_hours_override_id)
 
-Delete Business Hours Override for a store
+
 
 ### Example
 ```php
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
 # **getBankAccountForStore**
 > \Flipdish\\Client\Models\RestApiResultAssignedBankAccount getBankAccountForStore($store_id)
 
-Get Stores Bank Account Id
+
 
 ### Example
 ```php
@@ -425,7 +425,7 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->getBankAccountForStore($store_id);
@@ -440,7 +440,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
 # **getBusinessHours**
 > \Flipdish\\Client\Models\RestApiArrayResultBusinessHoursPeriod getBusinessHours($store_id, $delivery_type)
 
-Get Business hours
+
 
 ### Example
 ```php
@@ -476,8 +476,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$delivery_type = "delivery_type_example"; // string | Delivery type
+$store_id = 56; // int | 
+$delivery_type = "delivery_type_example"; // string | 
 
 try {
     $result = $apiInstance->getBusinessHours($store_id, $delivery_type);
@@ -492,8 +492,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **delivery_type** | **string**| Delivery type |
+ **store_id** | **int**|  |
+ **delivery_type** | **string**|  |
 
 ### Return type
 
@@ -513,7 +513,7 @@ Name | Type | Description  | Notes
 # **getBusinessHoursOverrideByStoreId**
 > \Flipdish\\Client\Models\RestApiPaginationResultBusinessHoursOverride getBusinessHoursOverrideByStoreId($store_id, $after, $page, $limit)
 
-Get business hours overrides by store identifier
+
 
 ### Example
 ```php
@@ -529,10 +529,10 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Return results that ended after this datetime. Default value is the current datetime.
-$page = 56; // int | Requested page index
-$limit = 56; // int | Requested page limit
+$store_id = 56; // int | 
+$after = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$page = 56; // int | 
+$limit = 56; // int | 
 
 try {
     $result = $apiInstance->getBusinessHoursOverrideByStoreId($store_id, $after, $page, $limit);
@@ -547,10 +547,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **after** | **\DateTime**| Return results that ended after this datetime. Default value is the current datetime. | [optional]
- **page** | **int**| Requested page index | [optional]
- **limit** | **int**| Requested page limit | [optional]
+ **store_id** | **int**|  |
+ **after** | **\DateTime**|  | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
 
 ### Return type
 
@@ -570,7 +570,7 @@ Name | Type | Description  | Notes
 # **getEndOfDayReport**
 > \Flipdish\\Client\Models\RestApiResultStoreEndOfDayReport getEndOfDayReport($store_id, $date)
 
-Get store end of day report
+
 
 ### Example
 ```php
@@ -586,8 +586,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Store identifier
+$store_id = 56; // int | 
+$date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
     $result = $apiInstance->getEndOfDayReport($store_id, $date);
@@ -602,8 +602,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **date** | **\DateTime**| Store identifier | [optional]
+ **store_id** | **int**|  |
+ **date** | **\DateTime**|  | [optional]
 
 ### Return type
 
@@ -623,7 +623,7 @@ Name | Type | Description  | Notes
 # **getPreOrderConfig**
 > \Flipdish\\Client\Models\RestApiResultPreOrderConfig getPreOrderConfig($store_id, $delivery_type)
 
-Get the pre order config for a store, by type
+
 
 ### Example
 ```php
@@ -639,8 +639,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$delivery_type = "delivery_type_example"; // string | \"delivery\" or \"pickup\"
+$store_id = 56; // int | 
+$delivery_type = "delivery_type_example"; // string | 
 
 try {
     $result = $apiInstance->getPreOrderConfig($store_id, $delivery_type);
@@ -655,8 +655,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **delivery_type** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; |
+ **store_id** | **int**|  |
+ **delivery_type** | **string**|  |
 
 ### Return type
 
@@ -676,7 +676,7 @@ Name | Type | Description  | Notes
 # **getPreOrderPreview**
 > \Flipdish\\Client\Models\RestApiArrayResultPreOrderTime getPreOrderPreview($store_id, $delivery_type, $pre_order_config_lead_time_minutes, $pre_order_config_interval_minutes, $pre_order_config_max_order_ahead_days, $pre_order_config_include_asap, $pre_order_config_include_more_granular_initial_time, $pre_order_config_cut_off_time_previous_day_basic, $pre_order_config_cut_off_time_current_day_basic, $pre_order_config_pre_order_time_display_type, $pre_order_config_always_appear_open, $pre_order_config_require_explicit_select_always)
 
-Get the Preview times of the pre-order configuration
+
 
 ### Example
 ```php
@@ -692,8 +692,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$delivery_type = "delivery_type_example"; // string | \"delivery\" or \"pickup\"
+$store_id = 56; // int | 
+$delivery_type = "delivery_type_example"; // string | 
 $pre_order_config_lead_time_minutes = 56; // int | Lead Time in Minutes
 $pre_order_config_interval_minutes = 56; // int | Interval in minutes
 $pre_order_config_max_order_ahead_days = 56; // int | Max Days to order ahead
@@ -718,8 +718,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **delivery_type** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; |
+ **store_id** | **int**|  |
+ **delivery_type** | **string**|  |
  **pre_order_config_lead_time_minutes** | **int**| Lead Time in Minutes | [optional]
  **pre_order_config_interval_minutes** | **int**| Interval in minutes | [optional]
  **pre_order_config_max_order_ahead_days** | **int**| Max Days to order ahead | [optional]
@@ -749,7 +749,7 @@ Name | Type | Description  | Notes
 # **getProcessingFeeConfigsByStoreId**
 > \Flipdish\\Client\Models\RestApiArrayResultProcessingFeeConfig getProcessingFeeConfigsByStoreId($store_id, $app_name_id)
 
-Get processing fee configs by store identifier
+
 
 ### Example
 ```php
@@ -765,8 +765,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$app_name_id = "app_name_id_example"; // string | App Name Id(Not used, still here for compatability reasons)
+$store_id = 56; // int | 
+$app_name_id = "app_name_id_example"; // string | 
 
 try {
     $result = $apiInstance->getProcessingFeeConfigsByStoreId($store_id, $app_name_id);
@@ -781,8 +781,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **app_name_id** | **string**| App Name Id(Not used, still here for compatability reasons) | [optional]
+ **store_id** | **int**|  |
+ **app_name_id** | **string**|  | [optional]
 
 ### Return type
 
@@ -802,7 +802,7 @@ Name | Type | Description  | Notes
 # **getProcessingFeeConfigsByStoreIdAndPaymentAccountType**
 > \Flipdish\\Client\Models\RestApiResultProcessingFeeConfig getProcessingFeeConfigsByStoreIdAndPaymentAccountType($store_id, $payment_account_type, $app_name_id)
 
-Get processing fee configs by store identifier
+
 
 ### Example
 ```php
@@ -818,9 +818,9 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
+$store_id = 56; // int | 
 $payment_account_type = "payment_account_type_example"; // string | 
-$app_name_id = "app_name_id_example"; // string | App Name Id(Not used, still here for compatability reasons)
+$app_name_id = "app_name_id_example"; // string | 
 
 try {
     $result = $apiInstance->getProcessingFeeConfigsByStoreIdAndPaymentAccountType($store_id, $payment_account_type, $app_name_id);
@@ -835,9 +835,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
+ **store_id** | **int**|  |
  **payment_account_type** | **string**|  |
- **app_name_id** | **string**| App Name Id(Not used, still here for compatability reasons) | [optional]
+ **app_name_id** | **string**|  | [optional]
 
 ### Return type
 
@@ -857,7 +857,7 @@ Name | Type | Description  | Notes
 # **getStoreById**
 > \Flipdish\\Client\Models\RestApiResultStore getStoreById($store_id)
 
-Get store by identifier
+
 
 ### Example
 ```php
@@ -873,7 +873,7 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->getStoreById($store_id);
@@ -888,7 +888,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -908,7 +908,7 @@ Name | Type | Description  | Notes
 # **getStoreFeeConfig**
 > \Flipdish\\Client\Models\StoreFeeConfig getStoreFeeConfig($store_id)
 
-Retrieve Store feeConfig
+
 
 ### Example
 ```php
@@ -924,7 +924,7 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->getStoreFeeConfig($store_id);
@@ -939,7 +939,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -959,7 +959,7 @@ Name | Type | Description  | Notes
 # **getStoreHeadersByAppId**
 > \Flipdish\\Client\Models\RestApiPaginationResultStoreHeader getStoreHeadersByAppId($app_id, $store_name_query, $page, $limit)
 
-Get all stores by app name id
+
 
 ### Example
 ```php
@@ -975,7 +975,7 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
+$app_id = "app_id_example"; // string | 
 $store_name_query = "store_name_query_example"; // string | 
 $page = 56; // int | 
 $limit = 56; // int | 
@@ -993,7 +993,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
+ **app_id** | **string**|  |
  **store_name_query** | **string**|  | [optional]
  **page** | **int**|  | [optional]
  **limit** | **int**|  | [optional]
@@ -1016,7 +1016,7 @@ Name | Type | Description  | Notes
 # **getStoreNetSales**
 > \Flipdish\\Client\Models\RestApiArrayResultStoreStatistics getStoreNetSales($app_id, $store_id)
 
-Get stores statistics by app name id and storeIds
+
 
 ### Example
 ```php
@@ -1032,8 +1032,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$store_id = array(56); // int[] | Store Ids
+$app_id = "app_id_example"; // string | 
+$store_id = array(56); // int[] | 
 
 try {
     $result = $apiInstance->getStoreNetSales($app_id, $store_id);
@@ -1048,8 +1048,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **store_id** | [**int[]**](../Model/int.md)| Store Ids |
+ **app_id** | **string**|  |
+ **store_id** | [**int[]**](../Model/int.md)|  |
 
 ### Return type
 
@@ -1069,7 +1069,7 @@ Name | Type | Description  | Notes
 # **getStoreServiceCharge**
 > \Flipdish\\Client\Models\ServiceCharge getStoreServiceCharge($store_id)
 
-Retrieve Store Service Charge
+
 
 ### Example
 ```php
@@ -1085,7 +1085,7 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->getStoreServiceCharge($store_id);
@@ -1100,7 +1100,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -1120,7 +1120,7 @@ Name | Type | Description  | Notes
 # **getStores**
 > \Flipdish\\Client\Models\RestApiPaginationResultStore getStores($search_query, $page, $limit, $store_group_id)
 
-Get all stores, excluding archived ones
+
 
 ### Example
 ```php
@@ -1136,10 +1136,10 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$search_query = "search_query_example"; // string | Search query
-$page = 56; // int | Requested page index
-$limit = 56; // int | Requested page limit
-$store_group_id = 56; // int | Store Group Id
+$search_query = "search_query_example"; // string | 
+$page = 56; // int | 
+$limit = 56; // int | 
+$store_group_id = 56; // int | 
 
 try {
     $result = $apiInstance->getStores($search_query, $page, $limit, $store_group_id);
@@ -1154,10 +1154,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **search_query** | **string**| Search query | [optional]
- **page** | **int**| Requested page index | [optional]
- **limit** | **int**| Requested page limit | [optional]
- **store_group_id** | **int**| Store Group Id | [optional]
+ **search_query** | **string**|  | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
+ **store_group_id** | **int**|  | [optional]
 
 ### Return type
 
@@ -1177,7 +1177,7 @@ Name | Type | Description  | Notes
 # **getStoresByAppId**
 > \Flipdish\\Client\Models\RestApiPaginationResultStore getStoresByAppId($app_id, $search_query, $page, $limit)
 
-Get all stores by app name id
+
 
 ### Example
 ```php
@@ -1193,10 +1193,10 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$search_query = "search_query_example"; // string | Search query
-$page = 56; // int | Requested page index
-$limit = 56; // int | Requested page limit
+$app_id = "app_id_example"; // string | 
+$search_query = "search_query_example"; // string | 
+$page = 56; // int | 
+$limit = 56; // int | 
 
 try {
     $result = $apiInstance->getStoresByAppId($app_id, $search_query, $page, $limit);
@@ -1211,10 +1211,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **search_query** | **string**| Search query | [optional]
- **page** | **int**| Requested page index | [optional]
- **limit** | **int**| Requested page limit | [optional]
+ **app_id** | **string**|  |
+ **search_query** | **string**|  | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
 
 ### Return type
 
@@ -1234,7 +1234,7 @@ Name | Type | Description  | Notes
 # **getStoresByStoreIdWithValidations**
 > \Flipdish\\Client\Models\RestApiPaginationResultStoreValidationConfig getStoresByStoreIdWithValidations($store_id, $app_id, $page, $limit)
 
-Get store validation by storeIds
+
 
 ### Example
 ```php
@@ -1250,10 +1250,10 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = array(56); // int[] | Store identifier
+$store_id = array(56); // int[] | 
 $app_id = "app_id_example"; // string | 
-$page = 56; // int | Requested page index
-$limit = 56; // int | Requested page limit
+$page = 56; // int | 
+$limit = 56; // int | 
 
 try {
     $result = $apiInstance->getStoresByStoreIdWithValidations($store_id, $app_id, $page, $limit);
@@ -1268,10 +1268,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | [**int[]**](../Model/int.md)| Store identifier |
+ **store_id** | [**int[]**](../Model/int.md)|  |
  **app_id** | **string**|  |
- **page** | **int**| Requested page index | [optional]
- **limit** | **int**| Requested page limit | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
 
 ### Return type
 
@@ -1291,7 +1291,7 @@ Name | Type | Description  | Notes
 # **publishStore**
 > publishStore($store_id)
 
-Publish store
+
 
 ### Example
 ```php
@@ -1307,7 +1307,7 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
+$store_id = 56; // int | 
 
 try {
     $apiInstance->publishStore($store_id);
@@ -1321,7 +1321,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -1341,7 +1341,7 @@ void (empty response body)
 # **setBusinessHours**
 > \Flipdish\\Client\Models\RestApiResultBusinessHoursPeriod setBusinessHours($store_id, $delivery_type, $business_hours_period)
 
-Set Business hours
+
 
 ### Example
 ```php
@@ -1357,9 +1357,9 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$delivery_type = "delivery_type_example"; // string | Delivery type
-$business_hours_period = new \Flipdish\\Client\Models\BusinessHoursPeriodBase(); // \Flipdish\\Client\Models\BusinessHoursPeriodBase | Business Hours Period
+$store_id = 56; // int | 
+$delivery_type = "delivery_type_example"; // string | 
+$business_hours_period = new \Flipdish\\Client\Models\BusinessHoursPeriodBase(); // \Flipdish\\Client\Models\BusinessHoursPeriodBase | 
 
 try {
     $result = $apiInstance->setBusinessHours($store_id, $delivery_type, $business_hours_period);
@@ -1374,9 +1374,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **delivery_type** | **string**| Delivery type |
- **business_hours_period** | [**\Flipdish\\Client\Models\BusinessHoursPeriodBase**](../Model/BusinessHoursPeriodBase.md)| Business Hours Period |
+ **store_id** | **int**|  |
+ **delivery_type** | **string**|  |
+ **business_hours_period** | [**\Flipdish\\Client\Models\BusinessHoursPeriodBase**](../Model/BusinessHoursPeriodBase.md)|  |
 
 ### Return type
 
@@ -1396,7 +1396,7 @@ Name | Type | Description  | Notes
 # **setPreOrdeEnabled**
 > \Flipdish\\Client\Models\RestApiArrayResultRestApiDefaultResponse setPreOrdeEnabled($store_id, $delivery_type, $enabled)
 
-UPDATE pre order config for a store, by type
+
 
 ### Example
 ```php
@@ -1412,9 +1412,9 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$delivery_type = "delivery_type_example"; // string | \"delivery\" or \"pickup\"
-$enabled = true; // bool | Update pre order config values
+$store_id = 56; // int | 
+$delivery_type = "delivery_type_example"; // string | 
+$enabled = true; // bool | 
 
 try {
     $result = $apiInstance->setPreOrdeEnabled($store_id, $delivery_type, $enabled);
@@ -1429,9 +1429,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **delivery_type** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; |
- **enabled** | **bool**| Update pre order config values |
+ **store_id** | **int**|  |
+ **delivery_type** | **string**|  |
+ **enabled** | **bool**|  |
 
 ### Return type
 
@@ -1451,7 +1451,7 @@ Name | Type | Description  | Notes
 # **unpublishStore**
 > unpublishStore($store_id)
 
-Unpublish store
+
 
 ### Example
 ```php
@@ -1467,7 +1467,7 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
+$store_id = 56; // int | 
 
 try {
     $apiInstance->unpublishStore($store_id);
@@ -1481,7 +1481,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -1501,7 +1501,7 @@ void (empty response body)
 # **updatePreOrderConfig**
 > \Flipdish\\Client\Models\RestApiArrayResultRestApiDefaultResponse updatePreOrderConfig($store_id, $delivery_type, $pre_order_config)
 
-UPDATE pre order config for a store, by type
+
 
 ### Example
 ```php
@@ -1517,9 +1517,9 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$delivery_type = "delivery_type_example"; // string | \"delivery\" or \"pickup\"
-$pre_order_config = new \Flipdish\\Client\Models\PreOrderConfig(); // \Flipdish\\Client\Models\PreOrderConfig | Update pre order config values
+$store_id = 56; // int | 
+$delivery_type = "delivery_type_example"; // string | 
+$pre_order_config = new \Flipdish\\Client\Models\PreOrderConfig(); // \Flipdish\\Client\Models\PreOrderConfig | 
 
 try {
     $result = $apiInstance->updatePreOrderConfig($store_id, $delivery_type, $pre_order_config);
@@ -1534,9 +1534,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **delivery_type** | **string**| \&quot;delivery\&quot; or \&quot;pickup\&quot; |
- **pre_order_config** | [**\Flipdish\\Client\Models\PreOrderConfig**](../Model/PreOrderConfig.md)| Update pre order config values |
+ **store_id** | **int**|  |
+ **delivery_type** | **string**|  |
+ **pre_order_config** | [**\Flipdish\\Client\Models\PreOrderConfig**](../Model/PreOrderConfig.md)|  |
 
 ### Return type
 
@@ -1556,7 +1556,7 @@ Name | Type | Description  | Notes
 # **updateStore**
 > \Flipdish\\Client\Models\RestApiResultStore updateStore($store_id, $store)
 
-Update store by identifier
+
 
 ### Example
 ```php
@@ -1572,8 +1572,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store Group identifier
-$store = new \Flipdish\\Client\Models\StoreBase(); // \Flipdish\\Client\Models\StoreBase | Store
+$store_id = 56; // int | 
+$store = new \Flipdish\\Client\Models\StoreBase(); // \Flipdish\\Client\Models\StoreBase | 
 
 try {
     $result = $apiInstance->updateStore($store_id, $store);
@@ -1588,8 +1588,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store Group identifier |
- **store** | [**\Flipdish\\Client\Models\StoreBase**](../Model/StoreBase.md)| Store |
+ **store_id** | **int**|  |
+ **store** | [**\Flipdish\\Client\Models\StoreBase**](../Model/StoreBase.md)|  |
 
 ### Return type
 
@@ -1609,7 +1609,7 @@ Name | Type | Description  | Notes
 # **updateStoreAddress**
 > \Flipdish\\Client\Models\RestApiResultStoreAddress updateStoreAddress($store_id, $store_address)
 
-Update store address
+
 
 ### Example
 ```php
@@ -1625,8 +1625,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$store_address = new \Flipdish\\Client\Models\StoreAddressBase(); // \Flipdish\\Client\Models\StoreAddressBase | Store address
+$store_id = 56; // int | 
+$store_address = new \Flipdish\\Client\Models\StoreAddressBase(); // \Flipdish\\Client\Models\StoreAddressBase | 
 
 try {
     $result = $apiInstance->updateStoreAddress($store_id, $store_address);
@@ -1641,8 +1641,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **store_address** | [**\Flipdish\\Client\Models\StoreAddressBase**](../Model/StoreAddressBase.md)| Store address |
+ **store_id** | **int**|  |
+ **store_address** | [**\Flipdish\\Client\Models\StoreAddressBase**](../Model/StoreAddressBase.md)|  |
 
 ### Return type
 
@@ -1662,7 +1662,7 @@ Name | Type | Description  | Notes
 # **updateStoreAddressCoordinates**
 > \Flipdish\\Client\Models\RestApiResultCoordinates updateStoreAddressCoordinates($store_id, $coordinates, $app_name_id)
 
-Update store address coordinates
+
 
 ### Example
 ```php
@@ -1678,9 +1678,9 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$coordinates = new \Flipdish\\Client\Models\Coordinates(); // \Flipdish\\Client\Models\Coordinates | Store address coordinates
-$app_name_id = "app_name_id_example"; // string | App Name Id(Not used, still here for compatability reasons)
+$store_id = 56; // int | 
+$coordinates = new \Flipdish\\Client\Models\Coordinates(); // \Flipdish\\Client\Models\Coordinates | 
+$app_name_id = "app_name_id_example"; // string | 
 
 try {
     $result = $apiInstance->updateStoreAddressCoordinates($store_id, $coordinates, $app_name_id);
@@ -1695,9 +1695,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **coordinates** | [**\Flipdish\\Client\Models\Coordinates**](../Model/Coordinates.md)| Store address coordinates |
- **app_name_id** | **string**| App Name Id(Not used, still here for compatability reasons) | [optional]
+ **store_id** | **int**|  |
+ **coordinates** | [**\Flipdish\\Client\Models\Coordinates**](../Model/Coordinates.md)|  |
+ **app_name_id** | **string**|  | [optional]
 
 ### Return type
 
@@ -1717,7 +1717,7 @@ Name | Type | Description  | Notes
 # **updateStoreAddressForm**
 > object updateStoreAddressForm($store_id, $address)
 
-Update store address
+
 
 ### Example
 ```php
@@ -1733,8 +1733,8 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$address = new \Flipdish\\Client\Models\StoreAddressForm(); // \Flipdish\\Client\Models\StoreAddressForm | Store address
+$store_id = 56; // int | 
+$address = new \Flipdish\\Client\Models\StoreAddressForm(); // \Flipdish\\Client\Models\StoreAddressForm | 
 
 try {
     $result = $apiInstance->updateStoreAddressForm($store_id, $address);
@@ -1749,8 +1749,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **address** | [**\Flipdish\\Client\Models\StoreAddressForm**](../Model/StoreAddressForm.md)| Store address |
+ **store_id** | **int**|  |
+ **address** | [**\Flipdish\\Client\Models\StoreAddressForm**](../Model/StoreAddressForm.md)|  |
 
 ### Return type
 

@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getOrderPaymentInformation**](PaymentsApi.md#getOrderPaymentInformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | Returns payment refund information related to the order with the order id
+[**getOrderPaymentInformation**](PaymentsApi.md#getOrderPaymentInformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | 
 
 
 # **getOrderPaymentInformation**
 > \Flipdish\\Client\Models\RestApiResultOrderPaymentInformation getOrderPaymentInformation($order_id)
 
-Returns payment refund information related to the order with the order id
+
 
 ### Example
 ```php
@@ -26,7 +26,7 @@ $apiInstance = new Flipdish\\Client\Api\PaymentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$order_id = 56; // int | Order identifier
+$order_id = 56; // int | 
 
 try {
     $result = $apiInstance->getOrderPaymentInformation($order_id);
@@ -41,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_id** | **int**| Order identifier |
+ **order_id** | **int**|  |
 
 ### Return type
 

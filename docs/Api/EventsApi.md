@@ -4,21 +4,21 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCustomerEvents**](EventsApi.md#getCustomerEvents) | **GET** /api/v1.0/{appId}/events/customer/{customerId} | Get customer events  For technical reasons, the number of records returned is limited to 100.
-[**getEvents**](EventsApi.md#getEvents) | **GET** /api/v1.0/{appId}/events | Get events  For technical reasons, the number of records returned is limited to 100.
-[**getEventsById**](EventsApi.md#getEventsById) | **GET** /api/v1.0/{appId}/events/{eventId} | Get event by Id  For technical reasons, the number of records returned is limited to 100.
-[**getMenuEvents**](EventsApi.md#getMenuEvents) | **GET** /api/v1.0/{appId}/events/menu/{menuId} | Get menu events  For technical reasons, the number of records returned is limited to 100.
-[**getOrderEvents**](EventsApi.md#getOrderEvents) | **GET** /api/v1.0/{appId}/events/order/{orderId} | Get order events  For technical reasons, the number of records returned is limited to 100.
-[**getOrderEventsByCustomer**](EventsApi.md#getOrderEventsByCustomer) | **GET** /api/v1.0/{appId}/events/order | Get order events by customer  For technical reasons, the number of records returned is limited to 100.
-[**getStoreEvents**](EventsApi.md#getStoreEvents) | **GET** /api/v1.0/{appId}/events/store/{storeId} | Get store events  For technical reasons, the number of records returned is limited to 100.
-[**getUserEvents**](EventsApi.md#getUserEvents) | **GET** /api/v1.0/{appId}/events/user/{userId} | Get user events  For technical reasons, the number of records returned is limited to 100.
-[**getWhiteLabelEvents**](EventsApi.md#getWhiteLabelEvents) | **GET** /api/v1.0/{appId}/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
+[**getCustomerEvents**](EventsApi.md#getCustomerEvents) | **GET** /api/v1.0/{appId}/events/customer/{customerId} | 
+[**getEvents**](EventsApi.md#getEvents) | **GET** /api/v1.0/{appId}/events | 
+[**getEventsById**](EventsApi.md#getEventsById) | **GET** /api/v1.0/{appId}/events/{eventId} | 
+[**getMenuEvents**](EventsApi.md#getMenuEvents) | **GET** /api/v1.0/{appId}/events/menu/{menuId} | 
+[**getOrderEvents**](EventsApi.md#getOrderEvents) | **GET** /api/v1.0/{appId}/events/order/{orderId} | 
+[**getOrderEventsByCustomer**](EventsApi.md#getOrderEventsByCustomer) | **GET** /api/v1.0/{appId}/events/order | 
+[**getStoreEvents**](EventsApi.md#getStoreEvents) | **GET** /api/v1.0/{appId}/events/store/{storeId} | 
+[**getUserEvents**](EventsApi.md#getUserEvents) | **GET** /api/v1.0/{appId}/events/user/{userId} | 
+[**getWhiteLabelEvents**](EventsApi.md#getWhiteLabelEvents) | **GET** /api/v1.0/{appId}/events/whitelabel/{whitelabelId} | 
 
 
 # **getCustomerEvents**
 > \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getCustomerEvents($app_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
-Get customer events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```php
@@ -35,7 +35,7 @@ $apiInstance = new Flipdish\\Client\Api\EventsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$customer_id = 56; // int | Customer identifier identifier
+$customer_id = 56; // int | 
 $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
@@ -67,7 +67,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **customer_id** | **int**| Customer identifier identifier |
+ **customer_id** | **int**|  |
  **limit** | **int**| The maximum elements to return | [optional]
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 # **getEvents**
 > \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getEvents($app_id, $white_label_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
-Get events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```php
@@ -120,8 +120,8 @@ $apiInstance = new Flipdish\\Client\Api\EventsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$white_label_id = 56; // int | White Label Id
-$customer_id = 56; // int | Customer Id
+$white_label_id = 56; // int | 
+$customer_id = 56; // int | 
 $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
@@ -153,8 +153,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **white_label_id** | **int**| White Label Id | [optional]
- **customer_id** | **int**| Customer Id | [optional]
+ **white_label_id** | **int**|  | [optional]
+ **customer_id** | **int**|  | [optional]
  **limit** | **int**| The maximum elements to return | [optional]
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 # **getEventsById**
 > \Flipdish\\Client\Models\EventSearchResult getEventsById($event_id, $app_id)
 
-Get event by Id  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```php
@@ -206,7 +206,7 @@ $apiInstance = new Flipdish\\Client\Api\EventsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$event_id = "event_id_example"; // string | Event identifier (Guid)
+$event_id = "event_id_example"; // string | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -222,7 +222,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **event_id** | [**string**](../Model/.md)| Event identifier (Guid) |
+ **event_id** | [**string**](../Model/.md)|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 # **getMenuEvents**
 > \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getMenuEvents($app_id, $menu_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id2, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
-Get menu events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```php
@@ -260,7 +260,7 @@ $apiInstance = new Flipdish\\Client\Api\EventsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$menu_id = 56; // int | Menu Identifier
+$menu_id = 56; // int | 
 $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
@@ -292,7 +292,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **menu_id** | **int**| Menu Identifier |
+ **menu_id** | **int**|  |
  **limit** | **int**| The maximum elements to return | [optional]
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 # **getOrderEvents**
 > \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getOrderEvents($app_id, $order_id, $limit, $page, $start, $end, $order_id2, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
-Get order events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```php
@@ -345,7 +345,7 @@ $apiInstance = new Flipdish\\Client\Api\EventsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$order_id = 56; // int | Order identifier
+$order_id = 56; // int | 
 $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
@@ -377,7 +377,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **order_id** | **int**| Order identifier |
+ **order_id** | **int**|  |
  **limit** | **int**| The maximum elements to return | [optional]
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
@@ -413,7 +413,7 @@ Name | Type | Description  | Notes
 # **getOrderEventsByCustomer**
 > \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getOrderEventsByCustomer($app_id, $customer_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
-Get order events by customer  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```php
@@ -430,7 +430,7 @@ $apiInstance = new Flipdish\\Client\Api\EventsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$customer_id = 56; // int | Customer identifier
+$customer_id = 56; // int | 
 $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
@@ -462,7 +462,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **customer_id** | **int**| Customer identifier |
+ **customer_id** | **int**|  |
  **limit** | **int**| The maximum elements to return | [optional]
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 # **getStoreEvents**
 > \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getStoreEvents($app_id, $store_id, $limit, $page, $start, $end, $order_id, $store_id2, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
-Get store events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```php
@@ -515,7 +515,7 @@ $apiInstance = new Flipdish\\Client\Api\EventsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$store_id = 56; // int | Id of the store
+$store_id = 56; // int | 
 $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
@@ -547,7 +547,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **store_id** | **int**| Id of the store |
+ **store_id** | **int**|  |
  **limit** | **int**| The maximum elements to return | [optional]
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
@@ -583,7 +583,7 @@ Name | Type | Description  | Notes
 # **getUserEvents**
 > \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getUserEvents($app_id, $user_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id2, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
-Get user events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```php
@@ -600,7 +600,7 @@ $apiInstance = new Flipdish\\Client\Api\EventsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$user_id = 56; // int | User identifier
+$user_id = 56; // int | 
 $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
@@ -632,7 +632,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **user_id** | **int**| User identifier |
+ **user_id** | **int**|  |
  **limit** | **int**| The maximum elements to return | [optional]
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]
@@ -668,7 +668,7 @@ Name | Type | Description  | Notes
 # **getWhiteLabelEvents**
 > \Flipdish\\Client\Models\RestApiEventSearchPaginationResult getWhiteLabelEvents($app_id, $whitelabel_id, $limit, $page, $start, $end, $order_id, $store_id, $store_id_list, $store_group_id, $user_id, $menu_id, $campaign_id, $user_email, $user_name, $voucher_code, $event_type, $flipdish_event_id)
 
-Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
+
 
 ### Example
 ```php
@@ -685,7 +685,7 @@ $apiInstance = new Flipdish\\Client\Api\EventsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$whitelabel_id = 56; // int | White Label Identifier
+$whitelabel_id = 56; // int | 
 $limit = 56; // int | The maximum elements to return
 $page = 56; // int | The index of the page to return, starting by 1
 $start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date
@@ -717,7 +717,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **whitelabel_id** | **int**| White Label Identifier |
+ **whitelabel_id** | **int**|  |
  **limit** | **int**| The maximum elements to return | [optional]
  **page** | **int**| The index of the page to return, starting by 1 | [optional]
  **start** | **\DateTime**| Start date | [optional]

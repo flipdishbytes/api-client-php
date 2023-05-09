@@ -74,7 +74,7 @@ class LookerDashboardApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for lookerDashboardGetAll
      *
-     * Get all dashboards.
+     * .
      *
      */
     public function testLookerDashboardGetAll()

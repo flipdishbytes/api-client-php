@@ -90,10 +90,8 @@ class ChannelsStoreMappingApi
     /**
      * Operation channelsGetStoreChannelStoreMapping
      *
-     * Gets the relationship between Flipdish Store and Channel Store
-     *
-     * @param  string $app_id Flipdish App Name Id (required)
-     * @param  int $channel_id Flipdish Channel ID (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $channel_id channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class ChannelsStoreMappingApi
     /**
      * Operation channelsGetStoreChannelStoreMappingWithHttpInfo
      *
-     * Gets the relationship between Flipdish Store and Channel Store
-     *
-     * @param  string $app_id Flipdish App Name Id (required)
-     * @param  int $channel_id Flipdish Channel ID (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -216,10 +212,10 @@ class ChannelsStoreMappingApi
     /**
      * Operation channelsGetStoreChannelStoreMappingAsync
      *
-     * Gets the relationship between Flipdish Store and Channel Store
+     * 
      *
-     * @param  string $app_id Flipdish App Name Id (required)
-     * @param  int $channel_id Flipdish Channel ID (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -237,10 +233,10 @@ class ChannelsStoreMappingApi
     /**
      * Operation channelsGetStoreChannelStoreMappingAsyncWithHttpInfo
      *
-     * Gets the relationship between Flipdish Store and Channel Store
+     * 
      *
-     * @param  string $app_id Flipdish App Name Id (required)
-     * @param  int $channel_id Flipdish Channel ID (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -290,8 +286,8 @@ class ChannelsStoreMappingApi
     /**
      * Create request for operation 'channelsGetStoreChannelStoreMapping'
      *
-     * @param  string $app_id Flipdish App Name Id (required)
-     * @param  int $channel_id Flipdish Channel ID (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -410,11 +406,9 @@ class ChannelsStoreMappingApi
     /**
      * Operation channelsSetStoreChannelStoreMapping
      *
-     * Sets the relationship between Flipdish Store and Channel Store
-     *
-     * @param  string $app_id Flipdish App Name Id (required)
-     * @param  int $channel_id Flipdish Channel ID (required)
-     * @param  \Flipdish\\Client\Models\ChannelStoreMapping[] $stores Flipdish and Channel Store configuration (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $channel_id channel_id (required)
+     * @param  \Flipdish\\Client\Models\ChannelStoreMapping[] $stores stores (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -429,11 +423,9 @@ class ChannelsStoreMappingApi
     /**
      * Operation channelsSetStoreChannelStoreMappingWithHttpInfo
      *
-     * Sets the relationship between Flipdish Store and Channel Store
-     *
-     * @param  string $app_id Flipdish App Name Id (required)
-     * @param  int $channel_id Flipdish Channel ID (required)
-     * @param  \Flipdish\\Client\Models\ChannelStoreMapping[] $stores Flipdish and Channel Store configuration (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
+     * @param  \Flipdish\\Client\Models\ChannelStoreMapping[] $stores (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -538,11 +530,11 @@ class ChannelsStoreMappingApi
     /**
      * Operation channelsSetStoreChannelStoreMappingAsync
      *
-     * Sets the relationship between Flipdish Store and Channel Store
+     * 
      *
-     * @param  string $app_id Flipdish App Name Id (required)
-     * @param  int $channel_id Flipdish Channel ID (required)
-     * @param  \Flipdish\\Client\Models\ChannelStoreMapping[] $stores Flipdish and Channel Store configuration (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
+     * @param  \Flipdish\\Client\Models\ChannelStoreMapping[] $stores (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -560,11 +552,11 @@ class ChannelsStoreMappingApi
     /**
      * Operation channelsSetStoreChannelStoreMappingAsyncWithHttpInfo
      *
-     * Sets the relationship between Flipdish Store and Channel Store
+     * 
      *
-     * @param  string $app_id Flipdish App Name Id (required)
-     * @param  int $channel_id Flipdish Channel ID (required)
-     * @param  \Flipdish\\Client\Models\ChannelStoreMapping[] $stores Flipdish and Channel Store configuration (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
+     * @param  \Flipdish\\Client\Models\ChannelStoreMapping[] $stores (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -614,9 +606,9 @@ class ChannelsStoreMappingApi
     /**
      * Create request for operation 'channelsSetStoreChannelStoreMapping'
      *
-     * @param  string $app_id Flipdish App Name Id (required)
-     * @param  int $channel_id Flipdish Channel ID (required)
-     * @param  \Flipdish\\Client\Models\ChannelStoreMapping[] $stores Flipdish and Channel Store configuration (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
+     * @param  \Flipdish\\Client\Models\ChannelStoreMapping[] $stores (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

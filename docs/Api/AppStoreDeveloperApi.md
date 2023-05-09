@@ -4,20 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**appVerificationUpdate**](AppStoreDeveloperApi.md#appVerificationUpdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | Update App store app verification
-[**createAppStoreApp**](AppStoreDeveloperApi.md#createAppStoreApp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | Create App store app
-[**deleteAppStoreApp**](AppStoreDeveloperApi.md#deleteAppStoreApp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Delete App store app
-[**getExternalFunctionSigningKey**](AppStoreDeveloperApi.md#getExternalFunctionSigningKey) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_function_signing_key | Get external function action signing key for app
-[**updateAppStoreApp**](AppStoreDeveloperApi.md#updateAppStoreApp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Update App store app
-[**uploadAppStoreAppLogo**](AppStoreDeveloperApi.md#uploadAppStoreAppLogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
+[**appVerificationUpdate**](AppStoreDeveloperApi.md#appVerificationUpdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | 
+[**createAppStoreApp**](AppStoreDeveloperApi.md#createAppStoreApp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | 
+[**deleteAppStoreApp**](AppStoreDeveloperApi.md#deleteAppStoreApp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
+[**getExternalFunctionSigningKey**](AppStoreDeveloperApi.md#getExternalFunctionSigningKey) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_function_signing_key | 
+[**updateAppStoreApp**](AppStoreDeveloperApi.md#updateAppStoreApp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
+[**uploadAppStoreAppLogo**](AppStoreDeveloperApi.md#uploadAppStoreAppLogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
 
 
 # **appVerificationUpdate**
 > appVerificationUpdate($oauth_app_id, $app_store_app_id, $verification_status)
 
-Update App store app verification
 
-[BETA - this endpoint is under development, do not use it in your production system][Note: Only Flipdish staff can verify apps]
 
 ### Example
 ```php
@@ -33,9 +31,9 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreDeveloperApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
-$app_store_app_id = "app_store_app_id_example"; // string | App store app id
-$verification_status = "verification_status_example"; // string | New verification status
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$app_store_app_id = "app_store_app_id_example"; // string | 
+$verification_status = "verification_status_example"; // string | 
 
 try {
     $apiInstance->appVerificationUpdate($oauth_app_id, $app_store_app_id, $verification_status);
@@ -49,9 +47,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
- **app_store_app_id** | **string**| App store app id |
- **verification_status** | **string**| New verification status |
+ **oauth_app_id** | **string**|  |
+ **app_store_app_id** | **string**|  |
+ **verification_status** | **string**|  |
 
 ### Return type
 
@@ -71,9 +69,7 @@ void (empty response body)
 # **createAppStoreApp**
 > \Flipdish\\Client\Models\RestApiResultAppStoreApp createAppStoreApp($oauth_app_id, $create_app_store_app)
 
-Create App store app
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -89,8 +85,8 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreDeveloperApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
-$create_app_store_app = new \Flipdish\\Client\Models\CreateAppStoreApp(); // \Flipdish\\Client\Models\CreateAppStoreApp | App store app
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$create_app_store_app = new \Flipdish\\Client\Models\CreateAppStoreApp(); // \Flipdish\\Client\Models\CreateAppStoreApp | 
 
 try {
     $result = $apiInstance->createAppStoreApp($oauth_app_id, $create_app_store_app);
@@ -105,8 +101,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
- **create_app_store_app** | [**\Flipdish\\Client\Models\CreateAppStoreApp**](../Model/CreateAppStoreApp.md)| App store app |
+ **oauth_app_id** | **string**|  |
+ **create_app_store_app** | [**\Flipdish\\Client\Models\CreateAppStoreApp**](../Model/CreateAppStoreApp.md)|  |
 
 ### Return type
 
@@ -126,9 +122,7 @@ Name | Type | Description  | Notes
 # **deleteAppStoreApp**
 > \Flipdish\\Client\Models\RestApiStringResult deleteAppStoreApp($oauth_app_id, $app_store_app_id)
 
-Delete App store app
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -144,8 +138,8 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreDeveloperApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
-$app_store_app_id = "app_store_app_id_example"; // string | App store app id
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$app_store_app_id = "app_store_app_id_example"; // string | 
 
 try {
     $result = $apiInstance->deleteAppStoreApp($oauth_app_id, $app_store_app_id);
@@ -160,8 +154,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
- **app_store_app_id** | **string**| App store app id |
+ **oauth_app_id** | **string**|  |
+ **app_store_app_id** | **string**|  |
 
 ### Return type
 
@@ -181,9 +175,7 @@ Name | Type | Description  | Notes
 # **getExternalFunctionSigningKey**
 > getExternalFunctionSigningKey($oauth_app_id, $app_store_app_id)
 
-Get external function action signing key for app
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -199,8 +191,8 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreDeveloperApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
-$app_store_app_id = "app_store_app_id_example"; // string | App store app id
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$app_store_app_id = "app_store_app_id_example"; // string | 
 
 try {
     $apiInstance->getExternalFunctionSigningKey($oauth_app_id, $app_store_app_id);
@@ -214,8 +206,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
- **app_store_app_id** | **string**| App store app id |
+ **oauth_app_id** | **string**|  |
+ **app_store_app_id** | **string**|  |
 
 ### Return type
 
@@ -235,9 +227,7 @@ void (empty response body)
 # **updateAppStoreApp**
 > updateAppStoreApp($oauth_app_id, $app_store_app_id, $app_store_app)
 
-Update App store app
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -253,9 +243,9 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreDeveloperApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
-$app_store_app_id = "app_store_app_id_example"; // string | App store app id
-$app_store_app = new \Flipdish\\Client\Models\UpdateAppStoreApp(); // \Flipdish\\Client\Models\UpdateAppStoreApp | Update App store app
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$app_store_app_id = "app_store_app_id_example"; // string | 
+$app_store_app = new \Flipdish\\Client\Models\UpdateAppStoreApp(); // \Flipdish\\Client\Models\UpdateAppStoreApp | 
 
 try {
     $apiInstance->updateAppStoreApp($oauth_app_id, $app_store_app_id, $app_store_app);
@@ -269,9 +259,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
- **app_store_app_id** | **string**| App store app id |
- **app_store_app** | [**\Flipdish\\Client\Models\UpdateAppStoreApp**](../Model/UpdateAppStoreApp.md)| Update App store app |
+ **oauth_app_id** | **string**|  |
+ **app_store_app_id** | **string**|  |
+ **app_store_app** | [**\Flipdish\\Client\Models\UpdateAppStoreApp**](../Model/UpdateAppStoreApp.md)|  |
 
 ### Return type
 
@@ -291,7 +281,7 @@ void (empty response body)
 # **uploadAppStoreAppLogo**
 > uploadAppStoreAppLogo($oauth_app_id, $app_store_app_id, $image)
 
-Upload the App store app logo \\ icon
+
 
 ### Example
 ```php
@@ -307,8 +297,8 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreDeveloperApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | OAuth App identifier
-$app_store_app_id = "app_store_app_id_example"; // string | App store app id
+$oauth_app_id = "oauth_app_id_example"; // string | 
+$app_store_app_id = "app_store_app_id_example"; // string | 
 $image = "/path/to/file.txt"; // \SplFileObject | App Store App Logo
 
 try {
@@ -323,8 +313,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| OAuth App identifier |
- **app_store_app_id** | **string**| App store app id |
+ **oauth_app_id** | **string**|  |
+ **app_store_app_id** | **string**|  |
  **image** | **\SplFileObject**| App Store App Logo |
 
 ### Return type

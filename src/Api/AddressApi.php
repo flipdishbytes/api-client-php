@@ -90,10 +90,8 @@ class AddressApi
     /**
      * Operation formByApp
      *
-     * Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
-     *
-     * @param  string $app_id Application (WhiteLabel) Id (WhiteLabelId or AppNameId). (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  string $app_id app_id (required)
+     * @param  string $language language (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class AddressApi
     /**
      * Operation formByAppWithHttpInfo
      *
-     * Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
-     *
-     * @param  string $app_id Application (WhiteLabel) Id (WhiteLabelId or AppNameId). (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  string $app_id (required)
+     * @param  string $language (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -208,10 +204,10 @@ class AddressApi
     /**
      * Operation formByAppAsync
      *
-     * Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
+     * 
      *
-     * @param  string $app_id Application (WhiteLabel) Id (WhiteLabelId or AppNameId). (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  string $app_id (required)
+     * @param  string $language (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -229,10 +225,10 @@ class AddressApi
     /**
      * Operation formByAppAsyncWithHttpInfo
      *
-     * Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
+     * 
      *
-     * @param  string $app_id Application (WhiteLabel) Id (WhiteLabelId or AppNameId). (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  string $app_id (required)
+     * @param  string $language (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -282,8 +278,8 @@ class AddressApi
     /**
      * Create request for operation 'formByApp'
      *
-     * @param  string $app_id Application (WhiteLabel) Id (WhiteLabelId or AppNameId). (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  string $app_id (required)
+     * @param  string $language (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -396,10 +392,8 @@ class AddressApi
     /**
      * Operation formByCountry
      *
-     * Provides a dyamic form definition for the given country code, with labels localized using the provided language.
-     *
-     * @param  string $country_code The 2 letter ISO country code, e.g.: IE. (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  string $country_code country_code (required)
+     * @param  string $language language (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -414,10 +408,8 @@ class AddressApi
     /**
      * Operation formByCountryWithHttpInfo
      *
-     * Provides a dyamic form definition for the given country code, with labels localized using the provided language.
-     *
-     * @param  string $country_code The 2 letter ISO country code, e.g.: IE. (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  string $country_code (required)
+     * @param  string $language (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -514,10 +506,10 @@ class AddressApi
     /**
      * Operation formByCountryAsync
      *
-     * Provides a dyamic form definition for the given country code, with labels localized using the provided language.
+     * 
      *
-     * @param  string $country_code The 2 letter ISO country code, e.g.: IE. (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  string $country_code (required)
+     * @param  string $language (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -535,10 +527,10 @@ class AddressApi
     /**
      * Operation formByCountryAsyncWithHttpInfo
      *
-     * Provides a dyamic form definition for the given country code, with labels localized using the provided language.
+     * 
      *
-     * @param  string $country_code The 2 letter ISO country code, e.g.: IE. (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  string $country_code (required)
+     * @param  string $language (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -588,8 +580,8 @@ class AddressApi
     /**
      * Create request for operation 'formByCountry'
      *
-     * @param  string $country_code The 2 letter ISO country code, e.g.: IE. (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  string $country_code (required)
+     * @param  string $language (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -702,10 +694,8 @@ class AddressApi
     /**
      * Operation formatGoogleAddress
      *
-     * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
-     *
-     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is returned from the maps API. (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address google_address (required)
+     * @param  string $language language (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -720,10 +710,8 @@ class AddressApi
     /**
      * Operation formatGoogleAddressWithHttpInfo
      *
-     * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
-     *
-     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is returned from the maps API. (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address (required)
+     * @param  string $language (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -820,10 +808,10 @@ class AddressApi
     /**
      * Operation formatGoogleAddressAsync
      *
-     * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
+     * 
      *
-     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is returned from the maps API. (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address (required)
+     * @param  string $language (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -841,10 +829,10 @@ class AddressApi
     /**
      * Operation formatGoogleAddressAsyncWithHttpInfo
      *
-     * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
+     * 
      *
-     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is returned from the maps API. (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address (required)
+     * @param  string $language (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -894,8 +882,8 @@ class AddressApi
     /**
      * Create request for operation 'formatGoogleAddress'
      *
-     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address A Google address object, as it is returned from the maps API. (required)
-     * @param  string $language (Optional) ISO culture info code, e.g.: en-IE, the default is en-US. (optional)
+     * @param  \Flipdish\\Client\Models\GoogleAddress $google_address (required)
+     * @param  string $language (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1003,9 +991,7 @@ class AddressApi
     /**
      * Operation getCountries
      *
-     * Retuns a list of localised countries
-     *
-     * @param  string $language  (optional)
+     * @param  string $language language (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1020,9 +1006,7 @@ class AddressApi
     /**
      * Operation getCountriesWithHttpInfo
      *
-     * Retuns a list of localised countries
-     *
-     * @param  string $language  (optional)
+     * @param  string $language (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1119,9 +1103,9 @@ class AddressApi
     /**
      * Operation getCountriesAsync
      *
-     * Retuns a list of localised countries
+     * 
      *
-     * @param  string $language  (optional)
+     * @param  string $language (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1139,9 +1123,9 @@ class AddressApi
     /**
      * Operation getCountriesAsyncWithHttpInfo
      *
-     * Retuns a list of localised countries
+     * 
      *
-     * @param  string $language  (optional)
+     * @param  string $language (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1191,7 +1175,7 @@ class AddressApi
     /**
      * Create request for operation 'getCountries'
      *
-     * @param  string $language  (optional)
+     * @param  string $language (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

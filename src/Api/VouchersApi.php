@@ -90,10 +90,8 @@ class VouchersApi
     /**
      * Operation createVoucher
      *
-     * [PRIVATE API] Create voucher
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\CreateVoucher $voucher Voucher Details (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateVoucher $voucher voucher (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class VouchersApi
     /**
      * Operation createVoucherWithHttpInfo
      *
-     * [PRIVATE API] Create voucher
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\CreateVoucher $voucher Voucher Details (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateVoucher $voucher (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -216,10 +212,10 @@ class VouchersApi
     /**
      * Operation createVoucherAsync
      *
-     * [PRIVATE API] Create voucher
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\CreateVoucher $voucher Voucher Details (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateVoucher $voucher (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -237,10 +233,10 @@ class VouchersApi
     /**
      * Operation createVoucherAsyncWithHttpInfo
      *
-     * [PRIVATE API] Create voucher
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\CreateVoucher $voucher Voucher Details (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateVoucher $voucher (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -290,8 +286,8 @@ class VouchersApi
     /**
      * Create request for operation 'createVoucher'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\CreateVoucher $voucher Voucher Details (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateVoucher $voucher (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -409,9 +405,7 @@ class VouchersApi
     /**
      * Operation getVoucherById
      *
-     * [PRIVATE API] Get voucher by identifier
-     *
-     * @param  int $voucher_id Id of the voucher (required)
+     * @param  int $voucher_id voucher_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -426,9 +420,7 @@ class VouchersApi
     /**
      * Operation getVoucherByIdWithHttpInfo
      *
-     * [PRIVATE API] Get voucher by identifier
-     *
-     * @param  int $voucher_id Id of the voucher (required)
+     * @param  int $voucher_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -533,9 +525,9 @@ class VouchersApi
     /**
      * Operation getVoucherByIdAsync
      *
-     * [PRIVATE API] Get voucher by identifier
+     * 
      *
-     * @param  int $voucher_id Id of the voucher (required)
+     * @param  int $voucher_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -553,9 +545,9 @@ class VouchersApi
     /**
      * Operation getVoucherByIdAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get voucher by identifier
+     * 
      *
-     * @param  int $voucher_id Id of the voucher (required)
+     * @param  int $voucher_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -605,7 +597,7 @@ class VouchersApi
     /**
      * Create request for operation 'getVoucherById'
      *
-     * @param  int $voucher_id Id of the voucher (required)
+     * @param  int $voucher_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -714,11 +706,9 @@ class VouchersApi
     /**
      * Operation getVoucherStatsById
      *
-     * [PRIVATE API] Get voucher stats by identifier
-     *
-     * @param  int $voucher_id Id of the voucher (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week \\ month (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
+     * @param  int $voucher_id voucher_id (required)
+     * @param  string $aggregate_data_by aggregate_data_by (required)
+     * @param  int $data_point_limit data_point_limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -733,11 +723,9 @@ class VouchersApi
     /**
      * Operation getVoucherStatsByIdWithHttpInfo
      *
-     * [PRIVATE API] Get voucher stats by identifier
-     *
-     * @param  int $voucher_id Id of the voucher (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week \\ month (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
+     * @param  int $voucher_id (required)
+     * @param  string $aggregate_data_by (required)
+     * @param  int $data_point_limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -842,11 +830,11 @@ class VouchersApi
     /**
      * Operation getVoucherStatsByIdAsync
      *
-     * [PRIVATE API] Get voucher stats by identifier
+     * 
      *
-     * @param  int $voucher_id Id of the voucher (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week \\ month (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
+     * @param  int $voucher_id (required)
+     * @param  string $aggregate_data_by (required)
+     * @param  int $data_point_limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -864,11 +852,11 @@ class VouchersApi
     /**
      * Operation getVoucherStatsByIdAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get voucher stats by identifier
+     * 
      *
-     * @param  int $voucher_id Id of the voucher (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week \\ month (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
+     * @param  int $voucher_id (required)
+     * @param  string $aggregate_data_by (required)
+     * @param  int $data_point_limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -918,9 +906,9 @@ class VouchersApi
     /**
      * Create request for operation 'getVoucherStatsById'
      *
-     * @param  int $voucher_id Id of the voucher (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week \\ month (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
+     * @param  int $voucher_id (required)
+     * @param  string $aggregate_data_by (required)
+     * @param  int $data_point_limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1043,16 +1031,14 @@ class VouchersApi
     /**
      * Operation getVouchers
      *
-     * [PRIVATE API] Get vouchers summaries for App Id
-     *
-     * @param  string $app_id Application Id (required)
-     * @param  int $page_index Page Number (optional)
-     * @param  int $page_size Page Size (optional)
-     * @param  string[] $search_codes Search by Voucher Code\\s (optional)
-     * @param  string[] $status_search Search by Status (optional)
-     * @param  string[] $type_search Search by Type (optional)
-     * @param  string[] $sub_type_search Search by Sub Type (optional)
-     * @param  int[] $store_ids Search by Store Ids (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $page_index page_index (optional)
+     * @param  int $page_size page_size (optional)
+     * @param  string[] $search_codes search_codes (optional)
+     * @param  string[] $status_search status_search (optional)
+     * @param  string[] $type_search type_search (optional)
+     * @param  string[] $sub_type_search sub_type_search (optional)
+     * @param  int[] $store_ids store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1067,16 +1053,14 @@ class VouchersApi
     /**
      * Operation getVouchersWithHttpInfo
      *
-     * [PRIVATE API] Get vouchers summaries for App Id
-     *
-     * @param  string $app_id Application Id (required)
-     * @param  int $page_index Page Number (optional)
-     * @param  int $page_size Page Size (optional)
-     * @param  string[] $search_codes Search by Voucher Code\\s (optional)
-     * @param  string[] $status_search Search by Status (optional)
-     * @param  string[] $type_search Search by Type (optional)
-     * @param  string[] $sub_type_search Search by Sub Type (optional)
-     * @param  int[] $store_ids Search by Store Ids (optional)
+     * @param  string $app_id (required)
+     * @param  int $page_index (optional)
+     * @param  int $page_size (optional)
+     * @param  string[] $search_codes (optional)
+     * @param  string[] $status_search (optional)
+     * @param  string[] $type_search (optional)
+     * @param  string[] $sub_type_search (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1173,16 +1157,16 @@ class VouchersApi
     /**
      * Operation getVouchersAsync
      *
-     * [PRIVATE API] Get vouchers summaries for App Id
+     * 
      *
-     * @param  string $app_id Application Id (required)
-     * @param  int $page_index Page Number (optional)
-     * @param  int $page_size Page Size (optional)
-     * @param  string[] $search_codes Search by Voucher Code\\s (optional)
-     * @param  string[] $status_search Search by Status (optional)
-     * @param  string[] $type_search Search by Type (optional)
-     * @param  string[] $sub_type_search Search by Sub Type (optional)
-     * @param  int[] $store_ids Search by Store Ids (optional)
+     * @param  string $app_id (required)
+     * @param  int $page_index (optional)
+     * @param  int $page_size (optional)
+     * @param  string[] $search_codes (optional)
+     * @param  string[] $status_search (optional)
+     * @param  string[] $type_search (optional)
+     * @param  string[] $sub_type_search (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1200,16 +1184,16 @@ class VouchersApi
     /**
      * Operation getVouchersAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get vouchers summaries for App Id
+     * 
      *
-     * @param  string $app_id Application Id (required)
-     * @param  int $page_index Page Number (optional)
-     * @param  int $page_size Page Size (optional)
-     * @param  string[] $search_codes Search by Voucher Code\\s (optional)
-     * @param  string[] $status_search Search by Status (optional)
-     * @param  string[] $type_search Search by Type (optional)
-     * @param  string[] $sub_type_search Search by Sub Type (optional)
-     * @param  int[] $store_ids Search by Store Ids (optional)
+     * @param  string $app_id (required)
+     * @param  int $page_index (optional)
+     * @param  int $page_size (optional)
+     * @param  string[] $search_codes (optional)
+     * @param  string[] $status_search (optional)
+     * @param  string[] $type_search (optional)
+     * @param  string[] $sub_type_search (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1259,14 +1243,14 @@ class VouchersApi
     /**
      * Create request for operation 'getVouchers'
      *
-     * @param  string $app_id Application Id (required)
-     * @param  int $page_index Page Number (optional)
-     * @param  int $page_size Page Size (optional)
-     * @param  string[] $search_codes Search by Voucher Code\\s (optional)
-     * @param  string[] $status_search Search by Status (optional)
-     * @param  string[] $type_search Search by Type (optional)
-     * @param  string[] $sub_type_search Search by Sub Type (optional)
-     * @param  int[] $store_ids Search by Store Ids (optional)
+     * @param  string $app_id (required)
+     * @param  int $page_index (optional)
+     * @param  int $page_size (optional)
+     * @param  string[] $search_codes (optional)
+     * @param  string[] $status_search (optional)
+     * @param  string[] $type_search (optional)
+     * @param  string[] $sub_type_search (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1418,14 +1402,12 @@ class VouchersApi
     /**
      * Operation updateVoucher
      *
-     * [PRIVATE API] Updates voucher
-     *
-     * @param  int $voucher_id Id of the voucher (required)
-     * @param  \Flipdish\\Client\Models\VoucherBase $voucher Updated details for the voucher (required)
-     * @param  int[] $store_id List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
-     * @param  int $percent_value Percent voucher value (can have 1 of 3) (optional)
-     * @param  double $lump_value Lump voucher value (can have 1 of 3) (optional)
-     * @param  int $free_item_id Free Item Id (can have 1 of 3) (optional)
+     * @param  int $voucher_id voucher_id (required)
+     * @param  \Flipdish\\Client\Models\VoucherBase $voucher voucher (required)
+     * @param  int[] $store_id store_id (optional)
+     * @param  int $percent_value percent_value (optional)
+     * @param  double $lump_value lump_value (optional)
+     * @param  int $free_item_id free_item_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1440,14 +1422,12 @@ class VouchersApi
     /**
      * Operation updateVoucherWithHttpInfo
      *
-     * [PRIVATE API] Updates voucher
-     *
-     * @param  int $voucher_id Id of the voucher (required)
-     * @param  \Flipdish\\Client\Models\VoucherBase $voucher Updated details for the voucher (required)
-     * @param  int[] $store_id List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
-     * @param  int $percent_value Percent voucher value (can have 1 of 3) (optional)
-     * @param  double $lump_value Lump voucher value (can have 1 of 3) (optional)
-     * @param  int $free_item_id Free Item Id (can have 1 of 3) (optional)
+     * @param  int $voucher_id (required)
+     * @param  \Flipdish\\Client\Models\VoucherBase $voucher (required)
+     * @param  int[] $store_id (optional)
+     * @param  int $percent_value (optional)
+     * @param  double $lump_value (optional)
+     * @param  int $free_item_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1552,14 +1532,14 @@ class VouchersApi
     /**
      * Operation updateVoucherAsync
      *
-     * [PRIVATE API] Updates voucher
+     * 
      *
-     * @param  int $voucher_id Id of the voucher (required)
-     * @param  \Flipdish\\Client\Models\VoucherBase $voucher Updated details for the voucher (required)
-     * @param  int[] $store_id List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
-     * @param  int $percent_value Percent voucher value (can have 1 of 3) (optional)
-     * @param  double $lump_value Lump voucher value (can have 1 of 3) (optional)
-     * @param  int $free_item_id Free Item Id (can have 1 of 3) (optional)
+     * @param  int $voucher_id (required)
+     * @param  \Flipdish\\Client\Models\VoucherBase $voucher (required)
+     * @param  int[] $store_id (optional)
+     * @param  int $percent_value (optional)
+     * @param  double $lump_value (optional)
+     * @param  int $free_item_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1577,14 +1557,14 @@ class VouchersApi
     /**
      * Operation updateVoucherAsyncWithHttpInfo
      *
-     * [PRIVATE API] Updates voucher
+     * 
      *
-     * @param  int $voucher_id Id of the voucher (required)
-     * @param  \Flipdish\\Client\Models\VoucherBase $voucher Updated details for the voucher (required)
-     * @param  int[] $store_id List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
-     * @param  int $percent_value Percent voucher value (can have 1 of 3) (optional)
-     * @param  double $lump_value Lump voucher value (can have 1 of 3) (optional)
-     * @param  int $free_item_id Free Item Id (can have 1 of 3) (optional)
+     * @param  int $voucher_id (required)
+     * @param  \Flipdish\\Client\Models\VoucherBase $voucher (required)
+     * @param  int[] $store_id (optional)
+     * @param  int $percent_value (optional)
+     * @param  double $lump_value (optional)
+     * @param  int $free_item_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1634,12 +1614,12 @@ class VouchersApi
     /**
      * Create request for operation 'updateVoucher'
      *
-     * @param  int $voucher_id Id of the voucher (required)
-     * @param  \Flipdish\\Client\Models\VoucherBase $voucher Updated details for the voucher (required)
-     * @param  int[] $store_id List of store ids associated. Not needed if Stores are passed in the request body. Has preference over the request body stores. Kept for backwards compatibility. (optional)
-     * @param  int $percent_value Percent voucher value (can have 1 of 3) (optional)
-     * @param  double $lump_value Lump voucher value (can have 1 of 3) (optional)
-     * @param  int $free_item_id Free Item Id (can have 1 of 3) (optional)
+     * @param  int $voucher_id (required)
+     * @param  \Flipdish\\Client\Models\VoucherBase $voucher (required)
+     * @param  int[] $store_id (optional)
+     * @param  int $percent_value (optional)
+     * @param  double $lump_value (optional)
+     * @param  int $free_item_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

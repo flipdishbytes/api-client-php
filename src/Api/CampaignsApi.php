@@ -90,10 +90,8 @@ class CampaignsApi
     /**
      * Operation createLoyaltyCampaign
      *
-     * Creates loyalty campaign
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign Loyalty campaign details (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign campaign (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class CampaignsApi
     /**
      * Operation createLoyaltyCampaignWithHttpInfo
      *
-     * Creates loyalty campaign
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign Loyalty campaign details (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -216,10 +212,10 @@ class CampaignsApi
     /**
      * Operation createLoyaltyCampaignAsync
      *
-     * Creates loyalty campaign
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign Loyalty campaign details (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -237,10 +233,10 @@ class CampaignsApi
     /**
      * Operation createLoyaltyCampaignAsyncWithHttpInfo
      *
-     * Creates loyalty campaign
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign Loyalty campaign details (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -290,8 +286,8 @@ class CampaignsApi
     /**
      * Create request for operation 'createLoyaltyCampaign'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign Loyalty campaign details (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -409,10 +405,8 @@ class CampaignsApi
     /**
      * Operation createRetentionCampaign
      *
-     * Creates retention campaign
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign Retention campaign details (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign campaign (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -427,10 +421,8 @@ class CampaignsApi
     /**
      * Operation createRetentionCampaignWithHttpInfo
      *
-     * Creates retention campaign
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign Retention campaign details (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -535,10 +527,10 @@ class CampaignsApi
     /**
      * Operation createRetentionCampaignAsync
      *
-     * Creates retention campaign
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign Retention campaign details (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -556,10 +548,10 @@ class CampaignsApi
     /**
      * Operation createRetentionCampaignAsyncWithHttpInfo
      *
-     * Creates retention campaign
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign Retention campaign details (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -609,8 +601,8 @@ class CampaignsApi
     /**
      * Create request for operation 'createRetentionCampaign'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign Retention campaign details (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -728,9 +720,7 @@ class CampaignsApi
     /**
      * Operation getLoyaltyCampaignsForApp
      *
-     * Gets loyalty campaigns for app
-     *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -745,9 +735,7 @@ class CampaignsApi
     /**
      * Operation getLoyaltyCampaignsForAppWithHttpInfo
      *
-     * Gets loyalty campaigns for app
-     *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -852,9 +840,9 @@ class CampaignsApi
     /**
      * Operation getLoyaltyCampaignsForAppAsync
      *
-     * Gets loyalty campaigns for app
+     * 
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -872,9 +860,9 @@ class CampaignsApi
     /**
      * Operation getLoyaltyCampaignsForAppAsyncWithHttpInfo
      *
-     * Gets loyalty campaigns for app
+     * 
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -924,7 +912,7 @@ class CampaignsApi
     /**
      * Create request for operation 'getLoyaltyCampaignsForApp'
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1033,10 +1021,8 @@ class CampaignsApi
     /**
      * Operation getLoyaltyCampaignsForStore
      *
-     * Gets loyalty campaigns for store
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1051,10 +1037,8 @@ class CampaignsApi
     /**
      * Operation getLoyaltyCampaignsForStoreWithHttpInfo
      *
-     * Gets loyalty campaigns for store
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1159,10 +1143,10 @@ class CampaignsApi
     /**
      * Operation getLoyaltyCampaignsForStoreAsync
      *
-     * Gets loyalty campaigns for store
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1180,10 +1164,10 @@ class CampaignsApi
     /**
      * Operation getLoyaltyCampaignsForStoreAsyncWithHttpInfo
      *
-     * Gets loyalty campaigns for store
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1233,8 +1217,8 @@ class CampaignsApi
     /**
      * Create request for operation 'getLoyaltyCampaignsForStore'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1357,9 +1341,7 @@ class CampaignsApi
     /**
      * Operation getRetentionCampaignsForApp
      *
-     * Gets retention campaigns for app
-     *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1374,9 +1356,7 @@ class CampaignsApi
     /**
      * Operation getRetentionCampaignsForAppWithHttpInfo
      *
-     * Gets retention campaigns for app
-     *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1481,9 +1461,9 @@ class CampaignsApi
     /**
      * Operation getRetentionCampaignsForAppAsync
      *
-     * Gets retention campaigns for app
+     * 
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1501,9 +1481,9 @@ class CampaignsApi
     /**
      * Operation getRetentionCampaignsForAppAsyncWithHttpInfo
      *
-     * Gets retention campaigns for app
+     * 
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1553,7 +1533,7 @@ class CampaignsApi
     /**
      * Create request for operation 'getRetentionCampaignsForApp'
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1662,10 +1642,8 @@ class CampaignsApi
     /**
      * Operation getRetentionCampaignsForStore
      *
-     * Gets retention campaigns for store
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1680,10 +1658,8 @@ class CampaignsApi
     /**
      * Operation getRetentionCampaignsForStoreWithHttpInfo
      *
-     * Gets retention campaigns for store
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1788,10 +1764,10 @@ class CampaignsApi
     /**
      * Operation getRetentionCampaignsForStoreAsync
      *
-     * Gets retention campaigns for store
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1809,10 +1785,10 @@ class CampaignsApi
     /**
      * Operation getRetentionCampaignsForStoreAsyncWithHttpInfo
      *
-     * Gets retention campaigns for store
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1862,8 +1838,8 @@ class CampaignsApi
     /**
      * Create request for operation 'getRetentionCampaignsForStore'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1986,10 +1962,8 @@ class CampaignsApi
     /**
      * Operation getStoreList
      *
-     * Gets list of stores for app
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  bool $only_published  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  bool $only_published only_published (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2004,10 +1978,8 @@ class CampaignsApi
     /**
      * Operation getStoreListWithHttpInfo
      *
-     * Gets list of stores for app
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  bool $only_published  (optional)
+     * @param  string $app_id (required)
+     * @param  bool $only_published (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2112,10 +2084,10 @@ class CampaignsApi
     /**
      * Operation getStoreListAsync
      *
-     * Gets list of stores for app
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  bool $only_published  (optional)
+     * @param  string $app_id (required)
+     * @param  bool $only_published (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2133,10 +2105,10 @@ class CampaignsApi
     /**
      * Operation getStoreListAsyncWithHttpInfo
      *
-     * Gets list of stores for app
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  bool $only_published  (optional)
+     * @param  string $app_id (required)
+     * @param  bool $only_published (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2186,8 +2158,8 @@ class CampaignsApi
     /**
      * Create request for operation 'getStoreList'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  bool $only_published  (optional)
+     * @param  string $app_id (required)
+     * @param  bool $only_published (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2300,10 +2272,8 @@ class CampaignsApi
     /**
      * Operation removeCampaign
      *
-     * Deletes a campaign
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Campaign Id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $campaign_id campaign_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2317,10 +2287,8 @@ class CampaignsApi
     /**
      * Operation removeCampaignWithHttpInfo
      *
-     * Deletes a campaign
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Campaign Id (required)
+     * @param  string $app_id (required)
+     * @param  int $campaign_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2403,10 +2371,10 @@ class CampaignsApi
     /**
      * Operation removeCampaignAsync
      *
-     * Deletes a campaign
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Campaign Id (required)
+     * @param  string $app_id (required)
+     * @param  int $campaign_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2424,10 +2392,10 @@ class CampaignsApi
     /**
      * Operation removeCampaignAsyncWithHttpInfo
      *
-     * Deletes a campaign
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Campaign Id (required)
+     * @param  string $app_id (required)
+     * @param  int $campaign_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2463,8 +2431,8 @@ class CampaignsApi
     /**
      * Create request for operation 'removeCampaign'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Campaign Id (required)
+     * @param  string $app_id (required)
+     * @param  int $campaign_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2587,11 +2555,9 @@ class CampaignsApi
     /**
      * Operation updateLoyaltyCampaign
      *
-     * Updates loyalty campaign
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Loyalty campaign Id (required)
-     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign Loyalty campaign details (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $campaign_id campaign_id (required)
+     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign campaign (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2606,11 +2572,9 @@ class CampaignsApi
     /**
      * Operation updateLoyaltyCampaignWithHttpInfo
      *
-     * Updates loyalty campaign
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Loyalty campaign Id (required)
-     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign Loyalty campaign details (required)
+     * @param  string $app_id (required)
+     * @param  int $campaign_id (required)
+     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2715,11 +2679,11 @@ class CampaignsApi
     /**
      * Operation updateLoyaltyCampaignAsync
      *
-     * Updates loyalty campaign
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Loyalty campaign Id (required)
-     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign Loyalty campaign details (required)
+     * @param  string $app_id (required)
+     * @param  int $campaign_id (required)
+     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2737,11 +2701,11 @@ class CampaignsApi
     /**
      * Operation updateLoyaltyCampaignAsyncWithHttpInfo
      *
-     * Updates loyalty campaign
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Loyalty campaign Id (required)
-     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign Loyalty campaign details (required)
+     * @param  string $app_id (required)
+     * @param  int $campaign_id (required)
+     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2791,9 +2755,9 @@ class CampaignsApi
     /**
      * Create request for operation 'updateLoyaltyCampaign'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Loyalty campaign Id (required)
-     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign Loyalty campaign details (required)
+     * @param  string $app_id (required)
+     * @param  int $campaign_id (required)
+     * @param  \Flipdish\\Client\Models\LoyaltyCampaignBase $campaign (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2925,11 +2889,9 @@ class CampaignsApi
     /**
      * Operation updateRetentionCampaign
      *
-     * Updates retention campaign
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Retention campaign Id (required)
-     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign Retention campaign details (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $campaign_id campaign_id (required)
+     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign campaign (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2944,11 +2906,9 @@ class CampaignsApi
     /**
      * Operation updateRetentionCampaignWithHttpInfo
      *
-     * Updates retention campaign
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Retention campaign Id (required)
-     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign Retention campaign details (required)
+     * @param  string $app_id (required)
+     * @param  int $campaign_id (required)
+     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3053,11 +3013,11 @@ class CampaignsApi
     /**
      * Operation updateRetentionCampaignAsync
      *
-     * Updates retention campaign
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Retention campaign Id (required)
-     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign Retention campaign details (required)
+     * @param  string $app_id (required)
+     * @param  int $campaign_id (required)
+     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3075,11 +3035,11 @@ class CampaignsApi
     /**
      * Operation updateRetentionCampaignAsyncWithHttpInfo
      *
-     * Updates retention campaign
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Retention campaign Id (required)
-     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign Retention campaign details (required)
+     * @param  string $app_id (required)
+     * @param  int $campaign_id (required)
+     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3129,9 +3089,9 @@ class CampaignsApi
     /**
      * Create request for operation 'updateRetentionCampaign'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $campaign_id Retention campaign Id (required)
-     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign Retention campaign details (required)
+     * @param  string $app_id (required)
+     * @param  int $campaign_id (required)
+     * @param  \Flipdish\\Client\Models\RetentionCampaignBase $campaign (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

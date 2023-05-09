@@ -90,10 +90,8 @@ class PushNotificationsApi
     /**
      * Operation deletePushNotification
      *
-     * [PRIVATE] Push notification to cutomers
-     *
-     * @param  string $app_id  (required)
-     * @param  int $scheduled_push_notification_id ID of Scheduled push notifiaction to delete (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $scheduled_push_notification_id scheduled_push_notification_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,10 +105,8 @@ class PushNotificationsApi
     /**
      * Operation deletePushNotificationWithHttpInfo
      *
-     * [PRIVATE] Push notification to cutomers
-     *
-     * @param  string $app_id  (required)
-     * @param  int $scheduled_push_notification_id ID of Scheduled push notifiaction to delete (required)
+     * @param  string $app_id (required)
+     * @param  int $scheduled_push_notification_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -177,10 +173,10 @@ class PushNotificationsApi
     /**
      * Operation deletePushNotificationAsync
      *
-     * [PRIVATE] Push notification to cutomers
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $scheduled_push_notification_id ID of Scheduled push notifiaction to delete (required)
+     * @param  string $app_id (required)
+     * @param  int $scheduled_push_notification_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -198,10 +194,10 @@ class PushNotificationsApi
     /**
      * Operation deletePushNotificationAsyncWithHttpInfo
      *
-     * [PRIVATE] Push notification to cutomers
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $scheduled_push_notification_id ID of Scheduled push notifiaction to delete (required)
+     * @param  string $app_id (required)
+     * @param  int $scheduled_push_notification_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -237,8 +233,8 @@ class PushNotificationsApi
     /**
      * Create request for operation 'deletePushNotification'
      *
-     * @param  string $app_id  (required)
-     * @param  int $scheduled_push_notification_id ID of Scheduled push notifiaction to delete (required)
+     * @param  string $app_id (required)
+     * @param  int $scheduled_push_notification_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -361,11 +357,9 @@ class PushNotificationsApi
     /**
      * Operation getPushNotifications
      *
-     * [PRIVATE] Push notification to cutomers
-     *
-     * @param  string $app_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -380,11 +374,9 @@ class PushNotificationsApi
     /**
      * Operation getPushNotificationsWithHttpInfo
      *
-     * [PRIVATE] Push notification to cutomers
-     *
-     * @param  string $app_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -473,11 +465,11 @@ class PushNotificationsApi
     /**
      * Operation getPushNotificationsAsync
      *
-     * [PRIVATE] Push notification to cutomers
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -495,11 +487,11 @@ class PushNotificationsApi
     /**
      * Operation getPushNotificationsAsyncWithHttpInfo
      *
-     * [PRIVATE] Push notification to cutomers
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -549,9 +541,9 @@ class PushNotificationsApi
     /**
      * Create request for operation 'getPushNotifications'
      *
-     * @param  string $app_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -668,10 +660,8 @@ class PushNotificationsApi
     /**
      * Operation schedulePushNotification
      *
-     * [PRIVATE] Push notification to cutomers
-     *
-     * @param  string $app_id Application Id (required)
-     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification Notification to send (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification notification (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -686,10 +676,8 @@ class PushNotificationsApi
     /**
      * Operation schedulePushNotificationWithHttpInfo
      *
-     * [PRIVATE] Push notification to cutomers
-     *
-     * @param  string $app_id Application Id (required)
-     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification Notification to send (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -778,10 +766,10 @@ class PushNotificationsApi
     /**
      * Operation schedulePushNotificationAsync
      *
-     * [PRIVATE] Push notification to cutomers
+     * 
      *
-     * @param  string $app_id Application Id (required)
-     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification Notification to send (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -799,10 +787,10 @@ class PushNotificationsApi
     /**
      * Operation schedulePushNotificationAsyncWithHttpInfo
      *
-     * [PRIVATE] Push notification to cutomers
+     * 
      *
-     * @param  string $app_id Application Id (required)
-     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification Notification to send (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -852,8 +840,8 @@ class PushNotificationsApi
     /**
      * Create request for operation 'schedulePushNotification'
      *
-     * @param  string $app_id Application Id (required)
-     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification Notification to send (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -971,11 +959,9 @@ class PushNotificationsApi
     /**
      * Operation updatePushNotification
      *
-     * [PRIVATE] Update the push notification
-     *
-     * @param  string $app_id Application Id (required)
-     * @param  int $scheduled_push_notification_id Notification Id (required)
-     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification Notification to send (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $scheduled_push_notification_id scheduled_push_notification_id (required)
+     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification notification (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -990,11 +976,9 @@ class PushNotificationsApi
     /**
      * Operation updatePushNotificationWithHttpInfo
      *
-     * [PRIVATE] Update the push notification
-     *
-     * @param  string $app_id Application Id (required)
-     * @param  int $scheduled_push_notification_id Notification Id (required)
-     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification Notification to send (required)
+     * @param  string $app_id (required)
+     * @param  int $scheduled_push_notification_id (required)
+     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1083,11 +1067,11 @@ class PushNotificationsApi
     /**
      * Operation updatePushNotificationAsync
      *
-     * [PRIVATE] Update the push notification
+     * 
      *
-     * @param  string $app_id Application Id (required)
-     * @param  int $scheduled_push_notification_id Notification Id (required)
-     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification Notification to send (required)
+     * @param  string $app_id (required)
+     * @param  int $scheduled_push_notification_id (required)
+     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1105,11 +1089,11 @@ class PushNotificationsApi
     /**
      * Operation updatePushNotificationAsyncWithHttpInfo
      *
-     * [PRIVATE] Update the push notification
+     * 
      *
-     * @param  string $app_id Application Id (required)
-     * @param  int $scheduled_push_notification_id Notification Id (required)
-     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification Notification to send (required)
+     * @param  string $app_id (required)
+     * @param  int $scheduled_push_notification_id (required)
+     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1159,9 +1143,9 @@ class PushNotificationsApi
     /**
      * Create request for operation 'updatePushNotification'
      *
-     * @param  string $app_id Application Id (required)
-     * @param  int $scheduled_push_notification_id Notification Id (required)
-     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification Notification to send (required)
+     * @param  string $app_id (required)
+     * @param  int $scheduled_push_notification_id (required)
+     * @param  \Flipdish\\Client\Models\PushNotificationRequest $notification (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

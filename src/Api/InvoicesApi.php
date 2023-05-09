@@ -90,17 +90,15 @@ class InvoicesApi
     /**
      * Operation getInvoices
      *
-     * Get list of invoices
-     *
-     * @param  string $app_id App Id (required)
-     * @param  string $subscription_id Subscription Id (optional) (optional)
-     * @param  int $limit Limit of invoices to return (optional) (optional)
-     * @param  string $page_id Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)
-     * @param  bool $exclude_not_owned_invoices Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)
-     * @param  \DateTime $date_from Filter starting from this date (optional) (optional)
-     * @param  \DateTime $date_to Filter ending from this date (optional) (optional)
-     * @param  string $invoice_number Invoice number (optional) (optional)
-     * @param  int[] $store_id Store Ids (optional) (optional)
+     * @param  string $app_id app_id (required)
+     * @param  string $subscription_id subscription_id (optional)
+     * @param  int $limit limit (optional)
+     * @param  string $page_id page_id (optional)
+     * @param  bool $exclude_not_owned_invoices exclude_not_owned_invoices (optional)
+     * @param  \DateTime $date_from date_from (optional)
+     * @param  \DateTime $date_to date_to (optional)
+     * @param  string $invoice_number invoice_number (optional)
+     * @param  int[] $store_id store_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -115,17 +113,15 @@ class InvoicesApi
     /**
      * Operation getInvoicesWithHttpInfo
      *
-     * Get list of invoices
-     *
-     * @param  string $app_id App Id (required)
-     * @param  string $subscription_id Subscription Id (optional) (optional)
-     * @param  int $limit Limit of invoices to return (optional) (optional)
-     * @param  string $page_id Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)
-     * @param  bool $exclude_not_owned_invoices Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)
-     * @param  \DateTime $date_from Filter starting from this date (optional) (optional)
-     * @param  \DateTime $date_to Filter ending from this date (optional) (optional)
-     * @param  string $invoice_number Invoice number (optional) (optional)
-     * @param  int[] $store_id Store Ids (optional) (optional)
+     * @param  string $app_id (required)
+     * @param  string $subscription_id (optional)
+     * @param  int $limit (optional)
+     * @param  string $page_id (optional)
+     * @param  bool $exclude_not_owned_invoices (optional)
+     * @param  \DateTime $date_from (optional)
+     * @param  \DateTime $date_to (optional)
+     * @param  string $invoice_number (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -222,17 +218,17 @@ class InvoicesApi
     /**
      * Operation getInvoicesAsync
      *
-     * Get list of invoices
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $subscription_id Subscription Id (optional) (optional)
-     * @param  int $limit Limit of invoices to return (optional) (optional)
-     * @param  string $page_id Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)
-     * @param  bool $exclude_not_owned_invoices Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)
-     * @param  \DateTime $date_from Filter starting from this date (optional) (optional)
-     * @param  \DateTime $date_to Filter ending from this date (optional) (optional)
-     * @param  string $invoice_number Invoice number (optional) (optional)
-     * @param  int[] $store_id Store Ids (optional) (optional)
+     * @param  string $app_id (required)
+     * @param  string $subscription_id (optional)
+     * @param  int $limit (optional)
+     * @param  string $page_id (optional)
+     * @param  bool $exclude_not_owned_invoices (optional)
+     * @param  \DateTime $date_from (optional)
+     * @param  \DateTime $date_to (optional)
+     * @param  string $invoice_number (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -250,17 +246,17 @@ class InvoicesApi
     /**
      * Operation getInvoicesAsyncWithHttpInfo
      *
-     * Get list of invoices
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $subscription_id Subscription Id (optional) (optional)
-     * @param  int $limit Limit of invoices to return (optional) (optional)
-     * @param  string $page_id Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)
-     * @param  bool $exclude_not_owned_invoices Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)
-     * @param  \DateTime $date_from Filter starting from this date (optional) (optional)
-     * @param  \DateTime $date_to Filter ending from this date (optional) (optional)
-     * @param  string $invoice_number Invoice number (optional) (optional)
-     * @param  int[] $store_id Store Ids (optional) (optional)
+     * @param  string $app_id (required)
+     * @param  string $subscription_id (optional)
+     * @param  int $limit (optional)
+     * @param  string $page_id (optional)
+     * @param  bool $exclude_not_owned_invoices (optional)
+     * @param  \DateTime $date_from (optional)
+     * @param  \DateTime $date_to (optional)
+     * @param  string $invoice_number (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -310,15 +306,15 @@ class InvoicesApi
     /**
      * Create request for operation 'getInvoices'
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $subscription_id Subscription Id (optional) (optional)
-     * @param  int $limit Limit of invoices to return (optional) (optional)
-     * @param  string $page_id Id for use in pagination. Use the next_page value returned in a previous response to request subsequent results. Do not include this on the first call (optional) (optional)
-     * @param  bool $exclude_not_owned_invoices Exclude not owned invoices. Set to true to only view your invoices (optional) (optional)
-     * @param  \DateTime $date_from Filter starting from this date (optional) (optional)
-     * @param  \DateTime $date_to Filter ending from this date (optional) (optional)
-     * @param  string $invoice_number Invoice number (optional) (optional)
-     * @param  int[] $store_id Store Ids (optional) (optional)
+     * @param  string $app_id (required)
+     * @param  string $subscription_id (optional)
+     * @param  int $limit (optional)
+     * @param  string $page_id (optional)
+     * @param  bool $exclude_not_owned_invoices (optional)
+     * @param  \DateTime $date_from (optional)
+     * @param  \DateTime $date_to (optional)
+     * @param  string $invoice_number (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

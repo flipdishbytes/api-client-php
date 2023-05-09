@@ -74,7 +74,7 @@ class StoreOrderCapacityApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoreOrderCapacity
      *
-     * Get store's order capacity configuration.
+     * .
      *
      */
     public function testGetStoreOrderCapacity()
@@ -84,7 +84,7 @@ class StoreOrderCapacityApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateStoreOrderCapacityConfig
      *
-     * Create or update a store's order capacity configuration.
+     * .
      *
      */
     public function testUpdateStoreOrderCapacityConfig()

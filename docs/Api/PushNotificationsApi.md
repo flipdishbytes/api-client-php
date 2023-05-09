@@ -4,16 +4,16 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deletePushNotification**](PushNotificationsApi.md#deletePushNotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
-[**getPushNotifications**](PushNotificationsApi.md#getPushNotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
-[**schedulePushNotification**](PushNotificationsApi.md#schedulePushNotification) | **POST** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
-[**updatePushNotification**](PushNotificationsApi.md#updatePushNotification) | **POST** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Update the push notification
+[**deletePushNotification**](PushNotificationsApi.md#deletePushNotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | 
+[**getPushNotifications**](PushNotificationsApi.md#getPushNotifications) | **GET** /api/v1.0/{appId}/pushnotifications | 
+[**schedulePushNotification**](PushNotificationsApi.md#schedulePushNotification) | **POST** /api/v1.0/{appId}/pushnotifications | 
+[**updatePushNotification**](PushNotificationsApi.md#updatePushNotification) | **POST** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | 
 
 
 # **deletePushNotification**
 > deletePushNotification($app_id, $scheduled_push_notification_id)
 
-[PRIVATE] Push notification to cutomers
+
 
 ### Example
 ```php
@@ -30,7 +30,7 @@ $apiInstance = new Flipdish\\Client\Api\PushNotificationsApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
-$scheduled_push_notification_id = 56; // int | ID of Scheduled push notifiaction to delete
+$scheduled_push_notification_id = 56; // int | 
 
 try {
     $apiInstance->deletePushNotification($app_id, $scheduled_push_notification_id);
@@ -45,7 +45,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **scheduled_push_notification_id** | **int**| ID of Scheduled push notifiaction to delete |
+ **scheduled_push_notification_id** | **int**|  |
 
 ### Return type
 
@@ -65,7 +65,7 @@ void (empty response body)
 # **getPushNotifications**
 > \Flipdish\\Client\Models\RestApiPaginationResultPushNotificationResponse getPushNotifications($app_id, $page, $limit)
 
-[PRIVATE] Push notification to cutomers
+
 
 ### Example
 ```php
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 # **schedulePushNotification**
 > \Flipdish\\Client\Models\RestApiResultPushNotificationResponse schedulePushNotification($app_id, $notification)
 
-[PRIVATE] Push notification to cutomers
+
 
 ### Example
 ```php
@@ -136,8 +136,8 @@ $apiInstance = new Flipdish\\Client\Api\PushNotificationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application Id
-$notification = new \Flipdish\\Client\Models\PushNotificationRequest(); // \Flipdish\\Client\Models\PushNotificationRequest | Notification to send
+$app_id = "app_id_example"; // string | 
+$notification = new \Flipdish\\Client\Models\PushNotificationRequest(); // \Flipdish\\Client\Models\PushNotificationRequest | 
 
 try {
     $result = $apiInstance->schedulePushNotification($app_id, $notification);
@@ -152,8 +152,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application Id |
- **notification** | [**\Flipdish\\Client\Models\PushNotificationRequest**](../Model/PushNotificationRequest.md)| Notification to send |
+ **app_id** | **string**|  |
+ **notification** | [**\Flipdish\\Client\Models\PushNotificationRequest**](../Model/PushNotificationRequest.md)|  |
 
 ### Return type
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 # **updatePushNotification**
 > \Flipdish\\Client\Models\RestApiResultPushNotificationResponse updatePushNotification($app_id, $scheduled_push_notification_id, $notification)
 
-[PRIVATE] Update the push notification
+
 
 ### Example
 ```php
@@ -189,9 +189,9 @@ $apiInstance = new Flipdish\\Client\Api\PushNotificationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application Id
-$scheduled_push_notification_id = 56; // int | Notification Id
-$notification = new \Flipdish\\Client\Models\PushNotificationRequest(); // \Flipdish\\Client\Models\PushNotificationRequest | Notification to send
+$app_id = "app_id_example"; // string | 
+$scheduled_push_notification_id = 56; // int | 
+$notification = new \Flipdish\\Client\Models\PushNotificationRequest(); // \Flipdish\\Client\Models\PushNotificationRequest | 
 
 try {
     $result = $apiInstance->updatePushNotification($app_id, $scheduled_push_notification_id, $notification);
@@ -206,9 +206,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application Id |
- **scheduled_push_notification_id** | **int**| Notification Id |
- **notification** | [**\Flipdish\\Client\Models\PushNotificationRequest**](../Model/PushNotificationRequest.md)| Notification to send |
+ **app_id** | **string**|  |
+ **scheduled_push_notification_id** | **int**|  |
+ **notification** | [**\Flipdish\\Client\Models\PushNotificationRequest**](../Model/PushNotificationRequest.md)|  |
 
 ### Return type
 

@@ -90,10 +90,8 @@ class OrdersApi
     /**
      * Operation acceptOrder
      *
-     * Accept order
-     *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Accept $accept_object Order accept parameters (eg: EstimatedMinutesForDelivery) (required)
+     * @param  int $id id (required)
+     * @param  \Flipdish\\Client\Models\Accept $accept_object accept_object (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,10 +105,8 @@ class OrdersApi
     /**
      * Operation acceptOrderWithHttpInfo
      *
-     * Accept order
-     *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Accept $accept_object Order accept parameters (eg: EstimatedMinutesForDelivery) (required)
+     * @param  int $id (required)
+     * @param  \Flipdish\\Client\Models\Accept $accept_object (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -201,10 +197,10 @@ class OrdersApi
     /**
      * Operation acceptOrderAsync
      *
-     * Accept order
+     * 
      *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Accept $accept_object Order accept parameters (eg: EstimatedMinutesForDelivery) (required)
+     * @param  int $id (required)
+     * @param  \Flipdish\\Client\Models\Accept $accept_object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -222,10 +218,10 @@ class OrdersApi
     /**
      * Operation acceptOrderAsyncWithHttpInfo
      *
-     * Accept order
+     * 
      *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Accept $accept_object Order accept parameters (eg: EstimatedMinutesForDelivery) (required)
+     * @param  int $id (required)
+     * @param  \Flipdish\\Client\Models\Accept $accept_object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -261,8 +257,8 @@ class OrdersApi
     /**
      * Create request for operation 'acceptOrder'
      *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Accept $accept_object Order accept parameters (eg: EstimatedMinutesForDelivery) (required)
+     * @param  int $id (required)
+     * @param  \Flipdish\\Client\Models\Accept $accept_object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -380,9 +376,7 @@ class OrdersApi
     /**
      * Operation dispatchOrder
      *
-     * Dispatch order
-     *
-     * @param  int $id Order identifier (required)
+     * @param  int $id id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -396,9 +390,7 @@ class OrdersApi
     /**
      * Operation dispatchOrderWithHttpInfo
      *
-     * Dispatch order
-     *
-     * @param  int $id Order identifier (required)
+     * @param  int $id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -489,9 +481,9 @@ class OrdersApi
     /**
      * Operation dispatchOrderAsync
      *
-     * Dispatch order
+     * 
      *
-     * @param  int $id Order identifier (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -509,9 +501,9 @@ class OrdersApi
     /**
      * Operation dispatchOrderAsyncWithHttpInfo
      *
-     * Dispatch order
+     * 
      *
-     * @param  int $id Order identifier (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -547,7 +539,7 @@ class OrdersApi
     /**
      * Create request for operation 'dispatchOrder'
      *
-     * @param  int $id Order identifier (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -656,9 +648,7 @@ class OrdersApi
     /**
      * Operation getDeliveryInformation
      *
-     * Get order delivery information
-     *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id order_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -673,9 +663,7 @@ class OrdersApi
     /**
      * Operation getDeliveryInformationWithHttpInfo
      *
-     * Get order delivery information
-     *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -780,9 +768,9 @@ class OrdersApi
     /**
      * Operation getDeliveryInformationAsync
      *
-     * Get order delivery information
+     * 
      *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -800,9 +788,9 @@ class OrdersApi
     /**
      * Operation getDeliveryInformationAsyncWithHttpInfo
      *
-     * Get order delivery information
+     * 
      *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -852,7 +840,7 @@ class OrdersApi
     /**
      * Create request for operation 'getDeliveryInformation'
      *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -961,9 +949,7 @@ class OrdersApi
     /**
      * Operation getFulfillmentState
      *
-     * Get order fulfillment state
-     *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id order_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -978,9 +964,7 @@ class OrdersApi
     /**
      * Operation getFulfillmentStateWithHttpInfo
      *
-     * Get order fulfillment state
-     *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1085,9 +1069,9 @@ class OrdersApi
     /**
      * Operation getFulfillmentStateAsync
      *
-     * Get order fulfillment state
+     * 
      *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1105,9 +1089,9 @@ class OrdersApi
     /**
      * Operation getFulfillmentStateAsyncWithHttpInfo
      *
-     * Get order fulfillment state
+     * 
      *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1157,7 +1141,7 @@ class OrdersApi
     /**
      * Create request for operation 'getFulfillmentState'
      *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1266,9 +1250,7 @@ class OrdersApi
     /**
      * Operation getFulfillmentStatusWithDetailsAndActions
      *
-     * Get order fulfillment state with actionable details like default next state
-     *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id order_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1283,9 +1265,7 @@ class OrdersApi
     /**
      * Operation getFulfillmentStatusWithDetailsAndActionsWithHttpInfo
      *
-     * Get order fulfillment state with actionable details like default next state
-     *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1390,9 +1370,9 @@ class OrdersApi
     /**
      * Operation getFulfillmentStatusWithDetailsAndActionsAsync
      *
-     * Get order fulfillment state with actionable details like default next state
+     * 
      *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1410,9 +1390,9 @@ class OrdersApi
     /**
      * Operation getFulfillmentStatusWithDetailsAndActionsAsyncWithHttpInfo
      *
-     * Get order fulfillment state with actionable details like default next state
+     * 
      *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1462,7 +1442,7 @@ class OrdersApi
     /**
      * Create request for operation 'getFulfillmentStatusWithDetailsAndActions'
      *
-     * @param  int $order_id Flipdish Order Id (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1571,9 +1551,7 @@ class OrdersApi
     /**
      * Operation getOrderById
      *
-     * Get order by ID
-     *
-     * @param  int $id Order identifier (required)
+     * @param  int $id id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1588,9 +1566,7 @@ class OrdersApi
     /**
      * Operation getOrderByIdWithHttpInfo
      *
-     * Get order by ID
-     *
-     * @param  int $id Order identifier (required)
+     * @param  int $id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1687,9 +1663,9 @@ class OrdersApi
     /**
      * Operation getOrderByIdAsync
      *
-     * Get order by ID
+     * 
      *
-     * @param  int $id Order identifier (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1707,9 +1683,9 @@ class OrdersApi
     /**
      * Operation getOrderByIdAsyncWithHttpInfo
      *
-     * Get order by ID
+     * 
      *
-     * @param  int $id Order identifier (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1759,7 +1735,7 @@ class OrdersApi
     /**
      * Create request for operation 'getOrderById'
      *
-     * @param  int $id Order identifier (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1868,14 +1844,12 @@ class OrdersApi
     /**
      * Operation getOrders
      *
-     * Get orders by filter
-     *
-     * @param  int[] $physical_restaurant_id Physical restaurant identifiers (optional)
-     * @param  string[] $state Order states (optional)
-     * @param  \DateTime $from Order has been placed after this parameter value (optional)
-     * @param  \DateTime $to Order has been placed before this parameter value (optional)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int[] $physical_restaurant_id physical_restaurant_id (optional)
+     * @param  string[] $state state (optional)
+     * @param  \DateTime $from from (optional)
+     * @param  \DateTime $to to (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1890,14 +1864,12 @@ class OrdersApi
     /**
      * Operation getOrdersWithHttpInfo
      *
-     * Get orders by filter
-     *
-     * @param  int[] $physical_restaurant_id Physical restaurant identifiers (optional)
-     * @param  string[] $state Order states (optional)
-     * @param  \DateTime $from Order has been placed after this parameter value (optional)
-     * @param  \DateTime $to Order has been placed before this parameter value (optional)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int[] $physical_restaurant_id (optional)
+     * @param  string[] $state (optional)
+     * @param  \DateTime $from (optional)
+     * @param  \DateTime $to (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1994,14 +1966,14 @@ class OrdersApi
     /**
      * Operation getOrdersAsync
      *
-     * Get orders by filter
+     * 
      *
-     * @param  int[] $physical_restaurant_id Physical restaurant identifiers (optional)
-     * @param  string[] $state Order states (optional)
-     * @param  \DateTime $from Order has been placed after this parameter value (optional)
-     * @param  \DateTime $to Order has been placed before this parameter value (optional)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int[] $physical_restaurant_id (optional)
+     * @param  string[] $state (optional)
+     * @param  \DateTime $from (optional)
+     * @param  \DateTime $to (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2019,14 +1991,14 @@ class OrdersApi
     /**
      * Operation getOrdersAsyncWithHttpInfo
      *
-     * Get orders by filter
+     * 
      *
-     * @param  int[] $physical_restaurant_id Physical restaurant identifiers (optional)
-     * @param  string[] $state Order states (optional)
-     * @param  \DateTime $from Order has been placed after this parameter value (optional)
-     * @param  \DateTime $to Order has been placed before this parameter value (optional)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int[] $physical_restaurant_id (optional)
+     * @param  string[] $state (optional)
+     * @param  \DateTime $from (optional)
+     * @param  \DateTime $to (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2076,12 +2048,12 @@ class OrdersApi
     /**
      * Create request for operation 'getOrders'
      *
-     * @param  int[] $physical_restaurant_id Physical restaurant identifiers (optional)
-     * @param  string[] $state Order states (optional)
-     * @param  \DateTime $from Order has been placed after this parameter value (optional)
-     * @param  \DateTime $to Order has been placed before this parameter value (optional)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int[] $physical_restaurant_id (optional)
+     * @param  string[] $state (optional)
+     * @param  \DateTime $from (optional)
+     * @param  \DateTime $to (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2206,19 +2178,17 @@ class OrdersApi
     /**
      * Operation getOrdersSummary
      *
-     * [PRIVATE API] Get summary of orders by filter
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  string $search_query Query string (optional)
-     * @param  int[] $physical_restaurant_id Physical restaurant identifiers (optional)
-     * @param  string[] $state Order states (optional)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  bool $order_by_requested_for_time  (optional)
-     * @param  string[] $channels  (optional)
-     * @param  int[] $order_ids Filter by the given orders (optional)
-     * @param  \DateTime $from Filter by date from (optional)
-     * @param  \DateTime $to Filter by date to (optional)
+     * @param  string $app_id app_id (required)
+     * @param  string $search_query search_query (optional)
+     * @param  int[] $physical_restaurant_id physical_restaurant_id (optional)
+     * @param  string[] $state state (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
+     * @param  bool $order_by_requested_for_time order_by_requested_for_time (optional)
+     * @param  string[] $channels channels (optional)
+     * @param  int[] $order_ids order_ids (optional)
+     * @param  \DateTime $from from (optional)
+     * @param  \DateTime $to to (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2233,19 +2203,17 @@ class OrdersApi
     /**
      * Operation getOrdersSummaryWithHttpInfo
      *
-     * [PRIVATE API] Get summary of orders by filter
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  string $search_query Query string (optional)
-     * @param  int[] $physical_restaurant_id Physical restaurant identifiers (optional)
-     * @param  string[] $state Order states (optional)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  bool $order_by_requested_for_time  (optional)
-     * @param  string[] $channels  (optional)
-     * @param  int[] $order_ids Filter by the given orders (optional)
-     * @param  \DateTime $from Filter by date from (optional)
-     * @param  \DateTime $to Filter by date to (optional)
+     * @param  string $app_id (required)
+     * @param  string $search_query (optional)
+     * @param  int[] $physical_restaurant_id (optional)
+     * @param  string[] $state (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  bool $order_by_requested_for_time (optional)
+     * @param  string[] $channels (optional)
+     * @param  int[] $order_ids (optional)
+     * @param  \DateTime $from (optional)
+     * @param  \DateTime $to (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2342,19 +2310,19 @@ class OrdersApi
     /**
      * Operation getOrdersSummaryAsync
      *
-     * [PRIVATE API] Get summary of orders by filter
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  string $search_query Query string (optional)
-     * @param  int[] $physical_restaurant_id Physical restaurant identifiers (optional)
-     * @param  string[] $state Order states (optional)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  bool $order_by_requested_for_time  (optional)
-     * @param  string[] $channels  (optional)
-     * @param  int[] $order_ids Filter by the given orders (optional)
-     * @param  \DateTime $from Filter by date from (optional)
-     * @param  \DateTime $to Filter by date to (optional)
+     * @param  string $app_id (required)
+     * @param  string $search_query (optional)
+     * @param  int[] $physical_restaurant_id (optional)
+     * @param  string[] $state (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  bool $order_by_requested_for_time (optional)
+     * @param  string[] $channels (optional)
+     * @param  int[] $order_ids (optional)
+     * @param  \DateTime $from (optional)
+     * @param  \DateTime $to (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2372,19 +2340,19 @@ class OrdersApi
     /**
      * Operation getOrdersSummaryAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get summary of orders by filter
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  string $search_query Query string (optional)
-     * @param  int[] $physical_restaurant_id Physical restaurant identifiers (optional)
-     * @param  string[] $state Order states (optional)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  bool $order_by_requested_for_time  (optional)
-     * @param  string[] $channels  (optional)
-     * @param  int[] $order_ids Filter by the given orders (optional)
-     * @param  \DateTime $from Filter by date from (optional)
-     * @param  \DateTime $to Filter by date to (optional)
+     * @param  string $app_id (required)
+     * @param  string $search_query (optional)
+     * @param  int[] $physical_restaurant_id (optional)
+     * @param  string[] $state (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  bool $order_by_requested_for_time (optional)
+     * @param  string[] $channels (optional)
+     * @param  int[] $order_ids (optional)
+     * @param  \DateTime $from (optional)
+     * @param  \DateTime $to (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2434,17 +2402,17 @@ class OrdersApi
     /**
      * Create request for operation 'getOrdersSummary'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  string $search_query Query string (optional)
-     * @param  int[] $physical_restaurant_id Physical restaurant identifiers (optional)
-     * @param  string[] $state Order states (optional)
-     * @param  int $page Requested page number (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  bool $order_by_requested_for_time  (optional)
-     * @param  string[] $channels  (optional)
-     * @param  int[] $order_ids Filter by the given orders (optional)
-     * @param  \DateTime $from Filter by date from (optional)
-     * @param  \DateTime $to Filter by date to (optional)
+     * @param  string $app_id (required)
+     * @param  string $search_query (optional)
+     * @param  int[] $physical_restaurant_id (optional)
+     * @param  string[] $state (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  bool $order_by_requested_for_time (optional)
+     * @param  string[] $channels (optional)
+     * @param  int[] $order_ids (optional)
+     * @param  \DateTime $from (optional)
+     * @param  \DateTime $to (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2605,10 +2573,8 @@ class OrdersApi
     /**
      * Operation refundOrder
      *
-     * Refund order
-     *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Refund $refund_object  (required)
+     * @param  int $id id (required)
+     * @param  \Flipdish\\Client\Models\Refund $refund_object refund_object (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2622,10 +2588,8 @@ class OrdersApi
     /**
      * Operation refundOrderWithHttpInfo
      *
-     * Refund order
-     *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Refund $refund_object  (required)
+     * @param  int $id (required)
+     * @param  \Flipdish\\Client\Models\Refund $refund_object (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2716,10 +2680,10 @@ class OrdersApi
     /**
      * Operation refundOrderAsync
      *
-     * Refund order
+     * 
      *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Refund $refund_object  (required)
+     * @param  int $id (required)
+     * @param  \Flipdish\\Client\Models\Refund $refund_object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2737,10 +2701,10 @@ class OrdersApi
     /**
      * Operation refundOrderAsyncWithHttpInfo
      *
-     * Refund order
+     * 
      *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Refund $refund_object  (required)
+     * @param  int $id (required)
+     * @param  \Flipdish\\Client\Models\Refund $refund_object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2776,8 +2740,8 @@ class OrdersApi
     /**
      * Create request for operation 'refundOrder'
      *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Refund $refund_object  (required)
+     * @param  int $id (required)
+     * @param  \Flipdish\\Client\Models\Refund $refund_object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2895,10 +2859,8 @@ class OrdersApi
     /**
      * Operation rejectOrder
      *
-     * Reject order
-     *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Reject $reject_object  (required)
+     * @param  int $id id (required)
+     * @param  \Flipdish\\Client\Models\Reject $reject_object reject_object (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2912,10 +2874,8 @@ class OrdersApi
     /**
      * Operation rejectOrderWithHttpInfo
      *
-     * Reject order
-     *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Reject $reject_object  (required)
+     * @param  int $id (required)
+     * @param  \Flipdish\\Client\Models\Reject $reject_object (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3006,10 +2966,10 @@ class OrdersApi
     /**
      * Operation rejectOrderAsync
      *
-     * Reject order
+     * 
      *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Reject $reject_object  (required)
+     * @param  int $id (required)
+     * @param  \Flipdish\\Client\Models\Reject $reject_object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3027,10 +2987,10 @@ class OrdersApi
     /**
      * Operation rejectOrderAsyncWithHttpInfo
      *
-     * Reject order
+     * 
      *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Reject $reject_object  (required)
+     * @param  int $id (required)
+     * @param  \Flipdish\\Client\Models\Reject $reject_object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3066,8 +3026,8 @@ class OrdersApi
     /**
      * Create request for operation 'rejectOrder'
      *
-     * @param  int $id Order identifier (required)
-     * @param  \Flipdish\\Client\Models\Reject $reject_object  (required)
+     * @param  int $id (required)
+     * @param  \Flipdish\\Client\Models\Reject $reject_object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3185,10 +3145,8 @@ class OrdersApi
     /**
      * Operation searchFulfillmentStatuses
      *
-     * Get fulfillment status for a list of orders
-     *
-     * @param  string $app_id App Id (required)
-     * @param  string $order_ids Flipdish Order Id list, comma separated (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $order_ids order_ids (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3203,10 +3161,8 @@ class OrdersApi
     /**
      * Operation searchFulfillmentStatusesWithHttpInfo
      *
-     * Get fulfillment status for a list of orders
-     *
-     * @param  string $app_id App Id (required)
-     * @param  string $order_ids Flipdish Order Id list, comma separated (required)
+     * @param  string $app_id (required)
+     * @param  string $order_ids (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3311,10 +3267,10 @@ class OrdersApi
     /**
      * Operation searchFulfillmentStatusesAsync
      *
-     * Get fulfillment status for a list of orders
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $order_ids Flipdish Order Id list, comma separated (required)
+     * @param  string $app_id (required)
+     * @param  string $order_ids (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3332,10 +3288,10 @@ class OrdersApi
     /**
      * Operation searchFulfillmentStatusesAsyncWithHttpInfo
      *
-     * Get fulfillment status for a list of orders
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $order_ids Flipdish Order Id list, comma separated (required)
+     * @param  string $app_id (required)
+     * @param  string $order_ids (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3385,8 +3341,8 @@ class OrdersApi
     /**
      * Create request for operation 'searchFulfillmentStatuses'
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $order_ids Flipdish Order Id list, comma separated (required)
+     * @param  string $app_id (required)
+     * @param  string $order_ids (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3505,10 +3461,8 @@ class OrdersApi
     /**
      * Operation updateDeliveryInformation
      *
-     * Add/update delivery-related information to an order
-     *
-     * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderDeliveryInformationBase $delivery_information Delivery Information (required)
+     * @param  int $order_id order_id (required)
+     * @param  \Flipdish\\Client\Models\OrderDeliveryInformationBase $delivery_information delivery_information (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3522,10 +3476,8 @@ class OrdersApi
     /**
      * Operation updateDeliveryInformationWithHttpInfo
      *
-     * Add/update delivery-related information to an order
-     *
-     * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderDeliveryInformationBase $delivery_information Delivery Information (required)
+     * @param  int $order_id (required)
+     * @param  \Flipdish\\Client\Models\OrderDeliveryInformationBase $delivery_information (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3600,10 +3552,10 @@ class OrdersApi
     /**
      * Operation updateDeliveryInformationAsync
      *
-     * Add/update delivery-related information to an order
+     * 
      *
-     * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderDeliveryInformationBase $delivery_information Delivery Information (required)
+     * @param  int $order_id (required)
+     * @param  \Flipdish\\Client\Models\OrderDeliveryInformationBase $delivery_information (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3621,10 +3573,10 @@ class OrdersApi
     /**
      * Operation updateDeliveryInformationAsyncWithHttpInfo
      *
-     * Add/update delivery-related information to an order
+     * 
      *
-     * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderDeliveryInformationBase $delivery_information Delivery Information (required)
+     * @param  int $order_id (required)
+     * @param  \Flipdish\\Client\Models\OrderDeliveryInformationBase $delivery_information (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3660,8 +3612,8 @@ class OrdersApi
     /**
      * Create request for operation 'updateDeliveryInformation'
      *
-     * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderDeliveryInformationBase $delivery_information Delivery Information (required)
+     * @param  int $order_id (required)
+     * @param  \Flipdish\\Client\Models\OrderDeliveryInformationBase $delivery_information (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3779,10 +3731,8 @@ class OrdersApi
     /**
      * Operation updateFulfillmentState
      *
-     * Update fulfillment status information to an order
-     *
-     * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request Fulfillment Status (required)
+     * @param  int $order_id order_id (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request fulfillment_status_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3796,10 +3746,8 @@ class OrdersApi
     /**
      * Operation updateFulfillmentStateWithHttpInfo
      *
-     * Update fulfillment status information to an order
-     *
-     * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request Fulfillment Status (required)
+     * @param  int $order_id (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3874,10 +3822,10 @@ class OrdersApi
     /**
      * Operation updateFulfillmentStateAsync
      *
-     * Update fulfillment status information to an order
+     * 
      *
-     * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request Fulfillment Status (required)
+     * @param  int $order_id (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3895,10 +3843,10 @@ class OrdersApi
     /**
      * Operation updateFulfillmentStateAsyncWithHttpInfo
      *
-     * Update fulfillment status information to an order
+     * 
      *
-     * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request Fulfillment Status (required)
+     * @param  int $order_id (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3934,8 +3882,8 @@ class OrdersApi
     /**
      * Create request for operation 'updateFulfillmentState'
      *
-     * @param  int $order_id Flipdish Order Id (required)
-     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request Fulfillment Status (required)
+     * @param  int $order_id (required)
+     * @param  \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate $fulfillment_status_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

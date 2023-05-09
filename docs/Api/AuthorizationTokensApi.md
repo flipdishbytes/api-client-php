@@ -4,14 +4,12 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAuthorizationTokens**](AuthorizationTokensApi.md#getAuthorizationTokens) | **GET** /api/v1.0/{appId}/authorizationtokens/{oauthAppId} | Get authorization tokens
-[**revokeToken**](AuthorizationTokensApi.md#revokeToken) | **DELETE** /api/v1.0/{appId}/authorizationtokens/{key} | Revoke token
+[**getAuthorizationTokens**](AuthorizationTokensApi.md#getAuthorizationTokens) | **GET** /api/v1.0/{appId}/authorizationtokens/{oauthAppId} | 
+[**revokeToken**](AuthorizationTokensApi.md#revokeToken) | **DELETE** /api/v1.0/{appId}/authorizationtokens/{key} | 
 
 
 # **getAuthorizationTokens**
 > \Flipdish\\Client\Models\RestApiPaginationResultOAuthTokenModel getAuthorizationTokens($oauth_app_id, $app_id, $page, $limit)
-
-Get authorization tokens
 
 
 
@@ -29,10 +27,10 @@ $apiInstance = new Flipdish\\Client\Api\AuthorizationTokensApi(
     new GuzzleHttp\Client(),
     $config
 );
-$oauth_app_id = "oauth_app_id_example"; // string | Client identifier
+$oauth_app_id = "oauth_app_id_example"; // string | 
 $app_id = "app_id_example"; // string | 
-$page = 56; // int | Requested page number
-$limit = 56; // int | Requested page limit
+$page = 56; // int | 
+$limit = 56; // int | 
 
 try {
     $result = $apiInstance->getAuthorizationTokens($oauth_app_id, $app_id, $page, $limit);
@@ -47,10 +45,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **oauth_app_id** | **string**| Client identifier |
+ **oauth_app_id** | **string**|  |
  **app_id** | **string**|  |
- **page** | **int**| Requested page number | [optional]
- **limit** | **int**| Requested page limit | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
 
 ### Return type
 
@@ -70,7 +68,7 @@ Name | Type | Description  | Notes
 # **revokeToken**
 > revokeToken($key, $app_id)
 
-Revoke token
+
 
 ### Example
 ```php
@@ -86,7 +84,7 @@ $apiInstance = new Flipdish\\Client\Api\AuthorizationTokensApi(
     new GuzzleHttp\Client(),
     $config
 );
-$key = "key_example"; // string | Token identifier key
+$key = "key_example"; // string | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -101,7 +99,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **string**| Token identifier key |
+ **key** | **string**|  |
  **app_id** | **string**|  |
 
 ### Return type

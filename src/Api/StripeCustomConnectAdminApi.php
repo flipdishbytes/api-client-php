@@ -90,9 +90,7 @@ class StripeCustomConnectAdminApi
     /**
      * Operation initializeBankAccountConnectedAccount
      *
-     * Create a new Bank Account and Stripe connected account
-     *
-     * @param  int[] $accounts Accounts to be initialized in stripe (required)
+     * @param  int[] $accounts accounts (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,9 +105,7 @@ class StripeCustomConnectAdminApi
     /**
      * Operation initializeBankAccountConnectedAccountWithHttpInfo
      *
-     * Create a new Bank Account and Stripe connected account
-     *
-     * @param  int[] $accounts Accounts to be initialized in stripe (required)
+     * @param  int[] $accounts (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -206,9 +202,9 @@ class StripeCustomConnectAdminApi
     /**
      * Operation initializeBankAccountConnectedAccountAsync
      *
-     * Create a new Bank Account and Stripe connected account
+     * 
      *
-     * @param  int[] $accounts Accounts to be initialized in stripe (required)
+     * @param  int[] $accounts (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -226,9 +222,9 @@ class StripeCustomConnectAdminApi
     /**
      * Operation initializeBankAccountConnectedAccountAsyncWithHttpInfo
      *
-     * Create a new Bank Account and Stripe connected account
+     * 
      *
-     * @param  int[] $accounts Accounts to be initialized in stripe (required)
+     * @param  int[] $accounts (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -278,7 +274,7 @@ class StripeCustomConnectAdminApi
     /**
      * Create request for operation 'initializeBankAccountConnectedAccount'
      *
-     * @param  int[] $accounts Accounts to be initialized in stripe (required)
+     * @param  int[] $accounts (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

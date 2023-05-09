@@ -90,10 +90,8 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation createFulfillmentStatesConfig
      *
-     * Create fulfillment configuration
-     *
-     * @param  string $app_id App id (required)
-     * @param  \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration $fulfillment_state_configuration Fulfillment state configuration (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration $fulfillment_state_configuration fulfillment_state_configuration (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation createFulfillmentStatesConfigWithHttpInfo
      *
-     * Create fulfillment configuration
-     *
-     * @param  string $app_id App id (required)
-     * @param  \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration $fulfillment_state_configuration Fulfillment state configuration (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration $fulfillment_state_configuration (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -216,10 +212,10 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation createFulfillmentStatesConfigAsync
      *
-     * Create fulfillment configuration
+     * 
      *
-     * @param  string $app_id App id (required)
-     * @param  \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration $fulfillment_state_configuration Fulfillment state configuration (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration $fulfillment_state_configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -237,10 +233,10 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation createFulfillmentStatesConfigAsyncWithHttpInfo
      *
-     * Create fulfillment configuration
+     * 
      *
-     * @param  string $app_id App id (required)
-     * @param  \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration $fulfillment_state_configuration Fulfillment state configuration (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration $fulfillment_state_configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -290,8 +286,8 @@ class FulfillmentStateConfigurationApi
     /**
      * Create request for operation 'createFulfillmentStatesConfig'
      *
-     * @param  string $app_id App id (required)
-     * @param  \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration $fulfillment_state_configuration Fulfillment state configuration (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateFulfillmentStatesConfiguration $fulfillment_state_configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -409,10 +405,8 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation deleteFulfillmentStatesConfig
      *
-     * Delete fulfillment states configuration
-     *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment states configuration id (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $config_id config_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -427,10 +421,8 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation deleteFulfillmentStatesConfigWithHttpInfo
      *
-     * Delete fulfillment states configuration
-     *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment states configuration id (required)
+     * @param  string $app_id (required)
+     * @param  string $config_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -535,10 +527,10 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation deleteFulfillmentStatesConfigAsync
      *
-     * Delete fulfillment states configuration
+     * 
      *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment states configuration id (required)
+     * @param  string $app_id (required)
+     * @param  string $config_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -556,10 +548,10 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation deleteFulfillmentStatesConfigAsyncWithHttpInfo
      *
-     * Delete fulfillment states configuration
+     * 
      *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment states configuration id (required)
+     * @param  string $app_id (required)
+     * @param  string $config_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -609,8 +601,8 @@ class FulfillmentStateConfigurationApi
     /**
      * Create request for operation 'deleteFulfillmentStatesConfig'
      *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment states configuration id (required)
+     * @param  string $app_id (required)
+     * @param  string $config_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -733,10 +725,8 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation getFulfillmentStatesConfiguration
      *
-     * Get fulfillment configuration
-     *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment configuration id (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $config_id config_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -751,10 +741,8 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation getFulfillmentStatesConfigurationWithHttpInfo
      *
-     * Get fulfillment configuration
-     *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment configuration id (required)
+     * @param  string $app_id (required)
+     * @param  string $config_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -859,10 +847,10 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation getFulfillmentStatesConfigurationAsync
      *
-     * Get fulfillment configuration
+     * 
      *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment configuration id (required)
+     * @param  string $app_id (required)
+     * @param  string $config_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -880,10 +868,10 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation getFulfillmentStatesConfigurationAsyncWithHttpInfo
      *
-     * Get fulfillment configuration
+     * 
      *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment configuration id (required)
+     * @param  string $app_id (required)
+     * @param  string $config_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -933,8 +921,8 @@ class FulfillmentStateConfigurationApi
     /**
      * Create request for operation 'getFulfillmentStatesConfiguration'
      *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment configuration id (required)
+     * @param  string $app_id (required)
+     * @param  string $config_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1057,9 +1045,7 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation getFulfillmentStatesConfigurationTemplate
      *
-     * Get fulfillment configuration template
-     *
-     * @param  string $app_id App id (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1074,9 +1060,7 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation getFulfillmentStatesConfigurationTemplateWithHttpInfo
      *
-     * Get fulfillment configuration template
-     *
-     * @param  string $app_id App id (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1181,9 +1165,9 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation getFulfillmentStatesConfigurationTemplateAsync
      *
-     * Get fulfillment configuration template
+     * 
      *
-     * @param  string $app_id App id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1201,9 +1185,9 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation getFulfillmentStatesConfigurationTemplateAsyncWithHttpInfo
      *
-     * Get fulfillment configuration template
+     * 
      *
-     * @param  string $app_id App id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1253,7 +1237,7 @@ class FulfillmentStateConfigurationApi
     /**
      * Create request for operation 'getFulfillmentStatesConfigurationTemplate'
      *
-     * @param  string $app_id App id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1362,9 +1346,7 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation searchFulfillmentStatesConfigurations
      *
-     * List fulfillment configurations for AppId
-     *
-     * @param  string $app_id App id (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1379,9 +1361,7 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation searchFulfillmentStatesConfigurationsWithHttpInfo
      *
-     * List fulfillment configurations for AppId
-     *
-     * @param  string $app_id App id (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1478,9 +1458,9 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation searchFulfillmentStatesConfigurationsAsync
      *
-     * List fulfillment configurations for AppId
+     * 
      *
-     * @param  string $app_id App id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1498,9 +1478,9 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation searchFulfillmentStatesConfigurationsAsyncWithHttpInfo
      *
-     * List fulfillment configurations for AppId
+     * 
      *
-     * @param  string $app_id App id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1550,7 +1530,7 @@ class FulfillmentStateConfigurationApi
     /**
      * Create request for operation 'searchFulfillmentStatesConfigurations'
      *
-     * @param  string $app_id App id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1659,11 +1639,9 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation updateFulfillmentStatesConfig
      *
-     * Update fulfillment configuration
-     *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment states configuration id (required)
-     * @param  \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration $update_fulfillment_states_configuration Update fulfillment states configuration (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $config_id config_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration $update_fulfillment_states_configuration update_fulfillment_states_configuration (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1677,11 +1655,9 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation updateFulfillmentStatesConfigWithHttpInfo
      *
-     * Update fulfillment configuration
-     *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment states configuration id (required)
-     * @param  \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration $update_fulfillment_states_configuration Update fulfillment states configuration (required)
+     * @param  string $app_id (required)
+     * @param  string $config_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration $update_fulfillment_states_configuration (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1764,11 +1740,11 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation updateFulfillmentStatesConfigAsync
      *
-     * Update fulfillment configuration
+     * 
      *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment states configuration id (required)
-     * @param  \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration $update_fulfillment_states_configuration Update fulfillment states configuration (required)
+     * @param  string $app_id (required)
+     * @param  string $config_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration $update_fulfillment_states_configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1786,11 +1762,11 @@ class FulfillmentStateConfigurationApi
     /**
      * Operation updateFulfillmentStatesConfigAsyncWithHttpInfo
      *
-     * Update fulfillment configuration
+     * 
      *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment states configuration id (required)
-     * @param  \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration $update_fulfillment_states_configuration Update fulfillment states configuration (required)
+     * @param  string $app_id (required)
+     * @param  string $config_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration $update_fulfillment_states_configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1826,9 +1802,9 @@ class FulfillmentStateConfigurationApi
     /**
      * Create request for operation 'updateFulfillmentStatesConfig'
      *
-     * @param  string $app_id App id (required)
-     * @param  string $config_id Fulfillment states configuration id (required)
-     * @param  \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration $update_fulfillment_states_configuration Update fulfillment states configuration (required)
+     * @param  string $app_id (required)
+     * @param  string $config_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateFulfillmentStatesConfiguration $update_fulfillment_states_configuration (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

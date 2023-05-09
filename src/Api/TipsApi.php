@@ -90,9 +90,7 @@ class TipsApi
     /**
      * Operation tipConfigGet
      *
-     * Returns current tip configuration for a store
-     *
-     * @param  int $store_id Store Id (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,9 +105,7 @@ class TipsApi
     /**
      * Operation tipConfigGetWithHttpInfo
      *
-     * Returns current tip configuration for a store
-     *
-     * @param  int $store_id Store Id (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -214,9 +210,9 @@ class TipsApi
     /**
      * Operation tipConfigGetAsync
      *
-     * Returns current tip configuration for a store
+     * 
      *
-     * @param  int $store_id Store Id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -234,9 +230,9 @@ class TipsApi
     /**
      * Operation tipConfigGetAsyncWithHttpInfo
      *
-     * Returns current tip configuration for a store
+     * 
      *
-     * @param  int $store_id Store Id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -286,7 +282,7 @@ class TipsApi
     /**
      * Create request for operation 'tipConfigGet'
      *
-     * @param  int $store_id Store Id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -395,10 +391,8 @@ class TipsApi
     /**
      * Operation tipConfigUpsert
      *
-     * Update or insert current tip configuration for a store
-     *
-     * @param  int $store_id Store Id (required)
-     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config Update Configuration (required)
+     * @param  int $store_id store_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config update_config (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -413,10 +407,8 @@ class TipsApi
     /**
      * Operation tipConfigUpsertWithHttpInfo
      *
-     * Update or insert current tip configuration for a store
-     *
-     * @param  int $store_id Store Id (required)
-     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config Update Configuration (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -521,10 +513,10 @@ class TipsApi
     /**
      * Operation tipConfigUpsertAsync
      *
-     * Update or insert current tip configuration for a store
+     * 
      *
-     * @param  int $store_id Store Id (required)
-     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config Update Configuration (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -542,10 +534,10 @@ class TipsApi
     /**
      * Operation tipConfigUpsertAsyncWithHttpInfo
      *
-     * Update or insert current tip configuration for a store
+     * 
      *
-     * @param  int $store_id Store Id (required)
-     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config Update Configuration (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -595,8 +587,8 @@ class TipsApi
     /**
      * Create request for operation 'tipConfigUpsert'
      *
-     * @param  int $store_id Store Id (required)
-     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config Update Configuration (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateTipConfiguration $update_config (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

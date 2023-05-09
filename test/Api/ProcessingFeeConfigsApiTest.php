@@ -74,7 +74,7 @@ class ProcessingFeeConfigsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getProcessingFeeConfigsByStoreIds
      *
-     * Get processing fee configs by store identifiers.
+     * .
      *
      */
     public function testGetProcessingFeeConfigsByStoreIds()

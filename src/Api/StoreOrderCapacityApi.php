@@ -90,11 +90,9 @@ class StoreOrderCapacityApi
     /**
      * Operation getStoreOrderCapacity
      *
-     * Get store's order capacity configuration
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
-     * @param  string $delivery_type Delivery / Pickup (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $store_id store_id (required)
+     * @param  string $delivery_type delivery_type (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -109,11 +107,9 @@ class StoreOrderCapacityApi
     /**
      * Operation getStoreOrderCapacityWithHttpInfo
      *
-     * Get store's order capacity configuration
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
-     * @param  string $delivery_type Delivery / Pickup (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -210,11 +206,11 @@ class StoreOrderCapacityApi
     /**
      * Operation getStoreOrderCapacityAsync
      *
-     * Get store's order capacity configuration
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
-     * @param  string $delivery_type Delivery / Pickup (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -232,11 +228,11 @@ class StoreOrderCapacityApi
     /**
      * Operation getStoreOrderCapacityAsyncWithHttpInfo
      *
-     * Get store's order capacity configuration
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
-     * @param  string $delivery_type Delivery / Pickup (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -286,9 +282,9 @@ class StoreOrderCapacityApi
     /**
      * Create request for operation 'getStoreOrderCapacity'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $store_id Store Id (required)
-     * @param  string $delivery_type Delivery / Pickup (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -425,11 +421,9 @@ class StoreOrderCapacityApi
     /**
      * Operation updateStoreOrderCapacityConfig
      *
-     * Create or update a store's order capacity configuration
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery / Pickup (required)
-     * @param  \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel $new_order_capacity_config new order capacity configuration (required)
+     * @param  int $store_id store_id (required)
+     * @param  string $delivery_type delivery_type (required)
+     * @param  \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel $new_order_capacity_config new_order_capacity_config (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -444,11 +438,9 @@ class StoreOrderCapacityApi
     /**
      * Operation updateStoreOrderCapacityConfigWithHttpInfo
      *
-     * Create or update a store's order capacity configuration
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery / Pickup (required)
-     * @param  \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel $new_order_capacity_config new order capacity configuration (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel $new_order_capacity_config (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -524,11 +516,11 @@ class StoreOrderCapacityApi
     /**
      * Operation updateStoreOrderCapacityConfigAsync
      *
-     * Create or update a store's order capacity configuration
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery / Pickup (required)
-     * @param  \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel $new_order_capacity_config new order capacity configuration (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel $new_order_capacity_config (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -547,11 +539,11 @@ class StoreOrderCapacityApi
     /**
      * Operation updateStoreOrderCapacityConfigAsyncWithHttpInfo
      *
-     * Create or update a store's order capacity configuration
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery / Pickup (required)
-     * @param  \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel $new_order_capacity_config new order capacity configuration (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel $new_order_capacity_config (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -588,9 +580,9 @@ class StoreOrderCapacityApi
     /**
      * Create request for operation 'updateStoreOrderCapacityConfig'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery / Pickup (required)
-     * @param  \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel $new_order_capacity_config new order capacity configuration (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel $new_order_capacity_config (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException

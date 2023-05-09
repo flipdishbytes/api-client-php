@@ -4,21 +4,21 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**appStoreConfigurationsAppStoreHandleOauthResponseCode**](AppStoreConfigurationsApi.md#appStoreConfigurationsAppStoreHandleOauthResponseCode) | **GET** /api/v1.0/appstore/oauthresponse/{appStoreAppId}/responsecode | Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
-[**createAppStoreConfig**](AppStoreConfigurationsApi.md#createAppStoreConfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create App store app configuration
-[**deleteAppStoreConfig**](AppStoreConfigurationsApi.md#deleteAppStoreConfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete App store app configuration
-[**executeConfigurationAction**](AppStoreConfigurationsApi.md#executeConfigurationAction) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action | Execute configuration action on a configuration item (eg. handle button press)
-[**getAppStoreConfig**](AppStoreConfigurationsApi.md#getAppStoreConfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get App store app configuration
-[**getConfiguredAppSingleApp**](AppStoreConfigurationsApi.md#getConfiguredAppSingleApp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of App store app configurations for one App store app
-[**getConfiguredApps**](AppStoreConfigurationsApi.md#getConfiguredApps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of App store apps which have been configured
-[**updateAppStoreConfig**](AppStoreConfigurationsApi.md#updateAppStoreConfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update App store app configuration
-[**updateAppStoreConfigSettingValues**](AppStoreConfigurationsApi.md#updateAppStoreConfigSettingValues) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/updatesettings | Update AppStore App Configuration values, specified settings only
+[**appStoreConfigurationsAppStoreHandleOauthResponseCode**](AppStoreConfigurationsApi.md#appStoreConfigurationsAppStoreHandleOauthResponseCode) | **GET** /api/v1.0/appstore/oauthresponse/{appStoreAppId}/responsecode | 
+[**createAppStoreConfig**](AppStoreConfigurationsApi.md#createAppStoreConfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | 
+[**deleteAppStoreConfig**](AppStoreConfigurationsApi.md#deleteAppStoreConfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | 
+[**executeConfigurationAction**](AppStoreConfigurationsApi.md#executeConfigurationAction) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action | 
+[**getAppStoreConfig**](AppStoreConfigurationsApi.md#getAppStoreConfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | 
+[**getConfiguredAppSingleApp**](AppStoreConfigurationsApi.md#getConfiguredAppSingleApp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | 
+[**getConfiguredApps**](AppStoreConfigurationsApi.md#getConfiguredApps) | **GET** /api/v1.0/{appId}/appstore/apps | 
+[**updateAppStoreConfig**](AppStoreConfigurationsApi.md#updateAppStoreConfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | 
+[**updateAppStoreConfigSettingValues**](AppStoreConfigurationsApi.md#updateAppStoreConfigSettingValues) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/updatesettings | 
 
 
 # **appStoreConfigurationsAppStoreHandleOauthResponseCode**
 > object appStoreConfigurationsAppStoreHandleOauthResponseCode($app_store_app_id)
 
-Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
+
 
 ### Example
 ```php
@@ -69,9 +69,7 @@ Name | Type | Description  | Notes
 # **createAppStoreConfig**
 > \Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration createAppStoreConfig($app_id, $app_store_app_id)
 
-Create App store app configuration
 
-[BETA - this endpoint is under development, do not use it in your production system] This adds an Application to a Whitelabel that can later be configured to specific stores
 
 ### Example
 ```php
@@ -87,8 +85,8 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreConfigurationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App id
-$app_store_app_id = "app_store_app_id_example"; // string | App store app id
+$app_id = "app_id_example"; // string | 
+$app_store_app_id = "app_store_app_id_example"; // string | 
 
 try {
     $result = $apiInstance->createAppStoreConfig($app_id, $app_store_app_id);
@@ -103,8 +101,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App id |
- **app_store_app_id** | **string**| App store app id |
+ **app_id** | **string**|  |
+ **app_store_app_id** | **string**|  |
 
 ### Return type
 
@@ -124,9 +122,7 @@ Name | Type | Description  | Notes
 # **deleteAppStoreConfig**
 > \Flipdish\\Client\Models\RestApiStringResult deleteAppStoreConfig($app_id, $app_store_app_id, $config_id)
 
-Delete App store app configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -142,9 +138,9 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreConfigurationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App id
-$app_store_app_id = "app_store_app_id_example"; // string | App store app id
-$config_id = "config_id_example"; // string | App store app configuration id
+$app_id = "app_id_example"; // string | 
+$app_store_app_id = "app_store_app_id_example"; // string | 
+$config_id = "config_id_example"; // string | 
 
 try {
     $result = $apiInstance->deleteAppStoreConfig($app_id, $app_store_app_id, $config_id);
@@ -159,9 +155,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App id |
- **app_store_app_id** | **string**| App store app id |
- **config_id** | **string**| App store app configuration id |
+ **app_id** | **string**|  |
+ **app_store_app_id** | **string**|  |
+ **config_id** | **string**|  |
 
 ### Return type
 
@@ -181,7 +177,7 @@ Name | Type | Description  | Notes
 # **executeConfigurationAction**
 > \Flipdish\\Client\Models\ExecuteConfigurationActionResult executeConfigurationAction($app_id, $app_store_app_id, $config_id, $execute_configuration_action_request)
 
-Execute configuration action on a configuration item (eg. handle button press)
+
 
 ### Example
 ```php
@@ -197,10 +193,10 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreConfigurationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Id
-$app_store_app_id = "app_store_app_id_example"; // string | AppStore App Id
-$config_id = "config_id_example"; // string | AppStore App configuration Id
-$execute_configuration_action_request = new \Flipdish\\Client\Models\ExecuteConfigurationActionRequest(); // \Flipdish\\Client\Models\ExecuteConfigurationActionRequest | Action request details
+$app_id = "app_id_example"; // string | 
+$app_store_app_id = "app_store_app_id_example"; // string | 
+$config_id = "config_id_example"; // string | 
+$execute_configuration_action_request = new \Flipdish\\Client\Models\ExecuteConfigurationActionRequest(); // \Flipdish\\Client\Models\ExecuteConfigurationActionRequest | 
 
 try {
     $result = $apiInstance->executeConfigurationAction($app_id, $app_store_app_id, $config_id, $execute_configuration_action_request);
@@ -215,10 +211,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Id |
- **app_store_app_id** | **string**| AppStore App Id |
- **config_id** | **string**| AppStore App configuration Id |
- **execute_configuration_action_request** | [**\Flipdish\\Client\Models\ExecuteConfigurationActionRequest**](../Model/ExecuteConfigurationActionRequest.md)| Action request details |
+ **app_id** | **string**|  |
+ **app_store_app_id** | **string**|  |
+ **config_id** | **string**|  |
+ **execute_configuration_action_request** | [**\Flipdish\\Client\Models\ExecuteConfigurationActionRequest**](../Model/ExecuteConfigurationActionRequest.md)|  |
 
 ### Return type
 
@@ -238,9 +234,7 @@ Name | Type | Description  | Notes
 # **getAppStoreConfig**
 > \Flipdish\\Client\Models\AppStoreAppConfiguration getAppStoreConfig($app_id, $app_store_app_id, $config_id)
 
-Get App store app configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -256,9 +250,9 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreConfigurationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App id
-$app_store_app_id = "app_store_app_id_example"; // string | App store app id
-$config_id = "config_id_example"; // string | App store app configuration id
+$app_id = "app_id_example"; // string | 
+$app_store_app_id = "app_store_app_id_example"; // string | 
+$config_id = "config_id_example"; // string | 
 
 try {
     $result = $apiInstance->getAppStoreConfig($app_id, $app_store_app_id, $config_id);
@@ -273,9 +267,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App id |
- **app_store_app_id** | **string**| App store app id |
- **config_id** | **string**| App store app configuration id |
+ **app_id** | **string**|  |
+ **app_store_app_id** | **string**|  |
+ **config_id** | **string**|  |
 
 ### Return type
 
@@ -295,9 +289,7 @@ Name | Type | Description  | Notes
 # **getConfiguredAppSingleApp**
 > \Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationSummary getConfiguredAppSingleApp($app_id, $app_store_app_id)
 
-Get list of App store app configurations for one App store app
 
-[ALPHA - this endpoint is not ready to be consumed]
 
 ### Example
 ```php
@@ -313,8 +305,8 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreConfigurationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App id
-$app_store_app_id = "app_store_app_id_example"; // string | App store app id
+$app_id = "app_id_example"; // string | 
+$app_store_app_id = "app_store_app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getConfiguredAppSingleApp($app_id, $app_store_app_id);
@@ -329,8 +321,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App id |
- **app_store_app_id** | **string**| App store app id |
+ **app_id** | **string**|  |
+ **app_store_app_id** | **string**|  |
 
 ### Return type
 
@@ -350,9 +342,7 @@ Name | Type | Description  | Notes
 # **getConfiguredApps**
 > \Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationHeader getConfiguredApps($app_id)
 
-Get list of App store apps which have been configured
 
-[ALPHA - this endpoint is not ready to be consumed]
 
 ### Example
 ```php
@@ -368,7 +358,7 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreConfigurationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App id
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getConfiguredApps($app_id);
@@ -383,7 +373,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App id |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -403,9 +393,7 @@ Name | Type | Description  | Notes
 # **updateAppStoreConfig**
 > updateAppStoreConfig($app_id, $app_store_app_id, $config_id, $update_app_store_app_configuration)
 
-Update App store app configuration
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -421,10 +409,10 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreConfigurationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App id
-$app_store_app_id = "app_store_app_id_example"; // string | App store app id
-$config_id = "config_id_example"; // string | App store app configuration id
-$update_app_store_app_configuration = new \Flipdish\\Client\Models\UpdateAppStoreAppConfiguration(); // \Flipdish\\Client\Models\UpdateAppStoreAppConfiguration | Update App store app configuration
+$app_id = "app_id_example"; // string | 
+$app_store_app_id = "app_store_app_id_example"; // string | 
+$config_id = "config_id_example"; // string | 
+$update_app_store_app_configuration = new \Flipdish\\Client\Models\UpdateAppStoreAppConfiguration(); // \Flipdish\\Client\Models\UpdateAppStoreAppConfiguration | 
 
 try {
     $apiInstance->updateAppStoreConfig($app_id, $app_store_app_id, $config_id, $update_app_store_app_configuration);
@@ -438,10 +426,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App id |
- **app_store_app_id** | **string**| App store app id |
- **config_id** | **string**| App store app configuration id |
- **update_app_store_app_configuration** | [**\Flipdish\\Client\Models\UpdateAppStoreAppConfiguration**](../Model/UpdateAppStoreAppConfiguration.md)| Update App store app configuration |
+ **app_id** | **string**|  |
+ **app_store_app_id** | **string**|  |
+ **config_id** | **string**|  |
+ **update_app_store_app_configuration** | [**\Flipdish\\Client\Models\UpdateAppStoreAppConfiguration**](../Model/UpdateAppStoreAppConfiguration.md)|  |
 
 ### Return type
 
@@ -461,9 +449,7 @@ void (empty response body)
 # **updateAppStoreConfigSettingValues**
 > updateAppStoreConfigSettingValues($app_id, $app_store_app_id, $config_id, $update_app_store_app_configuration_values)
 
-Update AppStore App Configuration values, specified settings only
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php

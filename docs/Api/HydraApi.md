@@ -4,33 +4,33 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**assignEmv**](HydraApi.md#assignEmv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | Assign an EMV terminal to a kiosk
-[**attachStoreToKiosk**](HydraApi.md#attachStoreToKiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | [Private]
-[**attachStoreToTerminal**](HydraApi.md#attachStoreToTerminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | [Private]
+[**assignEmv**](HydraApi.md#assignEmv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | 
+[**attachStoreToKiosk**](HydraApi.md#attachStoreToKiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | 
+[**attachStoreToTerminal**](HydraApi.md#attachStoreToTerminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | 
 [**cancelEmvPayment**](HydraApi.md#cancelEmvPayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
-[**detachStoreFromTerminal**](HydraApi.md#detachStoreFromTerminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | [Private]
-[**getAttachedDevice**](HydraApi.md#getAttachedDevice) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/{deviceId} | [Private]
-[**getAttachedDevices**](HydraApi.md#getAttachedDevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | [Private]
-[**getEMVTerminalDetails**](HydraApi.md#getEMVTerminalDetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | [Private]
-[**getEmvOrderState**](HydraApi.md#getEmvOrderState) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | [Private]
-[**getKioskCashPaymentSettings**](HydraApi.md#getKioskCashPaymentSettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | Get the status of Cash Payment Method on Kiosk
+[**detachStoreFromTerminal**](HydraApi.md#detachStoreFromTerminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | 
+[**getAttachedDevice**](HydraApi.md#getAttachedDevice) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/{deviceId} | 
+[**getAttachedDevices**](HydraApi.md#getAttachedDevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | 
+[**getEMVTerminalDetails**](HydraApi.md#getEMVTerminalDetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | 
+[**getEmvOrderState**](HydraApi.md#getEmvOrderState) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | 
+[**getKioskCashPaymentSettings**](HydraApi.md#getKioskCashPaymentSettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | 
 [**getRegistration**](HydraApi.md#getRegistration) | **GET** /api/v1.0/hydra/registration | 
-[**getSettings**](HydraApi.md#getSettings) | **GET** /api/v1.0/hydra/settings | [Private]
-[**hydraCreateEmv**](HydraApi.md#hydraCreateEmv) | **POST** /api/v1.0/{appId}/emvterminals | [Private]
-[**hydraDeleteEmv**](HydraApi.md#hydraDeleteEmv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | [Private]
-[**hydraDetachStoreFromKiosk**](HydraApi.md#hydraDetachStoreFromKiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | [Private]
-[**hydraGetEmvsForAppId**](HydraApi.md#hydraGetEmvsForAppId) | **GET** /api/v1.0/{appId}/emvterminals | List EMV terminals belonging to the given AppNameId
-[**loginWithDeviceId**](HydraApi.md#loginWithDeviceId) | **POST** /api/v1.0/hydra/{deviceId}/login | [Private]
-[**register**](HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | [Private]
-[**unAssign**](HydraApi.md#unAssign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | [Private]
-[**unassignEmv**](HydraApi.md#unassignEmv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | Unassign the currently assigned EMV terminal from a kiosk
-[**updateKioskCashVisibilitySettings**](HydraApi.md#updateKioskCashVisibilitySettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | Update the Cash Payment Method Visibility on Kiosk
+[**getSettings**](HydraApi.md#getSettings) | **GET** /api/v1.0/hydra/settings | 
+[**hydraCreateEmv**](HydraApi.md#hydraCreateEmv) | **POST** /api/v1.0/{appId}/emvterminals | 
+[**hydraDeleteEmv**](HydraApi.md#hydraDeleteEmv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | 
+[**hydraDetachStoreFromKiosk**](HydraApi.md#hydraDetachStoreFromKiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | 
+[**hydraGetEmvsForAppId**](HydraApi.md#hydraGetEmvsForAppId) | **GET** /api/v1.0/{appId}/emvterminals | 
+[**loginWithDeviceId**](HydraApi.md#loginWithDeviceId) | **POST** /api/v1.0/hydra/{deviceId}/login | 
+[**register**](HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | 
+[**unAssign**](HydraApi.md#unAssign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | 
+[**unassignEmv**](HydraApi.md#unassignEmv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | 
+[**updateKioskCashVisibilitySettings**](HydraApi.md#updateKioskCashVisibilitySettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | 
 
 
 # **assignEmv**
 > assignEmv($app_id, $hydra_config_id, $emv_terminal_id)
 
-Assign an EMV terminal to a kiosk
+
 
 ### Example
 ```php
@@ -84,7 +84,7 @@ void (empty response body)
 # **attachStoreToKiosk**
 > \Flipdish\\Client\Models\RestApiResultHydraStatus attachStoreToKiosk($app_id, $store_id, $device_id)
 
-[Private]
+
 
 ### Example
 ```php
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 # **attachStoreToTerminal**
 > \Flipdish\\Client\Models\RestApiResultHydraStatus attachStoreToTerminal($app_id, $device_id, $store_id)
 
-[Private]
+
 
 ### Example
 ```php
@@ -246,7 +246,7 @@ void (empty response body)
 # **detachStoreFromTerminal**
 > \Flipdish\\Client\Models\RestApiResultHydraStatus detachStoreFromTerminal($app_id, $device_id, $store_id)
 
-[Private]
+
 
 ### Example
 ```php
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 # **getAttachedDevice**
 > \Flipdish\\Client\Models\RestApiResultHydraDeviceDetails getAttachedDevice($app_id, $device_type, $device_id)
 
-[Private]
+
 
 ### Example
 ```php
@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 # **getAttachedDevices**
 > \Flipdish\\Client\Models\RestApiPaginationResultHydraDeviceDetails getAttachedDevices($app_id, $device_type, $page_index, $page_size, $store_id, $device_name, $device_serial)
 
-[Private]
+
 
 ### Example
 ```php
@@ -419,7 +419,7 @@ Name | Type | Description  | Notes
 # **getEMVTerminalDetails**
 > \Flipdish\\Client\Models\RestApiResultPaymentTerminalDetails getEMVTerminalDetails($app_id)
 
-[Private]
+
 
 ### Example
 ```php
@@ -470,7 +470,7 @@ Name | Type | Description  | Notes
 # **getEmvOrderState**
 > \Flipdish\\Client\Models\RestApiResultPaymentTerminalTransactionDetails getEmvOrderState($order_id, $app_id)
 
-[Private]
+
 
 ### Example
 ```php
@@ -523,9 +523,7 @@ Name | Type | Description  | Notes
 # **getKioskCashPaymentSettings**
 > \Flipdish\\Client\Models\RestApiArrayResultKioskCashPaymentSettings getKioskCashPaymentSettings($app_id, $device_id)
 
-Get the status of Cash Payment Method on Kiosk
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -625,7 +623,7 @@ This endpoint does not need any parameter.
 # **getSettings**
 > \Flipdish\\Client\Models\RestApiResultHydraConfig getSettings()
 
-[Private]
+
 
 ### Example
 ```php
@@ -672,7 +670,7 @@ This endpoint does not need any parameter.
 # **hydraCreateEmv**
 > object hydraCreateEmv($app_id, $emv)
 
-[Private]
+
 
 ### Example
 ```php
@@ -725,7 +723,7 @@ Name | Type | Description  | Notes
 # **hydraDeleteEmv**
 > object hydraDeleteEmv($app_id, $id)
 
-[Private]
+
 
 ### Example
 ```php
@@ -778,7 +776,7 @@ Name | Type | Description  | Notes
 # **hydraDetachStoreFromKiosk**
 > \Flipdish\\Client\Models\RestApiResultHydraStatus hydraDetachStoreFromKiosk($app_id, $store_id, $device_id)
 
-[Private]
+
 
 ### Example
 ```php
@@ -833,7 +831,7 @@ Name | Type | Description  | Notes
 # **hydraGetEmvsForAppId**
 > \Flipdish\\Client\Models\RestApiArrayResultEmvTerminalWithAssignments hydraGetEmvsForAppId($app_id)
 
-List EMV terminals belonging to the given AppNameId
+
 
 ### Example
 ```php
@@ -884,7 +882,7 @@ Name | Type | Description  | Notes
 # **loginWithDeviceId**
 > loginWithDeviceId($device_id, $hydra_user_type, $serial_number)
 
-[Private]
+
 
 ### Example
 ```php
@@ -938,7 +936,7 @@ void (empty response body)
 # **register**
 > \Flipdish\\Client\Models\RestApiResultHydraStatus register($app_id, $hydra_registration)
 
-[Private]
+
 
 ### Example
 ```php
@@ -991,7 +989,7 @@ Name | Type | Description  | Notes
 # **unAssign**
 > unAssign($app_id, $device_id)
 
-[Private]
+
 
 ### Example
 ```php
@@ -1043,7 +1041,7 @@ void (empty response body)
 # **unassignEmv**
 > unassignEmv($app_id, $hydra_config_id)
 
-Unassign the currently assigned EMV terminal from a kiosk
+
 
 ### Example
 ```php
@@ -1095,9 +1093,7 @@ void (empty response body)
 # **updateKioskCashVisibilitySettings**
 > updateKioskCashVisibilitySettings($app_id, $device_id, $is_cash_enabled)
 
-Update the Cash Payment Method Visibility on Kiosk
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php

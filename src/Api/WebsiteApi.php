@@ -90,10 +90,8 @@ class WebsiteApi
     /**
      * Operation addTestimonial
      *
-     * Add a testimonial
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial Testimonial to be added (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial testimonial (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class WebsiteApi
     /**
      * Operation addTestimonialWithHttpInfo
      *
-     * Add a testimonial
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial Testimonial to be added (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -208,10 +204,10 @@ class WebsiteApi
     /**
      * Operation addTestimonialAsync
      *
-     * Add a testimonial
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial Testimonial to be added (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -229,10 +225,10 @@ class WebsiteApi
     /**
      * Operation addTestimonialAsyncWithHttpInfo
      *
-     * Add a testimonial
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial Testimonial to be added (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -282,8 +278,8 @@ class WebsiteApi
     /**
      * Create request for operation 'addTestimonial'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial Testimonial to be added (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -401,10 +397,8 @@ class WebsiteApi
     /**
      * Operation deleteTestimonial
      *
-     * Delete a testimonial
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $testimonial_id Id of the testimonial to delete (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $testimonial_id testimonial_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -418,10 +412,8 @@ class WebsiteApi
     /**
      * Operation deleteTestimonialWithHttpInfo
      *
-     * Delete a testimonial
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $testimonial_id Id of the testimonial to delete (required)
+     * @param  string $app_id (required)
+     * @param  int $testimonial_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -496,10 +488,10 @@ class WebsiteApi
     /**
      * Operation deleteTestimonialAsync
      *
-     * Delete a testimonial
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $testimonial_id Id of the testimonial to delete (required)
+     * @param  string $app_id (required)
+     * @param  int $testimonial_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -517,10 +509,10 @@ class WebsiteApi
     /**
      * Operation deleteTestimonialAsyncWithHttpInfo
      *
-     * Delete a testimonial
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $testimonial_id Id of the testimonial to delete (required)
+     * @param  string $app_id (required)
+     * @param  int $testimonial_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -556,8 +548,8 @@ class WebsiteApi
     /**
      * Create request for operation 'deleteTestimonial'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $testimonial_id Id of the testimonial to delete (required)
+     * @param  string $app_id (required)
+     * @param  int $testimonial_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -680,10 +672,8 @@ class WebsiteApi
     /**
      * Operation deleteWebsiteImage
      *
-     * Delete Website Image
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $image_id Id of the image (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $image_id image_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -697,10 +687,8 @@ class WebsiteApi
     /**
      * Operation deleteWebsiteImageWithHttpInfo
      *
-     * Delete Website Image
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $image_id Id of the image (required)
+     * @param  string $app_id (required)
+     * @param  int $image_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -775,10 +763,10 @@ class WebsiteApi
     /**
      * Operation deleteWebsiteImageAsync
      *
-     * Delete Website Image
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $image_id Id of the image (required)
+     * @param  string $app_id (required)
+     * @param  int $image_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -796,10 +784,10 @@ class WebsiteApi
     /**
      * Operation deleteWebsiteImageAsyncWithHttpInfo
      *
-     * Delete Website Image
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $image_id Id of the image (required)
+     * @param  string $app_id (required)
+     * @param  int $image_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -835,8 +823,8 @@ class WebsiteApi
     /**
      * Create request for operation 'deleteWebsiteImage'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $image_id Id of the image (required)
+     * @param  string $app_id (required)
+     * @param  int $image_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -959,11 +947,9 @@ class WebsiteApi
     /**
      * Operation editTestimonial
      *
-     * Edit a testimonial
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $testimonial_id Id of the testimonial to edit (required)
-     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial New values of the testimonial (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $testimonial_id testimonial_id (required)
+     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial testimonial (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -978,11 +964,9 @@ class WebsiteApi
     /**
      * Operation editTestimonialWithHttpInfo
      *
-     * Edit a testimonial
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $testimonial_id Id of the testimonial to edit (required)
-     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial New values of the testimonial (required)
+     * @param  string $app_id (required)
+     * @param  int $testimonial_id (required)
+     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1079,11 +1063,11 @@ class WebsiteApi
     /**
      * Operation editTestimonialAsync
      *
-     * Edit a testimonial
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $testimonial_id Id of the testimonial to edit (required)
-     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial New values of the testimonial (required)
+     * @param  string $app_id (required)
+     * @param  int $testimonial_id (required)
+     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1101,11 +1085,11 @@ class WebsiteApi
     /**
      * Operation editTestimonialAsyncWithHttpInfo
      *
-     * Edit a testimonial
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $testimonial_id Id of the testimonial to edit (required)
-     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial New values of the testimonial (required)
+     * @param  string $app_id (required)
+     * @param  int $testimonial_id (required)
+     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1155,9 +1139,9 @@ class WebsiteApi
     /**
      * Create request for operation 'editTestimonial'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $testimonial_id Id of the testimonial to edit (required)
-     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial New values of the testimonial (required)
+     * @param  string $app_id (required)
+     * @param  int $testimonial_id (required)
+     * @param  \Flipdish\\Client\Models\WebsiteTestimonialBase $testimonial (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1289,9 +1273,7 @@ class WebsiteApi
     /**
      * Operation getIndexConfiguration
      *
-     * Get Index Configuration
-     *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1306,9 +1288,7 @@ class WebsiteApi
     /**
      * Operation getIndexConfigurationWithHttpInfo
      *
-     * Get Index Configuration
-     *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1405,9 +1385,9 @@ class WebsiteApi
     /**
      * Operation getIndexConfigurationAsync
      *
-     * Get Index Configuration
+     * 
      *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1425,9 +1405,9 @@ class WebsiteApi
     /**
      * Operation getIndexConfigurationAsyncWithHttpInfo
      *
-     * Get Index Configuration
+     * 
      *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1477,7 +1457,7 @@ class WebsiteApi
     /**
      * Create request for operation 'getIndexConfiguration'
      *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1586,10 +1566,8 @@ class WebsiteApi
     /**
      * Operation setIndexConfiguration
      *
-     * Set Index Configuration
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\IndexPageBase $index_page New index page definition (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\IndexPageBase $index_page index_page (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1604,10 +1582,8 @@ class WebsiteApi
     /**
      * Operation setIndexConfigurationWithHttpInfo
      *
-     * Set Index Configuration
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\IndexPageBase $index_page New index page definition (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\IndexPageBase $index_page (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1704,10 +1680,10 @@ class WebsiteApi
     /**
      * Operation setIndexConfigurationAsync
      *
-     * Set Index Configuration
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\IndexPageBase $index_page New index page definition (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\IndexPageBase $index_page (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1725,10 +1701,10 @@ class WebsiteApi
     /**
      * Operation setIndexConfigurationAsyncWithHttpInfo
      *
-     * Set Index Configuration
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\IndexPageBase $index_page New index page definition (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\IndexPageBase $index_page (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1778,8 +1754,8 @@ class WebsiteApi
     /**
      * Create request for operation 'setIndexConfiguration'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\IndexPageBase $index_page New index page definition (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\IndexPageBase $index_page (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1897,10 +1873,8 @@ class WebsiteApi
     /**
      * Operation uploadWebsiteImage
      *
-     * Upload Website Image
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $image_location Section for which to upload the image (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $image_location image_location (required)
      * @param  \SplFileObject $image App Logo (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1916,10 +1890,8 @@ class WebsiteApi
     /**
      * Operation uploadWebsiteImageWithHttpInfo
      *
-     * Upload Website Image
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $image_location Section for which to upload the image (required)
+     * @param  string $app_id (required)
+     * @param  string $image_location (required)
      * @param  \SplFileObject $image App Logo (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -2017,10 +1989,10 @@ class WebsiteApi
     /**
      * Operation uploadWebsiteImageAsync
      *
-     * Upload Website Image
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $image_location Section for which to upload the image (required)
+     * @param  string $app_id (required)
+     * @param  string $image_location (required)
      * @param  \SplFileObject $image App Logo (required)
      *
      * @throws \InvalidArgumentException
@@ -2039,10 +2011,10 @@ class WebsiteApi
     /**
      * Operation uploadWebsiteImageAsyncWithHttpInfo
      *
-     * Upload Website Image
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $image_location Section for which to upload the image (required)
+     * @param  string $app_id (required)
+     * @param  string $image_location (required)
      * @param  \SplFileObject $image App Logo (required)
      *
      * @throws \InvalidArgumentException
@@ -2093,8 +2065,8 @@ class WebsiteApi
     /**
      * Create request for operation 'uploadWebsiteImage'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $image_location Section for which to upload the image (required)
+     * @param  string $app_id (required)
+     * @param  string $image_location (required)
      * @param  \SplFileObject $image App Logo (required)
      *
      * @throws \InvalidArgumentException
@@ -2229,9 +2201,7 @@ class WebsiteApi
     /**
      * Operation websiteCheckNow
      *
-     * Triggers a Check DNS Process
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2245,9 +2215,7 @@ class WebsiteApi
     /**
      * Operation websiteCheckNowWithHttpInfo
      *
-     * Triggers a Check DNS Process
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2314,9 +2282,9 @@ class WebsiteApi
     /**
      * Operation websiteCheckNowAsync
      *
-     * Triggers a Check DNS Process
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2334,9 +2302,9 @@ class WebsiteApi
     /**
      * Operation websiteCheckNowAsyncWithHttpInfo
      *
-     * Triggers a Check DNS Process
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2372,7 +2340,7 @@ class WebsiteApi
     /**
      * Create request for operation 'websiteCheckNow'
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

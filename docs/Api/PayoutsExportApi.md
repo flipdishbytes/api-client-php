@@ -4,18 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**exportPayoutChargebacks**](PayoutsExportApi.md#exportPayoutChargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export | Export a list of payout&#39;s chargebacks as CSV
-[**exportPayoutOrders**](PayoutsExportApi.md#exportPayoutOrders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export | Export a list of payout&#39;s orders as CSV
-[**exportPayoutOtherCharges**](PayoutsExportApi.md#exportPayoutOtherCharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export | Export a list of payout&#39;s other charges as CSV
-[**exportPayoutRefunds**](PayoutsExportApi.md#exportPayoutRefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | Export a list of payout&#39;s refunds as CSV
-[**exportPayoutStores**](PayoutsExportApi.md#exportPayoutStores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | Export payout&#39;s details as CSV
-[**exportPayouts**](PayoutsExportApi.md#exportPayouts) | **GET** /api/v1.0/{appId}/payouts/export | Export payouts as CSV
+[**exportPayoutChargebacks**](PayoutsExportApi.md#exportPayoutChargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export | 
+[**exportPayoutOrders**](PayoutsExportApi.md#exportPayoutOrders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export | 
+[**exportPayoutOtherCharges**](PayoutsExportApi.md#exportPayoutOtherCharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export | 
+[**exportPayoutRefunds**](PayoutsExportApi.md#exportPayoutRefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | 
+[**exportPayoutStores**](PayoutsExportApi.md#exportPayoutStores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | 
+[**exportPayouts**](PayoutsExportApi.md#exportPayouts) | **GET** /api/v1.0/{appId}/payouts/export | 
 
 
 # **exportPayoutChargebacks**
 > string exportPayoutChargebacks($app_id, $bank_account_id, $payout_id, $store_ids)
 
-Export a list of payout's chargebacks as CSV
+
 
 ### Example
 ```php
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 # **exportPayoutOrders**
 > string exportPayoutOrders($app_id, $bank_account_id, $payout_id, $store_ids)
 
-Export a list of payout's orders as CSV
+
 
 ### Example
 ```php
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 # **exportPayoutOtherCharges**
 > string exportPayoutOtherCharges($app_id, $bank_account_id, $payout_id, $store_ids)
 
-Export a list of payout's other charges as CSV
+
 
 ### Example
 ```php
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 # **exportPayoutRefunds**
 > string exportPayoutRefunds($app_id, $bank_account_id, $payout_id, $store_ids)
 
-Export a list of payout's refunds as CSV
+
 
 ### Example
 ```php
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 # **exportPayoutStores**
 > string exportPayoutStores($app_id, $bank_account_id, $payout_id, $store_ids)
 
-Export payout's details as CSV
+
 
 ### Example
 ```php
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 # **exportPayouts**
 > string exportPayouts($app_id, $start_date, $end_date, $payout_request_ids_bank_account_ids, $payout_request_ids_states)
 
-Export payouts as CSV
+
 
 ### Example
 ```php

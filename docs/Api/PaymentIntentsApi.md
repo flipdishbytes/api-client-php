@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getPaymentIntent**](PaymentIntentsApi.md#getPaymentIntent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | Returns stripe payment intent for a given id
+[**getPaymentIntent**](PaymentIntentsApi.md#getPaymentIntent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | 
 
 
 # **getPaymentIntent**
 > \Flipdish\\Client\Models\RestApiResultPaymentIntent getPaymentIntent($payment_intent_id)
 
-Returns stripe payment intent for a given id
+
 
 ### Example
 ```php
@@ -26,7 +26,7 @@ $apiInstance = new Flipdish\\Client\Api\PaymentIntentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$payment_intent_id = "payment_intent_id_example"; // string | Stripe payment intent identifier
+$payment_intent_id = "payment_intent_id_example"; // string | 
 
 try {
     $result = $apiInstance->getPaymentIntent($payment_intent_id);
@@ -41,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **payment_intent_id** | **string**| Stripe payment intent identifier |
+ **payment_intent_id** | **string**|  |
 
 ### Return type
 

@@ -90,11 +90,9 @@ class AppStoreDeveloperApi
     /**
      * Operation appVerificationUpdate
      *
-     * Update App store app verification
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
-     * @param  string $verification_status New verification status (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  string $app_store_app_id app_store_app_id (required)
+     * @param  string $verification_status verification_status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,11 +106,9 @@ class AppStoreDeveloperApi
     /**
      * Operation appVerificationUpdateWithHttpInfo
      *
-     * Update App store app verification
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
-     * @param  string $verification_status New verification status (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
+     * @param  string $verification_status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -195,11 +191,11 @@ class AppStoreDeveloperApi
     /**
      * Operation appVerificationUpdateAsync
      *
-     * Update App store app verification
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
-     * @param  string $verification_status New verification status (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
+     * @param  string $verification_status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -217,11 +213,11 @@ class AppStoreDeveloperApi
     /**
      * Operation appVerificationUpdateAsyncWithHttpInfo
      *
-     * Update App store app verification
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
-     * @param  string $verification_status New verification status (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
+     * @param  string $verification_status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -257,9 +253,9 @@ class AppStoreDeveloperApi
     /**
      * Create request for operation 'appVerificationUpdate'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
-     * @param  string $verification_status New verification status (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
+     * @param  string $verification_status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -392,10 +388,8 @@ class AppStoreDeveloperApi
     /**
      * Operation createAppStoreApp
      *
-     * Create App store app
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app create_app_store_app (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -410,10 +404,8 @@ class AppStoreDeveloperApi
     /**
      * Operation createAppStoreAppWithHttpInfo
      *
-     * Create App store app
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
+     * @param  string $oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -510,10 +502,10 @@ class AppStoreDeveloperApi
     /**
      * Operation createAppStoreAppAsync
      *
-     * Create App store app
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
+     * @param  string $oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -531,10 +523,10 @@ class AppStoreDeveloperApi
     /**
      * Operation createAppStoreAppAsyncWithHttpInfo
      *
-     * Create App store app
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
+     * @param  string $oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -584,8 +576,8 @@ class AppStoreDeveloperApi
     /**
      * Create request for operation 'createAppStoreApp'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app App store app (required)
+     * @param  string $oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateAppStoreApp $create_app_store_app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -703,10 +695,8 @@ class AppStoreDeveloperApi
     /**
      * Operation deleteAppStoreApp
      *
-     * Delete App store app
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  string $app_store_app_id app_store_app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -721,10 +711,8 @@ class AppStoreDeveloperApi
     /**
      * Operation deleteAppStoreAppWithHttpInfo
      *
-     * Delete App store app
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -829,10 +817,10 @@ class AppStoreDeveloperApi
     /**
      * Operation deleteAppStoreAppAsync
      *
-     * Delete App store app
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -850,10 +838,10 @@ class AppStoreDeveloperApi
     /**
      * Operation deleteAppStoreAppAsyncWithHttpInfo
      *
-     * Delete App store app
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -903,8 +891,8 @@ class AppStoreDeveloperApi
     /**
      * Create request for operation 'deleteAppStoreApp'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1027,10 +1015,8 @@ class AppStoreDeveloperApi
     /**
      * Operation getExternalFunctionSigningKey
      *
-     * Get external function action signing key for app
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  string $app_store_app_id app_store_app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1044,10 +1030,8 @@ class AppStoreDeveloperApi
     /**
      * Operation getExternalFunctionSigningKeyWithHttpInfo
      *
-     * Get external function action signing key for app
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1130,10 +1114,10 @@ class AppStoreDeveloperApi
     /**
      * Operation getExternalFunctionSigningKeyAsync
      *
-     * Get external function action signing key for app
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1151,10 +1135,10 @@ class AppStoreDeveloperApi
     /**
      * Operation getExternalFunctionSigningKeyAsyncWithHttpInfo
      *
-     * Get external function action signing key for app
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1190,8 +1174,8 @@ class AppStoreDeveloperApi
     /**
      * Create request for operation 'getExternalFunctionSigningKey'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1314,11 +1298,9 @@ class AppStoreDeveloperApi
     /**
      * Operation updateAppStoreApp
      *
-     * Update App store app
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
-     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  string $app_store_app_id app_store_app_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app app_store_app (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1332,11 +1314,9 @@ class AppStoreDeveloperApi
     /**
      * Operation updateAppStoreAppWithHttpInfo
      *
-     * Update App store app
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
-     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1419,11 +1399,11 @@ class AppStoreDeveloperApi
     /**
      * Operation updateAppStoreAppAsync
      *
-     * Update App store app
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
-     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1441,11 +1421,11 @@ class AppStoreDeveloperApi
     /**
      * Operation updateAppStoreAppAsyncWithHttpInfo
      *
-     * Update App store app
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
-     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1481,9 +1461,9 @@ class AppStoreDeveloperApi
     /**
      * Create request for operation 'updateAppStoreApp'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
-     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app Update App store app (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateAppStoreApp $app_store_app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1615,10 +1595,8 @@ class AppStoreDeveloperApi
     /**
      * Operation uploadAppStoreAppLogo
      *
-     * Upload the App store app logo \\ icon
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  string $app_store_app_id app_store_app_id (required)
      * @param  \SplFileObject $image App Store App Logo (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1633,10 +1611,8 @@ class AppStoreDeveloperApi
     /**
      * Operation uploadAppStoreAppLogoWithHttpInfo
      *
-     * Upload the App store app logo \\ icon
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
      * @param  \SplFileObject $image App Store App Logo (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1712,10 +1688,10 @@ class AppStoreDeveloperApi
     /**
      * Operation uploadAppStoreAppLogoAsync
      *
-     * Upload the App store app logo \\ icon
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
      * @param  \SplFileObject $image App Store App Logo (required)
      *
      * @throws \InvalidArgumentException
@@ -1734,10 +1710,10 @@ class AppStoreDeveloperApi
     /**
      * Operation uploadAppStoreAppLogoAsyncWithHttpInfo
      *
-     * Upload the App store app logo \\ icon
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
      * @param  \SplFileObject $image App Store App Logo (required)
      *
      * @throws \InvalidArgumentException
@@ -1774,8 +1750,8 @@ class AppStoreDeveloperApi
     /**
      * Create request for operation 'uploadAppStoreAppLogo'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $app_store_app_id App store app id (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $app_store_app_id (required)
      * @param  \SplFileObject $image App Store App Logo (required)
      *
      * @throws \InvalidArgumentException

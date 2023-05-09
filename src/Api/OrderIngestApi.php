@@ -90,8 +90,6 @@ class OrderIngestApi
     /**
      * Operation orderIngestSubmitNewOrder
      *
-     * Provides an ability to ingest a 3rd party order into Flipdish ecosystem
-     *
      * @param  \Flipdish\\Client\Models\OrderIngestSubmitOrderRequest $order order (required)
      * @param  string $app_name_id app_name_id (required)
      *
@@ -107,8 +105,6 @@ class OrderIngestApi
 
     /**
      * Operation orderIngestSubmitNewOrderWithHttpInfo
-     *
-     * Provides an ability to ingest a 3rd party order into Flipdish ecosystem
      *
      * @param  \Flipdish\\Client\Models\OrderIngestSubmitOrderRequest $order (required)
      * @param  string $app_name_id (required)
@@ -208,7 +204,7 @@ class OrderIngestApi
     /**
      * Operation orderIngestSubmitNewOrderAsync
      *
-     * Provides an ability to ingest a 3rd party order into Flipdish ecosystem
+     * 
      *
      * @param  \Flipdish\\Client\Models\OrderIngestSubmitOrderRequest $order (required)
      * @param  string $app_name_id (required)
@@ -229,7 +225,7 @@ class OrderIngestApi
     /**
      * Operation orderIngestSubmitNewOrderAsyncWithHttpInfo
      *
-     * Provides an ability to ingest a 3rd party order into Flipdish ecosystem
+     * 
      *
      * @param  \Flipdish\\Client\Models\OrderIngestSubmitOrderRequest $order (required)
      * @param  string $app_name_id (required)

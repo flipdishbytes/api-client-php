@@ -4,15 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAllKioskSettingsForStore**](KioskStoreSettingsApi.md#getAllKioskSettingsForStore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | Get all kiosk settings associated with a store
-[**getAllStoreSettingsForKioskHydra**](KioskStoreSettingsApi.md#getAllStoreSettingsForKioskHydra) | **GET** /api/v1.0/kioskstoresettings | [For Kiosk use only] Get all stores connected to a Kiosk
+[**getAllKioskSettingsForStore**](KioskStoreSettingsApi.md#getAllKioskSettingsForStore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | 
+[**getAllStoreSettingsForKioskHydra**](KioskStoreSettingsApi.md#getAllStoreSettingsForKioskHydra) | **GET** /api/v1.0/kioskstoresettings | 
 [**updateCashSettingForKiosk**](KioskStoreSettingsApi.md#updateCashSettingForKiosk) | **POST** /api/v1.0/{appId}/kiosksettings/cash | 
 
 
 # **getAllKioskSettingsForStore**
 > \Flipdish\\Client\Models\RestApiResultStoreKioskSettings getAllKioskSettingsForStore($store_id, $app_id)
 
-Get all kiosk settings associated with a store
+
 
 ### Example
 ```php
@@ -28,8 +28,8 @@ $apiInstance = new Flipdish\\Client\Api\KioskStoreSettingsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$app_id = "app_id_example"; // string | App Name Id
+$store_id = 56; // int | 
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getAllKioskSettingsForStore($store_id, $app_id);
@@ -44,8 +44,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **app_id** | **string**| App Name Id |
+ **store_id** | **int**|  |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 # **getAllStoreSettingsForKioskHydra**
 > \Flipdish\\Client\Models\RestApiResultKioskStoreSettings getAllStoreSettingsForKioskHydra()
 
-[For Kiosk use only] Get all stores connected to a Kiosk
+
 
 ### Example
 ```php

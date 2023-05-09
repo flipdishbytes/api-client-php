@@ -90,10 +90,8 @@ class StripeCustomConnectApi
     /**
      * Operation createBankAccountAndConnectedAccount
      *
-     * Create a new Bank Account and Stripe connected account
-     *
-     * @param  string $app_id App Name (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Account to be created (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account account (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class StripeCustomConnectApi
     /**
      * Operation createBankAccountAndConnectedAccountWithHttpInfo
      *
-     * Create a new Bank Account and Stripe connected account
-     *
-     * @param  string $app_id App Name (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Account to be created (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -208,10 +204,10 @@ class StripeCustomConnectApi
     /**
      * Operation createBankAccountAndConnectedAccountAsync
      *
-     * Create a new Bank Account and Stripe connected account
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Account to be created (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -229,10 +225,10 @@ class StripeCustomConnectApi
     /**
      * Operation createBankAccountAndConnectedAccountAsyncWithHttpInfo
      *
-     * Create a new Bank Account and Stripe connected account
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Account to be created (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -282,8 +278,8 @@ class StripeCustomConnectApi
     /**
      * Create request for operation 'createBankAccountAndConnectedAccount'
      *
-     * @param  string $app_id App Name (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Account to be created (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -401,10 +397,8 @@ class StripeCustomConnectApi
     /**
      * Operation createStripeConnectedAccount
      *
-     * Create or update a Stripe connected account associated with the bank account of bankAccountId
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $bank_account_id Bank Account Id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -419,10 +413,8 @@ class StripeCustomConnectApi
     /**
      * Operation createStripeConnectedAccountWithHttpInfo
      *
-     * Create or update a Stripe connected account associated with the bank account of bankAccountId
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $bank_account_id Bank Account Id (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -519,10 +511,10 @@ class StripeCustomConnectApi
     /**
      * Operation createStripeConnectedAccountAsync
      *
-     * Create or update a Stripe connected account associated with the bank account of bankAccountId
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $bank_account_id Bank Account Id (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -540,10 +532,10 @@ class StripeCustomConnectApi
     /**
      * Operation createStripeConnectedAccountAsyncWithHttpInfo
      *
-     * Create or update a Stripe connected account associated with the bank account of bankAccountId
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $bank_account_id Bank Account Id (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -593,8 +585,8 @@ class StripeCustomConnectApi
     /**
      * Create request for operation 'createStripeConnectedAccount'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $bank_account_id Bank Account Id (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -717,11 +709,9 @@ class StripeCustomConnectApi
     /**
      * Operation createStripeConnectedAccountLink
      *
-     * Gets a single-use Stripe URL for the given account
-     *
-     * @param  string $app_id App Name (required)
-     * @param  string $stripe_connected_account_id Stripe Connected Account Id (required)
-     * @param  \Flipdish\\Client\Models\StripeAccountLinkRequest $stripe_account_link_request  (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $stripe_connected_account_id stripe_connected_account_id (required)
+     * @param  \Flipdish\\Client\Models\StripeAccountLinkRequest $stripe_account_link_request stripe_account_link_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -736,11 +726,9 @@ class StripeCustomConnectApi
     /**
      * Operation createStripeConnectedAccountLinkWithHttpInfo
      *
-     * Gets a single-use Stripe URL for the given account
-     *
-     * @param  string $app_id App Name (required)
-     * @param  string $stripe_connected_account_id Stripe Connected Account Id (required)
-     * @param  \Flipdish\\Client\Models\StripeAccountLinkRequest $stripe_account_link_request  (required)
+     * @param  string $app_id (required)
+     * @param  string $stripe_connected_account_id (required)
+     * @param  \Flipdish\\Client\Models\StripeAccountLinkRequest $stripe_account_link_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -837,11 +825,11 @@ class StripeCustomConnectApi
     /**
      * Operation createStripeConnectedAccountLinkAsync
      *
-     * Gets a single-use Stripe URL for the given account
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  string $stripe_connected_account_id Stripe Connected Account Id (required)
-     * @param  \Flipdish\\Client\Models\StripeAccountLinkRequest $stripe_account_link_request  (required)
+     * @param  string $app_id (required)
+     * @param  string $stripe_connected_account_id (required)
+     * @param  \Flipdish\\Client\Models\StripeAccountLinkRequest $stripe_account_link_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -859,11 +847,11 @@ class StripeCustomConnectApi
     /**
      * Operation createStripeConnectedAccountLinkAsyncWithHttpInfo
      *
-     * Gets a single-use Stripe URL for the given account
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  string $stripe_connected_account_id Stripe Connected Account Id (required)
-     * @param  \Flipdish\\Client\Models\StripeAccountLinkRequest $stripe_account_link_request  (required)
+     * @param  string $app_id (required)
+     * @param  string $stripe_connected_account_id (required)
+     * @param  \Flipdish\\Client\Models\StripeAccountLinkRequest $stripe_account_link_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -913,9 +901,9 @@ class StripeCustomConnectApi
     /**
      * Create request for operation 'createStripeConnectedAccountLink'
      *
-     * @param  string $app_id App Name (required)
-     * @param  string $stripe_connected_account_id Stripe Connected Account Id (required)
-     * @param  \Flipdish\\Client\Models\StripeAccountLinkRequest $stripe_account_link_request  (required)
+     * @param  string $app_id (required)
+     * @param  string $stripe_connected_account_id (required)
+     * @param  \Flipdish\\Client\Models\StripeAccountLinkRequest $stripe_account_link_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1047,9 +1035,7 @@ class StripeCustomConnectApi
     /**
      * Operation getCustomConnect
      *
-     * Gets a list of stripe custom connect ids information
-     *
-     * @param  int $store_id  (required)
+     * @param  int $store_id store_id (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1065,9 +1051,7 @@ class StripeCustomConnectApi
     /**
      * Operation getCustomConnectWithHttpInfo
      *
-     * Gets a list of stripe custom connect ids information
-     *
-     * @param  int $store_id  (required)
+     * @param  int $store_id (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1165,9 +1149,9 @@ class StripeCustomConnectApi
     /**
      * Operation getCustomConnectAsync
      *
-     * Gets a list of stripe custom connect ids information
+     * 
      *
-     * @param  int $store_id  (required)
+     * @param  int $store_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1186,9 +1170,9 @@ class StripeCustomConnectApi
     /**
      * Operation getCustomConnectAsyncWithHttpInfo
      *
-     * Gets a list of stripe custom connect ids information
+     * 
      *
-     * @param  int $store_id  (required)
+     * @param  int $store_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1239,7 +1223,7 @@ class StripeCustomConnectApi
     /**
      * Create request for operation 'getCustomConnect'
      *
-     * @param  int $store_id  (required)
+     * @param  int $store_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1363,10 +1347,8 @@ class StripeCustomConnectApi
     /**
      * Operation getVerificationStatus
      *
-     * Gets the current verification status of the given connected account
-     *
-     * @param  string $app_id  (required)
-     * @param  string $stripe_connected_account_id  (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $stripe_connected_account_id stripe_connected_account_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1381,10 +1363,8 @@ class StripeCustomConnectApi
     /**
      * Operation getVerificationStatusWithHttpInfo
      *
-     * Gets the current verification status of the given connected account
-     *
-     * @param  string $app_id  (required)
-     * @param  string $stripe_connected_account_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $stripe_connected_account_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1481,10 +1461,10 @@ class StripeCustomConnectApi
     /**
      * Operation getVerificationStatusAsync
      *
-     * Gets the current verification status of the given connected account
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $stripe_connected_account_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $stripe_connected_account_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1502,10 +1482,10 @@ class StripeCustomConnectApi
     /**
      * Operation getVerificationStatusAsyncWithHttpInfo
      *
-     * Gets the current verification status of the given connected account
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $stripe_connected_account_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $stripe_connected_account_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1555,8 +1535,8 @@ class StripeCustomConnectApi
     /**
      * Create request for operation 'getVerificationStatus'
      *
-     * @param  string $app_id  (required)
-     * @param  string $stripe_connected_account_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $stripe_connected_account_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1675,11 +1655,9 @@ class StripeCustomConnectApi
     /**
      * Operation setBankAccountBusinessType
      *
-     * Update bank account's BusinessType and create a Stripe Connected Account
-     *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Bank Account Id (required)
-     * @param  string $business_type Bank Account business type (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  string $business_type business_type (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1694,11 +1672,9 @@ class StripeCustomConnectApi
     /**
      * Operation setBankAccountBusinessTypeWithHttpInfo
      *
-     * Update bank account's BusinessType and create a Stripe Connected Account
-     *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Bank Account Id (required)
-     * @param  string $business_type Bank Account business type (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  string $business_type (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1795,11 +1771,11 @@ class StripeCustomConnectApi
     /**
      * Operation setBankAccountBusinessTypeAsync
      *
-     * Update bank account's BusinessType and create a Stripe Connected Account
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Bank Account Id (required)
-     * @param  string $business_type Bank Account business type (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  string $business_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1817,11 +1793,11 @@ class StripeCustomConnectApi
     /**
      * Operation setBankAccountBusinessTypeAsyncWithHttpInfo
      *
-     * Update bank account's BusinessType and create a Stripe Connected Account
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Bank Account Id (required)
-     * @param  string $business_type Bank Account business type (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  string $business_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1871,9 +1847,9 @@ class StripeCustomConnectApi
     /**
      * Create request for operation 'setBankAccountBusinessType'
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Bank Account Id (required)
-     * @param  string $business_type Bank Account business type (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  string $business_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2313,11 +2289,9 @@ class StripeCustomConnectApi
     /**
      * Operation updateBankAccountDetails
      *
-     * Update bank account details
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $bank_account_id Bank Account Id (required)
-     * @param  \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest $update_request fields to be updated (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest $update_request update_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2332,11 +2306,9 @@ class StripeCustomConnectApi
     /**
      * Operation updateBankAccountDetailsWithHttpInfo
      *
-     * Update bank account details
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $bank_account_id Bank Account Id (required)
-     * @param  \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest $update_request fields to be updated (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest $update_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2433,11 +2405,11 @@ class StripeCustomConnectApi
     /**
      * Operation updateBankAccountDetailsAsync
      *
-     * Update bank account details
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $bank_account_id Bank Account Id (required)
-     * @param  \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest $update_request fields to be updated (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest $update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2455,11 +2427,11 @@ class StripeCustomConnectApi
     /**
      * Operation updateBankAccountDetailsAsyncWithHttpInfo
      *
-     * Update bank account details
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $bank_account_id Bank Account Id (required)
-     * @param  \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest $update_request fields to be updated (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest $update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2509,9 +2481,9 @@ class StripeCustomConnectApi
     /**
      * Create request for operation 'updateBankAccountDetails'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $bank_account_id Bank Account Id (required)
-     * @param  \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest $update_request fields to be updated (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest $update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2643,8 +2615,6 @@ class StripeCustomConnectApi
     /**
      * Operation updatePayoutSchedule
      *
-     * Update Stripe Connection Account's payout schedule
-     *
      * @param  string $app_id app_id (required)
      * @param  string $stripe_connected_account_id stripe_connected_account_id (required)
      * @param  string $interval interval (required)
@@ -2661,8 +2631,6 @@ class StripeCustomConnectApi
 
     /**
      * Operation updatePayoutScheduleWithHttpInfo
-     *
-     * Update Stripe Connection Account's payout schedule
      *
      * @param  string $app_id (required)
      * @param  string $stripe_connected_account_id (required)
@@ -2763,7 +2731,7 @@ class StripeCustomConnectApi
     /**
      * Operation updatePayoutScheduleAsync
      *
-     * Update Stripe Connection Account's payout schedule
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $stripe_connected_account_id (required)
@@ -2785,7 +2753,7 @@ class StripeCustomConnectApi
     /**
      * Operation updatePayoutScheduleAsyncWithHttpInfo
      *
-     * Update Stripe Connection Account's payout schedule
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $stripe_connected_account_id (required)

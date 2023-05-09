@@ -74,7 +74,7 @@ class OAuthClientsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for addRedirectUri
      *
-     * Create OAuth App redirect uri.
+     * .
      *
      */
     public function testAddRedirectUri()
@@ -84,7 +84,7 @@ class OAuthClientsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createOAuthApp
      *
-     * Create OAuth App.
+     * .
      *
      */
     public function testCreateOAuthApp()
@@ -94,7 +94,7 @@ class OAuthClientsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteOAuthApp
      *
-     * Delete OAuth App.
+     * .
      *
      */
     public function testDeleteOAuthApp()
@@ -104,7 +104,7 @@ class OAuthClientsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOAuthApps
      *
-     * Get all OAuth Apps.
+     * .
      *
      */
     public function testGetOAuthApps()
@@ -114,7 +114,7 @@ class OAuthClientsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOAuthClientByClientId
      *
-     * Get OAuth App by identifier.
+     * .
      *
      */
     public function testGetOAuthClientByClientId()
@@ -124,7 +124,7 @@ class OAuthClientsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOAuthClientSecret
      *
-     * Get OAuth App secret key.
+     * .
      *
      */
     public function testGetOAuthClientSecret()
@@ -134,7 +134,7 @@ class OAuthClientsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOauthAccessToken
      *
-     * Get OAuth access token for App.
+     * .
      *
      */
     public function testGetOauthAccessToken()
@@ -144,7 +144,7 @@ class OAuthClientsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getRedirectUris
      *
-     * Get OAuth App redirect uris.
+     * .
      *
      */
     public function testGetRedirectUris()
@@ -164,7 +164,7 @@ class OAuthClientsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for removeRedirectUri
      *
-     * Delete OAuth App redirect uri.
+     * .
      *
      */
     public function testRemoveRedirectUri()
@@ -174,7 +174,7 @@ class OAuthClientsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateOAuthApp
      *
-     * Update OAuth App.
+     * .
      *
      */
     public function testUpdateOAuthApp()

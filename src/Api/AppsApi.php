@@ -90,9 +90,7 @@ class AppsApi
     /**
      * Operation getApp
      *
-     * Get the application configuration
-     *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,9 +105,7 @@ class AppsApi
     /**
      * Operation getAppWithHttpInfo
      *
-     * Get the application configuration
-     *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -206,9 +202,9 @@ class AppsApi
     /**
      * Operation getAppAsync
      *
-     * Get the application configuration
+     * 
      *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -226,9 +222,9 @@ class AppsApi
     /**
      * Operation getAppAsyncWithHttpInfo
      *
-     * Get the application configuration
+     * 
      *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -278,7 +274,7 @@ class AppsApi
     /**
      * Create request for operation 'getApp'
      *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -387,9 +383,7 @@ class AppsApi
     /**
      * Operation getAppHostnameStatus
      *
-     * Get the application hostname DNS delegation states for A and CNAME records.
-     *
-     * @param  string $app_id Application identifier. (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -404,9 +398,7 @@ class AppsApi
     /**
      * Operation getAppHostnameStatusWithHttpInfo
      *
-     * Get the application hostname DNS delegation states for A and CNAME records.
-     *
-     * @param  string $app_id Application identifier. (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -503,9 +495,9 @@ class AppsApi
     /**
      * Operation getAppHostnameStatusAsync
      *
-     * Get the application hostname DNS delegation states for A and CNAME records.
+     * 
      *
-     * @param  string $app_id Application identifier. (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -523,9 +515,9 @@ class AppsApi
     /**
      * Operation getAppHostnameStatusAsyncWithHttpInfo
      *
-     * Get the application hostname DNS delegation states for A and CNAME records.
+     * 
      *
-     * @param  string $app_id Application identifier. (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -575,7 +567,7 @@ class AppsApi
     /**
      * Create request for operation 'getAppHostnameStatus'
      *
-     * @param  string $app_id Application identifier. (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -684,8 +676,6 @@ class AppsApi
     /**
      * Operation getApps
      *
-     * Get Apps
-     *
      * @param  string $name_filter name_filter (optional)
      * @param  int $page page (optional)
      * @param  int $limit limit (optional)
@@ -702,8 +692,6 @@ class AppsApi
 
     /**
      * Operation getAppsWithHttpInfo
-     *
-     * Get Apps
      *
      * @param  string $name_filter (optional)
      * @param  int $page (optional)
@@ -804,7 +792,7 @@ class AppsApi
     /**
      * Operation getAppsAsync
      *
-     * Get Apps
+     * 
      *
      * @param  string $name_filter (optional)
      * @param  int $page (optional)
@@ -826,7 +814,7 @@ class AppsApi
     /**
      * Operation getAppsAsyncWithHttpInfo
      *
-     * Get Apps
+     * 
      *
      * @param  string $name_filter (optional)
      * @param  int $page (optional)
@@ -989,9 +977,7 @@ class AppsApi
     /**
      * Operation getCompliance
      *
-     * Get the application compliance configuration
-     *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1006,9 +992,7 @@ class AppsApi
     /**
      * Operation getComplianceWithHttpInfo
      *
-     * Get the application compliance configuration
-     *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1105,9 +1089,9 @@ class AppsApi
     /**
      * Operation getComplianceAsync
      *
-     * Get the application compliance configuration
+     * 
      *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1125,9 +1109,9 @@ class AppsApi
     /**
      * Operation getComplianceAsyncWithHttpInfo
      *
-     * Get the application compliance configuration
+     * 
      *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1177,7 +1161,7 @@ class AppsApi
     /**
      * Create request for operation 'getCompliance'
      *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1286,9 +1270,7 @@ class AppsApi
     /**
      * Operation getPanaceaVanityUrl
      *
-     * Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
-     *
-     * @param  string $app_id Application identifier. (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1303,9 +1285,7 @@ class AppsApi
     /**
      * Operation getPanaceaVanityUrlWithHttpInfo
      *
-     * Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
-     *
-     * @param  string $app_id Application identifier. (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1394,9 +1374,9 @@ class AppsApi
     /**
      * Operation getPanaceaVanityUrlAsync
      *
-     * Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+     * 
      *
-     * @param  string $app_id Application identifier. (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1414,9 +1394,9 @@ class AppsApi
     /**
      * Operation getPanaceaVanityUrlAsyncWithHttpInfo
      *
-     * Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+     * 
      *
-     * @param  string $app_id Application identifier. (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1466,7 +1446,7 @@ class AppsApi
     /**
      * Create request for operation 'getPanaceaVanityUrl'
      *
-     * @param  string $app_id Application identifier. (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1575,8 +1555,6 @@ class AppsApi
     /**
      * Operation getSupportedCountries
      *
-     * Get all supported countries.
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1590,8 +1568,6 @@ class AppsApi
 
     /**
      * Operation getSupportedCountriesWithHttpInfo
-     *
-     * Get all supported countries.
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1689,7 +1665,7 @@ class AppsApi
     /**
      * Operation getSupportedCountriesAsync
      *
-     * Get all supported countries.
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -1708,7 +1684,7 @@ class AppsApi
     /**
      * Operation getSupportedCountriesAsyncWithHttpInfo
      *
-     * Get all supported countries.
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -1853,9 +1829,7 @@ class AppsApi
     /**
      * Operation isPanaceaVanityUrlAvailable
      *
-     * Is panacea vanity url available
-     *
-     * @param  string $vanity_url Vanity url to check (required)
+     * @param  string $vanity_url vanity_url (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1871,9 +1845,7 @@ class AppsApi
     /**
      * Operation isPanaceaVanityUrlAvailableWithHttpInfo
      *
-     * Is panacea vanity url available
-     *
-     * @param  string $vanity_url Vanity url to check (required)
+     * @param  string $vanity_url (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1963,9 +1935,9 @@ class AppsApi
     /**
      * Operation isPanaceaVanityUrlAvailableAsync
      *
-     * Is panacea vanity url available
+     * 
      *
-     * @param  string $vanity_url Vanity url to check (required)
+     * @param  string $vanity_url (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1984,9 +1956,9 @@ class AppsApi
     /**
      * Operation isPanaceaVanityUrlAvailableAsyncWithHttpInfo
      *
-     * Is panacea vanity url available
+     * 
      *
-     * @param  string $vanity_url Vanity url to check (required)
+     * @param  string $vanity_url (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -2037,7 +2009,7 @@ class AppsApi
     /**
      * Create request for operation 'isPanaceaVanityUrlAvailable'
      *
-     * @param  string $vanity_url Vanity url to check (required)
+     * @param  string $vanity_url (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -2157,10 +2129,8 @@ class AppsApi
     /**
      * Operation setAppConfig
      *
-     * Set the application configuration
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\AppConfigUpdateModel $app_config_update Changes to the configuration (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\AppConfigUpdateModel $app_config_update app_config_update (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2175,10 +2145,8 @@ class AppsApi
     /**
      * Operation setAppConfigWithHttpInfo
      *
-     * Set the application configuration
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\AppConfigUpdateModel $app_config_update Changes to the configuration (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\AppConfigUpdateModel $app_config_update (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2275,10 +2243,10 @@ class AppsApi
     /**
      * Operation setAppConfigAsync
      *
-     * Set the application configuration
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\AppConfigUpdateModel $app_config_update Changes to the configuration (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\AppConfigUpdateModel $app_config_update (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2296,10 +2264,10 @@ class AppsApi
     /**
      * Operation setAppConfigAsyncWithHttpInfo
      *
-     * Set the application configuration
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\AppConfigUpdateModel $app_config_update Changes to the configuration (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\AppConfigUpdateModel $app_config_update (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2349,8 +2317,8 @@ class AppsApi
     /**
      * Create request for operation 'setAppConfig'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\AppConfigUpdateModel $app_config_update Changes to the configuration (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\AppConfigUpdateModel $app_config_update (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2468,12 +2436,10 @@ class AppsApi
     /**
      * Operation setAppHostname
      *
-     * Set the application hostname.
-     *
-     * @param  string $app_id Application identifier. (required)
-     * @param  string $hostname The new Hostname. (required)
-     * @param  bool $is_embed Will the website be embedded (optional)
-     * @param  bool $is_next_gen_web Enables the NextGen web editor (optional)
+     * @param  string $app_id app_id (required)
+     * @param  string $hostname hostname (required)
+     * @param  bool $is_embed is_embed (optional)
+     * @param  bool $is_next_gen_web is_next_gen_web (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2488,12 +2454,10 @@ class AppsApi
     /**
      * Operation setAppHostnameWithHttpInfo
      *
-     * Set the application hostname.
-     *
-     * @param  string $app_id Application identifier. (required)
-     * @param  string $hostname The new Hostname. (required)
-     * @param  bool $is_embed Will the website be embedded (optional)
-     * @param  bool $is_next_gen_web Enables the NextGen web editor (optional)
+     * @param  string $app_id (required)
+     * @param  string $hostname (required)
+     * @param  bool $is_embed (optional)
+     * @param  bool $is_next_gen_web (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2582,12 +2546,12 @@ class AppsApi
     /**
      * Operation setAppHostnameAsync
      *
-     * Set the application hostname.
+     * 
      *
-     * @param  string $app_id Application identifier. (required)
-     * @param  string $hostname The new Hostname. (required)
-     * @param  bool $is_embed Will the website be embedded (optional)
-     * @param  bool $is_next_gen_web Enables the NextGen web editor (optional)
+     * @param  string $app_id (required)
+     * @param  string $hostname (required)
+     * @param  bool $is_embed (optional)
+     * @param  bool $is_next_gen_web (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2605,12 +2569,12 @@ class AppsApi
     /**
      * Operation setAppHostnameAsyncWithHttpInfo
      *
-     * Set the application hostname.
+     * 
      *
-     * @param  string $app_id Application identifier. (required)
-     * @param  string $hostname The new Hostname. (required)
-     * @param  bool $is_embed Will the website be embedded (optional)
-     * @param  bool $is_next_gen_web Enables the NextGen web editor (optional)
+     * @param  string $app_id (required)
+     * @param  string $hostname (required)
+     * @param  bool $is_embed (optional)
+     * @param  bool $is_next_gen_web (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2660,10 +2624,10 @@ class AppsApi
     /**
      * Create request for operation 'setAppHostname'
      *
-     * @param  string $app_id Application identifier. (required)
-     * @param  string $hostname The new Hostname. (required)
-     * @param  bool $is_embed Will the website be embedded (optional)
-     * @param  bool $is_next_gen_web Enables the NextGen web editor (optional)
+     * @param  string $app_id (required)
+     * @param  string $hostname (required)
+     * @param  bool $is_embed (optional)
+     * @param  bool $is_next_gen_web (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2790,10 +2754,8 @@ class AppsApi
     /**
      * Operation setAppLanguages
      *
-     * Set the application languages
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\Language[] $languages New list of languages (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\Language[] $languages languages (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2808,10 +2770,8 @@ class AppsApi
     /**
      * Operation setAppLanguagesWithHttpInfo
      *
-     * Set the application languages
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\Language[] $languages New list of languages (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\Language[] $languages (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2908,10 +2868,10 @@ class AppsApi
     /**
      * Operation setAppLanguagesAsync
      *
-     * Set the application languages
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\Language[] $languages New list of languages (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\Language[] $languages (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2929,10 +2889,10 @@ class AppsApi
     /**
      * Operation setAppLanguagesAsyncWithHttpInfo
      *
-     * Set the application languages
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\Language[] $languages New list of languages (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\Language[] $languages (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2982,8 +2942,8 @@ class AppsApi
     /**
      * Create request for operation 'setAppLanguages'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\Language[] $languages New list of languages (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\Language[] $languages (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3101,10 +3061,8 @@ class AppsApi
     /**
      * Operation setCompliance
      *
-     * Set the application compliance configuration
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $compliance_type Compliance type (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $compliance_type compliance_type (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3119,10 +3077,8 @@ class AppsApi
     /**
      * Operation setComplianceWithHttpInfo
      *
-     * Set the application compliance configuration
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $compliance_type Compliance type (required)
+     * @param  string $app_id (required)
+     * @param  string $compliance_type (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3219,10 +3175,10 @@ class AppsApi
     /**
      * Operation setComplianceAsync
      *
-     * Set the application compliance configuration
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $compliance_type Compliance type (required)
+     * @param  string $app_id (required)
+     * @param  string $compliance_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3240,10 +3196,10 @@ class AppsApi
     /**
      * Operation setComplianceAsyncWithHttpInfo
      *
-     * Set the application compliance configuration
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $compliance_type Compliance type (required)
+     * @param  string $app_id (required)
+     * @param  string $compliance_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3293,8 +3249,8 @@ class AppsApi
     /**
      * Create request for operation 'setCompliance'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $compliance_type Compliance type (required)
+     * @param  string $app_id (required)
+     * @param  string $compliance_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3413,10 +3369,8 @@ class AppsApi
     /**
      * Operation setPanaceaVanityUrl
      *
-     * Set panacea vanity url
-     *
-     * @param  string $app_id Application identifier. (required)
-     * @param  string $vanity_url Vanity url (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $vanity_url vanity_url (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3431,10 +3385,8 @@ class AppsApi
     /**
      * Operation setPanaceaVanityUrlWithHttpInfo
      *
-     * Set panacea vanity url
-     *
-     * @param  string $app_id Application identifier. (required)
-     * @param  string $vanity_url Vanity url (required)
+     * @param  string $app_id (required)
+     * @param  string $vanity_url (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3523,10 +3475,10 @@ class AppsApi
     /**
      * Operation setPanaceaVanityUrlAsync
      *
-     * Set panacea vanity url
+     * 
      *
-     * @param  string $app_id Application identifier. (required)
-     * @param  string $vanity_url Vanity url (required)
+     * @param  string $app_id (required)
+     * @param  string $vanity_url (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3544,10 +3496,10 @@ class AppsApi
     /**
      * Operation setPanaceaVanityUrlAsyncWithHttpInfo
      *
-     * Set panacea vanity url
+     * 
      *
-     * @param  string $app_id Application identifier. (required)
-     * @param  string $vanity_url Vanity url (required)
+     * @param  string $app_id (required)
+     * @param  string $vanity_url (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3597,8 +3549,8 @@ class AppsApi
     /**
      * Create request for operation 'setPanaceaVanityUrl'
      *
-     * @param  string $app_id Application identifier. (required)
-     * @param  string $vanity_url Vanity url (required)
+     * @param  string $app_id (required)
+     * @param  string $vanity_url (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3717,12 +3669,10 @@ class AppsApi
     /**
      * Operation toggleNextGenWeb
      *
-     * Toggle Next Gen Web
-     *
-     * @param  string $app_id  (required)
-     * @param  string $hostname  (required)
-     * @param  string $vanity_url  (required)
-     * @param  bool $is_next_gen_web  (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $hostname hostname (required)
+     * @param  string $vanity_url vanity_url (required)
+     * @param  bool $is_next_gen_web is_next_gen_web (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3737,12 +3687,10 @@ class AppsApi
     /**
      * Operation toggleNextGenWebWithHttpInfo
      *
-     * Toggle Next Gen Web
-     *
-     * @param  string $app_id  (required)
-     * @param  string $hostname  (required)
-     * @param  string $vanity_url  (required)
-     * @param  bool $is_next_gen_web  (required)
+     * @param  string $app_id (required)
+     * @param  string $hostname (required)
+     * @param  string $vanity_url (required)
+     * @param  bool $is_next_gen_web (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3831,12 +3779,12 @@ class AppsApi
     /**
      * Operation toggleNextGenWebAsync
      *
-     * Toggle Next Gen Web
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $hostname  (required)
-     * @param  string $vanity_url  (required)
-     * @param  bool $is_next_gen_web  (required)
+     * @param  string $app_id (required)
+     * @param  string $hostname (required)
+     * @param  string $vanity_url (required)
+     * @param  bool $is_next_gen_web (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3854,12 +3802,12 @@ class AppsApi
     /**
      * Operation toggleNextGenWebAsyncWithHttpInfo
      *
-     * Toggle Next Gen Web
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $hostname  (required)
-     * @param  string $vanity_url  (required)
-     * @param  bool $is_next_gen_web  (required)
+     * @param  string $app_id (required)
+     * @param  string $hostname (required)
+     * @param  string $vanity_url (required)
+     * @param  bool $is_next_gen_web (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3909,10 +3857,10 @@ class AppsApi
     /**
      * Create request for operation 'toggleNextGenWeb'
      *
-     * @param  string $app_id  (required)
-     * @param  string $hostname  (required)
-     * @param  string $vanity_url  (required)
-     * @param  bool $is_next_gen_web  (required)
+     * @param  string $app_id (required)
+     * @param  string $hostname (required)
+     * @param  string $vanity_url (required)
+     * @param  bool $is_next_gen_web (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4051,9 +3999,7 @@ class AppsApi
     /**
      * Operation uploadAppLogo
      *
-     * Set the application logo \\ icon
-     *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id app_id (required)
      * @param  \SplFileObject $image App Logo (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -4068,9 +4014,7 @@ class AppsApi
     /**
      * Operation uploadAppLogoWithHttpInfo
      *
-     * Set the application logo \\ icon
-     *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      * @param  \SplFileObject $image App Logo (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -4146,9 +4090,9 @@ class AppsApi
     /**
      * Operation uploadAppLogoAsync
      *
-     * Set the application logo \\ icon
+     * 
      *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      * @param  \SplFileObject $image App Logo (required)
      *
      * @throws \InvalidArgumentException
@@ -4167,9 +4111,9 @@ class AppsApi
     /**
      * Operation uploadAppLogoAsyncWithHttpInfo
      *
-     * Set the application logo \\ icon
+     * 
      *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      * @param  \SplFileObject $image App Logo (required)
      *
      * @throws \InvalidArgumentException
@@ -4206,7 +4150,7 @@ class AppsApi
     /**
      * Create request for operation 'uploadAppLogo'
      *
-     * @param  string $app_id Application identifier (required)
+     * @param  string $app_id (required)
      * @param  \SplFileObject $image App Logo (required)
      *
      * @throws \InvalidArgumentException

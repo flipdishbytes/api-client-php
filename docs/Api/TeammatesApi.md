@@ -4,18 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createTeammate**](TeammatesApi.md#createTeammate) | **POST** /api/v1.0/{appId}/teammates | Create teammate and send an invite.
-[**deleteTeammate**](TeammatesApi.md#deleteTeammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
-[**getTeammateByAppIdAndTeammateId**](TeammatesApi.md#getTeammateByAppIdAndTeammateId) | **GET** /api/v1.0/{appId}/teammates/{id} | Get a teammates by email address
-[**getTeammatesByAppId**](TeammatesApi.md#getTeammatesByAppId) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
-[**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | Redeem one-time code from invitation
-[**updateTeammate**](TeammatesApi.md#updateTeammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
+[**createTeammate**](TeammatesApi.md#createTeammate) | **POST** /api/v1.0/{appId}/teammates | 
+[**deleteTeammate**](TeammatesApi.md#deleteTeammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | 
+[**getTeammateByAppIdAndTeammateId**](TeammatesApi.md#getTeammateByAppIdAndTeammateId) | **GET** /api/v1.0/{appId}/teammates/{id} | 
+[**getTeammatesByAppId**](TeammatesApi.md#getTeammatesByAppId) | **GET** /api/v1.0/{appId}/teammates | 
+[**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**updateTeammate**](TeammatesApi.md#updateTeammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
 
 
 # **createTeammate**
 > \Flipdish\\Client\Models\RestApiResultTeammate createTeammate($app_id, $teammate)
 
-Create teammate and send an invite.
+
 
 ### Example
 ```php
@@ -31,8 +31,8 @@ $apiInstance = new Flipdish\\Client\Api\TeammatesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$teammate = new \Flipdish\\Client\Models\CreateTeammate(); // \Flipdish\\Client\Models\CreateTeammate | teammate model
+$app_id = "app_id_example"; // string | 
+$teammate = new \Flipdish\\Client\Models\CreateTeammate(); // \Flipdish\\Client\Models\CreateTeammate | 
 
 try {
     $result = $apiInstance->createTeammate($app_id, $teammate);
@@ -47,8 +47,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **teammate** | [**\Flipdish\\Client\Models\CreateTeammate**](../Model/CreateTeammate.md)| teammate model |
+ **app_id** | **string**|  |
+ **teammate** | [**\Flipdish\\Client\Models\CreateTeammate**](../Model/CreateTeammate.md)|  |
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 # **deleteTeammate**
 > deleteTeammate($app_id, $id)
 
-Delete teammate
+
 
 ### Example
 ```php
@@ -120,7 +120,7 @@ void (empty response body)
 # **getTeammateByAppIdAndTeammateId**
 > \Flipdish\\Client\Models\RestApiResultTeammate getTeammateByAppIdAndTeammateId($app_id, $id)
 
-Get a teammates by email address
+
 
 ### Example
 ```php
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 # **getTeammatesByAppId**
 > \Flipdish\\Client\Models\RestApiArrayResultTeammate getTeammatesByAppId($app_id)
 
-Get all teammates
+
 
 ### Example
 ```php
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 # **redeemInvitation**
 > \Flipdish\\Client\Models\RestApiResultRedeemInvitationResult redeemInvitation($otc, $app_id)
 
-Redeem one-time code from invitation
+
 
 ### Example
 ```php
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 # **updateTeammate**
 > \Flipdish\\Client\Models\RestApiResultTeammate updateTeammate($app_id, $id, $teammate)
 
-Update teammates (this method does not support Deltas!)
+
 
 ### Example
 ```php
@@ -293,9 +293,9 @@ $apiInstance = new Flipdish\\Client\Api\TeammatesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$id = "id_example"; // string | teammate identifier
-$teammate = new \Flipdish\\Client\Models\TeammateBase(); // \Flipdish\\Client\Models\TeammateBase | teammate model
+$app_id = "app_id_example"; // string | 
+$id = "id_example"; // string | 
+$teammate = new \Flipdish\\Client\Models\TeammateBase(); // \Flipdish\\Client\Models\TeammateBase | 
 
 try {
     $result = $apiInstance->updateTeammate($app_id, $id, $teammate);
@@ -310,9 +310,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **id** | **string**| teammate identifier |
- **teammate** | [**\Flipdish\\Client\Models\TeammateBase**](../Model/TeammateBase.md)| teammate model |
+ **app_id** | **string**|  |
+ **id** | **string**|  |
+ **teammate** | [**\Flipdish\\Client\Models\TeammateBase**](../Model/TeammateBase.md)|  |
 
 ### Return type
 

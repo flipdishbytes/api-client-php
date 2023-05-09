@@ -74,7 +74,7 @@ class BankAccountApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for attachBankAccountToStore
      *
-     * [PRIVATE API] Attach Bank Account to Store.
+     * .
      *
      */
     public function testAttachBankAccountToStore()
@@ -84,7 +84,7 @@ class BankAccountApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createBankAccount
      *
-     * Create a new Bank Account and attach to this App.
+     * .
      *
      */
     public function testCreateBankAccount()
@@ -94,7 +94,7 @@ class BankAccountApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteBankAccount
      *
-     * Delete BankAccount.
+     * .
      *
      */
     public function testDeleteBankAccount()
@@ -104,7 +104,7 @@ class BankAccountApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getBankAccountById
      *
-     * Get BankAccount Detail by Id.
+     * .
      *
      */
     public function testGetBankAccountById()
@@ -114,7 +114,7 @@ class BankAccountApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getBankAccounts
      *
-     * Get List of BankAccounts for WL.
+     * .
      *
      */
     public function testGetBankAccounts()
@@ -124,7 +124,7 @@ class BankAccountApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getCountriesWithFieldDefinitions
      *
-     * Get bank account fields definitions.
+     * .
      *
      */
     public function testGetCountriesWithFieldDefinitions()
@@ -134,7 +134,7 @@ class BankAccountApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getFieldDefinitions
      *
-     * Get bank account fields definitions.
+     * .
      *
      */
     public function testGetFieldDefinitions()
@@ -144,7 +144,7 @@ class BankAccountApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateBankAccount
      *
-     * Update BankAccount.
+     * .
      *
      */
     public function testUpdateBankAccount()
@@ -154,7 +154,7 @@ class BankAccountApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateBankAccountState
      *
-     * [PRIVATE API] Update State of Bank Account.
+     * .
      *
      */
     public function testUpdateBankAccountState()

@@ -74,7 +74,7 @@ class DriversApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for addDriverNotificationToken
      *
-     * Add driver token.
+     * .
      *
      */
     public function testAddDriverNotificationToken()
@@ -84,7 +84,7 @@ class DriversApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteDriverProfileImage
      *
-     * Delete driver profile image.
+     * .
      *
      */
     public function testDeleteDriverProfileImage()
@@ -94,7 +94,7 @@ class DriversApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for driverLogin
      *
-     * [PRIVATE] Login with phone number and pin.
+     * .
      *
      */
     public function testDriverLogin()
@@ -104,7 +104,7 @@ class DriversApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for driverRequestLoginCodeSms
      *
-     * [PRIVATE] Request an SMS to be sent to the driver with their login code.
+     * .
      *
      */
     public function testDriverRequestLoginCodeSms()
@@ -114,7 +114,7 @@ class DriversApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getDriverProfile
      *
-     * Get driver profile.
+     * .
      *
      */
     public function testGetDriverProfile()
@@ -124,7 +124,7 @@ class DriversApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoresForDriver
      *
-     * Get stores for driver.
+     * .
      *
      */
     public function testGetStoresForDriver()
@@ -134,7 +134,7 @@ class DriversApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for removeDriverNotificationToken
      *
-     * Delete driver token.
+     * .
      *
      */
     public function testRemoveDriverNotificationToken()
@@ -154,7 +154,7 @@ class DriversApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setDriverProfileImage
      *
-     * Set driver profile image and returns it's url.
+     * .
      *
      */
     public function testSetDriverProfileImage()
@@ -164,7 +164,7 @@ class DriversApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateDeliveryTrackingStatus
      *
-     * Change delivery tracking status and return the updated status..
+     * .
      *
      */
     public function testUpdateDeliveryTrackingStatus()
@@ -174,7 +174,7 @@ class DriversApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateDriverProfile
      *
-     * Update driver profile.
+     * .
      *
      */
     public function testUpdateDriverProfile()

@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getLogs**](HttpRequestResponseLogsApi.md#getLogs) | **GET** /api/v1.0/{appId}/interactions/logs | Get API interaction logs
+[**getLogs**](HttpRequestResponseLogsApi.md#getLogs) | **GET** /api/v1.0/{appId}/interactions/logs | 
 
 
 # **getLogs**
 > \Flipdish\\Client\Models\RestApiPaginationResultHttpRequestAndResponseLog getLogs($start, $end, $app_id, $filter_by_user_id, $guid, $page, $limit)
 
-Get API interaction logs
+
 
 ### Example
 ```php
@@ -26,13 +26,13 @@ $apiInstance = new Flipdish\\Client\Api\HttpRequestResponseLogsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date time
-$end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date time
+$start = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 $app_id = "app_id_example"; // string | 
-$filter_by_user_id = 56; // int | User id (optional)
-$guid = "guid_example"; // string | Id of the log
-$page = 56; // int | Page number
-$limit = 56; // int | Page size
+$filter_by_user_id = 56; // int | 
+$guid = "guid_example"; // string | 
+$page = 56; // int | 
+$limit = 56; // int | 
 
 try {
     $result = $apiInstance->getLogs($start, $end, $app_id, $filter_by_user_id, $guid, $page, $limit);
@@ -47,13 +47,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start** | **\DateTime**| Start date time |
- **end** | **\DateTime**| End date time |
+ **start** | **\DateTime**|  |
+ **end** | **\DateTime**|  |
  **app_id** | **string**|  |
- **filter_by_user_id** | **int**| User id (optional) | [optional]
- **guid** | **string**| Id of the log | [optional]
- **page** | **int**| Page number | [optional]
- **limit** | **int**| Page size | [optional]
+ **filter_by_user_id** | **int**|  | [optional]
+ **guid** | **string**|  | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
 
 ### Return type
 

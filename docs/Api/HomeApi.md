@@ -4,17 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**completeHomeAction**](HomeApi.md#completeHomeAction) | **POST** /api/v1.0/{appId}/home/{homeActionId} | [PRIVATE API] Complete Home Action
-[**dismissOldPortalAction**](HomeApi.md#dismissOldPortalAction) | **POST** /api/v1.0/home/dismissoldportalaction | [PRIVATE API] Complete Home Action
-[**getHomeActions**](HomeApi.md#getHomeActions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
-[**getHomeStatistics**](HomeApi.md#getHomeStatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
-[**getOktaPortalFeatureFlag**](HomeApi.md#getOktaPortalFeatureFlag) | **GET** /api/v1.0/home/okta-portal | [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+[**completeHomeAction**](HomeApi.md#completeHomeAction) | **POST** /api/v1.0/{appId}/home/{homeActionId} | 
+[**dismissOldPortalAction**](HomeApi.md#dismissOldPortalAction) | **POST** /api/v1.0/home/dismissoldportalaction | 
+[**getHomeActions**](HomeApi.md#getHomeActions) | **GET** /api/v1.0/{appId}/home | 
+[**getHomeStatistics**](HomeApi.md#getHomeStatistics) | **GET** /api/v1.0/{appId}/home/stats | 
+[**getOktaPortalFeatureFlag**](HomeApi.md#getOktaPortalFeatureFlag) | **GET** /api/v1.0/home/okta-portal | 
 
 
 # **completeHomeAction**
 > object completeHomeAction($app_id, $home_action_id, $is_dismissed)
 
-[PRIVATE API] Complete Home Action
+
 
 ### Example
 ```php
@@ -30,8 +30,8 @@ $apiInstance = new Flipdish\\Client\Api\HomeApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$home_action_id = 56; // int | Id of the action
+$app_id = "app_id_example"; // string | 
+$home_action_id = 56; // int | 
 $is_dismissed = true; // bool | 
 
 try {
@@ -47,8 +47,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **home_action_id** | **int**| Id of the action |
+ **app_id** | **string**|  |
+ **home_action_id** | **int**|  |
  **is_dismissed** | **bool**|  |
 
 ### Return type
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 # **dismissOldPortalAction**
 > object dismissOldPortalAction()
 
-[PRIVATE API] Complete Home Action
+
 
 ### Example
 ```php
@@ -116,7 +116,7 @@ This endpoint does not need any parameter.
 # **getHomeActions**
 > \Flipdish\\Client\Models\RestApiArrayResultHomeAction getHomeActions($app_id)
 
-[PRIVATE API] Get Home Actions
+
 
 ### Example
 ```php
@@ -132,7 +132,7 @@ $apiInstance = new Flipdish\\Client\Api\HomeApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getHomeActions($app_id);
@@ -147,7 +147,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 # **getHomeStatistics**
 > \Flipdish\\Client\Models\RestApiResultHomeStatistics getHomeStatistics($app_id)
 
-[PRIVATE API] Get Home Statistics
+
 
 ### Example
 ```php
@@ -183,7 +183,7 @@ $apiInstance = new Flipdish\\Client\Api\HomeApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getHomeStatistics($app_id);
@@ -198,7 +198,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 # **getOktaPortalFeatureFlag**
 > \Flipdish\\Client\Models\RestApiResultOktaPortalFeatureFlag getOktaPortalFeatureFlag()
 
-[PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+
 
 ### Example
 ```php

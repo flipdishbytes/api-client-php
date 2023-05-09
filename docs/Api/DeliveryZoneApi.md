@@ -4,16 +4,16 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addDeliveryZone**](DeliveryZoneApi.md#addDeliveryZone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones | Adds a delivery zone to the store id
-[**getDeliveryZones**](DeliveryZoneApi.md#getDeliveryZones) | **GET** /api/v1.0/stores/{storeId}/deliveryzones | Get all the delivery zones associated with a store
-[**removeDeliveryZone**](DeliveryZoneApi.md#removeDeliveryZone) | **DELETE** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | Removes the existing delivery zone
-[**updateDeliveryZone**](DeliveryZoneApi.md#updateDeliveryZone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | Updates the existing delivery zone
+[**addDeliveryZone**](DeliveryZoneApi.md#addDeliveryZone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones | 
+[**getDeliveryZones**](DeliveryZoneApi.md#getDeliveryZones) | **GET** /api/v1.0/stores/{storeId}/deliveryzones | 
+[**removeDeliveryZone**](DeliveryZoneApi.md#removeDeliveryZone) | **DELETE** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | 
+[**updateDeliveryZone**](DeliveryZoneApi.md#updateDeliveryZone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | 
 
 
 # **addDeliveryZone**
 > \Flipdish\\Client\Models\RestApiResultDeliveryZone addDeliveryZone($store_id, $delivery_zone_base)
 
-Adds a delivery zone to the store id
+
 
 ### Example
 ```php
@@ -29,8 +29,8 @@ $apiInstance = new Flipdish\\Client\Api\DeliveryZoneApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store Id to which the delivery zone will be added
-$delivery_zone_base = new \Flipdish\\Client\Models\DeliveryZoneBase(); // \Flipdish\\Client\Models\DeliveryZoneBase | Optional delivery zone, if not supplied will create a default zone
+$store_id = 56; // int | 
+$delivery_zone_base = new \Flipdish\\Client\Models\DeliveryZoneBase(); // \Flipdish\\Client\Models\DeliveryZoneBase | 
 
 try {
     $result = $apiInstance->addDeliveryZone($store_id, $delivery_zone_base);
@@ -45,8 +45,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store Id to which the delivery zone will be added |
- **delivery_zone_base** | [**\Flipdish\\Client\Models\DeliveryZoneBase**](../Model/DeliveryZoneBase.md)| Optional delivery zone, if not supplied will create a default zone |
+ **store_id** | **int**|  |
+ **delivery_zone_base** | [**\Flipdish\\Client\Models\DeliveryZoneBase**](../Model/DeliveryZoneBase.md)|  |
 
 ### Return type
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 # **getDeliveryZones**
 > \Flipdish\\Client\Models\RestApiArrayResultDeliveryZone getDeliveryZones($store_id)
 
-Get all the delivery zones associated with a store
+
 
 ### Example
 ```php
@@ -82,7 +82,7 @@ $apiInstance = new Flipdish\\Client\Api\DeliveryZoneApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store Id to which the delivery zones are associated
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->getDeliveryZones($store_id);
@@ -97,7 +97,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store Id to which the delivery zones are associated |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 # **removeDeliveryZone**
 > removeDeliveryZone($store_id, $delivery_zone_id)
 
-Removes the existing delivery zone
+
 
 ### Example
 ```php
@@ -133,8 +133,8 @@ $apiInstance = new Flipdish\\Client\Api\DeliveryZoneApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store Id to which the delivery zone belongs
-$delivery_zone_id = 56; // int | Delivery zone id to be removed
+$store_id = 56; // int | 
+$delivery_zone_id = 56; // int | 
 
 try {
     $apiInstance->removeDeliveryZone($store_id, $delivery_zone_id);
@@ -148,8 +148,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store Id to which the delivery zone belongs |
- **delivery_zone_id** | **int**| Delivery zone id to be removed |
+ **store_id** | **int**|  |
+ **delivery_zone_id** | **int**|  |
 
 ### Return type
 
@@ -169,7 +169,7 @@ void (empty response body)
 # **updateDeliveryZone**
 > \Flipdish\\Client\Models\RestApiResultDeliveryZone updateDeliveryZone($store_id, $delivery_zone_id, $delivery_zone)
 
-Updates the existing delivery zone
+
 
 ### Example
 ```php
@@ -185,9 +185,9 @@ $apiInstance = new Flipdish\\Client\Api\DeliveryZoneApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store Id to which the delivery zone belongs
-$delivery_zone_id = 56; // int | Delivery zone id to be updated
-$delivery_zone = new \Flipdish\\Client\Models\DeliveryZoneBase(); // \Flipdish\\Client\Models\DeliveryZoneBase | Delta of delivery zone parameters that need to be changed
+$store_id = 56; // int | 
+$delivery_zone_id = 56; // int | 
+$delivery_zone = new \Flipdish\\Client\Models\DeliveryZoneBase(); // \Flipdish\\Client\Models\DeliveryZoneBase | 
 
 try {
     $result = $apiInstance->updateDeliveryZone($store_id, $delivery_zone_id, $delivery_zone);
@@ -202,9 +202,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store Id to which the delivery zone belongs |
- **delivery_zone_id** | **int**| Delivery zone id to be updated |
- **delivery_zone** | [**\Flipdish\\Client\Models\DeliveryZoneBase**](../Model/DeliveryZoneBase.md)| Delta of delivery zone parameters that need to be changed |
+ **store_id** | **int**|  |
+ **delivery_zone_id** | **int**|  |
+ **delivery_zone** | [**\Flipdish\\Client\Models\DeliveryZoneBase**](../Model/DeliveryZoneBase.md)|  |
 
 ### Return type
 

@@ -4,27 +4,25 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**acceptOrder**](OrdersApi.md#acceptOrder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
-[**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
-[**getDeliveryInformation**](OrdersApi.md#getDeliveryInformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
-[**getFulfillmentState**](OrdersApi.md#getFulfillmentState) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state | Get order fulfillment state
-[**getFulfillmentStatusWithDetailsAndActions**](OrdersApi.md#getFulfillmentStatusWithDetailsAndActions) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state/details | Get order fulfillment state with actionable details like default next state
-[**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | Get order by ID
-[**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | Get orders by filter
-[**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
-[**refundOrder**](OrdersApi.md#refundOrder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
-[**rejectOrder**](OrdersApi.md#rejectOrder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
-[**searchFulfillmentStatuses**](OrdersApi.md#searchFulfillmentStatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
-[**updateDeliveryInformation**](OrdersApi.md#updateDeliveryInformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
-[**updateFulfillmentState**](OrdersApi.md#updateFulfillmentState) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | Update fulfillment status information to an order
+[**acceptOrder**](OrdersApi.md#acceptOrder) | **POST** /api/v1.0/orders/{id}/accept | 
+[**dispatchOrder**](OrdersApi.md#dispatchOrder) | **POST** /api/v1.0/orders/{id}/dispatch | 
+[**getDeliveryInformation**](OrdersApi.md#getDeliveryInformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | 
+[**getFulfillmentState**](OrdersApi.md#getFulfillmentState) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state | 
+[**getFulfillmentStatusWithDetailsAndActions**](OrdersApi.md#getFulfillmentStatusWithDetailsAndActions) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state/details | 
+[**getOrderById**](OrdersApi.md#getOrderById) | **GET** /api/v1.0/orders/{id} | 
+[**getOrders**](OrdersApi.md#getOrders) | **GET** /api/v1.0/orders | 
+[**getOrdersSummary**](OrdersApi.md#getOrdersSummary) | **GET** /api/v1.0/{appId}/orders/summaries | 
+[**refundOrder**](OrdersApi.md#refundOrder) | **POST** /api/v1.0/orders/{id}/refund | 
+[**rejectOrder**](OrdersApi.md#rejectOrder) | **POST** /api/v1.0/orders/{id}/reject | 
+[**searchFulfillmentStatuses**](OrdersApi.md#searchFulfillmentStatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | 
+[**updateDeliveryInformation**](OrdersApi.md#updateDeliveryInformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | 
+[**updateFulfillmentState**](OrdersApi.md#updateFulfillmentState) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | 
 
 
 # **acceptOrder**
 > acceptOrder($id, $accept_object)
 
-Accept order
 
-To accept an order, you create an `accept` object and send it to Flipdish API using HTTP POST method. `Id` path parameter identifies the order.
 
 ### Example
 ```php
@@ -40,8 +38,8 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | Order identifier
-$accept_object = new \Flipdish\\Client\Models\Accept(); // \Flipdish\\Client\Models\Accept | Order accept parameters (eg: EstimatedMinutesForDelivery)
+$id = 56; // int | 
+$accept_object = new \Flipdish\\Client\Models\Accept(); // \Flipdish\\Client\Models\Accept | 
 
 try {
     $apiInstance->acceptOrder($id, $accept_object);
@@ -55,8 +53,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Order identifier |
- **accept_object** | [**\Flipdish\\Client\Models\Accept**](../Model/Accept.md)| Order accept parameters (eg: EstimatedMinutesForDelivery) |
+ **id** | **int**|  |
+ **accept_object** | [**\Flipdish\\Client\Models\Accept**](../Model/Accept.md)|  |
 
 ### Return type
 
@@ -76,9 +74,7 @@ void (empty response body)
 # **dispatchOrder**
 > dispatchOrder($id)
 
-Dispatch order
 
-To dispatch an order send a POST request with `Id` path parameter which identifies the order.
 
 ### Example
 ```php
@@ -94,7 +90,7 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | Order identifier
+$id = 56; // int | 
 
 try {
     $apiInstance->dispatchOrder($id);
@@ -108,7 +104,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Order identifier |
+ **id** | **int**|  |
 
 ### Return type
 
@@ -128,9 +124,7 @@ void (empty response body)
 # **getDeliveryInformation**
 > \Flipdish\\Client\Models\RestApiResultOrderDeliveryInformation getDeliveryInformation($order_id)
 
-Get order delivery information
 
-Returns an orders delivery information. This would be used to display the latest known delivery information on a screen.
 
 ### Example
 ```php
@@ -146,7 +140,7 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$order_id = 56; // int | Flipdish Order Id
+$order_id = 56; // int | 
 
 try {
     $result = $apiInstance->getDeliveryInformation($order_id);
@@ -161,7 +155,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_id** | **int**| Flipdish Order Id |
+ **order_id** | **int**|  |
 
 ### Return type
 
@@ -181,9 +175,7 @@ Name | Type | Description  | Notes
 # **getFulfillmentState**
 > \Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatus getFulfillmentState($order_id)
 
-Get order fulfillment state
 
-[BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment state.
 
 ### Example
 ```php
@@ -199,7 +191,7 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$order_id = 56; // int | Flipdish Order Id
+$order_id = 56; // int | 
 
 try {
     $result = $apiInstance->getFulfillmentState($order_id);
@@ -214,7 +206,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_id** | **int**| Flipdish Order Id |
+ **order_id** | **int**|  |
 
 ### Return type
 
@@ -234,9 +226,7 @@ Name | Type | Description  | Notes
 # **getFulfillmentStatusWithDetailsAndActions**
 > \Flipdish\\Client\Models\RestApiResultOrderFulfillmentStatusWithConfigurationActions getFulfillmentStatusWithDetailsAndActions($order_id)
 
-Get order fulfillment state with actionable details like default next state
 
-[BETA - this endpoint is under development, do not use it in your production system] Returns an order's fulfillment status and details about possible states.
 
 ### Example
 ```php
@@ -252,7 +242,7 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$order_id = 56; // int | Flipdish Order Id
+$order_id = 56; // int | 
 
 try {
     $result = $apiInstance->getFulfillmentStatusWithDetailsAndActions($order_id);
@@ -267,7 +257,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_id** | **int**| Flipdish Order Id |
+ **order_id** | **int**|  |
 
 ### Return type
 
@@ -287,7 +277,7 @@ Name | Type | Description  | Notes
 # **getOrderById**
 > \Flipdish\\Client\Models\RestApiResultOrder getOrderById($id)
 
-Get order by ID
+
 
 ### Example
 ```php
@@ -303,7 +293,7 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | Order identifier
+$id = 56; // int | 
 
 try {
     $result = $apiInstance->getOrderById($id);
@@ -318,7 +308,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Order identifier |
+ **id** | **int**|  |
 
 ### Return type
 
@@ -338,7 +328,7 @@ Name | Type | Description  | Notes
 # **getOrders**
 > \Flipdish\\Client\Models\RestApiPaginationResultOrder getOrders($physical_restaurant_id, $state, $from, $to, $page, $limit)
 
-Get orders by filter
+
 
 ### Example
 ```php
@@ -354,12 +344,12 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$physical_restaurant_id = array(56); // int[] | Physical restaurant identifiers
-$state = array("state_example"); // string[] | Order states
-$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Order has been placed after this parameter value
-$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Order has been placed before this parameter value
-$page = 56; // int | Requested page number
-$limit = 56; // int | Requested page limit
+$physical_restaurant_id = array(56); // int[] | 
+$state = array("state_example"); // string[] | 
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$page = 56; // int | 
+$limit = 56; // int | 
 
 try {
     $result = $apiInstance->getOrders($physical_restaurant_id, $state, $from, $to, $page, $limit);
@@ -374,12 +364,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **physical_restaurant_id** | [**int[]**](../Model/int.md)| Physical restaurant identifiers | [optional]
- **state** | [**string[]**](../Model/string.md)| Order states | [optional]
- **from** | **\DateTime**| Order has been placed after this parameter value | [optional]
- **to** | **\DateTime**| Order has been placed before this parameter value | [optional]
- **page** | **int**| Requested page number | [optional]
- **limit** | **int**| Requested page limit | [optional]
+ **physical_restaurant_id** | [**int[]**](../Model/int.md)|  | [optional]
+ **state** | [**string[]**](../Model/string.md)|  | [optional]
+ **from** | **\DateTime**|  | [optional]
+ **to** | **\DateTime**|  | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
 
 ### Return type
 
@@ -399,7 +389,7 @@ Name | Type | Description  | Notes
 # **getOrdersSummary**
 > \Flipdish\\Client\Models\RestApiPaginationResultOrderSummary getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to)
 
-[PRIVATE API] Get summary of orders by filter
+
 
 ### Example
 ```php
@@ -415,17 +405,17 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$search_query = "search_query_example"; // string | Query string
-$physical_restaurant_id = array(56); // int[] | Physical restaurant identifiers
-$state = array("state_example"); // string[] | Order states
-$page = 56; // int | Requested page number
-$limit = 56; // int | Requested page limit
+$app_id = "app_id_example"; // string | 
+$search_query = "search_query_example"; // string | 
+$physical_restaurant_id = array(56); // int[] | 
+$state = array("state_example"); // string[] | 
+$page = 56; // int | 
+$limit = 56; // int | 
 $order_by_requested_for_time = true; // bool | 
 $channels = array("channels_example"); // string[] | 
-$order_ids = array(56); // int[] | Filter by the given orders
-$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter by date from
-$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Filter by date to
+$order_ids = array(56); // int[] | 
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
     $result = $apiInstance->getOrdersSummary($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to);
@@ -440,17 +430,17 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **search_query** | **string**| Query string | [optional]
- **physical_restaurant_id** | [**int[]**](../Model/int.md)| Physical restaurant identifiers | [optional]
- **state** | [**string[]**](../Model/string.md)| Order states | [optional]
- **page** | **int**| Requested page number | [optional]
- **limit** | **int**| Requested page limit | [optional]
+ **app_id** | **string**|  |
+ **search_query** | **string**|  | [optional]
+ **physical_restaurant_id** | [**int[]**](../Model/int.md)|  | [optional]
+ **state** | [**string[]**](../Model/string.md)|  | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
  **order_by_requested_for_time** | **bool**|  | [optional]
  **channels** | [**string[]**](../Model/string.md)|  | [optional]
- **order_ids** | [**int[]**](../Model/int.md)| Filter by the given orders | [optional]
- **from** | **\DateTime**| Filter by date from | [optional]
- **to** | **\DateTime**| Filter by date to | [optional]
+ **order_ids** | [**int[]**](../Model/int.md)|  | [optional]
+ **from** | **\DateTime**|  | [optional]
+ **to** | **\DateTime**|  | [optional]
 
 ### Return type
 
@@ -470,9 +460,7 @@ Name | Type | Description  | Notes
 # **refundOrder**
 > refundOrder($id, $refund_object)
 
-Refund order
 
-To refund an order, you create a `refund` object and send it to Flipdish API using HTTP POST method. `Id` path parameter identifies the order.
 
 ### Example
 ```php
@@ -488,7 +476,7 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | Order identifier
+$id = 56; // int | 
 $refund_object = new \Flipdish\\Client\Models\Refund(); // \Flipdish\\Client\Models\Refund | 
 
 try {
@@ -503,7 +491,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Order identifier |
+ **id** | **int**|  |
  **refund_object** | [**\Flipdish\\Client\Models\Refund**](../Model/Refund.md)|  |
 
 ### Return type
@@ -524,9 +512,7 @@ void (empty response body)
 # **rejectOrder**
 > rejectOrder($id, $reject_object)
 
-Reject order
 
-To reject an order, you create a `reject` object and send it to Flipdish API using HTTP POST method. `Id` path parameter identifies the order.
 
 ### Example
 ```php
@@ -542,7 +528,7 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | Order identifier
+$id = 56; // int | 
 $reject_object = new \Flipdish\\Client\Models\Reject(); // \Flipdish\\Client\Models\Reject | 
 
 try {
@@ -557,7 +543,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Order identifier |
+ **id** | **int**|  |
  **reject_object** | [**\Flipdish\\Client\Models\Reject**](../Model/Reject.md)|  |
 
 ### Return type
@@ -578,9 +564,7 @@ void (empty response body)
 # **searchFulfillmentStatuses**
 > \Flipdish\\Client\Models\RestApiArrayResultOrderFulfillmentStatus searchFulfillmentStatuses($app_id, $order_ids)
 
-Get fulfillment status for a list of orders
 
-[BETA - this endpoint is under development, do not use it in your production system] Returns fulfillment status for list of orders.
 
 ### Example
 ```php
@@ -596,8 +580,8 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Id
-$order_ids = "order_ids_example"; // string | Flipdish Order Id list, comma separated
+$app_id = "app_id_example"; // string | 
+$order_ids = "order_ids_example"; // string | 
 
 try {
     $result = $apiInstance->searchFulfillmentStatuses($app_id, $order_ids);
@@ -612,8 +596,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Id |
- **order_ids** | **string**| Flipdish Order Id list, comma separated |
+ **app_id** | **string**|  |
+ **order_ids** | **string**|  |
 
 ### Return type
 
@@ -633,9 +617,7 @@ Name | Type | Description  | Notes
 # **updateDeliveryInformation**
 > updateDeliveryInformation($order_id, $delivery_information)
 
-Add/update delivery-related information to an order
 
-Returns an order's delivery information. This would be used to display the latest known delivery information on a screen.
 
 ### Example
 ```php
@@ -651,8 +633,8 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$order_id = 56; // int | Flipdish Order Id
-$delivery_information = new \Flipdish\\Client\Models\OrderDeliveryInformationBase(); // \Flipdish\\Client\Models\OrderDeliveryInformationBase | Delivery Information
+$order_id = 56; // int | 
+$delivery_information = new \Flipdish\\Client\Models\OrderDeliveryInformationBase(); // \Flipdish\\Client\Models\OrderDeliveryInformationBase | 
 
 try {
     $apiInstance->updateDeliveryInformation($order_id, $delivery_information);
@@ -666,8 +648,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_id** | **int**| Flipdish Order Id |
- **delivery_information** | [**\Flipdish\\Client\Models\OrderDeliveryInformationBase**](../Model/OrderDeliveryInformationBase.md)| Delivery Information |
+ **order_id** | **int**|  |
+ **delivery_information** | [**\Flipdish\\Client\Models\OrderDeliveryInformationBase**](../Model/OrderDeliveryInformationBase.md)|  |
 
 ### Return type
 
@@ -687,9 +669,7 @@ void (empty response body)
 # **updateFulfillmentState**
 > updateFulfillmentState($order_id, $fulfillment_status_request)
 
-Update fulfillment status information to an order
 
-[BETA - this endpoint is under development, do not use it in your production system] Updates an order's fulfillment states.
 
 ### Example
 ```php
@@ -705,8 +685,8 @@ $apiInstance = new Flipdish\\Client\Api\OrdersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$order_id = 56; // int | Flipdish Order Id
-$fulfillment_status_request = new \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate(); // \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate | Fulfillment Status
+$order_id = 56; // int | 
+$fulfillment_status_request = new \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate(); // \Flipdish\\Client\Models\OrderFulfillmentStatusUpdate | 
 
 try {
     $apiInstance->updateFulfillmentState($order_id, $fulfillment_status_request);
@@ -720,8 +700,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_id** | **int**| Flipdish Order Id |
- **fulfillment_status_request** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusUpdate**](../Model/OrderFulfillmentStatusUpdate.md)| Fulfillment Status |
+ **order_id** | **int**|  |
+ **fulfillment_status_request** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusUpdate**](../Model/OrderFulfillmentStatusUpdate.md)|  |
 
 ### Return type
 

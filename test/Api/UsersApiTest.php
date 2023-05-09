@@ -84,7 +84,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getRoles
      *
-     * Get role names.
+     * .
      *
      */
     public function testGetRoles()

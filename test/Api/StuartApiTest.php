@@ -74,7 +74,7 @@ class StuartApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for stuartCancelJob
      *
-     * Cancel a stuart job.
+     * .
      *
      */
     public function testStuartCancelJob()
@@ -84,7 +84,7 @@ class StuartApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for stuartGetJob
      *
-     * Get start job details.
+     * .
      *
      */
     public function testStuartGetJob()
@@ -94,7 +94,7 @@ class StuartApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for stuartGetStuartSettings
      *
-     * Get stuart settings for a store.
+     * .
      *
      */
     public function testStuartGetStuartSettings()
@@ -104,7 +104,7 @@ class StuartApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for stuartPostStuartSettings
      *
-     * Set stuart settings for a store.
+     * .
      *
      */
     public function testStuartPostStuartSettings()

@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**initializeBankAccountConnectedAccount**](StripeCustomConnectAdminApi.md#initializeBankAccountConnectedAccount) | **POST** /api/v1.0/customconnect/initialize-bank-account | Create a new Bank Account and Stripe connected account
+[**initializeBankAccountConnectedAccount**](StripeCustomConnectAdminApi.md#initializeBankAccountConnectedAccount) | **POST** /api/v1.0/customconnect/initialize-bank-account | 
 
 
 # **initializeBankAccountConnectedAccount**
 > \Flipdish\\Client\Models\RestApiResultBankAccountDetail initializeBankAccountConnectedAccount($accounts)
 
-Create a new Bank Account and Stripe connected account
+
 
 ### Example
 ```php
@@ -26,7 +26,7 @@ $apiInstance = new Flipdish\\Client\Api\StripeCustomConnectAdminApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accounts = array(new \Flipdish\\Client\Models\int[]()); // int[] | Accounts to be initialized in stripe
+$accounts = array(new \Flipdish\\Client\Models\int[]()); // int[] | 
 
 try {
     $result = $apiInstance->initializeBankAccountConnectedAccount($accounts);
@@ -41,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accounts** | **int[]**| Accounts to be initialized in stripe |
+ **accounts** | **int[]**|  |
 
 ### Return type
 

@@ -90,9 +90,7 @@ class ProcessingFeeConfigsApi
     /**
      * Operation getProcessingFeeConfigsByStoreIds
      *
-     * Get processing fee configs by store identifiers
-     *
-     * @param  int[] $store_ids Store identifiers (required)
+     * @param  int[] $store_ids store_ids (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,9 +105,7 @@ class ProcessingFeeConfigsApi
     /**
      * Operation getProcessingFeeConfigsByStoreIdsWithHttpInfo
      *
-     * Get processing fee configs by store identifiers
-     *
-     * @param  int[] $store_ids Store identifiers (required)
+     * @param  int[] $store_ids (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -206,9 +202,9 @@ class ProcessingFeeConfigsApi
     /**
      * Operation getProcessingFeeConfigsByStoreIdsAsync
      *
-     * Get processing fee configs by store identifiers
+     * 
      *
-     * @param  int[] $store_ids Store identifiers (required)
+     * @param  int[] $store_ids (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -226,9 +222,9 @@ class ProcessingFeeConfigsApi
     /**
      * Operation getProcessingFeeConfigsByStoreIdsAsyncWithHttpInfo
      *
-     * Get processing fee configs by store identifiers
+     * 
      *
-     * @param  int[] $store_ids Store identifiers (required)
+     * @param  int[] $store_ids (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -278,7 +274,7 @@ class ProcessingFeeConfigsApi
     /**
      * Create request for operation 'getProcessingFeeConfigsByStoreIds'
      *
-     * @param  int[] $store_ids Store identifiers (required)
+     * @param  int[] $store_ids (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

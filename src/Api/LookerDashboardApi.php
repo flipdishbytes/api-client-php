@@ -90,8 +90,6 @@ class LookerDashboardApi
     /**
      * Operation lookerDashboardGetAll
      *
-     * Get all dashboards
-     *
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -105,8 +103,6 @@ class LookerDashboardApi
 
     /**
      * Operation lookerDashboardGetAllWithHttpInfo
-     *
-     * Get all dashboards
      *
      * @param  string $app_id (required)
      *
@@ -183,7 +179,7 @@ class LookerDashboardApi
     /**
      * Operation lookerDashboardGetAllAsync
      *
-     * Get all dashboards
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -203,7 +199,7 @@ class LookerDashboardApi
     /**
      * Operation lookerDashboardGetAllAsyncWithHttpInfo
      *
-     * Get all dashboards
+     * 
      *
      * @param  string $app_id (required)
      *

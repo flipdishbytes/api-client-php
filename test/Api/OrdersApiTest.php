@@ -74,7 +74,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for acceptOrder
      *
-     * Accept order.
+     * .
      *
      */
     public function testAcceptOrder()
@@ -84,7 +84,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for dispatchOrder
      *
-     * Dispatch order.
+     * .
      *
      */
     public function testDispatchOrder()
@@ -94,7 +94,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getDeliveryInformation
      *
-     * Get order delivery information.
+     * .
      *
      */
     public function testGetDeliveryInformation()
@@ -104,7 +104,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getFulfillmentState
      *
-     * Get order fulfillment state.
+     * .
      *
      */
     public function testGetFulfillmentState()
@@ -114,7 +114,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getFulfillmentStatusWithDetailsAndActions
      *
-     * Get order fulfillment state with actionable details like default next state.
+     * .
      *
      */
     public function testGetFulfillmentStatusWithDetailsAndActions()
@@ -124,7 +124,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOrderById
      *
-     * Get order by ID.
+     * .
      *
      */
     public function testGetOrderById()
@@ -134,7 +134,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOrders
      *
-     * Get orders by filter.
+     * .
      *
      */
     public function testGetOrders()
@@ -144,7 +144,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getOrdersSummary
      *
-     * [PRIVATE API] Get summary of orders by filter.
+     * .
      *
      */
     public function testGetOrdersSummary()
@@ -154,7 +154,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for refundOrder
      *
-     * Refund order.
+     * .
      *
      */
     public function testRefundOrder()
@@ -164,7 +164,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for rejectOrder
      *
-     * Reject order.
+     * .
      *
      */
     public function testRejectOrder()
@@ -174,7 +174,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for searchFulfillmentStatuses
      *
-     * Get fulfillment status for a list of orders.
+     * .
      *
      */
     public function testSearchFulfillmentStatuses()
@@ -184,7 +184,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateDeliveryInformation
      *
-     * Add/update delivery-related information to an order.
+     * .
      *
      */
     public function testUpdateDeliveryInformation()
@@ -194,7 +194,7 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateFulfillmentState
      *
-     * Update fulfillment status information to an order.
+     * .
      *
      */
     public function testUpdateFulfillmentState()

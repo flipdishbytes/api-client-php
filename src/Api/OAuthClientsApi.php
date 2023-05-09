@@ -90,10 +90,8 @@ class OAuthClientsApi
     /**
      * Operation addRedirectUri
      *
-     * Create OAuth App redirect uri
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $uri Redirect uri (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  string $uri uri (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -109,10 +107,8 @@ class OAuthClientsApi
     /**
      * Operation addRedirectUriWithHttpInfo
      *
-     * Create OAuth App redirect uri
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $uri Redirect uri (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $uri (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -210,10 +206,10 @@ class OAuthClientsApi
     /**
      * Operation addRedirectUriAsync
      *
-     * Create OAuth App redirect uri
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $uri Redirect uri (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $uri (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -232,10 +228,10 @@ class OAuthClientsApi
     /**
      * Operation addRedirectUriAsyncWithHttpInfo
      *
-     * Create OAuth App redirect uri
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $uri Redirect uri (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $uri (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -286,8 +282,8 @@ class OAuthClientsApi
     /**
      * Create request for operation 'addRedirectUri'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  string $uri Redirect uri (required)
+     * @param  string $oauth_app_id (required)
+     * @param  string $uri (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -420,9 +416,7 @@ class OAuthClientsApi
     /**
      * Operation createOAuthApp
      *
-     * Create OAuth App
-     *
-     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app OAuth App (required)
+     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app o_auth_app (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -437,9 +431,7 @@ class OAuthClientsApi
     /**
      * Operation createOAuthAppWithHttpInfo
      *
-     * Create OAuth App
-     *
-     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app OAuth App (required)
+     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -515,9 +507,9 @@ class OAuthClientsApi
     /**
      * Operation createOAuthAppAsync
      *
-     * Create OAuth App
+     * 
      *
-     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app OAuth App (required)
+     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -536,9 +528,9 @@ class OAuthClientsApi
     /**
      * Operation createOAuthAppAsyncWithHttpInfo
      *
-     * Create OAuth App
+     * 
      *
-     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app OAuth App (required)
+     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -575,7 +567,7 @@ class OAuthClientsApi
     /**
      * Create request for operation 'createOAuthApp'
      *
-     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app OAuth App (required)
+     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -694,9 +686,7 @@ class OAuthClientsApi
     /**
      * Operation deleteOAuthApp
      *
-     * Delete OAuth App
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -711,9 +701,7 @@ class OAuthClientsApi
     /**
      * Operation deleteOAuthAppWithHttpInfo
      *
-     * Delete OAuth App
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -789,9 +777,9 @@ class OAuthClientsApi
     /**
      * Operation deleteOAuthAppAsync
      *
-     * Delete OAuth App
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -810,9 +798,9 @@ class OAuthClientsApi
     /**
      * Operation deleteOAuthAppAsyncWithHttpInfo
      *
-     * Delete OAuth App
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -849,7 +837,7 @@ class OAuthClientsApi
     /**
      * Create request for operation 'deleteOAuthApp'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -973,8 +961,6 @@ class OAuthClientsApi
     /**
      * Operation getOAuthApps
      *
-     * Get all OAuth Apps
-     *
      * @param  string $app_id app_id (required)
      * @param  string $oauth_app_name oauth_app_name (optional)
      *
@@ -990,8 +976,6 @@ class OAuthClientsApi
 
     /**
      * Operation getOAuthAppsWithHttpInfo
-     *
-     * Get all OAuth Apps
      *
      * @param  string $app_id (required)
      * @param  string $oauth_app_name (optional)
@@ -1099,7 +1083,7 @@ class OAuthClientsApi
     /**
      * Operation getOAuthAppsAsync
      *
-     * Get all OAuth Apps
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $oauth_app_name (optional)
@@ -1120,7 +1104,7 @@ class OAuthClientsApi
     /**
      * Operation getOAuthAppsAsyncWithHttpInfo
      *
-     * Get all OAuth Apps
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $oauth_app_name (optional)
@@ -1287,9 +1271,7 @@ class OAuthClientsApi
     /**
      * Operation getOAuthClientByClientId
      *
-     * Get OAuth App by identifier
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1305,9 +1287,7 @@ class OAuthClientsApi
     /**
      * Operation getOAuthClientByClientIdWithHttpInfo
      *
-     * Get OAuth App by identifier
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1413,9 +1393,9 @@ class OAuthClientsApi
     /**
      * Operation getOAuthClientByClientIdAsync
      *
-     * Get OAuth App by identifier
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1434,9 +1414,9 @@ class OAuthClientsApi
     /**
      * Operation getOAuthClientByClientIdAsyncWithHttpInfo
      *
-     * Get OAuth App by identifier
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1487,7 +1467,7 @@ class OAuthClientsApi
     /**
      * Create request for operation 'getOAuthClientByClientId'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1611,9 +1591,7 @@ class OAuthClientsApi
     /**
      * Operation getOAuthClientSecret
      *
-     * Get OAuth App secret key
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1629,9 +1607,7 @@ class OAuthClientsApi
     /**
      * Operation getOAuthClientSecretWithHttpInfo
      *
-     * Get OAuth App secret key
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1737,9 +1713,9 @@ class OAuthClientsApi
     /**
      * Operation getOAuthClientSecretAsync
      *
-     * Get OAuth App secret key
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1758,9 +1734,9 @@ class OAuthClientsApi
     /**
      * Operation getOAuthClientSecretAsyncWithHttpInfo
      *
-     * Get OAuth App secret key
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1811,7 +1787,7 @@ class OAuthClientsApi
     /**
      * Create request for operation 'getOAuthClientSecret'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1935,9 +1911,7 @@ class OAuthClientsApi
     /**
      * Operation getOauthAccessToken
      *
-     * Get OAuth access token for App
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1953,9 +1927,7 @@ class OAuthClientsApi
     /**
      * Operation getOauthAccessTokenWithHttpInfo
      *
-     * Get OAuth access token for App
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -2053,9 +2025,9 @@ class OAuthClientsApi
     /**
      * Operation getOauthAccessTokenAsync
      *
-     * Get OAuth access token for App
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -2074,9 +2046,9 @@ class OAuthClientsApi
     /**
      * Operation getOauthAccessTokenAsyncWithHttpInfo
      *
-     * Get OAuth access token for App
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -2127,7 +2099,7 @@ class OAuthClientsApi
     /**
      * Create request for operation 'getOauthAccessToken'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -2251,9 +2223,7 @@ class OAuthClientsApi
     /**
      * Operation getRedirectUris
      *
-     * Get OAuth App redirect uris
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -2269,9 +2239,7 @@ class OAuthClientsApi
     /**
      * Operation getRedirectUrisWithHttpInfo
      *
-     * Get OAuth App redirect uris
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -2369,9 +2337,9 @@ class OAuthClientsApi
     /**
      * Operation getRedirectUrisAsync
      *
-     * Get OAuth App redirect uris
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -2390,9 +2358,9 @@ class OAuthClientsApi
     /**
      * Operation getRedirectUrisAsyncWithHttpInfo
      *
-     * Get OAuth App redirect uris
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -2443,7 +2411,7 @@ class OAuthClientsApi
     /**
      * Create request for operation 'getRedirectUris'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -2860,10 +2828,8 @@ class OAuthClientsApi
     /**
      * Operation removeRedirectUri
      *
-     * Delete OAuth App redirect uri
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  int $uri_id Redirect uri identifier (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  int $uri_id uri_id (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -2878,10 +2844,8 @@ class OAuthClientsApi
     /**
      * Operation removeRedirectUriWithHttpInfo
      *
-     * Delete OAuth App redirect uri
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  int $uri_id Redirect uri identifier (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $uri_id (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -2957,10 +2921,10 @@ class OAuthClientsApi
     /**
      * Operation removeRedirectUriAsync
      *
-     * Delete OAuth App redirect uri
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  int $uri_id Redirect uri identifier (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $uri_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -2979,10 +2943,10 @@ class OAuthClientsApi
     /**
      * Operation removeRedirectUriAsyncWithHttpInfo
      *
-     * Delete OAuth App redirect uri
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  int $uri_id Redirect uri identifier (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $uri_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -3019,8 +2983,8 @@ class OAuthClientsApi
     /**
      * Create request for operation 'removeRedirectUri'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  int $uri_id Redirect uri identifier (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $uri_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -3158,10 +3122,8 @@ class OAuthClientsApi
     /**
      * Operation updateOAuthApp
      *
-     * Update OAuth App
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app OAuth App (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app o_auth_app (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -3176,10 +3138,8 @@ class OAuthClientsApi
     /**
      * Operation updateOAuthAppWithHttpInfo
      *
-     * Update OAuth App
-     *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app OAuth App (required)
+     * @param  string $oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -3255,10 +3215,10 @@ class OAuthClientsApi
     /**
      * Operation updateOAuthAppAsync
      *
-     * Update OAuth App
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app OAuth App (required)
+     * @param  string $oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -3277,10 +3237,10 @@ class OAuthClientsApi
     /**
      * Operation updateOAuthAppAsyncWithHttpInfo
      *
-     * Update OAuth App
+     * 
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app OAuth App (required)
+     * @param  string $oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -3317,8 +3277,8 @@ class OAuthClientsApi
     /**
      * Create request for operation 'updateOAuthApp'
      *
-     * @param  string $oauth_app_id OAuth App identifier (required)
-     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app OAuth App (required)
+     * @param  string $oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\OAuthApp $o_auth_app (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException

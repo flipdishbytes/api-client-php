@@ -4,23 +4,23 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAppConfigSalesChannel**](MobileAppsApi.md#getAppConfigSalesChannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | Get sales channel configuration
-[**getStatistics**](MobileAppsApi.md#getStatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
-[**getSubmissionDetails**](MobileAppsApi.md#getSubmissionDetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | Get submission details mobile apps
-[**getSubmissionStatus**](MobileAppsApi.md#getSubmissionStatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Get submission status mobile apps
-[**publish**](MobileAppsApi.md#publish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/publish | Publish mobile apps
-[**resubmission**](MobileAppsApi.md#resubmission) | **POST** /api/v1.0/mobileapps/{appId}/resubmission | Re-submission form mobile apps
-[**submission**](MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
-[**unpublish**](MobileAppsApi.md#unpublish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/unpublish | Unpublish mobile apps
-[**updateAppConfigSalesChannel**](MobileAppsApi.md#updateAppConfigSalesChannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
-[**updateSubmissionStatus**](MobileAppsApi.md#updateSubmissionStatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Update submission status
-[**uploadImage**](MobileAppsApi.md#uploadImage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | Upload image mobile apps
+[**getAppConfigSalesChannel**](MobileAppsApi.md#getAppConfigSalesChannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | 
+[**getStatistics**](MobileAppsApi.md#getStatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | 
+[**getSubmissionDetails**](MobileAppsApi.md#getSubmissionDetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | 
+[**getSubmissionStatus**](MobileAppsApi.md#getSubmissionStatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | 
+[**publish**](MobileAppsApi.md#publish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/publish | 
+[**resubmission**](MobileAppsApi.md#resubmission) | **POST** /api/v1.0/mobileapps/{appId}/resubmission | 
+[**submission**](MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | 
+[**unpublish**](MobileAppsApi.md#unpublish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/unpublish | 
+[**updateAppConfigSalesChannel**](MobileAppsApi.md#updateAppConfigSalesChannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | 
+[**updateSubmissionStatus**](MobileAppsApi.md#updateSubmissionStatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | 
+[**uploadImage**](MobileAppsApi.md#uploadImage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | 
 
 
 # **getAppConfigSalesChannel**
 > \Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel getAppConfigSalesChannel($app_id)
 
-Get sales channel configuration
+
 
 ### Example
 ```php
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 # **getStatistics**
 > \Flipdish\\Client\Models\RestApiArrayResultMobileAppsStatistics getStatistics($app_id, $platform_types)
 
-Get statistics mobile apps
+
 
 ### Example
 ```php
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 # **getSubmissionDetails**
 > \Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionDetails getSubmissionDetails($app_id)
 
-Get submission details mobile apps
+
 
 ### Example
 ```php
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 # **getSubmissionStatus**
 > \Flipdish\\Client\Models\RestApiResultMobileAppsSubmissionStatus getSubmissionStatus($app_id, $submission_id)
 
-Get submission status mobile apps
+
 
 ### Example
 ```php
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 # **publish**
 > \Flipdish\\Client\Models\RestApiResultRestApiIntegerResult publish($app_id, $submission_id, $platform_type)
 
-Publish mobile apps
+
 
 ### Example
 ```php
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 # **resubmission**
 > \Flipdish\\Client\Models\RestApiResultMobileAppsSubmission resubmission($app_id, $mobile_apps_submission)
 
-Re-submission form mobile apps
+
 
 ### Example
 ```php
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 # **submission**
 > \Flipdish\\Client\Models\RestApiResultMobileAppsSubmission submission($app_id, $mobile_apps_submission)
 
-Submission form mobile apps
+
 
 ### Example
 ```php
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 # **unpublish**
 > \Flipdish\\Client\Models\RestApiIntegerResult unpublish($app_id, $submission_id, $platform_type)
 
-Unpublish mobile apps
+
 
 ### Example
 ```php
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 # **updateAppConfigSalesChannel**
 > \Flipdish\\Client\Models\RestApiResultAppConfigSalesChannel updateAppConfigSalesChannel($app_id, $app_config_sales_channel)
 
-Update the application sales channel configuration
+
 
 ### Example
 ```php
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 # **updateSubmissionStatus**
 > \Flipdish\\Client\Models\RestApiResultUpdateMobileAppsSubmissionStatus updateSubmissionStatus($app_id, $submission_id, $update_submission_status)
 
-Update submission status
+
 
 ### Example
 ```php
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 # **uploadImage**
 > \Flipdish\\Client\Models\RestApiResultMobileAppsImage uploadImage($app_id, $image)
 
-Upload image mobile apps
+
 
 ### Example
 ```php

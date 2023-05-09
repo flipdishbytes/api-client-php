@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get**](OrderBatchingConfigurationApi.md#get) | **GET** /api/v1.0/stores/{storeId}/order-batching-configuration | Returns order batching configuration for a specific store
-[**post**](OrderBatchingConfigurationApi.md#post) | **POST** /api/v1.0/stores/{storeId}/order-batching-configuration | Sets order batching configuration for a specific store
+[**get**](OrderBatchingConfigurationApi.md#get) | **GET** /api/v1.0/stores/{storeId}/order-batching-configuration | 
+[**post**](OrderBatchingConfigurationApi.md#post) | **POST** /api/v1.0/stores/{storeId}/order-batching-configuration | 
 
 
 # **get**
 > \Flipdish\\Client\Models\RestApiResultOrderBatchingConfiguration get($store_id)
 
-Returns order batching configuration for a specific store
+
 
 ### Example
 ```php
@@ -27,7 +27,7 @@ $apiInstance = new Flipdish\\Client\Api\OrderBatchingConfigurationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store Id
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->get($store_id);
@@ -42,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store Id |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 # **post**
 > post($store_id, $set_order_batching_configuration)
 
-Sets order batching configuration for a specific store
+
 
 ### Example
 ```php
@@ -78,8 +78,8 @@ $apiInstance = new Flipdish\\Client\Api\OrderBatchingConfigurationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store Id
-$set_order_batching_configuration = new \Flipdish\\Client\Models\SetOrderBatchingConfiguration(); // \Flipdish\\Client\Models\SetOrderBatchingConfiguration | SetOrderBatchingConfiguration
+$store_id = 56; // int | 
+$set_order_batching_configuration = new \Flipdish\\Client\Models\SetOrderBatchingConfiguration(); // \Flipdish\\Client\Models\SetOrderBatchingConfiguration | 
 
 try {
     $apiInstance->post($store_id, $set_order_batching_configuration);
@@ -93,8 +93,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store Id |
- **set_order_batching_configuration** | [**\Flipdish\\Client\Models\SetOrderBatchingConfiguration**](../Model/SetOrderBatchingConfiguration.md)| SetOrderBatchingConfiguration |
+ **store_id** | **int**|  |
+ **set_order_batching_configuration** | [**\Flipdish\\Client\Models\SetOrderBatchingConfiguration**](../Model/SetOrderBatchingConfiguration.md)|  |
 
 ### Return type
 

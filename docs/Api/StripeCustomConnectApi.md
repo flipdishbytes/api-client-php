@@ -4,21 +4,21 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createBankAccountAndConnectedAccount**](StripeCustomConnectApi.md#createBankAccountAndConnectedAccount) | **POST** /api/v1.0/{appId}/customconnect/bank-account | Create a new Bank Account and Stripe connected account
-[**createStripeConnectedAccount**](StripeCustomConnectApi.md#createStripeConnectedAccount) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account | Create or update a Stripe connected account associated with the bank account of bankAccountId
-[**createStripeConnectedAccountLink**](StripeCustomConnectApi.md#createStripeConnectedAccountLink) | **POST** /api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link | Gets a single-use Stripe URL for the given account
-[**getCustomConnect**](StripeCustomConnectApi.md#getCustomConnect) | **GET** /api/v1.0/{appId}/customconnect/{storeId} | Gets a list of stripe custom connect ids information
-[**getVerificationStatus**](StripeCustomConnectApi.md#getVerificationStatus) | **GET** /api/v1.0/{appId}/customconnect/verification-status | Gets the current verification status of the given connected account
-[**setBankAccountBusinessType**](StripeCustomConnectApi.md#setBankAccountBusinessType) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | Update bank account&#39;s BusinessType and create a Stripe Connected Account
+[**createBankAccountAndConnectedAccount**](StripeCustomConnectApi.md#createBankAccountAndConnectedAccount) | **POST** /api/v1.0/{appId}/customconnect/bank-account | 
+[**createStripeConnectedAccount**](StripeCustomConnectApi.md#createStripeConnectedAccount) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account | 
+[**createStripeConnectedAccountLink**](StripeCustomConnectApi.md#createStripeConnectedAccountLink) | **POST** /api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link | 
+[**getCustomConnect**](StripeCustomConnectApi.md#getCustomConnect) | **GET** /api/v1.0/{appId}/customconnect/{storeId} | 
+[**getVerificationStatus**](StripeCustomConnectApi.md#getVerificationStatus) | **GET** /api/v1.0/{appId}/customconnect/verification-status | 
+[**setBankAccountBusinessType**](StripeCustomConnectApi.md#setBankAccountBusinessType) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | 
 [**stripeCustomConnectRefresh**](StripeCustomConnectApi.md#stripeCustomConnectRefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
-[**updateBankAccountDetails**](StripeCustomConnectApi.md#updateBankAccountDetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | Update bank account details
-[**updatePayoutSchedule**](StripeCustomConnectApi.md#updatePayoutSchedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | Update Stripe Connection Account&#39;s payout schedule
+[**updateBankAccountDetails**](StripeCustomConnectApi.md#updateBankAccountDetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | 
+[**updatePayoutSchedule**](StripeCustomConnectApi.md#updatePayoutSchedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | 
 
 
 # **createBankAccountAndConnectedAccount**
 > \Flipdish\\Client\Models\RestApiResultBankAccountDetail createBankAccountAndConnectedAccount($app_id, $account)
 
-Create a new Bank Account and Stripe connected account
+
 
 ### Example
 ```php
@@ -34,8 +34,8 @@ $apiInstance = new Flipdish\\Client\Api\StripeCustomConnectApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name
-$account = new \Flipdish\\Client\Models\BankAccountCreate(); // \Flipdish\\Client\Models\BankAccountCreate | Account to be created
+$app_id = "app_id_example"; // string | 
+$account = new \Flipdish\\Client\Models\BankAccountCreate(); // \Flipdish\\Client\Models\BankAccountCreate | 
 
 try {
     $result = $apiInstance->createBankAccountAndConnectedAccount($app_id, $account);
@@ -50,8 +50,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name |
- **account** | [**\Flipdish\\Client\Models\BankAccountCreate**](../Model/BankAccountCreate.md)| Account to be created |
+ **app_id** | **string**|  |
+ **account** | [**\Flipdish\\Client\Models\BankAccountCreate**](../Model/BankAccountCreate.md)|  |
 
 ### Return type
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 # **createStripeConnectedAccount**
 > \Flipdish\\Client\Models\RestApiResultStripeConnectedAccount createStripeConnectedAccount($app_id, $bank_account_id)
 
-Create or update a Stripe connected account associated with the bank account of bankAccountId
+
 
 ### Example
 ```php
@@ -87,8 +87,8 @@ $apiInstance = new Flipdish\\Client\Api\StripeCustomConnectApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$bank_account_id = 56; // int | Bank Account Id
+$app_id = "app_id_example"; // string | 
+$bank_account_id = 56; // int | 
 
 try {
     $result = $apiInstance->createStripeConnectedAccount($app_id, $bank_account_id);
@@ -103,8 +103,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **bank_account_id** | **int**| Bank Account Id |
+ **app_id** | **string**|  |
+ **bank_account_id** | **int**|  |
 
 ### Return type
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 # **createStripeConnectedAccountLink**
 > \Flipdish\\Client\Models\RestApiResultStripeConnectedAccount createStripeConnectedAccountLink($app_id, $stripe_connected_account_id, $stripe_account_link_request)
 
-Gets a single-use Stripe URL for the given account
+
 
 ### Example
 ```php
@@ -140,8 +140,8 @@ $apiInstance = new Flipdish\\Client\Api\StripeCustomConnectApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name
-$stripe_connected_account_id = "stripe_connected_account_id_example"; // string | Stripe Connected Account Id
+$app_id = "app_id_example"; // string | 
+$stripe_connected_account_id = "stripe_connected_account_id_example"; // string | 
 $stripe_account_link_request = new \Flipdish\\Client\Models\StripeAccountLinkRequest(); // \Flipdish\\Client\Models\StripeAccountLinkRequest | 
 
 try {
@@ -157,8 +157,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name |
- **stripe_connected_account_id** | **string**| Stripe Connected Account Id |
+ **app_id** | **string**|  |
+ **stripe_connected_account_id** | **string**|  |
  **stripe_account_link_request** | [**\Flipdish\\Client\Models\StripeAccountLinkRequest**](../Model/StripeAccountLinkRequest.md)|  |
 
 ### Return type
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 # **getCustomConnect**
 > \Flipdish\\Client\Models\RestApiArrayResultStripeCustomConnectedAccount getCustomConnect($store_id, $app_id)
 
-Gets a list of stripe custom connect ids information
+
 
 ### Example
 ```php
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 # **getVerificationStatus**
 > \Flipdish\\Client\Models\RestApiResultStripeConnectedAccount getVerificationStatus($app_id, $stripe_connected_account_id)
 
-Gets the current verification status of the given connected account
+
 
 ### Example
 ```php
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 # **setBankAccountBusinessType**
 > \Flipdish\\Client\Models\RestApiResultBankAccountDetail setBankAccountBusinessType($app_id, $bank_account_id, $business_type)
 
-Update bank account's BusinessType and create a Stripe Connected Account
+
 
 ### Example
 ```php
@@ -301,9 +301,9 @@ $apiInstance = new Flipdish\\Client\Api\StripeCustomConnectApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name
-$bank_account_id = 56; // int | Bank Account Id
-$business_type = "business_type_example"; // string | Bank Account business type
+$app_id = "app_id_example"; // string | 
+$bank_account_id = 56; // int | 
+$business_type = "business_type_example"; // string | 
 
 try {
     $result = $apiInstance->setBankAccountBusinessType($app_id, $bank_account_id, $business_type);
@@ -318,9 +318,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name |
- **bank_account_id** | **int**| Bank Account Id |
- **business_type** | **string**| Bank Account business type |
+ **app_id** | **string**|  |
+ **bank_account_id** | **int**|  |
+ **business_type** | **string**|  |
 
 ### Return type
 
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 # **updateBankAccountDetails**
 > \Flipdish\\Client\Models\RestApiResultStripeConnectedAccount updateBankAccountDetails($app_id, $bank_account_id, $update_request)
 
-Update bank account details
+
 
 ### Example
 ```php
@@ -409,9 +409,9 @@ $apiInstance = new Flipdish\\Client\Api\StripeCustomConnectApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$bank_account_id = 56; // int | Bank Account Id
-$update_request = new \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest(); // \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest | fields to be updated
+$app_id = "app_id_example"; // string | 
+$bank_account_id = 56; // int | 
+$update_request = new \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest(); // \Flipdish\\Client\Models\BankAccountDetailsUpdateRequest | 
 
 try {
     $result = $apiInstance->updateBankAccountDetails($app_id, $bank_account_id, $update_request);
@@ -426,9 +426,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **bank_account_id** | **int**| Bank Account Id |
- **update_request** | [**\Flipdish\\Client\Models\BankAccountDetailsUpdateRequest**](../Model/BankAccountDetailsUpdateRequest.md)| fields to be updated |
+ **app_id** | **string**|  |
+ **bank_account_id** | **int**|  |
+ **update_request** | [**\Flipdish\\Client\Models\BankAccountDetailsUpdateRequest**](../Model/BankAccountDetailsUpdateRequest.md)|  |
 
 ### Return type
 
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 # **updatePayoutSchedule**
 > \Flipdish\\Client\Models\RestApiResultModelBase updatePayoutSchedule($app_id, $stripe_connected_account_id, $interval)
 
-Update Stripe Connection Account's payout schedule
+
 
 ### Example
 ```php

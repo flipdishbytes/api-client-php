@@ -90,11 +90,9 @@ class BankAccountApi
     /**
      * Operation attachBankAccountToStore
      *
-     * [PRIVATE API] Attach Bank Account to Store
-     *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  int $store_id Store to be attached to Bank account (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,11 +106,9 @@ class BankAccountApi
     /**
      * Operation attachBankAccountToStoreWithHttpInfo
      *
-     * [PRIVATE API] Attach Bank Account to Store
-     *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  int $store_id Store to be attached to Bank account (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -187,11 +183,11 @@ class BankAccountApi
     /**
      * Operation attachBankAccountToStoreAsync
      *
-     * [PRIVATE API] Attach Bank Account to Store
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  int $store_id Store to be attached to Bank account (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -209,11 +205,11 @@ class BankAccountApi
     /**
      * Operation attachBankAccountToStoreAsyncWithHttpInfo
      *
-     * [PRIVATE API] Attach Bank Account to Store
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  int $store_id Store to be attached to Bank account (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -249,9 +245,9 @@ class BankAccountApi
     /**
      * Create request for operation 'attachBankAccountToStore'
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  int $store_id Store to be attached to Bank account (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -388,10 +384,8 @@ class BankAccountApi
     /**
      * Operation createBankAccount
      *
-     * Create a new Bank Account and attach to this App
-     *
-     * @param  string $app_id App Name (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Account to be created (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account account (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -406,10 +400,8 @@ class BankAccountApi
     /**
      * Operation createBankAccountWithHttpInfo
      *
-     * Create a new Bank Account and attach to this App
-     *
-     * @param  string $app_id App Name (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Account to be created (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -506,10 +498,10 @@ class BankAccountApi
     /**
      * Operation createBankAccountAsync
      *
-     * Create a new Bank Account and attach to this App
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Account to be created (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -527,10 +519,10 @@ class BankAccountApi
     /**
      * Operation createBankAccountAsyncWithHttpInfo
      *
-     * Create a new Bank Account and attach to this App
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Account to be created (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -580,8 +572,8 @@ class BankAccountApi
     /**
      * Create request for operation 'createBankAccount'
      *
-     * @param  string $app_id App Name (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Account to be created (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -699,10 +691,8 @@ class BankAccountApi
     /**
      * Operation deleteBankAccount
      *
-     * Delete BankAccount
-     *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be marked as deleted (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -716,10 +706,8 @@ class BankAccountApi
     /**
      * Operation deleteBankAccountWithHttpInfo
      *
-     * Delete BankAccount
-     *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be marked as deleted (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -794,10 +782,10 @@ class BankAccountApi
     /**
      * Operation deleteBankAccountAsync
      *
-     * Delete BankAccount
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be marked as deleted (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -815,10 +803,10 @@ class BankAccountApi
     /**
      * Operation deleteBankAccountAsyncWithHttpInfo
      *
-     * Delete BankAccount
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be marked as deleted (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -854,8 +842,8 @@ class BankAccountApi
     /**
      * Create request for operation 'deleteBankAccount'
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be marked as deleted (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -978,9 +966,7 @@ class BankAccountApi
     /**
      * Operation getBankAccountById
      *
-     * Get BankAccount Detail by Id
-     *
-     * @param  int $bank_account_id Id of account (required)
+     * @param  int $bank_account_id bank_account_id (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -996,9 +982,7 @@ class BankAccountApi
     /**
      * Operation getBankAccountByIdWithHttpInfo
      *
-     * Get BankAccount Detail by Id
-     *
-     * @param  int $bank_account_id Id of account (required)
+     * @param  int $bank_account_id (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1096,9 +1080,9 @@ class BankAccountApi
     /**
      * Operation getBankAccountByIdAsync
      *
-     * Get BankAccount Detail by Id
+     * 
      *
-     * @param  int $bank_account_id Id of account (required)
+     * @param  int $bank_account_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1117,9 +1101,9 @@ class BankAccountApi
     /**
      * Operation getBankAccountByIdAsyncWithHttpInfo
      *
-     * Get BankAccount Detail by Id
+     * 
      *
-     * @param  int $bank_account_id Id of account (required)
+     * @param  int $bank_account_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1170,7 +1154,7 @@ class BankAccountApi
     /**
      * Create request for operation 'getBankAccountById'
      *
-     * @param  int $bank_account_id Id of account (required)
+     * @param  int $bank_account_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1294,9 +1278,7 @@ class BankAccountApi
     /**
      * Operation getBankAccounts
      *
-     * Get List of BankAccounts for WL
-     *
-     * @param  string $app_id App Name (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1311,9 +1293,7 @@ class BankAccountApi
     /**
      * Operation getBankAccountsWithHttpInfo
      *
-     * Get List of BankAccounts for WL
-     *
-     * @param  string $app_id App Name (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1410,9 +1390,9 @@ class BankAccountApi
     /**
      * Operation getBankAccountsAsync
      *
-     * Get List of BankAccounts for WL
+     * 
      *
-     * @param  string $app_id App Name (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1430,9 +1410,9 @@ class BankAccountApi
     /**
      * Operation getBankAccountsAsyncWithHttpInfo
      *
-     * Get List of BankAccounts for WL
+     * 
      *
-     * @param  string $app_id App Name (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1482,7 +1462,7 @@ class BankAccountApi
     /**
      * Create request for operation 'getBankAccounts'
      *
-     * @param  string $app_id App Name (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1591,8 +1571,6 @@ class BankAccountApi
     /**
      * Operation getCountriesWithFieldDefinitions
      *
-     * Get bank account fields definitions
-     *
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1607,8 +1585,6 @@ class BankAccountApi
 
     /**
      * Operation getCountriesWithFieldDefinitionsWithHttpInfo
-     *
-     * Get bank account fields definitions
      *
      * @param  string $app_id (required)
      *
@@ -1707,7 +1683,7 @@ class BankAccountApi
     /**
      * Operation getCountriesWithFieldDefinitionsAsync
      *
-     * Get bank account fields definitions
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -1727,7 +1703,7 @@ class BankAccountApi
     /**
      * Operation getCountriesWithFieldDefinitionsAsyncWithHttpInfo
      *
-     * Get bank account fields definitions
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -1888,8 +1864,6 @@ class BankAccountApi
     /**
      * Operation getFieldDefinitions
      *
-     * Get bank account fields definitions
-     *
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1904,8 +1878,6 @@ class BankAccountApi
 
     /**
      * Operation getFieldDefinitionsWithHttpInfo
-     *
-     * Get bank account fields definitions
      *
      * @param  string $app_id (required)
      *
@@ -2004,7 +1976,7 @@ class BankAccountApi
     /**
      * Operation getFieldDefinitionsAsync
      *
-     * Get bank account fields definitions
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -2024,7 +1996,7 @@ class BankAccountApi
     /**
      * Operation getFieldDefinitionsAsyncWithHttpInfo
      *
-     * Get bank account fields definitions
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -2185,11 +2157,9 @@ class BankAccountApi
     /**
      * Operation updateBankAccount
      *
-     * Update BankAccount
-     *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Details to update account with (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account account (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2203,11 +2173,9 @@ class BankAccountApi
     /**
      * Operation updateBankAccountWithHttpInfo
      *
-     * Update BankAccount
-     *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Details to update account with (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2282,11 +2250,11 @@ class BankAccountApi
     /**
      * Operation updateBankAccountAsync
      *
-     * Update BankAccount
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Details to update account with (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2304,11 +2272,11 @@ class BankAccountApi
     /**
      * Operation updateBankAccountAsyncWithHttpInfo
      *
-     * Update BankAccount
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Details to update account with (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2344,9 +2312,9 @@ class BankAccountApi
     /**
      * Create request for operation 'updateBankAccount'
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  \Flipdish\\Client\Models\BankAccountCreate $account Details to update account with (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  \Flipdish\\Client\Models\BankAccountCreate $account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2478,12 +2446,10 @@ class BankAccountApi
     /**
      * Operation updateBankAccountState
      *
-     * [PRIVATE API] Update State of Bank Account
-     *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  string $state New state (required)
-     * @param  string $reason Reason for state change, Mandatory for rejections (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  string $state state (required)
+     * @param  string $reason reason (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2497,12 +2463,10 @@ class BankAccountApi
     /**
      * Operation updateBankAccountStateWithHttpInfo
      *
-     * [PRIVATE API] Update State of Bank Account
-     *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  string $state New state (required)
-     * @param  string $reason Reason for state change, Mandatory for rejections (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  string $state (required)
+     * @param  string $reason (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2577,12 +2541,12 @@ class BankAccountApi
     /**
      * Operation updateBankAccountStateAsync
      *
-     * [PRIVATE API] Update State of Bank Account
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  string $state New state (required)
-     * @param  string $reason Reason for state change, Mandatory for rejections (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  string $state (required)
+     * @param  string $reason (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2600,12 +2564,12 @@ class BankAccountApi
     /**
      * Operation updateBankAccountStateAsyncWithHttpInfo
      *
-     * [PRIVATE API] Update State of Bank Account
+     * 
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  string $state New state (required)
-     * @param  string $reason Reason for state change, Mandatory for rejections (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  string $state (required)
+     * @param  string $reason (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2641,10 +2605,10 @@ class BankAccountApi
     /**
      * Create request for operation 'updateBankAccountState'
      *
-     * @param  string $app_id App Name (required)
-     * @param  int $bank_account_id Id of account to be updated (required)
-     * @param  string $state New state (required)
-     * @param  string $reason Reason for state change, Mandatory for rejections (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  string $state (required)
+     * @param  string $reason (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

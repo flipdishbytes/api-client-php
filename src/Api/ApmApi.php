@@ -90,9 +90,7 @@ class ApmApi
     /**
      * Operation getApmStatus
      *
-     * [PRIVATE API] Returns true if APM is enabled on at least one store in an application
-     *
-     * @param  string $app_id App Id (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,9 +105,7 @@ class ApmApi
     /**
      * Operation getApmStatusWithHttpInfo
      *
-     * [PRIVATE API] Returns true if APM is enabled on at least one store in an application
-     *
-     * @param  string $app_id App Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -206,9 +202,9 @@ class ApmApi
     /**
      * Operation getApmStatusAsync
      *
-     * [PRIVATE API] Returns true if APM is enabled on at least one store in an application
+     * 
      *
-     * @param  string $app_id App Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -226,9 +222,9 @@ class ApmApi
     /**
      * Operation getApmStatusAsyncWithHttpInfo
      *
-     * [PRIVATE API] Returns true if APM is enabled on at least one store in an application
+     * 
      *
-     * @param  string $app_id App Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -278,7 +274,7 @@ class ApmApi
     /**
      * Create request for operation 'getApmStatus'
      *
-     * @param  string $app_id App Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -387,10 +383,8 @@ class ApmApi
     /**
      * Operation getBasicStatistics
      *
-     * [PRIVATE API] Get Basic Statistics
-     *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int[] $store_id store_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -405,10 +399,8 @@ class ApmApi
     /**
      * Operation getBasicStatisticsWithHttpInfo
      *
-     * [PRIVATE API] Get Basic Statistics
-     *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  int[] $store_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -505,10 +497,10 @@ class ApmApi
     /**
      * Operation getBasicStatisticsAsync
      *
-     * [PRIVATE API] Get Basic Statistics
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -526,10 +518,10 @@ class ApmApi
     /**
      * Operation getBasicStatisticsAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get Basic Statistics
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -579,8 +571,8 @@ class ApmApi
     /**
      * Create request for operation 'getBasicStatistics'
      *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -696,10 +688,8 @@ class ApmApi
     /**
      * Operation getCalendarWeekStatistics
      *
-     * [PRIVATE API] Get Calendar statistics
-     *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int[] $store_id store_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -714,10 +704,8 @@ class ApmApi
     /**
      * Operation getCalendarWeekStatisticsWithHttpInfo
      *
-     * [PRIVATE API] Get Calendar statistics
-     *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  int[] $store_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -814,10 +802,10 @@ class ApmApi
     /**
      * Operation getCalendarWeekStatisticsAsync
      *
-     * [PRIVATE API] Get Calendar statistics
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -835,10 +823,10 @@ class ApmApi
     /**
      * Operation getCalendarWeekStatisticsAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get Calendar statistics
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -888,8 +876,8 @@ class ApmApi
     /**
      * Create request for operation 'getCalendarWeekStatistics'
      *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1005,12 +993,10 @@ class ApmApi
     /**
      * Operation getCallsStatistics
      *
-     * [PRIVATE API] Get Calls Statistics
-     *
-     * @param  string $app_id App Id (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id app_id (required)
+     * @param  string $aggregate_data_by aggregate_data_by (required)
+     * @param  int $data_point_limit data_point_limit (optional)
+     * @param  int[] $store_id store_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1025,12 +1011,10 @@ class ApmApi
     /**
      * Operation getCallsStatisticsWithHttpInfo
      *
-     * [PRIVATE API] Get Calls Statistics
-     *
-     * @param  string $app_id App Id (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  string $aggregate_data_by (required)
+     * @param  int $data_point_limit (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1127,12 +1111,12 @@ class ApmApi
     /**
      * Operation getCallsStatisticsAsync
      *
-     * [PRIVATE API] Get Calls Statistics
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  string $aggregate_data_by (required)
+     * @param  int $data_point_limit (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1150,12 +1134,12 @@ class ApmApi
     /**
      * Operation getCallsStatisticsAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get Calls Statistics
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  string $aggregate_data_by (required)
+     * @param  int $data_point_limit (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1205,10 +1189,10 @@ class ApmApi
     /**
      * Create request for operation 'getCallsStatistics'
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  string $aggregate_data_by (required)
+     * @param  int $data_point_limit (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1342,12 +1326,10 @@ class ApmApi
     /**
      * Operation getOrderStatistics
      *
-     * [PRIVATE API] Get Order Statistics (Value of Orders)
-     *
-     * @param  string $app_id App Id (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id app_id (required)
+     * @param  string $aggregate_data_by aggregate_data_by (required)
+     * @param  int $data_point_limit data_point_limit (optional)
+     * @param  int[] $store_id store_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1362,12 +1344,10 @@ class ApmApi
     /**
      * Operation getOrderStatisticsWithHttpInfo
      *
-     * [PRIVATE API] Get Order Statistics (Value of Orders)
-     *
-     * @param  string $app_id App Id (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  string $aggregate_data_by (required)
+     * @param  int $data_point_limit (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1464,12 +1444,12 @@ class ApmApi
     /**
      * Operation getOrderStatisticsAsync
      *
-     * [PRIVATE API] Get Order Statistics (Value of Orders)
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  string $aggregate_data_by (required)
+     * @param  int $data_point_limit (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1487,12 +1467,12 @@ class ApmApi
     /**
      * Operation getOrderStatisticsAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get Order Statistics (Value of Orders)
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  string $aggregate_data_by (required)
+     * @param  int $data_point_limit (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1542,10 +1522,10 @@ class ApmApi
     /**
      * Create request for operation 'getOrderStatistics'
      *
-     * @param  string $app_id App Id (required)
-     * @param  string $aggregate_data_by Aggregate data by day \\ week (required)
-     * @param  int $data_point_limit Amount of data points per request (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  string $aggregate_data_by (required)
+     * @param  int $data_point_limit (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1679,12 +1659,10 @@ class ApmApi
     /**
      * Operation getPaginatedCallList
      *
-     * [PRIVATE API] Get paginated APM call list
-     *
-     * @param  string $app_id App Id (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
+     * @param  int[] $store_id store_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1699,12 +1677,10 @@ class ApmApi
     /**
      * Operation getPaginatedCallListWithHttpInfo
      *
-     * [PRIVATE API] Get paginated APM call list
-     *
-     * @param  string $app_id App Id (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1801,12 +1777,12 @@ class ApmApi
     /**
      * Operation getPaginatedCallListAsync
      *
-     * [PRIVATE API] Get paginated APM call list
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1824,12 +1800,12 @@ class ApmApi
     /**
      * Operation getPaginatedCallListAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get paginated APM call list
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1879,10 +1855,10 @@ class ApmApi
     /**
      * Create request for operation 'getPaginatedCallList'
      *
-     * @param  string $app_id App Id (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  int[] $store_id List of stores to search by (optional)
+     * @param  string $app_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

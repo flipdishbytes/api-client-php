@@ -74,7 +74,7 @@ class StripeCustomConnectAdminApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for initializeBankAccountConnectedAccount
      *
-     * Create a new Bank Account and Stripe connected account.
+     * .
      *
      */
     public function testInitializeBankAccountConnectedAccount()

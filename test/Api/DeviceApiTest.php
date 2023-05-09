@@ -74,7 +74,7 @@ class DeviceApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for assignDevice
      *
-     * Assign device to AppId. Device must have been enrolled before.
+     * .
      *
      */
     public function testAssignDevice()
@@ -84,7 +84,7 @@ class DeviceApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for enrollDevice
      *
-     * Enroll a new device - this returns a PIN code for actually assigning it later.
+     * .
      *
      */
     public function testEnrollDevice()
@@ -94,7 +94,7 @@ class DeviceApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getDeviceDetails
      *
-     * Get details for a device by model and deviceid.
+     * .
      *
      */
     public function testGetDeviceDetails()
@@ -104,7 +104,7 @@ class DeviceApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for searchDevices
      *
-     * Search devices by AppId and optionally storeId.
+     * .
      *
      */
     public function testSearchDevices()

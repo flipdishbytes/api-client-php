@@ -90,10 +90,8 @@ class TeammatesApi
     /**
      * Operation createTeammate
      *
-     * Create teammate and send an invite.
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateTeammate $teammate teammate model (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateTeammate $teammate teammate (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class TeammatesApi
     /**
      * Operation createTeammateWithHttpInfo
      *
-     * Create teammate and send an invite.
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateTeammate $teammate teammate model (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateTeammate $teammate (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -208,10 +204,10 @@ class TeammatesApi
     /**
      * Operation createTeammateAsync
      *
-     * Create teammate and send an invite.
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateTeammate $teammate teammate model (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateTeammate $teammate (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -229,10 +225,10 @@ class TeammatesApi
     /**
      * Operation createTeammateAsyncWithHttpInfo
      *
-     * Create teammate and send an invite.
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateTeammate $teammate teammate model (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateTeammate $teammate (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -282,8 +278,8 @@ class TeammatesApi
     /**
      * Create request for operation 'createTeammate'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateTeammate $teammate teammate model (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateTeammate $teammate (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -401,8 +397,6 @@ class TeammatesApi
     /**
      * Operation deleteTeammate
      *
-     * Delete teammate
-     *
      * @param  string $app_id app_id (required)
      * @param  string $id id (required)
      *
@@ -417,8 +411,6 @@ class TeammatesApi
 
     /**
      * Operation deleteTeammateWithHttpInfo
-     *
-     * Delete teammate
      *
      * @param  string $app_id (required)
      * @param  string $id (required)
@@ -496,7 +488,7 @@ class TeammatesApi
     /**
      * Operation deleteTeammateAsync
      *
-     * Delete teammate
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $id (required)
@@ -517,7 +509,7 @@ class TeammatesApi
     /**
      * Operation deleteTeammateAsyncWithHttpInfo
      *
-     * Delete teammate
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $id (required)
@@ -680,8 +672,6 @@ class TeammatesApi
     /**
      * Operation getTeammateByAppIdAndTeammateId
      *
-     * Get a teammates by email address
-     *
      * @param  string $app_id app_id (required)
      * @param  string $id id (required)
      *
@@ -697,8 +687,6 @@ class TeammatesApi
 
     /**
      * Operation getTeammateByAppIdAndTeammateIdWithHttpInfo
-     *
-     * Get a teammates by email address
      *
      * @param  string $app_id (required)
      * @param  string $id (required)
@@ -798,7 +786,7 @@ class TeammatesApi
     /**
      * Operation getTeammateByAppIdAndTeammateIdAsync
      *
-     * Get a teammates by email address
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $id (required)
@@ -819,7 +807,7 @@ class TeammatesApi
     /**
      * Operation getTeammateByAppIdAndTeammateIdAsyncWithHttpInfo
      *
-     * Get a teammates by email address
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $id (required)
@@ -996,8 +984,6 @@ class TeammatesApi
     /**
      * Operation getTeammatesByAppId
      *
-     * Get all teammates
-     *
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1012,8 +998,6 @@ class TeammatesApi
 
     /**
      * Operation getTeammatesByAppIdWithHttpInfo
-     *
-     * Get all teammates
      *
      * @param  string $app_id (required)
      *
@@ -1112,7 +1096,7 @@ class TeammatesApi
     /**
      * Operation getTeammatesByAppIdAsync
      *
-     * Get all teammates
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -1132,7 +1116,7 @@ class TeammatesApi
     /**
      * Operation getTeammatesByAppIdAsyncWithHttpInfo
      *
-     * Get all teammates
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -1293,9 +1277,7 @@ class TeammatesApi
     /**
      * Operation redeemInvitation
      *
-     * Redeem one-time code from invitation
-     *
-     * @param  string $otc  (required)
+     * @param  string $otc otc (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1311,9 +1293,7 @@ class TeammatesApi
     /**
      * Operation redeemInvitationWithHttpInfo
      *
-     * Redeem one-time code from invitation
-     *
-     * @param  string $otc  (required)
+     * @param  string $otc (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1411,9 +1391,9 @@ class TeammatesApi
     /**
      * Operation redeemInvitationAsync
      *
-     * Redeem one-time code from invitation
+     * 
      *
-     * @param  string $otc  (required)
+     * @param  string $otc (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1432,9 +1412,9 @@ class TeammatesApi
     /**
      * Operation redeemInvitationAsyncWithHttpInfo
      *
-     * Redeem one-time code from invitation
+     * 
      *
-     * @param  string $otc  (required)
+     * @param  string $otc (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1485,7 +1465,7 @@ class TeammatesApi
     /**
      * Create request for operation 'redeemInvitation'
      *
-     * @param  string $otc  (required)
+     * @param  string $otc (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1609,11 +1589,9 @@ class TeammatesApi
     /**
      * Operation updateTeammate
      *
-     * Update teammates (this method does not support Deltas!)
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $id teammate identifier (required)
-     * @param  \Flipdish\\Client\Models\TeammateBase $teammate teammate model (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $id id (required)
+     * @param  \Flipdish\\Client\Models\TeammateBase $teammate teammate (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1628,11 +1606,9 @@ class TeammatesApi
     /**
      * Operation updateTeammateWithHttpInfo
      *
-     * Update teammates (this method does not support Deltas!)
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $id teammate identifier (required)
-     * @param  \Flipdish\\Client\Models\TeammateBase $teammate teammate model (required)
+     * @param  string $app_id (required)
+     * @param  string $id (required)
+     * @param  \Flipdish\\Client\Models\TeammateBase $teammate (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1729,11 +1705,11 @@ class TeammatesApi
     /**
      * Operation updateTeammateAsync
      *
-     * Update teammates (this method does not support Deltas!)
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $id teammate identifier (required)
-     * @param  \Flipdish\\Client\Models\TeammateBase $teammate teammate model (required)
+     * @param  string $app_id (required)
+     * @param  string $id (required)
+     * @param  \Flipdish\\Client\Models\TeammateBase $teammate (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1751,11 +1727,11 @@ class TeammatesApi
     /**
      * Operation updateTeammateAsyncWithHttpInfo
      *
-     * Update teammates (this method does not support Deltas!)
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $id teammate identifier (required)
-     * @param  \Flipdish\\Client\Models\TeammateBase $teammate teammate model (required)
+     * @param  string $app_id (required)
+     * @param  string $id (required)
+     * @param  \Flipdish\\Client\Models\TeammateBase $teammate (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1805,9 +1781,9 @@ class TeammatesApi
     /**
      * Create request for operation 'updateTeammate'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $id teammate identifier (required)
-     * @param  \Flipdish\\Client\Models\TeammateBase $teammate teammate model (required)
+     * @param  string $app_id (required)
+     * @param  string $id (required)
+     * @param  \Flipdish\\Client\Models\TeammateBase $teammate (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

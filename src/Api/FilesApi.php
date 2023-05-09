@@ -90,10 +90,8 @@ class FilesApi
     /**
      * Operation downloadFile
      *
-     * Get file from storage
-     *
-     * @param  string $app_id  (required)
-     * @param  string $file_id  (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $file_id file_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class FilesApi
     /**
      * Operation downloadFileWithHttpInfo
      *
-     * Get file from storage
-     *
-     * @param  string $app_id  (required)
-     * @param  string $file_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $file_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -216,10 +212,10 @@ class FilesApi
     /**
      * Operation downloadFileAsync
      *
-     * Get file from storage
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $file_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $file_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -237,10 +233,10 @@ class FilesApi
     /**
      * Operation downloadFileAsyncWithHttpInfo
      *
-     * Get file from storage
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $file_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $file_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -290,8 +286,8 @@ class FilesApi
     /**
      * Create request for operation 'downloadFile'
      *
-     * @param  string $app_id  (required)
-     * @param  string $file_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $file_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

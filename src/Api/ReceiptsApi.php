@@ -90,9 +90,7 @@ class ReceiptsApi
     /**
      * Operation getReceipt
      *
-     * Returns all receipt information for a given orderId
-     *
-     * @param  int $order_id  (required)
+     * @param  int $order_id order_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,9 +105,7 @@ class ReceiptsApi
     /**
      * Operation getReceiptWithHttpInfo
      *
-     * Returns all receipt information for a given orderId
-     *
-     * @param  int $order_id  (required)
+     * @param  int $order_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -198,9 +194,9 @@ class ReceiptsApi
     /**
      * Operation getReceiptAsync
      *
-     * Returns all receipt information for a given orderId
+     * 
      *
-     * @param  int $order_id  (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -218,9 +214,9 @@ class ReceiptsApi
     /**
      * Operation getReceiptAsyncWithHttpInfo
      *
-     * Returns all receipt information for a given orderId
+     * 
      *
-     * @param  int $order_id  (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -270,7 +266,7 @@ class ReceiptsApi
     /**
      * Create request for operation 'getReceipt'
      *
-     * @param  int $order_id  (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

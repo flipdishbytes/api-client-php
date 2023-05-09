@@ -4,22 +4,22 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createLoyaltyCampaign**](CampaignsApi.md#createLoyaltyCampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty | Creates loyalty campaign
-[**createRetentionCampaign**](CampaignsApi.md#createRetentionCampaign) | **POST** /api/v1.0/{appId}/campaigns/retention | Creates retention campaign
-[**getLoyaltyCampaignsForApp**](CampaignsApi.md#getLoyaltyCampaignsForApp) | **GET** /api/v1.0/{appId}/campaigns/loyalty | Gets loyalty campaigns for app
-[**getLoyaltyCampaignsForStore**](CampaignsApi.md#getLoyaltyCampaignsForStore) | **GET** /api/v1.0/{appId}/campaigns/loyalty/{storeId} | Gets loyalty campaigns for store
-[**getRetentionCampaignsForApp**](CampaignsApi.md#getRetentionCampaignsForApp) | **GET** /api/v1.0/{appId}/campaigns/retention | Gets retention campaigns for app
-[**getRetentionCampaignsForStore**](CampaignsApi.md#getRetentionCampaignsForStore) | **GET** /api/v1.0/{appId}/campaigns/retention/{storeId} | Gets retention campaigns for store
-[**getStoreList**](CampaignsApi.md#getStoreList) | **GET** /api/v1.0/{appId}/campaigns/stores | Gets list of stores for app
-[**removeCampaign**](CampaignsApi.md#removeCampaign) | **DELETE** /api/v1.0/{appId}/campaigns/{campaignId} | Deletes a campaign
-[**updateLoyaltyCampaign**](CampaignsApi.md#updateLoyaltyCampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty/{campaignId} | Updates loyalty campaign
-[**updateRetentionCampaign**](CampaignsApi.md#updateRetentionCampaign) | **POST** /api/v1.0/{appId}/campaigns/retention/{campaignId} | Updates retention campaign
+[**createLoyaltyCampaign**](CampaignsApi.md#createLoyaltyCampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty | 
+[**createRetentionCampaign**](CampaignsApi.md#createRetentionCampaign) | **POST** /api/v1.0/{appId}/campaigns/retention | 
+[**getLoyaltyCampaignsForApp**](CampaignsApi.md#getLoyaltyCampaignsForApp) | **GET** /api/v1.0/{appId}/campaigns/loyalty | 
+[**getLoyaltyCampaignsForStore**](CampaignsApi.md#getLoyaltyCampaignsForStore) | **GET** /api/v1.0/{appId}/campaigns/loyalty/{storeId} | 
+[**getRetentionCampaignsForApp**](CampaignsApi.md#getRetentionCampaignsForApp) | **GET** /api/v1.0/{appId}/campaigns/retention | 
+[**getRetentionCampaignsForStore**](CampaignsApi.md#getRetentionCampaignsForStore) | **GET** /api/v1.0/{appId}/campaigns/retention/{storeId} | 
+[**getStoreList**](CampaignsApi.md#getStoreList) | **GET** /api/v1.0/{appId}/campaigns/stores | 
+[**removeCampaign**](CampaignsApi.md#removeCampaign) | **DELETE** /api/v1.0/{appId}/campaigns/{campaignId} | 
+[**updateLoyaltyCampaign**](CampaignsApi.md#updateLoyaltyCampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty/{campaignId} | 
+[**updateRetentionCampaign**](CampaignsApi.md#updateRetentionCampaign) | **POST** /api/v1.0/{appId}/campaigns/retention/{campaignId} | 
 
 
 # **createLoyaltyCampaign**
 > \Flipdish\\Client\Models\RestApiResultLoyaltyCampaign createLoyaltyCampaign($app_id, $campaign)
 
-Creates loyalty campaign
+
 
 ### Example
 ```php
@@ -35,8 +35,8 @@ $apiInstance = new Flipdish\\Client\Api\CampaignsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$campaign = new \Flipdish\\Client\Models\LoyaltyCampaignBase(); // \Flipdish\\Client\Models\LoyaltyCampaignBase | Loyalty campaign details
+$app_id = "app_id_example"; // string | 
+$campaign = new \Flipdish\\Client\Models\LoyaltyCampaignBase(); // \Flipdish\\Client\Models\LoyaltyCampaignBase | 
 
 try {
     $result = $apiInstance->createLoyaltyCampaign($app_id, $campaign);
@@ -51,8 +51,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **campaign** | [**\Flipdish\\Client\Models\LoyaltyCampaignBase**](../Model/LoyaltyCampaignBase.md)| Loyalty campaign details |
+ **app_id** | **string**|  |
+ **campaign** | [**\Flipdish\\Client\Models\LoyaltyCampaignBase**](../Model/LoyaltyCampaignBase.md)|  |
 
 ### Return type
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 # **createRetentionCampaign**
 > \Flipdish\\Client\Models\RestApiResultRetentionCampaign createRetentionCampaign($app_id, $campaign)
 
-Creates retention campaign
+
 
 ### Example
 ```php
@@ -88,8 +88,8 @@ $apiInstance = new Flipdish\\Client\Api\CampaignsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$campaign = new \Flipdish\\Client\Models\RetentionCampaignBase(); // \Flipdish\\Client\Models\RetentionCampaignBase | Retention campaign details
+$app_id = "app_id_example"; // string | 
+$campaign = new \Flipdish\\Client\Models\RetentionCampaignBase(); // \Flipdish\\Client\Models\RetentionCampaignBase | 
 
 try {
     $result = $apiInstance->createRetentionCampaign($app_id, $campaign);
@@ -104,8 +104,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **campaign** | [**\Flipdish\\Client\Models\RetentionCampaignBase**](../Model/RetentionCampaignBase.md)| Retention campaign details |
+ **app_id** | **string**|  |
+ **campaign** | [**\Flipdish\\Client\Models\RetentionCampaignBase**](../Model/RetentionCampaignBase.md)|  |
 
 ### Return type
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 # **getLoyaltyCampaignsForApp**
 > \Flipdish\\Client\Models\RestApiArrayResultLoyaltyCampaign getLoyaltyCampaignsForApp($app_id)
 
-Gets loyalty campaigns for app
+
 
 ### Example
 ```php
@@ -141,7 +141,7 @@ $apiInstance = new Flipdish\\Client\Api\CampaignsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getLoyaltyCampaignsForApp($app_id);
@@ -156,7 +156,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 # **getLoyaltyCampaignsForStore**
 > \Flipdish\\Client\Models\RestApiArrayResultLoyaltyCampaign getLoyaltyCampaignsForStore($app_id, $store_id)
 
-Gets loyalty campaigns for store
+
 
 ### Example
 ```php
@@ -192,8 +192,8 @@ $apiInstance = new Flipdish\\Client\Api\CampaignsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$store_id = 56; // int | Store Id
+$app_id = "app_id_example"; // string | 
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->getLoyaltyCampaignsForStore($app_id, $store_id);
@@ -208,8 +208,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **store_id** | **int**| Store Id |
+ **app_id** | **string**|  |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 # **getRetentionCampaignsForApp**
 > \Flipdish\\Client\Models\RestApiArrayResultRetentionCampaign getRetentionCampaignsForApp($app_id)
 
-Gets retention campaigns for app
+
 
 ### Example
 ```php
@@ -245,7 +245,7 @@ $apiInstance = new Flipdish\\Client\Api\CampaignsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getRetentionCampaignsForApp($app_id);
@@ -260,7 +260,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
 # **getRetentionCampaignsForStore**
 > \Flipdish\\Client\Models\RestApiArrayResultRetentionCampaign getRetentionCampaignsForStore($app_id, $store_id)
 
-Gets retention campaigns for store
+
 
 ### Example
 ```php
@@ -296,8 +296,8 @@ $apiInstance = new Flipdish\\Client\Api\CampaignsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$store_id = 56; // int | Store Id
+$app_id = "app_id_example"; // string | 
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->getRetentionCampaignsForStore($app_id, $store_id);
@@ -312,8 +312,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **store_id** | **int**| Store Id |
+ **app_id** | **string**|  |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 # **getStoreList**
 > \Flipdish\\Client\Models\RestApiArrayResultStoreListItem getStoreList($app_id, $only_published)
 
-Gets list of stores for app
+
 
 ### Example
 ```php
@@ -349,7 +349,7 @@ $apiInstance = new Flipdish\\Client\Api\CampaignsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
+$app_id = "app_id_example"; // string | 
 $only_published = true; // bool | 
 
 try {
@@ -365,7 +365,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
+ **app_id** | **string**|  |
  **only_published** | **bool**|  | [optional]
 
 ### Return type
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 # **removeCampaign**
 > removeCampaign($app_id, $campaign_id)
 
-Deletes a campaign
+
 
 ### Example
 ```php
@@ -402,8 +402,8 @@ $apiInstance = new Flipdish\\Client\Api\CampaignsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$campaign_id = 56; // int | Campaign Id
+$app_id = "app_id_example"; // string | 
+$campaign_id = 56; // int | 
 
 try {
     $apiInstance->removeCampaign($app_id, $campaign_id);
@@ -417,8 +417,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **campaign_id** | **int**| Campaign Id |
+ **app_id** | **string**|  |
+ **campaign_id** | **int**|  |
 
 ### Return type
 
@@ -438,7 +438,7 @@ void (empty response body)
 # **updateLoyaltyCampaign**
 > \Flipdish\\Client\Models\RestApiResultLoyaltyCampaign updateLoyaltyCampaign($app_id, $campaign_id, $campaign)
 
-Updates loyalty campaign
+
 
 ### Example
 ```php
@@ -454,9 +454,9 @@ $apiInstance = new Flipdish\\Client\Api\CampaignsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$campaign_id = 56; // int | Loyalty campaign Id
-$campaign = new \Flipdish\\Client\Models\LoyaltyCampaignBase(); // \Flipdish\\Client\Models\LoyaltyCampaignBase | Loyalty campaign details
+$app_id = "app_id_example"; // string | 
+$campaign_id = 56; // int | 
+$campaign = new \Flipdish\\Client\Models\LoyaltyCampaignBase(); // \Flipdish\\Client\Models\LoyaltyCampaignBase | 
 
 try {
     $result = $apiInstance->updateLoyaltyCampaign($app_id, $campaign_id, $campaign);
@@ -471,9 +471,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **campaign_id** | **int**| Loyalty campaign Id |
- **campaign** | [**\Flipdish\\Client\Models\LoyaltyCampaignBase**](../Model/LoyaltyCampaignBase.md)| Loyalty campaign details |
+ **app_id** | **string**|  |
+ **campaign_id** | **int**|  |
+ **campaign** | [**\Flipdish\\Client\Models\LoyaltyCampaignBase**](../Model/LoyaltyCampaignBase.md)|  |
 
 ### Return type
 
@@ -493,7 +493,7 @@ Name | Type | Description  | Notes
 # **updateRetentionCampaign**
 > \Flipdish\\Client\Models\RestApiResultRetentionCampaign updateRetentionCampaign($app_id, $campaign_id, $campaign)
 
-Updates retention campaign
+
 
 ### Example
 ```php
@@ -509,9 +509,9 @@ $apiInstance = new Flipdish\\Client\Api\CampaignsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$campaign_id = 56; // int | Retention campaign Id
-$campaign = new \Flipdish\\Client\Models\RetentionCampaignBase(); // \Flipdish\\Client\Models\RetentionCampaignBase | Retention campaign details
+$app_id = "app_id_example"; // string | 
+$campaign_id = 56; // int | 
+$campaign = new \Flipdish\\Client\Models\RetentionCampaignBase(); // \Flipdish\\Client\Models\RetentionCampaignBase | 
 
 try {
     $result = $apiInstance->updateRetentionCampaign($app_id, $campaign_id, $campaign);
@@ -526,9 +526,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **campaign_id** | **int**| Retention campaign Id |
- **campaign** | [**\Flipdish\\Client\Models\RetentionCampaignBase**](../Model/RetentionCampaignBase.md)| Retention campaign details |
+ **app_id** | **string**|  |
+ **campaign_id** | **int**|  |
+ **campaign** | [**\Flipdish\\Client\Models\RetentionCampaignBase**](../Model/RetentionCampaignBase.md)|  |
 
 ### Return type
 

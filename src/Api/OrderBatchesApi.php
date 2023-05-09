@@ -90,12 +90,10 @@ class OrderBatchesApi
     /**
      * Operation getAllOrderBatches
      *
-     * Returns order batches
-     *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_ids List of store Ids (optional)
-     * @param  \DateTime $created_from Start date for retrieving the entries (optional)
-     * @param  \DateTime $created_to End date for retrieving the entries (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int[] $store_ids store_ids (optional)
+     * @param  \DateTime $created_from created_from (optional)
+     * @param  \DateTime $created_to created_to (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -110,12 +108,10 @@ class OrderBatchesApi
     /**
      * Operation getAllOrderBatchesWithHttpInfo
      *
-     * Returns order batches
-     *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_ids List of store Ids (optional)
-     * @param  \DateTime $created_from Start date for retrieving the entries (optional)
-     * @param  \DateTime $created_to End date for retrieving the entries (optional)
+     * @param  string $app_id (required)
+     * @param  int[] $store_ids (optional)
+     * @param  \DateTime $created_from (optional)
+     * @param  \DateTime $created_to (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -220,12 +216,12 @@ class OrderBatchesApi
     /**
      * Operation getAllOrderBatchesAsync
      *
-     * Returns order batches
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_ids List of store Ids (optional)
-     * @param  \DateTime $created_from Start date for retrieving the entries (optional)
-     * @param  \DateTime $created_to End date for retrieving the entries (optional)
+     * @param  string $app_id (required)
+     * @param  int[] $store_ids (optional)
+     * @param  \DateTime $created_from (optional)
+     * @param  \DateTime $created_to (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -243,12 +239,12 @@ class OrderBatchesApi
     /**
      * Operation getAllOrderBatchesAsyncWithHttpInfo
      *
-     * Returns order batches
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_ids List of store Ids (optional)
-     * @param  \DateTime $created_from Start date for retrieving the entries (optional)
-     * @param  \DateTime $created_to End date for retrieving the entries (optional)
+     * @param  string $app_id (required)
+     * @param  int[] $store_ids (optional)
+     * @param  \DateTime $created_from (optional)
+     * @param  \DateTime $created_to (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -298,10 +294,10 @@ class OrderBatchesApi
     /**
      * Create request for operation 'getAllOrderBatches'
      *
-     * @param  string $app_id App Id (required)
-     * @param  int[] $store_ids List of store Ids (optional)
-     * @param  \DateTime $created_from Start date for retrieving the entries (optional)
-     * @param  \DateTime $created_to End date for retrieving the entries (optional)
+     * @param  string $app_id (required)
+     * @param  int[] $store_ids (optional)
+     * @param  \DateTime $created_from (optional)
+     * @param  \DateTime $created_to (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -425,10 +421,8 @@ class OrderBatchesApi
     /**
      * Operation getOrderBatch
      *
-     * Returns the order batch details
-     *
-     * @param  string $app_id App Id (required)
-     * @param  int $order_batch_id Order Batch Id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $order_batch_id order_batch_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -443,10 +437,8 @@ class OrderBatchesApi
     /**
      * Operation getOrderBatchWithHttpInfo
      *
-     * Returns the order batch details
-     *
-     * @param  string $app_id App Id (required)
-     * @param  int $order_batch_id Order Batch Id (required)
+     * @param  string $app_id (required)
+     * @param  int $order_batch_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -559,10 +551,10 @@ class OrderBatchesApi
     /**
      * Operation getOrderBatchAsync
      *
-     * Returns the order batch details
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  int $order_batch_id Order Batch Id (required)
+     * @param  string $app_id (required)
+     * @param  int $order_batch_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -580,10 +572,10 @@ class OrderBatchesApi
     /**
      * Operation getOrderBatchAsyncWithHttpInfo
      *
-     * Returns the order batch details
+     * 
      *
-     * @param  string $app_id App Id (required)
-     * @param  int $order_batch_id Order Batch Id (required)
+     * @param  string $app_id (required)
+     * @param  int $order_batch_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -633,8 +625,8 @@ class OrderBatchesApi
     /**
      * Create request for operation 'getOrderBatch'
      *
-     * @param  string $app_id App Id (required)
-     * @param  int $order_batch_id Order Batch Id (required)
+     * @param  string $app_id (required)
+     * @param  int $order_batch_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

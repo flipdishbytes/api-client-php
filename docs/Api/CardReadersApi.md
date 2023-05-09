@@ -4,27 +4,25 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelCurrentlyInitiatedBluetoothDeviceUpdate**](CardReadersApi.md#cancelCurrentlyInitiatedBluetoothDeviceUpdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | Cancel currently initiated install update for bluetooth terminal
-[**cancelReaderAction**](CardReadersApi.md#cancelReaderAction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | Cancel terminals action
-[**cardReadersGetReader**](CardReadersApi.md#cardReadersGetReader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | Get reader
-[**generateStripeTerminalLocation**](CardReadersApi.md#generateStripeTerminalLocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | Get Location ID for Stripe Terminal
-[**getBluetoothTerminalStatus**](CardReadersApi.md#getBluetoothTerminalStatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | Get the status of the bluetooth terminal
-[**getStripeConnectionToken**](CardReadersApi.md#getStripeConnectionToken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | Get Connection Token For a Stripe Terminal
-[**initiateBluetoothTerminalDeviceUpdateCheck**](CardReadersApi.md#initiateBluetoothTerminalDeviceUpdateCheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | Trigger check for Bluetooth device update on Kiosk
-[**initiateKioskBluetoothPairingMode**](CardReadersApi.md#initiateKioskBluetoothPairingMode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
-[**initiateKioskBluetoothUpdateInstall**](CardReadersApi.md#initiateKioskBluetoothUpdateInstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
-[**initiateReaderProcessPaymentIntent**](CardReadersApi.md#initiateReaderProcessPaymentIntent) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/processPaymentIntent | Initiate Stripe terminal to Process Payment Intent
+[**cancelCurrentlyInitiatedBluetoothDeviceUpdate**](CardReadersApi.md#cancelCurrentlyInitiatedBluetoothDeviceUpdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | 
+[**cancelReaderAction**](CardReadersApi.md#cancelReaderAction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | 
+[**cardReadersGetReader**](CardReadersApi.md#cardReadersGetReader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | 
+[**generateStripeTerminalLocation**](CardReadersApi.md#generateStripeTerminalLocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | 
+[**getBluetoothTerminalStatus**](CardReadersApi.md#getBluetoothTerminalStatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | 
+[**getStripeConnectionToken**](CardReadersApi.md#getStripeConnectionToken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | 
+[**initiateBluetoothTerminalDeviceUpdateCheck**](CardReadersApi.md#initiateBluetoothTerminalDeviceUpdateCheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | 
+[**initiateKioskBluetoothPairingMode**](CardReadersApi.md#initiateKioskBluetoothPairingMode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | 
+[**initiateKioskBluetoothUpdateInstall**](CardReadersApi.md#initiateKioskBluetoothUpdateInstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | 
+[**initiateReaderProcessPaymentIntent**](CardReadersApi.md#initiateReaderProcessPaymentIntent) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/processPaymentIntent | 
 [**registerStripeTerminal**](CardReadersApi.md#registerStripeTerminal) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/register | 
-[**unRegisterTerminal**](CardReadersApi.md#unRegisterTerminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | Un-register terminal by deleting it from stripe
-[**unpairCurrentlyPairedBluetoothDevice**](CardReadersApi.md#unpairCurrentlyPairedBluetoothDevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
+[**unRegisterTerminal**](CardReadersApi.md#unRegisterTerminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | 
+[**unpairCurrentlyPairedBluetoothDevice**](CardReadersApi.md#unpairCurrentlyPairedBluetoothDevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | 
 
 
 # **cancelCurrentlyInitiatedBluetoothDeviceUpdate**
 > cancelCurrentlyInitiatedBluetoothDeviceUpdate($app_id, $device_id, $terminal_type)
 
-Cancel currently initiated install update for bluetooth terminal
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -78,9 +76,7 @@ void (empty response body)
 # **cancelReaderAction**
 > \Flipdish\\Client\Models\RestApiResultCardReader cancelReaderAction($reader_id, $app_id)
 
-Cancel terminals action
 
-Can only be called by Kiosk
 
 ### Example
 ```php
@@ -133,9 +129,7 @@ Name | Type | Description  | Notes
 # **cardReadersGetReader**
 > \Flipdish\\Client\Models\RestApiResultCardReader cardReadersGetReader($reader_id, $app_id)
 
-Get reader
 
-Can only be called by Kiosk
 
 ### Example
 ```php
@@ -188,9 +182,7 @@ Name | Type | Description  | Notes
 # **generateStripeTerminalLocation**
 > \Flipdish\\Client\Models\RestApiResultStripeTerminalLocation generateStripeTerminalLocation($geo_point_request, $app_id)
 
-Get Location ID for Stripe Terminal
 
-Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -243,9 +235,7 @@ Name | Type | Description  | Notes
 # **getBluetoothTerminalStatus**
 > \Flipdish\\Client\Models\RestApiResultBluetoothTerminalStatus getBluetoothTerminalStatus($app_id, $device_id)
 
-Get the status of the bluetooth terminal
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -298,9 +288,7 @@ Name | Type | Description  | Notes
 # **getStripeConnectionToken**
 > \Flipdish\\Client\Models\RestApiResultStripeTerminalConnectionToken getStripeConnectionToken($app_id)
 
-Get Connection Token For a Stripe Terminal
 
-Can only be called by Kiosk
 
 ### Example
 ```php
@@ -351,9 +339,7 @@ Name | Type | Description  | Notes
 # **initiateBluetoothTerminalDeviceUpdateCheck**
 > initiateBluetoothTerminalDeviceUpdateCheck($app_id, $device_id, $terminal_type)
 
-Trigger check for Bluetooth device update on Kiosk
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -407,9 +393,7 @@ void (empty response body)
 # **initiateKioskBluetoothPairingMode**
 > initiateKioskBluetoothPairingMode($app_id, $device_id, $terminal_type)
 
-Initiate stripe terminal pairing mode
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -463,9 +447,7 @@ void (empty response body)
 # **initiateKioskBluetoothUpdateInstall**
 > initiateKioskBluetoothUpdateInstall($app_id, $device_id, $terminal_type)
 
-Initiate Kiosk Update Install for bluetooth terminal
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -519,9 +501,7 @@ void (empty response body)
 # **initiateReaderProcessPaymentIntent**
 > \Flipdish\\Client\Models\RestApiResultCardReader initiateReaderProcessPaymentIntent($request, $reader_id, $app_id)
 
-Initiate Stripe terminal to Process Payment Intent
 
-Can only be called by Kiosk  [BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -629,9 +609,7 @@ Name | Type | Description  | Notes
 # **unRegisterTerminal**
 > \Flipdish\\Client\Models\RestApiResultCardReader unRegisterTerminal($request, $app_id)
 
-Un-register terminal by deleting it from stripe
 
-Can only be called by Kiosk
 
 ### Example
 ```php
@@ -684,9 +662,7 @@ Name | Type | Description  | Notes
 # **unpairCurrentlyPairedBluetoothDevice**
 > unpairCurrentlyPairedBluetoothDevice($app_id, $device_id)
 
-Unpair the currently paired stripe terminal
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php

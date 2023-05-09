@@ -66,8 +66,8 @@ $apiInstance = new Flipdish\\Client\Api\AccountsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$signup_step_action = "signup_step_action_example"; // string | Signup step action
-$answer_id = 56; // int | Identifier of the answer
+$signup_step_action = "signup_step_action_example"; // string | 
+$answer_id = 56; // int | 
 
 try {
     $apiInstance->answerSignUpQuestion($signup_step_action, $answer_id);
@@ -84,100 +84,100 @@ All URIs are relative to *https://api.flipdish.co*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccountsApi* | [**answerSignUpQuestion**](docs/Api/AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | Answer a signup question
-*AccountsApi* | [**changePassword**](docs/Api/AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | Change password
-*AccountsApi* | [**changePasswordWithPin**](docs/Api/AccountsApi.md#changepasswordwithpin) | **PUT** /api/v1.0/accounts/password/pin | Change password
-*AccountsApi* | [**createAccount**](docs/Api/AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | Create account with email address and store name
-*AccountsApi* | [**getAccountDetails**](docs/Api/AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | Gets the current account detail
-*AccountsApi* | [**getLocalisedTimeZones**](docs/Api/AccountsApi.md#getlocalisedtimezones) | **GET** /api/v1.0/accounts/timezones | [PRIVATE API] Get timezones localised to users language
-*AccountsApi* | [**login**](docs/Api/AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | Login with username and password
-*AccountsApi* | [**loginSso**](docs/Api/AccountsApi.md#loginsso) | **POST** /api/v1.0/accounts/login/sso | Login with SSO token
-*AccountsApi* | [**loginWithPin**](docs/Api/AccountsApi.md#loginwithpin) | **POST** /api/v1.0/accounts/login/pin | Login with email and pin
-*AccountsApi* | [**logout**](docs/Api/AccountsApi.md#logout) | **POST** /api/v1.0/accounts/logout | Log out. It removes Flipdish authorization Cookie.
-*AccountsApi* | [**passwordResetWithToken**](docs/Api/AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | Reset password with token.
-*AccountsApi* | [**recaptchaValidate**](docs/Api/AccountsApi.md#recaptchavalidate) | **POST** /api/v1.0/accounts/recaptcha | Validate recaptcha from flipdish portal
-*AccountsApi* | [**requestLoginPin**](docs/Api/AccountsApi.md#requestloginpin) | **POST** /api/v1.0/accounts/pin | Request login PIN. The server sends the PIN to the email address.
-*AccountsApi* | [**requestPasswordReset**](docs/Api/AccountsApi.md#requestpasswordreset) | **POST** /api/v1.0/accounts/passwordreset | Request password reset. Flipdish system will send a token via email.
-*AccountsApi* | [**sendPinForPasswordReset**](docs/Api/AccountsApi.md#sendpinforpasswordreset) | **POST** /api/v1.0/accounts/password/resetpin | Request Password Reset PIN. The server sends the PIN to the email address.
-*AccountsApi* | [**skipSignupStep**](docs/Api/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | Skip a signup question
-*AccountsApi* | [**updateAccount**](docs/Api/AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | Update account with name and language
-*AddressApi* | [**formByApp**](docs/Api/AddressApi.md#formbyapp) | **GET** /api/v1.0/app/{appId}/address/form | Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language.
-*AddressApi* | [**formByCountry**](docs/Api/AddressApi.md#formbycountry) | **GET** /api/v1.0/address/country/{countryCode}/form | Provides a dyamic form definition for the given country code, with labels localized using the provided language.
-*AddressApi* | [**formatGoogleAddress**](docs/Api/AddressApi.md#formatgoogleaddress) | **POST** /api/v1.0/address/google | Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form.
-*AddressApi* | [**getCountries**](docs/Api/AddressApi.md#getcountries) | **GET** /api/v1.0/address/countries | Retuns a list of localised countries
-*ApmApi* | [**getApmStatus**](docs/Api/ApmApi.md#getapmstatus) | **GET** /api/v1.0/{appId}/apm/status | [PRIVATE API] Returns true if APM is enabled on at least one store in an application
-*ApmApi* | [**getBasicStatistics**](docs/Api/ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/{appId}/apm/statistics | [PRIVATE API] Get Basic Statistics
-*ApmApi* | [**getCalendarWeekStatistics**](docs/Api/ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | [PRIVATE API] Get Calendar statistics
-*ApmApi* | [**getCallsStatistics**](docs/Api/ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | [PRIVATE API] Get Calls Statistics
-*ApmApi* | [**getOrderStatistics**](docs/Api/ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | [PRIVATE API] Get Order Statistics (Value of Orders)
-*ApmApi* | [**getPaginatedCallList**](docs/Api/ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/{appId}/apm/calls | [PRIVATE API] Get paginated APM call list
-*AppStoreApi* | [**getAppStoreApp**](docs/Api/AppStoreApi.md#getappstoreapp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | Get App store app
-*AppStoreApi* | [**getAppStoreApps**](docs/Api/AppStoreApi.md#getappstoreapps) | **GET** /api/v1.0/appstore/apps | Get list of App store app summaries
-*AppStoreConfigurationsApi* | [**appStoreConfigurationsAppStoreHandleOauthResponseCode**](docs/Api/AppStoreConfigurationsApi.md#appstoreconfigurationsappstorehandleoauthresponsecode) | **GET** /api/v1.0/appstore/oauthresponse/{appStoreAppId}/responsecode | Process the OAuth response code (bounce back redirect from external OAuth provider after successful authentication)  the query string will contain state and code
-*AppStoreConfigurationsApi* | [**createAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#createappstoreconfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | Create App store app configuration
-*AppStoreConfigurationsApi* | [**deleteAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#deleteappstoreconfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Delete App store app configuration
-*AppStoreConfigurationsApi* | [**executeConfigurationAction**](docs/Api/AppStoreConfigurationsApi.md#executeconfigurationaction) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action | Execute configuration action on a configuration item (eg. handle button press)
-*AppStoreConfigurationsApi* | [**getAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#getappstoreconfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Get App store app configuration
-*AppStoreConfigurationsApi* | [**getConfiguredAppSingleApp**](docs/Api/AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | Get list of App store app configurations for one App store app
-*AppStoreConfigurationsApi* | [**getConfiguredApps**](docs/Api/AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | Get list of App store apps which have been configured
-*AppStoreConfigurationsApi* | [**updateAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#updateappstoreconfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | Update App store app configuration
-*AppStoreConfigurationsApi* | [**updateAppStoreConfigSettingValues**](docs/Api/AppStoreConfigurationsApi.md#updateappstoreconfigsettingvalues) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/updatesettings | Update AppStore App Configuration values, specified settings only
-*AppStoreDeveloperApi* | [**appVerificationUpdate**](docs/Api/AppStoreDeveloperApi.md#appverificationupdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | Update App store app verification
-*AppStoreDeveloperApi* | [**createAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#createappstoreapp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | Create App store app
-*AppStoreDeveloperApi* | [**deleteAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Delete App store app
-*AppStoreDeveloperApi* | [**getExternalFunctionSigningKey**](docs/Api/AppStoreDeveloperApi.md#getexternalfunctionsigningkey) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_function_signing_key | Get external function action signing key for app
-*AppStoreDeveloperApi* | [**updateAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | Update App store app
-*AppStoreDeveloperApi* | [**uploadAppStoreAppLogo**](docs/Api/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | Upload the App store app logo \\ icon
-*AppsApi* | [**getApp**](docs/Api/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
-*AppsApi* | [**getAppHostnameStatus**](docs/Api/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | Get the application hostname DNS delegation states for A and CNAME records.
-*AppsApi* | [**getApps**](docs/Api/AppsApi.md#getapps) | **GET** /api/v1.0/apps | Get Apps
-*AppsApi* | [**getCompliance**](docs/Api/AppsApi.md#getcompliance) | **GET** /api/v1.0/apps/{appId}/compliance | Get the application compliance configuration
-*AppsApi* | [**getPanaceaVanityUrl**](docs/Api/AppsApi.md#getpanaceavanityurl) | **GET** /api/v1.0/apps/{appId}/panacea/url | Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
-*AppsApi* | [**getSupportedCountries**](docs/Api/AppsApi.md#getsupportedcountries) | **GET** /api/v1.0/apps/supportedcountries | Get all supported countries.
-*AppsApi* | [**isPanaceaVanityUrlAvailable**](docs/Api/AppsApi.md#ispanaceavanityurlavailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | Is panacea vanity url available
-*AppsApi* | [**setAppConfig**](docs/Api/AppsApi.md#setappconfig) | **POST** /api/v1.0/apps/{appId}/config | Set the application configuration
-*AppsApi* | [**setAppHostname**](docs/Api/AppsApi.md#setapphostname) | **POST** /api/v1.0/apps/{appId}/hostname | Set the application hostname.
-*AppsApi* | [**setAppLanguages**](docs/Api/AppsApi.md#setapplanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | Set the application languages
-*AppsApi* | [**setCompliance**](docs/Api/AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | Set the application compliance configuration
-*AppsApi* | [**setPanaceaVanityUrl**](docs/Api/AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | Set panacea vanity url
-*AppsApi* | [**toggleNextGenWeb**](docs/Api/AppsApi.md#togglenextgenweb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | Toggle Next Gen Web
-*AppsApi* | [**uploadAppLogo**](docs/Api/AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | Set the application logo \\ icon
-*AuditLogsApi* | [**addOrderAuditLog**](docs/Api/AuditLogsApi.md#addorderauditlog) | **POST** /api/v1.0/auditlogs/orders/{orderId} | Create an order audit log event
-*AuditLogsApi* | [**addStoreAuditLogEvent**](docs/Api/AuditLogsApi.md#addstoreauditlogevent) | **POST** /api/v1.0/auditlogs/stores/{storeId} | Create a store audit log event
-*AuthorizationTokensApi* | [**getAuthorizationTokens**](docs/Api/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/{appId}/authorizationtokens/{oauthAppId} | Get authorization tokens
-*AuthorizationTokensApi* | [**revokeToken**](docs/Api/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/{appId}/authorizationtokens/{key} | Revoke token
-*BankAccountApi* | [**attachBankAccountToStore**](docs/Api/BankAccountApi.md#attachbankaccounttostore) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/store/{storeId} | [PRIVATE API] Attach Bank Account to Store
-*BankAccountApi* | [**createBankAccount**](docs/Api/BankAccountApi.md#createbankaccount) | **POST** /api/v1.0/{appId}/bankaccounts | Create a new Bank Account and attach to this App
-*BankAccountApi* | [**deleteBankAccount**](docs/Api/BankAccountApi.md#deletebankaccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Delete BankAccount
-*BankAccountApi* | [**getBankAccountById**](docs/Api/BankAccountApi.md#getbankaccountbyid) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Get BankAccount Detail by Id
-*BankAccountApi* | [**getBankAccounts**](docs/Api/BankAccountApi.md#getbankaccounts) | **GET** /api/v1.0/{appId}/bankaccounts | Get List of BankAccounts for WL
-*BankAccountApi* | [**getCountriesWithFieldDefinitions**](docs/Api/BankAccountApi.md#getcountrieswithfielddefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/countries-field-definitions | Get bank account fields definitions
-*BankAccountApi* | [**getFieldDefinitions**](docs/Api/BankAccountApi.md#getfielddefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/field-definitions | Get bank account fields definitions
-*BankAccountApi* | [**updateBankAccount**](docs/Api/BankAccountApi.md#updatebankaccount) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | Update BankAccount
-*BankAccountApi* | [**updateBankAccountState**](docs/Api/BankAccountApi.md#updatebankaccountstate) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/state/{state} | [PRIVATE API] Update State of Bank Account
-*CampaignsApi* | [**createLoyaltyCampaign**](docs/Api/CampaignsApi.md#createloyaltycampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty | Creates loyalty campaign
-*CampaignsApi* | [**createRetentionCampaign**](docs/Api/CampaignsApi.md#createretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention | Creates retention campaign
-*CampaignsApi* | [**getLoyaltyCampaignsForApp**](docs/Api/CampaignsApi.md#getloyaltycampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/loyalty | Gets loyalty campaigns for app
-*CampaignsApi* | [**getLoyaltyCampaignsForStore**](docs/Api/CampaignsApi.md#getloyaltycampaignsforstore) | **GET** /api/v1.0/{appId}/campaigns/loyalty/{storeId} | Gets loyalty campaigns for store
-*CampaignsApi* | [**getRetentionCampaignsForApp**](docs/Api/CampaignsApi.md#getretentioncampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/retention | Gets retention campaigns for app
-*CampaignsApi* | [**getRetentionCampaignsForStore**](docs/Api/CampaignsApi.md#getretentioncampaignsforstore) | **GET** /api/v1.0/{appId}/campaigns/retention/{storeId} | Gets retention campaigns for store
-*CampaignsApi* | [**getStoreList**](docs/Api/CampaignsApi.md#getstorelist) | **GET** /api/v1.0/{appId}/campaigns/stores | Gets list of stores for app
-*CampaignsApi* | [**removeCampaign**](docs/Api/CampaignsApi.md#removecampaign) | **DELETE** /api/v1.0/{appId}/campaigns/{campaignId} | Deletes a campaign
-*CampaignsApi* | [**updateLoyaltyCampaign**](docs/Api/CampaignsApi.md#updateloyaltycampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty/{campaignId} | Updates loyalty campaign
-*CampaignsApi* | [**updateRetentionCampaign**](docs/Api/CampaignsApi.md#updateretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention/{campaignId} | Updates retention campaign
-*CardReadersApi* | [**cancelCurrentlyInitiatedBluetoothDeviceUpdate**](docs/Api/CardReadersApi.md#cancelcurrentlyinitiatedbluetoothdeviceupdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | Cancel currently initiated install update for bluetooth terminal
-*CardReadersApi* | [**cancelReaderAction**](docs/Api/CardReadersApi.md#cancelreaderaction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | Cancel terminals action
-*CardReadersApi* | [**cardReadersGetReader**](docs/Api/CardReadersApi.md#cardreadersgetreader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | Get reader
-*CardReadersApi* | [**generateStripeTerminalLocation**](docs/Api/CardReadersApi.md#generatestripeterminallocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | Get Location ID for Stripe Terminal
-*CardReadersApi* | [**getBluetoothTerminalStatus**](docs/Api/CardReadersApi.md#getbluetoothterminalstatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | Get the status of the bluetooth terminal
-*CardReadersApi* | [**getStripeConnectionToken**](docs/Api/CardReadersApi.md#getstripeconnectiontoken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | Get Connection Token For a Stripe Terminal
-*CardReadersApi* | [**initiateBluetoothTerminalDeviceUpdateCheck**](docs/Api/CardReadersApi.md#initiatebluetoothterminaldeviceupdatecheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | Trigger check for Bluetooth device update on Kiosk
-*CardReadersApi* | [**initiateKioskBluetoothPairingMode**](docs/Api/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | Initiate stripe terminal pairing mode
-*CardReadersApi* | [**initiateKioskBluetoothUpdateInstall**](docs/Api/CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | Initiate Kiosk Update Install for bluetooth terminal
-*CardReadersApi* | [**initiateReaderProcessPaymentIntent**](docs/Api/CardReadersApi.md#initiatereaderprocesspaymentintent) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/processPaymentIntent | Initiate Stripe terminal to Process Payment Intent
+*AccountsApi* | [**answerSignUpQuestion**](docs/Api/AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | 
+*AccountsApi* | [**changePassword**](docs/Api/AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | 
+*AccountsApi* | [**changePasswordWithPin**](docs/Api/AccountsApi.md#changepasswordwithpin) | **PUT** /api/v1.0/accounts/password/pin | 
+*AccountsApi* | [**createAccount**](docs/Api/AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | 
+*AccountsApi* | [**getAccountDetails**](docs/Api/AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | 
+*AccountsApi* | [**getLocalisedTimeZones**](docs/Api/AccountsApi.md#getlocalisedtimezones) | **GET** /api/v1.0/accounts/timezones | 
+*AccountsApi* | [**login**](docs/Api/AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | 
+*AccountsApi* | [**loginSso**](docs/Api/AccountsApi.md#loginsso) | **POST** /api/v1.0/accounts/login/sso | 
+*AccountsApi* | [**loginWithPin**](docs/Api/AccountsApi.md#loginwithpin) | **POST** /api/v1.0/accounts/login/pin | 
+*AccountsApi* | [**logout**](docs/Api/AccountsApi.md#logout) | **POST** /api/v1.0/accounts/logout | 
+*AccountsApi* | [**passwordResetWithToken**](docs/Api/AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | 
+*AccountsApi* | [**recaptchaValidate**](docs/Api/AccountsApi.md#recaptchavalidate) | **POST** /api/v1.0/accounts/recaptcha | 
+*AccountsApi* | [**requestLoginPin**](docs/Api/AccountsApi.md#requestloginpin) | **POST** /api/v1.0/accounts/pin | 
+*AccountsApi* | [**requestPasswordReset**](docs/Api/AccountsApi.md#requestpasswordreset) | **POST** /api/v1.0/accounts/passwordreset | 
+*AccountsApi* | [**sendPinForPasswordReset**](docs/Api/AccountsApi.md#sendpinforpasswordreset) | **POST** /api/v1.0/accounts/password/resetpin | 
+*AccountsApi* | [**skipSignupStep**](docs/Api/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
+*AccountsApi* | [**updateAccount**](docs/Api/AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | 
+*AddressApi* | [**formByApp**](docs/Api/AddressApi.md#formbyapp) | **GET** /api/v1.0/app/{appId}/address/form | 
+*AddressApi* | [**formByCountry**](docs/Api/AddressApi.md#formbycountry) | **GET** /api/v1.0/address/country/{countryCode}/form | 
+*AddressApi* | [**formatGoogleAddress**](docs/Api/AddressApi.md#formatgoogleaddress) | **POST** /api/v1.0/address/google | 
+*AddressApi* | [**getCountries**](docs/Api/AddressApi.md#getcountries) | **GET** /api/v1.0/address/countries | 
+*ApmApi* | [**getApmStatus**](docs/Api/ApmApi.md#getapmstatus) | **GET** /api/v1.0/{appId}/apm/status | 
+*ApmApi* | [**getBasicStatistics**](docs/Api/ApmApi.md#getbasicstatistics) | **GET** /api/v1.0/{appId}/apm/statistics | 
+*ApmApi* | [**getCalendarWeekStatistics**](docs/Api/ApmApi.md#getcalendarweekstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calendar | 
+*ApmApi* | [**getCallsStatistics**](docs/Api/ApmApi.md#getcallsstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/calls/{aggregateDataBy} | 
+*ApmApi* | [**getOrderStatistics**](docs/Api/ApmApi.md#getorderstatistics) | **GET** /api/v1.0/{appId}/apm/statistics/orders/{aggregateDataBy} | 
+*ApmApi* | [**getPaginatedCallList**](docs/Api/ApmApi.md#getpaginatedcalllist) | **GET** /api/v1.0/{appId}/apm/calls | 
+*AppStoreApi* | [**getAppStoreApp**](docs/Api/AppStoreApi.md#getappstoreapp) | **GET** /api/v1.0/appstore/apps/{appStoreAppId} | 
+*AppStoreApi* | [**getAppStoreApps**](docs/Api/AppStoreApi.md#getappstoreapps) | **GET** /api/v1.0/appstore/apps | 
+*AppStoreConfigurationsApi* | [**appStoreConfigurationsAppStoreHandleOauthResponseCode**](docs/Api/AppStoreConfigurationsApi.md#appstoreconfigurationsappstorehandleoauthresponsecode) | **GET** /api/v1.0/appstore/oauthresponse/{appStoreAppId}/responsecode | 
+*AppStoreConfigurationsApi* | [**createAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#createappstoreconfig) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config | 
+*AppStoreConfigurationsApi* | [**deleteAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#deleteappstoreconfig) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | 
+*AppStoreConfigurationsApi* | [**executeConfigurationAction**](docs/Api/AppStoreConfigurationsApi.md#executeconfigurationaction) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/action | 
+*AppStoreConfigurationsApi* | [**getAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#getappstoreconfig) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | 
+*AppStoreConfigurationsApi* | [**getConfiguredAppSingleApp**](docs/Api/AppStoreConfigurationsApi.md#getconfiguredappsingleapp) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId} | 
+*AppStoreConfigurationsApi* | [**getConfiguredApps**](docs/Api/AppStoreConfigurationsApi.md#getconfiguredapps) | **GET** /api/v1.0/{appId}/appstore/apps | 
+*AppStoreConfigurationsApi* | [**updateAppStoreConfig**](docs/Api/AppStoreConfigurationsApi.md#updateappstoreconfig) | **PUT** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId} | 
+*AppStoreConfigurationsApi* | [**updateAppStoreConfigSettingValues**](docs/Api/AppStoreConfigurationsApi.md#updateappstoreconfigsettingvalues) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/config/{configId}/updatesettings | 
+*AppStoreDeveloperApi* | [**appVerificationUpdate**](docs/Api/AppStoreDeveloperApi.md#appverificationupdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | 
+*AppStoreDeveloperApi* | [**createAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#createappstoreapp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | 
+*AppStoreDeveloperApi* | [**deleteAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
+*AppStoreDeveloperApi* | [**getExternalFunctionSigningKey**](docs/Api/AppStoreDeveloperApi.md#getexternalfunctionsigningkey) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_function_signing_key | 
+*AppStoreDeveloperApi* | [**updateAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
+*AppStoreDeveloperApi* | [**uploadAppStoreAppLogo**](docs/Api/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
+*AppsApi* | [**getApp**](docs/Api/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
+*AppsApi* | [**getAppHostnameStatus**](docs/Api/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
+*AppsApi* | [**getApps**](docs/Api/AppsApi.md#getapps) | **GET** /api/v1.0/apps | 
+*AppsApi* | [**getCompliance**](docs/Api/AppsApi.md#getcompliance) | **GET** /api/v1.0/apps/{appId}/compliance | 
+*AppsApi* | [**getPanaceaVanityUrl**](docs/Api/AppsApi.md#getpanaceavanityurl) | **GET** /api/v1.0/apps/{appId}/panacea/url | 
+*AppsApi* | [**getSupportedCountries**](docs/Api/AppsApi.md#getsupportedcountries) | **GET** /api/v1.0/apps/supportedcountries | 
+*AppsApi* | [**isPanaceaVanityUrlAvailable**](docs/Api/AppsApi.md#ispanaceavanityurlavailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | 
+*AppsApi* | [**setAppConfig**](docs/Api/AppsApi.md#setappconfig) | **POST** /api/v1.0/apps/{appId}/config | 
+*AppsApi* | [**setAppHostname**](docs/Api/AppsApi.md#setapphostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
+*AppsApi* | [**setAppLanguages**](docs/Api/AppsApi.md#setapplanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 
+*AppsApi* | [**setCompliance**](docs/Api/AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
+*AppsApi* | [**setPanaceaVanityUrl**](docs/Api/AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
+*AppsApi* | [**toggleNextGenWeb**](docs/Api/AppsApi.md#togglenextgenweb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
+*AppsApi* | [**uploadAppLogo**](docs/Api/AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | 
+*AuditLogsApi* | [**addOrderAuditLog**](docs/Api/AuditLogsApi.md#addorderauditlog) | **POST** /api/v1.0/auditlogs/orders/{orderId} | 
+*AuditLogsApi* | [**addStoreAuditLogEvent**](docs/Api/AuditLogsApi.md#addstoreauditlogevent) | **POST** /api/v1.0/auditlogs/stores/{storeId} | 
+*AuthorizationTokensApi* | [**getAuthorizationTokens**](docs/Api/AuthorizationTokensApi.md#getauthorizationtokens) | **GET** /api/v1.0/{appId}/authorizationtokens/{oauthAppId} | 
+*AuthorizationTokensApi* | [**revokeToken**](docs/Api/AuthorizationTokensApi.md#revoketoken) | **DELETE** /api/v1.0/{appId}/authorizationtokens/{key} | 
+*BankAccountApi* | [**attachBankAccountToStore**](docs/Api/BankAccountApi.md#attachbankaccounttostore) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/store/{storeId} | 
+*BankAccountApi* | [**createBankAccount**](docs/Api/BankAccountApi.md#createbankaccount) | **POST** /api/v1.0/{appId}/bankaccounts | 
+*BankAccountApi* | [**deleteBankAccount**](docs/Api/BankAccountApi.md#deletebankaccount) | **DELETE** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | 
+*BankAccountApi* | [**getBankAccountById**](docs/Api/BankAccountApi.md#getbankaccountbyid) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | 
+*BankAccountApi* | [**getBankAccounts**](docs/Api/BankAccountApi.md#getbankaccounts) | **GET** /api/v1.0/{appId}/bankaccounts | 
+*BankAccountApi* | [**getCountriesWithFieldDefinitions**](docs/Api/BankAccountApi.md#getcountrieswithfielddefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/countries-field-definitions | 
+*BankAccountApi* | [**getFieldDefinitions**](docs/Api/BankAccountApi.md#getfielddefinitions) | **GET** /api/v1.0/{appId}/bankaccounts/field-definitions | 
+*BankAccountApi* | [**updateBankAccount**](docs/Api/BankAccountApi.md#updatebankaccount) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId} | 
+*BankAccountApi* | [**updateBankAccountState**](docs/Api/BankAccountApi.md#updatebankaccountstate) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/state/{state} | 
+*CampaignsApi* | [**createLoyaltyCampaign**](docs/Api/CampaignsApi.md#createloyaltycampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty | 
+*CampaignsApi* | [**createRetentionCampaign**](docs/Api/CampaignsApi.md#createretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention | 
+*CampaignsApi* | [**getLoyaltyCampaignsForApp**](docs/Api/CampaignsApi.md#getloyaltycampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/loyalty | 
+*CampaignsApi* | [**getLoyaltyCampaignsForStore**](docs/Api/CampaignsApi.md#getloyaltycampaignsforstore) | **GET** /api/v1.0/{appId}/campaigns/loyalty/{storeId} | 
+*CampaignsApi* | [**getRetentionCampaignsForApp**](docs/Api/CampaignsApi.md#getretentioncampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/retention | 
+*CampaignsApi* | [**getRetentionCampaignsForStore**](docs/Api/CampaignsApi.md#getretentioncampaignsforstore) | **GET** /api/v1.0/{appId}/campaigns/retention/{storeId} | 
+*CampaignsApi* | [**getStoreList**](docs/Api/CampaignsApi.md#getstorelist) | **GET** /api/v1.0/{appId}/campaigns/stores | 
+*CampaignsApi* | [**removeCampaign**](docs/Api/CampaignsApi.md#removecampaign) | **DELETE** /api/v1.0/{appId}/campaigns/{campaignId} | 
+*CampaignsApi* | [**updateLoyaltyCampaign**](docs/Api/CampaignsApi.md#updateloyaltycampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty/{campaignId} | 
+*CampaignsApi* | [**updateRetentionCampaign**](docs/Api/CampaignsApi.md#updateretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention/{campaignId} | 
+*CardReadersApi* | [**cancelCurrentlyInitiatedBluetoothDeviceUpdate**](docs/Api/CardReadersApi.md#cancelcurrentlyinitiatedbluetoothdeviceupdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | 
+*CardReadersApi* | [**cancelReaderAction**](docs/Api/CardReadersApi.md#cancelreaderaction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | 
+*CardReadersApi* | [**cardReadersGetReader**](docs/Api/CardReadersApi.md#cardreadersgetreader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | 
+*CardReadersApi* | [**generateStripeTerminalLocation**](docs/Api/CardReadersApi.md#generatestripeterminallocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | 
+*CardReadersApi* | [**getBluetoothTerminalStatus**](docs/Api/CardReadersApi.md#getbluetoothterminalstatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | 
+*CardReadersApi* | [**getStripeConnectionToken**](docs/Api/CardReadersApi.md#getstripeconnectiontoken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | 
+*CardReadersApi* | [**initiateBluetoothTerminalDeviceUpdateCheck**](docs/Api/CardReadersApi.md#initiatebluetoothterminaldeviceupdatecheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | 
+*CardReadersApi* | [**initiateKioskBluetoothPairingMode**](docs/Api/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | 
+*CardReadersApi* | [**initiateKioskBluetoothUpdateInstall**](docs/Api/CardReadersApi.md#initiatekioskbluetoothupdateinstall) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/installUpdate | 
+*CardReadersApi* | [**initiateReaderProcessPaymentIntent**](docs/Api/CardReadersApi.md#initiatereaderprocesspaymentintent) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/processPaymentIntent | 
 *CardReadersApi* | [**registerStripeTerminal**](docs/Api/CardReadersApi.md#registerstripeterminal) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/register | 
-*CardReadersApi* | [**unRegisterTerminal**](docs/Api/CardReadersApi.md#unregisterterminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | Un-register terminal by deleting it from stripe
-*CardReadersApi* | [**unpairCurrentlyPairedBluetoothDevice**](docs/Api/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | Unpair the currently paired stripe terminal
+*CardReadersApi* | [**unRegisterTerminal**](docs/Api/CardReadersApi.md#unregisterterminal) | **DELETE** /api/v1.0/{appId}/payments/terminals/stripe/unregister | 
+*CardReadersApi* | [**unpairCurrentlyPairedBluetoothDevice**](docs/Api/CardReadersApi.md#unpaircurrentlypairedbluetoothdevice) | **DELETE** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/unpair | 
 *CatalogChangesApi* | [**getPendingMenuChanges**](docs/Api/CatalogChangesApi.md#getpendingmenuchanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | Get menu pending changes from Catalog groups and items
 *CatalogChangesApi* | [**getPendingMenuChangesSummaries**](docs/Api/CatalogChangesApi.md#getpendingmenuchangessummaries) | **GET** /api/v1.0/{appId}/menus/catalog-changes/summaries | Get menu pending changes summaries by appId
 *CatalogChangesApi* | [**publishPendingMenuChanges**](docs/Api/CatalogChangesApi.md#publishpendingmenuchanges) | **POST** /api/v1.0/{appId}/menus/catalog-changes/publish | Update menus with the pending changes from Catalog groups and items
@@ -200,119 +200,119 @@ Class | Method | HTTP request | Description
 *CatalogProductsApi* | [**getProductById**](docs/Api/CatalogProductsApi.md#getproductbyid) | **GET** /api/v1.0/{appId}/catalog/products/{catalogItemId} | Get Product by Id
 *CatalogProductsApi* | [**getProducts**](docs/Api/CatalogProductsApi.md#getproducts) | **GET** /api/v1.0/{appId}/catalog/products | Get paginated products by app name id filtered by types
 *CatalogProductsApi* | [**updateProduct**](docs/Api/CatalogProductsApi.md#updateproduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId} | Update Product
-*ChannelsApi* | [**assignAppIdToSalesChannel**](docs/Api/ChannelsApi.md#assignappidtosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | Assign a given AppId to a Sales Channel
-*ChannelsApi* | [**assignStoreToChannel**](docs/Api/ChannelsApi.md#assignstoretochannel) | **POST** /api/v1.0/{appId}/channels/assign-store | Assign a Store to a Sales Channel
-*ChannelsApi* | [**attachStoreToSalesChannel**](docs/Api/ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
-*ChannelsApi* | [**detachAllStoresFromSalesChannel**](docs/Api/ChannelsApi.md#detachallstoresfromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
-*ChannelsApi* | [**detachStoreFromSalesChannel**](docs/Api/ChannelsApi.md#detachstorefromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
-*ChannelsApi* | [**getAssignedChannels**](docs/Api/ChannelsApi.md#getassignedchannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given AppId
-*ChannelsApi* | [**getAvailableChannels**](docs/Api/ChannelsApi.md#getavailablechannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given AppId
-*ChannelsApi* | [**getChannel**](docs/Api/ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | Returns a Sales Channel by Id.
-*ChannelsApi* | [**getChannels**](docs/Api/ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | Returns a list of enabled Channels
-*ChannelsApi* | [**getStoresAssignedToChannel**](docs/Api/ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of stores of an AppId that are assigned to a given Sales Channel
-*ChannelsApi* | [**getStoresBySalesChannel**](docs/Api/ChannelsApi.md#getstoresbysaleschannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
-*ChannelsApi* | [**unassignStoreFromChannel**](docs/Api/ChannelsApi.md#unassignstorefromchannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
-*ChannelsStoreMappingApi* | [**channelsGetStoreChannelStoreMapping**](docs/Api/ChannelsStoreMappingApi.md#channelsgetstorechannelstoremapping) | **GET** /api/v1.0/{appId}/channels/storemappings | Gets the relationship between Flipdish Store and Channel Store
-*ChannelsStoreMappingApi* | [**channelsSetStoreChannelStoreMapping**](docs/Api/ChannelsStoreMappingApi.md#channelssetstorechannelstoremapping) | **POST** /api/v1.0/{appId}/channels/storemappings | Sets the relationship between Flipdish Store and Channel Store
+*ChannelsApi* | [**assignAppIdToSalesChannel**](docs/Api/ChannelsApi.md#assignappidtosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | 
+*ChannelsApi* | [**assignStoreToChannel**](docs/Api/ChannelsApi.md#assignstoretochannel) | **POST** /api/v1.0/{appId}/channels/assign-store | 
+*ChannelsApi* | [**attachStoreToSalesChannel**](docs/Api/ChannelsApi.md#attachstoretosaleschannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | 
+*ChannelsApi* | [**detachAllStoresFromSalesChannel**](docs/Api/ChannelsApi.md#detachallstoresfromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | 
+*ChannelsApi* | [**detachStoreFromSalesChannel**](docs/Api/ChannelsApi.md#detachstorefromsaleschannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | 
+*ChannelsApi* | [**getAssignedChannels**](docs/Api/ChannelsApi.md#getassignedchannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | 
+*ChannelsApi* | [**getAvailableChannels**](docs/Api/ChannelsApi.md#getavailablechannels) | **GET** /api/v1.0/{appId}/channels/available-channels | 
+*ChannelsApi* | [**getChannel**](docs/Api/ChannelsApi.md#getchannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
+*ChannelsApi* | [**getChannels**](docs/Api/ChannelsApi.md#getchannels) | **GET** /api/v1.0/{appId}/channels | 
+*ChannelsApi* | [**getStoresAssignedToChannel**](docs/Api/ChannelsApi.md#getstoresassignedtochannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | 
+*ChannelsApi* | [**getStoresBySalesChannel**](docs/Api/ChannelsApi.md#getstoresbysaleschannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | 
+*ChannelsApi* | [**unassignStoreFromChannel**](docs/Api/ChannelsApi.md#unassignstorefromchannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | 
+*ChannelsStoreMappingApi* | [**channelsGetStoreChannelStoreMapping**](docs/Api/ChannelsStoreMappingApi.md#channelsgetstorechannelstoremapping) | **GET** /api/v1.0/{appId}/channels/storemappings | 
+*ChannelsStoreMappingApi* | [**channelsSetStoreChannelStoreMapping**](docs/Api/ChannelsStoreMappingApi.md#channelssetstorechannelstoremapping) | **POST** /api/v1.0/{appId}/channels/storemappings | 
 *ContentSecurityPolicyApi* | [**contentSecurityPolicyReport**](docs/Api/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
-*CrossSellApi* | [**getCrossSellMenuItems**](docs/Api/CrossSellApi.md#getcrosssellmenuitems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | Get all Menu items by MenuId for cross sells
-*CustomersApi* | [**getCustomerById**](docs/Api/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | Get customer of an app by Id
-*CustomersApi* | [**updateCustomerById**](docs/Api/CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | Update customer of an app by Id
-*DeliveryTrackingApi* | [**assignDriverToOrder**](docs/Api/DeliveryTrackingApi.md#assigndrivertoorder) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders/{orderId} | [PRIVATE] Assign driver to order
-*DeliveryTrackingApi* | [**assignDriverToOrders**](docs/Api/DeliveryTrackingApi.md#assigndrivertoorders) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders | Assign driver to multiple orders
-*DeliveryTrackingApi* | [**getDrivers**](docs/Api/DeliveryTrackingApi.md#getdrivers) | **GET** /api/v1.0/{appId}/drivers | [PRIVATE] Get drivers by App
-*DeliveryTrackingApi* | [**inviteDriverToApp**](docs/Api/DeliveryTrackingApi.md#invitedrivertoapp) | **POST** /api/v1.0/{appId}/drivers | [PRIVATE] Invite driver
-*DeliveryTrackingApi* | [**removeDriverFromApp**](docs/Api/DeliveryTrackingApi.md#removedriverfromapp) | **DELETE** /api/v1.0/{appId}/drivers/{driverId} | [PRIVATE] Unassign driver from app
-*DeliveryTrackingApi* | [**unassignDriverFromOrder**](docs/Api/DeliveryTrackingApi.md#unassigndriverfromorder) | **DELETE** /api/v1.0/{appId}/orders/{orderId}/driver | [PRIVATE] Unassign driver from order
-*DeliveryZoneApi* | [**addDeliveryZone**](docs/Api/DeliveryZoneApi.md#adddeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones | Adds a delivery zone to the store id
-*DeliveryZoneApi* | [**getDeliveryZones**](docs/Api/DeliveryZoneApi.md#getdeliveryzones) | **GET** /api/v1.0/stores/{storeId}/deliveryzones | Get all the delivery zones associated with a store
-*DeliveryZoneApi* | [**removeDeliveryZone**](docs/Api/DeliveryZoneApi.md#removedeliveryzone) | **DELETE** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | Removes the existing delivery zone
-*DeliveryZoneApi* | [**updateDeliveryZone**](docs/Api/DeliveryZoneApi.md#updatedeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | Updates the existing delivery zone
-*DeviceApi* | [**assignDevice**](docs/Api/DeviceApi.md#assigndevice) | **POST** /api/v1.0/{appId}/devices/assign | Assign device to AppId. Device must have been enrolled before
-*DeviceApi* | [**enrollDevice**](docs/Api/DeviceApi.md#enrolldevice) | **POST** /api/v1.0/{appId}/devices/enroll | Enroll a new device - this returns a PIN code for actually assigning it later
-*DeviceApi* | [**getDeviceDetails**](docs/Api/DeviceApi.md#getdevicedetails) | **GET** /api/v1.0/{appId}/devices/device/{deviceModel}/{deviceId} | Get details for a device by model and deviceid
-*DeviceApi* | [**searchDevices**](docs/Api/DeviceApi.md#searchdevices) | **GET** /api/v1.0/{appId}/devices/search | Search devices by AppId and optionally storeId
-*DriversApi* | [**addDriverNotificationToken**](docs/Api/DriversApi.md#adddrivernotificationtoken) | **POST** /api/v1.0/drivers/token | Add driver token
-*DriversApi* | [**deleteDriverProfileImage**](docs/Api/DriversApi.md#deletedriverprofileimage) | **DELETE** /api/v1.0/drivers/profile/image | Delete driver profile image
-*DriversApi* | [**driverLogin**](docs/Api/DriversApi.md#driverlogin) | **POST** /api/v1.0/drivers/login | [PRIVATE] Login with phone number and pin
-*DriversApi* | [**driverRequestLoginCodeSms**](docs/Api/DriversApi.md#driverrequestlogincodesms) | **POST** /api/v1.0/drivers/pin | [PRIVATE] Request an SMS to be sent to the driver with their login code
-*DriversApi* | [**getDriverProfile**](docs/Api/DriversApi.md#getdriverprofile) | **GET** /api/v1.0/drivers/profile | Get driver profile
-*DriversApi* | [**getStoresForDriver**](docs/Api/DriversApi.md#getstoresfordriver) | **GET** /api/v1.0/drivers/assignedstores | Get stores for driver
-*DriversApi* | [**removeDriverNotificationToken**](docs/Api/DriversApi.md#removedrivernotificationtoken) | **DELETE** /api/v1.0/drivers/token | Delete driver token
+*CrossSellApi* | [**getCrossSellMenuItems**](docs/Api/CrossSellApi.md#getcrosssellmenuitems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | 
+*CustomersApi* | [**getCustomerById**](docs/Api/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
+*CustomersApi* | [**updateCustomerById**](docs/Api/CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | 
+*DeliveryTrackingApi* | [**assignDriverToOrder**](docs/Api/DeliveryTrackingApi.md#assigndrivertoorder) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders/{orderId} | 
+*DeliveryTrackingApi* | [**assignDriverToOrders**](docs/Api/DeliveryTrackingApi.md#assigndrivertoorders) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders | 
+*DeliveryTrackingApi* | [**getDrivers**](docs/Api/DeliveryTrackingApi.md#getdrivers) | **GET** /api/v1.0/{appId}/drivers | 
+*DeliveryTrackingApi* | [**inviteDriverToApp**](docs/Api/DeliveryTrackingApi.md#invitedrivertoapp) | **POST** /api/v1.0/{appId}/drivers | 
+*DeliveryTrackingApi* | [**removeDriverFromApp**](docs/Api/DeliveryTrackingApi.md#removedriverfromapp) | **DELETE** /api/v1.0/{appId}/drivers/{driverId} | 
+*DeliveryTrackingApi* | [**unassignDriverFromOrder**](docs/Api/DeliveryTrackingApi.md#unassigndriverfromorder) | **DELETE** /api/v1.0/{appId}/orders/{orderId}/driver | 
+*DeliveryZoneApi* | [**addDeliveryZone**](docs/Api/DeliveryZoneApi.md#adddeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones | 
+*DeliveryZoneApi* | [**getDeliveryZones**](docs/Api/DeliveryZoneApi.md#getdeliveryzones) | **GET** /api/v1.0/stores/{storeId}/deliveryzones | 
+*DeliveryZoneApi* | [**removeDeliveryZone**](docs/Api/DeliveryZoneApi.md#removedeliveryzone) | **DELETE** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | 
+*DeliveryZoneApi* | [**updateDeliveryZone**](docs/Api/DeliveryZoneApi.md#updatedeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | 
+*DeviceApi* | [**assignDevice**](docs/Api/DeviceApi.md#assigndevice) | **POST** /api/v1.0/{appId}/devices/assign | 
+*DeviceApi* | [**enrollDevice**](docs/Api/DeviceApi.md#enrolldevice) | **POST** /api/v1.0/{appId}/devices/enroll | 
+*DeviceApi* | [**getDeviceDetails**](docs/Api/DeviceApi.md#getdevicedetails) | **GET** /api/v1.0/{appId}/devices/device/{deviceModel}/{deviceId} | 
+*DeviceApi* | [**searchDevices**](docs/Api/DeviceApi.md#searchdevices) | **GET** /api/v1.0/{appId}/devices/search | 
+*DriversApi* | [**addDriverNotificationToken**](docs/Api/DriversApi.md#adddrivernotificationtoken) | **POST** /api/v1.0/drivers/token | 
+*DriversApi* | [**deleteDriverProfileImage**](docs/Api/DriversApi.md#deletedriverprofileimage) | **DELETE** /api/v1.0/drivers/profile/image | 
+*DriversApi* | [**driverLogin**](docs/Api/DriversApi.md#driverlogin) | **POST** /api/v1.0/drivers/login | 
+*DriversApi* | [**driverRequestLoginCodeSms**](docs/Api/DriversApi.md#driverrequestlogincodesms) | **POST** /api/v1.0/drivers/pin | 
+*DriversApi* | [**getDriverProfile**](docs/Api/DriversApi.md#getdriverprofile) | **GET** /api/v1.0/drivers/profile | 
+*DriversApi* | [**getStoresForDriver**](docs/Api/DriversApi.md#getstoresfordriver) | **GET** /api/v1.0/drivers/assignedstores | 
+*DriversApi* | [**removeDriverNotificationToken**](docs/Api/DriversApi.md#removedrivernotificationtoken) | **DELETE** /api/v1.0/drivers/token | 
 *DriversApi* | [**setDriverPresenceForStore**](docs/Api/DriversApi.md#setdriverpresenceforstore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
-*DriversApi* | [**setDriverProfileImage**](docs/Api/DriversApi.md#setdriverprofileimage) | **POST** /api/v1.0/drivers/profile/image | Set driver profile image and returns it&#39;s url
-*DriversApi* | [**updateDeliveryTrackingStatus**](docs/Api/DriversApi.md#updatedeliverytrackingstatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | Change delivery tracking status and return the updated status.
-*DriversApi* | [**updateDriverProfile**](docs/Api/DriversApi.md#updatedriverprofile) | **POST** /api/v1.0/drivers/profile | Update driver profile
-*EventsApi* | [**getCustomerEvents**](docs/Api/EventsApi.md#getcustomerevents) | **GET** /api/v1.0/{appId}/events/customer/{customerId} | Get customer events  For technical reasons, the number of records returned is limited to 100.
-*EventsApi* | [**getEvents**](docs/Api/EventsApi.md#getevents) | **GET** /api/v1.0/{appId}/events | Get events  For technical reasons, the number of records returned is limited to 100.
-*EventsApi* | [**getEventsById**](docs/Api/EventsApi.md#geteventsbyid) | **GET** /api/v1.0/{appId}/events/{eventId} | Get event by Id  For technical reasons, the number of records returned is limited to 100.
-*EventsApi* | [**getMenuEvents**](docs/Api/EventsApi.md#getmenuevents) | **GET** /api/v1.0/{appId}/events/menu/{menuId} | Get menu events  For technical reasons, the number of records returned is limited to 100.
-*EventsApi* | [**getOrderEvents**](docs/Api/EventsApi.md#getorderevents) | **GET** /api/v1.0/{appId}/events/order/{orderId} | Get order events  For technical reasons, the number of records returned is limited to 100.
-*EventsApi* | [**getOrderEventsByCustomer**](docs/Api/EventsApi.md#getordereventsbycustomer) | **GET** /api/v1.0/{appId}/events/order | Get order events by customer  For technical reasons, the number of records returned is limited to 100.
-*EventsApi* | [**getStoreEvents**](docs/Api/EventsApi.md#getstoreevents) | **GET** /api/v1.0/{appId}/events/store/{storeId} | Get store events  For technical reasons, the number of records returned is limited to 100.
-*EventsApi* | [**getUserEvents**](docs/Api/EventsApi.md#getuserevents) | **GET** /api/v1.0/{appId}/events/user/{userId} | Get user events  For technical reasons, the number of records returned is limited to 100.
-*EventsApi* | [**getWhiteLabelEvents**](docs/Api/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/{appId}/events/whitelabel/{whitelabelId} | Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
-*FilesApi* | [**downloadFile**](docs/Api/FilesApi.md#downloadfile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | Get file from storage
+*DriversApi* | [**setDriverProfileImage**](docs/Api/DriversApi.md#setdriverprofileimage) | **POST** /api/v1.0/drivers/profile/image | 
+*DriversApi* | [**updateDeliveryTrackingStatus**](docs/Api/DriversApi.md#updatedeliverytrackingstatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
+*DriversApi* | [**updateDriverProfile**](docs/Api/DriversApi.md#updatedriverprofile) | **POST** /api/v1.0/drivers/profile | 
+*EventsApi* | [**getCustomerEvents**](docs/Api/EventsApi.md#getcustomerevents) | **GET** /api/v1.0/{appId}/events/customer/{customerId} | 
+*EventsApi* | [**getEvents**](docs/Api/EventsApi.md#getevents) | **GET** /api/v1.0/{appId}/events | 
+*EventsApi* | [**getEventsById**](docs/Api/EventsApi.md#geteventsbyid) | **GET** /api/v1.0/{appId}/events/{eventId} | 
+*EventsApi* | [**getMenuEvents**](docs/Api/EventsApi.md#getmenuevents) | **GET** /api/v1.0/{appId}/events/menu/{menuId} | 
+*EventsApi* | [**getOrderEvents**](docs/Api/EventsApi.md#getorderevents) | **GET** /api/v1.0/{appId}/events/order/{orderId} | 
+*EventsApi* | [**getOrderEventsByCustomer**](docs/Api/EventsApi.md#getordereventsbycustomer) | **GET** /api/v1.0/{appId}/events/order | 
+*EventsApi* | [**getStoreEvents**](docs/Api/EventsApi.md#getstoreevents) | **GET** /api/v1.0/{appId}/events/store/{storeId} | 
+*EventsApi* | [**getUserEvents**](docs/Api/EventsApi.md#getuserevents) | **GET** /api/v1.0/{appId}/events/user/{userId} | 
+*EventsApi* | [**getWhiteLabelEvents**](docs/Api/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/{appId}/events/whitelabel/{whitelabelId} | 
+*FilesApi* | [**downloadFile**](docs/Api/FilesApi.md#downloadfile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | 
 *FirebaseAppsApi* | [**firebaseAppsAddFirebaseApp**](docs/Api/FirebaseAppsApi.md#firebaseappsaddfirebaseapp) | **POST** /api/v1.0/FirebaseApp | 
 *FirebaseAppsApi* | [**firebaseAppsGetFirebaseApp**](docs/Api/FirebaseAppsApi.md#firebaseappsgetfirebaseapp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
-*FulfillmentStateConfigurationApi* | [**createFulfillmentStatesConfig**](docs/Api/FulfillmentStateConfigurationApi.md#createfulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states | Create fulfillment configuration
-*FulfillmentStateConfigurationApi* | [**deleteFulfillmentStatesConfig**](docs/Api/FulfillmentStateConfigurationApi.md#deletefulfillmentstatesconfig) | **DELETE** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Delete fulfillment states configuration
-*FulfillmentStateConfigurationApi* | [**getFulfillmentStatesConfiguration**](docs/Api/FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfiguration) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Get fulfillment configuration
-*FulfillmentStateConfigurationApi* | [**getFulfillmentStatesConfigurationTemplate**](docs/Api/FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfigurationtemplate) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states_template | Get fulfillment configuration template
-*FulfillmentStateConfigurationApi* | [**searchFulfillmentStatesConfigurations**](docs/Api/FulfillmentStateConfigurationApi.md#searchfulfillmentstatesconfigurations) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states | List fulfillment configurations for AppId
-*FulfillmentStateConfigurationApi* | [**updateFulfillmentStatesConfig**](docs/Api/FulfillmentStateConfigurationApi.md#updatefulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | Update fulfillment configuration
+*FulfillmentStateConfigurationApi* | [**createFulfillmentStatesConfig**](docs/Api/FulfillmentStateConfigurationApi.md#createfulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states | 
+*FulfillmentStateConfigurationApi* | [**deleteFulfillmentStatesConfig**](docs/Api/FulfillmentStateConfigurationApi.md#deletefulfillmentstatesconfig) | **DELETE** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | 
+*FulfillmentStateConfigurationApi* | [**getFulfillmentStatesConfiguration**](docs/Api/FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfiguration) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | 
+*FulfillmentStateConfigurationApi* | [**getFulfillmentStatesConfigurationTemplate**](docs/Api/FulfillmentStateConfigurationApi.md#getfulfillmentstatesconfigurationtemplate) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states_template | 
+*FulfillmentStateConfigurationApi* | [**searchFulfillmentStatesConfigurations**](docs/Api/FulfillmentStateConfigurationApi.md#searchfulfillmentstatesconfigurations) | **GET** /api/v1.0/{appId}/fulfillment/configuration/states | 
+*FulfillmentStateConfigurationApi* | [**updateFulfillmentStatesConfig**](docs/Api/FulfillmentStateConfigurationApi.md#updatefulfillmentstatesconfig) | **POST** /api/v1.0/{appId}/fulfillment/configuration/states/{configId} | 
 *HeartbeatApi* | [**headHostname**](docs/Api/HeartbeatApi.md#headhostname) | **HEAD** /api/v1.0/heartbeat/Hostname | 
 *HeartbeatApi* | [**headPing**](docs/Api/HeartbeatApi.md#headping) | **HEAD** /api/v1.0/heartbeat | 
 *HeartbeatApi* | [**hostname**](docs/Api/HeartbeatApi.md#hostname) | **GET** /api/v1.0/heartbeat/Hostname | 
 *HeartbeatApi* | [**ping**](docs/Api/HeartbeatApi.md#ping) | **GET** /api/v1.0/heartbeat | 
-*HomeApi* | [**completeHomeAction**](docs/Api/HomeApi.md#completehomeaction) | **POST** /api/v1.0/{appId}/home/{homeActionId} | [PRIVATE API] Complete Home Action
-*HomeApi* | [**dismissOldPortalAction**](docs/Api/HomeApi.md#dismissoldportalaction) | **POST** /api/v1.0/home/dismissoldportalaction | [PRIVATE API] Complete Home Action
-*HomeApi* | [**getHomeActions**](docs/Api/HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | [PRIVATE API] Get Home Actions
-*HomeApi* | [**getHomeStatistics**](docs/Api/HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | [PRIVATE API] Get Home Statistics
-*HomeApi* | [**getOktaPortalFeatureFlag**](docs/Api/HomeApi.md#getoktaportalfeatureflag) | **GET** /api/v1.0/home/okta-portal | [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
-*HttpRequestResponseLogsApi* | [**getLogs**](docs/Api/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/{appId}/interactions/logs | Get API interaction logs
-*HydraApi* | [**assignEmv**](docs/Api/HydraApi.md#assignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | Assign an EMV terminal to a kiosk
-*HydraApi* | [**attachStoreToKiosk**](docs/Api/HydraApi.md#attachstoretokiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | [Private]
-*HydraApi* | [**attachStoreToTerminal**](docs/Api/HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | [Private]
+*HomeApi* | [**completeHomeAction**](docs/Api/HomeApi.md#completehomeaction) | **POST** /api/v1.0/{appId}/home/{homeActionId} | 
+*HomeApi* | [**dismissOldPortalAction**](docs/Api/HomeApi.md#dismissoldportalaction) | **POST** /api/v1.0/home/dismissoldportalaction | 
+*HomeApi* | [**getHomeActions**](docs/Api/HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | 
+*HomeApi* | [**getHomeStatistics**](docs/Api/HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | 
+*HomeApi* | [**getOktaPortalFeatureFlag**](docs/Api/HomeApi.md#getoktaportalfeatureflag) | **GET** /api/v1.0/home/okta-portal | 
+*HttpRequestResponseLogsApi* | [**getLogs**](docs/Api/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/{appId}/interactions/logs | 
+*HydraApi* | [**assignEmv**](docs/Api/HydraApi.md#assignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | 
+*HydraApi* | [**attachStoreToKiosk**](docs/Api/HydraApi.md#attachstoretokiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | 
+*HydraApi* | [**attachStoreToTerminal**](docs/Api/HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | 
 *HydraApi* | [**cancelEmvPayment**](docs/Api/HydraApi.md#cancelemvpayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
-*HydraApi* | [**detachStoreFromTerminal**](docs/Api/HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | [Private]
-*HydraApi* | [**getAttachedDevice**](docs/Api/HydraApi.md#getattacheddevice) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/{deviceId} | [Private]
-*HydraApi* | [**getAttachedDevices**](docs/Api/HydraApi.md#getattacheddevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | [Private]
-*HydraApi* | [**getEMVTerminalDetails**](docs/Api/HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | [Private]
-*HydraApi* | [**getEmvOrderState**](docs/Api/HydraApi.md#getemvorderstate) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | [Private]
-*HydraApi* | [**getKioskCashPaymentSettings**](docs/Api/HydraApi.md#getkioskcashpaymentsettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | Get the status of Cash Payment Method on Kiosk
+*HydraApi* | [**detachStoreFromTerminal**](docs/Api/HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | 
+*HydraApi* | [**getAttachedDevice**](docs/Api/HydraApi.md#getattacheddevice) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/{deviceId} | 
+*HydraApi* | [**getAttachedDevices**](docs/Api/HydraApi.md#getattacheddevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | 
+*HydraApi* | [**getEMVTerminalDetails**](docs/Api/HydraApi.md#getemvterminaldetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | 
+*HydraApi* | [**getEmvOrderState**](docs/Api/HydraApi.md#getemvorderstate) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | 
+*HydraApi* | [**getKioskCashPaymentSettings**](docs/Api/HydraApi.md#getkioskcashpaymentsettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | 
 *HydraApi* | [**getRegistration**](docs/Api/HydraApi.md#getregistration) | **GET** /api/v1.0/hydra/registration | 
-*HydraApi* | [**getSettings**](docs/Api/HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | [Private]
-*HydraApi* | [**hydraCreateEmv**](docs/Api/HydraApi.md#hydracreateemv) | **POST** /api/v1.0/{appId}/emvterminals | [Private]
-*HydraApi* | [**hydraDeleteEmv**](docs/Api/HydraApi.md#hydradeleteemv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | [Private]
-*HydraApi* | [**hydraDetachStoreFromKiosk**](docs/Api/HydraApi.md#hydradetachstorefromkiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | [Private]
-*HydraApi* | [**hydraGetEmvsForAppId**](docs/Api/HydraApi.md#hydragetemvsforappid) | **GET** /api/v1.0/{appId}/emvterminals | List EMV terminals belonging to the given AppNameId
-*HydraApi* | [**loginWithDeviceId**](docs/Api/HydraApi.md#loginwithdeviceid) | **POST** /api/v1.0/hydra/{deviceId}/login | [Private]
-*HydraApi* | [**register**](docs/Api/HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | [Private]
-*HydraApi* | [**unAssign**](docs/Api/HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | [Private]
-*HydraApi* | [**unassignEmv**](docs/Api/HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | Unassign the currently assigned EMV terminal from a kiosk
-*HydraApi* | [**updateKioskCashVisibilitySettings**](docs/Api/HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | Update the Cash Payment Method Visibility on Kiosk
+*HydraApi* | [**getSettings**](docs/Api/HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | 
+*HydraApi* | [**hydraCreateEmv**](docs/Api/HydraApi.md#hydracreateemv) | **POST** /api/v1.0/{appId}/emvterminals | 
+*HydraApi* | [**hydraDeleteEmv**](docs/Api/HydraApi.md#hydradeleteemv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | 
+*HydraApi* | [**hydraDetachStoreFromKiosk**](docs/Api/HydraApi.md#hydradetachstorefromkiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | 
+*HydraApi* | [**hydraGetEmvsForAppId**](docs/Api/HydraApi.md#hydragetemvsforappid) | **GET** /api/v1.0/{appId}/emvterminals | 
+*HydraApi* | [**loginWithDeviceId**](docs/Api/HydraApi.md#loginwithdeviceid) | **POST** /api/v1.0/hydra/{deviceId}/login | 
+*HydraApi* | [**register**](docs/Api/HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | 
+*HydraApi* | [**unAssign**](docs/Api/HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | 
+*HydraApi* | [**unassignEmv**](docs/Api/HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | 
+*HydraApi* | [**updateKioskCashVisibilitySettings**](docs/Api/HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | 
 *IntercomApi* | [**userHash**](docs/Api/IntercomApi.md#userhash) | **GET** /api/v1.0/intercom/userHash | 
-*InvoicesApi* | [**getInvoices**](docs/Api/InvoicesApi.md#getinvoices) | **GET** /api/v1.0/{appId}/invoices | Get list of invoices
-*KioskIotApi* | [**getKioskIotConnection**](docs/Api/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
-*KioskIotApi* | [**queryTelemetrySeries**](docs/Api/KioskIotApi.md#querytelemetryseries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | Get the IoT time series values for a given Kiosk Id, properties and time range
-*KioskStoreSettingsApi* | [**getAllKioskSettingsForStore**](docs/Api/KioskStoreSettingsApi.md#getallkiosksettingsforstore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | Get all kiosk settings associated with a store
-*KioskStoreSettingsApi* | [**getAllStoreSettingsForKioskHydra**](docs/Api/KioskStoreSettingsApi.md#getallstoresettingsforkioskhydra) | **GET** /api/v1.0/kioskstoresettings | [For Kiosk use only] Get all stores connected to a Kiosk
+*InvoicesApi* | [**getInvoices**](docs/Api/InvoicesApi.md#getinvoices) | **GET** /api/v1.0/{appId}/invoices | 
+*KioskIotApi* | [**getKioskIotConnection**](docs/Api/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | 
+*KioskIotApi* | [**queryTelemetrySeries**](docs/Api/KioskIotApi.md#querytelemetryseries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | 
+*KioskStoreSettingsApi* | [**getAllKioskSettingsForStore**](docs/Api/KioskStoreSettingsApi.md#getallkiosksettingsforstore) | **GET** /api/v1.0/{appId}/kiosksettings/store/{storeId} | 
+*KioskStoreSettingsApi* | [**getAllStoreSettingsForKioskHydra**](docs/Api/KioskStoreSettingsApi.md#getallstoresettingsforkioskhydra) | **GET** /api/v1.0/kioskstoresettings | 
 *KioskStoreSettingsApi* | [**updateCashSettingForKiosk**](docs/Api/KioskStoreSettingsApi.md#updatecashsettingforkiosk) | **POST** /api/v1.0/{appId}/kiosksettings/cash | 
 *LightspeedApi* | [**lightspeedGenerateMenu**](docs/Api/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
 *LightspeedApi* | [**lightspeedGetStoreSettings**](docs/Api/LightspeedApi.md#lightspeedgetstoresettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
 *LightspeedApi* | [**lightspeedSaveStoreSettings**](docs/Api/LightspeedApi.md#lightspeedsavestoresettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
-*LocationApi* | [**createLocation**](docs/Api/LocationApi.md#createlocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location | Create a Location i.e: Table, Hotel Room, Car park space
-*LocationApi* | [**deleteLocation**](docs/Api/LocationApi.md#deletelocation) | **DELETE** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete | Set a Location as deleted
-*LocationApi* | [**mapLocationToExternalId**](docs/Api/LocationApi.md#maplocationtoexternalid) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external | Set or unset External Location Id on a Location
-*LocationApi* | [**moveLocation**](docs/Api/LocationApi.md#movelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move | Move a Location to a different location Area
-*LocationApi* | [**updateLocation**](docs/Api/LocationApi.md#updatelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update | Update a Location i.e: Table, Hotel Room, Car park space
-*LocationAreasApi* | [**createLocationArea**](docs/Api/LocationAreasApi.md#createlocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | Create a Location Area, i.e: Room, Floor, Parking lot
-*LocationAreasApi* | [**getLocationArea**](docs/Api/LocationAreasApi.md#getlocationarea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | Retrieve a Location Area
-*LocationAreasApi* | [**getLocationAreasForStore**](docs/Api/LocationAreasApi.md#getlocationareasforstore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | Retrieve all Location Areas for a Store
-*LocationAreasApi* | [**updateLocationArea**](docs/Api/LocationAreasApi.md#updatelocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/update | Update a Location Area, i.e: Room, Floor, Car park space
-*LookerDashboardApi* | [**lookerDashboardGetAll**](docs/Api/LookerDashboardApi.md#lookerdashboardgetall) | **GET** /api/v1.0/{appId}/looker/dashboards | Get all dashboards
-*LookerSingleSignOnApi* | [**getSSOEndpoint**](docs/Api/LookerSingleSignOnApi.md#getssoendpoint) | **GET** /api/v1.0/{appId}/looker/sso | Get the generic single sign on embed URL for Looker dashboards
+*LocationApi* | [**createLocation**](docs/Api/LocationApi.md#createlocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location | 
+*LocationApi* | [**deleteLocation**](docs/Api/LocationApi.md#deletelocation) | **DELETE** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/delete | 
+*LocationApi* | [**mapLocationToExternalId**](docs/Api/LocationApi.md#maplocationtoexternalid) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/map-external | 
+*LocationApi* | [**moveLocation**](docs/Api/LocationApi.md#movelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/move | 
+*LocationApi* | [**updateLocation**](docs/Api/LocationApi.md#updatelocation) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/location/{locationId}/update | 
+*LocationAreasApi* | [**createLocationArea**](docs/Api/LocationAreasApi.md#createlocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas | 
+*LocationAreasApi* | [**getLocationArea**](docs/Api/LocationAreasApi.md#getlocationarea) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId} | 
+*LocationAreasApi* | [**getLocationAreasForStore**](docs/Api/LocationAreasApi.md#getlocationareasforstore) | **GET** /api/v1.0/{appId}/stores/{storeId}/location-areas | 
+*LocationAreasApi* | [**updateLocationArea**](docs/Api/LocationAreasApi.md#updatelocationarea) | **POST** /api/v1.0/{appId}/stores/{storeId}/location-areas/{locationAreaId}/update | 
+*LookerDashboardApi* | [**lookerDashboardGetAll**](docs/Api/LookerDashboardApi.md#lookerdashboardgetall) | **GET** /api/v1.0/{appId}/looker/dashboards | 
+*LookerSingleSignOnApi* | [**getSSOEndpoint**](docs/Api/LookerSingleSignOnApi.md#getssoendpoint) | **GET** /api/v1.0/{appId}/looker/sso | 
 *MenuOptionSetItemsApi* | [**addMenuItemOptionSetItem**](docs/Api/MenuOptionSetItemsApi.md#addmenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Create menu item option set item
 *MenuOptionSetItemsApi* | [**deleteOptionSetItemImage**](docs/Api/MenuOptionSetItemsApi.md#deleteoptionsetitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Delete menu item option set item image
 *MenuOptionSetItemsApi* | [**getMenuItemOptionSetItemById**](docs/Api/MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
@@ -386,71 +386,71 @@ Class | Method | HTTP request | Description
 *MetafieldDefinitionsApi* | [**getOwnerEntityConfigurations**](docs/Api/MetafieldDefinitionsApi.md#getownerentityconfigurations) | **GET** /api/v1.0/{appId}/metafields/definitions | 
 *MetafieldDefinitionsApi* | [**getOwnerEntityRecommendations**](docs/Api/MetafieldDefinitionsApi.md#getownerentityrecommendations) | **GET** /api/v1.0/{appId}/metafields/definitions/recommendations/{ownerEntity} | 
 *MetafieldDefinitionsApi* | [**updateMetafieldDefinition**](docs/Api/MetafieldDefinitionsApi.md#updatemetafielddefinition) | **POST** /api/v1.0/{appId}/metafields/definitions/{ownerEntity}/{key} | 
-*MobileAppsApi* | [**getAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#getappconfigsaleschannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | Get sales channel configuration
-*MobileAppsApi* | [**getStatistics**](docs/Api/MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | Get statistics mobile apps
-*MobileAppsApi* | [**getSubmissionDetails**](docs/Api/MobileAppsApi.md#getsubmissiondetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | Get submission details mobile apps
-*MobileAppsApi* | [**getSubmissionStatus**](docs/Api/MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Get submission status mobile apps
-*MobileAppsApi* | [**publish**](docs/Api/MobileAppsApi.md#publish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/publish | Publish mobile apps
-*MobileAppsApi* | [**resubmission**](docs/Api/MobileAppsApi.md#resubmission) | **POST** /api/v1.0/mobileapps/{appId}/resubmission | Re-submission form mobile apps
-*MobileAppsApi* | [**submission**](docs/Api/MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | Submission form mobile apps
-*MobileAppsApi* | [**unpublish**](docs/Api/MobileAppsApi.md#unpublish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/unpublish | Unpublish mobile apps
-*MobileAppsApi* | [**updateAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#updateappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | Update the application sales channel configuration
-*MobileAppsApi* | [**updateSubmissionStatus**](docs/Api/MobileAppsApi.md#updatesubmissionstatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | Update submission status
-*MobileAppsApi* | [**uploadImage**](docs/Api/MobileAppsApi.md#uploadimage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | Upload image mobile apps
-*OAuthClientsApi* | [**addRedirectUri**](docs/Api/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Create OAuth App redirect uri
-*OAuthClientsApi* | [**createOAuthApp**](docs/Api/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | Create OAuth App
-*OAuthClientsApi* | [**deleteOAuthApp**](docs/Api/OAuthClientsApi.md#deleteoauthapp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Delete OAuth App
-*OAuthClientsApi* | [**getOAuthApps**](docs/Api/OAuthClientsApi.md#getoauthapps) | **GET** /api/v1.0/{appId}/oauthclients | Get all OAuth Apps
-*OAuthClientsApi* | [**getOAuthClientByClientId**](docs/Api/OAuthClientsApi.md#getoauthclientbyclientid) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Get OAuth App by identifier
-*OAuthClientsApi* | [**getOAuthClientSecret**](docs/Api/OAuthClientsApi.md#getoauthclientsecret) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/secret | Get OAuth App secret key
-*OAuthClientsApi* | [**getOauthAccessToken**](docs/Api/OAuthClientsApi.md#getoauthaccesstoken) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/accesstoken | Get OAuth access token for App
-*OAuthClientsApi* | [**getRedirectUris**](docs/Api/OAuthClientsApi.md#getredirecturis) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | Get OAuth App redirect uris
+*MobileAppsApi* | [**getAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#getappconfigsaleschannel) | **GET** /api/v1.0/mobileapps/{appId}/saleschannel/details | 
+*MobileAppsApi* | [**getStatistics**](docs/Api/MobileAppsApi.md#getstatistics) | **GET** /api/v1.0/mobileapps/{appId}/statistics | 
+*MobileAppsApi* | [**getSubmissionDetails**](docs/Api/MobileAppsApi.md#getsubmissiondetails) | **GET** /api/v1.0/mobileapps/{appId}/submission/details | 
+*MobileAppsApi* | [**getSubmissionStatus**](docs/Api/MobileAppsApi.md#getsubmissionstatus) | **GET** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | 
+*MobileAppsApi* | [**publish**](docs/Api/MobileAppsApi.md#publish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/publish | 
+*MobileAppsApi* | [**resubmission**](docs/Api/MobileAppsApi.md#resubmission) | **POST** /api/v1.0/mobileapps/{appId}/resubmission | 
+*MobileAppsApi* | [**submission**](docs/Api/MobileAppsApi.md#submission) | **POST** /api/v1.0/mobileapps/{appId}/submission | 
+*MobileAppsApi* | [**unpublish**](docs/Api/MobileAppsApi.md#unpublish) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/unpublish | 
+*MobileAppsApi* | [**updateAppConfigSalesChannel**](docs/Api/MobileAppsApi.md#updateappconfigsaleschannel) | **POST** /api/v1.0/mobileapps/{appId}/saleschannel | 
+*MobileAppsApi* | [**updateSubmissionStatus**](docs/Api/MobileAppsApi.md#updatesubmissionstatus) | **POST** /api/v1.0/mobileapps/{appId}/submission/{submissionId}/status | 
+*MobileAppsApi* | [**uploadImage**](docs/Api/MobileAppsApi.md#uploadimage) | **POST** /api/v1.0/mobileapps/{appId}/submission/image | 
+*OAuthClientsApi* | [**addRedirectUri**](docs/Api/OAuthClientsApi.md#addredirecturi) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | 
+*OAuthClientsApi* | [**createOAuthApp**](docs/Api/OAuthClientsApi.md#createoauthapp) | **POST** /api/v1.0/{appId}/oauthclients | 
+*OAuthClientsApi* | [**deleteOAuthApp**](docs/Api/OAuthClientsApi.md#deleteoauthapp) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId} | 
+*OAuthClientsApi* | [**getOAuthApps**](docs/Api/OAuthClientsApi.md#getoauthapps) | **GET** /api/v1.0/{appId}/oauthclients | 
+*OAuthClientsApi* | [**getOAuthClientByClientId**](docs/Api/OAuthClientsApi.md#getoauthclientbyclientid) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId} | 
+*OAuthClientsApi* | [**getOAuthClientSecret**](docs/Api/OAuthClientsApi.md#getoauthclientsecret) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/secret | 
+*OAuthClientsApi* | [**getOauthAccessToken**](docs/Api/OAuthClientsApi.md#getoauthaccesstoken) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/accesstoken | 
+*OAuthClientsApi* | [**getRedirectUris**](docs/Api/OAuthClientsApi.md#getredirecturis) | **GET** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis | 
 *OAuthClientsApi* | [**oAuthClientsGetApplications**](docs/Api/OAuthClientsApi.md#oauthclientsgetapplications) | **GET** /api/v1.0/{appId}/oauthclients/appnames | 
-*OAuthClientsApi* | [**removeRedirectUri**](docs/Api/OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId} | Delete OAuth App redirect uri
-*OAuthClientsApi* | [**updateOAuthApp**](docs/Api/OAuthClientsApi.md#updateoauthapp) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId} | Update OAuth App
+*OAuthClientsApi* | [**removeRedirectUri**](docs/Api/OAuthClientsApi.md#removeredirecturi) | **DELETE** /api/v1.0/{appId}/oauthclients/{oauthAppId}/redirecturis/{uriId} | 
+*OAuthClientsApi* | [**updateOAuthApp**](docs/Api/OAuthClientsApi.md#updateoauthapp) | **POST** /api/v1.0/{appId}/oauthclients/{oauthAppId} | 
 *OnboardingApi* | [**onboardingGetOnboardingConfig**](docs/Api/OnboardingApi.md#onboardinggetonboardingconfig) | **GET** /api/v1.0/clients/{appId}/onboarding/config | 
 *OnboardingApi* | [**onboardingGetOnboardingItems**](docs/Api/OnboardingApi.md#onboardinggetonboardingitems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
 *OnboardingApi* | [**onboardingUpdateOnboardingConfig**](docs/Api/OnboardingApi.md#onboardingupdateonboardingconfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
 *OnboardingApi* | [**onboardingUpdateOnboardingItem**](docs/Api/OnboardingApi.md#onboardingupdateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
-*OrderBatchesApi* | [**getAllOrderBatches**](docs/Api/OrderBatchesApi.md#getallorderbatches) | **GET** /api/v1.0/{appId}/order-batches | Returns order batches
-*OrderBatchesApi* | [**getOrderBatch**](docs/Api/OrderBatchesApi.md#getorderbatch) | **GET** /api/v1.0/{appId}/order-batches/{orderBatchId} | Returns the order batch details
-*OrderBatchingConfigurationApi* | [**get**](docs/Api/OrderBatchingConfigurationApi.md#get) | **GET** /api/v1.0/stores/{storeId}/order-batching-configuration | Returns order batching configuration for a specific store
-*OrderBatchingConfigurationApi* | [**post**](docs/Api/OrderBatchingConfigurationApi.md#post) | **POST** /api/v1.0/stores/{storeId}/order-batching-configuration | Sets order batching configuration for a specific store
-*OrderIngestApi* | [**orderIngestSubmitNewOrder**](docs/Api/OrderIngestApi.md#orderingestsubmitneworder) | **POST** /api/v1.0/{appNameId}/order-ingest/submit | Provides an ability to ingest a 3rd party order into Flipdish ecosystem
-*OrdersApi* | [**acceptOrder**](docs/Api/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | Accept order
-*OrdersApi* | [**dispatchOrder**](docs/Api/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | Dispatch order
-*OrdersApi* | [**getDeliveryInformation**](docs/Api/OrdersApi.md#getdeliveryinformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | Get order delivery information
-*OrdersApi* | [**getFulfillmentState**](docs/Api/OrdersApi.md#getfulfillmentstate) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state | Get order fulfillment state
-*OrdersApi* | [**getFulfillmentStatusWithDetailsAndActions**](docs/Api/OrdersApi.md#getfulfillmentstatuswithdetailsandactions) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state/details | Get order fulfillment state with actionable details like default next state
-*OrdersApi* | [**getOrderById**](docs/Api/OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | Get order by ID
-*OrdersApi* | [**getOrders**](docs/Api/OrdersApi.md#getorders) | **GET** /api/v1.0/orders | Get orders by filter
-*OrdersApi* | [**getOrdersSummary**](docs/Api/OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | [PRIVATE API] Get summary of orders by filter
-*OrdersApi* | [**refundOrder**](docs/Api/OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | Refund order
-*OrdersApi* | [**rejectOrder**](docs/Api/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | Reject order
-*OrdersApi* | [**searchFulfillmentStatuses**](docs/Api/OrdersApi.md#searchfulfillmentstatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | Get fulfillment status for a list of orders
-*OrdersApi* | [**updateDeliveryInformation**](docs/Api/OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | Add/update delivery-related information to an order
-*OrdersApi* | [**updateFulfillmentState**](docs/Api/OrdersApi.md#updatefulfillmentstate) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | Update fulfillment status information to an order
-*PaymentIntentsApi* | [**getPaymentIntent**](docs/Api/PaymentIntentsApi.md#getpaymentintent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | Returns stripe payment intent for a given id
-*PaymentsApi* | [**getOrderPaymentInformation**](docs/Api/PaymentsApi.md#getorderpaymentinformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | Returns payment refund information related to the order with the order id
-*PayoutsApi* | [**getPayout**](docs/Api/PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | Get Payout details broken down by Store
-*PayoutsApi* | [**getPayoutChargebacks**](docs/Api/PayoutsApi.md#getpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | Get list of payout&#39;s chargebacks
-*PayoutsApi* | [**getPayoutOrders**](docs/Api/PayoutsApi.md#getpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | Get list of payout&#39;s orders
-*PayoutsApi* | [**getPayoutOtherCharges**](docs/Api/PayoutsApi.md#getpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges | Get list of payout&#39;s other charges
-*PayoutsApi* | [**getPayoutRefunds**](docs/Api/PayoutsApi.md#getpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds | Get list of payout&#39;s refunds
-*PayoutsApi* | [**getPayoutSummaries**](docs/Api/PayoutsApi.md#getpayoutsummaries) | **GET** /api/v1.0/{appId}/payouts/summaries | Get list of payout summaries
-*PayoutsApi* | [**getPayouts**](docs/Api/PayoutsApi.md#getpayouts) | **GET** /api/v1.0/{appId}/payouts | Get list of payouts
-*PayoutsExportApi* | [**exportPayoutChargebacks**](docs/Api/PayoutsExportApi.md#exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export | Export a list of payout&#39;s chargebacks as CSV
-*PayoutsExportApi* | [**exportPayoutOrders**](docs/Api/PayoutsExportApi.md#exportpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export | Export a list of payout&#39;s orders as CSV
-*PayoutsExportApi* | [**exportPayoutOtherCharges**](docs/Api/PayoutsExportApi.md#exportpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export | Export a list of payout&#39;s other charges as CSV
-*PayoutsExportApi* | [**exportPayoutRefunds**](docs/Api/PayoutsExportApi.md#exportpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | Export a list of payout&#39;s refunds as CSV
-*PayoutsExportApi* | [**exportPayoutStores**](docs/Api/PayoutsExportApi.md#exportpayoutstores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | Export payout&#39;s details as CSV
-*PayoutsExportApi* | [**exportPayouts**](docs/Api/PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | Export payouts as CSV
-*ProcessingFeeConfigsApi* | [**getProcessingFeeConfigsByStoreIds**](docs/Api/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
-*PushNotificationsApi* | [**deletePushNotification**](docs/Api/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Push notification to cutomers
-*PushNotificationsApi* | [**getPushNotifications**](docs/Api/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
-*PushNotificationsApi* | [**schedulePushNotification**](docs/Api/PushNotificationsApi.md#schedulepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications | [PRIVATE] Push notification to cutomers
-*PushNotificationsApi* | [**updatePushNotification**](docs/Api/PushNotificationsApi.md#updatepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | [PRIVATE] Update the push notification
-*ReceiptsApi* | [**getReceipt**](docs/Api/ReceiptsApi.md#getreceipt) | **GET** /api/v1.0/receipts/{orderId} | Returns all receipt information for a given orderId
+*OrderBatchesApi* | [**getAllOrderBatches**](docs/Api/OrderBatchesApi.md#getallorderbatches) | **GET** /api/v1.0/{appId}/order-batches | 
+*OrderBatchesApi* | [**getOrderBatch**](docs/Api/OrderBatchesApi.md#getorderbatch) | **GET** /api/v1.0/{appId}/order-batches/{orderBatchId} | 
+*OrderBatchingConfigurationApi* | [**get**](docs/Api/OrderBatchingConfigurationApi.md#get) | **GET** /api/v1.0/stores/{storeId}/order-batching-configuration | 
+*OrderBatchingConfigurationApi* | [**post**](docs/Api/OrderBatchingConfigurationApi.md#post) | **POST** /api/v1.0/stores/{storeId}/order-batching-configuration | 
+*OrderIngestApi* | [**orderIngestSubmitNewOrder**](docs/Api/OrderIngestApi.md#orderingestsubmitneworder) | **POST** /api/v1.0/{appNameId}/order-ingest/submit | 
+*OrdersApi* | [**acceptOrder**](docs/Api/OrdersApi.md#acceptorder) | **POST** /api/v1.0/orders/{id}/accept | 
+*OrdersApi* | [**dispatchOrder**](docs/Api/OrdersApi.md#dispatchorder) | **POST** /api/v1.0/orders/{id}/dispatch | 
+*OrdersApi* | [**getDeliveryInformation**](docs/Api/OrdersApi.md#getdeliveryinformation) | **GET** /api/v1.0/orders/{orderId}/deliveryinfo | 
+*OrdersApi* | [**getFulfillmentState**](docs/Api/OrdersApi.md#getfulfillmentstate) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state | 
+*OrdersApi* | [**getFulfillmentStatusWithDetailsAndActions**](docs/Api/OrdersApi.md#getfulfillmentstatuswithdetailsandactions) | **GET** /api/v1.0/orders/{orderId}/fulfillment/state/details | 
+*OrdersApi* | [**getOrderById**](docs/Api/OrdersApi.md#getorderbyid) | **GET** /api/v1.0/orders/{id} | 
+*OrdersApi* | [**getOrders**](docs/Api/OrdersApi.md#getorders) | **GET** /api/v1.0/orders | 
+*OrdersApi* | [**getOrdersSummary**](docs/Api/OrdersApi.md#getorderssummary) | **GET** /api/v1.0/{appId}/orders/summaries | 
+*OrdersApi* | [**refundOrder**](docs/Api/OrdersApi.md#refundorder) | **POST** /api/v1.0/orders/{id}/refund | 
+*OrdersApi* | [**rejectOrder**](docs/Api/OrdersApi.md#rejectorder) | **POST** /api/v1.0/orders/{id}/reject | 
+*OrdersApi* | [**searchFulfillmentStatuses**](docs/Api/OrdersApi.md#searchfulfillmentstatuses) | **GET** /api/v1.0/{appId}/orders/fulfillmentstatuses | 
+*OrdersApi* | [**updateDeliveryInformation**](docs/Api/OrdersApi.md#updatedeliveryinformation) | **POST** /api/v1.0/orders/{orderId}/deliveryinfo | 
+*OrdersApi* | [**updateFulfillmentState**](docs/Api/OrdersApi.md#updatefulfillmentstate) | **POST** /api/v1.0/orders/{orderId}/fulfillment/state | 
+*PaymentIntentsApi* | [**getPaymentIntent**](docs/Api/PaymentIntentsApi.md#getpaymentintent) | **GET** /api/v1.0/payment_intents/{paymentIntentId} | 
+*PaymentsApi* | [**getOrderPaymentInformation**](docs/Api/PaymentsApi.md#getorderpaymentinformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | 
+*PayoutsApi* | [**getPayout**](docs/Api/PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | 
+*PayoutsApi* | [**getPayoutChargebacks**](docs/Api/PayoutsApi.md#getpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | 
+*PayoutsApi* | [**getPayoutOrders**](docs/Api/PayoutsApi.md#getpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | 
+*PayoutsApi* | [**getPayoutOtherCharges**](docs/Api/PayoutsApi.md#getpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges | 
+*PayoutsApi* | [**getPayoutRefunds**](docs/Api/PayoutsApi.md#getpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds | 
+*PayoutsApi* | [**getPayoutSummaries**](docs/Api/PayoutsApi.md#getpayoutsummaries) | **GET** /api/v1.0/{appId}/payouts/summaries | 
+*PayoutsApi* | [**getPayouts**](docs/Api/PayoutsApi.md#getpayouts) | **GET** /api/v1.0/{appId}/payouts | 
+*PayoutsExportApi* | [**exportPayoutChargebacks**](docs/Api/PayoutsExportApi.md#exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export | 
+*PayoutsExportApi* | [**exportPayoutOrders**](docs/Api/PayoutsExportApi.md#exportpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export | 
+*PayoutsExportApi* | [**exportPayoutOtherCharges**](docs/Api/PayoutsExportApi.md#exportpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export | 
+*PayoutsExportApi* | [**exportPayoutRefunds**](docs/Api/PayoutsExportApi.md#exportpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | 
+*PayoutsExportApi* | [**exportPayoutStores**](docs/Api/PayoutsExportApi.md#exportpayoutstores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | 
+*PayoutsExportApi* | [**exportPayouts**](docs/Api/PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | 
+*ProcessingFeeConfigsApi* | [**getProcessingFeeConfigsByStoreIds**](docs/Api/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | 
+*PushNotificationsApi* | [**deletePushNotification**](docs/Api/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | 
+*PushNotificationsApi* | [**getPushNotifications**](docs/Api/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | 
+*PushNotificationsApi* | [**schedulePushNotification**](docs/Api/PushNotificationsApi.md#schedulepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications | 
+*PushNotificationsApi* | [**updatePushNotification**](docs/Api/PushNotificationsApi.md#updatepushnotification) | **POST** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | 
+*ReceiptsApi* | [**getReceipt**](docs/Api/ReceiptsApi.md#getreceipt) | **GET** /api/v1.0/receipts/{orderId} | 
 *RestaurantVouchersPayGreenApi* | [**createPayGreenConfiguration**](docs/Api/RestaurantVouchersPayGreenApi.md#createpaygreenconfiguration) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen | 
 *RestaurantVouchersPayGreenApi* | [**deletePayGreenConfiguration**](docs/Api/RestaurantVouchersPayGreenApi.md#deletepaygreenconfiguration) | **DELETE** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
 *RestaurantVouchersPayGreenApi* | [**getElegibleStores**](docs/Api/RestaurantVouchersPayGreenApi.md#getelegiblestores) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores | 
@@ -460,97 +460,97 @@ Class | Method | HTTP request | Description
 *RestaurantVouchersPayGreenApi* | [**listPayGreenConfigurations**](docs/Api/RestaurantVouchersPayGreenApi.md#listpaygreenconfigurations) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
 *RestaurantVouchersPayGreenApi* | [**updatePayGreenConfiguration**](docs/Api/RestaurantVouchersPayGreenApi.md#updatepaygreenconfiguration) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
 *RestaurantVouchersPayGreenApi* | [**updateStorePayGreenConfiguration_**](docs/Api/RestaurantVouchersPayGreenApi.md#updatestorepaygreenconfiguration_) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId} | 
-*StoreGroupsApi* | [**createStoreGroup**](docs/Api/StoreGroupsApi.md#createstoregroup) | **POST** /api/v1.0/{appNameId}/storegroups | Creates a Store Group  It will be attached to an existing App
-*StoreGroupsApi* | [**getStoreGroup**](docs/Api/StoreGroupsApi.md#getstoregroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | Returns a Store Groups
-*StoreGroupsApi* | [**getStoreGroups**](docs/Api/StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | Returns a paginated list of Store Groups
-*StoreGroupsApi* | [**getStoreGroupsExtended**](docs/Api/StoreGroupsApi.md#getstoregroupsextended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | [PRIVATE API] Returns a paginated list of Extended Store Groups
-*StoreGroupsApi* | [**removeStoreGroup**](docs/Api/StoreGroupsApi.md#removestoregroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+*StoreGroupsApi* | [**createStoreGroup**](docs/Api/StoreGroupsApi.md#createstoregroup) | **POST** /api/v1.0/{appNameId}/storegroups | 
+*StoreGroupsApi* | [**getStoreGroup**](docs/Api/StoreGroupsApi.md#getstoregroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | 
+*StoreGroupsApi* | [**getStoreGroups**](docs/Api/StoreGroupsApi.md#getstoregroups) | **GET** /api/v1.0/{appNameId}/storegroups | 
+*StoreGroupsApi* | [**getStoreGroupsExtended**](docs/Api/StoreGroupsApi.md#getstoregroupsextended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | 
+*StoreGroupsApi* | [**removeStoreGroup**](docs/Api/StoreGroupsApi.md#removestoregroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | 
 *StoreGroupsApi* | [**setMenuMessagePerDeliveryType**](docs/Api/StoreGroupsApi.md#setmenumessageperdeliverytype) | **POST** /api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType | 
-*StoreGroupsApi* | [**updateStoreGroup**](docs/Api/StoreGroupsApi.md#updatestoregroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | Updates Store Group
-*StoreOrderCapacityApi* | [**getStoreOrderCapacity**](docs/Api/StoreOrderCapacityApi.md#getstoreordercapacity) | **GET** /api/v1.0/{appId}/storeordercapacity/{storeId}/{deliveryType} | Get store&#39;s order capacity configuration
-*StoreOrderCapacityApi* | [**updateStoreOrderCapacityConfig**](docs/Api/StoreOrderCapacityApi.md#updatestoreordercapacityconfig) | **POST** /api/v1.0/{appId}/storeordercapacity/{storeId} | Create or update a store&#39;s order capacity configuration
-*StoresApi* | [**archiveStore**](docs/Api/StoresApi.md#archivestore) | **POST** /api/v1.0/stores/{storeId}/archive | Archive store
-*StoresApi* | [**assignMenu**](docs/Api/StoresApi.md#assignmenu) | **POST** /api/v1.0/stores/{storeId}/menu/{menuId} | Assign Menu to Store
-*StoresApi* | [**cloneStore**](docs/Api/StoresApi.md#clonestore) | **POST** /api/v1.0/stores/{storeId}/clone | Clone store with store clone settings
-*StoresApi* | [**configureStoreServiceCharge**](docs/Api/StoresApi.md#configurestoreservicecharge) | **POST** /api/v1.0/stores/{storeId}/servicecharge | Configure Store Service Charge; Idempotent Operation
-*StoresApi* | [**createBusinessHoursOverrideByStoreId**](docs/Api/StoresApi.md#createbusinesshoursoverridebystoreid) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | Create Business Hours Override for a store
-*StoresApi* | [**createStore**](docs/Api/StoresApi.md#createstore) | **POST** /api/v1.0/stores | Create store with Store Group identifier
-*StoresApi* | [**deleteBusinessHoursOverride**](docs/Api/StoresApi.md#deletebusinesshoursoverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | Delete Business Hours Override for a store
-*StoresApi* | [**getBankAccountForStore**](docs/Api/StoresApi.md#getbankaccountforstore) | **GET** /api/v1.0/stores/{storeId}/bankaccount | Get Stores Bank Account Id
-*StoresApi* | [**getBusinessHours**](docs/Api/StoresApi.md#getbusinesshours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Get Business hours
-*StoresApi* | [**getBusinessHoursOverrideByStoreId**](docs/Api/StoresApi.md#getbusinesshoursoverridebystoreid) | **GET** /api/v1.0/stores/{storeId}/businesshoursoverrides | Get business hours overrides by store identifier
-*StoresApi* | [**getEndOfDayReport**](docs/Api/StoresApi.md#getendofdayreport) | **GET** /api/v1.0/stores/{storeId}/endofdayreport | Get store end of day report
-*StoresApi* | [**getPreOrderConfig**](docs/Api/StoresApi.md#getpreorderconfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | Get the pre order config for a store, by type
-*StoresApi* | [**getPreOrderPreview**](docs/Api/StoresApi.md#getpreorderpreview) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/preview | Get the Preview times of the pre-order configuration
-*StoresApi* | [**getProcessingFeeConfigsByStoreId**](docs/Api/StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | Get processing fee configs by store identifier
-*StoresApi* | [**getProcessingFeeConfigsByStoreIdAndPaymentAccountType**](docs/Api/StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | Get processing fee configs by store identifier
-*StoresApi* | [**getStoreById**](docs/Api/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | Get store by identifier
-*StoresApi* | [**getStoreFeeConfig**](docs/Api/StoresApi.md#getstorefeeconfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | Retrieve Store feeConfig
-*StoresApi* | [**getStoreHeadersByAppId**](docs/Api/StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | Get all stores by app name id
-*StoresApi* | [**getStoreNetSales**](docs/Api/StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | Get stores statistics by app name id and storeIds
-*StoresApi* | [**getStoreServiceCharge**](docs/Api/StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | Retrieve Store Service Charge
-*StoresApi* | [**getStores**](docs/Api/StoresApi.md#getstores) | **GET** /api/v1.0/stores | Get all stores, excluding archived ones
-*StoresApi* | [**getStoresByAppId**](docs/Api/StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | Get all stores by app name id
-*StoresApi* | [**getStoresByStoreIdWithValidations**](docs/Api/StoresApi.md#getstoresbystoreidwithvalidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | Get store validation by storeIds
-*StoresApi* | [**publishStore**](docs/Api/StoresApi.md#publishstore) | **POST** /api/v1.0/stores/{storeId}/publish | Publish store
-*StoresApi* | [**setBusinessHours**](docs/Api/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | Set Business hours
-*StoresApi* | [**setPreOrdeEnabled**](docs/Api/StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | UPDATE pre order config for a store, by type
-*StoresApi* | [**unpublishStore**](docs/Api/StoresApi.md#unpublishstore) | **POST** /api/v1.0/stores/{storeId}/unpublish | Unpublish store
-*StoresApi* | [**updatePreOrderConfig**](docs/Api/StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | UPDATE pre order config for a store, by type
-*StoresApi* | [**updateStore**](docs/Api/StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | Update store by identifier
-*StoresApi* | [**updateStoreAddress**](docs/Api/StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | Update store address
-*StoresApi* | [**updateStoreAddressCoordinates**](docs/Api/StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | Update store address coordinates
-*StoresApi* | [**updateStoreAddressForm**](docs/Api/StoresApi.md#updatestoreaddressform) | **POST** /api/v1.0/stores/{storeId}/addressform | Update store address
-*StripeCustomConnectApi* | [**createBankAccountAndConnectedAccount**](docs/Api/StripeCustomConnectApi.md#createbankaccountandconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/bank-account | Create a new Bank Account and Stripe connected account
-*StripeCustomConnectApi* | [**createStripeConnectedAccount**](docs/Api/StripeCustomConnectApi.md#createstripeconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account | Create or update a Stripe connected account associated with the bank account of bankAccountId
-*StripeCustomConnectApi* | [**createStripeConnectedAccountLink**](docs/Api/StripeCustomConnectApi.md#createstripeconnectedaccountlink) | **POST** /api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link | Gets a single-use Stripe URL for the given account
-*StripeCustomConnectApi* | [**getCustomConnect**](docs/Api/StripeCustomConnectApi.md#getcustomconnect) | **GET** /api/v1.0/{appId}/customconnect/{storeId} | Gets a list of stripe custom connect ids information
-*StripeCustomConnectApi* | [**getVerificationStatus**](docs/Api/StripeCustomConnectApi.md#getverificationstatus) | **GET** /api/v1.0/{appId}/customconnect/verification-status | Gets the current verification status of the given connected account
-*StripeCustomConnectApi* | [**setBankAccountBusinessType**](docs/Api/StripeCustomConnectApi.md#setbankaccountbusinesstype) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | Update bank account&#39;s BusinessType and create a Stripe Connected Account
+*StoreGroupsApi* | [**updateStoreGroup**](docs/Api/StoreGroupsApi.md#updatestoregroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | 
+*StoreOrderCapacityApi* | [**getStoreOrderCapacity**](docs/Api/StoreOrderCapacityApi.md#getstoreordercapacity) | **GET** /api/v1.0/{appId}/storeordercapacity/{storeId}/{deliveryType} | 
+*StoreOrderCapacityApi* | [**updateStoreOrderCapacityConfig**](docs/Api/StoreOrderCapacityApi.md#updatestoreordercapacityconfig) | **POST** /api/v1.0/{appId}/storeordercapacity/{storeId} | 
+*StoresApi* | [**archiveStore**](docs/Api/StoresApi.md#archivestore) | **POST** /api/v1.0/stores/{storeId}/archive | 
+*StoresApi* | [**assignMenu**](docs/Api/StoresApi.md#assignmenu) | **POST** /api/v1.0/stores/{storeId}/menu/{menuId} | 
+*StoresApi* | [**cloneStore**](docs/Api/StoresApi.md#clonestore) | **POST** /api/v1.0/stores/{storeId}/clone | 
+*StoresApi* | [**configureStoreServiceCharge**](docs/Api/StoresApi.md#configurestoreservicecharge) | **POST** /api/v1.0/stores/{storeId}/servicecharge | 
+*StoresApi* | [**createBusinessHoursOverrideByStoreId**](docs/Api/StoresApi.md#createbusinesshoursoverridebystoreid) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | 
+*StoresApi* | [**createStore**](docs/Api/StoresApi.md#createstore) | **POST** /api/v1.0/stores | 
+*StoresApi* | [**deleteBusinessHoursOverride**](docs/Api/StoresApi.md#deletebusinesshoursoverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | 
+*StoresApi* | [**getBankAccountForStore**](docs/Api/StoresApi.md#getbankaccountforstore) | **GET** /api/v1.0/stores/{storeId}/bankaccount | 
+*StoresApi* | [**getBusinessHours**](docs/Api/StoresApi.md#getbusinesshours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
+*StoresApi* | [**getBusinessHoursOverrideByStoreId**](docs/Api/StoresApi.md#getbusinesshoursoverridebystoreid) | **GET** /api/v1.0/stores/{storeId}/businesshoursoverrides | 
+*StoresApi* | [**getEndOfDayReport**](docs/Api/StoresApi.md#getendofdayreport) | **GET** /api/v1.0/stores/{storeId}/endofdayreport | 
+*StoresApi* | [**getPreOrderConfig**](docs/Api/StoresApi.md#getpreorderconfig) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 
+*StoresApi* | [**getPreOrderPreview**](docs/Api/StoresApi.md#getpreorderpreview) | **GET** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/preview | 
+*StoresApi* | [**getProcessingFeeConfigsByStoreId**](docs/Api/StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | 
+*StoresApi* | [**getProcessingFeeConfigsByStoreIdAndPaymentAccountType**](docs/Api/StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | 
+*StoresApi* | [**getStoreById**](docs/Api/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | 
+*StoresApi* | [**getStoreFeeConfig**](docs/Api/StoresApi.md#getstorefeeconfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | 
+*StoresApi* | [**getStoreHeadersByAppId**](docs/Api/StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | 
+*StoresApi* | [**getStoreNetSales**](docs/Api/StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | 
+*StoresApi* | [**getStoreServiceCharge**](docs/Api/StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | 
+*StoresApi* | [**getStores**](docs/Api/StoresApi.md#getstores) | **GET** /api/v1.0/stores | 
+*StoresApi* | [**getStoresByAppId**](docs/Api/StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | 
+*StoresApi* | [**getStoresByStoreIdWithValidations**](docs/Api/StoresApi.md#getstoresbystoreidwithvalidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | 
+*StoresApi* | [**publishStore**](docs/Api/StoresApi.md#publishstore) | **POST** /api/v1.0/stores/{storeId}/publish | 
+*StoresApi* | [**setBusinessHours**](docs/Api/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
+*StoresApi* | [**setPreOrdeEnabled**](docs/Api/StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
+*StoresApi* | [**unpublishStore**](docs/Api/StoresApi.md#unpublishstore) | **POST** /api/v1.0/stores/{storeId}/unpublish | 
+*StoresApi* | [**updatePreOrderConfig**](docs/Api/StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 
+*StoresApi* | [**updateStore**](docs/Api/StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | 
+*StoresApi* | [**updateStoreAddress**](docs/Api/StoresApi.md#updatestoreaddress) | **POST** /api/v1.0/stores/{storeId}/address | 
+*StoresApi* | [**updateStoreAddressCoordinates**](docs/Api/StoresApi.md#updatestoreaddresscoordinates) | **POST** /api/v1.0/stores/{storeId}/address/coordinates | 
+*StoresApi* | [**updateStoreAddressForm**](docs/Api/StoresApi.md#updatestoreaddressform) | **POST** /api/v1.0/stores/{storeId}/addressform | 
+*StripeCustomConnectApi* | [**createBankAccountAndConnectedAccount**](docs/Api/StripeCustomConnectApi.md#createbankaccountandconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/bank-account | 
+*StripeCustomConnectApi* | [**createStripeConnectedAccount**](docs/Api/StripeCustomConnectApi.md#createstripeconnectedaccount) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/create-update-account | 
+*StripeCustomConnectApi* | [**createStripeConnectedAccountLink**](docs/Api/StripeCustomConnectApi.md#createstripeconnectedaccountlink) | **POST** /api/v1.0/{appId}/customconnect/{stripeConnectedAccountId}/create-account-link | 
+*StripeCustomConnectApi* | [**getCustomConnect**](docs/Api/StripeCustomConnectApi.md#getcustomconnect) | **GET** /api/v1.0/{appId}/customconnect/{storeId} | 
+*StripeCustomConnectApi* | [**getVerificationStatus**](docs/Api/StripeCustomConnectApi.md#getverificationstatus) | **GET** /api/v1.0/{appId}/customconnect/verification-status | 
+*StripeCustomConnectApi* | [**setBankAccountBusinessType**](docs/Api/StripeCustomConnectApi.md#setbankaccountbusinesstype) | **POST** /api/v1.0/{appId}/customconnect/bank-account/{bankAccountId}/businesstype | 
 *StripeCustomConnectApi* | [**stripeCustomConnectRefresh**](docs/Api/StripeCustomConnectApi.md#stripecustomconnectrefresh) | **GET** /api/v1.0/{appId}/customconnect/refresh-link | 
-*StripeCustomConnectApi* | [**updateBankAccountDetails**](docs/Api/StripeCustomConnectApi.md#updatebankaccountdetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | Update bank account details
-*StripeCustomConnectApi* | [**updatePayoutSchedule**](docs/Api/StripeCustomConnectApi.md#updatepayoutschedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | Update Stripe Connection Account&#39;s payout schedule
-*StripeCustomConnectAdminApi* | [**initializeBankAccountConnectedAccount**](docs/Api/StripeCustomConnectAdminApi.md#initializebankaccountconnectedaccount) | **POST** /api/v1.0/customconnect/initialize-bank-account | Create a new Bank Account and Stripe connected account
-*StuartApi* | [**stuartCancelJob**](docs/Api/StuartApi.md#stuartcanceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | Cancel a stuart job
-*StuartApi* | [**stuartGetJob**](docs/Api/StuartApi.md#stuartgetjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | Get start job details
-*StuartApi* | [**stuartGetStuartSettings**](docs/Api/StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | Get stuart settings for a store
-*StuartApi* | [**stuartPostStuartSettings**](docs/Api/StuartApi.md#stuartpoststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | Set stuart settings for a store
-*SubscriptionsApi* | [**getSubscriptionById**](docs/Api/SubscriptionsApi.md#getsubscriptionbyid) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | Get subscription by id
-*SubscriptionsApi* | [**getSubscriptionsForApp**](docs/Api/SubscriptionsApi.md#getsubscriptionsforapp) | **GET** /api/v1.0/{appId}/subscriptions | Get list of subscriptions for an App
-*TeammatesApi* | [**createTeammate**](docs/Api/TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | Create teammate and send an invite.
-*TeammatesApi* | [**deleteTeammate**](docs/Api/TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | Delete teammate
-*TeammatesApi* | [**getTeammateByAppIdAndTeammateId**](docs/Api/TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | Get a teammates by email address
-*TeammatesApi* | [**getTeammatesByAppId**](docs/Api/TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | Get all teammates
-*TeammatesApi* | [**redeemInvitation**](docs/Api/TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | Redeem one-time code from invitation
-*TeammatesApi* | [**updateTeammate**](docs/Api/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | Update teammates (this method does not support Deltas!)
-*TerminalIotApi* | [**getTerminalIotConnection**](docs/Api/TerminalIotApi.md#getterminaliotconnection) | **POST** /api/v1.0/terminaliot/connect | Get the IoT connection parameters for telemetry and commands  No input parameters since authenticated hydra user defines context
-*TipsApi* | [**tipConfigGet**](docs/Api/TipsApi.md#tipconfigget) | **GET** /api/v1.0/stores/{storeId}/tipconfig | Returns current tip configuration for a store
-*TipsApi* | [**tipConfigUpsert**](docs/Api/TipsApi.md#tipconfigupsert) | **POST** /api/v1.0/stores/{storeId}/tipconfig | Update or insert current tip configuration for a store
+*StripeCustomConnectApi* | [**updateBankAccountDetails**](docs/Api/StripeCustomConnectApi.md#updatebankaccountdetails) | **POST** /api/v1.0/{appId}/customconnect/{bankAccountId}/update-bank-account-details | 
+*StripeCustomConnectApi* | [**updatePayoutSchedule**](docs/Api/StripeCustomConnectApi.md#updatepayoutschedule) | **POST** /api/v1.0/{appId}/customconnect/update-payout-schedule/{stripeConnectedAccountId}/{interval} | 
+*StripeCustomConnectAdminApi* | [**initializeBankAccountConnectedAccount**](docs/Api/StripeCustomConnectAdminApi.md#initializebankaccountconnectedaccount) | **POST** /api/v1.0/customconnect/initialize-bank-account | 
+*StuartApi* | [**stuartCancelJob**](docs/Api/StuartApi.md#stuartcanceljob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
+*StuartApi* | [**stuartGetJob**](docs/Api/StuartApi.md#stuartgetjob) | **GET** /api/v1.0/stuart/jobs/{jobId} | 
+*StuartApi* | [**stuartGetStuartSettings**](docs/Api/StuartApi.md#stuartgetstuartsettings) | **GET** /api/v1.0/stuart/settings/{storeId} | 
+*StuartApi* | [**stuartPostStuartSettings**](docs/Api/StuartApi.md#stuartpoststuartsettings) | **POST** /api/v1.0/stuart/settings/{storeId} | 
+*SubscriptionsApi* | [**getSubscriptionById**](docs/Api/SubscriptionsApi.md#getsubscriptionbyid) | **GET** /api/v1.0/{appId}/subscriptions/{subscriptionId} | 
+*SubscriptionsApi* | [**getSubscriptionsForApp**](docs/Api/SubscriptionsApi.md#getsubscriptionsforapp) | **GET** /api/v1.0/{appId}/subscriptions | 
+*TeammatesApi* | [**createTeammate**](docs/Api/TeammatesApi.md#createteammate) | **POST** /api/v1.0/{appId}/teammates | 
+*TeammatesApi* | [**deleteTeammate**](docs/Api/TeammatesApi.md#deleteteammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | 
+*TeammatesApi* | [**getTeammateByAppIdAndTeammateId**](docs/Api/TeammatesApi.md#getteammatebyappidandteammateid) | **GET** /api/v1.0/{appId}/teammates/{id} | 
+*TeammatesApi* | [**getTeammatesByAppId**](docs/Api/TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | 
+*TeammatesApi* | [**redeemInvitation**](docs/Api/TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+*TeammatesApi* | [**updateTeammate**](docs/Api/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
+*TerminalIotApi* | [**getTerminalIotConnection**](docs/Api/TerminalIotApi.md#getterminaliotconnection) | **POST** /api/v1.0/terminaliot/connect | 
+*TipsApi* | [**tipConfigGet**](docs/Api/TipsApi.md#tipconfigget) | **GET** /api/v1.0/stores/{storeId}/tipconfig | 
+*TipsApi* | [**tipConfigUpsert**](docs/Api/TipsApi.md#tipconfigupsert) | **POST** /api/v1.0/stores/{storeId}/tipconfig | 
 *UsersApi* | [**getPreviousOrderCountForStore**](docs/Api/UsersApi.md#getpreviousordercountforstore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
-*UsersApi* | [**getRoles**](docs/Api/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | Get role names
-*VouchersApi* | [**createVoucher**](docs/Api/VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | [PRIVATE API] Create voucher
-*VouchersApi* | [**getVoucherById**](docs/Api/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Get voucher by identifier
-*VouchersApi* | [**getVoucherStatsById**](docs/Api/VouchersApi.md#getvoucherstatsbyid) | **GET** /api/v1.0/vouchers/stats/{voucherId} | [PRIVATE API] Get voucher stats by identifier
-*VouchersApi* | [**getVouchers**](docs/Api/VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | [PRIVATE API] Get vouchers summaries for App Id
-*VouchersApi* | [**updateVoucher**](docs/Api/VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | [PRIVATE API] Updates voucher
-*WebhooksApi* | [**createWebhookSubscription**](docs/Api/WebhooksApi.md#createwebhooksubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Create a webhook subscription for you Oauth App
-*WebhooksApi* | [**createWebhookSubscriptionEventNames**](docs/Api/WebhooksApi.md#createwebhooksubscriptioneventnames) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Add event name to your webhook subscription
-*WebhooksApi* | [**deleteWebhookSubscription**](docs/Api/WebhooksApi.md#deletewebhooksubscription) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Delete you webhook subscription
-*WebhooksApi* | [**deleteWebhookSubscriptionEventName**](docs/Api/WebhooksApi.md#deletewebhooksubscriptioneventname) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | Remove event name to your webhook subscription
-*WebhooksApi* | [**getWebhookEventNames**](docs/Api/WebhooksApi.md#getwebhookeventnames) | **GET** /api/v1.0/{appId}/webhooks/events | Get all webhook subscription event names
-*WebhooksApi* | [**getWebhookEventNamesBySubscriptionId**](docs/Api/WebhooksApi.md#getwebhookeventnamesbysubscriptionid) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events | Get your webhook subscriptions selected event names
-*WebhooksApi* | [**getWebhookEventSample**](docs/Api/WebhooksApi.md#getwebhookeventsample) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test | Get a sample event from a webhook subscription
-*WebhooksApi* | [**getWebhookLogs**](docs/Api/WebhooksApi.md#getwebhooklogs) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs | Get logs for your webhook subscription
-*WebhooksApi* | [**getWebhookSubscriptions**](docs/Api/WebhooksApi.md#getwebhooksubscriptions) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | Get all webhook subscriptions by your Oauth App id
-*WebhooksApi* | [**updateWebhookSubscription**](docs/Api/WebhooksApi.md#updatewebhooksubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | Update a webhook subscription object
-*WebsiteApi* | [**addTestimonial**](docs/Api/WebsiteApi.md#addtestimonial) | **POST** /api/v1.0/{appId}/website/testimonial | Add a testimonial
-*WebsiteApi* | [**deleteTestimonial**](docs/Api/WebsiteApi.md#deletetestimonial) | **DELETE** /api/v1.0/{appId}/website/testimonial/{testimonialId} | Delete a testimonial
-*WebsiteApi* | [**deleteWebsiteImage**](docs/Api/WebsiteApi.md#deletewebsiteimage) | **DELETE** /api/v1.0/{appId}/website/image/{imageId} | Delete Website Image
-*WebsiteApi* | [**editTestimonial**](docs/Api/WebsiteApi.md#edittestimonial) | **POST** /api/v1.0/{appId}/website/testimonial/{testimonialId} | Edit a testimonial
-*WebsiteApi* | [**getIndexConfiguration**](docs/Api/WebsiteApi.md#getindexconfiguration) | **GET** /api/v1.0/{appId}/website/index | Get Index Configuration
-*WebsiteApi* | [**setIndexConfiguration**](docs/Api/WebsiteApi.md#setindexconfiguration) | **POST** /api/v1.0/{appId}/website/index | Set Index Configuration
-*WebsiteApi* | [**uploadWebsiteImage**](docs/Api/WebsiteApi.md#uploadwebsiteimage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | Upload Website Image
-*WebsiteApi* | [**websiteCheckNow**](docs/Api/WebsiteApi.md#websitechecknow) | **GET** /api/v1.0/{appId}/website/dnscheck | Triggers a Check DNS Process
+*UsersApi* | [**getRoles**](docs/Api/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | 
+*VouchersApi* | [**createVoucher**](docs/Api/VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | 
+*VouchersApi* | [**getVoucherById**](docs/Api/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | 
+*VouchersApi* | [**getVoucherStatsById**](docs/Api/VouchersApi.md#getvoucherstatsbyid) | **GET** /api/v1.0/vouchers/stats/{voucherId} | 
+*VouchersApi* | [**getVouchers**](docs/Api/VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | 
+*VouchersApi* | [**updateVoucher**](docs/Api/VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | 
+*WebhooksApi* | [**createWebhookSubscription**](docs/Api/WebhooksApi.md#createwebhooksubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | 
+*WebhooksApi* | [**createWebhookSubscriptionEventNames**](docs/Api/WebhooksApi.md#createwebhooksubscriptioneventnames) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | 
+*WebhooksApi* | [**deleteWebhookSubscription**](docs/Api/WebhooksApi.md#deletewebhooksubscription) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | 
+*WebhooksApi* | [**deleteWebhookSubscriptionEventName**](docs/Api/WebhooksApi.md#deletewebhooksubscriptioneventname) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | 
+*WebhooksApi* | [**getWebhookEventNames**](docs/Api/WebhooksApi.md#getwebhookeventnames) | **GET** /api/v1.0/{appId}/webhooks/events | 
+*WebhooksApi* | [**getWebhookEventNamesBySubscriptionId**](docs/Api/WebhooksApi.md#getwebhookeventnamesbysubscriptionid) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events | 
+*WebhooksApi* | [**getWebhookEventSample**](docs/Api/WebhooksApi.md#getwebhookeventsample) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName}/test | 
+*WebhooksApi* | [**getWebhookLogs**](docs/Api/WebhooksApi.md#getwebhooklogs) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/logs | 
+*WebhooksApi* | [**getWebhookSubscriptions**](docs/Api/WebhooksApi.md#getwebhooksubscriptions) | **GET** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | 
+*WebhooksApi* | [**updateWebhookSubscription**](docs/Api/WebhooksApi.md#updatewebhooksubscription) | **PUT** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | 
+*WebsiteApi* | [**addTestimonial**](docs/Api/WebsiteApi.md#addtestimonial) | **POST** /api/v1.0/{appId}/website/testimonial | 
+*WebsiteApi* | [**deleteTestimonial**](docs/Api/WebsiteApi.md#deletetestimonial) | **DELETE** /api/v1.0/{appId}/website/testimonial/{testimonialId} | 
+*WebsiteApi* | [**deleteWebsiteImage**](docs/Api/WebsiteApi.md#deletewebsiteimage) | **DELETE** /api/v1.0/{appId}/website/image/{imageId} | 
+*WebsiteApi* | [**editTestimonial**](docs/Api/WebsiteApi.md#edittestimonial) | **POST** /api/v1.0/{appId}/website/testimonial/{testimonialId} | 
+*WebsiteApi* | [**getIndexConfiguration**](docs/Api/WebsiteApi.md#getindexconfiguration) | **GET** /api/v1.0/{appId}/website/index | 
+*WebsiteApi* | [**setIndexConfiguration**](docs/Api/WebsiteApi.md#setindexconfiguration) | **POST** /api/v1.0/{appId}/website/index | 
+*WebsiteApi* | [**uploadWebsiteImage**](docs/Api/WebsiteApi.md#uploadwebsiteimage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | 
+*WebsiteApi* | [**websiteCheckNow**](docs/Api/WebsiteApi.md#websitechecknow) | **GET** /api/v1.0/{appId}/website/dnscheck | 
 
 
 ## Documentation For Models

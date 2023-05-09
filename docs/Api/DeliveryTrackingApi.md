@@ -4,18 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**assignDriverToOrder**](DeliveryTrackingApi.md#assignDriverToOrder) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders/{orderId} | [PRIVATE] Assign driver to order
-[**assignDriverToOrders**](DeliveryTrackingApi.md#assignDriverToOrders) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders | Assign driver to multiple orders
-[**getDrivers**](DeliveryTrackingApi.md#getDrivers) | **GET** /api/v1.0/{appId}/drivers | [PRIVATE] Get drivers by App
-[**inviteDriverToApp**](DeliveryTrackingApi.md#inviteDriverToApp) | **POST** /api/v1.0/{appId}/drivers | [PRIVATE] Invite driver
-[**removeDriverFromApp**](DeliveryTrackingApi.md#removeDriverFromApp) | **DELETE** /api/v1.0/{appId}/drivers/{driverId} | [PRIVATE] Unassign driver from app
-[**unassignDriverFromOrder**](DeliveryTrackingApi.md#unassignDriverFromOrder) | **DELETE** /api/v1.0/{appId}/orders/{orderId}/driver | [PRIVATE] Unassign driver from order
+[**assignDriverToOrder**](DeliveryTrackingApi.md#assignDriverToOrder) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders/{orderId} | 
+[**assignDriverToOrders**](DeliveryTrackingApi.md#assignDriverToOrders) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders | 
+[**getDrivers**](DeliveryTrackingApi.md#getDrivers) | **GET** /api/v1.0/{appId}/drivers | 
+[**inviteDriverToApp**](DeliveryTrackingApi.md#inviteDriverToApp) | **POST** /api/v1.0/{appId}/drivers | 
+[**removeDriverFromApp**](DeliveryTrackingApi.md#removeDriverFromApp) | **DELETE** /api/v1.0/{appId}/drivers/{driverId} | 
+[**unassignDriverFromOrder**](DeliveryTrackingApi.md#unassignDriverFromOrder) | **DELETE** /api/v1.0/{appId}/orders/{orderId}/driver | 
 
 
 # **assignDriverToOrder**
 > assignDriverToOrder($app_id, $order_id, $driver_id)
 
-[PRIVATE] Assign driver to order
+
 
 ### Example
 ```php
@@ -31,9 +31,9 @@ $apiInstance = new Flipdish\\Client\Api\DeliveryTrackingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$order_id = 56; // int | Order Id
-$driver_id = 56; // int | Driver Id
+$app_id = "app_id_example"; // string | 
+$order_id = 56; // int | 
+$driver_id = 56; // int | 
 
 try {
     $apiInstance->assignDriverToOrder($app_id, $order_id, $driver_id);
@@ -47,9 +47,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **order_id** | **int**| Order Id |
- **driver_id** | **int**| Driver Id |
+ **app_id** | **string**|  |
+ **order_id** | **int**|  |
+ **driver_id** | **int**|  |
 
 ### Return type
 
@@ -69,7 +69,7 @@ void (empty response body)
 # **assignDriverToOrders**
 > assignDriverToOrders($app_id, $driver_id, $order_id_and_sequence_numbers)
 
-Assign driver to multiple orders
+
 
 ### Example
 ```php
@@ -85,9 +85,9 @@ $apiInstance = new Flipdish\\Client\Api\DeliveryTrackingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$driver_id = 56; // int | Driver Id
-$order_id_and_sequence_numbers = array(new \Flipdish\\Client\Models\OrderIdAndSequenceNumber()); // \Flipdish\\Client\Models\OrderIdAndSequenceNumber[] | Array of object containing OrderId and Sequence
+$app_id = "app_id_example"; // string | 
+$driver_id = 56; // int | 
+$order_id_and_sequence_numbers = array(new \Flipdish\\Client\Models\OrderIdAndSequenceNumber()); // \Flipdish\\Client\Models\OrderIdAndSequenceNumber[] | 
 
 try {
     $apiInstance->assignDriverToOrders($app_id, $driver_id, $order_id_and_sequence_numbers);
@@ -101,9 +101,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **driver_id** | **int**| Driver Id |
- **order_id_and_sequence_numbers** | [**\Flipdish\\Client\Models\OrderIdAndSequenceNumber[]**](../Model/OrderIdAndSequenceNumber.md)| Array of object containing OrderId and Sequence |
+ **app_id** | **string**|  |
+ **driver_id** | **int**|  |
+ **order_id_and_sequence_numbers** | [**\Flipdish\\Client\Models\OrderIdAndSequenceNumber[]**](../Model/OrderIdAndSequenceNumber.md)|  |
 
 ### Return type
 
@@ -123,7 +123,7 @@ void (empty response body)
 # **getDrivers**
 > \Flipdish\\Client\Models\RestApiArrayResultDriver getDrivers($app_id, $name, $phone_number, $store_id, $presence)
 
-[PRIVATE] Get drivers by App
+
 
 ### Example
 ```php
@@ -139,11 +139,11 @@ $apiInstance = new Flipdish\\Client\Api\DeliveryTrackingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$name = "name_example"; // string | Driver's username
-$phone_number = "phone_number_example"; // string | Driver's phone number
-$store_id = 56; // int | Store Id
-$presence = "presence_example"; // string | Offline/Online
+$app_id = "app_id_example"; // string | 
+$name = "name_example"; // string | 
+$phone_number = "phone_number_example"; // string | 
+$store_id = 56; // int | 
+$presence = "presence_example"; // string | 
 
 try {
     $result = $apiInstance->getDrivers($app_id, $name, $phone_number, $store_id, $presence);
@@ -158,11 +158,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **name** | **string**| Driver&#39;s username | [optional]
- **phone_number** | **string**| Driver&#39;s phone number | [optional]
- **store_id** | **int**| Store Id | [optional]
- **presence** | **string**| Offline/Online | [optional]
+ **app_id** | **string**|  |
+ **name** | **string**|  | [optional]
+ **phone_number** | **string**|  | [optional]
+ **store_id** | **int**|  | [optional]
+ **presence** | **string**|  | [optional]
 
 ### Return type
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 # **inviteDriverToApp**
 > \Flipdish\\Client\Models\RestApiResultDriver inviteDriverToApp($app_id, $driver_invitation)
 
-[PRIVATE] Invite driver
+
 
 ### Example
 ```php
@@ -198,8 +198,8 @@ $apiInstance = new Flipdish\\Client\Api\DeliveryTrackingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$driver_invitation = new \Flipdish\\Client\Models\DriverInvitation(); // \Flipdish\\Client\Models\DriverInvitation | Driver invitation model
+$app_id = "app_id_example"; // string | 
+$driver_invitation = new \Flipdish\\Client\Models\DriverInvitation(); // \Flipdish\\Client\Models\DriverInvitation | 
 
 try {
     $result = $apiInstance->inviteDriverToApp($app_id, $driver_invitation);
@@ -214,8 +214,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **driver_invitation** | [**\Flipdish\\Client\Models\DriverInvitation**](../Model/DriverInvitation.md)| Driver invitation model |
+ **app_id** | **string**|  |
+ **driver_invitation** | [**\Flipdish\\Client\Models\DriverInvitation**](../Model/DriverInvitation.md)|  |
 
 ### Return type
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 # **removeDriverFromApp**
 > removeDriverFromApp($app_id, $driver_id)
 
-[PRIVATE] Unassign driver from app
+
 
 ### Example
 ```php
@@ -251,8 +251,8 @@ $apiInstance = new Flipdish\\Client\Api\DeliveryTrackingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$driver_id = 56; // int | Driver Id
+$app_id = "app_id_example"; // string | 
+$driver_id = 56; // int | 
 
 try {
     $apiInstance->removeDriverFromApp($app_id, $driver_id);
@@ -266,8 +266,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **driver_id** | **int**| Driver Id |
+ **app_id** | **string**|  |
+ **driver_id** | **int**|  |
 
 ### Return type
 
@@ -287,7 +287,7 @@ void (empty response body)
 # **unassignDriverFromOrder**
 > unassignDriverFromOrder($app_id, $order_id)
 
-[PRIVATE] Unassign driver from order
+
 
 ### Example
 ```php
@@ -303,8 +303,8 @@ $apiInstance = new Flipdish\\Client\Api\DeliveryTrackingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$order_id = 56; // int | Order Id
+$app_id = "app_id_example"; // string | 
+$order_id = 56; // int | 
 
 try {
     $apiInstance->unassignDriverFromOrder($app_id, $order_id);
@@ -318,8 +318,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **order_id** | **int**| Order Id |
+ **app_id** | **string**|  |
+ **order_id** | **int**|  |
 
 ### Return type
 

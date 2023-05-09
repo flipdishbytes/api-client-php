@@ -74,7 +74,7 @@ class AddressApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for formByApp
      *
-     * Provides a dyamic form definition based for the country of the given appId, with labels localized using the provided language..
+     * .
      *
      */
     public function testFormByApp()
@@ -84,7 +84,7 @@ class AddressApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for formByCountry
      *
-     * Provides a dyamic form definition for the given country code, with labels localized using the provided language..
+     * .
      *
      */
     public function testFormByCountry()
@@ -94,7 +94,7 @@ class AddressApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for formatGoogleAddress
      *
-     * Maps a Google Address Object to the values of the dynamic form associated with the address country and returns the dynamic form..
+     * .
      *
      */
     public function testFormatGoogleAddress()
@@ -104,7 +104,7 @@ class AddressApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getCountries
      *
-     * Retuns a list of localised countries.
+     * .
      *
      */
     public function testGetCountries()

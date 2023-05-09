@@ -74,7 +74,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for assignAppIdToSalesChannel
      *
-     * Assign a given AppId to a Sales Channel.
+     * .
      *
      */
     public function testAssignAppIdToSalesChannel()
@@ -84,7 +84,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for assignStoreToChannel
      *
-     * Assign a Store to a Sales Channel.
+     * .
      *
      */
     public function testAssignStoreToChannel()
@@ -94,7 +94,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for attachStoreToSalesChannel
      *
-     * Attachs the specified store to the given sales channel..
+     * .
      *
      */
     public function testAttachStoreToSalesChannel()
@@ -104,7 +104,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for detachAllStoresFromSalesChannel
      *
-     * Detaches all the stores from the given sales channel..
+     * .
      *
      */
     public function testDetachAllStoresFromSalesChannel()
@@ -114,7 +114,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for detachStoreFromSalesChannel
      *
-     * Detaches the specified store from the given sales channel..
+     * .
      *
      */
     public function testDetachStoreFromSalesChannel()
@@ -124,7 +124,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAssignedChannels
      *
-     * Returns a list of sales channels that are assigned to a given AppId.
+     * .
      *
      */
     public function testGetAssignedChannels()
@@ -134,7 +134,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAvailableChannels
      *
-     * Returns a list of sales channels that are not yet assigned to a given AppId.
+     * .
      *
      */
     public function testGetAvailableChannels()
@@ -144,7 +144,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getChannel
      *
-     * Returns a Sales Channel by Id..
+     * .
      *
      */
     public function testGetChannel()
@@ -154,7 +154,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getChannels
      *
-     * Returns a list of enabled Channels.
+     * .
      *
      */
     public function testGetChannels()
@@ -164,7 +164,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoresAssignedToChannel
      *
-     * Returns a list of stores of an AppId that are assigned to a given Sales Channel.
+     * .
      *
      */
     public function testGetStoresAssignedToChannel()
@@ -174,7 +174,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoresBySalesChannel
      *
-     * Returns a list of store ids attached to the given channel type for the specified app..
+     * .
      *
      */
     public function testGetStoresBySalesChannel()
@@ -184,7 +184,7 @@ class ChannelsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for unassignStoreFromChannel
      *
-     * Unassign a Store from a Sales Channel.
+     * .
      *
      */
     public function testUnassignStoreFromChannel()

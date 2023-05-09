@@ -74,7 +74,7 @@ class FilesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for downloadFile
      *
-     * Get file from storage.
+     * .
      *
      */
     public function testDownloadFile()

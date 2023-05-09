@@ -74,7 +74,7 @@ class StoreGroupsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createStoreGroup
      *
-     * Creates a Store Group  It will be attached to an existing App.
+     * .
      *
      */
     public function testCreateStoreGroup()
@@ -84,7 +84,7 @@ class StoreGroupsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoreGroup
      *
-     * Returns a Store Groups.
+     * .
      *
      */
     public function testGetStoreGroup()
@@ -94,7 +94,7 @@ class StoreGroupsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoreGroups
      *
-     * Returns a paginated list of Store Groups.
+     * .
      *
      */
     public function testGetStoreGroups()
@@ -104,7 +104,7 @@ class StoreGroupsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoreGroupsExtended
      *
-     * [PRIVATE API] Returns a paginated list of Extended Store Groups.
+     * .
      *
      */
     public function testGetStoreGroupsExtended()
@@ -114,7 +114,7 @@ class StoreGroupsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for removeStoreGroup
      *
-     * Deletes a Store Group  Can only remove a store group if there is no stores attached to the group.
+     * .
      *
      */
     public function testRemoveStoreGroup()
@@ -134,7 +134,7 @@ class StoreGroupsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateStoreGroup
      *
-     * Updates Store Group.
+     * .
      *
      */
     public function testUpdateStoreGroup()

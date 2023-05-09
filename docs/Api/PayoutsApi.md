@@ -4,19 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getPayout**](PayoutsApi.md#getPayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | Get Payout details broken down by Store
-[**getPayoutChargebacks**](PayoutsApi.md#getPayoutChargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | Get list of payout&#39;s chargebacks
-[**getPayoutOrders**](PayoutsApi.md#getPayoutOrders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | Get list of payout&#39;s orders
-[**getPayoutOtherCharges**](PayoutsApi.md#getPayoutOtherCharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges | Get list of payout&#39;s other charges
-[**getPayoutRefunds**](PayoutsApi.md#getPayoutRefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds | Get list of payout&#39;s refunds
-[**getPayoutSummaries**](PayoutsApi.md#getPayoutSummaries) | **GET** /api/v1.0/{appId}/payouts/summaries | Get list of payout summaries
-[**getPayouts**](PayoutsApi.md#getPayouts) | **GET** /api/v1.0/{appId}/payouts | Get list of payouts
+[**getPayout**](PayoutsApi.md#getPayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | 
+[**getPayoutChargebacks**](PayoutsApi.md#getPayoutChargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | 
+[**getPayoutOrders**](PayoutsApi.md#getPayoutOrders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | 
+[**getPayoutOtherCharges**](PayoutsApi.md#getPayoutOtherCharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges | 
+[**getPayoutRefunds**](PayoutsApi.md#getPayoutRefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds | 
+[**getPayoutSummaries**](PayoutsApi.md#getPayoutSummaries) | **GET** /api/v1.0/{appId}/payouts/summaries | 
+[**getPayouts**](PayoutsApi.md#getPayouts) | **GET** /api/v1.0/{appId}/payouts | 
 
 
 # **getPayout**
 > \Flipdish\\Client\Models\PayoutDetail getPayout($app_id, $bank_account_id, $payout_id)
 
-Get Payout details broken down by Store
+
 
 ### Example
 ```php
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 # **getPayoutChargebacks**
 > \Flipdish\\Client\Models\RestApiPaginationResultPayoutChargeback getPayoutChargebacks($app_id, $bank_account_id, $payout_id, $page, $limit, $store_ids)
 
-Get list of payout's chargebacks
+
 
 ### Example
 ```php
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 # **getPayoutOrders**
 > \Flipdish\\Client\Models\RestApiPaginationResultPayoutOrder getPayoutOrders($app_id, $bank_account_id, $payout_id, $page, $limit, $store_ids)
 
-Get list of payout's orders
+
 
 ### Example
 ```php
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 # **getPayoutOtherCharges**
 > \Flipdish\\Client\Models\RestApiPaginationResultPayoutOtherCharge getPayoutOtherCharges($app_id, $bank_account_id, $payout_id, $page, $limit, $store_ids)
 
-Get list of payout's other charges
+
 
 ### Example
 ```php
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 # **getPayoutRefunds**
 > \Flipdish\\Client\Models\RestApiPaginationResultPayoutRefund getPayoutRefunds($app_id, $bank_account_id, $payout_id, $page, $limit, $store_ids)
 
-Get list of payout's refunds
+
 
 ### Example
 ```php
@@ -315,9 +315,7 @@ Name | Type | Description  | Notes
 # **getPayoutSummaries**
 > \Flipdish\\Client\Models\RestApiArrayResultPayoutSummary getPayoutSummaries($app_id, $start_date, $end_date, $payout_request_ids_bank_account_ids, $payout_request_ids_states)
 
-Get list of payout summaries
 
-BETA - this endpoint is under development, do not use it in your production system
 
 ### Example
 ```php
@@ -376,9 +374,7 @@ Name | Type | Description  | Notes
 # **getPayouts**
 > \Flipdish\\Client\Models\RestApiPaginationResultPayout getPayouts($app_id, $start_date, $end_date, $page, $limit, $payout_request_ids_bank_account_ids, $payout_request_ids_states)
 
-Get list of payouts
 
-BETA - this endpoint is under development, do not use it in your production system
 
 ### Example
 ```php

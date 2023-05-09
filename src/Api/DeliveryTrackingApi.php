@@ -90,11 +90,9 @@ class DeliveryTrackingApi
     /**
      * Operation assignDriverToOrder
      *
-     * [PRIVATE] Assign driver to order
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $order_id Order Id (required)
-     * @param  int $driver_id Driver Id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $order_id order_id (required)
+     * @param  int $driver_id driver_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,11 +106,9 @@ class DeliveryTrackingApi
     /**
      * Operation assignDriverToOrderWithHttpInfo
      *
-     * [PRIVATE] Assign driver to order
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $order_id Order Id (required)
-     * @param  int $driver_id Driver Id (required)
+     * @param  string $app_id (required)
+     * @param  int $order_id (required)
+     * @param  int $driver_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -179,11 +175,11 @@ class DeliveryTrackingApi
     /**
      * Operation assignDriverToOrderAsync
      *
-     * [PRIVATE] Assign driver to order
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $order_id Order Id (required)
-     * @param  int $driver_id Driver Id (required)
+     * @param  string $app_id (required)
+     * @param  int $order_id (required)
+     * @param  int $driver_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -201,11 +197,11 @@ class DeliveryTrackingApi
     /**
      * Operation assignDriverToOrderAsyncWithHttpInfo
      *
-     * [PRIVATE] Assign driver to order
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $order_id Order Id (required)
-     * @param  int $driver_id Driver Id (required)
+     * @param  string $app_id (required)
+     * @param  int $order_id (required)
+     * @param  int $driver_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -241,9 +237,9 @@ class DeliveryTrackingApi
     /**
      * Create request for operation 'assignDriverToOrder'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $order_id Order Id (required)
-     * @param  int $driver_id Driver Id (required)
+     * @param  string $app_id (required)
+     * @param  int $order_id (required)
+     * @param  int $driver_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -380,11 +376,9 @@ class DeliveryTrackingApi
     /**
      * Operation assignDriverToOrders
      *
-     * Assign driver to multiple orders
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $driver_id Driver Id (required)
-     * @param  \Flipdish\\Client\Models\OrderIdAndSequenceNumber[] $order_id_and_sequence_numbers Array of object containing OrderId and Sequence (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $driver_id driver_id (required)
+     * @param  \Flipdish\\Client\Models\OrderIdAndSequenceNumber[] $order_id_and_sequence_numbers order_id_and_sequence_numbers (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -398,11 +392,9 @@ class DeliveryTrackingApi
     /**
      * Operation assignDriverToOrdersWithHttpInfo
      *
-     * Assign driver to multiple orders
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $driver_id Driver Id (required)
-     * @param  \Flipdish\\Client\Models\OrderIdAndSequenceNumber[] $order_id_and_sequence_numbers Array of object containing OrderId and Sequence (required)
+     * @param  string $app_id (required)
+     * @param  int $driver_id (required)
+     * @param  \Flipdish\\Client\Models\OrderIdAndSequenceNumber[] $order_id_and_sequence_numbers (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -469,11 +461,11 @@ class DeliveryTrackingApi
     /**
      * Operation assignDriverToOrdersAsync
      *
-     * Assign driver to multiple orders
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $driver_id Driver Id (required)
-     * @param  \Flipdish\\Client\Models\OrderIdAndSequenceNumber[] $order_id_and_sequence_numbers Array of object containing OrderId and Sequence (required)
+     * @param  string $app_id (required)
+     * @param  int $driver_id (required)
+     * @param  \Flipdish\\Client\Models\OrderIdAndSequenceNumber[] $order_id_and_sequence_numbers (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -491,11 +483,11 @@ class DeliveryTrackingApi
     /**
      * Operation assignDriverToOrdersAsyncWithHttpInfo
      *
-     * Assign driver to multiple orders
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $driver_id Driver Id (required)
-     * @param  \Flipdish\\Client\Models\OrderIdAndSequenceNumber[] $order_id_and_sequence_numbers Array of object containing OrderId and Sequence (required)
+     * @param  string $app_id (required)
+     * @param  int $driver_id (required)
+     * @param  \Flipdish\\Client\Models\OrderIdAndSequenceNumber[] $order_id_and_sequence_numbers (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -531,9 +523,9 @@ class DeliveryTrackingApi
     /**
      * Create request for operation 'assignDriverToOrders'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $driver_id Driver Id (required)
-     * @param  \Flipdish\\Client\Models\OrderIdAndSequenceNumber[] $order_id_and_sequence_numbers Array of object containing OrderId and Sequence (required)
+     * @param  string $app_id (required)
+     * @param  int $driver_id (required)
+     * @param  \Flipdish\\Client\Models\OrderIdAndSequenceNumber[] $order_id_and_sequence_numbers (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -665,13 +657,11 @@ class DeliveryTrackingApi
     /**
      * Operation getDrivers
      *
-     * [PRIVATE] Get drivers by App
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $name Driver&#39;s username (optional)
-     * @param  string $phone_number Driver&#39;s phone number (optional)
-     * @param  int $store_id Store Id (optional)
-     * @param  string $presence Offline/Online (optional)
+     * @param  string $app_id app_id (required)
+     * @param  string $name name (optional)
+     * @param  string $phone_number phone_number (optional)
+     * @param  int $store_id store_id (optional)
+     * @param  string $presence presence (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -686,13 +676,11 @@ class DeliveryTrackingApi
     /**
      * Operation getDriversWithHttpInfo
      *
-     * [PRIVATE] Get drivers by App
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $name Driver&#39;s username (optional)
-     * @param  string $phone_number Driver&#39;s phone number (optional)
-     * @param  int $store_id Store Id (optional)
-     * @param  string $presence Offline/Online (optional)
+     * @param  string $app_id (required)
+     * @param  string $name (optional)
+     * @param  string $phone_number (optional)
+     * @param  int $store_id (optional)
+     * @param  string $presence (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -781,13 +769,13 @@ class DeliveryTrackingApi
     /**
      * Operation getDriversAsync
      *
-     * [PRIVATE] Get drivers by App
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $name Driver&#39;s username (optional)
-     * @param  string $phone_number Driver&#39;s phone number (optional)
-     * @param  int $store_id Store Id (optional)
-     * @param  string $presence Offline/Online (optional)
+     * @param  string $app_id (required)
+     * @param  string $name (optional)
+     * @param  string $phone_number (optional)
+     * @param  int $store_id (optional)
+     * @param  string $presence (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -805,13 +793,13 @@ class DeliveryTrackingApi
     /**
      * Operation getDriversAsyncWithHttpInfo
      *
-     * [PRIVATE] Get drivers by App
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $name Driver&#39;s username (optional)
-     * @param  string $phone_number Driver&#39;s phone number (optional)
-     * @param  int $store_id Store Id (optional)
-     * @param  string $presence Offline/Online (optional)
+     * @param  string $app_id (required)
+     * @param  string $name (optional)
+     * @param  string $phone_number (optional)
+     * @param  int $store_id (optional)
+     * @param  string $presence (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -861,11 +849,11 @@ class DeliveryTrackingApi
     /**
      * Create request for operation 'getDrivers'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  string $name Driver&#39;s username (optional)
-     * @param  string $phone_number Driver&#39;s phone number (optional)
-     * @param  int $store_id Store Id (optional)
-     * @param  string $presence Offline/Online (optional)
+     * @param  string $app_id (required)
+     * @param  string $name (optional)
+     * @param  string $phone_number (optional)
+     * @param  int $store_id (optional)
+     * @param  string $presence (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -990,10 +978,8 @@ class DeliveryTrackingApi
     /**
      * Operation inviteDriverToApp
      *
-     * [PRIVATE] Invite driver
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\DriverInvitation $driver_invitation Driver invitation model (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\DriverInvitation $driver_invitation driver_invitation (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1008,10 +994,8 @@ class DeliveryTrackingApi
     /**
      * Operation inviteDriverToAppWithHttpInfo
      *
-     * [PRIVATE] Invite driver
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\DriverInvitation $driver_invitation Driver invitation model (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\DriverInvitation $driver_invitation (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1100,10 +1084,10 @@ class DeliveryTrackingApi
     /**
      * Operation inviteDriverToAppAsync
      *
-     * [PRIVATE] Invite driver
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\DriverInvitation $driver_invitation Driver invitation model (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\DriverInvitation $driver_invitation (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1121,10 +1105,10 @@ class DeliveryTrackingApi
     /**
      * Operation inviteDriverToAppAsyncWithHttpInfo
      *
-     * [PRIVATE] Invite driver
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\DriverInvitation $driver_invitation Driver invitation model (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\DriverInvitation $driver_invitation (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1174,8 +1158,8 @@ class DeliveryTrackingApi
     /**
      * Create request for operation 'inviteDriverToApp'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  \Flipdish\\Client\Models\DriverInvitation $driver_invitation Driver invitation model (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\DriverInvitation $driver_invitation (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1293,10 +1277,8 @@ class DeliveryTrackingApi
     /**
      * Operation removeDriverFromApp
      *
-     * [PRIVATE] Unassign driver from app
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $driver_id Driver Id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $driver_id driver_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1310,10 +1292,8 @@ class DeliveryTrackingApi
     /**
      * Operation removeDriverFromAppWithHttpInfo
      *
-     * [PRIVATE] Unassign driver from app
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $driver_id Driver Id (required)
+     * @param  string $app_id (required)
+     * @param  int $driver_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1380,10 +1360,10 @@ class DeliveryTrackingApi
     /**
      * Operation removeDriverFromAppAsync
      *
-     * [PRIVATE] Unassign driver from app
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $driver_id Driver Id (required)
+     * @param  string $app_id (required)
+     * @param  int $driver_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1401,10 +1381,10 @@ class DeliveryTrackingApi
     /**
      * Operation removeDriverFromAppAsyncWithHttpInfo
      *
-     * [PRIVATE] Unassign driver from app
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $driver_id Driver Id (required)
+     * @param  string $app_id (required)
+     * @param  int $driver_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1440,8 +1420,8 @@ class DeliveryTrackingApi
     /**
      * Create request for operation 'removeDriverFromApp'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $driver_id Driver Id (required)
+     * @param  string $app_id (required)
+     * @param  int $driver_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1564,10 +1544,8 @@ class DeliveryTrackingApi
     /**
      * Operation unassignDriverFromOrder
      *
-     * [PRIVATE] Unassign driver from order
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $order_id Order Id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $order_id order_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1581,10 +1559,8 @@ class DeliveryTrackingApi
     /**
      * Operation unassignDriverFromOrderWithHttpInfo
      *
-     * [PRIVATE] Unassign driver from order
-     *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $order_id Order Id (required)
+     * @param  string $app_id (required)
+     * @param  int $order_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1651,10 +1627,10 @@ class DeliveryTrackingApi
     /**
      * Operation unassignDriverFromOrderAsync
      *
-     * [PRIVATE] Unassign driver from order
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $order_id Order Id (required)
+     * @param  string $app_id (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1672,10 +1648,10 @@ class DeliveryTrackingApi
     /**
      * Operation unassignDriverFromOrderAsyncWithHttpInfo
      *
-     * [PRIVATE] Unassign driver from order
+     * 
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $order_id Order Id (required)
+     * @param  string $app_id (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1711,8 +1687,8 @@ class DeliveryTrackingApi
     /**
      * Create request for operation 'unassignDriverFromOrder'
      *
-     * @param  string $app_id Application identifier (required)
-     * @param  int $order_id Order Id (required)
+     * @param  string $app_id (required)
+     * @param  int $order_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

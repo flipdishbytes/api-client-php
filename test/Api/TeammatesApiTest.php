@@ -74,7 +74,7 @@ class TeammatesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createTeammate
      *
-     * Create teammate and send an invite..
+     * .
      *
      */
     public function testCreateTeammate()
@@ -84,7 +84,7 @@ class TeammatesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteTeammate
      *
-     * Delete teammate.
+     * .
      *
      */
     public function testDeleteTeammate()
@@ -94,7 +94,7 @@ class TeammatesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getTeammateByAppIdAndTeammateId
      *
-     * Get a teammates by email address.
+     * .
      *
      */
     public function testGetTeammateByAppIdAndTeammateId()
@@ -104,7 +104,7 @@ class TeammatesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getTeammatesByAppId
      *
-     * Get all teammates.
+     * .
      *
      */
     public function testGetTeammatesByAppId()
@@ -114,7 +114,7 @@ class TeammatesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for redeemInvitation
      *
-     * Redeem one-time code from invitation.
+     * .
      *
      */
     public function testRedeemInvitation()
@@ -124,7 +124,7 @@ class TeammatesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateTeammate
      *
-     * Update teammates (this method does not support Deltas!).
+     * .
      *
      */
     public function testUpdateTeammate()

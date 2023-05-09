@@ -90,10 +90,8 @@ class StuartApi
     /**
      * Operation stuartCancelJob
      *
-     * Cancel a stuart job
-     *
-     * @param  int $job_id Stuart job identifier (required)
-     * @param  int $store_id Store identifier (required)
+     * @param  int $job_id job_id (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class StuartApi
     /**
      * Operation stuartCancelJobWithHttpInfo
      *
-     * Cancel a stuart job
-     *
-     * @param  int $job_id Stuart job identifier (required)
-     * @param  int $store_id Store identifier (required)
+     * @param  int $job_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -208,10 +204,10 @@ class StuartApi
     /**
      * Operation stuartCancelJobAsync
      *
-     * Cancel a stuart job
+     * 
      *
-     * @param  int $job_id Stuart job identifier (required)
-     * @param  int $store_id Store identifier (required)
+     * @param  int $job_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -229,10 +225,10 @@ class StuartApi
     /**
      * Operation stuartCancelJobAsyncWithHttpInfo
      *
-     * Cancel a stuart job
+     * 
      *
-     * @param  int $job_id Stuart job identifier (required)
-     * @param  int $store_id Store identifier (required)
+     * @param  int $job_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -282,8 +278,8 @@ class StuartApi
     /**
      * Create request for operation 'stuartCancelJob'
      *
-     * @param  int $job_id Stuart job identifier (required)
-     * @param  int $store_id Store identifier (required)
+     * @param  int $job_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -402,10 +398,8 @@ class StuartApi
     /**
      * Operation stuartGetJob
      *
-     * Get start job details
-     *
-     * @param  int $job_id Stuart job identifier (required)
-     * @param  int $store_id Store identifier (required)
+     * @param  int $job_id job_id (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -420,10 +414,8 @@ class StuartApi
     /**
      * Operation stuartGetJobWithHttpInfo
      *
-     * Get start job details
-     *
-     * @param  int $job_id Stuart job identifier (required)
-     * @param  int $store_id Store identifier (required)
+     * @param  int $job_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -520,10 +512,10 @@ class StuartApi
     /**
      * Operation stuartGetJobAsync
      *
-     * Get start job details
+     * 
      *
-     * @param  int $job_id Stuart job identifier (required)
-     * @param  int $store_id Store identifier (required)
+     * @param  int $job_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -541,10 +533,10 @@ class StuartApi
     /**
      * Operation stuartGetJobAsyncWithHttpInfo
      *
-     * Get start job details
+     * 
      *
-     * @param  int $job_id Stuart job identifier (required)
-     * @param  int $store_id Store identifier (required)
+     * @param  int $job_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -594,8 +586,8 @@ class StuartApi
     /**
      * Create request for operation 'stuartGetJob'
      *
-     * @param  int $job_id Stuart job identifier (required)
-     * @param  int $store_id Store identifier (required)
+     * @param  int $job_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -714,9 +706,7 @@ class StuartApi
     /**
      * Operation stuartGetStuartSettings
      *
-     * Get stuart settings for a store
-     *
-     * @param  int $store_id Store Identifier (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -731,9 +721,7 @@ class StuartApi
     /**
      * Operation stuartGetStuartSettingsWithHttpInfo
      *
-     * Get stuart settings for a store
-     *
-     * @param  int $store_id Store Identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -830,9 +818,9 @@ class StuartApi
     /**
      * Operation stuartGetStuartSettingsAsync
      *
-     * Get stuart settings for a store
+     * 
      *
-     * @param  int $store_id Store Identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -850,9 +838,9 @@ class StuartApi
     /**
      * Operation stuartGetStuartSettingsAsyncWithHttpInfo
      *
-     * Get stuart settings for a store
+     * 
      *
-     * @param  int $store_id Store Identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -902,7 +890,7 @@ class StuartApi
     /**
      * Create request for operation 'stuartGetStuartSettings'
      *
-     * @param  int $store_id Store Identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1011,10 +999,8 @@ class StuartApi
     /**
      * Operation stuartPostStuartSettings
      *
-     * Set stuart settings for a store
-     *
-     * @param  int $store_id Store Identifier (required)
-     * @param  \Flipdish\\Client\Models\StuartSettings $stuart_settings Stuart settings model (required)
+     * @param  int $store_id store_id (required)
+     * @param  \Flipdish\\Client\Models\StuartSettings $stuart_settings stuart_settings (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1029,10 +1015,8 @@ class StuartApi
     /**
      * Operation stuartPostStuartSettingsWithHttpInfo
      *
-     * Set stuart settings for a store
-     *
-     * @param  int $store_id Store Identifier (required)
-     * @param  \Flipdish\\Client\Models\StuartSettings $stuart_settings Stuart settings model (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StuartSettings $stuart_settings (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1137,10 +1121,10 @@ class StuartApi
     /**
      * Operation stuartPostStuartSettingsAsync
      *
-     * Set stuart settings for a store
+     * 
      *
-     * @param  int $store_id Store Identifier (required)
-     * @param  \Flipdish\\Client\Models\StuartSettings $stuart_settings Stuart settings model (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StuartSettings $stuart_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1158,10 +1142,10 @@ class StuartApi
     /**
      * Operation stuartPostStuartSettingsAsyncWithHttpInfo
      *
-     * Set stuart settings for a store
+     * 
      *
-     * @param  int $store_id Store Identifier (required)
-     * @param  \Flipdish\\Client\Models\StuartSettings $stuart_settings Stuart settings model (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StuartSettings $stuart_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1211,8 +1195,8 @@ class StuartApi
     /**
      * Create request for operation 'stuartPostStuartSettings'
      *
-     * @param  int $store_id Store Identifier (required)
-     * @param  \Flipdish\\Client\Models\StuartSettings $stuart_settings Stuart settings model (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StuartSettings $stuart_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

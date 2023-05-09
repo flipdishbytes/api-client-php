@@ -4,24 +4,24 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**assignAppIdToSalesChannel**](ChannelsApi.md#assignAppIdToSalesChannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | Assign a given AppId to a Sales Channel
-[**assignStoreToChannel**](ChannelsApi.md#assignStoreToChannel) | **POST** /api/v1.0/{appId}/channels/assign-store | Assign a Store to a Sales Channel
-[**attachStoreToSalesChannel**](ChannelsApi.md#attachStoreToSalesChannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Attachs the specified store to the given sales channel.
-[**detachAllStoresFromSalesChannel**](ChannelsApi.md#detachAllStoresFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | Detaches all the stores from the given sales channel.
-[**detachStoreFromSalesChannel**](ChannelsApi.md#detachStoreFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | Detaches the specified store from the given sales channel.
-[**getAssignedChannels**](ChannelsApi.md#getAssignedChannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | Returns a list of sales channels that are assigned to a given AppId
-[**getAvailableChannels**](ChannelsApi.md#getAvailableChannels) | **GET** /api/v1.0/{appId}/channels/available-channels | Returns a list of sales channels that are not yet assigned to a given AppId
-[**getChannel**](ChannelsApi.md#getChannel) | **GET** /api/v1.0/{appId}/channels/{id} | Returns a Sales Channel by Id.
-[**getChannels**](ChannelsApi.md#getChannels) | **GET** /api/v1.0/{appId}/channels | Returns a list of enabled Channels
-[**getStoresAssignedToChannel**](ChannelsApi.md#getStoresAssignedToChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | Returns a list of stores of an AppId that are assigned to a given Sales Channel
-[**getStoresBySalesChannel**](ChannelsApi.md#getStoresBySalesChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | Returns a list of store ids attached to the given channel type for the specified app.
-[**unassignStoreFromChannel**](ChannelsApi.md#unassignStoreFromChannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | Unassign a Store from a Sales Channel
+[**assignAppIdToSalesChannel**](ChannelsApi.md#assignAppIdToSalesChannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/assign-appId | 
+[**assignStoreToChannel**](ChannelsApi.md#assignStoreToChannel) | **POST** /api/v1.0/{appId}/channels/assign-store | 
+[**attachStoreToSalesChannel**](ChannelsApi.md#attachStoreToSalesChannel) | **POST** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | 
+[**detachAllStoresFromSalesChannel**](ChannelsApi.md#detachAllStoresFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores | 
+[**detachStoreFromSalesChannel**](ChannelsApi.md#detachStoreFromSalesChannel) | **DELETE** /api/v1.0/{appId}/channels/{channelId}/stores/{storeId} | 
+[**getAssignedChannels**](ChannelsApi.md#getAssignedChannels) | **GET** /api/v1.0/{appId}/channels/assigned-channels | 
+[**getAvailableChannels**](ChannelsApi.md#getAvailableChannels) | **GET** /api/v1.0/{appId}/channels/available-channels | 
+[**getChannel**](ChannelsApi.md#getChannel) | **GET** /api/v1.0/{appId}/channels/{id} | 
+[**getChannels**](ChannelsApi.md#getChannels) | **GET** /api/v1.0/{appId}/channels | 
+[**getStoresAssignedToChannel**](ChannelsApi.md#getStoresAssignedToChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/assigned-stores | 
+[**getStoresBySalesChannel**](ChannelsApi.md#getStoresBySalesChannel) | **GET** /api/v1.0/{appId}/channels/{channelId}/stores | 
+[**unassignStoreFromChannel**](ChannelsApi.md#unassignStoreFromChannel) | **DELETE** /api/v1.0/{appId}/channels/unassign-store | 
 
 
 # **assignAppIdToSalesChannel**
 > object assignAppIdToSalesChannel($app_id, $channel_id)
 
-Assign a given AppId to a Sales Channel
+
 
 ### Example
 ```php
@@ -37,8 +37,8 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application Id (AppNameIdxxx)
-$channel_id = 56; // int | Channel Id (123, 456)
+$app_id = "app_id_example"; // string | 
+$channel_id = 56; // int | 
 
 try {
     $result = $apiInstance->assignAppIdToSalesChannel($app_id, $channel_id);
@@ -53,8 +53,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application Id (AppNameIdxxx) |
- **channel_id** | **int**| Channel Id (123, 456) |
+ **app_id** | **string**|  |
+ **channel_id** | **int**|  |
 
 ### Return type
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 # **assignStoreToChannel**
 > object assignStoreToChannel($store_id, $app_id, $channel_id)
 
-Assign a Store to a Sales Channel
+
 
 ### Example
 ```php
@@ -90,9 +90,9 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store Id (123, 456)
-$app_id = "app_id_example"; // string | AppId (AppNameIdxxx)
-$channel_id = 56; // int | Channel Id (123, 456)
+$store_id = 56; // int | 
+$app_id = "app_id_example"; // string | 
+$channel_id = 56; // int | 
 
 try {
     $result = $apiInstance->assignStoreToChannel($store_id, $app_id, $channel_id);
@@ -107,9 +107,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store Id (123, 456) |
- **app_id** | **string**| AppId (AppNameIdxxx) |
- **channel_id** | **int**| Channel Id (123, 456) |
+ **store_id** | **int**|  |
+ **app_id** | **string**|  |
+ **channel_id** | **int**|  |
 
 ### Return type
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 # **attachStoreToSalesChannel**
 > object attachStoreToSalesChannel($app_id, $channel_id, $store_id)
 
-Attachs the specified store to the given sales channel.
+
 
 ### Example
 ```php
@@ -145,9 +145,9 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application Id (AppNameId)
-$channel_id = 56; // int | Type of sales channel (Android, IOS, Web, etc.)
-$store_id = 56; // int | Store Id (Phyisical Restaurant) to attach.
+$app_id = "app_id_example"; // string | 
+$channel_id = 56; // int | 
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->attachStoreToSalesChannel($app_id, $channel_id, $store_id);
@@ -162,9 +162,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application Id (AppNameId) |
- **channel_id** | **int**| Type of sales channel (Android, IOS, Web, etc.) |
- **store_id** | **int**| Store Id (Phyisical Restaurant) to attach. |
+ **app_id** | **string**|  |
+ **channel_id** | **int**|  |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 # **detachAllStoresFromSalesChannel**
 > object detachAllStoresFromSalesChannel($app_id, $channel_id)
 
-Detaches all the stores from the given sales channel.
+
 
 ### Example
 ```php
@@ -200,8 +200,8 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application Id (AppNameId)
-$channel_id = 56; // int | Type of sales channel (Android, IOS, Web, etc.)
+$app_id = "app_id_example"; // string | 
+$channel_id = 56; // int | 
 
 try {
     $result = $apiInstance->detachAllStoresFromSalesChannel($app_id, $channel_id);
@@ -216,8 +216,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application Id (AppNameId) |
- **channel_id** | **int**| Type of sales channel (Android, IOS, Web, etc.) |
+ **app_id** | **string**|  |
+ **channel_id** | **int**|  |
 
 ### Return type
 
@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 # **detachStoreFromSalesChannel**
 > object detachStoreFromSalesChannel($app_id, $channel_id, $store_id)
 
-Detaches the specified store from the given sales channel.
+
 
 ### Example
 ```php
@@ -253,9 +253,9 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application Id (AppNameId)
-$channel_id = 56; // int | Type of sales channel (Android, IOS, Web, etc.)
-$store_id = 56; // int | Store Id (Phyisical Restaurant) to detach.
+$app_id = "app_id_example"; // string | 
+$channel_id = 56; // int | 
+$store_id = 56; // int | 
 
 try {
     $result = $apiInstance->detachStoreFromSalesChannel($app_id, $channel_id, $store_id);
@@ -270,9 +270,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application Id (AppNameId) |
- **channel_id** | **int**| Type of sales channel (Android, IOS, Web, etc.) |
- **store_id** | **int**| Store Id (Phyisical Restaurant) to detach. |
+ **app_id** | **string**|  |
+ **channel_id** | **int**|  |
+ **store_id** | **int**|  |
 
 ### Return type
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 # **getAssignedChannels**
 > \Flipdish\\Client\Models\RestApiArrayResultChannel getAssignedChannels($app_id)
 
-Returns a list of sales channels that are assigned to a given AppId
+
 
 ### Example
 ```php
@@ -308,7 +308,7 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application Id (AppNameIdxxx)
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getAssignedChannels($app_id);
@@ -323,7 +323,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application Id (AppNameIdxxx) |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 # **getAvailableChannels**
 > \Flipdish\\Client\Models\RestApiArrayResultChannel getAvailableChannels($app_id)
 
-Returns a list of sales channels that are not yet assigned to a given AppId
+
 
 ### Example
 ```php
@@ -359,7 +359,7 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application Id (AppNameIdxxx)
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getAvailableChannels($app_id);
@@ -374,7 +374,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application Id (AppNameIdxxx) |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -394,7 +394,7 @@ Name | Type | Description  | Notes
 # **getChannel**
 > \Flipdish\\Client\Models\RestApiResultChannel getChannel($id, $app_id)
 
-Returns a Sales Channel by Id.
+
 
 ### Example
 ```php
@@ -410,8 +410,8 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | ChannelId
-$app_id = "app_id_example"; // string | AppId
+$id = 56; // int | 
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getChannel($id, $app_id);
@@ -426,8 +426,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| ChannelId |
- **app_id** | **string**| AppId |
+ **id** | **int**|  |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
 # **getChannels**
 > \Flipdish\\Client\Models\RestApiArrayResultChannel getChannels($app_id)
 
-Returns a list of enabled Channels
+
 
 ### Example
 ```php
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 # **getStoresAssignedToChannel**
 > \Flipdish\\Client\Models\RestApiArrayResultStoreChannelAssignment getStoresAssignedToChannel($app_id, $channel_id)
 
-Returns a list of stores of an AppId that are assigned to a given Sales Channel
+
 
 ### Example
 ```php
@@ -514,8 +514,8 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application Id (AppNameId)
-$channel_id = 56; // int | Sales channel (Android, IOS, Web, etc.)
+$app_id = "app_id_example"; // string | 
+$channel_id = 56; // int | 
 
 try {
     $result = $apiInstance->getStoresAssignedToChannel($app_id, $channel_id);
@@ -530,8 +530,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application Id (AppNameId) |
- **channel_id** | **int**| Sales channel (Android, IOS, Web, etc.) |
+ **app_id** | **string**|  |
+ **channel_id** | **int**|  |
 
 ### Return type
 
@@ -551,7 +551,7 @@ Name | Type | Description  | Notes
 # **getStoresBySalesChannel**
 > \Flipdish\\Client\Models\Response getStoresBySalesChannel($app_id, $channel_id)
 
-Returns a list of store ids attached to the given channel type for the specified app.
+
 
 ### Example
 ```php
@@ -567,8 +567,8 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application Id (AppNameId)
-$channel_id = 56; // int | Type of sales channel (Android, IOS, Web, etc.)
+$app_id = "app_id_example"; // string | 
+$channel_id = 56; // int | 
 
 try {
     $result = $apiInstance->getStoresBySalesChannel($app_id, $channel_id);
@@ -583,8 +583,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application Id (AppNameId) |
- **channel_id** | **int**| Type of sales channel (Android, IOS, Web, etc.) |
+ **app_id** | **string**|  |
+ **channel_id** | **int**|  |
 
 ### Return type
 
@@ -604,7 +604,7 @@ Name | Type | Description  | Notes
 # **unassignStoreFromChannel**
 > object unassignStoreFromChannel($store_id, $app_id, $channel_id)
 
-Unassign a Store from a Sales Channel
+
 
 ### Example
 ```php
@@ -620,9 +620,9 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store Id (123, 456)
-$app_id = "app_id_example"; // string | AppId (AppNameIdxxx)
-$channel_id = 56; // int | Channel Id (123, 456)
+$store_id = 56; // int | 
+$app_id = "app_id_example"; // string | 
+$channel_id = 56; // int | 
 
 try {
     $result = $apiInstance->unassignStoreFromChannel($store_id, $app_id, $channel_id);
@@ -637,9 +637,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store Id (123, 456) |
- **app_id** | **string**| AppId (AppNameIdxxx) |
- **channel_id** | **int**| Channel Id (123, 456) |
+ **store_id** | **int**|  |
+ **app_id** | **string**|  |
+ **channel_id** | **int**|  |
 
 ### Return type
 

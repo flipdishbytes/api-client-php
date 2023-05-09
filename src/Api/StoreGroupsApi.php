@@ -90,10 +90,8 @@ class StoreGroupsApi
     /**
      * Operation createStoreGroup
      *
-     * Creates a Store Group  It will be attached to an existing App
-     *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group Store group definition (required)
+     * @param  string $app_name_id app_name_id (required)
+     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group store_group (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class StoreGroupsApi
     /**
      * Operation createStoreGroupWithHttpInfo
      *
-     * Creates a Store Group  It will be attached to an existing App
-     *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group Store group definition (required)
+     * @param  string $app_name_id (required)
+     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -208,10 +204,10 @@ class StoreGroupsApi
     /**
      * Operation createStoreGroupAsync
      *
-     * Creates a Store Group  It will be attached to an existing App
+     * 
      *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group Store group definition (required)
+     * @param  string $app_name_id (required)
+     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -229,10 +225,10 @@ class StoreGroupsApi
     /**
      * Operation createStoreGroupAsyncWithHttpInfo
      *
-     * Creates a Store Group  It will be attached to an existing App
+     * 
      *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group Store group definition (required)
+     * @param  string $app_name_id (required)
+     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -282,8 +278,8 @@ class StoreGroupsApi
     /**
      * Create request for operation 'createStoreGroup'
      *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group Store group definition (required)
+     * @param  string $app_name_id (required)
+     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -401,9 +397,7 @@ class StoreGroupsApi
     /**
      * Operation getStoreGroup
      *
-     * Returns a Store Groups
-     *
-     * @param  int $store_group_id Store Group Id (required)
+     * @param  int $store_group_id store_group_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -418,9 +412,7 @@ class StoreGroupsApi
     /**
      * Operation getStoreGroupWithHttpInfo
      *
-     * Returns a Store Groups
-     *
-     * @param  int $store_group_id Store Group Id (required)
+     * @param  int $store_group_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -517,9 +509,9 @@ class StoreGroupsApi
     /**
      * Operation getStoreGroupAsync
      *
-     * Returns a Store Groups
+     * 
      *
-     * @param  int $store_group_id Store Group Id (required)
+     * @param  int $store_group_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -537,9 +529,9 @@ class StoreGroupsApi
     /**
      * Operation getStoreGroupAsyncWithHttpInfo
      *
-     * Returns a Store Groups
+     * 
      *
-     * @param  int $store_group_id Store Group Id (required)
+     * @param  int $store_group_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -589,7 +581,7 @@ class StoreGroupsApi
     /**
      * Create request for operation 'getStoreGroup'
      *
-     * @param  int $store_group_id Store Group Id (required)
+     * @param  int $store_group_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -698,12 +690,10 @@ class StoreGroupsApi
     /**
      * Operation getStoreGroups
      *
-     * Returns a paginated list of Store Groups
-     *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_name_id app_name_id (required)
+     * @param  string $search_query search_query (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -718,12 +708,10 @@ class StoreGroupsApi
     /**
      * Operation getStoreGroupsWithHttpInfo
      *
-     * Returns a paginated list of Store Groups
-     *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_name_id (required)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -820,12 +808,12 @@ class StoreGroupsApi
     /**
      * Operation getStoreGroupsAsync
      *
-     * Returns a paginated list of Store Groups
+     * 
      *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_name_id (required)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -843,12 +831,12 @@ class StoreGroupsApi
     /**
      * Operation getStoreGroupsAsyncWithHttpInfo
      *
-     * Returns a paginated list of Store Groups
+     * 
      *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_name_id (required)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -898,10 +886,10 @@ class StoreGroupsApi
     /**
      * Create request for operation 'getStoreGroups'
      *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_name_id (required)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1022,12 +1010,10 @@ class StoreGroupsApi
     /**
      * Operation getStoreGroupsExtended
      *
-     * [PRIVATE API] Returns a paginated list of Extended Store Groups
-     *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_name_id app_name_id (required)
+     * @param  string $search_query search_query (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      * @param  int $grouping_radius grouping_radius (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1043,12 +1029,10 @@ class StoreGroupsApi
     /**
      * Operation getStoreGroupsExtendedWithHttpInfo
      *
-     * [PRIVATE API] Returns a paginated list of Extended Store Groups
-     *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_name_id (required)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      * @param  int $grouping_radius (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1146,12 +1130,12 @@ class StoreGroupsApi
     /**
      * Operation getStoreGroupsExtendedAsync
      *
-     * [PRIVATE API] Returns a paginated list of Extended Store Groups
+     * 
      *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_name_id (required)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      * @param  int $grouping_radius (optional)
      *
      * @throws \InvalidArgumentException
@@ -1170,12 +1154,12 @@ class StoreGroupsApi
     /**
      * Operation getStoreGroupsExtendedAsyncWithHttpInfo
      *
-     * [PRIVATE API] Returns a paginated list of Extended Store Groups
+     * 
      *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_name_id (required)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      * @param  int $grouping_radius (optional)
      *
      * @throws \InvalidArgumentException
@@ -1226,10 +1210,10 @@ class StoreGroupsApi
     /**
      * Create request for operation 'getStoreGroupsExtended'
      *
-     * @param  string $app_name_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_name_id (required)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      * @param  int $grouping_radius (optional)
      *
      * @throws \InvalidArgumentException
@@ -1355,9 +1339,7 @@ class StoreGroupsApi
     /**
      * Operation removeStoreGroup
      *
-     * Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
-     *
-     * @param  int $store_group_id Store Group Id (required)
+     * @param  int $store_group_id store_group_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1371,9 +1353,7 @@ class StoreGroupsApi
     /**
      * Operation removeStoreGroupWithHttpInfo
      *
-     * Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
-     *
-     * @param  int $store_group_id Store Group Id (required)
+     * @param  int $store_group_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1448,9 +1428,9 @@ class StoreGroupsApi
     /**
      * Operation removeStoreGroupAsync
      *
-     * Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+     * 
      *
-     * @param  int $store_group_id Store Group Id (required)
+     * @param  int $store_group_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1468,9 +1448,9 @@ class StoreGroupsApi
     /**
      * Operation removeStoreGroupAsyncWithHttpInfo
      *
-     * Deletes a Store Group  Can only remove a store group if there is no stores attached to the group
+     * 
      *
-     * @param  int $store_group_id Store Group Id (required)
+     * @param  int $store_group_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1506,7 +1486,7 @@ class StoreGroupsApi
     /**
      * Create request for operation 'removeStoreGroup'
      *
-     * @param  int $store_group_id Store Group Id (required)
+     * @param  int $store_group_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1904,10 +1884,8 @@ class StoreGroupsApi
     /**
      * Operation updateStoreGroup
      *
-     * Updates Store Group
-     *
-     * @param  int $store_group_id Store Group Id (required)
-     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group Store Group Delta (required)
+     * @param  int $store_group_id store_group_id (required)
+     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group store_group (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1922,10 +1900,8 @@ class StoreGroupsApi
     /**
      * Operation updateStoreGroupWithHttpInfo
      *
-     * Updates Store Group
-     *
-     * @param  int $store_group_id Store Group Id (required)
-     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group Store Group Delta (required)
+     * @param  int $store_group_id (required)
+     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2022,10 +1998,10 @@ class StoreGroupsApi
     /**
      * Operation updateStoreGroupAsync
      *
-     * Updates Store Group
+     * 
      *
-     * @param  int $store_group_id Store Group Id (required)
-     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group Store Group Delta (required)
+     * @param  int $store_group_id (required)
+     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2043,10 +2019,10 @@ class StoreGroupsApi
     /**
      * Operation updateStoreGroupAsyncWithHttpInfo
      *
-     * Updates Store Group
+     * 
      *
-     * @param  int $store_group_id Store Group Id (required)
-     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group Store Group Delta (required)
+     * @param  int $store_group_id (required)
+     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2096,8 +2072,8 @@ class StoreGroupsApi
     /**
      * Create request for operation 'updateStoreGroup'
      *
-     * @param  int $store_group_id Store Group Id (required)
-     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group Store Group Delta (required)
+     * @param  int $store_group_id (required)
+     * @param  \Flipdish\\Client\Models\StoreGroupBase $store_group (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

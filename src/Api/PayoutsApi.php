@@ -90,11 +90,9 @@ class PayoutsApi
     /**
      * Operation getPayout
      *
-     * Get Payout details broken down by Store
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  int $payout_id payout_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -109,11 +107,9 @@ class PayoutsApi
     /**
      * Operation getPayoutWithHttpInfo
      *
-     * Get Payout details broken down by Store
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -210,11 +206,11 @@ class PayoutsApi
     /**
      * Operation getPayoutAsync
      *
-     * Get Payout details broken down by Store
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -232,11 +228,11 @@ class PayoutsApi
     /**
      * Operation getPayoutAsyncWithHttpInfo
      *
-     * Get Payout details broken down by Store
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -286,9 +282,9 @@ class PayoutsApi
     /**
      * Create request for operation 'getPayout'
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -425,14 +421,12 @@ class PayoutsApi
     /**
      * Operation getPayoutChargebacks
      *
-     * Get list of payout's chargebacks
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  int $payout_id payout_id (required)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
+     * @param  int[] $store_ids store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -447,14 +441,12 @@ class PayoutsApi
     /**
      * Operation getPayoutChargebacksWithHttpInfo
      *
-     * Get list of payout's chargebacks
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -551,14 +543,14 @@ class PayoutsApi
     /**
      * Operation getPayoutChargebacksAsync
      *
-     * Get list of payout's chargebacks
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -576,14 +568,14 @@ class PayoutsApi
     /**
      * Operation getPayoutChargebacksAsyncWithHttpInfo
      *
-     * Get list of payout's chargebacks
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -633,12 +625,12 @@ class PayoutsApi
     /**
      * Create request for operation 'getPayoutChargebacks'
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -790,14 +782,12 @@ class PayoutsApi
     /**
      * Operation getPayoutOrders
      *
-     * Get list of payout's orders
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  int $payout_id payout_id (required)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
+     * @param  int[] $store_ids store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -812,14 +802,12 @@ class PayoutsApi
     /**
      * Operation getPayoutOrdersWithHttpInfo
      *
-     * Get list of payout's orders
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -916,14 +904,14 @@ class PayoutsApi
     /**
      * Operation getPayoutOrdersAsync
      *
-     * Get list of payout's orders
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -941,14 +929,14 @@ class PayoutsApi
     /**
      * Operation getPayoutOrdersAsyncWithHttpInfo
      *
-     * Get list of payout's orders
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -998,12 +986,12 @@ class PayoutsApi
     /**
      * Create request for operation 'getPayoutOrders'
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1155,14 +1143,12 @@ class PayoutsApi
     /**
      * Operation getPayoutOtherCharges
      *
-     * Get list of payout's other charges
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  int $payout_id payout_id (required)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
+     * @param  int[] $store_ids store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1177,14 +1163,12 @@ class PayoutsApi
     /**
      * Operation getPayoutOtherChargesWithHttpInfo
      *
-     * Get list of payout's other charges
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1281,14 +1265,14 @@ class PayoutsApi
     /**
      * Operation getPayoutOtherChargesAsync
      *
-     * Get list of payout's other charges
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1306,14 +1290,14 @@ class PayoutsApi
     /**
      * Operation getPayoutOtherChargesAsyncWithHttpInfo
      *
-     * Get list of payout's other charges
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1363,12 +1347,12 @@ class PayoutsApi
     /**
      * Create request for operation 'getPayoutOtherCharges'
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1520,14 +1504,12 @@ class PayoutsApi
     /**
      * Operation getPayoutRefunds
      *
-     * Get list of payout's refunds
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
+     * @param  int $payout_id payout_id (required)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
+     * @param  int[] $store_ids store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1542,14 +1524,12 @@ class PayoutsApi
     /**
      * Operation getPayoutRefundsWithHttpInfo
      *
-     * Get list of payout's refunds
-     *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1646,14 +1626,14 @@ class PayoutsApi
     /**
      * Operation getPayoutRefundsAsync
      *
-     * Get list of payout's refunds
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1671,14 +1651,14 @@ class PayoutsApi
     /**
      * Operation getPayoutRefundsAsyncWithHttpInfo
      *
-     * Get list of payout's refunds
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1728,12 +1708,12 @@ class PayoutsApi
     /**
      * Create request for operation 'getPayoutRefunds'
      *
-     * @param  string $app_id  (required)
-     * @param  int $bank_account_id  (required)
-     * @param  int $payout_id  (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
-     * @param  int[] $store_ids  (optional)
+     * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
+     * @param  int $payout_id (required)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int[] $store_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1885,11 +1865,9 @@ class PayoutsApi
     /**
      * Operation getPayoutSummaries
      *
-     * Get list of payout summaries
-     *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *
@@ -1906,11 +1884,9 @@ class PayoutsApi
     /**
      * Operation getPayoutSummariesWithHttpInfo
      *
-     * Get list of payout summaries
-     *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
+     * @param  string $app_id (required)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *
@@ -2009,11 +1985,11 @@ class PayoutsApi
     /**
      * Operation getPayoutSummariesAsync
      *
-     * Get list of payout summaries
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
+     * @param  string $app_id (required)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *
@@ -2033,11 +2009,11 @@ class PayoutsApi
     /**
      * Operation getPayoutSummariesAsyncWithHttpInfo
      *
-     * Get list of payout summaries
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
+     * @param  string $app_id (required)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *
@@ -2089,9 +2065,9 @@ class PayoutsApi
     /**
      * Create request for operation 'getPayoutSummaries'
      *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
+     * @param  string $app_id (required)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *
@@ -2224,13 +2200,11 @@ class PayoutsApi
     /**
      * Operation getPayouts
      *
-     * Get list of payouts
-     *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *
@@ -2247,13 +2221,11 @@ class PayoutsApi
     /**
      * Operation getPayoutsWithHttpInfo
      *
-     * Get list of payouts
-     *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *
@@ -2352,13 +2324,13 @@ class PayoutsApi
     /**
      * Operation getPayoutsAsync
      *
-     * Get list of payouts
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *
@@ -2378,13 +2350,13 @@ class PayoutsApi
     /**
      * Operation getPayoutsAsyncWithHttpInfo
      *
-     * Get list of payouts
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *
@@ -2436,11 +2408,11 @@ class PayoutsApi
     /**
      * Create request for operation 'getPayouts'
      *
-     * @param  string $app_id  (required)
-     * @param  \DateTime $start_date  (optional)
-     * @param  \DateTime $end_date  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      * @param  int[] $payout_request_ids_bank_account_ids List of bank account ids to search for (optional)
      * @param  string[] $payout_request_ids_states List of {Flipdish.PublicModels.V1.Payouts.PayoutStatus} so search for (optional)
      *

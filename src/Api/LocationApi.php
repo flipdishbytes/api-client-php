@@ -90,12 +90,10 @@ class LocationApi
     /**
      * Operation createLocation
      *
-     * Create a Location i.e: Table, Hotel Room, Car park space
-     *
-     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input Input data for creating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input create_location_input (required)
+     * @param  int $location_area_id location_area_id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -110,12 +108,10 @@ class LocationApi
     /**
      * Operation createLocationWithHttpInfo
      *
-     * Create a Location i.e: Table, Hotel Room, Car park space
-     *
-     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input Input data for creating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input (required)
+     * @param  int $location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -228,12 +224,12 @@ class LocationApi
     /**
      * Operation createLocationAsync
      *
-     * Create a Location i.e: Table, Hotel Room, Car park space
+     * 
      *
-     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input Input data for creating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input (required)
+     * @param  int $location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -251,12 +247,12 @@ class LocationApi
     /**
      * Operation createLocationAsyncWithHttpInfo
      *
-     * Create a Location i.e: Table, Hotel Room, Car park space
+     * 
      *
-     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input Input data for creating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input (required)
+     * @param  int $location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -306,10 +302,10 @@ class LocationApi
     /**
      * Create request for operation 'createLocation'
      *
-     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input Input data for creating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  \Flipdish\\Client\Models\CreateLocation[] $create_location_input (required)
+     * @param  int $location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -455,12 +451,10 @@ class LocationApi
     /**
      * Operation deleteLocation
      *
-     * Set a Location as deleted
-     *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  int $location_id location_id (required)
+     * @param  int $location_area_id location_area_id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -475,12 +469,10 @@ class LocationApi
     /**
      * Operation deleteLocationWithHttpInfo
      *
-     * Set a Location as deleted
-     *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  int $location_id (required)
+     * @param  int $location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -585,12 +577,12 @@ class LocationApi
     /**
      * Operation deleteLocationAsync
      *
-     * Set a Location as deleted
+     * 
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  int $location_id (required)
+     * @param  int $location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -608,12 +600,12 @@ class LocationApi
     /**
      * Operation deleteLocationAsyncWithHttpInfo
      *
-     * Set a Location as deleted
+     * 
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  int $location_id (required)
+     * @param  int $location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -663,10 +655,10 @@ class LocationApi
     /**
      * Create request for operation 'deleteLocation'
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  int $location_id (required)
+     * @param  int $location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -817,13 +809,11 @@ class LocationApi
     /**
      * Operation mapLocationToExternalId
      *
-     * Set or unset External Location Id on a Location
-     *
-     * @param  int $location_id Id of the Location that will be mapped (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     * @param  string $external_location_id External Id to be mapped to the location (optional)
+     * @param  int $location_id location_id (required)
+     * @param  int $location_area_id location_area_id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $store_id store_id (required)
+     * @param  string $external_location_id external_location_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -838,13 +828,11 @@ class LocationApi
     /**
      * Operation mapLocationToExternalIdWithHttpInfo
      *
-     * Set or unset External Location Id on a Location
-     *
-     * @param  int $location_id Id of the Location that will be mapped (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     * @param  string $external_location_id External Id to be mapped to the location (optional)
+     * @param  int $location_id (required)
+     * @param  int $location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     * @param  string $external_location_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -949,13 +937,13 @@ class LocationApi
     /**
      * Operation mapLocationToExternalIdAsync
      *
-     * Set or unset External Location Id on a Location
+     * 
      *
-     * @param  int $location_id Id of the Location that will be mapped (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     * @param  string $external_location_id External Id to be mapped to the location (optional)
+     * @param  int $location_id (required)
+     * @param  int $location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     * @param  string $external_location_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -973,13 +961,13 @@ class LocationApi
     /**
      * Operation mapLocationToExternalIdAsyncWithHttpInfo
      *
-     * Set or unset External Location Id on a Location
+     * 
      *
-     * @param  int $location_id Id of the Location that will be mapped (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     * @param  string $external_location_id External Id to be mapped to the location (optional)
+     * @param  int $location_id (required)
+     * @param  int $location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     * @param  string $external_location_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1029,11 +1017,11 @@ class LocationApi
     /**
      * Create request for operation 'mapLocationToExternalId'
      *
-     * @param  int $location_id Id of the Location that will be mapped (required)
-     * @param  int $location_area_id Id of the Location Area that the Location belong (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
-     * @param  string $external_location_id External Id to be mapped to the location (optional)
+     * @param  int $location_id (required)
+     * @param  int $location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
+     * @param  string $external_location_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1188,13 +1176,11 @@ class LocationApi
     /**
      * Operation moveLocation
      *
-     * Move a Location to a different location Area
-     *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  int $new_location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  int $location_id location_id (required)
+     * @param  int $location_area_id location_area_id (required)
+     * @param  int $new_location_area_id new_location_area_id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1209,13 +1195,11 @@ class LocationApi
     /**
      * Operation moveLocationWithHttpInfo
      *
-     * Move a Location to a different location Area
-     *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  int $new_location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  int $location_id (required)
+     * @param  int $location_area_id (required)
+     * @param  int $new_location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1320,13 +1304,13 @@ class LocationApi
     /**
      * Operation moveLocationAsync
      *
-     * Move a Location to a different location Area
+     * 
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  int $new_location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  int $location_id (required)
+     * @param  int $location_area_id (required)
+     * @param  int $new_location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1344,13 +1328,13 @@ class LocationApi
     /**
      * Operation moveLocationAsyncWithHttpInfo
      *
-     * Move a Location to a different location Area
+     * 
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  int $new_location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  int $location_id (required)
+     * @param  int $location_area_id (required)
+     * @param  int $new_location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1400,11 +1384,11 @@ class LocationApi
     /**
      * Create request for operation 'moveLocation'
      *
-     * @param  int $location_id Id of the Location that will be moved (required)
-     * @param  int $location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  int $new_location_area_id Id of the new Location area that it should be moved to (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  int $location_id (required)
+     * @param  int $location_area_id (required)
+     * @param  int $new_location_area_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1565,13 +1549,11 @@ class LocationApi
     /**
      * Operation updateLocation
      *
-     * Update a Location i.e: Table, Hotel Room, Car park space
-     *
-     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input Input data for updating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  int $location_id Id of the Location to be updated (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input update_location_input (required)
+     * @param  int $location_area_id location_area_id (required)
+     * @param  int $location_id location_id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1586,13 +1568,11 @@ class LocationApi
     /**
      * Operation updateLocationWithHttpInfo
      *
-     * Update a Location i.e: Table, Hotel Room, Car park space
-     *
-     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input Input data for updating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  int $location_id Id of the Location to be updated (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input (required)
+     * @param  int $location_area_id (required)
+     * @param  int $location_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1697,13 +1677,13 @@ class LocationApi
     /**
      * Operation updateLocationAsync
      *
-     * Update a Location i.e: Table, Hotel Room, Car park space
+     * 
      *
-     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input Input data for updating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  int $location_id Id of the Location to be updated (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input (required)
+     * @param  int $location_area_id (required)
+     * @param  int $location_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1721,13 +1701,13 @@ class LocationApi
     /**
      * Operation updateLocationAsyncWithHttpInfo
      *
-     * Update a Location i.e: Table, Hotel Room, Car park space
+     * 
      *
-     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input Input data for updating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  int $location_id Id of the Location to be updated (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input (required)
+     * @param  int $location_area_id (required)
+     * @param  int $location_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1777,11 +1757,11 @@ class LocationApi
     /**
      * Create request for operation 'updateLocation'
      *
-     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input Input data for updating the Location (required)
-     * @param  int $location_area_id Id of the Location area where the Location belongs (required)
-     * @param  int $location_id Id of the Location to be updated (required)
-     * @param  string $app_id AppId i.e: (fd1234) (required)
-     * @param  int $store_id Id of the Store (required)
+     * @param  \Flipdish\\Client\Models\CreateLocation $update_location_input (required)
+     * @param  int $location_area_id (required)
+     * @param  int $location_id (required)
+     * @param  string $app_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

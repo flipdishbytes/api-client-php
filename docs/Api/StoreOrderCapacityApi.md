@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getStoreOrderCapacity**](StoreOrderCapacityApi.md#getStoreOrderCapacity) | **GET** /api/v1.0/{appId}/storeordercapacity/{storeId}/{deliveryType} | Get store&#39;s order capacity configuration
-[**updateStoreOrderCapacityConfig**](StoreOrderCapacityApi.md#updateStoreOrderCapacityConfig) | **POST** /api/v1.0/{appId}/storeordercapacity/{storeId} | Create or update a store&#39;s order capacity configuration
+[**getStoreOrderCapacity**](StoreOrderCapacityApi.md#getStoreOrderCapacity) | **GET** /api/v1.0/{appId}/storeordercapacity/{storeId}/{deliveryType} | 
+[**updateStoreOrderCapacityConfig**](StoreOrderCapacityApi.md#updateStoreOrderCapacityConfig) | **POST** /api/v1.0/{appId}/storeordercapacity/{storeId} | 
 
 
 # **getStoreOrderCapacity**
 > \Flipdish\\Client\Models\RestApiResultStoreOrderCapacityConfig getStoreOrderCapacity($app_id, $store_id, $delivery_type)
 
-Get store's order capacity configuration
+
 
 ### Example
 ```php
@@ -27,9 +27,9 @@ $apiInstance = new Flipdish\\Client\Api\StoreOrderCapacityApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Name Id
-$store_id = 56; // int | Store Id
-$delivery_type = "delivery_type_example"; // string | Delivery / Pickup
+$app_id = "app_id_example"; // string | 
+$store_id = 56; // int | 
+$delivery_type = "delivery_type_example"; // string | 
 
 try {
     $result = $apiInstance->getStoreOrderCapacity($app_id, $store_id, $delivery_type);
@@ -44,9 +44,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Name Id |
- **store_id** | **int**| Store Id |
- **delivery_type** | **string**| Delivery / Pickup |
+ **app_id** | **string**|  |
+ **store_id** | **int**|  |
+ **delivery_type** | **string**|  |
 
 ### Return type
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 # **updateStoreOrderCapacityConfig**
 > updateStoreOrderCapacityConfig($store_id, $delivery_type, $new_order_capacity_config, $app_id)
 
-Create or update a store's order capacity configuration
+
 
 ### Example
 ```php
@@ -82,9 +82,9 @@ $apiInstance = new Flipdish\\Client\Api\StoreOrderCapacityApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_id = 56; // int | Store identifier
-$delivery_type = "delivery_type_example"; // string | Delivery / Pickup
-$new_order_capacity_config = new \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel(); // \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel | new order capacity configuration
+$store_id = 56; // int | 
+$delivery_type = "delivery_type_example"; // string | 
+$new_order_capacity_config = new \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel(); // \Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -99,9 +99,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_id** | **int**| Store identifier |
- **delivery_type** | **string**| Delivery / Pickup |
- **new_order_capacity_config** | [**\Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel**](../Model/StoreOrderCapacityConfigEditModel.md)| new order capacity configuration |
+ **store_id** | **int**|  |
+ **delivery_type** | **string**|  |
+ **new_order_capacity_config** | [**\Flipdish\\Client\Models\StoreOrderCapacityConfigEditModel**](../Model/StoreOrderCapacityConfigEditModel.md)|  |
  **app_id** | **string**|  |
 
 ### Return type

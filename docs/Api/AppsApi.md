@@ -4,26 +4,26 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getApp**](AppsApi.md#getApp) | **GET** /api/v1.0/apps/{appId} | Get the application configuration
-[**getAppHostnameStatus**](AppsApi.md#getAppHostnameStatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | Get the application hostname DNS delegation states for A and CNAME records.
-[**getApps**](AppsApi.md#getApps) | **GET** /api/v1.0/apps | Get Apps
-[**getCompliance**](AppsApi.md#getCompliance) | **GET** /api/v1.0/apps/{appId}/compliance | Get the application compliance configuration
-[**getPanaceaVanityUrl**](AppsApi.md#getPanaceaVanityUrl) | **GET** /api/v1.0/apps/{appId}/panacea/url | Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
-[**getSupportedCountries**](AppsApi.md#getSupportedCountries) | **GET** /api/v1.0/apps/supportedcountries | Get all supported countries.
-[**isPanaceaVanityUrlAvailable**](AppsApi.md#isPanaceaVanityUrlAvailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | Is panacea vanity url available
-[**setAppConfig**](AppsApi.md#setAppConfig) | **POST** /api/v1.0/apps/{appId}/config | Set the application configuration
-[**setAppHostname**](AppsApi.md#setAppHostname) | **POST** /api/v1.0/apps/{appId}/hostname | Set the application hostname.
-[**setAppLanguages**](AppsApi.md#setAppLanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | Set the application languages
-[**setCompliance**](AppsApi.md#setCompliance) | **POST** /api/v1.0/apps/{appId}/compliance | Set the application compliance configuration
-[**setPanaceaVanityUrl**](AppsApi.md#setPanaceaVanityUrl) | **POST** /api/v1.0/apps/{appId}/panacea/url | Set panacea vanity url
-[**toggleNextGenWeb**](AppsApi.md#toggleNextGenWeb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | Toggle Next Gen Web
-[**uploadAppLogo**](AppsApi.md#uploadAppLogo) | **POST** /api/v1.0/apps/{appId}/logo | Set the application logo \\ icon
+[**getApp**](AppsApi.md#getApp) | **GET** /api/v1.0/apps/{appId} | 
+[**getAppHostnameStatus**](AppsApi.md#getAppHostnameStatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
+[**getApps**](AppsApi.md#getApps) | **GET** /api/v1.0/apps | 
+[**getCompliance**](AppsApi.md#getCompliance) | **GET** /api/v1.0/apps/{appId}/compliance | 
+[**getPanaceaVanityUrl**](AppsApi.md#getPanaceaVanityUrl) | **GET** /api/v1.0/apps/{appId}/panacea/url | 
+[**getSupportedCountries**](AppsApi.md#getSupportedCountries) | **GET** /api/v1.0/apps/supportedcountries | 
+[**isPanaceaVanityUrlAvailable**](AppsApi.md#isPanaceaVanityUrlAvailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | 
+[**setAppConfig**](AppsApi.md#setAppConfig) | **POST** /api/v1.0/apps/{appId}/config | 
+[**setAppHostname**](AppsApi.md#setAppHostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
+[**setAppLanguages**](AppsApi.md#setAppLanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 
+[**setCompliance**](AppsApi.md#setCompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
+[**setPanaceaVanityUrl**](AppsApi.md#setPanaceaVanityUrl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
+[**toggleNextGenWeb**](AppsApi.md#toggleNextGenWeb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
+[**uploadAppLogo**](AppsApi.md#uploadAppLogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 
 
 # **getApp**
 > \Flipdish\\Client\Models\RestApiResultApp getApp($app_id)
 
-Get the application configuration
+
 
 ### Example
 ```php
@@ -39,7 +39,7 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getApp($app_id);
@@ -54,7 +54,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -74,9 +74,7 @@ Name | Type | Description  | Notes
 # **getAppHostnameStatus**
 > \Flipdish\\Client\Models\RestApiResultDnsRecordInformation getAppHostnameStatus($app_id)
 
-Get the application hostname DNS delegation states for A and CNAME records.
 
-A domain might be ready but still need 10 minutes to work properly because of HAProxy.
 
 ### Example
 ```php
@@ -92,7 +90,7 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier.
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getAppHostnameStatus($app_id);
@@ -107,7 +105,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier. |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -127,7 +125,7 @@ Name | Type | Description  | Notes
 # **getApps**
 > \Flipdish\\Client\Models\RestApiPaginationResultApp getApps($name_filter, $page, $limit)
 
-Get Apps
+
 
 ### Example
 ```php
@@ -182,7 +180,7 @@ Name | Type | Description  | Notes
 # **getCompliance**
 > \Flipdish\\Client\Models\RestApiResultAppCompliance getCompliance($app_id)
 
-Get the application compliance configuration
+
 
 ### Example
 ```php
@@ -198,7 +196,7 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getCompliance($app_id);
@@ -213,7 +211,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -233,7 +231,7 @@ Name | Type | Description  | Notes
 # **getPanaceaVanityUrl**
 > \Flipdish\\Client\Models\RestApiStringResult getPanaceaVanityUrl($app_id)
 
-Get panacea vanity url. This sets the URL which the Panacea website is available at. ie. my.flipdish.com/[vanityurl]
+
 
 ### Example
 ```php
@@ -249,7 +247,7 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier.
+$app_id = "app_id_example"; // string | 
 
 try {
     $result = $apiInstance->getPanaceaVanityUrl($app_id);
@@ -264,7 +262,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier. |
+ **app_id** | **string**|  |
 
 ### Return type
 
@@ -284,7 +282,7 @@ Name | Type | Description  | Notes
 # **getSupportedCountries**
 > \Flipdish\\Client\Models\RestApiArrayResultSupportedCountry getSupportedCountries()
 
-Get all supported countries.
+
 
 ### Example
 ```php
@@ -331,9 +329,7 @@ This endpoint does not need any parameter.
 # **isPanaceaVanityUrlAvailable**
 > \Flipdish\\Client\Models\RestApiStringResult isPanaceaVanityUrlAvailable($vanity_url, $app_id)
 
-Is panacea vanity url available
 
-Minimum length of 3 characters
 
 ### Example
 ```php
@@ -349,7 +345,7 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$vanity_url = "vanity_url_example"; // string | Vanity url to check
+$vanity_url = "vanity_url_example"; // string | 
 $app_id = "app_id_example"; // string | 
 
 try {
@@ -365,7 +361,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **vanity_url** | **string**| Vanity url to check |
+ **vanity_url** | **string**|  |
  **app_id** | **string**|  |
 
 ### Return type
@@ -386,7 +382,7 @@ Name | Type | Description  | Notes
 # **setAppConfig**
 > \Flipdish\\Client\Models\RestApiResultApp setAppConfig($app_id, $app_config_update)
 
-Set the application configuration
+
 
 ### Example
 ```php
@@ -402,8 +398,8 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$app_config_update = new \Flipdish\\Client\Models\AppConfigUpdateModel(); // \Flipdish\\Client\Models\AppConfigUpdateModel | Changes to the configuration
+$app_id = "app_id_example"; // string | 
+$app_config_update = new \Flipdish\\Client\Models\AppConfigUpdateModel(); // \Flipdish\\Client\Models\AppConfigUpdateModel | 
 
 try {
     $result = $apiInstance->setAppConfig($app_id, $app_config_update);
@@ -418,8 +414,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **app_config_update** | [**\Flipdish\\Client\Models\AppConfigUpdateModel**](../Model/AppConfigUpdateModel.md)| Changes to the configuration |
+ **app_id** | **string**|  |
+ **app_config_update** | [**\Flipdish\\Client\Models\AppConfigUpdateModel**](../Model/AppConfigUpdateModel.md)|  |
 
 ### Return type
 
@@ -439,9 +435,7 @@ Name | Type | Description  | Notes
 # **setAppHostname**
 > \Flipdish\\Client\Models\RestApiStringResult setAppHostname($app_id, $hostname, $is_embed, $is_next_gen_web)
 
-Set the application hostname.
 
-If no subdomain is specified in {hostname} 'www' will be prepended.
 
 ### Example
 ```php
@@ -457,10 +451,10 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier.
-$hostname = "hostname_example"; // string | The new Hostname.
-$is_embed = true; // bool | Will the website be embedded
-$is_next_gen_web = true; // bool | Enables the NextGen web editor
+$app_id = "app_id_example"; // string | 
+$hostname = "hostname_example"; // string | 
+$is_embed = true; // bool | 
+$is_next_gen_web = true; // bool | 
 
 try {
     $result = $apiInstance->setAppHostname($app_id, $hostname, $is_embed, $is_next_gen_web);
@@ -475,10 +469,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier. |
- **hostname** | **string**| The new Hostname. |
- **is_embed** | **bool**| Will the website be embedded | [optional]
- **is_next_gen_web** | **bool**| Enables the NextGen web editor | [optional]
+ **app_id** | **string**|  |
+ **hostname** | **string**|  |
+ **is_embed** | **bool**|  | [optional]
+ **is_next_gen_web** | **bool**|  | [optional]
 
 ### Return type
 
@@ -498,7 +492,7 @@ Name | Type | Description  | Notes
 # **setAppLanguages**
 > \Flipdish\\Client\Models\RestApiResultApp setAppLanguages($app_id, $languages)
 
-Set the application languages
+
 
 ### Example
 ```php
@@ -514,8 +508,8 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$languages = array(new \Flipdish\\Client\Models\Language()); // \Flipdish\\Client\Models\Language[] | New list of languages
+$app_id = "app_id_example"; // string | 
+$languages = array(new \Flipdish\\Client\Models\Language()); // \Flipdish\\Client\Models\Language[] | 
 
 try {
     $result = $apiInstance->setAppLanguages($app_id, $languages);
@@ -530,8 +524,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **languages** | [**\Flipdish\\Client\Models\Language[]**](../Model/Language.md)| New list of languages |
+ **app_id** | **string**|  |
+ **languages** | [**\Flipdish\\Client\Models\Language[]**](../Model/Language.md)|  |
 
 ### Return type
 
@@ -551,7 +545,7 @@ Name | Type | Description  | Notes
 # **setCompliance**
 > \Flipdish\\Client\Models\RestApiResultAppCompliance setCompliance($app_id, $compliance_type)
 
-Set the application compliance configuration
+
 
 ### Example
 ```php
@@ -567,8 +561,8 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
-$compliance_type = "compliance_type_example"; // string | Compliance type
+$app_id = "app_id_example"; // string | 
+$compliance_type = "compliance_type_example"; // string | 
 
 try {
     $result = $apiInstance->setCompliance($app_id, $compliance_type);
@@ -583,8 +577,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
- **compliance_type** | **string**| Compliance type |
+ **app_id** | **string**|  |
+ **compliance_type** | **string**|  |
 
 ### Return type
 
@@ -604,9 +598,7 @@ Name | Type | Description  | Notes
 # **setPanaceaVanityUrl**
 > \Flipdish\\Client\Models\RestApiStringResult setPanaceaVanityUrl($app_id, $vanity_url)
 
-Set panacea vanity url
 
-Minimum length of 3 characters
 
 ### Example
 ```php
@@ -622,8 +614,8 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier.
-$vanity_url = "vanity_url_example"; // string | Vanity url
+$app_id = "app_id_example"; // string | 
+$vanity_url = "vanity_url_example"; // string | 
 
 try {
     $result = $apiInstance->setPanaceaVanityUrl($app_id, $vanity_url);
@@ -638,8 +630,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier. |
- **vanity_url** | **string**| Vanity url |
+ **app_id** | **string**|  |
+ **vanity_url** | **string**|  |
 
 ### Return type
 
@@ -659,7 +651,7 @@ Name | Type | Description  | Notes
 # **toggleNextGenWeb**
 > \Flipdish\\Client\Models\RestApiStringResult toggleNextGenWeb($app_id, $hostname, $vanity_url, $is_next_gen_web)
 
-Toggle Next Gen Web
+
 
 ### Example
 ```php
@@ -716,7 +708,7 @@ Name | Type | Description  | Notes
 # **uploadAppLogo**
 > uploadAppLogo($app_id, $image)
 
-Set the application logo \\ icon
+
 
 ### Example
 ```php
@@ -732,7 +724,7 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Application identifier
+$app_id = "app_id_example"; // string | 
 $image = "/path/to/file.txt"; // \SplFileObject | App Logo
 
 try {
@@ -747,7 +739,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Application identifier |
+ **app_id** | **string**|  |
  **image** | **\SplFileObject**| App Logo |
 
 ### Return type

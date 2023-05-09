@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getProcessingFeeConfigsByStoreIds**](ProcessingFeeConfigsApi.md#getProcessingFeeConfigsByStoreIds) | **GET** /api/v1.0/processingfeeconfigs | Get processing fee configs by store identifiers
+[**getProcessingFeeConfigsByStoreIds**](ProcessingFeeConfigsApi.md#getProcessingFeeConfigsByStoreIds) | **GET** /api/v1.0/processingfeeconfigs | 
 
 
 # **getProcessingFeeConfigsByStoreIds**
 > \Flipdish\\Client\Models\RestApiArrayResultProcessingFeeConfig getProcessingFeeConfigsByStoreIds($store_ids)
 
-Get processing fee configs by store identifiers
+
 
 ### Example
 ```php
@@ -26,7 +26,7 @@ $apiInstance = new Flipdish\\Client\Api\ProcessingFeeConfigsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$store_ids = array(56); // int[] | Store identifiers
+$store_ids = array(56); // int[] | 
 
 try {
     $result = $apiInstance->getProcessingFeeConfigsByStoreIds($store_ids);
@@ -41,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **store_ids** | [**int[]**](../Model/int.md)| Store identifiers |
+ **store_ids** | [**int[]**](../Model/int.md)|  |
 
 ### Return type
 

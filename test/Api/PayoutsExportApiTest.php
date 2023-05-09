@@ -74,7 +74,7 @@ class PayoutsExportApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for exportPayoutChargebacks
      *
-     * Export a list of payout's chargebacks as CSV.
+     * .
      *
      */
     public function testExportPayoutChargebacks()
@@ -84,7 +84,7 @@ class PayoutsExportApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for exportPayoutOrders
      *
-     * Export a list of payout's orders as CSV.
+     * .
      *
      */
     public function testExportPayoutOrders()
@@ -94,7 +94,7 @@ class PayoutsExportApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for exportPayoutOtherCharges
      *
-     * Export a list of payout's other charges as CSV.
+     * .
      *
      */
     public function testExportPayoutOtherCharges()
@@ -104,7 +104,7 @@ class PayoutsExportApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for exportPayoutRefunds
      *
-     * Export a list of payout's refunds as CSV.
+     * .
      *
      */
     public function testExportPayoutRefunds()
@@ -114,7 +114,7 @@ class PayoutsExportApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for exportPayoutStores
      *
-     * Export payout's details as CSV.
+     * .
      *
      */
     public function testExportPayoutStores()
@@ -124,7 +124,7 @@ class PayoutsExportApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for exportPayouts
      *
-     * Export payouts as CSV.
+     * .
      *
      */
     public function testExportPayouts()

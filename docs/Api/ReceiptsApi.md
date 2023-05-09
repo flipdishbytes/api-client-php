@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getReceipt**](ReceiptsApi.md#getReceipt) | **GET** /api/v1.0/receipts/{orderId} | Returns all receipt information for a given orderId
+[**getReceipt**](ReceiptsApi.md#getReceipt) | **GET** /api/v1.0/receipts/{orderId} | 
 
 
 # **getReceipt**
 > \Flipdish\\Client\Models\GetReceiptByOrderIdQueryResponse getReceipt($order_id)
 
-Returns all receipt information for a given orderId
+
 
 ### Example
 ```php

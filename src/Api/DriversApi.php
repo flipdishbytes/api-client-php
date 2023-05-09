@@ -90,9 +90,7 @@ class DriversApi
     /**
      * Operation addDriverNotificationToken
      *
-     * Add driver token
-     *
-     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $update_driver_token  (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $update_driver_token update_driver_token (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -106,9 +104,7 @@ class DriversApi
     /**
      * Operation addDriverNotificationTokenWithHttpInfo
      *
-     * Add driver token
-     *
-     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $update_driver_token  (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $update_driver_token (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -175,9 +171,9 @@ class DriversApi
     /**
      * Operation addDriverNotificationTokenAsync
      *
-     * Add driver token
+     * 
      *
-     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $update_driver_token  (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $update_driver_token (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -195,9 +191,9 @@ class DriversApi
     /**
      * Operation addDriverNotificationTokenAsyncWithHttpInfo
      *
-     * Add driver token
+     * 
      *
-     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $update_driver_token  (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $update_driver_token (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -233,7 +229,7 @@ class DriversApi
     /**
      * Create request for operation 'addDriverNotificationToken'
      *
-     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $update_driver_token  (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $update_driver_token (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -337,8 +333,6 @@ class DriversApi
     /**
      * Operation deleteDriverProfileImage
      *
-     * Delete driver profile image
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -351,8 +345,6 @@ class DriversApi
 
     /**
      * Operation deleteDriverProfileImageWithHttpInfo
-     *
-     * Delete driver profile image
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -420,7 +412,7 @@ class DriversApi
     /**
      * Operation deleteDriverProfileImageAsync
      *
-     * Delete driver profile image
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -439,7 +431,7 @@ class DriversApi
     /**
      * Operation deleteDriverProfileImageAsyncWithHttpInfo
      *
-     * Delete driver profile image
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -570,9 +562,7 @@ class DriversApi
     /**
      * Operation driverLogin
      *
-     * [PRIVATE] Login with phone number and pin
-     *
-     * @param  \Flipdish\\Client\Models\DriverLoginModel $driver_login_model Driver request login code model (required)
+     * @param  \Flipdish\\Client\Models\DriverLoginModel $driver_login_model driver_login_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -586,9 +576,7 @@ class DriversApi
     /**
      * Operation driverLoginWithHttpInfo
      *
-     * [PRIVATE] Login with phone number and pin
-     *
-     * @param  \Flipdish\\Client\Models\DriverLoginModel $driver_login_model Driver request login code model (required)
+     * @param  \Flipdish\\Client\Models\DriverLoginModel $driver_login_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -655,9 +643,9 @@ class DriversApi
     /**
      * Operation driverLoginAsync
      *
-     * [PRIVATE] Login with phone number and pin
+     * 
      *
-     * @param  \Flipdish\\Client\Models\DriverLoginModel $driver_login_model Driver request login code model (required)
+     * @param  \Flipdish\\Client\Models\DriverLoginModel $driver_login_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -675,9 +663,9 @@ class DriversApi
     /**
      * Operation driverLoginAsyncWithHttpInfo
      *
-     * [PRIVATE] Login with phone number and pin
+     * 
      *
-     * @param  \Flipdish\\Client\Models\DriverLoginModel $driver_login_model Driver request login code model (required)
+     * @param  \Flipdish\\Client\Models\DriverLoginModel $driver_login_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -713,7 +701,7 @@ class DriversApi
     /**
      * Create request for operation 'driverLogin'
      *
-     * @param  \Flipdish\\Client\Models\DriverLoginModel $driver_login_model Driver request login code model (required)
+     * @param  \Flipdish\\Client\Models\DriverLoginModel $driver_login_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -817,9 +805,7 @@ class DriversApi
     /**
      * Operation driverRequestLoginCodeSms
      *
-     * [PRIVATE] Request an SMS to be sent to the driver with their login code
-     *
-     * @param  \Flipdish\\Client\Models\DriverRequestLoginPinModel $driver_request_login_pin_model Driver request login code model (required)
+     * @param  \Flipdish\\Client\Models\DriverRequestLoginPinModel $driver_request_login_pin_model driver_request_login_pin_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -833,9 +819,7 @@ class DriversApi
     /**
      * Operation driverRequestLoginCodeSmsWithHttpInfo
      *
-     * [PRIVATE] Request an SMS to be sent to the driver with their login code
-     *
-     * @param  \Flipdish\\Client\Models\DriverRequestLoginPinModel $driver_request_login_pin_model Driver request login code model (required)
+     * @param  \Flipdish\\Client\Models\DriverRequestLoginPinModel $driver_request_login_pin_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -902,9 +886,9 @@ class DriversApi
     /**
      * Operation driverRequestLoginCodeSmsAsync
      *
-     * [PRIVATE] Request an SMS to be sent to the driver with their login code
+     * 
      *
-     * @param  \Flipdish\\Client\Models\DriverRequestLoginPinModel $driver_request_login_pin_model Driver request login code model (required)
+     * @param  \Flipdish\\Client\Models\DriverRequestLoginPinModel $driver_request_login_pin_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -922,9 +906,9 @@ class DriversApi
     /**
      * Operation driverRequestLoginCodeSmsAsyncWithHttpInfo
      *
-     * [PRIVATE] Request an SMS to be sent to the driver with their login code
+     * 
      *
-     * @param  \Flipdish\\Client\Models\DriverRequestLoginPinModel $driver_request_login_pin_model Driver request login code model (required)
+     * @param  \Flipdish\\Client\Models\DriverRequestLoginPinModel $driver_request_login_pin_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -960,7 +944,7 @@ class DriversApi
     /**
      * Create request for operation 'driverRequestLoginCodeSms'
      *
-     * @param  \Flipdish\\Client\Models\DriverRequestLoginPinModel $driver_request_login_pin_model Driver request login code model (required)
+     * @param  \Flipdish\\Client\Models\DriverRequestLoginPinModel $driver_request_login_pin_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1064,8 +1048,6 @@ class DriversApi
     /**
      * Operation getDriverProfile
      *
-     * Get driver profile
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1079,8 +1061,6 @@ class DriversApi
 
     /**
      * Operation getDriverProfileWithHttpInfo
-     *
-     * Get driver profile
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1170,7 +1150,7 @@ class DriversApi
     /**
      * Operation getDriverProfileAsync
      *
-     * Get driver profile
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -1189,7 +1169,7 @@ class DriversApi
     /**
      * Operation getDriverProfileAsyncWithHttpInfo
      *
-     * Get driver profile
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -1334,8 +1314,6 @@ class DriversApi
     /**
      * Operation getStoresForDriver
      *
-     * Get stores for driver
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1349,8 +1327,6 @@ class DriversApi
 
     /**
      * Operation getStoresForDriverWithHttpInfo
-     *
-     * Get stores for driver
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1440,7 +1416,7 @@ class DriversApi
     /**
      * Operation getStoresForDriverAsync
      *
-     * Get stores for driver
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -1459,7 +1435,7 @@ class DriversApi
     /**
      * Operation getStoresForDriverAsyncWithHttpInfo
      *
-     * Get stores for driver
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -1604,9 +1580,7 @@ class DriversApi
     /**
      * Operation removeDriverNotificationToken
      *
-     * Delete driver token
-     *
-     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $remove_driver_token  (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $remove_driver_token remove_driver_token (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1620,9 +1594,7 @@ class DriversApi
     /**
      * Operation removeDriverNotificationTokenWithHttpInfo
      *
-     * Delete driver token
-     *
-     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $remove_driver_token  (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $remove_driver_token (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1689,9 +1661,9 @@ class DriversApi
     /**
      * Operation removeDriverNotificationTokenAsync
      *
-     * Delete driver token
+     * 
      *
-     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $remove_driver_token  (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $remove_driver_token (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1709,9 +1681,9 @@ class DriversApi
     /**
      * Operation removeDriverNotificationTokenAsyncWithHttpInfo
      *
-     * Delete driver token
+     * 
      *
-     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $remove_driver_token  (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $remove_driver_token (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1747,7 +1719,7 @@ class DriversApi
     /**
      * Create request for operation 'removeDriverNotificationToken'
      *
-     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $remove_driver_token  (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $remove_driver_token (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2118,8 +2090,6 @@ class DriversApi
     /**
      * Operation setDriverProfileImage
      *
-     * Set driver profile image and returns it's url
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2133,8 +2103,6 @@ class DriversApi
 
     /**
      * Operation setDriverProfileImageWithHttpInfo
-     *
-     * Set driver profile image and returns it's url
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -2224,7 +2192,7 @@ class DriversApi
     /**
      * Operation setDriverProfileImageAsync
      *
-     * Set driver profile image and returns it's url
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -2243,7 +2211,7 @@ class DriversApi
     /**
      * Operation setDriverProfileImageAsyncWithHttpInfo
      *
-     * Set driver profile image and returns it's url
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -2388,10 +2356,8 @@ class DriversApi
     /**
      * Operation updateDeliveryTrackingStatus
      *
-     * Change delivery tracking status and return the updated status.
-     *
-     * @param  int $order_id Order identifier (required)
-     * @param  string $delivery_tracking_status  (required)
+     * @param  int $order_id order_id (required)
+     * @param  string $delivery_tracking_status delivery_tracking_status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2406,10 +2372,8 @@ class DriversApi
     /**
      * Operation updateDeliveryTrackingStatusWithHttpInfo
      *
-     * Change delivery tracking status and return the updated status.
-     *
-     * @param  int $order_id Order identifier (required)
-     * @param  string $delivery_tracking_status  (required)
+     * @param  int $order_id (required)
+     * @param  string $delivery_tracking_status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2522,10 +2486,10 @@ class DriversApi
     /**
      * Operation updateDeliveryTrackingStatusAsync
      *
-     * Change delivery tracking status and return the updated status.
+     * 
      *
-     * @param  int $order_id Order identifier (required)
-     * @param  string $delivery_tracking_status  (required)
+     * @param  int $order_id (required)
+     * @param  string $delivery_tracking_status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2543,10 +2507,10 @@ class DriversApi
     /**
      * Operation updateDeliveryTrackingStatusAsyncWithHttpInfo
      *
-     * Change delivery tracking status and return the updated status.
+     * 
      *
-     * @param  int $order_id Order identifier (required)
-     * @param  string $delivery_tracking_status  (required)
+     * @param  int $order_id (required)
+     * @param  string $delivery_tracking_status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2596,8 +2560,8 @@ class DriversApi
     /**
      * Create request for operation 'updateDeliveryTrackingStatus'
      *
-     * @param  int $order_id Order identifier (required)
-     * @param  string $delivery_tracking_status  (required)
+     * @param  int $order_id (required)
+     * @param  string $delivery_tracking_status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2720,9 +2684,7 @@ class DriversApi
     /**
      * Operation updateDriverProfile
      *
-     * Update driver profile
-     *
-     * @param  \Flipdish\\Client\Models\UpdateDriverProfileModel $update_driver_profile Update the driver profile (i.e Name) (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverProfileModel $update_driver_profile update_driver_profile (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2736,9 +2698,7 @@ class DriversApi
     /**
      * Operation updateDriverProfileWithHttpInfo
      *
-     * Update driver profile
-     *
-     * @param  \Flipdish\\Client\Models\UpdateDriverProfileModel $update_driver_profile Update the driver profile (i.e Name) (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverProfileModel $update_driver_profile (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2805,9 +2765,9 @@ class DriversApi
     /**
      * Operation updateDriverProfileAsync
      *
-     * Update driver profile
+     * 
      *
-     * @param  \Flipdish\\Client\Models\UpdateDriverProfileModel $update_driver_profile Update the driver profile (i.e Name) (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverProfileModel $update_driver_profile (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2825,9 +2785,9 @@ class DriversApi
     /**
      * Operation updateDriverProfileAsyncWithHttpInfo
      *
-     * Update driver profile
+     * 
      *
-     * @param  \Flipdish\\Client\Models\UpdateDriverProfileModel $update_driver_profile Update the driver profile (i.e Name) (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverProfileModel $update_driver_profile (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2863,7 +2823,7 @@ class DriversApi
     /**
      * Create request for operation 'updateDriverProfile'
      *
-     * @param  \Flipdish\\Client\Models\UpdateDriverProfileModel $update_driver_profile Update the driver profile (i.e Name) (required)
+     * @param  \Flipdish\\Client\Models\UpdateDriverProfileModel $update_driver_profile (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

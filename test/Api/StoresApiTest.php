@@ -74,7 +74,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for archiveStore
      *
-     * Archive store.
+     * .
      *
      */
     public function testArchiveStore()
@@ -84,7 +84,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for assignMenu
      *
-     * Assign Menu to Store.
+     * .
      *
      */
     public function testAssignMenu()
@@ -94,7 +94,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cloneStore
      *
-     * Clone store with store clone settings.
+     * .
      *
      */
     public function testCloneStore()
@@ -104,7 +104,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for configureStoreServiceCharge
      *
-     * Configure Store Service Charge; Idempotent Operation.
+     * .
      *
      */
     public function testConfigureStoreServiceCharge()
@@ -114,7 +114,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createBusinessHoursOverrideByStoreId
      *
-     * Create Business Hours Override for a store.
+     * .
      *
      */
     public function testCreateBusinessHoursOverrideByStoreId()
@@ -124,7 +124,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createStore
      *
-     * Create store with Store Group identifier.
+     * .
      *
      */
     public function testCreateStore()
@@ -134,7 +134,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteBusinessHoursOverride
      *
-     * Delete Business Hours Override for a store.
+     * .
      *
      */
     public function testDeleteBusinessHoursOverride()
@@ -144,7 +144,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getBankAccountForStore
      *
-     * Get Stores Bank Account Id.
+     * .
      *
      */
     public function testGetBankAccountForStore()
@@ -154,7 +154,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getBusinessHours
      *
-     * Get Business hours.
+     * .
      *
      */
     public function testGetBusinessHours()
@@ -164,7 +164,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getBusinessHoursOverrideByStoreId
      *
-     * Get business hours overrides by store identifier.
+     * .
      *
      */
     public function testGetBusinessHoursOverrideByStoreId()
@@ -174,7 +174,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getEndOfDayReport
      *
-     * Get store end of day report.
+     * .
      *
      */
     public function testGetEndOfDayReport()
@@ -184,7 +184,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPreOrderConfig
      *
-     * Get the pre order config for a store, by type.
+     * .
      *
      */
     public function testGetPreOrderConfig()
@@ -194,7 +194,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPreOrderPreview
      *
-     * Get the Preview times of the pre-order configuration.
+     * .
      *
      */
     public function testGetPreOrderPreview()
@@ -204,7 +204,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getProcessingFeeConfigsByStoreId
      *
-     * Get processing fee configs by store identifier.
+     * .
      *
      */
     public function testGetProcessingFeeConfigsByStoreId()
@@ -214,7 +214,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getProcessingFeeConfigsByStoreIdAndPaymentAccountType
      *
-     * Get processing fee configs by store identifier.
+     * .
      *
      */
     public function testGetProcessingFeeConfigsByStoreIdAndPaymentAccountType()
@@ -224,7 +224,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoreById
      *
-     * Get store by identifier.
+     * .
      *
      */
     public function testGetStoreById()
@@ -234,7 +234,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoreFeeConfig
      *
-     * Retrieve Store feeConfig.
+     * .
      *
      */
     public function testGetStoreFeeConfig()
@@ -244,7 +244,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoreHeadersByAppId
      *
-     * Get all stores by app name id.
+     * .
      *
      */
     public function testGetStoreHeadersByAppId()
@@ -254,7 +254,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoreNetSales
      *
-     * Get stores statistics by app name id and storeIds.
+     * .
      *
      */
     public function testGetStoreNetSales()
@@ -264,7 +264,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoreServiceCharge
      *
-     * Retrieve Store Service Charge.
+     * .
      *
      */
     public function testGetStoreServiceCharge()
@@ -274,7 +274,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStores
      *
-     * Get all stores, excluding archived ones.
+     * .
      *
      */
     public function testGetStores()
@@ -284,7 +284,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoresByAppId
      *
-     * Get all stores by app name id.
+     * .
      *
      */
     public function testGetStoresByAppId()
@@ -294,7 +294,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoresByStoreIdWithValidations
      *
-     * Get store validation by storeIds.
+     * .
      *
      */
     public function testGetStoresByStoreIdWithValidations()
@@ -304,7 +304,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for publishStore
      *
-     * Publish store.
+     * .
      *
      */
     public function testPublishStore()
@@ -314,7 +314,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setBusinessHours
      *
-     * Set Business hours.
+     * .
      *
      */
     public function testSetBusinessHours()
@@ -324,7 +324,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setPreOrdeEnabled
      *
-     * UPDATE pre order config for a store, by type.
+     * .
      *
      */
     public function testSetPreOrdeEnabled()
@@ -334,7 +334,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for unpublishStore
      *
-     * Unpublish store.
+     * .
      *
      */
     public function testUnpublishStore()
@@ -344,7 +344,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updatePreOrderConfig
      *
-     * UPDATE pre order config for a store, by type.
+     * .
      *
      */
     public function testUpdatePreOrderConfig()
@@ -354,7 +354,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateStore
      *
-     * Update store by identifier.
+     * .
      *
      */
     public function testUpdateStore()
@@ -364,7 +364,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateStoreAddress
      *
-     * Update store address.
+     * .
      *
      */
     public function testUpdateStoreAddress()
@@ -374,7 +374,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateStoreAddressCoordinates
      *
-     * Update store address coordinates.
+     * .
      *
      */
     public function testUpdateStoreAddressCoordinates()
@@ -384,7 +384,7 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateStoreAddressForm
      *
-     * Update store address.
+     * .
      *
      */
     public function testUpdateStoreAddressForm()

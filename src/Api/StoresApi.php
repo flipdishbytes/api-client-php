@@ -90,9 +90,7 @@ class StoresApi
     /**
      * Operation archiveStore
      *
-     * Archive store
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -106,9 +104,7 @@ class StoresApi
     /**
      * Operation archiveStoreWithHttpInfo
      *
-     * Archive store
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -183,9 +179,9 @@ class StoresApi
     /**
      * Operation archiveStoreAsync
      *
-     * Archive store
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -203,9 +199,9 @@ class StoresApi
     /**
      * Operation archiveStoreAsyncWithHttpInfo
      *
-     * Archive store
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -241,7 +237,7 @@ class StoresApi
     /**
      * Create request for operation 'archiveStore'
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -350,10 +346,8 @@ class StoresApi
     /**
      * Operation assignMenu
      *
-     * Assign Menu to Store
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  int $menu_id Id of Menu to assign to store (required)
+     * @param  int $store_id store_id (required)
+     * @param  int $menu_id menu_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -368,10 +362,8 @@ class StoresApi
     /**
      * Operation assignMenuWithHttpInfo
      *
-     * Assign Menu to Store
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  int $menu_id Id of Menu to assign to store (required)
+     * @param  int $store_id (required)
+     * @param  int $menu_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -468,10 +460,10 @@ class StoresApi
     /**
      * Operation assignMenuAsync
      *
-     * Assign Menu to Store
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  int $menu_id Id of Menu to assign to store (required)
+     * @param  int $store_id (required)
+     * @param  int $menu_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -489,10 +481,10 @@ class StoresApi
     /**
      * Operation assignMenuAsyncWithHttpInfo
      *
-     * Assign Menu to Store
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  int $menu_id Id of Menu to assign to store (required)
+     * @param  int $store_id (required)
+     * @param  int $menu_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -542,8 +534,8 @@ class StoresApi
     /**
      * Create request for operation 'assignMenu'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  int $menu_id Id of Menu to assign to store (required)
+     * @param  int $store_id (required)
+     * @param  int $menu_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -666,10 +658,8 @@ class StoresApi
     /**
      * Operation cloneStore
      *
-     * Clone store with store clone settings
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreCloneSettings $settings Settings for cloning the store (required)
+     * @param  int $store_id store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreCloneSettings $settings settings (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -684,10 +674,8 @@ class StoresApi
     /**
      * Operation cloneStoreWithHttpInfo
      *
-     * Clone store with store clone settings
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreCloneSettings $settings Settings for cloning the store (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreCloneSettings $settings (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -784,10 +772,10 @@ class StoresApi
     /**
      * Operation cloneStoreAsync
      *
-     * Clone store with store clone settings
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreCloneSettings $settings Settings for cloning the store (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreCloneSettings $settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -805,10 +793,10 @@ class StoresApi
     /**
      * Operation cloneStoreAsyncWithHttpInfo
      *
-     * Clone store with store clone settings
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreCloneSettings $settings Settings for cloning the store (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreCloneSettings $settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -858,8 +846,8 @@ class StoresApi
     /**
      * Create request for operation 'cloneStore'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreCloneSettings $settings Settings for cloning the store (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreCloneSettings $settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -977,10 +965,8 @@ class StoresApi
     /**
      * Operation configureStoreServiceCharge
      *
-     * Configure Store Service Charge; Idempotent Operation
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\ServiceCharge $service_charge Service charge (required)
+     * @param  int $store_id store_id (required)
+     * @param  \Flipdish\\Client\Models\ServiceCharge $service_charge service_charge (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -995,10 +981,8 @@ class StoresApi
     /**
      * Operation configureStoreServiceChargeWithHttpInfo
      *
-     * Configure Store Service Charge; Idempotent Operation
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\ServiceCharge $service_charge Service charge (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\ServiceCharge $service_charge (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1103,10 +1087,10 @@ class StoresApi
     /**
      * Operation configureStoreServiceChargeAsync
      *
-     * Configure Store Service Charge; Idempotent Operation
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\ServiceCharge $service_charge Service charge (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\ServiceCharge $service_charge (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1124,10 +1108,10 @@ class StoresApi
     /**
      * Operation configureStoreServiceChargeAsyncWithHttpInfo
      *
-     * Configure Store Service Charge; Idempotent Operation
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\ServiceCharge $service_charge Service charge (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\ServiceCharge $service_charge (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1177,8 +1161,8 @@ class StoresApi
     /**
      * Create request for operation 'configureStoreServiceCharge'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\ServiceCharge $service_charge Service charge (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\ServiceCharge $service_charge (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1296,10 +1280,8 @@ class StoresApi
     /**
      * Operation createBusinessHoursOverrideByStoreId
      *
-     * Create Business Hours Override for a store
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\BusinessHoursOverrideBase $business_hours_override Business Hours Override (required)
+     * @param  int $store_id store_id (required)
+     * @param  \Flipdish\\Client\Models\BusinessHoursOverrideBase $business_hours_override business_hours_override (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1314,10 +1296,8 @@ class StoresApi
     /**
      * Operation createBusinessHoursOverrideByStoreIdWithHttpInfo
      *
-     * Create Business Hours Override for a store
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\BusinessHoursOverrideBase $business_hours_override Business Hours Override (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\BusinessHoursOverrideBase $business_hours_override (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1414,10 +1394,10 @@ class StoresApi
     /**
      * Operation createBusinessHoursOverrideByStoreIdAsync
      *
-     * Create Business Hours Override for a store
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\BusinessHoursOverrideBase $business_hours_override Business Hours Override (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\BusinessHoursOverrideBase $business_hours_override (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1435,10 +1415,10 @@ class StoresApi
     /**
      * Operation createBusinessHoursOverrideByStoreIdAsyncWithHttpInfo
      *
-     * Create Business Hours Override for a store
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\BusinessHoursOverrideBase $business_hours_override Business Hours Override (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\BusinessHoursOverrideBase $business_hours_override (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1488,8 +1468,8 @@ class StoresApi
     /**
      * Create request for operation 'createBusinessHoursOverrideByStoreId'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\BusinessHoursOverrideBase $business_hours_override Business Hours Override (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\BusinessHoursOverrideBase $business_hours_override (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1607,10 +1587,8 @@ class StoresApi
     /**
      * Operation createStore
      *
-     * Create store with Store Group identifier
-     *
-     * @param  int $store_group_id Store Group identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreCreateBase $store Store (required)
+     * @param  int $store_group_id store_group_id (required)
+     * @param  \Flipdish\\Client\Models\StoreCreateBase $store store (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1625,10 +1603,8 @@ class StoresApi
     /**
      * Operation createStoreWithHttpInfo
      *
-     * Create store with Store Group identifier
-     *
-     * @param  int $store_group_id Store Group identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreCreateBase $store Store (required)
+     * @param  int $store_group_id (required)
+     * @param  \Flipdish\\Client\Models\StoreCreateBase $store (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1725,10 +1701,10 @@ class StoresApi
     /**
      * Operation createStoreAsync
      *
-     * Create store with Store Group identifier
+     * 
      *
-     * @param  int $store_group_id Store Group identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreCreateBase $store Store (required)
+     * @param  int $store_group_id (required)
+     * @param  \Flipdish\\Client\Models\StoreCreateBase $store (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1746,10 +1722,10 @@ class StoresApi
     /**
      * Operation createStoreAsyncWithHttpInfo
      *
-     * Create store with Store Group identifier
+     * 
      *
-     * @param  int $store_group_id Store Group identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreCreateBase $store Store (required)
+     * @param  int $store_group_id (required)
+     * @param  \Flipdish\\Client\Models\StoreCreateBase $store (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1799,8 +1775,8 @@ class StoresApi
     /**
      * Create request for operation 'createStore'
      *
-     * @param  int $store_group_id Store Group identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreCreateBase $store Store (required)
+     * @param  int $store_group_id (required)
+     * @param  \Flipdish\\Client\Models\StoreCreateBase $store (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1914,10 +1890,8 @@ class StoresApi
     /**
      * Operation deleteBusinessHoursOverride
      *
-     * Delete Business Hours Override for a store
-     *
-     * @param  int $store_id  (required)
-     * @param  int $business_hours_override_id  (required)
+     * @param  int $store_id store_id (required)
+     * @param  int $business_hours_override_id business_hours_override_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1932,10 +1906,8 @@ class StoresApi
     /**
      * Operation deleteBusinessHoursOverrideWithHttpInfo
      *
-     * Delete Business Hours Override for a store
-     *
-     * @param  int $store_id  (required)
-     * @param  int $business_hours_override_id  (required)
+     * @param  int $store_id (required)
+     * @param  int $business_hours_override_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2032,10 +2004,10 @@ class StoresApi
     /**
      * Operation deleteBusinessHoursOverrideAsync
      *
-     * Delete Business Hours Override for a store
+     * 
      *
-     * @param  int $store_id  (required)
-     * @param  int $business_hours_override_id  (required)
+     * @param  int $store_id (required)
+     * @param  int $business_hours_override_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2053,10 +2025,10 @@ class StoresApi
     /**
      * Operation deleteBusinessHoursOverrideAsyncWithHttpInfo
      *
-     * Delete Business Hours Override for a store
+     * 
      *
-     * @param  int $store_id  (required)
-     * @param  int $business_hours_override_id  (required)
+     * @param  int $store_id (required)
+     * @param  int $business_hours_override_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2106,8 +2078,8 @@ class StoresApi
     /**
      * Create request for operation 'deleteBusinessHoursOverride'
      *
-     * @param  int $store_id  (required)
-     * @param  int $business_hours_override_id  (required)
+     * @param  int $store_id (required)
+     * @param  int $business_hours_override_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2230,9 +2202,7 @@ class StoresApi
     /**
      * Operation getBankAccountForStore
      *
-     * Get Stores Bank Account Id
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2247,9 +2217,7 @@ class StoresApi
     /**
      * Operation getBankAccountForStoreWithHttpInfo
      *
-     * Get Stores Bank Account Id
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2346,9 +2314,9 @@ class StoresApi
     /**
      * Operation getBankAccountForStoreAsync
      *
-     * Get Stores Bank Account Id
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2366,9 +2334,9 @@ class StoresApi
     /**
      * Operation getBankAccountForStoreAsyncWithHttpInfo
      *
-     * Get Stores Bank Account Id
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2418,7 +2386,7 @@ class StoresApi
     /**
      * Create request for operation 'getBankAccountForStore'
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2527,10 +2495,8 @@ class StoresApi
     /**
      * Operation getBusinessHours
      *
-     * Get Business hours
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery type (required)
+     * @param  int $store_id store_id (required)
+     * @param  string $delivery_type delivery_type (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2545,10 +2511,8 @@ class StoresApi
     /**
      * Operation getBusinessHoursWithHttpInfo
      *
-     * Get Business hours
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery type (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2645,10 +2609,10 @@ class StoresApi
     /**
      * Operation getBusinessHoursAsync
      *
-     * Get Business hours
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery type (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2666,10 +2630,10 @@ class StoresApi
     /**
      * Operation getBusinessHoursAsyncWithHttpInfo
      *
-     * Get Business hours
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery type (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2719,8 +2683,8 @@ class StoresApi
     /**
      * Create request for operation 'getBusinessHours'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery type (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2843,12 +2807,10 @@ class StoresApi
     /**
      * Operation getBusinessHoursOverrideByStoreId
      *
-     * Get business hours overrides by store identifier
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \DateTime $after Return results that ended after this datetime. Default value is the current datetime. (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $store_id store_id (required)
+     * @param  \DateTime $after after (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2863,12 +2825,10 @@ class StoresApi
     /**
      * Operation getBusinessHoursOverrideByStoreIdWithHttpInfo
      *
-     * Get business hours overrides by store identifier
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \DateTime $after Return results that ended after this datetime. Default value is the current datetime. (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $store_id (required)
+     * @param  \DateTime $after (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2965,12 +2925,12 @@ class StoresApi
     /**
      * Operation getBusinessHoursOverrideByStoreIdAsync
      *
-     * Get business hours overrides by store identifier
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \DateTime $after Return results that ended after this datetime. Default value is the current datetime. (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $store_id (required)
+     * @param  \DateTime $after (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2988,12 +2948,12 @@ class StoresApi
     /**
      * Operation getBusinessHoursOverrideByStoreIdAsyncWithHttpInfo
      *
-     * Get business hours overrides by store identifier
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \DateTime $after Return results that ended after this datetime. Default value is the current datetime. (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $store_id (required)
+     * @param  \DateTime $after (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3043,10 +3003,10 @@ class StoresApi
     /**
      * Create request for operation 'getBusinessHoursOverrideByStoreId'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \DateTime $after Return results that ended after this datetime. Default value is the current datetime. (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $store_id (required)
+     * @param  \DateTime $after (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3167,10 +3127,8 @@ class StoresApi
     /**
      * Operation getEndOfDayReport
      *
-     * Get store end of day report
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \DateTime $date Store identifier (optional)
+     * @param  int $store_id store_id (required)
+     * @param  \DateTime $date date (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3185,10 +3143,8 @@ class StoresApi
     /**
      * Operation getEndOfDayReportWithHttpInfo
      *
-     * Get store end of day report
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \DateTime $date Store identifier (optional)
+     * @param  int $store_id (required)
+     * @param  \DateTime $date (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3285,10 +3241,10 @@ class StoresApi
     /**
      * Operation getEndOfDayReportAsync
      *
-     * Get store end of day report
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \DateTime $date Store identifier (optional)
+     * @param  int $store_id (required)
+     * @param  \DateTime $date (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3306,10 +3262,10 @@ class StoresApi
     /**
      * Operation getEndOfDayReportAsyncWithHttpInfo
      *
-     * Get store end of day report
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \DateTime $date Store identifier (optional)
+     * @param  int $store_id (required)
+     * @param  \DateTime $date (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3359,8 +3315,8 @@ class StoresApi
     /**
      * Create request for operation 'getEndOfDayReport'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \DateTime $date Store identifier (optional)
+     * @param  int $store_id (required)
+     * @param  \DateTime $date (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3473,10 +3429,8 @@ class StoresApi
     /**
      * Operation getPreOrderConfig
      *
-     * Get the pre order config for a store, by type
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param  int $store_id store_id (required)
+     * @param  string $delivery_type delivery_type (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3491,10 +3445,8 @@ class StoresApi
     /**
      * Operation getPreOrderConfigWithHttpInfo
      *
-     * Get the pre order config for a store, by type
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3591,10 +3543,10 @@ class StoresApi
     /**
      * Operation getPreOrderConfigAsync
      *
-     * Get the pre order config for a store, by type
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3612,10 +3564,10 @@ class StoresApi
     /**
      * Operation getPreOrderConfigAsyncWithHttpInfo
      *
-     * Get the pre order config for a store, by type
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3665,8 +3617,8 @@ class StoresApi
     /**
      * Create request for operation 'getPreOrderConfig'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3789,10 +3741,8 @@ class StoresApi
     /**
      * Operation getPreOrderPreview
      *
-     * Get the Preview times of the pre-order configuration
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param  int $store_id store_id (required)
+     * @param  string $delivery_type delivery_type (required)
      * @param  int $pre_order_config_lead_time_minutes Lead Time in Minutes (optional)
      * @param  int $pre_order_config_interval_minutes Interval in minutes (optional)
      * @param  int $pre_order_config_max_order_ahead_days Max Days to order ahead (optional)
@@ -3817,10 +3767,8 @@ class StoresApi
     /**
      * Operation getPreOrderPreviewWithHttpInfo
      *
-     * Get the Preview times of the pre-order configuration
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      * @param  int $pre_order_config_lead_time_minutes Lead Time in Minutes (optional)
      * @param  int $pre_order_config_interval_minutes Interval in minutes (optional)
      * @param  int $pre_order_config_max_order_ahead_days Max Days to order ahead (optional)
@@ -3927,10 +3875,10 @@ class StoresApi
     /**
      * Operation getPreOrderPreviewAsync
      *
-     * Get the Preview times of the pre-order configuration
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      * @param  int $pre_order_config_lead_time_minutes Lead Time in Minutes (optional)
      * @param  int $pre_order_config_interval_minutes Interval in minutes (optional)
      * @param  int $pre_order_config_max_order_ahead_days Max Days to order ahead (optional)
@@ -3958,10 +3906,10 @@ class StoresApi
     /**
      * Operation getPreOrderPreviewAsyncWithHttpInfo
      *
-     * Get the Preview times of the pre-order configuration
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      * @param  int $pre_order_config_lead_time_minutes Lead Time in Minutes (optional)
      * @param  int $pre_order_config_interval_minutes Interval in minutes (optional)
      * @param  int $pre_order_config_max_order_ahead_days Max Days to order ahead (optional)
@@ -4021,8 +3969,8 @@ class StoresApi
     /**
      * Create request for operation 'getPreOrderPreview'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
      * @param  int $pre_order_config_lead_time_minutes Lead Time in Minutes (optional)
      * @param  int $pre_order_config_interval_minutes Interval in minutes (optional)
      * @param  int $pre_order_config_max_order_ahead_days Max Days to order ahead (optional)
@@ -4195,10 +4143,8 @@ class StoresApi
     /**
      * Operation getProcessingFeeConfigsByStoreId
      *
-     * Get processing fee configs by store identifier
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id store_id (required)
+     * @param  string $app_name_id app_name_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4213,10 +4159,8 @@ class StoresApi
     /**
      * Operation getProcessingFeeConfigsByStoreIdWithHttpInfo
      *
-     * Get processing fee configs by store identifier
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id (required)
+     * @param  string $app_name_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4313,10 +4257,10 @@ class StoresApi
     /**
      * Operation getProcessingFeeConfigsByStoreIdAsync
      *
-     * Get processing fee configs by store identifier
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id (required)
+     * @param  string $app_name_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4334,10 +4278,10 @@ class StoresApi
     /**
      * Operation getProcessingFeeConfigsByStoreIdAsyncWithHttpInfo
      *
-     * Get processing fee configs by store identifier
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id (required)
+     * @param  string $app_name_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4387,8 +4331,8 @@ class StoresApi
     /**
      * Create request for operation 'getProcessingFeeConfigsByStoreId'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id (required)
+     * @param  string $app_name_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4501,11 +4445,9 @@ class StoresApi
     /**
      * Operation getProcessingFeeConfigsByStoreIdAndPaymentAccountType
      *
-     * Get processing fee configs by store identifier
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $payment_account_type  (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id store_id (required)
+     * @param  string $payment_account_type payment_account_type (required)
+     * @param  string $app_name_id app_name_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4520,11 +4462,9 @@ class StoresApi
     /**
      * Operation getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeWithHttpInfo
      *
-     * Get processing fee configs by store identifier
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $payment_account_type  (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id (required)
+     * @param  string $payment_account_type (required)
+     * @param  string $app_name_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4621,11 +4561,11 @@ class StoresApi
     /**
      * Operation getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsync
      *
-     * Get processing fee configs by store identifier
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $payment_account_type  (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id (required)
+     * @param  string $payment_account_type (required)
+     * @param  string $app_name_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4643,11 +4583,11 @@ class StoresApi
     /**
      * Operation getProcessingFeeConfigsByStoreIdAndPaymentAccountTypeAsyncWithHttpInfo
      *
-     * Get processing fee configs by store identifier
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $payment_account_type  (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id (required)
+     * @param  string $payment_account_type (required)
+     * @param  string $app_name_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4697,9 +4637,9 @@ class StoresApi
     /**
      * Create request for operation 'getProcessingFeeConfigsByStoreIdAndPaymentAccountType'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $payment_account_type  (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id (required)
+     * @param  string $payment_account_type (required)
+     * @param  string $app_name_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4826,9 +4766,7 @@ class StoresApi
     /**
      * Operation getStoreById
      *
-     * Get store by identifier
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4843,9 +4781,7 @@ class StoresApi
     /**
      * Operation getStoreByIdWithHttpInfo
      *
-     * Get store by identifier
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4942,9 +4878,9 @@ class StoresApi
     /**
      * Operation getStoreByIdAsync
      *
-     * Get store by identifier
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4962,9 +4898,9 @@ class StoresApi
     /**
      * Operation getStoreByIdAsyncWithHttpInfo
      *
-     * Get store by identifier
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5014,7 +4950,7 @@ class StoresApi
     /**
      * Create request for operation 'getStoreById'
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5123,9 +5059,7 @@ class StoresApi
     /**
      * Operation getStoreFeeConfig
      *
-     * Retrieve Store feeConfig
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5140,9 +5074,7 @@ class StoresApi
     /**
      * Operation getStoreFeeConfigWithHttpInfo
      *
-     * Retrieve Store feeConfig
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5239,9 +5171,9 @@ class StoresApi
     /**
      * Operation getStoreFeeConfigAsync
      *
-     * Retrieve Store feeConfig
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5259,9 +5191,9 @@ class StoresApi
     /**
      * Operation getStoreFeeConfigAsyncWithHttpInfo
      *
-     * Retrieve Store feeConfig
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5311,7 +5243,7 @@ class StoresApi
     /**
      * Create request for operation 'getStoreFeeConfig'
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5420,9 +5352,7 @@ class StoresApi
     /**
      * Operation getStoreHeadersByAppId
      *
-     * Get all stores by app name id
-     *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id app_id (required)
      * @param  string $store_name_query store_name_query (optional)
      * @param  int $page page (optional)
      * @param  int $limit limit (optional)
@@ -5440,9 +5370,7 @@ class StoresApi
     /**
      * Operation getStoreHeadersByAppIdWithHttpInfo
      *
-     * Get all stores by app name id
-     *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      * @param  string $store_name_query (optional)
      * @param  int $page (optional)
      * @param  int $limit (optional)
@@ -5542,9 +5470,9 @@ class StoresApi
     /**
      * Operation getStoreHeadersByAppIdAsync
      *
-     * Get all stores by app name id
+     * 
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      * @param  string $store_name_query (optional)
      * @param  int $page (optional)
      * @param  int $limit (optional)
@@ -5565,9 +5493,9 @@ class StoresApi
     /**
      * Operation getStoreHeadersByAppIdAsyncWithHttpInfo
      *
-     * Get all stores by app name id
+     * 
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      * @param  string $store_name_query (optional)
      * @param  int $page (optional)
      * @param  int $limit (optional)
@@ -5620,7 +5548,7 @@ class StoresApi
     /**
      * Create request for operation 'getStoreHeadersByAppId'
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      * @param  string $store_name_query (optional)
      * @param  int $page (optional)
      * @param  int $limit (optional)
@@ -5744,10 +5672,8 @@ class StoresApi
     /**
      * Operation getStoreNetSales
      *
-     * Get stores statistics by app name id and storeIds
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int[] $store_id Store Ids (required)
+     * @param  string $app_id app_id (required)
+     * @param  int[] $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5762,10 +5688,8 @@ class StoresApi
     /**
      * Operation getStoreNetSalesWithHttpInfo
      *
-     * Get stores statistics by app name id and storeIds
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int[] $store_id Store Ids (required)
+     * @param  string $app_id (required)
+     * @param  int[] $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5862,10 +5786,10 @@ class StoresApi
     /**
      * Operation getStoreNetSalesAsync
      *
-     * Get stores statistics by app name id and storeIds
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int[] $store_id Store Ids (required)
+     * @param  string $app_id (required)
+     * @param  int[] $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5883,10 +5807,10 @@ class StoresApi
     /**
      * Operation getStoreNetSalesAsyncWithHttpInfo
      *
-     * Get stores statistics by app name id and storeIds
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int[] $store_id Store Ids (required)
+     * @param  string $app_id (required)
+     * @param  int[] $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5936,8 +5860,8 @@ class StoresApi
     /**
      * Create request for operation 'getStoreNetSales'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int[] $store_id Store Ids (required)
+     * @param  string $app_id (required)
+     * @param  int[] $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6059,9 +5983,7 @@ class StoresApi
     /**
      * Operation getStoreServiceCharge
      *
-     * Retrieve Store Service Charge
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6076,9 +5998,7 @@ class StoresApi
     /**
      * Operation getStoreServiceChargeWithHttpInfo
      *
-     * Retrieve Store Service Charge
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6175,9 +6095,9 @@ class StoresApi
     /**
      * Operation getStoreServiceChargeAsync
      *
-     * Retrieve Store Service Charge
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6195,9 +6115,9 @@ class StoresApi
     /**
      * Operation getStoreServiceChargeAsyncWithHttpInfo
      *
-     * Retrieve Store Service Charge
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6247,7 +6167,7 @@ class StoresApi
     /**
      * Create request for operation 'getStoreServiceCharge'
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6356,12 +6276,10 @@ class StoresApi
     /**
      * Operation getStores
      *
-     * Get all stores, excluding archived ones
-     *
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  int $store_group_id Store Group Id (optional)
+     * @param  string $search_query search_query (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
+     * @param  int $store_group_id store_group_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6376,12 +6294,10 @@ class StoresApi
     /**
      * Operation getStoresWithHttpInfo
      *
-     * Get all stores, excluding archived ones
-     *
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  int $store_group_id Store Group Id (optional)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int $store_group_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6478,12 +6394,12 @@ class StoresApi
     /**
      * Operation getStoresAsync
      *
-     * Get all stores, excluding archived ones
+     * 
      *
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  int $store_group_id Store Group Id (optional)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int $store_group_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6501,12 +6417,12 @@ class StoresApi
     /**
      * Operation getStoresAsyncWithHttpInfo
      *
-     * Get all stores, excluding archived ones
+     * 
      *
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  int $store_group_id Store Group Id (optional)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int $store_group_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6556,10 +6472,10 @@ class StoresApi
     /**
      * Create request for operation 'getStores'
      *
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
-     * @param  int $store_group_id Store Group Id (optional)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  int $store_group_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6670,12 +6586,10 @@ class StoresApi
     /**
      * Operation getStoresByAppId
      *
-     * Get all stores by app name id
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_id app_id (required)
+     * @param  string $search_query search_query (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6690,12 +6604,10 @@ class StoresApi
     /**
      * Operation getStoresByAppIdWithHttpInfo
      *
-     * Get all stores by app name id
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_id (required)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6792,12 +6704,12 @@ class StoresApi
     /**
      * Operation getStoresByAppIdAsync
      *
-     * Get all stores by app name id
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_id (required)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6815,12 +6727,12 @@ class StoresApi
     /**
      * Operation getStoresByAppIdAsyncWithHttpInfo
      *
-     * Get all stores by app name id
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_id (required)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6870,10 +6782,10 @@ class StoresApi
     /**
      * Create request for operation 'getStoresByAppId'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  string $search_query Search query (optional)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  string $app_id (required)
+     * @param  string $search_query (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6994,12 +6906,10 @@ class StoresApi
     /**
      * Operation getStoresByStoreIdWithValidations
      *
-     * Get store validation by storeIds
-     *
-     * @param  int[] $store_id Store identifier (required)
+     * @param  int[] $store_id store_id (required)
      * @param  string $app_id app_id (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7014,12 +6924,10 @@ class StoresApi
     /**
      * Operation getStoresByStoreIdWithValidationsWithHttpInfo
      *
-     * Get store validation by storeIds
-     *
-     * @param  int[] $store_id Store identifier (required)
+     * @param  int[] $store_id (required)
      * @param  string $app_id (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7116,12 +7024,12 @@ class StoresApi
     /**
      * Operation getStoresByStoreIdWithValidationsAsync
      *
-     * Get store validation by storeIds
+     * 
      *
-     * @param  int[] $store_id Store identifier (required)
+     * @param  int[] $store_id (required)
      * @param  string $app_id (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7139,12 +7047,12 @@ class StoresApi
     /**
      * Operation getStoresByStoreIdWithValidationsAsyncWithHttpInfo
      *
-     * Get store validation by storeIds
+     * 
      *
-     * @param  int[] $store_id Store identifier (required)
+     * @param  int[] $store_id (required)
      * @param  string $app_id (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7194,10 +7102,10 @@ class StoresApi
     /**
      * Create request for operation 'getStoresByStoreIdWithValidations'
      *
-     * @param  int[] $store_id Store identifier (required)
+     * @param  int[] $store_id (required)
      * @param  string $app_id (required)
-     * @param  int $page Requested page index (optional)
-     * @param  int $limit Requested page limit (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7327,9 +7235,7 @@ class StoresApi
     /**
      * Operation publishStore
      *
-     * Publish store
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7343,9 +7249,7 @@ class StoresApi
     /**
      * Operation publishStoreWithHttpInfo
      *
-     * Publish store
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7420,9 +7324,9 @@ class StoresApi
     /**
      * Operation publishStoreAsync
      *
-     * Publish store
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7440,9 +7344,9 @@ class StoresApi
     /**
      * Operation publishStoreAsyncWithHttpInfo
      *
-     * Publish store
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7478,7 +7382,7 @@ class StoresApi
     /**
      * Create request for operation 'publishStore'
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7587,11 +7491,9 @@ class StoresApi
     /**
      * Operation setBusinessHours
      *
-     * Set Business hours
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery type (required)
-     * @param  \Flipdish\\Client\Models\BusinessHoursPeriodBase $business_hours_period Business Hours Period (required)
+     * @param  int $store_id store_id (required)
+     * @param  string $delivery_type delivery_type (required)
+     * @param  \Flipdish\\Client\Models\BusinessHoursPeriodBase $business_hours_period business_hours_period (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7606,11 +7508,9 @@ class StoresApi
     /**
      * Operation setBusinessHoursWithHttpInfo
      *
-     * Set Business hours
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery type (required)
-     * @param  \Flipdish\\Client\Models\BusinessHoursPeriodBase $business_hours_period Business Hours Period (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  \Flipdish\\Client\Models\BusinessHoursPeriodBase $business_hours_period (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7699,11 +7599,11 @@ class StoresApi
     /**
      * Operation setBusinessHoursAsync
      *
-     * Set Business hours
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery type (required)
-     * @param  \Flipdish\\Client\Models\BusinessHoursPeriodBase $business_hours_period Business Hours Period (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  \Flipdish\\Client\Models\BusinessHoursPeriodBase $business_hours_period (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7721,11 +7621,11 @@ class StoresApi
     /**
      * Operation setBusinessHoursAsyncWithHttpInfo
      *
-     * Set Business hours
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery type (required)
-     * @param  \Flipdish\\Client\Models\BusinessHoursPeriodBase $business_hours_period Business Hours Period (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  \Flipdish\\Client\Models\BusinessHoursPeriodBase $business_hours_period (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7775,9 +7675,9 @@ class StoresApi
     /**
      * Create request for operation 'setBusinessHours'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type Delivery type (required)
-     * @param  \Flipdish\\Client\Models\BusinessHoursPeriodBase $business_hours_period Business Hours Period (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  \Flipdish\\Client\Models\BusinessHoursPeriodBase $business_hours_period (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7909,11 +7809,9 @@ class StoresApi
     /**
      * Operation setPreOrdeEnabled
      *
-     * UPDATE pre order config for a store, by type
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param  bool $enabled Update pre order config values (required)
+     * @param  int $store_id store_id (required)
+     * @param  string $delivery_type delivery_type (required)
+     * @param  bool $enabled enabled (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7928,11 +7826,9 @@ class StoresApi
     /**
      * Operation setPreOrdeEnabledWithHttpInfo
      *
-     * UPDATE pre order config for a store, by type
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param  bool $enabled Update pre order config values (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  bool $enabled (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8029,11 +7925,11 @@ class StoresApi
     /**
      * Operation setPreOrdeEnabledAsync
      *
-     * UPDATE pre order config for a store, by type
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param  bool $enabled Update pre order config values (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  bool $enabled (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8051,11 +7947,11 @@ class StoresApi
     /**
      * Operation setPreOrdeEnabledAsyncWithHttpInfo
      *
-     * UPDATE pre order config for a store, by type
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param  bool $enabled Update pre order config values (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  bool $enabled (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8105,9 +8001,9 @@ class StoresApi
     /**
      * Create request for operation 'setPreOrdeEnabled'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param  bool $enabled Update pre order config values (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  bool $enabled (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -8240,9 +8136,7 @@ class StoresApi
     /**
      * Operation unpublishStore
      *
-     * Unpublish store
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8256,9 +8150,7 @@ class StoresApi
     /**
      * Operation unpublishStoreWithHttpInfo
      *
-     * Unpublish store
-     *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8333,9 +8225,9 @@ class StoresApi
     /**
      * Operation unpublishStoreAsync
      *
-     * Unpublish store
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8353,9 +8245,9 @@ class StoresApi
     /**
      * Operation unpublishStoreAsyncWithHttpInfo
      *
-     * Unpublish store
+     * 
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8391,7 +8283,7 @@ class StoresApi
     /**
      * Create request for operation 'unpublishStore'
      *
-     * @param  int $store_id Store identifier (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -8500,11 +8392,9 @@ class StoresApi
     /**
      * Operation updatePreOrderConfig
      *
-     * UPDATE pre order config for a store, by type
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param  \Flipdish\\Client\Models\PreOrderConfig $pre_order_config Update pre order config values (required)
+     * @param  int $store_id store_id (required)
+     * @param  string $delivery_type delivery_type (required)
+     * @param  \Flipdish\\Client\Models\PreOrderConfig $pre_order_config pre_order_config (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8519,11 +8409,9 @@ class StoresApi
     /**
      * Operation updatePreOrderConfigWithHttpInfo
      *
-     * UPDATE pre order config for a store, by type
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param  \Flipdish\\Client\Models\PreOrderConfig $pre_order_config Update pre order config values (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  \Flipdish\\Client\Models\PreOrderConfig $pre_order_config (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8620,11 +8508,11 @@ class StoresApi
     /**
      * Operation updatePreOrderConfigAsync
      *
-     * UPDATE pre order config for a store, by type
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param  \Flipdish\\Client\Models\PreOrderConfig $pre_order_config Update pre order config values (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  \Flipdish\\Client\Models\PreOrderConfig $pre_order_config (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8642,11 +8530,11 @@ class StoresApi
     /**
      * Operation updatePreOrderConfigAsyncWithHttpInfo
      *
-     * UPDATE pre order config for a store, by type
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param  \Flipdish\\Client\Models\PreOrderConfig $pre_order_config Update pre order config values (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  \Flipdish\\Client\Models\PreOrderConfig $pre_order_config (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8696,9 +8584,9 @@ class StoresApi
     /**
      * Create request for operation 'updatePreOrderConfig'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  string $delivery_type \&quot;delivery\&quot; or \&quot;pickup\&quot; (required)
-     * @param  \Flipdish\\Client\Models\PreOrderConfig $pre_order_config Update pre order config values (required)
+     * @param  int $store_id (required)
+     * @param  string $delivery_type (required)
+     * @param  \Flipdish\\Client\Models\PreOrderConfig $pre_order_config (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -8830,10 +8718,8 @@ class StoresApi
     /**
      * Operation updateStore
      *
-     * Update store by identifier
-     *
-     * @param  int $store_id Store Group identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreBase $store Store (required)
+     * @param  int $store_id store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreBase $store store (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8848,10 +8734,8 @@ class StoresApi
     /**
      * Operation updateStoreWithHttpInfo
      *
-     * Update store by identifier
-     *
-     * @param  int $store_id Store Group identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreBase $store Store (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreBase $store (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8948,10 +8832,10 @@ class StoresApi
     /**
      * Operation updateStoreAsync
      *
-     * Update store by identifier
+     * 
      *
-     * @param  int $store_id Store Group identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreBase $store Store (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreBase $store (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8969,10 +8853,10 @@ class StoresApi
     /**
      * Operation updateStoreAsyncWithHttpInfo
      *
-     * Update store by identifier
+     * 
      *
-     * @param  int $store_id Store Group identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreBase $store Store (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreBase $store (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9022,8 +8906,8 @@ class StoresApi
     /**
      * Create request for operation 'updateStore'
      *
-     * @param  int $store_id Store Group identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreBase $store Store (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreBase $store (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -9141,10 +9025,8 @@ class StoresApi
     /**
      * Operation updateStoreAddress
      *
-     * Update store address
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreAddressBase $store_address Store address (required)
+     * @param  int $store_id store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreAddressBase $store_address store_address (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -9159,10 +9041,8 @@ class StoresApi
     /**
      * Operation updateStoreAddressWithHttpInfo
      *
-     * Update store address
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreAddressBase $store_address Store address (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreAddressBase $store_address (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -9259,10 +9139,10 @@ class StoresApi
     /**
      * Operation updateStoreAddressAsync
      *
-     * Update store address
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreAddressBase $store_address Store address (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreAddressBase $store_address (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9280,10 +9160,10 @@ class StoresApi
     /**
      * Operation updateStoreAddressAsyncWithHttpInfo
      *
-     * Update store address
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreAddressBase $store_address Store address (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreAddressBase $store_address (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9333,8 +9213,8 @@ class StoresApi
     /**
      * Create request for operation 'updateStoreAddress'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreAddressBase $store_address Store address (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreAddressBase $store_address (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -9452,11 +9332,9 @@ class StoresApi
     /**
      * Operation updateStoreAddressCoordinates
      *
-     * Update store address coordinates
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\Coordinates $coordinates Store address coordinates (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id store_id (required)
+     * @param  \Flipdish\\Client\Models\Coordinates $coordinates coordinates (required)
+     * @param  string $app_name_id app_name_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -9471,11 +9349,9 @@ class StoresApi
     /**
      * Operation updateStoreAddressCoordinatesWithHttpInfo
      *
-     * Update store address coordinates
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\Coordinates $coordinates Store address coordinates (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\Coordinates $coordinates (required)
+     * @param  string $app_name_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -9572,11 +9448,11 @@ class StoresApi
     /**
      * Operation updateStoreAddressCoordinatesAsync
      *
-     * Update store address coordinates
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\Coordinates $coordinates Store address coordinates (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\Coordinates $coordinates (required)
+     * @param  string $app_name_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9594,11 +9470,11 @@ class StoresApi
     /**
      * Operation updateStoreAddressCoordinatesAsyncWithHttpInfo
      *
-     * Update store address coordinates
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\Coordinates $coordinates Store address coordinates (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\Coordinates $coordinates (required)
+     * @param  string $app_name_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9648,9 +9524,9 @@ class StoresApi
     /**
      * Create request for operation 'updateStoreAddressCoordinates'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\Coordinates $coordinates Store address coordinates (required)
-     * @param  string $app_name_id App Name Id(Not used, still here for compatability reasons) (optional)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\Coordinates $coordinates (required)
+     * @param  string $app_name_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -9772,10 +9648,8 @@ class StoresApi
     /**
      * Operation updateStoreAddressForm
      *
-     * Update store address
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreAddressForm $address Store address (required)
+     * @param  int $store_id store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreAddressForm $address address (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -9790,10 +9664,8 @@ class StoresApi
     /**
      * Operation updateStoreAddressFormWithHttpInfo
      *
-     * Update store address
-     *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreAddressForm $address Store address (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreAddressForm $address (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -9890,10 +9762,10 @@ class StoresApi
     /**
      * Operation updateStoreAddressFormAsync
      *
-     * Update store address
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreAddressForm $address Store address (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreAddressForm $address (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9911,10 +9783,10 @@ class StoresApi
     /**
      * Operation updateStoreAddressFormAsyncWithHttpInfo
      *
-     * Update store address
+     * 
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreAddressForm $address Store address (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreAddressForm $address (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9964,8 +9836,8 @@ class StoresApi
     /**
      * Create request for operation 'updateStoreAddressForm'
      *
-     * @param  int $store_id Store identifier (required)
-     * @param  \Flipdish\\Client\Models\StoreAddressForm $address Store address (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\StoreAddressForm $address (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

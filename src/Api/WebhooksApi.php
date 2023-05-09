@@ -90,10 +90,8 @@ class WebhooksApi
     /**
      * Operation createWebhookSubscription
      *
-     * Create a webhook subscription for you Oauth App
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription Webhook subscription object (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription webhook_subscription (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -109,10 +107,8 @@ class WebhooksApi
     /**
      * Operation createWebhookSubscriptionWithHttpInfo
      *
-     * Create a webhook subscription for you Oauth App
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription Webhook subscription object (required)
+     * @param  string $oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -210,10 +206,10 @@ class WebhooksApi
     /**
      * Operation createWebhookSubscriptionAsync
      *
-     * Create a webhook subscription for you Oauth App
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription Webhook subscription object (required)
+     * @param  string $oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -232,10 +228,10 @@ class WebhooksApi
     /**
      * Operation createWebhookSubscriptionAsyncWithHttpInfo
      *
-     * Create a webhook subscription for you Oauth App
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription Webhook subscription object (required)
+     * @param  string $oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -286,8 +282,8 @@ class WebhooksApi
     /**
      * Create request for operation 'createWebhookSubscription'
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription Webhook subscription object (required)
+     * @param  string $oauth_app_id (required)
+     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -420,11 +416,9 @@ class WebhooksApi
     /**
      * Operation createWebhookSubscriptionEventNames
      *
-     * Add event name to your webhook subscription
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  string $event_name Webhook subscription event name (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  int $webhook_subscription_id webhook_subscription_id (required)
+     * @param  string $event_name event_name (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -439,11 +433,9 @@ class WebhooksApi
     /**
      * Operation createWebhookSubscriptionEventNamesWithHttpInfo
      *
-     * Add event name to your webhook subscription
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  string $event_name Webhook subscription event name (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  string $event_name (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -527,11 +519,11 @@ class WebhooksApi
     /**
      * Operation createWebhookSubscriptionEventNamesAsync
      *
-     * Add event name to your webhook subscription
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  string $event_name Webhook subscription event name (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  string $event_name (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -550,11 +542,11 @@ class WebhooksApi
     /**
      * Operation createWebhookSubscriptionEventNamesAsyncWithHttpInfo
      *
-     * Add event name to your webhook subscription
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  string $event_name Webhook subscription event name (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  string $event_name (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -591,9 +583,9 @@ class WebhooksApi
     /**
      * Create request for operation 'createWebhookSubscriptionEventNames'
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  string $event_name Webhook subscription event name (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  string $event_name (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -745,10 +737,8 @@ class WebhooksApi
     /**
      * Operation deleteWebhookSubscription
      *
-     * Delete you webhook subscription
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  int $webhook_subscription_id webhook_subscription_id (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -763,10 +753,8 @@ class WebhooksApi
     /**
      * Operation deleteWebhookSubscriptionWithHttpInfo
      *
-     * Delete you webhook subscription
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -842,10 +830,10 @@ class WebhooksApi
     /**
      * Operation deleteWebhookSubscriptionAsync
      *
-     * Delete you webhook subscription
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -864,10 +852,10 @@ class WebhooksApi
     /**
      * Operation deleteWebhookSubscriptionAsyncWithHttpInfo
      *
-     * Delete you webhook subscription
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -904,8 +892,8 @@ class WebhooksApi
     /**
      * Create request for operation 'deleteWebhookSubscription'
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1043,11 +1031,9 @@ class WebhooksApi
     /**
      * Operation deleteWebhookSubscriptionEventName
      *
-     * Remove event name to your webhook subscription
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  string $event_name Webhook subscription event name (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  int $webhook_subscription_id webhook_subscription_id (required)
+     * @param  string $event_name event_name (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1062,11 +1048,9 @@ class WebhooksApi
     /**
      * Operation deleteWebhookSubscriptionEventNameWithHttpInfo
      *
-     * Remove event name to your webhook subscription
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  string $event_name Webhook subscription event name (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  string $event_name (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1142,11 +1126,11 @@ class WebhooksApi
     /**
      * Operation deleteWebhookSubscriptionEventNameAsync
      *
-     * Remove event name to your webhook subscription
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  string $event_name Webhook subscription event name (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  string $event_name (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1165,11 +1149,11 @@ class WebhooksApi
     /**
      * Operation deleteWebhookSubscriptionEventNameAsyncWithHttpInfo
      *
-     * Remove event name to your webhook subscription
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  string $event_name Webhook subscription event name (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  string $event_name (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1206,9 +1190,9 @@ class WebhooksApi
     /**
      * Create request for operation 'deleteWebhookSubscriptionEventName'
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  string $event_name Webhook subscription event name (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  string $event_name (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1360,8 +1344,6 @@ class WebhooksApi
     /**
      * Operation getWebhookEventNames
      *
-     * Get all webhook subscription event names
-     *
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1376,8 +1358,6 @@ class WebhooksApi
 
     /**
      * Operation getWebhookEventNamesWithHttpInfo
-     *
-     * Get all webhook subscription event names
      *
      * @param  string $app_id (required)
      *
@@ -1476,7 +1456,7 @@ class WebhooksApi
     /**
      * Operation getWebhookEventNamesAsync
      *
-     * Get all webhook subscription event names
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -1496,7 +1476,7 @@ class WebhooksApi
     /**
      * Operation getWebhookEventNamesAsyncWithHttpInfo
      *
-     * Get all webhook subscription event names
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -1657,10 +1637,8 @@ class WebhooksApi
     /**
      * Operation getWebhookEventNamesBySubscriptionId
      *
-     * Get your webhook subscriptions selected event names
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  int $webhook_subscription_id webhook_subscription_id (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1676,10 +1654,8 @@ class WebhooksApi
     /**
      * Operation getWebhookEventNamesBySubscriptionIdWithHttpInfo
      *
-     * Get your webhook subscriptions selected event names
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1777,10 +1753,10 @@ class WebhooksApi
     /**
      * Operation getWebhookEventNamesBySubscriptionIdAsync
      *
-     * Get your webhook subscriptions selected event names
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1799,10 +1775,10 @@ class WebhooksApi
     /**
      * Operation getWebhookEventNamesBySubscriptionIdAsyncWithHttpInfo
      *
-     * Get your webhook subscriptions selected event names
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1853,8 +1829,8 @@ class WebhooksApi
     /**
      * Create request for operation 'getWebhookEventNamesBySubscriptionId'
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1992,8 +1968,6 @@ class WebhooksApi
     /**
      * Operation getWebhookEventSample
      *
-     * Get a sample event from a webhook subscription
-     *
      * @param  string $event_name event_name (required)
      * @param  string $app_id app_id (required)
      * @param  string $oauth_app_id oauth_app_id (required)
@@ -2012,8 +1986,6 @@ class WebhooksApi
 
     /**
      * Operation getWebhookEventSampleWithHttpInfo
-     *
-     * Get a sample event from a webhook subscription
      *
      * @param  string $event_name (required)
      * @param  string $app_id (required)
@@ -2116,7 +2088,7 @@ class WebhooksApi
     /**
      * Operation getWebhookEventSampleAsync
      *
-     * Get a sample event from a webhook subscription
+     * 
      *
      * @param  string $event_name (required)
      * @param  string $app_id (required)
@@ -2140,7 +2112,7 @@ class WebhooksApi
     /**
      * Operation getWebhookEventSampleAsyncWithHttpInfo
      *
-     * Get a sample event from a webhook subscription
+     * 
      *
      * @param  string $event_name (required)
      * @param  string $app_id (required)
@@ -2355,15 +2327,13 @@ class WebhooksApi
     /**
      * Operation getWebhookLogs
      *
-     * Get logs for your webhook subscription
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  \DateTime $start Start time (required)
-     * @param  \DateTime $end End time (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  int $webhook_subscription_id webhook_subscription_id (required)
+     * @param  \DateTime $start start (required)
+     * @param  \DateTime $end end (required)
      * @param  string $app_id app_id (required)
-     * @param  int $page Page number (optional)
-     * @param  int $limit Page size (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2378,15 +2348,13 @@ class WebhooksApi
     /**
      * Operation getWebhookLogsWithHttpInfo
      *
-     * Get logs for your webhook subscription
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  \DateTime $start Start time (required)
-     * @param  \DateTime $end End time (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  \DateTime $start (required)
+     * @param  \DateTime $end (required)
      * @param  string $app_id (required)
-     * @param  int $page Page number (optional)
-     * @param  int $limit Page size (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2483,15 +2451,15 @@ class WebhooksApi
     /**
      * Operation getWebhookLogsAsync
      *
-     * Get logs for your webhook subscription
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  \DateTime $start Start time (required)
-     * @param  \DateTime $end End time (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  \DateTime $start (required)
+     * @param  \DateTime $end (required)
      * @param  string $app_id (required)
-     * @param  int $page Page number (optional)
-     * @param  int $limit Page size (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2509,15 +2477,15 @@ class WebhooksApi
     /**
      * Operation getWebhookLogsAsyncWithHttpInfo
      *
-     * Get logs for your webhook subscription
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  \DateTime $start Start time (required)
-     * @param  \DateTime $end End time (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  \DateTime $start (required)
+     * @param  \DateTime $end (required)
      * @param  string $app_id (required)
-     * @param  int $page Page number (optional)
-     * @param  int $limit Page size (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2567,13 +2535,13 @@ class WebhooksApi
     /**
      * Create request for operation 'getWebhookLogs'
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  \DateTime $start Start time (required)
-     * @param  \DateTime $end End time (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  \DateTime $start (required)
+     * @param  \DateTime $end (required)
      * @param  string $app_id (required)
-     * @param  int $page Page number (optional)
-     * @param  int $limit Page size (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2738,12 +2706,10 @@ class WebhooksApi
     /**
      * Operation getWebhookSubscriptions
      *
-     * Get all webhook subscriptions by your Oauth App id
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
      * @param  string $app_id app_id (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2758,12 +2724,10 @@ class WebhooksApi
     /**
      * Operation getWebhookSubscriptionsWithHttpInfo
      *
-     * Get all webhook subscriptions by your Oauth App id
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2860,12 +2824,12 @@ class WebhooksApi
     /**
      * Operation getWebhookSubscriptionsAsync
      *
-     * Get all webhook subscriptions by your Oauth App id
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2883,12 +2847,12 @@ class WebhooksApi
     /**
      * Operation getWebhookSubscriptionsAsyncWithHttpInfo
      *
-     * Get all webhook subscriptions by your Oauth App id
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2938,10 +2902,10 @@ class WebhooksApi
     /**
      * Create request for operation 'getWebhookSubscriptions'
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
+     * @param  string $oauth_app_id (required)
      * @param  string $app_id (required)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3072,11 +3036,9 @@ class WebhooksApi
     /**
      * Operation updateWebhookSubscription
      *
-     * Update a webhook subscription object
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription Webhook subscription object (required)
+     * @param  string $oauth_app_id oauth_app_id (required)
+     * @param  int $webhook_subscription_id webhook_subscription_id (required)
+     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription webhook_subscription (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -3091,11 +3053,9 @@ class WebhooksApi
     /**
      * Operation updateWebhookSubscriptionWithHttpInfo
      *
-     * Update a webhook subscription object
-     *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription Webhook subscription object (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -3171,11 +3131,11 @@ class WebhooksApi
     /**
      * Operation updateWebhookSubscriptionAsync
      *
-     * Update a webhook subscription object
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription Webhook subscription object (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -3194,11 +3154,11 @@ class WebhooksApi
     /**
      * Operation updateWebhookSubscriptionAsyncWithHttpInfo
      *
-     * Update a webhook subscription object
+     * 
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription Webhook subscription object (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -3235,9 +3195,9 @@ class WebhooksApi
     /**
      * Create request for operation 'updateWebhookSubscription'
      *
-     * @param  string $oauth_app_id Oauth App identifier (required)
-     * @param  int $webhook_subscription_id Webhook subscription identifier (required)
-     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription Webhook subscription object (required)
+     * @param  string $oauth_app_id (required)
+     * @param  int $webhook_subscription_id (required)
+     * @param  \Flipdish\\Client\Models\WebhookSubscription $webhook_subscription (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException

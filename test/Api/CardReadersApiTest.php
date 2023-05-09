@@ -74,7 +74,7 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cancelCurrentlyInitiatedBluetoothDeviceUpdate
      *
-     * Cancel currently initiated install update for bluetooth terminal.
+     * .
      *
      */
     public function testCancelCurrentlyInitiatedBluetoothDeviceUpdate()
@@ -84,7 +84,7 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cancelReaderAction
      *
-     * Cancel terminals action.
+     * .
      *
      */
     public function testCancelReaderAction()
@@ -94,7 +94,7 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cardReadersGetReader
      *
-     * Get reader.
+     * .
      *
      */
     public function testCardReadersGetReader()
@@ -104,7 +104,7 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for generateStripeTerminalLocation
      *
-     * Get Location ID for Stripe Terminal.
+     * .
      *
      */
     public function testGenerateStripeTerminalLocation()
@@ -114,7 +114,7 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getBluetoothTerminalStatus
      *
-     * Get the status of the bluetooth terminal.
+     * .
      *
      */
     public function testGetBluetoothTerminalStatus()
@@ -124,7 +124,7 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStripeConnectionToken
      *
-     * Get Connection Token For a Stripe Terminal.
+     * .
      *
      */
     public function testGetStripeConnectionToken()
@@ -134,7 +134,7 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for initiateBluetoothTerminalDeviceUpdateCheck
      *
-     * Trigger check for Bluetooth device update on Kiosk.
+     * .
      *
      */
     public function testInitiateBluetoothTerminalDeviceUpdateCheck()
@@ -144,7 +144,7 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for initiateKioskBluetoothPairingMode
      *
-     * Initiate stripe terminal pairing mode.
+     * .
      *
      */
     public function testInitiateKioskBluetoothPairingMode()
@@ -154,7 +154,7 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for initiateKioskBluetoothUpdateInstall
      *
-     * Initiate Kiosk Update Install for bluetooth terminal.
+     * .
      *
      */
     public function testInitiateKioskBluetoothUpdateInstall()
@@ -164,7 +164,7 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for initiateReaderProcessPaymentIntent
      *
-     * Initiate Stripe terminal to Process Payment Intent.
+     * .
      *
      */
     public function testInitiateReaderProcessPaymentIntent()
@@ -184,7 +184,7 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for unRegisterTerminal
      *
-     * Un-register terminal by deleting it from stripe.
+     * .
      *
      */
     public function testUnRegisterTerminal()
@@ -194,7 +194,7 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for unpairCurrentlyPairedBluetoothDevice
      *
-     * Unpair the currently paired stripe terminal.
+     * .
      *
      */
     public function testUnpairCurrentlyPairedBluetoothDevice()

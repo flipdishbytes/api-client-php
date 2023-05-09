@@ -74,7 +74,7 @@ class CampaignsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createLoyaltyCampaign
      *
-     * Creates loyalty campaign.
+     * .
      *
      */
     public function testCreateLoyaltyCampaign()
@@ -84,7 +84,7 @@ class CampaignsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createRetentionCampaign
      *
-     * Creates retention campaign.
+     * .
      *
      */
     public function testCreateRetentionCampaign()
@@ -94,7 +94,7 @@ class CampaignsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getLoyaltyCampaignsForApp
      *
-     * Gets loyalty campaigns for app.
+     * .
      *
      */
     public function testGetLoyaltyCampaignsForApp()
@@ -104,7 +104,7 @@ class CampaignsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getLoyaltyCampaignsForStore
      *
-     * Gets loyalty campaigns for store.
+     * .
      *
      */
     public function testGetLoyaltyCampaignsForStore()
@@ -114,7 +114,7 @@ class CampaignsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getRetentionCampaignsForApp
      *
-     * Gets retention campaigns for app.
+     * .
      *
      */
     public function testGetRetentionCampaignsForApp()
@@ -124,7 +124,7 @@ class CampaignsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getRetentionCampaignsForStore
      *
-     * Gets retention campaigns for store.
+     * .
      *
      */
     public function testGetRetentionCampaignsForStore()
@@ -134,7 +134,7 @@ class CampaignsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getStoreList
      *
-     * Gets list of stores for app.
+     * .
      *
      */
     public function testGetStoreList()
@@ -144,7 +144,7 @@ class CampaignsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for removeCampaign
      *
-     * Deletes a campaign.
+     * .
      *
      */
     public function testRemoveCampaign()
@@ -154,7 +154,7 @@ class CampaignsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateLoyaltyCampaign
      *
-     * Updates loyalty campaign.
+     * .
      *
      */
     public function testUpdateLoyaltyCampaign()
@@ -164,7 +164,7 @@ class CampaignsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateRetentionCampaign
      *
-     * Updates retention campaign.
+     * .
      *
      */
     public function testUpdateRetentionCampaign()

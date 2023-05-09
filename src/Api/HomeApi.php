@@ -90,11 +90,9 @@ class HomeApi
     /**
      * Operation completeHomeAction
      *
-     * [PRIVATE API] Complete Home Action
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $home_action_id Id of the action (required)
-     * @param  bool $is_dismissed  (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $home_action_id home_action_id (required)
+     * @param  bool $is_dismissed is_dismissed (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -109,11 +107,9 @@ class HomeApi
     /**
      * Operation completeHomeActionWithHttpInfo
      *
-     * [PRIVATE API] Complete Home Action
-     *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $home_action_id Id of the action (required)
-     * @param  bool $is_dismissed  (required)
+     * @param  string $app_id (required)
+     * @param  int $home_action_id (required)
+     * @param  bool $is_dismissed (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -218,11 +214,11 @@ class HomeApi
     /**
      * Operation completeHomeActionAsync
      *
-     * [PRIVATE API] Complete Home Action
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $home_action_id Id of the action (required)
-     * @param  bool $is_dismissed  (required)
+     * @param  string $app_id (required)
+     * @param  int $home_action_id (required)
+     * @param  bool $is_dismissed (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -240,11 +236,11 @@ class HomeApi
     /**
      * Operation completeHomeActionAsyncWithHttpInfo
      *
-     * [PRIVATE API] Complete Home Action
+     * 
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $home_action_id Id of the action (required)
-     * @param  bool $is_dismissed  (required)
+     * @param  string $app_id (required)
+     * @param  int $home_action_id (required)
+     * @param  bool $is_dismissed (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -294,9 +290,9 @@ class HomeApi
     /**
      * Create request for operation 'completeHomeAction'
      *
-     * @param  string $app_id App Name Id (required)
-     * @param  int $home_action_id Id of the action (required)
-     * @param  bool $is_dismissed  (required)
+     * @param  string $app_id (required)
+     * @param  int $home_action_id (required)
+     * @param  bool $is_dismissed (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -429,8 +425,6 @@ class HomeApi
     /**
      * Operation dismissOldPortalAction
      *
-     * [PRIVATE API] Complete Home Action
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -444,8 +438,6 @@ class HomeApi
 
     /**
      * Operation dismissOldPortalActionWithHttpInfo
-     *
-     * [PRIVATE API] Complete Home Action
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -551,7 +543,7 @@ class HomeApi
     /**
      * Operation dismissOldPortalActionAsync
      *
-     * [PRIVATE API] Complete Home Action
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -570,7 +562,7 @@ class HomeApi
     /**
      * Operation dismissOldPortalActionAsyncWithHttpInfo
      *
-     * [PRIVATE API] Complete Home Action
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -715,9 +707,7 @@ class HomeApi
     /**
      * Operation getHomeActions
      *
-     * [PRIVATE API] Get Home Actions
-     *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -732,9 +722,7 @@ class HomeApi
     /**
      * Operation getHomeActionsWithHttpInfo
      *
-     * [PRIVATE API] Get Home Actions
-     *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -839,9 +827,9 @@ class HomeApi
     /**
      * Operation getHomeActionsAsync
      *
-     * [PRIVATE API] Get Home Actions
+     * 
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -859,9 +847,9 @@ class HomeApi
     /**
      * Operation getHomeActionsAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get Home Actions
+     * 
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -911,7 +899,7 @@ class HomeApi
     /**
      * Create request for operation 'getHomeActions'
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1020,9 +1008,7 @@ class HomeApi
     /**
      * Operation getHomeStatistics
      *
-     * [PRIVATE API] Get Home Statistics
-     *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1037,9 +1023,7 @@ class HomeApi
     /**
      * Operation getHomeStatisticsWithHttpInfo
      *
-     * [PRIVATE API] Get Home Statistics
-     *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1136,9 +1120,9 @@ class HomeApi
     /**
      * Operation getHomeStatisticsAsync
      *
-     * [PRIVATE API] Get Home Statistics
+     * 
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1156,9 +1140,9 @@ class HomeApi
     /**
      * Operation getHomeStatisticsAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get Home Statistics
+     * 
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1208,7 +1192,7 @@ class HomeApi
     /**
      * Create request for operation 'getHomeStatistics'
      *
-     * @param  string $app_id App Name Id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1317,8 +1301,6 @@ class HomeApi
     /**
      * Operation getOktaPortalFeatureFlag
      *
-     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
-     *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1332,8 +1314,6 @@ class HomeApi
 
     /**
      * Operation getOktaPortalFeatureFlagWithHttpInfo
-     *
-     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1439,7 +1419,7 @@ class HomeApi
     /**
      * Operation getOktaPortalFeatureFlagAsync
      *
-     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+     * 
      *
      *
      * @throws \InvalidArgumentException
@@ -1458,7 +1438,7 @@ class HomeApi
     /**
      * Operation getOktaPortalFeatureFlagAsyncWithHttpInfo
      *
-     * [PRIVATE API] Get Azure KeyVault OktaApiPortalLoginRequired
+     * 
      *
      *
      * @throws \InvalidArgumentException

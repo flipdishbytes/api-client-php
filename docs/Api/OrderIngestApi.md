@@ -4,15 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**orderIngestSubmitNewOrder**](OrderIngestApi.md#orderIngestSubmitNewOrder) | **POST** /api/v1.0/{appNameId}/order-ingest/submit | Provides an ability to ingest a 3rd party order into Flipdish ecosystem
+[**orderIngestSubmitNewOrder**](OrderIngestApi.md#orderIngestSubmitNewOrder) | **POST** /api/v1.0/{appNameId}/order-ingest/submit | 
 
 
 # **orderIngestSubmitNewOrder**
 > \Flipdish\\Client\Models\RestApiResultOrderIngestSubmitOrderResponse orderIngestSubmitNewOrder($order, $app_name_id)
 
-Provides an ability to ingest a 3rd party order into Flipdish ecosystem
 
-[ALPHA - this endpoint is under internal development, it is not available just yet to use in your production system]
 
 ### Example
 ```php

@@ -74,7 +74,7 @@ class PushNotificationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deletePushNotification
      *
-     * [PRIVATE] Push notification to cutomers.
+     * .
      *
      */
     public function testDeletePushNotification()
@@ -84,7 +84,7 @@ class PushNotificationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPushNotifications
      *
-     * [PRIVATE] Push notification to cutomers.
+     * .
      *
      */
     public function testGetPushNotifications()
@@ -94,7 +94,7 @@ class PushNotificationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for schedulePushNotification
      *
-     * [PRIVATE] Push notification to cutomers.
+     * .
      *
      */
     public function testSchedulePushNotification()
@@ -104,7 +104,7 @@ class PushNotificationsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updatePushNotification
      *
-     * [PRIVATE] Update the push notification.
+     * .
      *
      */
     public function testUpdatePushNotification()

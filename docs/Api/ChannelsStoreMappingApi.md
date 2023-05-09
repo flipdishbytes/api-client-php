@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**channelsGetStoreChannelStoreMapping**](ChannelsStoreMappingApi.md#channelsGetStoreChannelStoreMapping) | **GET** /api/v1.0/{appId}/channels/storemappings | Gets the relationship between Flipdish Store and Channel Store
-[**channelsSetStoreChannelStoreMapping**](ChannelsStoreMappingApi.md#channelsSetStoreChannelStoreMapping) | **POST** /api/v1.0/{appId}/channels/storemappings | Sets the relationship between Flipdish Store and Channel Store
+[**channelsGetStoreChannelStoreMapping**](ChannelsStoreMappingApi.md#channelsGetStoreChannelStoreMapping) | **GET** /api/v1.0/{appId}/channels/storemappings | 
+[**channelsSetStoreChannelStoreMapping**](ChannelsStoreMappingApi.md#channelsSetStoreChannelStoreMapping) | **POST** /api/v1.0/{appId}/channels/storemappings | 
 
 
 # **channelsGetStoreChannelStoreMapping**
 > \Flipdish\\Client\Models\RestApiArrayResultStoreChannelStoreMapping channelsGetStoreChannelStoreMapping($app_id, $channel_id)
 
-Gets the relationship between Flipdish Store and Channel Store
+
 
 ### Example
 ```php
@@ -27,8 +27,8 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsStoreMappingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Flipdish App Name Id
-$channel_id = 56; // int | Flipdish Channel ID
+$app_id = "app_id_example"; // string | 
+$channel_id = 56; // int | 
 
 try {
     $result = $apiInstance->channelsGetStoreChannelStoreMapping($app_id, $channel_id);
@@ -43,8 +43,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Flipdish App Name Id |
- **channel_id** | **int**| Flipdish Channel ID |
+ **app_id** | **string**|  |
+ **channel_id** | **int**|  |
 
 ### Return type
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 # **channelsSetStoreChannelStoreMapping**
 > \Flipdish\\Client\Models\RestApiArrayResultStoreChannelStoreMapping channelsSetStoreChannelStoreMapping($app_id, $channel_id, $stores)
 
-Sets the relationship between Flipdish Store and Channel Store
+
 
 ### Example
 ```php
@@ -80,9 +80,9 @@ $apiInstance = new Flipdish\\Client\Api\ChannelsStoreMappingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | Flipdish App Name Id
-$channel_id = 56; // int | Flipdish Channel ID
-$stores = array(new \Flipdish\\Client\Models\ChannelStoreMapping()); // \Flipdish\\Client\Models\ChannelStoreMapping[] | Flipdish and Channel Store configuration
+$app_id = "app_id_example"; // string | 
+$channel_id = 56; // int | 
+$stores = array(new \Flipdish\\Client\Models\ChannelStoreMapping()); // \Flipdish\\Client\Models\ChannelStoreMapping[] | 
 
 try {
     $result = $apiInstance->channelsSetStoreChannelStoreMapping($app_id, $channel_id, $stores);
@@ -97,9 +97,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| Flipdish App Name Id |
- **channel_id** | **int**| Flipdish Channel ID |
- **stores** | [**\Flipdish\\Client\Models\ChannelStoreMapping[]**](../Model/ChannelStoreMapping.md)| Flipdish and Channel Store configuration |
+ **app_id** | **string**|  |
+ **channel_id** | **int**|  |
+ **stores** | [**\Flipdish\\Client\Models\ChannelStoreMapping[]**](../Model/ChannelStoreMapping.md)|  |
 
 ### Return type
 

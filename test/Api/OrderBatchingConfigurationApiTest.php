@@ -74,7 +74,7 @@ class OrderBatchingConfigurationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for get
      *
-     * Returns order batching configuration for a specific store.
+     * .
      *
      */
     public function testGet()
@@ -84,7 +84,7 @@ class OrderBatchingConfigurationApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for post
      *
-     * Sets order batching configuration for a specific store.
+     * .
      *
      */
     public function testPost()

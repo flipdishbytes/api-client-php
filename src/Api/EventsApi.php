@@ -90,10 +90,8 @@ class EventsApi
     /**
      * Operation getCustomerEvents
      *
-     * Get customer events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id app_id (required)
-     * @param  int $customer_id Customer identifier identifier (required)
+     * @param  int $customer_id customer_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -124,10 +122,8 @@ class EventsApi
     /**
      * Operation getCustomerEventsWithHttpInfo
      *
-     * Get customer events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id (required)
-     * @param  int $customer_id Customer identifier identifier (required)
+     * @param  int $customer_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -240,10 +236,10 @@ class EventsApi
     /**
      * Operation getCustomerEventsAsync
      *
-     * Get customer events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $customer_id Customer identifier identifier (required)
+     * @param  int $customer_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -277,10 +273,10 @@ class EventsApi
     /**
      * Operation getCustomerEventsAsyncWithHttpInfo
      *
-     * Get customer events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $customer_id Customer identifier identifier (required)
+     * @param  int $customer_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -347,7 +343,7 @@ class EventsApi
      * Create request for operation 'getCustomerEvents'
      *
      * @param  string $app_id (required)
-     * @param  int $customer_id Customer identifier identifier (required)
+     * @param  int $customer_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -556,11 +552,9 @@ class EventsApi
     /**
      * Operation getEvents
      *
-     * Get events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id app_id (required)
-     * @param  int $white_label_id White Label Id (optional)
-     * @param  int $customer_id Customer Id (optional)
+     * @param  int $white_label_id white_label_id (optional)
+     * @param  int $customer_id customer_id (optional)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -591,11 +585,9 @@ class EventsApi
     /**
      * Operation getEventsWithHttpInfo
      *
-     * Get events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id (required)
-     * @param  int $white_label_id White Label Id (optional)
-     * @param  int $customer_id Customer Id (optional)
+     * @param  int $white_label_id (optional)
+     * @param  int $customer_id (optional)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -708,11 +700,11 @@ class EventsApi
     /**
      * Operation getEventsAsync
      *
-     * Get events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $white_label_id White Label Id (optional)
-     * @param  int $customer_id Customer Id (optional)
+     * @param  int $white_label_id (optional)
+     * @param  int $customer_id (optional)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -746,11 +738,11 @@ class EventsApi
     /**
      * Operation getEventsAsyncWithHttpInfo
      *
-     * Get events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $white_label_id White Label Id (optional)
-     * @param  int $customer_id Customer Id (optional)
+     * @param  int $white_label_id (optional)
+     * @param  int $customer_id (optional)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -817,8 +809,8 @@ class EventsApi
      * Create request for operation 'getEvents'
      *
      * @param  string $app_id (required)
-     * @param  int $white_label_id White Label Id (optional)
-     * @param  int $customer_id Customer Id (optional)
+     * @param  int $white_label_id (optional)
+     * @param  int $customer_id (optional)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -1021,9 +1013,7 @@ class EventsApi
     /**
      * Operation getEventsById
      *
-     * Get event by Id  For technical reasons, the number of records returned is limited to 100.
-     *
-     * @param  string $event_id Event identifier (Guid) (required)
+     * @param  string $event_id event_id (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1039,9 +1029,7 @@ class EventsApi
     /**
      * Operation getEventsByIdWithHttpInfo
      *
-     * Get event by Id  For technical reasons, the number of records returned is limited to 100.
-     *
-     * @param  string $event_id Event identifier (Guid) (required)
+     * @param  string $event_id (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1139,9 +1127,9 @@ class EventsApi
     /**
      * Operation getEventsByIdAsync
      *
-     * Get event by Id  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
-     * @param  string $event_id Event identifier (Guid) (required)
+     * @param  string $event_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1160,9 +1148,9 @@ class EventsApi
     /**
      * Operation getEventsByIdAsyncWithHttpInfo
      *
-     * Get event by Id  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
-     * @param  string $event_id Event identifier (Guid) (required)
+     * @param  string $event_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1213,7 +1201,7 @@ class EventsApi
     /**
      * Create request for operation 'getEventsById'
      *
-     * @param  string $event_id Event identifier (Guid) (required)
+     * @param  string $event_id (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -1337,10 +1325,8 @@ class EventsApi
     /**
      * Operation getMenuEvents
      *
-     * Get menu events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id app_id (required)
-     * @param  int $menu_id Menu Identifier (required)
+     * @param  int $menu_id menu_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -1371,10 +1357,8 @@ class EventsApi
     /**
      * Operation getMenuEventsWithHttpInfo
      *
-     * Get menu events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id (required)
-     * @param  int $menu_id Menu Identifier (required)
+     * @param  int $menu_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -1487,10 +1471,10 @@ class EventsApi
     /**
      * Operation getMenuEventsAsync
      *
-     * Get menu events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $menu_id Menu Identifier (required)
+     * @param  int $menu_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -1524,10 +1508,10 @@ class EventsApi
     /**
      * Operation getMenuEventsAsyncWithHttpInfo
      *
-     * Get menu events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $menu_id Menu Identifier (required)
+     * @param  int $menu_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -1594,7 +1578,7 @@ class EventsApi
      * Create request for operation 'getMenuEvents'
      *
      * @param  string $app_id (required)
-     * @param  int $menu_id Menu Identifier (required)
+     * @param  int $menu_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -1803,10 +1787,8 @@ class EventsApi
     /**
      * Operation getOrderEvents
      *
-     * Get order events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id app_id (required)
-     * @param  int $order_id Order identifier (required)
+     * @param  int $order_id order_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -1837,10 +1819,8 @@ class EventsApi
     /**
      * Operation getOrderEventsWithHttpInfo
      *
-     * Get order events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id (required)
-     * @param  int $order_id Order identifier (required)
+     * @param  int $order_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -1953,10 +1933,10 @@ class EventsApi
     /**
      * Operation getOrderEventsAsync
      *
-     * Get order events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $order_id Order identifier (required)
+     * @param  int $order_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -1990,10 +1970,10 @@ class EventsApi
     /**
      * Operation getOrderEventsAsyncWithHttpInfo
      *
-     * Get order events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $order_id Order identifier (required)
+     * @param  int $order_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -2060,7 +2040,7 @@ class EventsApi
      * Create request for operation 'getOrderEvents'
      *
      * @param  string $app_id (required)
-     * @param  int $order_id Order identifier (required)
+     * @param  int $order_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -2269,10 +2249,8 @@ class EventsApi
     /**
      * Operation getOrderEventsByCustomer
      *
-     * Get order events by customer  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id app_id (required)
-     * @param  int $customer_id Customer identifier (required)
+     * @param  int $customer_id customer_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -2303,10 +2281,8 @@ class EventsApi
     /**
      * Operation getOrderEventsByCustomerWithHttpInfo
      *
-     * Get order events by customer  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id (required)
-     * @param  int $customer_id Customer identifier (required)
+     * @param  int $customer_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -2419,10 +2395,10 @@ class EventsApi
     /**
      * Operation getOrderEventsByCustomerAsync
      *
-     * Get order events by customer  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $customer_id Customer identifier (required)
+     * @param  int $customer_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -2456,10 +2432,10 @@ class EventsApi
     /**
      * Operation getOrderEventsByCustomerAsyncWithHttpInfo
      *
-     * Get order events by customer  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $customer_id Customer identifier (required)
+     * @param  int $customer_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -2526,7 +2502,7 @@ class EventsApi
      * Create request for operation 'getOrderEventsByCustomer'
      *
      * @param  string $app_id (required)
-     * @param  int $customer_id Customer identifier (required)
+     * @param  int $customer_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -2731,10 +2707,8 @@ class EventsApi
     /**
      * Operation getStoreEvents
      *
-     * Get store events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id app_id (required)
-     * @param  int $store_id Id of the store (required)
+     * @param  int $store_id store_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -2765,10 +2739,8 @@ class EventsApi
     /**
      * Operation getStoreEventsWithHttpInfo
      *
-     * Get store events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id (required)
-     * @param  int $store_id Id of the store (required)
+     * @param  int $store_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -2881,10 +2853,10 @@ class EventsApi
     /**
      * Operation getStoreEventsAsync
      *
-     * Get store events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $store_id Id of the store (required)
+     * @param  int $store_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -2918,10 +2890,10 @@ class EventsApi
     /**
      * Operation getStoreEventsAsyncWithHttpInfo
      *
-     * Get store events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $store_id Id of the store (required)
+     * @param  int $store_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -2988,7 +2960,7 @@ class EventsApi
      * Create request for operation 'getStoreEvents'
      *
      * @param  string $app_id (required)
-     * @param  int $store_id Id of the store (required)
+     * @param  int $store_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -3197,10 +3169,8 @@ class EventsApi
     /**
      * Operation getUserEvents
      *
-     * Get user events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id app_id (required)
-     * @param  int $user_id User identifier (required)
+     * @param  int $user_id user_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -3231,10 +3201,8 @@ class EventsApi
     /**
      * Operation getUserEventsWithHttpInfo
      *
-     * Get user events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id (required)
-     * @param  int $user_id User identifier (required)
+     * @param  int $user_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -3347,10 +3315,10 @@ class EventsApi
     /**
      * Operation getUserEventsAsync
      *
-     * Get user events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $user_id User identifier (required)
+     * @param  int $user_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -3384,10 +3352,10 @@ class EventsApi
     /**
      * Operation getUserEventsAsyncWithHttpInfo
      *
-     * Get user events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $user_id User identifier (required)
+     * @param  int $user_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -3454,7 +3422,7 @@ class EventsApi
      * Create request for operation 'getUserEvents'
      *
      * @param  string $app_id (required)
-     * @param  int $user_id User identifier (required)
+     * @param  int $user_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -3663,10 +3631,8 @@ class EventsApi
     /**
      * Operation getWhiteLabelEvents
      *
-     * Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id app_id (required)
-     * @param  int $whitelabel_id White Label Identifier (required)
+     * @param  int $whitelabel_id whitelabel_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -3697,10 +3663,8 @@ class EventsApi
     /**
      * Operation getWhiteLabelEventsWithHttpInfo
      *
-     * Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
-     *
      * @param  string $app_id (required)
-     * @param  int $whitelabel_id White Label Identifier (required)
+     * @param  int $whitelabel_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -3813,10 +3777,10 @@ class EventsApi
     /**
      * Operation getWhiteLabelEventsAsync
      *
-     * Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $whitelabel_id White Label Identifier (required)
+     * @param  int $whitelabel_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -3850,10 +3814,10 @@ class EventsApi
     /**
      * Operation getWhiteLabelEventsAsyncWithHttpInfo
      *
-     * Get WhiteLabel events  For technical reasons, the number of records returned is limited to 100.
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $whitelabel_id White Label Identifier (required)
+     * @param  int $whitelabel_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)
@@ -3920,7 +3884,7 @@ class EventsApi
      * Create request for operation 'getWhiteLabelEvents'
      *
      * @param  string $app_id (required)
-     * @param  int $whitelabel_id White Label Identifier (required)
+     * @param  int $whitelabel_id (required)
      * @param  int $limit The maximum elements to return (optional)
      * @param  int $page The index of the page to return, starting by 1 (optional)
      * @param  \DateTime $start Start date (optional)

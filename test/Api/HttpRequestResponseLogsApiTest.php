@@ -74,7 +74,7 @@ class HttpRequestResponseLogsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getLogs
      *
-     * Get API interaction logs.
+     * .
      *
      */
     public function testGetLogs()

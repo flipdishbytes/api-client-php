@@ -90,10 +90,8 @@ class DeliveryZoneApi
     /**
      * Operation addDeliveryZone
      *
-     * Adds a delivery zone to the store id
-     *
-     * @param  int $store_id Store Id to which the delivery zone will be added (required)
-     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone_base Optional delivery zone, if not supplied will create a default zone (required)
+     * @param  int $store_id store_id (required)
+     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone_base delivery_zone_base (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class DeliveryZoneApi
     /**
      * Operation addDeliveryZoneWithHttpInfo
      *
-     * Adds a delivery zone to the store id
-     *
-     * @param  int $store_id Store Id to which the delivery zone will be added (required)
-     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone_base Optional delivery zone, if not supplied will create a default zone (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone_base (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -208,10 +204,10 @@ class DeliveryZoneApi
     /**
      * Operation addDeliveryZoneAsync
      *
-     * Adds a delivery zone to the store id
+     * 
      *
-     * @param  int $store_id Store Id to which the delivery zone will be added (required)
-     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone_base Optional delivery zone, if not supplied will create a default zone (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone_base (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -229,10 +225,10 @@ class DeliveryZoneApi
     /**
      * Operation addDeliveryZoneAsyncWithHttpInfo
      *
-     * Adds a delivery zone to the store id
+     * 
      *
-     * @param  int $store_id Store Id to which the delivery zone will be added (required)
-     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone_base Optional delivery zone, if not supplied will create a default zone (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone_base (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -282,8 +278,8 @@ class DeliveryZoneApi
     /**
      * Create request for operation 'addDeliveryZone'
      *
-     * @param  int $store_id Store Id to which the delivery zone will be added (required)
-     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone_base Optional delivery zone, if not supplied will create a default zone (required)
+     * @param  int $store_id (required)
+     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone_base (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -401,9 +397,7 @@ class DeliveryZoneApi
     /**
      * Operation getDeliveryZones
      *
-     * Get all the delivery zones associated with a store
-     *
-     * @param  int $store_id Store Id to which the delivery zones are associated (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -418,9 +412,7 @@ class DeliveryZoneApi
     /**
      * Operation getDeliveryZonesWithHttpInfo
      *
-     * Get all the delivery zones associated with a store
-     *
-     * @param  int $store_id Store Id to which the delivery zones are associated (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -517,9 +509,9 @@ class DeliveryZoneApi
     /**
      * Operation getDeliveryZonesAsync
      *
-     * Get all the delivery zones associated with a store
+     * 
      *
-     * @param  int $store_id Store Id to which the delivery zones are associated (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -537,9 +529,9 @@ class DeliveryZoneApi
     /**
      * Operation getDeliveryZonesAsyncWithHttpInfo
      *
-     * Get all the delivery zones associated with a store
+     * 
      *
-     * @param  int $store_id Store Id to which the delivery zones are associated (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -589,7 +581,7 @@ class DeliveryZoneApi
     /**
      * Create request for operation 'getDeliveryZones'
      *
-     * @param  int $store_id Store Id to which the delivery zones are associated (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -698,10 +690,8 @@ class DeliveryZoneApi
     /**
      * Operation removeDeliveryZone
      *
-     * Removes the existing delivery zone
-     *
-     * @param  int $store_id Store Id to which the delivery zone belongs (required)
-     * @param  int $delivery_zone_id Delivery zone id to be removed (required)
+     * @param  int $store_id store_id (required)
+     * @param  int $delivery_zone_id delivery_zone_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -715,10 +705,8 @@ class DeliveryZoneApi
     /**
      * Operation removeDeliveryZoneWithHttpInfo
      *
-     * Removes the existing delivery zone
-     *
-     * @param  int $store_id Store Id to which the delivery zone belongs (required)
-     * @param  int $delivery_zone_id Delivery zone id to be removed (required)
+     * @param  int $store_id (required)
+     * @param  int $delivery_zone_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -793,10 +781,10 @@ class DeliveryZoneApi
     /**
      * Operation removeDeliveryZoneAsync
      *
-     * Removes the existing delivery zone
+     * 
      *
-     * @param  int $store_id Store Id to which the delivery zone belongs (required)
-     * @param  int $delivery_zone_id Delivery zone id to be removed (required)
+     * @param  int $store_id (required)
+     * @param  int $delivery_zone_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -814,10 +802,10 @@ class DeliveryZoneApi
     /**
      * Operation removeDeliveryZoneAsyncWithHttpInfo
      *
-     * Removes the existing delivery zone
+     * 
      *
-     * @param  int $store_id Store Id to which the delivery zone belongs (required)
-     * @param  int $delivery_zone_id Delivery zone id to be removed (required)
+     * @param  int $store_id (required)
+     * @param  int $delivery_zone_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -853,8 +841,8 @@ class DeliveryZoneApi
     /**
      * Create request for operation 'removeDeliveryZone'
      *
-     * @param  int $store_id Store Id to which the delivery zone belongs (required)
-     * @param  int $delivery_zone_id Delivery zone id to be removed (required)
+     * @param  int $store_id (required)
+     * @param  int $delivery_zone_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -977,11 +965,9 @@ class DeliveryZoneApi
     /**
      * Operation updateDeliveryZone
      *
-     * Updates the existing delivery zone
-     *
-     * @param  int $store_id Store Id to which the delivery zone belongs (required)
-     * @param  int $delivery_zone_id Delivery zone id to be updated (required)
-     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone Delta of delivery zone parameters that need to be changed (required)
+     * @param  int $store_id store_id (required)
+     * @param  int $delivery_zone_id delivery_zone_id (required)
+     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone delivery_zone (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -996,11 +982,9 @@ class DeliveryZoneApi
     /**
      * Operation updateDeliveryZoneWithHttpInfo
      *
-     * Updates the existing delivery zone
-     *
-     * @param  int $store_id Store Id to which the delivery zone belongs (required)
-     * @param  int $delivery_zone_id Delivery zone id to be updated (required)
-     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone Delta of delivery zone parameters that need to be changed (required)
+     * @param  int $store_id (required)
+     * @param  int $delivery_zone_id (required)
+     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1097,11 +1081,11 @@ class DeliveryZoneApi
     /**
      * Operation updateDeliveryZoneAsync
      *
-     * Updates the existing delivery zone
+     * 
      *
-     * @param  int $store_id Store Id to which the delivery zone belongs (required)
-     * @param  int $delivery_zone_id Delivery zone id to be updated (required)
-     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone Delta of delivery zone parameters that need to be changed (required)
+     * @param  int $store_id (required)
+     * @param  int $delivery_zone_id (required)
+     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1119,11 +1103,11 @@ class DeliveryZoneApi
     /**
      * Operation updateDeliveryZoneAsyncWithHttpInfo
      *
-     * Updates the existing delivery zone
+     * 
      *
-     * @param  int $store_id Store Id to which the delivery zone belongs (required)
-     * @param  int $delivery_zone_id Delivery zone id to be updated (required)
-     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone Delta of delivery zone parameters that need to be changed (required)
+     * @param  int $store_id (required)
+     * @param  int $delivery_zone_id (required)
+     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1173,9 +1157,9 @@ class DeliveryZoneApi
     /**
      * Create request for operation 'updateDeliveryZone'
      *
-     * @param  int $store_id Store Id to which the delivery zone belongs (required)
-     * @param  int $delivery_zone_id Delivery zone id to be updated (required)
-     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone Delta of delivery zone parameters that need to be changed (required)
+     * @param  int $store_id (required)
+     * @param  int $delivery_zone_id (required)
+     * @param  \Flipdish\\Client\Models\DeliveryZoneBase $delivery_zone (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

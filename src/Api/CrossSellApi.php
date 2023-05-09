@@ -90,12 +90,10 @@ class CrossSellApi
     /**
      * Operation getCrossSellMenuItems
      *
-     * Get all Menu items by MenuId for cross sells
-     *
-     * @param  int $menu_id Requested MenuId (required)
-     * @param  int[] $menu_item_id Selected Menu items (required)
-     * @param  int $limit Set the limit of items returned (required)
-     * @param  double $total_value Get the total cost of items in the basket (required)
+     * @param  int $menu_id menu_id (required)
+     * @param  int[] $menu_item_id menu_item_id (required)
+     * @param  int $limit limit (required)
+     * @param  double $total_value total_value (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -111,12 +109,10 @@ class CrossSellApi
     /**
      * Operation getCrossSellMenuItemsWithHttpInfo
      *
-     * Get all Menu items by MenuId for cross sells
-     *
-     * @param  int $menu_id Requested MenuId (required)
-     * @param  int[] $menu_item_id Selected Menu items (required)
-     * @param  int $limit Set the limit of items returned (required)
-     * @param  double $total_value Get the total cost of items in the basket (required)
+     * @param  int $menu_id (required)
+     * @param  int[] $menu_item_id (required)
+     * @param  int $limit (required)
+     * @param  double $total_value (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -214,12 +210,12 @@ class CrossSellApi
     /**
      * Operation getCrossSellMenuItemsAsync
      *
-     * Get all Menu items by MenuId for cross sells
+     * 
      *
-     * @param  int $menu_id Requested MenuId (required)
-     * @param  int[] $menu_item_id Selected Menu items (required)
-     * @param  int $limit Set the limit of items returned (required)
-     * @param  double $total_value Get the total cost of items in the basket (required)
+     * @param  int $menu_id (required)
+     * @param  int[] $menu_item_id (required)
+     * @param  int $limit (required)
+     * @param  double $total_value (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -238,12 +234,12 @@ class CrossSellApi
     /**
      * Operation getCrossSellMenuItemsAsyncWithHttpInfo
      *
-     * Get all Menu items by MenuId for cross sells
+     * 
      *
-     * @param  int $menu_id Requested MenuId (required)
-     * @param  int[] $menu_item_id Selected Menu items (required)
-     * @param  int $limit Set the limit of items returned (required)
-     * @param  double $total_value Get the total cost of items in the basket (required)
+     * @param  int $menu_id (required)
+     * @param  int[] $menu_item_id (required)
+     * @param  int $limit (required)
+     * @param  double $total_value (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -294,10 +290,10 @@ class CrossSellApi
     /**
      * Create request for operation 'getCrossSellMenuItems'
      *
-     * @param  int $menu_id Requested MenuId (required)
-     * @param  int[] $menu_item_id Selected Menu items (required)
-     * @param  int $limit Set the limit of items returned (required)
-     * @param  double $total_value Get the total cost of items in the basket (required)
+     * @param  int $menu_id (required)
+     * @param  int[] $menu_item_id (required)
+     * @param  int $limit (required)
+     * @param  double $total_value (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException

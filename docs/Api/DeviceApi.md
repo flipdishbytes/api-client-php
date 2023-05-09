@@ -4,18 +4,16 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**assignDevice**](DeviceApi.md#assignDevice) | **POST** /api/v1.0/{appId}/devices/assign | Assign device to AppId. Device must have been enrolled before
-[**enrollDevice**](DeviceApi.md#enrollDevice) | **POST** /api/v1.0/{appId}/devices/enroll | Enroll a new device - this returns a PIN code for actually assigning it later
-[**getDeviceDetails**](DeviceApi.md#getDeviceDetails) | **GET** /api/v1.0/{appId}/devices/device/{deviceModel}/{deviceId} | Get details for a device by model and deviceid
-[**searchDevices**](DeviceApi.md#searchDevices) | **GET** /api/v1.0/{appId}/devices/search | Search devices by AppId and optionally storeId
+[**assignDevice**](DeviceApi.md#assignDevice) | **POST** /api/v1.0/{appId}/devices/assign | 
+[**enrollDevice**](DeviceApi.md#enrollDevice) | **POST** /api/v1.0/{appId}/devices/enroll | 
+[**getDeviceDetails**](DeviceApi.md#getDeviceDetails) | **GET** /api/v1.0/{appId}/devices/device/{deviceModel}/{deviceId} | 
+[**searchDevices**](DeviceApi.md#searchDevices) | **GET** /api/v1.0/{appId}/devices/search | 
 
 
 # **assignDevice**
 > \Flipdish\\Client\Models\RestApiResultClientDeviceEnrollmentResult assignDevice($app_id, $assign_device_request)
 
-Assign device to AppId. Device must have been enrolled before
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -31,8 +29,8 @@ $apiInstance = new Flipdish\\Client\Api\DeviceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Id
-$assign_device_request = new \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice(); // \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice | Assign request
+$app_id = "app_id_example"; // string | 
+$assign_device_request = new \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice(); // \Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice | 
 
 try {
     $result = $apiInstance->assignDevice($app_id, $assign_device_request);
@@ -47,8 +45,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Id |
- **assign_device_request** | [**\Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice**](../Model/ClientDeviceAssignEnrolledDevice.md)| Assign request |
+ **app_id** | **string**|  |
+ **assign_device_request** | [**\Flipdish\\Client\Models\ClientDeviceAssignEnrolledDevice**](../Model/ClientDeviceAssignEnrolledDevice.md)|  |
 
 ### Return type
 
@@ -68,9 +66,7 @@ Name | Type | Description  | Notes
 # **enrollDevice**
 > \Flipdish\\Client\Models\RestApiResultClientDeviceEnrollmentResult enrollDevice($app_id, $device_enrollment_request)
 
-Enroll a new device - this returns a PIN code for actually assigning it later
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -86,8 +82,8 @@ $apiInstance = new Flipdish\\Client\Api\DeviceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Id - not for the device, only for permission checking
-$device_enrollment_request = new \Flipdish\\Client\Models\ClientDeviceEnroll(); // \Flipdish\\Client\Models\ClientDeviceEnroll | Request object for enrolling device
+$app_id = "app_id_example"; // string | 
+$device_enrollment_request = new \Flipdish\\Client\Models\ClientDeviceEnroll(); // \Flipdish\\Client\Models\ClientDeviceEnroll | 
 
 try {
     $result = $apiInstance->enrollDevice($app_id, $device_enrollment_request);
@@ -102,8 +98,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Id - not for the device, only for permission checking |
- **device_enrollment_request** | [**\Flipdish\\Client\Models\ClientDeviceEnroll**](../Model/ClientDeviceEnroll.md)| Request object for enrolling device |
+ **app_id** | **string**|  |
+ **device_enrollment_request** | [**\Flipdish\\Client\Models\ClientDeviceEnroll**](../Model/ClientDeviceEnroll.md)|  |
 
 ### Return type
 
@@ -123,9 +119,7 @@ Name | Type | Description  | Notes
 # **getDeviceDetails**
 > \Flipdish\\Client\Models\RestApiResultClientDevice getDeviceDetails($app_id, $device_model, $device_id)
 
-Get details for a device by model and deviceid
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -141,9 +135,9 @@ $apiInstance = new Flipdish\\Client\Api\DeviceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Id
-$device_model = "device_model_example"; // string | Device Model
-$device_id = "device_id_example"; // string | Device Id
+$app_id = "app_id_example"; // string | 
+$device_model = "device_model_example"; // string | 
+$device_id = "device_id_example"; // string | 
 
 try {
     $result = $apiInstance->getDeviceDetails($app_id, $device_model, $device_id);
@@ -158,9 +152,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Id |
- **device_model** | **string**| Device Model |
- **device_id** | **string**| Device Id |
+ **app_id** | **string**|  |
+ **device_model** | **string**|  |
+ **device_id** | **string**|  |
 
 ### Return type
 
@@ -180,9 +174,7 @@ Name | Type | Description  | Notes
 # **searchDevices**
 > \Flipdish\\Client\Models\RestApiArrayResultClientDeviceSummary searchDevices($app_id, $store_id, $device_model)
 
-Search devices by AppId and optionally storeId
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -198,9 +190,9 @@ $apiInstance = new Flipdish\\Client\Api\DeviceApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App Id
-$store_id = 56; // int | Store Id (optional)
-$device_model = "device_model_example"; // string | Device Model (optional)
+$app_id = "app_id_example"; // string | 
+$store_id = 56; // int | 
+$device_model = "device_model_example"; // string | 
 
 try {
     $result = $apiInstance->searchDevices($app_id, $store_id, $device_model);
@@ -215,9 +207,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App Id |
- **store_id** | **int**| Store Id (optional) | [optional]
- **device_model** | **string**| Device Model (optional) | [optional]
+ **app_id** | **string**|  |
+ **store_id** | **int**|  | [optional]
+ **device_model** | **string**|  | [optional]
 
 ### Return type
 

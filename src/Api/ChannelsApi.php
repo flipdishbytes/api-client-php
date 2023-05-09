@@ -90,10 +90,8 @@ class ChannelsApi
     /**
      * Operation assignAppIdToSalesChannel
      *
-     * Assign a given AppId to a Sales Channel
-     *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $channel_id channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +106,8 @@ class ChannelsApi
     /**
      * Operation assignAppIdToSalesChannelWithHttpInfo
      *
-     * Assign a given AppId to a Sales Channel
-     *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -224,10 +220,10 @@ class ChannelsApi
     /**
      * Operation assignAppIdToSalesChannelAsync
      *
-     * Assign a given AppId to a Sales Channel
+     * 
      *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -245,10 +241,10 @@ class ChannelsApi
     /**
      * Operation assignAppIdToSalesChannelAsyncWithHttpInfo
      *
-     * Assign a given AppId to a Sales Channel
+     * 
      *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -298,8 +294,8 @@ class ChannelsApi
     /**
      * Create request for operation 'assignAppIdToSalesChannel'
      *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -422,11 +418,9 @@ class ChannelsApi
     /**
      * Operation assignStoreToChannel
      *
-     * Assign a Store to a Sales Channel
-     *
-     * @param  int $store_id Store Id (123, 456) (required)
-     * @param  string $app_id AppId (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  int $store_id store_id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $channel_id channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -441,11 +435,9 @@ class ChannelsApi
     /**
      * Operation assignStoreToChannelWithHttpInfo
      *
-     * Assign a Store to a Sales Channel
-     *
-     * @param  int $store_id Store Id (123, 456) (required)
-     * @param  string $app_id AppId (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  int $store_id (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -558,11 +550,11 @@ class ChannelsApi
     /**
      * Operation assignStoreToChannelAsync
      *
-     * Assign a Store to a Sales Channel
+     * 
      *
-     * @param  int $store_id Store Id (123, 456) (required)
-     * @param  string $app_id AppId (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  int $store_id (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -580,11 +572,11 @@ class ChannelsApi
     /**
      * Operation assignStoreToChannelAsyncWithHttpInfo
      *
-     * Assign a Store to a Sales Channel
+     * 
      *
-     * @param  int $store_id Store Id (123, 456) (required)
-     * @param  string $app_id AppId (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  int $store_id (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -634,9 +626,9 @@ class ChannelsApi
     /**
      * Create request for operation 'assignStoreToChannel'
      *
-     * @param  int $store_id Store Id (123, 456) (required)
-     * @param  string $app_id AppId (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  int $store_id (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -765,11 +757,9 @@ class ChannelsApi
     /**
      * Operation attachStoreToSalesChannel
      *
-     * Attachs the specified store to the given sales channel.
-     *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param  int $store_id Store Id (Phyisical Restaurant) to attach. (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $channel_id channel_id (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -784,11 +774,9 @@ class ChannelsApi
     /**
      * Operation attachStoreToSalesChannelWithHttpInfo
      *
-     * Attachs the specified store to the given sales channel.
-     *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param  int $store_id Store Id (Phyisical Restaurant) to attach. (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -885,11 +873,11 @@ class ChannelsApi
     /**
      * Operation attachStoreToSalesChannelAsync
      *
-     * Attachs the specified store to the given sales channel.
+     * 
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param  int $store_id Store Id (Phyisical Restaurant) to attach. (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -907,11 +895,11 @@ class ChannelsApi
     /**
      * Operation attachStoreToSalesChannelAsyncWithHttpInfo
      *
-     * Attachs the specified store to the given sales channel.
+     * 
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param  int $store_id Store Id (Phyisical Restaurant) to attach. (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -961,9 +949,9 @@ class ChannelsApi
     /**
      * Create request for operation 'attachStoreToSalesChannel'
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param  int $store_id Store Id (Phyisical Restaurant) to attach. (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1100,10 +1088,8 @@ class ChannelsApi
     /**
      * Operation detachAllStoresFromSalesChannel
      *
-     * Detaches all the stores from the given sales channel.
-     *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $channel_id channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1118,10 +1104,8 @@ class ChannelsApi
     /**
      * Operation detachAllStoresFromSalesChannelWithHttpInfo
      *
-     * Detaches all the stores from the given sales channel.
-     *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1218,10 +1202,10 @@ class ChannelsApi
     /**
      * Operation detachAllStoresFromSalesChannelAsync
      *
-     * Detaches all the stores from the given sales channel.
+     * 
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1239,10 +1223,10 @@ class ChannelsApi
     /**
      * Operation detachAllStoresFromSalesChannelAsyncWithHttpInfo
      *
-     * Detaches all the stores from the given sales channel.
+     * 
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1292,8 +1276,8 @@ class ChannelsApi
     /**
      * Create request for operation 'detachAllStoresFromSalesChannel'
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1416,11 +1400,9 @@ class ChannelsApi
     /**
      * Operation detachStoreFromSalesChannel
      *
-     * Detaches the specified store from the given sales channel.
-     *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param  int $store_id Store Id (Phyisical Restaurant) to detach. (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $channel_id channel_id (required)
+     * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1435,11 +1417,9 @@ class ChannelsApi
     /**
      * Operation detachStoreFromSalesChannelWithHttpInfo
      *
-     * Detaches the specified store from the given sales channel.
-     *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param  int $store_id Store Id (Phyisical Restaurant) to detach. (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1536,11 +1516,11 @@ class ChannelsApi
     /**
      * Operation detachStoreFromSalesChannelAsync
      *
-     * Detaches the specified store from the given sales channel.
+     * 
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param  int $store_id Store Id (Phyisical Restaurant) to detach. (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1558,11 +1538,11 @@ class ChannelsApi
     /**
      * Operation detachStoreFromSalesChannelAsyncWithHttpInfo
      *
-     * Detaches the specified store from the given sales channel.
+     * 
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param  int $store_id Store Id (Phyisical Restaurant) to detach. (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1612,9 +1592,9 @@ class ChannelsApi
     /**
      * Create request for operation 'detachStoreFromSalesChannel'
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
-     * @param  int $store_id Store Id (Phyisical Restaurant) to detach. (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
+     * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1751,9 +1731,7 @@ class ChannelsApi
     /**
      * Operation getAssignedChannels
      *
-     * Returns a list of sales channels that are assigned to a given AppId
-     *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1768,9 +1746,7 @@ class ChannelsApi
     /**
      * Operation getAssignedChannelsWithHttpInfo
      *
-     * Returns a list of sales channels that are assigned to a given AppId
-     *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1875,9 +1851,9 @@ class ChannelsApi
     /**
      * Operation getAssignedChannelsAsync
      *
-     * Returns a list of sales channels that are assigned to a given AppId
+     * 
      *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1895,9 +1871,9 @@ class ChannelsApi
     /**
      * Operation getAssignedChannelsAsyncWithHttpInfo
      *
-     * Returns a list of sales channels that are assigned to a given AppId
+     * 
      *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1947,7 +1923,7 @@ class ChannelsApi
     /**
      * Create request for operation 'getAssignedChannels'
      *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2056,9 +2032,7 @@ class ChannelsApi
     /**
      * Operation getAvailableChannels
      *
-     * Returns a list of sales channels that are not yet assigned to a given AppId
-     *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2073,9 +2047,7 @@ class ChannelsApi
     /**
      * Operation getAvailableChannelsWithHttpInfo
      *
-     * Returns a list of sales channels that are not yet assigned to a given AppId
-     *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2180,9 +2152,9 @@ class ChannelsApi
     /**
      * Operation getAvailableChannelsAsync
      *
-     * Returns a list of sales channels that are not yet assigned to a given AppId
+     * 
      *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2200,9 +2172,9 @@ class ChannelsApi
     /**
      * Operation getAvailableChannelsAsyncWithHttpInfo
      *
-     * Returns a list of sales channels that are not yet assigned to a given AppId
+     * 
      *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2252,7 +2224,7 @@ class ChannelsApi
     /**
      * Create request for operation 'getAvailableChannels'
      *
-     * @param  string $app_id Application Id (AppNameIdxxx) (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2361,10 +2333,8 @@ class ChannelsApi
     /**
      * Operation getChannel
      *
-     * Returns a Sales Channel by Id.
-     *
-     * @param  int $id ChannelId (required)
-     * @param  string $app_id AppId (required)
+     * @param  int $id id (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2379,10 +2349,8 @@ class ChannelsApi
     /**
      * Operation getChannelWithHttpInfo
      *
-     * Returns a Sales Channel by Id.
-     *
-     * @param  int $id ChannelId (required)
-     * @param  string $app_id AppId (required)
+     * @param  int $id (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2495,10 +2463,10 @@ class ChannelsApi
     /**
      * Operation getChannelAsync
      *
-     * Returns a Sales Channel by Id.
+     * 
      *
-     * @param  int $id ChannelId (required)
-     * @param  string $app_id AppId (required)
+     * @param  int $id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2516,10 +2484,10 @@ class ChannelsApi
     /**
      * Operation getChannelAsyncWithHttpInfo
      *
-     * Returns a Sales Channel by Id.
+     * 
      *
-     * @param  int $id ChannelId (required)
-     * @param  string $app_id AppId (required)
+     * @param  int $id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2569,8 +2537,8 @@ class ChannelsApi
     /**
      * Create request for operation 'getChannel'
      *
-     * @param  int $id ChannelId (required)
-     * @param  string $app_id AppId (required)
+     * @param  int $id (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2693,8 +2661,6 @@ class ChannelsApi
     /**
      * Operation getChannels
      *
-     * Returns a list of enabled Channels
-     *
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -2709,8 +2675,6 @@ class ChannelsApi
 
     /**
      * Operation getChannelsWithHttpInfo
-     *
-     * Returns a list of enabled Channels
      *
      * @param  string $app_id (required)
      *
@@ -2817,7 +2781,7 @@ class ChannelsApi
     /**
      * Operation getChannelsAsync
      *
-     * Returns a list of enabled Channels
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -2837,7 +2801,7 @@ class ChannelsApi
     /**
      * Operation getChannelsAsyncWithHttpInfo
      *
-     * Returns a list of enabled Channels
+     * 
      *
      * @param  string $app_id (required)
      *
@@ -2998,10 +2962,8 @@ class ChannelsApi
     /**
      * Operation getStoresAssignedToChannel
      *
-     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
-     *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $channel_id channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3016,10 +2978,8 @@ class ChannelsApi
     /**
      * Operation getStoresAssignedToChannelWithHttpInfo
      *
-     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
-     *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3116,10 +3076,10 @@ class ChannelsApi
     /**
      * Operation getStoresAssignedToChannelAsync
      *
-     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
+     * 
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3137,10 +3097,10 @@ class ChannelsApi
     /**
      * Operation getStoresAssignedToChannelAsyncWithHttpInfo
      *
-     * Returns a list of stores of an AppId that are assigned to a given Sales Channel
+     * 
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3190,8 +3150,8 @@ class ChannelsApi
     /**
      * Create request for operation 'getStoresAssignedToChannel'
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3314,10 +3274,8 @@ class ChannelsApi
     /**
      * Operation getStoresBySalesChannel
      *
-     * Returns a list of store ids attached to the given channel type for the specified app.
-     *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $channel_id channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3332,10 +3290,8 @@ class ChannelsApi
     /**
      * Operation getStoresBySalesChannelWithHttpInfo
      *
-     * Returns a list of store ids attached to the given channel type for the specified app.
-     *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3432,10 +3388,10 @@ class ChannelsApi
     /**
      * Operation getStoresBySalesChannelAsync
      *
-     * Returns a list of store ids attached to the given channel type for the specified app.
+     * 
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3453,10 +3409,10 @@ class ChannelsApi
     /**
      * Operation getStoresBySalesChannelAsyncWithHttpInfo
      *
-     * Returns a list of store ids attached to the given channel type for the specified app.
+     * 
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3506,8 +3462,8 @@ class ChannelsApi
     /**
      * Create request for operation 'getStoresBySalesChannel'
      *
-     * @param  string $app_id Application Id (AppNameId) (required)
-     * @param  int $channel_id Type of sales channel (Android, IOS, Web, etc.) (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3630,11 +3586,9 @@ class ChannelsApi
     /**
      * Operation unassignStoreFromChannel
      *
-     * Unassign a Store from a Sales Channel
-     *
-     * @param  int $store_id Store Id (123, 456) (required)
-     * @param  string $app_id AppId (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  int $store_id store_id (required)
+     * @param  string $app_id app_id (required)
+     * @param  int $channel_id channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3649,11 +3603,9 @@ class ChannelsApi
     /**
      * Operation unassignStoreFromChannelWithHttpInfo
      *
-     * Unassign a Store from a Sales Channel
-     *
-     * @param  int $store_id Store Id (123, 456) (required)
-     * @param  string $app_id AppId (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  int $store_id (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3758,11 +3710,11 @@ class ChannelsApi
     /**
      * Operation unassignStoreFromChannelAsync
      *
-     * Unassign a Store from a Sales Channel
+     * 
      *
-     * @param  int $store_id Store Id (123, 456) (required)
-     * @param  string $app_id AppId (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  int $store_id (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3780,11 +3732,11 @@ class ChannelsApi
     /**
      * Operation unassignStoreFromChannelAsyncWithHttpInfo
      *
-     * Unassign a Store from a Sales Channel
+     * 
      *
-     * @param  int $store_id Store Id (123, 456) (required)
-     * @param  string $app_id AppId (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  int $store_id (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3834,9 +3786,9 @@ class ChannelsApi
     /**
      * Create request for operation 'unassignStoreFromChannel'
      *
-     * @param  int $store_id Store Id (123, 456) (required)
-     * @param  string $app_id AppId (AppNameIdxxx) (required)
-     * @param  int $channel_id Channel Id (123, 456) (required)
+     * @param  int $store_id (required)
+     * @param  string $app_id (required)
+     * @param  int $channel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

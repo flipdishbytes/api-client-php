@@ -74,7 +74,7 @@ class PaymentIntentsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPaymentIntent
      *
-     * Returns stripe payment intent for a given id.
+     * .
      *
      */
     public function testGetPaymentIntent()
