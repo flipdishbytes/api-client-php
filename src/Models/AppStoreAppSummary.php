@@ -61,6 +61,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
         'id' => 'string',
         'verification_status' => 'string',
         'logo' => 'string',
+        'internal' => 'bool',
         'name' => 'string',
         'description' => 'string',
         'is_enabled' => 'bool',
@@ -78,6 +79,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
         'id' => null,
         'verification_status' => null,
         'logo' => null,
+        'internal' => null,
         'name' => null,
         'description' => null,
         'is_enabled' => null,
@@ -116,6 +118,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
         'id' => 'Id',
         'verification_status' => 'VerificationStatus',
         'logo' => 'Logo',
+        'internal' => 'Internal',
         'name' => 'Name',
         'description' => 'Description',
         'is_enabled' => 'IsEnabled',
@@ -133,6 +136,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
         'id' => 'setId',
         'verification_status' => 'setVerificationStatus',
         'logo' => 'setLogo',
+        'internal' => 'setInternal',
         'name' => 'setName',
         'description' => 'setDescription',
         'is_enabled' => 'setIsEnabled',
@@ -150,6 +154,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
         'id' => 'getId',
         'verification_status' => 'getVerificationStatus',
         'logo' => 'getLogo',
+        'internal' => 'getInternal',
         'name' => 'getName',
         'description' => 'getDescription',
         'is_enabled' => 'getIsEnabled',
@@ -308,6 +313,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['verification_status'] = isset($data['verification_status']) ? $data['verification_status'] : null;
         $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
+        $this->container['internal'] = isset($data['internal']) ? $data['internal'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
@@ -325,6 +331,9 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
         if ($this->container['verification_status'] === null) {
             $invalidProperties[] = "'verification_status' can't be null";
         }
@@ -336,6 +345,9 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
             );
         }
 
+        if ($this->container['internal'] === null) {
+            $invalidProperties[] = "'internal' can't be null";
+        }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
@@ -440,6 +452,30 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     public function setLogo($logo)
     {
         $this->container['logo'] = $logo;
+
+        return $this;
+    }
+
+    /**
+     * Gets internal
+     *
+     * @return bool
+     */
+    public function getInternal()
+    {
+        return $this->container['internal'];
+    }
+
+    /**
+     * Sets internal
+     *
+     * @param bool $internal Internal
+     *
+     * @return $this
+     */
+    public function setInternal($internal)
+    {
+        $this->container['internal'] = $internal;
 
         return $this;
     }

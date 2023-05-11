@@ -64,6 +64,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         'stores' => '\Flipdish\\Client\Models\ConfiguredStore[]',
         'configuration_type' => 'string',
         'store_selector_type' => 'string',
+        'internal' => 'bool',
         'app_store_app_id' => 'string',
         'name' => 'string',
         'description' => 'string',
@@ -83,6 +84,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         'stores' => null,
         'configuration_type' => null,
         'store_selector_type' => null,
+        'internal' => null,
         'app_store_app_id' => null,
         'name' => null,
         'description' => null,
@@ -123,6 +125,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         'stores' => 'Stores',
         'configuration_type' => 'ConfigurationType',
         'store_selector_type' => 'StoreSelectorType',
+        'internal' => 'Internal',
         'app_store_app_id' => 'AppStoreAppId',
         'name' => 'Name',
         'description' => 'Description',
@@ -142,6 +145,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         'stores' => 'setStores',
         'configuration_type' => 'setConfigurationType',
         'store_selector_type' => 'setStoreSelectorType',
+        'internal' => 'setInternal',
         'app_store_app_id' => 'setAppStoreAppId',
         'name' => 'setName',
         'description' => 'setDescription',
@@ -161,6 +165,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         'stores' => 'getStores',
         'configuration_type' => 'getConfigurationType',
         'store_selector_type' => 'getStoreSelectorType',
+        'internal' => 'getInternal',
         'app_store_app_id' => 'getAppStoreAppId',
         'name' => 'getName',
         'description' => 'getDescription',
@@ -266,6 +271,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         $this->container['stores'] = isset($data['stores']) ? $data['stores'] : null;
         $this->container['configuration_type'] = isset($data['configuration_type']) ? $data['configuration_type'] : null;
         $this->container['store_selector_type'] = isset($data['store_selector_type']) ? $data['store_selector_type'] : null;
+        $this->container['internal'] = isset($data['internal']) ? $data['internal'] : null;
         $this->container['app_store_app_id'] = isset($data['app_store_app_id']) ? $data['app_store_app_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -294,6 +300,9 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
         if ($this->container['stores'] === null) {
             $invalidProperties[] = "'stores' can't be null";
         }
+        if ($this->container['configuration_type'] === null) {
+            $invalidProperties[] = "'configuration_type' can't be null";
+        }
         $allowedValues = $this->getConfigurationTypeAllowableValues();
         if (!is_null($this->container['configuration_type']) && !in_array($this->container['configuration_type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -302,6 +311,9 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
             );
         }
 
+        if ($this->container['store_selector_type'] === null) {
+            $invalidProperties[] = "'store_selector_type' can't be null";
+        }
         $allowedValues = $this->getStoreSelectorTypeAllowableValues();
         if (!is_null($this->container['store_selector_type']) && !in_array($this->container['store_selector_type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -310,6 +322,9 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
             );
         }
 
+        if ($this->container['internal'] === null) {
+            $invalidProperties[] = "'internal' can't be null";
+        }
         if ($this->container['app_store_app_id'] === null) {
             $invalidProperties[] = "'app_store_app_id' can't be null";
         }
@@ -450,7 +465,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     public function setConfigurationType($configuration_type)
     {
         $allowedValues = $this->getConfigurationTypeAllowableValues();
-        if (!is_null($configuration_type) && !in_array($configuration_type, $allowedValues, true)) {
+        if (!in_array($configuration_type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'configuration_type', must be one of '%s'",
@@ -483,7 +498,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     public function setStoreSelectorType($store_selector_type)
     {
         $allowedValues = $this->getStoreSelectorTypeAllowableValues();
-        if (!is_null($store_selector_type) && !in_array($store_selector_type, $allowedValues, true)) {
+        if (!in_array($store_selector_type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'store_selector_type', must be one of '%s'",
@@ -492,6 +507,30 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
             );
         }
         $this->container['store_selector_type'] = $store_selector_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets internal
+     *
+     * @return bool
+     */
+    public function getInternal()
+    {
+        return $this->container['internal'];
+    }
+
+    /**
+     * Sets internal
+     *
+     * @param bool $internal Internal
+     *
+     * @return $this
+     */
+    public function setInternal($internal)
+    {
+        $this->container['internal'] = $internal;
 
         return $this;
     }

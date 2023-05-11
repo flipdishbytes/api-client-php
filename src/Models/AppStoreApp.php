@@ -59,6 +59,7 @@ class AppStoreApp implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
+        'internal' => 'bool',
         'verification_status' => 'string',
         'logo' => 'string',
         'o_auth_app_id' => 'string',
@@ -88,6 +89,7 @@ class AppStoreApp implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
+        'internal' => null,
         'verification_status' => null,
         'logo' => null,
         'o_auth_app_id' => null,
@@ -138,6 +140,7 @@ class AppStoreApp implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'Id',
+        'internal' => 'Internal',
         'verification_status' => 'VerificationStatus',
         'logo' => 'Logo',
         'o_auth_app_id' => 'OAuthAppId',
@@ -167,6 +170,7 @@ class AppStoreApp implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'internal' => 'setInternal',
         'verification_status' => 'setVerificationStatus',
         'logo' => 'setLogo',
         'o_auth_app_id' => 'setOAuthAppId',
@@ -196,6 +200,7 @@ class AppStoreApp implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'internal' => 'getInternal',
         'verification_status' => 'getVerificationStatus',
         'logo' => 'getLogo',
         'o_auth_app_id' => 'getOAuthAppId',
@@ -438,6 +443,7 @@ class AppStoreApp implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['internal'] = isset($data['internal']) ? $data['internal'] : null;
         $this->container['verification_status'] = isset($data['verification_status']) ? $data['verification_status'] : null;
         $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
         $this->container['o_auth_app_id'] = isset($data['o_auth_app_id']) ? $data['o_auth_app_id'] : null;
@@ -471,6 +477,9 @@ class AppStoreApp implements ModelInterface, ArrayAccess
 
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['internal'] === null) {
+            $invalidProperties[] = "'internal' can't be null";
         }
         if ($this->container['verification_status'] === null) {
             $invalidProperties[] = "'verification_status' can't be null";
@@ -577,6 +586,30 @@ class AppStoreApp implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets internal
+     *
+     * @return bool
+     */
+    public function getInternal()
+    {
+        return $this->container['internal'];
+    }
+
+    /**
+     * Sets internal
+     *
+     * @param bool $internal Internal
+     *
+     * @return $this
+     */
+    public function setInternal($internal)
+    {
+        $this->container['internal'] = $internal;
 
         return $this;
     }

@@ -119,6 +119,13 @@ class AppStoreAppConfigurationSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "internal"
+     */
+    public function testPropertyInternal()
+    {
+    }
+
+    /**
      * Test attribute "app_store_app_id"
      */
     public function testPropertyAppStoreAppId()

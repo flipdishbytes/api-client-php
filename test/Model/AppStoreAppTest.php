@@ -84,6 +84,13 @@ class AppStoreAppTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "internal"
+     */
+    public function testPropertyInternal()
+    {
+    }
+
+    /**
      * Test attribute "verification_status"
      */
     public function testPropertyVerificationStatus()

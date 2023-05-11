@@ -7,8 +7,9 @@ Name | Type | Description | Notes
 **app_id** | **string** | App Id | 
 **is_enabled** | **bool** | Is enabled | 
 **stores** | [**\Flipdish\\Client\Models\ConfiguredStore[]**](ConfiguredStore.md) | List of stores | 
-**configuration_type** | **string** | Configuration type | [optional] 
-**store_selector_type** | **string** | Store selector type | [optional] 
+**configuration_type** | **string** | Configuration type | 
+**store_selector_type** | **string** | Store selector type | 
+**internal** | **bool** | Internal | 
 **app_store_app_id** | **string** | Unique App store app id | 
 **name** | **string** | Name of Appstore app | 
 **description** | **string** | Description | 

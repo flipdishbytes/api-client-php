@@ -98,6 +98,13 @@ class AppStoreAppSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "internal"
+     */
+    public function testPropertyInternal()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
