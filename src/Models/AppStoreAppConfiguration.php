@@ -67,6 +67,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'verification_status' => 'string',
         'logo' => 'string',
         'o_auth_app_id' => 'string',
+        'internal' => 'bool',
         'details' => 'string',
         'configuration_type' => 'string',
         'store_selector_type' => 'string',
@@ -100,6 +101,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'verification_status' => null,
         'logo' => null,
         'o_auth_app_id' => null,
+        'internal' => null,
         'details' => null,
         'configuration_type' => null,
         'store_selector_type' => null,
@@ -154,6 +156,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'verification_status' => 'VerificationStatus',
         'logo' => 'Logo',
         'o_auth_app_id' => 'OAuthAppId',
+        'internal' => 'Internal',
         'details' => 'Details',
         'configuration_type' => 'ConfigurationType',
         'store_selector_type' => 'StoreSelectorType',
@@ -187,6 +190,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'verification_status' => 'setVerificationStatus',
         'logo' => 'setLogo',
         'o_auth_app_id' => 'setOAuthAppId',
+        'internal' => 'setInternal',
         'details' => 'setDetails',
         'configuration_type' => 'setConfigurationType',
         'store_selector_type' => 'setStoreSelectorType',
@@ -220,6 +224,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         'verification_status' => 'getVerificationStatus',
         'logo' => 'getLogo',
         'o_auth_app_id' => 'getOAuthAppId',
+        'internal' => 'getInternal',
         'details' => 'getDetails',
         'configuration_type' => 'getConfigurationType',
         'store_selector_type' => 'getStoreSelectorType',
@@ -466,6 +471,7 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
         $this->container['verification_status'] = isset($data['verification_status']) ? $data['verification_status'] : null;
         $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
         $this->container['o_auth_app_id'] = isset($data['o_auth_app_id']) ? $data['o_auth_app_id'] : null;
+        $this->container['internal'] = isset($data['internal']) ? $data['internal'] : null;
         $this->container['details'] = isset($data['details']) ? $data['details'] : null;
         $this->container['configuration_type'] = isset($data['configuration_type']) ? $data['configuration_type'] : null;
         $this->container['store_selector_type'] = isset($data['store_selector_type']) ? $data['store_selector_type'] : null;
@@ -518,6 +524,9 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
 
         if ($this->container['o_auth_app_id'] === null) {
             $invalidProperties[] = "'o_auth_app_id' can't be null";
+        }
+        if ($this->container['internal'] === null) {
+            $invalidProperties[] = "'internal' can't be null";
         }
         if ($this->container['details'] === null) {
             $invalidProperties[] = "'details' can't be null";
@@ -811,6 +820,30 @@ class AppStoreAppConfiguration implements ModelInterface, ArrayAccess
     public function setOAuthAppId($o_auth_app_id)
     {
         $this->container['o_auth_app_id'] = $o_auth_app_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets internal
+     *
+     * @return bool
+     */
+    public function getInternal()
+    {
+        return $this->container['internal'];
+    }
+
+    /**
+     * Sets internal
+     *
+     * @param bool $internal Internal
+     *
+     * @return $this
+     */
+    public function setInternal($internal)
+    {
+        $this->container['internal'] = $internal;
 
         return $this;
     }

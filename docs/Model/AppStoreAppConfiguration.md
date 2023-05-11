@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **verification_status** | **string** | Application verification status | 
 **logo** | **string** | Logo | [optional] 
 **o_auth_app_id** | **string** | OAuth App identifier | 
+**internal** | **bool** | Internal | 
 **details** | **string** | Details | 
 **configuration_type** | **string** | Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt; | 
 **store_selector_type** | **string** | Store selector type | 

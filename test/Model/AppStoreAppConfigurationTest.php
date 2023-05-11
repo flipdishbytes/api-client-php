@@ -140,6 +140,13 @@ class AppStoreAppConfigurationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "internal"
+     */
+    public function testPropertyInternal()
+    {
+    }
+
+    /**
      * Test attribute "details"
      */
     public function testPropertyDetails()
