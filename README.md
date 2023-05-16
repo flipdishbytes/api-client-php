@@ -218,12 +218,6 @@ Class | Method | HTTP request | Description
 *CrossSellApi* | [**getCrossSellMenuItems**](docs/Api/CrossSellApi.md#getcrosssellmenuitems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | 
 *CustomersApi* | [**getCustomerById**](docs/Api/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
 *CustomersApi* | [**updateCustomerById**](docs/Api/CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | 
-*DeliveryTrackingApi* | [**assignDriverToOrder**](docs/Api/DeliveryTrackingApi.md#assigndrivertoorder) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders/{orderId} | 
-*DeliveryTrackingApi* | [**assignDriverToOrders**](docs/Api/DeliveryTrackingApi.md#assigndrivertoorders) | **POST** /api/v1.0/{appId}/drivers/{driverId}/orders | 
-*DeliveryTrackingApi* | [**getDrivers**](docs/Api/DeliveryTrackingApi.md#getdrivers) | **GET** /api/v1.0/{appId}/drivers | 
-*DeliveryTrackingApi* | [**inviteDriverToApp**](docs/Api/DeliveryTrackingApi.md#invitedrivertoapp) | **POST** /api/v1.0/{appId}/drivers | 
-*DeliveryTrackingApi* | [**removeDriverFromApp**](docs/Api/DeliveryTrackingApi.md#removedriverfromapp) | **DELETE** /api/v1.0/{appId}/drivers/{driverId} | 
-*DeliveryTrackingApi* | [**unassignDriverFromOrder**](docs/Api/DeliveryTrackingApi.md#unassigndriverfromorder) | **DELETE** /api/v1.0/{appId}/orders/{orderId}/driver | 
 *DeliveryZoneApi* | [**addDeliveryZone**](docs/Api/DeliveryZoneApi.md#adddeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones | 
 *DeliveryZoneApi* | [**getDeliveryZones**](docs/Api/DeliveryZoneApi.md#getdeliveryzones) | **GET** /api/v1.0/stores/{storeId}/deliveryzones | 
 *DeliveryZoneApi* | [**removeDeliveryZone**](docs/Api/DeliveryZoneApi.md#removedeliveryzone) | **DELETE** /api/v1.0/stores/{storeId}/deliveryzones/{deliveryZoneId} | 
@@ -232,17 +226,17 @@ Class | Method | HTTP request | Description
 *DeviceApi* | [**enrollDevice**](docs/Api/DeviceApi.md#enrolldevice) | **POST** /api/v1.0/{appId}/devices/enroll | 
 *DeviceApi* | [**getDeviceDetails**](docs/Api/DeviceApi.md#getdevicedetails) | **GET** /api/v1.0/{appId}/devices/device/{deviceModel}/{deviceId} | 
 *DeviceApi* | [**searchDevices**](docs/Api/DeviceApi.md#searchdevices) | **GET** /api/v1.0/{appId}/devices/search | 
-*DriversApi* | [**addDriverNotificationToken**](docs/Api/DriversApi.md#adddrivernotificationtoken) | **POST** /api/v1.0/drivers/token | 
-*DriversApi* | [**deleteDriverProfileImage**](docs/Api/DriversApi.md#deletedriverprofileimage) | **DELETE** /api/v1.0/drivers/profile/image | 
-*DriversApi* | [**driverLogin**](docs/Api/DriversApi.md#driverlogin) | **POST** /api/v1.0/drivers/login | 
-*DriversApi* | [**driverRequestLoginCodeSms**](docs/Api/DriversApi.md#driverrequestlogincodesms) | **POST** /api/v1.0/drivers/pin | 
-*DriversApi* | [**getDriverProfile**](docs/Api/DriversApi.md#getdriverprofile) | **GET** /api/v1.0/drivers/profile | 
-*DriversApi* | [**getStoresForDriver**](docs/Api/DriversApi.md#getstoresfordriver) | **GET** /api/v1.0/drivers/assignedstores | 
-*DriversApi* | [**removeDriverNotificationToken**](docs/Api/DriversApi.md#removedrivernotificationtoken) | **DELETE** /api/v1.0/drivers/token | 
-*DriversApi* | [**setDriverPresenceForStore**](docs/Api/DriversApi.md#setdriverpresenceforstore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
-*DriversApi* | [**setDriverProfileImage**](docs/Api/DriversApi.md#setdriverprofileimage) | **POST** /api/v1.0/drivers/profile/image | 
-*DriversApi* | [**updateDeliveryTrackingStatus**](docs/Api/DriversApi.md#updatedeliverytrackingstatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
-*DriversApi* | [**updateDriverProfile**](docs/Api/DriversApi.md#updatedriverprofile) | **POST** /api/v1.0/drivers/profile | 
+*DriversApi* | [**driversAddDriverNotificationToken**](docs/Api/DriversApi.md#driversadddrivernotificationtoken) | **POST** /api/v1.0/drivers/token | 
+*DriversApi* | [**driversDeleteDriverProfileImage**](docs/Api/DriversApi.md#driversdeletedriverprofileimage) | **DELETE** /api/v1.0/drivers/profile/image | 
+*DriversApi* | [**driversDriverLogin**](docs/Api/DriversApi.md#driversdriverlogin) | **POST** /api/v1.0/drivers/login | 
+*DriversApi* | [**driversDriverRequestLoginCodeSms**](docs/Api/DriversApi.md#driversdriverrequestlogincodesms) | **POST** /api/v1.0/drivers/pin | 
+*DriversApi* | [**driversGetDriverProfile**](docs/Api/DriversApi.md#driversgetdriverprofile) | **GET** /api/v1.0/drivers/profile | 
+*DriversApi* | [**driversGetStoresForDriver**](docs/Api/DriversApi.md#driversgetstoresfordriver) | **GET** /api/v1.0/drivers/assignedstores | 
+*DriversApi* | [**driversRemoveDriverNotificationToken**](docs/Api/DriversApi.md#driversremovedrivernotificationtoken) | **DELETE** /api/v1.0/drivers/token | 
+*DriversApi* | [**driversSetDriverPresenceForStore**](docs/Api/DriversApi.md#driverssetdriverpresenceforstore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
+*DriversApi* | [**driversSetDriverProfileImage**](docs/Api/DriversApi.md#driverssetdriverprofileimage) | **POST** /api/v1.0/drivers/profile/image | 
+*DriversApi* | [**driversUpdateDeliveryTrackingStatus**](docs/Api/DriversApi.md#driversupdatedeliverytrackingstatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
+*DriversApi* | [**driversUpdateDriverProfile**](docs/Api/DriversApi.md#driversupdatedriverprofile) | **POST** /api/v1.0/drivers/profile | 
 *EventsApi* | [**getCustomerEvents**](docs/Api/EventsApi.md#getcustomerevents) | **GET** /api/v1.0/{appId}/events/customer/{customerId} | 
 *EventsApi* | [**getEvents**](docs/Api/EventsApi.md#getevents) | **GET** /api/v1.0/{appId}/events | 
 *EventsApi* | [**getEventsById**](docs/Api/EventsApi.md#geteventsbyid) | **GET** /api/v1.0/{appId}/events/{eventId} | 
@@ -680,11 +674,8 @@ Class | Method | HTTP request | Description
  - [DeviceSettings](docs/Model/DeviceSettings.md)
  - [DnsRecordInformation](docs/Model/DnsRecordInformation.md)
  - [DnsVerifiedEvent](docs/Model/DnsVerifiedEvent.md)
- - [Driver](docs/Model/Driver.md)
- - [DriverInvitation](docs/Model/DriverInvitation.md)
  - [DriverLoginModel](docs/Model/DriverLoginModel.md)
  - [DriverRequestLoginPinModel](docs/Model/DriverRequestLoginPinModel.md)
- - [DriverStore](docs/Model/DriverStore.md)
  - [DynamicFormField](docs/Model/DynamicFormField.md)
  - [DynamicFormFieldOption](docs/Model/DynamicFormFieldOption.md)
  - [DynamicFormRule](docs/Model/DynamicFormRule.md)
@@ -870,7 +861,6 @@ Class | Method | HTTP request | Description
  - [OrderFulfillmentStatusUpdate](docs/Model/OrderFulfillmentStatusUpdate.md)
  - [OrderFulfillmentStatusUpdatedEvent](docs/Model/OrderFulfillmentStatusUpdatedEvent.md)
  - [OrderFulfillmentStatusWithConfigurationActions](docs/Model/OrderFulfillmentStatusWithConfigurationActions.md)
- - [OrderIdAndSequenceNumber](docs/Model/OrderIdAndSequenceNumber.md)
  - [OrderIngestSubmitOrderRequest](docs/Model/OrderIngestSubmitOrderRequest.md)
  - [OrderIngestSubmitOrderResponse](docs/Model/OrderIngestSubmitOrderResponse.md)
  - [OrderItem](docs/Model/OrderItem.md)
@@ -950,8 +940,6 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultClientDeviceSummary](docs/Model/RestApiArrayResultClientDeviceSummary.md)
  - [RestApiArrayResultCountryWithAccountFieldsDefinitions](docs/Model/RestApiArrayResultCountryWithAccountFieldsDefinitions.md)
  - [RestApiArrayResultDeliveryZone](docs/Model/RestApiArrayResultDeliveryZone.md)
- - [RestApiArrayResultDriver](docs/Model/RestApiArrayResultDriver.md)
- - [RestApiArrayResultDriverStore](docs/Model/RestApiArrayResultDriverStore.md)
  - [RestApiArrayResultEmvTerminalWithAssignments](docs/Model/RestApiArrayResultEmvTerminalWithAssignments.md)
  - [RestApiArrayResultFulfillmentStatesConfigurationSummary](docs/Model/RestApiArrayResultFulfillmentStatesConfigurationSummary.md)
  - [RestApiArrayResultHomeAction](docs/Model/RestApiArrayResultHomeAction.md)
@@ -1057,7 +1045,6 @@ Class | Method | HTTP request | Description
  - [RestApiResultCustomer](docs/Model/RestApiResultCustomer.md)
  - [RestApiResultDeliveryZone](docs/Model/RestApiResultDeliveryZone.md)
  - [RestApiResultDnsRecordInformation](docs/Model/RestApiResultDnsRecordInformation.md)
- - [RestApiResultDriver](docs/Model/RestApiResultDriver.md)
  - [RestApiResultFulfillmentStatesConfiguration](docs/Model/RestApiResultFulfillmentStatesConfiguration.md)
  - [RestApiResultGroup](docs/Model/RestApiResultGroup.md)
  - [RestApiResultHomeStatistics](docs/Model/RestApiResultHomeStatistics.md)

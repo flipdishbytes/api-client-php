@@ -4,21 +4,21 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addDriverNotificationToken**](DriversApi.md#addDriverNotificationToken) | **POST** /api/v1.0/drivers/token | 
-[**deleteDriverProfileImage**](DriversApi.md#deleteDriverProfileImage) | **DELETE** /api/v1.0/drivers/profile/image | 
-[**driverLogin**](DriversApi.md#driverLogin) | **POST** /api/v1.0/drivers/login | 
-[**driverRequestLoginCodeSms**](DriversApi.md#driverRequestLoginCodeSms) | **POST** /api/v1.0/drivers/pin | 
-[**getDriverProfile**](DriversApi.md#getDriverProfile) | **GET** /api/v1.0/drivers/profile | 
-[**getStoresForDriver**](DriversApi.md#getStoresForDriver) | **GET** /api/v1.0/drivers/assignedstores | 
-[**removeDriverNotificationToken**](DriversApi.md#removeDriverNotificationToken) | **DELETE** /api/v1.0/drivers/token | 
-[**setDriverPresenceForStore**](DriversApi.md#setDriverPresenceForStore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
-[**setDriverProfileImage**](DriversApi.md#setDriverProfileImage) | **POST** /api/v1.0/drivers/profile/image | 
-[**updateDeliveryTrackingStatus**](DriversApi.md#updateDeliveryTrackingStatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
-[**updateDriverProfile**](DriversApi.md#updateDriverProfile) | **POST** /api/v1.0/drivers/profile | 
+[**driversAddDriverNotificationToken**](DriversApi.md#driversAddDriverNotificationToken) | **POST** /api/v1.0/drivers/token | 
+[**driversDeleteDriverProfileImage**](DriversApi.md#driversDeleteDriverProfileImage) | **DELETE** /api/v1.0/drivers/profile/image | 
+[**driversDriverLogin**](DriversApi.md#driversDriverLogin) | **POST** /api/v1.0/drivers/login | 
+[**driversDriverRequestLoginCodeSms**](DriversApi.md#driversDriverRequestLoginCodeSms) | **POST** /api/v1.0/drivers/pin | 
+[**driversGetDriverProfile**](DriversApi.md#driversGetDriverProfile) | **GET** /api/v1.0/drivers/profile | 
+[**driversGetStoresForDriver**](DriversApi.md#driversGetStoresForDriver) | **GET** /api/v1.0/drivers/assignedstores | 
+[**driversRemoveDriverNotificationToken**](DriversApi.md#driversRemoveDriverNotificationToken) | **DELETE** /api/v1.0/drivers/token | 
+[**driversSetDriverPresenceForStore**](DriversApi.md#driversSetDriverPresenceForStore) | **POST** /api/v1.0/drivers/stores/{storeId}/presence/{presence} | 
+[**driversSetDriverProfileImage**](DriversApi.md#driversSetDriverProfileImage) | **POST** /api/v1.0/drivers/profile/image | 
+[**driversUpdateDeliveryTrackingStatus**](DriversApi.md#driversUpdateDeliveryTrackingStatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
+[**driversUpdateDriverProfile**](DriversApi.md#driversUpdateDriverProfile) | **POST** /api/v1.0/drivers/profile | 
 
 
-# **addDriverNotificationToken**
-> addDriverNotificationToken($update_driver_token)
+# **driversAddDriverNotificationToken**
+> object driversAddDriverNotificationToken($update_driver_token)
 
 
 
@@ -39,9 +39,10 @@ $apiInstance = new Flipdish\\Client\Api\DriversApi(
 $update_driver_token = new \Flipdish\\Client\Models\UpdateDriverNotificationToken(); // \Flipdish\\Client\Models\UpdateDriverNotificationToken | 
 
 try {
-    $apiInstance->addDriverNotificationToken($update_driver_token);
+    $result = $apiInstance->driversAddDriverNotificationToken($update_driver_token);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriversApi->addDriverNotificationToken: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DriversApi->driversAddDriverNotificationToken: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -54,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -67,8 +68,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteDriverProfileImage**
-> deleteDriverProfileImage()
+# **driversDeleteDriverProfileImage**
+> object driversDeleteDriverProfileImage()
 
 
 
@@ -88,9 +89,10 @@ $apiInstance = new Flipdish\\Client\Api\DriversApi(
 );
 
 try {
-    $apiInstance->deleteDriverProfileImage();
+    $result = $apiInstance->driversDeleteDriverProfileImage();
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriversApi->deleteDriverProfileImage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DriversApi->driversDeleteDriverProfileImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -100,7 +102,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -113,8 +115,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **driverLogin**
-> driverLogin($driver_login_model)
+# **driversDriverLogin**
+> object driversDriverLogin($driver_login_model)
 
 
 
@@ -135,9 +137,10 @@ $apiInstance = new Flipdish\\Client\Api\DriversApi(
 $driver_login_model = new \Flipdish\\Client\Models\DriverLoginModel(); // \Flipdish\\Client\Models\DriverLoginModel | 
 
 try {
-    $apiInstance->driverLogin($driver_login_model);
+    $result = $apiInstance->driversDriverLogin($driver_login_model);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriversApi->driverLogin: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DriversApi->driversDriverLogin: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -150,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -163,8 +166,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **driverRequestLoginCodeSms**
-> driverRequestLoginCodeSms($driver_request_login_pin_model)
+# **driversDriverRequestLoginCodeSms**
+> object driversDriverRequestLoginCodeSms($driver_request_login_pin_model)
 
 
 
@@ -185,9 +188,10 @@ $apiInstance = new Flipdish\\Client\Api\DriversApi(
 $driver_request_login_pin_model = new \Flipdish\\Client\Models\DriverRequestLoginPinModel(); // \Flipdish\\Client\Models\DriverRequestLoginPinModel | 
 
 try {
-    $apiInstance->driverRequestLoginCodeSms($driver_request_login_pin_model);
+    $result = $apiInstance->driversDriverRequestLoginCodeSms($driver_request_login_pin_model);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriversApi->driverRequestLoginCodeSms: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DriversApi->driversDriverRequestLoginCodeSms: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -200,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -213,8 +217,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getDriverProfile**
-> \Flipdish\\Client\Models\RestApiResultDriver getDriverProfile()
+# **driversGetDriverProfile**
+> object driversGetDriverProfile()
 
 
 
@@ -234,10 +238,10 @@ $apiInstance = new Flipdish\\Client\Api\DriversApi(
 );
 
 try {
-    $result = $apiInstance->getDriverProfile();
+    $result = $apiInstance->driversGetDriverProfile();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriversApi->getDriverProfile: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DriversApi->driversGetDriverProfile: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -247,7 +251,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiResultDriver**](../Model/RestApiResultDriver.md)
+**object**
 
 ### Authorization
 
@@ -260,8 +264,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getStoresForDriver**
-> \Flipdish\\Client\Models\RestApiArrayResultDriverStore getStoresForDriver()
+# **driversGetStoresForDriver**
+> object driversGetStoresForDriver()
 
 
 
@@ -281,10 +285,10 @@ $apiInstance = new Flipdish\\Client\Api\DriversApi(
 );
 
 try {
-    $result = $apiInstance->getStoresForDriver();
+    $result = $apiInstance->driversGetStoresForDriver();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriversApi->getStoresForDriver: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DriversApi->driversGetStoresForDriver: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -294,7 +298,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiArrayResultDriverStore**](../Model/RestApiArrayResultDriverStore.md)
+**object**
 
 ### Authorization
 
@@ -307,8 +311,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **removeDriverNotificationToken**
-> removeDriverNotificationToken($remove_driver_token)
+# **driversRemoveDriverNotificationToken**
+> object driversRemoveDriverNotificationToken($remove_driver_token)
 
 
 
@@ -329,9 +333,10 @@ $apiInstance = new Flipdish\\Client\Api\DriversApi(
 $remove_driver_token = new \Flipdish\\Client\Models\UpdateDriverNotificationToken(); // \Flipdish\\Client\Models\UpdateDriverNotificationToken | 
 
 try {
-    $apiInstance->removeDriverNotificationToken($remove_driver_token);
+    $result = $apiInstance->driversRemoveDriverNotificationToken($remove_driver_token);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriversApi->removeDriverNotificationToken: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DriversApi->driversRemoveDriverNotificationToken: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -344,7 +349,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -357,8 +362,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **setDriverPresenceForStore**
-> setDriverPresenceForStore($store_id, $presence)
+# **driversSetDriverPresenceForStore**
+> object driversSetDriverPresenceForStore($store_id, $presence)
 
 
 
@@ -380,9 +385,10 @@ $store_id = 56; // int |
 $presence = "presence_example"; // string | 
 
 try {
-    $apiInstance->setDriverPresenceForStore($store_id, $presence);
+    $result = $apiInstance->driversSetDriverPresenceForStore($store_id, $presence);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriversApi->setDriverPresenceForStore: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DriversApi->driversSetDriverPresenceForStore: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -396,7 +402,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -409,8 +415,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **setDriverProfileImage**
-> \Flipdish\\Client\Models\RestApiStringResult setDriverProfileImage()
+# **driversSetDriverProfileImage**
+> object driversSetDriverProfileImage()
 
 
 
@@ -430,10 +436,10 @@ $apiInstance = new Flipdish\\Client\Api\DriversApi(
 );
 
 try {
-    $result = $apiInstance->setDriverProfileImage();
+    $result = $apiInstance->driversSetDriverProfileImage();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriversApi->setDriverProfileImage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DriversApi->driversSetDriverProfileImage: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -443,7 +449,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
+**object**
 
 ### Authorization
 
@@ -456,8 +462,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateDeliveryTrackingStatus**
-> \Flipdish\\Client\Models\RestApiStringResult updateDeliveryTrackingStatus($order_id, $delivery_tracking_status)
+# **driversUpdateDeliveryTrackingStatus**
+> object driversUpdateDeliveryTrackingStatus($order_id, $delivery_tracking_status)
 
 
 
@@ -479,10 +485,10 @@ $order_id = 56; // int |
 $delivery_tracking_status = "delivery_tracking_status_example"; // string | 
 
 try {
-    $result = $apiInstance->updateDeliveryTrackingStatus($order_id, $delivery_tracking_status);
+    $result = $apiInstance->driversUpdateDeliveryTrackingStatus($order_id, $delivery_tracking_status);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriversApi->updateDeliveryTrackingStatus: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DriversApi->driversUpdateDeliveryTrackingStatus: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -496,7 +502,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
+**object**
 
 ### Authorization
 
@@ -509,8 +515,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateDriverProfile**
-> updateDriverProfile($update_driver_profile)
+# **driversUpdateDriverProfile**
+> object driversUpdateDriverProfile($update_driver_profile)
 
 
 
@@ -531,9 +537,10 @@ $apiInstance = new Flipdish\\Client\Api\DriversApi(
 $update_driver_profile = new \Flipdish\\Client\Models\UpdateDriverProfileModel(); // \Flipdish\\Client\Models\UpdateDriverProfileModel | 
 
 try {
-    $apiInstance->updateDriverProfile($update_driver_profile);
+    $result = $apiInstance->driversUpdateDriverProfile($update_driver_profile);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriversApi->updateDriverProfile: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DriversApi->driversUpdateDriverProfile: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -546,7 +553,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 

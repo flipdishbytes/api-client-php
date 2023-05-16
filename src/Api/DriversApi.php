@@ -88,32 +88,33 @@ class DriversApi
     }
 
     /**
-     * Operation addDriverNotificationToken
+     * Operation driversAddDriverNotificationToken
      *
      * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $update_driver_token update_driver_token (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function addDriverNotificationToken($update_driver_token)
+    public function driversAddDriverNotificationToken($update_driver_token)
     {
-        $this->addDriverNotificationTokenWithHttpInfo($update_driver_token);
+        list($response) = $this->driversAddDriverNotificationTokenWithHttpInfo($update_driver_token);
+        return $response;
     }
 
     /**
-     * Operation addDriverNotificationTokenWithHttpInfo
+     * Operation driversAddDriverNotificationTokenWithHttpInfo
      *
      * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $update_driver_token (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addDriverNotificationTokenWithHttpInfo($update_driver_token)
+    public function driversAddDriverNotificationTokenWithHttpInfo($update_driver_token)
     {
-        $returnType = '';
-        $request = $this->addDriverNotificationTokenRequest($update_driver_token);
+        $returnType = 'object';
+        $request = $this->driversAddDriverNotificationTokenRequest($update_driver_token);
 
         try {
             $options = $this->createHttpClientOption();
@@ -143,10 +144,40 @@ class DriversApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -169,7 +200,7 @@ class DriversApi
     }
 
     /**
-     * Operation addDriverNotificationTokenAsync
+     * Operation driversAddDriverNotificationTokenAsync
      *
      * 
      *
@@ -178,9 +209,9 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addDriverNotificationTokenAsync($update_driver_token)
+    public function driversAddDriverNotificationTokenAsync($update_driver_token)
     {
-        return $this->addDriverNotificationTokenAsyncWithHttpInfo($update_driver_token)
+        return $this->driversAddDriverNotificationTokenAsyncWithHttpInfo($update_driver_token)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -189,7 +220,7 @@ class DriversApi
     }
 
     /**
-     * Operation addDriverNotificationTokenAsyncWithHttpInfo
+     * Operation driversAddDriverNotificationTokenAsyncWithHttpInfo
      *
      * 
      *
@@ -198,16 +229,30 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addDriverNotificationTokenAsyncWithHttpInfo($update_driver_token)
+    public function driversAddDriverNotificationTokenAsyncWithHttpInfo($update_driver_token)
     {
-        $returnType = '';
-        $request = $this->addDriverNotificationTokenRequest($update_driver_token);
+        $returnType = 'object';
+        $request = $this->driversAddDriverNotificationTokenRequest($update_driver_token);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -227,19 +272,19 @@ class DriversApi
     }
 
     /**
-     * Create request for operation 'addDriverNotificationToken'
+     * Create request for operation 'driversAddDriverNotificationToken'
      *
      * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $update_driver_token (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function addDriverNotificationTokenRequest($update_driver_token)
+    protected function driversAddDriverNotificationTokenRequest($update_driver_token)
     {
         // verify the required parameter 'update_driver_token' is set
         if ($update_driver_token === null || (is_array($update_driver_token) && count($update_driver_token) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $update_driver_token when calling addDriverNotificationToken'
+                'Missing the required parameter $update_driver_token when calling driversAddDriverNotificationToken'
             );
         }
 
@@ -331,30 +376,31 @@ class DriversApi
     }
 
     /**
-     * Operation deleteDriverProfileImage
+     * Operation driversDeleteDriverProfileImage
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function deleteDriverProfileImage()
+    public function driversDeleteDriverProfileImage()
     {
-        $this->deleteDriverProfileImageWithHttpInfo();
+        list($response) = $this->driversDeleteDriverProfileImageWithHttpInfo();
+        return $response;
     }
 
     /**
-     * Operation deleteDriverProfileImageWithHttpInfo
+     * Operation driversDeleteDriverProfileImageWithHttpInfo
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteDriverProfileImageWithHttpInfo()
+    public function driversDeleteDriverProfileImageWithHttpInfo()
     {
-        $returnType = '';
-        $request = $this->deleteDriverProfileImageRequest();
+        $returnType = 'object';
+        $request = $this->driversDeleteDriverProfileImageRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -384,10 +430,40 @@ class DriversApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -410,7 +486,7 @@ class DriversApi
     }
 
     /**
-     * Operation deleteDriverProfileImageAsync
+     * Operation driversDeleteDriverProfileImageAsync
      *
      * 
      *
@@ -418,9 +494,9 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteDriverProfileImageAsync()
+    public function driversDeleteDriverProfileImageAsync()
     {
-        return $this->deleteDriverProfileImageAsyncWithHttpInfo()
+        return $this->driversDeleteDriverProfileImageAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -429,7 +505,7 @@ class DriversApi
     }
 
     /**
-     * Operation deleteDriverProfileImageAsyncWithHttpInfo
+     * Operation driversDeleteDriverProfileImageAsyncWithHttpInfo
      *
      * 
      *
@@ -437,16 +513,30 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteDriverProfileImageAsyncWithHttpInfo()
+    public function driversDeleteDriverProfileImageAsyncWithHttpInfo()
     {
-        $returnType = '';
-        $request = $this->deleteDriverProfileImageRequest();
+        $returnType = 'object';
+        $request = $this->driversDeleteDriverProfileImageRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -466,13 +556,13 @@ class DriversApi
     }
 
     /**
-     * Create request for operation 'deleteDriverProfileImage'
+     * Create request for operation 'driversDeleteDriverProfileImage'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function deleteDriverProfileImageRequest()
+    protected function driversDeleteDriverProfileImageRequest()
     {
 
         $resourcePath = '/api/v1.0/drivers/profile/image';
@@ -560,32 +650,33 @@ class DriversApi
     }
 
     /**
-     * Operation driverLogin
+     * Operation driversDriverLogin
      *
      * @param  \Flipdish\\Client\Models\DriverLoginModel $driver_login_model driver_login_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function driverLogin($driver_login_model)
+    public function driversDriverLogin($driver_login_model)
     {
-        $this->driverLoginWithHttpInfo($driver_login_model);
+        list($response) = $this->driversDriverLoginWithHttpInfo($driver_login_model);
+        return $response;
     }
 
     /**
-     * Operation driverLoginWithHttpInfo
+     * Operation driversDriverLoginWithHttpInfo
      *
      * @param  \Flipdish\\Client\Models\DriverLoginModel $driver_login_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function driverLoginWithHttpInfo($driver_login_model)
+    public function driversDriverLoginWithHttpInfo($driver_login_model)
     {
-        $returnType = '';
-        $request = $this->driverLoginRequest($driver_login_model);
+        $returnType = 'object';
+        $request = $this->driversDriverLoginRequest($driver_login_model);
 
         try {
             $options = $this->createHttpClientOption();
@@ -615,10 +706,40 @@ class DriversApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -641,7 +762,7 @@ class DriversApi
     }
 
     /**
-     * Operation driverLoginAsync
+     * Operation driversDriverLoginAsync
      *
      * 
      *
@@ -650,9 +771,9 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function driverLoginAsync($driver_login_model)
+    public function driversDriverLoginAsync($driver_login_model)
     {
-        return $this->driverLoginAsyncWithHttpInfo($driver_login_model)
+        return $this->driversDriverLoginAsyncWithHttpInfo($driver_login_model)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -661,7 +782,7 @@ class DriversApi
     }
 
     /**
-     * Operation driverLoginAsyncWithHttpInfo
+     * Operation driversDriverLoginAsyncWithHttpInfo
      *
      * 
      *
@@ -670,16 +791,30 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function driverLoginAsyncWithHttpInfo($driver_login_model)
+    public function driversDriverLoginAsyncWithHttpInfo($driver_login_model)
     {
-        $returnType = '';
-        $request = $this->driverLoginRequest($driver_login_model);
+        $returnType = 'object';
+        $request = $this->driversDriverLoginRequest($driver_login_model);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -699,19 +834,19 @@ class DriversApi
     }
 
     /**
-     * Create request for operation 'driverLogin'
+     * Create request for operation 'driversDriverLogin'
      *
      * @param  \Flipdish\\Client\Models\DriverLoginModel $driver_login_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function driverLoginRequest($driver_login_model)
+    protected function driversDriverLoginRequest($driver_login_model)
     {
         // verify the required parameter 'driver_login_model' is set
         if ($driver_login_model === null || (is_array($driver_login_model) && count($driver_login_model) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $driver_login_model when calling driverLogin'
+                'Missing the required parameter $driver_login_model when calling driversDriverLogin'
             );
         }
 
@@ -803,32 +938,33 @@ class DriversApi
     }
 
     /**
-     * Operation driverRequestLoginCodeSms
+     * Operation driversDriverRequestLoginCodeSms
      *
      * @param  \Flipdish\\Client\Models\DriverRequestLoginPinModel $driver_request_login_pin_model driver_request_login_pin_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function driverRequestLoginCodeSms($driver_request_login_pin_model)
+    public function driversDriverRequestLoginCodeSms($driver_request_login_pin_model)
     {
-        $this->driverRequestLoginCodeSmsWithHttpInfo($driver_request_login_pin_model);
+        list($response) = $this->driversDriverRequestLoginCodeSmsWithHttpInfo($driver_request_login_pin_model);
+        return $response;
     }
 
     /**
-     * Operation driverRequestLoginCodeSmsWithHttpInfo
+     * Operation driversDriverRequestLoginCodeSmsWithHttpInfo
      *
      * @param  \Flipdish\\Client\Models\DriverRequestLoginPinModel $driver_request_login_pin_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function driverRequestLoginCodeSmsWithHttpInfo($driver_request_login_pin_model)
+    public function driversDriverRequestLoginCodeSmsWithHttpInfo($driver_request_login_pin_model)
     {
-        $returnType = '';
-        $request = $this->driverRequestLoginCodeSmsRequest($driver_request_login_pin_model);
+        $returnType = 'object';
+        $request = $this->driversDriverRequestLoginCodeSmsRequest($driver_request_login_pin_model);
 
         try {
             $options = $this->createHttpClientOption();
@@ -858,10 +994,40 @@ class DriversApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -884,7 +1050,7 @@ class DriversApi
     }
 
     /**
-     * Operation driverRequestLoginCodeSmsAsync
+     * Operation driversDriverRequestLoginCodeSmsAsync
      *
      * 
      *
@@ -893,9 +1059,9 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function driverRequestLoginCodeSmsAsync($driver_request_login_pin_model)
+    public function driversDriverRequestLoginCodeSmsAsync($driver_request_login_pin_model)
     {
-        return $this->driverRequestLoginCodeSmsAsyncWithHttpInfo($driver_request_login_pin_model)
+        return $this->driversDriverRequestLoginCodeSmsAsyncWithHttpInfo($driver_request_login_pin_model)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -904,7 +1070,7 @@ class DriversApi
     }
 
     /**
-     * Operation driverRequestLoginCodeSmsAsyncWithHttpInfo
+     * Operation driversDriverRequestLoginCodeSmsAsyncWithHttpInfo
      *
      * 
      *
@@ -913,16 +1079,30 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function driverRequestLoginCodeSmsAsyncWithHttpInfo($driver_request_login_pin_model)
+    public function driversDriverRequestLoginCodeSmsAsyncWithHttpInfo($driver_request_login_pin_model)
     {
-        $returnType = '';
-        $request = $this->driverRequestLoginCodeSmsRequest($driver_request_login_pin_model);
+        $returnType = 'object';
+        $request = $this->driversDriverRequestLoginCodeSmsRequest($driver_request_login_pin_model);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -942,19 +1122,19 @@ class DriversApi
     }
 
     /**
-     * Create request for operation 'driverRequestLoginCodeSms'
+     * Create request for operation 'driversDriverRequestLoginCodeSms'
      *
      * @param  \Flipdish\\Client\Models\DriverRequestLoginPinModel $driver_request_login_pin_model (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function driverRequestLoginCodeSmsRequest($driver_request_login_pin_model)
+    protected function driversDriverRequestLoginCodeSmsRequest($driver_request_login_pin_model)
     {
         // verify the required parameter 'driver_request_login_pin_model' is set
         if ($driver_request_login_pin_model === null || (is_array($driver_request_login_pin_model) && count($driver_request_login_pin_model) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $driver_request_login_pin_model when calling driverRequestLoginCodeSms'
+                'Missing the required parameter $driver_request_login_pin_model when calling driversDriverRequestLoginCodeSms'
             );
         }
 
@@ -1046,31 +1226,31 @@ class DriversApi
     }
 
     /**
-     * Operation getDriverProfile
+     * Operation driversGetDriverProfile
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultDriver
+     * @return object
      */
-    public function getDriverProfile()
+    public function driversGetDriverProfile()
     {
-        list($response) = $this->getDriverProfileWithHttpInfo();
+        list($response) = $this->driversGetDriverProfileWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation getDriverProfileWithHttpInfo
+     * Operation driversGetDriverProfileWithHttpInfo
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultDriver, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDriverProfileWithHttpInfo()
+    public function driversGetDriverProfileWithHttpInfo()
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultDriver';
-        $request = $this->getDriverProfileRequest();
+        $returnType = 'object';
+        $request = $this->driversGetDriverProfileRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -1121,7 +1301,15 @@ class DriversApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultDriver',
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1148,7 +1336,7 @@ class DriversApi
     }
 
     /**
-     * Operation getDriverProfileAsync
+     * Operation driversGetDriverProfileAsync
      *
      * 
      *
@@ -1156,9 +1344,9 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDriverProfileAsync()
+    public function driversGetDriverProfileAsync()
     {
-        return $this->getDriverProfileAsyncWithHttpInfo()
+        return $this->driversGetDriverProfileAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1167,7 +1355,7 @@ class DriversApi
     }
 
     /**
-     * Operation getDriverProfileAsyncWithHttpInfo
+     * Operation driversGetDriverProfileAsyncWithHttpInfo
      *
      * 
      *
@@ -1175,10 +1363,10 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDriverProfileAsyncWithHttpInfo()
+    public function driversGetDriverProfileAsyncWithHttpInfo()
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultDriver';
-        $request = $this->getDriverProfileRequest();
+        $returnType = 'object';
+        $request = $this->driversGetDriverProfileRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1218,13 +1406,13 @@ class DriversApi
     }
 
     /**
-     * Create request for operation 'getDriverProfile'
+     * Create request for operation 'driversGetDriverProfile'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getDriverProfileRequest()
+    protected function driversGetDriverProfileRequest()
     {
 
         $resourcePath = '/api/v1.0/drivers/profile';
@@ -1312,31 +1500,31 @@ class DriversApi
     }
 
     /**
-     * Operation getStoresForDriver
+     * Operation driversGetStoresForDriver
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiArrayResultDriverStore
+     * @return object
      */
-    public function getStoresForDriver()
+    public function driversGetStoresForDriver()
     {
-        list($response) = $this->getStoresForDriverWithHttpInfo();
+        list($response) = $this->driversGetStoresForDriverWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation getStoresForDriverWithHttpInfo
+     * Operation driversGetStoresForDriverWithHttpInfo
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiArrayResultDriverStore, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStoresForDriverWithHttpInfo()
+    public function driversGetStoresForDriverWithHttpInfo()
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultDriverStore';
-        $request = $this->getStoresForDriverRequest();
+        $returnType = 'object';
+        $request = $this->driversGetStoresForDriverRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -1387,7 +1575,15 @@ class DriversApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiArrayResultDriverStore',
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1414,7 +1610,7 @@ class DriversApi
     }
 
     /**
-     * Operation getStoresForDriverAsync
+     * Operation driversGetStoresForDriverAsync
      *
      * 
      *
@@ -1422,9 +1618,9 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStoresForDriverAsync()
+    public function driversGetStoresForDriverAsync()
     {
-        return $this->getStoresForDriverAsyncWithHttpInfo()
+        return $this->driversGetStoresForDriverAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1433,7 +1629,7 @@ class DriversApi
     }
 
     /**
-     * Operation getStoresForDriverAsyncWithHttpInfo
+     * Operation driversGetStoresForDriverAsyncWithHttpInfo
      *
      * 
      *
@@ -1441,10 +1637,10 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStoresForDriverAsyncWithHttpInfo()
+    public function driversGetStoresForDriverAsyncWithHttpInfo()
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultDriverStore';
-        $request = $this->getStoresForDriverRequest();
+        $returnType = 'object';
+        $request = $this->driversGetStoresForDriverRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1484,13 +1680,13 @@ class DriversApi
     }
 
     /**
-     * Create request for operation 'getStoresForDriver'
+     * Create request for operation 'driversGetStoresForDriver'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getStoresForDriverRequest()
+    protected function driversGetStoresForDriverRequest()
     {
 
         $resourcePath = '/api/v1.0/drivers/assignedstores';
@@ -1578,32 +1774,33 @@ class DriversApi
     }
 
     /**
-     * Operation removeDriverNotificationToken
+     * Operation driversRemoveDriverNotificationToken
      *
      * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $remove_driver_token remove_driver_token (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function removeDriverNotificationToken($remove_driver_token)
+    public function driversRemoveDriverNotificationToken($remove_driver_token)
     {
-        $this->removeDriverNotificationTokenWithHttpInfo($remove_driver_token);
+        list($response) = $this->driversRemoveDriverNotificationTokenWithHttpInfo($remove_driver_token);
+        return $response;
     }
 
     /**
-     * Operation removeDriverNotificationTokenWithHttpInfo
+     * Operation driversRemoveDriverNotificationTokenWithHttpInfo
      *
      * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $remove_driver_token (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function removeDriverNotificationTokenWithHttpInfo($remove_driver_token)
+    public function driversRemoveDriverNotificationTokenWithHttpInfo($remove_driver_token)
     {
-        $returnType = '';
-        $request = $this->removeDriverNotificationTokenRequest($remove_driver_token);
+        $returnType = 'object';
+        $request = $this->driversRemoveDriverNotificationTokenRequest($remove_driver_token);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1633,10 +1830,40 @@ class DriversApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1659,7 +1886,7 @@ class DriversApi
     }
 
     /**
-     * Operation removeDriverNotificationTokenAsync
+     * Operation driversRemoveDriverNotificationTokenAsync
      *
      * 
      *
@@ -1668,9 +1895,9 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeDriverNotificationTokenAsync($remove_driver_token)
+    public function driversRemoveDriverNotificationTokenAsync($remove_driver_token)
     {
-        return $this->removeDriverNotificationTokenAsyncWithHttpInfo($remove_driver_token)
+        return $this->driversRemoveDriverNotificationTokenAsyncWithHttpInfo($remove_driver_token)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1679,7 +1906,7 @@ class DriversApi
     }
 
     /**
-     * Operation removeDriverNotificationTokenAsyncWithHttpInfo
+     * Operation driversRemoveDriverNotificationTokenAsyncWithHttpInfo
      *
      * 
      *
@@ -1688,16 +1915,30 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function removeDriverNotificationTokenAsyncWithHttpInfo($remove_driver_token)
+    public function driversRemoveDriverNotificationTokenAsyncWithHttpInfo($remove_driver_token)
     {
-        $returnType = '';
-        $request = $this->removeDriverNotificationTokenRequest($remove_driver_token);
+        $returnType = 'object';
+        $request = $this->driversRemoveDriverNotificationTokenRequest($remove_driver_token);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1717,19 +1958,19 @@ class DriversApi
     }
 
     /**
-     * Create request for operation 'removeDriverNotificationToken'
+     * Create request for operation 'driversRemoveDriverNotificationToken'
      *
      * @param  \Flipdish\\Client\Models\UpdateDriverNotificationToken $remove_driver_token (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function removeDriverNotificationTokenRequest($remove_driver_token)
+    protected function driversRemoveDriverNotificationTokenRequest($remove_driver_token)
     {
         // verify the required parameter 'remove_driver_token' is set
         if ($remove_driver_token === null || (is_array($remove_driver_token) && count($remove_driver_token) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $remove_driver_token when calling removeDriverNotificationToken'
+                'Missing the required parameter $remove_driver_token when calling driversRemoveDriverNotificationToken'
             );
         }
 
@@ -1821,34 +2062,35 @@ class DriversApi
     }
 
     /**
-     * Operation setDriverPresenceForStore
+     * Operation driversSetDriverPresenceForStore
      *
      * @param  int $store_id store_id (required)
      * @param  string $presence presence (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function setDriverPresenceForStore($store_id, $presence)
+    public function driversSetDriverPresenceForStore($store_id, $presence)
     {
-        $this->setDriverPresenceForStoreWithHttpInfo($store_id, $presence);
+        list($response) = $this->driversSetDriverPresenceForStoreWithHttpInfo($store_id, $presence);
+        return $response;
     }
 
     /**
-     * Operation setDriverPresenceForStoreWithHttpInfo
+     * Operation driversSetDriverPresenceForStoreWithHttpInfo
      *
      * @param  int $store_id (required)
      * @param  string $presence (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function setDriverPresenceForStoreWithHttpInfo($store_id, $presence)
+    public function driversSetDriverPresenceForStoreWithHttpInfo($store_id, $presence)
     {
-        $returnType = '';
-        $request = $this->setDriverPresenceForStoreRequest($store_id, $presence);
+        $returnType = 'object';
+        $request = $this->driversSetDriverPresenceForStoreRequest($store_id, $presence);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1878,10 +2120,40 @@ class DriversApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1904,7 +2176,7 @@ class DriversApi
     }
 
     /**
-     * Operation setDriverPresenceForStoreAsync
+     * Operation driversSetDriverPresenceForStoreAsync
      *
      * 
      *
@@ -1914,9 +2186,9 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function setDriverPresenceForStoreAsync($store_id, $presence)
+    public function driversSetDriverPresenceForStoreAsync($store_id, $presence)
     {
-        return $this->setDriverPresenceForStoreAsyncWithHttpInfo($store_id, $presence)
+        return $this->driversSetDriverPresenceForStoreAsyncWithHttpInfo($store_id, $presence)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1925,7 +2197,7 @@ class DriversApi
     }
 
     /**
-     * Operation setDriverPresenceForStoreAsyncWithHttpInfo
+     * Operation driversSetDriverPresenceForStoreAsyncWithHttpInfo
      *
      * 
      *
@@ -1935,16 +2207,30 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function setDriverPresenceForStoreAsyncWithHttpInfo($store_id, $presence)
+    public function driversSetDriverPresenceForStoreAsyncWithHttpInfo($store_id, $presence)
     {
-        $returnType = '';
-        $request = $this->setDriverPresenceForStoreRequest($store_id, $presence);
+        $returnType = 'object';
+        $request = $this->driversSetDriverPresenceForStoreRequest($store_id, $presence);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1964,7 +2250,7 @@ class DriversApi
     }
 
     /**
-     * Create request for operation 'setDriverPresenceForStore'
+     * Create request for operation 'driversSetDriverPresenceForStore'
      *
      * @param  int $store_id (required)
      * @param  string $presence (required)
@@ -1972,18 +2258,18 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function setDriverPresenceForStoreRequest($store_id, $presence)
+    protected function driversSetDriverPresenceForStoreRequest($store_id, $presence)
     {
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling setDriverPresenceForStore'
+                'Missing the required parameter $store_id when calling driversSetDriverPresenceForStore'
             );
         }
         // verify the required parameter 'presence' is set
         if ($presence === null || (is_array($presence) && count($presence) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $presence when calling setDriverPresenceForStore'
+                'Missing the required parameter $presence when calling driversSetDriverPresenceForStore'
             );
         }
 
@@ -2088,31 +2374,31 @@ class DriversApi
     }
 
     /**
-     * Operation setDriverProfileImage
+     * Operation driversSetDriverProfileImage
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiStringResult
+     * @return object
      */
-    public function setDriverProfileImage()
+    public function driversSetDriverProfileImage()
     {
-        list($response) = $this->setDriverProfileImageWithHttpInfo();
+        list($response) = $this->driversSetDriverProfileImageWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation setDriverProfileImageWithHttpInfo
+     * Operation driversSetDriverProfileImageWithHttpInfo
      *
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiStringResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function setDriverProfileImageWithHttpInfo()
+    public function driversSetDriverProfileImageWithHttpInfo()
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
-        $request = $this->setDriverProfileImageRequest();
+        $returnType = 'object';
+        $request = $this->driversSetDriverProfileImageRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -2163,7 +2449,15 @@ class DriversApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiStringResult',
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2190,7 +2484,7 @@ class DriversApi
     }
 
     /**
-     * Operation setDriverProfileImageAsync
+     * Operation driversSetDriverProfileImageAsync
      *
      * 
      *
@@ -2198,9 +2492,9 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function setDriverProfileImageAsync()
+    public function driversSetDriverProfileImageAsync()
     {
-        return $this->setDriverProfileImageAsyncWithHttpInfo()
+        return $this->driversSetDriverProfileImageAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2209,7 +2503,7 @@ class DriversApi
     }
 
     /**
-     * Operation setDriverProfileImageAsyncWithHttpInfo
+     * Operation driversSetDriverProfileImageAsyncWithHttpInfo
      *
      * 
      *
@@ -2217,10 +2511,10 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function setDriverProfileImageAsyncWithHttpInfo()
+    public function driversSetDriverProfileImageAsyncWithHttpInfo()
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
-        $request = $this->setDriverProfileImageRequest();
+        $returnType = 'object';
+        $request = $this->driversSetDriverProfileImageRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2260,13 +2554,13 @@ class DriversApi
     }
 
     /**
-     * Create request for operation 'setDriverProfileImage'
+     * Create request for operation 'driversSetDriverProfileImage'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function setDriverProfileImageRequest()
+    protected function driversSetDriverProfileImageRequest()
     {
 
         $resourcePath = '/api/v1.0/drivers/profile/image';
@@ -2354,35 +2648,35 @@ class DriversApi
     }
 
     /**
-     * Operation updateDeliveryTrackingStatus
+     * Operation driversUpdateDeliveryTrackingStatus
      *
      * @param  int $order_id order_id (required)
      * @param  string $delivery_tracking_status delivery_tracking_status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiStringResult
+     * @return object
      */
-    public function updateDeliveryTrackingStatus($order_id, $delivery_tracking_status)
+    public function driversUpdateDeliveryTrackingStatus($order_id, $delivery_tracking_status)
     {
-        list($response) = $this->updateDeliveryTrackingStatusWithHttpInfo($order_id, $delivery_tracking_status);
+        list($response) = $this->driversUpdateDeliveryTrackingStatusWithHttpInfo($order_id, $delivery_tracking_status);
         return $response;
     }
 
     /**
-     * Operation updateDeliveryTrackingStatusWithHttpInfo
+     * Operation driversUpdateDeliveryTrackingStatusWithHttpInfo
      *
      * @param  int $order_id (required)
      * @param  string $delivery_tracking_status (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiStringResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateDeliveryTrackingStatusWithHttpInfo($order_id, $delivery_tracking_status)
+    public function driversUpdateDeliveryTrackingStatusWithHttpInfo($order_id, $delivery_tracking_status)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
-        $request = $this->updateDeliveryTrackingStatusRequest($order_id, $delivery_tracking_status);
+        $returnType = 'object';
+        $request = $this->driversUpdateDeliveryTrackingStatusRequest($order_id, $delivery_tracking_status);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2433,7 +2727,7 @@ class DriversApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiStringResult',
+                        'object',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2462,29 +2756,13 @@ class DriversApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 409:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation updateDeliveryTrackingStatusAsync
+     * Operation driversUpdateDeliveryTrackingStatusAsync
      *
      * 
      *
@@ -2494,9 +2772,9 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateDeliveryTrackingStatusAsync($order_id, $delivery_tracking_status)
+    public function driversUpdateDeliveryTrackingStatusAsync($order_id, $delivery_tracking_status)
     {
-        return $this->updateDeliveryTrackingStatusAsyncWithHttpInfo($order_id, $delivery_tracking_status)
+        return $this->driversUpdateDeliveryTrackingStatusAsyncWithHttpInfo($order_id, $delivery_tracking_status)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2505,7 +2783,7 @@ class DriversApi
     }
 
     /**
-     * Operation updateDeliveryTrackingStatusAsyncWithHttpInfo
+     * Operation driversUpdateDeliveryTrackingStatusAsyncWithHttpInfo
      *
      * 
      *
@@ -2515,10 +2793,10 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateDeliveryTrackingStatusAsyncWithHttpInfo($order_id, $delivery_tracking_status)
+    public function driversUpdateDeliveryTrackingStatusAsyncWithHttpInfo($order_id, $delivery_tracking_status)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
-        $request = $this->updateDeliveryTrackingStatusRequest($order_id, $delivery_tracking_status);
+        $returnType = 'object';
+        $request = $this->driversUpdateDeliveryTrackingStatusRequest($order_id, $delivery_tracking_status);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2558,7 +2836,7 @@ class DriversApi
     }
 
     /**
-     * Create request for operation 'updateDeliveryTrackingStatus'
+     * Create request for operation 'driversUpdateDeliveryTrackingStatus'
      *
      * @param  int $order_id (required)
      * @param  string $delivery_tracking_status (required)
@@ -2566,18 +2844,18 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateDeliveryTrackingStatusRequest($order_id, $delivery_tracking_status)
+    protected function driversUpdateDeliveryTrackingStatusRequest($order_id, $delivery_tracking_status)
     {
         // verify the required parameter 'order_id' is set
         if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $order_id when calling updateDeliveryTrackingStatus'
+                'Missing the required parameter $order_id when calling driversUpdateDeliveryTrackingStatus'
             );
         }
         // verify the required parameter 'delivery_tracking_status' is set
         if ($delivery_tracking_status === null || (is_array($delivery_tracking_status) && count($delivery_tracking_status) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $delivery_tracking_status when calling updateDeliveryTrackingStatus'
+                'Missing the required parameter $delivery_tracking_status when calling driversUpdateDeliveryTrackingStatus'
             );
         }
 
@@ -2682,32 +2960,33 @@ class DriversApi
     }
 
     /**
-     * Operation updateDriverProfile
+     * Operation driversUpdateDriverProfile
      *
      * @param  \Flipdish\\Client\Models\UpdateDriverProfileModel $update_driver_profile update_driver_profile (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function updateDriverProfile($update_driver_profile)
+    public function driversUpdateDriverProfile($update_driver_profile)
     {
-        $this->updateDriverProfileWithHttpInfo($update_driver_profile);
+        list($response) = $this->driversUpdateDriverProfileWithHttpInfo($update_driver_profile);
+        return $response;
     }
 
     /**
-     * Operation updateDriverProfileWithHttpInfo
+     * Operation driversUpdateDriverProfileWithHttpInfo
      *
      * @param  \Flipdish\\Client\Models\UpdateDriverProfileModel $update_driver_profile (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateDriverProfileWithHttpInfo($update_driver_profile)
+    public function driversUpdateDriverProfileWithHttpInfo($update_driver_profile)
     {
-        $returnType = '';
-        $request = $this->updateDriverProfileRequest($update_driver_profile);
+        $returnType = 'object';
+        $request = $this->driversUpdateDriverProfileRequest($update_driver_profile);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2737,10 +3016,40 @@ class DriversApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -2763,7 +3072,7 @@ class DriversApi
     }
 
     /**
-     * Operation updateDriverProfileAsync
+     * Operation driversUpdateDriverProfileAsync
      *
      * 
      *
@@ -2772,9 +3081,9 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateDriverProfileAsync($update_driver_profile)
+    public function driversUpdateDriverProfileAsync($update_driver_profile)
     {
-        return $this->updateDriverProfileAsyncWithHttpInfo($update_driver_profile)
+        return $this->driversUpdateDriverProfileAsyncWithHttpInfo($update_driver_profile)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2783,7 +3092,7 @@ class DriversApi
     }
 
     /**
-     * Operation updateDriverProfileAsyncWithHttpInfo
+     * Operation driversUpdateDriverProfileAsyncWithHttpInfo
      *
      * 
      *
@@ -2792,16 +3101,30 @@ class DriversApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateDriverProfileAsyncWithHttpInfo($update_driver_profile)
+    public function driversUpdateDriverProfileAsyncWithHttpInfo($update_driver_profile)
     {
-        $returnType = '';
-        $request = $this->updateDriverProfileRequest($update_driver_profile);
+        $returnType = 'object';
+        $request = $this->driversUpdateDriverProfileRequest($update_driver_profile);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -2821,19 +3144,19 @@ class DriversApi
     }
 
     /**
-     * Create request for operation 'updateDriverProfile'
+     * Create request for operation 'driversUpdateDriverProfile'
      *
      * @param  \Flipdish\\Client\Models\UpdateDriverProfileModel $update_driver_profile (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateDriverProfileRequest($update_driver_profile)
+    protected function driversUpdateDriverProfileRequest($update_driver_profile)
     {
         // verify the required parameter 'update_driver_profile' is set
         if ($update_driver_profile === null || (is_array($update_driver_profile) && count($update_driver_profile) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $update_driver_profile when calling updateDriverProfile'
+                'Missing the required parameter $update_driver_profile when calling driversUpdateDriverProfile'
             );
         }
 
