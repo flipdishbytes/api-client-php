@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **products** | [**\Flipdish\\Client\Models\SubscriptionProduct[]**](SubscriptionProduct.md) | Products | 
 **upcoming_invoice_items** | [**\Flipdish\\Client\Models\InvoiceItem[]**](InvoiceItem.md) | Upcoming invoice items | [optional] 
+**upcoming_invoice_discounts** | [**\Flipdish\\Client\Models\InvoiceDiscount[]**](InvoiceDiscount.md) | Upcoming invoice discounts | [optional] 
 **subscription_id** | **string** | The subscription identifier | 
 **name** | **string** |  | 
 **status** | **string** | Status | 

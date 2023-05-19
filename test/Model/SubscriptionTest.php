@@ -91,6 +91,13 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "upcoming_invoice_discounts"
+     */
+    public function testPropertyUpcomingInvoiceDiscounts()
+    {
+    }
+
+    /**
      * Test attribute "subscription_id"
      */
     public function testPropertySubscriptionId()

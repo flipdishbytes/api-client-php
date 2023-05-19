@@ -323,7 +323,6 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_EDIT_MENU_IMAGE = 'EditMenuImage';
     const APP_RESOURCE_SET_VIEW_VOUCHERS = 'ViewVouchers';
     const APP_RESOURCE_SET_EDIT_VOUCHERS = 'EditVouchers';
-    const APP_RESOURCE_SET_UPDATE_VOUCHERS_EXTEND_DISABLE = 'UpdateVouchersExtendDisable';
     const APP_RESOURCE_SET_VIEW_WEBSITE_CONTENT = 'ViewWebsiteContent';
     const APP_RESOURCE_SET_EDIT_WEBSITE_CONTENT = 'EditWebsiteContent';
     const APP_RESOURCE_SET_VIEW_WEBSITE_DNS_VERIFIED = 'ViewWebsiteDnsVerified';
@@ -513,7 +512,6 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_EDIT_MENU_IMAGE,
             self::APP_RESOURCE_SET_VIEW_VOUCHERS,
             self::APP_RESOURCE_SET_EDIT_VOUCHERS,
-            self::APP_RESOURCE_SET_UPDATE_VOUCHERS_EXTEND_DISABLE,
             self::APP_RESOURCE_SET_VIEW_WEBSITE_CONTENT,
             self::APP_RESOURCE_SET_EDIT_WEBSITE_CONTENT,
             self::APP_RESOURCE_SET_VIEW_WEBSITE_DNS_VERIFIED,

@@ -732,6 +732,7 @@ Class | Method | HTTP request | Description
  - [IndexPageBase](docs/Model/IndexPageBase.md)
  - [IntercomUserHash](docs/Model/IntercomUserHash.md)
  - [Invoice](docs/Model/Invoice.md)
+ - [InvoiceDiscount](docs/Model/InvoiceDiscount.md)
  - [InvoiceItem](docs/Model/InvoiceItem.md)
  - [InvoicePeriod](docs/Model/InvoicePeriod.md)
  - [JobAddress](docs/Model/JobAddress.md)
