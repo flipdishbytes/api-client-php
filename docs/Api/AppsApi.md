@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setAppHostname**
-> \Flipdish\\Client\Models\RestApiStringResult setAppHostname($app_id, $hostname, $is_embed, $is_next_gen_web)
+> \Flipdish\\Client\Models\RestApiStringResult setAppHostname($app_id, $hostname, $is_embed)
 
 
 
@@ -454,10 +454,9 @@ $apiInstance = new Flipdish\\Client\Api\AppsApi(
 $app_id = "app_id_example"; // string | 
 $hostname = "hostname_example"; // string | 
 $is_embed = true; // bool | 
-$is_next_gen_web = true; // bool | 
 
 try {
-    $result = $apiInstance->setAppHostname($app_id, $hostname, $is_embed, $is_next_gen_web);
+    $result = $apiInstance->setAppHostname($app_id, $hostname, $is_embed);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AppsApi->setAppHostname: ', $e->getMessage(), PHP_EOL;
@@ -472,7 +471,6 @@ Name | Type | Description  | Notes
  **app_id** | **string**|  |
  **hostname** | **string**|  |
  **is_embed** | **bool**|  | [optional]
- **is_next_gen_web** | **bool**|  | [optional]
 
 ### Return type
 
