@@ -1,6 +1,6 @@
 <?php
 /**
- * ProcessingFeeConfig
+ * DuringOrderPromotionOptionsDm
  *
  * PHP version 5
  *
@@ -33,15 +33,14 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * ProcessingFeeConfig Class Doc Comment
+ * DuringOrderPromotionOptionsDm Class Doc Comment
  *
  * @category Class
- * @description Processing fee config
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProcessingFeeConfig implements ModelInterface, ArrayAccess
+class DuringOrderPromotionOptionsDm implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +49,7 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ProcessingFeeConfig';
+    protected static $swaggerModelName = 'DuringOrderPromotionOptionsDm';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +57,10 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'store_id' => 'int',
-        'payment_account_type' => 'string',
-        'percent_fee' => 'double',
-        'fixed_fee' => 'double'
+        'during_order_promotion_type' => 'string',
+        'min_sms_share_count' => 'int',
+        'free_coke_count' => 'int',
+        'promotion_period_seconds' => 'int'
     ];
 
     /**
@@ -70,10 +69,10 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'store_id' => 'int32',
-        'payment_account_type' => null,
-        'percent_fee' => 'double',
-        'fixed_fee' => 'double'
+        'during_order_promotion_type' => null,
+        'min_sms_share_count' => 'int32',
+        'free_coke_count' => 'int32',
+        'promotion_period_seconds' => 'int32'
     ];
 
     /**
@@ -103,10 +102,10 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_id' => 'StoreId',
-        'payment_account_type' => 'PaymentAccountType',
-        'percent_fee' => 'PercentFee',
-        'fixed_fee' => 'FixedFee'
+        'during_order_promotion_type' => 'DuringOrderPromotionType',
+        'min_sms_share_count' => 'MinSmsShareCount',
+        'free_coke_count' => 'FreeCokeCount',
+        'promotion_period_seconds' => 'PromotionPeriodSeconds'
     ];
 
     /**
@@ -115,10 +114,10 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_id' => 'setStoreId',
-        'payment_account_type' => 'setPaymentAccountType',
-        'percent_fee' => 'setPercentFee',
-        'fixed_fee' => 'setFixedFee'
+        'during_order_promotion_type' => 'setDuringOrderPromotionType',
+        'min_sms_share_count' => 'setMinSmsShareCount',
+        'free_coke_count' => 'setFreeCokeCount',
+        'promotion_period_seconds' => 'setPromotionPeriodSeconds'
     ];
 
     /**
@@ -127,10 +126,10 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_id' => 'getStoreId',
-        'payment_account_type' => 'getPaymentAccountType',
-        'percent_fee' => 'getPercentFee',
-        'fixed_fee' => 'getFixedFee'
+        'during_order_promotion_type' => 'getDuringOrderPromotionType',
+        'min_sms_share_count' => 'getMinSmsShareCount',
+        'free_coke_count' => 'getFreeCokeCount',
+        'promotion_period_seconds' => 'getPromotionPeriodSeconds'
     ];
 
     /**
@@ -174,16 +173,11 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const PAYMENT_ACCOUNT_TYPE_CARD = 'Card';
-    const PAYMENT_ACCOUNT_TYPE_CASH = 'Cash';
-    const PAYMENT_ACCOUNT_TYPE_IDEAL = 'Ideal';
-    const PAYMENT_ACCOUNT_TYPE_BANCONTACT = 'Bancontact';
-    const PAYMENT_ACCOUNT_TYPE_GIROPAY = 'Giropay';
-    const PAYMENT_ACCOUNT_TYPE_EPS = 'Eps';
-    const PAYMENT_ACCOUNT_TYPE_EMV = 'Emv';
-    const PAYMENT_ACCOUNT_TYPE_PAY_PAL = 'PayPal';
-    const PAYMENT_ACCOUNT_TYPE_PAY_GREEN = 'PayGreen';
-    const PAYMENT_ACCOUNT_TYPE_GOOGLE_WALLET_TOKEN = 'GoogleWalletToken';
+    const DURING_ORDER_PROMOTION_TYPE_NONE = 'None';
+    const DURING_ORDER_PROMOTION_TYPE_BUMP_FREE_CHOCOLATE = 'BumpFreeChocolate';
+    const DURING_ORDER_PROMOTION_TYPE_BUMP_FREE_COKE = 'BumpFreeCoke';
+    const DURING_ORDER_PROMOTION_TYPE_SMS_INVITE_FREE_CHOCOLATE = 'SmsInviteFreeChocolate';
+    const DURING_ORDER_PROMOTION_TYPE_SMS_INVITE_FREE_COKE = 'SmsInviteFreeCoke';
     
 
     
@@ -192,19 +186,14 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
      *
      * @return string[]
      */
-    public function getPaymentAccountTypeAllowableValues()
+    public function getDuringOrderPromotionTypeAllowableValues()
     {
         return [
-            self::PAYMENT_ACCOUNT_TYPE_CARD,
-            self::PAYMENT_ACCOUNT_TYPE_CASH,
-            self::PAYMENT_ACCOUNT_TYPE_IDEAL,
-            self::PAYMENT_ACCOUNT_TYPE_BANCONTACT,
-            self::PAYMENT_ACCOUNT_TYPE_GIROPAY,
-            self::PAYMENT_ACCOUNT_TYPE_EPS,
-            self::PAYMENT_ACCOUNT_TYPE_EMV,
-            self::PAYMENT_ACCOUNT_TYPE_PAY_PAL,
-            self::PAYMENT_ACCOUNT_TYPE_PAY_GREEN,
-            self::PAYMENT_ACCOUNT_TYPE_GOOGLE_WALLET_TOKEN,
+            self::DURING_ORDER_PROMOTION_TYPE_NONE,
+            self::DURING_ORDER_PROMOTION_TYPE_BUMP_FREE_CHOCOLATE,
+            self::DURING_ORDER_PROMOTION_TYPE_BUMP_FREE_COKE,
+            self::DURING_ORDER_PROMOTION_TYPE_SMS_INVITE_FREE_CHOCOLATE,
+            self::DURING_ORDER_PROMOTION_TYPE_SMS_INVITE_FREE_COKE,
         ];
     }
     
@@ -224,10 +213,10 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
-        $this->container['payment_account_type'] = isset($data['payment_account_type']) ? $data['payment_account_type'] : null;
-        $this->container['percent_fee'] = isset($data['percent_fee']) ? $data['percent_fee'] : null;
-        $this->container['fixed_fee'] = isset($data['fixed_fee']) ? $data['fixed_fee'] : null;
+        $this->container['during_order_promotion_type'] = isset($data['during_order_promotion_type']) ? $data['during_order_promotion_type'] : null;
+        $this->container['min_sms_share_count'] = isset($data['min_sms_share_count']) ? $data['min_sms_share_count'] : null;
+        $this->container['free_coke_count'] = isset($data['free_coke_count']) ? $data['free_coke_count'] : null;
+        $this->container['promotion_period_seconds'] = isset($data['promotion_period_seconds']) ? $data['promotion_period_seconds'] : null;
     }
 
     /**
@@ -239,10 +228,10 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getPaymentAccountTypeAllowableValues();
-        if (!is_null($this->container['payment_account_type']) && !in_array($this->container['payment_account_type'], $allowedValues, true)) {
+        $allowedValues = $this->getDuringOrderPromotionTypeAllowableValues();
+        if (!is_null($this->container['during_order_promotion_type']) && !in_array($this->container['during_order_promotion_type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'payment_account_type', must be one of '%s'",
+                "invalid value for 'during_order_promotion_type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -263,106 +252,106 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_id
-     *
-     * @return int
-     */
-    public function getStoreId()
-    {
-        return $this->container['store_id'];
-    }
-
-    /**
-     * Sets store_id
-     *
-     * @param int $store_id Store Id
-     *
-     * @return $this
-     */
-    public function setStoreId($store_id)
-    {
-        $this->container['store_id'] = $store_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets payment_account_type
+     * Gets during_order_promotion_type
      *
      * @return string
      */
-    public function getPaymentAccountType()
+    public function getDuringOrderPromotionType()
     {
-        return $this->container['payment_account_type'];
+        return $this->container['during_order_promotion_type'];
     }
 
     /**
-     * Sets payment_account_type
+     * Sets during_order_promotion_type
      *
-     * @param string $payment_account_type Payment account type
+     * @param string $during_order_promotion_type during_order_promotion_type
      *
      * @return $this
      */
-    public function setPaymentAccountType($payment_account_type)
+    public function setDuringOrderPromotionType($during_order_promotion_type)
     {
-        $allowedValues = $this->getPaymentAccountTypeAllowableValues();
-        if (!is_null($payment_account_type) && !in_array($payment_account_type, $allowedValues, true)) {
+        $allowedValues = $this->getDuringOrderPromotionTypeAllowableValues();
+        if (!is_null($during_order_promotion_type) && !in_array($during_order_promotion_type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'payment_account_type', must be one of '%s'",
+                    "Invalid value for 'during_order_promotion_type', must be one of '%s'",
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['payment_account_type'] = $payment_account_type;
+        $this->container['during_order_promotion_type'] = $during_order_promotion_type;
 
         return $this;
     }
 
     /**
-     * Gets percent_fee
+     * Gets min_sms_share_count
      *
-     * @return double
+     * @return int
      */
-    public function getPercentFee()
+    public function getMinSmsShareCount()
     {
-        return $this->container['percent_fee'];
+        return $this->container['min_sms_share_count'];
     }
 
     /**
-     * Sets percent_fee
+     * Sets min_sms_share_count
      *
-     * @param double $percent_fee Percent fee to customer, including VAT
+     * @param int $min_sms_share_count min_sms_share_count
      *
      * @return $this
      */
-    public function setPercentFee($percent_fee)
+    public function setMinSmsShareCount($min_sms_share_count)
     {
-        $this->container['percent_fee'] = $percent_fee;
+        $this->container['min_sms_share_count'] = $min_sms_share_count;
 
         return $this;
     }
 
     /**
-     * Gets fixed_fee
+     * Gets free_coke_count
      *
-     * @return double
+     * @return int
      */
-    public function getFixedFee()
+    public function getFreeCokeCount()
     {
-        return $this->container['fixed_fee'];
+        return $this->container['free_coke_count'];
     }
 
     /**
-     * Sets fixed_fee
+     * Sets free_coke_count
      *
-     * @param double $fixed_fee Fixed fee to customer, including VAT
+     * @param int $free_coke_count free_coke_count
      *
      * @return $this
      */
-    public function setFixedFee($fixed_fee)
+    public function setFreeCokeCount($free_coke_count)
     {
-        $this->container['fixed_fee'] = $fixed_fee;
+        $this->container['free_coke_count'] = $free_coke_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets promotion_period_seconds
+     *
+     * @return int
+     */
+    public function getPromotionPeriodSeconds()
+    {
+        return $this->container['promotion_period_seconds'];
+    }
+
+    /**
+     * Sets promotion_period_seconds
+     *
+     * @param int $promotion_period_seconds promotion_period_seconds
+     *
+     * @return $this
+     */
+    public function setPromotionPeriodSeconds($promotion_period_seconds)
+    {
+        $this->container['promotion_period_seconds'] = $promotion_period_seconds;
 
         return $this;
     }

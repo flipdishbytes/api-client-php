@@ -1,6 +1,6 @@
 <?php
 /**
- * ProcessingFeeConfig
+ * OrderItemDm
  *
  * PHP version 5
  *
@@ -33,15 +33,14 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * ProcessingFeeConfig Class Doc Comment
+ * OrderItemDm Class Doc Comment
  *
  * @category Class
- * @description Processing fee config
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProcessingFeeConfig implements ModelInterface, ArrayAccess
+class OrderItemDm implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +49,7 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ProcessingFeeConfig';
+    protected static $swaggerModelName = 'OrderItemDm';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +57,9 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'store_id' => 'int',
-        'payment_account_type' => 'string',
-        'percent_fee' => 'double',
-        'fixed_fee' => 'double'
+        'menu_item_id' => 'int',
+        'is_available' => 'bool',
+        'menu_item_option_set_item_ids' => 'int[]'
     ];
 
     /**
@@ -70,10 +68,9 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'store_id' => 'int32',
-        'payment_account_type' => null,
-        'percent_fee' => 'double',
-        'fixed_fee' => 'double'
+        'menu_item_id' => 'int32',
+        'is_available' => null,
+        'menu_item_option_set_item_ids' => 'int32'
     ];
 
     /**
@@ -103,10 +100,9 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_id' => 'StoreId',
-        'payment_account_type' => 'PaymentAccountType',
-        'percent_fee' => 'PercentFee',
-        'fixed_fee' => 'FixedFee'
+        'menu_item_id' => 'MenuItemId',
+        'is_available' => 'IsAvailable',
+        'menu_item_option_set_item_ids' => 'MenuItemOptionSetItemIds'
     ];
 
     /**
@@ -115,10 +111,9 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_id' => 'setStoreId',
-        'payment_account_type' => 'setPaymentAccountType',
-        'percent_fee' => 'setPercentFee',
-        'fixed_fee' => 'setFixedFee'
+        'menu_item_id' => 'setMenuItemId',
+        'is_available' => 'setIsAvailable',
+        'menu_item_option_set_item_ids' => 'setMenuItemOptionSetItemIds'
     ];
 
     /**
@@ -127,10 +122,9 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_id' => 'getStoreId',
-        'payment_account_type' => 'getPaymentAccountType',
-        'percent_fee' => 'getPercentFee',
-        'fixed_fee' => 'getFixedFee'
+        'menu_item_id' => 'getMenuItemId',
+        'is_available' => 'getIsAvailable',
+        'menu_item_option_set_item_ids' => 'getMenuItemOptionSetItemIds'
     ];
 
     /**
@@ -174,39 +168,8 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const PAYMENT_ACCOUNT_TYPE_CARD = 'Card';
-    const PAYMENT_ACCOUNT_TYPE_CASH = 'Cash';
-    const PAYMENT_ACCOUNT_TYPE_IDEAL = 'Ideal';
-    const PAYMENT_ACCOUNT_TYPE_BANCONTACT = 'Bancontact';
-    const PAYMENT_ACCOUNT_TYPE_GIROPAY = 'Giropay';
-    const PAYMENT_ACCOUNT_TYPE_EPS = 'Eps';
-    const PAYMENT_ACCOUNT_TYPE_EMV = 'Emv';
-    const PAYMENT_ACCOUNT_TYPE_PAY_PAL = 'PayPal';
-    const PAYMENT_ACCOUNT_TYPE_PAY_GREEN = 'PayGreen';
-    const PAYMENT_ACCOUNT_TYPE_GOOGLE_WALLET_TOKEN = 'GoogleWalletToken';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getPaymentAccountTypeAllowableValues()
-    {
-        return [
-            self::PAYMENT_ACCOUNT_TYPE_CARD,
-            self::PAYMENT_ACCOUNT_TYPE_CASH,
-            self::PAYMENT_ACCOUNT_TYPE_IDEAL,
-            self::PAYMENT_ACCOUNT_TYPE_BANCONTACT,
-            self::PAYMENT_ACCOUNT_TYPE_GIROPAY,
-            self::PAYMENT_ACCOUNT_TYPE_EPS,
-            self::PAYMENT_ACCOUNT_TYPE_EMV,
-            self::PAYMENT_ACCOUNT_TYPE_PAY_PAL,
-            self::PAYMENT_ACCOUNT_TYPE_PAY_GREEN,
-            self::PAYMENT_ACCOUNT_TYPE_GOOGLE_WALLET_TOKEN,
-        ];
-    }
     
 
     /**
@@ -224,10 +187,9 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
-        $this->container['payment_account_type'] = isset($data['payment_account_type']) ? $data['payment_account_type'] : null;
-        $this->container['percent_fee'] = isset($data['percent_fee']) ? $data['percent_fee'] : null;
-        $this->container['fixed_fee'] = isset($data['fixed_fee']) ? $data['fixed_fee'] : null;
+        $this->container['menu_item_id'] = isset($data['menu_item_id']) ? $data['menu_item_id'] : null;
+        $this->container['is_available'] = isset($data['is_available']) ? $data['is_available'] : null;
+        $this->container['menu_item_option_set_item_ids'] = isset($data['menu_item_option_set_item_ids']) ? $data['menu_item_option_set_item_ids'] : null;
     }
 
     /**
@@ -238,14 +200,6 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getPaymentAccountTypeAllowableValues();
-        if (!is_null($this->container['payment_account_type']) && !in_array($this->container['payment_account_type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'payment_account_type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -263,106 +217,73 @@ class ProcessingFeeConfig implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_id
+     * Gets menu_item_id
      *
      * @return int
      */
-    public function getStoreId()
+    public function getMenuItemId()
     {
-        return $this->container['store_id'];
+        return $this->container['menu_item_id'];
     }
 
     /**
-     * Sets store_id
+     * Sets menu_item_id
      *
-     * @param int $store_id Store Id
+     * @param int $menu_item_id menu_item_id
      *
      * @return $this
      */
-    public function setStoreId($store_id)
+    public function setMenuItemId($menu_item_id)
     {
-        $this->container['store_id'] = $store_id;
+        $this->container['menu_item_id'] = $menu_item_id;
 
         return $this;
     }
 
     /**
-     * Gets payment_account_type
+     * Gets is_available
      *
-     * @return string
+     * @return bool
      */
-    public function getPaymentAccountType()
+    public function getIsAvailable()
     {
-        return $this->container['payment_account_type'];
+        return $this->container['is_available'];
     }
 
     /**
-     * Sets payment_account_type
+     * Sets is_available
      *
-     * @param string $payment_account_type Payment account type
+     * @param bool $is_available is_available
      *
      * @return $this
      */
-    public function setPaymentAccountType($payment_account_type)
+    public function setIsAvailable($is_available)
     {
-        $allowedValues = $this->getPaymentAccountTypeAllowableValues();
-        if (!is_null($payment_account_type) && !in_array($payment_account_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'payment_account_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['payment_account_type'] = $payment_account_type;
+        $this->container['is_available'] = $is_available;
 
         return $this;
     }
 
     /**
-     * Gets percent_fee
+     * Gets menu_item_option_set_item_ids
      *
-     * @return double
+     * @return int[]
      */
-    public function getPercentFee()
+    public function getMenuItemOptionSetItemIds()
     {
-        return $this->container['percent_fee'];
+        return $this->container['menu_item_option_set_item_ids'];
     }
 
     /**
-     * Sets percent_fee
+     * Sets menu_item_option_set_item_ids
      *
-     * @param double $percent_fee Percent fee to customer, including VAT
+     * @param int[] $menu_item_option_set_item_ids menu_item_option_set_item_ids
      *
      * @return $this
      */
-    public function setPercentFee($percent_fee)
+    public function setMenuItemOptionSetItemIds($menu_item_option_set_item_ids)
     {
-        $this->container['percent_fee'] = $percent_fee;
-
-        return $this;
-    }
-
-    /**
-     * Gets fixed_fee
-     *
-     * @return double
-     */
-    public function getFixedFee()
-    {
-        return $this->container['fixed_fee'];
-    }
-
-    /**
-     * Sets fixed_fee
-     *
-     * @param double $fixed_fee Fixed fee to customer, including VAT
-     *
-     * @return $this
-     */
-    public function setFixedFee($fixed_fee)
-    {
-        $this->container['fixed_fee'] = $fixed_fee;
+        $this->container['menu_item_option_set_item_ids'] = $menu_item_option_set_item_ids;
 
         return $this;
     }
