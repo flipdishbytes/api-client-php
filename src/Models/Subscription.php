@@ -59,14 +59,15 @@ class Subscription implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'products' => '\Flipdish\\Client\Models\SubscriptionProduct[]',
+        'next_invoice_amount' => 'double',
+        'next_invoice_billing_date' => '\DateTime',
         'upcoming_invoice_items' => '\Flipdish\\Client\Models\InvoiceItem[]',
         'upcoming_invoice_discounts' => '\Flipdish\\Client\Models\InvoiceDiscount[]',
+        'upcoming_invoice' => '\Flipdish\\Client\Models\UpcomingInvoice',
         'subscription_id' => 'string',
         'name' => 'string',
         'status' => 'string',
         'currency' => 'string',
-        'next_invoice_amount' => 'double',
-        'next_invoice_billing_date' => '\DateTime',
         'user' => 'string',
         'default_payment_description' => 'string',
         'cancellation_date' => '\DateTime'
@@ -79,14 +80,15 @@ class Subscription implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'products' => null,
+        'next_invoice_amount' => 'double',
+        'next_invoice_billing_date' => 'date-time',
         'upcoming_invoice_items' => null,
         'upcoming_invoice_discounts' => null,
+        'upcoming_invoice' => null,
         'subscription_id' => null,
         'name' => null,
         'status' => null,
         'currency' => null,
-        'next_invoice_amount' => 'double',
-        'next_invoice_billing_date' => 'date-time',
         'user' => null,
         'default_payment_description' => null,
         'cancellation_date' => 'date-time'
@@ -120,14 +122,15 @@ class Subscription implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'products' => 'Products',
+        'next_invoice_amount' => 'NextInvoiceAmount',
+        'next_invoice_billing_date' => 'NextInvoiceBillingDate',
         'upcoming_invoice_items' => 'UpcomingInvoiceItems',
         'upcoming_invoice_discounts' => 'UpcomingInvoiceDiscounts',
+        'upcoming_invoice' => 'UpcomingInvoice',
         'subscription_id' => 'SubscriptionId',
         'name' => 'Name',
         'status' => 'Status',
         'currency' => 'Currency',
-        'next_invoice_amount' => 'NextInvoiceAmount',
-        'next_invoice_billing_date' => 'NextInvoiceBillingDate',
         'user' => 'User',
         'default_payment_description' => 'DefaultPaymentDescription',
         'cancellation_date' => 'CancellationDate'
@@ -140,14 +143,15 @@ class Subscription implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'products' => 'setProducts',
+        'next_invoice_amount' => 'setNextInvoiceAmount',
+        'next_invoice_billing_date' => 'setNextInvoiceBillingDate',
         'upcoming_invoice_items' => 'setUpcomingInvoiceItems',
         'upcoming_invoice_discounts' => 'setUpcomingInvoiceDiscounts',
+        'upcoming_invoice' => 'setUpcomingInvoice',
         'subscription_id' => 'setSubscriptionId',
         'name' => 'setName',
         'status' => 'setStatus',
         'currency' => 'setCurrency',
-        'next_invoice_amount' => 'setNextInvoiceAmount',
-        'next_invoice_billing_date' => 'setNextInvoiceBillingDate',
         'user' => 'setUser',
         'default_payment_description' => 'setDefaultPaymentDescription',
         'cancellation_date' => 'setCancellationDate'
@@ -160,14 +164,15 @@ class Subscription implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'products' => 'getProducts',
+        'next_invoice_amount' => 'getNextInvoiceAmount',
+        'next_invoice_billing_date' => 'getNextInvoiceBillingDate',
         'upcoming_invoice_items' => 'getUpcomingInvoiceItems',
         'upcoming_invoice_discounts' => 'getUpcomingInvoiceDiscounts',
+        'upcoming_invoice' => 'getUpcomingInvoice',
         'subscription_id' => 'getSubscriptionId',
         'name' => 'getName',
         'status' => 'getStatus',
         'currency' => 'getCurrency',
-        'next_invoice_amount' => 'getNextInvoiceAmount',
-        'next_invoice_billing_date' => 'getNextInvoiceBillingDate',
         'user' => 'getUser',
         'default_payment_description' => 'getDefaultPaymentDescription',
         'cancellation_date' => 'getCancellationDate'
@@ -496,14 +501,15 @@ class Subscription implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['products'] = isset($data['products']) ? $data['products'] : null;
+        $this->container['next_invoice_amount'] = isset($data['next_invoice_amount']) ? $data['next_invoice_amount'] : null;
+        $this->container['next_invoice_billing_date'] = isset($data['next_invoice_billing_date']) ? $data['next_invoice_billing_date'] : null;
         $this->container['upcoming_invoice_items'] = isset($data['upcoming_invoice_items']) ? $data['upcoming_invoice_items'] : null;
         $this->container['upcoming_invoice_discounts'] = isset($data['upcoming_invoice_discounts']) ? $data['upcoming_invoice_discounts'] : null;
+        $this->container['upcoming_invoice'] = isset($data['upcoming_invoice']) ? $data['upcoming_invoice'] : null;
         $this->container['subscription_id'] = isset($data['subscription_id']) ? $data['subscription_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
-        $this->container['next_invoice_amount'] = isset($data['next_invoice_amount']) ? $data['next_invoice_amount'] : null;
-        $this->container['next_invoice_billing_date'] = isset($data['next_invoice_billing_date']) ? $data['next_invoice_billing_date'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['default_payment_description'] = isset($data['default_payment_description']) ? $data['default_payment_description'] : null;
         $this->container['cancellation_date'] = isset($data['cancellation_date']) ? $data['cancellation_date'] : null;
@@ -592,6 +598,54 @@ class Subscription implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets next_invoice_amount
+     *
+     * @return double
+     */
+    public function getNextInvoiceAmount()
+    {
+        return $this->container['next_invoice_amount'];
+    }
+
+    /**
+     * Sets next_invoice_amount
+     *
+     * @param double $next_invoice_amount Next invoice amount
+     *
+     * @return $this
+     */
+    public function setNextInvoiceAmount($next_invoice_amount)
+    {
+        $this->container['next_invoice_amount'] = $next_invoice_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets next_invoice_billing_date
+     *
+     * @return \DateTime
+     */
+    public function getNextInvoiceBillingDate()
+    {
+        return $this->container['next_invoice_billing_date'];
+    }
+
+    /**
+     * Sets next_invoice_billing_date
+     *
+     * @param \DateTime $next_invoice_billing_date Next invoice billing date
+     *
+     * @return $this
+     */
+    public function setNextInvoiceBillingDate($next_invoice_billing_date)
+    {
+        $this->container['next_invoice_billing_date'] = $next_invoice_billing_date;
+
+        return $this;
+    }
+
+    /**
      * Gets upcoming_invoice_items
      *
      * @return \Flipdish\\Client\Models\InvoiceItem[]
@@ -635,6 +689,30 @@ class Subscription implements ModelInterface, ArrayAccess
     public function setUpcomingInvoiceDiscounts($upcoming_invoice_discounts)
     {
         $this->container['upcoming_invoice_discounts'] = $upcoming_invoice_discounts;
+
+        return $this;
+    }
+
+    /**
+     * Gets upcoming_invoice
+     *
+     * @return \Flipdish\\Client\Models\UpcomingInvoice
+     */
+    public function getUpcomingInvoice()
+    {
+        return $this->container['upcoming_invoice'];
+    }
+
+    /**
+     * Sets upcoming_invoice
+     *
+     * @param \Flipdish\\Client\Models\UpcomingInvoice $upcoming_invoice Upcoming invoice
+     *
+     * @return $this
+     */
+    public function setUpcomingInvoice($upcoming_invoice)
+    {
+        $this->container['upcoming_invoice'] = $upcoming_invoice;
 
         return $this;
     }
@@ -749,54 +827,6 @@ class Subscription implements ModelInterface, ArrayAccess
             );
         }
         $this->container['currency'] = $currency;
-
-        return $this;
-    }
-
-    /**
-     * Gets next_invoice_amount
-     *
-     * @return double
-     */
-    public function getNextInvoiceAmount()
-    {
-        return $this->container['next_invoice_amount'];
-    }
-
-    /**
-     * Sets next_invoice_amount
-     *
-     * @param double $next_invoice_amount Next invoice amount
-     *
-     * @return $this
-     */
-    public function setNextInvoiceAmount($next_invoice_amount)
-    {
-        $this->container['next_invoice_amount'] = $next_invoice_amount;
-
-        return $this;
-    }
-
-    /**
-     * Gets next_invoice_billing_date
-     *
-     * @return \DateTime
-     */
-    public function getNextInvoiceBillingDate()
-    {
-        return $this->container['next_invoice_billing_date'];
-    }
-
-    /**
-     * Sets next_invoice_billing_date
-     *
-     * @param \DateTime $next_invoice_billing_date Next invoice billing date
-     *
-     * @return $this
-     */
-    public function setNextInvoiceBillingDate($next_invoice_billing_date)
-    {
-        $this->container['next_invoice_billing_date'] = $next_invoice_billing_date;
 
         return $this;
     }

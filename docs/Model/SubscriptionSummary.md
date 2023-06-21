@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**next_invoice_amount** | **double** | Next invoice amount | [optional] 
+**next_invoice_billing_date** | [**\DateTime**](\DateTime.md) | Next invoice billing date | [optional] 
 **subscription_id** | **string** | The subscription identifier | 
 **name** | **string** |  | 
 **status** | **string** | Status | 
 **currency** | **string** | Currency | 
-**next_invoice_amount** | **double** | Next invoice amount | [optional] 
-**next_invoice_billing_date** | [**\DateTime**](\DateTime.md) | Next invoice billing date | [optional] 
 **user** | **string** | User | 
 **default_payment_description** | **string** | Default payment description | [optional] 
 **cancellation_date** | [**\DateTime**](\DateTime.md) | Cancellation Date | [optional] 

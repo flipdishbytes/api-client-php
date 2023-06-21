@@ -84,6 +84,20 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "next_invoice_amount"
+     */
+    public function testPropertyNextInvoiceAmount()
+    {
+    }
+
+    /**
+     * Test attribute "next_invoice_billing_date"
+     */
+    public function testPropertyNextInvoiceBillingDate()
+    {
+    }
+
+    /**
      * Test attribute "upcoming_invoice_items"
      */
     public function testPropertyUpcomingInvoiceItems()
@@ -94,6 +108,13 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
      * Test attribute "upcoming_invoice_discounts"
      */
     public function testPropertyUpcomingInvoiceDiscounts()
+    {
+    }
+
+    /**
+     * Test attribute "upcoming_invoice"
+     */
+    public function testPropertyUpcomingInvoice()
     {
     }
 
@@ -122,20 +143,6 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
      * Test attribute "currency"
      */
     public function testPropertyCurrency()
-    {
-    }
-
-    /**
-     * Test attribute "next_invoice_amount"
-     */
-    public function testPropertyNextInvoiceAmount()
-    {
-    }
-
-    /**
-     * Test attribute "next_invoice_billing_date"
-     */
-    public function testPropertyNextInvoiceBillingDate()
     {
     }
 

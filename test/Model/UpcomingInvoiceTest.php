@@ -1,6 +1,6 @@
 <?php
 /**
- * SubscriptionSummaryTest
+ * UpcomingInvoiceTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * SubscriptionSummaryTest Class Doc Comment
+ * UpcomingInvoiceTest Class Doc Comment
  *
  * @category    Class
- * @description Subscription Summary
+ * @description UpcomingInvoice
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SubscriptionSummaryTest extends \PHPUnit_Framework_TestCase
+class UpcomingInvoiceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,72 +70,65 @@ class SubscriptionSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SubscriptionSummary"
+     * Test "UpcomingInvoice"
      */
-    public function testSubscriptionSummary()
+    public function testUpcomingInvoice()
     {
     }
 
     /**
-     * Test attribute "next_invoice_amount"
+     * Test attribute "amount"
      */
-    public function testPropertyNextInvoiceAmount()
+    public function testPropertyAmount()
     {
     }
 
     /**
-     * Test attribute "next_invoice_billing_date"
+     * Test attribute "next_billing_date"
      */
-    public function testPropertyNextInvoiceBillingDate()
+    public function testPropertyNextBillingDate()
     {
     }
 
     /**
-     * Test attribute "subscription_id"
+     * Test attribute "subtotal"
      */
-    public function testPropertySubscriptionId()
+    public function testPropertySubtotal()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "total_excluding_tax"
      */
-    public function testPropertyName()
+    public function testPropertyTotalExcludingTax()
     {
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "amount_due"
      */
-    public function testPropertyStatus()
+    public function testPropertyAmountDue()
     {
     }
 
     /**
-     * Test attribute "currency"
+     * Test attribute "tax"
      */
-    public function testPropertyCurrency()
+    public function testPropertyTax()
     {
     }
 
     /**
-     * Test attribute "user"
+     * Test attribute "items"
      */
-    public function testPropertyUser()
+    public function testPropertyItems()
     {
     }
 
     /**
-     * Test attribute "default_payment_description"
+     * Test attribute "discounts"
      */
-    public function testPropertyDefaultPaymentDescription()
-    {
-    }
-
-    /**
-     * Test attribute "cancellation_date"
-     */
-    public function testPropertyCancellationDate()
+    public function testPropertyDiscounts()
     {
     }
 }
