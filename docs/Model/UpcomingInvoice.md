@@ -5,10 +5,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amount** | **double** | Amount | [optional] 
 **next_billing_date** | [**\DateTime**](\DateTime.md) | Next billing date | [optional] 
-**subtotal** | **int** | Subtotal | 
-**total_excluding_tax** | **int** | Total excluding tax | [optional] 
-**amount_due** | **int** | Amount due | 
-**tax** | **int** | Tax | 
+**subtotal** | **double** | Subtotal | 
+**total_excluding_tax** | **double** | Total excluding tax | [optional] 
+**amount_due** | **double** | Amount due | 
+**tax** | **double** | Tax | 
 **items** | [**\Flipdish\\Client\Models\InvoiceItem[]**](InvoiceItem.md) | Items | [optional] 
 **discounts** | [**\Flipdish\\Client\Models\InvoiceDiscount[]**](InvoiceDiscount.md) | Discounts | [optional] 
 

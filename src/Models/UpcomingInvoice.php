@@ -59,10 +59,10 @@ class UpcomingInvoice implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'amount' => 'double',
         'next_billing_date' => '\DateTime',
-        'subtotal' => 'int',
-        'total_excluding_tax' => 'int',
-        'amount_due' => 'int',
-        'tax' => 'int',
+        'subtotal' => 'double',
+        'total_excluding_tax' => 'double',
+        'amount_due' => 'double',
+        'tax' => 'double',
         'items' => '\Flipdish\\Client\Models\InvoiceItem[]',
         'discounts' => '\Flipdish\\Client\Models\InvoiceDiscount[]'
     ];
@@ -75,10 +75,10 @@ class UpcomingInvoice implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'amount' => 'double',
         'next_billing_date' => 'date-time',
-        'subtotal' => 'int64',
-        'total_excluding_tax' => 'int64',
-        'amount_due' => 'int64',
-        'tax' => 'int64',
+        'subtotal' => 'double',
+        'total_excluding_tax' => 'double',
+        'amount_due' => 'double',
+        'tax' => 'double',
         'items' => null,
         'discounts' => null
     ];
@@ -306,7 +306,7 @@ class UpcomingInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets subtotal
      *
-     * @return int
+     * @return double
      */
     public function getSubtotal()
     {
@@ -316,7 +316,7 @@ class UpcomingInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets subtotal
      *
-     * @param int $subtotal Subtotal
+     * @param double $subtotal Subtotal
      *
      * @return $this
      */
@@ -330,7 +330,7 @@ class UpcomingInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets total_excluding_tax
      *
-     * @return int
+     * @return double
      */
     public function getTotalExcludingTax()
     {
@@ -340,7 +340,7 @@ class UpcomingInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets total_excluding_tax
      *
-     * @param int $total_excluding_tax Total excluding tax
+     * @param double $total_excluding_tax Total excluding tax
      *
      * @return $this
      */
@@ -354,7 +354,7 @@ class UpcomingInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets amount_due
      *
-     * @return int
+     * @return double
      */
     public function getAmountDue()
     {
@@ -364,7 +364,7 @@ class UpcomingInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets amount_due
      *
-     * @param int $amount_due Amount due
+     * @param double $amount_due Amount due
      *
      * @return $this
      */
@@ -378,7 +378,7 @@ class UpcomingInvoice implements ModelInterface, ArrayAccess
     /**
      * Gets tax
      *
-     * @return int
+     * @return double
      */
     public function getTax()
     {
@@ -388,7 +388,7 @@ class UpcomingInvoice implements ModelInterface, ArrayAccess
     /**
      * Sets tax
      *
-     * @param int $tax Tax
+     * @param double $tax Tax
      *
      * @return $this
      */

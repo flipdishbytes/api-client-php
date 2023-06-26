@@ -139,6 +139,7 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**setAppConfig**](docs/Api/AppsApi.md#setappconfig) | **POST** /api/v1.0/apps/{appId}/config | 
 *AppsApi* | [**setAppHostname**](docs/Api/AppsApi.md#setapphostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
 *AppsApi* | [**setAppLanguages**](docs/Api/AppsApi.md#setapplanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 
+*AppsApi* | [**setAppStoreName**](docs/Api/AppsApi.md#setappstorename) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 *AppsApi* | [**setCompliance**](docs/Api/AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 *AppsApi* | [**setPanaceaVanityUrl**](docs/Api/AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
 *AppsApi* | [**setSalesforceReferences**](docs/Api/AppsApi.md#setsalesforcereferences) | **POST** /api/v1.0/apps/{appId}/salesforcereferences | 
