@@ -196,6 +196,13 @@ class AppTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "kiosk_primary_colour"
+     */
+    public function testPropertyKioskPrimaryColour()
+    {
+    }
+
+    /**
      * Test attribute "application_category"
      */
     public function testPropertyApplicationCategory()

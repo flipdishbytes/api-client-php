@@ -75,6 +75,7 @@ class App implements ModelInterface, ArrayAccess
         'name' => 'string',
         'host_name' => 'string',
         'main_color' => 'string',
+        'kiosk_primary_colour' => 'string',
         'application_category' => 'string',
         'is_panacea_enabled' => 'bool',
         'cookie_consent_prompt_enabled' => 'bool'
@@ -103,6 +104,7 @@ class App implements ModelInterface, ArrayAccess
         'name' => null,
         'host_name' => null,
         'main_color' => null,
+        'kiosk_primary_colour' => null,
         'application_category' => null,
         'is_panacea_enabled' => null,
         'cookie_consent_prompt_enabled' => null
@@ -152,6 +154,7 @@ class App implements ModelInterface, ArrayAccess
         'name' => 'Name',
         'host_name' => 'HostName',
         'main_color' => 'MainColor',
+        'kiosk_primary_colour' => 'KioskPrimaryColour',
         'application_category' => 'ApplicationCategory',
         'is_panacea_enabled' => 'IsPanaceaEnabled',
         'cookie_consent_prompt_enabled' => 'CookieConsentPromptEnabled'
@@ -180,6 +183,7 @@ class App implements ModelInterface, ArrayAccess
         'name' => 'setName',
         'host_name' => 'setHostName',
         'main_color' => 'setMainColor',
+        'kiosk_primary_colour' => 'setKioskPrimaryColour',
         'application_category' => 'setApplicationCategory',
         'is_panacea_enabled' => 'setIsPanaceaEnabled',
         'cookie_consent_prompt_enabled' => 'setCookieConsentPromptEnabled'
@@ -208,6 +212,7 @@ class App implements ModelInterface, ArrayAccess
         'name' => 'getName',
         'host_name' => 'getHostName',
         'main_color' => 'getMainColor',
+        'kiosk_primary_colour' => 'getKioskPrimaryColour',
         'application_category' => 'getApplicationCategory',
         'is_panacea_enabled' => 'getIsPanaceaEnabled',
         'cookie_consent_prompt_enabled' => 'getCookieConsentPromptEnabled'
@@ -657,6 +662,7 @@ class App implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['host_name'] = isset($data['host_name']) ? $data['host_name'] : null;
         $this->container['main_color'] = isset($data['main_color']) ? $data['main_color'] : null;
+        $this->container['kiosk_primary_colour'] = isset($data['kiosk_primary_colour']) ? $data['kiosk_primary_colour'] : null;
         $this->container['application_category'] = isset($data['application_category']) ? $data['application_category'] : null;
         $this->container['is_panacea_enabled'] = isset($data['is_panacea_enabled']) ? $data['is_panacea_enabled'] : null;
         $this->container['cookie_consent_prompt_enabled'] = isset($data['cookie_consent_prompt_enabled']) ? $data['cookie_consent_prompt_enabled'] : null;
@@ -1139,6 +1145,30 @@ class App implements ModelInterface, ArrayAccess
     public function setMainColor($main_color)
     {
         $this->container['main_color'] = $main_color;
+
+        return $this;
+    }
+
+    /**
+     * Gets kiosk_primary_colour
+     *
+     * @return string
+     */
+    public function getKioskPrimaryColour()
+    {
+        return $this->container['kiosk_primary_colour'];
+    }
+
+    /**
+     * Sets kiosk_primary_colour
+     *
+     * @param string $kiosk_primary_colour Primary colour used on the Kiosk
+     *
+     * @return $this
+     */
+    public function setKioskPrimaryColour($kiosk_primary_colour)
+    {
+        $this->container['kiosk_primary_colour'] = $kiosk_primary_colour;
 
         return $this;
     }
