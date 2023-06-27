@@ -132,6 +132,16 @@ class AppStoreConfigurationsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getConfiguredAppWithSubscriptionsSingleApp
+     *
+     * .
+     *
+     */
+    public function testGetConfiguredAppWithSubscriptionsSingleApp()
+    {
+    }
+
+    /**
      * Test case for getConfiguredApps
      *
      * .
