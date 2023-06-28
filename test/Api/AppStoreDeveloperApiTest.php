@@ -102,6 +102,16 @@ class AppStoreDeveloperApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getAppExternalProduct
+     *
+     * .
+     *
+     */
+    public function testGetAppExternalProduct()
+    {
+    }
+
+    /**
      * Test case for getExternalFunctionSigningKey
      *
      * .
@@ -118,6 +128,16 @@ class AppStoreDeveloperApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testUpdateAppStoreApp()
+    {
+    }
+
+    /**
+     * Test case for updateExternalProduct
+     *
+     * .
+     *
+     */
+    public function testUpdateExternalProduct()
     {
     }
 

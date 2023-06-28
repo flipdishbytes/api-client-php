@@ -154,6 +154,13 @@ class UpdateAppStoreAppTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_paid"
+     */
+    public function testPropertyIsPaid()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

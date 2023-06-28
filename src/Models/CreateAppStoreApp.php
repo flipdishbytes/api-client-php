@@ -69,6 +69,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
         'support' => '\Flipdish\\Client\Models\AppStoreAppSupportInfo',
         'external_function_action_url' => 'string',
         'external_function_signature_key' => 'string',
+        'is_paid' => 'bool',
         'name' => 'string',
         'description' => 'string',
         'is_enabled' => 'bool',
@@ -94,6 +95,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
         'support' => null,
         'external_function_action_url' => null,
         'external_function_signature_key' => null,
+        'is_paid' => null,
         'name' => null,
         'description' => null,
         'is_enabled' => null,
@@ -140,6 +142,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
         'support' => 'Support',
         'external_function_action_url' => 'ExternalFunctionActionUrl',
         'external_function_signature_key' => 'ExternalFunctionSignatureKey',
+        'is_paid' => 'IsPaid',
         'name' => 'Name',
         'description' => 'Description',
         'is_enabled' => 'IsEnabled',
@@ -165,6 +168,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
         'support' => 'setSupport',
         'external_function_action_url' => 'setExternalFunctionActionUrl',
         'external_function_signature_key' => 'setExternalFunctionSignatureKey',
+        'is_paid' => 'setIsPaid',
         'name' => 'setName',
         'description' => 'setDescription',
         'is_enabled' => 'setIsEnabled',
@@ -190,6 +194,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
         'support' => 'getSupport',
         'external_function_action_url' => 'getExternalFunctionActionUrl',
         'external_function_signature_key' => 'getExternalFunctionSignatureKey',
+        'is_paid' => 'getIsPaid',
         'name' => 'getName',
         'description' => 'getDescription',
         'is_enabled' => 'getIsEnabled',
@@ -411,6 +416,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
         $this->container['support'] = isset($data['support']) ? $data['support'] : null;
         $this->container['external_function_action_url'] = isset($data['external_function_action_url']) ? $data['external_function_action_url'] : null;
         $this->container['external_function_signature_key'] = isset($data['external_function_signature_key']) ? $data['external_function_signature_key'] : null;
+        $this->container['is_paid'] = isset($data['is_paid']) ? $data['is_paid'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
@@ -795,6 +801,30 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     public function setExternalFunctionSignatureKey($external_function_signature_key)
     {
         $this->container['external_function_signature_key'] = $external_function_signature_key;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_paid
+     *
+     * @return bool
+     */
+    public function getIsPaid()
+    {
+        return $this->container['is_paid'];
+    }
+
+    /**
+     * Sets is_paid
+     *
+     * @param bool $is_paid Is Paid
+     *
+     * @return $this
+     */
+    public function setIsPaid($is_paid)
+    {
+        $this->container['is_paid'] = $is_paid;
 
         return $this;
     }

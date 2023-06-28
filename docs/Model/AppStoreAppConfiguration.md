@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **support** | [**\Flipdish\\Client\Models\AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) | Support information | [optional] 
 **external_function_action_url** | **string** | Action URL for external functions, used for handling Portal configuration action buttons | [optional] 
 **external_function_signature_key** | **string** | Signing key for external function action calls | [optional] 
+**is_paid** | **bool** | Is Paid | [optional] 
 **name** | **string** | Name | 
 **description** | **string** | Description | 
 **categories** | **string[]** | Categories | 

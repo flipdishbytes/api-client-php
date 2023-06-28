@@ -126,8 +126,10 @@ Class | Method | HTTP request | Description
 *AppStoreDeveloperApi* | [**appVerificationUpdate**](docs/Api/AppStoreDeveloperApi.md#appverificationupdate) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/verification | 
 *AppStoreDeveloperApi* | [**createAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#createappstoreapp) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps | 
 *AppStoreDeveloperApi* | [**deleteAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#deleteappstoreapp) | **DELETE** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
+*AppStoreDeveloperApi* | [**getAppExternalProduct**](docs/Api/AppStoreDeveloperApi.md#getappexternalproduct) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product | 
 *AppStoreDeveloperApi* | [**getExternalFunctionSigningKey**](docs/Api/AppStoreDeveloperApi.md#getexternalfunctionsigningkey) | **GET** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_function_signing_key | 
 *AppStoreDeveloperApi* | [**updateAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
+*AppStoreDeveloperApi* | [**updateExternalProduct**](docs/Api/AppStoreDeveloperApi.md#updateexternalproduct) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product | 
 *AppStoreDeveloperApi* | [**uploadAppStoreAppLogo**](docs/Api/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
 *AppsApi* | [**getApp**](docs/Api/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 *AppsApi* | [**getAppHostnameStatus**](docs/Api/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
@@ -1247,6 +1249,7 @@ Class | Method | HTTP request | Description
  - [UpdateAppStoreAppConfiguration](docs/Model/UpdateAppStoreAppConfiguration.md)
  - [UpdateAppStoreAppConfigurationValuesBatch](docs/Model/UpdateAppStoreAppConfigurationValuesBatch.md)
  - [UpdateAppStoreAppConfigurationWebhookDTO](docs/Model/UpdateAppStoreAppConfigurationWebhookDTO.md)
+ - [UpdateAppStoreAppExternalProduct](docs/Model/UpdateAppStoreAppExternalProduct.md)
  - [UpdateCatalogGroupReference](docs/Model/UpdateCatalogGroupReference.md)
  - [UpdateCatalogItem](docs/Model/UpdateCatalogItem.md)
  - [UpdateDriverNotificationToken](docs/Model/UpdateDriverNotificationToken.md)
