@@ -88,6 +88,7 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**changePassword**](docs/Api/AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | 
 *AccountsApi* | [**changePasswordWithPin**](docs/Api/AccountsApi.md#changepasswordwithpin) | **PUT** /api/v1.0/accounts/password/pin | 
 *AccountsApi* | [**createAccount**](docs/Api/AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | 
+*AccountsApi* | [**createBasicAccount**](docs/Api/AccountsApi.md#createbasicaccount) | **POST** /api/v1.0/accounts/basic-account | 
 *AccountsApi* | [**getAccountDetails**](docs/Api/AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | 
 *AccountsApi* | [**getLocalisedTimeZones**](docs/Api/AccountsApi.md#getlocalisedtimezones) | **GET** /api/v1.0/accounts/timezones | 
 *AccountsApi* | [**login**](docs/Api/AccountsApi.md#login) | **POST** /api/v1.0/accounts/login | 
@@ -641,6 +642,7 @@ Class | Method | HTTP request | Description
  - [CountryWithAccountFieldsDefinitions](docs/Model/CountryWithAccountFieldsDefinitions.md)
  - [CreateAccountModel](docs/Model/CreateAccountModel.md)
  - [CreateAppStoreApp](docs/Model/CreateAppStoreApp.md)
+ - [CreateBasicAccountModel](docs/Model/CreateBasicAccountModel.md)
  - [CreateCatalogGroupReference](docs/Model/CreateCatalogGroupReference.md)
  - [CreateCatalogItem](docs/Model/CreateCatalogItem.md)
  - [CreateFulfillmentStatesConfiguration](docs/Model/CreateFulfillmentStatesConfiguration.md)

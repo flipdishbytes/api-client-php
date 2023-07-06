@@ -112,6 +112,16 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createBasicAccount
+     *
+     * .
+     *
+     */
+    public function testCreateBasicAccount()
+    {
+    }
+
+    /**
      * Test case for getAccountDetails
      *
      * .

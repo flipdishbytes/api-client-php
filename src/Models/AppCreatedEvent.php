@@ -63,6 +63,7 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
         'app_name' => 'string',
         'country_id' => 'string',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
+        'opportunity_id' => 'string',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -81,6 +82,7 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
         'app_name' => null,
         'country_id' => null,
         'user' => null,
+        'opportunity_id' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -120,6 +122,7 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
         'app_name' => 'AppName',
         'country_id' => 'CountryId',
         'user' => 'User',
+        'opportunity_id' => 'OpportunityId',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -138,6 +141,7 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
         'app_name' => 'setAppName',
         'country_id' => 'setCountryId',
         'user' => 'setUser',
+        'opportunity_id' => 'setOpportunityId',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -156,6 +160,7 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
         'app_name' => 'getAppName',
         'country_id' => 'getCountryId',
         'user' => 'getUser',
+        'opportunity_id' => 'getOpportunityId',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -228,6 +233,7 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
         $this->container['app_name'] = isset($data['app_name']) ? $data['app_name'] : null;
         $this->container['country_id'] = isset($data['country_id']) ? $data['country_id'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
+        $this->container['opportunity_id'] = isset($data['opportunity_id']) ? $data['opportunity_id'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -375,6 +381,30 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
     public function setUser($user)
     {
         $this->container['user'] = $user;
+
+        return $this;
+    }
+
+    /**
+     * Gets opportunity_id
+     *
+     * @return string
+     */
+    public function getOpportunityId()
+    {
+        return $this->container['opportunity_id'];
+    }
+
+    /**
+     * Sets opportunity_id
+     *
+     * @param string $opportunity_id SalesForce Opportunity Id
+     *
+     * @return $this
+     */
+    public function setOpportunityId($opportunity_id)
+    {
+        $this->container['opportunity_id'] = $opportunity_id;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * AppCreatedEventTest
+ * CreateBasicAccountModelTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * AppCreatedEventTest Class Doc Comment
+ * CreateBasicAccountModelTest Class Doc Comment
  *
  * @category    Class
- * @description Application created event
+ * @description Basic attributes for creating an account
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AppCreatedEventTest extends \PHPUnit_Framework_TestCase
+class CreateBasicAccountModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,44 +70,23 @@ class AppCreatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AppCreatedEvent"
+     * Test "CreateBasicAccountModel"
      */
-    public function testAppCreatedEvent()
+    public function testCreateBasicAccountModel()
     {
     }
 
     /**
-     * Test attribute "event_name"
+     * Test attribute "store_name"
      */
-    public function testPropertyEventName()
+    public function testPropertyStoreName()
     {
     }
 
     /**
-     * Test attribute "description"
+     * Test attribute "language_id"
      */
-    public function testPropertyDescription()
-    {
-    }
-
-    /**
-     * Test attribute "app_name"
-     */
-    public function testPropertyAppName()
-    {
-    }
-
-    /**
-     * Test attribute "country_id"
-     */
-    public function testPropertyCountryId()
-    {
-    }
-
-    /**
-     * Test attribute "user"
-     */
-    public function testPropertyUser()
+    public function testPropertyLanguageId()
     {
     }
 
@@ -115,41 +94,6 @@ class AppCreatedEventTest extends \PHPUnit_Framework_TestCase
      * Test attribute "opportunity_id"
      */
     public function testPropertyOpportunityId()
-    {
-    }
-
-    /**
-     * Test attribute "flipdish_event_id"
-     */
-    public function testPropertyFlipdishEventId()
-    {
-    }
-
-    /**
-     * Test attribute "create_time"
-     */
-    public function testPropertyCreateTime()
-    {
-    }
-
-    /**
-     * Test attribute "position"
-     */
-    public function testPropertyPosition()
-    {
-    }
-
-    /**
-     * Test attribute "app_id"
-     */
-    public function testPropertyAppId()
-    {
-    }
-
-    /**
-     * Test attribute "ip_address"
-     */
-    public function testPropertyIpAddress()
     {
     }
 }
