@@ -4,7 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hydra_config_id** | **int** | Flipdish internal device identifier | [optional] 
-**device_id** | **string** | Device Id or Serial Number | [optional] 
+**device_id** | **string** | Device Id | [optional] 
+**serial_number** | **string** | Serial Number | [optional] 
 **device_type** | **string** | Type of the device | [optional] 
 **status** | **string** | Status of the device | [optional] 
 **device_name** | **string** | Device Name | [optional] 

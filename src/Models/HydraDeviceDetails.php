@@ -60,6 +60,7 @@ class HydraDeviceDetails implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'hydra_config_id' => 'int',
         'device_id' => 'string',
+        'serial_number' => 'string',
         'device_type' => 'string',
         'status' => 'string',
         'device_name' => 'string',
@@ -79,6 +80,7 @@ class HydraDeviceDetails implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'hydra_config_id' => 'int32',
         'device_id' => null,
+        'serial_number' => null,
         'device_type' => null,
         'status' => null,
         'device_name' => null,
@@ -119,6 +121,7 @@ class HydraDeviceDetails implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'hydra_config_id' => 'HydraConfigId',
         'device_id' => 'DeviceId',
+        'serial_number' => 'SerialNumber',
         'device_type' => 'DeviceType',
         'status' => 'Status',
         'device_name' => 'DeviceName',
@@ -138,6 +141,7 @@ class HydraDeviceDetails implements ModelInterface, ArrayAccess
     protected static $setters = [
         'hydra_config_id' => 'setHydraConfigId',
         'device_id' => 'setDeviceId',
+        'serial_number' => 'setSerialNumber',
         'device_type' => 'setDeviceType',
         'status' => 'setStatus',
         'device_name' => 'setDeviceName',
@@ -157,6 +161,7 @@ class HydraDeviceDetails implements ModelInterface, ArrayAccess
     protected static $getters = [
         'hydra_config_id' => 'getHydraConfigId',
         'device_id' => 'getDeviceId',
+        'serial_number' => 'getSerialNumber',
         'device_type' => 'getDeviceType',
         'status' => 'getStatus',
         'device_name' => 'getDeviceName',
@@ -264,6 +269,7 @@ class HydraDeviceDetails implements ModelInterface, ArrayAccess
     {
         $this->container['hydra_config_id'] = isset($data['hydra_config_id']) ? $data['hydra_config_id'] : null;
         $this->container['device_id'] = isset($data['device_id']) ? $data['device_id'] : null;
+        $this->container['serial_number'] = isset($data['serial_number']) ? $data['serial_number'] : null;
         $this->container['device_type'] = isset($data['device_type']) ? $data['device_type'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['device_name'] = isset($data['device_name']) ? $data['device_name'] : null;
@@ -352,13 +358,37 @@ class HydraDeviceDetails implements ModelInterface, ArrayAccess
     /**
      * Sets device_id
      *
-     * @param string $device_id Device Id or Serial Number
+     * @param string $device_id Device Id
      *
      * @return $this
      */
     public function setDeviceId($device_id)
     {
         $this->container['device_id'] = $device_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets serial_number
+     *
+     * @return string
+     */
+    public function getSerialNumber()
+    {
+        return $this->container['serial_number'];
+    }
+
+    /**
+     * Sets serial_number
+     *
+     * @param string $serial_number Serial Number
+     *
+     * @return $this
+     */
+    public function setSerialNumber($serial_number)
+    {
+        $this->container['serial_number'] = $serial_number;
 
         return $this;
     }

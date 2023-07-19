@@ -91,6 +91,13 @@ class HydraDeviceDetailsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "serial_number"
+     */
+    public function testPropertySerialNumber()
+    {
+    }
+
+    /**
      * Test attribute "device_type"
      */
     public function testPropertyDeviceType()
