@@ -152,6 +152,16 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getReadyToProcess
+     *
+     * .
+     *
+     */
+    public function testGetReadyToProcess()
+    {
+    }
+
+    /**
      * Test case for refundOrder
      *
      * .
