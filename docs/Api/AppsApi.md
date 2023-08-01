@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**getSalesforceReferences**](AppsApi.md#getSalesforceReferences) | **GET** /api/v1.0/apps/{appId}/salesforcereferences | 
 [**getSupportedCountries**](AppsApi.md#getSupportedCountries) | **GET** /api/v1.0/apps/supportedcountries | 
 [**isPanaceaVanityUrlAvailable**](AppsApi.md#isPanaceaVanityUrlAvailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | 
+[**lookupByWhitelabelId**](AppsApi.md#lookupByWhitelabelId) | **GET** /api/v1.0/apps/{whitelabelId}/lookup | 
 [**setAppConfig**](AppsApi.md#setAppConfig) | **POST** /api/v1.0/apps/{appId}/config | 
 [**setAppHostname**](AppsApi.md#setAppHostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
 [**setAppLanguages**](AppsApi.md#setAppLanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 
@@ -421,6 +422,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **lookupByWhitelabelId**
+> \Flipdish\\Client\Models\AppLookup lookupByWhitelabelId($whitelabel_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\AppsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$whitelabel_id = 56; // int | 
+
+try {
+    $result = $apiInstance->lookupByWhitelabelId($whitelabel_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AppsApi->lookupByWhitelabelId: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **whitelabel_id** | **int**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\AppLookup**](../Model/AppLookup.md)
 
 ### Authorization
 

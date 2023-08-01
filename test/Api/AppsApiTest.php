@@ -152,6 +152,16 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for lookupByWhitelabelId
+     *
+     * .
+     *
+     */
+    public function testLookupByWhitelabelId()
+    {
+    }
+
+    /**
      * Test case for setAppConfig
      *
      * .

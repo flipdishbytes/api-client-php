@@ -140,6 +140,7 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**getSalesforceReferences**](docs/Api/AppsApi.md#getsalesforcereferences) | **GET** /api/v1.0/apps/{appId}/salesforcereferences | 
 *AppsApi* | [**getSupportedCountries**](docs/Api/AppsApi.md#getsupportedcountries) | **GET** /api/v1.0/apps/supportedcountries | 
 *AppsApi* | [**isPanaceaVanityUrlAvailable**](docs/Api/AppsApi.md#ispanaceavanityurlavailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | 
+*AppsApi* | [**lookupByWhitelabelId**](docs/Api/AppsApi.md#lookupbywhitelabelid) | **GET** /api/v1.0/apps/{whitelabelId}/lookup | 
 *AppsApi* | [**setAppConfig**](docs/Api/AppsApi.md#setappconfig) | **POST** /api/v1.0/apps/{appId}/config | 
 *AppsApi* | [**setAppHostname**](docs/Api/AppsApi.md#setapphostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
 *AppsApi* | [**setAppLanguages**](docs/Api/AppsApi.md#setapplanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 
@@ -584,6 +585,7 @@ Class | Method | HTTP request | Description
  - [AppConfigSalesChannel](docs/Model/AppConfigSalesChannel.md)
  - [AppConfigUpdateModel](docs/Model/AppConfigUpdateModel.md)
  - [AppCreatedEvent](docs/Model/AppCreatedEvent.md)
+ - [AppLookup](docs/Model/AppLookup.md)
  - [AppSalesforceReferences](docs/Model/AppSalesforceReferences.md)
  - [AppStoreApp](docs/Model/AppStoreApp.md)
  - [AppStoreAppConfiguration](docs/Model/AppStoreAppConfiguration.md)
