@@ -172,6 +172,16 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getKioskSettings
+     *
+     * .
+     *
+     */
+    public function testGetKioskSettings()
+    {
+    }
+
+    /**
      * Test case for getRegistration
      *
      * .
@@ -278,6 +288,16 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testUpdateKioskCashVisibilitySettings()
+    {
+    }
+
+    /**
+     * Test case for updateKioskSettings
+     *
+     * .
+     *
+     */
+    public function testUpdateKioskSettings()
     {
     }
 }
