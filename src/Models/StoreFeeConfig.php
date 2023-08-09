@@ -98,7 +98,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_delivery' => 'double',
         'fixed_fee_delivery' => 'double',
         'percent_fee_card_pos_transaction' => 'double',
-        'fixed_fee_card_pos_transaction' => 'double'
+        'fixed_fee_card_pos_transaction' => 'double',
+        'percent_fee_order_with_google' => 'double',
+        'fixed_fee_order_with_google' => 'double'
     ];
 
     /**
@@ -147,7 +149,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_delivery' => 'double',
         'fixed_fee_delivery' => 'double',
         'percent_fee_card_pos_transaction' => 'double',
-        'fixed_fee_card_pos_transaction' => 'double'
+        'fixed_fee_card_pos_transaction' => 'double',
+        'percent_fee_order_with_google' => 'double',
+        'fixed_fee_order_with_google' => 'double'
     ];
 
     /**
@@ -217,7 +221,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_delivery' => 'PercentFeeDelivery',
         'fixed_fee_delivery' => 'FixedFeeDelivery',
         'percent_fee_card_pos_transaction' => 'PercentFeeCardPosTransaction',
-        'fixed_fee_card_pos_transaction' => 'FixedFeeCardPosTransaction'
+        'fixed_fee_card_pos_transaction' => 'FixedFeeCardPosTransaction',
+        'percent_fee_order_with_google' => 'PercentFeeOrderWithGoogle',
+        'fixed_fee_order_with_google' => 'FixedFeeOrderWithGoogle'
     ];
 
     /**
@@ -266,7 +272,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_delivery' => 'setPercentFeeDelivery',
         'fixed_fee_delivery' => 'setFixedFeeDelivery',
         'percent_fee_card_pos_transaction' => 'setPercentFeeCardPosTransaction',
-        'fixed_fee_card_pos_transaction' => 'setFixedFeeCardPosTransaction'
+        'fixed_fee_card_pos_transaction' => 'setFixedFeeCardPosTransaction',
+        'percent_fee_order_with_google' => 'setPercentFeeOrderWithGoogle',
+        'fixed_fee_order_with_google' => 'setFixedFeeOrderWithGoogle'
     ];
 
     /**
@@ -315,7 +323,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_delivery' => 'getPercentFeeDelivery',
         'fixed_fee_delivery' => 'getFixedFeeDelivery',
         'percent_fee_card_pos_transaction' => 'getPercentFeeCardPosTransaction',
-        'fixed_fee_card_pos_transaction' => 'getFixedFeeCardPosTransaction'
+        'fixed_fee_card_pos_transaction' => 'getFixedFeeCardPosTransaction',
+        'percent_fee_order_with_google' => 'getPercentFeeOrderWithGoogle',
+        'fixed_fee_order_with_google' => 'getFixedFeeOrderWithGoogle'
     ];
 
     /**
@@ -419,6 +429,8 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         $this->container['fixed_fee_delivery'] = isset($data['fixed_fee_delivery']) ? $data['fixed_fee_delivery'] : null;
         $this->container['percent_fee_card_pos_transaction'] = isset($data['percent_fee_card_pos_transaction']) ? $data['percent_fee_card_pos_transaction'] : null;
         $this->container['fixed_fee_card_pos_transaction'] = isset($data['fixed_fee_card_pos_transaction']) ? $data['fixed_fee_card_pos_transaction'] : null;
+        $this->container['percent_fee_order_with_google'] = isset($data['percent_fee_order_with_google']) ? $data['percent_fee_order_with_google'] : null;
+        $this->container['fixed_fee_order_with_google'] = isset($data['fixed_fee_order_with_google']) ? $data['fixed_fee_order_with_google'] : null;
     }
 
     /**
@@ -1425,6 +1437,54 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
     public function setFixedFeeCardPosTransaction($fixed_fee_card_pos_transaction)
     {
         $this->container['fixed_fee_card_pos_transaction'] = $fixed_fee_card_pos_transaction;
+
+        return $this;
+    }
+
+    /**
+     * Gets percent_fee_order_with_google
+     *
+     * @return double
+     */
+    public function getPercentFeeOrderWithGoogle()
+    {
+        return $this->container['percent_fee_order_with_google'];
+    }
+
+    /**
+     * Sets percent_fee_order_with_google
+     *
+     * @param double $percent_fee_order_with_google Additional percentage fee charged on orders submitted through Order With Google
+     *
+     * @return $this
+     */
+    public function setPercentFeeOrderWithGoogle($percent_fee_order_with_google)
+    {
+        $this->container['percent_fee_order_with_google'] = $percent_fee_order_with_google;
+
+        return $this;
+    }
+
+    /**
+     * Gets fixed_fee_order_with_google
+     *
+     * @return double
+     */
+    public function getFixedFeeOrderWithGoogle()
+    {
+        return $this->container['fixed_fee_order_with_google'];
+    }
+
+    /**
+     * Sets fixed_fee_order_with_google
+     *
+     * @param double $fixed_fee_order_with_google Additional fixed fee charged on orders submitted through Order With Google
+     *
+     * @return $this
+     */
+    public function setFixedFeeOrderWithGoogle($fixed_fee_order_with_google)
+    {
+        $this->container['fixed_fee_order_with_google'] = $fixed_fee_order_with_google;
 
         return $this;
     }

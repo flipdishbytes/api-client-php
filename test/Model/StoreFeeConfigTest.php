@@ -362,4 +362,18 @@ class StoreFeeConfigTest extends \PHPUnit_Framework_TestCase
     public function testPropertyFixedFeeCardPosTransaction()
     {
     }
+
+    /**
+     * Test attribute "percent_fee_order_with_google"
+     */
+    public function testPropertyPercentFeeOrderWithGoogle()
+    {
+    }
+
+    /**
+     * Test attribute "fixed_fee_order_with_google"
+     */
+    public function testPropertyFixedFeeOrderWithGoogle()
+    {
+    }
 }
