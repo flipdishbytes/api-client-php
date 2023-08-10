@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**menu_item_id** | **int** | Menu item identifier. This ID may change at any time. Use &#x60;PublicId&#x60; if you need a permanent reference to the item. | [optional] 
 **actual_price** | **double** | Actual price - the minimum price possible when all required option set items prices are included. | [optional] 
 **menu_item_option_sets** | [**\Flipdish\\Client\Models\MenuItemOptionSet[]**](MenuItemOptionSet.md) | Menu item option sets | [optional] 
 **daily_special_hours** | [**\Flipdish\\Client\Models\BusinessHoursPeriod[]**](BusinessHoursPeriod.md) | Daily special hours | [optional] 
@@ -24,6 +23,7 @@ Name | Type | Description | Notes
 **disable_vouchers** | **bool** | If true, then vouchers won&#39;t be applied for this item | [optional] 
 **image_name** | **string** | Image url | [optional] 
 **image_url** | **string** | Image url | [optional] 
+**menu_item_id** | **int** | Menu Item Id | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

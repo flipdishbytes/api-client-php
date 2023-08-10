@@ -58,7 +58,6 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'menu_item_id' => 'int',
         'actual_price' => 'double',
         'menu_item_option_sets' => '\Flipdish\\Client\Models\MenuItemOptionSet[]',
         'daily_special_hours' => '\Flipdish\\Client\Models\BusinessHoursPeriod[]',
@@ -78,7 +77,8 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'cell_layout_type' => 'string',
         'disable_vouchers' => 'bool',
         'image_name' => 'string',
-        'image_url' => 'string'
+        'image_url' => 'string',
+        'menu_item_id' => 'int'
     ];
 
     /**
@@ -87,7 +87,6 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'menu_item_id' => 'int32',
         'actual_price' => 'double',
         'menu_item_option_sets' => null,
         'daily_special_hours' => null,
@@ -107,7 +106,8 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'cell_layout_type' => null,
         'disable_vouchers' => null,
         'image_name' => null,
-        'image_url' => null
+        'image_url' => null,
+        'menu_item_id' => 'int32'
     ];
 
     /**
@@ -137,7 +137,6 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'menu_item_id' => 'MenuItemId',
         'actual_price' => 'ActualPrice',
         'menu_item_option_sets' => 'MenuItemOptionSets',
         'daily_special_hours' => 'DailySpecialHours',
@@ -157,7 +156,8 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'cell_layout_type' => 'CellLayoutType',
         'disable_vouchers' => 'DisableVouchers',
         'image_name' => 'ImageName',
-        'image_url' => 'ImageUrl'
+        'image_url' => 'ImageUrl',
+        'menu_item_id' => 'MenuItemId'
     ];
 
     /**
@@ -166,7 +166,6 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'menu_item_id' => 'setMenuItemId',
         'actual_price' => 'setActualPrice',
         'menu_item_option_sets' => 'setMenuItemOptionSets',
         'daily_special_hours' => 'setDailySpecialHours',
@@ -186,7 +185,8 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'cell_layout_type' => 'setCellLayoutType',
         'disable_vouchers' => 'setDisableVouchers',
         'image_name' => 'setImageName',
-        'image_url' => 'setImageUrl'
+        'image_url' => 'setImageUrl',
+        'menu_item_id' => 'setMenuItemId'
     ];
 
     /**
@@ -195,7 +195,6 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'menu_item_id' => 'getMenuItemId',
         'actual_price' => 'getActualPrice',
         'menu_item_option_sets' => 'getMenuItemOptionSets',
         'daily_special_hours' => 'getDailySpecialHours',
@@ -215,7 +214,8 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'cell_layout_type' => 'getCellLayoutType',
         'disable_vouchers' => 'getDisableVouchers',
         'image_name' => 'getImageName',
-        'image_url' => 'getImageUrl'
+        'image_url' => 'getImageUrl',
+        'menu_item_id' => 'getMenuItemId'
     ];
 
     /**
@@ -316,7 +316,6 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['menu_item_id'] = isset($data['menu_item_id']) ? $data['menu_item_id'] : null;
         $this->container['actual_price'] = isset($data['actual_price']) ? $data['actual_price'] : null;
         $this->container['menu_item_option_sets'] = isset($data['menu_item_option_sets']) ? $data['menu_item_option_sets'] : null;
         $this->container['daily_special_hours'] = isset($data['daily_special_hours']) ? $data['daily_special_hours'] : null;
@@ -337,6 +336,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         $this->container['disable_vouchers'] = isset($data['disable_vouchers']) ? $data['disable_vouchers'] : null;
         $this->container['image_name'] = isset($data['image_name']) ? $data['image_name'] : null;
         $this->container['image_url'] = isset($data['image_url']) ? $data['image_url'] : null;
+        $this->container['menu_item_id'] = isset($data['menu_item_id']) ? $data['menu_item_id'] : null;
     }
 
     /**
@@ -394,30 +394,6 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets menu_item_id
-     *
-     * @return int
-     */
-    public function getMenuItemId()
-    {
-        return $this->container['menu_item_id'];
-    }
-
-    /**
-     * Sets menu_item_id
-     *
-     * @param int $menu_item_id Menu item identifier. This ID may change at any time. Use `PublicId` if you need a permanent reference to the item.
-     *
-     * @return $this
-     */
-    public function setMenuItemId($menu_item_id)
-    {
-        $this->container['menu_item_id'] = $menu_item_id;
-
-        return $this;
-    }
 
     /**
      * Gets actual_price
@@ -927,6 +903,30 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
     public function setImageUrl($image_url)
     {
         $this->container['image_url'] = $image_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets menu_item_id
+     *
+     * @return int
+     */
+    public function getMenuItemId()
+    {
+        return $this->container['menu_item_id'];
+    }
+
+    /**
+     * Sets menu_item_id
+     *
+     * @param int $menu_item_id Menu Item Id
+     *
+     * @return $this
+     */
+    public function setMenuItemId($menu_item_id)
+    {
+        $this->container['menu_item_id'] = $menu_item_id;
 
         return $this;
     }

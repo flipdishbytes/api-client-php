@@ -77,13 +77,6 @@ class MenuSectionItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "menu_item_id"
-     */
-    public function testPropertyMenuItemId()
-    {
-    }
-
-    /**
      * Test attribute "actual_price"
      */
     public function testPropertyActualPrice()
@@ -220,6 +213,13 @@ class MenuSectionItemTest extends \PHPUnit_Framework_TestCase
      * Test attribute "image_url"
      */
     public function testPropertyImageUrl()
+    {
+    }
+
+    /**
+     * Test attribute "menu_item_id"
+     */
+    public function testPropertyMenuItemId()
     {
     }
 }
