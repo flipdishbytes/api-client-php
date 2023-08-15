@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **kiosk_primary_colour** | **string** | Primary colour used on the Kiosk | [optional] 
 **application_category** | **string** | Application Category | [optional] 
 **is_panacea_enabled** | **bool** | Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App&#39;s website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain. | [optional] 
+**panacea_vanity_url** | **string** | In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl} | [optional] 
 **cookie_consent_prompt_enabled** | **bool** | Cookie Consent Prompt Enabled | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

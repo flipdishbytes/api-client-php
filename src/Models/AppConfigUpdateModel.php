@@ -64,6 +64,7 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'kiosk_primary_colour' => 'string',
         'application_category' => 'string',
         'is_panacea_enabled' => 'bool',
+        'panacea_vanity_url' => 'string',
         'cookie_consent_prompt_enabled' => 'bool'
     ];
 
@@ -79,6 +80,7 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'kiosk_primary_colour' => null,
         'application_category' => null,
         'is_panacea_enabled' => null,
+        'panacea_vanity_url' => null,
         'cookie_consent_prompt_enabled' => null
     ];
 
@@ -115,6 +117,7 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'kiosk_primary_colour' => 'KioskPrimaryColour',
         'application_category' => 'ApplicationCategory',
         'is_panacea_enabled' => 'IsPanaceaEnabled',
+        'panacea_vanity_url' => 'PanaceaVanityUrl',
         'cookie_consent_prompt_enabled' => 'CookieConsentPromptEnabled'
     ];
 
@@ -130,6 +133,7 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'kiosk_primary_colour' => 'setKioskPrimaryColour',
         'application_category' => 'setApplicationCategory',
         'is_panacea_enabled' => 'setIsPanaceaEnabled',
+        'panacea_vanity_url' => 'setPanaceaVanityUrl',
         'cookie_consent_prompt_enabled' => 'setCookieConsentPromptEnabled'
     ];
 
@@ -145,6 +149,7 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'kiosk_primary_colour' => 'getKioskPrimaryColour',
         'application_category' => 'getApplicationCategory',
         'is_panacea_enabled' => 'getIsPanaceaEnabled',
+        'panacea_vanity_url' => 'getPanaceaVanityUrl',
         'cookie_consent_prompt_enabled' => 'getCookieConsentPromptEnabled'
     ];
 
@@ -231,6 +236,7 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         $this->container['kiosk_primary_colour'] = isset($data['kiosk_primary_colour']) ? $data['kiosk_primary_colour'] : null;
         $this->container['application_category'] = isset($data['application_category']) ? $data['application_category'] : null;
         $this->container['is_panacea_enabled'] = isset($data['is_panacea_enabled']) ? $data['is_panacea_enabled'] : null;
+        $this->container['panacea_vanity_url'] = isset($data['panacea_vanity_url']) ? $data['panacea_vanity_url'] : null;
         $this->container['cookie_consent_prompt_enabled'] = isset($data['cookie_consent_prompt_enabled']) ? $data['cookie_consent_prompt_enabled'] : null;
     }
 
@@ -415,6 +421,30 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
     public function setIsPanaceaEnabled($is_panacea_enabled)
     {
         $this->container['is_panacea_enabled'] = $is_panacea_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets panacea_vanity_url
+     *
+     * @return string
+     */
+    public function getPanaceaVanityUrl()
+    {
+        return $this->container['panacea_vanity_url'];
+    }
+
+    /**
+     * Sets panacea_vanity_url
+     *
+     * @param string $panacea_vanity_url In case of IsPanaceaEnabled is true, the app can be accessed via https://my.flipdish.com/{PanaceaVanityUrl}
+     *
+     * @return $this
+     */
+    public function setPanaceaVanityUrl($panacea_vanity_url)
+    {
+        $this->container['panacea_vanity_url'] = $panacea_vanity_url;
 
         return $this;
     }

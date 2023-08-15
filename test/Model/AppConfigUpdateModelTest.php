@@ -119,6 +119,13 @@ class AppConfigUpdateModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "panacea_vanity_url"
+     */
+    public function testPropertyPanaceaVanityUrl()
+    {
+    }
+
+    /**
      * Test attribute "cookie_consent_prompt_enabled"
      */
     public function testPropertyCookieConsentPromptEnabled()
