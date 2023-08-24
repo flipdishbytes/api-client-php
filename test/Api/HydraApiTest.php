@@ -122,6 +122,16 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getAblyToken
+     *
+     * .
+     *
+     */
+    public function testGetAblyToken()
+    {
+    }
+
+    /**
      * Test case for getAttachedDevice
      *
      * .
