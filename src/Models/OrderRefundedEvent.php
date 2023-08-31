@@ -61,6 +61,7 @@ class OrderRefundedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'string',
         'refunded_amount' => 'double',
         'description' => 'string',
+        'user' => '\Flipdish\\Client\Models\UserEventInfo',
         'order' => '\Flipdish\\Client\Models\Order',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
@@ -78,6 +79,7 @@ class OrderRefundedEvent implements ModelInterface, ArrayAccess
         'event_name' => null,
         'refunded_amount' => 'double',
         'description' => null,
+        'user' => null,
         'order' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
@@ -116,6 +118,7 @@ class OrderRefundedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'EventName',
         'refunded_amount' => 'RefundedAmount',
         'description' => 'Description',
+        'user' => 'User',
         'order' => 'Order',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
@@ -133,6 +136,7 @@ class OrderRefundedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'setEventName',
         'refunded_amount' => 'setRefundedAmount',
         'description' => 'setDescription',
+        'user' => 'setUser',
         'order' => 'setOrder',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
@@ -150,6 +154,7 @@ class OrderRefundedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'getEventName',
         'refunded_amount' => 'getRefundedAmount',
         'description' => 'getDescription',
+        'user' => 'getUser',
         'order' => 'getOrder',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
@@ -221,6 +226,7 @@ class OrderRefundedEvent implements ModelInterface, ArrayAccess
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
         $this->container['refunded_amount'] = isset($data['refunded_amount']) ? $data['refunded_amount'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
@@ -321,6 +327,30 @@ class OrderRefundedEvent implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets user
+     *
+     * @return \Flipdish\\Client\Models\UserEventInfo
+     */
+    public function getUser()
+    {
+        return $this->container['user'];
+    }
+
+    /**
+     * Sets user
+     *
+     * @param \Flipdish\\Client\Models\UserEventInfo $user User who has refunded the order
+     *
+     * @return $this
+     */
+    public function setUser($user)
+    {
+        $this->container['user'] = $user;
 
         return $this;
     }

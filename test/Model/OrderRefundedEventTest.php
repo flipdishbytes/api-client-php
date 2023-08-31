@@ -98,6 +98,13 @@ class OrderRefundedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "user"
+     */
+    public function testPropertyUser()
+    {
+    }
+
+    /**
      * Test attribute "order"
      */
     public function testPropertyOrder()

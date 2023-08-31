@@ -62,6 +62,7 @@ class OrderRejectedEvent implements ModelInterface, ArrayAccess
         'description' => 'string',
         'order_rejected_time' => '\DateTime',
         'reason' => 'string',
+        'user' => '\Flipdish\\Client\Models\UserEventInfo',
         'order' => '\Flipdish\\Client\Models\Order',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
@@ -80,6 +81,7 @@ class OrderRejectedEvent implements ModelInterface, ArrayAccess
         'description' => null,
         'order_rejected_time' => 'date-time',
         'reason' => null,
+        'user' => null,
         'order' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
@@ -119,6 +121,7 @@ class OrderRejectedEvent implements ModelInterface, ArrayAccess
         'description' => 'Description',
         'order_rejected_time' => 'OrderRejectedTime',
         'reason' => 'Reason',
+        'user' => 'User',
         'order' => 'Order',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
@@ -137,6 +140,7 @@ class OrderRejectedEvent implements ModelInterface, ArrayAccess
         'description' => 'setDescription',
         'order_rejected_time' => 'setOrderRejectedTime',
         'reason' => 'setReason',
+        'user' => 'setUser',
         'order' => 'setOrder',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
@@ -155,6 +159,7 @@ class OrderRejectedEvent implements ModelInterface, ArrayAccess
         'description' => 'getDescription',
         'order_rejected_time' => 'getOrderRejectedTime',
         'reason' => 'getReason',
+        'user' => 'getUser',
         'order' => 'getOrder',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
@@ -227,6 +232,7 @@ class OrderRejectedEvent implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['order_rejected_time'] = isset($data['order_rejected_time']) ? $data['order_rejected_time'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
@@ -351,6 +357,30 @@ class OrderRejectedEvent implements ModelInterface, ArrayAccess
     public function setReason($reason)
     {
         $this->container['reason'] = $reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets user
+     *
+     * @return \Flipdish\\Client\Models\UserEventInfo
+     */
+    public function getUser()
+    {
+        return $this->container['user'];
+    }
+
+    /**
+     * Sets user
+     *
+     * @param \Flipdish\\Client\Models\UserEventInfo $user User who has rejected the order
+     *
+     * @return $this
+     */
+    public function setUser($user)
+    {
+        $this->container['user'] = $user;
 
         return $this;
     }
