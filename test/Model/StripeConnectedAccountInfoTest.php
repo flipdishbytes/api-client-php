@@ -103,4 +103,11 @@ class StripeConnectedAccountInfoTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPayoutScheduleInterval()
     {
     }
+
+    /**
+     * Test attribute "payouts_paused"
+     */
+    public function testPropertyPayoutsPaused()
+    {
+    }
 }
