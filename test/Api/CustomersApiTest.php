@@ -72,16 +72,6 @@ class CustomersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for customersGetOptOutMarketingLink
-     *
-     * .
-     *
-     */
-    public function testCustomersGetOptOutMarketingLink()
-    {
-    }
-
-    /**
      * Test case for getCustomerById
      *
      * .

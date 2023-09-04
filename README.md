@@ -227,7 +227,6 @@ Class | Method | HTTP request | Description
 *ClientsApi* | [**setStripeCustomerId**](docs/Api/ClientsApi.md#setstripecustomerid) | **POST** /api/v1.0/clients/{clientId}/stripecustomerid | 
 *ContentSecurityPolicyApi* | [**contentSecurityPolicyReport**](docs/Api/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
 *CrossSellApi* | [**getCrossSellMenuItems**](docs/Api/CrossSellApi.md#getcrosssellmenuitems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | 
-*CustomersApi* | [**customersGetOptOutMarketingLink**](docs/Api/CustomersApi.md#customersgetoptoutmarketinglink) | **POST** /api/v1.0/{appId}/customers/{customerId}/opt-out-link | 
 *CustomersApi* | [**getCustomerById**](docs/Api/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
 *CustomersApi* | [**updateCustomerById**](docs/Api/CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | 
 *DeliveryZoneApi* | [**addDeliveryZone**](docs/Api/DeliveryZoneApi.md#adddeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones | 
