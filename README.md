@@ -257,6 +257,8 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**getStoreEvents**](docs/Api/EventsApi.md#getstoreevents) | **GET** /api/v1.0/{appId}/events/store/{storeId} | 
 *EventsApi* | [**getUserEvents**](docs/Api/EventsApi.md#getuserevents) | **GET** /api/v1.0/{appId}/events/user/{userId} | 
 *EventsApi* | [**getWhiteLabelEvents**](docs/Api/EventsApi.md#getwhitelabelevents) | **GET** /api/v1.0/{appId}/events/whitelabel/{whitelabelId} | 
+*FeaturesApi* | [**disableFeatures**](docs/Api/FeaturesApi.md#disablefeatures) | **POST** /api/v1.0/{appId}/features/disable | 
+*FeaturesApi* | [**enableFeatures**](docs/Api/FeaturesApi.md#enablefeatures) | **POST** /api/v1.0/{appId}/features/enable | 
 *FilesApi* | [**downloadFile**](docs/Api/FilesApi.md#downloadfile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | 
 *FirebaseAppsApi* | [**firebaseAppsAddFirebaseApp**](docs/Api/FirebaseAppsApi.md#firebaseappsaddfirebaseapp) | **POST** /api/v1.0/FirebaseApp | 
 *FirebaseAppsApi* | [**firebaseAppsGetFirebaseApp**](docs/Api/FirebaseAppsApi.md#firebaseappsgetfirebaseapp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
