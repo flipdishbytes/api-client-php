@@ -59,6 +59,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'legacy_order_dm' => '\Flipdish\\Client\Models\OrderDm',
         'phone_number' => 'string',
+        'customer_name' => 'string',
         'delivery_location' => '\Flipdish\\Client\Models\DeliveryLocation'
     ];
 
@@ -70,6 +71,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'legacy_order_dm' => null,
         'phone_number' => null,
+        'customer_name' => null,
         'delivery_location' => null
     ];
 
@@ -102,6 +104,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'legacy_order_dm' => 'LegacyOrderDm',
         'phone_number' => 'PhoneNumber',
+        'customer_name' => 'CustomerName',
         'delivery_location' => 'DeliveryLocation'
     ];
 
@@ -113,6 +116,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
         'legacy_order_dm' => 'setLegacyOrderDm',
         'phone_number' => 'setPhoneNumber',
+        'customer_name' => 'setCustomerName',
         'delivery_location' => 'setDeliveryLocation'
     ];
 
@@ -124,6 +128,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
         'legacy_order_dm' => 'getLegacyOrderDm',
         'phone_number' => 'getPhoneNumber',
+        'customer_name' => 'getCustomerName',
         'delivery_location' => 'getDeliveryLocation'
     ];
 
@@ -189,6 +194,7 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     {
         $this->container['legacy_order_dm'] = isset($data['legacy_order_dm']) ? $data['legacy_order_dm'] : null;
         $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
+        $this->container['customer_name'] = isset($data['customer_name']) ? $data['customer_name'] : null;
         $this->container['delivery_location'] = isset($data['delivery_location']) ? $data['delivery_location'] : null;
     }
 
@@ -260,6 +266,30 @@ class CreateOrderRequest implements ModelInterface, ArrayAccess
     public function setPhoneNumber($phone_number)
     {
         $this->container['phone_number'] = $phone_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets customer_name
+     *
+     * @return string
+     */
+    public function getCustomerName()
+    {
+        return $this->container['customer_name'];
+    }
+
+    /**
+     * Sets customer_name
+     *
+     * @param string $customer_name customer_name
+     *
+     * @return $this
+     */
+    public function setCustomerName($customer_name)
+    {
+        $this->container['customer_name'] = $customer_name;
 
         return $this;
     }

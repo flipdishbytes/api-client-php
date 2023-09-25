@@ -91,6 +91,13 @@ class CreateOrderRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "customer_name"
+     */
+    public function testPropertyCustomerName()
+    {
+    }
+
+    /**
      * Test attribute "delivery_location"
      */
     public function testPropertyDeliveryLocation()
