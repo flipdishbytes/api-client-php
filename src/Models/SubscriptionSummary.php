@@ -66,6 +66,7 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         'currency' => 'string',
         'user' => 'string',
         'default_payment_description' => 'string',
+        'cancellation_request_date' => '\DateTime',
         'cancellation_date' => '\DateTime'
     ];
 
@@ -83,6 +84,7 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         'currency' => null,
         'user' => null,
         'default_payment_description' => null,
+        'cancellation_request_date' => 'date-time',
         'cancellation_date' => 'date-time'
     ];
 
@@ -121,6 +123,7 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         'currency' => 'Currency',
         'user' => 'User',
         'default_payment_description' => 'DefaultPaymentDescription',
+        'cancellation_request_date' => 'CancellationRequestDate',
         'cancellation_date' => 'CancellationDate'
     ];
 
@@ -138,6 +141,7 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         'currency' => 'setCurrency',
         'user' => 'setUser',
         'default_payment_description' => 'setDefaultPaymentDescription',
+        'cancellation_request_date' => 'setCancellationRequestDate',
         'cancellation_date' => 'setCancellationDate'
     ];
 
@@ -155,6 +159,7 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         'currency' => 'getCurrency',
         'user' => 'getUser',
         'default_payment_description' => 'getDefaultPaymentDescription',
+        'cancellation_request_date' => 'getCancellationRequestDate',
         'cancellation_date' => 'getCancellationDate'
     ];
 
@@ -488,6 +493,7 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['default_payment_description'] = isset($data['default_payment_description']) ? $data['default_payment_description'] : null;
+        $this->container['cancellation_request_date'] = isset($data['cancellation_request_date']) ? $data['cancellation_request_date'] : null;
         $this->container['cancellation_date'] = isset($data['cancellation_date']) ? $data['cancellation_date'] : null;
     }
 
@@ -757,6 +763,30 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets cancellation_request_date
+     *
+     * @return \DateTime
+     */
+    public function getCancellationRequestDate()
+    {
+        return $this->container['cancellation_request_date'];
+    }
+
+    /**
+     * Sets cancellation_request_date
+     *
+     * @param \DateTime $cancellation_request_date Cancellation Date
+     *
+     * @return $this
+     */
+    public function setCancellationRequestDate($cancellation_request_date)
+    {
+        $this->container['cancellation_request_date'] = $cancellation_request_date;
+
+        return $this;
+    }
+
+    /**
      * Gets cancellation_date
      *
      * @return \DateTime
@@ -769,7 +799,7 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
     /**
      * Sets cancellation_date
      *
-     * @param \DateTime $cancellation_date Cancellation Date
+     * @param \DateTime $cancellation_date Cancel Date
      *
      * @return $this
      */

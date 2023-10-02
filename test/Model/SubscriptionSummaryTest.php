@@ -133,6 +133,13 @@ class SubscriptionSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "cancellation_request_date"
+     */
+    public function testPropertyCancellationRequestDate()
+    {
+    }
+
+    /**
      * Test attribute "cancellation_date"
      */
     public function testPropertyCancellationDate()
