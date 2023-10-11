@@ -503,6 +503,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**getStoreById**](docs/Api/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | 
 *StoresApi* | [**getStoreFeeConfig**](docs/Api/StoresApi.md#getstorefeeconfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | 
 *StoresApi* | [**getStoreHeadersByAppId**](docs/Api/StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | 
+*StoresApi* | [**getStoreLeadTimes**](docs/Api/StoresApi.md#getstoreleadtimes) | **GET** /api/v1.0/stores/{storeId}/leadTimes | 
 *StoresApi* | [**getStoreNetSales**](docs/Api/StoresApi.md#getstorenetsales) | **GET** /api/v1.0/{appId}/stores/stats | 
 *StoresApi* | [**getStoreServiceCharge**](docs/Api/StoresApi.md#getstoreservicecharge) | **GET** /api/v1.0/stores/{storeId}/servicecharge | 
 *StoresApi* | [**getStores**](docs/Api/StoresApi.md#getstores) | **GET** /api/v1.0/stores | 
@@ -511,6 +512,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**publishStore**](docs/Api/StoresApi.md#publishstore) | **POST** /api/v1.0/stores/{storeId}/publish | 
 *StoresApi* | [**setBusinessHours**](docs/Api/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 *StoresApi* | [**setPreOrdeEnabled**](docs/Api/StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
+*StoresApi* | [**setStoreLeadTimes**](docs/Api/StoresApi.md#setstoreleadtimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
 *StoresApi* | [**unpublishStore**](docs/Api/StoresApi.md#unpublishstore) | **POST** /api/v1.0/stores/{storeId}/unpublish | 
 *StoresApi* | [**updatePreOrderConfig**](docs/Api/StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 
 *StoresApi* | [**updateStore**](docs/Api/StoresApi.md#updatestore) | **POST** /api/v1.0/stores/{storeId} | 
@@ -792,6 +794,7 @@ Class | Method | HTTP request | Description
  - [KioskTerminalActionStateChangedEvent](docs/Model/KioskTerminalActionStateChangedEvent.md)
  - [Language](docs/Model/Language.md)
  - [LastPaymentError](docs/Model/LastPaymentError.md)
+ - [LeadTime](docs/Model/LeadTime.md)
  - [LightspeedSettings](docs/Model/LightspeedSettings.md)
  - [LineItem](docs/Model/LineItem.md)
  - [LineItemOption](docs/Model/LineItemOption.md)
@@ -905,6 +908,7 @@ Class | Method | HTTP request | Description
  - [OrderItem](docs/Model/OrderItem.md)
  - [OrderItemDm](docs/Model/OrderItemDm.md)
  - [OrderItemOption](docs/Model/OrderItemOption.md)
+ - [OrderLeadTimes](docs/Model/OrderLeadTimes.md)
  - [OrderList](docs/Model/OrderList.md)
  - [OrderPaymentInformation](docs/Model/OrderPaymentInformation.md)
  - [OrderRatingUpdatedEvent](docs/Model/OrderRatingUpdatedEvent.md)

@@ -252,6 +252,16 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getStoreLeadTimes
+     *
+     * .
+     *
+     */
+    public function testGetStoreLeadTimes()
+    {
+    }
+
+    /**
      * Test case for getStoreNetSales
      *
      * .
@@ -328,6 +338,16 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testSetPreOrdeEnabled()
+    {
+    }
+
+    /**
+     * Test case for setStoreLeadTimes
+     *
+     * .
+     *
+     */
+    public function testSetStoreLeadTimes()
     {
     }
 
