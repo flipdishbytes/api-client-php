@@ -74,7 +74,7 @@ class MenuZonesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for addMenuZone
      *
-     * .
+     * Adds a new menu zone to a menu..
      *
      */
     public function testAddMenuZone()
@@ -84,7 +84,7 @@ class MenuZonesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteMenuZone
      *
-     * .
+     * Deletes a menu zone..
      *
      */
     public function testDeleteMenuZone()
@@ -92,9 +92,19 @@ class MenuZonesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for deleteMenuZoneImage
+     *
+     * Deletes a menu zone image..
+     *
+     */
+    public function testDeleteMenuZoneImage()
+    {
+    }
+
+    /**
      * Test case for flipMenuZones
      *
-     * .
+     * Flips the order of two menu zones..
      *
      */
     public function testFlipMenuZones()
@@ -104,7 +114,7 @@ class MenuZonesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getMenuZone
      *
-     * .
+     * Gets a specific menu zone for a given zone id.
      *
      */
     public function testGetMenuZone()
@@ -112,19 +122,19 @@ class MenuZonesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getMenuZonesForMenu
+     * Test case for getMenuZonesForMenuId
      *
-     * .
+     * Gets all the menu zones for a menu.
      *
      */
-    public function testGetMenuZonesForMenu()
+    public function testGetMenuZonesForMenuId()
     {
     }
 
     /**
      * Test case for setMenuSectionMenuZone
      *
-     * .
+     * Sets a zone to a menu section..
      *
      */
     public function testSetMenuSectionMenuZone()
@@ -132,19 +142,19 @@ class MenuZonesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for setMenuSectionMenuZone_0
+     * Test case for setMenuZoneDescription
      *
-     * .
+     * Sets the description of a menu zone..
      *
      */
-    public function testSetMenuSectionMenuZone0()
+    public function testSetMenuZoneDescription()
     {
     }
 
     /**
      * Test case for setMenuZoneName
      *
-     * .
+     * Sets the name of a menu zone..
      *
      */
     public function testSetMenuZoneName()
@@ -154,7 +164,7 @@ class MenuZonesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateMenuZone
      *
-     * .
+     * Updates a menu zone..
      *
      */
     public function testUpdateMenuZone()
@@ -164,20 +174,10 @@ class MenuZonesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for uploadMenuZoneImage
      *
-     * .
+     * Uploads an image for a menu zone..
      *
      */
     public function testUploadMenuZoneImage()
-    {
-    }
-
-    /**
-     * Test case for uploadMenuZoneImage_0
-     *
-     * .
-     *
-     */
-    public function testUploadMenuZoneImage0()
     {
     }
 }

@@ -359,17 +359,17 @@ Class | Method | HTTP request | Description
 *MenuSectionsApi* | [**menuSectionsSetItemDisplayOrders**](docs/Api/MenuSectionsApi.md#menusectionssetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | Re-arrange Items within a Section
 *MenuSectionsApi* | [**updateMenuSection**](docs/Api/MenuSectionsApi.md#updatemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
 *MenuSectionsApi* | [**uploadMenuSectionImage**](docs/Api/MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
-*MenuZonesApi* | [**addMenuZone**](docs/Api/MenuZonesApi.md#addmenuzone) | **POST** /api/v1.0/menus/{menuId}/zones | 
-*MenuZonesApi* | [**deleteMenuZone**](docs/Api/MenuZonesApi.md#deletemenuzone) | **DELETE** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | 
-*MenuZonesApi* | [**flipMenuZones**](docs/Api/MenuZonesApi.md#flipmenuzones) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/flip/{menuZoneI2} | 
-*MenuZonesApi* | [**getMenuZone**](docs/Api/MenuZonesApi.md#getmenuzone) | **GET** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | 
-*MenuZonesApi* | [**getMenuZonesForMenu**](docs/Api/MenuZonesApi.md#getmenuzonesformenu) | **GET** /api/v1.0/menus/{menuId}/zones | 
-*MenuZonesApi* | [**setMenuSectionMenuZone**](docs/Api/MenuZonesApi.md#setmenusectionmenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/description | 
-*MenuZonesApi* | [**setMenuSectionMenuZone_0**](docs/Api/MenuZonesApi.md#setmenusectionmenuzone_0) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/section/{menuSectionId} | 
-*MenuZonesApi* | [**setMenuZoneName**](docs/Api/MenuZonesApi.md#setmenuzonename) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/name/{menuZoneName} | 
-*MenuZonesApi* | [**updateMenuZone**](docs/Api/MenuZonesApi.md#updatemenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | 
-*MenuZonesApi* | [**uploadMenuZoneImage**](docs/Api/MenuZonesApi.md#uploadmenuzoneimage) | **POST** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | 
-*MenuZonesApi* | [**uploadMenuZoneImage_0**](docs/Api/MenuZonesApi.md#uploadmenuzoneimage_0) | **DELETE** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | 
+*MenuZonesApi* | [**addMenuZone**](docs/Api/MenuZonesApi.md#addmenuzone) | **POST** /api/v1.0/menus/{menuId}/zones | Adds a new menu zone to a menu.
+*MenuZonesApi* | [**deleteMenuZone**](docs/Api/MenuZonesApi.md#deletemenuzone) | **DELETE** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Deletes a menu zone.
+*MenuZonesApi* | [**deleteMenuZoneImage**](docs/Api/MenuZonesApi.md#deletemenuzoneimage) | **DELETE** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | Deletes a menu zone image.
+*MenuZonesApi* | [**flipMenuZones**](docs/Api/MenuZonesApi.md#flipmenuzones) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/flip/{menuZoneI2} | Flips the order of two menu zones.
+*MenuZonesApi* | [**getMenuZone**](docs/Api/MenuZonesApi.md#getmenuzone) | **GET** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Gets a specific menu zone for a given zone id
+*MenuZonesApi* | [**getMenuZonesForMenuId**](docs/Api/MenuZonesApi.md#getmenuzonesformenuid) | **GET** /api/v1.0/menus/{menuId}/zones | Gets all the menu zones for a menu
+*MenuZonesApi* | [**setMenuSectionMenuZone**](docs/Api/MenuZonesApi.md#setmenusectionmenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/section/{menuSectionId} | Sets a zone to a menu section.
+*MenuZonesApi* | [**setMenuZoneDescription**](docs/Api/MenuZonesApi.md#setmenuzonedescription) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/description | Sets the description of a menu zone.
+*MenuZonesApi* | [**setMenuZoneName**](docs/Api/MenuZonesApi.md#setmenuzonename) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/name/{menuZoneName} | Sets the name of a menu zone.
+*MenuZonesApi* | [**updateMenuZone**](docs/Api/MenuZonesApi.md#updatemenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Updates a menu zone.
+*MenuZonesApi* | [**uploadMenuZoneImage**](docs/Api/MenuZonesApi.md#uploadmenuzoneimage) | **POST** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | Uploads an image for a menu zone.
 *MenusApi* | [**createDraftMenuFromExistingMenu**](docs/Api/MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API]Clone a menu, (without attaching stores)
 *MenusApi* | [**createNewMenuForApp**](docs/Api/MenusApi.md#createnewmenuforapp) | **POST** /api/v1.0/{appId}/menus | Create a new menu. If request body is empty, the system will create a menu with default items.
 *MenusApi* | [**deleteMenu**](docs/Api/MenusApi.md#deletemenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API]Mark a Menu as Deleted
