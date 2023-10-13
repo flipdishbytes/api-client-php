@@ -98,6 +98,20 @@ class OrderDeliveryTrackingStatusUpdatedEventTest extends \PHPUnit_Framework_Tes
     }
 
     /**
+     * Test attribute "delivery_integration_name"
+     */
+    public function testPropertyDeliveryIntegrationName()
+    {
+    }
+
+    /**
+     * Test attribute "delivery_error_message"
+     */
+    public function testPropertyDeliveryErrorMessage()
+    {
+    }
+
+    /**
      * Test attribute "flipdish_event_id"
      */
     public function testPropertyFlipdishEventId()

@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**getProcessingFeeConfigsByStoreId**](StoresApi.md#getProcessingFeeConfigsByStoreId) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | 
 [**getProcessingFeeConfigsByStoreIdAndPaymentAccountType**](StoresApi.md#getProcessingFeeConfigsByStoreIdAndPaymentAccountType) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | 
 [**getStoreById**](StoresApi.md#getStoreById) | **GET** /api/v1.0/stores/{storeId} | 
+[**getStoreDeliveryFeeConfig**](StoresApi.md#getStoreDeliveryFeeConfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 [**getStoreFeeConfig**](StoresApi.md#getStoreFeeConfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | 
 [**getStoreHeadersByAppId**](StoresApi.md#getStoreHeadersByAppId) | **GET** /api/v1.0/{appId}/stores/header | 
 [**getStoreLeadTimes**](StoresApi.md#getStoreLeadTimes) | **GET** /api/v1.0/stores/{storeId}/leadTimes | 
@@ -29,6 +30,7 @@ Method | HTTP request | Description
 [**getStoresByAppId**](StoresApi.md#getStoresByAppId) | **GET** /api/v1.0/{appId}/stores | 
 [**getStoresByStoreIdWithValidations**](StoresApi.md#getStoresByStoreIdWithValidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | 
 [**publishStore**](StoresApi.md#publishStore) | **POST** /api/v1.0/stores/{storeId}/publish | 
+[**putStoreDeliveryFeeConfig**](StoresApi.md#putStoreDeliveryFeeConfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 [**setBusinessHours**](StoresApi.md#setBusinessHours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 [**setPreOrdeEnabled**](StoresApi.md#setPreOrdeEnabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
 [**setStoreLeadTimes**](StoresApi.md#setStoreLeadTimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
@@ -907,6 +909,57 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getStoreDeliveryFeeConfig**
+> \Flipdish\\Client\Models\RestApiArrayResultStoreDeliveryZoneFeeConfig getStoreDeliveryFeeConfig($store_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | 
+
+try {
+    $result = $apiInstance->getStoreDeliveryFeeConfig($store_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->getStoreDeliveryFeeConfig: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiArrayResultStoreDeliveryZoneFeeConfig**](../Model/RestApiArrayResultStoreDeliveryZoneFeeConfig.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getStoreFeeConfig**
 > \Flipdish\\Client\Models\StoreFeeConfig getStoreFeeConfig($store_id)
 
@@ -1387,6 +1440,58 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **putStoreDeliveryFeeConfig**
+> putStoreDeliveryFeeConfig($store_id, $configs)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\StoresApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$store_id = 56; // int | 
+$configs = array(new \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfig()); // \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfig[] | 
+
+try {
+    $apiInstance->putStoreDeliveryFeeConfig($store_id, $configs);
+} catch (Exception $e) {
+    echo 'Exception when calling StoresApi->putStoreDeliveryFeeConfig: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **int**|  |
+ **configs** | [**\Flipdish\\Client\Models\StoreDeliveryZoneFeeConfig[]**](../Model/StoreDeliveryZoneFeeConfig.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

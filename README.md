@@ -512,6 +512,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**getProcessingFeeConfigsByStoreId**](docs/Api/StoresApi.md#getprocessingfeeconfigsbystoreid) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs | 
 *StoresApi* | [**getProcessingFeeConfigsByStoreIdAndPaymentAccountType**](docs/Api/StoresApi.md#getprocessingfeeconfigsbystoreidandpaymentaccounttype) | **GET** /api/v1.0/stores/{storeId}/processingfeeconfigs/{paymentAccountType} | 
 *StoresApi* | [**getStoreById**](docs/Api/StoresApi.md#getstorebyid) | **GET** /api/v1.0/stores/{storeId} | 
+*StoresApi* | [**getStoreDeliveryFeeConfig**](docs/Api/StoresApi.md#getstoredeliveryfeeconfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 *StoresApi* | [**getStoreFeeConfig**](docs/Api/StoresApi.md#getstorefeeconfig) | **GET** /api/v1.0/stores/{storeId}/feeConfig | 
 *StoresApi* | [**getStoreHeadersByAppId**](docs/Api/StoresApi.md#getstoreheadersbyappid) | **GET** /api/v1.0/{appId}/stores/header | 
 *StoresApi* | [**getStoreLeadTimes**](docs/Api/StoresApi.md#getstoreleadtimes) | **GET** /api/v1.0/stores/{storeId}/leadTimes | 
@@ -521,6 +522,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**getStoresByAppId**](docs/Api/StoresApi.md#getstoresbyappid) | **GET** /api/v1.0/{appId}/stores | 
 *StoresApi* | [**getStoresByStoreIdWithValidations**](docs/Api/StoresApi.md#getstoresbystoreidwithvalidations) | **GET** /api/v1.0/{appId}/storevalidation/kiosk | 
 *StoresApi* | [**publishStore**](docs/Api/StoresApi.md#publishstore) | **POST** /api/v1.0/stores/{storeId}/publish | 
+*StoresApi* | [**putStoreDeliveryFeeConfig**](docs/Api/StoresApi.md#putstoredeliveryfeeconfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 *StoresApi* | [**setBusinessHours**](docs/Api/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 *StoresApi* | [**setPreOrdeEnabled**](docs/Api/StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
 *StoresApi* | [**setStoreLeadTimes**](docs/Api/StoresApi.md#setstoreleadtimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
@@ -1036,6 +1038,7 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultRetentionCampaign](docs/Model/RestApiArrayResultRetentionCampaign.md)
  - [RestApiArrayResultStoreChannelAssignment](docs/Model/RestApiArrayResultStoreChannelAssignment.md)
  - [RestApiArrayResultStoreChannelStoreMapping](docs/Model/RestApiArrayResultStoreChannelStoreMapping.md)
+ - [RestApiArrayResultStoreDeliveryZoneFeeConfig](docs/Model/RestApiArrayResultStoreDeliveryZoneFeeConfig.md)
  - [RestApiArrayResultStoreListItem](docs/Model/RestApiArrayResultStoreListItem.md)
  - [RestApiArrayResultStoreStatistics](docs/Model/RestApiArrayResultStoreStatistics.md)
  - [RestApiArrayResultStripeCustomConnectedAccount](docs/Model/RestApiArrayResultStripeCustomConnectedAccount.md)
@@ -1227,6 +1230,7 @@ Class | Method | HTTP request | Description
  - [StoreCreatedEvent](docs/Model/StoreCreatedEvent.md)
  - [StoreDataPoint](docs/Model/StoreDataPoint.md)
  - [StoreDeletedEvent](docs/Model/StoreDeletedEvent.md)
+ - [StoreDeliveryZoneFeeConfig](docs/Model/StoreDeliveryZoneFeeConfig.md)
  - [StoreEndOfDayReport](docs/Model/StoreEndOfDayReport.md)
  - [StoreFeeConfig](docs/Model/StoreFeeConfig.md)
  - [StoreFeeConfigUpdatedEvent](docs/Model/StoreFeeConfigUpdatedEvent.md)

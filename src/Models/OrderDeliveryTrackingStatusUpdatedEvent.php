@@ -61,6 +61,8 @@ class OrderDeliveryTrackingStatusUpdatedEvent implements ModelInterface, ArrayAc
         'event_name' => 'string',
         'description' => 'string',
         'order' => '\Flipdish\\Client\Models\Order',
+        'delivery_integration_name' => 'string',
+        'delivery_error_message' => 'string',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -77,6 +79,8 @@ class OrderDeliveryTrackingStatusUpdatedEvent implements ModelInterface, ArrayAc
         'event_name' => null,
         'description' => null,
         'order' => null,
+        'delivery_integration_name' => null,
+        'delivery_error_message' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -114,6 +118,8 @@ class OrderDeliveryTrackingStatusUpdatedEvent implements ModelInterface, ArrayAc
         'event_name' => 'EventName',
         'description' => 'Description',
         'order' => 'Order',
+        'delivery_integration_name' => 'DeliveryIntegrationName',
+        'delivery_error_message' => 'DeliveryErrorMessage',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -130,6 +136,8 @@ class OrderDeliveryTrackingStatusUpdatedEvent implements ModelInterface, ArrayAc
         'event_name' => 'setEventName',
         'description' => 'setDescription',
         'order' => 'setOrder',
+        'delivery_integration_name' => 'setDeliveryIntegrationName',
+        'delivery_error_message' => 'setDeliveryErrorMessage',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -146,6 +154,8 @@ class OrderDeliveryTrackingStatusUpdatedEvent implements ModelInterface, ArrayAc
         'event_name' => 'getEventName',
         'description' => 'getDescription',
         'order' => 'getOrder',
+        'delivery_integration_name' => 'getDeliveryIntegrationName',
+        'delivery_error_message' => 'getDeliveryErrorMessage',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -216,6 +226,8 @@ class OrderDeliveryTrackingStatusUpdatedEvent implements ModelInterface, ArrayAc
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
+        $this->container['delivery_integration_name'] = isset($data['delivery_integration_name']) ? $data['delivery_integration_name'] : null;
+        $this->container['delivery_error_message'] = isset($data['delivery_error_message']) ? $data['delivery_error_message'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -315,6 +327,54 @@ class OrderDeliveryTrackingStatusUpdatedEvent implements ModelInterface, ArrayAc
     public function setOrder($order)
     {
         $this->container['order'] = $order;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_integration_name
+     *
+     * @return string
+     */
+    public function getDeliveryIntegrationName()
+    {
+        return $this->container['delivery_integration_name'];
+    }
+
+    /**
+     * Sets delivery_integration_name
+     *
+     * @param string $delivery_integration_name Delivery integration name
+     *
+     * @return $this
+     */
+    public function setDeliveryIntegrationName($delivery_integration_name)
+    {
+        $this->container['delivery_integration_name'] = $delivery_integration_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_error_message
+     *
+     * @return string
+     */
+    public function getDeliveryErrorMessage()
+    {
+        return $this->container['delivery_error_message'];
+    }
+
+    /**
+     * Sets delivery_error_message
+     *
+     * @param string $delivery_error_message Delivery error message (optional)
+     *
+     * @return $this
+     */
+    public function setDeliveryErrorMessage($delivery_error_message)
+    {
+        $this->container['delivery_error_message'] = $delivery_error_message;
 
         return $this;
     }

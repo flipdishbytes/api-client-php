@@ -232,6 +232,16 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getStoreDeliveryFeeConfig
+     *
+     * .
+     *
+     */
+    public function testGetStoreDeliveryFeeConfig()
+    {
+    }
+
+    /**
      * Test case for getStoreFeeConfig
      *
      * .
@@ -318,6 +328,16 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPublishStore()
+    {
+    }
+
+    /**
+     * Test case for putStoreDeliveryFeeConfig
+     *
+     * .
+     *
+     */
+    public function testPutStoreDeliveryFeeConfig()
     {
     }
 
