@@ -58,7 +58,8 @@ class PercentDiscountDetails implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'percentage_discount' => 'int'
+        'percentage_discount' => 'int',
+        'max_discount_amount' => 'double'
     ];
 
     /**
@@ -67,7 +68,8 @@ class PercentDiscountDetails implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'percentage_discount' => 'int32'
+        'percentage_discount' => 'int32',
+        'max_discount_amount' => 'double'
     ];
 
     /**
@@ -97,7 +99,8 @@ class PercentDiscountDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'percentage_discount' => 'PercentageDiscount'
+        'percentage_discount' => 'PercentageDiscount',
+        'max_discount_amount' => 'MaxDiscountAmount'
     ];
 
     /**
@@ -106,7 +109,8 @@ class PercentDiscountDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'percentage_discount' => 'setPercentageDiscount'
+        'percentage_discount' => 'setPercentageDiscount',
+        'max_discount_amount' => 'setMaxDiscountAmount'
     ];
 
     /**
@@ -115,7 +119,8 @@ class PercentDiscountDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'percentage_discount' => 'getPercentageDiscount'
+        'percentage_discount' => 'getPercentageDiscount',
+        'max_discount_amount' => 'getMaxDiscountAmount'
     ];
 
     /**
@@ -179,6 +184,7 @@ class PercentDiscountDetails implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['percentage_discount'] = isset($data['percentage_discount']) ? $data['percentage_discount'] : null;
+        $this->container['max_discount_amount'] = isset($data['max_discount_amount']) ? $data['max_discount_amount'] : null;
     }
 
     /**
@@ -225,6 +231,30 @@ class PercentDiscountDetails implements ModelInterface, ArrayAccess
     public function setPercentageDiscount($percentage_discount)
     {
         $this->container['percentage_discount'] = $percentage_discount;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_discount_amount
+     *
+     * @return double
+     */
+    public function getMaxDiscountAmount()
+    {
+        return $this->container['max_discount_amount'];
+    }
+
+    /**
+     * Sets max_discount_amount
+     *
+     * @param double $max_discount_amount The maximum amount that the percentage discount value can be.  If not set then there is no maximum.  If set to e.g. 20 euro, and the percentage discount is 25%, and the order total is 100 euro, then the discount will be 20 euro (not 25 euro).
+     *
+     * @return $this
+     */
+    public function setMaxDiscountAmount($max_discount_amount)
+    {
+        $this->container['max_discount_amount'] = $max_discount_amount;
 
         return $this;
     }

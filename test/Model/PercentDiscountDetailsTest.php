@@ -82,4 +82,11 @@ class PercentDiscountDetailsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPercentageDiscount()
     {
     }
+
+    /**
+     * Test attribute "max_discount_amount"
+     */
+    public function testPropertyMaxDiscountAmount()
+    {
+    }
 }
