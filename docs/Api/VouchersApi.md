@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateVoucher**
-> \Flipdish\\Client\Models\RestApiResultVoucherWithStats updateVoucher($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id)
+> \Flipdish\\Client\Models\RestApiResultVoucherWithStats updateVoucher($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id, $max_discount_amount)
 
 
 
@@ -260,9 +260,10 @@ $store_id = array(56); // int[] |
 $percent_value = 56; // int | 
 $lump_value = 1.2; // double | 
 $free_item_id = 56; // int | 
+$max_discount_amount = 1.2; // double | 
 
 try {
-    $result = $apiInstance->updateVoucher($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id);
+    $result = $apiInstance->updateVoucher($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id, $max_discount_amount);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VouchersApi->updateVoucher: ', $e->getMessage(), PHP_EOL;
@@ -280,6 +281,7 @@ Name | Type | Description  | Notes
  **percent_value** | **int**|  | [optional]
  **lump_value** | **double**|  | [optional]
  **free_item_id** | **int**|  | [optional]
+ **max_discount_amount** | **double**|  | [optional]
 
 ### Return type
 

@@ -1408,14 +1408,15 @@ class VouchersApi
      * @param  int $percent_value percent_value (optional)
      * @param  double $lump_value lump_value (optional)
      * @param  int $free_item_id free_item_id (optional)
+     * @param  double $max_discount_amount max_discount_amount (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultVoucherWithStats
      */
-    public function updateVoucher($voucher_id, $voucher, $store_id = null, $percent_value = null, $lump_value = null, $free_item_id = null)
+    public function updateVoucher($voucher_id, $voucher, $store_id = null, $percent_value = null, $lump_value = null, $free_item_id = null, $max_discount_amount = null)
     {
-        list($response) = $this->updateVoucherWithHttpInfo($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id);
+        list($response) = $this->updateVoucherWithHttpInfo($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id, $max_discount_amount);
         return $response;
     }
 
@@ -1428,15 +1429,16 @@ class VouchersApi
      * @param  int $percent_value (optional)
      * @param  double $lump_value (optional)
      * @param  int $free_item_id (optional)
+     * @param  double $max_discount_amount (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultVoucherWithStats, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateVoucherWithHttpInfo($voucher_id, $voucher, $store_id = null, $percent_value = null, $lump_value = null, $free_item_id = null)
+    public function updateVoucherWithHttpInfo($voucher_id, $voucher, $store_id = null, $percent_value = null, $lump_value = null, $free_item_id = null, $max_discount_amount = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultVoucherWithStats';
-        $request = $this->updateVoucherRequest($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id);
+        $request = $this->updateVoucherRequest($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id, $max_discount_amount);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1540,13 +1542,14 @@ class VouchersApi
      * @param  int $percent_value (optional)
      * @param  double $lump_value (optional)
      * @param  int $free_item_id (optional)
+     * @param  double $max_discount_amount (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateVoucherAsync($voucher_id, $voucher, $store_id = null, $percent_value = null, $lump_value = null, $free_item_id = null)
+    public function updateVoucherAsync($voucher_id, $voucher, $store_id = null, $percent_value = null, $lump_value = null, $free_item_id = null, $max_discount_amount = null)
     {
-        return $this->updateVoucherAsyncWithHttpInfo($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id)
+        return $this->updateVoucherAsyncWithHttpInfo($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id, $max_discount_amount)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1565,14 +1568,15 @@ class VouchersApi
      * @param  int $percent_value (optional)
      * @param  double $lump_value (optional)
      * @param  int $free_item_id (optional)
+     * @param  double $max_discount_amount (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateVoucherAsyncWithHttpInfo($voucher_id, $voucher, $store_id = null, $percent_value = null, $lump_value = null, $free_item_id = null)
+    public function updateVoucherAsyncWithHttpInfo($voucher_id, $voucher, $store_id = null, $percent_value = null, $lump_value = null, $free_item_id = null, $max_discount_amount = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultVoucherWithStats';
-        $request = $this->updateVoucherRequest($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id);
+        $request = $this->updateVoucherRequest($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id, $max_discount_amount);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1620,11 +1624,12 @@ class VouchersApi
      * @param  int $percent_value (optional)
      * @param  double $lump_value (optional)
      * @param  int $free_item_id (optional)
+     * @param  double $max_discount_amount (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateVoucherRequest($voucher_id, $voucher, $store_id = null, $percent_value = null, $lump_value = null, $free_item_id = null)
+    protected function updateVoucherRequest($voucher_id, $voucher, $store_id = null, $percent_value = null, $lump_value = null, $free_item_id = null, $max_discount_amount = null)
     {
         // verify the required parameter 'voucher_id' is set
         if ($voucher_id === null || (is_array($voucher_id) && count($voucher_id) === 0)) {
@@ -1664,6 +1669,10 @@ class VouchersApi
         // query params
         if ($free_item_id !== null) {
             $queryParams['freeItemId'] = ObjectSerializer::toQueryValue($free_item_id);
+        }
+        // query params
+        if ($max_discount_amount !== null) {
+            $queryParams['maxDiscountAmount'] = ObjectSerializer::toQueryValue($max_discount_amount);
         }
 
         // path params
