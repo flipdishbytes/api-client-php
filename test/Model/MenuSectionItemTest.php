@@ -126,6 +126,13 @@ class MenuSectionItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "exclude_from_voucher_discounting"
+     */
+    public function testPropertyExcludeFromVoucherDiscounting()
+    {
+    }
+
+    /**
      * Test attribute "metadata"
      */
     public function testPropertyMetadata()

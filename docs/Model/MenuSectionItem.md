@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **tax_rate_name** | **string** | Tax rate name | [optional] 
 **tax_rate_id** | **int** | TaxRate | [optional] 
 **tax_value** | **double** | TaxValue - the tax associated with this item, based on TaxRate / TaxType and Currency (currency determines decimal point precision) | [optional] 
+**exclude_from_voucher_discounting** | **bool** | If true, the item is excluded from voucher discount calculations | [optional] 
 **metadata** | [**\Flipdish\\Client\Models\CreateMetadata[]**](CreateMetadata.md) | List of metadata | [optional] 
 **catalog_item_id** | **string** | Catalog item Id when the Item is associated to a Product | [optional] 
 **name** | **string** | Menu item name (like \&quot;Korma\&quot;) | [optional] 

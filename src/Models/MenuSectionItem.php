@@ -65,6 +65,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'tax_rate_name' => 'string',
         'tax_rate_id' => 'int',
         'tax_value' => 'double',
+        'exclude_from_voucher_discounting' => 'bool',
         'metadata' => '\Flipdish\\Client\Models\CreateMetadata[]',
         'catalog_item_id' => 'string',
         'name' => 'string',
@@ -94,6 +95,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'tax_rate_name' => null,
         'tax_rate_id' => 'int32',
         'tax_value' => 'double',
+        'exclude_from_voucher_discounting' => null,
         'metadata' => null,
         'catalog_item_id' => null,
         'name' => null,
@@ -144,6 +146,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'tax_rate_name' => 'TaxRateName',
         'tax_rate_id' => 'TaxRateId',
         'tax_value' => 'TaxValue',
+        'exclude_from_voucher_discounting' => 'ExcludeFromVoucherDiscounting',
         'metadata' => 'Metadata',
         'catalog_item_id' => 'CatalogItemId',
         'name' => 'Name',
@@ -173,6 +176,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'tax_rate_name' => 'setTaxRateName',
         'tax_rate_id' => 'setTaxRateId',
         'tax_value' => 'setTaxValue',
+        'exclude_from_voucher_discounting' => 'setExcludeFromVoucherDiscounting',
         'metadata' => 'setMetadata',
         'catalog_item_id' => 'setCatalogItemId',
         'name' => 'setName',
@@ -202,6 +206,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'tax_rate_name' => 'getTaxRateName',
         'tax_rate_id' => 'getTaxRateId',
         'tax_value' => 'getTaxValue',
+        'exclude_from_voucher_discounting' => 'getExcludeFromVoucherDiscounting',
         'metadata' => 'getMetadata',
         'catalog_item_id' => 'getCatalogItemId',
         'name' => 'getName',
@@ -323,6 +328,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         $this->container['tax_rate_name'] = isset($data['tax_rate_name']) ? $data['tax_rate_name'] : null;
         $this->container['tax_rate_id'] = isset($data['tax_rate_id']) ? $data['tax_rate_id'] : null;
         $this->container['tax_value'] = isset($data['tax_value']) ? $data['tax_value'] : null;
+        $this->container['exclude_from_voucher_discounting'] = isset($data['exclude_from_voucher_discounting']) ? $data['exclude_from_voucher_discounting'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
         $this->container['catalog_item_id'] = isset($data['catalog_item_id']) ? $data['catalog_item_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -559,6 +565,30 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
     public function setTaxValue($tax_value)
     {
         $this->container['tax_value'] = $tax_value;
+
+        return $this;
+    }
+
+    /**
+     * Gets exclude_from_voucher_discounting
+     *
+     * @return bool
+     */
+    public function getExcludeFromVoucherDiscounting()
+    {
+        return $this->container['exclude_from_voucher_discounting'];
+    }
+
+    /**
+     * Sets exclude_from_voucher_discounting
+     *
+     * @param bool $exclude_from_voucher_discounting If true, the item is excluded from voucher discount calculations
+     *
+     * @return $this
+     */
+    public function setExcludeFromVoucherDiscounting($exclude_from_voucher_discounting)
+    {
+        $this->container['exclude_from_voucher_discounting'] = $exclude_from_voucher_discounting;
 
         return $this;
     }
