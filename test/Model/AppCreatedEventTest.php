@@ -112,9 +112,9 @@ class AppCreatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "opportunity_id"
+     * Test attribute "account_id"
      */
-    public function testPropertyOpportunityId()
+    public function testPropertyAccountId()
     {
     }
 

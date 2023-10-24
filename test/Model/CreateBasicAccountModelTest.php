@@ -96,4 +96,11 @@ class CreateBasicAccountModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyOpportunityId()
     {
     }
+
+    /**
+     * Test attribute "account_id"
+     */
+    public function testPropertyAccountId()
+    {
+    }
 }

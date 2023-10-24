@@ -60,7 +60,8 @@ class CreateBasicAccountModel implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'store_name' => 'string',
         'language_id' => 'string',
-        'opportunity_id' => 'string'
+        'opportunity_id' => 'string',
+        'account_id' => 'string'
     ];
 
     /**
@@ -71,7 +72,8 @@ class CreateBasicAccountModel implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'store_name' => null,
         'language_id' => null,
-        'opportunity_id' => null
+        'opportunity_id' => null,
+        'account_id' => null
     ];
 
     /**
@@ -103,7 +105,8 @@ class CreateBasicAccountModel implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'store_name' => 'StoreName',
         'language_id' => 'LanguageId',
-        'opportunity_id' => 'OpportunityId'
+        'opportunity_id' => 'OpportunityId',
+        'account_id' => 'AccountId'
     ];
 
     /**
@@ -114,7 +117,8 @@ class CreateBasicAccountModel implements ModelInterface, ArrayAccess
     protected static $setters = [
         'store_name' => 'setStoreName',
         'language_id' => 'setLanguageId',
-        'opportunity_id' => 'setOpportunityId'
+        'opportunity_id' => 'setOpportunityId',
+        'account_id' => 'setAccountId'
     ];
 
     /**
@@ -125,7 +129,8 @@ class CreateBasicAccountModel implements ModelInterface, ArrayAccess
     protected static $getters = [
         'store_name' => 'getStoreName',
         'language_id' => 'getLanguageId',
-        'opportunity_id' => 'getOpportunityId'
+        'opportunity_id' => 'getOpportunityId',
+        'account_id' => 'getAccountId'
     ];
 
     /**
@@ -191,6 +196,7 @@ class CreateBasicAccountModel implements ModelInterface, ArrayAccess
         $this->container['store_name'] = isset($data['store_name']) ? $data['store_name'] : null;
         $this->container['language_id'] = isset($data['language_id']) ? $data['language_id'] : null;
         $this->container['opportunity_id'] = isset($data['opportunity_id']) ? $data['opportunity_id'] : null;
+        $this->container['account_id'] = isset($data['account_id']) ? $data['account_id'] : null;
     }
 
     /**
@@ -288,6 +294,30 @@ class CreateBasicAccountModel implements ModelInterface, ArrayAccess
     public function setOpportunityId($opportunity_id)
     {
         $this->container['opportunity_id'] = $opportunity_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets account_id
+     *
+     * @return string
+     */
+    public function getAccountId()
+    {
+        return $this->container['account_id'];
+    }
+
+    /**
+     * Sets account_id
+     *
+     * @param string $account_id Salesforce Account Id
+     *
+     * @return $this
+     */
+    public function setAccountId($account_id)
+    {
+        $this->container['account_id'] = $account_id;
 
         return $this;
     }
