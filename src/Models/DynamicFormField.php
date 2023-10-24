@@ -63,7 +63,8 @@ class DynamicFormField implements ModelInterface, ArrayAccess
         'rules' => '\Flipdish\\Client\Models\DynamicFormRules',
         'mapping' => 'map[string,string]',
         'modifiers' => 'string[]',
-        'value' => 'object'
+        'value' => 'object',
+        'scopes' => 'string'
     ];
 
     /**
@@ -78,7 +79,8 @@ class DynamicFormField implements ModelInterface, ArrayAccess
         'rules' => null,
         'mapping' => null,
         'modifiers' => null,
-        'value' => null
+        'value' => null,
+        'scopes' => null
     ];
 
     /**
@@ -114,7 +116,8 @@ class DynamicFormField implements ModelInterface, ArrayAccess
         'rules' => 'Rules',
         'mapping' => 'Mapping',
         'modifiers' => 'Modifiers',
-        'value' => 'Value'
+        'value' => 'Value',
+        'scopes' => 'Scopes'
     ];
 
     /**
@@ -129,7 +132,8 @@ class DynamicFormField implements ModelInterface, ArrayAccess
         'rules' => 'setRules',
         'mapping' => 'setMapping',
         'modifiers' => 'setModifiers',
-        'value' => 'setValue'
+        'value' => 'setValue',
+        'scopes' => 'setScopes'
     ];
 
     /**
@@ -144,7 +148,8 @@ class DynamicFormField implements ModelInterface, ArrayAccess
         'rules' => 'getRules',
         'mapping' => 'getMapping',
         'modifiers' => 'getModifiers',
-        'value' => 'getValue'
+        'value' => 'getValue',
+        'scopes' => 'getScopes'
     ];
 
     /**
@@ -214,6 +219,7 @@ class DynamicFormField implements ModelInterface, ArrayAccess
         $this->container['mapping'] = isset($data['mapping']) ? $data['mapping'] : null;
         $this->container['modifiers'] = isset($data['modifiers']) ? $data['modifiers'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['scopes'] = isset($data['scopes']) ? $data['scopes'] : null;
     }
 
     /**
@@ -404,6 +410,30 @@ class DynamicFormField implements ModelInterface, ArrayAccess
     public function setValue($value)
     {
         $this->container['value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Gets scopes
+     *
+     * @return string
+     */
+    public function getScopes()
+    {
+        return $this->container['scopes'];
+    }
+
+    /**
+     * Sets scopes
+     *
+     * @param string $scopes scopes
+     *
+     * @return $this
+     */
+    public function setScopes($scopes)
+    {
+        $this->container['scopes'] = $scopes;
 
         return $this;
     }
