@@ -1379,14 +1379,15 @@ class MenusNutritionInfoApi
      * Get allergens
      *
      * @param  string $app_id app_id (required)
+     * @param  string $language_id language_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiArrayResultAllergen
      */
-    public function getAllergens($app_id)
+    public function getAllergens($app_id, $language_id)
     {
-        list($response) = $this->getAllergensWithHttpInfo($app_id);
+        list($response) = $this->getAllergensWithHttpInfo($app_id, $language_id);
         return $response;
     }
 
@@ -1396,15 +1397,16 @@ class MenusNutritionInfoApi
      * Get allergens
      *
      * @param  string $app_id (required)
+     * @param  string $language_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiArrayResultAllergen, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAllergensWithHttpInfo($app_id)
+    public function getAllergensWithHttpInfo($app_id, $language_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAllergen';
-        $request = $this->getAllergensRequest($app_id);
+        $request = $this->getAllergensRequest($app_id, $language_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1503,13 +1505,14 @@ class MenusNutritionInfoApi
      * Get allergens
      *
      * @param  string $app_id (required)
+     * @param  string $language_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAllergensAsync($app_id)
+    public function getAllergensAsync($app_id, $language_id)
     {
-        return $this->getAllergensAsyncWithHttpInfo($app_id)
+        return $this->getAllergensAsyncWithHttpInfo($app_id, $language_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1523,14 +1526,15 @@ class MenusNutritionInfoApi
      * Get allergens
      *
      * @param  string $app_id (required)
+     * @param  string $language_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAllergensAsyncWithHttpInfo($app_id)
+    public function getAllergensAsyncWithHttpInfo($app_id, $language_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAllergen';
-        $request = $this->getAllergensRequest($app_id);
+        $request = $this->getAllergensRequest($app_id, $language_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1573,16 +1577,23 @@ class MenusNutritionInfoApi
      * Create request for operation 'getAllergens'
      *
      * @param  string $app_id (required)
+     * @param  string $language_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAllergensRequest($app_id)
+    protected function getAllergensRequest($app_id, $language_id)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $app_id when calling getAllergens'
+            );
+        }
+        // verify the required parameter 'language_id' is set
+        if ($language_id === null || (is_array($language_id) && count($language_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $language_id when calling getAllergens'
             );
         }
 
@@ -1593,6 +1604,10 @@ class MenusNutritionInfoApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($language_id !== null) {
+            $queryParams['languageId'] = ObjectSerializer::toQueryValue($language_id);
+        }
 
         // path params
         if ($app_id !== null) {

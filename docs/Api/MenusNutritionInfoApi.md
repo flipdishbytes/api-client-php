@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAllergens**
-> \Flipdish\\Client\Models\RestApiArrayResultAllergen getAllergens($app_id)
+> \Flipdish\\Client\Models\RestApiArrayResultAllergen getAllergens($app_id, $language_id)
 
 Get allergens
 
@@ -244,9 +244,10 @@ $apiInstance = new Flipdish\\Client\Api\MenusNutritionInfoApi(
     $config
 );
 $app_id = "app_id_example"; // string | 
+$language_id = "language_id_example"; // string | 
 
 try {
-    $result = $apiInstance->getAllergens($app_id);
+    $result = $apiInstance->getAllergens($app_id, $language_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MenusNutritionInfoApi->getAllergens: ', $e->getMessage(), PHP_EOL;
@@ -259,6 +260,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
+ **language_id** | **string**|  |
 
 ### Return type
 
