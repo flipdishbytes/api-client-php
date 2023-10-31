@@ -1069,7 +1069,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStoreLeadTimes**
-> \Flipdish\\Client\Models\OrderLeadTimes getStoreLeadTimes($store_id)
+> \Flipdish\\Client\Models\RestApiResultOrderLeadTimes getStoreLeadTimes($store_id)
 
 
 
@@ -1106,7 +1106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\OrderLeadTimes**](../Model/OrderLeadTimes.md)
+[**\Flipdish\\Client\Models\RestApiResultOrderLeadTimes**](../Model/RestApiResultOrderLeadTimes.md)
 
 ### Authorization
 
@@ -1607,7 +1607,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setStoreLeadTimes**
-> \Flipdish\\Client\Models\OrderLeadTimes setStoreLeadTimes($store_id, $lead_time)
+> \Flipdish\\Client\Models\RestApiResultOrderLeadTimes setStoreLeadTimes($store_id, $lead_time)
 
 
 
@@ -1646,7 +1646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\OrderLeadTimes**](../Model/OrderLeadTimes.md)
+[**\Flipdish\\Client\Models\RestApiResultOrderLeadTimes**](../Model/RestApiResultOrderLeadTimes.md)
 
 ### Authorization
 

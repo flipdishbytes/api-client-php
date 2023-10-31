@@ -5961,7 +5961,7 @@ class StoresApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\OrderLeadTimes
+     * @return \Flipdish\\Client\Models\RestApiResultOrderLeadTimes
      */
     public function getStoreLeadTimes($store_id)
     {
@@ -5976,11 +5976,11 @@ class StoresApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\OrderLeadTimes, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultOrderLeadTimes, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStoreLeadTimesWithHttpInfo($store_id)
     {
-        $returnType = '\Flipdish\\Client\Models\OrderLeadTimes';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultOrderLeadTimes';
         $request = $this->getStoreLeadTimesRequest($store_id);
 
         try {
@@ -6032,7 +6032,7 @@ class StoresApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\OrderLeadTimes',
+                        '\Flipdish\\Client\Models\RestApiResultOrderLeadTimes',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6098,7 +6098,7 @@ class StoresApi
      */
     public function getStoreLeadTimesAsyncWithHttpInfo($store_id)
     {
-        $returnType = '\Flipdish\\Client\Models\OrderLeadTimes';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultOrderLeadTimes';
         $request = $this->getStoreLeadTimesRequest($store_id);
 
         return $this->client
@@ -8973,7 +8973,7 @@ class StoresApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\OrderLeadTimes
+     * @return \Flipdish\\Client\Models\RestApiResultOrderLeadTimes
      */
     public function setStoreLeadTimes($store_id, $lead_time)
     {
@@ -8989,11 +8989,11 @@ class StoresApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\OrderLeadTimes, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultOrderLeadTimes, HTTP status code, HTTP response headers (array of strings)
      */
     public function setStoreLeadTimesWithHttpInfo($store_id, $lead_time)
     {
-        $returnType = '\Flipdish\\Client\Models\OrderLeadTimes';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultOrderLeadTimes';
         $request = $this->setStoreLeadTimesRequest($store_id, $lead_time);
 
         try {
@@ -9045,7 +9045,7 @@ class StoresApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\OrderLeadTimes',
+                        '\Flipdish\\Client\Models\RestApiResultOrderLeadTimes',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9113,7 +9113,7 @@ class StoresApi
      */
     public function setStoreLeadTimesAsyncWithHttpInfo($store_id, $lead_time)
     {
-        $returnType = '\Flipdish\\Client\Models\OrderLeadTimes';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultOrderLeadTimes';
         $request = $this->setStoreLeadTimesRequest($store_id, $lead_time);
 
         return $this->client

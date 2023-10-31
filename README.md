@@ -1154,6 +1154,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultOrderFulfillmentStatus](docs/Model/RestApiResultOrderFulfillmentStatus.md)
  - [RestApiResultOrderFulfillmentStatusWithConfigurationActions](docs/Model/RestApiResultOrderFulfillmentStatusWithConfigurationActions.md)
  - [RestApiResultOrderIngestSubmitOrderResponse](docs/Model/RestApiResultOrderIngestSubmitOrderResponse.md)
+ - [RestApiResultOrderLeadTimes](docs/Model/RestApiResultOrderLeadTimes.md)
  - [RestApiResultOrderPaymentInformation](docs/Model/RestApiResultOrderPaymentInformation.md)
  - [RestApiResultPaymentIntent](docs/Model/RestApiResultPaymentIntent.md)
  - [RestApiResultPaymentTerminalDetails](docs/Model/RestApiResultPaymentTerminalDetails.md)

@@ -1,6 +1,6 @@
 <?php
 /**
- * LeadTime
+ * RestApiResultOrderLeadTimes
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * LeadTime Class Doc Comment
+ * RestApiResultOrderLeadTimes Class Doc Comment
  *
  * @category Class
- * @description 
+ * @description Rest api result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class LeadTime implements ModelInterface, ArrayAccess
+class RestApiResultOrderLeadTimes implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class LeadTime implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'LeadTime';
+    protected static $swaggerModelName = 'RestApiResult[OrderLeadTimes]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,7 @@ class LeadTime implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'dispatch_type' => 'string',
-        'lead_time_minutes' => 'int'
+        'data' => '\Flipdish\\Client\Models\OrderLeadTimes'
     ];
 
     /**
@@ -68,8 +67,7 @@ class LeadTime implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'dispatch_type' => null,
-        'lead_time_minutes' => 'int32'
+        'data' => null
     ];
 
     /**
@@ -99,8 +97,7 @@ class LeadTime implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'dispatch_type' => 'DispatchType',
-        'lead_time_minutes' => 'LeadTimeMinutes'
+        'data' => 'Data'
     ];
 
     /**
@@ -109,8 +106,7 @@ class LeadTime implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'dispatch_type' => 'setDispatchType',
-        'lead_time_minutes' => 'setLeadTimeMinutes'
+        'data' => 'setData'
     ];
 
     /**
@@ -119,8 +115,7 @@ class LeadTime implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'dispatch_type' => 'getDispatchType',
-        'lead_time_minutes' => 'getLeadTimeMinutes'
+        'data' => 'getData'
     ];
 
     /**
@@ -183,8 +178,7 @@ class LeadTime implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['dispatch_type'] = isset($data['dispatch_type']) ? $data['dispatch_type'] : null;
-        $this->container['lead_time_minutes'] = isset($data['lead_time_minutes']) ? $data['lead_time_minutes'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -196,11 +190,8 @@ class LeadTime implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['dispatch_type'] === null) {
-            $invalidProperties[] = "'dispatch_type' can't be null";
-        }
-        if ($this->container['lead_time_minutes'] === null) {
-            $invalidProperties[] = "'lead_time_minutes' can't be null";
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
         }
         return $invalidProperties;
     }
@@ -218,49 +209,25 @@ class LeadTime implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets dispatch_type
+     * Gets data
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\OrderLeadTimes
      */
-    public function getDispatchType()
+    public function getData()
     {
-        return $this->container['dispatch_type'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets dispatch_type
+     * Sets data
      *
-     * @param string $dispatch_type There are two valid values for this field - `collection` and `delivery`.
+     * @param \Flipdish\\Client\Models\OrderLeadTimes $data Generic data object.
      *
      * @return $this
      */
-    public function setDispatchType($dispatch_type)
+    public function setData($data)
     {
-        $this->container['dispatch_type'] = $dispatch_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets lead_time_minutes
-     *
-     * @return int
-     */
-    public function getLeadTimeMinutes()
-    {
-        return $this->container['lead_time_minutes'];
-    }
-
-    /**
-     * Sets lead_time_minutes
-     *
-     * @param int $lead_time_minutes This must be a positive integer.
-     *
-     * @return $this
-     */
-    public function setLeadTimeMinutes($lead_time_minutes)
-    {
-        $this->container['lead_time_minutes'] = $lead_time_minutes;
+        $this->container['data'] = $data;
 
         return $this;
     }
