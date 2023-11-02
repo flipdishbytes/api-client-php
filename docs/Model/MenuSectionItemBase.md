@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **image_name** | **string** | Image url | [optional] 
 **image_url** | **string** | Image url | [optional] 
 **menu_item_id** | **int** | Menu Item Id | [optional] 
+**exclude_from_voucher_discounting** | **bool** | If true, the item is excluded from voucher discount calculations | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

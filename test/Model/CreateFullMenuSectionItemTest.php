@@ -180,4 +180,11 @@ class CreateFullMenuSectionItemTest extends \PHPUnit_Framework_TestCase
     public function testPropertyMenuItemId()
     {
     }
+
+    /**
+     * Test attribute "exclude_from_voucher_discounting"
+     */
+    public function testPropertyExcludeFromVoucherDiscounting()
+    {
+    }
 }
