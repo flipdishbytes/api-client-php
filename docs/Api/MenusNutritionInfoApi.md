@@ -260,7 +260,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
- **language_id** | **string**|  |
+ **language_id** | **string**|  | [optional]
 
 ### Return type
 

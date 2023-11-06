@@ -1379,13 +1379,13 @@ class MenusNutritionInfoApi
      * Get allergens
      *
      * @param  string $app_id app_id (required)
-     * @param  string $language_id language_id (required)
+     * @param  string $language_id language_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiArrayResultAllergen
      */
-    public function getAllergens($app_id, $language_id)
+    public function getAllergens($app_id, $language_id = null)
     {
         list($response) = $this->getAllergensWithHttpInfo($app_id, $language_id);
         return $response;
@@ -1397,13 +1397,13 @@ class MenusNutritionInfoApi
      * Get allergens
      *
      * @param  string $app_id (required)
-     * @param  string $language_id (required)
+     * @param  string $language_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiArrayResultAllergen, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAllergensWithHttpInfo($app_id, $language_id)
+    public function getAllergensWithHttpInfo($app_id, $language_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAllergen';
         $request = $this->getAllergensRequest($app_id, $language_id);
@@ -1505,12 +1505,12 @@ class MenusNutritionInfoApi
      * Get allergens
      *
      * @param  string $app_id (required)
-     * @param  string $language_id (required)
+     * @param  string $language_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAllergensAsync($app_id, $language_id)
+    public function getAllergensAsync($app_id, $language_id = null)
     {
         return $this->getAllergensAsyncWithHttpInfo($app_id, $language_id)
             ->then(
@@ -1526,12 +1526,12 @@ class MenusNutritionInfoApi
      * Get allergens
      *
      * @param  string $app_id (required)
-     * @param  string $language_id (required)
+     * @param  string $language_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAllergensAsyncWithHttpInfo($app_id, $language_id)
+    public function getAllergensAsyncWithHttpInfo($app_id, $language_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAllergen';
         $request = $this->getAllergensRequest($app_id, $language_id);
@@ -1577,23 +1577,17 @@ class MenusNutritionInfoApi
      * Create request for operation 'getAllergens'
      *
      * @param  string $app_id (required)
-     * @param  string $language_id (required)
+     * @param  string $language_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAllergensRequest($app_id, $language_id)
+    protected function getAllergensRequest($app_id, $language_id = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $app_id when calling getAllergens'
-            );
-        }
-        // verify the required parameter 'language_id' is set
-        if ($language_id === null || (is_array($language_id) && count($language_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $language_id when calling getAllergens'
             );
         }
 
