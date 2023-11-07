@@ -69,7 +69,7 @@ class VoucherWithStats implements ModelInterface, ArrayAccess
         'voucher_sub_type' => 'string',
         'currency' => 'string',
         'store_names' => 'string[]',
-        'add_item_details' => '\Flipdish\\Client\Models\AddItemDetails',
+        'promotion_details' => '\Flipdish\\Client\Models\PromotionDetails',
         'credit_note_details' => '\Flipdish\\Client\Models\CreditNoteDetails',
         'lump_discount_details' => '\Flipdish\\Client\Models\LumpDiscountDetails',
         'percent_discount_details' => '\Flipdish\\Client\Models\PercentDiscountDetails',
@@ -109,7 +109,7 @@ class VoucherWithStats implements ModelInterface, ArrayAccess
         'voucher_sub_type' => null,
         'currency' => null,
         'store_names' => null,
-        'add_item_details' => null,
+        'promotion_details' => null,
         'credit_note_details' => null,
         'lump_discount_details' => null,
         'percent_discount_details' => null,
@@ -170,7 +170,7 @@ class VoucherWithStats implements ModelInterface, ArrayAccess
         'voucher_sub_type' => 'VoucherSubType',
         'currency' => 'Currency',
         'store_names' => 'StoreNames',
-        'add_item_details' => 'AddItemDetails',
+        'promotion_details' => 'PromotionDetails',
         'credit_note_details' => 'CreditNoteDetails',
         'lump_discount_details' => 'LumpDiscountDetails',
         'percent_discount_details' => 'PercentDiscountDetails',
@@ -210,7 +210,7 @@ class VoucherWithStats implements ModelInterface, ArrayAccess
         'voucher_sub_type' => 'setVoucherSubType',
         'currency' => 'setCurrency',
         'store_names' => 'setStoreNames',
-        'add_item_details' => 'setAddItemDetails',
+        'promotion_details' => 'setPromotionDetails',
         'credit_note_details' => 'setCreditNoteDetails',
         'lump_discount_details' => 'setLumpDiscountDetails',
         'percent_discount_details' => 'setPercentDiscountDetails',
@@ -250,7 +250,7 @@ class VoucherWithStats implements ModelInterface, ArrayAccess
         'voucher_sub_type' => 'getVoucherSubType',
         'currency' => 'getCurrency',
         'store_names' => 'getStoreNames',
-        'add_item_details' => 'getAddItemDetails',
+        'promotion_details' => 'getPromotionDetails',
         'credit_note_details' => 'getCreditNoteDetails',
         'lump_discount_details' => 'getLumpDiscountDetails',
         'percent_discount_details' => 'getPercentDiscountDetails',
@@ -646,7 +646,7 @@ class VoucherWithStats implements ModelInterface, ArrayAccess
         $this->container['voucher_sub_type'] = isset($data['voucher_sub_type']) ? $data['voucher_sub_type'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['store_names'] = isset($data['store_names']) ? $data['store_names'] : null;
-        $this->container['add_item_details'] = isset($data['add_item_details']) ? $data['add_item_details'] : null;
+        $this->container['promotion_details'] = isset($data['promotion_details']) ? $data['promotion_details'] : null;
         $this->container['credit_note_details'] = isset($data['credit_note_details']) ? $data['credit_note_details'] : null;
         $this->container['lump_discount_details'] = isset($data['lump_discount_details']) ? $data['lump_discount_details'] : null;
         $this->container['percent_discount_details'] = isset($data['percent_discount_details']) ? $data['percent_discount_details'] : null;
@@ -1026,25 +1026,25 @@ class VoucherWithStats implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets add_item_details
+     * Gets promotion_details
      *
-     * @return \Flipdish\\Client\Models\AddItemDetails
+     * @return \Flipdish\\Client\Models\PromotionDetails
      */
-    public function getAddItemDetails()
+    public function getPromotionDetails()
     {
-        return $this->container['add_item_details'];
+        return $this->container['promotion_details'];
     }
 
     /**
-     * Sets add_item_details
+     * Sets promotion_details
      *
-     * @param \Flipdish\\Client\Models\AddItemDetails $add_item_details Add item details
+     * @param \Flipdish\\Client\Models\PromotionDetails $promotion_details Promotion details
      *
      * @return $this
      */
-    public function setAddItemDetails($add_item_details)
+    public function setPromotionDetails($promotion_details)
     {
-        $this->container['add_item_details'] = $add_item_details;
+        $this->container['promotion_details'] = $promotion_details;
 
         return $this;
     }

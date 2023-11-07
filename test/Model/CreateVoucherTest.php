@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * CreateVoucherTest Class Doc Comment
  *
  * @category    Class
- * @description Voucher
+ * @description Create Voucher
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -84,9 +84,9 @@ class CreateVoucherTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "add_item_details"
+     * Test attribute "promotion"
      */
-    public function testPropertyAddItemDetails()
+    public function testPropertyPromotion()
     {
     }
 

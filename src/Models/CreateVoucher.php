@@ -36,7 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * CreateVoucher Class Doc Comment
  *
  * @category Class
- * @description Voucher
+ * @description Create Voucher
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -59,7 +59,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'voucher_type' => 'string',
-        'add_item_details' => '\Flipdish\\Client\Models\AddItemDetails',
+        'promotion' => '\Flipdish\\Client\Models\CreatePromotion',
         'credit_note_details' => '\Flipdish\\Client\Models\CreditNoteDetails',
         'lump_discount_details' => '\Flipdish\\Client\Models\LumpDiscountDetails',
         'percent_discount_details' => '\Flipdish\\Client\Models\PercentDiscountDetails',
@@ -89,7 +89,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'voucher_type' => null,
-        'add_item_details' => null,
+        'promotion' => null,
         'credit_note_details' => null,
         'lump_discount_details' => null,
         'percent_discount_details' => null,
@@ -140,7 +140,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'voucher_type' => 'VoucherType',
-        'add_item_details' => 'AddItemDetails',
+        'promotion' => 'Promotion',
         'credit_note_details' => 'CreditNoteDetails',
         'lump_discount_details' => 'LumpDiscountDetails',
         'percent_discount_details' => 'PercentDiscountDetails',
@@ -170,7 +170,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'voucher_type' => 'setVoucherType',
-        'add_item_details' => 'setAddItemDetails',
+        'promotion' => 'setPromotion',
         'credit_note_details' => 'setCreditNoteDetails',
         'lump_discount_details' => 'setLumpDiscountDetails',
         'percent_discount_details' => 'setPercentDiscountDetails',
@@ -200,7 +200,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'voucher_type' => 'getVoucherType',
-        'add_item_details' => 'getAddItemDetails',
+        'promotion' => 'getPromotion',
         'credit_note_details' => 'getCreditNoteDetails',
         'lump_discount_details' => 'getLumpDiscountDetails',
         'percent_discount_details' => 'getPercentDiscountDetails',
@@ -303,7 +303,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['voucher_type'] = isset($data['voucher_type']) ? $data['voucher_type'] : null;
-        $this->container['add_item_details'] = isset($data['add_item_details']) ? $data['add_item_details'] : null;
+        $this->container['promotion'] = isset($data['promotion']) ? $data['promotion'] : null;
         $this->container['credit_note_details'] = isset($data['credit_note_details']) ? $data['credit_note_details'] : null;
         $this->container['lump_discount_details'] = isset($data['lump_discount_details']) ? $data['lump_discount_details'] : null;
         $this->container['percent_discount_details'] = isset($data['percent_discount_details']) ? $data['percent_discount_details'] : null;
@@ -392,25 +392,25 @@ class CreateVoucher implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets add_item_details
+     * Gets promotion
      *
-     * @return \Flipdish\\Client\Models\AddItemDetails
+     * @return \Flipdish\\Client\Models\CreatePromotion
      */
-    public function getAddItemDetails()
+    public function getPromotion()
     {
-        return $this->container['add_item_details'];
+        return $this->container['promotion'];
     }
 
     /**
-     * Sets add_item_details
+     * Sets promotion
      *
-     * @param \Flipdish\\Client\Models\AddItemDetails $add_item_details Add item details
+     * @param \Flipdish\\Client\Models\CreatePromotion $promotion Create Promotion details
      *
      * @return $this
      */
-    public function setAddItemDetails($add_item_details)
+    public function setPromotion($promotion)
     {
-        $this->container['add_item_details'] = $add_item_details;
+        $this->container['promotion'] = $promotion;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * VoucherBaseTest
+ * UpdateVoucherTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * VoucherBaseTest Class Doc Comment
+ * UpdateVoucherTest Class Doc Comment
  *
  * @category    Class
- * @description Voucher Base
+ * @description Update Voucher
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class VoucherBaseTest extends \PHPUnit_Framework_TestCase
+class UpdateVoucherTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,30 @@ class VoucherBaseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "VoucherBase"
+     * Test "UpdateVoucher"
      */
-    public function testVoucherBase()
+    public function testUpdateVoucher()
+    {
+    }
+
+    /**
+     * Test attribute "promotion_id"
+     */
+    public function testPropertyPromotionId()
+    {
+    }
+
+    /**
+     * Test attribute "promotion_name"
+     */
+    public function testPropertyPromotionName()
+    {
+    }
+
+    /**
+     * Test attribute "promotion_award_menu_item_public_ids"
+     */
+    public function testPropertyPromotionAwardMenuItemPublicIds()
     {
     }
 

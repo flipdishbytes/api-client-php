@@ -1,6 +1,6 @@
 <?php
 /**
- * AddItemDetailsTest
+ * PromotionDetailsTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * AddItemDetailsTest Class Doc Comment
+ * PromotionDetailsTest Class Doc Comment
  *
  * @category    Class
- * @description Add item details
+ * @description Promotion
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AddItemDetailsTest extends \PHPUnit_Framework_TestCase
+class PromotionDetailsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,23 +70,30 @@ class AddItemDetailsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AddItemDetails"
+     * Test "PromotionDetails"
      */
-    public function testAddItemDetails()
+    public function testPromotionDetails()
     {
     }
 
     /**
-     * Test attribute "promotional_item_id"
+     * Test attribute "promotion_id"
      */
-    public function testPropertyPromotionalItemId()
+    public function testPropertyPromotionId()
     {
     }
 
     /**
-     * Test attribute "promotional_item_name"
+     * Test attribute "name"
      */
-    public function testPropertyPromotionalItemName()
+    public function testPropertyName()
+    {
+    }
+
+    /**
+     * Test attribute "promotion_awards"
+     */
+    public function testPropertyPromotionAwards()
     {
     }
 }

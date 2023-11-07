@@ -1,6 +1,6 @@
 <?php
 /**
- * VoucherBase
+ * UpdateVoucher
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * VoucherBase Class Doc Comment
+ * UpdateVoucher Class Doc Comment
  *
  * @category Class
- * @description Voucher Base
+ * @description Update Voucher
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class VoucherBase implements ModelInterface, ArrayAccess
+class UpdateVoucher implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class VoucherBase implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'VoucherBase';
+    protected static $swaggerModelName = 'UpdateVoucher';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,6 +58,9 @@ class VoucherBase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'promotion_id' => 'int',
+        'promotion_name' => 'string',
+        'promotion_award_menu_item_public_ids' => 'string[]',
         'code' => 'string',
         'description' => 'string',
         'stores' => 'int[]',
@@ -83,6 +86,9 @@ class VoucherBase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'promotion_id' => 'int32',
+        'promotion_name' => null,
+        'promotion_award_menu_item_public_ids' => 'uuid',
         'code' => null,
         'description' => null,
         'stores' => 'int32',
@@ -129,6 +135,9 @@ class VoucherBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'promotion_id' => 'PromotionId',
+        'promotion_name' => 'PromotionName',
+        'promotion_award_menu_item_public_ids' => 'PromotionAwardMenuItemPublicIds',
         'code' => 'Code',
         'description' => 'Description',
         'stores' => 'Stores',
@@ -154,6 +163,9 @@ class VoucherBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'promotion_id' => 'setPromotionId',
+        'promotion_name' => 'setPromotionName',
+        'promotion_award_menu_item_public_ids' => 'setPromotionAwardMenuItemPublicIds',
         'code' => 'setCode',
         'description' => 'setDescription',
         'stores' => 'setStores',
@@ -179,6 +191,9 @@ class VoucherBase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'promotion_id' => 'getPromotionId',
+        'promotion_name' => 'getPromotionName',
+        'promotion_award_menu_item_public_ids' => 'getPromotionAwardMenuItemPublicIds',
         'code' => 'getCode',
         'description' => 'getDescription',
         'stores' => 'getStores',
@@ -258,6 +273,9 @@ class VoucherBase implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['promotion_id'] = isset($data['promotion_id']) ? $data['promotion_id'] : null;
+        $this->container['promotion_name'] = isset($data['promotion_name']) ? $data['promotion_name'] : null;
+        $this->container['promotion_award_menu_item_public_ids'] = isset($data['promotion_award_menu_item_public_ids']) ? $data['promotion_award_menu_item_public_ids'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['stores'] = isset($data['stores']) ? $data['stores'] : null;
@@ -300,6 +318,78 @@ class VoucherBase implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets promotion_id
+     *
+     * @return int
+     */
+    public function getPromotionId()
+    {
+        return $this->container['promotion_id'];
+    }
+
+    /**
+     * Sets promotion_id
+     *
+     * @param int $promotion_id Promotion ID to update
+     *
+     * @return $this
+     */
+    public function setPromotionId($promotion_id)
+    {
+        $this->container['promotion_id'] = $promotion_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets promotion_name
+     *
+     * @return string
+     */
+    public function getPromotionName()
+    {
+        return $this->container['promotion_name'];
+    }
+
+    /**
+     * Sets promotion_name
+     *
+     * @param string $promotion_name The updated name of the promotion
+     *
+     * @return $this
+     */
+    public function setPromotionName($promotion_name)
+    {
+        $this->container['promotion_name'] = $promotion_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets promotion_award_menu_item_public_ids
+     *
+     * @return string[]
+     */
+    public function getPromotionAwardMenuItemPublicIds()
+    {
+        return $this->container['promotion_award_menu_item_public_ids'];
+    }
+
+    /**
+     * Sets promotion_award_menu_item_public_ids
+     *
+     * @param string[] $promotion_award_menu_item_public_ids The updated menu items that the promotion awards
+     *
+     * @return $this
+     */
+    public function setPromotionAwardMenuItemPublicIds($promotion_award_menu_item_public_ids)
+    {
+        $this->container['promotion_award_menu_item_public_ids'] = $promotion_award_menu_item_public_ids;
+
+        return $this;
+    }
 
     /**
      * Gets code

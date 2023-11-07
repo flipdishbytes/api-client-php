@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **voucher_type** | **string** | Voucher Type | [optional] 
-**add_item_details** | [**\Flipdish\\Client\Models\AddItemDetails**](AddItemDetails.md) | Add item details | [optional] 
+**promotion** | [**\Flipdish\\Client\Models\CreatePromotion**](CreatePromotion.md) | Create Promotion details | [optional] 
 **credit_note_details** | [**\Flipdish\\Client\Models\CreditNoteDetails**](CreditNoteDetails.md) | Credit note details | [optional] 
 **lump_discount_details** | [**\Flipdish\\Client\Models\LumpDiscountDetails**](LumpDiscountDetails.md) | Lump discount details | [optional] 
 **percent_discount_details** | [**\Flipdish\\Client\Models\PercentDiscountDetails**](PercentDiscountDetails.md) | Percent discount details | [optional] 

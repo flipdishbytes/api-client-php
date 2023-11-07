@@ -119,9 +119,9 @@ class VoucherTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "add_item_details"
+     * Test attribute "promotion_details"
      */
-    public function testPropertyAddItemDetails()
+    public function testPropertyPromotionDetails()
     {
     }
 

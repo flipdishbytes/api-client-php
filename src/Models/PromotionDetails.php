@@ -1,6 +1,6 @@
 <?php
 /**
- * AddItemDetails
+ * PromotionDetails
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * AddItemDetails Class Doc Comment
+ * PromotionDetails Class Doc Comment
  *
  * @category Class
- * @description Add item details
+ * @description Promotion
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AddItemDetails implements ModelInterface, ArrayAccess
+class PromotionDetails implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class AddItemDetails implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'AddItemDetails';
+    protected static $swaggerModelName = 'PromotionDetails';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,9 @@ class AddItemDetails implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'promotional_item_id' => 'int',
-        'promotional_item_name' => 'string'
+        'promotion_id' => 'int',
+        'name' => 'string',
+        'promotion_awards' => '\Flipdish\\Client\Models\PromotionAward[]'
     ];
 
     /**
@@ -68,8 +69,9 @@ class AddItemDetails implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'promotional_item_id' => 'int32',
-        'promotional_item_name' => null
+        'promotion_id' => 'int32',
+        'name' => null,
+        'promotion_awards' => null
     ];
 
     /**
@@ -99,8 +101,9 @@ class AddItemDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'promotional_item_id' => 'PromotionalItemId',
-        'promotional_item_name' => 'PromotionalItemName'
+        'promotion_id' => 'PromotionId',
+        'name' => 'Name',
+        'promotion_awards' => 'PromotionAwards'
     ];
 
     /**
@@ -109,8 +112,9 @@ class AddItemDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'promotional_item_id' => 'setPromotionalItemId',
-        'promotional_item_name' => 'setPromotionalItemName'
+        'promotion_id' => 'setPromotionId',
+        'name' => 'setName',
+        'promotion_awards' => 'setPromotionAwards'
     ];
 
     /**
@@ -119,8 +123,9 @@ class AddItemDetails implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'promotional_item_id' => 'getPromotionalItemId',
-        'promotional_item_name' => 'getPromotionalItemName'
+        'promotion_id' => 'getPromotionId',
+        'name' => 'getName',
+        'promotion_awards' => 'getPromotionAwards'
     ];
 
     /**
@@ -183,8 +188,9 @@ class AddItemDetails implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['promotional_item_id'] = isset($data['promotional_item_id']) ? $data['promotional_item_id'] : null;
-        $this->container['promotional_item_name'] = isset($data['promotional_item_name']) ? $data['promotional_item_name'] : null;
+        $this->container['promotion_id'] = isset($data['promotion_id']) ? $data['promotion_id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['promotion_awards'] = isset($data['promotion_awards']) ? $data['promotion_awards'] : null;
     }
 
     /**
@@ -212,49 +218,73 @@ class AddItemDetails implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets promotional_item_id
+     * Gets promotion_id
      *
      * @return int
      */
-    public function getPromotionalItemId()
+    public function getPromotionId()
     {
-        return $this->container['promotional_item_id'];
+        return $this->container['promotion_id'];
     }
 
     /**
-     * Sets promotional_item_id
+     * Sets promotion_id
      *
-     * @param int $promotional_item_id Promotional Item Id
+     * @param int $promotion_id Promotion Id
      *
      * @return $this
      */
-    public function setPromotionalItemId($promotional_item_id)
+    public function setPromotionId($promotion_id)
     {
-        $this->container['promotional_item_id'] = $promotional_item_id;
+        $this->container['promotion_id'] = $promotion_id;
 
         return $this;
     }
 
     /**
-     * Gets promotional_item_name
+     * Gets name
      *
      * @return string
      */
-    public function getPromotionalItemName()
+    public function getName()
     {
-        return $this->container['promotional_item_name'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets promotional_item_name
+     * Sets name
      *
-     * @param string $promotional_item_name Promotional Item Name
+     * @param string $name The name of the promotion
      *
      * @return $this
      */
-    public function setPromotionalItemName($promotional_item_name)
+    public function setName($name)
     {
-        $this->container['promotional_item_name'] = $promotional_item_name;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets promotion_awards
+     *
+     * @return \Flipdish\\Client\Models\PromotionAward[]
+     */
+    public function getPromotionAwards()
+    {
+        return $this->container['promotion_awards'];
+    }
+
+    /**
+     * Sets promotion_awards
+     *
+     * @param \Flipdish\\Client\Models\PromotionAward[] $promotion_awards The items that this promotion will award
+     *
+     * @return $this
+     */
+    public function setPromotionAwards($promotion_awards)
+    {
+        $this->container['promotion_awards'] = $promotion_awards;
 
         return $this;
     }

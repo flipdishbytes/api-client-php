@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateVoucher**
-> \Flipdish\\Client\Models\RestApiResultVoucherWithStats updateVoucher($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id, $max_discount_amount)
+> \Flipdish\\Client\Models\RestApiResultVoucherWithStats updateVoucher($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $max_discount_amount)
 
 
 
@@ -255,15 +255,14 @@ $apiInstance = new Flipdish\\Client\Api\VouchersApi(
     $config
 );
 $voucher_id = 56; // int | 
-$voucher = new \Flipdish\\Client\Models\VoucherBase(); // \Flipdish\\Client\Models\VoucherBase | 
+$voucher = new \Flipdish\\Client\Models\UpdateVoucher(); // \Flipdish\\Client\Models\UpdateVoucher | 
 $store_id = array(56); // int[] | 
 $percent_value = 56; // int | 
 $lump_value = 1.2; // double | 
-$free_item_id = 56; // int | 
 $max_discount_amount = 1.2; // double | 
 
 try {
-    $result = $apiInstance->updateVoucher($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $free_item_id, $max_discount_amount);
+    $result = $apiInstance->updateVoucher($voucher_id, $voucher, $store_id, $percent_value, $lump_value, $max_discount_amount);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VouchersApi->updateVoucher: ', $e->getMessage(), PHP_EOL;
@@ -276,11 +275,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **voucher_id** | **int**|  |
- **voucher** | [**\Flipdish\\Client\Models\VoucherBase**](../Model/VoucherBase.md)|  |
+ **voucher** | [**\Flipdish\\Client\Models\UpdateVoucher**](../Model/UpdateVoucher.md)|  |
  **store_id** | [**int[]**](../Model/int.md)|  | [optional]
  **percent_value** | **int**|  | [optional]
  **lump_value** | **double**|  | [optional]
- **free_item_id** | **int**|  | [optional]
  **max_discount_amount** | **double**|  | [optional]
 
 ### Return type
