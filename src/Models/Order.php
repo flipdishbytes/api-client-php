@@ -106,7 +106,8 @@ class Order implements ModelInterface, ArrayAccess
         'delivery_tracking_status' => 'string',
         'driver_id' => 'int',
         'total_tax' => 'double',
-        'order_tracking_code' => 'string'
+        'order_tracking_code' => 'string',
+        'delivery_fee_area_id' => 'int'
     ];
 
     /**
@@ -163,7 +164,8 @@ class Order implements ModelInterface, ArrayAccess
         'delivery_tracking_status' => null,
         'driver_id' => 'int32',
         'total_tax' => 'double',
-        'order_tracking_code' => null
+        'order_tracking_code' => null,
+        'delivery_fee_area_id' => 'int32'
     ];
 
     /**
@@ -241,7 +243,8 @@ class Order implements ModelInterface, ArrayAccess
         'delivery_tracking_status' => 'DeliveryTrackingStatus',
         'driver_id' => 'DriverId',
         'total_tax' => 'TotalTax',
-        'order_tracking_code' => 'OrderTrackingCode'
+        'order_tracking_code' => 'OrderTrackingCode',
+        'delivery_fee_area_id' => 'DeliveryFeeAreaId'
     ];
 
     /**
@@ -298,7 +301,8 @@ class Order implements ModelInterface, ArrayAccess
         'delivery_tracking_status' => 'setDeliveryTrackingStatus',
         'driver_id' => 'setDriverId',
         'total_tax' => 'setTotalTax',
-        'order_tracking_code' => 'setOrderTrackingCode'
+        'order_tracking_code' => 'setOrderTrackingCode',
+        'delivery_fee_area_id' => 'setDeliveryFeeAreaId'
     ];
 
     /**
@@ -355,7 +359,8 @@ class Order implements ModelInterface, ArrayAccess
         'delivery_tracking_status' => 'getDeliveryTrackingStatus',
         'driver_id' => 'getDriverId',
         'total_tax' => 'getTotalTax',
-        'order_tracking_code' => 'getOrderTrackingCode'
+        'order_tracking_code' => 'getOrderTrackingCode',
+        'delivery_fee_area_id' => 'getDeliveryFeeAreaId'
     ];
 
     /**
@@ -708,6 +713,7 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
         $this->container['total_tax'] = isset($data['total_tax']) ? $data['total_tax'] : null;
         $this->container['order_tracking_code'] = isset($data['order_tracking_code']) ? $data['order_tracking_code'] : null;
+        $this->container['delivery_fee_area_id'] = isset($data['delivery_fee_area_id']) ? $data['delivery_fee_area_id'] : null;
     }
 
     /**
@@ -2059,6 +2065,30 @@ class Order implements ModelInterface, ArrayAccess
     public function setOrderTrackingCode($order_tracking_code)
     {
         $this->container['order_tracking_code'] = $order_tracking_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_fee_area_id
+     *
+     * @return int
+     */
+    public function getDeliveryFeeAreaId()
+    {
+        return $this->container['delivery_fee_area_id'];
+    }
+
+    /**
+     * Sets delivery_fee_area_id
+     *
+     * @param int $delivery_fee_area_id Delivery area identifier
+     *
+     * @return $this
+     */
+    public function setDeliveryFeeAreaId($delivery_fee_area_id)
+    {
+        $this->container['delivery_fee_area_id'] = $delivery_fee_area_id;
 
         return $this;
     }

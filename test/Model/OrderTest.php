@@ -418,4 +418,11 @@ class OrderTest extends \PHPUnit_Framework_TestCase
     public function testPropertyOrderTrackingCode()
     {
     }
+
+    /**
+     * Test attribute "delivery_fee_area_id"
+     */
+    public function testPropertyDeliveryFeeAreaId()
+    {
+    }
 }
