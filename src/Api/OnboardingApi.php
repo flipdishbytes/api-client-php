@@ -385,14 +385,15 @@ class OnboardingApi
      *
      * @param  string $app_id app_id (required)
      * @param  int $store_id store_id (required)
+     * @param  int $milestone_id milestone_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
-    public function onboardingGetOnboardingItems($app_id, $store_id)
+    public function onboardingGetOnboardingItems($app_id, $store_id, $milestone_id = null)
     {
-        list($response) = $this->onboardingGetOnboardingItemsWithHttpInfo($app_id, $store_id);
+        list($response) = $this->onboardingGetOnboardingItemsWithHttpInfo($app_id, $store_id, $milestone_id);
         return $response;
     }
 
@@ -401,15 +402,16 @@ class OnboardingApi
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
+     * @param  int $milestone_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function onboardingGetOnboardingItemsWithHttpInfo($app_id, $store_id)
+    public function onboardingGetOnboardingItemsWithHttpInfo($app_id, $store_id, $milestone_id = null)
     {
         $returnType = 'object';
-        $request = $this->onboardingGetOnboardingItemsRequest($app_id, $store_id);
+        $request = $this->onboardingGetOnboardingItemsRequest($app_id, $store_id, $milestone_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -501,13 +503,14 @@ class OnboardingApi
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
+     * @param  int $milestone_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function onboardingGetOnboardingItemsAsync($app_id, $store_id)
+    public function onboardingGetOnboardingItemsAsync($app_id, $store_id, $milestone_id = null)
     {
-        return $this->onboardingGetOnboardingItemsAsyncWithHttpInfo($app_id, $store_id)
+        return $this->onboardingGetOnboardingItemsAsyncWithHttpInfo($app_id, $store_id, $milestone_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -522,14 +525,15 @@ class OnboardingApi
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
+     * @param  int $milestone_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function onboardingGetOnboardingItemsAsyncWithHttpInfo($app_id, $store_id)
+    public function onboardingGetOnboardingItemsAsyncWithHttpInfo($app_id, $store_id, $milestone_id = null)
     {
         $returnType = 'object';
-        $request = $this->onboardingGetOnboardingItemsRequest($app_id, $store_id);
+        $request = $this->onboardingGetOnboardingItemsRequest($app_id, $store_id, $milestone_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -573,11 +577,12 @@ class OnboardingApi
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
+     * @param  int $milestone_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function onboardingGetOnboardingItemsRequest($app_id, $store_id)
+    protected function onboardingGetOnboardingItemsRequest($app_id, $store_id, $milestone_id = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -599,6 +604,10 @@ class OnboardingApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($milestone_id !== null) {
+            $queryParams['milestoneId'] = ObjectSerializer::toQueryValue($milestone_id);
+        }
 
         // path params
         if ($app_id !== null) {

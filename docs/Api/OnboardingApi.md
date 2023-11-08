@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **onboardingGetOnboardingItems**
-> object onboardingGetOnboardingItems($app_id, $store_id)
+> object onboardingGetOnboardingItems($app_id, $store_id, $milestone_id)
 
 
 
@@ -82,9 +82,10 @@ $apiInstance = new Flipdish\\Client\Api\OnboardingApi(
 );
 $app_id = "app_id_example"; // string | 
 $store_id = 56; // int | 
+$milestone_id = 56; // int | 
 
 try {
-    $result = $apiInstance->onboardingGetOnboardingItems($app_id, $store_id);
+    $result = $apiInstance->onboardingGetOnboardingItems($app_id, $store_id, $milestone_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OnboardingApi->onboardingGetOnboardingItems: ', $e->getMessage(), PHP_EOL;
@@ -98,6 +99,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
  **store_id** | **int**|  |
+ **milestone_id** | **int**|  | [optional]
 
 ### Return type
 

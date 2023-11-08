@@ -59,6 +59,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
+        'app_store_app_id' => 'string',
         'verification_status' => 'string',
         'logo' => 'string',
         'internal' => 'bool',
@@ -77,6 +78,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
+        'app_store_app_id' => null,
         'verification_status' => null,
         'logo' => null,
         'internal' => null,
@@ -116,6 +118,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'Id',
+        'app_store_app_id' => 'AppStoreAppId',
         'verification_status' => 'VerificationStatus',
         'logo' => 'Logo',
         'internal' => 'Internal',
@@ -134,6 +137,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'app_store_app_id' => 'setAppStoreAppId',
         'verification_status' => 'setVerificationStatus',
         'logo' => 'setLogo',
         'internal' => 'setInternal',
@@ -152,6 +156,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'app_store_app_id' => 'getAppStoreAppId',
         'verification_status' => 'getVerificationStatus',
         'logo' => 'getLogo',
         'internal' => 'getInternal',
@@ -311,6 +316,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['app_store_app_id'] = isset($data['app_store_app_id']) ? $data['app_store_app_id'] : null;
         $this->container['verification_status'] = isset($data['verification_status']) ? $data['verification_status'] : null;
         $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
         $this->container['internal'] = isset($data['internal']) ? $data['internal'] : null;
@@ -395,6 +401,30 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets app_store_app_id
+     *
+     * @return string
+     */
+    public function getAppStoreAppId()
+    {
+        return $this->container['app_store_app_id'];
+    }
+
+    /**
+     * Sets app_store_app_id
+     *
+     * @param string $app_store_app_id Same as Id for compatibility on portal.  Will be removed once portal is updated to read the Id field
+     *
+     * @return $this
+     */
+    public function setAppStoreAppId($app_store_app_id)
+    {
+        $this->container['app_store_app_id'] = $app_store_app_id;
 
         return $this;
     }
