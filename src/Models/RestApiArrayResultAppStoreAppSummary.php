@@ -1,6 +1,6 @@
 <?php
 /**
- * AppStoreAppConfigurationHeader
+ * RestApiArrayResultAppStoreAppSummary
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * AppStoreAppConfigurationHeader Class Doc Comment
+ * RestApiArrayResultAppStoreAppSummary Class Doc Comment
  *
  * @category Class
- * @description App store app configuration header information
+ * @description Rest api array result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AppStoreAppConfigurationHeader implements ModelInterface, ArrayAccess
+class RestApiArrayResultAppStoreAppSummary implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class AppStoreAppConfigurationHeader implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'AppStoreAppConfigurationHeader';
+    protected static $swaggerModelName = 'RestApiArrayResult[AppStoreAppSummary]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,11 +58,7 @@ class AppStoreAppConfigurationHeader implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'app_store_app_id' => 'string',
-        'name' => 'string',
-        'description' => 'string',
-        'logo' => 'string',
-        'developer_name' => 'string'
+        'data' => '\Flipdish\\Client\Models\AppStoreAppSummary[]'
     ];
 
     /**
@@ -71,11 +67,7 @@ class AppStoreAppConfigurationHeader implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'app_store_app_id' => null,
-        'name' => null,
-        'description' => null,
-        'logo' => null,
-        'developer_name' => null
+        'data' => null
     ];
 
     /**
@@ -105,11 +97,7 @@ class AppStoreAppConfigurationHeader implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'app_store_app_id' => 'AppStoreAppId',
-        'name' => 'Name',
-        'description' => 'Description',
-        'logo' => 'Logo',
-        'developer_name' => 'DeveloperName'
+        'data' => 'Data'
     ];
 
     /**
@@ -118,11 +106,7 @@ class AppStoreAppConfigurationHeader implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'app_store_app_id' => 'setAppStoreAppId',
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'logo' => 'setLogo',
-        'developer_name' => 'setDeveloperName'
+        'data' => 'setData'
     ];
 
     /**
@@ -131,11 +115,7 @@ class AppStoreAppConfigurationHeader implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'app_store_app_id' => 'getAppStoreAppId',
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'logo' => 'getLogo',
-        'developer_name' => 'getDeveloperName'
+        'data' => 'getData'
     ];
 
     /**
@@ -198,11 +178,7 @@ class AppStoreAppConfigurationHeader implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['app_store_app_id'] = isset($data['app_store_app_id']) ? $data['app_store_app_id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['logo'] = isset($data['logo']) ? $data['logo'] : null;
-        $this->container['developer_name'] = isset($data['developer_name']) ? $data['developer_name'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -214,14 +190,8 @@ class AppStoreAppConfigurationHeader implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['app_store_app_id'] === null) {
-            $invalidProperties[] = "'app_store_app_id' can't be null";
-        }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['description'] === null) {
-            $invalidProperties[] = "'description' can't be null";
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
         }
         return $invalidProperties;
     }
@@ -239,121 +209,25 @@ class AppStoreAppConfigurationHeader implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets app_store_app_id
+     * Gets data
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\AppStoreAppSummary[]
      */
-    public function getAppStoreAppId()
+    public function getData()
     {
-        return $this->container['app_store_app_id'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets app_store_app_id
+     * Sets data
      *
-     * @param string $app_store_app_id Unique App store app id
+     * @param \Flipdish\\Client\Models\AppStoreAppSummary[] $data Generic data object.
      *
      * @return $this
      */
-    public function setAppStoreAppId($app_store_app_id)
+    public function setData($data)
     {
-        $this->container['app_store_app_id'] = $app_store_app_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name Name of Appstore app
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string $description Description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets logo
-     *
-     * @return string
-     */
-    public function getLogo()
-    {
-        return $this->container['logo'];
-    }
-
-    /**
-     * Sets logo
-     *
-     * @param string $logo Logo
-     *
-     * @return $this
-     */
-    public function setLogo($logo)
-    {
-        $this->container['logo'] = $logo;
-
-        return $this;
-    }
-
-    /**
-     * Gets developer_name
-     *
-     * @return string
-     */
-    public function getDeveloperName()
-    {
-        return $this->container['developer_name'];
-    }
-
-    /**
-     * Sets developer_name
-     *
-     * @param string $developer_name Developer name
-     *
-     * @return $this
-     */
-    public function setDeveloperName($developer_name)
-    {
-        $this->container['developer_name'] = $developer_name;
+        $this->container['data'] = $data;
 
         return $this;
     }

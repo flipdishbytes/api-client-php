@@ -1,9 +1,9 @@
-# RestApiArrayResultAppStoreAppConfigurationHeader
+# RestApiArrayResultAppStoreAppSummary
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\Flipdish\\Client\Models\AppStoreAppConfigurationHeader[]**](AppStoreAppConfigurationHeader.md) | Generic data object. | 
+**data** | [**\Flipdish\\Client\Models\AppStoreAppSummary[]**](AppStoreAppSummary.md) | Generic data object. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

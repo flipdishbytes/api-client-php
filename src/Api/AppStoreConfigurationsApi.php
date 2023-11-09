@@ -2370,7 +2370,7 @@ class AppStoreConfigurationsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationHeader
+     * @return \Flipdish\\Client\Models\RestApiArrayResultAppStoreAppSummary
      */
     public function getConfiguredApps($app_id)
     {
@@ -2385,11 +2385,11 @@ class AppStoreConfigurationsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationHeader, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultAppStoreAppSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConfiguredAppsWithHttpInfo($app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationHeader';
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppSummary';
         $request = $this->getConfiguredAppsRequest($app_id);
 
         try {
@@ -2441,7 +2441,7 @@ class AppStoreConfigurationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationHeader',
+                        '\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2507,7 +2507,7 @@ class AppStoreConfigurationsApi
      */
     public function getConfiguredAppsAsyncWithHttpInfo($app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationHeader';
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppSummary';
         $request = $this->getConfiguredAppsRequest($app_id);
 
         return $this->client

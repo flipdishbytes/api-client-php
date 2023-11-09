@@ -1,6 +1,6 @@
 <?php
 /**
- * AppStoreAppConfigurationHeaderTest
+ * RestApiArrayResultAppStoreAppSummaryTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * AppStoreAppConfigurationHeaderTest Class Doc Comment
+ * RestApiArrayResultAppStoreAppSummaryTest Class Doc Comment
  *
  * @category    Class
- * @description App store app configuration header information
+ * @description Rest api array result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AppStoreAppConfigurationHeaderTest extends \PHPUnit_Framework_TestCase
+class RestApiArrayResultAppStoreAppSummaryTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,44 +70,16 @@ class AppStoreAppConfigurationHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AppStoreAppConfigurationHeader"
+     * Test "RestApiArrayResultAppStoreAppSummary"
      */
-    public function testAppStoreAppConfigurationHeader()
+    public function testRestApiArrayResultAppStoreAppSummary()
     {
     }
 
     /**
-     * Test attribute "app_store_app_id"
+     * Test attribute "data"
      */
-    public function testPropertyAppStoreAppId()
-    {
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-    }
-
-    /**
-     * Test attribute "logo"
-     */
-    public function testPropertyLogo()
-    {
-    }
-
-    /**
-     * Test attribute "developer_name"
-     */
-    public function testPropertyDeveloperName()
+    public function testPropertyData()
     {
     }
 }

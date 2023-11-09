@@ -84,13 +84,6 @@ class AppStoreAppSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "app_store_app_id"
-     */
-    public function testPropertyAppStoreAppId()
-    {
-    }
-
-    /**
      * Test attribute "verification_status"
      */
     public function testPropertyVerificationStatus()

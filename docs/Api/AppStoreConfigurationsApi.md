@@ -394,7 +394,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getConfiguredApps**
-> \Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationHeader getConfiguredApps($app_id)
+> \Flipdish\\Client\Models\RestApiArrayResultAppStoreAppSummary getConfiguredApps($app_id)
 
 
 
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppConfigurationHeader**](../Model/RestApiArrayResultAppStoreAppConfigurationHeader.md)
+[**\Flipdish\\Client\Models\RestApiArrayResultAppStoreAppSummary**](../Model/RestApiArrayResultAppStoreAppSummary.md)
 
 ### Authorization
 
