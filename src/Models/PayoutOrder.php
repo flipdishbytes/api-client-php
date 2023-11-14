@@ -70,6 +70,7 @@ class PayoutOrder implements ModelInterface, ArrayAccess
         'voucher' => 'double',
         'flat_fee_excluding_vat' => 'double',
         'flat_fee_excluding_vat' => 'double',
+        'flat_fee_including_vat' => 'double',
         'percentage_fee_excluding_vat' => 'double',
         'percentage_fee_excluding_vat' => 'double',
         'vat' => 'double',
@@ -99,6 +100,7 @@ class PayoutOrder implements ModelInterface, ArrayAccess
         'voucher' => 'double',
         'flat_fee_excluding_vat' => 'double',
         'flat_fee_excluding_vat' => 'double',
+        'flat_fee_including_vat' => 'double',
         'percentage_fee_excluding_vat' => 'double',
         'percentage_fee_excluding_vat' => 'double',
         'vat' => 'double',
@@ -149,6 +151,7 @@ class PayoutOrder implements ModelInterface, ArrayAccess
         'voucher' => 'Voucher',
         'flat_fee_excluding_vat' => 'FlatFeeExcludingVat',
         'flat_fee_excluding_vat' => 'FlatFeeExcludingVAT',
+        'flat_fee_including_vat' => 'FlatFeeIncludingVat',
         'percentage_fee_excluding_vat' => 'PercentageFeeExcludingVat',
         'percentage_fee_excluding_vat' => 'PercentageFeeExcludingVAT',
         'vat' => 'Vat',
@@ -178,6 +181,7 @@ class PayoutOrder implements ModelInterface, ArrayAccess
         'voucher' => 'setVoucher',
         'flat_fee_excluding_vat' => 'setFlatFeeExcludingVat',
         'flat_fee_excluding_vat' => 'setFlatFeeExcludingVat',
+        'flat_fee_including_vat' => 'setFlatFeeIncludingVat',
         'percentage_fee_excluding_vat' => 'setPercentageFeeExcludingVat',
         'percentage_fee_excluding_vat' => 'setPercentageFeeExcludingVat',
         'vat' => 'setVat',
@@ -207,6 +211,7 @@ class PayoutOrder implements ModelInterface, ArrayAccess
         'voucher' => 'getVoucher',
         'flat_fee_excluding_vat' => 'getFlatFeeExcludingVat',
         'flat_fee_excluding_vat' => 'getFlatFeeExcludingVat',
+        'flat_fee_including_vat' => 'getFlatFeeIncludingVat',
         'percentage_fee_excluding_vat' => 'getPercentageFeeExcludingVat',
         'percentage_fee_excluding_vat' => 'getPercentageFeeExcludingVat',
         'vat' => 'getVat',
@@ -542,6 +547,7 @@ class PayoutOrder implements ModelInterface, ArrayAccess
         $this->container['voucher'] = isset($data['voucher']) ? $data['voucher'] : null;
         $this->container['flat_fee_excluding_vat'] = isset($data['flat_fee_excluding_vat']) ? $data['flat_fee_excluding_vat'] : null;
         $this->container['flat_fee_excluding_vat'] = isset($data['flat_fee_excluding_vat']) ? $data['flat_fee_excluding_vat'] : null;
+        $this->container['flat_fee_including_vat'] = isset($data['flat_fee_including_vat']) ? $data['flat_fee_including_vat'] : null;
         $this->container['percentage_fee_excluding_vat'] = isset($data['percentage_fee_excluding_vat']) ? $data['percentage_fee_excluding_vat'] : null;
         $this->container['percentage_fee_excluding_vat'] = isset($data['percentage_fee_excluding_vat']) ? $data['percentage_fee_excluding_vat'] : null;
         $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
@@ -888,13 +894,37 @@ class PayoutOrder implements ModelInterface, ArrayAccess
     /**
      * Sets flat_fee_excluding_vat
      *
-     * @param double $flat_fee_excluding_vat flat_fee_excluding_vat
+     * @param double $flat_fee_excluding_vat Order flat fee amount excluding VAT
      *
      * @return $this
      */
     public function setFlatFeeExcludingVat($flat_fee_excluding_vat)
     {
         $this->container['flat_fee_excluding_vat'] = $flat_fee_excluding_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets flat_fee_including_vat
+     *
+     * @return double
+     */
+    public function getFlatFeeIncludingVat()
+    {
+        return $this->container['flat_fee_including_vat'];
+    }
+
+    /**
+     * Sets flat_fee_including_vat
+     *
+     * @param double $flat_fee_including_vat Order flat fee amount including VAT
+     *
+     * @return $this
+     */
+    public function setFlatFeeIncludingVat($flat_fee_including_vat)
+    {
+        $this->container['flat_fee_including_vat'] = $flat_fee_including_vat;
 
         return $this;
     }
@@ -936,7 +966,7 @@ class PayoutOrder implements ModelInterface, ArrayAccess
     /**
      * Sets percentage_fee_excluding_vat
      *
-     * @param double $percentage_fee_excluding_vat percentage_fee_excluding_vat
+     * @param double $percentage_fee_excluding_vat Order percentage fee excluding VAT
      *
      * @return $this
      */

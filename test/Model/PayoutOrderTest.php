@@ -161,6 +161,13 @@ class PayoutOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "flat_fee_including_vat"
+     */
+    public function testPropertyFlatFeeIncludingVat()
+    {
+    }
+
+    /**
      * Test attribute "percentage_fee_excluding_vat"
      */
     public function testPropertyPercentageFeeExcludingVat()
