@@ -248,7 +248,7 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets is_welcome_screen_enabled
      *
-     * @param bool $is_welcome_screen_enabled is_welcome_screen_enabled
+     * @param bool $is_welcome_screen_enabled Gets or sets whether welcome screen is enabled
      *
      * @return $this
      */
