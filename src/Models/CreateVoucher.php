@@ -79,7 +79,8 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => 'bool',
         'is_valid_only_once' => 'bool',
         'start_date' => '\DateTime',
-        'expiry_date' => '\DateTime'
+        'expiry_date' => '\DateTime',
+        'channel_restrictions' => 'string[]'
     ];
 
     /**
@@ -109,7 +110,8 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => null,
         'is_valid_only_once' => null,
         'start_date' => 'date-time',
-        'expiry_date' => 'date-time'
+        'expiry_date' => 'date-time',
+        'channel_restrictions' => null
     ];
 
     /**
@@ -160,7 +162,8 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => 'IsValidOncePerCustomer',
         'is_valid_only_once' => 'IsValidOnlyOnce',
         'start_date' => 'StartDate',
-        'expiry_date' => 'ExpiryDate'
+        'expiry_date' => 'ExpiryDate',
+        'channel_restrictions' => 'ChannelRestrictions'
     ];
 
     /**
@@ -190,7 +193,8 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => 'setIsValidOncePerCustomer',
         'is_valid_only_once' => 'setIsValidOnlyOnce',
         'start_date' => 'setStartDate',
-        'expiry_date' => 'setExpiryDate'
+        'expiry_date' => 'setExpiryDate',
+        'channel_restrictions' => 'setChannelRestrictions'
     ];
 
     /**
@@ -220,7 +224,8 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => 'getIsValidOncePerCustomer',
         'is_valid_only_once' => 'getIsValidOnlyOnce',
         'start_date' => 'getStartDate',
-        'expiry_date' => 'getExpiryDate'
+        'expiry_date' => 'getExpiryDate',
+        'channel_restrictions' => 'getChannelRestrictions'
     ];
 
     /**
@@ -268,6 +273,12 @@ class CreateVoucher implements ModelInterface, ArrayAccess
     const VOUCHER_TYPE_LUMP_DISCOUNT = 'LumpDiscount';
     const VOUCHER_TYPE_ADD_ITEM = 'AddItem';
     const VOUCHER_TYPE_CREDIT_NOTE = 'CreditNote';
+    const CHANNEL_RESTRICTIONS_IOS = 'Ios';
+    const CHANNEL_RESTRICTIONS_ANDROID = 'Android';
+    const CHANNEL_RESTRICTIONS_WEB = 'Web';
+    const CHANNEL_RESTRICTIONS_KIOSK = 'Kiosk';
+    const CHANNEL_RESTRICTIONS_POS = 'Pos';
+    const CHANNEL_RESTRICTIONS_GOOGLE = 'Google';
     
 
     
@@ -283,6 +294,23 @@ class CreateVoucher implements ModelInterface, ArrayAccess
             self::VOUCHER_TYPE_LUMP_DISCOUNT,
             self::VOUCHER_TYPE_ADD_ITEM,
             self::VOUCHER_TYPE_CREDIT_NOTE,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getChannelRestrictionsAllowableValues()
+    {
+        return [
+            self::CHANNEL_RESTRICTIONS_IOS,
+            self::CHANNEL_RESTRICTIONS_ANDROID,
+            self::CHANNEL_RESTRICTIONS_WEB,
+            self::CHANNEL_RESTRICTIONS_KIOSK,
+            self::CHANNEL_RESTRICTIONS_POS,
+            self::CHANNEL_RESTRICTIONS_GOOGLE,
         ];
     }
     
@@ -324,6 +352,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         $this->container['is_valid_only_once'] = isset($data['is_valid_only_once']) ? $data['is_valid_only_once'] : null;
         $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
         $this->container['expiry_date'] = isset($data['expiry_date']) ? $data['expiry_date'] : null;
+        $this->container['channel_restrictions'] = isset($data['channel_restrictions']) ? $data['channel_restrictions'] : null;
     }
 
     /**
@@ -891,6 +920,39 @@ class CreateVoucher implements ModelInterface, ArrayAccess
     public function setExpiryDate($expiry_date)
     {
         $this->container['expiry_date'] = $expiry_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets channel_restrictions
+     *
+     * @return string[]
+     */
+    public function getChannelRestrictions()
+    {
+        return $this->container['channel_restrictions'];
+    }
+
+    /**
+     * Sets channel_restrictions
+     *
+     * @param string[] $channel_restrictions Limit the channels this voucher can be used on
+     *
+     * @return $this
+     */
+    public function setChannelRestrictions($channel_restrictions)
+    {
+        $allowedValues = $this->getChannelRestrictionsAllowableValues();
+        if (!is_null($channel_restrictions) && array_diff($channel_restrictions, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'channel_restrictions', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['channel_restrictions'] = $channel_restrictions;
 
         return $this;
     }

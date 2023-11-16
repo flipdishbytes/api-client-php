@@ -229,4 +229,11 @@ class CreateVoucherTest extends \PHPUnit_Framework_TestCase
     public function testPropertyExpiryDate()
     {
     }
+
+    /**
+     * Test attribute "channel_restrictions"
+     */
+    public function testPropertyChannelRestrictions()
+    {
+    }
 }
