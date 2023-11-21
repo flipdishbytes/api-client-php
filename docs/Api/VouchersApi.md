@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getVouchers**
-> \Flipdish\\Client\Models\RestApiPaginationResultVoucherSummary getVouchers($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids)
+> \Flipdish\\Client\Models\RestApiPaginationResultVoucherSummary getVouchers($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids, $channel_restrictions)
 
 
 
@@ -197,9 +197,10 @@ $status_search = array("status_search_example"); // string[] |
 $type_search = array("type_search_example"); // string[] | 
 $sub_type_search = array("sub_type_search_example"); // string[] | 
 $store_ids = array(56); // int[] | 
+$channel_restrictions = array("channel_restrictions_example"); // string[] | 
 
 try {
-    $result = $apiInstance->getVouchers($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids);
+    $result = $apiInstance->getVouchers($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids, $channel_restrictions);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling VouchersApi->getVouchers: ', $e->getMessage(), PHP_EOL;
@@ -219,6 +220,7 @@ Name | Type | Description  | Notes
  **type_search** | [**string[]**](../Model/string.md)|  | [optional]
  **sub_type_search** | [**string[]**](../Model/string.md)|  | [optional]
  **store_ids** | [**int[]**](../Model/int.md)|  | [optional]
+ **channel_restrictions** | [**string[]**](../Model/string.md)|  | [optional]
 
 ### Return type
 

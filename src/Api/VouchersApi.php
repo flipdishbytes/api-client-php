@@ -1039,14 +1039,15 @@ class VouchersApi
      * @param  string[] $type_search type_search (optional)
      * @param  string[] $sub_type_search sub_type_search (optional)
      * @param  int[] $store_ids store_ids (optional)
+     * @param  string[] $channel_restrictions channel_restrictions (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiPaginationResultVoucherSummary
      */
-    public function getVouchers($app_id, $page_index = null, $page_size = null, $search_codes = null, $status_search = null, $type_search = null, $sub_type_search = null, $store_ids = null)
+    public function getVouchers($app_id, $page_index = null, $page_size = null, $search_codes = null, $status_search = null, $type_search = null, $sub_type_search = null, $store_ids = null, $channel_restrictions = null)
     {
-        list($response) = $this->getVouchersWithHttpInfo($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids);
+        list($response) = $this->getVouchersWithHttpInfo($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids, $channel_restrictions);
         return $response;
     }
 
@@ -1061,15 +1062,16 @@ class VouchersApi
      * @param  string[] $type_search (optional)
      * @param  string[] $sub_type_search (optional)
      * @param  int[] $store_ids (optional)
+     * @param  string[] $channel_restrictions (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiPaginationResultVoucherSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getVouchersWithHttpInfo($app_id, $page_index = null, $page_size = null, $search_codes = null, $status_search = null, $type_search = null, $sub_type_search = null, $store_ids = null)
+    public function getVouchersWithHttpInfo($app_id, $page_index = null, $page_size = null, $search_codes = null, $status_search = null, $type_search = null, $sub_type_search = null, $store_ids = null, $channel_restrictions = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultVoucherSummary';
-        $request = $this->getVouchersRequest($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids);
+        $request = $this->getVouchersRequest($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids, $channel_restrictions);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1167,13 +1169,14 @@ class VouchersApi
      * @param  string[] $type_search (optional)
      * @param  string[] $sub_type_search (optional)
      * @param  int[] $store_ids (optional)
+     * @param  string[] $channel_restrictions (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getVouchersAsync($app_id, $page_index = null, $page_size = null, $search_codes = null, $status_search = null, $type_search = null, $sub_type_search = null, $store_ids = null)
+    public function getVouchersAsync($app_id, $page_index = null, $page_size = null, $search_codes = null, $status_search = null, $type_search = null, $sub_type_search = null, $store_ids = null, $channel_restrictions = null)
     {
-        return $this->getVouchersAsyncWithHttpInfo($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids)
+        return $this->getVouchersAsyncWithHttpInfo($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids, $channel_restrictions)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1194,14 +1197,15 @@ class VouchersApi
      * @param  string[] $type_search (optional)
      * @param  string[] $sub_type_search (optional)
      * @param  int[] $store_ids (optional)
+     * @param  string[] $channel_restrictions (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getVouchersAsyncWithHttpInfo($app_id, $page_index = null, $page_size = null, $search_codes = null, $status_search = null, $type_search = null, $sub_type_search = null, $store_ids = null)
+    public function getVouchersAsyncWithHttpInfo($app_id, $page_index = null, $page_size = null, $search_codes = null, $status_search = null, $type_search = null, $sub_type_search = null, $store_ids = null, $channel_restrictions = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultVoucherSummary';
-        $request = $this->getVouchersRequest($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids);
+        $request = $this->getVouchersRequest($app_id, $page_index, $page_size, $search_codes, $status_search, $type_search, $sub_type_search, $store_ids, $channel_restrictions);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1251,11 +1255,12 @@ class VouchersApi
      * @param  string[] $type_search (optional)
      * @param  string[] $sub_type_search (optional)
      * @param  int[] $store_ids (optional)
+     * @param  string[] $channel_restrictions (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getVouchersRequest($app_id, $page_index = null, $page_size = null, $search_codes = null, $status_search = null, $type_search = null, $sub_type_search = null, $store_ids = null)
+    protected function getVouchersRequest($app_id, $page_index = null, $page_size = null, $search_codes = null, $status_search = null, $type_search = null, $sub_type_search = null, $store_ids = null, $channel_restrictions = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -1313,6 +1318,13 @@ class VouchersApi
         } else
         if ($store_ids !== null) {
             $queryParams['storeIds'] = ObjectSerializer::toQueryValue($store_ids);
+        }
+        // query params
+        if (is_array($channel_restrictions)) {
+            $queryParams['channelRestrictions'] = $channel_restrictions;
+        } else
+        if ($channel_restrictions !== null) {
+            $queryParams['channelRestrictions'] = ObjectSerializer::toQueryValue($channel_restrictions);
         }
 
         // path params
