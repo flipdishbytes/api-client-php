@@ -61,6 +61,7 @@ class RetentionCampaign implements ModelInterface, ArrayAccess
         'campaign_id' => 'int',
         'statistics' => '\Flipdish\\Client\Models\CampaignStatistics',
         'stores' => '\Flipdish\\Client\Models\StoreCampaignStartTime[]',
+        'public_id' => 'string',
         'notify_customer_after_minutes' => 'int',
         'percent_discount_amount' => 'int',
         'lump_discount_amount' => 'double',
@@ -81,6 +82,7 @@ class RetentionCampaign implements ModelInterface, ArrayAccess
         'campaign_id' => 'int32',
         'statistics' => null,
         'stores' => null,
+        'public_id' => 'uuid',
         'notify_customer_after_minutes' => 'int32',
         'percent_discount_amount' => 'int32',
         'lump_discount_amount' => 'double',
@@ -122,6 +124,7 @@ class RetentionCampaign implements ModelInterface, ArrayAccess
         'campaign_id' => 'CampaignId',
         'statistics' => 'Statistics',
         'stores' => 'Stores',
+        'public_id' => 'PublicId',
         'notify_customer_after_minutes' => 'NotifyCustomerAfterMinutes',
         'percent_discount_amount' => 'PercentDiscountAmount',
         'lump_discount_amount' => 'LumpDiscountAmount',
@@ -142,6 +145,7 @@ class RetentionCampaign implements ModelInterface, ArrayAccess
         'campaign_id' => 'setCampaignId',
         'statistics' => 'setStatistics',
         'stores' => 'setStores',
+        'public_id' => 'setPublicId',
         'notify_customer_after_minutes' => 'setNotifyCustomerAfterMinutes',
         'percent_discount_amount' => 'setPercentDiscountAmount',
         'lump_discount_amount' => 'setLumpDiscountAmount',
@@ -162,6 +166,7 @@ class RetentionCampaign implements ModelInterface, ArrayAccess
         'campaign_id' => 'getCampaignId',
         'statistics' => 'getStatistics',
         'stores' => 'getStores',
+        'public_id' => 'getPublicId',
         'notify_customer_after_minutes' => 'getNotifyCustomerAfterMinutes',
         'percent_discount_amount' => 'getPercentDiscountAmount',
         'lump_discount_amount' => 'getLumpDiscountAmount',
@@ -236,6 +241,7 @@ class RetentionCampaign implements ModelInterface, ArrayAccess
         $this->container['campaign_id'] = isset($data['campaign_id']) ? $data['campaign_id'] : null;
         $this->container['statistics'] = isset($data['statistics']) ? $data['statistics'] : null;
         $this->container['stores'] = isset($data['stores']) ? $data['stores'] : null;
+        $this->container['public_id'] = isset($data['public_id']) ? $data['public_id'] : null;
         $this->container['notify_customer_after_minutes'] = isset($data['notify_customer_after_minutes']) ? $data['notify_customer_after_minutes'] : null;
         $this->container['percent_discount_amount'] = isset($data['percent_discount_amount']) ? $data['percent_discount_amount'] : null;
         $this->container['lump_discount_amount'] = isset($data['lump_discount_amount']) ? $data['lump_discount_amount'] : null;
@@ -371,6 +377,30 @@ class RetentionCampaign implements ModelInterface, ArrayAccess
     public function setStores($stores)
     {
         $this->container['stores'] = $stores;
+
+        return $this;
+    }
+
+    /**
+     * Gets public_id
+     *
+     * @return string
+     */
+    public function getPublicId()
+    {
+        return $this->container['public_id'];
+    }
+
+    /**
+     * Sets public_id
+     *
+     * @param string $public_id Permanent reference to the item.
+     *
+     * @return $this
+     */
+    public function setPublicId($public_id)
+    {
+        $this->container['public_id'] = $public_id;
 
         return $this;
     }

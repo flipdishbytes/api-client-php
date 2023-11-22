@@ -98,6 +98,13 @@ class RetentionCampaignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "public_id"
+     */
+    public function testPropertyPublicId()
+    {
+    }
+
+    /**
      * Test attribute "notify_customer_after_minutes"
      */
     public function testPropertyNotifyCustomerAfterMinutes()

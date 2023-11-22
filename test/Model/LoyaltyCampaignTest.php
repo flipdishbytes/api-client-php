@@ -98,6 +98,13 @@ class LoyaltyCampaignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "public_id"
+     */
+    public function testPropertyPublicId()
+    {
+    }
+
+    /**
      * Test attribute "orders_before_receiving_voucher"
      */
     public function testPropertyOrdersBeforeReceivingVoucher()

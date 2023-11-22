@@ -61,6 +61,7 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
         'campaign_id' => 'int',
         'statistics' => '\Flipdish\\Client\Models\CampaignStatistics',
         'stores' => '\Flipdish\\Client\Models\StoreCampaignStartTime[]',
+        'public_id' => 'string',
         'orders_before_receiving_voucher' => 'int',
         'percent_discount_amount' => 'int',
         'rounding_strategy' => 'int',
@@ -82,6 +83,7 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
         'campaign_id' => 'int32',
         'statistics' => null,
         'stores' => null,
+        'public_id' => 'uuid',
         'orders_before_receiving_voucher' => 'int32',
         'percent_discount_amount' => 'int32',
         'rounding_strategy' => 'int32',
@@ -124,6 +126,7 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
         'campaign_id' => 'CampaignId',
         'statistics' => 'Statistics',
         'stores' => 'Stores',
+        'public_id' => 'PublicId',
         'orders_before_receiving_voucher' => 'OrdersBeforeReceivingVoucher',
         'percent_discount_amount' => 'PercentDiscountAmount',
         'rounding_strategy' => 'RoundingStrategy',
@@ -145,6 +148,7 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
         'campaign_id' => 'setCampaignId',
         'statistics' => 'setStatistics',
         'stores' => 'setStores',
+        'public_id' => 'setPublicId',
         'orders_before_receiving_voucher' => 'setOrdersBeforeReceivingVoucher',
         'percent_discount_amount' => 'setPercentDiscountAmount',
         'rounding_strategy' => 'setRoundingStrategy',
@@ -166,6 +170,7 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
         'campaign_id' => 'getCampaignId',
         'statistics' => 'getStatistics',
         'stores' => 'getStores',
+        'public_id' => 'getPublicId',
         'orders_before_receiving_voucher' => 'getOrdersBeforeReceivingVoucher',
         'percent_discount_amount' => 'getPercentDiscountAmount',
         'rounding_strategy' => 'getRoundingStrategy',
@@ -241,6 +246,7 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
         $this->container['campaign_id'] = isset($data['campaign_id']) ? $data['campaign_id'] : null;
         $this->container['statistics'] = isset($data['statistics']) ? $data['statistics'] : null;
         $this->container['stores'] = isset($data['stores']) ? $data['stores'] : null;
+        $this->container['public_id'] = isset($data['public_id']) ? $data['public_id'] : null;
         $this->container['orders_before_receiving_voucher'] = isset($data['orders_before_receiving_voucher']) ? $data['orders_before_receiving_voucher'] : null;
         $this->container['percent_discount_amount'] = isset($data['percent_discount_amount']) ? $data['percent_discount_amount'] : null;
         $this->container['rounding_strategy'] = isset($data['rounding_strategy']) ? $data['rounding_strategy'] : null;
@@ -369,6 +375,30 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
     public function setStores($stores)
     {
         $this->container['stores'] = $stores;
+
+        return $this;
+    }
+
+    /**
+     * Gets public_id
+     *
+     * @return string
+     */
+    public function getPublicId()
+    {
+        return $this->container['public_id'];
+    }
+
+    /**
+     * Sets public_id
+     *
+     * @param string $public_id Permanent reference to the item.
+     *
+     * @return $this
+     */
+    public function setPublicId($public_id)
+    {
+        $this->container['public_id'] = $public_id;
 
         return $this;
     }

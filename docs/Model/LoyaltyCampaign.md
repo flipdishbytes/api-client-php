@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **campaign_id** | **int** | Id of campaign | [optional] 
 **statistics** | [**\Flipdish\\Client\Models\CampaignStatistics**](CampaignStatistics.md) | Statistics of campaign | [optional] 
 **stores** | [**\Flipdish\\Client\Models\StoreCampaignStartTime[]**](StoreCampaignStartTime.md) | Stores this campaign applies to with campaign start time in Utc | [optional] 
+**public_id** | **string** | Permanent reference to the item. | [optional] 
 **orders_before_receiving_voucher** | **int** | Number of orders customer needs to make, before receiving voucher | [optional] 
 **percent_discount_amount** | **int** | Discount amount in percents | [optional] 
 **rounding_strategy** | **int** | Controls how the loyalty voucher&#39;s amount is rounded | [optional] 
