@@ -297,6 +297,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_CREATE_CAMPAIGNS_CONFIGURATIONS = 'CreateCampaignsConfigurations';
     const APP_RESOURCE_SET_UPDATE_CAMPAIGNS_CONFIGURATIONS = 'UpdateCampaignsConfigurations';
     const APP_RESOURCE_SET_DELETE_CAMPAIGNS_CONFIGURATIONS = 'DeleteCampaignsConfigurations';
+    const APP_RESOURCE_SET_STAMP_LOYALTY_CARD_AGAINST_CAMPAIGNS_CONFIGURATIONS = 'StampLoyaltyCardAgainstCampaignsConfigurations';
     const APP_RESOURCE_SET_VIEW_DEVELOPERS_SETTINGS = 'ViewDevelopersSettings';
     const APP_RESOURCE_SET_EDIT_DEVELOPERS_SETTINGS = 'EditDevelopersSettings';
     const APP_RESOURCE_SET_VIEW_ORDERS = 'ViewOrders';
@@ -489,6 +490,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_CREATE_CAMPAIGNS_CONFIGURATIONS,
             self::APP_RESOURCE_SET_UPDATE_CAMPAIGNS_CONFIGURATIONS,
             self::APP_RESOURCE_SET_DELETE_CAMPAIGNS_CONFIGURATIONS,
+            self::APP_RESOURCE_SET_STAMP_LOYALTY_CARD_AGAINST_CAMPAIGNS_CONFIGURATIONS,
             self::APP_RESOURCE_SET_VIEW_DEVELOPERS_SETTINGS,
             self::APP_RESOURCE_SET_EDIT_DEVELOPERS_SETTINGS,
             self::APP_RESOURCE_SET_VIEW_ORDERS,
