@@ -78,6 +78,8 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_refunded_fees' => 'double',
         'online_sales_fees' => 'double',
         'pos_sales_fees' => 'double',
+        'delivery_fees' => 'double',
+        'tip_fees' => 'double',
         'online_sales_refunded_amount' => 'double',
         'pos_sales_refunded_amount' => 'double',
         'online_sales_tax' => 'double',
@@ -124,6 +126,8 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_refunded_fees' => 'double',
         'online_sales_fees' => 'double',
         'pos_sales_fees' => 'double',
+        'delivery_fees' => 'double',
+        'tip_fees' => 'double',
         'online_sales_refunded_amount' => 'double',
         'pos_sales_refunded_amount' => 'double',
         'online_sales_tax' => 'double',
@@ -191,6 +195,8 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_refunded_fees' => 'OnlineSalesRefundedFees',
         'online_sales_fees' => 'OnlineSalesFees',
         'pos_sales_fees' => 'PosSalesFees',
+        'delivery_fees' => 'DeliveryFees',
+        'tip_fees' => 'TipFees',
         'online_sales_refunded_amount' => 'OnlineSalesRefundedAmount',
         'pos_sales_refunded_amount' => 'PosSalesRefundedAmount',
         'online_sales_tax' => 'OnlineSalesTax',
@@ -237,6 +243,8 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_refunded_fees' => 'setOnlineSalesRefundedFees',
         'online_sales_fees' => 'setOnlineSalesFees',
         'pos_sales_fees' => 'setPosSalesFees',
+        'delivery_fees' => 'setDeliveryFees',
+        'tip_fees' => 'setTipFees',
         'online_sales_refunded_amount' => 'setOnlineSalesRefundedAmount',
         'pos_sales_refunded_amount' => 'setPosSalesRefundedAmount',
         'online_sales_tax' => 'setOnlineSalesTax',
@@ -283,6 +291,8 @@ class Payout implements ModelInterface, ArrayAccess
         'online_sales_refunded_fees' => 'getOnlineSalesRefundedFees',
         'online_sales_fees' => 'getOnlineSalesFees',
         'pos_sales_fees' => 'getPosSalesFees',
+        'delivery_fees' => 'getDeliveryFees',
+        'tip_fees' => 'getTipFees',
         'online_sales_refunded_amount' => 'getOnlineSalesRefundedAmount',
         'pos_sales_refunded_amount' => 'getPosSalesRefundedAmount',
         'online_sales_tax' => 'getOnlineSalesTax',
@@ -656,6 +666,8 @@ class Payout implements ModelInterface, ArrayAccess
         $this->container['online_sales_refunded_fees'] = isset($data['online_sales_refunded_fees']) ? $data['online_sales_refunded_fees'] : null;
         $this->container['online_sales_fees'] = isset($data['online_sales_fees']) ? $data['online_sales_fees'] : null;
         $this->container['pos_sales_fees'] = isset($data['pos_sales_fees']) ? $data['pos_sales_fees'] : null;
+        $this->container['delivery_fees'] = isset($data['delivery_fees']) ? $data['delivery_fees'] : null;
+        $this->container['tip_fees'] = isset($data['tip_fees']) ? $data['tip_fees'] : null;
         $this->container['online_sales_refunded_amount'] = isset($data['online_sales_refunded_amount']) ? $data['online_sales_refunded_amount'] : null;
         $this->container['pos_sales_refunded_amount'] = isset($data['pos_sales_refunded_amount']) ? $data['pos_sales_refunded_amount'] : null;
         $this->container['online_sales_tax'] = isset($data['online_sales_tax']) ? $data['online_sales_tax'] : null;
@@ -1227,6 +1239,54 @@ class Payout implements ModelInterface, ArrayAccess
     public function setPosSalesFees($pos_sales_fees)
     {
         $this->container['pos_sales_fees'] = $pos_sales_fees;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_fees
+     *
+     * @return double
+     */
+    public function getDeliveryFees()
+    {
+        return $this->container['delivery_fees'];
+    }
+
+    /**
+     * Sets delivery_fees
+     *
+     * @param double $delivery_fees Delivery fees
+     *
+     * @return $this
+     */
+    public function setDeliveryFees($delivery_fees)
+    {
+        $this->container['delivery_fees'] = $delivery_fees;
+
+        return $this;
+    }
+
+    /**
+     * Gets tip_fees
+     *
+     * @return double
+     */
+    public function getTipFees()
+    {
+        return $this->container['tip_fees'];
+    }
+
+    /**
+     * Sets tip_fees
+     *
+     * @param double $tip_fees Tip fees
+     *
+     * @return $this
+     */
+    public function setTipFees($tip_fees)
+    {
+        $this->container['tip_fees'] = $tip_fees;
 
         return $this;
     }

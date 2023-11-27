@@ -138,4 +138,18 @@ class FlipdishFeesDetailsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTotalFees()
     {
     }
+
+    /**
+     * Test attribute "delivery_fees"
+     */
+    public function testPropertyDeliveryFees()
+    {
+    }
+
+    /**
+     * Test attribute "tip_fees"
+     */
+    public function testPropertyTipFees()
+    {
+    }
 }
