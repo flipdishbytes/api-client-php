@@ -132,6 +132,9 @@ Class | Method | HTTP request | Description
 *AppStoreDeveloperApi* | [**updateAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
 *AppStoreDeveloperApi* | [**updateExternalProduct**](docs/Api/AppStoreDeveloperApi.md#updateexternalproduct) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product | 
 *AppStoreDeveloperApi* | [**uploadAppStoreAppLogo**](docs/Api/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
+*AppStoreSubscriptionsApi* | [**createAppStoreSubscription**](docs/Api/AppStoreSubscriptionsApi.md#createappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
+*AppStoreSubscriptionsApi* | [**deleteAppSubscription**](docs/Api/AppStoreSubscriptionsApi.md#deleteappsubscription) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
+*AppStoreSubscriptionsApi* | [**updateAppStoreSubscription**](docs/Api/AppStoreSubscriptionsApi.md#updateappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
 *AppsApi* | [**getApp**](docs/Api/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 *AppsApi* | [**getAppHostnameStatus**](docs/Api/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
 *AppsApi* | [**getApps**](docs/Api/AppsApi.md#getapps) | **GET** /api/v1.0/apps | 
@@ -596,6 +599,7 @@ Class | Method | HTTP request | Description
  - [AccountFieldDefinition](docs/Model/AccountFieldDefinition.md)
  - [AccountFieldKeyValuePair](docs/Model/AccountFieldKeyValuePair.md)
  - [AccountFieldsDefinitions](docs/Model/AccountFieldsDefinitions.md)
+ - [AddAppStoreSubscriptionRequest](docs/Model/AddAppStoreSubscriptionRequest.md)
  - [AddressFormDisplayFormat](docs/Model/AddressFormDisplayFormat.md)
  - [AddressFormResponse](docs/Model/AddressFormResponse.md)
  - [AllMetadataResult](docs/Model/AllMetadataResult.md)
@@ -624,6 +628,7 @@ Class | Method | HTTP request | Description
  - [AppStoreConfigCreatedEvent](docs/Model/AppStoreConfigCreatedEvent.md)
  - [AppStoreConfigDeletedEvent](docs/Model/AppStoreConfigDeletedEvent.md)
  - [AppStoreConfigUpdatedEvent](docs/Model/AppStoreConfigUpdatedEvent.md)
+ - [AppStoreSubscriptionJobResponse](docs/Model/AppStoreSubscriptionJobResponse.md)
  - [AppUpdatedEvent](docs/Model/AppUpdatedEvent.md)
  - [AssignedBankAccount](docs/Model/AssignedBankAccount.md)
  - [AuditLogFieldChangeInformation](docs/Model/AuditLogFieldChangeInformation.md)
@@ -1102,6 +1107,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultAppStoreApp](docs/Model/RestApiResultAppStoreApp.md)
  - [RestApiResultAppStoreAppConfiguration](docs/Model/RestApiResultAppStoreAppConfiguration.md)
  - [RestApiResultAppStoreAppConfigurationsWithSubscriptions](docs/Model/RestApiResultAppStoreAppConfigurationsWithSubscriptions.md)
+ - [RestApiResultAppStoreSubscriptionJobResponse](docs/Model/RestApiResultAppStoreSubscriptionJobResponse.md)
  - [RestApiResultAssignedBankAccount](docs/Model/RestApiResultAssignedBankAccount.md)
  - [RestApiResultBankAccountDetail](docs/Model/RestApiResultBankAccountDetail.md)
  - [RestApiResultBluetoothTerminalStatus](docs/Model/RestApiResultBluetoothTerminalStatus.md)
@@ -1309,6 +1315,7 @@ Class | Method | HTTP request | Description
  - [UpdateAppStoreAppConfigurationValuesBatch](docs/Model/UpdateAppStoreAppConfigurationValuesBatch.md)
  - [UpdateAppStoreAppConfigurationWebhookDTO](docs/Model/UpdateAppStoreAppConfigurationWebhookDTO.md)
  - [UpdateAppStoreAppExternalProduct](docs/Model/UpdateAppStoreAppExternalProduct.md)
+ - [UpdateAppStoreSubscriptionRequest](docs/Model/UpdateAppStoreSubscriptionRequest.md)
  - [UpdateCatalogGroupReference](docs/Model/UpdateCatalogGroupReference.md)
  - [UpdateCatalogItem](docs/Model/UpdateCatalogItem.md)
  - [UpdateDriverNotificationToken](docs/Model/UpdateDriverNotificationToken.md)
