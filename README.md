@@ -132,7 +132,8 @@ Class | Method | HTTP request | Description
 *AppStoreDeveloperApi* | [**updateAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
 *AppStoreDeveloperApi* | [**updateExternalProduct**](docs/Api/AppStoreDeveloperApi.md#updateexternalproduct) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product | 
 *AppStoreDeveloperApi* | [**uploadAppStoreAppLogo**](docs/Api/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
-*AppStoreSubscriptionsApi* | [**createAppStoreSubscription**](docs/Api/AppStoreSubscriptionsApi.md#createappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
+*AppStoreSubscriptionsApi* | [**createAppStoreSubscription**](docs/Api/AppStoreSubscriptionsApi.md#createappstoresubscription) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
+*AppStoreSubscriptionsApi* | [**createAppStoreSubscription_0**](docs/Api/AppStoreSubscriptionsApi.md#createappstoresubscription_0) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
 *AppStoreSubscriptionsApi* | [**deleteAppSubscription**](docs/Api/AppStoreSubscriptionsApi.md#deleteappsubscription) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
 *AppStoreSubscriptionsApi* | [**updateAppStoreSubscription**](docs/Api/AppStoreSubscriptionsApi.md#updateappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
 *AppsApi* | [**getApp**](docs/Api/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
@@ -628,6 +629,7 @@ Class | Method | HTTP request | Description
  - [AppStoreConfigCreatedEvent](docs/Model/AppStoreConfigCreatedEvent.md)
  - [AppStoreConfigDeletedEvent](docs/Model/AppStoreConfigDeletedEvent.md)
  - [AppStoreConfigUpdatedEvent](docs/Model/AppStoreConfigUpdatedEvent.md)
+ - [AppStoreSubscriptionItem](docs/Model/AppStoreSubscriptionItem.md)
  - [AppStoreSubscriptionJobResponse](docs/Model/AppStoreSubscriptionJobResponse.md)
  - [AppUpdatedEvent](docs/Model/AppUpdatedEvent.md)
  - [AssignedBankAccount](docs/Model/AssignedBankAccount.md)
@@ -1010,6 +1012,7 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultApmHourlyDataPoint](docs/Model/RestApiArrayResultApmHourlyDataPoint.md)
  - [RestApiArrayResultAppStoreAppConfigurationSummary](docs/Model/RestApiArrayResultAppStoreAppConfigurationSummary.md)
  - [RestApiArrayResultAppStoreAppSummary](docs/Model/RestApiArrayResultAppStoreAppSummary.md)
+ - [RestApiArrayResultAppStoreSubscriptionItem](docs/Model/RestApiArrayResultAppStoreSubscriptionItem.md)
  - [RestApiArrayResultBankAccountSummary](docs/Model/RestApiArrayResultBankAccountSummary.md)
  - [RestApiArrayResultBusinessHoursPeriod](docs/Model/RestApiArrayResultBusinessHoursPeriod.md)
  - [RestApiArrayResultChannel](docs/Model/RestApiArrayResultChannel.md)

@@ -92,20 +92,340 @@ class AppStoreSubscriptionsApi
      *
      * @param  string $app_id app_id (required)
      * @param  string $app_store_app_id app_store_app_id (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiArrayResultAppStoreSubscriptionItem
+     */
+    public function createAppStoreSubscription($app_id, $app_store_app_id)
+    {
+        list($response) = $this->createAppStoreSubscriptionWithHttpInfo($app_id, $app_store_app_id);
+        return $response;
+    }
+
+    /**
+     * Operation createAppStoreSubscriptionWithHttpInfo
+     *
+     * @param  string $app_id (required)
+     * @param  string $app_store_app_id (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultAppStoreSubscriptionItem, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createAppStoreSubscriptionWithHttpInfo($app_id, $app_store_app_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppStoreSubscriptionItem';
+        $request = $this->createAppStoreSubscriptionRequest($app_id, $app_store_app_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiArrayResultAppStoreSubscriptionItem',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createAppStoreSubscriptionAsync
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     * @param  string $app_store_app_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createAppStoreSubscriptionAsync($app_id, $app_store_app_id)
+    {
+        return $this->createAppStoreSubscriptionAsyncWithHttpInfo($app_id, $app_store_app_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation createAppStoreSubscriptionAsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     * @param  string $app_store_app_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createAppStoreSubscriptionAsyncWithHttpInfo($app_id, $app_store_app_id)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultAppStoreSubscriptionItem';
+        $request = $this->createAppStoreSubscriptionRequest($app_id, $app_store_app_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'createAppStoreSubscription'
+     *
+     * @param  string $app_id (required)
+     * @param  string $app_store_app_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function createAppStoreSubscriptionRequest($app_id, $app_store_app_id)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling createAppStoreSubscription'
+            );
+        }
+        // verify the required parameter 'app_store_app_id' is set
+        if ($app_store_app_id === null || (is_array($app_store_app_id) && count($app_store_app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_store_app_id when calling createAppStoreSubscription'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($app_store_app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appStoreAppId' . '}',
+                ObjectSerializer::toPathValue($app_store_app_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation createAppStoreSubscription_0
+     *
+     * @param  string $app_id app_id (required)
+     * @param  string $app_store_app_id app_store_app_id (required)
      * @param  \Flipdish\\Client\Models\AddAppStoreSubscriptionRequest $add_app_store_subscription_request add_app_store_subscription_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultAppStoreSubscriptionJobResponse
      */
-    public function createAppStoreSubscription($app_id, $app_store_app_id, $add_app_store_subscription_request)
+    public function createAppStoreSubscription_0($app_id, $app_store_app_id, $add_app_store_subscription_request)
     {
-        list($response) = $this->createAppStoreSubscriptionWithHttpInfo($app_id, $app_store_app_id, $add_app_store_subscription_request);
+        list($response) = $this->createAppStoreSubscription_0WithHttpInfo($app_id, $app_store_app_id, $add_app_store_subscription_request);
         return $response;
     }
 
     /**
-     * Operation createAppStoreSubscriptionWithHttpInfo
+     * Operation createAppStoreSubscription_0WithHttpInfo
      *
      * @param  string $app_id (required)
      * @param  string $app_store_app_id (required)
@@ -115,10 +435,10 @@ class AppStoreSubscriptionsApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultAppStoreSubscriptionJobResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createAppStoreSubscriptionWithHttpInfo($app_id, $app_store_app_id, $add_app_store_subscription_request)
+    public function createAppStoreSubscription_0WithHttpInfo($app_id, $app_store_app_id, $add_app_store_subscription_request)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreSubscriptionJobResponse';
-        $request = $this->createAppStoreSubscriptionRequest($app_id, $app_store_app_id, $add_app_store_subscription_request);
+        $request = $this->createAppStoreSubscription_0Request($app_id, $app_store_app_id, $add_app_store_subscription_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -212,7 +532,7 @@ class AppStoreSubscriptionsApi
     }
 
     /**
-     * Operation createAppStoreSubscriptionAsync
+     * Operation createAppStoreSubscription_0Async
      *
      * 
      *
@@ -223,9 +543,9 @@ class AppStoreSubscriptionsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAppStoreSubscriptionAsync($app_id, $app_store_app_id, $add_app_store_subscription_request)
+    public function createAppStoreSubscription_0Async($app_id, $app_store_app_id, $add_app_store_subscription_request)
     {
-        return $this->createAppStoreSubscriptionAsyncWithHttpInfo($app_id, $app_store_app_id, $add_app_store_subscription_request)
+        return $this->createAppStoreSubscription_0AsyncWithHttpInfo($app_id, $app_store_app_id, $add_app_store_subscription_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -234,7 +554,7 @@ class AppStoreSubscriptionsApi
     }
 
     /**
-     * Operation createAppStoreSubscriptionAsyncWithHttpInfo
+     * Operation createAppStoreSubscription_0AsyncWithHttpInfo
      *
      * 
      *
@@ -245,10 +565,10 @@ class AppStoreSubscriptionsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createAppStoreSubscriptionAsyncWithHttpInfo($app_id, $app_store_app_id, $add_app_store_subscription_request)
+    public function createAppStoreSubscription_0AsyncWithHttpInfo($app_id, $app_store_app_id, $add_app_store_subscription_request)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreSubscriptionJobResponse';
-        $request = $this->createAppStoreSubscriptionRequest($app_id, $app_store_app_id, $add_app_store_subscription_request);
+        $request = $this->createAppStoreSubscription_0Request($app_id, $app_store_app_id, $add_app_store_subscription_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -288,7 +608,7 @@ class AppStoreSubscriptionsApi
     }
 
     /**
-     * Create request for operation 'createAppStoreSubscription'
+     * Create request for operation 'createAppStoreSubscription_0'
      *
      * @param  string $app_id (required)
      * @param  string $app_store_app_id (required)
@@ -297,24 +617,24 @@ class AppStoreSubscriptionsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createAppStoreSubscriptionRequest($app_id, $app_store_app_id, $add_app_store_subscription_request)
+    protected function createAppStoreSubscription_0Request($app_id, $app_store_app_id, $add_app_store_subscription_request)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling createAppStoreSubscription'
+                'Missing the required parameter $app_id when calling createAppStoreSubscription_0'
             );
         }
         // verify the required parameter 'app_store_app_id' is set
         if ($app_store_app_id === null || (is_array($app_store_app_id) && count($app_store_app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_store_app_id when calling createAppStoreSubscription'
+                'Missing the required parameter $app_store_app_id when calling createAppStoreSubscription_0'
             );
         }
         // verify the required parameter 'add_app_store_subscription_request' is set
         if ($add_app_store_subscription_request === null || (is_array($add_app_store_subscription_request) && count($add_app_store_subscription_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $add_app_store_subscription_request when calling createAppStoreSubscription'
+                'Missing the required parameter $add_app_store_subscription_request when calling createAppStoreSubscription_0'
             );
         }
 
