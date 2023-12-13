@@ -102,6 +102,16 @@ class AppStoreSubscriptionsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getAppStoreSubscriptionChangeJobStatus
+     *
+     * .
+     *
+     */
+    public function testGetAppStoreSubscriptionChangeJobStatus()
+    {
+    }
+
+    /**
      * Test case for updateAppStoreSubscription
      *
      * .
