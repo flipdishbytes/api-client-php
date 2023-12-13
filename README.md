@@ -231,6 +231,7 @@ Class | Method | HTTP request | Description
 *ClientsApi* | [**setStripeCustomerId**](docs/Api/ClientsApi.md#setstripecustomerid) | **POST** /api/v1.0/clients/{clientId}/stripecustomerid | 
 *ContentSecurityPolicyApi* | [**contentSecurityPolicyReport**](docs/Api/ContentSecurityPolicyApi.md#contentsecuritypolicyreport) | **POST** /api/v1.0/csp/report | 
 *CrossSellApi* | [**getCrossSellMenuItems**](docs/Api/CrossSellApi.md#getcrosssellmenuitems) | **GET** /api/v1.0/{appId}/crossSell/menuItems | 
+*CustomersApi* | [**createCustomer**](docs/Api/CustomersApi.md#createcustomer) | **POST** /api/v1.0/{appId}/customers | 
 *CustomersApi* | [**getCustomerById**](docs/Api/CustomersApi.md#getcustomerbyid) | **GET** /api/v1.0/{appId}/customers/{customerId} | 
 *CustomersApi* | [**updateCustomerById**](docs/Api/CustomersApi.md#updatecustomerbyid) | **POST** /api/v1.0/{appId}/customers/{customerId} | 
 *DeliveryZoneApi* | [**addDeliveryZone**](docs/Api/DeliveryZoneApi.md#adddeliveryzone) | **POST** /api/v1.0/stores/{storeId}/deliveryzones | 
@@ -713,6 +714,7 @@ Class | Method | HTTP request | Description
  - [CurrencyData](docs/Model/CurrencyData.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerConsentUpdatedEvent](docs/Model/CustomerConsentUpdatedEvent.md)
+ - [CustomerCreateModel](docs/Model/CustomerCreateModel.md)
  - [CustomerCreatedEvent](docs/Model/CustomerCreatedEvent.md)
  - [CustomerDeliveryTrackingOrder](docs/Model/CustomerDeliveryTrackingOrder.md)
  - [CustomerDeliveryTrackingOrderLine](docs/Model/CustomerDeliveryTrackingOrderLine.md)

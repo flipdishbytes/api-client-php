@@ -357,6 +357,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_VIEW_KIOSK_TELEMETRY = 'ViewKioskTelemetry';
     const APP_RESOURCE_SET_VIEW_CUSTOMERS = 'ViewCustomers';
     const APP_RESOURCE_SET_EDIT_CUSTOMERS = 'EditCustomers';
+    const APP_RESOURCE_SET_CREATE_CUSTOMERS = 'CreateCustomers';
     const APP_RESOURCE_SET_CREATE_CATALOG_ELEMENTS = 'CreateCatalogElements';
     const APP_RESOURCE_SET_UPDATE_CATALOG_ELEMENTS = 'UpdateCatalogElements';
     const APP_RESOURCE_SET_VIEW_CATALOG_ELEMENTS = 'ViewCatalogElements';
@@ -553,6 +554,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_VIEW_KIOSK_TELEMETRY,
             self::APP_RESOURCE_SET_VIEW_CUSTOMERS,
             self::APP_RESOURCE_SET_EDIT_CUSTOMERS,
+            self::APP_RESOURCE_SET_CREATE_CUSTOMERS,
             self::APP_RESOURCE_SET_CREATE_CATALOG_ELEMENTS,
             self::APP_RESOURCE_SET_UPDATE_CATALOG_ELEMENTS,
             self::APP_RESOURCE_SET_VIEW_CATALOG_ELEMENTS,
