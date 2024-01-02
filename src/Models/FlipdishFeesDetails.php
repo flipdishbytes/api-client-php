@@ -66,9 +66,7 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
         'cash_sales_refunded_fees' => 'double',
         'pos_sales_refunded_fees' => 'double',
         'sales_fees_vat' => 'double',
-        'total_fees' => 'double',
-        'delivery_fees' => 'double',
-        'tip_fees' => 'double'
+        'total_fees' => 'double'
     ];
 
     /**
@@ -85,9 +83,7 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
         'cash_sales_refunded_fees' => 'double',
         'pos_sales_refunded_fees' => 'double',
         'sales_fees_vat' => 'double',
-        'total_fees' => 'double',
-        'delivery_fees' => 'double',
-        'tip_fees' => 'double'
+        'total_fees' => 'double'
     ];
 
     /**
@@ -125,9 +121,7 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
         'cash_sales_refunded_fees' => 'CashSalesRefundedFees',
         'pos_sales_refunded_fees' => 'PosSalesRefundedFees',
         'sales_fees_vat' => 'SalesFeesVat',
-        'total_fees' => 'TotalFees',
-        'delivery_fees' => 'DeliveryFees',
-        'tip_fees' => 'TipFees'
+        'total_fees' => 'TotalFees'
     ];
 
     /**
@@ -144,9 +138,7 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
         'cash_sales_refunded_fees' => 'setCashSalesRefundedFees',
         'pos_sales_refunded_fees' => 'setPosSalesRefundedFees',
         'sales_fees_vat' => 'setSalesFeesVat',
-        'total_fees' => 'setTotalFees',
-        'delivery_fees' => 'setDeliveryFees',
-        'tip_fees' => 'setTipFees'
+        'total_fees' => 'setTotalFees'
     ];
 
     /**
@@ -163,9 +155,7 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
         'cash_sales_refunded_fees' => 'getCashSalesRefundedFees',
         'pos_sales_refunded_fees' => 'getPosSalesRefundedFees',
         'sales_fees_vat' => 'getSalesFeesVat',
-        'total_fees' => 'getTotalFees',
-        'delivery_fees' => 'getDeliveryFees',
-        'tip_fees' => 'getTipFees'
+        'total_fees' => 'getTotalFees'
     ];
 
     /**
@@ -237,8 +227,6 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
         $this->container['pos_sales_refunded_fees'] = isset($data['pos_sales_refunded_fees']) ? $data['pos_sales_refunded_fees'] : null;
         $this->container['sales_fees_vat'] = isset($data['sales_fees_vat']) ? $data['sales_fees_vat'] : null;
         $this->container['total_fees'] = isset($data['total_fees']) ? $data['total_fees'] : null;
-        $this->container['delivery_fees'] = isset($data['delivery_fees']) ? $data['delivery_fees'] : null;
-        $this->container['tip_fees'] = isset($data['tip_fees']) ? $data['tip_fees'] : null;
     }
 
     /**
@@ -477,54 +465,6 @@ class FlipdishFeesDetails implements ModelInterface, ArrayAccess
     public function setTotalFees($total_fees)
     {
         $this->container['total_fees'] = $total_fees;
-
-        return $this;
-    }
-
-    /**
-     * Gets delivery_fees
-     *
-     * @return double
-     */
-    public function getDeliveryFees()
-    {
-        return $this->container['delivery_fees'];
-    }
-
-    /**
-     * Sets delivery_fees
-     *
-     * @param double $delivery_fees Delivery fees
-     *
-     * @return $this
-     */
-    public function setDeliveryFees($delivery_fees)
-    {
-        $this->container['delivery_fees'] = $delivery_fees;
-
-        return $this;
-    }
-
-    /**
-     * Gets tip_fees
-     *
-     * @return double
-     */
-    public function getTipFees()
-    {
-        return $this->container['tip_fees'];
-    }
-
-    /**
-     * Sets tip_fees
-     *
-     * @param double $tip_fees Tip fees
-     *
-     * @return $this
-     */
-    public function setTipFees($tip_fees)
-    {
-        $this->container['tip_fees'] = $tip_fees;
 
         return $this;
     }
