@@ -68,7 +68,8 @@ class PayoutStore implements ModelInterface, ArrayAccess
         'chargebacks' => '\Flipdish\\Client\Models\ChargebackDetails',
         'other_charges' => '\Flipdish\\Client\Models\OtherChargesDetails',
         'balance' => '\Flipdish\\Client\Models\BalanceDetails',
-        'pos_revenue' => '\Flipdish\\Client\Models\PosRevenueDetails'
+        'pos_revenue' => '\Flipdish\\Client\Models\PosRevenueDetails',
+        'third_party_fees' => '\Flipdish\\Client\Models\ThirdPartyFeesDetails'
     ];
 
     /**
@@ -87,7 +88,8 @@ class PayoutStore implements ModelInterface, ArrayAccess
         'chargebacks' => null,
         'other_charges' => null,
         'balance' => null,
-        'pos_revenue' => null
+        'pos_revenue' => null,
+        'third_party_fees' => null
     ];
 
     /**
@@ -127,7 +129,8 @@ class PayoutStore implements ModelInterface, ArrayAccess
         'chargebacks' => 'Chargebacks',
         'other_charges' => 'OtherCharges',
         'balance' => 'Balance',
-        'pos_revenue' => 'PosRevenue'
+        'pos_revenue' => 'PosRevenue',
+        'third_party_fees' => 'ThirdPartyFees'
     ];
 
     /**
@@ -146,7 +149,8 @@ class PayoutStore implements ModelInterface, ArrayAccess
         'chargebacks' => 'setChargebacks',
         'other_charges' => 'setOtherCharges',
         'balance' => 'setBalance',
-        'pos_revenue' => 'setPosRevenue'
+        'pos_revenue' => 'setPosRevenue',
+        'third_party_fees' => 'setThirdPartyFees'
     ];
 
     /**
@@ -165,7 +169,8 @@ class PayoutStore implements ModelInterface, ArrayAccess
         'chargebacks' => 'getChargebacks',
         'other_charges' => 'getOtherCharges',
         'balance' => 'getBalance',
-        'pos_revenue' => 'getPosRevenue'
+        'pos_revenue' => 'getPosRevenue',
+        'third_party_fees' => 'getThirdPartyFees'
     ];
 
     /**
@@ -239,6 +244,7 @@ class PayoutStore implements ModelInterface, ArrayAccess
         $this->container['other_charges'] = isset($data['other_charges']) ? $data['other_charges'] : null;
         $this->container['balance'] = isset($data['balance']) ? $data['balance'] : null;
         $this->container['pos_revenue'] = isset($data['pos_revenue']) ? $data['pos_revenue'] : null;
+        $this->container['third_party_fees'] = isset($data['third_party_fees']) ? $data['third_party_fees'] : null;
     }
 
     /**
@@ -525,6 +531,30 @@ class PayoutStore implements ModelInterface, ArrayAccess
     public function setPosRevenue($pos_revenue)
     {
         $this->container['pos_revenue'] = $pos_revenue;
+
+        return $this;
+    }
+
+    /**
+     * Gets third_party_fees
+     *
+     * @return \Flipdish\\Client\Models\ThirdPartyFeesDetails
+     */
+    public function getThirdPartyFees()
+    {
+        return $this->container['third_party_fees'];
+    }
+
+    /**
+     * Sets third_party_fees
+     *
+     * @param \Flipdish\\Client\Models\ThirdPartyFeesDetails $third_party_fees Third party integration fees
+     *
+     * @return $this
+     */
+    public function setThirdPartyFees($third_party_fees)
+    {
+        $this->container['third_party_fees'] = $third_party_fees;
 
         return $this;
     }

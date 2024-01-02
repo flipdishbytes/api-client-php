@@ -152,4 +152,11 @@ class PayoutStoreTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPosRevenue()
     {
     }
+
+    /**
+     * Test attribute "third_party_fees"
+     */
+    public function testPropertyThirdPartyFees()
+    {
+    }
 }

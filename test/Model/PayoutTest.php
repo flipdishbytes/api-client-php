@@ -341,4 +341,25 @@ class PayoutTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPayGreenSalesAmount()
     {
     }
+
+    /**
+     * Test attribute "delivery_integration_fee"
+     */
+    public function testPropertyDeliveryIntegrationFee()
+    {
+    }
+
+    /**
+     * Test attribute "delivery_integration_tip_fee"
+     */
+    public function testPropertyDeliveryIntegrationTipFee()
+    {
+    }
+
+    /**
+     * Test attribute "total_third_party_fees"
+     */
+    public function testPropertyTotalThirdPartyFees()
+    {
+    }
 }

@@ -95,7 +95,10 @@ class Payout implements ModelInterface, ArrayAccess
         'total_other_charges' => 'double',
         'opening_balance' => 'double',
         'closing_balance' => 'double',
-        'pay_green_sales_amount' => 'double'
+        'pay_green_sales_amount' => 'double',
+        'delivery_integration_fee' => 'double',
+        'delivery_integration_tip_fee' => 'double',
+        'total_third_party_fees' => 'double'
     ];
 
     /**
@@ -141,7 +144,10 @@ class Payout implements ModelInterface, ArrayAccess
         'total_other_charges' => 'double',
         'opening_balance' => 'double',
         'closing_balance' => 'double',
-        'pay_green_sales_amount' => 'double'
+        'pay_green_sales_amount' => 'double',
+        'delivery_integration_fee' => 'double',
+        'delivery_integration_tip_fee' => 'double',
+        'total_third_party_fees' => 'double'
     ];
 
     /**
@@ -208,7 +214,10 @@ class Payout implements ModelInterface, ArrayAccess
         'total_other_charges' => 'TotalOtherCharges',
         'opening_balance' => 'OpeningBalance',
         'closing_balance' => 'ClosingBalance',
-        'pay_green_sales_amount' => 'PayGreenSalesAmount'
+        'pay_green_sales_amount' => 'PayGreenSalesAmount',
+        'delivery_integration_fee' => 'DeliveryIntegrationFee',
+        'delivery_integration_tip_fee' => 'DeliveryIntegrationTipFee',
+        'total_third_party_fees' => 'TotalThirdPartyFees'
     ];
 
     /**
@@ -254,7 +263,10 @@ class Payout implements ModelInterface, ArrayAccess
         'total_other_charges' => 'setTotalOtherCharges',
         'opening_balance' => 'setOpeningBalance',
         'closing_balance' => 'setClosingBalance',
-        'pay_green_sales_amount' => 'setPayGreenSalesAmount'
+        'pay_green_sales_amount' => 'setPayGreenSalesAmount',
+        'delivery_integration_fee' => 'setDeliveryIntegrationFee',
+        'delivery_integration_tip_fee' => 'setDeliveryIntegrationTipFee',
+        'total_third_party_fees' => 'setTotalThirdPartyFees'
     ];
 
     /**
@@ -300,7 +312,10 @@ class Payout implements ModelInterface, ArrayAccess
         'total_other_charges' => 'getTotalOtherCharges',
         'opening_balance' => 'getOpeningBalance',
         'closing_balance' => 'getClosingBalance',
-        'pay_green_sales_amount' => 'getPayGreenSalesAmount'
+        'pay_green_sales_amount' => 'getPayGreenSalesAmount',
+        'delivery_integration_fee' => 'getDeliveryIntegrationFee',
+        'delivery_integration_tip_fee' => 'getDeliveryIntegrationTipFee',
+        'total_third_party_fees' => 'getTotalThirdPartyFees'
     ];
 
     /**
@@ -674,6 +689,9 @@ class Payout implements ModelInterface, ArrayAccess
         $this->container['opening_balance'] = isset($data['opening_balance']) ? $data['opening_balance'] : null;
         $this->container['closing_balance'] = isset($data['closing_balance']) ? $data['closing_balance'] : null;
         $this->container['pay_green_sales_amount'] = isset($data['pay_green_sales_amount']) ? $data['pay_green_sales_amount'] : null;
+        $this->container['delivery_integration_fee'] = isset($data['delivery_integration_fee']) ? $data['delivery_integration_fee'] : null;
+        $this->container['delivery_integration_tip_fee'] = isset($data['delivery_integration_tip_fee']) ? $data['delivery_integration_tip_fee'] : null;
+        $this->container['total_third_party_fees'] = isset($data['total_third_party_fees']) ? $data['total_third_party_fees'] : null;
     }
 
     /**
@@ -1659,6 +1677,78 @@ class Payout implements ModelInterface, ArrayAccess
     public function setPayGreenSalesAmount($pay_green_sales_amount)
     {
         $this->container['pay_green_sales_amount'] = $pay_green_sales_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_integration_fee
+     *
+     * @return double
+     */
+    public function getDeliveryIntegrationFee()
+    {
+        return $this->container['delivery_integration_fee'];
+    }
+
+    /**
+     * Sets delivery_integration_fee
+     *
+     * @param double $delivery_integration_fee Third party integration delivery fee
+     *
+     * @return $this
+     */
+    public function setDeliveryIntegrationFee($delivery_integration_fee)
+    {
+        $this->container['delivery_integration_fee'] = $delivery_integration_fee;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_integration_tip_fee
+     *
+     * @return double
+     */
+    public function getDeliveryIntegrationTipFee()
+    {
+        return $this->container['delivery_integration_tip_fee'];
+    }
+
+    /**
+     * Sets delivery_integration_tip_fee
+     *
+     * @param double $delivery_integration_tip_fee Third party integration delivery tip fee
+     *
+     * @return $this
+     */
+    public function setDeliveryIntegrationTipFee($delivery_integration_tip_fee)
+    {
+        $this->container['delivery_integration_tip_fee'] = $delivery_integration_tip_fee;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_third_party_fees
+     *
+     * @return double
+     */
+    public function getTotalThirdPartyFees()
+    {
+        return $this->container['total_third_party_fees'];
+    }
+
+    /**
+     * Sets total_third_party_fees
+     *
+     * @param double $total_third_party_fees Total third party integration fees
+     *
+     * @return $this
+     */
+    public function setTotalThirdPartyFees($total_third_party_fees)
+    {
+        $this->container['total_third_party_fees'] = $total_third_party_fees;
 
         return $this;
     }
