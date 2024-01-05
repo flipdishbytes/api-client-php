@@ -58,6 +58,7 @@ class OrderVoucherSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'voucher_id' => 'int',
         'name' => 'string',
         'description' => 'string',
         'code' => 'string',
@@ -72,6 +73,7 @@ class OrderVoucherSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'voucher_id' => 'int32',
         'name' => null,
         'description' => null,
         'code' => null,
@@ -107,6 +109,7 @@ class OrderVoucherSummary implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'voucher_id' => 'VoucherId',
         'name' => 'Name',
         'description' => 'Description',
         'code' => 'Code',
@@ -121,6 +124,7 @@ class OrderVoucherSummary implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'voucher_id' => 'setVoucherId',
         'name' => 'setName',
         'description' => 'setDescription',
         'code' => 'setCode',
@@ -135,6 +139,7 @@ class OrderVoucherSummary implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'voucher_id' => 'getVoucherId',
         'name' => 'getName',
         'description' => 'getDescription',
         'code' => 'getCode',
@@ -247,6 +252,7 @@ class OrderVoucherSummary implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['voucher_id'] = isset($data['voucher_id']) ? $data['voucher_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
@@ -294,6 +300,30 @@ class OrderVoucherSummary implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets voucher_id
+     *
+     * @return int
+     */
+    public function getVoucherId()
+    {
+        return $this->container['voucher_id'];
+    }
+
+    /**
+     * Sets voucher_id
+     *
+     * @param int $voucher_id Voucher ID
+     *
+     * @return $this
+     */
+    public function setVoucherId($voucher_id)
+    {
+        $this->container['voucher_id'] = $voucher_id;
+
+        return $this;
+    }
 
     /**
      * Gets name

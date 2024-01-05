@@ -750,7 +750,7 @@ class AppStoreSubscriptionsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiStringResult
+     * @return \Flipdish\\Client\Models\RestApiResultAppStoreSubscriptionJobResponse
      */
     public function deleteAppSubscription($app_id, $app_store_app_id, $subscription_id)
     {
@@ -767,11 +767,11 @@ class AppStoreSubscriptionsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiStringResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultAppStoreSubscriptionJobResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAppSubscriptionWithHttpInfo($app_id, $app_store_app_id, $subscription_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreSubscriptionJobResponse';
         $request = $this->deleteAppSubscriptionRequest($app_id, $app_store_app_id, $subscription_id);
 
         try {
@@ -823,7 +823,7 @@ class AppStoreSubscriptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiStringResult',
+                        '\Flipdish\\Client\Models\RestApiResultAppStoreSubscriptionJobResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -901,7 +901,7 @@ class AppStoreSubscriptionsApi
      */
     public function deleteAppSubscriptionAsyncWithHttpInfo($app_id, $app_store_app_id, $subscription_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreSubscriptionJobResponse';
         $request = $this->deleteAppSubscriptionRequest($app_id, $app_store_app_id, $subscription_id);
 
         return $this->client

@@ -77,6 +77,13 @@ class OrderVoucherSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "voucher_id"
+     */
+    public function testPropertyVoucherId()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

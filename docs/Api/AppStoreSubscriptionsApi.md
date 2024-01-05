@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAppSubscription**
-> \Flipdish\\Client\Models\RestApiStringResult deleteAppSubscription($app_id, $app_store_app_id, $subscription_id)
+> \Flipdish\\Client\Models\RestApiResultAppStoreSubscriptionJobResponse deleteAppSubscription($app_id, $app_store_app_id, $subscription_id)
 
 
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
+[**\Flipdish\\Client\Models\RestApiResultAppStoreSubscriptionJobResponse**](../Model/RestApiResultAppStoreSubscriptionJobResponse.md)
 
 ### Authorization
 
