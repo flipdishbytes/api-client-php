@@ -924,6 +924,13 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "app_store_subscription_change_job_updated_event"
+     */
+    public function testPropertyAppStoreSubscriptionChangeJobUpdatedEvent()
+    {
+    }
+
+    /**
      * Test attribute "catalog_item_created_event"
      */
     public function testPropertyCatalogItemCreatedEvent()

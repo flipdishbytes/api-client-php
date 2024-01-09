@@ -124,6 +124,7 @@ Name | Type | Description | Notes
 **app_store_config_created_event** | [**\Flipdish\\Client\Models\AppStoreConfigCreatedEvent[]**](AppStoreConfigCreatedEvent.md) | App Store Config Created | [optional] 
 **app_store_config_updated_event** | [**\Flipdish\\Client\Models\AppStoreConfigUpdatedEvent[]**](AppStoreConfigUpdatedEvent.md) | App Store Config Updated | [optional] 
 **app_store_config_deleted_event** | [**\Flipdish\\Client\Models\AppStoreConfigDeletedEvent[]**](AppStoreConfigDeletedEvent.md) | App Store Config Deleted | [optional] 
+**app_store_subscription_change_job_updated_event** | [**\Flipdish\\Client\Models\AppStoreSubscriptionChangeJobUpdatedEvent[]**](AppStoreSubscriptionChangeJobUpdatedEvent.md) | App Store Subscription Change Job Updated | [optional] 
 **catalog_item_created_event** | [**\Flipdish\\Client\Models\CatalogItemCreatedEvent[]**](CatalogItemCreatedEvent.md) | Catalog Item Created | [optional] 
 **catalog_item_updated_event** | [**\Flipdish\\Client\Models\CatalogItemUpdatedEvent[]**](CatalogItemUpdatedEvent.md) | Catalog Item Updated | [optional] 
 **catalog_item_archived_event** | [**\Flipdish\\Client\Models\CatalogItemArchivedEvent[]**](CatalogItemArchivedEvent.md) | Catalog Item Archived | [optional] 

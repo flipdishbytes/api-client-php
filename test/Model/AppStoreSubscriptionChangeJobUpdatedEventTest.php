@@ -1,6 +1,6 @@
 <?php
 /**
- * AppStoreAppConfigurationsWithSubscriptionsTest
+ * AppStoreSubscriptionChangeJobUpdatedEventTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * AppStoreAppConfigurationsWithSubscriptionsTest Class Doc Comment
+ * AppStoreSubscriptionChangeJobUpdatedEventTest Class Doc Comment
  *
  * @category    Class
- * @description App store configurations for a given AppId
+ * @description Subscription change job status updated event
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AppStoreAppConfigurationsWithSubscriptionsTest extends \PHPUnit_Framework_TestCase
+class AppStoreSubscriptionChangeJobUpdatedEventTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,30 +70,65 @@ class AppStoreAppConfigurationsWithSubscriptionsTest extends \PHPUnit_Framework_
     }
 
     /**
-     * Test "AppStoreAppConfigurationsWithSubscriptions"
+     * Test "AppStoreSubscriptionChangeJobUpdatedEvent"
      */
-    public function testAppStoreAppConfigurationsWithSubscriptions()
+    public function testAppStoreSubscriptionChangeJobUpdatedEvent()
     {
     }
 
     /**
-     * Test attribute "subscription"
+     * Test attribute "event_name"
      */
-    public function testPropertySubscription()
+    public function testPropertyEventName()
     {
     }
 
     /**
-     * Test attribute "configurations"
+     * Test attribute "app_store_app_id"
      */
-    public function testPropertyConfigurations()
+    public function testPropertyAppStoreAppId()
     {
     }
 
     /**
-     * Test attribute "prices"
+     * Test attribute "status"
      */
-    public function testPropertyPrices()
+    public function testPropertyStatus()
+    {
+    }
+
+    /**
+     * Test attribute "flipdish_event_id"
+     */
+    public function testPropertyFlipdishEventId()
+    {
+    }
+
+    /**
+     * Test attribute "create_time"
+     */
+    public function testPropertyCreateTime()
+    {
+    }
+
+    /**
+     * Test attribute "position"
+     */
+    public function testPropertyPosition()
+    {
+    }
+
+    /**
+     * Test attribute "app_id"
+     */
+    public function testPropertyAppId()
+    {
+    }
+
+    /**
+     * Test attribute "ip_address"
+     */
+    public function testPropertyIpAddress()
     {
     }
 }

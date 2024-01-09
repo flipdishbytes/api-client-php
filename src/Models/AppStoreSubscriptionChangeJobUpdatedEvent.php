@@ -1,6 +1,6 @@
 <?php
 /**
- * AppStoreAppConfigurationsWithSubscriptions
+ * AppStoreSubscriptionChangeJobUpdatedEvent
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * AppStoreAppConfigurationsWithSubscriptions Class Doc Comment
+ * AppStoreSubscriptionChangeJobUpdatedEvent Class Doc Comment
  *
  * @category Class
- * @description App store configurations for a given AppId
+ * @description Subscription change job status updated event
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, ArrayAccess
+class AppStoreSubscriptionChangeJobUpdatedEvent implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
       *
       * @var string
       */
-    protected static $swaggerModelName = 'AppStoreAppConfigurationsWithSubscriptions';
+    protected static $swaggerModelName = 'AppStoreSubscriptionChangeJobUpdatedEvent';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,14 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'subscription' => '\Flipdish\\Client\Models\AppStoreAppSubscriptionSummary',
-        'configurations' => '\Flipdish\\Client\Models\AppStoreAppConfigurationSummary[]',
-        'prices' => '\Flipdish\\Client\Models\SubscriptionProductPriceInfo[]'
+        'event_name' => 'string',
+        'app_store_app_id' => 'string',
+        'status' => 'string',
+        'flipdish_event_id' => 'string',
+        'create_time' => '\DateTime',
+        'position' => 'int',
+        'app_id' => 'string',
+        'ip_address' => 'string'
     ];
 
     /**
@@ -69,9 +74,14 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'subscription' => null,
-        'configurations' => null,
-        'prices' => null
+        'event_name' => null,
+        'app_store_app_id' => null,
+        'status' => null,
+        'flipdish_event_id' => 'uuid',
+        'create_time' => 'date-time',
+        'position' => 'int32',
+        'app_id' => null,
+        'ip_address' => null
     ];
 
     /**
@@ -101,9 +111,14 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
      * @var string[]
      */
     protected static $attributeMap = [
-        'subscription' => 'Subscription',
-        'configurations' => 'Configurations',
-        'prices' => 'Prices'
+        'event_name' => 'EventName',
+        'app_store_app_id' => 'AppStoreAppId',
+        'status' => 'Status',
+        'flipdish_event_id' => 'FlipdishEventId',
+        'create_time' => 'CreateTime',
+        'position' => 'Position',
+        'app_id' => 'AppId',
+        'ip_address' => 'IpAddress'
     ];
 
     /**
@@ -112,9 +127,14 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
      * @var string[]
      */
     protected static $setters = [
-        'subscription' => 'setSubscription',
-        'configurations' => 'setConfigurations',
-        'prices' => 'setPrices'
+        'event_name' => 'setEventName',
+        'app_store_app_id' => 'setAppStoreAppId',
+        'status' => 'setStatus',
+        'flipdish_event_id' => 'setFlipdishEventId',
+        'create_time' => 'setCreateTime',
+        'position' => 'setPosition',
+        'app_id' => 'setAppId',
+        'ip_address' => 'setIpAddress'
     ];
 
     /**
@@ -123,9 +143,14 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
      * @var string[]
      */
     protected static $getters = [
-        'subscription' => 'getSubscription',
-        'configurations' => 'getConfigurations',
-        'prices' => 'getPrices'
+        'event_name' => 'getEventName',
+        'app_store_app_id' => 'getAppStoreAppId',
+        'status' => 'getStatus',
+        'flipdish_event_id' => 'getFlipdishEventId',
+        'create_time' => 'getCreateTime',
+        'position' => 'getPosition',
+        'app_id' => 'getAppId',
+        'ip_address' => 'getIpAddress'
     ];
 
     /**
@@ -188,9 +213,14 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
      */
     public function __construct(array $data = null)
     {
-        $this->container['subscription'] = isset($data['subscription']) ? $data['subscription'] : null;
-        $this->container['configurations'] = isset($data['configurations']) ? $data['configurations'] : null;
-        $this->container['prices'] = isset($data['prices']) ? $data['prices'] : null;
+        $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
+        $this->container['app_store_app_id'] = isset($data['app_store_app_id']) ? $data['app_store_app_id'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
+        $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
+        $this->container['position'] = isset($data['position']) ? $data['position'] : null;
+        $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
+        $this->container['ip_address'] = isset($data['ip_address']) ? $data['ip_address'] : null;
     }
 
     /**
@@ -218,73 +248,193 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
 
 
     /**
-     * Gets subscription
+     * Gets event_name
      *
-     * @return \Flipdish\\Client\Models\AppStoreAppSubscriptionSummary
+     * @return string
      */
-    public function getSubscription()
+    public function getEventName()
     {
-        return $this->container['subscription'];
+        return $this->container['event_name'];
     }
 
     /**
-     * Sets subscription
+     * Sets event_name
      *
-     * @param \Flipdish\\Client\Models\AppStoreAppSubscriptionSummary $subscription Subscription information for the AppId for the AppStoreApp
+     * @param string $event_name The event name
      *
      * @return $this
      */
-    public function setSubscription($subscription)
+    public function setEventName($event_name)
     {
-        $this->container['subscription'] = $subscription;
+        $this->container['event_name'] = $event_name;
 
         return $this;
     }
 
     /**
-     * Gets configurations
+     * Gets app_store_app_id
      *
-     * @return \Flipdish\\Client\Models\AppStoreAppConfigurationSummary[]
+     * @return string
      */
-    public function getConfigurations()
+    public function getAppStoreAppId()
     {
-        return $this->container['configurations'];
+        return $this->container['app_store_app_id'];
     }
 
     /**
-     * Sets configurations
+     * Sets app_store_app_id
      *
-     * @param \Flipdish\\Client\Models\AppStoreAppConfigurationSummary[] $configurations Configurations for the AppId for the AppStoreApp
+     * @param string $app_store_app_id App Store Id
      *
      * @return $this
      */
-    public function setConfigurations($configurations)
+    public function setAppStoreAppId($app_store_app_id)
     {
-        $this->container['configurations'] = $configurations;
+        $this->container['app_store_app_id'] = $app_store_app_id;
 
         return $this;
     }
 
     /**
-     * Gets prices
+     * Gets status
      *
-     * @return \Flipdish\\Client\Models\SubscriptionProductPriceInfo[]
+     * @return string
      */
-    public function getPrices()
+    public function getStatus()
     {
-        return $this->container['prices'];
+        return $this->container['status'];
     }
 
     /**
-     * Sets prices
+     * Sets status
      *
-     * @param \Flipdish\\Client\Models\SubscriptionProductPriceInfo[] $prices Prices
+     * @param string $status Status
      *
      * @return $this
      */
-    public function setPrices($prices)
+    public function setStatus($status)
     {
-        $this->container['prices'] = $prices;
+        $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets flipdish_event_id
+     *
+     * @return string
+     */
+    public function getFlipdishEventId()
+    {
+        return $this->container['flipdish_event_id'];
+    }
+
+    /**
+     * Sets flipdish_event_id
+     *
+     * @param string $flipdish_event_id The identitfier of the event
+     *
+     * @return $this
+     */
+    public function setFlipdishEventId($flipdish_event_id)
+    {
+        $this->container['flipdish_event_id'] = $flipdish_event_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets create_time
+     *
+     * @return \DateTime
+     */
+    public function getCreateTime()
+    {
+        return $this->container['create_time'];
+    }
+
+    /**
+     * Sets create_time
+     *
+     * @param \DateTime $create_time The time of creation of the event
+     *
+     * @return $this
+     */
+    public function setCreateTime($create_time)
+    {
+        $this->container['create_time'] = $create_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets position
+     *
+     * @return int
+     */
+    public function getPosition()
+    {
+        return $this->container['position'];
+    }
+
+    /**
+     * Sets position
+     *
+     * @param int $position Position
+     *
+     * @return $this
+     */
+    public function setPosition($position)
+    {
+        $this->container['position'] = $position;
+
+        return $this;
+    }
+
+    /**
+     * Gets app_id
+     *
+     * @return string
+     */
+    public function getAppId()
+    {
+        return $this->container['app_id'];
+    }
+
+    /**
+     * Sets app_id
+     *
+     * @param string $app_id App id
+     *
+     * @return $this
+     */
+    public function setAppId($app_id)
+    {
+        $this->container['app_id'] = $app_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets ip_address
+     *
+     * @return string
+     */
+    public function getIpAddress()
+    {
+        return $this->container['ip_address'];
+    }
+
+    /**
+     * Sets ip_address
+     *
+     * @param string $ip_address Ip Address
+     *
+     * @return $this
+     */
+    public function setIpAddress($ip_address)
+    {
+        $this->container['ip_address'] = $ip_address;
 
         return $this;
     }

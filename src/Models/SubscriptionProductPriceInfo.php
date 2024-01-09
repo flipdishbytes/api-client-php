@@ -1,6 +1,6 @@
 <?php
 /**
- * AppStoreAppConfigurationsWithSubscriptions
+ * SubscriptionProductPriceInfo
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * AppStoreAppConfigurationsWithSubscriptions Class Doc Comment
+ * SubscriptionProductPriceInfo Class Doc Comment
  *
  * @category Class
- * @description App store configurations for a given AppId
+ * @description Price info
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, ArrayAccess
+class SubscriptionProductPriceInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
       *
       * @var string
       */
-    protected static $swaggerModelName = 'AppStoreAppConfigurationsWithSubscriptions';
+    protected static $swaggerModelName = 'SubscriptionProductPriceInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,9 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'subscription' => '\Flipdish\\Client\Models\AppStoreAppSubscriptionSummary',
-        'configurations' => '\Flipdish\\Client\Models\AppStoreAppConfigurationSummary[]',
-        'prices' => '\Flipdish\\Client\Models\SubscriptionProductPriceInfo[]'
+        'amount' => 'double',
+        'currency' => 'string',
+        'scope' => 'string'
     ];
 
     /**
@@ -69,9 +69,9 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'subscription' => null,
-        'configurations' => null,
-        'prices' => null
+        'amount' => 'double',
+        'currency' => null,
+        'scope' => null
     ];
 
     /**
@@ -101,9 +101,9 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
      * @var string[]
      */
     protected static $attributeMap = [
-        'subscription' => 'Subscription',
-        'configurations' => 'Configurations',
-        'prices' => 'Prices'
+        'amount' => 'Amount',
+        'currency' => 'Currency',
+        'scope' => 'Scope'
     ];
 
     /**
@@ -112,9 +112,9 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
      * @var string[]
      */
     protected static $setters = [
-        'subscription' => 'setSubscription',
-        'configurations' => 'setConfigurations',
-        'prices' => 'setPrices'
+        'amount' => 'setAmount',
+        'currency' => 'setCurrency',
+        'scope' => 'setScope'
     ];
 
     /**
@@ -123,9 +123,9 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
      * @var string[]
      */
     protected static $getters = [
-        'subscription' => 'getSubscription',
-        'configurations' => 'getConfigurations',
-        'prices' => 'getPrices'
+        'amount' => 'getAmount',
+        'currency' => 'getCurrency',
+        'scope' => 'getScope'
     ];
 
     /**
@@ -169,8 +169,23 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
         return self::$swaggerModelName;
     }
 
+    const SCOPE_STORE = 'Store';
+    const SCOPE_WHITELABEL = 'Whitelabel';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getScopeAllowableValues()
+    {
+        return [
+            self::SCOPE_STORE,
+            self::SCOPE_WHITELABEL,
+        ];
+    }
     
 
     /**
@@ -188,9 +203,9 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
      */
     public function __construct(array $data = null)
     {
-        $this->container['subscription'] = isset($data['subscription']) ? $data['subscription'] : null;
-        $this->container['configurations'] = isset($data['configurations']) ? $data['configurations'] : null;
-        $this->container['prices'] = isset($data['prices']) ? $data['prices'] : null;
+        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
+        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
+        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
     }
 
     /**
@@ -201,6 +216,14 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getScopeAllowableValues();
+        if (!is_null($this->container['scope']) && !in_array($this->container['scope'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'scope', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -218,73 +241,82 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
 
 
     /**
-     * Gets subscription
+     * Gets amount
      *
-     * @return \Flipdish\\Client\Models\AppStoreAppSubscriptionSummary
+     * @return double
      */
-    public function getSubscription()
+    public function getAmount()
     {
-        return $this->container['subscription'];
+        return $this->container['amount'];
     }
 
     /**
-     * Sets subscription
+     * Sets amount
      *
-     * @param \Flipdish\\Client\Models\AppStoreAppSubscriptionSummary $subscription Subscription information for the AppId for the AppStoreApp
+     * @param double $amount Price amount
      *
      * @return $this
      */
-    public function setSubscription($subscription)
+    public function setAmount($amount)
     {
-        $this->container['subscription'] = $subscription;
+        $this->container['amount'] = $amount;
 
         return $this;
     }
 
     /**
-     * Gets configurations
+     * Gets currency
      *
-     * @return \Flipdish\\Client\Models\AppStoreAppConfigurationSummary[]
+     * @return string
      */
-    public function getConfigurations()
+    public function getCurrency()
     {
-        return $this->container['configurations'];
+        return $this->container['currency'];
     }
 
     /**
-     * Sets configurations
+     * Sets currency
      *
-     * @param \Flipdish\\Client\Models\AppStoreAppConfigurationSummary[] $configurations Configurations for the AppId for the AppStoreApp
+     * @param string $currency Currency code
      *
      * @return $this
      */
-    public function setConfigurations($configurations)
+    public function setCurrency($currency)
     {
-        $this->container['configurations'] = $configurations;
+        $this->container['currency'] = $currency;
 
         return $this;
     }
 
     /**
-     * Gets prices
+     * Gets scope
      *
-     * @return \Flipdish\\Client\Models\SubscriptionProductPriceInfo[]
+     * @return string
      */
-    public function getPrices()
+    public function getScope()
     {
-        return $this->container['prices'];
+        return $this->container['scope'];
     }
 
     /**
-     * Sets prices
+     * Sets scope
      *
-     * @param \Flipdish\\Client\Models\SubscriptionProductPriceInfo[] $prices Prices
+     * @param string $scope Scope (eg. per store or per whitelabel)
      *
      * @return $this
      */
-    public function setPrices($prices)
+    public function setScope($scope)
     {
-        $this->container['prices'] = $prices;
+        $allowedValues = $this->getScopeAllowableValues();
+        if (!is_null($scope) && !in_array($scope, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'scope', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['scope'] = $scope;
 
         return $this;
     }

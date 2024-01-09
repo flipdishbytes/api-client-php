@@ -179,6 +179,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'app_store_config_created_event' => '\Flipdish\\Client\Models\AppStoreConfigCreatedEvent[]',
         'app_store_config_updated_event' => '\Flipdish\\Client\Models\AppStoreConfigUpdatedEvent[]',
         'app_store_config_deleted_event' => '\Flipdish\\Client\Models\AppStoreConfigDeletedEvent[]',
+        'app_store_subscription_change_job_updated_event' => '\Flipdish\\Client\Models\AppStoreSubscriptionChangeJobUpdatedEvent[]',
         'catalog_item_created_event' => '\Flipdish\\Client\Models\CatalogItemCreatedEvent[]',
         'catalog_item_updated_event' => '\Flipdish\\Client\Models\CatalogItemUpdatedEvent[]',
         'catalog_item_archived_event' => '\Flipdish\\Client\Models\CatalogItemArchivedEvent[]',
@@ -323,6 +324,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'app_store_config_created_event' => null,
         'app_store_config_updated_event' => null,
         'app_store_config_deleted_event' => null,
+        'app_store_subscription_change_job_updated_event' => null,
         'catalog_item_created_event' => null,
         'catalog_item_updated_event' => null,
         'catalog_item_archived_event' => null,
@@ -488,6 +490,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'app_store_config_created_event' => 'AppStoreConfigCreatedEvent',
         'app_store_config_updated_event' => 'AppStoreConfigUpdatedEvent',
         'app_store_config_deleted_event' => 'AppStoreConfigDeletedEvent',
+        'app_store_subscription_change_job_updated_event' => 'AppStoreSubscriptionChangeJobUpdatedEvent',
         'catalog_item_created_event' => 'CatalogItemCreatedEvent',
         'catalog_item_updated_event' => 'CatalogItemUpdatedEvent',
         'catalog_item_archived_event' => 'CatalogItemArchivedEvent',
@@ -632,6 +635,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'app_store_config_created_event' => 'setAppStoreConfigCreatedEvent',
         'app_store_config_updated_event' => 'setAppStoreConfigUpdatedEvent',
         'app_store_config_deleted_event' => 'setAppStoreConfigDeletedEvent',
+        'app_store_subscription_change_job_updated_event' => 'setAppStoreSubscriptionChangeJobUpdatedEvent',
         'catalog_item_created_event' => 'setCatalogItemCreatedEvent',
         'catalog_item_updated_event' => 'setCatalogItemUpdatedEvent',
         'catalog_item_archived_event' => 'setCatalogItemArchivedEvent',
@@ -776,6 +780,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'app_store_config_created_event' => 'getAppStoreConfigCreatedEvent',
         'app_store_config_updated_event' => 'getAppStoreConfigUpdatedEvent',
         'app_store_config_deleted_event' => 'getAppStoreConfigDeletedEvent',
+        'app_store_subscription_change_job_updated_event' => 'getAppStoreSubscriptionChangeJobUpdatedEvent',
         'catalog_item_created_event' => 'getCatalogItemCreatedEvent',
         'catalog_item_updated_event' => 'getCatalogItemUpdatedEvent',
         'catalog_item_archived_event' => 'getCatalogItemArchivedEvent',
@@ -974,6 +979,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         $this->container['app_store_config_created_event'] = isset($data['app_store_config_created_event']) ? $data['app_store_config_created_event'] : null;
         $this->container['app_store_config_updated_event'] = isset($data['app_store_config_updated_event']) ? $data['app_store_config_updated_event'] : null;
         $this->container['app_store_config_deleted_event'] = isset($data['app_store_config_deleted_event']) ? $data['app_store_config_deleted_event'] : null;
+        $this->container['app_store_subscription_change_job_updated_event'] = isset($data['app_store_subscription_change_job_updated_event']) ? $data['app_store_subscription_change_job_updated_event'] : null;
         $this->container['catalog_item_created_event'] = isset($data['catalog_item_created_event']) ? $data['catalog_item_created_event'] : null;
         $this->container['catalog_item_updated_event'] = isset($data['catalog_item_updated_event']) ? $data['catalog_item_updated_event'] : null;
         $this->container['catalog_item_archived_event'] = isset($data['catalog_item_archived_event']) ? $data['catalog_item_archived_event'] : null;
@@ -3915,6 +3921,30 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     public function setAppStoreConfigDeletedEvent($app_store_config_deleted_event)
     {
         $this->container['app_store_config_deleted_event'] = $app_store_config_deleted_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets app_store_subscription_change_job_updated_event
+     *
+     * @return \Flipdish\\Client\Models\AppStoreSubscriptionChangeJobUpdatedEvent[]
+     */
+    public function getAppStoreSubscriptionChangeJobUpdatedEvent()
+    {
+        return $this->container['app_store_subscription_change_job_updated_event'];
+    }
+
+    /**
+     * Sets app_store_subscription_change_job_updated_event
+     *
+     * @param \Flipdish\\Client\Models\AppStoreSubscriptionChangeJobUpdatedEvent[] $app_store_subscription_change_job_updated_event App Store Subscription Change Job Updated
+     *
+     * @return $this
+     */
+    public function setAppStoreSubscriptionChangeJobUpdatedEvent($app_store_subscription_change_job_updated_event)
+    {
+        $this->container['app_store_subscription_change_job_updated_event'] = $app_store_subscription_change_job_updated_event;
 
         return $this;
     }

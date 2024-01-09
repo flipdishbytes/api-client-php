@@ -1,6 +1,6 @@
 <?php
 /**
- * AppStoreAppConfigurationsWithSubscriptionsTest
+ * SubscriptionProductPriceInfoTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * AppStoreAppConfigurationsWithSubscriptionsTest Class Doc Comment
+ * SubscriptionProductPriceInfoTest Class Doc Comment
  *
  * @category    Class
- * @description App store configurations for a given AppId
+ * @description Price info
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AppStoreAppConfigurationsWithSubscriptionsTest extends \PHPUnit_Framework_TestCase
+class SubscriptionProductPriceInfoTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,30 +70,30 @@ class AppStoreAppConfigurationsWithSubscriptionsTest extends \PHPUnit_Framework_
     }
 
     /**
-     * Test "AppStoreAppConfigurationsWithSubscriptions"
+     * Test "SubscriptionProductPriceInfo"
      */
-    public function testAppStoreAppConfigurationsWithSubscriptions()
+    public function testSubscriptionProductPriceInfo()
     {
     }
 
     /**
-     * Test attribute "subscription"
+     * Test attribute "amount"
      */
-    public function testPropertySubscription()
+    public function testPropertyAmount()
     {
     }
 
     /**
-     * Test attribute "configurations"
+     * Test attribute "currency"
      */
-    public function testPropertyConfigurations()
+    public function testPropertyCurrency()
     {
     }
 
     /**
-     * Test attribute "prices"
+     * Test attribute "scope"
      */
-    public function testPropertyPrices()
+    public function testPropertyScope()
     {
     }
 }
