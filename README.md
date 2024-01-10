@@ -574,6 +574,7 @@ Class | Method | HTTP request | Description
 *VouchersApi* | [**getVoucherStatsById**](docs/Api/VouchersApi.md#getvoucherstatsbyid) | **GET** /api/v1.0/vouchers/stats/{voucherId} | 
 *VouchersApi* | [**getVouchers**](docs/Api/VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | 
 *VouchersApi* | [**updateVoucher**](docs/Api/VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | 
+*VouchersApi* | [**updateVoucherUsage**](docs/Api/VouchersApi.md#updatevoucherusage) | **POST** /api/v1.0/{appId}/vouchers/{voucherId}/usage | 
 *WebhooksApi* | [**createWebhookSubscription**](docs/Api/WebhooksApi.md#createwebhooksubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | 
 *WebhooksApi* | [**createWebhookSubscriptionEventNames**](docs/Api/WebhooksApi.md#createwebhooksubscriptioneventnames) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | 
 *WebhooksApi* | [**deleteWebhookSubscription**](docs/Api/WebhooksApi.md#deletewebhooksubscription) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | 
@@ -1343,6 +1344,7 @@ Class | Method | HTTP request | Description
  - [UpdateStorePayGreenConfigurationRequest](docs/Model/UpdateStorePayGreenConfigurationRequest.md)
  - [UpdateTipConfiguration](docs/Model/UpdateTipConfiguration.md)
  - [UpdateVoucher](docs/Model/UpdateVoucher.md)
+ - [UpdateVoucherUsage](docs/Model/UpdateVoucherUsage.md)
  - [UserAnsweredSignupQuestionsEvent](docs/Model/UserAnsweredSignupQuestionsEvent.md)
  - [UserCreatedEvent](docs/Model/UserCreatedEvent.md)
  - [UserDeletedEvent](docs/Model/UserDeletedEvent.md)
