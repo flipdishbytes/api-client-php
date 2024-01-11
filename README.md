@@ -132,10 +132,10 @@ Class | Method | HTTP request | Description
 *AppStoreDeveloperApi* | [**updateAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
 *AppStoreDeveloperApi* | [**updateExternalProduct**](docs/Api/AppStoreDeveloperApi.md#updateexternalproduct) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product | 
 *AppStoreDeveloperApi* | [**uploadAppStoreAppLogo**](docs/Api/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
-*AppStoreSubscriptionsApi* | [**createAppStoreSubscription**](docs/Api/AppStoreSubscriptionsApi.md#createappstoresubscription) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
-*AppStoreSubscriptionsApi* | [**createAppStoreSubscription_0**](docs/Api/AppStoreSubscriptionsApi.md#createappstoresubscription_0) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
+*AppStoreSubscriptionsApi* | [**createAppStoreSubscription**](docs/Api/AppStoreSubscriptionsApi.md#createappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
 *AppStoreSubscriptionsApi* | [**deleteAppSubscription**](docs/Api/AppStoreSubscriptionsApi.md#deleteappsubscription) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
 *AppStoreSubscriptionsApi* | [**getAppStoreSubscriptionChangeJobStatus**](docs/Api/AppStoreSubscriptionsApi.md#getappstoresubscriptionchangejobstatus) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/jobs/{jobId} | 
+*AppStoreSubscriptionsApi* | [**getAppStoreSubscriptions**](docs/Api/AppStoreSubscriptionsApi.md#getappstoresubscriptions) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
 *AppStoreSubscriptionsApi* | [**updateAppStoreSubscription**](docs/Api/AppStoreSubscriptionsApi.md#updateappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
 *AppsApi* | [**getApp**](docs/Api/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 *AppsApi* | [**getAppHostnameStatus**](docs/Api/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 

@@ -82,16 +82,6 @@ class AppStoreSubscriptionsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createAppStoreSubscription_0
-     *
-     * .
-     *
-     */
-    public function testCreateAppStoreSubscription0()
-    {
-    }
-
-    /**
      * Test case for deleteAppSubscription
      *
      * .
@@ -108,6 +98,16 @@ class AppStoreSubscriptionsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testGetAppStoreSubscriptionChangeJobStatus()
+    {
+    }
+
+    /**
+     * Test case for getAppStoreSubscriptions
+     *
+     * .
+     *
+     */
+    public function testGetAppStoreSubscriptions()
     {
     }
 

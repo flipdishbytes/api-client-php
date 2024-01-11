@@ -58,7 +58,8 @@ class SubmitOrderRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'payment_token' => 'string',
-        'phone_number' => 'string'
+        'phone_number' => 'string',
+        'chef_note' => 'string'
     ];
 
     /**
@@ -68,7 +69,8 @@ class SubmitOrderRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'payment_token' => null,
-        'phone_number' => null
+        'phone_number' => null,
+        'chef_note' => null
     ];
 
     /**
@@ -99,7 +101,8 @@ class SubmitOrderRequest implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'payment_token' => 'PaymentToken',
-        'phone_number' => 'PhoneNumber'
+        'phone_number' => 'PhoneNumber',
+        'chef_note' => 'ChefNote'
     ];
 
     /**
@@ -109,7 +112,8 @@ class SubmitOrderRequest implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'payment_token' => 'setPaymentToken',
-        'phone_number' => 'setPhoneNumber'
+        'phone_number' => 'setPhoneNumber',
+        'chef_note' => 'setChefNote'
     ];
 
     /**
@@ -119,7 +123,8 @@ class SubmitOrderRequest implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'payment_token' => 'getPaymentToken',
-        'phone_number' => 'getPhoneNumber'
+        'phone_number' => 'getPhoneNumber',
+        'chef_note' => 'getChefNote'
     ];
 
     /**
@@ -184,6 +189,7 @@ class SubmitOrderRequest implements ModelInterface, ArrayAccess
     {
         $this->container['payment_token'] = isset($data['payment_token']) ? $data['payment_token'] : null;
         $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
+        $this->container['chef_note'] = isset($data['chef_note']) ? $data['chef_note'] : null;
     }
 
     /**
@@ -254,6 +260,30 @@ class SubmitOrderRequest implements ModelInterface, ArrayAccess
     public function setPhoneNumber($phone_number)
     {
         $this->container['phone_number'] = $phone_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets chef_note
+     *
+     * @return string
+     */
+    public function getChefNote()
+    {
+        return $this->container['chef_note'];
+    }
+
+    /**
+     * Sets chef_note
+     *
+     * @param string $chef_note chef_note
+     *
+     * @return $this
+     */
+    public function setChefNote($chef_note)
+    {
+        $this->container['chef_note'] = $chef_note;
 
         return $this;
     }

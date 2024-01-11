@@ -59,7 +59,8 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'total_subscriptions' => 'int',
-        'used_subscriptions' => 'int'
+        'used_subscriptions' => 'int',
+        'subscription_account_is_setup_for_client' => 'bool'
     ];
 
     /**
@@ -69,7 +70,8 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'total_subscriptions' => 'int32',
-        'used_subscriptions' => 'int32'
+        'used_subscriptions' => 'int32',
+        'subscription_account_is_setup_for_client' => null
     ];
 
     /**
@@ -100,7 +102,8 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'total_subscriptions' => 'TotalSubscriptions',
-        'used_subscriptions' => 'UsedSubscriptions'
+        'used_subscriptions' => 'UsedSubscriptions',
+        'subscription_account_is_setup_for_client' => 'SubscriptionAccountIsSetupForClient'
     ];
 
     /**
@@ -110,7 +113,8 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'total_subscriptions' => 'setTotalSubscriptions',
-        'used_subscriptions' => 'setUsedSubscriptions'
+        'used_subscriptions' => 'setUsedSubscriptions',
+        'subscription_account_is_setup_for_client' => 'setSubscriptionAccountIsSetupForClient'
     ];
 
     /**
@@ -120,7 +124,8 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'total_subscriptions' => 'getTotalSubscriptions',
-        'used_subscriptions' => 'getUsedSubscriptions'
+        'used_subscriptions' => 'getUsedSubscriptions',
+        'subscription_account_is_setup_for_client' => 'getSubscriptionAccountIsSetupForClient'
     ];
 
     /**
@@ -185,6 +190,7 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
     {
         $this->container['total_subscriptions'] = isset($data['total_subscriptions']) ? $data['total_subscriptions'] : null;
         $this->container['used_subscriptions'] = isset($data['used_subscriptions']) ? $data['used_subscriptions'] : null;
+        $this->container['subscription_account_is_setup_for_client'] = isset($data['subscription_account_is_setup_for_client']) ? $data['subscription_account_is_setup_for_client'] : null;
     }
 
     /**
@@ -255,6 +261,30 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
     public function setUsedSubscriptions($used_subscriptions)
     {
         $this->container['used_subscriptions'] = $used_subscriptions;
+
+        return $this;
+    }
+
+    /**
+     * Gets subscription_account_is_setup_for_client
+     *
+     * @return bool
+     */
+    public function getSubscriptionAccountIsSetupForClient()
+    {
+        return $this->container['subscription_account_is_setup_for_client'];
+    }
+
+    /**
+     * Sets subscription_account_is_setup_for_client
+     *
+     * @param bool $subscription_account_is_setup_for_client Is client setup for subscriptions
+     *
+     * @return $this
+     */
+    public function setSubscriptionAccountIsSetupForClient($subscription_account_is_setup_for_client)
+    {
+        $this->container['subscription_account_is_setup_for_client'] = $subscription_account_is_setup_for_client;
 
         return $this;
     }

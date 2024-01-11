@@ -89,4 +89,11 @@ class SubmitOrderRequestTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPhoneNumber()
     {
     }
+
+    /**
+     * Test attribute "chef_note"
+     */
+    public function testPropertyChefNote()
+    {
+    }
 }
