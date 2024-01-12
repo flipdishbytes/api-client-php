@@ -96,4 +96,11 @@ class AppStoreAppSubscriptionSummaryTest extends \PHPUnit_Framework_TestCase
     public function testPropertySubscriptionAccountIsSetupForClient()
     {
     }
+
+    /**
+     * Test attribute "subscription_accounts"
+     */
+    public function testPropertySubscriptionAccounts()
+    {
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * AddAppStoreSubscriptionRequestTest
+ * AppStoreAppSubscriptionAccountTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * AddAppStoreSubscriptionRequestTest Class Doc Comment
+ * AppStoreAppSubscriptionAccountTest Class Doc Comment
  *
  * @category    Class
- * @description Add subscription
+ * @description Subscription account
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AddAppStoreSubscriptionRequestTest extends \PHPUnit_Framework_TestCase
+class AppStoreAppSubscriptionAccountTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,23 +70,16 @@ class AddAppStoreSubscriptionRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AddAppStoreSubscriptionRequest"
+     * Test "AppStoreAppSubscriptionAccount"
      */
-    public function testAddAppStoreSubscriptionRequest()
+    public function testAppStoreAppSubscriptionAccount()
     {
     }
 
     /**
-     * Test attribute "store_ids"
+     * Test attribute "email"
      */
-    public function testPropertyStoreIds()
-    {
-    }
-
-    /**
-     * Test attribute "subscription_account_email"
-     */
-    public function testPropertySubscriptionAccountEmail()
+    public function testPropertyEmail()
     {
     }
 }

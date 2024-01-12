@@ -1,6 +1,6 @@
 <?php
 /**
- * AddAppStoreSubscriptionRequest
+ * AppStoreAppSubscriptionAccount
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * AddAppStoreSubscriptionRequest Class Doc Comment
+ * AppStoreAppSubscriptionAccount Class Doc Comment
  *
  * @category Class
- * @description Add subscription
+ * @description Subscription account
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AddAppStoreSubscriptionRequest implements ModelInterface, ArrayAccess
+class AppStoreAppSubscriptionAccount implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class AddAppStoreSubscriptionRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'AddAppStoreSubscriptionRequest';
+    protected static $swaggerModelName = 'AppStoreAppSubscriptionAccount';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,7 @@ class AddAppStoreSubscriptionRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'store_ids' => 'int[]',
-        'subscription_account_email' => 'string'
+        'email' => 'string'
     ];
 
     /**
@@ -68,8 +67,7 @@ class AddAppStoreSubscriptionRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'store_ids' => 'int32',
-        'subscription_account_email' => null
+        'email' => null
     ];
 
     /**
@@ -99,8 +97,7 @@ class AddAppStoreSubscriptionRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'store_ids' => 'StoreIds',
-        'subscription_account_email' => 'SubscriptionAccountEmail'
+        'email' => 'Email'
     ];
 
     /**
@@ -109,8 +106,7 @@ class AddAppStoreSubscriptionRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'store_ids' => 'setStoreIds',
-        'subscription_account_email' => 'setSubscriptionAccountEmail'
+        'email' => 'setEmail'
     ];
 
     /**
@@ -119,8 +115,7 @@ class AddAppStoreSubscriptionRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'store_ids' => 'getStoreIds',
-        'subscription_account_email' => 'getSubscriptionAccountEmail'
+        'email' => 'getEmail'
     ];
 
     /**
@@ -183,8 +178,7 @@ class AddAppStoreSubscriptionRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
-        $this->container['subscription_account_email'] = isset($data['subscription_account_email']) ? $data['subscription_account_email'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
     }
 
     /**
@@ -212,49 +206,25 @@ class AddAppStoreSubscriptionRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets store_ids
-     *
-     * @return int[]
-     */
-    public function getStoreIds()
-    {
-        return $this->container['store_ids'];
-    }
-
-    /**
-     * Sets store_ids
-     *
-     * @param int[] $store_ids Store ids to update
-     *
-     * @return $this
-     */
-    public function setStoreIds($store_ids)
-    {
-        $this->container['store_ids'] = $store_ids;
-
-        return $this;
-    }
-
-    /**
-     * Gets subscription_account_email
+     * Gets email
      *
      * @return string
      */
-    public function getSubscriptionAccountEmail()
+    public function getEmail()
     {
-        return $this->container['subscription_account_email'];
+        return $this->container['email'];
     }
 
     /**
-     * Sets subscription_account_email
+     * Sets email
      *
-     * @param string $subscription_account_email Email (for subscription setup) - optional, only required for admin access
+     * @param string $email Email of the account user
      *
      * @return $this
      */
-    public function setSubscriptionAccountEmail($subscription_account_email)
+    public function setEmail($email)
     {
-        $this->container['subscription_account_email'] = $subscription_account_email;
+        $this->container['email'] = $email;
 
         return $this;
     }

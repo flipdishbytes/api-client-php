@@ -1,10 +1,9 @@
-# AddAppStoreSubscriptionRequest
+# AppStoreAppSubscriptionAccount
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**store_ids** | **int[]** | Store ids to update | [optional] 
-**subscription_account_email** | **string** | Email (for subscription setup) - optional, only required for admin access | [optional] 
+**email** | **string** | Email of the account user | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

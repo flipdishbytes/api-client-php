@@ -60,7 +60,8 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'total_subscriptions' => 'int',
         'used_subscriptions' => 'int',
-        'subscription_account_is_setup_for_client' => 'bool'
+        'subscription_account_is_setup_for_client' => 'bool',
+        'subscription_accounts' => '\Flipdish\\Client\Models\AppStoreAppSubscriptionAccount[]'
     ];
 
     /**
@@ -71,7 +72,8 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'total_subscriptions' => 'int32',
         'used_subscriptions' => 'int32',
-        'subscription_account_is_setup_for_client' => null
+        'subscription_account_is_setup_for_client' => null,
+        'subscription_accounts' => null
     ];
 
     /**
@@ -103,7 +105,8 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'total_subscriptions' => 'TotalSubscriptions',
         'used_subscriptions' => 'UsedSubscriptions',
-        'subscription_account_is_setup_for_client' => 'SubscriptionAccountIsSetupForClient'
+        'subscription_account_is_setup_for_client' => 'SubscriptionAccountIsSetupForClient',
+        'subscription_accounts' => 'SubscriptionAccounts'
     ];
 
     /**
@@ -114,7 +117,8 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
     protected static $setters = [
         'total_subscriptions' => 'setTotalSubscriptions',
         'used_subscriptions' => 'setUsedSubscriptions',
-        'subscription_account_is_setup_for_client' => 'setSubscriptionAccountIsSetupForClient'
+        'subscription_account_is_setup_for_client' => 'setSubscriptionAccountIsSetupForClient',
+        'subscription_accounts' => 'setSubscriptionAccounts'
     ];
 
     /**
@@ -125,7 +129,8 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
     protected static $getters = [
         'total_subscriptions' => 'getTotalSubscriptions',
         'used_subscriptions' => 'getUsedSubscriptions',
-        'subscription_account_is_setup_for_client' => 'getSubscriptionAccountIsSetupForClient'
+        'subscription_account_is_setup_for_client' => 'getSubscriptionAccountIsSetupForClient',
+        'subscription_accounts' => 'getSubscriptionAccounts'
     ];
 
     /**
@@ -191,6 +196,7 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
         $this->container['total_subscriptions'] = isset($data['total_subscriptions']) ? $data['total_subscriptions'] : null;
         $this->container['used_subscriptions'] = isset($data['used_subscriptions']) ? $data['used_subscriptions'] : null;
         $this->container['subscription_account_is_setup_for_client'] = isset($data['subscription_account_is_setup_for_client']) ? $data['subscription_account_is_setup_for_client'] : null;
+        $this->container['subscription_accounts'] = isset($data['subscription_accounts']) ? $data['subscription_accounts'] : null;
     }
 
     /**
@@ -285,6 +291,30 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
     public function setSubscriptionAccountIsSetupForClient($subscription_account_is_setup_for_client)
     {
         $this->container['subscription_account_is_setup_for_client'] = $subscription_account_is_setup_for_client;
+
+        return $this;
+    }
+
+    /**
+     * Gets subscription_accounts
+     *
+     * @return \Flipdish\\Client\Models\AppStoreAppSubscriptionAccount[]
+     */
+    public function getSubscriptionAccounts()
+    {
+        return $this->container['subscription_accounts'];
+    }
+
+    /**
+     * Sets subscription_accounts
+     *
+     * @param \Flipdish\\Client\Models\AppStoreAppSubscriptionAccount[] $subscription_accounts Available accounts for subscriptions (only if requesting user has enough permissions to see the list, otherwise empty list or null)
+     *
+     * @return $this
+     */
+    public function setSubscriptionAccounts($subscription_accounts)
+    {
+        $this->container['subscription_accounts'] = $subscription_accounts;
 
         return $this;
     }
