@@ -77,6 +77,13 @@ class WebsiteVanityUrlUpdatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "event_name"
+     */
+    public function testPropertyEventName()
+    {
+    }
+
+    /**
      * Test attribute "description"
      */
     public function testPropertyDescription()
@@ -94,13 +101,6 @@ class WebsiteVanityUrlUpdatedEventTest extends \PHPUnit_Framework_TestCase
      * Test attribute "vanity_url"
      */
     public function testPropertyVanityUrl()
-    {
-    }
-
-    /**
-     * Test attribute "event_name"
-     */
-    public function testPropertyEventName()
     {
     }
 

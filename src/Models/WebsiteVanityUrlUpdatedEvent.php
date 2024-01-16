@@ -58,10 +58,10 @@ class WebsiteVanityUrlUpdatedEvent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'event_name' => 'string',
         'description' => 'string',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
         'vanity_url' => 'string',
-        'event_name' => 'string',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -75,10 +75,10 @@ class WebsiteVanityUrlUpdatedEvent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'event_name' => null,
         'description' => null,
         'user' => null,
         'vanity_url' => null,
-        'event_name' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -113,10 +113,10 @@ class WebsiteVanityUrlUpdatedEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'event_name' => 'EventName',
         'description' => 'Description',
         'user' => 'User',
         'vanity_url' => 'VanityUrl',
-        'event_name' => 'EventName',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -130,10 +130,10 @@ class WebsiteVanityUrlUpdatedEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'event_name' => 'setEventName',
         'description' => 'setDescription',
         'user' => 'setUser',
         'vanity_url' => 'setVanityUrl',
-        'event_name' => 'setEventName',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -147,10 +147,10 @@ class WebsiteVanityUrlUpdatedEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'event_name' => 'getEventName',
         'description' => 'getDescription',
         'user' => 'getUser',
         'vanity_url' => 'getVanityUrl',
-        'event_name' => 'getEventName',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -218,10 +218,10 @@ class WebsiteVanityUrlUpdatedEvent implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['vanity_url'] = isset($data['vanity_url']) ? $data['vanity_url'] : null;
-        $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -252,6 +252,30 @@ class WebsiteVanityUrlUpdatedEvent implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets event_name
+     *
+     * @return string
+     */
+    public function getEventName()
+    {
+        return $this->container['event_name'];
+    }
+
+    /**
+     * Sets event_name
+     *
+     * @param string $event_name The event name
+     *
+     * @return $this
+     */
+    public function setEventName($event_name)
+    {
+        $this->container['event_name'] = $event_name;
+
+        return $this;
+    }
 
     /**
      * Gets description
@@ -321,30 +345,6 @@ class WebsiteVanityUrlUpdatedEvent implements ModelInterface, ArrayAccess
     public function setVanityUrl($vanity_url)
     {
         $this->container['vanity_url'] = $vanity_url;
-
-        return $this;
-    }
-
-    /**
-     * Gets event_name
-     *
-     * @return string
-     */
-    public function getEventName()
-    {
-        return $this->container['event_name'];
-    }
-
-    /**
-     * Sets event_name
-     *
-     * @param string $event_name The event name
-     *
-     * @return $this
-     */
-    public function setEventName($event_name)
-    {
-        $this->container['event_name'] = $event_name;
 
         return $this;
     }
