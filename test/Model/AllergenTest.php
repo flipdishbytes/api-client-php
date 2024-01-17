@@ -84,13 +84,6 @@ class AllergenTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-    }
-
-    /**
      * Test attribute "localized_name"
      */
     public function testPropertyLocalizedName()

@@ -58,7 +58,6 @@ class Allergen implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'allergen_id' => 'string',
-        'name' => 'string',
         'localized_name' => 'string',
         'icon_url' => 'string'
     ];
@@ -70,7 +69,6 @@ class Allergen implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'allergen_id' => null,
-        'name' => null,
         'localized_name' => null,
         'icon_url' => null
     ];
@@ -103,7 +101,6 @@ class Allergen implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'allergen_id' => 'AllergenId',
-        'name' => 'Name',
         'localized_name' => 'LocalizedName',
         'icon_url' => 'IconUrl'
     ];
@@ -115,7 +112,6 @@ class Allergen implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'allergen_id' => 'setAllergenId',
-        'name' => 'setName',
         'localized_name' => 'setLocalizedName',
         'icon_url' => 'setIconUrl'
     ];
@@ -127,7 +123,6 @@ class Allergen implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'allergen_id' => 'getAllergenId',
-        'name' => 'getName',
         'localized_name' => 'getLocalizedName',
         'icon_url' => 'getIconUrl'
     ];
@@ -193,7 +188,6 @@ class Allergen implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['allergen_id'] = isset($data['allergen_id']) ? $data['allergen_id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['localized_name'] = isset($data['localized_name']) ? $data['localized_name'] : null;
         $this->container['icon_url'] = isset($data['icon_url']) ? $data['icon_url'] : null;
     }
@@ -242,30 +236,6 @@ class Allergen implements ModelInterface, ArrayAccess
     public function setAllergenId($allergen_id)
     {
         $this->container['allergen_id'] = $allergen_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name English Name of the allergen
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
 
         return $this;
     }
