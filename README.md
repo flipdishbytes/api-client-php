@@ -377,6 +377,7 @@ Class | Method | HTTP request | Description
 *MenuZonesApi* | [**updateMenuZone**](docs/Api/MenuZonesApi.md#updatemenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Updates a menu zone.
 *MenuZonesApi* | [**uploadMenuZoneImage**](docs/Api/MenuZonesApi.md#uploadmenuzoneimage) | **POST** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | Uploads an image for a menu zone.
 *MenusApi* | [**createDraftMenuFromExistingMenu**](docs/Api/MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API]Clone a menu, (without attaching stores)
+*MenusApi* | [**createNewMenuAsync**](docs/Api/MenusApi.md#createnewmenuasync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
 *MenusApi* | [**createNewMenuForApp**](docs/Api/MenusApi.md#createnewmenuforapp) | **POST** /api/v1.0/{appId}/menus | Create a new menu. If request body is empty, the system will create a menu with default items.
 *MenusApi* | [**deleteMenu**](docs/Api/MenusApi.md#deletemenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API]Mark a Menu as Deleted
 *MenusApi* | [**deleteMenuImage**](docs/Api/MenusApi.md#deletemenuimage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
