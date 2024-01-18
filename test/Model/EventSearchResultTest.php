@@ -539,6 +539,13 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "telephony_config_updated_event"
+     */
+    public function testPropertyTelephonyConfigUpdatedEvent()
+    {
+    }
+
+    /**
      * Test attribute "loyalty_campaign_created_event"
      */
     public function testPropertyLoyaltyCampaignCreatedEvent()

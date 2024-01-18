@@ -69,6 +69,7 @@ Name | Type | Description | Notes
 **printer_unassigned_from_store_event** | [**\Flipdish\\Client\Models\PrinterUnassignedFromStoreEvent[]**](PrinterUnassignedFromStoreEvent.md) | Printer unassigned from store event | [optional] 
 **phone_call_started_event** | [**\Flipdish\\Client\Models\PhoneCallStartedEvent[]**](PhoneCallStartedEvent.md) | Phone call started event | [optional] 
 **phone_call_ended_event** | [**\Flipdish\\Client\Models\PhoneCallEndedEvent[]**](PhoneCallEndedEvent.md) | Phone call ended event | [optional] 
+**telephony_config_updated_event** | [**\Flipdish\\Client\Models\TelephonyConfigUpdatedEvent[]**](TelephonyConfigUpdatedEvent.md) | Telephony config updated event | [optional] 
 **loyalty_campaign_created_event** | [**\Flipdish\\Client\Models\LoyaltyCampaignCreatedEvent[]**](LoyaltyCampaignCreatedEvent.md) | Loyalty campaign created event | [optional] 
 **loyalty_campaign_deleted_event** | [**\Flipdish\\Client\Models\LoyaltyCampaignDeletedEvent[]**](LoyaltyCampaignDeletedEvent.md) | Loyalty campaign deleted event | [optional] 
 **loyalty_campaign_updated_event** | [**\Flipdish\\Client\Models\LoyaltyCampaignUpdatedEvent[]**](LoyaltyCampaignUpdatedEvent.md) | Loyalty campaign updated event | [optional] 

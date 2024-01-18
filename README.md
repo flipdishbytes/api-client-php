@@ -1320,6 +1320,8 @@ Class | Method | HTTP request | Description
  - [TelemetrySeriesProperty](docs/Model/TelemetrySeriesProperty.md)
  - [TelemetrySeriesQueryParameters](docs/Model/TelemetrySeriesQueryParameters.md)
  - [TelemetrySeriesResult](docs/Model/TelemetrySeriesResult.md)
+ - [TelephonyConfig](docs/Model/TelephonyConfig.md)
+ - [TelephonyConfigUpdatedEvent](docs/Model/TelephonyConfigUpdatedEvent.md)
  - [ThirdPartyFeesDetails](docs/Model/ThirdPartyFeesDetails.md)
  - [TipConfiguration](docs/Model/TipConfiguration.md)
  - [UnRegisterCardReaderRequest](docs/Model/UnRegisterCardReaderRequest.md)
