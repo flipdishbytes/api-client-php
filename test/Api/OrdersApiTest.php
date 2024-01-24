@@ -152,6 +152,16 @@ class OrdersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getOrdersSummaryNew
+     *
+     * .
+     *
+     */
+    public function testGetOrdersSummaryNew()
+    {
+    }
+
+    /**
      * Test case for getReadyToProcess
      *
      * .

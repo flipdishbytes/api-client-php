@@ -2189,14 +2189,15 @@ class OrdersApi
      * @param  int[] $order_ids order_ids (optional)
      * @param  \DateTime $from from (optional)
      * @param  \DateTime $to to (optional)
+     * @param  bool $log_sql log_sql (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiPaginationResultOrderSummary
      */
-    public function getOrdersSummary($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null)
+    public function getOrdersSummary($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null, $log_sql = null)
     {
-        list($response) = $this->getOrdersSummaryWithHttpInfo($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to);
+        list($response) = $this->getOrdersSummaryWithHttpInfo($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to, $log_sql);
         return $response;
     }
 
@@ -2214,15 +2215,16 @@ class OrdersApi
      * @param  int[] $order_ids (optional)
      * @param  \DateTime $from (optional)
      * @param  \DateTime $to (optional)
+     * @param  bool $log_sql (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiPaginationResultOrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrdersSummaryWithHttpInfo($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null)
+    public function getOrdersSummaryWithHttpInfo($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null, $log_sql = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultOrderSummary';
-        $request = $this->getOrdersSummaryRequest($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to);
+        $request = $this->getOrdersSummaryRequest($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to, $log_sql);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2323,13 +2325,14 @@ class OrdersApi
      * @param  int[] $order_ids (optional)
      * @param  \DateTime $from (optional)
      * @param  \DateTime $to (optional)
+     * @param  bool $log_sql (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrdersSummaryAsync($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null)
+    public function getOrdersSummaryAsync($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null, $log_sql = null)
     {
-        return $this->getOrdersSummaryAsyncWithHttpInfo($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to)
+        return $this->getOrdersSummaryAsyncWithHttpInfo($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to, $log_sql)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2353,14 +2356,15 @@ class OrdersApi
      * @param  int[] $order_ids (optional)
      * @param  \DateTime $from (optional)
      * @param  \DateTime $to (optional)
+     * @param  bool $log_sql (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrdersSummaryAsyncWithHttpInfo($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null)
+    public function getOrdersSummaryAsyncWithHttpInfo($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null, $log_sql = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultOrderSummary';
-        $request = $this->getOrdersSummaryRequest($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to);
+        $request = $this->getOrdersSummaryRequest($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to, $log_sql);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2413,11 +2417,12 @@ class OrdersApi
      * @param  int[] $order_ids (optional)
      * @param  \DateTime $from (optional)
      * @param  \DateTime $to (optional)
+     * @param  bool $log_sql (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOrdersSummaryRequest($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null)
+    protected function getOrdersSummaryRequest($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null, $log_sql = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -2484,6 +2489,414 @@ class OrdersApi
         // query params
         if ($to !== null) {
             $queryParams['to'] = ObjectSerializer::toQueryValue($to);
+        }
+        // query params
+        if ($log_sql !== null) {
+            $queryParams['logSql'] = ObjectSerializer::toQueryValue($log_sql);
+        }
+
+        // path params
+        if ($app_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'appId' . '}',
+                ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getOrdersSummaryNew
+     *
+     * @param  string $app_id app_id (required)
+     * @param  string $search_query search_query (optional)
+     * @param  int[] $physical_restaurant_id physical_restaurant_id (optional)
+     * @param  string[] $state state (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
+     * @param  bool $order_by_requested_for_time order_by_requested_for_time (optional)
+     * @param  string[] $channels channels (optional)
+     * @param  int[] $order_ids order_ids (optional)
+     * @param  \DateTime $from from (optional)
+     * @param  \DateTime $to to (optional)
+     * @param  bool $log_sql log_sql (optional)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiPaginationResultOrderSummary
+     */
+    public function getOrdersSummaryNew($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null, $log_sql = null)
+    {
+        list($response) = $this->getOrdersSummaryNewWithHttpInfo($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to, $log_sql);
+        return $response;
+    }
+
+    /**
+     * Operation getOrdersSummaryNewWithHttpInfo
+     *
+     * @param  string $app_id (required)
+     * @param  string $search_query (optional)
+     * @param  int[] $physical_restaurant_id (optional)
+     * @param  string[] $state (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  bool $order_by_requested_for_time (optional)
+     * @param  string[] $channels (optional)
+     * @param  int[] $order_ids (optional)
+     * @param  \DateTime $from (optional)
+     * @param  \DateTime $to (optional)
+     * @param  bool $log_sql (optional)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiPaginationResultOrderSummary, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getOrdersSummaryNewWithHttpInfo($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null, $log_sql = null)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultOrderSummary';
+        $request = $this->getOrdersSummaryNewRequest($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to, $log_sql);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiPaginationResultOrderSummary',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getOrdersSummaryNewAsync
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     * @param  string $search_query (optional)
+     * @param  int[] $physical_restaurant_id (optional)
+     * @param  string[] $state (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  bool $order_by_requested_for_time (optional)
+     * @param  string[] $channels (optional)
+     * @param  int[] $order_ids (optional)
+     * @param  \DateTime $from (optional)
+     * @param  \DateTime $to (optional)
+     * @param  bool $log_sql (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getOrdersSummaryNewAsync($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null, $log_sql = null)
+    {
+        return $this->getOrdersSummaryNewAsyncWithHttpInfo($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to, $log_sql)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getOrdersSummaryNewAsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  string $app_id (required)
+     * @param  string $search_query (optional)
+     * @param  int[] $physical_restaurant_id (optional)
+     * @param  string[] $state (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  bool $order_by_requested_for_time (optional)
+     * @param  string[] $channels (optional)
+     * @param  int[] $order_ids (optional)
+     * @param  \DateTime $from (optional)
+     * @param  \DateTime $to (optional)
+     * @param  bool $log_sql (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getOrdersSummaryNewAsyncWithHttpInfo($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null, $log_sql = null)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultOrderSummary';
+        $request = $this->getOrdersSummaryNewRequest($app_id, $search_query, $physical_restaurant_id, $state, $page, $limit, $order_by_requested_for_time, $channels, $order_ids, $from, $to, $log_sql);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getOrdersSummaryNew'
+     *
+     * @param  string $app_id (required)
+     * @param  string $search_query (optional)
+     * @param  int[] $physical_restaurant_id (optional)
+     * @param  string[] $state (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
+     * @param  bool $order_by_requested_for_time (optional)
+     * @param  string[] $channels (optional)
+     * @param  int[] $order_ids (optional)
+     * @param  \DateTime $from (optional)
+     * @param  \DateTime $to (optional)
+     * @param  bool $log_sql (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getOrdersSummaryNewRequest($app_id, $search_query = null, $physical_restaurant_id = null, $state = null, $page = null, $limit = null, $order_by_requested_for_time = null, $channels = null, $order_ids = null, $from = null, $to = null, $log_sql = null)
+    {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling getOrdersSummaryNew'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/{appId}/orders/summariesNew';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($search_query !== null) {
+            $queryParams['searchQuery'] = ObjectSerializer::toQueryValue($search_query);
+        }
+        // query params
+        if (is_array($physical_restaurant_id)) {
+            $queryParams['physicalRestaurantId'] = $physical_restaurant_id;
+        } else
+        if ($physical_restaurant_id !== null) {
+            $queryParams['physicalRestaurantId'] = ObjectSerializer::toQueryValue($physical_restaurant_id);
+        }
+        // query params
+        if (is_array($state)) {
+            $queryParams['state'] = $state;
+        } else
+        if ($state !== null) {
+            $queryParams['state'] = ObjectSerializer::toQueryValue($state);
+        }
+        // query params
+        if ($page !== null) {
+            $queryParams['page'] = ObjectSerializer::toQueryValue($page);
+        }
+        // query params
+        if ($limit !== null) {
+            $queryParams['limit'] = ObjectSerializer::toQueryValue($limit);
+        }
+        // query params
+        if ($order_by_requested_for_time !== null) {
+            $queryParams['orderByRequestedForTime'] = ObjectSerializer::toQueryValue($order_by_requested_for_time);
+        }
+        // query params
+        if (is_array($channels)) {
+            $queryParams['channels'] = $channels;
+        } else
+        if ($channels !== null) {
+            $queryParams['channels'] = ObjectSerializer::toQueryValue($channels);
+        }
+        // query params
+        if (is_array($order_ids)) {
+            $queryParams['orderIds'] = $order_ids;
+        } else
+        if ($order_ids !== null) {
+            $queryParams['orderIds'] = ObjectSerializer::toQueryValue($order_ids);
+        }
+        // query params
+        if ($from !== null) {
+            $queryParams['from'] = ObjectSerializer::toQueryValue($from);
+        }
+        // query params
+        if ($to !== null) {
+            $queryParams['to'] = ObjectSerializer::toQueryValue($to);
+        }
+        // query params
+        if ($log_sql !== null) {
+            $queryParams['logSql'] = ObjectSerializer::toQueryValue($log_sql);
         }
 
         // path params
