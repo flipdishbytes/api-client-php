@@ -322,6 +322,13 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "menu_async_creation_completed_event"
+     */
+    public function testPropertyMenuAsyncCreationCompletedEvent()
+    {
+    }
+
+    /**
      * Test attribute "menu_updated_event"
      */
     public function testPropertyMenuUpdatedEvent()

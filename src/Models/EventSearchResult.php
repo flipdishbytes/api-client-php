@@ -93,6 +93,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'store_logo_updated_event' => '\Flipdish\\Client\Models\StoreLogoUpdatedEvent[]',
         'store_logo_deleted_event' => '\Flipdish\\Client\Models\StoreLogoDeletedEvent[]',
         'menu_created_event' => '\Flipdish\\Client\Models\MenuCreatedEvent[]',
+        'menu_async_creation_completed_event' => '\Flipdish\\Client\Models\MenuAsyncCreationCompletedEvent[]',
         'menu_updated_event' => '\Flipdish\\Client\Models\MenuUpdatedEvent[]',
         'menu_uploaded_event' => '\Flipdish\\Client\Models\MenuUploadedEvent[]',
         'menu_bulk_edit_event' => '\Flipdish\\Client\Models\MenuBulkEditEvent[]',
@@ -239,6 +240,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'store_logo_updated_event' => null,
         'store_logo_deleted_event' => null,
         'menu_created_event' => null,
+        'menu_async_creation_completed_event' => null,
         'menu_updated_event' => null,
         'menu_uploaded_event' => null,
         'menu_bulk_edit_event' => null,
@@ -406,6 +408,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'store_logo_updated_event' => 'StoreLogoUpdatedEvent',
         'store_logo_deleted_event' => 'StoreLogoDeletedEvent',
         'menu_created_event' => 'MenuCreatedEvent',
+        'menu_async_creation_completed_event' => 'MenuAsyncCreationCompletedEvent',
         'menu_updated_event' => 'MenuUpdatedEvent',
         'menu_uploaded_event' => 'MenuUploadedEvent',
         'menu_bulk_edit_event' => 'MenuBulkEditEvent',
@@ -552,6 +555,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'store_logo_updated_event' => 'setStoreLogoUpdatedEvent',
         'store_logo_deleted_event' => 'setStoreLogoDeletedEvent',
         'menu_created_event' => 'setMenuCreatedEvent',
+        'menu_async_creation_completed_event' => 'setMenuAsyncCreationCompletedEvent',
         'menu_updated_event' => 'setMenuUpdatedEvent',
         'menu_uploaded_event' => 'setMenuUploadedEvent',
         'menu_bulk_edit_event' => 'setMenuBulkEditEvent',
@@ -698,6 +702,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'store_logo_updated_event' => 'getStoreLogoUpdatedEvent',
         'store_logo_deleted_event' => 'getStoreLogoDeletedEvent',
         'menu_created_event' => 'getMenuCreatedEvent',
+        'menu_async_creation_completed_event' => 'getMenuAsyncCreationCompletedEvent',
         'menu_updated_event' => 'getMenuUpdatedEvent',
         'menu_uploaded_event' => 'getMenuUploadedEvent',
         'menu_bulk_edit_event' => 'getMenuBulkEditEvent',
@@ -898,6 +903,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         $this->container['store_logo_updated_event'] = isset($data['store_logo_updated_event']) ? $data['store_logo_updated_event'] : null;
         $this->container['store_logo_deleted_event'] = isset($data['store_logo_deleted_event']) ? $data['store_logo_deleted_event'] : null;
         $this->container['menu_created_event'] = isset($data['menu_created_event']) ? $data['menu_created_event'] : null;
+        $this->container['menu_async_creation_completed_event'] = isset($data['menu_async_creation_completed_event']) ? $data['menu_async_creation_completed_event'] : null;
         $this->container['menu_updated_event'] = isset($data['menu_updated_event']) ? $data['menu_updated_event'] : null;
         $this->container['menu_uploaded_event'] = isset($data['menu_uploaded_event']) ? $data['menu_uploaded_event'] : null;
         $this->container['menu_bulk_edit_event'] = isset($data['menu_bulk_edit_event']) ? $data['menu_bulk_edit_event'] : null;
@@ -1863,6 +1869,30 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     public function setMenuCreatedEvent($menu_created_event)
     {
         $this->container['menu_created_event'] = $menu_created_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets menu_async_creation_completed_event
+     *
+     * @return \Flipdish\\Client\Models\MenuAsyncCreationCompletedEvent[]
+     */
+    public function getMenuAsyncCreationCompletedEvent()
+    {
+        return $this->container['menu_async_creation_completed_event'];
+    }
+
+    /**
+     * Sets menu_async_creation_completed_event
+     *
+     * @param \Flipdish\\Client\Models\MenuAsyncCreationCompletedEvent[] $menu_async_creation_completed_event Menu async creation completed events
+     *
+     * @return $this
+     */
+    public function setMenuAsyncCreationCompletedEvent($menu_async_creation_completed_event)
+    {
+        $this->container['menu_async_creation_completed_event'] = $menu_async_creation_completed_event;
 
         return $this;
     }

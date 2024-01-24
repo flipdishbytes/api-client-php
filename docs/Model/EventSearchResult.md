@@ -38,6 +38,7 @@ Name | Type | Description | Notes
 **store_logo_updated_event** | [**\Flipdish\\Client\Models\StoreLogoUpdatedEvent[]**](StoreLogoUpdatedEvent.md) | Store logo updated events | [optional] 
 **store_logo_deleted_event** | [**\Flipdish\\Client\Models\StoreLogoDeletedEvent[]**](StoreLogoDeletedEvent.md) | Store logo deleted events | [optional] 
 **menu_created_event** | [**\Flipdish\\Client\Models\MenuCreatedEvent[]**](MenuCreatedEvent.md) | Menu created events | [optional] 
+**menu_async_creation_completed_event** | [**\Flipdish\\Client\Models\MenuAsyncCreationCompletedEvent[]**](MenuAsyncCreationCompletedEvent.md) | Menu async creation completed events | [optional] 
 **menu_updated_event** | [**\Flipdish\\Client\Models\MenuUpdatedEvent[]**](MenuUpdatedEvent.md) | Menu updated events | [optional] 
 **menu_uploaded_event** | [**\Flipdish\\Client\Models\MenuUploadedEvent[]**](MenuUploadedEvent.md) | Menu uploaded events | [optional] 
 **menu_bulk_edit_event** | [**\Flipdish\\Client\Models\MenuBulkEditEvent[]**](MenuBulkEditEvent.md) | Menu bulk events | [optional] 
