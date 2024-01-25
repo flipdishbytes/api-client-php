@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **requested_delivery_or_pickup_time_utc** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **tip_amount** | **double** |  | [optional] 
 **delivery_location_id** | **int** |  | [optional] 
+**voucher_code** | **string** |  | [optional] 
 **order_item_vms** | [**\Flipdish\\Client\Models\OrderItemDm[]**](OrderItemDm.md) |  | [optional] 
 **virtual_restaurant_id** | **int** |  | [optional] 
 **physical_restaurant_id** | **int** |  | [optional] 

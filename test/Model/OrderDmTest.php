@@ -105,6 +105,13 @@ class OrderDmTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "voucher_code"
+     */
+    public function testPropertyVoucherCode()
+    {
+    }
+
+    /**
      * Test attribute "order_item_vms"
      */
     public function testPropertyOrderItemVms()

@@ -61,6 +61,7 @@ class OrderDm implements ModelInterface, ArrayAccess
         'requested_delivery_or_pickup_time_utc' => '\DateTime',
         'tip_amount' => 'double',
         'delivery_location_id' => 'int',
+        'voucher_code' => 'string',
         'order_item_vms' => '\Flipdish\\Client\Models\OrderItemDm[]',
         'virtual_restaurant_id' => 'int',
         'physical_restaurant_id' => 'int',
@@ -85,6 +86,7 @@ class OrderDm implements ModelInterface, ArrayAccess
         'requested_delivery_or_pickup_time_utc' => 'date-time',
         'tip_amount' => 'double',
         'delivery_location_id' => 'int32',
+        'voucher_code' => null,
         'order_item_vms' => null,
         'virtual_restaurant_id' => 'int32',
         'physical_restaurant_id' => 'int32',
@@ -130,6 +132,7 @@ class OrderDm implements ModelInterface, ArrayAccess
         'requested_delivery_or_pickup_time_utc' => 'RequestedDeliveryOrPickupTimeUtc',
         'tip_amount' => 'TipAmount',
         'delivery_location_id' => 'DeliveryLocationId',
+        'voucher_code' => 'VoucherCode',
         'order_item_vms' => 'OrderItemVms',
         'virtual_restaurant_id' => 'VirtualRestaurantId',
         'physical_restaurant_id' => 'PhysicalRestaurantId',
@@ -154,6 +157,7 @@ class OrderDm implements ModelInterface, ArrayAccess
         'requested_delivery_or_pickup_time_utc' => 'setRequestedDeliveryOrPickupTimeUtc',
         'tip_amount' => 'setTipAmount',
         'delivery_location_id' => 'setDeliveryLocationId',
+        'voucher_code' => 'setVoucherCode',
         'order_item_vms' => 'setOrderItemVms',
         'virtual_restaurant_id' => 'setVirtualRestaurantId',
         'physical_restaurant_id' => 'setPhysicalRestaurantId',
@@ -178,6 +182,7 @@ class OrderDm implements ModelInterface, ArrayAccess
         'requested_delivery_or_pickup_time_utc' => 'getRequestedDeliveryOrPickupTimeUtc',
         'tip_amount' => 'getTipAmount',
         'delivery_location_id' => 'getDeliveryLocationId',
+        'voucher_code' => 'getVoucherCode',
         'order_item_vms' => 'getOrderItemVms',
         'virtual_restaurant_id' => 'getVirtualRestaurantId',
         'physical_restaurant_id' => 'getPhysicalRestaurantId',
@@ -319,6 +324,7 @@ class OrderDm implements ModelInterface, ArrayAccess
         $this->container['requested_delivery_or_pickup_time_utc'] = isset($data['requested_delivery_or_pickup_time_utc']) ? $data['requested_delivery_or_pickup_time_utc'] : null;
         $this->container['tip_amount'] = isset($data['tip_amount']) ? $data['tip_amount'] : null;
         $this->container['delivery_location_id'] = isset($data['delivery_location_id']) ? $data['delivery_location_id'] : null;
+        $this->container['voucher_code'] = isset($data['voucher_code']) ? $data['voucher_code'] : null;
         $this->container['order_item_vms'] = isset($data['order_item_vms']) ? $data['order_item_vms'] : null;
         $this->container['virtual_restaurant_id'] = isset($data['virtual_restaurant_id']) ? $data['virtual_restaurant_id'] : null;
         $this->container['physical_restaurant_id'] = isset($data['physical_restaurant_id']) ? $data['physical_restaurant_id'] : null;
@@ -473,6 +479,30 @@ class OrderDm implements ModelInterface, ArrayAccess
     public function setDeliveryLocationId($delivery_location_id)
     {
         $this->container['delivery_location_id'] = $delivery_location_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets voucher_code
+     *
+     * @return string
+     */
+    public function getVoucherCode()
+    {
+        return $this->container['voucher_code'];
+    }
+
+    /**
+     * Sets voucher_code
+     *
+     * @param string $voucher_code voucher_code
+     *
+     * @return $this
+     */
+    public function setVoucherCode($voucher_code)
+    {
+        $this->container['voucher_code'] = $voucher_code;
 
         return $this;
     }
