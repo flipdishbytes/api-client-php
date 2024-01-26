@@ -68,6 +68,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'tax_value' => 'double',
         'name' => 'string',
         'price' => 'double',
+        'deposit_return_fee' => 'double',
         'is_available' => 'bool',
         'display_order' => 'int',
         'cell_layout_type' => 'string',
@@ -90,6 +91,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'tax_value' => 'double',
         'name' => null,
         'price' => 'double',
+        'deposit_return_fee' => 'double',
         'is_available' => null,
         'display_order' => 'int32',
         'cell_layout_type' => null,
@@ -133,6 +135,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'tax_value' => 'TaxValue',
         'name' => 'Name',
         'price' => 'Price',
+        'deposit_return_fee' => 'DepositReturnFee',
         'is_available' => 'IsAvailable',
         'display_order' => 'DisplayOrder',
         'cell_layout_type' => 'CellLayoutType',
@@ -155,6 +158,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'tax_value' => 'setTaxValue',
         'name' => 'setName',
         'price' => 'setPrice',
+        'deposit_return_fee' => 'setDepositReturnFee',
         'is_available' => 'setIsAvailable',
         'display_order' => 'setDisplayOrder',
         'cell_layout_type' => 'setCellLayoutType',
@@ -177,6 +181,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'tax_value' => 'getTaxValue',
         'name' => 'getName',
         'price' => 'getPrice',
+        'deposit_return_fee' => 'getDepositReturnFee',
         'is_available' => 'getIsAvailable',
         'display_order' => 'getDisplayOrder',
         'cell_layout_type' => 'getCellLayoutType',
@@ -272,6 +277,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
         $this->container['tax_value'] = isset($data['tax_value']) ? $data['tax_value'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['deposit_return_fee'] = isset($data['deposit_return_fee']) ? $data['deposit_return_fee'] : null;
         $this->container['is_available'] = isset($data['is_available']) ? $data['is_available'] : null;
         $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
         $this->container['cell_layout_type'] = isset($data['cell_layout_type']) ? $data['cell_layout_type'] : null;
@@ -546,6 +552,30 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
     public function setPrice($price)
     {
         $this->container['price'] = $price;
+
+        return $this;
+    }
+
+    /**
+     * Gets deposit_return_fee
+     *
+     * @return double
+     */
+    public function getDepositReturnFee()
+    {
+        return $this->container['deposit_return_fee'];
+    }
+
+    /**
+     * Sets deposit_return_fee
+     *
+     * @param double $deposit_return_fee An optional fee that can be added to the price of the item.
+     *
+     * @return $this
+     */
+    public function setDepositReturnFee($deposit_return_fee)
+    {
+        $this->container['deposit_return_fee'] = $deposit_return_fee;
 
         return $this;
     }

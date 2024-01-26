@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **next_menu_item_option_set_id** | **int** | if null, next option set is next. if -1, this is the final option set | [optional] 
 **name** | **string** | Name | [optional] 
 **price** | **double** | Price | [optional] 
+**deposit_return_fee** | **double** | An optional fee that can be added to the price of the item. | [optional] 
 **is_available** | **bool** | Is available | [optional] 
 **display_order** | **int** | Display order. Displayed in ascending order. | [optional] 
 **cell_layout_type** | **string** | Small | Medium | Large  Affects the layout of the menu. | [optional] 

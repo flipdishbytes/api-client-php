@@ -72,6 +72,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'description' => 'string',
         'spiciness_rating' => 'string',
         'price' => 'double',
+        'deposit_return_fee' => 'double',
         'display_order' => 'int',
         'alcohol' => 'bool',
         'is_available' => 'bool',
@@ -102,6 +103,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'description' => null,
         'spiciness_rating' => null,
         'price' => 'double',
+        'deposit_return_fee' => 'double',
         'display_order' => 'int32',
         'alcohol' => null,
         'is_available' => null,
@@ -153,6 +155,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'description' => 'Description',
         'spiciness_rating' => 'SpicinessRating',
         'price' => 'Price',
+        'deposit_return_fee' => 'DepositReturnFee',
         'display_order' => 'DisplayOrder',
         'alcohol' => 'Alcohol',
         'is_available' => 'IsAvailable',
@@ -183,6 +186,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'description' => 'setDescription',
         'spiciness_rating' => 'setSpicinessRating',
         'price' => 'setPrice',
+        'deposit_return_fee' => 'setDepositReturnFee',
         'display_order' => 'setDisplayOrder',
         'alcohol' => 'setAlcohol',
         'is_available' => 'setIsAvailable',
@@ -213,6 +217,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         'description' => 'getDescription',
         'spiciness_rating' => 'getSpicinessRating',
         'price' => 'getPrice',
+        'deposit_return_fee' => 'getDepositReturnFee',
         'display_order' => 'getDisplayOrder',
         'alcohol' => 'getAlcohol',
         'is_available' => 'getIsAvailable',
@@ -335,6 +340,7 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['spiciness_rating'] = isset($data['spiciness_rating']) ? $data['spiciness_rating'] : null;
         $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['deposit_return_fee'] = isset($data['deposit_return_fee']) ? $data['deposit_return_fee'] : null;
         $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
         $this->container['alcohol'] = isset($data['alcohol']) ? $data['alcohol'] : null;
         $this->container['is_available'] = isset($data['is_available']) ? $data['is_available'] : null;
@@ -756,6 +762,30 @@ class MenuSectionItem implements ModelInterface, ArrayAccess
     public function setPrice($price)
     {
         $this->container['price'] = $price;
+
+        return $this;
+    }
+
+    /**
+     * Gets deposit_return_fee
+     *
+     * @return double
+     */
+    public function getDepositReturnFee()
+    {
+        return $this->container['deposit_return_fee'];
+    }
+
+    /**
+     * Sets deposit_return_fee
+     *
+     * @param double $deposit_return_fee An optional fee that can be added to the price of the item.
+     *
+     * @return $this
+     */
+    public function setDepositReturnFee($deposit_return_fee)
+    {
+        $this->container['deposit_return_fee'] = $deposit_return_fee;
 
         return $this;
     }

@@ -126,6 +126,13 @@ class CreateFullMenuSectionItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "deposit_return_fee"
+     */
+    public function testPropertyDepositReturnFee()
+    {
+    }
+
+    /**
      * Test attribute "display_order"
      */
     public function testPropertyDisplayOrder()
