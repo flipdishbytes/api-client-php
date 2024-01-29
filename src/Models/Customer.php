@@ -60,6 +60,7 @@ class Customer implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'customer_id' => 'int',
         'registration_date' => '\DateTime',
+        'phone_number' => 'string',
         'cash_orders_enabled' => 'bool',
         'card_orders_enabled' => 'bool',
         'marketing_enabled' => 'bool'
@@ -73,6 +74,7 @@ class Customer implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'customer_id' => 'int32',
         'registration_date' => 'date-time',
+        'phone_number' => null,
         'cash_orders_enabled' => null,
         'card_orders_enabled' => null,
         'marketing_enabled' => null
@@ -107,6 +109,7 @@ class Customer implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'customer_id' => 'CustomerId',
         'registration_date' => 'RegistrationDate',
+        'phone_number' => 'PhoneNumber',
         'cash_orders_enabled' => 'CashOrdersEnabled',
         'card_orders_enabled' => 'CardOrdersEnabled',
         'marketing_enabled' => 'MarketingEnabled'
@@ -120,6 +123,7 @@ class Customer implements ModelInterface, ArrayAccess
     protected static $setters = [
         'customer_id' => 'setCustomerId',
         'registration_date' => 'setRegistrationDate',
+        'phone_number' => 'setPhoneNumber',
         'cash_orders_enabled' => 'setCashOrdersEnabled',
         'card_orders_enabled' => 'setCardOrdersEnabled',
         'marketing_enabled' => 'setMarketingEnabled'
@@ -133,6 +137,7 @@ class Customer implements ModelInterface, ArrayAccess
     protected static $getters = [
         'customer_id' => 'getCustomerId',
         'registration_date' => 'getRegistrationDate',
+        'phone_number' => 'getPhoneNumber',
         'cash_orders_enabled' => 'getCashOrdersEnabled',
         'card_orders_enabled' => 'getCardOrdersEnabled',
         'marketing_enabled' => 'getMarketingEnabled'
@@ -200,6 +205,7 @@ class Customer implements ModelInterface, ArrayAccess
     {
         $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
         $this->container['registration_date'] = isset($data['registration_date']) ? $data['registration_date'] : null;
+        $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
         $this->container['cash_orders_enabled'] = isset($data['cash_orders_enabled']) ? $data['cash_orders_enabled'] : null;
         $this->container['card_orders_enabled'] = isset($data['card_orders_enabled']) ? $data['card_orders_enabled'] : null;
         $this->container['marketing_enabled'] = isset($data['marketing_enabled']) ? $data['marketing_enabled'] : null;
@@ -273,6 +279,30 @@ class Customer implements ModelInterface, ArrayAccess
     public function setRegistrationDate($registration_date)
     {
         $this->container['registration_date'] = $registration_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone_number
+     *
+     * @return string
+     */
+    public function getPhoneNumber()
+    {
+        return $this->container['phone_number'];
+    }
+
+    /**
+     * Sets phone_number
+     *
+     * @param string $phone_number Phone Number in international format
+     *
+     * @return $this
+     */
+    public function setPhoneNumber($phone_number)
+    {
+        $this->container['phone_number'] = $phone_number;
 
         return $this;
     }

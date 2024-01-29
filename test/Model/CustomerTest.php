@@ -91,6 +91,13 @@ class CustomerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "phone_number"
+     */
+    public function testPropertyPhoneNumber()
+    {
+    }
+
+    /**
      * Test attribute "cash_orders_enabled"
      */
     public function testPropertyCashOrdersEnabled()
