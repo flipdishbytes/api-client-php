@@ -65,7 +65,8 @@ class OrderItemOption implements ModelInterface, ArrayAccess
         'name' => 'string',
         'price' => 'double',
         'menu_item_option_display_order' => 'int',
-        'menu_item_option_set_display_order' => 'int'
+        'menu_item_option_set_display_order' => 'int',
+        'deposit_return_fee' => 'double'
     ];
 
     /**
@@ -81,7 +82,8 @@ class OrderItemOption implements ModelInterface, ArrayAccess
         'name' => null,
         'price' => 'double',
         'menu_item_option_display_order' => 'int32',
-        'menu_item_option_set_display_order' => 'int32'
+        'menu_item_option_set_display_order' => 'int32',
+        'deposit_return_fee' => 'double'
     ];
 
     /**
@@ -118,7 +120,8 @@ class OrderItemOption implements ModelInterface, ArrayAccess
         'name' => 'Name',
         'price' => 'Price',
         'menu_item_option_display_order' => 'MenuItemOptionDisplayOrder',
-        'menu_item_option_set_display_order' => 'MenuItemOptionSetDisplayOrder'
+        'menu_item_option_set_display_order' => 'MenuItemOptionSetDisplayOrder',
+        'deposit_return_fee' => 'DepositReturnFee'
     ];
 
     /**
@@ -134,7 +137,8 @@ class OrderItemOption implements ModelInterface, ArrayAccess
         'name' => 'setName',
         'price' => 'setPrice',
         'menu_item_option_display_order' => 'setMenuItemOptionDisplayOrder',
-        'menu_item_option_set_display_order' => 'setMenuItemOptionSetDisplayOrder'
+        'menu_item_option_set_display_order' => 'setMenuItemOptionSetDisplayOrder',
+        'deposit_return_fee' => 'setDepositReturnFee'
     ];
 
     /**
@@ -150,7 +154,8 @@ class OrderItemOption implements ModelInterface, ArrayAccess
         'name' => 'getName',
         'price' => 'getPrice',
         'menu_item_option_display_order' => 'getMenuItemOptionDisplayOrder',
-        'menu_item_option_set_display_order' => 'getMenuItemOptionSetDisplayOrder'
+        'menu_item_option_set_display_order' => 'getMenuItemOptionSetDisplayOrder',
+        'deposit_return_fee' => 'getDepositReturnFee'
     ];
 
     /**
@@ -221,6 +226,7 @@ class OrderItemOption implements ModelInterface, ArrayAccess
         $this->container['price'] = isset($data['price']) ? $data['price'] : null;
         $this->container['menu_item_option_display_order'] = isset($data['menu_item_option_display_order']) ? $data['menu_item_option_display_order'] : null;
         $this->container['menu_item_option_set_display_order'] = isset($data['menu_item_option_set_display_order']) ? $data['menu_item_option_set_display_order'] : null;
+        $this->container['deposit_return_fee'] = isset($data['deposit_return_fee']) ? $data['deposit_return_fee'] : null;
     }
 
     /**
@@ -435,6 +441,30 @@ class OrderItemOption implements ModelInterface, ArrayAccess
     public function setMenuItemOptionSetDisplayOrder($menu_item_option_set_display_order)
     {
         $this->container['menu_item_option_set_display_order'] = $menu_item_option_set_display_order;
+
+        return $this;
+    }
+
+    /**
+     * Gets deposit_return_fee
+     *
+     * @return double
+     */
+    public function getDepositReturnFee()
+    {
+        return $this->container['deposit_return_fee'];
+    }
+
+    /**
+     * Sets deposit_return_fee
+     *
+     * @param double $deposit_return_fee Deposit return fee
+     *
+     * @return $this
+     */
+    public function setDepositReturnFee($deposit_return_fee)
+    {
+        $this->container['deposit_return_fee'] = $deposit_return_fee;
 
         return $this;
     }

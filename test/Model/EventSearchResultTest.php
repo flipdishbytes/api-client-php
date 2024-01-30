@@ -553,6 +553,13 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "channel_stores_updated_event"
+     */
+    public function testPropertyChannelStoresUpdatedEvent()
+    {
+    }
+
+    /**
      * Test attribute "loyalty_campaign_created_event"
      */
     public function testPropertyLoyaltyCampaignCreatedEvent()

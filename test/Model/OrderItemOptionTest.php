@@ -131,4 +131,11 @@ class OrderItemOptionTest extends \PHPUnit_Framework_TestCase
     public function testPropertyMenuItemOptionSetDisplayOrder()
     {
     }
+
+    /**
+     * Test attribute "deposit_return_fee"
+     */
+    public function testPropertyDepositReturnFee()
+    {
+    }
 }

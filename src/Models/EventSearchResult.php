@@ -126,6 +126,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'phone_call_started_event' => '\Flipdish\\Client\Models\PhoneCallStartedEvent[]',
         'phone_call_ended_event' => '\Flipdish\\Client\Models\PhoneCallEndedEvent[]',
         'telephony_config_updated_event' => '\Flipdish\\Client\Models\TelephonyConfigUpdatedEvent[]',
+        'channel_stores_updated_event' => '\Flipdish\\Client\Models\ChannelStoresUpdatedEvent[]',
         'loyalty_campaign_created_event' => '\Flipdish\\Client\Models\LoyaltyCampaignCreatedEvent[]',
         'loyalty_campaign_deleted_event' => '\Flipdish\\Client\Models\LoyaltyCampaignDeletedEvent[]',
         'loyalty_campaign_updated_event' => '\Flipdish\\Client\Models\LoyaltyCampaignUpdatedEvent[]',
@@ -273,6 +274,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'phone_call_started_event' => null,
         'phone_call_ended_event' => null,
         'telephony_config_updated_event' => null,
+        'channel_stores_updated_event' => null,
         'loyalty_campaign_created_event' => null,
         'loyalty_campaign_deleted_event' => null,
         'loyalty_campaign_updated_event' => null,
@@ -441,6 +443,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'phone_call_started_event' => 'PhoneCallStartedEvent',
         'phone_call_ended_event' => 'PhoneCallEndedEvent',
         'telephony_config_updated_event' => 'TelephonyConfigUpdatedEvent',
+        'channel_stores_updated_event' => 'ChannelStoresUpdatedEvent',
         'loyalty_campaign_created_event' => 'LoyaltyCampaignCreatedEvent',
         'loyalty_campaign_deleted_event' => 'LoyaltyCampaignDeletedEvent',
         'loyalty_campaign_updated_event' => 'LoyaltyCampaignUpdatedEvent',
@@ -588,6 +591,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'phone_call_started_event' => 'setPhoneCallStartedEvent',
         'phone_call_ended_event' => 'setPhoneCallEndedEvent',
         'telephony_config_updated_event' => 'setTelephonyConfigUpdatedEvent',
+        'channel_stores_updated_event' => 'setChannelStoresUpdatedEvent',
         'loyalty_campaign_created_event' => 'setLoyaltyCampaignCreatedEvent',
         'loyalty_campaign_deleted_event' => 'setLoyaltyCampaignDeletedEvent',
         'loyalty_campaign_updated_event' => 'setLoyaltyCampaignUpdatedEvent',
@@ -735,6 +739,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'phone_call_started_event' => 'getPhoneCallStartedEvent',
         'phone_call_ended_event' => 'getPhoneCallEndedEvent',
         'telephony_config_updated_event' => 'getTelephonyConfigUpdatedEvent',
+        'channel_stores_updated_event' => 'getChannelStoresUpdatedEvent',
         'loyalty_campaign_created_event' => 'getLoyaltyCampaignCreatedEvent',
         'loyalty_campaign_deleted_event' => 'getLoyaltyCampaignDeletedEvent',
         'loyalty_campaign_updated_event' => 'getLoyaltyCampaignUpdatedEvent',
@@ -936,6 +941,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         $this->container['phone_call_started_event'] = isset($data['phone_call_started_event']) ? $data['phone_call_started_event'] : null;
         $this->container['phone_call_ended_event'] = isset($data['phone_call_ended_event']) ? $data['phone_call_ended_event'] : null;
         $this->container['telephony_config_updated_event'] = isset($data['telephony_config_updated_event']) ? $data['telephony_config_updated_event'] : null;
+        $this->container['channel_stores_updated_event'] = isset($data['channel_stores_updated_event']) ? $data['channel_stores_updated_event'] : null;
         $this->container['loyalty_campaign_created_event'] = isset($data['loyalty_campaign_created_event']) ? $data['loyalty_campaign_created_event'] : null;
         $this->container['loyalty_campaign_deleted_event'] = isset($data['loyalty_campaign_deleted_event']) ? $data['loyalty_campaign_deleted_event'] : null;
         $this->container['loyalty_campaign_updated_event'] = isset($data['loyalty_campaign_updated_event']) ? $data['loyalty_campaign_updated_event'] : null;
@@ -2661,6 +2667,30 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     public function setTelephonyConfigUpdatedEvent($telephony_config_updated_event)
     {
         $this->container['telephony_config_updated_event'] = $telephony_config_updated_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets channel_stores_updated_event
+     *
+     * @return \Flipdish\\Client\Models\ChannelStoresUpdatedEvent[]
+     */
+    public function getChannelStoresUpdatedEvent()
+    {
+        return $this->container['channel_stores_updated_event'];
+    }
+
+    /**
+     * Sets channel_stores_updated_event
+     *
+     * @param \Flipdish\\Client\Models\ChannelStoresUpdatedEvent[] $channel_stores_updated_event Channel stores updated event
+     *
+     * @return $this
+     */
+    public function setChannelStoresUpdatedEvent($channel_stores_updated_event)
+    {
+        $this->container['channel_stores_updated_event'] = $channel_stores_updated_event;
 
         return $this;
     }

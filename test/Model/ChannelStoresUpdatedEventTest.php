@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderItemTest
+ * ChannelStoresUpdatedEventTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * OrderItemTest Class Doc Comment
+ * ChannelStoresUpdatedEventTest Class Doc Comment
  *
  * @category    Class
- * @description Order item
+ * @description Channel Stores Updated Event
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class OrderItemTest extends \PHPUnit_Framework_TestCase
+class ChannelStoresUpdatedEventTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,100 +70,72 @@ class OrderItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "OrderItem"
+     * Test "ChannelStoresUpdatedEvent"
      */
-    public function testOrderItem()
+    public function testChannelStoresUpdatedEvent()
     {
     }
 
     /**
-     * Test attribute "order_item_options"
+     * Test attribute "event_name"
      */
-    public function testPropertyOrderItemOptions()
+    public function testPropertyEventName()
     {
     }
 
     /**
-     * Test attribute "metadata"
+     * Test attribute "channel_id"
      */
-    public function testPropertyMetadata()
+    public function testPropertyChannelId()
     {
     }
 
     /**
-     * Test attribute "menu_item_public_id"
+     * Test attribute "store_ids"
      */
-    public function testPropertyMenuItemPublicId()
+    public function testPropertyStoreIds()
     {
     }
 
     /**
-     * Test attribute "menu_section_name"
+     * Test attribute "user"
      */
-    public function testPropertyMenuSectionName()
+    public function testPropertyUser()
     {
     }
 
     /**
-     * Test attribute "menu_section_display_order"
+     * Test attribute "flipdish_event_id"
      */
-    public function testPropertyMenuSectionDisplayOrder()
+    public function testPropertyFlipdishEventId()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "create_time"
      */
-    public function testPropertyName()
+    public function testPropertyCreateTime()
     {
     }
 
     /**
-     * Test attribute "description"
+     * Test attribute "position"
      */
-    public function testPropertyDescription()
+    public function testPropertyPosition()
     {
     }
 
     /**
-     * Test attribute "price"
+     * Test attribute "app_id"
      */
-    public function testPropertyPrice()
+    public function testPropertyAppId()
     {
     }
 
     /**
-     * Test attribute "price_including_option_set_items"
+     * Test attribute "ip_address"
      */
-    public function testPropertyPriceIncludingOptionSetItems()
-    {
-    }
-
-    /**
-     * Test attribute "menu_item_id"
-     */
-    public function testPropertyMenuItemId()
-    {
-    }
-
-    /**
-     * Test attribute "menu_item_display_order"
-     */
-    public function testPropertyMenuItemDisplayOrder()
-    {
-    }
-
-    /**
-     * Test attribute "is_available"
-     */
-    public function testPropertyIsAvailable()
-    {
-    }
-
-    /**
-     * Test attribute "deposit_return_fee"
-     */
-    public function testPropertyDepositReturnFee()
+    public function testPropertyIpAddress()
     {
     }
 }

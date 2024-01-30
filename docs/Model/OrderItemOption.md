@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **price** | **double** | Price | [optional] 
 **menu_item_option_display_order** | **int** | Menu item option display order | [optional] 
 **menu_item_option_set_display_order** | **int** | Menu item option set display order | [optional] 
+**deposit_return_fee** | **double** | Deposit return fee | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

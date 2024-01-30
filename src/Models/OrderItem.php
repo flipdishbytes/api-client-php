@@ -69,7 +69,8 @@ class OrderItem implements ModelInterface, ArrayAccess
         'price_including_option_set_items' => 'double',
         'menu_item_id' => 'int',
         'menu_item_display_order' => 'int',
-        'is_available' => 'bool'
+        'is_available' => 'bool',
+        'deposit_return_fee' => 'double'
     ];
 
     /**
@@ -89,7 +90,8 @@ class OrderItem implements ModelInterface, ArrayAccess
         'price_including_option_set_items' => 'double',
         'menu_item_id' => 'int32',
         'menu_item_display_order' => 'int32',
-        'is_available' => null
+        'is_available' => null,
+        'deposit_return_fee' => 'double'
     ];
 
     /**
@@ -130,7 +132,8 @@ class OrderItem implements ModelInterface, ArrayAccess
         'price_including_option_set_items' => 'PriceIncludingOptionSetItems',
         'menu_item_id' => 'MenuItemId',
         'menu_item_display_order' => 'MenuItemDisplayOrder',
-        'is_available' => 'IsAvailable'
+        'is_available' => 'IsAvailable',
+        'deposit_return_fee' => 'DepositReturnFee'
     ];
 
     /**
@@ -150,7 +153,8 @@ class OrderItem implements ModelInterface, ArrayAccess
         'price_including_option_set_items' => 'setPriceIncludingOptionSetItems',
         'menu_item_id' => 'setMenuItemId',
         'menu_item_display_order' => 'setMenuItemDisplayOrder',
-        'is_available' => 'setIsAvailable'
+        'is_available' => 'setIsAvailable',
+        'deposit_return_fee' => 'setDepositReturnFee'
     ];
 
     /**
@@ -170,7 +174,8 @@ class OrderItem implements ModelInterface, ArrayAccess
         'price_including_option_set_items' => 'getPriceIncludingOptionSetItems',
         'menu_item_id' => 'getMenuItemId',
         'menu_item_display_order' => 'getMenuItemDisplayOrder',
-        'is_available' => 'getIsAvailable'
+        'is_available' => 'getIsAvailable',
+        'deposit_return_fee' => 'getDepositReturnFee'
     ];
 
     /**
@@ -245,6 +250,7 @@ class OrderItem implements ModelInterface, ArrayAccess
         $this->container['menu_item_id'] = isset($data['menu_item_id']) ? $data['menu_item_id'] : null;
         $this->container['menu_item_display_order'] = isset($data['menu_item_display_order']) ? $data['menu_item_display_order'] : null;
         $this->container['is_available'] = isset($data['is_available']) ? $data['is_available'] : null;
+        $this->container['deposit_return_fee'] = isset($data['deposit_return_fee']) ? $data['deposit_return_fee'] : null;
     }
 
     /**
@@ -555,6 +561,30 @@ class OrderItem implements ModelInterface, ArrayAccess
     public function setIsAvailable($is_available)
     {
         $this->container['is_available'] = $is_available;
+
+        return $this;
+    }
+
+    /**
+     * Gets deposit_return_fee
+     *
+     * @return double
+     */
+    public function getDepositReturnFee()
+    {
+        return $this->container['deposit_return_fee'];
+    }
+
+    /**
+     * Sets deposit_return_fee
+     *
+     * @param double $deposit_return_fee Deposit return fee
+     *
+     * @return $this
+     */
+    public function setDepositReturnFee($deposit_return_fee)
+    {
+        $this->container['deposit_return_fee'] = $deposit_return_fee;
 
         return $this;
     }
