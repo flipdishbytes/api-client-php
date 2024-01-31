@@ -5,8 +5,8 @@ All URIs are relative to *https://api.flipdish.co*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createDraftMenuFromExistingMenu**](MenusApi.md#createDraftMenuFromExistingMenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API]Clone a menu, (without attaching stores)
-[**createNewMenuAsync**](MenusApi.md#createNewMenuAsync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
-[**createNewMenuForApp**](MenusApi.md#createNewMenuForApp) | **POST** /api/v1.0/{appId}/menus | Create a new menu. If request body is empty, the system will create a menu with default items.
+[**createNewMenuAsync**](MenusApi.md#createNewMenuAsync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously
+[**createNewMenuForApp**](MenusApi.md#createNewMenuForApp) | **POST** /api/v1.0/{appId}/menus | Create a new menu
 [**deleteMenu**](MenusApi.md#deleteMenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API]Mark a Menu as Deleted
 [**deleteMenuImage**](MenusApi.md#deleteMenuImage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
 [**deleteMenuItemMetadata**](MenusApi.md#deleteMenuItemMetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
@@ -93,7 +93,9 @@ Name | Type | Description  | Notes
 # **createNewMenuAsync**
 > object createNewMenuAsync($app_id, $menu)
 
-Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+Create a new menu asynchronously
+
+You must listen to the webhook menu.async_creation.completed to know when the menu is ready
 
 ### Example
 ```php
@@ -146,7 +148,9 @@ Name | Type | Description  | Notes
 # **createNewMenuForApp**
 > int createNewMenuForApp($app_id, $menu)
 
-Create a new menu. If request body is empty, the system will create a menu with default items.
+Create a new menu
+
+[DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
 
 ### Example
 ```php
@@ -163,7 +167,7 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     $config
 );
 $app_id = "app_id_example"; // string | App identifier
-$menu = new \Flipdish\\Client\Models\CreateFullMenu(); // \Flipdish\\Client\Models\CreateFullMenu | Menu
+$menu = new \Flipdish\\Client\Models\CreateFullMenu(); // \Flipdish\\Client\Models\CreateFullMenu | Menu. If empty the system will create a menu with default items
 
 try {
     $result = $apiInstance->createNewMenuForApp($app_id, $menu);
@@ -179,7 +183,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| App identifier |
- **menu** | [**\Flipdish\\Client\Models\CreateFullMenu**](../Model/CreateFullMenu.md)| Menu |
+ **menu** | [**\Flipdish\\Client\Models\CreateFullMenu**](../Model/CreateFullMenu.md)| Menu. If empty the system will create a menu with default items |
 
 ### Return type
 

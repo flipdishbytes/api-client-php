@@ -414,7 +414,7 @@ class MenusApi
     /**
      * Operation createNewMenuAsync
      *
-     * Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+     * Create a new menu asynchronously
      *
      * @param  string $app_id App id (required)
      * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
@@ -432,7 +432,7 @@ class MenusApi
     /**
      * Operation createNewMenuAsyncWithHttpInfo
      *
-     * Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+     * Create a new menu asynchronously
      *
      * @param  string $app_id App id (required)
      * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
@@ -540,7 +540,7 @@ class MenusApi
     /**
      * Operation createNewMenuAsyncAsync
      *
-     * Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+     * Create a new menu asynchronously
      *
      * @param  string $app_id App id (required)
      * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
@@ -561,7 +561,7 @@ class MenusApi
     /**
      * Operation createNewMenuAsyncAsyncWithHttpInfo
      *
-     * Create a new menu asynchronously. You must listen to the webhook menu.async_creation.completed to know when the menu is ready.
+     * Create a new menu asynchronously
      *
      * @param  string $app_id App id (required)
      * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
@@ -733,10 +733,10 @@ class MenusApi
     /**
      * Operation createNewMenuForApp
      *
-     * Create a new menu. If request body is empty, the system will create a menu with default items.
+     * Create a new menu
      *
      * @param  string $app_id App identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu. If empty the system will create a menu with default items (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -751,10 +751,10 @@ class MenusApi
     /**
      * Operation createNewMenuForAppWithHttpInfo
      *
-     * Create a new menu. If request body is empty, the system will create a menu with default items.
+     * Create a new menu
      *
      * @param  string $app_id App identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu. If empty the system will create a menu with default items (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -851,10 +851,10 @@ class MenusApi
     /**
      * Operation createNewMenuForAppAsync
      *
-     * Create a new menu. If request body is empty, the system will create a menu with default items.
+     * Create a new menu
      *
      * @param  string $app_id App identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu. If empty the system will create a menu with default items (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -872,10 +872,10 @@ class MenusApi
     /**
      * Operation createNewMenuForAppAsyncWithHttpInfo
      *
-     * Create a new menu. If request body is empty, the system will create a menu with default items.
+     * Create a new menu
      *
      * @param  string $app_id App identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu. If empty the system will create a menu with default items (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -926,7 +926,7 @@ class MenusApi
      * Create request for operation 'createNewMenuForApp'
      *
      * @param  string $app_id App identifier (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu. If empty the system will create a menu with default items (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
