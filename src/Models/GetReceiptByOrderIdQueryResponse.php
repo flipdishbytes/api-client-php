@@ -58,6 +58,7 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'previous_order' => '\Flipdish\\Client\Models\PreviousOrder',
+        'deposit_return_fees_summary' => '\Flipdish\\Client\Models\DepositReturnFeesSummary[]',
         'ts_requested_for_local' => '\DateTime',
         'ts_order_placed_local' => '\DateTime',
         'logo_url' => 'string',
@@ -73,6 +74,7 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'previous_order' => null,
+        'deposit_return_fees_summary' => null,
         'ts_requested_for_local' => 'date-time',
         'ts_order_placed_local' => 'date-time',
         'logo_url' => null,
@@ -109,6 +111,7 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'previous_order' => 'PreviousOrder',
+        'deposit_return_fees_summary' => 'DepositReturnFeesSummary',
         'ts_requested_for_local' => 'TsRequestedForLocal',
         'ts_order_placed_local' => 'TsOrderPlacedLocal',
         'logo_url' => 'LogoUrl',
@@ -124,6 +127,7 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'previous_order' => 'setPreviousOrder',
+        'deposit_return_fees_summary' => 'setDepositReturnFeesSummary',
         'ts_requested_for_local' => 'setTsRequestedForLocal',
         'ts_order_placed_local' => 'setTsOrderPlacedLocal',
         'logo_url' => 'setLogoUrl',
@@ -139,6 +143,7 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'previous_order' => 'getPreviousOrder',
+        'deposit_return_fees_summary' => 'getDepositReturnFeesSummary',
         'ts_requested_for_local' => 'getTsRequestedForLocal',
         'ts_order_placed_local' => 'getTsOrderPlacedLocal',
         'logo_url' => 'getLogoUrl',
@@ -208,6 +213,7 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['previous_order'] = isset($data['previous_order']) ? $data['previous_order'] : null;
+        $this->container['deposit_return_fees_summary'] = isset($data['deposit_return_fees_summary']) ? $data['deposit_return_fees_summary'] : null;
         $this->container['ts_requested_for_local'] = isset($data['ts_requested_for_local']) ? $data['ts_requested_for_local'] : null;
         $this->container['ts_order_placed_local'] = isset($data['ts_order_placed_local']) ? $data['ts_order_placed_local'] : null;
         $this->container['logo_url'] = isset($data['logo_url']) ? $data['logo_url'] : null;
@@ -260,6 +266,30 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
     public function setPreviousOrder($previous_order)
     {
         $this->container['previous_order'] = $previous_order;
+
+        return $this;
+    }
+
+    /**
+     * Gets deposit_return_fees_summary
+     *
+     * @return \Flipdish\\Client\Models\DepositReturnFeesSummary[]
+     */
+    public function getDepositReturnFeesSummary()
+    {
+        return $this->container['deposit_return_fees_summary'];
+    }
+
+    /**
+     * Sets deposit_return_fees_summary
+     *
+     * @param \Flipdish\\Client\Models\DepositReturnFeesSummary[] $deposit_return_fees_summary deposit_return_fees_summary
+     *
+     * @return $this
+     */
+    public function setDepositReturnFeesSummary($deposit_return_fees_summary)
+    {
+        $this->container['deposit_return_fees_summary'] = $deposit_return_fees_summary;
 
         return $this;
     }

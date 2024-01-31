@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **service_charge_amount** | **double** |  | [optional] 
 **tip_amount** | **double** |  | [optional] 
 **delivery_amount** | **double** |  | [optional] 
+**deposit_return_fee_amount** | **double** |  | [optional] 
 **total_tax** | **double** |  | [optional] 
 **total_amount** | **double** |  | [optional] 
 **items** | [**\Flipdish\\Client\Models\PreviousOrderItem[]**](PreviousOrderItem.md) |  | [optional] 

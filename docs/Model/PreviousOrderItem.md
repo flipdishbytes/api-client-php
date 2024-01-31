@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **menu_section_name** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 
 **price_including_option_set_items** | **double** |  | [optional] 
+**deposit_return_fee** | **double** |  | [optional] 
 **tax_amount** | **double** |  | [optional] 
 **previous_order_item_options** | [**\Flipdish\\Client\Models\PreviousOrderItemOption[]**](PreviousOrderItemOption.md) |  | [optional] 
 

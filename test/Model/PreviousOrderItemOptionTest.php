@@ -82,4 +82,11 @@ class PreviousOrderItemOptionTest extends \PHPUnit_Framework_TestCase
     public function testPropertyName()
     {
     }
+
+    /**
+     * Test attribute "deposit_return_fee"
+     */
+    public function testPropertyDepositReturnFee()
+    {
+    }
 }

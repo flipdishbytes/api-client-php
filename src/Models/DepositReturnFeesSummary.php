@@ -1,6 +1,6 @@
 <?php
 /**
- * PreviousOrderItemOption
+ * DepositReturnFeesSummary
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * PreviousOrderItemOption Class Doc Comment
+ * DepositReturnFeesSummary Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PreviousOrderItemOption implements ModelInterface, ArrayAccess
+class DepositReturnFeesSummary implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class PreviousOrderItemOption implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PreviousOrderItemOption';
+    protected static $swaggerModelName = 'DepositReturnFeesSummary';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,9 @@ class PreviousOrderItemOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => 'string',
-        'deposit_return_fee' => 'double'
+        'count' => 'int',
+        'fee' => 'double',
+        'total' => 'double'
     ];
 
     /**
@@ -67,8 +68,9 @@ class PreviousOrderItemOption implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'name' => null,
-        'deposit_return_fee' => 'double'
+        'count' => 'int32',
+        'fee' => 'double',
+        'total' => 'double'
     ];
 
     /**
@@ -98,8 +100,9 @@ class PreviousOrderItemOption implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'Name',
-        'deposit_return_fee' => 'DepositReturnFee'
+        'count' => 'Count',
+        'fee' => 'Fee',
+        'total' => 'Total'
     ];
 
     /**
@@ -108,8 +111,9 @@ class PreviousOrderItemOption implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'deposit_return_fee' => 'setDepositReturnFee'
+        'count' => 'setCount',
+        'fee' => 'setFee',
+        'total' => 'setTotal'
     ];
 
     /**
@@ -118,8 +122,9 @@ class PreviousOrderItemOption implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'deposit_return_fee' => 'getDepositReturnFee'
+        'count' => 'getCount',
+        'fee' => 'getFee',
+        'total' => 'getTotal'
     ];
 
     /**
@@ -182,8 +187,9 @@ class PreviousOrderItemOption implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['deposit_return_fee'] = isset($data['deposit_return_fee']) ? $data['deposit_return_fee'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['fee'] = isset($data['fee']) ? $data['fee'] : null;
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
     /**
@@ -211,49 +217,73 @@ class PreviousOrderItemOption implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets name
+     * Gets count
      *
-     * @return string
+     * @return int
      */
-    public function getName()
+    public function getCount()
     {
-        return $this->container['name'];
+        return $this->container['count'];
     }
 
     /**
-     * Sets name
+     * Sets count
      *
-     * @param string $name name
+     * @param int $count count
      *
      * @return $this
      */
-    public function setName($name)
+    public function setCount($count)
     {
-        $this->container['name'] = $name;
+        $this->container['count'] = $count;
 
         return $this;
     }
 
     /**
-     * Gets deposit_return_fee
+     * Gets fee
      *
      * @return double
      */
-    public function getDepositReturnFee()
+    public function getFee()
     {
-        return $this->container['deposit_return_fee'];
+        return $this->container['fee'];
     }
 
     /**
-     * Sets deposit_return_fee
+     * Sets fee
      *
-     * @param double $deposit_return_fee deposit_return_fee
+     * @param double $fee fee
      *
      * @return $this
      */
-    public function setDepositReturnFee($deposit_return_fee)
+    public function setFee($fee)
     {
-        $this->container['deposit_return_fee'] = $deposit_return_fee;
+        $this->container['fee'] = $fee;
+
+        return $this;
+    }
+
+    /**
+     * Gets total
+     *
+     * @return double
+     */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+     * Sets total
+     *
+     * @param double $total total
+     *
+     * @return $this
+     */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
 
         return $this;
     }

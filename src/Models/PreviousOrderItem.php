@@ -61,6 +61,7 @@ class PreviousOrderItem implements ModelInterface, ArrayAccess
         'menu_section_name' => 'string',
         'name' => 'string',
         'price_including_option_set_items' => 'double',
+        'deposit_return_fee' => 'double',
         'tax_amount' => 'double',
         'previous_order_item_options' => '\Flipdish\\Client\Models\PreviousOrderItemOption[]'
     ];
@@ -75,6 +76,7 @@ class PreviousOrderItem implements ModelInterface, ArrayAccess
         'menu_section_name' => null,
         'name' => null,
         'price_including_option_set_items' => 'double',
+        'deposit_return_fee' => 'double',
         'tax_amount' => 'double',
         'previous_order_item_options' => null
     ];
@@ -110,6 +112,7 @@ class PreviousOrderItem implements ModelInterface, ArrayAccess
         'menu_section_name' => 'MenuSectionName',
         'name' => 'Name',
         'price_including_option_set_items' => 'PriceIncludingOptionSetItems',
+        'deposit_return_fee' => 'DepositReturnFee',
         'tax_amount' => 'TaxAmount',
         'previous_order_item_options' => 'PreviousOrderItemOptions'
     ];
@@ -124,6 +127,7 @@ class PreviousOrderItem implements ModelInterface, ArrayAccess
         'menu_section_name' => 'setMenuSectionName',
         'name' => 'setName',
         'price_including_option_set_items' => 'setPriceIncludingOptionSetItems',
+        'deposit_return_fee' => 'setDepositReturnFee',
         'tax_amount' => 'setTaxAmount',
         'previous_order_item_options' => 'setPreviousOrderItemOptions'
     ];
@@ -138,6 +142,7 @@ class PreviousOrderItem implements ModelInterface, ArrayAccess
         'menu_section_name' => 'getMenuSectionName',
         'name' => 'getName',
         'price_including_option_set_items' => 'getPriceIncludingOptionSetItems',
+        'deposit_return_fee' => 'getDepositReturnFee',
         'tax_amount' => 'getTaxAmount',
         'previous_order_item_options' => 'getPreviousOrderItemOptions'
     ];
@@ -206,6 +211,7 @@ class PreviousOrderItem implements ModelInterface, ArrayAccess
         $this->container['menu_section_name'] = isset($data['menu_section_name']) ? $data['menu_section_name'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['price_including_option_set_items'] = isset($data['price_including_option_set_items']) ? $data['price_including_option_set_items'] : null;
+        $this->container['deposit_return_fee'] = isset($data['deposit_return_fee']) ? $data['deposit_return_fee'] : null;
         $this->container['tax_amount'] = isset($data['tax_amount']) ? $data['tax_amount'] : null;
         $this->container['previous_order_item_options'] = isset($data['previous_order_item_options']) ? $data['previous_order_item_options'] : null;
     }
@@ -326,6 +332,30 @@ class PreviousOrderItem implements ModelInterface, ArrayAccess
     public function setPriceIncludingOptionSetItems($price_including_option_set_items)
     {
         $this->container['price_including_option_set_items'] = $price_including_option_set_items;
+
+        return $this;
+    }
+
+    /**
+     * Gets deposit_return_fee
+     *
+     * @return double
+     */
+    public function getDepositReturnFee()
+    {
+        return $this->container['deposit_return_fee'];
+    }
+
+    /**
+     * Sets deposit_return_fee
+     *
+     * @param double $deposit_return_fee deposit_return_fee
+     *
+     * @return $this
+     */
+    public function setDepositReturnFee($deposit_return_fee)
+    {
+        $this->container['deposit_return_fee'] = $deposit_return_fee;
 
         return $this;
     }

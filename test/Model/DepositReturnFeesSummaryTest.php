@@ -1,6 +1,6 @@
 <?php
 /**
- * GetReceiptByOrderIdQueryResponseTest
+ * DepositReturnFeesSummaryTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * GetReceiptByOrderIdQueryResponseTest Class Doc Comment
+ * DepositReturnFeesSummaryTest Class Doc Comment
  *
  * @category    Class
- * @description GetReceiptByOrderIdQueryResponse
+ * @description DepositReturnFeesSummary
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class GetReceiptByOrderIdQueryResponseTest extends \PHPUnit_Framework_TestCase
+class DepositReturnFeesSummaryTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,65 +70,30 @@ class GetReceiptByOrderIdQueryResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "GetReceiptByOrderIdQueryResponse"
+     * Test "DepositReturnFeesSummary"
      */
-    public function testGetReceiptByOrderIdQueryResponse()
+    public function testDepositReturnFeesSummary()
     {
     }
 
     /**
-     * Test attribute "previous_order"
+     * Test attribute "count"
      */
-    public function testPropertyPreviousOrder()
+    public function testPropertyCount()
     {
     }
 
     /**
-     * Test attribute "deposit_return_fees_summary"
+     * Test attribute "fee"
      */
-    public function testPropertyDepositReturnFeesSummary()
+    public function testPropertyFee()
     {
     }
 
     /**
-     * Test attribute "ts_requested_for_local"
+     * Test attribute "total"
      */
-    public function testPropertyTsRequestedForLocal()
-    {
-    }
-
-    /**
-     * Test attribute "ts_order_placed_local"
-     */
-    public function testPropertyTsOrderPlacedLocal()
-    {
-    }
-
-    /**
-     * Test attribute "logo_url"
-     */
-    public function testPropertyLogoUrl()
-    {
-    }
-
-    /**
-     * Test attribute "address"
-     */
-    public function testPropertyAddress()
-    {
-    }
-
-    /**
-     * Test attribute "vat_number"
-     */
-    public function testPropertyVatNumber()
-    {
-    }
-
-    /**
-     * Test attribute "payment_method_description"
-     */
-    public function testPropertyPaymentMethodDescription()
+    public function testPropertyTotal()
     {
     }
 }

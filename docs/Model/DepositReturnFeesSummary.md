@@ -1,10 +1,11 @@
-# PreviousOrderItemOption
+# DepositReturnFeesSummary
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** |  | [optional] 
-**deposit_return_fee** | **double** |  | [optional] 
+**count** | **int** |  | [optional] 
+**fee** | **double** |  | [optional] 
+**total** | **double** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

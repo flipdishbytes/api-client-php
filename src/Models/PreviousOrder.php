@@ -74,6 +74,7 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'service_charge_amount' => 'double',
         'tip_amount' => 'double',
         'delivery_amount' => 'double',
+        'deposit_return_fee_amount' => 'double',
         'total_tax' => 'double',
         'total_amount' => 'double',
         'items' => '\Flipdish\\Client\Models\PreviousOrderItem[]',
@@ -104,6 +105,7 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'service_charge_amount' => 'double',
         'tip_amount' => 'double',
         'delivery_amount' => 'double',
+        'deposit_return_fee_amount' => 'double',
         'total_tax' => 'double',
         'total_amount' => 'double',
         'items' => null,
@@ -155,6 +157,7 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'service_charge_amount' => 'ServiceChargeAmount',
         'tip_amount' => 'TipAmount',
         'delivery_amount' => 'DeliveryAmount',
+        'deposit_return_fee_amount' => 'DepositReturnFeeAmount',
         'total_tax' => 'TotalTax',
         'total_amount' => 'TotalAmount',
         'items' => 'Items',
@@ -185,6 +188,7 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'service_charge_amount' => 'setServiceChargeAmount',
         'tip_amount' => 'setTipAmount',
         'delivery_amount' => 'setDeliveryAmount',
+        'deposit_return_fee_amount' => 'setDepositReturnFeeAmount',
         'total_tax' => 'setTotalTax',
         'total_amount' => 'setTotalAmount',
         'items' => 'setItems',
@@ -215,6 +219,7 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'service_charge_amount' => 'getServiceChargeAmount',
         'tip_amount' => 'getTipAmount',
         'delivery_amount' => 'getDeliveryAmount',
+        'deposit_return_fee_amount' => 'getDepositReturnFeeAmount',
         'total_tax' => 'getTotalTax',
         'total_amount' => 'getTotalAmount',
         'items' => 'getItems',
@@ -536,6 +541,7 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         $this->container['service_charge_amount'] = isset($data['service_charge_amount']) ? $data['service_charge_amount'] : null;
         $this->container['tip_amount'] = isset($data['tip_amount']) ? $data['tip_amount'] : null;
         $this->container['delivery_amount'] = isset($data['delivery_amount']) ? $data['delivery_amount'] : null;
+        $this->container['deposit_return_fee_amount'] = isset($data['deposit_return_fee_amount']) ? $data['deposit_return_fee_amount'] : null;
         $this->container['total_tax'] = isset($data['total_tax']) ? $data['total_tax'] : null;
         $this->container['total_amount'] = isset($data['total_amount']) ? $data['total_amount'] : null;
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
@@ -988,6 +994,30 @@ class PreviousOrder implements ModelInterface, ArrayAccess
     public function setDeliveryAmount($delivery_amount)
     {
         $this->container['delivery_amount'] = $delivery_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets deposit_return_fee_amount
+     *
+     * @return double
+     */
+    public function getDepositReturnFeeAmount()
+    {
+        return $this->container['deposit_return_fee_amount'];
+    }
+
+    /**
+     * Sets deposit_return_fee_amount
+     *
+     * @param double $deposit_return_fee_amount deposit_return_fee_amount
+     *
+     * @return $this
+     */
+    public function setDepositReturnFeeAmount($deposit_return_fee_amount)
+    {
+        $this->container['deposit_return_fee_amount'] = $deposit_return_fee_amount;
 
         return $this;
     }

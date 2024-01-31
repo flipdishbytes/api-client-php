@@ -196,6 +196,13 @@ class PreviousOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "deposit_return_fee_amount"
+     */
+    public function testPropertyDepositReturnFeeAmount()
+    {
+    }
+
+    /**
      * Test attribute "total_tax"
      */
     public function testPropertyTotalTax()
