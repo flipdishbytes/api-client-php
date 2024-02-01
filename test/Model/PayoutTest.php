@@ -362,4 +362,25 @@ class PayoutTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTotalThirdPartyFees()
     {
     }
+
+    /**
+     * Test attribute "pos_sales_amount"
+     */
+    public function testPropertyPosSalesAmount()
+    {
+    }
+
+    /**
+     * Test attribute "pos_sales_tax"
+     */
+    public function testPropertyPosSalesTax()
+    {
+    }
+
+    /**
+     * Test attribute "tips_on_pos_sales"
+     */
+    public function testPropertyTipsOnPosSales()
+    {
+    }
 }

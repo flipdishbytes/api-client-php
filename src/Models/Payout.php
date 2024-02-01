@@ -98,7 +98,10 @@ class Payout implements ModelInterface, ArrayAccess
         'pay_green_sales_amount' => 'double',
         'delivery_integration_fee' => 'double',
         'delivery_integration_tip_fee' => 'double',
-        'total_third_party_fees' => 'double'
+        'total_third_party_fees' => 'double',
+        'pos_sales_amount' => 'double',
+        'pos_sales_tax' => 'double',
+        'tips_on_pos_sales' => 'double'
     ];
 
     /**
@@ -147,7 +150,10 @@ class Payout implements ModelInterface, ArrayAccess
         'pay_green_sales_amount' => 'double',
         'delivery_integration_fee' => 'double',
         'delivery_integration_tip_fee' => 'double',
-        'total_third_party_fees' => 'double'
+        'total_third_party_fees' => 'double',
+        'pos_sales_amount' => 'double',
+        'pos_sales_tax' => 'double',
+        'tips_on_pos_sales' => 'double'
     ];
 
     /**
@@ -217,7 +223,10 @@ class Payout implements ModelInterface, ArrayAccess
         'pay_green_sales_amount' => 'PayGreenSalesAmount',
         'delivery_integration_fee' => 'DeliveryIntegrationFee',
         'delivery_integration_tip_fee' => 'DeliveryIntegrationTipFee',
-        'total_third_party_fees' => 'TotalThirdPartyFees'
+        'total_third_party_fees' => 'TotalThirdPartyFees',
+        'pos_sales_amount' => 'PosSalesAmount',
+        'pos_sales_tax' => 'PosSalesTax',
+        'tips_on_pos_sales' => 'TipsOnPosSales'
     ];
 
     /**
@@ -266,7 +275,10 @@ class Payout implements ModelInterface, ArrayAccess
         'pay_green_sales_amount' => 'setPayGreenSalesAmount',
         'delivery_integration_fee' => 'setDeliveryIntegrationFee',
         'delivery_integration_tip_fee' => 'setDeliveryIntegrationTipFee',
-        'total_third_party_fees' => 'setTotalThirdPartyFees'
+        'total_third_party_fees' => 'setTotalThirdPartyFees',
+        'pos_sales_amount' => 'setPosSalesAmount',
+        'pos_sales_tax' => 'setPosSalesTax',
+        'tips_on_pos_sales' => 'setTipsOnPosSales'
     ];
 
     /**
@@ -315,7 +327,10 @@ class Payout implements ModelInterface, ArrayAccess
         'pay_green_sales_amount' => 'getPayGreenSalesAmount',
         'delivery_integration_fee' => 'getDeliveryIntegrationFee',
         'delivery_integration_tip_fee' => 'getDeliveryIntegrationTipFee',
-        'total_third_party_fees' => 'getTotalThirdPartyFees'
+        'total_third_party_fees' => 'getTotalThirdPartyFees',
+        'pos_sales_amount' => 'getPosSalesAmount',
+        'pos_sales_tax' => 'getPosSalesTax',
+        'tips_on_pos_sales' => 'getTipsOnPosSales'
     ];
 
     /**
@@ -692,6 +707,9 @@ class Payout implements ModelInterface, ArrayAccess
         $this->container['delivery_integration_fee'] = isset($data['delivery_integration_fee']) ? $data['delivery_integration_fee'] : null;
         $this->container['delivery_integration_tip_fee'] = isset($data['delivery_integration_tip_fee']) ? $data['delivery_integration_tip_fee'] : null;
         $this->container['total_third_party_fees'] = isset($data['total_third_party_fees']) ? $data['total_third_party_fees'] : null;
+        $this->container['pos_sales_amount'] = isset($data['pos_sales_amount']) ? $data['pos_sales_amount'] : null;
+        $this->container['pos_sales_tax'] = isset($data['pos_sales_tax']) ? $data['pos_sales_tax'] : null;
+        $this->container['tips_on_pos_sales'] = isset($data['tips_on_pos_sales']) ? $data['tips_on_pos_sales'] : null;
     }
 
     /**
@@ -1749,6 +1767,78 @@ class Payout implements ModelInterface, ArrayAccess
     public function setTotalThirdPartyFees($total_third_party_fees)
     {
         $this->container['total_third_party_fees'] = $total_third_party_fees;
+
+        return $this;
+    }
+
+    /**
+     * Gets pos_sales_amount
+     *
+     * @return double
+     */
+    public function getPosSalesAmount()
+    {
+        return $this->container['pos_sales_amount'];
+    }
+
+    /**
+     * Sets pos_sales_amount
+     *
+     * @param double $pos_sales_amount POS sales amount
+     *
+     * @return $this
+     */
+    public function setPosSalesAmount($pos_sales_amount)
+    {
+        $this->container['pos_sales_amount'] = $pos_sales_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets pos_sales_tax
+     *
+     * @return double
+     */
+    public function getPosSalesTax()
+    {
+        return $this->container['pos_sales_tax'];
+    }
+
+    /**
+     * Sets pos_sales_tax
+     *
+     * @param double $pos_sales_tax POS sales tax
+     *
+     * @return $this
+     */
+    public function setPosSalesTax($pos_sales_tax)
+    {
+        $this->container['pos_sales_tax'] = $pos_sales_tax;
+
+        return $this;
+    }
+
+    /**
+     * Gets tips_on_pos_sales
+     *
+     * @return double
+     */
+    public function getTipsOnPosSales()
+    {
+        return $this->container['tips_on_pos_sales'];
+    }
+
+    /**
+     * Sets tips_on_pos_sales
+     *
+     * @param double $tips_on_pos_sales Tips on POS sales
+     *
+     * @return $this
+     */
+    public function setTipsOnPosSales($tips_on_pos_sales)
+    {
+        $this->container['tips_on_pos_sales'] = $tips_on_pos_sales;
 
         return $this;
     }
