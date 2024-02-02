@@ -92,6 +92,16 @@ class CampaignsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for fetchLoyaltyCampaignByPublicId
+     *
+     * .
+     *
+     */
+    public function testFetchLoyaltyCampaignByPublicId()
+    {
+    }
+
+    /**
      * Test case for getLoyaltyCampaignsForApp
      *
      * .

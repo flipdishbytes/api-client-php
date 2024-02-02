@@ -170,6 +170,7 @@ Class | Method | HTTP request | Description
 *BankAccountApi* | [**updateBankAccountState**](docs/Api/BankAccountApi.md#updatebankaccountstate) | **POST** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/state/{state} | 
 *CampaignsApi* | [**createLoyaltyCampaign**](docs/Api/CampaignsApi.md#createloyaltycampaign) | **POST** /api/v1.0/{appId}/campaigns/loyalty | 
 *CampaignsApi* | [**createRetentionCampaign**](docs/Api/CampaignsApi.md#createretentioncampaign) | **POST** /api/v1.0/{appId}/campaigns/retention | 
+*CampaignsApi* | [**fetchLoyaltyCampaignByPublicId**](docs/Api/CampaignsApi.md#fetchloyaltycampaignbypublicid) | **GET** /api/v1.0/{appId}/campaigns/loyalty/publicId/{campaignPublicId} | 
 *CampaignsApi* | [**getLoyaltyCampaignsForApp**](docs/Api/CampaignsApi.md#getloyaltycampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/loyalty | 
 *CampaignsApi* | [**getLoyaltyCampaignsForStore**](docs/Api/CampaignsApi.md#getloyaltycampaignsforstore) | **GET** /api/v1.0/{appId}/campaigns/loyalty/{storeId} | 
 *CampaignsApi* | [**getRetentionCampaignsForApp**](docs/Api/CampaignsApi.md#getretentioncampaignsforapp) | **GET** /api/v1.0/{appId}/campaigns/retention | 
@@ -658,6 +659,7 @@ Class | Method | HTTP request | Description
  - [BusinessHoursPeriod](docs/Model/BusinessHoursPeriod.md)
  - [BusinessHoursPeriodBase](docs/Model/BusinessHoursPeriodBase.md)
  - [CampaignStatistics](docs/Model/CampaignStatistics.md)
+ - [CancellationToken](docs/Model/CancellationToken.md)
  - [CardReader](docs/Model/CardReader.md)
  - [CardReaderRegistrationRequest](docs/Model/CardReaderRegistrationRequest.md)
  - [Cart](docs/Model/Cart.md)
@@ -1236,6 +1238,7 @@ Class | Method | HTTP request | Description
  - [RetentionCampaignUpdatedEvent](docs/Model/RetentionCampaignUpdatedEvent.md)
  - [RevenueAdjustmentsDetails](docs/Model/RevenueAdjustmentsDetails.md)
  - [RevenueDetail](docs/Model/RevenueDetail.md)
+ - [SafeWaitHandle](docs/Model/SafeWaitHandle.md)
  - [SearchCriteria](docs/Model/SearchCriteria.md)
  - [ServiceCharge](docs/Model/ServiceCharge.md)
  - [SetOrderBatchingConfiguration](docs/Model/SetOrderBatchingConfiguration.md)
@@ -1369,6 +1372,7 @@ Class | Method | HTTP request | Description
  - [VoucherSummary](docs/Model/VoucherSummary.md)
  - [VoucherUpdatedEvent](docs/Model/VoucherUpdatedEvent.md)
  - [VoucherWithStats](docs/Model/VoucherWithStats.md)
+ - [WaitHandle](docs/Model/WaitHandle.md)
  - [WebhookEventSample](docs/Model/WebhookEventSample.md)
  - [WebhookLog](docs/Model/WebhookLog.md)
  - [WebhookSubscription](docs/Model/WebhookSubscription.md)
