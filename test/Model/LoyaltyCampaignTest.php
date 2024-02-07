@@ -173,4 +173,11 @@ class LoyaltyCampaignTest extends \PHPUnit_Framework_TestCase
     public function testPropertyStoreIds()
     {
     }
+
+    /**
+     * Test attribute "app_id"
+     */
+    public function testPropertyAppId()
+    {
+    }
 }

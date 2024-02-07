@@ -71,7 +71,8 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
         'auto_apply_resulting_vouchers' => 'bool',
         'include_existing_orders' => 'bool',
         'is_enabled' => 'bool',
-        'store_ids' => 'int[]'
+        'store_ids' => 'int[]',
+        'app_id' => 'string'
     ];
 
     /**
@@ -93,7 +94,8 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
         'auto_apply_resulting_vouchers' => null,
         'include_existing_orders' => null,
         'is_enabled' => null,
-        'store_ids' => 'int32'
+        'store_ids' => 'int32',
+        'app_id' => null
     ];
 
     /**
@@ -136,7 +138,8 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
         'auto_apply_resulting_vouchers' => 'AutoApplyResultingVouchers',
         'include_existing_orders' => 'IncludeExistingOrders',
         'is_enabled' => 'IsEnabled',
-        'store_ids' => 'StoreIds'
+        'store_ids' => 'StoreIds',
+        'app_id' => 'AppId'
     ];
 
     /**
@@ -158,7 +161,8 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
         'auto_apply_resulting_vouchers' => 'setAutoApplyResultingVouchers',
         'include_existing_orders' => 'setIncludeExistingOrders',
         'is_enabled' => 'setIsEnabled',
-        'store_ids' => 'setStoreIds'
+        'store_ids' => 'setStoreIds',
+        'app_id' => 'setAppId'
     ];
 
     /**
@@ -180,7 +184,8 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
         'auto_apply_resulting_vouchers' => 'getAutoApplyResultingVouchers',
         'include_existing_orders' => 'getIncludeExistingOrders',
         'is_enabled' => 'getIsEnabled',
-        'store_ids' => 'getStoreIds'
+        'store_ids' => 'getStoreIds',
+        'app_id' => 'getAppId'
     ];
 
     /**
@@ -257,6 +262,7 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
         $this->container['include_existing_orders'] = isset($data['include_existing_orders']) ? $data['include_existing_orders'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
         $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
+        $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
     }
 
     /**
@@ -663,6 +669,30 @@ class LoyaltyCampaign implements ModelInterface, ArrayAccess
     public function setStoreIds($store_ids)
     {
         $this->container['store_ids'] = $store_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets app_id
+     *
+     * @return string
+     */
+    public function getAppId()
+    {
+        return $this->container['app_id'];
+    }
+
+    /**
+     * Sets app_id
+     *
+     * @param string $app_id The app that this campaign belongs to.
+     *
+     * @return $this
+     */
+    public function setAppId($app_id)
+    {
+        $this->container['app_id'] = $app_id;
 
         return $this;
     }

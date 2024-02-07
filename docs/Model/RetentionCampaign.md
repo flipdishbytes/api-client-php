@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **include_existing_orders** | **bool** | Campaign will apply to existing orders | [optional] 
 **is_enabled** | **bool** | Is campaign enabled | [optional] 
 **store_ids** | **int[]** | Ids of stores this campaign applies to | [optional] 
+**app_id** | **string** | The app that this campaign belongs to. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
