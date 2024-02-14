@@ -1303,7 +1303,7 @@ class AppStoreDeveloperApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiErrorResult
+     * @return \Flipdish\\Client\Models\RestApiStringResult
      */
     public function getExternalFunctionSigningKey($oauth_app_id, $app_store_app_id)
     {
@@ -1319,11 +1319,11 @@ class AppStoreDeveloperApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiErrorResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiStringResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function getExternalFunctionSigningKeyWithHttpInfo($oauth_app_id, $app_store_app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiErrorResult';
+        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
         $request = $this->getExternalFunctionSigningKeyRequest($oauth_app_id, $app_store_app_id);
 
         try {
@@ -1375,7 +1375,7 @@ class AppStoreDeveloperApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        '\Flipdish\\Client\Models\RestApiStringResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1451,7 +1451,7 @@ class AppStoreDeveloperApi
      */
     public function getExternalFunctionSigningKeyAsyncWithHttpInfo($oauth_app_id, $app_store_app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiErrorResult';
+        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
         $request = $this->getExternalFunctionSigningKeyRequest($oauth_app_id, $app_store_app_id);
 
         return $this->client

@@ -227,7 +227,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getExternalFunctionSigningKey**
-> \Flipdish\\Client\Models\RestApiErrorResult getExternalFunctionSigningKey($oauth_app_id, $app_store_app_id)
+> \Flipdish\\Client\Models\RestApiStringResult getExternalFunctionSigningKey($oauth_app_id, $app_store_app_id)
 
 
 
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiErrorResult**](../Model/RestApiErrorResult.md)
+[**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
 
 ### Authorization
 
