@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **getAppStoreApp**
-> \Flipdish\\Client\Models\AppStoreApp getAppStoreApp($app_store_app_id)
+> \Flipdish\\Client\Models\RestApiResultAppStoreApp getAppStoreApp($app_store_app_id)
 
 
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\AppStoreApp**](../Model/AppStoreApp.md)
+[**\Flipdish\\Client\Models\RestApiResultAppStoreApp**](../Model/RestApiResultAppStoreApp.md)
 
 ### Authorization
 

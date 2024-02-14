@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **executeConfigurationAction**
-> \Flipdish\\Client\Models\ExecuteConfigurationActionResult executeConfigurationAction($app_id, $app_store_app_id, $config_id, $execute_configuration_action_request)
+> \Flipdish\\Client\Models\RestApiResultExecuteConfigurationActionResult executeConfigurationAction($app_id, $app_store_app_id, $config_id, $execute_configuration_action_request)
 
 
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\ExecuteConfigurationActionResult**](../Model/ExecuteConfigurationActionResult.md)
+[**\Flipdish\\Client\Models\RestApiResultExecuteConfigurationActionResult**](../Model/RestApiResultExecuteConfigurationActionResult.md)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAppStoreConfig**
-> \Flipdish\\Client\Models\AppStoreAppConfiguration getAppStoreConfig($app_id, $app_store_app_id, $config_id)
+> \Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration getAppStoreConfig($app_id, $app_store_app_id, $config_id)
 
 
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\AppStoreAppConfiguration**](../Model/AppStoreAppConfiguration.md)
+[**\Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration**](../Model/RestApiResultAppStoreAppConfiguration.md)
 
 ### Authorization
 

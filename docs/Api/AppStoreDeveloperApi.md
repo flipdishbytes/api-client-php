@@ -227,7 +227,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getExternalFunctionSigningKey**
-> getExternalFunctionSigningKey($oauth_app_id, $app_store_app_id)
+> \Flipdish\\Client\Models\RestApiErrorResult getExternalFunctionSigningKey($oauth_app_id, $app_store_app_id)
 
 
 
@@ -249,7 +249,8 @@ $oauth_app_id = "oauth_app_id_example"; // string |
 $app_store_app_id = "app_store_app_id_example"; // string | 
 
 try {
-    $apiInstance->getExternalFunctionSigningKey($oauth_app_id, $app_store_app_id);
+    $result = $apiInstance->getExternalFunctionSigningKey($oauth_app_id, $app_store_app_id);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AppStoreDeveloperApi->getExternalFunctionSigningKey: ', $e->getMessage(), PHP_EOL;
 }
@@ -265,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\Flipdish\\Client\Models\RestApiErrorResult**](../Model/RestApiErrorResult.md)
 
 ### Authorization
 

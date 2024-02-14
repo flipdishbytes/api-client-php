@@ -1049,7 +1049,7 @@ class AppStoreConfigurationsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\ExecuteConfigurationActionResult
+     * @return \Flipdish\\Client\Models\RestApiResultExecuteConfigurationActionResult
      */
     public function executeConfigurationAction($app_id, $app_store_app_id, $config_id, $execute_configuration_action_request)
     {
@@ -1067,11 +1067,11 @@ class AppStoreConfigurationsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\ExecuteConfigurationActionResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultExecuteConfigurationActionResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function executeConfigurationActionWithHttpInfo($app_id, $app_store_app_id, $config_id, $execute_configuration_action_request)
     {
-        $returnType = '\Flipdish\\Client\Models\ExecuteConfigurationActionResult';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultExecuteConfigurationActionResult';
         $request = $this->executeConfigurationActionRequest($app_id, $app_store_app_id, $config_id, $execute_configuration_action_request);
 
         try {
@@ -1123,7 +1123,7 @@ class AppStoreConfigurationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\ExecuteConfigurationActionResult',
+                        '\Flipdish\\Client\Models\RestApiResultExecuteConfigurationActionResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1195,7 +1195,7 @@ class AppStoreConfigurationsApi
      */
     public function executeConfigurationActionAsyncWithHttpInfo($app_id, $app_store_app_id, $config_id, $execute_configuration_action_request)
     {
-        $returnType = '\Flipdish\\Client\Models\ExecuteConfigurationActionResult';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultExecuteConfigurationActionResult';
         $request = $this->executeConfigurationActionRequest($app_id, $app_store_app_id, $config_id, $execute_configuration_action_request);
 
         return $this->client
@@ -1393,7 +1393,7 @@ class AppStoreConfigurationsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\AppStoreAppConfiguration
+     * @return \Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration
      */
     public function getAppStoreConfig($app_id, $app_store_app_id, $config_id)
     {
@@ -1410,11 +1410,11 @@ class AppStoreConfigurationsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\AppStoreAppConfiguration, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAppStoreConfigWithHttpInfo($app_id, $app_store_app_id, $config_id)
     {
-        $returnType = '\Flipdish\\Client\Models\AppStoreAppConfiguration';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration';
         $request = $this->getAppStoreConfigRequest($app_id, $app_store_app_id, $config_id);
 
         try {
@@ -1466,7 +1466,7 @@ class AppStoreConfigurationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\AppStoreAppConfiguration',
+                        '\Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1544,7 +1544,7 @@ class AppStoreConfigurationsApi
      */
     public function getAppStoreConfigAsyncWithHttpInfo($app_id, $app_store_app_id, $config_id)
     {
-        $returnType = '\Flipdish\\Client\Models\AppStoreAppConfiguration';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreAppConfiguration';
         $request = $this->getAppStoreConfigRequest($app_id, $app_store_app_id, $config_id);
 
         return $this->client

@@ -94,7 +94,7 @@ class AppStoreApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\AppStoreApp
+     * @return \Flipdish\\Client\Models\RestApiResultAppStoreApp
      */
     public function getAppStoreApp($app_store_app_id)
     {
@@ -109,11 +109,11 @@ class AppStoreApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\AppStoreApp, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultAppStoreApp, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAppStoreAppWithHttpInfo($app_store_app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\AppStoreApp';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreApp';
         $request = $this->getAppStoreAppRequest($app_store_app_id);
 
         try {
@@ -165,7 +165,7 @@ class AppStoreApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\AppStoreApp',
+                        '\Flipdish\\Client\Models\RestApiResultAppStoreApp',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -239,7 +239,7 @@ class AppStoreApi
      */
     public function getAppStoreAppAsyncWithHttpInfo($app_store_app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\AppStoreApp';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreApp';
         $request = $this->getAppStoreAppRequest($app_store_app_id);
 
         return $this->client

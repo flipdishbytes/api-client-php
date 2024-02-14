@@ -1143,6 +1143,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultCustomer](docs/Model/RestApiResultCustomer.md)
  - [RestApiResultDeliveryZone](docs/Model/RestApiResultDeliveryZone.md)
  - [RestApiResultDnsRecordInformation](docs/Model/RestApiResultDnsRecordInformation.md)
+ - [RestApiResultExecuteConfigurationActionResult](docs/Model/RestApiResultExecuteConfigurationActionResult.md)
  - [RestApiResultFulfillmentStatesConfiguration](docs/Model/RestApiResultFulfillmentStatesConfiguration.md)
  - [RestApiResultGroup](docs/Model/RestApiResultGroup.md)
  - [RestApiResultHomeStatistics](docs/Model/RestApiResultHomeStatistics.md)
