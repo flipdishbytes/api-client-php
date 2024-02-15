@@ -8070,31 +8070,31 @@ class StoresApi
      * Operation putStoreDeliveryFeeConfig
      *
      * @param  int $store_id store_id (required)
-     * @param  \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfig[] $configs configs (required)
+     * @param  \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfigUpdateRequest $fee_config_update_request fee_config_update_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function putStoreDeliveryFeeConfig($store_id, $configs)
+    public function putStoreDeliveryFeeConfig($store_id, $fee_config_update_request)
     {
-        $this->putStoreDeliveryFeeConfigWithHttpInfo($store_id, $configs);
+        $this->putStoreDeliveryFeeConfigWithHttpInfo($store_id, $fee_config_update_request);
     }
 
     /**
      * Operation putStoreDeliveryFeeConfigWithHttpInfo
      *
      * @param  int $store_id (required)
-     * @param  \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfig[] $configs (required)
+     * @param  \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfigUpdateRequest $fee_config_update_request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putStoreDeliveryFeeConfigWithHttpInfo($store_id, $configs)
+    public function putStoreDeliveryFeeConfigWithHttpInfo($store_id, $fee_config_update_request)
     {
         $returnType = '';
-        $request = $this->putStoreDeliveryFeeConfigRequest($store_id, $configs);
+        $request = $this->putStoreDeliveryFeeConfigRequest($store_id, $fee_config_update_request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8147,14 +8147,14 @@ class StoresApi
      * 
      *
      * @param  int $store_id (required)
-     * @param  \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfig[] $configs (required)
+     * @param  \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfigUpdateRequest $fee_config_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putStoreDeliveryFeeConfigAsync($store_id, $configs)
+    public function putStoreDeliveryFeeConfigAsync($store_id, $fee_config_update_request)
     {
-        return $this->putStoreDeliveryFeeConfigAsyncWithHttpInfo($store_id, $configs)
+        return $this->putStoreDeliveryFeeConfigAsyncWithHttpInfo($store_id, $fee_config_update_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8168,15 +8168,15 @@ class StoresApi
      * 
      *
      * @param  int $store_id (required)
-     * @param  \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfig[] $configs (required)
+     * @param  \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfigUpdateRequest $fee_config_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putStoreDeliveryFeeConfigAsyncWithHttpInfo($store_id, $configs)
+    public function putStoreDeliveryFeeConfigAsyncWithHttpInfo($store_id, $fee_config_update_request)
     {
         $returnType = '';
-        $request = $this->putStoreDeliveryFeeConfigRequest($store_id, $configs);
+        $request = $this->putStoreDeliveryFeeConfigRequest($store_id, $fee_config_update_request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8205,12 +8205,12 @@ class StoresApi
      * Create request for operation 'putStoreDeliveryFeeConfig'
      *
      * @param  int $store_id (required)
-     * @param  \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfig[] $configs (required)
+     * @param  \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfigUpdateRequest $fee_config_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function putStoreDeliveryFeeConfigRequest($store_id, $configs)
+    protected function putStoreDeliveryFeeConfigRequest($store_id, $fee_config_update_request)
     {
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
@@ -8218,10 +8218,10 @@ class StoresApi
                 'Missing the required parameter $store_id when calling putStoreDeliveryFeeConfig'
             );
         }
-        // verify the required parameter 'configs' is set
-        if ($configs === null || (is_array($configs) && count($configs) === 0)) {
+        // verify the required parameter 'fee_config_update_request' is set
+        if ($fee_config_update_request === null || (is_array($fee_config_update_request) && count($fee_config_update_request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $configs when calling putStoreDeliveryFeeConfig'
+                'Missing the required parameter $fee_config_update_request when calling putStoreDeliveryFeeConfig'
             );
         }
 
@@ -8244,8 +8244,8 @@ class StoresApi
 
         // body params
         $_tempBody = null;
-        if (isset($configs)) {
-            $_tempBody = $configs;
+        if (isset($fee_config_update_request)) {
+            $_tempBody = $fee_config_update_request;
         }
 
         if ($multipart) {

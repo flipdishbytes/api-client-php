@@ -1445,7 +1445,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putStoreDeliveryFeeConfig**
-> putStoreDeliveryFeeConfig($store_id, $configs)
+> putStoreDeliveryFeeConfig($store_id, $fee_config_update_request)
 
 
 
@@ -1464,10 +1464,10 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
     $config
 );
 $store_id = 56; // int | 
-$configs = array(new \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfig()); // \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfig[] | 
+$fee_config_update_request = new \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfigUpdateRequest(); // \Flipdish\\Client\Models\StoreDeliveryZoneFeeConfigUpdateRequest | 
 
 try {
-    $apiInstance->putStoreDeliveryFeeConfig($store_id, $configs);
+    $apiInstance->putStoreDeliveryFeeConfig($store_id, $fee_config_update_request);
 } catch (Exception $e) {
     echo 'Exception when calling StoresApi->putStoreDeliveryFeeConfig: ', $e->getMessage(), PHP_EOL;
 }
@@ -1479,7 +1479,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**|  |
- **configs** | [**\Flipdish\\Client\Models\StoreDeliveryZoneFeeConfig[]**](../Model/StoreDeliveryZoneFeeConfig.md)|  |
+ **fee_config_update_request** | [**\Flipdish\\Client\Models\StoreDeliveryZoneFeeConfigUpdateRequest**](../Model/StoreDeliveryZoneFeeConfigUpdateRequest.md)|  |
 
 ### Return type
 
