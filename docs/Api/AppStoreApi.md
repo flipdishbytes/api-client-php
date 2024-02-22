@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **getAppStoreApp**
-> \Flipdish\\Client\Models\RestApiResultAppStoreApp getAppStoreApp($app_store_app_id)
+> \Flipdish\\Client\Models\RestApiResultAppStoreApp getAppStoreApp($app_store_app_id, $app_id)
 
 
 
@@ -28,9 +28,10 @@ $apiInstance = new Flipdish\\Client\Api\AppStoreApi(
     $config
 );
 $app_store_app_id = "app_store_app_id_example"; // string | 
+$app_id = "app_id_example"; // string | 
 
 try {
-    $result = $apiInstance->getAppStoreApp($app_store_app_id);
+    $result = $apiInstance->getAppStoreApp($app_store_app_id, $app_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AppStoreApi->getAppStoreApp: ', $e->getMessage(), PHP_EOL;
@@ -43,6 +44,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_store_app_id** | **string**|  |
+ **app_id** | **string**|  | [optional]
 
 ### Return type
 

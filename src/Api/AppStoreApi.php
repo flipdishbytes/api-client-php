@@ -91,14 +91,15 @@ class AppStoreApi
      * Operation getAppStoreApp
      *
      * @param  string $app_store_app_id app_store_app_id (required)
+     * @param  string $app_id app_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultAppStoreApp
      */
-    public function getAppStoreApp($app_store_app_id)
+    public function getAppStoreApp($app_store_app_id, $app_id = null)
     {
-        list($response) = $this->getAppStoreAppWithHttpInfo($app_store_app_id);
+        list($response) = $this->getAppStoreAppWithHttpInfo($app_store_app_id, $app_id);
         return $response;
     }
 
@@ -106,15 +107,16 @@ class AppStoreApi
      * Operation getAppStoreAppWithHttpInfo
      *
      * @param  string $app_store_app_id (required)
+     * @param  string $app_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultAppStoreApp, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAppStoreAppWithHttpInfo($app_store_app_id)
+    public function getAppStoreAppWithHttpInfo($app_store_app_id, $app_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreApp';
-        $request = $this->getAppStoreAppRequest($app_store_app_id);
+        $request = $this->getAppStoreAppRequest($app_store_app_id, $app_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -213,13 +215,14 @@ class AppStoreApi
      * 
      *
      * @param  string $app_store_app_id (required)
+     * @param  string $app_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAppStoreAppAsync($app_store_app_id)
+    public function getAppStoreAppAsync($app_store_app_id, $app_id = null)
     {
-        return $this->getAppStoreAppAsyncWithHttpInfo($app_store_app_id)
+        return $this->getAppStoreAppAsyncWithHttpInfo($app_store_app_id, $app_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -233,14 +236,15 @@ class AppStoreApi
      * 
      *
      * @param  string $app_store_app_id (required)
+     * @param  string $app_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAppStoreAppAsyncWithHttpInfo($app_store_app_id)
+    public function getAppStoreAppAsyncWithHttpInfo($app_store_app_id, $app_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultAppStoreApp';
-        $request = $this->getAppStoreAppRequest($app_store_app_id);
+        $request = $this->getAppStoreAppRequest($app_store_app_id, $app_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -283,11 +287,12 @@ class AppStoreApi
      * Create request for operation 'getAppStoreApp'
      *
      * @param  string $app_store_app_id (required)
+     * @param  string $app_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAppStoreAppRequest($app_store_app_id)
+    protected function getAppStoreAppRequest($app_store_app_id, $app_id = null)
     {
         // verify the required parameter 'app_store_app_id' is set
         if ($app_store_app_id === null || (is_array($app_store_app_id) && count($app_store_app_id) === 0)) {
@@ -303,6 +308,10 @@ class AppStoreApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($app_id !== null) {
+            $queryParams['appId'] = ObjectSerializer::toQueryValue($app_id);
+        }
 
         // path params
         if ($app_store_app_id !== null) {
