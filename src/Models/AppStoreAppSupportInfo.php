@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * AppStoreAppSupportInfo Class Doc Comment
  *
  * @category Class
- * @description App store app support information
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -248,7 +247,7 @@ class AppStoreAppSupportInfo implements ModelInterface, ArrayAccess
     /**
      * Sets privacy_policy
      *
-     * @param string $privacy_policy Privacy policy url
+     * @param string $privacy_policy privacy_policy
      *
      * @return $this
      */
@@ -272,7 +271,7 @@ class AppStoreAppSupportInfo implements ModelInterface, ArrayAccess
     /**
      * Sets terms_of_use
      *
-     * @param string $terms_of_use Terms of use url
+     * @param string $terms_of_use terms_of_use
      *
      * @return $this
      */
@@ -296,7 +295,7 @@ class AppStoreAppSupportInfo implements ModelInterface, ArrayAccess
     /**
      * Sets company_website
      *
-     * @param string $company_website Company website url
+     * @param string $company_website company_website
      *
      * @return $this
      */
@@ -320,7 +319,7 @@ class AppStoreAppSupportInfo implements ModelInterface, ArrayAccess
     /**
      * Sets learn_more
      *
-     * @param string $learn_more Learn more url
+     * @param string $learn_more learn_more
      *
      * @return $this
      */
@@ -344,7 +343,7 @@ class AppStoreAppSupportInfo implements ModelInterface, ArrayAccess
     /**
      * Sets installation_message
      *
-     * @param string $installation_message Installation message
+     * @param string $installation_message installation_message
      *
      * @return $this
      */
@@ -368,7 +367,7 @@ class AppStoreAppSupportInfo implements ModelInterface, ArrayAccess
     /**
      * Sets support_email
      *
-     * @param string $support_email Support email
+     * @param string $support_email support_email
      *
      * @return $this
      */

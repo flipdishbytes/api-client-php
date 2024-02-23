@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * AppStoreSubscriptionItem Class Doc Comment
  *
  * @category Class
- * @description Subscription list item
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -248,7 +247,7 @@ class AppStoreSubscriptionItem implements ModelInterface, ArrayAccess
     /**
      * Sets external_subscription_id
      *
-     * @param string $external_subscription_id ExternalSubscriptionId
+     * @param string $external_subscription_id external_subscription_id
      *
      * @return $this
      */
@@ -272,7 +271,7 @@ class AppStoreSubscriptionItem implements ModelInterface, ArrayAccess
     /**
      * Sets store_ids
      *
-     * @param int[] $store_ids StoreIds
+     * @param int[] $store_ids store_ids
      *
      * @return $this
      */
@@ -296,7 +295,7 @@ class AppStoreSubscriptionItem implements ModelInterface, ArrayAccess
     /**
      * Sets user_id
      *
-     * @param int $user_id UserId
+     * @param int $user_id user_id
      *
      * @return $this
      */
@@ -320,7 +319,7 @@ class AppStoreSubscriptionItem implements ModelInterface, ArrayAccess
     /**
      * Sets user_email
      *
-     * @param string $user_email UserEmail
+     * @param string $user_email user_email
      *
      * @return $this
      */
@@ -344,7 +343,7 @@ class AppStoreSubscriptionItem implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status Status
+     * @param string $status status
      *
      * @return $this
      */
@@ -368,7 +367,7 @@ class AppStoreSubscriptionItem implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_change_job_id
      *
-     * @param string $subscription_change_job_id SubscriptionChangeJobId
+     * @param string $subscription_change_job_id subscription_change_job_id
      *
      * @return $this
      */

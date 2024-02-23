@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * SubscriptionProductPriceInfo Class Doc Comment
  *
  * @category Class
- * @description Price info
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -253,7 +252,7 @@ class SubscriptionProductPriceInfo implements ModelInterface, ArrayAccess
     /**
      * Sets amount
      *
-     * @param double $amount Price amount
+     * @param double $amount amount
      *
      * @return $this
      */
@@ -277,7 +276,7 @@ class SubscriptionProductPriceInfo implements ModelInterface, ArrayAccess
     /**
      * Sets currency
      *
-     * @param string $currency Currency code
+     * @param string $currency currency
      *
      * @return $this
      */
@@ -301,7 +300,7 @@ class SubscriptionProductPriceInfo implements ModelInterface, ArrayAccess
     /**
      * Sets scope
      *
-     * @param string $scope Scope (eg. per store or per whitelabel)
+     * @param string $scope scope
      *
      * @return $this
      */

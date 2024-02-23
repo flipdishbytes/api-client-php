@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * UpdateAppStoreAppConfiguration Class Doc Comment
  *
  * @category Class
- * @description Update App store app configuration
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -233,7 +232,7 @@ class UpdateAppStoreAppConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets is_enabled
      *
-     * @param bool $is_enabled Is enabled
+     * @param bool $is_enabled is_enabled
      *
      * @return $this
      */
@@ -257,7 +256,7 @@ class UpdateAppStoreAppConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets store_ids
      *
-     * @param int[] $store_ids Stores id's
+     * @param int[] $store_ids store_ids
      *
      * @return $this
      */
@@ -281,7 +280,7 @@ class UpdateAppStoreAppConfiguration implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \Flipdish\\Client\Models\Setting[] $settings Settings
+     * @param \Flipdish\\Client\Models\Setting[] $settings settings
      *
      * @return $this
      */

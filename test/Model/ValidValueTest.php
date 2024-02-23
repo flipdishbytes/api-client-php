@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * ValidValueTest Class Doc Comment
  *
  * @category    Class
- * @description Valid Value
+ * @description ValidValue
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

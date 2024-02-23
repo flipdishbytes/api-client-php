@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * SubscriptionProductPriceInfoTest Class Doc Comment
  *
  * @category    Class
- * @description Price info
+ * @description SubscriptionProductPriceInfo
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

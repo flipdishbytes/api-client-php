@@ -3,33 +3,33 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Unique App store app configuration id | 
-**app_id** | **string** | App id | 
-**app_store_app_id** | **string** | App store app id | 
-**is_enabled** | **bool** | Is enabled | 
-**store_ids** | **int[]** | Stores id&#39;s | [optional] 
-**settings** | [**\Flipdish\\Client\Models\Setting[]**](Setting.md) | Settings | [optional] 
-**verification_status** | **string** | Application verification status | 
-**logo** | **string** | Logo | [optional] 
-**o_auth_app_id** | **string** | OAuth App identifier | 
-**internal** | **bool** | Internal | 
-**details** | **string** | Details | 
-**configuration_type** | **string** | Configuration type  &lt;example&gt;External link&lt;/example&gt;&lt;example&gt;Flipdish hosted&lt;/example&gt; | 
-**store_selector_type** | **string** | Store selector type | 
-**field_groups** | [**\Flipdish\\Client\Models\FieldGroup[]**](FieldGroup.md) | Field groups | [optional] 
-**setup_instructions** | **string** | Setup instructions | [optional] 
-**external_setup_link** | **string** | External setup link | [optional] 
-**teammate_app_access_level** | **string** | Teammate app access level | [optional] 
-**permissions_type** | **string** | Permissions type | 
-**support** | [**\Flipdish\\Client\Models\AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) | Support information | [optional] 
-**external_function_action_url** | **string** | Action URL for external functions, used for handling Portal configuration action buttons | [optional] 
-**external_function_signature_key** | **string** | Signing key for external function action calls | [optional] 
-**is_paid** | **bool** | Is Paid | [optional] 
-**name** | **string** | Name | 
-**description** | **string** | Description | 
-**categories** | **string[]** | Categories | 
-**countries** | **string[]** | Countries | 
-**developer_name** | **string** | Developer Name | [optional] 
+**id** | **string** |  | 
+**app_id** | **string** |  | 
+**app_store_app_id** | **string** |  | 
+**is_enabled** | **bool** |  | 
+**store_ids** | **int[]** |  | [optional] 
+**settings** | [**\Flipdish\\Client\Models\Setting[]**](Setting.md) |  | [optional] 
+**verification_status** | **string** |  | 
+**logo** | **string** |  | [optional] 
+**o_auth_app_id** | **string** |  | 
+**internal** | **bool** |  | 
+**details** | **string** |  | 
+**configuration_type** | **string** |  | 
+**store_selector_type** | **string** |  | 
+**field_groups** | [**\Flipdish\\Client\Models\FieldGroup[]**](FieldGroup.md) |  | [optional] 
+**setup_instructions** | **string** |  | [optional] 
+**external_setup_link** | **string** |  | [optional] 
+**teammate_app_access_level** | **string** |  | [optional] 
+**permissions_type** | **string** |  | 
+**support** | [**\Flipdish\\Client\Models\AppStoreAppSupportInfo**](AppStoreAppSupportInfo.md) |  | [optional] 
+**external_function_action_url** | **string** |  | [optional] 
+**external_function_signature_key** | **string** |  | [optional] 
+**is_paid** | **bool** |  | [optional] 
+**name** | **string** |  | 
+**description** | **string** |  | 
+**categories** | **string[]** |  | 
+**countries** | **string[]** |  | 
+**developer_name** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

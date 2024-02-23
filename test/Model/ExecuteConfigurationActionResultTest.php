@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * ExecuteConfigurationActionResultTest Class Doc Comment
  *
  * @category    Class
- * @description Result of configuration action execution
+ * @description ExecuteConfigurationActionResult
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

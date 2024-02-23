@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * UpdateAppStoreAppExternalProduct Class Doc Comment
  *
  * @category Class
- * @description Update App store app external product id
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -218,7 +217,7 @@ class UpdateAppStoreAppExternalProduct implements ModelInterface, ArrayAccess
     /**
      * Sets external_product_id
      *
-     * @param string $external_product_id The external product id
+     * @param string $external_product_id external_product_id
      *
      * @return $this
      */

@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * ValidValue Class Doc Comment
  *
  * @category Class
- * @description Valid Value
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -230,7 +229,7 @@ class ValidValue implements ModelInterface, ArrayAccess
     /**
      * Sets code
      *
-     * @param string $code Code
+     * @param string $code code
      *
      * @return $this
      */
@@ -254,7 +253,7 @@ class ValidValue implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name Name
+     * @param string $name name
      *
      * @return $this
      */

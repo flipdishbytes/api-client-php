@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * ExecuteConfigurationActionRequestTest Class Doc Comment
  *
  * @category    Class
- * @description Execute Configuration
+ * @description ExecuteConfigurationActionRequest
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

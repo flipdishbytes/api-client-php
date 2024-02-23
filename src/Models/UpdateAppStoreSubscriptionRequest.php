@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * UpdateAppStoreSubscriptionRequest Class Doc Comment
  *
  * @category Class
- * @description Update subscription
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -218,7 +217,7 @@ class UpdateAppStoreSubscriptionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets store_ids
      *
-     * @param int[] $store_ids Store ids to update
+     * @param int[] $store_ids store_ids
      *
      * @return $this
      */

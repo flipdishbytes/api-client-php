@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * AddAppStoreSubscriptionRequest Class Doc Comment
  *
  * @category Class
- * @description Add subscription
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -224,7 +223,7 @@ class AddAppStoreSubscriptionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets store_ids
      *
-     * @param int[] $store_ids Store ids to update
+     * @param int[] $store_ids store_ids
      *
      * @return $this
      */
@@ -248,7 +247,7 @@ class AddAppStoreSubscriptionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_account_email
      *
-     * @param string $subscription_account_email Email (for subscription setup) - optional, only required for admin access
+     * @param string $subscription_account_email subscription_account_email
      *
      * @return $this
      */

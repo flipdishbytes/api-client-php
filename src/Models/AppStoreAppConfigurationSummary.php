@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * AppStoreAppConfigurationSummary Class Doc Comment
  *
  * @category Class
- * @description App store app configuration summary information
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -362,7 +361,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id Unique App store app configuration id
+     * @param string $id id
      *
      * @return $this
      */
@@ -386,7 +385,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     /**
      * Sets app_id
      *
-     * @param string $app_id App Id
+     * @param string $app_id app_id
      *
      * @return $this
      */
@@ -410,7 +409,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     /**
      * Sets is_enabled
      *
-     * @param bool $is_enabled Is enabled
+     * @param bool $is_enabled is_enabled
      *
      * @return $this
      */
@@ -434,7 +433,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     /**
      * Sets stores
      *
-     * @param \Flipdish\\Client\Models\ConfiguredStore[] $stores List of stores
+     * @param \Flipdish\\Client\Models\ConfiguredStore[] $stores stores
      *
      * @return $this
      */
@@ -458,7 +457,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     /**
      * Sets configuration_type
      *
-     * @param string $configuration_type Configuration type
+     * @param string $configuration_type configuration_type
      *
      * @return $this
      */
@@ -491,7 +490,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     /**
      * Sets store_selector_type
      *
-     * @param string $store_selector_type Store selector type
+     * @param string $store_selector_type store_selector_type
      *
      * @return $this
      */
@@ -524,7 +523,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     /**
      * Sets internal
      *
-     * @param bool $internal Internal
+     * @param bool $internal internal
      *
      * @return $this
      */
@@ -548,7 +547,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     /**
      * Sets app_store_app_id
      *
-     * @param string $app_store_app_id Unique App store app id
+     * @param string $app_store_app_id app_store_app_id
      *
      * @return $this
      */
@@ -572,7 +571,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name Name of Appstore app
+     * @param string $name name
      *
      * @return $this
      */
@@ -596,7 +595,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description Description
+     * @param string $description description
      *
      * @return $this
      */
@@ -620,7 +619,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     /**
      * Sets logo
      *
-     * @param string $logo Logo
+     * @param string $logo logo
      *
      * @return $this
      */
@@ -644,7 +643,7 @@ class AppStoreAppConfigurationSummary implements ModelInterface, ArrayAccess
     /**
      * Sets developer_name
      *
-     * @param string $developer_name Developer name
+     * @param string $developer_name developer_name
      *
      * @return $this
      */

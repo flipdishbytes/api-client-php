@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * ExecuteConfigurationActionResult Class Doc Comment
  *
  * @category Class
- * @description Result of configuration action execution
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -261,7 +260,7 @@ class ExecuteConfigurationActionResult implements ModelInterface, ArrayAccess
     /**
      * Sets error_message
      *
-     * @param string $error_message Error message to display to the user (if not empty)
+     * @param string $error_message error_message
      *
      * @return $this
      */
@@ -285,7 +284,7 @@ class ExecuteConfigurationActionResult implements ModelInterface, ArrayAccess
     /**
      * Sets info_message
      *
-     * @param string $info_message Information message to display to the user (if not empty)
+     * @param string $info_message info_message
      *
      * @return $this
      */
@@ -309,7 +308,7 @@ class ExecuteConfigurationActionResult implements ModelInterface, ArrayAccess
     /**
      * Sets redirect_url
      *
-     * @param string $redirect_url Redirect user to URL (if not empty)
+     * @param string $redirect_url redirect_url
      *
      * @return $this
      */
@@ -333,7 +332,7 @@ class ExecuteConfigurationActionResult implements ModelInterface, ArrayAccess
     /**
      * Sets redirect_target
      *
-     * @param string $redirect_target Redirect target
+     * @param string $redirect_target redirect_target
      *
      * @return $this
      */

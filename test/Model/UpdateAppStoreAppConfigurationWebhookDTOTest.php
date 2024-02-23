@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * UpdateAppStoreAppConfigurationWebhookDTOTest Class Doc Comment
  *
  * @category    Class
- * @description App store app configuration webhook event
+ * @description UpdateAppStoreAppConfigurationWebhookDTO
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

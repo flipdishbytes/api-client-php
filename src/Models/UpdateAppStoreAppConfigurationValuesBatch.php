@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * UpdateAppStoreAppConfigurationValuesBatch Class Doc Comment
  *
  * @category Class
- * @description Update configuration values for the specified settings only
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -218,7 +217,7 @@ class UpdateAppStoreAppConfigurationValuesBatch implements ModelInterface, Array
     /**
      * Sets settings
      *
-     * @param \Flipdish\\Client\Models\Setting[] $settings Settings to update
+     * @param \Flipdish\\Client\Models\Setting[] $settings settings
      *
      * @return $this
      */

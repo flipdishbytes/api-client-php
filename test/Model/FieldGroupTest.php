@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * FieldGroupTest Class Doc Comment
  *
  * @category    Class
- * @description Field group
+ * @description FieldGroup
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

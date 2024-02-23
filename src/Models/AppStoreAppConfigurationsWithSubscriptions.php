@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * AppStoreAppConfigurationsWithSubscriptions Class Doc Comment
  *
  * @category Class
- * @description App store configurations for a given AppId
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -230,7 +229,7 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
     /**
      * Sets subscription
      *
-     * @param \Flipdish\\Client\Models\AppStoreAppSubscriptionSummary $subscription Subscription information for the AppId for the AppStoreApp
+     * @param \Flipdish\\Client\Models\AppStoreAppSubscriptionSummary $subscription subscription
      *
      * @return $this
      */
@@ -254,7 +253,7 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
     /**
      * Sets configurations
      *
-     * @param \Flipdish\\Client\Models\AppStoreAppConfigurationSummary[] $configurations Configurations for the AppId for the AppStoreApp
+     * @param \Flipdish\\Client\Models\AppStoreAppConfigurationSummary[] $configurations configurations
      *
      * @return $this
      */
@@ -278,7 +277,7 @@ class AppStoreAppConfigurationsWithSubscriptions implements ModelInterface, Arra
     /**
      * Sets prices
      *
-     * @param \Flipdish\\Client\Models\SubscriptionProductPriceInfo[] $prices Prices
+     * @param \Flipdish\\Client\Models\SubscriptionProductPriceInfo[] $prices prices
      *
      * @return $this
      */

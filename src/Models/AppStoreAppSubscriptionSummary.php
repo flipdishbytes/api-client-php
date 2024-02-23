@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * AppStoreAppSubscriptionSummary Class Doc Comment
  *
  * @category Class
- * @description App store subscription information
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -236,7 +235,7 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
     /**
      * Sets total_subscriptions
      *
-     * @param int $total_subscriptions Total subscriptions (per the AppId subscription setup)
+     * @param int $total_subscriptions total_subscriptions
      *
      * @return $this
      */
@@ -260,7 +259,7 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
     /**
      * Sets used_subscriptions
      *
-     * @param int $used_subscriptions Number of subscriptions configured and enabled
+     * @param int $used_subscriptions used_subscriptions
      *
      * @return $this
      */
@@ -284,7 +283,7 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_account_is_setup_for_client
      *
-     * @param bool $subscription_account_is_setup_for_client Is client setup for subscriptions
+     * @param bool $subscription_account_is_setup_for_client subscription_account_is_setup_for_client
      *
      * @return $this
      */
@@ -308,7 +307,7 @@ class AppStoreAppSubscriptionSummary implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_accounts
      *
-     * @param \Flipdish\\Client\Models\AppStoreAppSubscriptionAccount[] $subscription_accounts Available accounts for subscriptions (only if requesting user has enough permissions to see the list, otherwise empty list or null)
+     * @param \Flipdish\\Client\Models\AppStoreAppSubscriptionAccount[] $subscription_accounts subscription_accounts
      *
      * @return $this
      */

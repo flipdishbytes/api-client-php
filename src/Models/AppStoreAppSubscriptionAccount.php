@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * AppStoreAppSubscriptionAccount Class Doc Comment
  *
  * @category Class
- * @description Subscription account
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -218,7 +217,7 @@ class AppStoreAppSubscriptionAccount implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string $email Email of the account user
+     * @param string $email email
      *
      * @return $this
      */

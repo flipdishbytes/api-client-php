@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * AppStoreAppSummary Class Doc Comment
  *
  * @category Class
- * @description App store app summary information
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -388,7 +387,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id Unique App store app id
+     * @param string $id id
      *
      * @return $this
      */
@@ -412,7 +411,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     /**
      * Sets verification_status
      *
-     * @param string $verification_status Application verification status
+     * @param string $verification_status verification_status
      *
      * @return $this
      */
@@ -445,7 +444,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     /**
      * Sets logo
      *
-     * @param string $logo Logo
+     * @param string $logo logo
      *
      * @return $this
      */
@@ -469,7 +468,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     /**
      * Sets internal
      *
-     * @param bool $internal Internal
+     * @param bool $internal internal
      *
      * @return $this
      */
@@ -493,7 +492,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name Name
+     * @param string $name name
      *
      * @return $this
      */
@@ -517,7 +516,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description Description
+     * @param string $description description
      *
      * @return $this
      */
@@ -541,7 +540,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     /**
      * Sets is_enabled
      *
-     * @param bool $is_enabled Is application enabled
+     * @param bool $is_enabled is_enabled
      *
      * @return $this
      */
@@ -565,7 +564,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     /**
      * Sets categories
      *
-     * @param string[] $categories Categories
+     * @param string[] $categories categories
      *
      * @return $this
      */
@@ -598,7 +597,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     /**
      * Sets countries
      *
-     * @param string[] $countries Countries
+     * @param string[] $countries countries
      *
      * @return $this
      */
@@ -631,7 +630,7 @@ class AppStoreAppSummary implements ModelInterface, ArrayAccess
     /**
      * Sets developer_name
      *
-     * @param string $developer_name Developer Name
+     * @param string $developer_name developer_name
      *
      * @return $this
      */

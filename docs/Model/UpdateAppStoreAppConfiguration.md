@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_enabled** | **bool** | Is enabled | 
-**store_ids** | **int[]** | Stores id&#39;s | [optional] 
-**settings** | [**\Flipdish\\Client\Models\Setting[]**](Setting.md) | Settings | [optional] 
+**is_enabled** | **bool** |  | 
+**store_ids** | **int[]** |  | [optional] 
+**settings** | [**\Flipdish\\Client\Models\Setting[]**](Setting.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

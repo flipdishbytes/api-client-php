@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * AppStoreSubscriptionJobResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Subscription change job can be longer running, this contains job information
+ * @description AppStoreSubscriptionJobResponse
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

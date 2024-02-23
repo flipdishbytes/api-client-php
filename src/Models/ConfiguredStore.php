@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * ConfiguredStore Class Doc Comment
  *
  * @category Class
- * @description Configured stores
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -224,7 +223,7 @@ class ConfiguredStore implements ModelInterface, ArrayAccess
     /**
      * Sets store_id
      *
-     * @param int $store_id Store id
+     * @param int $store_id store_id
      *
      * @return $this
      */
@@ -248,7 +247,7 @@ class ConfiguredStore implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name Name of store
+     * @param string $name name
      *
      * @return $this
      */

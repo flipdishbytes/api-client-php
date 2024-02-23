@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * UpdateAppStoreAppConfigurationWebhookDTO Class Doc Comment
  *
  * @category Class
- * @description App store app configuration webhook event
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -242,7 +241,7 @@ class UpdateAppStoreAppConfigurationWebhookDTO implements ModelInterface, ArrayA
     /**
      * Sets id
      *
-     * @param string $id Unique App store app configuration id
+     * @param string $id id
      *
      * @return $this
      */
@@ -266,7 +265,7 @@ class UpdateAppStoreAppConfigurationWebhookDTO implements ModelInterface, ArrayA
     /**
      * Sets is_enabled
      *
-     * @param bool $is_enabled Is enabled
+     * @param bool $is_enabled is_enabled
      *
      * @return $this
      */
@@ -290,7 +289,7 @@ class UpdateAppStoreAppConfigurationWebhookDTO implements ModelInterface, ArrayA
     /**
      * Sets store_ids
      *
-     * @param int[] $store_ids Store id's
+     * @param int[] $store_ids store_ids
      *
      * @return $this
      */
@@ -314,7 +313,7 @@ class UpdateAppStoreAppConfigurationWebhookDTO implements ModelInterface, ArrayA
     /**
      * Sets settings
      *
-     * @param \Flipdish\\Client\Models\Setting[] $settings Settings
+     * @param \Flipdish\\Client\Models\Setting[] $settings settings
      *
      * @return $this
      */

@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * FieldGroup Class Doc Comment
  *
  * @category Class
- * @description Field group
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -256,7 +255,7 @@ class FieldGroup implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name Name
+     * @param string $name name
      *
      * @return $this
      */
@@ -280,7 +279,7 @@ class FieldGroup implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description Description
+     * @param string $description description
      *
      * @return $this
      */
@@ -304,7 +303,7 @@ class FieldGroup implements ModelInterface, ArrayAccess
     /**
      * Sets tooltip
      *
-     * @param string $tooltip Tooltip  <remarks>Displays on text hover</remarks>
+     * @param string $tooltip tooltip
      *
      * @return $this
      */
@@ -328,7 +327,7 @@ class FieldGroup implements ModelInterface, ArrayAccess
     /**
      * Sets position
      *
-     * @param int $position Position  <remarks>Position order in the field groups to display</remarks>
+     * @param int $position position
      *
      * @return $this
      */
@@ -360,7 +359,7 @@ class FieldGroup implements ModelInterface, ArrayAccess
     /**
      * Sets fields
      *
-     * @param \Flipdish\\Client\Models\Field[] $fields Fields
+     * @param \Flipdish\\Client\Models\Field[] $fields fields
      *
      * @return $this
      */

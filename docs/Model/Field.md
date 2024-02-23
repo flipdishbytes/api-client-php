@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** | Name | 
-**description** | **string** | Description | 
-**key** | **string** | Key | 
-**tooltip** | **string** | Tooltip | [optional] 
-**position** | **int** | Position | 
-**default_value** | **string** | Default Value | [optional] 
-**valid_values** | [**\Flipdish\\Client\Models\ValidValue[]**](ValidValue.md) | Valid Values  &lt;remarks&gt;Used typically for dropdown/select&lt;/remarks&gt; | [optional] 
-**validation_regex** | **string** | Validation Regex | [optional] 
-**field_type** | **string** | Field Type | 
-**is_flipdish_restricted** | **bool** | Is this field only editable by Flipdish? | [optional] 
+**name** | **string** |  | 
+**description** | **string** |  | 
+**key** | **string** |  | 
+**tooltip** | **string** |  | [optional] 
+**position** | **int** |  | 
+**default_value** | **string** |  | [optional] 
+**valid_values** | [**\Flipdish\\Client\Models\ValidValue[]**](ValidValue.md) |  | [optional] 
+**validation_regex** | **string** |  | [optional] 
+**field_type** | **string** |  | 
+**is_flipdish_restricted** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

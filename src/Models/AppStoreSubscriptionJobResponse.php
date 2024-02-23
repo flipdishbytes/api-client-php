@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * AppStoreSubscriptionJobResponse Class Doc Comment
  *
  * @category Class
- * @description Subscription change job can be longer running, this contains job information
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -218,7 +217,7 @@ class AppStoreSubscriptionJobResponse implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_change_job_id
      *
-     * @param string $subscription_change_job_id Subscription change job id
+     * @param string $subscription_change_job_id subscription_change_job_id
      *
      * @return $this
      */

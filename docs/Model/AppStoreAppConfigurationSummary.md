@@ -3,18 +3,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Unique App store app configuration id | 
-**app_id** | **string** | App Id | 
-**is_enabled** | **bool** | Is enabled | 
-**stores** | [**\Flipdish\\Client\Models\ConfiguredStore[]**](ConfiguredStore.md) | List of stores | 
-**configuration_type** | **string** | Configuration type | 
-**store_selector_type** | **string** | Store selector type | 
-**internal** | **bool** | Internal | 
-**app_store_app_id** | **string** | Unique App store app id | 
-**name** | **string** | Name of Appstore app | 
-**description** | **string** | Description | 
-**logo** | **string** | Logo | [optional] 
-**developer_name** | **string** | Developer name | [optional] 
+**id** | **string** |  | 
+**app_id** | **string** |  | 
+**is_enabled** | **bool** |  | 
+**stores** | [**\Flipdish\\Client\Models\ConfiguredStore[]**](ConfiguredStore.md) |  | 
+**configuration_type** | **string** |  | 
+**store_selector_type** | **string** |  | 
+**internal** | **bool** |  | 
+**app_store_app_id** | **string** |  | 
+**name** | **string** |  | 
+**description** | **string** |  | 
+**logo** | **string** |  | [optional] 
+**developer_name** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

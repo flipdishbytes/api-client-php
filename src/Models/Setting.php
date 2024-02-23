@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * Setting Class Doc Comment
  *
  * @category Class
- * @description Setting
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -224,7 +223,7 @@ class Setting implements ModelInterface, ArrayAccess
     /**
      * Sets key
      *
-     * @param string $key Key
+     * @param string $key key
      *
      * @return $this
      */
@@ -248,7 +247,7 @@ class Setting implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param string $value Value
+     * @param string $value value
      *
      * @return $this
      */

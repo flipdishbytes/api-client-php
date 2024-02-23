@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * CreateAppStoreApp Class Doc Comment
  *
  * @category Class
- * @description Create App store app
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -518,7 +517,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets details
      *
-     * @param string $details Details
+     * @param string $details details
      *
      * @return $this
      */
@@ -542,7 +541,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets configuration_type
      *
-     * @param string $configuration_type Configuration type  <example>External link</example><example>Flipdish hosted</example>
+     * @param string $configuration_type configuration_type
      *
      * @return $this
      */
@@ -575,7 +574,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets store_selector_type
      *
-     * @param string $store_selector_type Store selector type
+     * @param string $store_selector_type store_selector_type
      *
      * @return $this
      */
@@ -608,7 +607,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets field_groups
      *
-     * @param \Flipdish\\Client\Models\FieldGroup[] $field_groups Field groups
+     * @param \Flipdish\\Client\Models\FieldGroup[] $field_groups field_groups
      *
      * @return $this
      */
@@ -632,7 +631,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets setup_instructions
      *
-     * @param string $setup_instructions Setup instructions
+     * @param string $setup_instructions setup_instructions
      *
      * @return $this
      */
@@ -656,7 +655,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets external_setup_link
      *
-     * @param string $external_setup_link External setup link
+     * @param string $external_setup_link external_setup_link
      *
      * @return $this
      */
@@ -680,7 +679,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets teammate_app_access_level
      *
-     * @param string $teammate_app_access_level Teammate app access level
+     * @param string $teammate_app_access_level teammate_app_access_level
      *
      * @return $this
      */
@@ -713,7 +712,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets permissions_type
      *
-     * @param string $permissions_type Permissions type
+     * @param string $permissions_type permissions_type
      *
      * @return $this
      */
@@ -746,7 +745,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets support
      *
-     * @param \Flipdish\\Client\Models\AppStoreAppSupportInfo $support Support information
+     * @param \Flipdish\\Client\Models\AppStoreAppSupportInfo $support support
      *
      * @return $this
      */
@@ -770,7 +769,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets external_function_action_url
      *
-     * @param string $external_function_action_url Action URL for external functions, used for handling Portal configuration action buttons
+     * @param string $external_function_action_url external_function_action_url
      *
      * @return $this
      */
@@ -794,7 +793,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets external_function_signature_key
      *
-     * @param string $external_function_signature_key Signing key for external function action calls
+     * @param string $external_function_signature_key external_function_signature_key
      *
      * @return $this
      */
@@ -818,7 +817,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets is_paid
      *
-     * @param bool $is_paid Is Paid
+     * @param bool $is_paid is_paid
      *
      * @return $this
      */
@@ -842,7 +841,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name Name
+     * @param string $name name
      *
      * @return $this
      */
@@ -866,7 +865,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description Description
+     * @param string $description description
      *
      * @return $this
      */
@@ -890,7 +889,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets is_enabled
      *
-     * @param bool $is_enabled Is application enabled
+     * @param bool $is_enabled is_enabled
      *
      * @return $this
      */
@@ -914,7 +913,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets categories
      *
-     * @param string[] $categories Categories
+     * @param string[] $categories categories
      *
      * @return $this
      */
@@ -947,7 +946,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets countries
      *
-     * @param string[] $countries Countries
+     * @param string[] $countries countries
      *
      * @return $this
      */
@@ -980,7 +979,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     /**
      * Sets developer_name
      *
-     * @param string $developer_name Developer Name
+     * @param string $developer_name developer_name
      *
      * @return $this
      */

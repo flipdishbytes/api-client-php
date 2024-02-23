@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * AppStoreAppTest Class Doc Comment
  *
  * @category    Class
- * @description App store app
+ * @description AppStoreApp
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

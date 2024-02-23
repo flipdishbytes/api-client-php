@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * UpdateAppStoreAppConfigurationValuesBatchTest Class Doc Comment
  *
  * @category    Class
- * @description Update configuration values for the specified settings only
+ * @description UpdateAppStoreAppConfigurationValuesBatch
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

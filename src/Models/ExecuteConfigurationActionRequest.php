@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * ExecuteConfigurationActionRequest Class Doc Comment
  *
  * @category Class
- * @description Execute Configuration
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -224,7 +223,7 @@ class ExecuteConfigurationActionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets key
      *
-     * @param string $key Key - of field triggering the action
+     * @param string $key key
      *
      * @return $this
      */
@@ -248,7 +247,7 @@ class ExecuteConfigurationActionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets action
      *
-     * @param string $action Action for element
+     * @param string $action action
      *
      * @return $this
      */

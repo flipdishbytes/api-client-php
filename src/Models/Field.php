@@ -36,7 +36,6 @@ use \Flipdish\\Client\ObjectSerializer;
  * Field Class Doc Comment
  *
  * @category Class
- * @description Field
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -334,7 +333,7 @@ class Field implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name Name
+     * @param string $name name
      *
      * @return $this
      */
@@ -358,7 +357,7 @@ class Field implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description Description
+     * @param string $description description
      *
      * @return $this
      */
@@ -382,7 +381,7 @@ class Field implements ModelInterface, ArrayAccess
     /**
      * Sets key
      *
-     * @param string $key Key
+     * @param string $key key
      *
      * @return $this
      */
@@ -406,7 +405,7 @@ class Field implements ModelInterface, ArrayAccess
     /**
      * Sets tooltip
      *
-     * @param string $tooltip Tooltip
+     * @param string $tooltip tooltip
      *
      * @return $this
      */
@@ -430,7 +429,7 @@ class Field implements ModelInterface, ArrayAccess
     /**
      * Sets position
      *
-     * @param int $position Position
+     * @param int $position position
      *
      * @return $this
      */
@@ -462,7 +461,7 @@ class Field implements ModelInterface, ArrayAccess
     /**
      * Sets default_value
      *
-     * @param string $default_value Default Value
+     * @param string $default_value default_value
      *
      * @return $this
      */
@@ -486,7 +485,7 @@ class Field implements ModelInterface, ArrayAccess
     /**
      * Sets valid_values
      *
-     * @param \Flipdish\\Client\Models\ValidValue[] $valid_values Valid Values  <remarks>Used typically for dropdown/select</remarks>
+     * @param \Flipdish\\Client\Models\ValidValue[] $valid_values valid_values
      *
      * @return $this
      */
@@ -510,7 +509,7 @@ class Field implements ModelInterface, ArrayAccess
     /**
      * Sets validation_regex
      *
-     * @param string $validation_regex Validation Regex
+     * @param string $validation_regex validation_regex
      *
      * @return $this
      */
@@ -534,7 +533,7 @@ class Field implements ModelInterface, ArrayAccess
     /**
      * Sets field_type
      *
-     * @param string $field_type Field Type
+     * @param string $field_type field_type
      *
      * @return $this
      */
@@ -567,7 +566,7 @@ class Field implements ModelInterface, ArrayAccess
     /**
      * Sets is_flipdish_restricted
      *
-     * @param bool $is_flipdish_restricted Is this field only editable by Flipdish?
+     * @param bool $is_flipdish_restricted is_flipdish_restricted
      *
      * @return $this
      */
