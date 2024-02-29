@@ -98,13 +98,6 @@ class VoucherTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "voucher_sub_type"
-     */
-    public function testPropertyVoucherSubType()
-    {
-    }
-
-    /**
      * Test attribute "currency"
      */
     public function testPropertyCurrency()
@@ -269,6 +262,20 @@ class VoucherTest extends \PHPUnit_Framework_TestCase
      * Test attribute "channel_restrictions"
      */
     public function testPropertyChannelRestrictions()
+    {
+    }
+
+    /**
+     * Test attribute "voucher_sub_type"
+     */
+    public function testPropertyVoucherSubType()
+    {
+    }
+
+    /**
+     * Test attribute "customer_id"
+     */
+    public function testPropertyCustomerId()
     {
     }
 }

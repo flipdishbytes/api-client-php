@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **voucher_id** | **int** | Voucher Id | [optional] 
 **status** | **string** | Voucher Status | [optional] 
 **voucher_type** | **string** | Voucher Type | [optional] 
-**voucher_sub_type** | **string** | Voucher Sub Type | [optional] 
 **currency** | **string** | Currency of the voucher | [optional] 
 **store_names** | **string[]** | Stores that this voucher applies to | [optional] 
 **promotion_details** | [**\Flipdish\\Client\Models\PromotionDetails**](PromotionDetails.md) | Promotion details | [optional] 
@@ -36,6 +35,8 @@ Name | Type | Description | Notes
 **start_date** | [**\DateTime**](\DateTime.md) | Voucher Starts On (Time in UTC) | [optional] 
 **expiry_date** | [**\DateTime**](\DateTime.md) | Voucher Expires On (Time in UTC) | [optional] 
 **channel_restrictions** | **string[]** | Limit the channels this voucher can be used on | [optional] 
+**voucher_sub_type** | **string** | Voucher Subtype | [optional] 
+**customer_id** | **int** | Customer UserID | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

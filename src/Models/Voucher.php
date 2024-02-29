@@ -61,7 +61,6 @@ class Voucher implements ModelInterface, ArrayAccess
         'voucher_id' => 'int',
         'status' => 'string',
         'voucher_type' => 'string',
-        'voucher_sub_type' => 'string',
         'currency' => 'string',
         'store_names' => 'string[]',
         'promotion_details' => '\Flipdish\\Client\Models\PromotionDetails',
@@ -85,7 +84,9 @@ class Voucher implements ModelInterface, ArrayAccess
         'is_valid_only_once' => 'bool',
         'start_date' => '\DateTime',
         'expiry_date' => '\DateTime',
-        'channel_restrictions' => 'string[]'
+        'channel_restrictions' => 'string[]',
+        'voucher_sub_type' => 'string',
+        'customer_id' => 'int'
     ];
 
     /**
@@ -97,7 +98,6 @@ class Voucher implements ModelInterface, ArrayAccess
         'voucher_id' => 'int32',
         'status' => null,
         'voucher_type' => null,
-        'voucher_sub_type' => null,
         'currency' => null,
         'store_names' => null,
         'promotion_details' => null,
@@ -121,7 +121,9 @@ class Voucher implements ModelInterface, ArrayAccess
         'is_valid_only_once' => null,
         'start_date' => 'date-time',
         'expiry_date' => 'date-time',
-        'channel_restrictions' => null
+        'channel_restrictions' => null,
+        'voucher_sub_type' => null,
+        'customer_id' => 'int32'
     ];
 
     /**
@@ -154,7 +156,6 @@ class Voucher implements ModelInterface, ArrayAccess
         'voucher_id' => 'VoucherId',
         'status' => 'Status',
         'voucher_type' => 'VoucherType',
-        'voucher_sub_type' => 'VoucherSubType',
         'currency' => 'Currency',
         'store_names' => 'StoreNames',
         'promotion_details' => 'PromotionDetails',
@@ -178,7 +179,9 @@ class Voucher implements ModelInterface, ArrayAccess
         'is_valid_only_once' => 'IsValidOnlyOnce',
         'start_date' => 'StartDate',
         'expiry_date' => 'ExpiryDate',
-        'channel_restrictions' => 'ChannelRestrictions'
+        'channel_restrictions' => 'ChannelRestrictions',
+        'voucher_sub_type' => 'VoucherSubType',
+        'customer_id' => 'CustomerId'
     ];
 
     /**
@@ -190,7 +193,6 @@ class Voucher implements ModelInterface, ArrayAccess
         'voucher_id' => 'setVoucherId',
         'status' => 'setStatus',
         'voucher_type' => 'setVoucherType',
-        'voucher_sub_type' => 'setVoucherSubType',
         'currency' => 'setCurrency',
         'store_names' => 'setStoreNames',
         'promotion_details' => 'setPromotionDetails',
@@ -214,7 +216,9 @@ class Voucher implements ModelInterface, ArrayAccess
         'is_valid_only_once' => 'setIsValidOnlyOnce',
         'start_date' => 'setStartDate',
         'expiry_date' => 'setExpiryDate',
-        'channel_restrictions' => 'setChannelRestrictions'
+        'channel_restrictions' => 'setChannelRestrictions',
+        'voucher_sub_type' => 'setVoucherSubType',
+        'customer_id' => 'setCustomerId'
     ];
 
     /**
@@ -226,7 +230,6 @@ class Voucher implements ModelInterface, ArrayAccess
         'voucher_id' => 'getVoucherId',
         'status' => 'getStatus',
         'voucher_type' => 'getVoucherType',
-        'voucher_sub_type' => 'getVoucherSubType',
         'currency' => 'getCurrency',
         'store_names' => 'getStoreNames',
         'promotion_details' => 'getPromotionDetails',
@@ -250,7 +253,9 @@ class Voucher implements ModelInterface, ArrayAccess
         'is_valid_only_once' => 'getIsValidOnlyOnce',
         'start_date' => 'getStartDate',
         'expiry_date' => 'getExpiryDate',
-        'channel_restrictions' => 'getChannelRestrictions'
+        'channel_restrictions' => 'getChannelRestrictions',
+        'voucher_sub_type' => 'getVoucherSubType',
+        'customer_id' => 'getCustomerId'
     ];
 
     /**
@@ -303,13 +308,6 @@ class Voucher implements ModelInterface, ArrayAccess
     const VOUCHER_TYPE_LUMP_DISCOUNT = 'LumpDiscount';
     const VOUCHER_TYPE_ADD_ITEM = 'AddItem';
     const VOUCHER_TYPE_CREDIT_NOTE = 'CreditNote';
-    const VOUCHER_SUB_TYPE_NONE = 'None';
-    const VOUCHER_SUB_TYPE_SIGN_UP = 'SignUp';
-    const VOUCHER_SUB_TYPE_LOYALTY = 'Loyalty';
-    const VOUCHER_SUB_TYPE_LOYALTY25 = 'Loyalty25';
-    const VOUCHER_SUB_TYPE_RETENTION = 'Retention';
-    const VOUCHER_SUB_TYPE_SECONDARY_RETENTION = 'SecondaryRetention';
-    const VOUCHER_SUB_TYPE_CUSTOM = 'Custom';
     const CURRENCY_EUR = 'EUR';
     const CURRENCY_USD = 'USD';
     const CURRENCY_GBP = 'GBP';
@@ -429,6 +427,13 @@ class Voucher implements ModelInterface, ArrayAccess
     const CHANNEL_RESTRICTIONS_KIOSK = 'Kiosk';
     const CHANNEL_RESTRICTIONS_POS = 'Pos';
     const CHANNEL_RESTRICTIONS_GOOGLE = 'Google';
+    const VOUCHER_SUB_TYPE_NONE = 'None';
+    const VOUCHER_SUB_TYPE_SIGN_UP = 'SignUp';
+    const VOUCHER_SUB_TYPE_LOYALTY = 'Loyalty';
+    const VOUCHER_SUB_TYPE_LOYALTY25 = 'Loyalty25';
+    const VOUCHER_SUB_TYPE_RETENTION = 'Retention';
+    const VOUCHER_SUB_TYPE_SECONDARY_RETENTION = 'SecondaryRetention';
+    const VOUCHER_SUB_TYPE_CUSTOM = 'Custom';
     
 
     
@@ -460,24 +465,6 @@ class Voucher implements ModelInterface, ArrayAccess
             self::VOUCHER_TYPE_LUMP_DISCOUNT,
             self::VOUCHER_TYPE_ADD_ITEM,
             self::VOUCHER_TYPE_CREDIT_NOTE,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getVoucherSubTypeAllowableValues()
-    {
-        return [
-            self::VOUCHER_SUB_TYPE_NONE,
-            self::VOUCHER_SUB_TYPE_SIGN_UP,
-            self::VOUCHER_SUB_TYPE_LOYALTY,
-            self::VOUCHER_SUB_TYPE_LOYALTY25,
-            self::VOUCHER_SUB_TYPE_RETENTION,
-            self::VOUCHER_SUB_TYPE_SECONDARY_RETENTION,
-            self::VOUCHER_SUB_TYPE_CUSTOM,
         ];
     }
     
@@ -622,6 +609,24 @@ class Voucher implements ModelInterface, ArrayAccess
         ];
     }
     
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getVoucherSubTypeAllowableValues()
+    {
+        return [
+            self::VOUCHER_SUB_TYPE_NONE,
+            self::VOUCHER_SUB_TYPE_SIGN_UP,
+            self::VOUCHER_SUB_TYPE_LOYALTY,
+            self::VOUCHER_SUB_TYPE_LOYALTY25,
+            self::VOUCHER_SUB_TYPE_RETENTION,
+            self::VOUCHER_SUB_TYPE_SECONDARY_RETENTION,
+            self::VOUCHER_SUB_TYPE_CUSTOM,
+        ];
+    }
+    
 
     /**
      * Associative array for storing property values
@@ -641,7 +646,6 @@ class Voucher implements ModelInterface, ArrayAccess
         $this->container['voucher_id'] = isset($data['voucher_id']) ? $data['voucher_id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['voucher_type'] = isset($data['voucher_type']) ? $data['voucher_type'] : null;
-        $this->container['voucher_sub_type'] = isset($data['voucher_sub_type']) ? $data['voucher_sub_type'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['store_names'] = isset($data['store_names']) ? $data['store_names'] : null;
         $this->container['promotion_details'] = isset($data['promotion_details']) ? $data['promotion_details'] : null;
@@ -666,6 +670,8 @@ class Voucher implements ModelInterface, ArrayAccess
         $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
         $this->container['expiry_date'] = isset($data['expiry_date']) ? $data['expiry_date'] : null;
         $this->container['channel_restrictions'] = isset($data['channel_restrictions']) ? $data['channel_restrictions'] : null;
+        $this->container['voucher_sub_type'] = isset($data['voucher_sub_type']) ? $data['voucher_sub_type'] : null;
+        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
     }
 
     /**
@@ -693,18 +699,18 @@ class Voucher implements ModelInterface, ArrayAccess
             );
         }
 
-        $allowedValues = $this->getVoucherSubTypeAllowableValues();
-        if (!is_null($this->container['voucher_sub_type']) && !in_array($this->container['voucher_sub_type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'voucher_sub_type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
         $allowedValues = $this->getCurrencyAllowableValues();
         if (!is_null($this->container['currency']) && !in_array($this->container['currency'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'currency', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getVoucherSubTypeAllowableValues();
+        if (!is_null($this->container['voucher_sub_type']) && !in_array($this->container['voucher_sub_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'voucher_sub_type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -810,39 +816,6 @@ class Voucher implements ModelInterface, ArrayAccess
             );
         }
         $this->container['voucher_type'] = $voucher_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets voucher_sub_type
-     *
-     * @return string
-     */
-    public function getVoucherSubType()
-    {
-        return $this->container['voucher_sub_type'];
-    }
-
-    /**
-     * Sets voucher_sub_type
-     *
-     * @param string $voucher_sub_type Voucher Sub Type
-     *
-     * @return $this
-     */
-    public function setVoucherSubType($voucher_sub_type)
-    {
-        $allowedValues = $this->getVoucherSubTypeAllowableValues();
-        if (!is_null($voucher_sub_type) && !in_array($voucher_sub_type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'voucher_sub_type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['voucher_sub_type'] = $voucher_sub_type;
 
         return $this;
     }
@@ -1437,6 +1410,63 @@ class Voucher implements ModelInterface, ArrayAccess
             );
         }
         $this->container['channel_restrictions'] = $channel_restrictions;
+
+        return $this;
+    }
+
+    /**
+     * Gets voucher_sub_type
+     *
+     * @return string
+     */
+    public function getVoucherSubType()
+    {
+        return $this->container['voucher_sub_type'];
+    }
+
+    /**
+     * Sets voucher_sub_type
+     *
+     * @param string $voucher_sub_type Voucher Subtype
+     *
+     * @return $this
+     */
+    public function setVoucherSubType($voucher_sub_type)
+    {
+        $allowedValues = $this->getVoucherSubTypeAllowableValues();
+        if (!is_null($voucher_sub_type) && !in_array($voucher_sub_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'voucher_sub_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['voucher_sub_type'] = $voucher_sub_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets customer_id
+     *
+     * @return int
+     */
+    public function getCustomerId()
+    {
+        return $this->container['customer_id'];
+    }
+
+    /**
+     * Sets customer_id
+     *
+     * @param int $customer_id Customer UserID
+     *
+     * @return $this
+     */
+    public function setCustomerId($customer_id)
+    {
+        $this->container['customer_id'] = $customer_id;
 
         return $this;
     }

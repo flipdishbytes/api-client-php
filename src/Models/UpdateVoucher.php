@@ -78,7 +78,9 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
         'is_valid_only_once' => 'bool',
         'start_date' => '\DateTime',
         'expiry_date' => '\DateTime',
-        'channel_restrictions' => 'string[]'
+        'channel_restrictions' => 'string[]',
+        'voucher_sub_type' => 'string',
+        'customer_id' => 'int'
     ];
 
     /**
@@ -107,7 +109,9 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
         'is_valid_only_once' => null,
         'start_date' => 'date-time',
         'expiry_date' => 'date-time',
-        'channel_restrictions' => null
+        'channel_restrictions' => null,
+        'voucher_sub_type' => null,
+        'customer_id' => 'int32'
     ];
 
     /**
@@ -157,7 +161,9 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
         'is_valid_only_once' => 'IsValidOnlyOnce',
         'start_date' => 'StartDate',
         'expiry_date' => 'ExpiryDate',
-        'channel_restrictions' => 'ChannelRestrictions'
+        'channel_restrictions' => 'ChannelRestrictions',
+        'voucher_sub_type' => 'VoucherSubType',
+        'customer_id' => 'CustomerId'
     ];
 
     /**
@@ -186,7 +192,9 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
         'is_valid_only_once' => 'setIsValidOnlyOnce',
         'start_date' => 'setStartDate',
         'expiry_date' => 'setExpiryDate',
-        'channel_restrictions' => 'setChannelRestrictions'
+        'channel_restrictions' => 'setChannelRestrictions',
+        'voucher_sub_type' => 'setVoucherSubType',
+        'customer_id' => 'setCustomerId'
     ];
 
     /**
@@ -215,7 +223,9 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
         'is_valid_only_once' => 'getIsValidOnlyOnce',
         'start_date' => 'getStartDate',
         'expiry_date' => 'getExpiryDate',
-        'channel_restrictions' => 'getChannelRestrictions'
+        'channel_restrictions' => 'getChannelRestrictions',
+        'voucher_sub_type' => 'getVoucherSubType',
+        'customer_id' => 'getCustomerId'
     ];
 
     /**
@@ -265,6 +275,13 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
     const CHANNEL_RESTRICTIONS_KIOSK = 'Kiosk';
     const CHANNEL_RESTRICTIONS_POS = 'Pos';
     const CHANNEL_RESTRICTIONS_GOOGLE = 'Google';
+    const VOUCHER_SUB_TYPE_NONE = 'None';
+    const VOUCHER_SUB_TYPE_SIGN_UP = 'SignUp';
+    const VOUCHER_SUB_TYPE_LOYALTY = 'Loyalty';
+    const VOUCHER_SUB_TYPE_LOYALTY25 = 'Loyalty25';
+    const VOUCHER_SUB_TYPE_RETENTION = 'Retention';
+    const VOUCHER_SUB_TYPE_SECONDARY_RETENTION = 'SecondaryRetention';
+    const VOUCHER_SUB_TYPE_CUSTOM = 'Custom';
     
 
     
@@ -282,6 +299,24 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
             self::CHANNEL_RESTRICTIONS_KIOSK,
             self::CHANNEL_RESTRICTIONS_POS,
             self::CHANNEL_RESTRICTIONS_GOOGLE,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getVoucherSubTypeAllowableValues()
+    {
+        return [
+            self::VOUCHER_SUB_TYPE_NONE,
+            self::VOUCHER_SUB_TYPE_SIGN_UP,
+            self::VOUCHER_SUB_TYPE_LOYALTY,
+            self::VOUCHER_SUB_TYPE_LOYALTY25,
+            self::VOUCHER_SUB_TYPE_RETENTION,
+            self::VOUCHER_SUB_TYPE_SECONDARY_RETENTION,
+            self::VOUCHER_SUB_TYPE_CUSTOM,
         ];
     }
     
@@ -322,6 +357,8 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
         $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
         $this->container['expiry_date'] = isset($data['expiry_date']) ? $data['expiry_date'] : null;
         $this->container['channel_restrictions'] = isset($data['channel_restrictions']) ? $data['channel_restrictions'] : null;
+        $this->container['voucher_sub_type'] = isset($data['voucher_sub_type']) ? $data['voucher_sub_type'] : null;
+        $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
     }
 
     /**
@@ -332,6 +369,14 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getVoucherSubTypeAllowableValues();
+        if (!is_null($this->container['voucher_sub_type']) && !in_array($this->container['voucher_sub_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'voucher_sub_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -857,6 +902,63 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
             );
         }
         $this->container['channel_restrictions'] = $channel_restrictions;
+
+        return $this;
+    }
+
+    /**
+     * Gets voucher_sub_type
+     *
+     * @return string
+     */
+    public function getVoucherSubType()
+    {
+        return $this->container['voucher_sub_type'];
+    }
+
+    /**
+     * Sets voucher_sub_type
+     *
+     * @param string $voucher_sub_type Voucher Subtype
+     *
+     * @return $this
+     */
+    public function setVoucherSubType($voucher_sub_type)
+    {
+        $allowedValues = $this->getVoucherSubTypeAllowableValues();
+        if (!is_null($voucher_sub_type) && !in_array($voucher_sub_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'voucher_sub_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['voucher_sub_type'] = $voucher_sub_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets customer_id
+     *
+     * @return int
+     */
+    public function getCustomerId()
+    {
+        return $this->container['customer_id'];
+    }
+
+    /**
+     * Sets customer_id
+     *
+     * @param int $customer_id Customer UserID
+     *
+     * @return $this
+     */
+    public function setCustomerId($customer_id)
+    {
+        $this->container['customer_id'] = $customer_id;
 
         return $this;
     }

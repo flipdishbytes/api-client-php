@@ -236,4 +236,18 @@ class CreateVoucherTest extends \PHPUnit_Framework_TestCase
     public function testPropertyChannelRestrictions()
     {
     }
+
+    /**
+     * Test attribute "voucher_sub_type"
+     */
+    public function testPropertyVoucherSubType()
+    {
+    }
+
+    /**
+     * Test attribute "customer_id"
+     */
+    public function testPropertyCustomerId()
+    {
+    }
 }
