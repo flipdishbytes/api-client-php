@@ -62,6 +62,7 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         'stripe_id' => 'string',
         'card_payment_status' => 'string',
         'payout_schedule_interval' => 'string',
+        'payouts_enabled' => 'bool',
         'payouts_paused' => 'bool'
     ];
 
@@ -75,6 +76,7 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         'stripe_id' => null,
         'card_payment_status' => null,
         'payout_schedule_interval' => null,
+        'payouts_enabled' => null,
         'payouts_paused' => null
     ];
 
@@ -109,6 +111,7 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         'stripe_id' => 'StripeId',
         'card_payment_status' => 'CardPaymentStatus',
         'payout_schedule_interval' => 'PayoutScheduleInterval',
+        'payouts_enabled' => 'PayoutsEnabled',
         'payouts_paused' => 'PayoutsPaused'
     ];
 
@@ -122,6 +125,7 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         'stripe_id' => 'setStripeId',
         'card_payment_status' => 'setCardPaymentStatus',
         'payout_schedule_interval' => 'setPayoutScheduleInterval',
+        'payouts_enabled' => 'setPayoutsEnabled',
         'payouts_paused' => 'setPayoutsPaused'
     ];
 
@@ -135,6 +139,7 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         'stripe_id' => 'getStripeId',
         'card_payment_status' => 'getCardPaymentStatus',
         'payout_schedule_interval' => 'getPayoutScheduleInterval',
+        'payouts_enabled' => 'getPayoutsEnabled',
         'payouts_paused' => 'getPayoutsPaused'
     ];
 
@@ -265,6 +270,7 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         $this->container['stripe_id'] = isset($data['stripe_id']) ? $data['stripe_id'] : null;
         $this->container['card_payment_status'] = isset($data['card_payment_status']) ? $data['card_payment_status'] : null;
         $this->container['payout_schedule_interval'] = isset($data['payout_schedule_interval']) ? $data['payout_schedule_interval'] : null;
+        $this->container['payouts_enabled'] = isset($data['payouts_enabled']) ? $data['payouts_enabled'] : null;
         $this->container['payouts_paused'] = isset($data['payouts_paused']) ? $data['payouts_paused'] : null;
     }
 
@@ -435,6 +441,30 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
             );
         }
         $this->container['payout_schedule_interval'] = $payout_schedule_interval;
+
+        return $this;
+    }
+
+    /**
+     * Gets payouts_enabled
+     *
+     * @return bool
+     */
+    public function getPayoutsEnabled()
+    {
+        return $this->container['payouts_enabled'];
+    }
+
+    /**
+     * Sets payouts_enabled
+     *
+     * @param bool $payouts_enabled Payouts Enabled status
+     *
+     * @return $this
+     */
+    public function setPayoutsEnabled($payouts_enabled)
+    {
+        $this->container['payouts_enabled'] = $payouts_enabled;
 
         return $this;
     }

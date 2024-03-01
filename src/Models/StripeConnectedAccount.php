@@ -63,7 +63,8 @@ class StripeConnectedAccount implements ModelInterface, ArrayAccess
         'whitelabel_config_id' => 'int',
         'card_payments_status' => 'string',
         'transfers_status' => 'string',
-        'account_status' => 'string'
+        'account_status' => 'string',
+        'payouts_enabled' => 'bool'
     ];
 
     /**
@@ -77,7 +78,8 @@ class StripeConnectedAccount implements ModelInterface, ArrayAccess
         'whitelabel_config_id' => 'int32',
         'card_payments_status' => null,
         'transfers_status' => null,
-        'account_status' => null
+        'account_status' => null,
+        'payouts_enabled' => null
     ];
 
     /**
@@ -112,7 +114,8 @@ class StripeConnectedAccount implements ModelInterface, ArrayAccess
         'whitelabel_config_id' => 'WhitelabelConfigId',
         'card_payments_status' => 'CardPaymentsStatus',
         'transfers_status' => 'TransfersStatus',
-        'account_status' => 'AccountStatus'
+        'account_status' => 'AccountStatus',
+        'payouts_enabled' => 'PayoutsEnabled'
     ];
 
     /**
@@ -126,7 +129,8 @@ class StripeConnectedAccount implements ModelInterface, ArrayAccess
         'whitelabel_config_id' => 'setWhitelabelConfigId',
         'card_payments_status' => 'setCardPaymentsStatus',
         'transfers_status' => 'setTransfersStatus',
-        'account_status' => 'setAccountStatus'
+        'account_status' => 'setAccountStatus',
+        'payouts_enabled' => 'setPayoutsEnabled'
     ];
 
     /**
@@ -140,7 +144,8 @@ class StripeConnectedAccount implements ModelInterface, ArrayAccess
         'whitelabel_config_id' => 'getWhitelabelConfigId',
         'card_payments_status' => 'getCardPaymentsStatus',
         'transfers_status' => 'getTransfersStatus',
-        'account_status' => 'getAccountStatus'
+        'account_status' => 'getAccountStatus',
+        'payouts_enabled' => 'getPayoutsEnabled'
     ];
 
     /**
@@ -272,6 +277,7 @@ class StripeConnectedAccount implements ModelInterface, ArrayAccess
         $this->container['card_payments_status'] = isset($data['card_payments_status']) ? $data['card_payments_status'] : null;
         $this->container['transfers_status'] = isset($data['transfers_status']) ? $data['transfers_status'] : null;
         $this->container['account_status'] = isset($data['account_status']) ? $data['account_status'] : null;
+        $this->container['payouts_enabled'] = isset($data['payouts_enabled']) ? $data['payouts_enabled'] : null;
     }
 
     /**
@@ -489,6 +495,30 @@ class StripeConnectedAccount implements ModelInterface, ArrayAccess
             );
         }
         $this->container['account_status'] = $account_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets payouts_enabled
+     *
+     * @return bool
+     */
+    public function getPayoutsEnabled()
+    {
+        return $this->container['payouts_enabled'];
+    }
+
+    /**
+     * Sets payouts_enabled
+     *
+     * @param bool $payouts_enabled Payouts Enabled status
+     *
+     * @return $this
+     */
+    public function setPayoutsEnabled($payouts_enabled)
+    {
+        $this->container['payouts_enabled'] = $payouts_enabled;
 
         return $this;
     }

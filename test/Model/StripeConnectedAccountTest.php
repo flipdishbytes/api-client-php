@@ -117,4 +117,11 @@ class StripeConnectedAccountTest extends \PHPUnit_Framework_TestCase
     public function testPropertyAccountStatus()
     {
     }
+
+    /**
+     * Test attribute "payouts_enabled"
+     */
+    public function testPropertyPayoutsEnabled()
+    {
+    }
 }
