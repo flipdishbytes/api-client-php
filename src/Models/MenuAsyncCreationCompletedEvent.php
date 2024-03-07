@@ -62,6 +62,7 @@ class MenuAsyncCreationCompletedEvent implements ModelInterface, ArrayAccess
         'description' => 'string',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
         'menu' => '\Flipdish\\Client\Models\Menu',
+        'success' => 'bool',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -79,6 +80,7 @@ class MenuAsyncCreationCompletedEvent implements ModelInterface, ArrayAccess
         'description' => null,
         'user' => null,
         'menu' => null,
+        'success' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -117,6 +119,7 @@ class MenuAsyncCreationCompletedEvent implements ModelInterface, ArrayAccess
         'description' => 'Description',
         'user' => 'User',
         'menu' => 'Menu',
+        'success' => 'Success',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -134,6 +137,7 @@ class MenuAsyncCreationCompletedEvent implements ModelInterface, ArrayAccess
         'description' => 'setDescription',
         'user' => 'setUser',
         'menu' => 'setMenu',
+        'success' => 'setSuccess',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -151,6 +155,7 @@ class MenuAsyncCreationCompletedEvent implements ModelInterface, ArrayAccess
         'description' => 'getDescription',
         'user' => 'getUser',
         'menu' => 'getMenu',
+        'success' => 'getSuccess',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -222,6 +227,7 @@ class MenuAsyncCreationCompletedEvent implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['menu'] = isset($data['menu']) ? $data['menu'] : null;
+        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -345,6 +351,30 @@ class MenuAsyncCreationCompletedEvent implements ModelInterface, ArrayAccess
     public function setMenu($menu)
     {
         $this->container['menu'] = $menu;
+
+        return $this;
+    }
+
+    /**
+     * Gets success
+     *
+     * @return bool
+     */
+    public function getSuccess()
+    {
+        return $this->container['success'];
+    }
+
+    /**
+     * Sets success
+     *
+     * @param bool $success Flag indicating if the menu creation was successful
+     *
+     * @return $this
+     */
+    public function setSuccess($success)
+    {
+        $this->container['success'] = $success;
 
         return $this;
     }
