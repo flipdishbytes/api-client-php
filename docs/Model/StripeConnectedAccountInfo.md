@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **payout_schedule_interval** | **string** | Payouts Schedule Interval | [optional] 
 **payouts_enabled** | **bool** | Payouts Enabled status | [optional] 
 **payouts_paused** | **bool** | Flag indicating if payouts are paused | [optional] 
+**payments_enabled** | **bool** | Flag indicating if payments are enabled | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

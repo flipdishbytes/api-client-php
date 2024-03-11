@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **transfers_status** | **string** | Transfers capability status (Inactive, Pending, Active, Unrequested) | [optional] 
 **account_status** | **string** | Current status of the account | [optional] 
 **payouts_enabled** | **bool** | Payouts Enabled status | [optional] 
+**payments_enabled** | **bool** | Payments Enabled status | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
