@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAppStoreApps**
-> \Flipdish\\Client\Models\RestApiPaginationResultAppStoreAppSummary getAppStoreApps($search, $page, $limit, $exclude_not_owned)
+> \Flipdish\\Client\Models\RestApiPaginationResultAppStoreAppSummary getAppStoreApps($search, $page, $limit, $exclude_not_owned, $show_only_verified)
 
 
 
@@ -84,9 +84,10 @@ $search = "search_example"; // string |
 $page = 56; // int | 
 $limit = 56; // int | 
 $exclude_not_owned = true; // bool | 
+$show_only_verified = true; // bool | 
 
 try {
-    $result = $apiInstance->getAppStoreApps($search, $page, $limit, $exclude_not_owned);
+    $result = $apiInstance->getAppStoreApps($search, $page, $limit, $exclude_not_owned, $show_only_verified);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AppStoreApi->getAppStoreApps: ', $e->getMessage(), PHP_EOL;
@@ -102,6 +103,7 @@ Name | Type | Description  | Notes
  **page** | **int**|  | [optional]
  **limit** | **int**|  | [optional]
  **exclude_not_owned** | **bool**|  | [optional]
+ **show_only_verified** | **bool**|  | [optional]
 
 ### Return type
 

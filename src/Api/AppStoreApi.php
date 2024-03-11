@@ -404,14 +404,15 @@ class AppStoreApi
      * @param  int $page page (optional)
      * @param  int $limit limit (optional)
      * @param  bool $exclude_not_owned exclude_not_owned (optional)
+     * @param  bool $show_only_verified show_only_verified (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiPaginationResultAppStoreAppSummary
      */
-    public function getAppStoreApps($search, $page = null, $limit = null, $exclude_not_owned = null)
+    public function getAppStoreApps($search, $page = null, $limit = null, $exclude_not_owned = null, $show_only_verified = null)
     {
-        list($response) = $this->getAppStoreAppsWithHttpInfo($search, $page, $limit, $exclude_not_owned);
+        list($response) = $this->getAppStoreAppsWithHttpInfo($search, $page, $limit, $exclude_not_owned, $show_only_verified);
         return $response;
     }
 
@@ -422,15 +423,16 @@ class AppStoreApi
      * @param  int $page (optional)
      * @param  int $limit (optional)
      * @param  bool $exclude_not_owned (optional)
+     * @param  bool $show_only_verified (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiPaginationResultAppStoreAppSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAppStoreAppsWithHttpInfo($search, $page = null, $limit = null, $exclude_not_owned = null)
+    public function getAppStoreAppsWithHttpInfo($search, $page = null, $limit = null, $exclude_not_owned = null, $show_only_verified = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultAppStoreAppSummary';
-        $request = $this->getAppStoreAppsRequest($search, $page, $limit, $exclude_not_owned);
+        $request = $this->getAppStoreAppsRequest($search, $page, $limit, $exclude_not_owned, $show_only_verified);
 
         try {
             $options = $this->createHttpClientOption();
@@ -524,13 +526,14 @@ class AppStoreApi
      * @param  int $page (optional)
      * @param  int $limit (optional)
      * @param  bool $exclude_not_owned (optional)
+     * @param  bool $show_only_verified (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAppStoreAppsAsync($search, $page = null, $limit = null, $exclude_not_owned = null)
+    public function getAppStoreAppsAsync($search, $page = null, $limit = null, $exclude_not_owned = null, $show_only_verified = null)
     {
-        return $this->getAppStoreAppsAsyncWithHttpInfo($search, $page, $limit, $exclude_not_owned)
+        return $this->getAppStoreAppsAsyncWithHttpInfo($search, $page, $limit, $exclude_not_owned, $show_only_verified)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -547,14 +550,15 @@ class AppStoreApi
      * @param  int $page (optional)
      * @param  int $limit (optional)
      * @param  bool $exclude_not_owned (optional)
+     * @param  bool $show_only_verified (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAppStoreAppsAsyncWithHttpInfo($search, $page = null, $limit = null, $exclude_not_owned = null)
+    public function getAppStoreAppsAsyncWithHttpInfo($search, $page = null, $limit = null, $exclude_not_owned = null, $show_only_verified = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultAppStoreAppSummary';
-        $request = $this->getAppStoreAppsRequest($search, $page, $limit, $exclude_not_owned);
+        $request = $this->getAppStoreAppsRequest($search, $page, $limit, $exclude_not_owned, $show_only_verified);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -600,11 +604,12 @@ class AppStoreApi
      * @param  int $page (optional)
      * @param  int $limit (optional)
      * @param  bool $exclude_not_owned (optional)
+     * @param  bool $show_only_verified (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAppStoreAppsRequest($search, $page = null, $limit = null, $exclude_not_owned = null)
+    protected function getAppStoreAppsRequest($search, $page = null, $limit = null, $exclude_not_owned = null, $show_only_verified = null)
     {
         // verify the required parameter 'search' is set
         if ($search === null || (is_array($search) && count($search) === 0)) {
@@ -635,6 +640,10 @@ class AppStoreApi
         // query params
         if ($exclude_not_owned !== null) {
             $queryParams['excludeNotOwned'] = ObjectSerializer::toQueryValue($exclude_not_owned);
+        }
+        // query params
+        if ($show_only_verified !== null) {
+            $queryParams['showOnlyVerified'] = ObjectSerializer::toQueryValue($show_only_verified);
         }
 
 
