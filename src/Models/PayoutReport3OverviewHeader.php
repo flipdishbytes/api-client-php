@@ -65,7 +65,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'period_start_time' => '\DateTime',
         'period_end_time' => '\DateTime',
         'destination_bank' => 'string',
-        'destination_account' => 'string'
+        'destination_account' => 'string',
+        'amount' => 'double'
     ];
 
     /**
@@ -82,7 +83,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'period_start_time' => 'date-time',
         'period_end_time' => 'date-time',
         'destination_bank' => null,
-        'destination_account' => null
+        'destination_account' => null,
+        'amount' => 'double'
     ];
 
     /**
@@ -120,7 +122,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'period_start_time' => 'PeriodStartTime',
         'period_end_time' => 'PeriodEndTime',
         'destination_bank' => 'DestinationBank',
-        'destination_account' => 'DestinationAccount'
+        'destination_account' => 'DestinationAccount',
+        'amount' => 'Amount'
     ];
 
     /**
@@ -137,7 +140,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'period_start_time' => 'setPeriodStartTime',
         'period_end_time' => 'setPeriodEndTime',
         'destination_bank' => 'setDestinationBank',
-        'destination_account' => 'setDestinationAccount'
+        'destination_account' => 'setDestinationAccount',
+        'amount' => 'setAmount'
     ];
 
     /**
@@ -154,7 +158,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'period_start_time' => 'getPeriodStartTime',
         'period_end_time' => 'getPeriodEndTime',
         'destination_bank' => 'getDestinationBank',
-        'destination_account' => 'getDestinationAccount'
+        'destination_account' => 'getDestinationAccount',
+        'amount' => 'getAmount'
     ];
 
     /**
@@ -226,6 +231,7 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         $this->container['period_end_time'] = isset($data['period_end_time']) ? $data['period_end_time'] : null;
         $this->container['destination_bank'] = isset($data['destination_bank']) ? $data['destination_bank'] : null;
         $this->container['destination_account'] = isset($data['destination_account']) ? $data['destination_account'] : null;
+        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
     }
 
     /**
@@ -464,6 +470,30 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
     public function setDestinationAccount($destination_account)
     {
         $this->container['destination_account'] = $destination_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets amount
+     *
+     * @return double
+     */
+    public function getAmount()
+    {
+        return $this->container['amount'];
+    }
+
+    /**
+     * Sets amount
+     *
+     * @param double $amount amount
+     *
+     * @return $this
+     */
+    public function setAmount($amount)
+    {
+        $this->container['amount'] = $amount;
 
         return $this;
     }

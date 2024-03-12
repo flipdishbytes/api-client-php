@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **period_end_time** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **destination_bank** | **string** |  | [optional] 
 **destination_account** | **string** |  | [optional] 
+**amount** | **double** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -138,4 +138,11 @@ class PayoutReport3OverviewHeaderTest extends \PHPUnit_Framework_TestCase
     public function testPropertyDestinationAccount()
     {
     }
+
+    /**
+     * Test attribute "amount"
+     */
+    public function testPropertyAmount()
+    {
+    }
 }
