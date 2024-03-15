@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **destination_bank** | **string** |  | [optional] 
 **destination_account** | **string** |  | [optional] 
 **amount** | **double** |  | [optional] 
+**currency** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

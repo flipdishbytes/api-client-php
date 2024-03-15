@@ -84,6 +84,13 @@ class PayoutReport3DetailsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "currency"
+     */
+    public function testPropertyCurrency()
+    {
+    }
+
+    /**
      * Test attribute "summary"
      */
     public function testPropertySummary()

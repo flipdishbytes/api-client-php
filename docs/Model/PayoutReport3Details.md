@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amount** | **double** |  | [optional] 
+**currency** | **string** |  | [optional] 
 **summary** | [**\Flipdish\\Client\Models\PayoutReport3DetailsSummary**](PayoutReport3DetailsSummary.md) |  | [optional] 
 **revenue** | [**\Flipdish\\Client\Models\PayoutReport3DetailsRevenue**](PayoutReport3DetailsRevenue.md) |  | [optional] 
 **flipdish_fees** | [**\Flipdish\\Client\Models\PayoutReport3DetailsFlipdishFees**](PayoutReport3DetailsFlipdishFees.md) |  | [optional] 

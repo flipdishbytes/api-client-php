@@ -58,6 +58,7 @@ class PayoutReport3Details implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'amount' => 'double',
+        'currency' => 'string',
         'summary' => '\Flipdish\\Client\Models\PayoutReport3DetailsSummary',
         'revenue' => '\Flipdish\\Client\Models\PayoutReport3DetailsRevenue',
         'flipdish_fees' => '\Flipdish\\Client\Models\PayoutReport3DetailsFlipdishFees',
@@ -71,6 +72,7 @@ class PayoutReport3Details implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'amount' => 'double',
+        'currency' => null,
         'summary' => null,
         'revenue' => null,
         'flipdish_fees' => null,
@@ -105,6 +107,7 @@ class PayoutReport3Details implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'amount' => 'Amount',
+        'currency' => 'Currency',
         'summary' => 'Summary',
         'revenue' => 'Revenue',
         'flipdish_fees' => 'FlipdishFees',
@@ -118,6 +121,7 @@ class PayoutReport3Details implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'amount' => 'setAmount',
+        'currency' => 'setCurrency',
         'summary' => 'setSummary',
         'revenue' => 'setRevenue',
         'flipdish_fees' => 'setFlipdishFees',
@@ -131,6 +135,7 @@ class PayoutReport3Details implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'amount' => 'getAmount',
+        'currency' => 'getCurrency',
         'summary' => 'getSummary',
         'revenue' => 'getRevenue',
         'flipdish_fees' => 'getFlipdishFees',
@@ -198,6 +203,7 @@ class PayoutReport3Details implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
+        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['summary'] = isset($data['summary']) ? $data['summary'] : null;
         $this->container['revenue'] = isset($data['revenue']) ? $data['revenue'] : null;
         $this->container['flipdish_fees'] = isset($data['flipdish_fees']) ? $data['flipdish_fees'] : null;
@@ -248,6 +254,30 @@ class PayoutReport3Details implements ModelInterface, ArrayAccess
     public function setAmount($amount)
     {
         $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency
+     *
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->container['currency'];
+    }
+
+    /**
+     * Sets currency
+     *
+     * @param string $currency currency
+     *
+     * @return $this
+     */
+    public function setCurrency($currency)
+    {
+        $this->container['currency'] = $currency;
 
         return $this;
     }

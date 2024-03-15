@@ -66,7 +66,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'period_end_time' => '\DateTime',
         'destination_bank' => 'string',
         'destination_account' => 'string',
-        'amount' => 'double'
+        'amount' => 'double',
+        'currency' => 'string'
     ];
 
     /**
@@ -84,7 +85,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'period_end_time' => 'date-time',
         'destination_bank' => null,
         'destination_account' => null,
-        'amount' => 'double'
+        'amount' => 'double',
+        'currency' => null
     ];
 
     /**
@@ -123,7 +125,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'period_end_time' => 'PeriodEndTime',
         'destination_bank' => 'DestinationBank',
         'destination_account' => 'DestinationAccount',
-        'amount' => 'Amount'
+        'amount' => 'Amount',
+        'currency' => 'Currency'
     ];
 
     /**
@@ -141,7 +144,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'period_end_time' => 'setPeriodEndTime',
         'destination_bank' => 'setDestinationBank',
         'destination_account' => 'setDestinationAccount',
-        'amount' => 'setAmount'
+        'amount' => 'setAmount',
+        'currency' => 'setCurrency'
     ];
 
     /**
@@ -159,7 +163,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'period_end_time' => 'getPeriodEndTime',
         'destination_bank' => 'getDestinationBank',
         'destination_account' => 'getDestinationAccount',
-        'amount' => 'getAmount'
+        'amount' => 'getAmount',
+        'currency' => 'getCurrency'
     ];
 
     /**
@@ -232,6 +237,7 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         $this->container['destination_bank'] = isset($data['destination_bank']) ? $data['destination_bank'] : null;
         $this->container['destination_account'] = isset($data['destination_account']) ? $data['destination_account'] : null;
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
+        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
     }
 
     /**
@@ -494,6 +500,30 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
     public function setAmount($amount)
     {
         $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency
+     *
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->container['currency'];
+    }
+
+    /**
+     * Sets currency
+     *
+     * @param string $currency currency
+     *
+     * @return $this
+     */
+    public function setCurrency($currency)
+    {
+        $this->container['currency'] = $currency;
 
         return $this;
     }
