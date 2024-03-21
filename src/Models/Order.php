@@ -75,7 +75,6 @@ class Order implements ModelInterface, ArrayAccess
         'channel_order_id' => 'string',
         'channel_order_display_id' => 'string',
         'channel' => '\Flipdish\\Client\Models\Channel',
-        'receipt_code' => 'string',
         'order_drop_off_location' => '\Flipdish\\Client\Models\OrderDropOffLocation',
         'fulfillment_status' => '\Flipdish\\Client\Models\OrderFulfillmentStatusBase',
         'order_batch_info' => '\Flipdish\\Client\Models\OrderBatchSummary',
@@ -107,7 +106,8 @@ class Order implements ModelInterface, ArrayAccess
         'driver_id' => 'int',
         'total_tax' => 'double',
         'order_tracking_code' => 'string',
-        'delivery_fee_area_id' => 'int'
+        'delivery_fee_area_id' => 'int',
+        'receipt_code' => 'string'
     ];
 
     /**
@@ -133,7 +133,6 @@ class Order implements ModelInterface, ArrayAccess
         'channel_order_id' => null,
         'channel_order_display_id' => null,
         'channel' => null,
-        'receipt_code' => null,
         'order_drop_off_location' => null,
         'fulfillment_status' => null,
         'order_batch_info' => null,
@@ -165,7 +164,8 @@ class Order implements ModelInterface, ArrayAccess
         'driver_id' => 'int32',
         'total_tax' => 'double',
         'order_tracking_code' => null,
-        'delivery_fee_area_id' => 'int32'
+        'delivery_fee_area_id' => 'int32',
+        'receipt_code' => null
     ];
 
     /**
@@ -212,7 +212,6 @@ class Order implements ModelInterface, ArrayAccess
         'channel_order_id' => 'ChannelOrderId',
         'channel_order_display_id' => 'ChannelOrderDisplayId',
         'channel' => 'Channel',
-        'receipt_code' => 'ReceiptCode',
         'order_drop_off_location' => 'OrderDropOffLocation',
         'fulfillment_status' => 'FulfillmentStatus',
         'order_batch_info' => 'OrderBatchInfo',
@@ -244,7 +243,8 @@ class Order implements ModelInterface, ArrayAccess
         'driver_id' => 'DriverId',
         'total_tax' => 'TotalTax',
         'order_tracking_code' => 'OrderTrackingCode',
-        'delivery_fee_area_id' => 'DeliveryFeeAreaId'
+        'delivery_fee_area_id' => 'DeliveryFeeAreaId',
+        'receipt_code' => 'ReceiptCode'
     ];
 
     /**
@@ -270,7 +270,6 @@ class Order implements ModelInterface, ArrayAccess
         'channel_order_id' => 'setChannelOrderId',
         'channel_order_display_id' => 'setChannelOrderDisplayId',
         'channel' => 'setChannel',
-        'receipt_code' => 'setReceiptCode',
         'order_drop_off_location' => 'setOrderDropOffLocation',
         'fulfillment_status' => 'setFulfillmentStatus',
         'order_batch_info' => 'setOrderBatchInfo',
@@ -302,7 +301,8 @@ class Order implements ModelInterface, ArrayAccess
         'driver_id' => 'setDriverId',
         'total_tax' => 'setTotalTax',
         'order_tracking_code' => 'setOrderTrackingCode',
-        'delivery_fee_area_id' => 'setDeliveryFeeAreaId'
+        'delivery_fee_area_id' => 'setDeliveryFeeAreaId',
+        'receipt_code' => 'setReceiptCode'
     ];
 
     /**
@@ -328,7 +328,6 @@ class Order implements ModelInterface, ArrayAccess
         'channel_order_id' => 'getChannelOrderId',
         'channel_order_display_id' => 'getChannelOrderDisplayId',
         'channel' => 'getChannel',
-        'receipt_code' => 'getReceiptCode',
         'order_drop_off_location' => 'getOrderDropOffLocation',
         'fulfillment_status' => 'getFulfillmentStatus',
         'order_batch_info' => 'getOrderBatchInfo',
@@ -360,7 +359,8 @@ class Order implements ModelInterface, ArrayAccess
         'driver_id' => 'getDriverId',
         'total_tax' => 'getTotalTax',
         'order_tracking_code' => 'getOrderTrackingCode',
-        'delivery_fee_area_id' => 'getDeliveryFeeAreaId'
+        'delivery_fee_area_id' => 'getDeliveryFeeAreaId',
+        'receipt_code' => 'getReceiptCode'
     ];
 
     /**
@@ -681,7 +681,6 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['channel_order_id'] = isset($data['channel_order_id']) ? $data['channel_order_id'] : null;
         $this->container['channel_order_display_id'] = isset($data['channel_order_display_id']) ? $data['channel_order_display_id'] : null;
         $this->container['channel'] = isset($data['channel']) ? $data['channel'] : null;
-        $this->container['receipt_code'] = isset($data['receipt_code']) ? $data['receipt_code'] : null;
         $this->container['order_drop_off_location'] = isset($data['order_drop_off_location']) ? $data['order_drop_off_location'] : null;
         $this->container['fulfillment_status'] = isset($data['fulfillment_status']) ? $data['fulfillment_status'] : null;
         $this->container['order_batch_info'] = isset($data['order_batch_info']) ? $data['order_batch_info'] : null;
@@ -714,6 +713,7 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['total_tax'] = isset($data['total_tax']) ? $data['total_tax'] : null;
         $this->container['order_tracking_code'] = isset($data['order_tracking_code']) ? $data['order_tracking_code'] : null;
         $this->container['delivery_fee_area_id'] = isset($data['delivery_fee_area_id']) ? $data['delivery_fee_area_id'] : null;
+        $this->container['receipt_code'] = isset($data['receipt_code']) ? $data['receipt_code'] : null;
     }
 
     /**
@@ -1216,30 +1216,6 @@ class Order implements ModelInterface, ArrayAccess
     public function setChannel($channel)
     {
         $this->container['channel'] = $channel;
-
-        return $this;
-    }
-
-    /**
-     * Gets receipt_code
-     *
-     * @return string
-     */
-    public function getReceiptCode()
-    {
-        return $this->container['receipt_code'];
-    }
-
-    /**
-     * Sets receipt_code
-     *
-     * @param string $receipt_code Generated receipt code for an order
-     *
-     * @return $this
-     */
-    public function setReceiptCode($receipt_code)
-    {
-        $this->container['receipt_code'] = $receipt_code;
 
         return $this;
     }
@@ -2089,6 +2065,30 @@ class Order implements ModelInterface, ArrayAccess
     public function setDeliveryFeeAreaId($delivery_fee_area_id)
     {
         $this->container['delivery_fee_area_id'] = $delivery_fee_area_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets receipt_code
+     *
+     * @return string
+     */
+    public function getReceiptCode()
+    {
+        return $this->container['receipt_code'];
+    }
+
+    /**
+     * Sets receipt_code
+     *
+     * @param string $receipt_code Code used to view the order's receipt
+     *
+     * @return $this
+     */
+    public function setReceiptCode($receipt_code)
+    {
+        $this->container['receipt_code'] = $receipt_code;
 
         return $this;
     }

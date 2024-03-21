@@ -196,13 +196,6 @@ class OrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "receipt_code"
-     */
-    public function testPropertyReceiptCode()
-    {
-    }
-
-    /**
      * Test attribute "order_drop_off_location"
      */
     public function testPropertyOrderDropOffLocation()
@@ -423,6 +416,13 @@ class OrderTest extends \PHPUnit_Framework_TestCase
      * Test attribute "delivery_fee_area_id"
      */
     public function testPropertyDeliveryFeeAreaId()
+    {
+    }
+
+    /**
+     * Test attribute "receipt_code"
+     */
+    public function testPropertyReceiptCode()
     {
     }
 }

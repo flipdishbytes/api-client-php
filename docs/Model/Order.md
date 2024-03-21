@@ -20,7 +20,6 @@ Name | Type | Description | Notes
 **channel_order_id** | **string** | ChannelOrderId from external channel | [optional] 
 **channel_order_display_id** | **string** | ChannelOrderDisplayId from external channel | [optional] 
 **channel** | [**\Flipdish\\Client\Models\Channel**](Channel.md) | Channel where the Order comes from | [optional] 
-**receipt_code** | **string** | Generated receipt code for an order | [optional] 
 **order_drop_off_location** | [**\Flipdish\\Client\Models\OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order | [optional] 
 **fulfillment_status** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md) | [BETA - this is a new field in development] Fulfillment status for this order | [optional] 
 **order_batch_info** | [**\Flipdish\\Client\Models\OrderBatchSummary**](OrderBatchSummary.md) | OrderBatch information | [optional] 
@@ -53,6 +52,7 @@ Name | Type | Description | Notes
 **total_tax** | **double** | Total tax applied to order | [optional] 
 **order_tracking_code** | **string** | Unique, 6 character long alpha numeric code for tracking. | [optional] 
 **delivery_fee_area_id** | **int** | Delivery area identifier | [optional] 
+**receipt_code** | **string** | Code used to view the order&#39;s receipt | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
