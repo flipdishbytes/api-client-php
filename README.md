@@ -335,7 +335,7 @@ Class | Method | HTTP request | Description
 *MenuOptionSetItemsApi* | [**getMenuItemOptionSetItemById**](docs/Api/MenuOptionSetItemsApi.md#getmenuitemoptionsetitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
 *MenuOptionSetItemsApi* | [**getMenuItemOptionSetItems**](docs/Api/MenuOptionSetItemsApi.md#getmenuitemoptionsetitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Get menu item option set items
 *MenuOptionSetItemsApi* | [**removeMenuItemOptionSetItem**](docs/Api/MenuOptionSetItemsApi.md#removemenuitemoptionsetitem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Delete menu item option set item
-*MenuOptionSetItemsApi* | [**setOptionSetItemTax**](docs/Api/MenuOptionSetItemsApi.md#setoptionsetitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | [Private API] Set Tax Rate on OptionSetItem
+*MenuOptionSetItemsApi* | [**setOptionSetItemTax**](docs/Api/MenuOptionSetItemsApi.md#setoptionsetitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | Set Tax Rate on OptionSetItem
 *MenuOptionSetItemsApi* | [**updateMenuItemOptionSetItem**](docs/Api/MenuOptionSetItemsApi.md#updatemenuitemoptionsetitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Update menu item option set item
 *MenuOptionSetItemsApi* | [**uploadOptionSetItemImage**](docs/Api/MenuOptionSetItemsApi.md#uploadoptionsetitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Upload menu item option set item image
 *MenuOptionSetsApi* | [**createMenuItemOptionSet**](docs/Api/MenuOptionSetsApi.md#createmenuitemoptionset) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | Create menu item option set
@@ -352,8 +352,8 @@ Class | Method | HTTP request | Description
 *MenuSectionItemsApi* | [**deleteMenuSectionItemImage**](docs/Api/MenuSectionItemsApi.md#deletemenusectionitemimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
 *MenuSectionItemsApi* | [**getMenuItemById**](docs/Api/MenuSectionItemsApi.md#getmenuitembyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
 *MenuSectionItemsApi* | [**getMenuItems**](docs/Api/MenuSectionItemsApi.md#getmenuitems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Get menu items
-*MenuSectionItemsApi* | [**moveMenuItem**](docs/Api/MenuSectionItemsApi.md#movemenuitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | [PRIVATE API]Move an Item within a menu
-*MenuSectionItemsApi* | [**setSectionItemTax**](docs/Api/MenuSectionItemsApi.md#setsectionitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/taxrate/{taxRateId} | [PRIVATE API]Move an Item within a menu
+*MenuSectionItemsApi* | [**moveMenuItem**](docs/Api/MenuSectionItemsApi.md#movemenuitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | [PRIVATE API] Move an Item within a menu
+*MenuSectionItemsApi* | [**setSectionItemTax**](docs/Api/MenuSectionItemsApi.md#setsectionitemtax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/taxrate/{taxRateId} | Set tax rate for menu item
 *MenuSectionItemsApi* | [**updateMenuSectionItem**](docs/Api/MenuSectionItemsApi.md#updatemenusectionitem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Update menu section item
 *MenuSectionItemsApi* | [**uploadMenuSectionItemImage**](docs/Api/MenuSectionItemsApi.md#uploadmenusectionitemimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
 *MenuSectionsApi* | [**cloneMenuSection**](docs/Api/MenuSectionsApi.md#clonemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/clone | Clone menu section
@@ -364,7 +364,7 @@ Class | Method | HTTP request | Description
 *MenuSectionsApi* | [**deleteMenuSectionImage**](docs/Api/MenuSectionsApi.md#deletemenusectionimage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
 *MenuSectionsApi* | [**getMenuSectionById**](docs/Api/MenuSectionsApi.md#getmenusectionbyid) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
 *MenuSectionsApi* | [**getMenuSections**](docs/Api/MenuSectionsApi.md#getmenusections) | **GET** /api/v1.0/menus/{menuId}/sections | Get menu sections
-*MenuSectionsApi* | [**menuSectionsSetItemDisplayOrders**](docs/Api/MenuSectionsApi.md#menusectionssetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | Re-arrange Items within a Section
+*MenuSectionsApi* | [**menuSectionsSetItemDisplayOrders**](docs/Api/MenuSectionsApi.md#menusectionssetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | [PRIVATE API] Re-arrange Items within a Section
 *MenuSectionsApi* | [**updateMenuSection**](docs/Api/MenuSectionsApi.md#updatemenusection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
 *MenuSectionsApi* | [**uploadMenuSectionImage**](docs/Api/MenuSectionsApi.md#uploadmenusectionimage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
 *MenuZonesApi* | [**addMenuZone**](docs/Api/MenuZonesApi.md#addmenuzone) | **POST** /api/v1.0/menus/{menuId}/zones | Adds a new menu zone to a menu.
@@ -378,10 +378,10 @@ Class | Method | HTTP request | Description
 *MenuZonesApi* | [**setMenuZoneName**](docs/Api/MenuZonesApi.md#setmenuzonename) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/name/{menuZoneName} | Sets the name of a menu zone.
 *MenuZonesApi* | [**updateMenuZone**](docs/Api/MenuZonesApi.md#updatemenuzone) | **PUT** /api/v1.0/menus/{menuId}/zones/{menuZoneId} | Updates a menu zone.
 *MenuZonesApi* | [**uploadMenuZoneImage**](docs/Api/MenuZonesApi.md#uploadmenuzoneimage) | **POST** /api/v1.0/menus/{menuId}/zones/{menuZoneId}/image | Uploads an image for a menu zone.
-*MenusApi* | [**createDraftMenuFromExistingMenu**](docs/Api/MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API]Clone a menu, (without attaching stores)
+*MenusApi* | [**createDraftMenuFromExistingMenu**](docs/Api/MenusApi.md#createdraftmenufromexistingmenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API] Clone a menu, (without attaching stores)
 *MenusApi* | [**createNewMenuAsync**](docs/Api/MenusApi.md#createnewmenuasync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously
 *MenusApi* | [**createNewMenuForApp**](docs/Api/MenusApi.md#createnewmenuforapp) | **POST** /api/v1.0/{appId}/menus | Create a new menu
-*MenusApi* | [**deleteMenu**](docs/Api/MenusApi.md#deletemenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API]Mark a Menu as Deleted
+*MenusApi* | [**deleteMenu**](docs/Api/MenusApi.md#deletemenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API] Mark a Menu as Deleted
 *MenusApi* | [**deleteMenuImage**](docs/Api/MenusApi.md#deletemenuimage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
 *MenusApi* | [**deleteMenuItemMetadata**](docs/Api/MenusApi.md#deletemenuitemmetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
 *MenusApi* | [**getAllMenuMetadataByMenuIdAndStoreId**](docs/Api/MenusApi.md#getallmenumetadatabymenuidandstoreid) | **GET** /api/v1.0/menus/{menuId}/metadata/store/{storeId} | Get all menu metadata by menu ID and store ID
@@ -389,23 +389,23 @@ Class | Method | HTTP request | Description
 *MenusApi* | [**getMenuItemMetadata**](docs/Api/MenusApi.md#getmenuitemmetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
 *MenusApi* | [**getMenuItemMetadataByKey**](docs/Api/MenusApi.md#getmenuitemmetadatabykey) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
 *MenusApi* | [**getMenuItemOptionSetItemMetadata**](docs/Api/MenusApi.md#getmenuitemoptionsetitemmetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get menu item option set item metadata by key
-*MenusApi* | [**getMenuName**](docs/Api/MenusApi.md#getmenuname) | **GET** /api/v1.0/menus/{menuId}/name | [PRIVATE API]Get Menus Name
-*MenusApi* | [**getMenuStoreNames**](docs/Api/MenusApi.md#getmenustorenames) | **GET** /api/v1.0/menus/{menuId}/stores | [PRIVATE API]Get menus store names
-*MenusApi* | [**getMenuTaxDetails**](docs/Api/MenusApi.md#getmenutaxdetails) | **GET** /api/v1.0/menus/{menuId}/tax | [PRIVATE API]Get menus tax details
-*MenusApi* | [**getMenusByAppId**](docs/Api/MenusApi.md#getmenusbyappid) | **GET** /api/v1.0/{appId}/menus | [PRIVATE API]Get menus by appId
+*MenusApi* | [**getMenuName**](docs/Api/MenusApi.md#getmenuname) | **GET** /api/v1.0/menus/{menuId}/name | [PRIVATE API] Get Menus Name
+*MenusApi* | [**getMenuStoreNames**](docs/Api/MenusApi.md#getmenustorenames) | **GET** /api/v1.0/menus/{menuId}/stores | [PRIVATE API] Get menus store names
+*MenusApi* | [**getMenuTaxDetails**](docs/Api/MenusApi.md#getmenutaxdetails) | **GET** /api/v1.0/menus/{menuId}/tax | [PRIVATE API] Get menus tax details
+*MenusApi* | [**getMenusByAppId**](docs/Api/MenusApi.md#getmenusbyappid) | **GET** /api/v1.0/{appId}/menus | [PRIVATE API] Get menus by appId
 *MenusApi* | [**getMenusCheckpoints**](docs/Api/MenusApi.md#getmenuscheckpoints) | **GET** /api/v1.0/menus/{menuId}/checkpoints | [PRIVATE API]Get a Menus Checkpoints
-*MenusApi* | [**menusDeleteTaxRate**](docs/Api/MenusApi.md#menusdeletetaxrate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
-*MenusApi* | [**menusGetMenuBulkShowHide**](docs/Api/MenusApi.md#menusgetmenubulkshowhide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | 
-*MenusApi* | [**menusSetDisplayOnMenuTax**](docs/Api/MenusApi.md#menussetdisplayonmenutax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | [PRIVATE API]Set if tax shows for a Menu
-*MenusApi* | [**menusSetItemDisplayOrders**](docs/Api/MenusApi.md#menussetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | [PRIVATE API]Re-arrange Sections within a Menu
-*MenusApi* | [**menusShowHideBulkItems**](docs/Api/MenusApi.md#menusshowhidebulkitems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | 
-*MenusApi* | [**menusUpdateTaxType**](docs/Api/MenusApi.md#menusupdatetaxtype) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | [PRIVATE API]Set the type of Tax on a Menu
-*MenusApi* | [**menusUpsertTaxRate**](docs/Api/MenusApi.md#menusupserttaxrate) | **POST** /api/v1.0/menus/{menuId}/taxrate | [PRIVATE API]Add/Update a Tax Rate
-*MenusApi* | [**restoreAMenuCheckpoint**](docs/Api/MenusApi.md#restoreamenucheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | [PRIVATE API]Restore a Menu to a checkpoint
+*MenusApi* | [**menusDeleteTaxRate**](docs/Api/MenusApi.md#menusdeletetaxrate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+*MenusApi* | [**menusGetMenuBulkShowHide**](docs/Api/MenusApi.md#menusgetmenubulkshowhide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | Get bulk show/hide menu items and option set items
+*MenusApi* | [**menusSetDisplayOnMenuTax**](docs/Api/MenusApi.md#menussetdisplayonmenutax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | [PRIVATE API] Set if tax shows for a Menu
+*MenusApi* | [**menusSetItemDisplayOrders**](docs/Api/MenusApi.md#menussetitemdisplayorders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | [PRIVATE API] Re-arrange Sections within a Menu
+*MenusApi* | [**menusShowHideBulkItems**](docs/Api/MenusApi.md#menusshowhidebulkitems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | Bulk show/hide menu items or option set items
+*MenusApi* | [**menusUpdateTaxType**](docs/Api/MenusApi.md#menusupdatetaxtype) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | [PRIVATE API] Set the type of Tax on a Menu
+*MenusApi* | [**menusUpsertTaxRate**](docs/Api/MenusApi.md#menusupserttaxrate) | **POST** /api/v1.0/menus/{menuId}/taxrate | [PRIVATE API] Add/Update a Tax Rate
+*MenusApi* | [**restoreAMenuCheckpoint**](docs/Api/MenusApi.md#restoreamenucheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | [PRIVATE API] Restore a Menu to a checkpoint
 *MenusApi* | [**setMenuItemMetadata**](docs/Api/MenusApi.md#setmenuitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
 *MenusApi* | [**setMenuItemOptionSetItemMetadata**](docs/Api/MenusApi.md#setmenuitemoptionsetitemmetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata
-*MenusApi* | [**setMenuLock**](docs/Api/MenusApi.md#setmenulock) | **POST** /api/v1.0/menus/{menuId}/lock | [PRIVATE API]Lock/Unlock a Menu for Editing
-*MenusApi* | [**setMenuName**](docs/Api/MenusApi.md#setmenuname) | **POST** /api/v1.0/menus/{menuId}/name | [PRIVATE API]Set Menus Name
+*MenusApi* | [**setMenuLock**](docs/Api/MenusApi.md#setmenulock) | **POST** /api/v1.0/menus/{menuId}/lock | [PRIVATE API] Lock/Unlock a Menu for Editing
+*MenusApi* | [**setMenuName**](docs/Api/MenusApi.md#setmenuname) | **POST** /api/v1.0/menus/{menuId}/name | [PRIVATE API] Set Menus Name
 *MenusApi* | [**updateMenu**](docs/Api/MenusApi.md#updatemenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
 *MenusApi* | [**uploadMenuImage**](docs/Api/MenusApi.md#uploadmenuimage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 *MenusApi* | [**uploadNewMenuForApp**](docs/Api/MenusApi.md#uploadnewmenuforapp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.

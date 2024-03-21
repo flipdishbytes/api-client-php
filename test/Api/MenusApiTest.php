@@ -74,7 +74,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createDraftMenuFromExistingMenu
      *
-     * [PRIVATE API]Clone a menu, (without attaching stores).
+     * [PRIVATE API] Clone a menu, (without attaching stores).
      *
      */
     public function testCreateDraftMenuFromExistingMenu()
@@ -104,7 +104,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteMenu
      *
-     * [PRIVATE API]Mark a Menu as Deleted.
+     * [PRIVATE API] Mark a Menu as Deleted.
      *
      */
     public function testDeleteMenu()
@@ -184,7 +184,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getMenuName
      *
-     * [PRIVATE API]Get Menus Name.
+     * [PRIVATE API] Get Menus Name.
      *
      */
     public function testGetMenuName()
@@ -194,7 +194,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getMenuStoreNames
      *
-     * [PRIVATE API]Get menus store names.
+     * [PRIVATE API] Get menus store names.
      *
      */
     public function testGetMenuStoreNames()
@@ -204,7 +204,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getMenuTaxDetails
      *
-     * [PRIVATE API]Get menus tax details.
+     * [PRIVATE API] Get menus tax details.
      *
      */
     public function testGetMenuTaxDetails()
@@ -214,7 +214,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getMenusByAppId
      *
-     * [PRIVATE API]Get menus by appId.
+     * [PRIVATE API] Get menus by appId.
      *
      */
     public function testGetMenusByAppId()
@@ -234,7 +234,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for menusDeleteTaxRate
      *
-     * [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached.
+     * [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached.
      *
      */
     public function testMenusDeleteTaxRate()
@@ -244,7 +244,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for menusGetMenuBulkShowHide
      *
-     * .
+     * Get bulk show/hide menu items and option set items.
      *
      */
     public function testMenusGetMenuBulkShowHide()
@@ -254,7 +254,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for menusSetDisplayOnMenuTax
      *
-     * [PRIVATE API]Set if tax shows for a Menu.
+     * [PRIVATE API] Set if tax shows for a Menu.
      *
      */
     public function testMenusSetDisplayOnMenuTax()
@@ -264,7 +264,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for menusSetItemDisplayOrders
      *
-     * [PRIVATE API]Re-arrange Sections within a Menu.
+     * [PRIVATE API] Re-arrange Sections within a Menu.
      *
      */
     public function testMenusSetItemDisplayOrders()
@@ -274,7 +274,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for menusShowHideBulkItems
      *
-     * .
+     * Bulk show/hide menu items or option set items.
      *
      */
     public function testMenusShowHideBulkItems()
@@ -284,7 +284,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for menusUpdateTaxType
      *
-     * [PRIVATE API]Set the type of Tax on a Menu.
+     * [PRIVATE API] Set the type of Tax on a Menu.
      *
      */
     public function testMenusUpdateTaxType()
@@ -294,7 +294,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for menusUpsertTaxRate
      *
-     * [PRIVATE API]Add/Update a Tax Rate.
+     * [PRIVATE API] Add/Update a Tax Rate.
      *
      */
     public function testMenusUpsertTaxRate()
@@ -304,7 +304,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for restoreAMenuCheckpoint
      *
-     * [PRIVATE API]Restore a Menu to a checkpoint.
+     * [PRIVATE API] Restore a Menu to a checkpoint.
      *
      */
     public function testRestoreAMenuCheckpoint()
@@ -334,7 +334,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setMenuLock
      *
-     * [PRIVATE API]Lock/Unlock a Menu for Editing.
+     * [PRIVATE API] Lock/Unlock a Menu for Editing.
      *
      */
     public function testSetMenuLock()
@@ -344,7 +344,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setMenuName
      *
-     * [PRIVATE API]Set Menus Name.
+     * [PRIVATE API] Set Menus Name.
      *
      */
     public function testSetMenuName()

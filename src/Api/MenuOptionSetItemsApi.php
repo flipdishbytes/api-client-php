@@ -1865,7 +1865,7 @@ class MenuOptionSetItemsApi
     /**
      * Operation setOptionSetItemTax
      *
-     * [Private API] Set Tax Rate on OptionSetItem
+     * Set Tax Rate on OptionSetItem
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id  (required)
@@ -1886,7 +1886,7 @@ class MenuOptionSetItemsApi
     /**
      * Operation setOptionSetItemTaxWithHttpInfo
      *
-     * [Private API] Set Tax Rate on OptionSetItem
+     * Set Tax Rate on OptionSetItem
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id  (required)
@@ -1968,7 +1968,7 @@ class MenuOptionSetItemsApi
     /**
      * Operation setOptionSetItemTaxAsync
      *
-     * [Private API] Set Tax Rate on OptionSetItem
+     * Set Tax Rate on OptionSetItem
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id  (required)
@@ -1993,7 +1993,7 @@ class MenuOptionSetItemsApi
     /**
      * Operation setOptionSetItemTaxAsyncWithHttpInfo
      *
-     * [Private API] Set Tax Rate on OptionSetItem
+     * Set Tax Rate on OptionSetItem
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id  (required)
@@ -2228,7 +2228,7 @@ class MenuOptionSetItemsApi
      * @param  int $option_set_id Option set identifier (required)
      * @param  int $menu_item_option_set_item_id Option set item identifier (required)
      * @param  \Flipdish\\Client\Models\MenuItemOptionSetItemBase $menu_item_option_set_item Option set item (delta) (required)
-     * @param  double $undo_after An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param  double $undo_after An optional time period, in hours, after which the hide-section operation will be undone. (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2250,7 +2250,7 @@ class MenuOptionSetItemsApi
      * @param  int $option_set_id Option set identifier (required)
      * @param  int $menu_item_option_set_item_id Option set item identifier (required)
      * @param  \Flipdish\\Client\Models\MenuItemOptionSetItemBase $menu_item_option_set_item Option set item (delta) (required)
-     * @param  double $undo_after An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param  double $undo_after An optional time period, in hours, after which the hide-section operation will be undone. (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2333,7 +2333,7 @@ class MenuOptionSetItemsApi
      * @param  int $option_set_id Option set identifier (required)
      * @param  int $menu_item_option_set_item_id Option set item identifier (required)
      * @param  \Flipdish\\Client\Models\MenuItemOptionSetItemBase $menu_item_option_set_item Option set item (delta) (required)
-     * @param  double $undo_after An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param  double $undo_after An optional time period, in hours, after which the hide-section operation will be undone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2359,7 +2359,7 @@ class MenuOptionSetItemsApi
      * @param  int $option_set_id Option set identifier (required)
      * @param  int $menu_item_option_set_item_id Option set item identifier (required)
      * @param  \Flipdish\\Client\Models\MenuItemOptionSetItemBase $menu_item_option_set_item Option set item (delta) (required)
-     * @param  double $undo_after An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param  double $undo_after An optional time period, in hours, after which the hide-section operation will be undone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2401,7 +2401,7 @@ class MenuOptionSetItemsApi
      * @param  int $option_set_id Option set identifier (required)
      * @param  int $menu_item_option_set_item_id Option set item identifier (required)
      * @param  \Flipdish\\Client\Models\MenuItemOptionSetItemBase $menu_item_option_set_item Option set item (delta) (required)
-     * @param  double $undo_after An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param  double $undo_after An optional time period, in hours, after which the hide-section operation will be undone. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

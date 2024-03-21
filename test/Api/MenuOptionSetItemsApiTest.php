@@ -124,7 +124,7 @@ class MenuOptionSetItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setOptionSetItemTax
      *
-     * [Private API] Set Tax Rate on OptionSetItem.
+     * Set Tax Rate on OptionSetItem.
      *
      */
     public function testSetOptionSetItemTax()

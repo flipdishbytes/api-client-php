@@ -2348,7 +2348,7 @@ class MenuSectionItemsApi
     /**
      * Operation moveMenuItem
      *
-     * [PRIVATE API]Move an Item within a menu
+     * [PRIVATE API] Move an Item within a menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Section to put item in (will usually be original section) (required)
@@ -2367,7 +2367,7 @@ class MenuSectionItemsApi
     /**
      * Operation moveMenuItemWithHttpInfo
      *
-     * [PRIVATE API]Move an Item within a menu
+     * [PRIVATE API] Move an Item within a menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Section to put item in (will usually be original section) (required)
@@ -2447,7 +2447,7 @@ class MenuSectionItemsApi
     /**
      * Operation moveMenuItemAsync
      *
-     * [PRIVATE API]Move an Item within a menu
+     * [PRIVATE API] Move an Item within a menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Section to put item in (will usually be original section) (required)
@@ -2470,7 +2470,7 @@ class MenuSectionItemsApi
     /**
      * Operation moveMenuItemAsyncWithHttpInfo
      *
-     * [PRIVATE API]Move an Item within a menu
+     * [PRIVATE API] Move an Item within a menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Section to put item in (will usually be original section) (required)
@@ -2665,7 +2665,7 @@ class MenuSectionItemsApi
     /**
      * Operation setSectionItemTax
      *
-     * [PRIVATE API]Move an Item within a menu
+     * Set tax rate for menu item
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Section to put item in (will usually be original section) (required)
@@ -2684,7 +2684,7 @@ class MenuSectionItemsApi
     /**
      * Operation setSectionItemTaxWithHttpInfo
      *
-     * [PRIVATE API]Move an Item within a menu
+     * Set tax rate for menu item
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Section to put item in (will usually be original section) (required)
@@ -2764,7 +2764,7 @@ class MenuSectionItemsApi
     /**
      * Operation setSectionItemTaxAsync
      *
-     * [PRIVATE API]Move an Item within a menu
+     * Set tax rate for menu item
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Section to put item in (will usually be original section) (required)
@@ -2787,7 +2787,7 @@ class MenuSectionItemsApi
     /**
      * Operation setSectionItemTaxAsyncWithHttpInfo
      *
-     * [PRIVATE API]Move an Item within a menu
+     * Set tax rate for menu item
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Section to put item in (will usually be original section) (required)
@@ -2988,7 +2988,7 @@ class MenuSectionItemsApi
      * @param  int $menu_section_id Menu section identifier (required)
      * @param  int $menu_section_item_id Menu section item identifier (required)
      * @param  \Flipdish\\Client\Models\MenuSectionItemBase $menu_section_item Menu section item (delta) (required)
-     * @param  double $undo_after An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param  double $undo_after An optional time period, in hours, after which the hide-section operation will be undone (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3008,7 +3008,7 @@ class MenuSectionItemsApi
      * @param  int $menu_section_id Menu section identifier (required)
      * @param  int $menu_section_item_id Menu section item identifier (required)
      * @param  \Flipdish\\Client\Models\MenuSectionItemBase $menu_section_item Menu section item (delta) (required)
-     * @param  double $undo_after An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param  double $undo_after An optional time period, in hours, after which the hide-section operation will be undone (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3089,7 +3089,7 @@ class MenuSectionItemsApi
      * @param  int $menu_section_id Menu section identifier (required)
      * @param  int $menu_section_item_id Menu section item identifier (required)
      * @param  \Flipdish\\Client\Models\MenuSectionItemBase $menu_section_item Menu section item (delta) (required)
-     * @param  double $undo_after An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param  double $undo_after An optional time period, in hours, after which the hide-section operation will be undone (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3113,7 +3113,7 @@ class MenuSectionItemsApi
      * @param  int $menu_section_id Menu section identifier (required)
      * @param  int $menu_section_item_id Menu section item identifier (required)
      * @param  \Flipdish\\Client\Models\MenuSectionItemBase $menu_section_item Menu section item (delta) (required)
-     * @param  double $undo_after An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param  double $undo_after An optional time period, in hours, after which the hide-section operation will be undone (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3153,7 +3153,7 @@ class MenuSectionItemsApi
      * @param  int $menu_section_id Menu section identifier (required)
      * @param  int $menu_section_item_id Menu section item identifier (required)
      * @param  \Flipdish\\Client\Models\MenuSectionItemBase $menu_section_item Menu section item (delta) (required)
-     * @param  double $undo_after An optional time period, in hours, after which the hide-section operaton will be undone. (optional)
+     * @param  double $undo_after An optional time period, in hours, after which the hide-section operation will be undone (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

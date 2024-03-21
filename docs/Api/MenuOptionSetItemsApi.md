@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getMenuItemOptionSetItemById**](MenuOptionSetItemsApi.md#getMenuItemOptionSetItemById) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Get menu item option set item by identifier
 [**getMenuItemOptionSetItems**](MenuOptionSetItemsApi.md#getMenuItemOptionSetItems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems | Get menu item option set items
 [**removeMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#removeMenuItemOptionSetItem) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Delete menu item option set item
-[**setOptionSetItemTax**](MenuOptionSetItemsApi.md#setOptionSetItemTax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | [Private API] Set Tax Rate on OptionSetItem
+[**setOptionSetItemTax**](MenuOptionSetItemsApi.md#setOptionSetItemTax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/taxrate/{taxRateId} | Set Tax Rate on OptionSetItem
 [**updateMenuItemOptionSetItem**](MenuOptionSetItemsApi.md#updateMenuItemOptionSetItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId} | Update menu item option set item
 [**uploadOptionSetItemImage**](MenuOptionSetItemsApi.md#uploadOptionSetItemImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/optionsetitems/{menuItemOptionSetItemId}/image | Upload menu item option set item image
 
@@ -308,7 +308,7 @@ void (empty response body)
 # **setOptionSetItemTax**
 > setOptionSetItemTax($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id, $menu_item_option_set_item_id, $tax_rate_id)
 
-[Private API] Set Tax Rate on OptionSetItem
+Set Tax Rate on OptionSetItem
 
 ### Example
 ```php
@@ -390,7 +390,7 @@ $menu_section_item_id = 56; // int | Menu section item identifier
 $option_set_id = 56; // int | Option set identifier
 $menu_item_option_set_item_id = 56; // int | Option set item identifier
 $menu_item_option_set_item = new \Flipdish\\Client\Models\MenuItemOptionSetItemBase(); // \Flipdish\\Client\Models\MenuItemOptionSetItemBase | Option set item (delta)
-$undo_after = 1.2; // double | An optional time period, in hours, after which the hide-section operaton will be undone.
+$undo_after = 1.2; // double | An optional time period, in hours, after which the hide-section operation will be undone.
 
 try {
     $apiInstance->updateMenuItemOptionSetItem($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id, $menu_item_option_set_item_id, $menu_item_option_set_item, $undo_after);
@@ -410,7 +410,7 @@ Name | Type | Description  | Notes
  **option_set_id** | **int**| Option set identifier |
  **menu_item_option_set_item_id** | **int**| Option set item identifier |
  **menu_item_option_set_item** | [**\Flipdish\\Client\Models\MenuItemOptionSetItemBase**](../Model/MenuItemOptionSetItemBase.md)| Option set item (delta) |
- **undo_after** | **double**| An optional time period, in hours, after which the hide-section operaton will be undone. | [optional]
+ **undo_after** | **double**| An optional time period, in hours, after which the hide-section operation will be undone. | [optional]
 
 ### Return type
 

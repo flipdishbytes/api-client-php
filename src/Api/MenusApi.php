@@ -90,7 +90,7 @@ class MenusApi
     /**
      * Operation createDraftMenuFromExistingMenu
      *
-     * [PRIVATE API]Clone a menu, (without attaching stores)
+     * [PRIVATE API] Clone a menu, (without attaching stores)
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  string $new_name Name of the new Menu (required)
@@ -108,7 +108,7 @@ class MenusApi
     /**
      * Operation createDraftMenuFromExistingMenuWithHttpInfo
      *
-     * [PRIVATE API]Clone a menu, (without attaching stores)
+     * [PRIVATE API] Clone a menu, (without attaching stores)
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  string $new_name Name of the new Menu (required)
@@ -216,7 +216,7 @@ class MenusApi
     /**
      * Operation createDraftMenuFromExistingMenuAsync
      *
-     * [PRIVATE API]Clone a menu, (without attaching stores)
+     * [PRIVATE API] Clone a menu, (without attaching stores)
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  string $new_name Name of the new Menu (required)
@@ -237,7 +237,7 @@ class MenusApi
     /**
      * Operation createDraftMenuFromExistingMenuAsyncWithHttpInfo
      *
-     * [PRIVATE API]Clone a menu, (without attaching stores)
+     * [PRIVATE API] Clone a menu, (without attaching stores)
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  string $new_name Name of the new Menu (required)
@@ -1044,7 +1044,7 @@ class MenusApi
     /**
      * Operation deleteMenu
      *
-     * [PRIVATE API]Mark a Menu as Deleted
+     * [PRIVATE API] Mark a Menu as Deleted
      *
      * @param  int $menu_id Menu Identifier (required)
      *
@@ -1060,7 +1060,7 @@ class MenusApi
     /**
      * Operation deleteMenuWithHttpInfo
      *
-     * [PRIVATE API]Mark a Menu as Deleted
+     * [PRIVATE API] Mark a Menu as Deleted
      *
      * @param  int $menu_id Menu Identifier (required)
      *
@@ -1137,7 +1137,7 @@ class MenusApi
     /**
      * Operation deleteMenuAsync
      *
-     * [PRIVATE API]Mark a Menu as Deleted
+     * [PRIVATE API] Mark a Menu as Deleted
      *
      * @param  int $menu_id Menu Identifier (required)
      *
@@ -1157,7 +1157,7 @@ class MenusApi
     /**
      * Operation deleteMenuAsyncWithHttpInfo
      *
-     * [PRIVATE API]Mark a Menu as Deleted
+     * [PRIVATE API] Mark a Menu as Deleted
      *
      * @param  int $menu_id Menu Identifier (required)
      *
@@ -2878,11 +2878,12 @@ class MenusApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \Flipdish\\Client\Models\RestApiResultMetadata
      */
     public function getMenuItemMetadataByKey($menu_id, $store_id, $menu_item_id, $key)
     {
-        $this->getMenuItemMetadataByKeyWithHttpInfo($menu_id, $store_id, $menu_item_id, $key);
+        list($response) = $this->getMenuItemMetadataByKeyWithHttpInfo($menu_id, $store_id, $menu_item_id, $key);
+        return $response;
     }
 
     /**
@@ -2897,11 +2898,11 @@ class MenusApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultMetadata, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMenuItemMetadataByKeyWithHttpInfo($menu_id, $store_id, $menu_item_id, $key)
     {
-        $returnType = '';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultMetadata';
         $request = $this->getMenuItemMetadataByKeyRequest($menu_id, $store_id, $menu_item_id, $key);
 
         try {
@@ -2932,10 +2933,32 @@ class MenusApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiResultMetadata',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -3011,14 +3034,28 @@ class MenusApi
      */
     public function getMenuItemMetadataByKeyAsyncWithHttpInfo($menu_id, $store_id, $menu_item_id, $key)
     {
-        $returnType = '';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultMetadata';
         $request = $this->getMenuItemMetadataByKeyRequest($menu_id, $store_id, $menu_item_id, $key);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -3537,33 +3574,34 @@ class MenusApi
     /**
      * Operation getMenuName
      *
-     * [PRIVATE API]Get Menus Name
+     * [PRIVATE API] Get Menus Name
      *
      * @param  int $menu_id Menu identifier (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return string
      */
     public function getMenuName($menu_id)
     {
-        $this->getMenuNameWithHttpInfo($menu_id);
+        list($response) = $this->getMenuNameWithHttpInfo($menu_id);
+        return $response;
     }
 
     /**
      * Operation getMenuNameWithHttpInfo
      *
-     * [PRIVATE API]Get Menus Name
+     * [PRIVATE API] Get Menus Name
      *
      * @param  int $menu_id Menu identifier (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMenuNameWithHttpInfo($menu_id)
     {
-        $returnType = '';
+        $returnType = 'string';
         $request = $this->getMenuNameRequest($menu_id);
 
         try {
@@ -3594,10 +3632,32 @@ class MenusApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'string',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -3630,7 +3690,7 @@ class MenusApi
     /**
      * Operation getMenuNameAsync
      *
-     * [PRIVATE API]Get Menus Name
+     * [PRIVATE API] Get Menus Name
      *
      * @param  int $menu_id Menu identifier (required)
      *
@@ -3650,7 +3710,7 @@ class MenusApi
     /**
      * Operation getMenuNameAsyncWithHttpInfo
      *
-     * [PRIVATE API]Get Menus Name
+     * [PRIVATE API] Get Menus Name
      *
      * @param  int $menu_id Menu identifier (required)
      *
@@ -3659,14 +3719,28 @@ class MenusApi
      */
     public function getMenuNameAsyncWithHttpInfo($menu_id)
     {
-        $returnType = '';
+        $returnType = 'string';
         $request = $this->getMenuNameRequest($menu_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -3797,7 +3871,7 @@ class MenusApi
     /**
      * Operation getMenuStoreNames
      *
-     * [PRIVATE API]Get menus store names
+     * [PRIVATE API] Get menus store names
      *
      * @param  int $menu_id Menu identifier (required)
      *
@@ -3814,7 +3888,7 @@ class MenusApi
     /**
      * Operation getMenuStoreNamesWithHttpInfo
      *
-     * [PRIVATE API]Get menus store names
+     * [PRIVATE API] Get menus store names
      *
      * @param  int $menu_id Menu identifier (required)
      *
@@ -3921,7 +3995,7 @@ class MenusApi
     /**
      * Operation getMenuStoreNamesAsync
      *
-     * [PRIVATE API]Get menus store names
+     * [PRIVATE API] Get menus store names
      *
      * @param  int $menu_id Menu identifier (required)
      *
@@ -3941,7 +4015,7 @@ class MenusApi
     /**
      * Operation getMenuStoreNamesAsyncWithHttpInfo
      *
-     * [PRIVATE API]Get menus store names
+     * [PRIVATE API] Get menus store names
      *
      * @param  int $menu_id Menu identifier (required)
      *
@@ -4102,7 +4176,7 @@ class MenusApi
     /**
      * Operation getMenuTaxDetails
      *
-     * [PRIVATE API]Get menus tax details
+     * [PRIVATE API] Get menus tax details
      *
      * @param  int $menu_id Menu identifier (required)
      *
@@ -4119,7 +4193,7 @@ class MenusApi
     /**
      * Operation getMenuTaxDetailsWithHttpInfo
      *
-     * [PRIVATE API]Get menus tax details
+     * [PRIVATE API] Get menus tax details
      *
      * @param  int $menu_id Menu identifier (required)
      *
@@ -4218,7 +4292,7 @@ class MenusApi
     /**
      * Operation getMenuTaxDetailsAsync
      *
-     * [PRIVATE API]Get menus tax details
+     * [PRIVATE API] Get menus tax details
      *
      * @param  int $menu_id Menu identifier (required)
      *
@@ -4238,7 +4312,7 @@ class MenusApi
     /**
      * Operation getMenuTaxDetailsAsyncWithHttpInfo
      *
-     * [PRIVATE API]Get menus tax details
+     * [PRIVATE API] Get menus tax details
      *
      * @param  int $menu_id Menu identifier (required)
      *
@@ -4399,7 +4473,7 @@ class MenusApi
     /**
      * Operation getMenusByAppId
      *
-     * [PRIVATE API]Get menus by appId
+     * [PRIVATE API] Get menus by appId
      *
      * @param  string $app_id Get Menus for this appId (required)
      *
@@ -4416,7 +4490,7 @@ class MenusApi
     /**
      * Operation getMenusByAppIdWithHttpInfo
      *
-     * [PRIVATE API]Get menus by appId
+     * [PRIVATE API] Get menus by appId
      *
      * @param  string $app_id Get Menus for this appId (required)
      *
@@ -4523,7 +4597,7 @@ class MenusApi
     /**
      * Operation getMenusByAppIdAsync
      *
-     * [PRIVATE API]Get menus by appId
+     * [PRIVATE API] Get menus by appId
      *
      * @param  string $app_id Get Menus for this appId (required)
      *
@@ -4543,7 +4617,7 @@ class MenusApi
     /**
      * Operation getMenusByAppIdAsyncWithHttpInfo
      *
-     * [PRIVATE API]Get menus by appId
+     * [PRIVATE API] Get menus by appId
      *
      * @param  string $app_id Get Menus for this appId (required)
      *
@@ -5001,7 +5075,7 @@ class MenusApi
     /**
      * Operation menusDeleteTaxRate
      *
-     * [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     * [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $tax_id Id of Menu Tax to be removed (required)
@@ -5018,7 +5092,7 @@ class MenusApi
     /**
      * Operation menusDeleteTaxRateWithHttpInfo
      *
-     * [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     * [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $tax_id Id of Menu Tax to be removed (required)
@@ -5096,7 +5170,7 @@ class MenusApi
     /**
      * Operation menusDeleteTaxRateAsync
      *
-     * [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     * [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $tax_id Id of Menu Tax to be removed (required)
@@ -5117,7 +5191,7 @@ class MenusApi
     /**
      * Operation menusDeleteTaxRateAsyncWithHttpInfo
      *
-     * [PRIVATE API]Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     * [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $tax_id Id of Menu Tax to be removed (required)
@@ -5280,8 +5354,10 @@ class MenusApi
     /**
      * Operation menusGetMenuBulkShowHide
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  bool $is_available is_available (required)
+     * Get bulk show/hide menu items and option set items
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  bool $is_available Is available flag (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5296,8 +5372,10 @@ class MenusApi
     /**
      * Operation menusGetMenuBulkShowHideWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  bool $is_available (required)
+     * Get bulk show/hide menu items and option set items
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  bool $is_available Is available flag (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5394,10 +5472,10 @@ class MenusApi
     /**
      * Operation menusGetMenuBulkShowHideAsync
      *
-     * 
+     * Get bulk show/hide menu items and option set items
      *
-     * @param  int $menu_id (required)
-     * @param  bool $is_available (required)
+     * @param  int $menu_id Menu id (required)
+     * @param  bool $is_available Is available flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5415,10 +5493,10 @@ class MenusApi
     /**
      * Operation menusGetMenuBulkShowHideAsyncWithHttpInfo
      *
-     * 
+     * Get bulk show/hide menu items and option set items
      *
-     * @param  int $menu_id (required)
-     * @param  bool $is_available (required)
+     * @param  int $menu_id Menu id (required)
+     * @param  bool $is_available Is available flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5468,8 +5546,8 @@ class MenusApi
     /**
      * Create request for operation 'menusGetMenuBulkShowHide'
      *
-     * @param  int $menu_id (required)
-     * @param  bool $is_available (required)
+     * @param  int $menu_id Menu id (required)
+     * @param  bool $is_available Is available flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5588,7 +5666,7 @@ class MenusApi
     /**
      * Operation menusSetDisplayOnMenuTax
      *
-     * [PRIVATE API]Set if tax shows for a Menu
+     * [PRIVATE API] Set if tax shows for a Menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  bool $show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
@@ -5605,7 +5683,7 @@ class MenusApi
     /**
      * Operation menusSetDisplayOnMenuTaxWithHttpInfo
      *
-     * [PRIVATE API]Set if tax shows for a Menu
+     * [PRIVATE API] Set if tax shows for a Menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  bool $show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
@@ -5683,7 +5761,7 @@ class MenusApi
     /**
      * Operation menusSetDisplayOnMenuTaxAsync
      *
-     * [PRIVATE API]Set if tax shows for a Menu
+     * [PRIVATE API] Set if tax shows for a Menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  bool $show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
@@ -5704,7 +5782,7 @@ class MenusApi
     /**
      * Operation menusSetDisplayOnMenuTaxAsyncWithHttpInfo
      *
-     * [PRIVATE API]Set if tax shows for a Menu
+     * [PRIVATE API] Set if tax shows for a Menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  bool $show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
@@ -5867,7 +5945,7 @@ class MenusApi
     /**
      * Operation menusSetItemDisplayOrders
      *
-     * [PRIVATE API]Re-arrange Sections within a Menu
+     * [PRIVATE API] Re-arrange Sections within a Menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Section Ids and their new display order (required)
@@ -5884,7 +5962,7 @@ class MenusApi
     /**
      * Operation menusSetItemDisplayOrdersWithHttpInfo
      *
-     * [PRIVATE API]Re-arrange Sections within a Menu
+     * [PRIVATE API] Re-arrange Sections within a Menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Section Ids and their new display order (required)
@@ -5962,7 +6040,7 @@ class MenusApi
     /**
      * Operation menusSetItemDisplayOrdersAsync
      *
-     * [PRIVATE API]Re-arrange Sections within a Menu
+     * [PRIVATE API] Re-arrange Sections within a Menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Section Ids and their new display order (required)
@@ -5983,7 +6061,7 @@ class MenusApi
     /**
      * Operation menusSetItemDisplayOrdersAsyncWithHttpInfo
      *
-     * [PRIVATE API]Re-arrange Sections within a Menu
+     * [PRIVATE API] Re-arrange Sections within a Menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Section Ids and their new display order (required)
@@ -6141,9 +6219,11 @@ class MenusApi
     /**
      * Operation menusShowHideBulkItems
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements menu_elements (required)
-     * @param  bool $is_available is_available (required)
+     * Bulk show/hide menu items or option set items
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements Elements to be show/hide (required)
+     * @param  bool $is_available Is available flag (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6158,9 +6238,11 @@ class MenusApi
     /**
      * Operation menusShowHideBulkItemsWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements (required)
-     * @param  bool $is_available (required)
+     * Bulk show/hide menu items or option set items
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements Elements to be show/hide (required)
+     * @param  bool $is_available Is available flag (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6257,11 +6339,11 @@ class MenusApi
     /**
      * Operation menusShowHideBulkItemsAsync
      *
-     * 
+     * Bulk show/hide menu items or option set items
      *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements (required)
-     * @param  bool $is_available (required)
+     * @param  int $menu_id Menu id (required)
+     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements Elements to be show/hide (required)
+     * @param  bool $is_available Is available flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6279,11 +6361,11 @@ class MenusApi
     /**
      * Operation menusShowHideBulkItemsAsyncWithHttpInfo
      *
-     * 
+     * Bulk show/hide menu items or option set items
      *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements (required)
-     * @param  bool $is_available (required)
+     * @param  int $menu_id Menu id (required)
+     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements Elements to be show/hide (required)
+     * @param  bool $is_available Is available flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6333,9 +6415,9 @@ class MenusApi
     /**
      * Create request for operation 'menusShowHideBulkItems'
      *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements (required)
-     * @param  bool $is_available (required)
+     * @param  int $menu_id Menu id (required)
+     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements Elements to be show/hide (required)
+     * @param  bool $is_available Is available flag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6463,7 +6545,7 @@ class MenusApi
     /**
      * Operation menusUpdateTaxType
      *
-     * [PRIVATE API]Set the type of Tax on a Menu
+     * [PRIVATE API] Set the type of Tax on a Menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  string $type Type of Tax (required)
@@ -6480,7 +6562,7 @@ class MenusApi
     /**
      * Operation menusUpdateTaxTypeWithHttpInfo
      *
-     * [PRIVATE API]Set the type of Tax on a Menu
+     * [PRIVATE API] Set the type of Tax on a Menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  string $type Type of Tax (required)
@@ -6558,7 +6640,7 @@ class MenusApi
     /**
      * Operation menusUpdateTaxTypeAsync
      *
-     * [PRIVATE API]Set the type of Tax on a Menu
+     * [PRIVATE API] Set the type of Tax on a Menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  string $type Type of Tax (required)
@@ -6579,7 +6661,7 @@ class MenusApi
     /**
      * Operation menusUpdateTaxTypeAsyncWithHttpInfo
      *
-     * [PRIVATE API]Set the type of Tax on a Menu
+     * [PRIVATE API] Set the type of Tax on a Menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  string $type Type of Tax (required)
@@ -6742,10 +6824,10 @@ class MenusApi
     /**
      * Operation menusUpsertTaxRate
      *
-     * [PRIVATE API]Add/Update a Tax Rate
+     * [PRIVATE API] Add/Update a Tax Rate
      *
      * @param  int $menu_id Menu identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax Rate to Add/Update (required)
+     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax rate to add/update (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6760,10 +6842,10 @@ class MenusApi
     /**
      * Operation menusUpsertTaxRateWithHttpInfo
      *
-     * [PRIVATE API]Add/Update a Tax Rate
+     * [PRIVATE API] Add/Update a Tax Rate
      *
      * @param  int $menu_id Menu identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax Rate to Add/Update (required)
+     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax rate to add/update (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6860,10 +6942,10 @@ class MenusApi
     /**
      * Operation menusUpsertTaxRateAsync
      *
-     * [PRIVATE API]Add/Update a Tax Rate
+     * [PRIVATE API] Add/Update a Tax Rate
      *
      * @param  int $menu_id Menu identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax Rate to Add/Update (required)
+     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax rate to add/update (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6881,10 +6963,10 @@ class MenusApi
     /**
      * Operation menusUpsertTaxRateAsyncWithHttpInfo
      *
-     * [PRIVATE API]Add/Update a Tax Rate
+     * [PRIVATE API] Add/Update a Tax Rate
      *
      * @param  int $menu_id Menu identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax Rate to Add/Update (required)
+     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax rate to add/update (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6935,7 +7017,7 @@ class MenusApi
      * Create request for operation 'menusUpsertTaxRate'
      *
      * @param  int $menu_id Menu identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax Rate to Add/Update (required)
+     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax rate to add/update (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7053,7 +7135,7 @@ class MenusApi
     /**
      * Operation restoreAMenuCheckpoint
      *
-     * [PRIVATE API]Restore a Menu to a checkpoint
+     * [PRIVATE API] Restore a Menu to a checkpoint
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $checkpoint_id Checkpoint to restore menu to (required)
@@ -7070,7 +7152,7 @@ class MenusApi
     /**
      * Operation restoreAMenuCheckpointWithHttpInfo
      *
-     * [PRIVATE API]Restore a Menu to a checkpoint
+     * [PRIVATE API] Restore a Menu to a checkpoint
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $checkpoint_id Checkpoint to restore menu to (required)
@@ -7148,7 +7230,7 @@ class MenusApi
     /**
      * Operation restoreAMenuCheckpointAsync
      *
-     * [PRIVATE API]Restore a Menu to a checkpoint
+     * [PRIVATE API] Restore a Menu to a checkpoint
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $checkpoint_id Checkpoint to restore menu to (required)
@@ -7169,7 +7251,7 @@ class MenusApi
     /**
      * Operation restoreAMenuCheckpointAsyncWithHttpInfo
      *
-     * [PRIVATE API]Restore a Menu to a checkpoint
+     * [PRIVATE API] Restore a Menu to a checkpoint
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $checkpoint_id Checkpoint to restore menu to (required)
@@ -7972,7 +8054,7 @@ class MenusApi
     /**
      * Operation setMenuLock
      *
-     * [PRIVATE API]Lock/Unlock a Menu for Editing
+     * [PRIVATE API] Lock/Unlock a Menu for Editing
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  bool $locked True: Locks menu for editing, False: Unlocks for editing (required)
@@ -7989,7 +8071,7 @@ class MenusApi
     /**
      * Operation setMenuLockWithHttpInfo
      *
-     * [PRIVATE API]Lock/Unlock a Menu for Editing
+     * [PRIVATE API] Lock/Unlock a Menu for Editing
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  bool $locked True: Locks menu for editing, False: Unlocks for editing (required)
@@ -8067,7 +8149,7 @@ class MenusApi
     /**
      * Operation setMenuLockAsync
      *
-     * [PRIVATE API]Lock/Unlock a Menu for Editing
+     * [PRIVATE API] Lock/Unlock a Menu for Editing
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  bool $locked True: Locks menu for editing, False: Unlocks for editing (required)
@@ -8088,7 +8170,7 @@ class MenusApi
     /**
      * Operation setMenuLockAsyncWithHttpInfo
      *
-     * [PRIVATE API]Lock/Unlock a Menu for Editing
+     * [PRIVATE API] Lock/Unlock a Menu for Editing
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  bool $locked True: Locks menu for editing, False: Unlocks for editing (required)
@@ -8246,7 +8328,7 @@ class MenusApi
     /**
      * Operation setMenuName
      *
-     * [PRIVATE API]Set Menus Name
+     * [PRIVATE API] Set Menus Name
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  string $name Name to set for this Menu (required)
@@ -8263,7 +8345,7 @@ class MenusApi
     /**
      * Operation setMenuNameWithHttpInfo
      *
-     * [PRIVATE API]Set Menus Name
+     * [PRIVATE API] Set Menus Name
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  string $name Name to set for this Menu (required)
@@ -8341,7 +8423,7 @@ class MenusApi
     /**
      * Operation setMenuNameAsync
      *
-     * [PRIVATE API]Set Menus Name
+     * [PRIVATE API] Set Menus Name
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  string $name Name to set for this Menu (required)
@@ -8362,7 +8444,7 @@ class MenusApi
     /**
      * Operation setMenuNameAsyncWithHttpInfo
      *
-     * [PRIVATE API]Set Menus Name
+     * [PRIVATE API] Set Menus Name
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  string $name Name to set for this Menu (required)
@@ -8523,7 +8605,7 @@ class MenusApi
      * Update menu
      *
      * @param  int $menu_id Menu identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuBase $menu Menu (delta) (required)
+     * @param  \Flipdish\\Client\Models\MenuBase $menu Full menu data (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8540,7 +8622,7 @@ class MenusApi
      * Update menu
      *
      * @param  int $menu_id Menu identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuBase $menu Menu (delta) (required)
+     * @param  \Flipdish\\Client\Models\MenuBase $menu Full menu data (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -8618,7 +8700,7 @@ class MenusApi
      * Update menu
      *
      * @param  int $menu_id Menu identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuBase $menu Menu (delta) (required)
+     * @param  \Flipdish\\Client\Models\MenuBase $menu Full menu data (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8639,7 +8721,7 @@ class MenusApi
      * Update menu
      *
      * @param  int $menu_id Menu identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuBase $menu Menu (delta) (required)
+     * @param  \Flipdish\\Client\Models\MenuBase $menu Full menu data (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8676,7 +8758,7 @@ class MenusApi
      * Create request for operation 'updateMenu'
      *
      * @param  int $menu_id Menu identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuBase $menu Menu (delta) (required)
+     * @param  \Flipdish\\Client\Models\MenuBase $menu Full menu data (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

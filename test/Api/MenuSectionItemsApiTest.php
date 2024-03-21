@@ -144,7 +144,7 @@ class MenuSectionItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for moveMenuItem
      *
-     * [PRIVATE API]Move an Item within a menu.
+     * [PRIVATE API] Move an Item within a menu.
      *
      */
     public function testMoveMenuItem()
@@ -154,7 +154,7 @@ class MenuSectionItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setSectionItemTax
      *
-     * [PRIVATE API]Move an Item within a menu.
+     * Set tax rate for menu item.
      *
      */
     public function testSetSectionItemTax()

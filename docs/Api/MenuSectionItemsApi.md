@@ -11,8 +11,8 @@ Method | HTTP request | Description
 [**deleteMenuSectionItemImage**](MenuSectionItemsApi.md#deleteMenuSectionItemImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Delete menu section item image
 [**getMenuItemById**](MenuSectionItemsApi.md#getMenuItemById) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Get menu item by identifier
 [**getMenuItems**](MenuSectionItemsApi.md#getMenuItems) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems | Get menu items
-[**moveMenuItem**](MenuSectionItemsApi.md#moveMenuItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | [PRIVATE API]Move an Item within a menu
-[**setSectionItemTax**](MenuSectionItemsApi.md#setSectionItemTax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/taxrate/{taxRateId} | [PRIVATE API]Move an Item within a menu
+[**moveMenuItem**](MenuSectionItemsApi.md#moveMenuItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/setorder/{destinationDisplayOrder} | [PRIVATE API] Move an Item within a menu
+[**setSectionItemTax**](MenuSectionItemsApi.md#setSectionItemTax) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/taxrate/{taxRateId} | Set tax rate for menu item
 [**updateMenuSectionItem**](MenuSectionItemsApi.md#updateMenuSectionItem) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId} | Update menu section item
 [**uploadMenuSectionItemImage**](MenuSectionItemsApi.md#uploadMenuSectionItemImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/image | Upload menu section item image
 
@@ -403,7 +403,9 @@ Name | Type | Description  | Notes
 # **moveMenuItem**
 > moveMenuItem($menu_id, $menu_section_id, $menu_section_item_id, $destination_display_order)
 
-[PRIVATE API]Move an Item within a menu
+[PRIVATE API] Move an Item within a menu
+
+[PRIVATE API]
 
 ### Example
 ```php
@@ -459,7 +461,7 @@ void (empty response body)
 # **setSectionItemTax**
 > setSectionItemTax($menu_id, $menu_section_id, $menu_section_item_id, $tax_rate_id)
 
-[PRIVATE API]Move an Item within a menu
+Set tax rate for menu item
 
 ### Example
 ```php
@@ -535,7 +537,7 @@ $menu_id = 56; // int | Menu identifier
 $menu_section_id = 56; // int | Menu section identifier
 $menu_section_item_id = 56; // int | Menu section item identifier
 $menu_section_item = new \Flipdish\\Client\Models\MenuSectionItemBase(); // \Flipdish\\Client\Models\MenuSectionItemBase | Menu section item (delta)
-$undo_after = 1.2; // double | An optional time period, in hours, after which the hide-section operaton will be undone.
+$undo_after = 1.2; // double | An optional time period, in hours, after which the hide-section operation will be undone
 
 try {
     $apiInstance->updateMenuSectionItem($menu_id, $menu_section_id, $menu_section_item_id, $menu_section_item, $undo_after);
@@ -553,7 +555,7 @@ Name | Type | Description  | Notes
  **menu_section_id** | **int**| Menu section identifier |
  **menu_section_item_id** | **int**| Menu section item identifier |
  **menu_section_item** | [**\Flipdish\\Client\Models\MenuSectionItemBase**](../Model/MenuSectionItemBase.md)| Menu section item (delta) |
- **undo_after** | **double**| An optional time period, in hours, after which the hide-section operaton will be undone. | [optional]
+ **undo_after** | **double**| An optional time period, in hours, after which the hide-section operation will be undone | [optional]
 
 ### Return type
 
