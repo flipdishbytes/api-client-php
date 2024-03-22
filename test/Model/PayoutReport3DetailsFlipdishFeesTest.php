@@ -140,6 +140,13 @@ class PayoutReport3DetailsFlipdishFeesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "other_integration_tips"
+     */
+    public function testPropertyOtherIntegrationTips()
+    {
+    }
+
+    /**
      * Test attribute "vat"
      */
     public function testPropertyVat()

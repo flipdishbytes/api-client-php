@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **pos_card** | **double** |  | [optional] 
 **pos_card_on_flipdish_orders** | **double** |  | [optional] 
 **other_integration_fees** | **double** |  | [optional] 
+**other_integration_tips** | **double** |  | [optional] 
 **vat** | **double** |  | [optional] 
 **total** | **double** |  | [optional] 
 
