@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPayoutReport3Orders**
-> \Flipdish\\Client\Models\RestApiPaginationResultPayoutReport3PayoutOrder getPayoutReport3Orders($app_id, $bank_account_id, $payout_id, $store_ids)
+> \Flipdish\\Client\Models\RestApiPaginationResultPayoutReport3PayoutOrder getPayoutReport3Orders($app_id, $bank_account_id, $payout_id, $store_ids, $page, $limit)
 
 
 
@@ -89,9 +89,11 @@ $app_id = "app_id_example"; // string |
 $bank_account_id = 56; // int | 
 $payout_id = 56; // int | 
 $store_ids = array(56); // int[] | 
+$page = 56; // int | 
+$limit = 56; // int | 
 
 try {
-    $result = $apiInstance->getPayoutReport3Orders($app_id, $bank_account_id, $payout_id, $store_ids);
+    $result = $apiInstance->getPayoutReport3Orders($app_id, $bank_account_id, $payout_id, $store_ids, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayoutReportsApi->getPayoutReport3Orders: ', $e->getMessage(), PHP_EOL;
@@ -107,6 +109,8 @@ Name | Type | Description  | Notes
  **bank_account_id** | **int**|  |
  **payout_id** | **int**|  |
  **store_ids** | [**int[]**](../Model/int.md)|  | [optional]
+ **page** | **int**|  | [optional]
+ **limit** | **int**|  | [optional]
 
 ### Return type
 

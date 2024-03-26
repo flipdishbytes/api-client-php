@@ -217,6 +217,13 @@ class PayoutReport3PayoutOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "store_name"
+     */
+    public function testPropertyStoreName()
+    {
+    }
+
+    /**
      * Test attribute "service_charge_amount"
      */
     public function testPropertyServiceChargeAmount()

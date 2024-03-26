@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **cash_fee_charged_to_customer** | **double** |  | [optional] 
 **net_sales** | **double** |  | [optional] 
 **store_id** | **int** |  | [optional] 
+**store_name** | **string** |  | [optional] 
 **service_charge_amount** | **double** |  | [optional] 
 **service_charge_percentage** | **double** |  | [optional] 
 

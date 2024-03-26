@@ -77,6 +77,7 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'cash_fee_charged_to_customer' => 'double',
         'net_sales' => 'double',
         'store_id' => 'int',
+        'store_name' => 'string',
         'service_charge_amount' => 'double',
         'service_charge_percentage' => 'double'
     ];
@@ -107,6 +108,7 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'cash_fee_charged_to_customer' => 'double',
         'net_sales' => 'double',
         'store_id' => 'int32',
+        'store_name' => null,
         'service_charge_amount' => 'double',
         'service_charge_percentage' => 'double'
     ];
@@ -158,6 +160,7 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'cash_fee_charged_to_customer' => 'CashFeeChargedToCustomer',
         'net_sales' => 'NetSales',
         'store_id' => 'StoreId',
+        'store_name' => 'StoreName',
         'service_charge_amount' => 'ServiceChargeAmount',
         'service_charge_percentage' => 'ServiceChargePercentage'
     ];
@@ -188,6 +191,7 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'cash_fee_charged_to_customer' => 'setCashFeeChargedToCustomer',
         'net_sales' => 'setNetSales',
         'store_id' => 'setStoreId',
+        'store_name' => 'setStoreName',
         'service_charge_amount' => 'setServiceChargeAmount',
         'service_charge_percentage' => 'setServiceChargePercentage'
     ];
@@ -218,6 +222,7 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'cash_fee_charged_to_customer' => 'getCashFeeChargedToCustomer',
         'net_sales' => 'getNetSales',
         'store_id' => 'getStoreId',
+        'store_name' => 'getStoreName',
         'service_charge_amount' => 'getServiceChargeAmount',
         'service_charge_percentage' => 'getServiceChargePercentage'
     ];
@@ -554,6 +559,7 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         $this->container['cash_fee_charged_to_customer'] = isset($data['cash_fee_charged_to_customer']) ? $data['cash_fee_charged_to_customer'] : null;
         $this->container['net_sales'] = isset($data['net_sales']) ? $data['net_sales'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
+        $this->container['store_name'] = isset($data['store_name']) ? $data['store_name'] : null;
         $this->container['service_charge_amount'] = isset($data['service_charge_amount']) ? $data['service_charge_amount'] : null;
         $this->container['service_charge_percentage'] = isset($data['service_charge_percentage']) ? $data['service_charge_percentage'] : null;
     }
@@ -1092,6 +1098,30 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
     public function setStoreId($store_id)
     {
         $this->container['store_id'] = $store_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets store_name
+     *
+     * @return string
+     */
+    public function getStoreName()
+    {
+        return $this->container['store_name'];
+    }
+
+    /**
+     * Sets store_name
+     *
+     * @param string $store_name store_name
+     *
+     * @return $this
+     */
+    public function setStoreName($store_name)
+    {
+        $this->container['store_name'] = $store_name;
 
         return $this;
     }
