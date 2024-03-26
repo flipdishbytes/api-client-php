@@ -308,6 +308,7 @@ class Voucher implements ModelInterface, ArrayAccess
     const VOUCHER_TYPE_LUMP_DISCOUNT = 'LumpDiscount';
     const VOUCHER_TYPE_ADD_ITEM = 'AddItem';
     const VOUCHER_TYPE_CREDIT_NOTE = 'CreditNote';
+    const VOUCHER_TYPE_FREE_DELIVERY = 'FreeDelivery';
     const CURRENCY_EUR = 'EUR';
     const CURRENCY_USD = 'USD';
     const CURRENCY_GBP = 'GBP';
@@ -465,6 +466,7 @@ class Voucher implements ModelInterface, ArrayAccess
             self::VOUCHER_TYPE_LUMP_DISCOUNT,
             self::VOUCHER_TYPE_ADD_ITEM,
             self::VOUCHER_TYPE_CREDIT_NOTE,
+            self::VOUCHER_TYPE_FREE_DELIVERY,
         ];
     }
     

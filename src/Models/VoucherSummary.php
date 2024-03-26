@@ -198,6 +198,7 @@ class VoucherSummary implements ModelInterface, ArrayAccess
     const VOUCHER_TYPE_LUMP_DISCOUNT = 'LumpDiscount';
     const VOUCHER_TYPE_ADD_ITEM = 'AddItem';
     const VOUCHER_TYPE_CREDIT_NOTE = 'CreditNote';
+    const VOUCHER_TYPE_FREE_DELIVERY = 'FreeDelivery';
     const VOUCHER_SUB_TYPE_NONE = 'None';
     const VOUCHER_SUB_TYPE_SIGN_UP = 'SignUp';
     const VOUCHER_SUB_TYPE_LOYALTY = 'Loyalty';
@@ -236,6 +237,7 @@ class VoucherSummary implements ModelInterface, ArrayAccess
             self::VOUCHER_TYPE_LUMP_DISCOUNT,
             self::VOUCHER_TYPE_ADD_ITEM,
             self::VOUCHER_TYPE_CREDIT_NOTE,
+            self::VOUCHER_TYPE_FREE_DELIVERY,
         ];
     }
     

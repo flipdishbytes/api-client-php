@@ -283,6 +283,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
     const VOUCHER_TYPE_LUMP_DISCOUNT = 'LumpDiscount';
     const VOUCHER_TYPE_ADD_ITEM = 'AddItem';
     const VOUCHER_TYPE_CREDIT_NOTE = 'CreditNote';
+    const VOUCHER_TYPE_FREE_DELIVERY = 'FreeDelivery';
     const CHANNEL_RESTRICTIONS_IOS = 'Ios';
     const CHANNEL_RESTRICTIONS_ANDROID = 'Android';
     const CHANNEL_RESTRICTIONS_WEB = 'Web';
@@ -311,6 +312,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
             self::VOUCHER_TYPE_LUMP_DISCOUNT,
             self::VOUCHER_TYPE_ADD_ITEM,
             self::VOUCHER_TYPE_CREDIT_NOTE,
+            self::VOUCHER_TYPE_FREE_DELIVERY,
         ];
     }
     

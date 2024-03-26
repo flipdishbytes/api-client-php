@@ -193,6 +193,7 @@ class OrderVoucherSummary implements ModelInterface, ArrayAccess
     const TYPE_LUMP_DISCOUNT = 'LumpDiscount';
     const TYPE_ADD_ITEM = 'AddItem';
     const TYPE_CREDIT_NOTE = 'CreditNote';
+    const TYPE_FREE_DELIVERY = 'FreeDelivery';
     const SUB_TYPE_NONE = 'None';
     const SUB_TYPE_SIGN_UP = 'SignUp';
     const SUB_TYPE_LOYALTY = 'Loyalty';
@@ -215,6 +216,7 @@ class OrderVoucherSummary implements ModelInterface, ArrayAccess
             self::TYPE_LUMP_DISCOUNT,
             self::TYPE_ADD_ITEM,
             self::TYPE_CREDIT_NOTE,
+            self::TYPE_FREE_DELIVERY,
         ];
     }
     
