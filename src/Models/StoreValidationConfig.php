@@ -266,7 +266,7 @@ class StoreValidationConfig implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name name
+     * @param string $name Name
      *
      * @return $this
      */
@@ -338,7 +338,7 @@ class StoreValidationConfig implements ModelInterface, ArrayAccess
     /**
      * Sets config_validation
      *
-     * @param \Flipdish\\Client\Models\StoreConfig $config_validation config_validation
+     * @param \Flipdish\\Client\Models\StoreConfig $config_validation Store list of validations
      *
      * @return $this
      */
