@@ -61,6 +61,7 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
         'revenue_for_fee_calculations' => 'double',
         'flipdish_fees' => 'double',
         'adjustments' => 'double',
+        'third_party_integration_fees_and_tips' => 'double',
         'total' => 'double'
     ];
 
@@ -74,6 +75,7 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
         'revenue_for_fee_calculations' => 'double',
         'flipdish_fees' => 'double',
         'adjustments' => 'double',
+        'third_party_integration_fees_and_tips' => 'double',
         'total' => 'double'
     ];
 
@@ -108,6 +110,7 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
         'revenue_for_fee_calculations' => 'RevenueForFeeCalculations',
         'flipdish_fees' => 'FlipdishFees',
         'adjustments' => 'Adjustments',
+        'third_party_integration_fees_and_tips' => 'ThirdPartyIntegrationFeesAndTips',
         'total' => 'Total'
     ];
 
@@ -121,6 +124,7 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
         'revenue_for_fee_calculations' => 'setRevenueForFeeCalculations',
         'flipdish_fees' => 'setFlipdishFees',
         'adjustments' => 'setAdjustments',
+        'third_party_integration_fees_and_tips' => 'setThirdPartyIntegrationFeesAndTips',
         'total' => 'setTotal'
     ];
 
@@ -134,6 +138,7 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
         'revenue_for_fee_calculations' => 'getRevenueForFeeCalculations',
         'flipdish_fees' => 'getFlipdishFees',
         'adjustments' => 'getAdjustments',
+        'third_party_integration_fees_and_tips' => 'getThirdPartyIntegrationFeesAndTips',
         'total' => 'getTotal'
     ];
 
@@ -201,6 +206,7 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
         $this->container['revenue_for_fee_calculations'] = isset($data['revenue_for_fee_calculations']) ? $data['revenue_for_fee_calculations'] : null;
         $this->container['flipdish_fees'] = isset($data['flipdish_fees']) ? $data['flipdish_fees'] : null;
         $this->container['adjustments'] = isset($data['adjustments']) ? $data['adjustments'] : null;
+        $this->container['third_party_integration_fees_and_tips'] = isset($data['third_party_integration_fees_and_tips']) ? $data['third_party_integration_fees_and_tips'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
@@ -320,6 +326,30 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
     public function setAdjustments($adjustments)
     {
         $this->container['adjustments'] = $adjustments;
+
+        return $this;
+    }
+
+    /**
+     * Gets third_party_integration_fees_and_tips
+     *
+     * @return double
+     */
+    public function getThirdPartyIntegrationFeesAndTips()
+    {
+        return $this->container['third_party_integration_fees_and_tips'];
+    }
+
+    /**
+     * Sets third_party_integration_fees_and_tips
+     *
+     * @param double $third_party_integration_fees_and_tips third_party_integration_fees_and_tips
+     *
+     * @return $this
+     */
+    public function setThirdPartyIntegrationFeesAndTips($third_party_integration_fees_and_tips)
+    {
+        $this->container['third_party_integration_fees_and_tips'] = $third_party_integration_fees_and_tips;
 
         return $this;
     }

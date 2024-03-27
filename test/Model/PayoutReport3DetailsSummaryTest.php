@@ -105,6 +105,13 @@ class PayoutReport3DetailsSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "third_party_integration_fees_and_tips"
+     */
+    public function testPropertyThirdPartyIntegrationFeesAndTips()
+    {
+    }
+
+    /**
      * Test attribute "total"
      */
     public function testPropertyTotal()
