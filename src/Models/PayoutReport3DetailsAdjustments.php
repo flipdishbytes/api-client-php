@@ -57,6 +57,8 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'opening_balance_date' => '\DateTime',
+        'closing_balance_date' => '\DateTime',
         'opening_balance' => 'double',
         'refunds_on_card_orders' => 'double',
         'refunds_on_cash_orders' => 'double',
@@ -72,6 +74,8 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'opening_balance_date' => 'date-time',
+        'closing_balance_date' => 'date-time',
         'opening_balance' => 'double',
         'refunds_on_card_orders' => 'double',
         'refunds_on_cash_orders' => 'double',
@@ -108,6 +112,8 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'opening_balance_date' => 'OpeningBalanceDate',
+        'closing_balance_date' => 'ClosingBalanceDate',
         'opening_balance' => 'OpeningBalance',
         'refunds_on_card_orders' => 'RefundsOnCardOrders',
         'refunds_on_cash_orders' => 'RefundsOnCashOrders',
@@ -123,6 +129,8 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'opening_balance_date' => 'setOpeningBalanceDate',
+        'closing_balance_date' => 'setClosingBalanceDate',
         'opening_balance' => 'setOpeningBalance',
         'refunds_on_card_orders' => 'setRefundsOnCardOrders',
         'refunds_on_cash_orders' => 'setRefundsOnCashOrders',
@@ -138,6 +146,8 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'opening_balance_date' => 'getOpeningBalanceDate',
+        'closing_balance_date' => 'getClosingBalanceDate',
         'opening_balance' => 'getOpeningBalance',
         'refunds_on_card_orders' => 'getRefundsOnCardOrders',
         'refunds_on_cash_orders' => 'getRefundsOnCashOrders',
@@ -207,6 +217,8 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['opening_balance_date'] = isset($data['opening_balance_date']) ? $data['opening_balance_date'] : null;
+        $this->container['closing_balance_date'] = isset($data['closing_balance_date']) ? $data['closing_balance_date'] : null;
         $this->container['opening_balance'] = isset($data['opening_balance']) ? $data['opening_balance'] : null;
         $this->container['refunds_on_card_orders'] = isset($data['refunds_on_card_orders']) ? $data['refunds_on_card_orders'] : null;
         $this->container['refunds_on_cash_orders'] = isset($data['refunds_on_cash_orders']) ? $data['refunds_on_cash_orders'] : null;
@@ -239,6 +251,54 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets opening_balance_date
+     *
+     * @return \DateTime
+     */
+    public function getOpeningBalanceDate()
+    {
+        return $this->container['opening_balance_date'];
+    }
+
+    /**
+     * Sets opening_balance_date
+     *
+     * @param \DateTime $opening_balance_date opening_balance_date
+     *
+     * @return $this
+     */
+    public function setOpeningBalanceDate($opening_balance_date)
+    {
+        $this->container['opening_balance_date'] = $opening_balance_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets closing_balance_date
+     *
+     * @return \DateTime
+     */
+    public function getClosingBalanceDate()
+    {
+        return $this->container['closing_balance_date'];
+    }
+
+    /**
+     * Sets closing_balance_date
+     *
+     * @param \DateTime $closing_balance_date closing_balance_date
+     *
+     * @return $this
+     */
+    public function setClosingBalanceDate($closing_balance_date)
+    {
+        $this->container['closing_balance_date'] = $closing_balance_date;
+
+        return $this;
+    }
 
     /**
      * Gets opening_balance

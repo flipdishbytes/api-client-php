@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**opening_balance_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**closing_balance_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **opening_balance** | **double** |  | [optional] 
 **refunds_on_card_orders** | **double** |  | [optional] 
 **refunds_on_cash_orders** | **double** |  | [optional] 

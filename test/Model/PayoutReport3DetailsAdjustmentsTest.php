@@ -77,6 +77,20 @@ class PayoutReport3DetailsAdjustmentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "opening_balance_date"
+     */
+    public function testPropertyOpeningBalanceDate()
+    {
+    }
+
+    /**
+     * Test attribute "closing_balance_date"
+     */
+    public function testPropertyClosingBalanceDate()
+    {
+    }
+
+    /**
      * Test attribute "opening_balance"
      */
     public function testPropertyOpeningBalance()
