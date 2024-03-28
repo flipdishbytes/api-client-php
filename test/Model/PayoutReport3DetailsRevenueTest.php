@@ -105,13 +105,6 @@ class PayoutReport3DetailsRevenueTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "total_net_sales"
-     */
-    public function testPropertyTotalNetSales()
-    {
-    }
-
-    /**
      * Test attribute "total_revenue"
      */
     public function testPropertyTotalRevenue()
@@ -122,6 +115,13 @@ class PayoutReport3DetailsRevenueTest extends \PHPUnit_Framework_TestCase
      * Test attribute "revenue_for_fee_calculations"
      */
     public function testPropertyRevenueForFeeCalculations()
+    {
+    }
+
+    /**
+     * Test attribute "drs_charges"
+     */
+    public function testPropertyDrsCharges()
     {
     }
 }

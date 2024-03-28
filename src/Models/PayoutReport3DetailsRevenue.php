@@ -61,9 +61,9 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
         'delivery_charges' => '\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine',
         'other_charges' => '\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine',
         'tips' => '\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine',
-        'total_net_sales' => '\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine',
         'total_revenue' => '\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine',
-        'revenue_for_fee_calculations' => '\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine'
+        'revenue_for_fee_calculations' => '\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine',
+        'drs_charges' => '\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine'
     ];
 
     /**
@@ -76,9 +76,9 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
         'delivery_charges' => null,
         'other_charges' => null,
         'tips' => null,
-        'total_net_sales' => null,
         'total_revenue' => null,
-        'revenue_for_fee_calculations' => null
+        'revenue_for_fee_calculations' => null,
+        'drs_charges' => null
     ];
 
     /**
@@ -112,9 +112,9 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
         'delivery_charges' => 'DeliveryCharges',
         'other_charges' => 'OtherCharges',
         'tips' => 'Tips',
-        'total_net_sales' => 'TotalNetSales',
         'total_revenue' => 'TotalRevenue',
-        'revenue_for_fee_calculations' => 'RevenueForFeeCalculations'
+        'revenue_for_fee_calculations' => 'RevenueForFeeCalculations',
+        'drs_charges' => 'DrsCharges'
     ];
 
     /**
@@ -127,9 +127,9 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
         'delivery_charges' => 'setDeliveryCharges',
         'other_charges' => 'setOtherCharges',
         'tips' => 'setTips',
-        'total_net_sales' => 'setTotalNetSales',
         'total_revenue' => 'setTotalRevenue',
-        'revenue_for_fee_calculations' => 'setRevenueForFeeCalculations'
+        'revenue_for_fee_calculations' => 'setRevenueForFeeCalculations',
+        'drs_charges' => 'setDrsCharges'
     ];
 
     /**
@@ -142,9 +142,9 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
         'delivery_charges' => 'getDeliveryCharges',
         'other_charges' => 'getOtherCharges',
         'tips' => 'getTips',
-        'total_net_sales' => 'getTotalNetSales',
         'total_revenue' => 'getTotalRevenue',
-        'revenue_for_fee_calculations' => 'getRevenueForFeeCalculations'
+        'revenue_for_fee_calculations' => 'getRevenueForFeeCalculations',
+        'drs_charges' => 'getDrsCharges'
     ];
 
     /**
@@ -211,9 +211,9 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
         $this->container['delivery_charges'] = isset($data['delivery_charges']) ? $data['delivery_charges'] : null;
         $this->container['other_charges'] = isset($data['other_charges']) ? $data['other_charges'] : null;
         $this->container['tips'] = isset($data['tips']) ? $data['tips'] : null;
-        $this->container['total_net_sales'] = isset($data['total_net_sales']) ? $data['total_net_sales'] : null;
         $this->container['total_revenue'] = isset($data['total_revenue']) ? $data['total_revenue'] : null;
         $this->container['revenue_for_fee_calculations'] = isset($data['revenue_for_fee_calculations']) ? $data['revenue_for_fee_calculations'] : null;
+        $this->container['drs_charges'] = isset($data['drs_charges']) ? $data['drs_charges'] : null;
     }
 
     /**
@@ -337,30 +337,6 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets total_net_sales
-     *
-     * @return \Flipdish\\Client\Models\PayoutReport3DetailsSalesLine
-     */
-    public function getTotalNetSales()
-    {
-        return $this->container['total_net_sales'];
-    }
-
-    /**
-     * Sets total_net_sales
-     *
-     * @param \Flipdish\\Client\Models\PayoutReport3DetailsSalesLine $total_net_sales total_net_sales
-     *
-     * @return $this
-     */
-    public function setTotalNetSales($total_net_sales)
-    {
-        $this->container['total_net_sales'] = $total_net_sales;
-
-        return $this;
-    }
-
-    /**
      * Gets total_revenue
      *
      * @return \Flipdish\\Client\Models\PayoutReport3DetailsSalesLine
@@ -404,6 +380,30 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
     public function setRevenueForFeeCalculations($revenue_for_fee_calculations)
     {
         $this->container['revenue_for_fee_calculations'] = $revenue_for_fee_calculations;
+
+        return $this;
+    }
+
+    /**
+     * Gets drs_charges
+     *
+     * @return \Flipdish\\Client\Models\PayoutReport3DetailsSalesLine
+     */
+    public function getDrsCharges()
+    {
+        return $this->container['drs_charges'];
+    }
+
+    /**
+     * Sets drs_charges
+     *
+     * @param \Flipdish\\Client\Models\PayoutReport3DetailsSalesLine $drs_charges drs_charges
+     *
+     * @return $this
+     */
+    public function setDrsCharges($drs_charges)
+    {
+        $this->container['drs_charges'] = $drs_charges;
 
         return $this;
     }
