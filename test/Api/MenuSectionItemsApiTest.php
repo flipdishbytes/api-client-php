@@ -144,7 +144,7 @@ class MenuSectionItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for moveMenuItem
      *
-     * [PRIVATE API] Move an Item within a menu.
+     * Move an Item within a menu.
      *
      */
     public function testMoveMenuItem()

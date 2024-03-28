@@ -154,7 +154,7 @@ class MenuSectionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for menuSectionsSetItemDisplayOrders
      *
-     * [PRIVATE API] Re-arrange Items within a Section.
+     * Re-arrange Items within a Section.
      *
      */
     public function testMenuSectionsSetItemDisplayOrders()

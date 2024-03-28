@@ -2348,7 +2348,7 @@ class MenuSectionItemsApi
     /**
      * Operation moveMenuItem
      *
-     * [PRIVATE API] Move an Item within a menu
+     * Move an Item within a menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Section to put item in (will usually be original section) (required)
@@ -2367,7 +2367,7 @@ class MenuSectionItemsApi
     /**
      * Operation moveMenuItemWithHttpInfo
      *
-     * [PRIVATE API] Move an Item within a menu
+     * Move an Item within a menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Section to put item in (will usually be original section) (required)
@@ -2447,7 +2447,7 @@ class MenuSectionItemsApi
     /**
      * Operation moveMenuItemAsync
      *
-     * [PRIVATE API] Move an Item within a menu
+     * Move an Item within a menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Section to put item in (will usually be original section) (required)
@@ -2470,7 +2470,7 @@ class MenuSectionItemsApi
     /**
      * Operation moveMenuItemAsyncWithHttpInfo
      *
-     * [PRIVATE API] Move an Item within a menu
+     * Move an Item within a menu
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Section to put item in (will usually be original section) (required)

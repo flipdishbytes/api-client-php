@@ -4,10 +4,10 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createDraftMenuFromExistingMenu**](MenusApi.md#createDraftMenuFromExistingMenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | [PRIVATE API] Clone a menu, (without attaching stores)
+[**createDraftMenuFromExistingMenu**](MenusApi.md#createDraftMenuFromExistingMenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | Clone a menu, (without attaching stores)
 [**createNewMenuAsync**](MenusApi.md#createNewMenuAsync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously
 [**createNewMenuForApp**](MenusApi.md#createNewMenuForApp) | **POST** /api/v1.0/{appId}/menus | Create a new menu
-[**deleteMenu**](MenusApi.md#deleteMenu) | **DELETE** /api/v1.0/menus/{menuId} | [PRIVATE API] Mark a Menu as Deleted
+[**deleteMenu**](MenusApi.md#deleteMenu) | **DELETE** /api/v1.0/menus/{menuId} | Mark a Menu as Deleted
 [**deleteMenuImage**](MenusApi.md#deleteMenuImage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
 [**deleteMenuItemMetadata**](MenusApi.md#deleteMenuItemMetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
 [**getAllMenuMetadataByMenuIdAndStoreId**](MenusApi.md#getAllMenuMetadataByMenuIdAndStoreId) | **GET** /api/v1.0/menus/{menuId}/metadata/store/{storeId} | Get all menu metadata by menu ID and store ID
@@ -15,23 +15,23 @@ Method | HTTP request | Description
 [**getMenuItemMetadata**](MenusApi.md#getMenuItemMetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
 [**getMenuItemMetadataByKey**](MenusApi.md#getMenuItemMetadataByKey) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
 [**getMenuItemOptionSetItemMetadata**](MenusApi.md#getMenuItemOptionSetItemMetadata) | **GET** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Get menu item option set item metadata by key
-[**getMenuName**](MenusApi.md#getMenuName) | **GET** /api/v1.0/menus/{menuId}/name | [PRIVATE API] Get Menus Name
-[**getMenuStoreNames**](MenusApi.md#getMenuStoreNames) | **GET** /api/v1.0/menus/{menuId}/stores | [PRIVATE API] Get menus store names
-[**getMenuTaxDetails**](MenusApi.md#getMenuTaxDetails) | **GET** /api/v1.0/menus/{menuId}/tax | [PRIVATE API] Get menus tax details
-[**getMenusByAppId**](MenusApi.md#getMenusByAppId) | **GET** /api/v1.0/{appId}/menus | [PRIVATE API] Get menus by appId
-[**getMenusCheckpoints**](MenusApi.md#getMenusCheckpoints) | **GET** /api/v1.0/menus/{menuId}/checkpoints | [PRIVATE API]Get a Menus Checkpoints
-[**menusDeleteTaxRate**](MenusApi.md#menusDeleteTaxRate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | [PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+[**getMenuName**](MenusApi.md#getMenuName) | **GET** /api/v1.0/menus/{menuId}/name | Get Menus Name
+[**getMenuStoreNames**](MenusApi.md#getMenuStoreNames) | **GET** /api/v1.0/menus/{menuId}/stores | Get menus store names
+[**getMenuTaxDetails**](MenusApi.md#getMenuTaxDetails) | **GET** /api/v1.0/menus/{menuId}/tax | Get menus tax details
+[**getMenusByAppId**](MenusApi.md#getMenusByAppId) | **GET** /api/v1.0/{appId}/menus | Get menus by appId
+[**getMenusCheckpoints**](MenusApi.md#getMenusCheckpoints) | **GET** /api/v1.0/menus/{menuId}/checkpoints | Get a Menus Checkpoints
+[**menusDeleteTaxRate**](MenusApi.md#menusDeleteTaxRate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
 [**menusGetMenuBulkShowHide**](MenusApi.md#menusGetMenuBulkShowHide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | Get bulk show/hide menu items and option set items
-[**menusSetDisplayOnMenuTax**](MenusApi.md#menusSetDisplayOnMenuTax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | [PRIVATE API] Set if tax shows for a Menu
-[**menusSetItemDisplayOrders**](MenusApi.md#menusSetItemDisplayOrders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | [PRIVATE API] Re-arrange Sections within a Menu
+[**menusSetDisplayOnMenuTax**](MenusApi.md#menusSetDisplayOnMenuTax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | Set if tax shows for a Menu
+[**menusSetItemDisplayOrders**](MenusApi.md#menusSetItemDisplayOrders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | Re-arrange Sections within a Menu
 [**menusShowHideBulkItems**](MenusApi.md#menusShowHideBulkItems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | Bulk show/hide menu items or option set items
-[**menusUpdateTaxType**](MenusApi.md#menusUpdateTaxType) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | [PRIVATE API] Set the type of Tax on a Menu
-[**menusUpsertTaxRate**](MenusApi.md#menusUpsertTaxRate) | **POST** /api/v1.0/menus/{menuId}/taxrate | [PRIVATE API] Add/Update a Tax Rate
-[**restoreAMenuCheckpoint**](MenusApi.md#restoreAMenuCheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | [PRIVATE API] Restore a Menu to a checkpoint
+[**menusUpdateTaxType**](MenusApi.md#menusUpdateTaxType) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | Set the type of Tax on a Menu
+[**menusUpsertTaxRate**](MenusApi.md#menusUpsertTaxRate) | **POST** /api/v1.0/menus/{menuId}/taxrate | Add/Update a Tax Rate
+[**restoreAMenuCheckpoint**](MenusApi.md#restoreAMenuCheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | Restore a Menu to a checkpoint
 [**setMenuItemMetadata**](MenusApi.md#setMenuItemMetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
 [**setMenuItemOptionSetItemMetadata**](MenusApi.md#setMenuItemOptionSetItemMetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata
-[**setMenuLock**](MenusApi.md#setMenuLock) | **POST** /api/v1.0/menus/{menuId}/lock | [PRIVATE API] Lock/Unlock a Menu for Editing
-[**setMenuName**](MenusApi.md#setMenuName) | **POST** /api/v1.0/menus/{menuId}/name | [PRIVATE API] Set Menus Name
+[**setMenuLock**](MenusApi.md#setMenuLock) | **POST** /api/v1.0/menus/{menuId}/lock | Lock/Unlock a Menu for Editing
+[**setMenuName**](MenusApi.md#setMenuName) | **POST** /api/v1.0/menus/{menuId}/name | Set Menus Name
 [**updateMenu**](MenusApi.md#updateMenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
 [**uploadMenuImage**](MenusApi.md#uploadMenuImage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
 [**uploadNewMenuForApp**](MenusApi.md#uploadNewMenuForApp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.
@@ -40,9 +40,7 @@ Method | HTTP request | Description
 # **createDraftMenuFromExistingMenu**
 > \Flipdish\\Client\Models\RestApiResultMenu createDraftMenuFromExistingMenu($menu_id, $new_name)
 
-[PRIVATE API] Clone a menu, (without attaching stores)
-
-[PRIVATE API]
+Clone a menu, (without attaching stores)
 
 ### Example
 ```php
@@ -205,9 +203,7 @@ Name | Type | Description  | Notes
 # **deleteMenu**
 > deleteMenu($menu_id)
 
-[PRIVATE API] Mark a Menu as Deleted
-
-[PRIVATE API]
+Mark a Menu as Deleted
 
 ### Example
 ```php
@@ -634,9 +630,7 @@ Name | Type | Description  | Notes
 # **getMenuName**
 > string getMenuName($menu_id)
 
-[PRIVATE API] Get Menus Name
-
-[PRIVATE API]
+Get Menus Name
 
 ### Example
 ```php
@@ -687,9 +681,7 @@ Name | Type | Description  | Notes
 # **getMenuStoreNames**
 > \Flipdish\\Client\Models\RestApiArrayResultMenuStoreNames getMenuStoreNames($menu_id)
 
-[PRIVATE API] Get menus store names
-
-[PRIVATE API]
+Get menus store names
 
 ### Example
 ```php
@@ -740,9 +732,7 @@ Name | Type | Description  | Notes
 # **getMenuTaxDetails**
 > \Flipdish\\Client\Models\RestApiArrayResultMenuTaxDetails getMenuTaxDetails($menu_id)
 
-[PRIVATE API] Get menus tax details
-
-[PRIVATE API]
+Get menus tax details
 
 ### Example
 ```php
@@ -793,9 +783,7 @@ Name | Type | Description  | Notes
 # **getMenusByAppId**
 > \Flipdish\\Client\Models\RestApiArrayResultMenuSummary getMenusByAppId($app_id)
 
-[PRIVATE API] Get menus by appId
-
-[PRIVATE API]
+Get menus by appId
 
 ### Example
 ```php
@@ -846,9 +834,7 @@ Name | Type | Description  | Notes
 # **getMenusCheckpoints**
 > \Flipdish\\Client\Models\RestApiArrayResultMenuCheckpoint getMenusCheckpoints($menu_id)
 
-[PRIVATE API]Get a Menus Checkpoints
-
-[PRIVATE API]
+Get a Menus Checkpoints
 
 ### Example
 ```php
@@ -899,9 +885,7 @@ Name | Type | Description  | Notes
 # **menusDeleteTaxRate**
 > menusDeleteTaxRate($menu_id, $tax_id)
 
-[PRIVATE API] Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
-
-[PRIVATE API]
+Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
 
 ### Example
 ```php
@@ -1006,9 +990,7 @@ Name | Type | Description  | Notes
 # **menusSetDisplayOnMenuTax**
 > menusSetDisplayOnMenuTax($menu_id, $show)
 
-[PRIVATE API] Set if tax shows for a Menu
-
-[PRIVATE API]
+Set if tax shows for a Menu
 
 ### Example
 ```php
@@ -1060,9 +1042,7 @@ void (empty response body)
 # **menusSetItemDisplayOrders**
 > menusSetItemDisplayOrders($menu_id, $display_orders)
 
-[PRIVATE API] Re-arrange Sections within a Menu
-
-[PRIVATE API]
+Re-arrange Sections within a Menu
 
 ### Example
 ```php
@@ -1169,9 +1149,7 @@ Name | Type | Description  | Notes
 # **menusUpdateTaxType**
 > menusUpdateTaxType($menu_id, $type)
 
-[PRIVATE API] Set the type of Tax on a Menu
-
-[PRIVATE API]
+Set the type of Tax on a Menu
 
 ### Example
 ```php
@@ -1223,9 +1201,7 @@ void (empty response body)
 # **menusUpsertTaxRate**
 > \Flipdish\\Client\Models\MenuTaxRate menusUpsertTaxRate($menu_id, $tax_rate)
 
-[PRIVATE API] Add/Update a Tax Rate
-
-[PRIVATE API]
+Add/Update a Tax Rate
 
 ### Example
 ```php
@@ -1278,9 +1254,7 @@ Name | Type | Description  | Notes
 # **restoreAMenuCheckpoint**
 > restoreAMenuCheckpoint($menu_id, $checkpoint_id)
 
-[PRIVATE API] Restore a Menu to a checkpoint
-
-[PRIVATE API]
+Restore a Menu to a checkpoint
 
 ### Example
 ```php
@@ -1444,9 +1418,7 @@ void (empty response body)
 # **setMenuLock**
 > setMenuLock($menu_id, $locked)
 
-[PRIVATE API] Lock/Unlock a Menu for Editing
-
-[PRIVATE API]
+Lock/Unlock a Menu for Editing
 
 ### Example
 ```php
@@ -1498,9 +1470,7 @@ void (empty response body)
 # **setMenuName**
 > setMenuName($menu_id, $name)
 
-[PRIVATE API] Set Menus Name
-
-[PRIVATE API]
+Set Menus Name
 
 ### Example
 ```php

@@ -2591,7 +2591,7 @@ class MenuSectionsApi
     /**
      * Operation menuSectionsSetItemDisplayOrders
      *
-     * [PRIVATE API] Re-arrange Items within a Section
+     * Re-arrange Items within a Section
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Menu section identifier (required)
@@ -2609,7 +2609,7 @@ class MenuSectionsApi
     /**
      * Operation menuSectionsSetItemDisplayOrdersWithHttpInfo
      *
-     * [PRIVATE API] Re-arrange Items within a Section
+     * Re-arrange Items within a Section
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Menu section identifier (required)
@@ -2688,7 +2688,7 @@ class MenuSectionsApi
     /**
      * Operation menuSectionsSetItemDisplayOrdersAsync
      *
-     * [PRIVATE API] Re-arrange Items within a Section
+     * Re-arrange Items within a Section
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Menu section identifier (required)
@@ -2710,7 +2710,7 @@ class MenuSectionsApi
     /**
      * Operation menuSectionsSetItemDisplayOrdersAsyncWithHttpInfo
      *
-     * [PRIVATE API] Re-arrange Items within a Section
+     * Re-arrange Items within a Section
      *
      * @param  int $menu_id Menu identifier (required)
      * @param  int $menu_section_id Menu section identifier (required)
