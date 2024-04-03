@@ -67,19 +67,8 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'delivery_charges' => 'double',
         'tips' => 'double',
         'voucher' => 'double',
-        'flat_fee_excluding_vat' => 'double',
-        'flat_fee_excluding_vat' => 'double',
-        'flat_fee_including_vat' => 'double',
-        'percentage_fee_excluding_vat' => 'double',
-        'percentage_fee_excluding_vat' => 'double',
-        'vat' => 'double',
-        'total_fees' => 'double',
-        'cash_fee_charged_to_customer' => 'double',
-        'net_sales' => 'double',
         'store_id' => 'int',
-        'store_name' => 'string',
-        'service_charge_amount' => 'double',
-        'service_charge_percentage' => 'double'
+        'store_name' => 'string'
     ];
 
     /**
@@ -98,19 +87,8 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'delivery_charges' => 'double',
         'tips' => 'double',
         'voucher' => 'double',
-        'flat_fee_excluding_vat' => 'double',
-        'flat_fee_excluding_vat' => 'double',
-        'flat_fee_including_vat' => 'double',
-        'percentage_fee_excluding_vat' => 'double',
-        'percentage_fee_excluding_vat' => 'double',
-        'vat' => 'double',
-        'total_fees' => 'double',
-        'cash_fee_charged_to_customer' => 'double',
-        'net_sales' => 'double',
         'store_id' => 'int32',
-        'store_name' => null,
-        'service_charge_amount' => 'double',
-        'service_charge_percentage' => 'double'
+        'store_name' => null
     ];
 
     /**
@@ -150,19 +128,8 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'delivery_charges' => 'DeliveryCharges',
         'tips' => 'Tips',
         'voucher' => 'Voucher',
-        'flat_fee_excluding_vat' => 'FlatFeeExcludingVat',
-        'flat_fee_excluding_vat' => 'FlatFeeExcludingVAT',
-        'flat_fee_including_vat' => 'FlatFeeIncludingVat',
-        'percentage_fee_excluding_vat' => 'PercentageFeeExcludingVat',
-        'percentage_fee_excluding_vat' => 'PercentageFeeExcludingVAT',
-        'vat' => 'Vat',
-        'total_fees' => 'TotalFees',
-        'cash_fee_charged_to_customer' => 'CashFeeChargedToCustomer',
-        'net_sales' => 'NetSales',
         'store_id' => 'StoreId',
-        'store_name' => 'StoreName',
-        'service_charge_amount' => 'ServiceChargeAmount',
-        'service_charge_percentage' => 'ServiceChargePercentage'
+        'store_name' => 'StoreName'
     ];
 
     /**
@@ -181,19 +148,8 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'delivery_charges' => 'setDeliveryCharges',
         'tips' => 'setTips',
         'voucher' => 'setVoucher',
-        'flat_fee_excluding_vat' => 'setFlatFeeExcludingVat',
-        'flat_fee_excluding_vat' => 'setFlatFeeExcludingVat',
-        'flat_fee_including_vat' => 'setFlatFeeIncludingVat',
-        'percentage_fee_excluding_vat' => 'setPercentageFeeExcludingVat',
-        'percentage_fee_excluding_vat' => 'setPercentageFeeExcludingVat',
-        'vat' => 'setVat',
-        'total_fees' => 'setTotalFees',
-        'cash_fee_charged_to_customer' => 'setCashFeeChargedToCustomer',
-        'net_sales' => 'setNetSales',
         'store_id' => 'setStoreId',
-        'store_name' => 'setStoreName',
-        'service_charge_amount' => 'setServiceChargeAmount',
-        'service_charge_percentage' => 'setServiceChargePercentage'
+        'store_name' => 'setStoreName'
     ];
 
     /**
@@ -212,19 +168,8 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'delivery_charges' => 'getDeliveryCharges',
         'tips' => 'getTips',
         'voucher' => 'getVoucher',
-        'flat_fee_excluding_vat' => 'getFlatFeeExcludingVat',
-        'flat_fee_excluding_vat' => 'getFlatFeeExcludingVat',
-        'flat_fee_including_vat' => 'getFlatFeeIncludingVat',
-        'percentage_fee_excluding_vat' => 'getPercentageFeeExcludingVat',
-        'percentage_fee_excluding_vat' => 'getPercentageFeeExcludingVat',
-        'vat' => 'getVat',
-        'total_fees' => 'getTotalFees',
-        'cash_fee_charged_to_customer' => 'getCashFeeChargedToCustomer',
-        'net_sales' => 'getNetSales',
         'store_id' => 'getStoreId',
-        'store_name' => 'getStoreName',
-        'service_charge_amount' => 'getServiceChargeAmount',
-        'service_charge_percentage' => 'getServiceChargePercentage'
+        'store_name' => 'getStoreName'
     ];
 
     /**
@@ -269,7 +214,7 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
     }
 
     const ORDER_TYPE_CASH = 'Cash';
-    const ORDER_TYPE_ONLINE = 'Online';
+    const ORDER_TYPE_CARD = 'Card';
     const ORDER_CURRENCY_EUR = 'EUR';
     const ORDER_CURRENCY_USD = 'USD';
     const ORDER_CURRENCY_GBP = 'GBP';
@@ -395,7 +340,7 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
     {
         return [
             self::ORDER_TYPE_CASH,
-            self::ORDER_TYPE_ONLINE,
+            self::ORDER_TYPE_CARD,
         ];
     }
     
@@ -549,19 +494,8 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         $this->container['delivery_charges'] = isset($data['delivery_charges']) ? $data['delivery_charges'] : null;
         $this->container['tips'] = isset($data['tips']) ? $data['tips'] : null;
         $this->container['voucher'] = isset($data['voucher']) ? $data['voucher'] : null;
-        $this->container['flat_fee_excluding_vat'] = isset($data['flat_fee_excluding_vat']) ? $data['flat_fee_excluding_vat'] : null;
-        $this->container['flat_fee_excluding_vat'] = isset($data['flat_fee_excluding_vat']) ? $data['flat_fee_excluding_vat'] : null;
-        $this->container['flat_fee_including_vat'] = isset($data['flat_fee_including_vat']) ? $data['flat_fee_including_vat'] : null;
-        $this->container['percentage_fee_excluding_vat'] = isset($data['percentage_fee_excluding_vat']) ? $data['percentage_fee_excluding_vat'] : null;
-        $this->container['percentage_fee_excluding_vat'] = isset($data['percentage_fee_excluding_vat']) ? $data['percentage_fee_excluding_vat'] : null;
-        $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
-        $this->container['total_fees'] = isset($data['total_fees']) ? $data['total_fees'] : null;
-        $this->container['cash_fee_charged_to_customer'] = isset($data['cash_fee_charged_to_customer']) ? $data['cash_fee_charged_to_customer'] : null;
-        $this->container['net_sales'] = isset($data['net_sales']) ? $data['net_sales'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
         $this->container['store_name'] = isset($data['store_name']) ? $data['store_name'] : null;
-        $this->container['service_charge_amount'] = isset($data['service_charge_amount']) ? $data['service_charge_amount'] : null;
-        $this->container['service_charge_percentage'] = isset($data['service_charge_percentage']) ? $data['service_charge_percentage'] : null;
     }
 
     /**
@@ -863,222 +797,6 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets flat_fee_excluding_vat
-     *
-     * @return double
-     */
-    public function getFlatFeeExcludingVat()
-    {
-        return $this->container['flat_fee_excluding_vat'];
-    }
-
-    /**
-     * Sets flat_fee_excluding_vat
-     *
-     * @param double $flat_fee_excluding_vat flat_fee_excluding_vat
-     *
-     * @return $this
-     */
-    public function setFlatFeeExcludingVat($flat_fee_excluding_vat)
-    {
-        $this->container['flat_fee_excluding_vat'] = $flat_fee_excluding_vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets flat_fee_excluding_vat
-     *
-     * @return double
-     */
-    public function getFlatFeeExcludingVat()
-    {
-        return $this->container['flat_fee_excluding_vat'];
-    }
-
-    /**
-     * Sets flat_fee_excluding_vat
-     *
-     * @param double $flat_fee_excluding_vat flat_fee_excluding_vat
-     *
-     * @return $this
-     */
-    public function setFlatFeeExcludingVat($flat_fee_excluding_vat)
-    {
-        $this->container['flat_fee_excluding_vat'] = $flat_fee_excluding_vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets flat_fee_including_vat
-     *
-     * @return double
-     */
-    public function getFlatFeeIncludingVat()
-    {
-        return $this->container['flat_fee_including_vat'];
-    }
-
-    /**
-     * Sets flat_fee_including_vat
-     *
-     * @param double $flat_fee_including_vat flat_fee_including_vat
-     *
-     * @return $this
-     */
-    public function setFlatFeeIncludingVat($flat_fee_including_vat)
-    {
-        $this->container['flat_fee_including_vat'] = $flat_fee_including_vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets percentage_fee_excluding_vat
-     *
-     * @return double
-     */
-    public function getPercentageFeeExcludingVat()
-    {
-        return $this->container['percentage_fee_excluding_vat'];
-    }
-
-    /**
-     * Sets percentage_fee_excluding_vat
-     *
-     * @param double $percentage_fee_excluding_vat percentage_fee_excluding_vat
-     *
-     * @return $this
-     */
-    public function setPercentageFeeExcludingVat($percentage_fee_excluding_vat)
-    {
-        $this->container['percentage_fee_excluding_vat'] = $percentage_fee_excluding_vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets percentage_fee_excluding_vat
-     *
-     * @return double
-     */
-    public function getPercentageFeeExcludingVat()
-    {
-        return $this->container['percentage_fee_excluding_vat'];
-    }
-
-    /**
-     * Sets percentage_fee_excluding_vat
-     *
-     * @param double $percentage_fee_excluding_vat percentage_fee_excluding_vat
-     *
-     * @return $this
-     */
-    public function setPercentageFeeExcludingVat($percentage_fee_excluding_vat)
-    {
-        $this->container['percentage_fee_excluding_vat'] = $percentage_fee_excluding_vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets vat
-     *
-     * @return double
-     */
-    public function getVat()
-    {
-        return $this->container['vat'];
-    }
-
-    /**
-     * Sets vat
-     *
-     * @param double $vat vat
-     *
-     * @return $this
-     */
-    public function setVat($vat)
-    {
-        $this->container['vat'] = $vat;
-
-        return $this;
-    }
-
-    /**
-     * Gets total_fees
-     *
-     * @return double
-     */
-    public function getTotalFees()
-    {
-        return $this->container['total_fees'];
-    }
-
-    /**
-     * Sets total_fees
-     *
-     * @param double $total_fees total_fees
-     *
-     * @return $this
-     */
-    public function setTotalFees($total_fees)
-    {
-        $this->container['total_fees'] = $total_fees;
-
-        return $this;
-    }
-
-    /**
-     * Gets cash_fee_charged_to_customer
-     *
-     * @return double
-     */
-    public function getCashFeeChargedToCustomer()
-    {
-        return $this->container['cash_fee_charged_to_customer'];
-    }
-
-    /**
-     * Sets cash_fee_charged_to_customer
-     *
-     * @param double $cash_fee_charged_to_customer cash_fee_charged_to_customer
-     *
-     * @return $this
-     */
-    public function setCashFeeChargedToCustomer($cash_fee_charged_to_customer)
-    {
-        $this->container['cash_fee_charged_to_customer'] = $cash_fee_charged_to_customer;
-
-        return $this;
-    }
-
-    /**
-     * Gets net_sales
-     *
-     * @return double
-     */
-    public function getNetSales()
-    {
-        return $this->container['net_sales'];
-    }
-
-    /**
-     * Sets net_sales
-     *
-     * @param double $net_sales net_sales
-     *
-     * @return $this
-     */
-    public function setNetSales($net_sales)
-    {
-        $this->container['net_sales'] = $net_sales;
-
-        return $this;
-    }
-
-    /**
      * Gets store_id
      *
      * @return int
@@ -1122,54 +840,6 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
     public function setStoreName($store_name)
     {
         $this->container['store_name'] = $store_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets service_charge_amount
-     *
-     * @return double
-     */
-    public function getServiceChargeAmount()
-    {
-        return $this->container['service_charge_amount'];
-    }
-
-    /**
-     * Sets service_charge_amount
-     *
-     * @param double $service_charge_amount service_charge_amount
-     *
-     * @return $this
-     */
-    public function setServiceChargeAmount($service_charge_amount)
-    {
-        $this->container['service_charge_amount'] = $service_charge_amount;
-
-        return $this;
-    }
-
-    /**
-     * Gets service_charge_percentage
-     *
-     * @return double
-     */
-    public function getServiceChargePercentage()
-    {
-        return $this->container['service_charge_percentage'];
-    }
-
-    /**
-     * Sets service_charge_percentage
-     *
-     * @param double $service_charge_percentage service_charge_percentage
-     *
-     * @return $this
-     */
-    public function setServiceChargePercentage($service_charge_percentage)
-    {
-        $this->container['service_charge_percentage'] = $service_charge_percentage;
 
         return $this;
     }

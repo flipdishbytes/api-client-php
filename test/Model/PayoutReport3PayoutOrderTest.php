@@ -147,69 +147,6 @@ class PayoutReport3PayoutOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "flat_fee_excluding_vat"
-     */
-    public function testPropertyFlatFeeExcludingVat()
-    {
-    }
-
-    /**
-     * Test attribute "flat_fee_excluding_vat"
-     */
-    public function testPropertyFlatFeeExcludingVat()
-    {
-    }
-
-    /**
-     * Test attribute "flat_fee_including_vat"
-     */
-    public function testPropertyFlatFeeIncludingVat()
-    {
-    }
-
-    /**
-     * Test attribute "percentage_fee_excluding_vat"
-     */
-    public function testPropertyPercentageFeeExcludingVat()
-    {
-    }
-
-    /**
-     * Test attribute "percentage_fee_excluding_vat"
-     */
-    public function testPropertyPercentageFeeExcludingVat()
-    {
-    }
-
-    /**
-     * Test attribute "vat"
-     */
-    public function testPropertyVat()
-    {
-    }
-
-    /**
-     * Test attribute "total_fees"
-     */
-    public function testPropertyTotalFees()
-    {
-    }
-
-    /**
-     * Test attribute "cash_fee_charged_to_customer"
-     */
-    public function testPropertyCashFeeChargedToCustomer()
-    {
-    }
-
-    /**
-     * Test attribute "net_sales"
-     */
-    public function testPropertyNetSales()
-    {
-    }
-
-    /**
      * Test attribute "store_id"
      */
     public function testPropertyStoreId()
@@ -220,20 +157,6 @@ class PayoutReport3PayoutOrderTest extends \PHPUnit_Framework_TestCase
      * Test attribute "store_name"
      */
     public function testPropertyStoreName()
-    {
-    }
-
-    /**
-     * Test attribute "service_charge_amount"
-     */
-    public function testPropertyServiceChargeAmount()
-    {
-    }
-
-    /**
-     * Test attribute "service_charge_percentage"
-     */
-    public function testPropertyServiceChargePercentage()
     {
     }
 }
