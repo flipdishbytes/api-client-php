@@ -159,4 +159,11 @@ class PayoutReport3PayoutOrderTest extends \PHPUnit_Framework_TestCase
     public function testPropertyStoreName()
     {
     }
+
+    /**
+     * Test attribute "refund_chargeback_type"
+     */
+    public function testPropertyRefundChargebackType()
+    {
+    }
 }

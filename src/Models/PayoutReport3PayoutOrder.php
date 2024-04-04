@@ -68,7 +68,8 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'tips' => 'double',
         'voucher' => 'double',
         'store_id' => 'int',
-        'store_name' => 'string'
+        'store_name' => 'string',
+        'refund_chargeback_type' => 'string'
     ];
 
     /**
@@ -88,7 +89,8 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'tips' => 'double',
         'voucher' => 'double',
         'store_id' => 'int32',
-        'store_name' => null
+        'store_name' => null,
+        'refund_chargeback_type' => null
     ];
 
     /**
@@ -129,7 +131,8 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'tips' => 'Tips',
         'voucher' => 'Voucher',
         'store_id' => 'StoreId',
-        'store_name' => 'StoreName'
+        'store_name' => 'StoreName',
+        'refund_chargeback_type' => 'RefundChargebackType'
     ];
 
     /**
@@ -149,7 +152,8 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'tips' => 'setTips',
         'voucher' => 'setVoucher',
         'store_id' => 'setStoreId',
-        'store_name' => 'setStoreName'
+        'store_name' => 'setStoreName',
+        'refund_chargeback_type' => 'setRefundChargebackType'
     ];
 
     /**
@@ -169,7 +173,8 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         'tips' => 'getTips',
         'voucher' => 'getVoucher',
         'store_id' => 'getStoreId',
-        'store_name' => 'getStoreName'
+        'store_name' => 'getStoreName',
+        'refund_chargeback_type' => 'getRefundChargebackType'
     ];
 
     /**
@@ -328,6 +333,8 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
     const ORDER_CURRENCY_MOP = 'MOP';
     const ORDER_CURRENCY_TWD = 'TWD';
     const ORDER_CURRENCY_BMD = 'BMD';
+    const REFUND_CHARGEBACK_TYPE_REFUND = 'Refund';
+    const REFUND_CHARGEBACK_TYPE_CHARGEBACK = 'Chargeback';
     
 
     
@@ -468,6 +475,19 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         ];
     }
     
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getRefundChargebackTypeAllowableValues()
+    {
+        return [
+            self::REFUND_CHARGEBACK_TYPE_REFUND,
+            self::REFUND_CHARGEBACK_TYPE_CHARGEBACK,
+        ];
+    }
+    
 
     /**
      * Associative array for storing property values
@@ -496,6 +516,7 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         $this->container['voucher'] = isset($data['voucher']) ? $data['voucher'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
         $this->container['store_name'] = isset($data['store_name']) ? $data['store_name'] : null;
+        $this->container['refund_chargeback_type'] = isset($data['refund_chargeback_type']) ? $data['refund_chargeback_type'] : null;
     }
 
     /**
@@ -519,6 +540,14 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
         if (!is_null($this->container['order_currency']) && !in_array($this->container['order_currency'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'order_currency', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getRefundChargebackTypeAllowableValues();
+        if (!is_null($this->container['refund_chargeback_type']) && !in_array($this->container['refund_chargeback_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'refund_chargeback_type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -840,6 +869,39 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
     public function setStoreName($store_name)
     {
         $this->container['store_name'] = $store_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets refund_chargeback_type
+     *
+     * @return string
+     */
+    public function getRefundChargebackType()
+    {
+        return $this->container['refund_chargeback_type'];
+    }
+
+    /**
+     * Sets refund_chargeback_type
+     *
+     * @param string $refund_chargeback_type refund_chargeback_type
+     *
+     * @return $this
+     */
+    public function setRefundChargebackType($refund_chargeback_type)
+    {
+        $allowedValues = $this->getRefundChargebackTypeAllowableValues();
+        if (!is_null($refund_chargeback_type) && !in_array($refund_chargeback_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'refund_chargeback_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['refund_chargeback_type'] = $refund_chargeback_type;
 
         return $this;
     }
