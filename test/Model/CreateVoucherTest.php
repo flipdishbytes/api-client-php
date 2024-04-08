@@ -250,4 +250,11 @@ class CreateVoucherTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCustomerId()
     {
     }
+
+    /**
+     * Test attribute "max_redemptions"
+     */
+    public function testPropertyMaxRedemptions()
+    {
+    }
 }

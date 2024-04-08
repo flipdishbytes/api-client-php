@@ -100,4 +100,14 @@ class PayoutReportsApiTest extends \PHPUnit_Framework_TestCase
     public function testGetPayoutReport3Overview()
     {
     }
+
+    /**
+     * Test case for payoutReport3ExportPayoutOnlineOrders
+     *
+     * .
+     *
+     */
+    public function testPayoutReport3ExportPayoutOnlineOrders()
+    {
+    }
 }

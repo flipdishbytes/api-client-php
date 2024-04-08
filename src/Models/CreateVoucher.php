@@ -82,7 +82,8 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'expiry_date' => '\DateTime',
         'channel_restrictions' => 'string[]',
         'voucher_sub_type' => 'string',
-        'customer_id' => 'int'
+        'customer_id' => 'int',
+        'max_redemptions' => 'int'
     ];
 
     /**
@@ -115,7 +116,8 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'expiry_date' => 'date-time',
         'channel_restrictions' => null,
         'voucher_sub_type' => null,
-        'customer_id' => 'int32'
+        'customer_id' => 'int32',
+        'max_redemptions' => 'int32'
     ];
 
     /**
@@ -169,7 +171,8 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'expiry_date' => 'ExpiryDate',
         'channel_restrictions' => 'ChannelRestrictions',
         'voucher_sub_type' => 'VoucherSubType',
-        'customer_id' => 'CustomerId'
+        'customer_id' => 'CustomerId',
+        'max_redemptions' => 'MaxRedemptions'
     ];
 
     /**
@@ -202,7 +205,8 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'expiry_date' => 'setExpiryDate',
         'channel_restrictions' => 'setChannelRestrictions',
         'voucher_sub_type' => 'setVoucherSubType',
-        'customer_id' => 'setCustomerId'
+        'customer_id' => 'setCustomerId',
+        'max_redemptions' => 'setMaxRedemptions'
     ];
 
     /**
@@ -235,7 +239,8 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'expiry_date' => 'getExpiryDate',
         'channel_restrictions' => 'getChannelRestrictions',
         'voucher_sub_type' => 'getVoucherSubType',
-        'customer_id' => 'getCustomerId'
+        'customer_id' => 'getCustomerId',
+        'max_redemptions' => 'getMaxRedemptions'
     ];
 
     /**
@@ -392,6 +397,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         $this->container['channel_restrictions'] = isset($data['channel_restrictions']) ? $data['channel_restrictions'] : null;
         $this->container['voucher_sub_type'] = isset($data['voucher_sub_type']) ? $data['voucher_sub_type'] : null;
         $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
+        $this->container['max_redemptions'] = isset($data['max_redemptions']) ? $data['max_redemptions'] : null;
     }
 
     /**
@@ -1057,6 +1063,30 @@ class CreateVoucher implements ModelInterface, ArrayAccess
     public function setCustomerId($customer_id)
     {
         $this->container['customer_id'] = $customer_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_redemptions
+     *
+     * @return int
+     */
+    public function getMaxRedemptions()
+    {
+        return $this->container['max_redemptions'];
+    }
+
+    /**
+     * Sets max_redemptions
+     *
+     * @param int $max_redemptions Maximum number of times the voucher can be redeemed (used)
+     *
+     * @return $this
+     */
+    public function setMaxRedemptions($max_redemptions)
+    {
+        $this->container['max_redemptions'] = $max_redemptions;
 
         return $this;
     }
