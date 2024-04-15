@@ -95,7 +95,7 @@ class FilesApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string
+     * @return \Flipdish\\Client\Models\RestApiResultFileDownloadResult
      */
     public function downloadFile($app_id, $file_id)
     {
@@ -111,11 +111,11 @@ class FilesApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultFileDownloadResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function downloadFileWithHttpInfo($app_id, $file_id)
     {
-        $returnType = 'string';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultFileDownloadResult';
         $request = $this->downloadFileRequest($app_id, $file_id);
 
         try {
@@ -167,15 +167,7 @@ class FilesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'string',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'string',
+                        '\Flipdish\\Client\Models\RestApiResultFileDownloadResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,14 +184,6 @@ class FilesApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'string',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -243,7 +227,7 @@ class FilesApi
      */
     public function downloadFileAsyncWithHttpInfo($app_id, $file_id)
     {
-        $returnType = 'string';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultFileDownloadResult';
         $request = $this->downloadFileRequest($app_id, $file_id);
 
         return $this->client

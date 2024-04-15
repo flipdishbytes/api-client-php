@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **downloadFile**
-> string downloadFile($app_id, $file_id)
+> \Flipdish\\Client\Models\RestApiResultFileDownloadResult downloadFile($app_id, $file_id)
 
 
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\Flipdish\\Client\Models\RestApiResultFileDownloadResult**](../Model/RestApiResultFileDownloadResult.md)
 
 ### Authorization
 

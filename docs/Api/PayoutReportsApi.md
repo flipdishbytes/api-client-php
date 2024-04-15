@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payoutReport3ExportPayoutOnlineOrders**
-> string payoutReport3ExportPayoutOnlineOrders($app_id, $bank_account_id, $payout_id, $start_date, $end_date, $payout_request_ids_bank_account_ids, $payout_request_ids_states)
+> \Flipdish\\Client\Models\RestApiResultFileCreationResult payoutReport3ExportPayoutOnlineOrders($app_id, $bank_account_id, $payout_id, $start_date, $end_date, $payout_request_ids_bank_account_ids, $payout_request_ids_states)
 
 
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\Flipdish\\Client\Models\RestApiResultFileCreationResult**](../Model/RestApiResultFileCreationResult.md)
 
 ### Authorization
 

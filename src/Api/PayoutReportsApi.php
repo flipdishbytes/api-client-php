@@ -1135,7 +1135,7 @@ class PayoutReportsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string
+     * @return \Flipdish\\Client\Models\RestApiResultFileCreationResult
      */
     public function payoutReport3ExportPayoutOnlineOrders($app_id, $bank_account_id, $payout_id, $start_date = null, $end_date = null, $payout_request_ids_bank_account_ids = null, $payout_request_ids_states = null)
     {
@@ -1156,11 +1156,11 @@ class PayoutReportsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiResultFileCreationResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function payoutReport3ExportPayoutOnlineOrdersWithHttpInfo($app_id, $bank_account_id, $payout_id, $start_date = null, $end_date = null, $payout_request_ids_bank_account_ids = null, $payout_request_ids_states = null)
     {
-        $returnType = 'string';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultFileCreationResult';
         $request = $this->payoutReport3ExportPayoutOnlineOrdersRequest($app_id, $bank_account_id, $payout_id, $start_date, $end_date, $payout_request_ids_bank_account_ids, $payout_request_ids_states);
 
         try {
@@ -1212,7 +1212,7 @@ class PayoutReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'string',
+                        '\Flipdish\\Client\Models\RestApiResultFileCreationResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1290,7 +1290,7 @@ class PayoutReportsApi
      */
     public function payoutReport3ExportPayoutOnlineOrdersAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $start_date = null, $end_date = null, $payout_request_ids_bank_account_ids = null, $payout_request_ids_states = null)
     {
-        $returnType = 'string';
+        $returnType = '\Flipdish\\Client\Models\RestApiResultFileCreationResult';
         $request = $this->payoutReport3ExportPayoutOnlineOrdersRequest($app_id, $bank_account_id, $payout_id, $start_date, $end_date, $payout_request_ids_bank_account_ids, $payout_request_ids_states);
 
         return $this->client
