@@ -209,6 +209,7 @@ class StripeConnectedAccount implements ModelInterface, ArrayAccess
     const ACCOUNT_STATUS_UNVERIFIED = 'Unverified';
     const ACCOUNT_STATUS_REJECTED = 'Rejected';
     const ACCOUNT_STATUS_UPDATE_EXTERNAL_ACCOUNT = 'UpdateExternalAccount';
+    const ACCOUNT_STATUS_PLATFORM_PAUSED = 'PlatformPaused';
     
 
     
@@ -257,6 +258,7 @@ class StripeConnectedAccount implements ModelInterface, ArrayAccess
             self::ACCOUNT_STATUS_UNVERIFIED,
             self::ACCOUNT_STATUS_REJECTED,
             self::ACCOUNT_STATUS_UPDATE_EXTERNAL_ACCOUNT,
+            self::ACCOUNT_STATUS_PLATFORM_PAUSED,
         ];
     }
     
