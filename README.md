@@ -477,6 +477,7 @@ Class | Method | HTTP request | Description
 *PayoutReportsApi* | [**getPayoutReport3Orders**](docs/Api/PayoutReportsApi.md#getpayoutreport3orders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/orders | 
 *PayoutReportsApi* | [**getPayoutReport3Overview**](docs/Api/PayoutReportsApi.md#getpayoutreport3overview) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/overview | 
 *PayoutReportsApi* | [**payoutReport3ExportPayoutOnlineOrders**](docs/Api/PayoutReportsApi.md#payoutreport3exportpayoutonlineorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/onlineorders | 
+*PayoutReportsApi* | [**payoutReport3ExportPayoutPosSales**](docs/Api/PayoutReportsApi.md#payoutreport3exportpayoutpossales) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/possales | 
 *PayoutsApi* | [**getPayout**](docs/Api/PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | 
 *PayoutsApi* | [**getPayoutChargebacks**](docs/Api/PayoutsApi.md#getpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | 
 *PayoutsApi* | [**getPayoutOrders**](docs/Api/PayoutsApi.md#getpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | 
