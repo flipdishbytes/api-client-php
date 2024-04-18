@@ -84,9 +84,9 @@ class PayoutReport3DetailsFlipdishFeesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "web_and_app_cash_revenue_excluding_tips"
+     * Test attribute "web_and_app_cash_revenue_including_tips"
      */
-    public function testPropertyWebAndAppCashRevenueExcludingTips()
+    public function testPropertyWebAndAppCashRevenueIncludingTips()
     {
     }
 
@@ -98,9 +98,9 @@ class PayoutReport3DetailsFlipdishFeesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "web_and_app_card_revenue_excluding_tips"
+     * Test attribute "web_and_app_card_revenue_including_tips"
      */
-    public function testPropertyWebAndAppCardRevenueExcludingTips()
+    public function testPropertyWebAndAppCardRevenueIncludingTips()
     {
     }
 

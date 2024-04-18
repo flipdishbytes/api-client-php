@@ -58,9 +58,9 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'web_and_app_cash' => 'double',
-        'web_and_app_cash_revenue_excluding_tips' => 'double',
+        'web_and_app_cash_revenue_including_tips' => 'double',
         'web_and_app_card' => 'double',
-        'web_and_app_card_revenue_excluding_tips' => 'double',
+        'web_and_app_card_revenue_including_tips' => 'double',
         'kiosk_cash' => 'double',
         'kiosk_card' => 'double',
         'qrop_cash' => 'double',
@@ -81,9 +81,9 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'web_and_app_cash' => 'double',
-        'web_and_app_cash_revenue_excluding_tips' => 'double',
+        'web_and_app_cash_revenue_including_tips' => 'double',
         'web_and_app_card' => 'double',
-        'web_and_app_card_revenue_excluding_tips' => 'double',
+        'web_and_app_card_revenue_including_tips' => 'double',
         'kiosk_cash' => 'double',
         'kiosk_card' => 'double',
         'qrop_cash' => 'double',
@@ -125,9 +125,9 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'web_and_app_cash' => 'WebAndAppCash',
-        'web_and_app_cash_revenue_excluding_tips' => 'WebAndAppCashRevenueExcludingTips',
+        'web_and_app_cash_revenue_including_tips' => 'WebAndAppCashRevenueIncludingTips',
         'web_and_app_card' => 'WebAndAppCard',
-        'web_and_app_card_revenue_excluding_tips' => 'WebAndAppCardRevenueExcludingTips',
+        'web_and_app_card_revenue_including_tips' => 'WebAndAppCardRevenueIncludingTips',
         'kiosk_cash' => 'KioskCash',
         'kiosk_card' => 'KioskCard',
         'qrop_cash' => 'QropCash',
@@ -148,9 +148,9 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'web_and_app_cash' => 'setWebAndAppCash',
-        'web_and_app_cash_revenue_excluding_tips' => 'setWebAndAppCashRevenueExcludingTips',
+        'web_and_app_cash_revenue_including_tips' => 'setWebAndAppCashRevenueIncludingTips',
         'web_and_app_card' => 'setWebAndAppCard',
-        'web_and_app_card_revenue_excluding_tips' => 'setWebAndAppCardRevenueExcludingTips',
+        'web_and_app_card_revenue_including_tips' => 'setWebAndAppCardRevenueIncludingTips',
         'kiosk_cash' => 'setKioskCash',
         'kiosk_card' => 'setKioskCard',
         'qrop_cash' => 'setQropCash',
@@ -171,9 +171,9 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'web_and_app_cash' => 'getWebAndAppCash',
-        'web_and_app_cash_revenue_excluding_tips' => 'getWebAndAppCashRevenueExcludingTips',
+        'web_and_app_cash_revenue_including_tips' => 'getWebAndAppCashRevenueIncludingTips',
         'web_and_app_card' => 'getWebAndAppCard',
-        'web_and_app_card_revenue_excluding_tips' => 'getWebAndAppCardRevenueExcludingTips',
+        'web_and_app_card_revenue_including_tips' => 'getWebAndAppCardRevenueIncludingTips',
         'kiosk_cash' => 'getKioskCash',
         'kiosk_card' => 'getKioskCard',
         'qrop_cash' => 'getQropCash',
@@ -248,9 +248,9 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['web_and_app_cash'] = isset($data['web_and_app_cash']) ? $data['web_and_app_cash'] : null;
-        $this->container['web_and_app_cash_revenue_excluding_tips'] = isset($data['web_and_app_cash_revenue_excluding_tips']) ? $data['web_and_app_cash_revenue_excluding_tips'] : null;
+        $this->container['web_and_app_cash_revenue_including_tips'] = isset($data['web_and_app_cash_revenue_including_tips']) ? $data['web_and_app_cash_revenue_including_tips'] : null;
         $this->container['web_and_app_card'] = isset($data['web_and_app_card']) ? $data['web_and_app_card'] : null;
-        $this->container['web_and_app_card_revenue_excluding_tips'] = isset($data['web_and_app_card_revenue_excluding_tips']) ? $data['web_and_app_card_revenue_excluding_tips'] : null;
+        $this->container['web_and_app_card_revenue_including_tips'] = isset($data['web_and_app_card_revenue_including_tips']) ? $data['web_and_app_card_revenue_including_tips'] : null;
         $this->container['kiosk_cash'] = isset($data['kiosk_cash']) ? $data['kiosk_cash'] : null;
         $this->container['kiosk_card'] = isset($data['kiosk_card']) ? $data['kiosk_card'] : null;
         $this->container['qrop_cash'] = isset($data['qrop_cash']) ? $data['qrop_cash'] : null;
@@ -313,25 +313,25 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets web_and_app_cash_revenue_excluding_tips
+     * Gets web_and_app_cash_revenue_including_tips
      *
      * @return double
      */
-    public function getWebAndAppCashRevenueExcludingTips()
+    public function getWebAndAppCashRevenueIncludingTips()
     {
-        return $this->container['web_and_app_cash_revenue_excluding_tips'];
+        return $this->container['web_and_app_cash_revenue_including_tips'];
     }
 
     /**
-     * Sets web_and_app_cash_revenue_excluding_tips
+     * Sets web_and_app_cash_revenue_including_tips
      *
-     * @param double $web_and_app_cash_revenue_excluding_tips web_and_app_cash_revenue_excluding_tips
+     * @param double $web_and_app_cash_revenue_including_tips web_and_app_cash_revenue_including_tips
      *
      * @return $this
      */
-    public function setWebAndAppCashRevenueExcludingTips($web_and_app_cash_revenue_excluding_tips)
+    public function setWebAndAppCashRevenueIncludingTips($web_and_app_cash_revenue_including_tips)
     {
-        $this->container['web_and_app_cash_revenue_excluding_tips'] = $web_and_app_cash_revenue_excluding_tips;
+        $this->container['web_and_app_cash_revenue_including_tips'] = $web_and_app_cash_revenue_including_tips;
 
         return $this;
     }
@@ -361,25 +361,25 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets web_and_app_card_revenue_excluding_tips
+     * Gets web_and_app_card_revenue_including_tips
      *
      * @return double
      */
-    public function getWebAndAppCardRevenueExcludingTips()
+    public function getWebAndAppCardRevenueIncludingTips()
     {
-        return $this->container['web_and_app_card_revenue_excluding_tips'];
+        return $this->container['web_and_app_card_revenue_including_tips'];
     }
 
     /**
-     * Sets web_and_app_card_revenue_excluding_tips
+     * Sets web_and_app_card_revenue_including_tips
      *
-     * @param double $web_and_app_card_revenue_excluding_tips web_and_app_card_revenue_excluding_tips
+     * @param double $web_and_app_card_revenue_including_tips web_and_app_card_revenue_including_tips
      *
      * @return $this
      */
-    public function setWebAndAppCardRevenueExcludingTips($web_and_app_card_revenue_excluding_tips)
+    public function setWebAndAppCardRevenueIncludingTips($web_and_app_card_revenue_including_tips)
     {
-        $this->container['web_and_app_card_revenue_excluding_tips'] = $web_and_app_card_revenue_excluding_tips;
+        $this->container['web_and_app_card_revenue_including_tips'] = $web_and_app_card_revenue_including_tips;
 
         return $this;
     }

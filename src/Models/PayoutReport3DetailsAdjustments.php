@@ -65,21 +65,7 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees' => 'double',
         'chargebacks' => 'double',
         'other_transactions' => 'double',
-        'closing_balance' => 'double',
-        'opening_balance_credit' => 'double',
-        'opening_balance_debit' => 'double',
-        'refunds_on_card_orders_credit' => 'double',
-        'refunds_on_card_orders_debit' => 'double',
-        'refunds_on_cash_orders_credit' => 'double',
-        'refunds_on_cash_orders_debit' => 'double',
-        'cash_customer_fees_credit' => 'double',
-        'cash_customer_fees_debit' => 'double',
-        'chargebacks_credit' => 'double',
-        'chargebacks_debit' => 'double',
-        'other_transactions_credit' => 'double',
-        'other_transactions_debit' => 'double',
-        'closing_balance_credit' => 'double',
-        'closing_balance_debit' => 'double'
+        'closing_balance' => 'double'
     ];
 
     /**
@@ -96,21 +82,7 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees' => 'double',
         'chargebacks' => 'double',
         'other_transactions' => 'double',
-        'closing_balance' => 'double',
-        'opening_balance_credit' => 'double',
-        'opening_balance_debit' => 'double',
-        'refunds_on_card_orders_credit' => 'double',
-        'refunds_on_card_orders_debit' => 'double',
-        'refunds_on_cash_orders_credit' => 'double',
-        'refunds_on_cash_orders_debit' => 'double',
-        'cash_customer_fees_credit' => 'double',
-        'cash_customer_fees_debit' => 'double',
-        'chargebacks_credit' => 'double',
-        'chargebacks_debit' => 'double',
-        'other_transactions_credit' => 'double',
-        'other_transactions_debit' => 'double',
-        'closing_balance_credit' => 'double',
-        'closing_balance_debit' => 'double'
+        'closing_balance' => 'double'
     ];
 
     /**
@@ -148,21 +120,7 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees' => 'CashCustomerFees',
         'chargebacks' => 'Chargebacks',
         'other_transactions' => 'OtherTransactions',
-        'closing_balance' => 'ClosingBalance',
-        'opening_balance_credit' => 'OpeningBalanceCredit',
-        'opening_balance_debit' => 'OpeningBalanceDebit',
-        'refunds_on_card_orders_credit' => 'RefundsOnCardOrdersCredit',
-        'refunds_on_card_orders_debit' => 'RefundsOnCardOrdersDebit',
-        'refunds_on_cash_orders_credit' => 'RefundsOnCashOrdersCredit',
-        'refunds_on_cash_orders_debit' => 'RefundsOnCashOrdersDebit',
-        'cash_customer_fees_credit' => 'CashCustomerFeesCredit',
-        'cash_customer_fees_debit' => 'CashCustomerFeesDebit',
-        'chargebacks_credit' => 'ChargebacksCredit',
-        'chargebacks_debit' => 'ChargebacksDebit',
-        'other_transactions_credit' => 'OtherTransactionsCredit',
-        'other_transactions_debit' => 'OtherTransactionsDebit',
-        'closing_balance_credit' => 'ClosingBalanceCredit',
-        'closing_balance_debit' => 'ClosingBalanceDebit'
+        'closing_balance' => 'ClosingBalance'
     ];
 
     /**
@@ -179,21 +137,7 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees' => 'setCashCustomerFees',
         'chargebacks' => 'setChargebacks',
         'other_transactions' => 'setOtherTransactions',
-        'closing_balance' => 'setClosingBalance',
-        'opening_balance_credit' => 'setOpeningBalanceCredit',
-        'opening_balance_debit' => 'setOpeningBalanceDebit',
-        'refunds_on_card_orders_credit' => 'setRefundsOnCardOrdersCredit',
-        'refunds_on_card_orders_debit' => 'setRefundsOnCardOrdersDebit',
-        'refunds_on_cash_orders_credit' => 'setRefundsOnCashOrdersCredit',
-        'refunds_on_cash_orders_debit' => 'setRefundsOnCashOrdersDebit',
-        'cash_customer_fees_credit' => 'setCashCustomerFeesCredit',
-        'cash_customer_fees_debit' => 'setCashCustomerFeesDebit',
-        'chargebacks_credit' => 'setChargebacksCredit',
-        'chargebacks_debit' => 'setChargebacksDebit',
-        'other_transactions_credit' => 'setOtherTransactionsCredit',
-        'other_transactions_debit' => 'setOtherTransactionsDebit',
-        'closing_balance_credit' => 'setClosingBalanceCredit',
-        'closing_balance_debit' => 'setClosingBalanceDebit'
+        'closing_balance' => 'setClosingBalance'
     ];
 
     /**
@@ -210,21 +154,7 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees' => 'getCashCustomerFees',
         'chargebacks' => 'getChargebacks',
         'other_transactions' => 'getOtherTransactions',
-        'closing_balance' => 'getClosingBalance',
-        'opening_balance_credit' => 'getOpeningBalanceCredit',
-        'opening_balance_debit' => 'getOpeningBalanceDebit',
-        'refunds_on_card_orders_credit' => 'getRefundsOnCardOrdersCredit',
-        'refunds_on_card_orders_debit' => 'getRefundsOnCardOrdersDebit',
-        'refunds_on_cash_orders_credit' => 'getRefundsOnCashOrdersCredit',
-        'refunds_on_cash_orders_debit' => 'getRefundsOnCashOrdersDebit',
-        'cash_customer_fees_credit' => 'getCashCustomerFeesCredit',
-        'cash_customer_fees_debit' => 'getCashCustomerFeesDebit',
-        'chargebacks_credit' => 'getChargebacksCredit',
-        'chargebacks_debit' => 'getChargebacksDebit',
-        'other_transactions_credit' => 'getOtherTransactionsCredit',
-        'other_transactions_debit' => 'getOtherTransactionsDebit',
-        'closing_balance_credit' => 'getClosingBalanceCredit',
-        'closing_balance_debit' => 'getClosingBalanceDebit'
+        'closing_balance' => 'getClosingBalance'
     ];
 
     /**
@@ -296,20 +226,6 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         $this->container['chargebacks'] = isset($data['chargebacks']) ? $data['chargebacks'] : null;
         $this->container['other_transactions'] = isset($data['other_transactions']) ? $data['other_transactions'] : null;
         $this->container['closing_balance'] = isset($data['closing_balance']) ? $data['closing_balance'] : null;
-        $this->container['opening_balance_credit'] = isset($data['opening_balance_credit']) ? $data['opening_balance_credit'] : null;
-        $this->container['opening_balance_debit'] = isset($data['opening_balance_debit']) ? $data['opening_balance_debit'] : null;
-        $this->container['refunds_on_card_orders_credit'] = isset($data['refunds_on_card_orders_credit']) ? $data['refunds_on_card_orders_credit'] : null;
-        $this->container['refunds_on_card_orders_debit'] = isset($data['refunds_on_card_orders_debit']) ? $data['refunds_on_card_orders_debit'] : null;
-        $this->container['refunds_on_cash_orders_credit'] = isset($data['refunds_on_cash_orders_credit']) ? $data['refunds_on_cash_orders_credit'] : null;
-        $this->container['refunds_on_cash_orders_debit'] = isset($data['refunds_on_cash_orders_debit']) ? $data['refunds_on_cash_orders_debit'] : null;
-        $this->container['cash_customer_fees_credit'] = isset($data['cash_customer_fees_credit']) ? $data['cash_customer_fees_credit'] : null;
-        $this->container['cash_customer_fees_debit'] = isset($data['cash_customer_fees_debit']) ? $data['cash_customer_fees_debit'] : null;
-        $this->container['chargebacks_credit'] = isset($data['chargebacks_credit']) ? $data['chargebacks_credit'] : null;
-        $this->container['chargebacks_debit'] = isset($data['chargebacks_debit']) ? $data['chargebacks_debit'] : null;
-        $this->container['other_transactions_credit'] = isset($data['other_transactions_credit']) ? $data['other_transactions_credit'] : null;
-        $this->container['other_transactions_debit'] = isset($data['other_transactions_debit']) ? $data['other_transactions_debit'] : null;
-        $this->container['closing_balance_credit'] = isset($data['closing_balance_credit']) ? $data['closing_balance_credit'] : null;
-        $this->container['closing_balance_debit'] = isset($data['closing_balance_debit']) ? $data['closing_balance_debit'] : null;
     }
 
     /**
@@ -548,342 +464,6 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
     public function setClosingBalance($closing_balance)
     {
         $this->container['closing_balance'] = $closing_balance;
-
-        return $this;
-    }
-
-    /**
-     * Gets opening_balance_credit
-     *
-     * @return double
-     */
-    public function getOpeningBalanceCredit()
-    {
-        return $this->container['opening_balance_credit'];
-    }
-
-    /**
-     * Sets opening_balance_credit
-     *
-     * @param double $opening_balance_credit opening_balance_credit
-     *
-     * @return $this
-     */
-    public function setOpeningBalanceCredit($opening_balance_credit)
-    {
-        $this->container['opening_balance_credit'] = $opening_balance_credit;
-
-        return $this;
-    }
-
-    /**
-     * Gets opening_balance_debit
-     *
-     * @return double
-     */
-    public function getOpeningBalanceDebit()
-    {
-        return $this->container['opening_balance_debit'];
-    }
-
-    /**
-     * Sets opening_balance_debit
-     *
-     * @param double $opening_balance_debit opening_balance_debit
-     *
-     * @return $this
-     */
-    public function setOpeningBalanceDebit($opening_balance_debit)
-    {
-        $this->container['opening_balance_debit'] = $opening_balance_debit;
-
-        return $this;
-    }
-
-    /**
-     * Gets refunds_on_card_orders_credit
-     *
-     * @return double
-     */
-    public function getRefundsOnCardOrdersCredit()
-    {
-        return $this->container['refunds_on_card_orders_credit'];
-    }
-
-    /**
-     * Sets refunds_on_card_orders_credit
-     *
-     * @param double $refunds_on_card_orders_credit refunds_on_card_orders_credit
-     *
-     * @return $this
-     */
-    public function setRefundsOnCardOrdersCredit($refunds_on_card_orders_credit)
-    {
-        $this->container['refunds_on_card_orders_credit'] = $refunds_on_card_orders_credit;
-
-        return $this;
-    }
-
-    /**
-     * Gets refunds_on_card_orders_debit
-     *
-     * @return double
-     */
-    public function getRefundsOnCardOrdersDebit()
-    {
-        return $this->container['refunds_on_card_orders_debit'];
-    }
-
-    /**
-     * Sets refunds_on_card_orders_debit
-     *
-     * @param double $refunds_on_card_orders_debit refunds_on_card_orders_debit
-     *
-     * @return $this
-     */
-    public function setRefundsOnCardOrdersDebit($refunds_on_card_orders_debit)
-    {
-        $this->container['refunds_on_card_orders_debit'] = $refunds_on_card_orders_debit;
-
-        return $this;
-    }
-
-    /**
-     * Gets refunds_on_cash_orders_credit
-     *
-     * @return double
-     */
-    public function getRefundsOnCashOrdersCredit()
-    {
-        return $this->container['refunds_on_cash_orders_credit'];
-    }
-
-    /**
-     * Sets refunds_on_cash_orders_credit
-     *
-     * @param double $refunds_on_cash_orders_credit refunds_on_cash_orders_credit
-     *
-     * @return $this
-     */
-    public function setRefundsOnCashOrdersCredit($refunds_on_cash_orders_credit)
-    {
-        $this->container['refunds_on_cash_orders_credit'] = $refunds_on_cash_orders_credit;
-
-        return $this;
-    }
-
-    /**
-     * Gets refunds_on_cash_orders_debit
-     *
-     * @return double
-     */
-    public function getRefundsOnCashOrdersDebit()
-    {
-        return $this->container['refunds_on_cash_orders_debit'];
-    }
-
-    /**
-     * Sets refunds_on_cash_orders_debit
-     *
-     * @param double $refunds_on_cash_orders_debit refunds_on_cash_orders_debit
-     *
-     * @return $this
-     */
-    public function setRefundsOnCashOrdersDebit($refunds_on_cash_orders_debit)
-    {
-        $this->container['refunds_on_cash_orders_debit'] = $refunds_on_cash_orders_debit;
-
-        return $this;
-    }
-
-    /**
-     * Gets cash_customer_fees_credit
-     *
-     * @return double
-     */
-    public function getCashCustomerFeesCredit()
-    {
-        return $this->container['cash_customer_fees_credit'];
-    }
-
-    /**
-     * Sets cash_customer_fees_credit
-     *
-     * @param double $cash_customer_fees_credit cash_customer_fees_credit
-     *
-     * @return $this
-     */
-    public function setCashCustomerFeesCredit($cash_customer_fees_credit)
-    {
-        $this->container['cash_customer_fees_credit'] = $cash_customer_fees_credit;
-
-        return $this;
-    }
-
-    /**
-     * Gets cash_customer_fees_debit
-     *
-     * @return double
-     */
-    public function getCashCustomerFeesDebit()
-    {
-        return $this->container['cash_customer_fees_debit'];
-    }
-
-    /**
-     * Sets cash_customer_fees_debit
-     *
-     * @param double $cash_customer_fees_debit cash_customer_fees_debit
-     *
-     * @return $this
-     */
-    public function setCashCustomerFeesDebit($cash_customer_fees_debit)
-    {
-        $this->container['cash_customer_fees_debit'] = $cash_customer_fees_debit;
-
-        return $this;
-    }
-
-    /**
-     * Gets chargebacks_credit
-     *
-     * @return double
-     */
-    public function getChargebacksCredit()
-    {
-        return $this->container['chargebacks_credit'];
-    }
-
-    /**
-     * Sets chargebacks_credit
-     *
-     * @param double $chargebacks_credit chargebacks_credit
-     *
-     * @return $this
-     */
-    public function setChargebacksCredit($chargebacks_credit)
-    {
-        $this->container['chargebacks_credit'] = $chargebacks_credit;
-
-        return $this;
-    }
-
-    /**
-     * Gets chargebacks_debit
-     *
-     * @return double
-     */
-    public function getChargebacksDebit()
-    {
-        return $this->container['chargebacks_debit'];
-    }
-
-    /**
-     * Sets chargebacks_debit
-     *
-     * @param double $chargebacks_debit chargebacks_debit
-     *
-     * @return $this
-     */
-    public function setChargebacksDebit($chargebacks_debit)
-    {
-        $this->container['chargebacks_debit'] = $chargebacks_debit;
-
-        return $this;
-    }
-
-    /**
-     * Gets other_transactions_credit
-     *
-     * @return double
-     */
-    public function getOtherTransactionsCredit()
-    {
-        return $this->container['other_transactions_credit'];
-    }
-
-    /**
-     * Sets other_transactions_credit
-     *
-     * @param double $other_transactions_credit other_transactions_credit
-     *
-     * @return $this
-     */
-    public function setOtherTransactionsCredit($other_transactions_credit)
-    {
-        $this->container['other_transactions_credit'] = $other_transactions_credit;
-
-        return $this;
-    }
-
-    /**
-     * Gets other_transactions_debit
-     *
-     * @return double
-     */
-    public function getOtherTransactionsDebit()
-    {
-        return $this->container['other_transactions_debit'];
-    }
-
-    /**
-     * Sets other_transactions_debit
-     *
-     * @param double $other_transactions_debit other_transactions_debit
-     *
-     * @return $this
-     */
-    public function setOtherTransactionsDebit($other_transactions_debit)
-    {
-        $this->container['other_transactions_debit'] = $other_transactions_debit;
-
-        return $this;
-    }
-
-    /**
-     * Gets closing_balance_credit
-     *
-     * @return double
-     */
-    public function getClosingBalanceCredit()
-    {
-        return $this->container['closing_balance_credit'];
-    }
-
-    /**
-     * Sets closing_balance_credit
-     *
-     * @param double $closing_balance_credit closing_balance_credit
-     *
-     * @return $this
-     */
-    public function setClosingBalanceCredit($closing_balance_credit)
-    {
-        $this->container['closing_balance_credit'] = $closing_balance_credit;
-
-        return $this;
-    }
-
-    /**
-     * Gets closing_balance_debit
-     *
-     * @return double
-     */
-    public function getClosingBalanceDebit()
-    {
-        return $this->container['closing_balance_debit'];
-    }
-
-    /**
-     * Sets closing_balance_debit
-     *
-     * @param double $closing_balance_debit closing_balance_debit
-     *
-     * @return $this
-     */
-    public function setClosingBalanceDebit($closing_balance_debit)
-    {
-        $this->container['closing_balance_debit'] = $closing_balance_debit;
 
         return $this;
     }
