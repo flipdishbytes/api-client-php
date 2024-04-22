@@ -140,4 +140,14 @@ class PayoutReportsApiTest extends \PHPUnit_Framework_TestCase
     public function testPayoutReport3ExportPayoutPosSales()
     {
     }
+
+    /**
+     * Test case for payoutReport3ExportPayoutRefundedRejected
+     *
+     * .
+     *
+     */
+    public function testPayoutReport3ExportPayoutRefundedRejected()
+    {
+    }
 }
