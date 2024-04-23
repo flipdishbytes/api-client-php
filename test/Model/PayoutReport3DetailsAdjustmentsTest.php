@@ -138,4 +138,53 @@ class PayoutReport3DetailsAdjustmentsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyClosingBalance()
     {
     }
+
+    /**
+     * Test attribute "balance_repaid"
+     */
+    public function testPropertyBalanceRepaid()
+    {
+    }
+
+    /**
+     * Test attribute "refunds_on_card_orders_brackets_amount"
+     */
+    public function testPropertyRefundsOnCardOrdersBracketsAmount()
+    {
+    }
+
+    /**
+     * Test attribute "refunds_on_card_orders_brackets_out_of_amount"
+     */
+    public function testPropertyRefundsOnCardOrdersBracketsOutOfAmount()
+    {
+    }
+
+    /**
+     * Test attribute "refunds_on_cash_orders_brackets_amount"
+     */
+    public function testPropertyRefundsOnCashOrdersBracketsAmount()
+    {
+    }
+
+    /**
+     * Test attribute "refunds_on_cash_orders_brackets_out_of_amount"
+     */
+    public function testPropertyRefundsOnCashOrdersBracketsOutOfAmount()
+    {
+    }
+
+    /**
+     * Test attribute "cash_customer_fees_brackets_amount"
+     */
+    public function testPropertyCashCustomerFeesBracketsAmount()
+    {
+    }
+
+    /**
+     * Test attribute "cash_customer_fees_brackets_out_of_amount"
+     */
+    public function testPropertyCashCustomerFeesBracketsOutOfAmount()
+    {
+    }
 }

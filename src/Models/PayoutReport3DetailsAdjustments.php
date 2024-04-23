@@ -65,7 +65,14 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees' => 'double',
         'chargebacks' => 'double',
         'other_transactions' => 'double',
-        'closing_balance' => 'double'
+        'closing_balance' => 'double',
+        'balance_repaid' => 'double',
+        'refunds_on_card_orders_brackets_amount' => 'double',
+        'refunds_on_card_orders_brackets_out_of_amount' => 'double',
+        'refunds_on_cash_orders_brackets_amount' => 'double',
+        'refunds_on_cash_orders_brackets_out_of_amount' => 'double',
+        'cash_customer_fees_brackets_amount' => 'double',
+        'cash_customer_fees_brackets_out_of_amount' => 'double'
     ];
 
     /**
@@ -82,7 +89,14 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees' => 'double',
         'chargebacks' => 'double',
         'other_transactions' => 'double',
-        'closing_balance' => 'double'
+        'closing_balance' => 'double',
+        'balance_repaid' => 'double',
+        'refunds_on_card_orders_brackets_amount' => 'double',
+        'refunds_on_card_orders_brackets_out_of_amount' => 'double',
+        'refunds_on_cash_orders_brackets_amount' => 'double',
+        'refunds_on_cash_orders_brackets_out_of_amount' => 'double',
+        'cash_customer_fees_brackets_amount' => 'double',
+        'cash_customer_fees_brackets_out_of_amount' => 'double'
     ];
 
     /**
@@ -120,7 +134,14 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees' => 'CashCustomerFees',
         'chargebacks' => 'Chargebacks',
         'other_transactions' => 'OtherTransactions',
-        'closing_balance' => 'ClosingBalance'
+        'closing_balance' => 'ClosingBalance',
+        'balance_repaid' => 'BalanceRepaid',
+        'refunds_on_card_orders_brackets_amount' => 'RefundsOnCardOrdersBracketsAmount',
+        'refunds_on_card_orders_brackets_out_of_amount' => 'RefundsOnCardOrdersBracketsOutOfAmount',
+        'refunds_on_cash_orders_brackets_amount' => 'RefundsOnCashOrdersBracketsAmount',
+        'refunds_on_cash_orders_brackets_out_of_amount' => 'RefundsOnCashOrdersBracketsOutOfAmount',
+        'cash_customer_fees_brackets_amount' => 'CashCustomerFeesBracketsAmount',
+        'cash_customer_fees_brackets_out_of_amount' => 'CashCustomerFeesBracketsOutOfAmount'
     ];
 
     /**
@@ -137,7 +158,14 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees' => 'setCashCustomerFees',
         'chargebacks' => 'setChargebacks',
         'other_transactions' => 'setOtherTransactions',
-        'closing_balance' => 'setClosingBalance'
+        'closing_balance' => 'setClosingBalance',
+        'balance_repaid' => 'setBalanceRepaid',
+        'refunds_on_card_orders_brackets_amount' => 'setRefundsOnCardOrdersBracketsAmount',
+        'refunds_on_card_orders_brackets_out_of_amount' => 'setRefundsOnCardOrdersBracketsOutOfAmount',
+        'refunds_on_cash_orders_brackets_amount' => 'setRefundsOnCashOrdersBracketsAmount',
+        'refunds_on_cash_orders_brackets_out_of_amount' => 'setRefundsOnCashOrdersBracketsOutOfAmount',
+        'cash_customer_fees_brackets_amount' => 'setCashCustomerFeesBracketsAmount',
+        'cash_customer_fees_brackets_out_of_amount' => 'setCashCustomerFeesBracketsOutOfAmount'
     ];
 
     /**
@@ -154,7 +182,14 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees' => 'getCashCustomerFees',
         'chargebacks' => 'getChargebacks',
         'other_transactions' => 'getOtherTransactions',
-        'closing_balance' => 'getClosingBalance'
+        'closing_balance' => 'getClosingBalance',
+        'balance_repaid' => 'getBalanceRepaid',
+        'refunds_on_card_orders_brackets_amount' => 'getRefundsOnCardOrdersBracketsAmount',
+        'refunds_on_card_orders_brackets_out_of_amount' => 'getRefundsOnCardOrdersBracketsOutOfAmount',
+        'refunds_on_cash_orders_brackets_amount' => 'getRefundsOnCashOrdersBracketsAmount',
+        'refunds_on_cash_orders_brackets_out_of_amount' => 'getRefundsOnCashOrdersBracketsOutOfAmount',
+        'cash_customer_fees_brackets_amount' => 'getCashCustomerFeesBracketsAmount',
+        'cash_customer_fees_brackets_out_of_amount' => 'getCashCustomerFeesBracketsOutOfAmount'
     ];
 
     /**
@@ -226,6 +261,13 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         $this->container['chargebacks'] = isset($data['chargebacks']) ? $data['chargebacks'] : null;
         $this->container['other_transactions'] = isset($data['other_transactions']) ? $data['other_transactions'] : null;
         $this->container['closing_balance'] = isset($data['closing_balance']) ? $data['closing_balance'] : null;
+        $this->container['balance_repaid'] = isset($data['balance_repaid']) ? $data['balance_repaid'] : null;
+        $this->container['refunds_on_card_orders_brackets_amount'] = isset($data['refunds_on_card_orders_brackets_amount']) ? $data['refunds_on_card_orders_brackets_amount'] : null;
+        $this->container['refunds_on_card_orders_brackets_out_of_amount'] = isset($data['refunds_on_card_orders_brackets_out_of_amount']) ? $data['refunds_on_card_orders_brackets_out_of_amount'] : null;
+        $this->container['refunds_on_cash_orders_brackets_amount'] = isset($data['refunds_on_cash_orders_brackets_amount']) ? $data['refunds_on_cash_orders_brackets_amount'] : null;
+        $this->container['refunds_on_cash_orders_brackets_out_of_amount'] = isset($data['refunds_on_cash_orders_brackets_out_of_amount']) ? $data['refunds_on_cash_orders_brackets_out_of_amount'] : null;
+        $this->container['cash_customer_fees_brackets_amount'] = isset($data['cash_customer_fees_brackets_amount']) ? $data['cash_customer_fees_brackets_amount'] : null;
+        $this->container['cash_customer_fees_brackets_out_of_amount'] = isset($data['cash_customer_fees_brackets_out_of_amount']) ? $data['cash_customer_fees_brackets_out_of_amount'] : null;
     }
 
     /**
@@ -464,6 +506,174 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
     public function setClosingBalance($closing_balance)
     {
         $this->container['closing_balance'] = $closing_balance;
+
+        return $this;
+    }
+
+    /**
+     * Gets balance_repaid
+     *
+     * @return double
+     */
+    public function getBalanceRepaid()
+    {
+        return $this->container['balance_repaid'];
+    }
+
+    /**
+     * Sets balance_repaid
+     *
+     * @param double $balance_repaid balance_repaid
+     *
+     * @return $this
+     */
+    public function setBalanceRepaid($balance_repaid)
+    {
+        $this->container['balance_repaid'] = $balance_repaid;
+
+        return $this;
+    }
+
+    /**
+     * Gets refunds_on_card_orders_brackets_amount
+     *
+     * @return double
+     */
+    public function getRefundsOnCardOrdersBracketsAmount()
+    {
+        return $this->container['refunds_on_card_orders_brackets_amount'];
+    }
+
+    /**
+     * Sets refunds_on_card_orders_brackets_amount
+     *
+     * @param double $refunds_on_card_orders_brackets_amount refunds_on_card_orders_brackets_amount
+     *
+     * @return $this
+     */
+    public function setRefundsOnCardOrdersBracketsAmount($refunds_on_card_orders_brackets_amount)
+    {
+        $this->container['refunds_on_card_orders_brackets_amount'] = $refunds_on_card_orders_brackets_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets refunds_on_card_orders_brackets_out_of_amount
+     *
+     * @return double
+     */
+    public function getRefundsOnCardOrdersBracketsOutOfAmount()
+    {
+        return $this->container['refunds_on_card_orders_brackets_out_of_amount'];
+    }
+
+    /**
+     * Sets refunds_on_card_orders_brackets_out_of_amount
+     *
+     * @param double $refunds_on_card_orders_brackets_out_of_amount refunds_on_card_orders_brackets_out_of_amount
+     *
+     * @return $this
+     */
+    public function setRefundsOnCardOrdersBracketsOutOfAmount($refunds_on_card_orders_brackets_out_of_amount)
+    {
+        $this->container['refunds_on_card_orders_brackets_out_of_amount'] = $refunds_on_card_orders_brackets_out_of_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets refunds_on_cash_orders_brackets_amount
+     *
+     * @return double
+     */
+    public function getRefundsOnCashOrdersBracketsAmount()
+    {
+        return $this->container['refunds_on_cash_orders_brackets_amount'];
+    }
+
+    /**
+     * Sets refunds_on_cash_orders_brackets_amount
+     *
+     * @param double $refunds_on_cash_orders_brackets_amount refunds_on_cash_orders_brackets_amount
+     *
+     * @return $this
+     */
+    public function setRefundsOnCashOrdersBracketsAmount($refunds_on_cash_orders_brackets_amount)
+    {
+        $this->container['refunds_on_cash_orders_brackets_amount'] = $refunds_on_cash_orders_brackets_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets refunds_on_cash_orders_brackets_out_of_amount
+     *
+     * @return double
+     */
+    public function getRefundsOnCashOrdersBracketsOutOfAmount()
+    {
+        return $this->container['refunds_on_cash_orders_brackets_out_of_amount'];
+    }
+
+    /**
+     * Sets refunds_on_cash_orders_brackets_out_of_amount
+     *
+     * @param double $refunds_on_cash_orders_brackets_out_of_amount refunds_on_cash_orders_brackets_out_of_amount
+     *
+     * @return $this
+     */
+    public function setRefundsOnCashOrdersBracketsOutOfAmount($refunds_on_cash_orders_brackets_out_of_amount)
+    {
+        $this->container['refunds_on_cash_orders_brackets_out_of_amount'] = $refunds_on_cash_orders_brackets_out_of_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets cash_customer_fees_brackets_amount
+     *
+     * @return double
+     */
+    public function getCashCustomerFeesBracketsAmount()
+    {
+        return $this->container['cash_customer_fees_brackets_amount'];
+    }
+
+    /**
+     * Sets cash_customer_fees_brackets_amount
+     *
+     * @param double $cash_customer_fees_brackets_amount cash_customer_fees_brackets_amount
+     *
+     * @return $this
+     */
+    public function setCashCustomerFeesBracketsAmount($cash_customer_fees_brackets_amount)
+    {
+        $this->container['cash_customer_fees_brackets_amount'] = $cash_customer_fees_brackets_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets cash_customer_fees_brackets_out_of_amount
+     *
+     * @return double
+     */
+    public function getCashCustomerFeesBracketsOutOfAmount()
+    {
+        return $this->container['cash_customer_fees_brackets_out_of_amount'];
+    }
+
+    /**
+     * Sets cash_customer_fees_brackets_out_of_amount
+     *
+     * @param double $cash_customer_fees_brackets_out_of_amount cash_customer_fees_brackets_out_of_amount
+     *
+     * @return $this
+     */
+    public function setCashCustomerFeesBracketsOutOfAmount($cash_customer_fees_brackets_out_of_amount)
+    {
+        $this->container['cash_customer_fees_brackets_out_of_amount'] = $cash_customer_fees_brackets_out_of_amount;
 
         return $this;
     }
