@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptionsForApp**
-> \Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary getSubscriptionsForApp($app_id, $exclude_not_owned_subscriptions, $store_id)
+> \Flipdish\\Client\Models\RestApiArrayResultSubscriptionSummary getSubscriptionsForApp($app_id, $exclude_not_owned_subscriptions, $store_id, $exclude_cancelled_subscriptions)
 
 
 
@@ -84,9 +84,10 @@ $apiInstance = new Flipdish\\Client\Api\SubscriptionsApi(
 $app_id = "app_id_example"; // string | 
 $exclude_not_owned_subscriptions = true; // bool | 
 $store_id = array(56); // int[] | 
+$exclude_cancelled_subscriptions = true; // bool | 
 
 try {
-    $result = $apiInstance->getSubscriptionsForApp($app_id, $exclude_not_owned_subscriptions, $store_id);
+    $result = $apiInstance->getSubscriptionsForApp($app_id, $exclude_not_owned_subscriptions, $store_id, $exclude_cancelled_subscriptions);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SubscriptionsApi->getSubscriptionsForApp: ', $e->getMessage(), PHP_EOL;
@@ -101,6 +102,7 @@ Name | Type | Description  | Notes
  **app_id** | **string**|  |
  **exclude_not_owned_subscriptions** | **bool**|  | [optional]
  **store_id** | [**int[]**](../Model/int.md)|  | [optional]
+ **exclude_cancelled_subscriptions** | **bool**|  | [optional]
 
 ### Return type
 
