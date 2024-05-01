@@ -58,6 +58,7 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'revenue' => 'double',
+        'revenue_of_which_cash' => 'double',
         'revenue_for_fee_calculations' => 'double',
         'flipdish_fees' => 'double',
         'adjustments' => 'double',
@@ -72,6 +73,7 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'revenue' => 'double',
+        'revenue_of_which_cash' => 'double',
         'revenue_for_fee_calculations' => 'double',
         'flipdish_fees' => 'double',
         'adjustments' => 'double',
@@ -107,6 +109,7 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'revenue' => 'Revenue',
+        'revenue_of_which_cash' => 'RevenueOfWhichCash',
         'revenue_for_fee_calculations' => 'RevenueForFeeCalculations',
         'flipdish_fees' => 'FlipdishFees',
         'adjustments' => 'Adjustments',
@@ -121,6 +124,7 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'revenue' => 'setRevenue',
+        'revenue_of_which_cash' => 'setRevenueOfWhichCash',
         'revenue_for_fee_calculations' => 'setRevenueForFeeCalculations',
         'flipdish_fees' => 'setFlipdishFees',
         'adjustments' => 'setAdjustments',
@@ -135,6 +139,7 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'revenue' => 'getRevenue',
+        'revenue_of_which_cash' => 'getRevenueOfWhichCash',
         'revenue_for_fee_calculations' => 'getRevenueForFeeCalculations',
         'flipdish_fees' => 'getFlipdishFees',
         'adjustments' => 'getAdjustments',
@@ -203,6 +208,7 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['revenue'] = isset($data['revenue']) ? $data['revenue'] : null;
+        $this->container['revenue_of_which_cash'] = isset($data['revenue_of_which_cash']) ? $data['revenue_of_which_cash'] : null;
         $this->container['revenue_for_fee_calculations'] = isset($data['revenue_for_fee_calculations']) ? $data['revenue_for_fee_calculations'] : null;
         $this->container['flipdish_fees'] = isset($data['flipdish_fees']) ? $data['flipdish_fees'] : null;
         $this->container['adjustments'] = isset($data['adjustments']) ? $data['adjustments'] : null;
@@ -254,6 +260,30 @@ class PayoutReport3DetailsSummary implements ModelInterface, ArrayAccess
     public function setRevenue($revenue)
     {
         $this->container['revenue'] = $revenue;
+
+        return $this;
+    }
+
+    /**
+     * Gets revenue_of_which_cash
+     *
+     * @return double
+     */
+    public function getRevenueOfWhichCash()
+    {
+        return $this->container['revenue_of_which_cash'];
+    }
+
+    /**
+     * Sets revenue_of_which_cash
+     *
+     * @param double $revenue_of_which_cash revenue_of_which_cash
+     *
+     * @return $this
+     */
+    public function setRevenueOfWhichCash($revenue_of_which_cash)
+    {
+        $this->container['revenue_of_which_cash'] = $revenue_of_which_cash;
 
         return $this;
     }

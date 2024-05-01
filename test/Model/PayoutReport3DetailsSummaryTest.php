@@ -84,6 +84,13 @@ class PayoutReport3DetailsSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "revenue_of_which_cash"
+     */
+    public function testPropertyRevenueOfWhichCash()
+    {
+    }
+
+    /**
      * Test attribute "revenue_for_fee_calculations"
      */
     public function testPropertyRevenueForFeeCalculations()
