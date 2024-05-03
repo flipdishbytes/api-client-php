@@ -58,7 +58,8 @@ class KioskSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'hide_logo_from_front_page' => 'bool'
+        'hide_logo_from_front_page' => 'bool',
+        'two_column_menu_layout' => 'bool'
     ];
 
     /**
@@ -67,7 +68,8 @@ class KioskSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'hide_logo_from_front_page' => null
+        'hide_logo_from_front_page' => null,
+        'two_column_menu_layout' => null
     ];
 
     /**
@@ -97,7 +99,8 @@ class KioskSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'hide_logo_from_front_page' => 'HideLogoFromFrontPage'
+        'hide_logo_from_front_page' => 'HideLogoFromFrontPage',
+        'two_column_menu_layout' => 'TwoColumnMenuLayout'
     ];
 
     /**
@@ -106,7 +109,8 @@ class KioskSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'hide_logo_from_front_page' => 'setHideLogoFromFrontPage'
+        'hide_logo_from_front_page' => 'setHideLogoFromFrontPage',
+        'two_column_menu_layout' => 'setTwoColumnMenuLayout'
     ];
 
     /**
@@ -115,7 +119,8 @@ class KioskSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'hide_logo_from_front_page' => 'getHideLogoFromFrontPage'
+        'hide_logo_from_front_page' => 'getHideLogoFromFrontPage',
+        'two_column_menu_layout' => 'getTwoColumnMenuLayout'
     ];
 
     /**
@@ -179,6 +184,7 @@ class KioskSettings implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['hide_logo_from_front_page'] = isset($data['hide_logo_from_front_page']) ? $data['hide_logo_from_front_page'] : null;
+        $this->container['two_column_menu_layout'] = isset($data['two_column_menu_layout']) ? $data['two_column_menu_layout'] : null;
     }
 
     /**
@@ -225,6 +231,30 @@ class KioskSettings implements ModelInterface, ArrayAccess
     public function setHideLogoFromFrontPage($hide_logo_from_front_page)
     {
         $this->container['hide_logo_from_front_page'] = $hide_logo_from_front_page;
+
+        return $this;
+    }
+
+    /**
+     * Gets two_column_menu_layout
+     *
+     * @return bool
+     */
+    public function getTwoColumnMenuLayout()
+    {
+        return $this->container['two_column_menu_layout'];
+    }
+
+    /**
+     * Sets two_column_menu_layout
+     *
+     * @param bool $two_column_menu_layout 2 Column Menu Layout
+     *
+     * @return $this
+     */
+    public function setTwoColumnMenuLayout($two_column_menu_layout)
+    {
+        $this->container['two_column_menu_layout'] = $two_column_menu_layout;
 
         return $this;
     }

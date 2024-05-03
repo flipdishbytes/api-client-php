@@ -82,4 +82,11 @@ class KioskSettingsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyHideLogoFromFrontPage()
     {
     }
+
+    /**
+     * Test attribute "two_column_menu_layout"
+     */
+    public function testPropertyTwoColumnMenuLayout()
+    {
+    }
 }
