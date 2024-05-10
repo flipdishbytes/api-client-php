@@ -84,13 +84,6 @@ class PayoutReport3PayoutOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "payout_id"
-     */
-    public function testPropertyPayoutId()
-    {
-    }
-
-    /**
      * Test attribute "order_date"
      */
     public function testPropertyOrderDate()
@@ -98,16 +91,23 @@ class PayoutReport3PayoutOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "order_type"
+     * Test attribute "store_id"
      */
-    public function testPropertyOrderType()
+    public function testPropertyStoreId()
     {
     }
 
     /**
-     * Test attribute "order_currency"
+     * Test attribute "store_name"
      */
-    public function testPropertyOrderCurrency()
+    public function testPropertyStoreName()
+    {
+    }
+
+    /**
+     * Test attribute "order_type"
+     */
+    public function testPropertyOrderType()
     {
     }
 
@@ -147,16 +147,9 @@ class PayoutReport3PayoutOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "store_id"
+     * Test attribute "order_currency"
      */
-    public function testPropertyStoreId()
-    {
-    }
-
-    /**
-     * Test attribute "store_name"
-     */
-    public function testPropertyStoreName()
+    public function testPropertyOrderCurrency()
     {
     }
 

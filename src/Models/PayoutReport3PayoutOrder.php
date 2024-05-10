@@ -58,17 +58,16 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'order_id' => 'int',
-        'payout_id' => 'int',
         'order_date' => '\DateTime',
+        'store_id' => 'int',
+        'store_name' => 'string',
         'order_type' => 'string',
-        'order_currency' => 'string',
         'sales' => 'double',
         'sales_tax' => 'double',
         'delivery_charges' => 'double',
         'tips' => 'double',
         'voucher' => 'double',
-        'store_id' => 'int',
-        'store_name' => 'string',
+        'order_currency' => 'string',
         'refund_chargeback_type' => 'string'
     ];
 
@@ -79,17 +78,16 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'order_id' => 'int32',
-        'payout_id' => 'int32',
         'order_date' => 'date-time',
+        'store_id' => 'int32',
+        'store_name' => null,
         'order_type' => null,
-        'order_currency' => null,
         'sales' => 'double',
         'sales_tax' => 'double',
         'delivery_charges' => 'double',
         'tips' => 'double',
         'voucher' => 'double',
-        'store_id' => 'int32',
-        'store_name' => null,
+        'order_currency' => null,
         'refund_chargeback_type' => null
     ];
 
@@ -121,17 +119,16 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'order_id' => 'OrderId',
-        'payout_id' => 'PayoutId',
         'order_date' => 'OrderDate',
+        'store_id' => 'StoreId',
+        'store_name' => 'StoreName',
         'order_type' => 'OrderType',
-        'order_currency' => 'OrderCurrency',
         'sales' => 'Sales',
         'sales_tax' => 'SalesTax',
         'delivery_charges' => 'DeliveryCharges',
         'tips' => 'Tips',
         'voucher' => 'Voucher',
-        'store_id' => 'StoreId',
-        'store_name' => 'StoreName',
+        'order_currency' => 'OrderCurrency',
         'refund_chargeback_type' => 'RefundChargebackType'
     ];
 
@@ -142,17 +139,16 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'order_id' => 'setOrderId',
-        'payout_id' => 'setPayoutId',
         'order_date' => 'setOrderDate',
+        'store_id' => 'setStoreId',
+        'store_name' => 'setStoreName',
         'order_type' => 'setOrderType',
-        'order_currency' => 'setOrderCurrency',
         'sales' => 'setSales',
         'sales_tax' => 'setSalesTax',
         'delivery_charges' => 'setDeliveryCharges',
         'tips' => 'setTips',
         'voucher' => 'setVoucher',
-        'store_id' => 'setStoreId',
-        'store_name' => 'setStoreName',
+        'order_currency' => 'setOrderCurrency',
         'refund_chargeback_type' => 'setRefundChargebackType'
     ];
 
@@ -163,17 +159,16 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'order_id' => 'getOrderId',
-        'payout_id' => 'getPayoutId',
         'order_date' => 'getOrderDate',
+        'store_id' => 'getStoreId',
+        'store_name' => 'getStoreName',
         'order_type' => 'getOrderType',
-        'order_currency' => 'getOrderCurrency',
         'sales' => 'getSales',
         'sales_tax' => 'getSalesTax',
         'delivery_charges' => 'getDeliveryCharges',
         'tips' => 'getTips',
         'voucher' => 'getVoucher',
-        'store_id' => 'getStoreId',
-        'store_name' => 'getStoreName',
+        'order_currency' => 'getOrderCurrency',
         'refund_chargeback_type' => 'getRefundChargebackType'
     ];
 
@@ -505,17 +500,16 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
-        $this->container['payout_id'] = isset($data['payout_id']) ? $data['payout_id'] : null;
         $this->container['order_date'] = isset($data['order_date']) ? $data['order_date'] : null;
+        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
+        $this->container['store_name'] = isset($data['store_name']) ? $data['store_name'] : null;
         $this->container['order_type'] = isset($data['order_type']) ? $data['order_type'] : null;
-        $this->container['order_currency'] = isset($data['order_currency']) ? $data['order_currency'] : null;
         $this->container['sales'] = isset($data['sales']) ? $data['sales'] : null;
         $this->container['sales_tax'] = isset($data['sales_tax']) ? $data['sales_tax'] : null;
         $this->container['delivery_charges'] = isset($data['delivery_charges']) ? $data['delivery_charges'] : null;
         $this->container['tips'] = isset($data['tips']) ? $data['tips'] : null;
         $this->container['voucher'] = isset($data['voucher']) ? $data['voucher'] : null;
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
-        $this->container['store_name'] = isset($data['store_name']) ? $data['store_name'] : null;
+        $this->container['order_currency'] = isset($data['order_currency']) ? $data['order_currency'] : null;
         $this->container['refund_chargeback_type'] = isset($data['refund_chargeback_type']) ? $data['refund_chargeback_type'] : null;
     }
 
@@ -592,30 +586,6 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets payout_id
-     *
-     * @return int
-     */
-    public function getPayoutId()
-    {
-        return $this->container['payout_id'];
-    }
-
-    /**
-     * Sets payout_id
-     *
-     * @param int $payout_id payout_id
-     *
-     * @return $this
-     */
-    public function setPayoutId($payout_id)
-    {
-        $this->container['payout_id'] = $payout_id;
-
-        return $this;
-    }
-
-    /**
      * Gets order_date
      *
      * @return \DateTime
@@ -635,6 +605,54 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
     public function setOrderDate($order_date)
     {
         $this->container['order_date'] = $order_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets store_id
+     *
+     * @return int
+     */
+    public function getStoreId()
+    {
+        return $this->container['store_id'];
+    }
+
+    /**
+     * Sets store_id
+     *
+     * @param int $store_id store_id
+     *
+     * @return $this
+     */
+    public function setStoreId($store_id)
+    {
+        $this->container['store_id'] = $store_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets store_name
+     *
+     * @return string
+     */
+    public function getStoreName()
+    {
+        return $this->container['store_name'];
+    }
+
+    /**
+     * Sets store_name
+     *
+     * @param string $store_name store_name
+     *
+     * @return $this
+     */
+    public function setStoreName($store_name)
+    {
+        $this->container['store_name'] = $store_name;
 
         return $this;
     }
@@ -668,39 +686,6 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
             );
         }
         $this->container['order_type'] = $order_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets order_currency
-     *
-     * @return string
-     */
-    public function getOrderCurrency()
-    {
-        return $this->container['order_currency'];
-    }
-
-    /**
-     * Sets order_currency
-     *
-     * @param string $order_currency order_currency
-     *
-     * @return $this
-     */
-    public function setOrderCurrency($order_currency)
-    {
-        $allowedValues = $this->getOrderCurrencyAllowableValues();
-        if (!is_null($order_currency) && !in_array($order_currency, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'order_currency', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['order_currency'] = $order_currency;
 
         return $this;
     }
@@ -826,49 +811,34 @@ class PayoutReport3PayoutOrder implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets store_id
-     *
-     * @return int
-     */
-    public function getStoreId()
-    {
-        return $this->container['store_id'];
-    }
-
-    /**
-     * Sets store_id
-     *
-     * @param int $store_id store_id
-     *
-     * @return $this
-     */
-    public function setStoreId($store_id)
-    {
-        $this->container['store_id'] = $store_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets store_name
+     * Gets order_currency
      *
      * @return string
      */
-    public function getStoreName()
+    public function getOrderCurrency()
     {
-        return $this->container['store_name'];
+        return $this->container['order_currency'];
     }
 
     /**
-     * Sets store_name
+     * Sets order_currency
      *
-     * @param string $store_name store_name
+     * @param string $order_currency order_currency
      *
      * @return $this
      */
-    public function setStoreName($store_name)
+    public function setOrderCurrency($order_currency)
     {
-        $this->container['store_name'] = $store_name;
+        $allowedValues = $this->getOrderCurrencyAllowableValues();
+        if (!is_null($order_currency) && !in_array($order_currency, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'order_currency', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['order_currency'] = $order_currency;
 
         return $this;
     }
