@@ -187,4 +187,11 @@ class PayoutReport3DetailsAdjustmentsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCashCustomerFeesBracketsOutOfAmount()
     {
     }
+
+    /**
+     * Test attribute "balance_change"
+     */
+    public function testPropertyBalanceChange()
+    {
+    }
 }

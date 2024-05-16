@@ -72,7 +72,8 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'refunds_on_cash_orders_brackets_amount' => 'double',
         'refunds_on_cash_orders_brackets_out_of_amount' => 'double',
         'cash_customer_fees_brackets_amount' => 'double',
-        'cash_customer_fees_brackets_out_of_amount' => 'double'
+        'cash_customer_fees_brackets_out_of_amount' => 'double',
+        'balance_change' => 'double'
     ];
 
     /**
@@ -96,7 +97,8 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'refunds_on_cash_orders_brackets_amount' => 'double',
         'refunds_on_cash_orders_brackets_out_of_amount' => 'double',
         'cash_customer_fees_brackets_amount' => 'double',
-        'cash_customer_fees_brackets_out_of_amount' => 'double'
+        'cash_customer_fees_brackets_out_of_amount' => 'double',
+        'balance_change' => 'double'
     ];
 
     /**
@@ -141,7 +143,8 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'refunds_on_cash_orders_brackets_amount' => 'RefundsOnCashOrdersBracketsAmount',
         'refunds_on_cash_orders_brackets_out_of_amount' => 'RefundsOnCashOrdersBracketsOutOfAmount',
         'cash_customer_fees_brackets_amount' => 'CashCustomerFeesBracketsAmount',
-        'cash_customer_fees_brackets_out_of_amount' => 'CashCustomerFeesBracketsOutOfAmount'
+        'cash_customer_fees_brackets_out_of_amount' => 'CashCustomerFeesBracketsOutOfAmount',
+        'balance_change' => 'BalanceChange'
     ];
 
     /**
@@ -165,7 +168,8 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'refunds_on_cash_orders_brackets_amount' => 'setRefundsOnCashOrdersBracketsAmount',
         'refunds_on_cash_orders_brackets_out_of_amount' => 'setRefundsOnCashOrdersBracketsOutOfAmount',
         'cash_customer_fees_brackets_amount' => 'setCashCustomerFeesBracketsAmount',
-        'cash_customer_fees_brackets_out_of_amount' => 'setCashCustomerFeesBracketsOutOfAmount'
+        'cash_customer_fees_brackets_out_of_amount' => 'setCashCustomerFeesBracketsOutOfAmount',
+        'balance_change' => 'setBalanceChange'
     ];
 
     /**
@@ -189,7 +193,8 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'refunds_on_cash_orders_brackets_amount' => 'getRefundsOnCashOrdersBracketsAmount',
         'refunds_on_cash_orders_brackets_out_of_amount' => 'getRefundsOnCashOrdersBracketsOutOfAmount',
         'cash_customer_fees_brackets_amount' => 'getCashCustomerFeesBracketsAmount',
-        'cash_customer_fees_brackets_out_of_amount' => 'getCashCustomerFeesBracketsOutOfAmount'
+        'cash_customer_fees_brackets_out_of_amount' => 'getCashCustomerFeesBracketsOutOfAmount',
+        'balance_change' => 'getBalanceChange'
     ];
 
     /**
@@ -268,6 +273,7 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         $this->container['refunds_on_cash_orders_brackets_out_of_amount'] = isset($data['refunds_on_cash_orders_brackets_out_of_amount']) ? $data['refunds_on_cash_orders_brackets_out_of_amount'] : null;
         $this->container['cash_customer_fees_brackets_amount'] = isset($data['cash_customer_fees_brackets_amount']) ? $data['cash_customer_fees_brackets_amount'] : null;
         $this->container['cash_customer_fees_brackets_out_of_amount'] = isset($data['cash_customer_fees_brackets_out_of_amount']) ? $data['cash_customer_fees_brackets_out_of_amount'] : null;
+        $this->container['balance_change'] = isset($data['balance_change']) ? $data['balance_change'] : null;
     }
 
     /**
@@ -674,6 +680,30 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
     public function setCashCustomerFeesBracketsOutOfAmount($cash_customer_fees_brackets_out_of_amount)
     {
         $this->container['cash_customer_fees_brackets_out_of_amount'] = $cash_customer_fees_brackets_out_of_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets balance_change
+     *
+     * @return double
+     */
+    public function getBalanceChange()
+    {
+        return $this->container['balance_change'];
+    }
+
+    /**
+     * Sets balance_change
+     *
+     * @param double $balance_change balance_change
+     *
+     * @return $this
+     */
+    public function setBalanceChange($balance_change)
+    {
+        $this->container['balance_change'] = $balance_change;
 
         return $this;
     }
