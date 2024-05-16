@@ -172,6 +172,7 @@ class SignupStep implements ModelInterface, ArrayAccess
     const ACTION_QUESTION = 'Question';
     const ACTION_STORE_LOCATION = 'StoreLocation';
     const ACTION_PAYMENT_SUBSCRIPTION = 'PaymentSubscription';
+    const ACTION_STORE_NAME = 'StoreName';
     
 
     
@@ -186,6 +187,7 @@ class SignupStep implements ModelInterface, ArrayAccess
             self::ACTION_QUESTION,
             self::ACTION_STORE_LOCATION,
             self::ACTION_PAYMENT_SUBSCRIPTION,
+            self::ACTION_STORE_NAME,
         ];
     }
     
