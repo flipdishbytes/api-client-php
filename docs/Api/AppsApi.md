@@ -4,6 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**createApp**](AppsApi.md#createApp) | **POST** /api/v1.0/apps | 
 [**getApp**](AppsApi.md#getApp) | **GET** /api/v1.0/apps/{appId} | 
 [**getAppHostnameStatus**](AppsApi.md#getAppHostnameStatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
 [**getApps**](AppsApi.md#getApps) | **GET** /api/v1.0/apps | 
@@ -23,6 +24,57 @@ Method | HTTP request | Description
 [**toggleNextGenWeb**](AppsApi.md#toggleNextGenWeb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
 [**uploadAppLogo**](AppsApi.md#uploadAppLogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 
+
+# **createApp**
+> \Flipdish\\Client\Models\RestApiStringResult createApp($parameters)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\AppsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$parameters = new \Flipdish\\Client\Models\CreateAppParameters(); // \Flipdish\\Client\Models\CreateAppParameters | 
+
+try {
+    $result = $apiInstance->createApp($parameters);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AppsApi->createApp: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **parameters** | [**\Flipdish\\Client\Models\CreateAppParameters**](../Model/CreateAppParameters.md)|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getApp**
 > \Flipdish\\Client\Models\RestApiResultApp getApp($app_id)

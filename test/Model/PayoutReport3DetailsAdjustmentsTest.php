@@ -194,4 +194,18 @@ class PayoutReport3DetailsAdjustmentsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyBalanceChange()
     {
     }
+
+    /**
+     * Test attribute "previous_payout_id"
+     */
+    public function testPropertyPreviousPayoutId()
+    {
+    }
+
+    /**
+     * Test attribute "next_payout_id"
+     */
+    public function testPropertyNextPayoutId()
+    {
+    }
 }

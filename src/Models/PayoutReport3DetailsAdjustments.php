@@ -73,7 +73,9 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'refunds_on_cash_orders_brackets_out_of_amount' => 'double',
         'cash_customer_fees_brackets_amount' => 'double',
         'cash_customer_fees_brackets_out_of_amount' => 'double',
-        'balance_change' => 'double'
+        'balance_change' => 'double',
+        'previous_payout_id' => 'int',
+        'next_payout_id' => 'int'
     ];
 
     /**
@@ -98,7 +100,9 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'refunds_on_cash_orders_brackets_out_of_amount' => 'double',
         'cash_customer_fees_brackets_amount' => 'double',
         'cash_customer_fees_brackets_out_of_amount' => 'double',
-        'balance_change' => 'double'
+        'balance_change' => 'double',
+        'previous_payout_id' => 'int32',
+        'next_payout_id' => 'int32'
     ];
 
     /**
@@ -144,7 +148,9 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'refunds_on_cash_orders_brackets_out_of_amount' => 'RefundsOnCashOrdersBracketsOutOfAmount',
         'cash_customer_fees_brackets_amount' => 'CashCustomerFeesBracketsAmount',
         'cash_customer_fees_brackets_out_of_amount' => 'CashCustomerFeesBracketsOutOfAmount',
-        'balance_change' => 'BalanceChange'
+        'balance_change' => 'BalanceChange',
+        'previous_payout_id' => 'PreviousPayoutId',
+        'next_payout_id' => 'NextPayoutId'
     ];
 
     /**
@@ -169,7 +175,9 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'refunds_on_cash_orders_brackets_out_of_amount' => 'setRefundsOnCashOrdersBracketsOutOfAmount',
         'cash_customer_fees_brackets_amount' => 'setCashCustomerFeesBracketsAmount',
         'cash_customer_fees_brackets_out_of_amount' => 'setCashCustomerFeesBracketsOutOfAmount',
-        'balance_change' => 'setBalanceChange'
+        'balance_change' => 'setBalanceChange',
+        'previous_payout_id' => 'setPreviousPayoutId',
+        'next_payout_id' => 'setNextPayoutId'
     ];
 
     /**
@@ -194,7 +202,9 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'refunds_on_cash_orders_brackets_out_of_amount' => 'getRefundsOnCashOrdersBracketsOutOfAmount',
         'cash_customer_fees_brackets_amount' => 'getCashCustomerFeesBracketsAmount',
         'cash_customer_fees_brackets_out_of_amount' => 'getCashCustomerFeesBracketsOutOfAmount',
-        'balance_change' => 'getBalanceChange'
+        'balance_change' => 'getBalanceChange',
+        'previous_payout_id' => 'getPreviousPayoutId',
+        'next_payout_id' => 'getNextPayoutId'
     ];
 
     /**
@@ -274,6 +284,8 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         $this->container['cash_customer_fees_brackets_amount'] = isset($data['cash_customer_fees_brackets_amount']) ? $data['cash_customer_fees_brackets_amount'] : null;
         $this->container['cash_customer_fees_brackets_out_of_amount'] = isset($data['cash_customer_fees_brackets_out_of_amount']) ? $data['cash_customer_fees_brackets_out_of_amount'] : null;
         $this->container['balance_change'] = isset($data['balance_change']) ? $data['balance_change'] : null;
+        $this->container['previous_payout_id'] = isset($data['previous_payout_id']) ? $data['previous_payout_id'] : null;
+        $this->container['next_payout_id'] = isset($data['next_payout_id']) ? $data['next_payout_id'] : null;
     }
 
     /**
@@ -704,6 +716,54 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
     public function setBalanceChange($balance_change)
     {
         $this->container['balance_change'] = $balance_change;
+
+        return $this;
+    }
+
+    /**
+     * Gets previous_payout_id
+     *
+     * @return int
+     */
+    public function getPreviousPayoutId()
+    {
+        return $this->container['previous_payout_id'];
+    }
+
+    /**
+     * Sets previous_payout_id
+     *
+     * @param int $previous_payout_id previous_payout_id
+     *
+     * @return $this
+     */
+    public function setPreviousPayoutId($previous_payout_id)
+    {
+        $this->container['previous_payout_id'] = $previous_payout_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets next_payout_id
+     *
+     * @return int
+     */
+    public function getNextPayoutId()
+    {
+        return $this->container['next_payout_id'];
+    }
+
+    /**
+     * Sets next_payout_id
+     *
+     * @param int $next_payout_id next_payout_id
+     *
+     * @return $this
+     */
+    public function setNextPayoutId($next_payout_id)
+    {
+        $this->container['next_payout_id'] = $next_payout_id;
 
         return $this;
     }
