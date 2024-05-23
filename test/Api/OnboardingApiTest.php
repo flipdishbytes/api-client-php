@@ -82,6 +82,16 @@ class OnboardingApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for onboardingGetOnboardingConfigs
+     *
+     * .
+     *
+     */
+    public function testOnboardingGetOnboardingConfigs()
+    {
+    }
+
+    /**
      * Test case for onboardingGetOnboardingItems
      *
      * .

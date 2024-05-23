@@ -59,7 +59,8 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'is_enabled' => 'bool',
-        'is_welcome_screen_enabled' => 'bool'
+        'is_welcome_screen_enabled' => 'bool',
+        'config_type' => 'string'
     ];
 
     /**
@@ -69,7 +70,8 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'is_enabled' => null,
-        'is_welcome_screen_enabled' => null
+        'is_welcome_screen_enabled' => null,
+        'config_type' => null
     ];
 
     /**
@@ -100,7 +102,8 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'is_enabled' => 'IsEnabled',
-        'is_welcome_screen_enabled' => 'IsWelcomeScreenEnabled'
+        'is_welcome_screen_enabled' => 'IsWelcomeScreenEnabled',
+        'config_type' => 'ConfigType'
     ];
 
     /**
@@ -110,7 +113,8 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'is_enabled' => 'setIsEnabled',
-        'is_welcome_screen_enabled' => 'setIsWelcomeScreenEnabled'
+        'is_welcome_screen_enabled' => 'setIsWelcomeScreenEnabled',
+        'config_type' => 'setConfigType'
     ];
 
     /**
@@ -120,7 +124,8 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'is_enabled' => 'getIsEnabled',
-        'is_welcome_screen_enabled' => 'getIsWelcomeScreenEnabled'
+        'is_welcome_screen_enabled' => 'getIsWelcomeScreenEnabled',
+        'config_type' => 'getConfigType'
     ];
 
     /**
@@ -164,8 +169,23 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const CONFIG_TYPE_TUTORIAL = 'Tutorial';
+    const CONFIG_TYPE_ONBOARDING_WIZARD = 'OnboardingWizard';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getConfigTypeAllowableValues()
+    {
+        return [
+            self::CONFIG_TYPE_TUTORIAL,
+            self::CONFIG_TYPE_ONBOARDING_WIZARD,
+        ];
+    }
     
 
     /**
@@ -185,6 +205,7 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
     {
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
         $this->container['is_welcome_screen_enabled'] = isset($data['is_welcome_screen_enabled']) ? $data['is_welcome_screen_enabled'] : null;
+        $this->container['config_type'] = isset($data['config_type']) ? $data['config_type'] : null;
     }
 
     /**
@@ -195,6 +216,14 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getConfigTypeAllowableValues();
+        if (!is_null($this->container['config_type']) && !in_array($this->container['config_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'config_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -255,6 +284,39 @@ class OnboardingConfigUpdate implements ModelInterface, ArrayAccess
     public function setIsWelcomeScreenEnabled($is_welcome_screen_enabled)
     {
         $this->container['is_welcome_screen_enabled'] = $is_welcome_screen_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets config_type
+     *
+     * @return string
+     */
+    public function getConfigType()
+    {
+        return $this->container['config_type'];
+    }
+
+    /**
+     * Sets config_type
+     *
+     * @param string $config_type Onboarding config type
+     *
+     * @return $this
+     */
+    public function setConfigType($config_type)
+    {
+        $allowedValues = $this->getConfigTypeAllowableValues();
+        if (!is_null($config_type) && !in_array($config_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'config_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['config_type'] = $config_type;
 
         return $this;
     }
