@@ -452,6 +452,7 @@ Class | Method | HTTP request | Description
 *OnboardingApi* | [**onboardingGetOnboardingConfigs**](docs/Api/OnboardingApi.md#onboardinggetonboardingconfigs) | **GET** /api/v1.0/clients/{appId}/onboarding/configs | 
 *OnboardingApi* | [**onboardingGetOnboardingItems**](docs/Api/OnboardingApi.md#onboardinggetonboardingitems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
 *OnboardingApi* | [**onboardingUpdateOnboardingConfig**](docs/Api/OnboardingApi.md#onboardingupdateonboardingconfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
+*OnboardingApi* | [**onboardingUpdateOnboardingConfigById**](docs/Api/OnboardingApi.md#onboardingupdateonboardingconfigbyid) | **POST** /api/v1.0/clients/{appId}/onboarding/config/{configId} | 
 *OnboardingApi* | [**onboardingUpdateOnboardingItem**](docs/Api/OnboardingApi.md#onboardingupdateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
 *OrderBatchesApi* | [**getAllOrderBatches**](docs/Api/OrderBatchesApi.md#getallorderbatches) | **GET** /api/v1.0/{appId}/order-batches | 
 *OrderBatchesApi* | [**getOrderBatch**](docs/Api/OrderBatchesApi.md#getorderbatch) | **GET** /api/v1.0/{appId}/order-batches/{orderBatchId} | 
@@ -587,7 +588,9 @@ Class | Method | HTTP request | Description
 *VouchersApi* | [**createVoucher**](docs/Api/VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | 
 *VouchersApi* | [**getVoucherById**](docs/Api/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | 
 *VouchersApi* | [**getVoucherStatsById**](docs/Api/VouchersApi.md#getvoucherstatsbyid) | **GET** /api/v1.0/vouchers/stats/{voucherId} | 
+*VouchersApi* | [**getVoucherValidityPeriods**](docs/Api/VouchersApi.md#getvouchervalidityperiods) | **GET** /api/v1.0/{appId}/vouchers/{voucherId}/validity-periods | 
 *VouchersApi* | [**getVouchers**](docs/Api/VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | 
+*VouchersApi* | [**setVoucherValidityPeriodsSimplified**](docs/Api/VouchersApi.md#setvouchervalidityperiodssimplified) | **POST** /api/v1.0/{appId}/vouchers/{voucherId}/validity-periods-simplified | 
 *VouchersApi* | [**updateVoucher**](docs/Api/VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | 
 *VouchersApi* | [**updateVoucherUsage**](docs/Api/VouchersApi.md#updatevoucherusage) | **POST** /api/v1.0/{appId}/vouchers/{voucherId}/usage | 
 *WebhooksApi* | [**createWebhookSubscription**](docs/Api/WebhooksApi.md#createwebhooksubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | 
@@ -1276,6 +1279,7 @@ Class | Method | HTTP request | Description
  - [ServiceCharge](docs/Model/ServiceCharge.md)
  - [SetOrderBatchingConfiguration](docs/Model/SetOrderBatchingConfiguration.md)
  - [SetPasswordWithPinModel](docs/Model/SetPasswordWithPinModel.md)
+ - [SetVoucherValidityPeriodsSimplifiedRequest](docs/Model/SetVoucherValidityPeriodsSimplifiedRequest.md)
  - [Setting](docs/Model/Setting.md)
  - [SignupStep](docs/Model/SignupStep.md)
  - [SmsInfo](docs/Model/SmsInfo.md)
