@@ -102,16 +102,6 @@ class OnboardingApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for onboardingGetOnboardingItemsV2
-     *
-     * .
-     *
-     */
-    public function testOnboardingGetOnboardingItemsV2()
-    {
-    }
-
-    /**
      * Test case for onboardingUpdateOnboardingConfig
      *
      * .
@@ -138,16 +128,6 @@ class OnboardingApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testOnboardingUpdateOnboardingItem()
-    {
-    }
-
-    /**
-     * Test case for onboardingUpdateOnboardingItemV2
-     *
-     * .
-     *
-     */
-    public function testOnboardingUpdateOnboardingItemV2()
     {
     }
 }
