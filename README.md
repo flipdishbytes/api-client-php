@@ -451,9 +451,11 @@ Class | Method | HTTP request | Description
 *OnboardingApi* | [**onboardingGetOnboardingConfig**](docs/Api/OnboardingApi.md#onboardinggetonboardingconfig) | **GET** /api/v1.0/clients/{appId}/onboarding/config | 
 *OnboardingApi* | [**onboardingGetOnboardingConfigs**](docs/Api/OnboardingApi.md#onboardinggetonboardingconfigs) | **GET** /api/v1.0/clients/{appId}/onboarding/configs | 
 *OnboardingApi* | [**onboardingGetOnboardingItems**](docs/Api/OnboardingApi.md#onboardinggetonboardingitems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
+*OnboardingApi* | [**onboardingGetOnboardingItemsV2**](docs/Api/OnboardingApi.md#onboardinggetonboardingitemsv2) | **GET** /api/v1.0/clients/{appId}/onboarding/stores | 
 *OnboardingApi* | [**onboardingUpdateOnboardingConfig**](docs/Api/OnboardingApi.md#onboardingupdateonboardingconfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
 *OnboardingApi* | [**onboardingUpdateOnboardingConfigById**](docs/Api/OnboardingApi.md#onboardingupdateonboardingconfigbyid) | **POST** /api/v1.0/clients/{appId}/onboarding/config/{configId} | 
 *OnboardingApi* | [**onboardingUpdateOnboardingItem**](docs/Api/OnboardingApi.md#onboardingupdateonboardingitem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
+*OnboardingApi* | [**onboardingUpdateOnboardingItemV2**](docs/Api/OnboardingApi.md#onboardingupdateonboardingitemv2) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId} | 
 *OrderBatchesApi* | [**getAllOrderBatches**](docs/Api/OrderBatchesApi.md#getallorderbatches) | **GET** /api/v1.0/{appId}/order-batches | 
 *OrderBatchesApi* | [**getOrderBatch**](docs/Api/OrderBatchesApi.md#getorderbatch) | **GET** /api/v1.0/{appId}/order-batches/{orderBatchId} | 
 *OrderBatchingConfigurationApi* | [**get**](docs/Api/OrderBatchingConfigurationApi.md#get) | **GET** /api/v1.0/stores/{storeId}/order-batching-configuration | 
