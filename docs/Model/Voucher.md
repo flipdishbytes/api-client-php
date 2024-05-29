@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **start_date** | [**\DateTime**](\DateTime.md) | Voucher Starts On (Time in UTC) | [optional] 
 **expiry_date** | [**\DateTime**](\DateTime.md) | Voucher Expires On (Time in UTC) | [optional] 
 **channel_restrictions** | **string[]** | Limit the channels this voucher can be used on | [optional] 
+**validity_periods** | [**\Flipdish\\Client\Models\ValidityPeriod[]**](ValidityPeriod.md) | Periods in which the voucher is valid.  An empty list means the voucher is valid at all times.  When updating the voucher, if this is set to null, the validity periods won&#39;t be updated. | [optional] 
 **voucher_sub_type** | **string** | Voucher Subtype | [optional] 
 **customer_id** | **int** | Customer UserID | [optional] 
 **max_redemptions** | **int** | Maximum number of times the voucher can be redeemed (used) | [optional] 

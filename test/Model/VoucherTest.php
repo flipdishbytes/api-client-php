@@ -266,6 +266,13 @@ class VoucherTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "validity_periods"
+     */
+    public function testPropertyValidityPeriods()
+    {
+    }
+
+    /**
      * Test attribute "voucher_sub_type"
      */
     public function testPropertyVoucherSubType()

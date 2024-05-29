@@ -85,6 +85,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'start_date' => '\DateTime',
         'expiry_date' => '\DateTime',
         'channel_restrictions' => 'string[]',
+        'validity_periods' => '\Flipdish\\Client\Models\ValidityPeriod[]',
         'voucher_sub_type' => 'string',
         'customer_id' => 'int',
         'max_redemptions' => 'int'
@@ -123,6 +124,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'start_date' => 'date-time',
         'expiry_date' => 'date-time',
         'channel_restrictions' => null,
+        'validity_periods' => null,
         'voucher_sub_type' => null,
         'customer_id' => 'int32',
         'max_redemptions' => 'int32'
@@ -182,6 +184,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'start_date' => 'StartDate',
         'expiry_date' => 'ExpiryDate',
         'channel_restrictions' => 'ChannelRestrictions',
+        'validity_periods' => 'ValidityPeriods',
         'voucher_sub_type' => 'VoucherSubType',
         'customer_id' => 'CustomerId',
         'max_redemptions' => 'MaxRedemptions'
@@ -220,6 +223,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'start_date' => 'setStartDate',
         'expiry_date' => 'setExpiryDate',
         'channel_restrictions' => 'setChannelRestrictions',
+        'validity_periods' => 'setValidityPeriods',
         'voucher_sub_type' => 'setVoucherSubType',
         'customer_id' => 'setCustomerId',
         'max_redemptions' => 'setMaxRedemptions'
@@ -258,6 +262,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'start_date' => 'getStartDate',
         'expiry_date' => 'getExpiryDate',
         'channel_restrictions' => 'getChannelRestrictions',
+        'validity_periods' => 'getValidityPeriods',
         'voucher_sub_type' => 'getVoucherSubType',
         'customer_id' => 'getCustomerId',
         'max_redemptions' => 'getMaxRedemptions'
@@ -677,6 +682,7 @@ class Voucher implements ModelInterface, ArrayAccess
         $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
         $this->container['expiry_date'] = isset($data['expiry_date']) ? $data['expiry_date'] : null;
         $this->container['channel_restrictions'] = isset($data['channel_restrictions']) ? $data['channel_restrictions'] : null;
+        $this->container['validity_periods'] = isset($data['validity_periods']) ? $data['validity_periods'] : null;
         $this->container['voucher_sub_type'] = isset($data['voucher_sub_type']) ? $data['voucher_sub_type'] : null;
         $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
         $this->container['max_redemptions'] = isset($data['max_redemptions']) ? $data['max_redemptions'] : null;
@@ -1418,6 +1424,30 @@ class Voucher implements ModelInterface, ArrayAccess
             );
         }
         $this->container['channel_restrictions'] = $channel_restrictions;
+
+        return $this;
+    }
+
+    /**
+     * Gets validity_periods
+     *
+     * @return \Flipdish\\Client\Models\ValidityPeriod[]
+     */
+    public function getValidityPeriods()
+    {
+        return $this->container['validity_periods'];
+    }
+
+    /**
+     * Sets validity_periods
+     *
+     * @param \Flipdish\\Client\Models\ValidityPeriod[] $validity_periods Periods in which the voucher is valid.  An empty list means the voucher is valid at all times.  When updating the voucher, if this is set to null, the validity periods won't be updated.
+     *
+     * @return $this
+     */
+    public function setValidityPeriods($validity_periods)
+    {
+        $this->container['validity_periods'] = $validity_periods;
 
         return $this;
     }

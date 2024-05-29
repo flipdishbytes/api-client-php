@@ -112,9 +112,23 @@ class PayoutReport3DetailsFlipdishFeesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "kiosk_cash_revenue"
+     */
+    public function testPropertyKioskCashRevenue()
+    {
+    }
+
+    /**
      * Test attribute "kiosk_card"
      */
     public function testPropertyKioskCard()
+    {
+    }
+
+    /**
+     * Test attribute "kiosk_card_revenue"
+     */
+    public function testPropertyKioskCardRevenue()
     {
     }
 
