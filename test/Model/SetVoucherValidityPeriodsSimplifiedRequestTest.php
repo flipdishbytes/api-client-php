@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * SetVoucherValidityPeriodsSimplifiedRequestTest Class Doc Comment
  *
  * @category    Class
- * @description SetVoucherValidityPeriodsSimplifiedRequest
+ * @description Set the validity periods of a voucher.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
