@@ -59,6 +59,7 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'payout_id' => 'int',
         'bank_account_id' => 'int',
+        'is_manual_payout' => 'bool',
         'account_name' => 'string',
         'payout_status' => 'string',
         'created_date' => '\DateTime',
@@ -78,6 +79,7 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'payout_id' => 'int32',
         'bank_account_id' => 'int32',
+        'is_manual_payout' => null,
         'account_name' => null,
         'payout_status' => null,
         'created_date' => 'date-time',
@@ -118,6 +120,7 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'payout_id' => 'PayoutId',
         'bank_account_id' => 'BankAccountId',
+        'is_manual_payout' => 'IsManualPayout',
         'account_name' => 'AccountName',
         'payout_status' => 'PayoutStatus',
         'created_date' => 'CreatedDate',
@@ -137,6 +140,7 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
     protected static $setters = [
         'payout_id' => 'setPayoutId',
         'bank_account_id' => 'setBankAccountId',
+        'is_manual_payout' => 'setIsManualPayout',
         'account_name' => 'setAccountName',
         'payout_status' => 'setPayoutStatus',
         'created_date' => 'setCreatedDate',
@@ -156,6 +160,7 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
     protected static $getters = [
         'payout_id' => 'getPayoutId',
         'bank_account_id' => 'getBankAccountId',
+        'is_manual_payout' => 'getIsManualPayout',
         'account_name' => 'getAccountName',
         'payout_status' => 'getPayoutStatus',
         'created_date' => 'getCreatedDate',
@@ -229,6 +234,7 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
     {
         $this->container['payout_id'] = isset($data['payout_id']) ? $data['payout_id'] : null;
         $this->container['bank_account_id'] = isset($data['bank_account_id']) ? $data['bank_account_id'] : null;
+        $this->container['is_manual_payout'] = isset($data['is_manual_payout']) ? $data['is_manual_payout'] : null;
         $this->container['account_name'] = isset($data['account_name']) ? $data['account_name'] : null;
         $this->container['payout_status'] = isset($data['payout_status']) ? $data['payout_status'] : null;
         $this->container['created_date'] = isset($data['created_date']) ? $data['created_date'] : null;
@@ -308,6 +314,30 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
     public function setBankAccountId($bank_account_id)
     {
         $this->container['bank_account_id'] = $bank_account_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_manual_payout
+     *
+     * @return bool
+     */
+    public function getIsManualPayout()
+    {
+        return $this->container['is_manual_payout'];
+    }
+
+    /**
+     * Sets is_manual_payout
+     *
+     * @param bool $is_manual_payout is_manual_payout
+     *
+     * @return $this
+     */
+    public function setIsManualPayout($is_manual_payout)
+    {
+        $this->container['is_manual_payout'] = $is_manual_payout;
 
         return $this;
     }

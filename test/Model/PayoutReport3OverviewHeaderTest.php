@@ -91,6 +91,13 @@ class PayoutReport3OverviewHeaderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_manual_payout"
+     */
+    public function testPropertyIsManualPayout()
+    {
+    }
+
+    /**
      * Test attribute "account_name"
      */
     public function testPropertyAccountName()

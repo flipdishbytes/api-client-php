@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **payout_id** | **int** |  | [optional] 
 **bank_account_id** | **int** |  | [optional] 
+**is_manual_payout** | **bool** |  | [optional] 
 **account_name** | **string** |  | [optional] 
 **payout_status** | **string** |  | [optional] 
 **created_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
