@@ -58,9 +58,7 @@ class AppLookup implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'app_id' => 'string',
-        'opportunity_id' => 'string',
-        'account_id' => 'string'
+        'app_id' => 'string'
     ];
 
     /**
@@ -69,9 +67,7 @@ class AppLookup implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'app_id' => null,
-        'opportunity_id' => null,
-        'account_id' => null
+        'app_id' => null
     ];
 
     /**
@@ -101,9 +97,7 @@ class AppLookup implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'app_id' => 'AppId',
-        'opportunity_id' => 'OpportunityId',
-        'account_id' => 'AccountId'
+        'app_id' => 'AppId'
     ];
 
     /**
@@ -112,9 +106,7 @@ class AppLookup implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'app_id' => 'setAppId',
-        'opportunity_id' => 'setOpportunityId',
-        'account_id' => 'setAccountId'
+        'app_id' => 'setAppId'
     ];
 
     /**
@@ -123,9 +115,7 @@ class AppLookup implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'app_id' => 'getAppId',
-        'opportunity_id' => 'getOpportunityId',
-        'account_id' => 'getAccountId'
+        'app_id' => 'getAppId'
     ];
 
     /**
@@ -189,8 +179,6 @@ class AppLookup implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
-        $this->container['opportunity_id'] = isset($data['opportunity_id']) ? $data['opportunity_id'] : null;
-        $this->container['account_id'] = isset($data['account_id']) ? $data['account_id'] : null;
     }
 
     /**
@@ -237,54 +225,6 @@ class AppLookup implements ModelInterface, ArrayAccess
     public function setAppId($app_id)
     {
         $this->container['app_id'] = $app_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets opportunity_id
-     *
-     * @return string
-     */
-    public function getOpportunityId()
-    {
-        return $this->container['opportunity_id'];
-    }
-
-    /**
-     * Sets opportunity_id
-     *
-     * @param string $opportunity_id Salesforce opportunity id
-     *
-     * @return $this
-     */
-    public function setOpportunityId($opportunity_id)
-    {
-        $this->container['opportunity_id'] = $opportunity_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets account_id
-     *
-     * @return string
-     */
-    public function getAccountId()
-    {
-        return $this->container['account_id'];
-    }
-
-    /**
-     * Sets account_id
-     *
-     * @param string $account_id Salesforce account id
-     *
-     * @return $this
-     */
-    public function setAccountId($account_id)
-    {
-        $this->container['account_id'] = $account_id;
 
         return $this;
     }

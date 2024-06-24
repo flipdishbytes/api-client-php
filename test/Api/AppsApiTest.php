@@ -132,16 +132,6 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getSalesforceReferences
-     *
-     * .
-     *
-     */
-    public function testGetSalesforceReferences()
-    {
-    }
-
-    /**
      * Test case for getSupportedCountries
      *
      * .
@@ -228,16 +218,6 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testSetPanaceaVanityUrl()
-    {
-    }
-
-    /**
-     * Test case for setSalesforceReferences
-     *
-     * .
-     *
-     */
-    public function testSetSalesforceReferences()
     {
     }
 

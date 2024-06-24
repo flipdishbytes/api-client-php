@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**getApps**](AppsApi.md#getApps) | **GET** /api/v1.0/apps | 
 [**getCompliance**](AppsApi.md#getCompliance) | **GET** /api/v1.0/apps/{appId}/compliance | 
 [**getPanaceaVanityUrl**](AppsApi.md#getPanaceaVanityUrl) | **GET** /api/v1.0/apps/{appId}/panacea/url | 
-[**getSalesforceReferences**](AppsApi.md#getSalesforceReferences) | **GET** /api/v1.0/apps/{appId}/salesforcereferences | 
 [**getSupportedCountries**](AppsApi.md#getSupportedCountries) | **GET** /api/v1.0/apps/supportedcountries | 
 [**isPanaceaVanityUrlAvailable**](AppsApi.md#isPanaceaVanityUrlAvailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | 
 [**lookupByWhitelabelId**](AppsApi.md#lookupByWhitelabelId) | **GET** /api/v1.0/apps/{whitelabelId}/lookup | 
@@ -20,7 +19,6 @@ Method | HTTP request | Description
 [**setAppStoreName**](AppsApi.md#setAppStoreName) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 [**setCompliance**](AppsApi.md#setCompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 [**setPanaceaVanityUrl**](AppsApi.md#setPanaceaVanityUrl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
-[**setSalesforceReferences**](AppsApi.md#setSalesforceReferences) | **POST** /api/v1.0/apps/{appId}/salesforcereferences | 
 [**toggleNextGenWeb**](AppsApi.md#toggleNextGenWeb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
 [**uploadAppLogo**](AppsApi.md#uploadAppLogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 
@@ -323,57 +321,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **getSalesforceReferences**
-> \Flipdish\\Client\Models\AppSalesforceReferences getSalesforceReferences($app_id)
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\AppsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$app_id = "app_id_example"; // string | 
-
-try {
-    $result = $apiInstance->getSalesforceReferences($app_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling AppsApi->getSalesforceReferences: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
-
-### Return type
-
-[**\Flipdish\\Client\Models\AppSalesforceReferences**](../Model/AppSalesforceReferences.md)
 
 ### Authorization
 
@@ -852,59 +799,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **setSalesforceReferences**
-> \Flipdish\\Client\Models\RestApiStringResult setSalesforceReferences($app_id, $salesforce_references)
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\AppsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$app_id = "app_id_example"; // string | 
-$salesforce_references = new \Flipdish\\Client\Models\AppSalesforceReferences(); // \Flipdish\\Client\Models\AppSalesforceReferences | 
-
-try {
-    $result = $apiInstance->setSalesforceReferences($app_id, $salesforce_references);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling AppsApi->setSalesforceReferences: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
- **salesforce_references** | [**\Flipdish\\Client\Models\AppSalesforceReferences**](../Model/AppSalesforceReferences.md)|  |
-
-### Return type
-
-[**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

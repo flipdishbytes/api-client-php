@@ -82,18 +82,4 @@ class AppLookupTest extends \PHPUnit_Framework_TestCase
     public function testPropertyAppId()
     {
     }
-
-    /**
-     * Test attribute "opportunity_id"
-     */
-    public function testPropertyOpportunityId()
-    {
-    }
-
-    /**
-     * Test attribute "account_id"
-     */
-    public function testPropertyAccountId()
-    {
-    }
 }
