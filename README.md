@@ -314,6 +314,7 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**updateKioskSettings**](docs/Api/HydraApi.md#updatekiosksettings) | **POST** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
 *IntercomApi* | [**userHash**](docs/Api/IntercomApi.md#userhash) | **GET** /api/v1.0/intercom/userHash | 
 *InvoicesApi* | [**getInvoices**](docs/Api/InvoicesApi.md#getinvoices) | **GET** /api/v1.0/{appId}/invoices | 
+*KioskEntitlementsApi* | [**queryKioskEntitlements**](docs/Api/KioskEntitlementsApi.md#querykioskentitlements) | **GET** /api/v1.0/{appId}/kiosk/entitlements | 
 *KioskIotApi* | [**getKioskIotConnection**](docs/Api/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | 
 *KioskIotApi* | [**queryTelemetrySeries**](docs/Api/KioskIotApi.md#querytelemetryseries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | 
 *LightspeedApi* | [**lightspeedGenerateMenu**](docs/Api/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
@@ -847,6 +848,7 @@ Class | Method | HTTP request | Description
  - [KioskBluetoothTerminalUpdatedEvent](docs/Model/KioskBluetoothTerminalUpdatedEvent.md)
  - [KioskBluetoothUnpairingModeEvent](docs/Model/KioskBluetoothUnpairingModeEvent.md)
  - [KioskCashPaymentSettings](docs/Model/KioskCashPaymentSettings.md)
+ - [KioskEntitlementsResult](docs/Model/KioskEntitlementsResult.md)
  - [KioskIotConnectionParameters](docs/Model/KioskIotConnectionParameters.md)
  - [KioskSettings](docs/Model/KioskSettings.md)
  - [KioskTerminalActionStateChangedEvent](docs/Model/KioskTerminalActionStateChangedEvent.md)
@@ -1189,6 +1191,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultIndexPageBase](docs/Model/RestApiResultIndexPageBase.md)
  - [RestApiResultIntercomUserHash](docs/Model/RestApiResultIntercomUserHash.md)
  - [RestApiResultJobResponse](docs/Model/RestApiResultJobResponse.md)
+ - [RestApiResultKioskEntitlementsResult](docs/Model/RestApiResultKioskEntitlementsResult.md)
  - [RestApiResultKioskIotConnectionParameters](docs/Model/RestApiResultKioskIotConnectionParameters.md)
  - [RestApiResultKioskSettings](docs/Model/RestApiResultKioskSettings.md)
  - [RestApiResultLightspeedSettings](docs/Model/RestApiResultLightspeedSettings.md)
