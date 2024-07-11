@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **gross_sales** | [**\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine**](PayoutReport3DetailsSalesLine.md) |  | [optional] 
+**sales_tax** | [**\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine**](PayoutReport3DetailsSalesLine.md) |  | [optional] 
 **delivery_charges** | [**\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine**](PayoutReport3DetailsSalesLine.md) |  | [optional] 
 **other_charges** | [**\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine**](PayoutReport3DetailsSalesLine.md) |  | [optional] 
 **tips** | [**\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine**](PayoutReport3DetailsSalesLine.md) |  | [optional] 

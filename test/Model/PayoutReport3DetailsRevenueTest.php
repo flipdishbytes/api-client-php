@@ -84,6 +84,13 @@ class PayoutReport3DetailsRevenueTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "sales_tax"
+     */
+    public function testPropertySalesTax()
+    {
+    }
+
+    /**
      * Test attribute "delivery_charges"
      */
     public function testPropertyDeliveryCharges()

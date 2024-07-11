@@ -58,6 +58,7 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'gross_sales' => '\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine',
+        'sales_tax' => '\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine',
         'delivery_charges' => '\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine',
         'other_charges' => '\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine',
         'tips' => '\Flipdish\\Client\Models\PayoutReport3DetailsSalesLine',
@@ -73,6 +74,7 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'gross_sales' => null,
+        'sales_tax' => null,
         'delivery_charges' => null,
         'other_charges' => null,
         'tips' => null,
@@ -109,6 +111,7 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'gross_sales' => 'GrossSales',
+        'sales_tax' => 'SalesTax',
         'delivery_charges' => 'DeliveryCharges',
         'other_charges' => 'OtherCharges',
         'tips' => 'Tips',
@@ -124,6 +127,7 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'gross_sales' => 'setGrossSales',
+        'sales_tax' => 'setSalesTax',
         'delivery_charges' => 'setDeliveryCharges',
         'other_charges' => 'setOtherCharges',
         'tips' => 'setTips',
@@ -139,6 +143,7 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'gross_sales' => 'getGrossSales',
+        'sales_tax' => 'getSalesTax',
         'delivery_charges' => 'getDeliveryCharges',
         'other_charges' => 'getOtherCharges',
         'tips' => 'getTips',
@@ -208,6 +213,7 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['gross_sales'] = isset($data['gross_sales']) ? $data['gross_sales'] : null;
+        $this->container['sales_tax'] = isset($data['sales_tax']) ? $data['sales_tax'] : null;
         $this->container['delivery_charges'] = isset($data['delivery_charges']) ? $data['delivery_charges'] : null;
         $this->container['other_charges'] = isset($data['other_charges']) ? $data['other_charges'] : null;
         $this->container['tips'] = isset($data['tips']) ? $data['tips'] : null;
@@ -260,6 +266,30 @@ class PayoutReport3DetailsRevenue implements ModelInterface, ArrayAccess
     public function setGrossSales($gross_sales)
     {
         $this->container['gross_sales'] = $gross_sales;
+
+        return $this;
+    }
+
+    /**
+     * Gets sales_tax
+     *
+     * @return \Flipdish\\Client\Models\PayoutReport3DetailsSalesLine
+     */
+    public function getSalesTax()
+    {
+        return $this->container['sales_tax'];
+    }
+
+    /**
+     * Sets sales_tax
+     *
+     * @param \Flipdish\\Client\Models\PayoutReport3DetailsSalesLine $sales_tax sales_tax
+     *
+     * @return $this
+     */
+    public function setSalesTax($sales_tax)
+    {
+        $this->container['sales_tax'] = $sales_tax;
 
         return $this;
     }
