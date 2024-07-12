@@ -1,6 +1,6 @@
 <?php
 /**
- * DeliveryZoneTest
+ * CreateAppInOrgTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * DeliveryZoneTest Class Doc Comment
+ * CreateAppInOrgTest Class Doc Comment
  *
  * @category    Class
- * @description Delivery Zone
+ * @description Create an App in an Organisation Request
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DeliveryZoneTest extends \PHPUnit_Framework_TestCase
+class CreateAppInOrgTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,51 +70,30 @@ class DeliveryZoneTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "DeliveryZone"
+     * Test "CreateAppInOrg"
      */
-    public function testDeliveryZone()
+    public function testCreateAppInOrg()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "name"
      */
-    public function testPropertyId()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "fee_charged_to_store"
+     * Test attribute "country_id"
      */
-    public function testPropertyFeeChargedToStore()
+    public function testPropertyCountryId()
     {
     }
 
     /**
-     * Test attribute "delivery_fee"
+     * Test attribute "main_color"
      */
-    public function testPropertyDeliveryFee()
-    {
-    }
-
-    /**
-     * Test attribute "minimum_delivery_order_amount"
-     */
-    public function testPropertyMinimumDeliveryOrderAmount()
-    {
-    }
-
-    /**
-     * Test attribute "well_known_text"
-     */
-    public function testPropertyWellKnownText()
-    {
-    }
-
-    /**
-     * Test attribute "is_enabled"
-     */
-    public function testPropertyIsEnabled()
+    public function testPropertyMainColor()
     {
     }
 }

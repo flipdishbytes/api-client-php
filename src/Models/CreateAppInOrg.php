@@ -1,6 +1,6 @@
 <?php
 /**
- * DeliveryZone
+ * CreateAppInOrg
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * DeliveryZone Class Doc Comment
+ * CreateAppInOrg Class Doc Comment
  *
  * @category Class
- * @description Delivery Zone
+ * @description Create an App in an Organisation Request
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DeliveryZone implements ModelInterface, ArrayAccess
+class CreateAppInOrg implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class DeliveryZone implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'DeliveryZone';
+    protected static $swaggerModelName = 'CreateAppInOrg';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,12 +58,9 @@ class DeliveryZone implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'fee_charged_to_store' => 'double',
-        'delivery_fee' => 'double',
-        'minimum_delivery_order_amount' => 'double',
-        'well_known_text' => 'string',
-        'is_enabled' => 'bool'
+        'name' => 'string',
+        'country_id' => 'string',
+        'main_color' => 'string'
     ];
 
     /**
@@ -72,12 +69,9 @@ class DeliveryZone implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'int32',
-        'fee_charged_to_store' => 'double',
-        'delivery_fee' => 'double',
-        'minimum_delivery_order_amount' => 'double',
-        'well_known_text' => null,
-        'is_enabled' => null
+        'name' => null,
+        'country_id' => null,
+        'main_color' => null
     ];
 
     /**
@@ -107,12 +101,9 @@ class DeliveryZone implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'Id',
-        'fee_charged_to_store' => 'FeeChargedToStore',
-        'delivery_fee' => 'DeliveryFee',
-        'minimum_delivery_order_amount' => 'MinimumDeliveryOrderAmount',
-        'well_known_text' => 'WellKnownText',
-        'is_enabled' => 'IsEnabled'
+        'name' => 'Name',
+        'country_id' => 'CountryId',
+        'main_color' => 'MainColor'
     ];
 
     /**
@@ -121,12 +112,9 @@ class DeliveryZone implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'fee_charged_to_store' => 'setFeeChargedToStore',
-        'delivery_fee' => 'setDeliveryFee',
-        'minimum_delivery_order_amount' => 'setMinimumDeliveryOrderAmount',
-        'well_known_text' => 'setWellKnownText',
-        'is_enabled' => 'setIsEnabled'
+        'name' => 'setName',
+        'country_id' => 'setCountryId',
+        'main_color' => 'setMainColor'
     ];
 
     /**
@@ -135,12 +123,9 @@ class DeliveryZone implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'fee_charged_to_store' => 'getFeeChargedToStore',
-        'delivery_fee' => 'getDeliveryFee',
-        'minimum_delivery_order_amount' => 'getMinimumDeliveryOrderAmount',
-        'well_known_text' => 'getWellKnownText',
-        'is_enabled' => 'getIsEnabled'
+        'name' => 'getName',
+        'country_id' => 'getCountryId',
+        'main_color' => 'getMainColor'
     ];
 
     /**
@@ -203,12 +188,9 @@ class DeliveryZone implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['fee_charged_to_store'] = isset($data['fee_charged_to_store']) ? $data['fee_charged_to_store'] : null;
-        $this->container['delivery_fee'] = isset($data['delivery_fee']) ? $data['delivery_fee'] : null;
-        $this->container['minimum_delivery_order_amount'] = isset($data['minimum_delivery_order_amount']) ? $data['minimum_delivery_order_amount'] : null;
-        $this->container['well_known_text'] = isset($data['well_known_text']) ? $data['well_known_text'] : null;
-        $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['country_id'] = isset($data['country_id']) ? $data['country_id'] : null;
+        $this->container['main_color'] = isset($data['main_color']) ? $data['main_color'] : null;
     }
 
     /**
@@ -236,145 +218,73 @@ class DeliveryZone implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int $id Delivery Fee Area Id
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets fee_charged_to_store
-     *
-     * @return double
-     */
-    public function getFeeChargedToStore()
-    {
-        return $this->container['fee_charged_to_store'];
-    }
-
-    /**
-     * Sets fee_charged_to_store
-     *
-     * @param double $fee_charged_to_store Delivery Fee charged to store
-     *
-     * @return $this
-     */
-    public function setFeeChargedToStore($fee_charged_to_store)
-    {
-        $this->container['fee_charged_to_store'] = $fee_charged_to_store;
-
-        return $this;
-    }
-
-    /**
-     * Gets delivery_fee
-     *
-     * @return double
-     */
-    public function getDeliveryFee()
-    {
-        return $this->container['delivery_fee'];
-    }
-
-    /**
-     * Sets delivery_fee
-     *
-     * @param double $delivery_fee Delivery fee (will not be set below 0)
-     *
-     * @return $this
-     */
-    public function setDeliveryFee($delivery_fee)
-    {
-        $this->container['delivery_fee'] = $delivery_fee;
-
-        return $this;
-    }
-
-    /**
-     * Gets minimum_delivery_order_amount
-     *
-     * @return double
-     */
-    public function getMinimumDeliveryOrderAmount()
-    {
-        return $this->container['minimum_delivery_order_amount'];
-    }
-
-    /**
-     * Sets minimum_delivery_order_amount
-     *
-     * @param double $minimum_delivery_order_amount Minimum delivery order amount (will not be set below 0)
-     *
-     * @return $this
-     */
-    public function setMinimumDeliveryOrderAmount($minimum_delivery_order_amount)
-    {
-        $this->container['minimum_delivery_order_amount'] = $minimum_delivery_order_amount;
-
-        return $this;
-    }
-
-    /**
-     * Gets well_known_text
+     * Gets name
      *
      * @return string
      */
-    public function getWellKnownText()
+    public function getName()
     {
-        return $this->container['well_known_text'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets well_known_text
+     * Sets name
      *
-     * @param string $well_known_text Spatial data in Well Known Text format  We also support CIRCLE((0 0, 200)) - (centerLong centerLat, radius in m)
+     * @param string $name Name
      *
      * @return $this
      */
-    public function setWellKnownText($well_known_text)
+    public function setName($name)
     {
-        $this->container['well_known_text'] = $well_known_text;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets is_enabled
+     * Gets country_id
      *
-     * @return bool
+     * @return string
      */
-    public function getIsEnabled()
+    public function getCountryId()
     {
-        return $this->container['is_enabled'];
+        return $this->container['country_id'];
     }
 
     /**
-     * Sets is_enabled
+     * Sets country_id
      *
-     * @param bool $is_enabled Is delivery zone enabled
+     * @param string $country_id Country in ISO 3166-1 alpha-2 standard
      *
      * @return $this
      */
-    public function setIsEnabled($is_enabled)
+    public function setCountryId($country_id)
     {
-        $this->container['is_enabled'] = $is_enabled;
+        $this->container['country_id'] = $country_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets main_color
+     *
+     * @return string
+     */
+    public function getMainColor()
+    {
+        return $this->container['main_color'];
+    }
+
+    /**
+     * Sets main_color
+     *
+     * @param string $main_color Main color for the different sales channels
+     *
+     * @return $this
+     */
+    public function setMainColor($main_color)
+    {
+        $this->container['main_color'] = $main_color;
 
         return $this;
     }
