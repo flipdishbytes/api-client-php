@@ -284,7 +284,6 @@ Class | Method | HTTP request | Description
 *HeartbeatApi* | [**hostname**](docs/Api/HeartbeatApi.md#hostname) | **GET** /api/v1.0/heartbeat/Hostname | 
 *HeartbeatApi* | [**ping**](docs/Api/HeartbeatApi.md#ping) | **GET** /api/v1.0/heartbeat | 
 *HomeApi* | [**completeHomeAction**](docs/Api/HomeApi.md#completehomeaction) | **POST** /api/v1.0/{appId}/home/{homeActionId} | 
-*HomeApi* | [**dismissOldPortalAction**](docs/Api/HomeApi.md#dismissoldportalaction) | **POST** /api/v1.0/home/dismissoldportalaction | 
 *HomeApi* | [**getHomeActions**](docs/Api/HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | 
 *HomeApi* | [**getHomeStatistics**](docs/Api/HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | 
 *HomeApi* | [**getOktaPortalFeatureFlag**](docs/Api/HomeApi.md#getoktaportalfeatureflag) | **GET** /api/v1.0/home/okta-portal | 

@@ -59,7 +59,8 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'app_id' => 'string',
-        'invitation_status' => 'string'
+        'invitation_status' => 'string',
+        'is_new_user' => 'bool'
     ];
 
     /**
@@ -69,7 +70,8 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'app_id' => null,
-        'invitation_status' => null
+        'invitation_status' => null,
+        'is_new_user' => null
     ];
 
     /**
@@ -100,7 +102,8 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'app_id' => 'AppId',
-        'invitation_status' => 'InvitationStatus'
+        'invitation_status' => 'InvitationStatus',
+        'is_new_user' => 'IsNewUser'
     ];
 
     /**
@@ -110,7 +113,8 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'app_id' => 'setAppId',
-        'invitation_status' => 'setInvitationStatus'
+        'invitation_status' => 'setInvitationStatus',
+        'is_new_user' => 'setIsNewUser'
     ];
 
     /**
@@ -120,7 +124,8 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'app_id' => 'getAppId',
-        'invitation_status' => 'getInvitationStatus'
+        'invitation_status' => 'getInvitationStatus',
+        'is_new_user' => 'getIsNewUser'
     ];
 
     /**
@@ -202,6 +207,7 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
     {
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
         $this->container['invitation_status'] = isset($data['invitation_status']) ? $data['invitation_status'] : null;
+        $this->container['is_new_user'] = isset($data['is_new_user']) ? $data['is_new_user'] : null;
     }
 
     /**
@@ -289,6 +295,30 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
             );
         }
         $this->container['invitation_status'] = $invitation_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_new_user
+     *
+     * @return bool
+     */
+    public function getIsNewUser()
+    {
+        return $this->container['is_new_user'];
+    }
+
+    /**
+     * Sets is_new_user
+     *
+     * @param bool $is_new_user Bool indicating if the user that redeemed the invitation is a new user
+     *
+     * @return $this
+     */
+    public function setIsNewUser($is_new_user)
+    {
+        $this->container['is_new_user'] = $is_new_user;
 
         return $this;
     }

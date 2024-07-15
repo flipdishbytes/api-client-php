@@ -89,4 +89,11 @@ class RedeemInvitationResultTest extends \PHPUnit_Framework_TestCase
     public function testPropertyInvitationStatus()
     {
     }
+
+    /**
+     * Test attribute "is_new_user"
+     */
+    public function testPropertyIsNewUser()
+    {
+    }
 }

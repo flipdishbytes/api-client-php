@@ -82,16 +82,6 @@ class HomeApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for dismissOldPortalAction
-     *
-     * .
-     *
-     */
-    public function testDismissOldPortalAction()
-    {
-    }
-
-    /**
      * Test case for getHomeActions
      *
      * .
