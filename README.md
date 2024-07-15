@@ -132,12 +132,7 @@ Class | Method | HTTP request | Description
 *AppStoreDeveloperApi* | [**updateAppStoreApp**](docs/Api/AppStoreDeveloperApi.md#updateappstoreapp) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId} | 
 *AppStoreDeveloperApi* | [**updateExternalProduct**](docs/Api/AppStoreDeveloperApi.md#updateexternalproduct) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product | 
 *AppStoreDeveloperApi* | [**uploadAppStoreAppLogo**](docs/Api/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
-*AppStoreSubscriptionsApi* | [**createAppStoreSubscription**](docs/Api/AppStoreSubscriptionsApi.md#createappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
-*AppStoreSubscriptionsApi* | [**deleteAppSubscription**](docs/Api/AppStoreSubscriptionsApi.md#deleteappsubscription) | **DELETE** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
-*AppStoreSubscriptionsApi* | [**getAppStoreAppEntitlements**](docs/Api/AppStoreSubscriptionsApi.md#getappstoreappentitlements) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/entitlements | 
-*AppStoreSubscriptionsApi* | [**getAppStoreSubscriptionChangeJobStatus**](docs/Api/AppStoreSubscriptionsApi.md#getappstoresubscriptionchangejobstatus) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/jobs/{jobId} | 
-*AppStoreSubscriptionsApi* | [**getAppStoreSubscriptions**](docs/Api/AppStoreSubscriptionsApi.md#getappstoresubscriptions) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions | 
-*AppStoreSubscriptionsApi* | [**updateAppStoreSubscription**](docs/Api/AppStoreSubscriptionsApi.md#updateappstoresubscription) | **POST** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/subscriptions/{subscriptionId} | 
+*AppStoreEntitlementsApi* | [**getAppStoreAppEntitlements**](docs/Api/AppStoreEntitlementsApi.md#getappstoreappentitlements) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/entitlements | 
 *AppsApi* | [**createApp**](docs/Api/AppsApi.md#createapp) | **POST** /api/v1.0/apps | 
 *AppsApi* | [**createAppInOrg**](docs/Api/AppsApi.md#createappinorg) | **POST** /api/v1.0/orgs/{orgId}/apps | 
 *AppsApi* | [**getApp**](docs/Api/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
@@ -623,7 +618,6 @@ Class | Method | HTTP request | Description
  - [AccountFieldDefinition](docs/Model/AccountFieldDefinition.md)
  - [AccountFieldKeyValuePair](docs/Model/AccountFieldKeyValuePair.md)
  - [AccountFieldsDefinitions](docs/Model/AccountFieldsDefinitions.md)
- - [AddAppStoreSubscriptionRequest](docs/Model/AddAppStoreSubscriptionRequest.md)
  - [AddressFormDisplayFormat](docs/Model/AddressFormDisplayFormat.md)
  - [AddressFormResponse](docs/Model/AddressFormResponse.md)
  - [AllMetadataResult](docs/Model/AllMetadataResult.md)
@@ -653,10 +647,7 @@ Class | Method | HTTP request | Description
  - [AppStoreConfigCreatedEvent](docs/Model/AppStoreConfigCreatedEvent.md)
  - [AppStoreConfigDeletedEvent](docs/Model/AppStoreConfigDeletedEvent.md)
  - [AppStoreConfigUpdatedEvent](docs/Model/AppStoreConfigUpdatedEvent.md)
- - [AppStoreSubscriptionChangeJobStatusResponse](docs/Model/AppStoreSubscriptionChangeJobStatusResponse.md)
  - [AppStoreSubscriptionChangeJobUpdatedEvent](docs/Model/AppStoreSubscriptionChangeJobUpdatedEvent.md)
- - [AppStoreSubscriptionItem](docs/Model/AppStoreSubscriptionItem.md)
- - [AppStoreSubscriptionJobResponse](docs/Model/AppStoreSubscriptionJobResponse.md)
  - [AppUpdatedEvent](docs/Model/AppUpdatedEvent.md)
  - [AssignedBankAccount](docs/Model/AssignedBankAccount.md)
  - [AuditLogFieldChangeInformation](docs/Model/AuditLogFieldChangeInformation.md)
@@ -1059,7 +1050,6 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultApmHourlyDataPoint](docs/Model/RestApiArrayResultApmHourlyDataPoint.md)
  - [RestApiArrayResultAppStoreAppConfigurationSummary](docs/Model/RestApiArrayResultAppStoreAppConfigurationSummary.md)
  - [RestApiArrayResultAppStoreAppSummary](docs/Model/RestApiArrayResultAppStoreAppSummary.md)
- - [RestApiArrayResultAppStoreSubscriptionItem](docs/Model/RestApiArrayResultAppStoreSubscriptionItem.md)
  - [RestApiArrayResultBankAccountSummary](docs/Model/RestApiArrayResultBankAccountSummary.md)
  - [RestApiArrayResultBusinessHoursPeriod](docs/Model/RestApiArrayResultBusinessHoursPeriod.md)
  - [RestApiArrayResultChannel](docs/Model/RestApiArrayResultChannel.md)
@@ -1159,8 +1149,6 @@ Class | Method | HTTP request | Description
  - [RestApiResultAppStoreAppConfiguration](docs/Model/RestApiResultAppStoreAppConfiguration.md)
  - [RestApiResultAppStoreAppConfigurationsWithSubscriptions](docs/Model/RestApiResultAppStoreAppConfigurationsWithSubscriptions.md)
  - [RestApiResultAppStoreAppEntitlements](docs/Model/RestApiResultAppStoreAppEntitlements.md)
- - [RestApiResultAppStoreSubscriptionChangeJobStatusResponse](docs/Model/RestApiResultAppStoreSubscriptionChangeJobStatusResponse.md)
- - [RestApiResultAppStoreSubscriptionJobResponse](docs/Model/RestApiResultAppStoreSubscriptionJobResponse.md)
  - [RestApiResultAssignedBankAccount](docs/Model/RestApiResultAssignedBankAccount.md)
  - [RestApiResultBankAccountDetail](docs/Model/RestApiResultBankAccountDetail.md)
  - [RestApiResultBluetoothTerminalStatus](docs/Model/RestApiResultBluetoothTerminalStatus.md)
@@ -1382,7 +1370,6 @@ Class | Method | HTTP request | Description
  - [UpdateAppStoreAppConfigurationValuesBatch](docs/Model/UpdateAppStoreAppConfigurationValuesBatch.md)
  - [UpdateAppStoreAppConfigurationWebhookDTO](docs/Model/UpdateAppStoreAppConfigurationWebhookDTO.md)
  - [UpdateAppStoreAppExternalProduct](docs/Model/UpdateAppStoreAppExternalProduct.md)
- - [UpdateAppStoreSubscriptionRequest](docs/Model/UpdateAppStoreSubscriptionRequest.md)
  - [UpdateCatalogGroupReference](docs/Model/UpdateCatalogGroupReference.md)
  - [UpdateCatalogItem](docs/Model/UpdateCatalogItem.md)
  - [UpdateDriverNotificationToken](docs/Model/UpdateDriverNotificationToken.md)
