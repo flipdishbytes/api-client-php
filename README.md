@@ -524,6 +524,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**configureStoreServiceCharge**](docs/Api/StoresApi.md#configurestoreservicecharge) | **POST** /api/v1.0/stores/{storeId}/servicecharge | 
 *StoresApi* | [**createBusinessHoursOverrideByStoreId**](docs/Api/StoresApi.md#createbusinesshoursoverridebystoreid) | **POST** /api/v1.0/stores/{storeId}/businesshoursoverrides | 
 *StoresApi* | [**createStore**](docs/Api/StoresApi.md#createstore) | **POST** /api/v1.0/stores | 
+*StoresApi* | [**createStoreInProperty**](docs/Api/StoresApi.md#createstoreinproperty) | **POST** /api/v1.0/properties/{propertyId}/stores | 
 *StoresApi* | [**deleteBusinessHoursOverride**](docs/Api/StoresApi.md#deletebusinesshoursoverride) | **DELETE** /api/v1.0/stores/{storeId}/businesshoursoverrides/{businessHoursOverrideId} | 
 *StoresApi* | [**getBankAccountForStore**](docs/Api/StoresApi.md#getbankaccountforstore) | **GET** /api/v1.0/stores/{storeId}/bankaccount | 
 *StoresApi* | [**getBusinessHours**](docs/Api/StoresApi.md#getbusinesshours) | **GET** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 

@@ -132,6 +132,16 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createStoreInProperty
+     *
+     * .
+     *
+     */
+    public function testCreateStoreInProperty()
+    {
+    }
+
+    /**
      * Test case for deleteBusinessHoursOverride
      *
      * .
