@@ -74,7 +74,8 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'other_integration_tips' => 'double',
         'refunded_fees_on_refunded_sales' => 'double',
         'vat' => 'double',
-        'total' => 'double'
+        'total' => 'double',
+        'third_party_integration_fees_and_tips' => 'double'
     ];
 
     /**
@@ -100,7 +101,8 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'other_integration_tips' => 'double',
         'refunded_fees_on_refunded_sales' => 'double',
         'vat' => 'double',
-        'total' => 'double'
+        'total' => 'double',
+        'third_party_integration_fees_and_tips' => 'double'
     ];
 
     /**
@@ -147,7 +149,8 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'other_integration_tips' => 'OtherIntegrationTips',
         'refunded_fees_on_refunded_sales' => 'RefundedFeesOnRefundedSales',
         'vat' => 'Vat',
-        'total' => 'Total'
+        'total' => 'Total',
+        'third_party_integration_fees_and_tips' => 'ThirdPartyIntegrationFeesAndTips'
     ];
 
     /**
@@ -173,7 +176,8 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'other_integration_tips' => 'setOtherIntegrationTips',
         'refunded_fees_on_refunded_sales' => 'setRefundedFeesOnRefundedSales',
         'vat' => 'setVat',
-        'total' => 'setTotal'
+        'total' => 'setTotal',
+        'third_party_integration_fees_and_tips' => 'setThirdPartyIntegrationFeesAndTips'
     ];
 
     /**
@@ -199,7 +203,8 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'other_integration_tips' => 'getOtherIntegrationTips',
         'refunded_fees_on_refunded_sales' => 'getRefundedFeesOnRefundedSales',
         'vat' => 'getVat',
-        'total' => 'getTotal'
+        'total' => 'getTotal',
+        'third_party_integration_fees_and_tips' => 'getThirdPartyIntegrationFeesAndTips'
     ];
 
     /**
@@ -280,6 +285,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         $this->container['refunded_fees_on_refunded_sales'] = isset($data['refunded_fees_on_refunded_sales']) ? $data['refunded_fees_on_refunded_sales'] : null;
         $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
+        $this->container['third_party_integration_fees_and_tips'] = isset($data['third_party_integration_fees_and_tips']) ? $data['third_party_integration_fees_and_tips'] : null;
     }
 
     /**
@@ -734,6 +740,30 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     public function setTotal($total)
     {
         $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets third_party_integration_fees_and_tips
+     *
+     * @return double
+     */
+    public function getThirdPartyIntegrationFeesAndTips()
+    {
+        return $this->container['third_party_integration_fees_and_tips'];
+    }
+
+    /**
+     * Sets third_party_integration_fees_and_tips
+     *
+     * @param double $third_party_integration_fees_and_tips third_party_integration_fees_and_tips
+     *
+     * @return $this
+     */
+    public function setThirdPartyIntegrationFeesAndTips($third_party_integration_fees_and_tips)
+    {
+        $this->container['third_party_integration_fees_and_tips'] = $third_party_integration_fees_and_tips;
 
         return $this;
     }

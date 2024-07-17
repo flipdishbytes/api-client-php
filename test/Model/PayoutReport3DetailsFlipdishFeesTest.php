@@ -201,4 +201,11 @@ class PayoutReport3DetailsFlipdishFeesTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTotal()
     {
     }
+
+    /**
+     * Test attribute "third_party_integration_fees_and_tips"
+     */
+    public function testPropertyThirdPartyIntegrationFeesAndTips()
+    {
+    }
 }

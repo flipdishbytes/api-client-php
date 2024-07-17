@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **refunded_fees_on_refunded_sales** | **double** |  | [optional] 
 **vat** | **double** |  | [optional] 
 **total** | **double** |  | [optional] 
+**third_party_integration_fees_and_tips** | **double** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
