@@ -402,6 +402,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_VIEW_CATALOG_AUDIT_LOGS = 'ViewCatalogAuditLogs';
     const APP_RESOURCE_SET_VIEW_ORDER_FULFILLMENT_AUDIT_LOGS = 'ViewOrderFulfillmentAuditLogs';
     const APP_RESOURCE_SET_VIEW_CHANNEL_AUDIT_LOGS = 'ViewChannelAuditLogs';
+    const APP_RESOURCE_SET_VIEW_APP_STORE_AUDIT_LOGS = 'ViewAppStoreAuditLogs';
     const APP_RESOURCE_SET_SEND_PUSH_NOTIFICATION_TO_CUSTOMER = 'SendPushNotificationToCustomer';
     const APP_RESOURCE_SET_INVITE_DRIVER_TO_APP = 'InviteDriverToApp';
     const APP_RESOURCE_SET_GET_DRIVER_FOR_APP = 'GetDriverForApp';
@@ -601,6 +602,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_VIEW_CATALOG_AUDIT_LOGS,
             self::APP_RESOURCE_SET_VIEW_ORDER_FULFILLMENT_AUDIT_LOGS,
             self::APP_RESOURCE_SET_VIEW_CHANNEL_AUDIT_LOGS,
+            self::APP_RESOURCE_SET_VIEW_APP_STORE_AUDIT_LOGS,
             self::APP_RESOURCE_SET_SEND_PUSH_NOTIFICATION_TO_CUSTOMER,
             self::APP_RESOURCE_SET_INVITE_DRIVER_TO_APP,
             self::APP_RESOURCE_SET_GET_DRIVER_FOR_APP,
