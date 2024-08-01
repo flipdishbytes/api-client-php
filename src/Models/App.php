@@ -351,6 +351,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_VIEW_SERVICE_CHARGE_CONFIGURATIONS = 'ViewServiceChargeConfigurations';
     const APP_RESOURCE_SET_EDIT_SERVICE_CHARGE_CONFIGURATIONS = 'EditServiceChargeConfigurations';
     const APP_RESOURCE_SET_EDIT_STORE_DELIVERY_ZONE_FEES = 'EditStoreDeliveryZoneFees';
+    const APP_RESOURCE_SET_EDIT_STORE_DELIVERY_FEES_LIMITED = 'EditStoreDeliveryFeesLimited';
     const APP_RESOURCE_SET_VIEW_HYDRA_CONFIG = 'ViewHydraConfig';
     const APP_RESOURCE_SET_UPDATE_HYDRA_CONFIG_MANAGE = 'UpdateHydraConfigManage';
     const APP_RESOURCE_SET_INITIATE_BLUETOOTH_PAIRING_MODE = 'InitiateBluetoothPairingMode';
@@ -551,6 +552,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_VIEW_SERVICE_CHARGE_CONFIGURATIONS,
             self::APP_RESOURCE_SET_EDIT_SERVICE_CHARGE_CONFIGURATIONS,
             self::APP_RESOURCE_SET_EDIT_STORE_DELIVERY_ZONE_FEES,
+            self::APP_RESOURCE_SET_EDIT_STORE_DELIVERY_FEES_LIMITED,
             self::APP_RESOURCE_SET_VIEW_HYDRA_CONFIG,
             self::APP_RESOURCE_SET_UPDATE_HYDRA_CONFIG_MANAGE,
             self::APP_RESOURCE_SET_INITIATE_BLUETOOTH_PAIRING_MODE,
