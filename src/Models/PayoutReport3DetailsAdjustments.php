@@ -75,7 +75,9 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees_brackets_out_of_amount' => 'double',
         'balance_change' => 'double',
         'previous_payout_id' => 'int',
-        'next_payout_id' => 'int'
+        'next_payout_id' => 'int',
+        'refunded_fees_on_chargebacks' => 'double',
+        'total_chargeback_cost' => 'double'
     ];
 
     /**
@@ -102,7 +104,9 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees_brackets_out_of_amount' => 'double',
         'balance_change' => 'double',
         'previous_payout_id' => 'int32',
-        'next_payout_id' => 'int32'
+        'next_payout_id' => 'int32',
+        'refunded_fees_on_chargebacks' => 'double',
+        'total_chargeback_cost' => 'double'
     ];
 
     /**
@@ -150,7 +154,9 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees_brackets_out_of_amount' => 'CashCustomerFeesBracketsOutOfAmount',
         'balance_change' => 'BalanceChange',
         'previous_payout_id' => 'PreviousPayoutId',
-        'next_payout_id' => 'NextPayoutId'
+        'next_payout_id' => 'NextPayoutId',
+        'refunded_fees_on_chargebacks' => 'RefundedFeesOnChargebacks',
+        'total_chargeback_cost' => 'TotalChargebackCost'
     ];
 
     /**
@@ -177,7 +183,9 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees_brackets_out_of_amount' => 'setCashCustomerFeesBracketsOutOfAmount',
         'balance_change' => 'setBalanceChange',
         'previous_payout_id' => 'setPreviousPayoutId',
-        'next_payout_id' => 'setNextPayoutId'
+        'next_payout_id' => 'setNextPayoutId',
+        'refunded_fees_on_chargebacks' => 'setRefundedFeesOnChargebacks',
+        'total_chargeback_cost' => 'setTotalChargebackCost'
     ];
 
     /**
@@ -204,7 +212,9 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         'cash_customer_fees_brackets_out_of_amount' => 'getCashCustomerFeesBracketsOutOfAmount',
         'balance_change' => 'getBalanceChange',
         'previous_payout_id' => 'getPreviousPayoutId',
-        'next_payout_id' => 'getNextPayoutId'
+        'next_payout_id' => 'getNextPayoutId',
+        'refunded_fees_on_chargebacks' => 'getRefundedFeesOnChargebacks',
+        'total_chargeback_cost' => 'getTotalChargebackCost'
     ];
 
     /**
@@ -286,6 +296,8 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
         $this->container['balance_change'] = isset($data['balance_change']) ? $data['balance_change'] : null;
         $this->container['previous_payout_id'] = isset($data['previous_payout_id']) ? $data['previous_payout_id'] : null;
         $this->container['next_payout_id'] = isset($data['next_payout_id']) ? $data['next_payout_id'] : null;
+        $this->container['refunded_fees_on_chargebacks'] = isset($data['refunded_fees_on_chargebacks']) ? $data['refunded_fees_on_chargebacks'] : null;
+        $this->container['total_chargeback_cost'] = isset($data['total_chargeback_cost']) ? $data['total_chargeback_cost'] : null;
     }
 
     /**
@@ -764,6 +776,54 @@ class PayoutReport3DetailsAdjustments implements ModelInterface, ArrayAccess
     public function setNextPayoutId($next_payout_id)
     {
         $this->container['next_payout_id'] = $next_payout_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets refunded_fees_on_chargebacks
+     *
+     * @return double
+     */
+    public function getRefundedFeesOnChargebacks()
+    {
+        return $this->container['refunded_fees_on_chargebacks'];
+    }
+
+    /**
+     * Sets refunded_fees_on_chargebacks
+     *
+     * @param double $refunded_fees_on_chargebacks refunded_fees_on_chargebacks
+     *
+     * @return $this
+     */
+    public function setRefundedFeesOnChargebacks($refunded_fees_on_chargebacks)
+    {
+        $this->container['refunded_fees_on_chargebacks'] = $refunded_fees_on_chargebacks;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_chargeback_cost
+     *
+     * @return double
+     */
+    public function getTotalChargebackCost()
+    {
+        return $this->container['total_chargeback_cost'];
+    }
+
+    /**
+     * Sets total_chargeback_cost
+     *
+     * @param double $total_chargeback_cost total_chargeback_cost
+     *
+     * @return $this
+     */
+    public function setTotalChargebackCost($total_chargeback_cost)
+    {
+        $this->container['total_chargeback_cost'] = $total_chargeback_cost;
 
         return $this;
     }

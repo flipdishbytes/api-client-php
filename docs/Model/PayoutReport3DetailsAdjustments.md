@@ -22,6 +22,8 @@ Name | Type | Description | Notes
 **balance_change** | **double** |  | [optional] 
 **previous_payout_id** | **int** |  | [optional] 
 **next_payout_id** | **int** |  | [optional] 
+**refunded_fees_on_chargebacks** | **double** |  | [optional] 
+**total_chargeback_cost** | **double** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

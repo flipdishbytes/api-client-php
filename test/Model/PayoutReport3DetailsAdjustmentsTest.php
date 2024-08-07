@@ -208,4 +208,18 @@ class PayoutReport3DetailsAdjustmentsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyNextPayoutId()
     {
     }
+
+    /**
+     * Test attribute "refunded_fees_on_chargebacks"
+     */
+    public function testPropertyRefundedFeesOnChargebacks()
+    {
+    }
+
+    /**
+     * Test attribute "total_chargeback_cost"
+     */
+    public function testPropertyTotalChargebackCost()
+    {
+    }
 }
