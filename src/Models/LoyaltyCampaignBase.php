@@ -68,7 +68,8 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
         'include_existing_orders' => 'bool',
         'is_enabled' => 'bool',
         'store_ids' => 'int[]',
-        'app_id' => 'string'
+        'app_id' => 'string',
+        'force_discount' => 'bool'
     ];
 
     /**
@@ -87,7 +88,8 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
         'include_existing_orders' => null,
         'is_enabled' => null,
         'store_ids' => 'int32',
-        'app_id' => null
+        'app_id' => null,
+        'force_discount' => null
     ];
 
     /**
@@ -127,7 +129,8 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
         'include_existing_orders' => 'IncludeExistingOrders',
         'is_enabled' => 'IsEnabled',
         'store_ids' => 'StoreIds',
-        'app_id' => 'AppId'
+        'app_id' => 'AppId',
+        'force_discount' => 'ForceDiscount'
     ];
 
     /**
@@ -146,7 +149,8 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
         'include_existing_orders' => 'setIncludeExistingOrders',
         'is_enabled' => 'setIsEnabled',
         'store_ids' => 'setStoreIds',
-        'app_id' => 'setAppId'
+        'app_id' => 'setAppId',
+        'force_discount' => 'setForceDiscount'
     ];
 
     /**
@@ -165,7 +169,8 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
         'include_existing_orders' => 'getIncludeExistingOrders',
         'is_enabled' => 'getIsEnabled',
         'store_ids' => 'getStoreIds',
-        'app_id' => 'getAppId'
+        'app_id' => 'getAppId',
+        'force_discount' => 'getForceDiscount'
     ];
 
     /**
@@ -239,6 +244,7 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
         $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
+        $this->container['force_discount'] = isset($data['force_discount']) ? $data['force_discount'] : null;
     }
 
     /**
@@ -573,6 +579,30 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
     public function setAppId($app_id)
     {
         $this->container['app_id'] = $app_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets force_discount
+     *
+     * @return bool
+     */
+    public function getForceDiscount()
+    {
+        return $this->container['force_discount'];
+    }
+
+    /**
+     * Sets force_discount
+     *
+     * @param bool $force_discount Controls whether the voucher generated from this campaign will override discount exclusions
+     *
+     * @return $this
+     */
+    public function setForceDiscount($force_discount)
+    {
+        $this->container['force_discount'] = $force_discount;
 
         return $this;
     }

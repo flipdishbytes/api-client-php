@@ -173,4 +173,11 @@ class RetentionCampaignTest extends \PHPUnit_Framework_TestCase
     public function testPropertyAppId()
     {
     }
+
+    /**
+     * Test attribute "force_discount"
+     */
+    public function testPropertyForceDiscount()
+    {
+    }
 }
