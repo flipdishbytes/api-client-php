@@ -1,6 +1,6 @@
 <?php
 /**
- * RedeemInvitationResultTest
+ * AcceptInvitationResultTest
  *
  * PHP version 5
  *
@@ -30,7 +30,7 @@
 namespace Flipdish\\Client;
 
 /**
- * RedeemInvitationResultTest Class Doc Comment
+ * AcceptInvitationResultTest Class Doc Comment
  *
  * @category    Class
  * @description 
@@ -38,7 +38,7 @@ namespace Flipdish\\Client;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RedeemInvitationResultTest extends \PHPUnit_Framework_TestCase
+class AcceptInvitationResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,23 +70,23 @@ class RedeemInvitationResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RedeemInvitationResult"
+     * Test "AcceptInvitationResult"
      */
-    public function testRedeemInvitationResult()
+    public function testAcceptInvitationResult()
     {
     }
 
     /**
-     * Test attribute "app_id"
+     * Test attribute "is_new_user"
      */
-    public function testPropertyAppId()
+    public function testPropertyIsNewUser()
     {
     }
 
     /**
-     * Test attribute "invitation_status"
+     * Test attribute "invited_email_address"
      */
-    public function testPropertyInvitationStatus()
+    public function testPropertyInvitedEmailAddress()
     {
     }
 }

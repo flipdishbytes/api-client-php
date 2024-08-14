@@ -1,6 +1,6 @@
 <?php
 /**
- * RedeemInvitationResult
+ * RestApiResultAcceptInvitationResult
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * RedeemInvitationResult Class Doc Comment
+ * RestApiResultAcceptInvitationResult Class Doc Comment
  *
  * @category Class
- * @description 
+ * @description Rest api result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RedeemInvitationResult implements ModelInterface, ArrayAccess
+class RestApiResultAcceptInvitationResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RedeemInvitationResult';
+    protected static $swaggerModelName = 'RestApiResult[AcceptInvitationResult]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,7 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'app_id' => 'string',
-        'invitation_status' => 'string'
+        'data' => '\Flipdish\\Client\Models\AcceptInvitationResult'
     ];
 
     /**
@@ -68,8 +67,7 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'app_id' => null,
-        'invitation_status' => null
+        'data' => null
     ];
 
     /**
@@ -99,8 +97,7 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'app_id' => 'AppId',
-        'invitation_status' => 'InvitationStatus'
+        'data' => 'Data'
     ];
 
     /**
@@ -109,8 +106,7 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'app_id' => 'setAppId',
-        'invitation_status' => 'setInvitationStatus'
+        'data' => 'setData'
     ];
 
     /**
@@ -119,8 +115,7 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'app_id' => 'getAppId',
-        'invitation_status' => 'getInvitationStatus'
+        'data' => 'getData'
     ];
 
     /**
@@ -164,25 +159,8 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const INVITATION_STATUS_PENDING = 'Pending';
-    const INVITATION_STATUS_ACCEPTED = 'Accepted';
-    const INVITATION_STATUS_EXPIRED = 'Expired';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getInvitationStatusAllowableValues()
-    {
-        return [
-            self::INVITATION_STATUS_PENDING,
-            self::INVITATION_STATUS_ACCEPTED,
-            self::INVITATION_STATUS_EXPIRED,
-        ];
-    }
     
 
     /**
@@ -200,8 +178,7 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
-        $this->container['invitation_status'] = isset($data['invitation_status']) ? $data['invitation_status'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -213,14 +190,9 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getInvitationStatusAllowableValues();
-        if (!is_null($this->container['invitation_status']) && !in_array($this->container['invitation_status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'invitation_status', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
         }
-
         return $invalidProperties;
     }
 
@@ -237,58 +209,25 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets app_id
+     * Gets data
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\AcceptInvitationResult
      */
-    public function getAppId()
+    public function getData()
     {
-        return $this->container['app_id'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets app_id
+     * Sets data
      *
-     * @param string $app_id Access level is for this App
+     * @param \Flipdish\\Client\Models\AcceptInvitationResult $data Generic data object.
      *
      * @return $this
      */
-    public function setAppId($app_id)
+    public function setData($data)
     {
-        $this->container['app_id'] = $app_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets invitation_status
-     *
-     * @return string
-     */
-    public function getInvitationStatus()
-    {
-        return $this->container['invitation_status'];
-    }
-
-    /**
-     * Sets invitation_status
-     *
-     * @param string $invitation_status Invitation status
-     *
-     * @return $this
-     */
-    public function setInvitationStatus($invitation_status)
-    {
-        $allowedValues = $this->getInvitationStatusAllowableValues();
-        if (!is_null($invitation_status) && !in_array($invitation_status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'invitation_status', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['invitation_status'] = $invitation_status;
+        $this->container['data'] = $data;
 
         return $this;
     }

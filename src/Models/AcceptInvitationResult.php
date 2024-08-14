@@ -1,6 +1,6 @@
 <?php
 /**
- * RedeemInvitationResult
+ * AcceptInvitationResult
  *
  * PHP version 5
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * RedeemInvitationResult Class Doc Comment
+ * AcceptInvitationResult Class Doc Comment
  *
  * @category Class
  * @description 
@@ -41,7 +41,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RedeemInvitationResult implements ModelInterface, ArrayAccess
+class AcceptInvitationResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RedeemInvitationResult';
+    protected static $swaggerModelName = 'AcceptInvitationResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,8 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'app_id' => 'string',
-        'invitation_status' => 'string'
+        'is_new_user' => 'bool',
+        'invited_email_address' => 'string'
     ];
 
     /**
@@ -68,8 +68,8 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'app_id' => null,
-        'invitation_status' => null
+        'is_new_user' => null,
+        'invited_email_address' => null
     ];
 
     /**
@@ -99,8 +99,8 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'app_id' => 'AppId',
-        'invitation_status' => 'InvitationStatus'
+        'is_new_user' => 'IsNewUser',
+        'invited_email_address' => 'InvitedEmailAddress'
     ];
 
     /**
@@ -109,8 +109,8 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'app_id' => 'setAppId',
-        'invitation_status' => 'setInvitationStatus'
+        'is_new_user' => 'setIsNewUser',
+        'invited_email_address' => 'setInvitedEmailAddress'
     ];
 
     /**
@@ -119,8 +119,8 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'app_id' => 'getAppId',
-        'invitation_status' => 'getInvitationStatus'
+        'is_new_user' => 'getIsNewUser',
+        'invited_email_address' => 'getInvitedEmailAddress'
     ];
 
     /**
@@ -164,25 +164,8 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const INVITATION_STATUS_PENDING = 'Pending';
-    const INVITATION_STATUS_ACCEPTED = 'Accepted';
-    const INVITATION_STATUS_EXPIRED = 'Expired';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getInvitationStatusAllowableValues()
-    {
-        return [
-            self::INVITATION_STATUS_PENDING,
-            self::INVITATION_STATUS_ACCEPTED,
-            self::INVITATION_STATUS_EXPIRED,
-        ];
-    }
     
 
     /**
@@ -200,8 +183,8 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
-        $this->container['invitation_status'] = isset($data['invitation_status']) ? $data['invitation_status'] : null;
+        $this->container['is_new_user'] = isset($data['is_new_user']) ? $data['is_new_user'] : null;
+        $this->container['invited_email_address'] = isset($data['invited_email_address']) ? $data['invited_email_address'] : null;
     }
 
     /**
@@ -212,14 +195,6 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getInvitationStatusAllowableValues();
-        if (!is_null($this->container['invitation_status']) && !in_array($this->container['invitation_status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'invitation_status', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -237,58 +212,49 @@ class RedeemInvitationResult implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets app_id
+     * Gets is_new_user
      *
-     * @return string
+     * @return bool
      */
-    public function getAppId()
+    public function getIsNewUser()
     {
-        return $this->container['app_id'];
+        return $this->container['is_new_user'];
     }
 
     /**
-     * Sets app_id
+     * Sets is_new_user
      *
-     * @param string $app_id Access level is for this App
+     * @param bool $is_new_user Bool indicating if the user accepting the invitation is a new user
      *
      * @return $this
      */
-    public function setAppId($app_id)
+    public function setIsNewUser($is_new_user)
     {
-        $this->container['app_id'] = $app_id;
+        $this->container['is_new_user'] = $is_new_user;
 
         return $this;
     }
 
     /**
-     * Gets invitation_status
+     * Gets invited_email_address
      *
      * @return string
      */
-    public function getInvitationStatus()
+    public function getInvitedEmailAddress()
     {
-        return $this->container['invitation_status'];
+        return $this->container['invited_email_address'];
     }
 
     /**
-     * Sets invitation_status
+     * Sets invited_email_address
      *
-     * @param string $invitation_status Invitation status
+     * @param string $invited_email_address The email address that was invited.
      *
      * @return $this
      */
-    public function setInvitationStatus($invitation_status)
+    public function setInvitedEmailAddress($invited_email_address)
     {
-        $allowedValues = $this->getInvitationStatusAllowableValues();
-        if (!is_null($invitation_status) && !in_array($invitation_status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'invitation_status', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['invitation_status'] = $invitation_status;
+        $this->container['invited_email_address'] = $invited_email_address;
 
         return $this;
     }

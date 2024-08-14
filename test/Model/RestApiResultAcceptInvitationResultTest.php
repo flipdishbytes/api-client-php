@@ -1,6 +1,6 @@
 <?php
 /**
- * RedeemInvitationResultTest
+ * RestApiResultAcceptInvitationResultTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * RedeemInvitationResultTest Class Doc Comment
+ * RestApiResultAcceptInvitationResultTest Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description Rest api result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RedeemInvitationResultTest extends \PHPUnit_Framework_TestCase
+class RestApiResultAcceptInvitationResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,23 +70,16 @@ class RedeemInvitationResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RedeemInvitationResult"
+     * Test "RestApiResultAcceptInvitationResult"
      */
-    public function testRedeemInvitationResult()
+    public function testRestApiResultAcceptInvitationResult()
     {
     }
 
     /**
-     * Test attribute "app_id"
+     * Test attribute "data"
      */
-    public function testPropertyAppId()
-    {
-    }
-
-    /**
-     * Test attribute "invitation_status"
-     */
-    public function testPropertyInvitationStatus()
+    public function testPropertyData()
     {
     }
 }
