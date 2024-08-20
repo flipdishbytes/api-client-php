@@ -78,6 +78,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'is_valid_for_first_order_only' => 'bool',
         'is_valid_once_per_customer' => 'bool',
         'is_valid_only_once' => 'bool',
+        'is_discoverable' => 'bool',
         'start_date' => '\DateTime',
         'expiry_date' => '\DateTime',
         'channel_restrictions' => 'string[]',
@@ -113,6 +114,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'is_valid_for_first_order_only' => null,
         'is_valid_once_per_customer' => null,
         'is_valid_only_once' => null,
+        'is_discoverable' => null,
         'start_date' => 'date-time',
         'expiry_date' => 'date-time',
         'channel_restrictions' => null,
@@ -169,6 +171,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'is_valid_for_first_order_only' => 'IsValidForFirstOrderOnly',
         'is_valid_once_per_customer' => 'IsValidOncePerCustomer',
         'is_valid_only_once' => 'IsValidOnlyOnce',
+        'is_discoverable' => 'IsDiscoverable',
         'start_date' => 'StartDate',
         'expiry_date' => 'ExpiryDate',
         'channel_restrictions' => 'ChannelRestrictions',
@@ -204,6 +207,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'is_valid_for_first_order_only' => 'setIsValidForFirstOrderOnly',
         'is_valid_once_per_customer' => 'setIsValidOncePerCustomer',
         'is_valid_only_once' => 'setIsValidOnlyOnce',
+        'is_discoverable' => 'setIsDiscoverable',
         'start_date' => 'setStartDate',
         'expiry_date' => 'setExpiryDate',
         'channel_restrictions' => 'setChannelRestrictions',
@@ -239,6 +243,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         'is_valid_for_first_order_only' => 'getIsValidForFirstOrderOnly',
         'is_valid_once_per_customer' => 'getIsValidOncePerCustomer',
         'is_valid_only_once' => 'getIsValidOnlyOnce',
+        'is_discoverable' => 'getIsDiscoverable',
         'start_date' => 'getStartDate',
         'expiry_date' => 'getExpiryDate',
         'channel_restrictions' => 'getChannelRestrictions',
@@ -397,6 +402,7 @@ class CreateVoucher implements ModelInterface, ArrayAccess
         $this->container['is_valid_for_first_order_only'] = isset($data['is_valid_for_first_order_only']) ? $data['is_valid_for_first_order_only'] : null;
         $this->container['is_valid_once_per_customer'] = isset($data['is_valid_once_per_customer']) ? $data['is_valid_once_per_customer'] : null;
         $this->container['is_valid_only_once'] = isset($data['is_valid_only_once']) ? $data['is_valid_only_once'] : null;
+        $this->container['is_discoverable'] = isset($data['is_discoverable']) ? $data['is_discoverable'] : null;
         $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
         $this->container['expiry_date'] = isset($data['expiry_date']) ? $data['expiry_date'] : null;
         $this->container['channel_restrictions'] = isset($data['channel_restrictions']) ? $data['channel_restrictions'] : null;
@@ -931,6 +937,30 @@ class CreateVoucher implements ModelInterface, ArrayAccess
     public function setIsValidOnlyOnce($is_valid_only_once)
     {
         $this->container['is_valid_only_once'] = $is_valid_only_once;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_discoverable
+     *
+     * @return bool
+     */
+    public function getIsDiscoverable()
+    {
+        return $this->container['is_discoverable'];
+    }
+
+    /**
+     * Sets is_discoverable
+     *
+     * @param bool $is_discoverable Enables the voucher to be offered in the Voucher Discoverability feature
+     *
+     * @return $this
+     */
+    public function setIsDiscoverable($is_discoverable)
+    {
+        $this->container['is_discoverable'] = $is_discoverable;
 
         return $this;
     }

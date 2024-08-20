@@ -217,6 +217,13 @@ class CreateVoucherTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_discoverable"
+     */
+    public function testPropertyIsDiscoverable()
+    {
+    }
+
+    /**
      * Test attribute "start_date"
      */
     public function testPropertyStartDate()

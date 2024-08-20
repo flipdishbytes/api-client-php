@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **is_valid_for_first_order_only** | **bool** | Valid only on the first order by the customer | [optional] 
 **is_valid_once_per_customer** | **bool** | Valid once per customer | [optional] 
 **is_valid_only_once** | **bool** | Valid only once, by any customer (once used cannot be used again by any other customer) | [optional] 
+**is_discoverable** | **bool** | Enables the voucher to be offered in the Voucher Discoverability feature | [optional] 
 **start_date** | [**\DateTime**](\DateTime.md) | Voucher Starts On (Time in UTC) | [optional] 
 **expiry_date** | [**\DateTime**](\DateTime.md) | Voucher Expires On (Time in UTC) | [optional] 
 **channel_restrictions** | **string[]** | Limit the channels this voucher can be used on | [optional] 
