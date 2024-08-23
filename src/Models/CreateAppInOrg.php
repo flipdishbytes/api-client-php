@@ -60,7 +60,8 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'name' => 'string',
         'country_id' => 'string',
-        'main_color' => 'string'
+        'main_color' => 'string',
+        'app_id' => 'string'
     ];
 
     /**
@@ -71,7 +72,8 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'name' => null,
         'country_id' => null,
-        'main_color' => null
+        'main_color' => null,
+        'app_id' => null
     ];
 
     /**
@@ -103,7 +105,8 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'name' => 'Name',
         'country_id' => 'CountryId',
-        'main_color' => 'MainColor'
+        'main_color' => 'MainColor',
+        'app_id' => 'AppId'
     ];
 
     /**
@@ -114,7 +117,8 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
     protected static $setters = [
         'name' => 'setName',
         'country_id' => 'setCountryId',
-        'main_color' => 'setMainColor'
+        'main_color' => 'setMainColor',
+        'app_id' => 'setAppId'
     ];
 
     /**
@@ -125,7 +129,8 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
     protected static $getters = [
         'name' => 'getName',
         'country_id' => 'getCountryId',
-        'main_color' => 'getMainColor'
+        'main_color' => 'getMainColor',
+        'app_id' => 'getAppId'
     ];
 
     /**
@@ -191,6 +196,7 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['country_id'] = isset($data['country_id']) ? $data['country_id'] : null;
         $this->container['main_color'] = isset($data['main_color']) ? $data['main_color'] : null;
+        $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
     }
 
     /**
@@ -285,6 +291,30 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
     public function setMainColor($main_color)
     {
         $this->container['main_color'] = $main_color;
+
+        return $this;
+    }
+
+    /**
+     * Gets app_id
+     *
+     * @return string
+     */
+    public function getAppId()
+    {
+        return $this->container['app_id'];
+    }
+
+    /**
+     * Sets app_id
+     *
+     * @param string $app_id A predefined AppId
+     *
+     * @return $this
+     */
+    public function setAppId($app_id)
+    {
+        $this->container['app_id'] = $app_id;
 
         return $this;
     }

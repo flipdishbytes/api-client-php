@@ -96,4 +96,11 @@ class CreateAppInOrgTest extends \PHPUnit_Framework_TestCase
     public function testPropertyMainColor()
     {
     }
+
+    /**
+     * Test attribute "app_id"
+     */
+    public function testPropertyAppId()
+    {
+    }
 }
