@@ -77,6 +77,7 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => 'bool',
         'is_valid_only_once' => 'bool',
         'is_discoverable' => 'bool',
+        'force_discount' => 'bool',
         'start_date' => '\DateTime',
         'expiry_date' => '\DateTime',
         'channel_restrictions' => 'string[]',
@@ -111,6 +112,7 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => null,
         'is_valid_only_once' => null,
         'is_discoverable' => null,
+        'force_discount' => null,
         'start_date' => 'date-time',
         'expiry_date' => 'date-time',
         'channel_restrictions' => null,
@@ -166,6 +168,7 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => 'IsValidOncePerCustomer',
         'is_valid_only_once' => 'IsValidOnlyOnce',
         'is_discoverable' => 'IsDiscoverable',
+        'force_discount' => 'ForceDiscount',
         'start_date' => 'StartDate',
         'expiry_date' => 'ExpiryDate',
         'channel_restrictions' => 'ChannelRestrictions',
@@ -200,6 +203,7 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => 'setIsValidOncePerCustomer',
         'is_valid_only_once' => 'setIsValidOnlyOnce',
         'is_discoverable' => 'setIsDiscoverable',
+        'force_discount' => 'setForceDiscount',
         'start_date' => 'setStartDate',
         'expiry_date' => 'setExpiryDate',
         'channel_restrictions' => 'setChannelRestrictions',
@@ -234,6 +238,7 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => 'getIsValidOncePerCustomer',
         'is_valid_only_once' => 'getIsValidOnlyOnce',
         'is_discoverable' => 'getIsDiscoverable',
+        'force_discount' => 'getForceDiscount',
         'start_date' => 'getStartDate',
         'expiry_date' => 'getExpiryDate',
         'channel_restrictions' => 'getChannelRestrictions',
@@ -370,6 +375,7 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
         $this->container['is_valid_once_per_customer'] = isset($data['is_valid_once_per_customer']) ? $data['is_valid_once_per_customer'] : null;
         $this->container['is_valid_only_once'] = isset($data['is_valid_only_once']) ? $data['is_valid_only_once'] : null;
         $this->container['is_discoverable'] = isset($data['is_discoverable']) ? $data['is_discoverable'] : null;
+        $this->container['force_discount'] = isset($data['force_discount']) ? $data['force_discount'] : null;
         $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
         $this->container['expiry_date'] = isset($data['expiry_date']) ? $data['expiry_date'] : null;
         $this->container['channel_restrictions'] = isset($data['channel_restrictions']) ? $data['channel_restrictions'] : null;
@@ -863,6 +869,30 @@ class UpdateVoucher implements ModelInterface, ArrayAccess
     public function setIsDiscoverable($is_discoverable)
     {
         $this->container['is_discoverable'] = $is_discoverable;
+
+        return $this;
+    }
+
+    /**
+     * Gets force_discount
+     *
+     * @return bool
+     */
+    public function getForceDiscount()
+    {
+        return $this->container['force_discount'];
+    }
+
+    /**
+     * Sets force_discount
+     *
+     * @param bool $force_discount Force the discount to be applied which bypasses some menu restrictions
+     *
+     * @return $this
+     */
+    public function setForceDiscount($force_discount)
+    {
+        $this->container['force_discount'] = $force_discount;
 
         return $this;
     }

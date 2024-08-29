@@ -224,6 +224,13 @@ class CreateVoucherTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "force_discount"
+     */
+    public function testPropertyForceDiscount()
+    {
+    }
+
+    /**
      * Test attribute "start_date"
      */
     public function testPropertyStartDate()
