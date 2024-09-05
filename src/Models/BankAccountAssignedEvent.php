@@ -58,6 +58,7 @@ class BankAccountAssignedEvent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'org_id' => 'string',
         'bank_account' => '\Flipdish\\Client\Models\BankAccount',
         'description' => 'string',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
@@ -75,6 +76,7 @@ class BankAccountAssignedEvent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'org_id' => null,
         'bank_account' => null,
         'description' => null,
         'user' => null,
@@ -113,6 +115,7 @@ class BankAccountAssignedEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'org_id' => 'OrgId',
         'bank_account' => 'BankAccount',
         'description' => 'Description',
         'user' => 'User',
@@ -130,6 +133,7 @@ class BankAccountAssignedEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'org_id' => 'setOrgId',
         'bank_account' => 'setBankAccount',
         'description' => 'setDescription',
         'user' => 'setUser',
@@ -147,6 +151,7 @@ class BankAccountAssignedEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'org_id' => 'getOrgId',
         'bank_account' => 'getBankAccount',
         'description' => 'getDescription',
         'user' => 'getUser',
@@ -218,6 +223,7 @@ class BankAccountAssignedEvent implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['org_id'] = isset($data['org_id']) ? $data['org_id'] : null;
         $this->container['bank_account'] = isset($data['bank_account']) ? $data['bank_account'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
@@ -252,6 +258,30 @@ class BankAccountAssignedEvent implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets org_id
+     *
+     * @return string
+     */
+    public function getOrgId()
+    {
+        return $this->container['org_id'];
+    }
+
+    /**
+     * Sets org_id
+     *
+     * @param string $org_id Organisation Id
+     *
+     * @return $this
+     */
+    public function setOrgId($org_id)
+    {
+        $this->container['org_id'] = $org_id;
+
+        return $this;
+    }
 
     /**
      * Gets bank_account

@@ -69,7 +69,8 @@ class BankAccount implements ModelInterface, ArrayAccess
         'bank_country_code' => 'string',
         'account_holder_address' => 'string',
         'account_holder_country_code' => 'string',
-        'vat_number' => 'string'
+        'vat_number' => 'string',
+        'stripe_account_id' => 'string'
     ];
 
     /**
@@ -89,7 +90,8 @@ class BankAccount implements ModelInterface, ArrayAccess
         'bank_country_code' => null,
         'account_holder_address' => null,
         'account_holder_country_code' => null,
-        'vat_number' => null
+        'vat_number' => null,
+        'stripe_account_id' => null
     ];
 
     /**
@@ -130,7 +132,8 @@ class BankAccount implements ModelInterface, ArrayAccess
         'bank_country_code' => 'BankCountryCode',
         'account_holder_address' => 'AccountHolderAddress',
         'account_holder_country_code' => 'AccountHolderCountryCode',
-        'vat_number' => 'VatNumber'
+        'vat_number' => 'VatNumber',
+        'stripe_account_id' => 'StripeAccountId'
     ];
 
     /**
@@ -150,7 +153,8 @@ class BankAccount implements ModelInterface, ArrayAccess
         'bank_country_code' => 'setBankCountryCode',
         'account_holder_address' => 'setAccountHolderAddress',
         'account_holder_country_code' => 'setAccountHolderCountryCode',
-        'vat_number' => 'setVatNumber'
+        'vat_number' => 'setVatNumber',
+        'stripe_account_id' => 'setStripeAccountId'
     ];
 
     /**
@@ -170,7 +174,8 @@ class BankAccount implements ModelInterface, ArrayAccess
         'bank_country_code' => 'getBankCountryCode',
         'account_holder_address' => 'getAccountHolderAddress',
         'account_holder_country_code' => 'getAccountHolderCountryCode',
-        'vat_number' => 'getVatNumber'
+        'vat_number' => 'getVatNumber',
+        'stripe_account_id' => 'getStripeAccountId'
     ];
 
     /**
@@ -264,6 +269,7 @@ class BankAccount implements ModelInterface, ArrayAccess
         $this->container['account_holder_address'] = isset($data['account_holder_address']) ? $data['account_holder_address'] : null;
         $this->container['account_holder_country_code'] = isset($data['account_holder_country_code']) ? $data['account_holder_country_code'] : null;
         $this->container['vat_number'] = isset($data['vat_number']) ? $data['vat_number'] : null;
+        $this->container['stripe_account_id'] = isset($data['stripe_account_id']) ? $data['stripe_account_id'] : null;
     }
 
     /**
@@ -591,6 +597,30 @@ class BankAccount implements ModelInterface, ArrayAccess
     public function setVatNumber($vat_number)
     {
         $this->container['vat_number'] = $vat_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets stripe_account_id
+     *
+     * @return string
+     */
+    public function getStripeAccountId()
+    {
+        return $this->container['stripe_account_id'];
+    }
+
+    /**
+     * Sets stripe_account_id
+     *
+     * @param string $stripe_account_id Stripe Id of the connected account
+     *
+     * @return $this
+     */
+    public function setStripeAccountId($stripe_account_id)
+    {
+        $this->container['stripe_account_id'] = $stripe_account_id;
 
         return $this;
     }

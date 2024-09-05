@@ -77,6 +77,13 @@ class BankAccountCreatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "org_id"
+     */
+    public function testPropertyOrgId()
+    {
+    }
+
+    /**
      * Test attribute "bank_account"
      */
     public function testPropertyBankAccount()

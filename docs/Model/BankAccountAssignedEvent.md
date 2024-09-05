@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**org_id** | **string** | Organisation Id | [optional] 
 **bank_account** | [**\Flipdish\\Client\Models\BankAccount**](BankAccount.md) | The assigned bank account | [optional] 
 **description** | **string** | Event description | [optional] 
 **user** | [**\Flipdish\\Client\Models\UserEventInfo**](UserEventInfo.md) | Updated by user | [optional] 

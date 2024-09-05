@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**org_id** | **string** | Organisation Id | [optional] 
 **bank_account** | [**\Flipdish\\Client\Models\BankAccount**](BankAccount.md) | The create bank account | [optional] 
 **user** | [**\Flipdish\\Client\Models\UserEventInfo**](UserEventInfo.md) | Updated by user | [optional] 
 **event_name** | **string** | The event name | [optional] 

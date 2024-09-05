@@ -159,4 +159,11 @@ class BankAccountTest extends \PHPUnit_Framework_TestCase
     public function testPropertyVatNumber()
     {
     }
+
+    /**
+     * Test attribute "stripe_account_id"
+     */
+    public function testPropertyStripeAccountId()
+    {
+    }
 }
