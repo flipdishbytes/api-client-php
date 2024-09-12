@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**deleteTeammate**](TeammatesApi.md#deleteTeammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | 
 [**getTeammateByAppIdAndTeammateId**](TeammatesApi.md#getTeammateByAppIdAndTeammateId) | **GET** /api/v1.0/{appId}/teammates/{id} | 
 [**getTeammatesByAppId**](TeammatesApi.md#getTeammatesByAppId) | **GET** /api/v1.0/{appId}/teammates | 
-[**grantAccess**](TeammatesApi.md#grantAccess) | **POST** /api/v1.0/{appId}/teammates/GrantAccess | 
+[**grantaccess**](TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/grantaccess | 
 [**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
 [**teammatesAcceptInvitation**](TeammatesApi.md#teammatesAcceptInvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
 [**updateTeammate**](TeammatesApi.md#updateTeammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
@@ -223,8 +223,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **grantAccess**
-> object grantAccess($app_id, $teammate)
+# **grantaccess**
+> object grantaccess($app_id, $teammate)
 
 
 
@@ -246,10 +246,10 @@ $app_id = "app_id_example"; // string |
 $teammate = new \Flipdish\\Client\Models\CreateTeammate(); // \Flipdish\\Client\Models\CreateTeammate | 
 
 try {
-    $result = $apiInstance->grantAccess($app_id, $teammate);
+    $result = $apiInstance->grantaccess($app_id, $teammate);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TeammatesApi->grantAccess: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TeammatesApi->grantaccess: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

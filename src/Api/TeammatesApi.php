@@ -1275,7 +1275,7 @@ class TeammatesApi
     }
 
     /**
-     * Operation grantAccess
+     * Operation grantaccess
      *
      * @param  string $app_id app_id (required)
      * @param  \Flipdish\\Client\Models\CreateTeammate $teammate teammate (required)
@@ -1284,14 +1284,14 @@ class TeammatesApi
      * @throws \InvalidArgumentException
      * @return object
      */
-    public function grantAccess($app_id, $teammate)
+    public function grantaccess($app_id, $teammate)
     {
-        list($response) = $this->grantAccessWithHttpInfo($app_id, $teammate);
+        list($response) = $this->grantaccessWithHttpInfo($app_id, $teammate);
         return $response;
     }
 
     /**
-     * Operation grantAccessWithHttpInfo
+     * Operation grantaccessWithHttpInfo
      *
      * @param  string $app_id (required)
      * @param  \Flipdish\\Client\Models\CreateTeammate $teammate (required)
@@ -1300,10 +1300,10 @@ class TeammatesApi
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function grantAccessWithHttpInfo($app_id, $teammate)
+    public function grantaccessWithHttpInfo($app_id, $teammate)
     {
         $returnType = 'object';
-        $request = $this->grantAccessRequest($app_id, $teammate);
+        $request = $this->grantaccessRequest($app_id, $teammate);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1359,10 +1359,10 @@ class TeammatesApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 403:
+                case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1373,7 +1373,7 @@ class TeammatesApi
     }
 
     /**
-     * Operation grantAccessAsync
+     * Operation grantaccessAsync
      *
      * 
      *
@@ -1383,9 +1383,9 @@ class TeammatesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function grantAccessAsync($app_id, $teammate)
+    public function grantaccessAsync($app_id, $teammate)
     {
-        return $this->grantAccessAsyncWithHttpInfo($app_id, $teammate)
+        return $this->grantaccessAsyncWithHttpInfo($app_id, $teammate)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1394,7 +1394,7 @@ class TeammatesApi
     }
 
     /**
-     * Operation grantAccessAsyncWithHttpInfo
+     * Operation grantaccessAsyncWithHttpInfo
      *
      * 
      *
@@ -1404,10 +1404,10 @@ class TeammatesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function grantAccessAsyncWithHttpInfo($app_id, $teammate)
+    public function grantaccessAsyncWithHttpInfo($app_id, $teammate)
     {
         $returnType = 'object';
-        $request = $this->grantAccessRequest($app_id, $teammate);
+        $request = $this->grantaccessRequest($app_id, $teammate);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1447,7 +1447,7 @@ class TeammatesApi
     }
 
     /**
-     * Create request for operation 'grantAccess'
+     * Create request for operation 'grantaccess'
      *
      * @param  string $app_id (required)
      * @param  \Flipdish\\Client\Models\CreateTeammate $teammate (required)
@@ -1455,22 +1455,22 @@ class TeammatesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function grantAccessRequest($app_id, $teammate)
+    protected function grantaccessRequest($app_id, $teammate)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling grantAccess'
+                'Missing the required parameter $app_id when calling grantaccess'
             );
         }
         // verify the required parameter 'teammate' is set
         if ($teammate === null || (is_array($teammate) && count($teammate) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $teammate when calling grantAccess'
+                'Missing the required parameter $teammate when calling grantaccess'
             );
         }
 
-        $resourcePath = '/api/v1.0/{appId}/teammates/GrantAccess';
+        $resourcePath = '/api/v1.0/{appId}/teammates/grantaccess';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

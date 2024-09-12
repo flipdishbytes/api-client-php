@@ -112,12 +112,12 @@ class TeammatesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for grantAccess
+     * Test case for grantaccess
      *
      * .
      *
      */
-    public function testGrantAccess()
+    public function testGrantaccess()
     {
     }
 
