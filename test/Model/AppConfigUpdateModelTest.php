@@ -131,4 +131,11 @@ class AppConfigUpdateModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCookieConsentPromptEnabled()
     {
     }
+
+    /**
+     * Test attribute "logo_image_url"
+     */
+    public function testPropertyLogoImageUrl()
+    {
+    }
 }

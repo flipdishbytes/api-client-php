@@ -65,7 +65,8 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'application_category' => 'string',
         'is_panacea_enabled' => 'bool',
         'panacea_vanity_url' => 'string',
-        'cookie_consent_prompt_enabled' => 'bool'
+        'cookie_consent_prompt_enabled' => 'bool',
+        'logo_image_url' => 'string'
     ];
 
     /**
@@ -81,7 +82,8 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'application_category' => null,
         'is_panacea_enabled' => null,
         'panacea_vanity_url' => null,
-        'cookie_consent_prompt_enabled' => null
+        'cookie_consent_prompt_enabled' => null,
+        'logo_image_url' => null
     ];
 
     /**
@@ -118,7 +120,8 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'application_category' => 'ApplicationCategory',
         'is_panacea_enabled' => 'IsPanaceaEnabled',
         'panacea_vanity_url' => 'PanaceaVanityUrl',
-        'cookie_consent_prompt_enabled' => 'CookieConsentPromptEnabled'
+        'cookie_consent_prompt_enabled' => 'CookieConsentPromptEnabled',
+        'logo_image_url' => 'LogoImageUrl'
     ];
 
     /**
@@ -134,7 +137,8 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'application_category' => 'setApplicationCategory',
         'is_panacea_enabled' => 'setIsPanaceaEnabled',
         'panacea_vanity_url' => 'setPanaceaVanityUrl',
-        'cookie_consent_prompt_enabled' => 'setCookieConsentPromptEnabled'
+        'cookie_consent_prompt_enabled' => 'setCookieConsentPromptEnabled',
+        'logo_image_url' => 'setLogoImageUrl'
     ];
 
     /**
@@ -150,7 +154,8 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'application_category' => 'getApplicationCategory',
         'is_panacea_enabled' => 'getIsPanaceaEnabled',
         'panacea_vanity_url' => 'getPanaceaVanityUrl',
-        'cookie_consent_prompt_enabled' => 'getCookieConsentPromptEnabled'
+        'cookie_consent_prompt_enabled' => 'getCookieConsentPromptEnabled',
+        'logo_image_url' => 'getLogoImageUrl'
     ];
 
     /**
@@ -238,6 +243,7 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         $this->container['is_panacea_enabled'] = isset($data['is_panacea_enabled']) ? $data['is_panacea_enabled'] : null;
         $this->container['panacea_vanity_url'] = isset($data['panacea_vanity_url']) ? $data['panacea_vanity_url'] : null;
         $this->container['cookie_consent_prompt_enabled'] = isset($data['cookie_consent_prompt_enabled']) ? $data['cookie_consent_prompt_enabled'] : null;
+        $this->container['logo_image_url'] = isset($data['logo_image_url']) ? $data['logo_image_url'] : null;
     }
 
     /**
@@ -469,6 +475,30 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
     public function setCookieConsentPromptEnabled($cookie_consent_prompt_enabled)
     {
         $this->container['cookie_consent_prompt_enabled'] = $cookie_consent_prompt_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets logo_image_url
+     *
+     * @return string
+     */
+    public function getLogoImageUrl()
+    {
+        return $this->container['logo_image_url'];
+    }
+
+    /**
+     * Sets logo_image_url
+     *
+     * @param string $logo_image_url Logo image URL
+     *
+     * @return $this
+     */
+    public function setLogoImageUrl($logo_image_url)
+    {
+        $this->container['logo_image_url'] = $logo_image_url;
 
         return $this;
     }

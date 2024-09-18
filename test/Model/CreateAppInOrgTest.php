@@ -103,4 +103,11 @@ class CreateAppInOrgTest extends \PHPUnit_Framework_TestCase
     public function testPropertyAppId()
     {
     }
+
+    /**
+     * Test attribute "logo_image_url"
+     */
+    public function testPropertyLogoImageUrl()
+    {
+    }
 }

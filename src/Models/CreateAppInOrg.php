@@ -61,7 +61,8 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
         'name' => 'string',
         'country_id' => 'string',
         'main_color' => 'string',
-        'app_id' => 'string'
+        'app_id' => 'string',
+        'logo_image_url' => 'string'
     ];
 
     /**
@@ -73,7 +74,8 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
         'name' => null,
         'country_id' => null,
         'main_color' => null,
-        'app_id' => null
+        'app_id' => null,
+        'logo_image_url' => null
     ];
 
     /**
@@ -106,7 +108,8 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
         'name' => 'Name',
         'country_id' => 'CountryId',
         'main_color' => 'MainColor',
-        'app_id' => 'AppId'
+        'app_id' => 'AppId',
+        'logo_image_url' => 'LogoImageUrl'
     ];
 
     /**
@@ -118,7 +121,8 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
         'name' => 'setName',
         'country_id' => 'setCountryId',
         'main_color' => 'setMainColor',
-        'app_id' => 'setAppId'
+        'app_id' => 'setAppId',
+        'logo_image_url' => 'setLogoImageUrl'
     ];
 
     /**
@@ -130,7 +134,8 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
         'name' => 'getName',
         'country_id' => 'getCountryId',
         'main_color' => 'getMainColor',
-        'app_id' => 'getAppId'
+        'app_id' => 'getAppId',
+        'logo_image_url' => 'getLogoImageUrl'
     ];
 
     /**
@@ -197,6 +202,7 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
         $this->container['country_id'] = isset($data['country_id']) ? $data['country_id'] : null;
         $this->container['main_color'] = isset($data['main_color']) ? $data['main_color'] : null;
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
+        $this->container['logo_image_url'] = isset($data['logo_image_url']) ? $data['logo_image_url'] : null;
     }
 
     /**
@@ -315,6 +321,30 @@ class CreateAppInOrg implements ModelInterface, ArrayAccess
     public function setAppId($app_id)
     {
         $this->container['app_id'] = $app_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets logo_image_url
+     *
+     * @return string
+     */
+    public function getLogoImageUrl()
+    {
+        return $this->container['logo_image_url'];
+    }
+
+    /**
+     * Sets logo_image_url
+     *
+     * @param string $logo_image_url Logo image URL
+     *
+     * @return $this
+     */
+    public function setLogoImageUrl($logo_image_url)
+    {
+        $this->container['logo_image_url'] = $logo_image_url;
 
         return $this;
     }
