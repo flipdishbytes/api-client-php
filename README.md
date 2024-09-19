@@ -310,6 +310,7 @@ Class | Method | HTTP request | Description
 *IntercomApi* | [**userHash**](docs/Api/IntercomApi.md#userhash) | **GET** /api/v1.0/intercom/userHash | 
 *InvoicesApi* | [**getInvoices**](docs/Api/InvoicesApi.md#getinvoices) | **GET** /api/v1.0/{appId}/invoices | 
 *KioskEntitlementsApi* | [**queryKioskEntitlements**](docs/Api/KioskEntitlementsApi.md#querykioskentitlements) | **GET** /api/v1.0/{appId}/kiosk/entitlements | 
+*KioskEntitlementsApi* | [**queryKioskEntitlementsByOrgId**](docs/Api/KioskEntitlementsApi.md#querykioskentitlementsbyorgid) | **GET** /api/v1.0/orgs/{orgId}/kiosk/entitlements | 
 *KioskIotApi* | [**getKioskIotConnection**](docs/Api/KioskIotApi.md#getkioskiotconnection) | **POST** /api/v1.0/kioskiot/connect | 
 *KioskIotApi* | [**queryTelemetrySeries**](docs/Api/KioskIotApi.md#querytelemetryseries) | **POST** /api/v1.0/{appId}/kioskiot/timeseries/query | 
 *LightspeedApi* | [**lightspeedGenerateMenu**](docs/Api/LightspeedApi.md#lightspeedgeneratemenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
