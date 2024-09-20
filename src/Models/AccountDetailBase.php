@@ -62,7 +62,8 @@ class AccountDetailBase implements ModelInterface, ArrayAccess
         'language' => 'string',
         'time_zone_info_id' => 'string',
         'display_times_in_user_local_time_zone' => 'bool',
-        'show_hidden_features' => 'bool'
+        'show_hidden_features' => 'bool',
+        'created_at' => '\DateTime'
     ];
 
     /**
@@ -75,7 +76,8 @@ class AccountDetailBase implements ModelInterface, ArrayAccess
         'language' => null,
         'time_zone_info_id' => null,
         'display_times_in_user_local_time_zone' => null,
-        'show_hidden_features' => null
+        'show_hidden_features' => null,
+        'created_at' => 'date-time'
     ];
 
     /**
@@ -109,7 +111,8 @@ class AccountDetailBase implements ModelInterface, ArrayAccess
         'language' => 'Language',
         'time_zone_info_id' => 'TimeZoneInfoId',
         'display_times_in_user_local_time_zone' => 'DisplayTimesInUserLocalTimeZone',
-        'show_hidden_features' => 'ShowHiddenFeatures'
+        'show_hidden_features' => 'ShowHiddenFeatures',
+        'created_at' => 'CreatedAt'
     ];
 
     /**
@@ -122,7 +125,8 @@ class AccountDetailBase implements ModelInterface, ArrayAccess
         'language' => 'setLanguage',
         'time_zone_info_id' => 'setTimeZoneInfoId',
         'display_times_in_user_local_time_zone' => 'setDisplayTimesInUserLocalTimeZone',
-        'show_hidden_features' => 'setShowHiddenFeatures'
+        'show_hidden_features' => 'setShowHiddenFeatures',
+        'created_at' => 'setCreatedAt'
     ];
 
     /**
@@ -135,7 +139,8 @@ class AccountDetailBase implements ModelInterface, ArrayAccess
         'language' => 'getLanguage',
         'time_zone_info_id' => 'getTimeZoneInfoId',
         'display_times_in_user_local_time_zone' => 'getDisplayTimesInUserLocalTimeZone',
-        'show_hidden_features' => 'getShowHiddenFeatures'
+        'show_hidden_features' => 'getShowHiddenFeatures',
+        'created_at' => 'getCreatedAt'
     ];
 
     /**
@@ -203,6 +208,7 @@ class AccountDetailBase implements ModelInterface, ArrayAccess
         $this->container['time_zone_info_id'] = isset($data['time_zone_info_id']) ? $data['time_zone_info_id'] : null;
         $this->container['display_times_in_user_local_time_zone'] = isset($data['display_times_in_user_local_time_zone']) ? $data['display_times_in_user_local_time_zone'] : null;
         $this->container['show_hidden_features'] = isset($data['show_hidden_features']) ? $data['show_hidden_features'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
     }
 
     /**
@@ -345,6 +351,30 @@ class AccountDetailBase implements ModelInterface, ArrayAccess
     public function setShowHiddenFeatures($show_hidden_features)
     {
         $this->container['show_hidden_features'] = $show_hidden_features;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     *
+     * @param \DateTime $created_at User created at
+     *
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
 
         return $this;
     }
