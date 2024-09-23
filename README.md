@@ -134,7 +134,6 @@ Class | Method | HTTP request | Description
 *AppStoreDeveloperApi* | [**uploadAppStoreAppLogo**](docs/Api/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
 *AppStoreEntitlementsApi* | [**getAppStoreAppEntitlements**](docs/Api/AppStoreEntitlementsApi.md#getappstoreappentitlements) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/entitlements | 
 *AppsApi* | [**createApp**](docs/Api/AppsApi.md#createapp) | **POST** /api/v1.0/apps | 
-*AppsApi* | [**createAppInOrg**](docs/Api/AppsApi.md#createappinorg) | **POST** /api/v1.0/orgs/{orgId}/apps | 
 *AppsApi* | [**getApp**](docs/Api/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 *AppsApi* | [**getAppHostnameStatus**](docs/Api/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
 *AppsApi* | [**getApps**](docs/Api/AppsApi.md#getapps) | **GET** /api/v1.0/apps | 
@@ -701,7 +700,6 @@ Class | Method | HTTP request | Description
  - [CountryFormResponse](docs/Model/CountryFormResponse.md)
  - [CountryWithAccountFieldsDefinitions](docs/Model/CountryWithAccountFieldsDefinitions.md)
  - [CreateAccountModel](docs/Model/CreateAccountModel.md)
- - [CreateAppInOrg](docs/Model/CreateAppInOrg.md)
  - [CreateAppParameters](docs/Model/CreateAppParameters.md)
  - [CreateAppStoreApp](docs/Model/CreateAppStoreApp.md)
  - [CreateBasicAccountModel](docs/Model/CreateBasicAccountModel.md)
