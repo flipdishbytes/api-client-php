@@ -72,6 +72,16 @@ class AddressApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for addressTemplates
+     *
+     * .
+     *
+     */
+    public function testAddressTemplates()
+    {
+    }
+
+    /**
      * Test case for formByApp
      *
      * .

@@ -4,12 +4,64 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**addressTemplates**](AddressApi.md#addressTemplates) | **POST** /api/v1.0/address/templates | 
 [**formByApp**](AddressApi.md#formByApp) | **GET** /api/v1.0/app/{appId}/address/form | 
 [**formByCountry**](AddressApi.md#formByCountry) | **GET** /api/v1.0/address/country/{countryCode}/form | 
 [**formatGoogleAddress**](AddressApi.md#formatGoogleAddress) | **POST** /api/v1.0/address/google | 
 [**getCountries**](AddressApi.md#getCountries) | **GET** /api/v1.0/address/countries | 
 [**validateAddressForm**](AddressApi.md#validateAddressForm) | **POST** /api/v1.0/address/validate | 
 
+
+# **addressTemplates**
+> \Flipdish\\Client\Models\RestApiStringResult addressTemplates($address)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\AddressApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$address = new \Flipdish\\Client\Models\StoreAddressForm(); // \Flipdish\\Client\Models\StoreAddressForm | 
+
+try {
+    $result = $apiInstance->addressTemplates($address);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AddressApi->addressTemplates: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **address** | [**\Flipdish\\Client\Models\StoreAddressForm**](../Model/StoreAddressForm.md)|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **formByApp**
 > \Flipdish\\Client\Models\RestApiResultAddressFormResponse formByApp($app_id, $language)

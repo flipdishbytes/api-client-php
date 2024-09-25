@@ -102,6 +102,7 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**sendPinForPasswordReset**](docs/Api/AccountsApi.md#sendpinforpasswordreset) | **POST** /api/v1.0/accounts/password/resetpin | 
 *AccountsApi* | [**skipSignupStep**](docs/Api/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
 *AccountsApi* | [**updateAccount**](docs/Api/AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | 
+*AddressApi* | [**addressTemplates**](docs/Api/AddressApi.md#addresstemplates) | **POST** /api/v1.0/address/templates | 
 *AddressApi* | [**formByApp**](docs/Api/AddressApi.md#formbyapp) | **GET** /api/v1.0/app/{appId}/address/form | 
 *AddressApi* | [**formByCountry**](docs/Api/AddressApi.md#formbycountry) | **GET** /api/v1.0/address/country/{countryCode}/form | 
 *AddressApi* | [**formatGoogleAddress**](docs/Api/AddressApi.md#formatgoogleaddress) | **POST** /api/v1.0/address/google | 
