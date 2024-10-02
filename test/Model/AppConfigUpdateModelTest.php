@@ -138,4 +138,11 @@ class AppConfigUpdateModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyLogoImageUrl()
     {
     }
+
+    /**
+     * Test attribute "country_id"
+     */
+    public function testPropertyCountryId()
+    {
+    }
 }

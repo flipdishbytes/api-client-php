@@ -66,7 +66,8 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'is_panacea_enabled' => 'bool',
         'panacea_vanity_url' => 'string',
         'cookie_consent_prompt_enabled' => 'bool',
-        'logo_image_url' => 'string'
+        'logo_image_url' => 'string',
+        'country_id' => 'string'
     ];
 
     /**
@@ -83,7 +84,8 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'is_panacea_enabled' => null,
         'panacea_vanity_url' => null,
         'cookie_consent_prompt_enabled' => null,
-        'logo_image_url' => null
+        'logo_image_url' => null,
+        'country_id' => null
     ];
 
     /**
@@ -121,7 +123,8 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'is_panacea_enabled' => 'IsPanaceaEnabled',
         'panacea_vanity_url' => 'PanaceaVanityUrl',
         'cookie_consent_prompt_enabled' => 'CookieConsentPromptEnabled',
-        'logo_image_url' => 'LogoImageUrl'
+        'logo_image_url' => 'LogoImageUrl',
+        'country_id' => 'CountryId'
     ];
 
     /**
@@ -138,7 +141,8 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'is_panacea_enabled' => 'setIsPanaceaEnabled',
         'panacea_vanity_url' => 'setPanaceaVanityUrl',
         'cookie_consent_prompt_enabled' => 'setCookieConsentPromptEnabled',
-        'logo_image_url' => 'setLogoImageUrl'
+        'logo_image_url' => 'setLogoImageUrl',
+        'country_id' => 'setCountryId'
     ];
 
     /**
@@ -155,7 +159,8 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         'is_panacea_enabled' => 'getIsPanaceaEnabled',
         'panacea_vanity_url' => 'getPanaceaVanityUrl',
         'cookie_consent_prompt_enabled' => 'getCookieConsentPromptEnabled',
-        'logo_image_url' => 'getLogoImageUrl'
+        'logo_image_url' => 'getLogoImageUrl',
+        'country_id' => 'getCountryId'
     ];
 
     /**
@@ -244,6 +249,7 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
         $this->container['panacea_vanity_url'] = isset($data['panacea_vanity_url']) ? $data['panacea_vanity_url'] : null;
         $this->container['cookie_consent_prompt_enabled'] = isset($data['cookie_consent_prompt_enabled']) ? $data['cookie_consent_prompt_enabled'] : null;
         $this->container['logo_image_url'] = isset($data['logo_image_url']) ? $data['logo_image_url'] : null;
+        $this->container['country_id'] = isset($data['country_id']) ? $data['country_id'] : null;
     }
 
     /**
@@ -261,6 +267,14 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
                 "invalid value for 'application_category', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
+        }
+
+        if (!is_null($this->container['country_id']) && (mb_strlen($this->container['country_id']) > 2)) {
+            $invalidProperties[] = "invalid value for 'country_id', the character length must be smaller than or equal to 2.";
+        }
+
+        if (!is_null($this->container['country_id']) && (mb_strlen($this->container['country_id']) < 0)) {
+            $invalidProperties[] = "invalid value for 'country_id', the character length must be bigger than or equal to 0.";
         }
 
         return $invalidProperties;
@@ -499,6 +513,37 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
     public function setLogoImageUrl($logo_image_url)
     {
         $this->container['logo_image_url'] = $logo_image_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets country_id
+     *
+     * @return string
+     */
+    public function getCountryId()
+    {
+        return $this->container['country_id'];
+    }
+
+    /**
+     * Sets country_id
+     *
+     * @param string $country_id Country identifier in ISO 3166-1 alpha-2 format.
+     *
+     * @return $this
+     */
+    public function setCountryId($country_id)
+    {
+        if (!is_null($country_id) && (mb_strlen($country_id) > 2)) {
+            throw new \InvalidArgumentException('invalid length for $country_id when calling AppConfigUpdateModel., must be smaller than or equal to 2.');
+        }
+        if (!is_null($country_id) && (mb_strlen($country_id) < 0)) {
+            throw new \InvalidArgumentException('invalid length for $country_id when calling AppConfigUpdateModel., must be bigger than or equal to 0.');
+        }
+
+        $this->container['country_id'] = $country_id;
 
         return $this;
     }
