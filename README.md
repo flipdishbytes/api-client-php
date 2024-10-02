@@ -282,7 +282,6 @@ Class | Method | HTTP request | Description
 *HomeApi* | [**getHomeActions**](docs/Api/HomeApi.md#gethomeactions) | **GET** /api/v1.0/{appId}/home | 
 *HomeApi* | [**getHomeStatistics**](docs/Api/HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | 
 *HomeApi* | [**getOktaPortalFeatureFlag**](docs/Api/HomeApi.md#getoktaportalfeatureflag) | **GET** /api/v1.0/home/okta-portal | 
-*HttpRequestResponseLogsApi* | [**getLogs**](docs/Api/HttpRequestResponseLogsApi.md#getlogs) | **GET** /api/v1.0/{appId}/interactions/logs | 
 *HydraApi* | [**assignEmv**](docs/Api/HydraApi.md#assignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | 
 *HydraApi* | [**attachStoreToKiosk**](docs/Api/HydraApi.md#attachstoretokiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | 
 *HydraApi* | [**attachStoreToTerminal**](docs/Api/HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | 
@@ -799,7 +798,6 @@ Class | Method | HTTP request | Description
  - [HomeAction](docs/Model/HomeAction.md)
  - [HomeStatistics](docs/Model/HomeStatistics.md)
  - [HttpPostedFileBase](docs/Model/HttpPostedFileBase.md)
- - [HttpRequestAndResponseLog](docs/Model/HttpRequestAndResponseLog.md)
  - [HydraAssignedEvent](docs/Model/HydraAssignedEvent.md)
  - [HydraConfig](docs/Model/HydraConfig.md)
  - [HydraConnectionStatusChangedEvent](docs/Model/HydraConnectionStatusChangedEvent.md)
@@ -1112,7 +1110,6 @@ Class | Method | HTTP request | Description
  - [RestApiPaginationResultBusinessHoursOverride](docs/Model/RestApiPaginationResultBusinessHoursOverride.md)
  - [RestApiPaginationResultCatalogItem](docs/Model/RestApiPaginationResultCatalogItem.md)
  - [RestApiPaginationResultGroup](docs/Model/RestApiPaginationResultGroup.md)
- - [RestApiPaginationResultHttpRequestAndResponseLog](docs/Model/RestApiPaginationResultHttpRequestAndResponseLog.md)
  - [RestApiPaginationResultHydraDeviceDetails](docs/Model/RestApiPaginationResultHydraDeviceDetails.md)
  - [RestApiPaginationResultMetafieldDefinition](docs/Model/RestApiPaginationResultMetafieldDefinition.md)
  - [RestApiPaginationResultMetafieldDefinitionRecommendation](docs/Model/RestApiPaginationResultMetafieldDefinitionRecommendation.md)
