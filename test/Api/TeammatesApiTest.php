@@ -142,6 +142,16 @@ class TeammatesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teammatesPendingInvitations
+     *
+     * .
+     *
+     */
+    public function testTeammatesPendingInvitations()
+    {
+    }
+
+    /**
      * Test case for updateTeammate
      *
      * .
