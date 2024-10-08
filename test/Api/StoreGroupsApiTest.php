@@ -72,6 +72,16 @@ class StoreGroupsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for assignStoresToStoreGroup
+     *
+     * .
+     *
+     */
+    public function testAssignStoresToStoreGroup()
+    {
+    }
+
+    /**
      * Test case for createStoreGroup
      *
      * .
