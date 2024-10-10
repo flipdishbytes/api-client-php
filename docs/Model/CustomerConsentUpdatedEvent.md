@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **event_name** | **string** | The event name | [optional] 
+**org_id** | **string** | Organisation Id | [optional] 
 **enabled** | **bool** | Enabled | [optional] 
 **description** | **string** | Description | [optional] 
 **user** | [**\Flipdish\\Client\Models\UserEventInfo**](UserEventInfo.md) | Customer User info | [optional] 
