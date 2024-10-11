@@ -59,6 +59,7 @@ class OrderAcceptedEvent implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'event_name' => 'string',
+        'org_id' => 'string',
         'description' => 'string',
         'order_accepted_time' => '\DateTime',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
@@ -77,6 +78,7 @@ class OrderAcceptedEvent implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'event_name' => null,
+        'org_id' => null,
         'description' => null,
         'order_accepted_time' => 'date-time',
         'user' => null,
@@ -116,6 +118,7 @@ class OrderAcceptedEvent implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'event_name' => 'EventName',
+        'org_id' => 'OrgId',
         'description' => 'Description',
         'order_accepted_time' => 'OrderAcceptedTime',
         'user' => 'User',
@@ -134,6 +137,7 @@ class OrderAcceptedEvent implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'event_name' => 'setEventName',
+        'org_id' => 'setOrgId',
         'description' => 'setDescription',
         'order_accepted_time' => 'setOrderAcceptedTime',
         'user' => 'setUser',
@@ -152,6 +156,7 @@ class OrderAcceptedEvent implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'event_name' => 'getEventName',
+        'org_id' => 'getOrgId',
         'description' => 'getDescription',
         'order_accepted_time' => 'getOrderAcceptedTime',
         'user' => 'getUser',
@@ -224,6 +229,7 @@ class OrderAcceptedEvent implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
+        $this->container['org_id'] = isset($data['org_id']) ? $data['org_id'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['order_accepted_time'] = isset($data['order_accepted_time']) ? $data['order_accepted_time'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
@@ -279,6 +285,30 @@ class OrderAcceptedEvent implements ModelInterface, ArrayAccess
     public function setEventName($event_name)
     {
         $this->container['event_name'] = $event_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets org_id
+     *
+     * @return string
+     */
+    public function getOrgId()
+    {
+        return $this->container['org_id'];
+    }
+
+    /**
+     * Sets org_id
+     *
+     * @param string $org_id Organisation Id
+     *
+     * @return $this
+     */
+    public function setOrgId($org_id)
+    {
+        $this->container['org_id'] = $org_id;
 
         return $this;
     }

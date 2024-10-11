@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **event_name** | **string** | The event name | [optional] 
+**org_id** | **string** | Organisation Id | [optional] 
 **description** | **string** | Description | [optional] 
 **order_accepted_time** | [**\DateTime**](\DateTime.md) | Order Accepted Time | [optional] 
 **user** | [**\Flipdish\\Client\Models\UserEventInfo**](UserEventInfo.md) | User who has accepted the order | [optional] 
