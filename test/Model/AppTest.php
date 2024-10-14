@@ -98,13 +98,6 @@ class AppTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "country_id"
-     */
-    public function testPropertyCountryId()
-    {
-    }
-
-    /**
      * Test attribute "logo_image_url"
      */
     public function testPropertyLogoImageUrl()
@@ -227,6 +220,13 @@ class AppTest extends \PHPUnit_Framework_TestCase
      * Test attribute "cookie_consent_prompt_enabled"
      */
     public function testPropertyCookieConsentPromptEnabled()
+    {
+    }
+
+    /**
+     * Test attribute "country_id"
+     */
+    public function testPropertyCountryId()
     {
     }
 }

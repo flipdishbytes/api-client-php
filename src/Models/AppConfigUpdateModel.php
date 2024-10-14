@@ -434,7 +434,7 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
     /**
      * Sets is_panacea_enabled
      *
-     * @param bool $is_panacea_enabled Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App's website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.
+     * @param bool $is_panacea_enabled Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App's website is hosted on this domain.  The alternative to using Panacea websites is to use a custom domain.
      *
      * @return $this
      */
@@ -530,7 +530,7 @@ class AppConfigUpdateModel implements ModelInterface, ArrayAccess
     /**
      * Sets country_id
      *
-     * @param string $country_id Country identifier in ISO 3166-1 alpha-2 format.
+     * @param string $country_id Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks
      *
      * @return $this
      */

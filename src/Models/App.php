@@ -61,7 +61,6 @@ class App implements ModelInterface, ArrayAccess
         'app_id' => 'string',
         'has_ios_app' => 'bool',
         'has_android_app' => 'bool',
-        'country_id' => 'string',
         'logo_image_url' => 'string',
         'languages' => '\Flipdish\\Client\Models\Language[]',
         'available_app_languages' => '\Flipdish\\Client\Models\Language[]',
@@ -79,7 +78,8 @@ class App implements ModelInterface, ArrayAccess
         'application_category' => 'string',
         'is_panacea_enabled' => 'bool',
         'panacea_vanity_url' => 'string',
-        'cookie_consent_prompt_enabled' => 'bool'
+        'cookie_consent_prompt_enabled' => 'bool',
+        'country_id' => 'string'
     ];
 
     /**
@@ -91,7 +91,6 @@ class App implements ModelInterface, ArrayAccess
         'app_id' => null,
         'has_ios_app' => null,
         'has_android_app' => null,
-        'country_id' => null,
         'logo_image_url' => null,
         'languages' => null,
         'available_app_languages' => null,
@@ -109,7 +108,8 @@ class App implements ModelInterface, ArrayAccess
         'application_category' => null,
         'is_panacea_enabled' => null,
         'panacea_vanity_url' => null,
-        'cookie_consent_prompt_enabled' => null
+        'cookie_consent_prompt_enabled' => null,
+        'country_id' => null
     ];
 
     /**
@@ -142,7 +142,6 @@ class App implements ModelInterface, ArrayAccess
         'app_id' => 'AppId',
         'has_ios_app' => 'HasIosApp',
         'has_android_app' => 'HasAndroidApp',
-        'country_id' => 'CountryId',
         'logo_image_url' => 'LogoImageUrl',
         'languages' => 'Languages',
         'available_app_languages' => 'AvailableAppLanguages',
@@ -160,7 +159,8 @@ class App implements ModelInterface, ArrayAccess
         'application_category' => 'ApplicationCategory',
         'is_panacea_enabled' => 'IsPanaceaEnabled',
         'panacea_vanity_url' => 'PanaceaVanityUrl',
-        'cookie_consent_prompt_enabled' => 'CookieConsentPromptEnabled'
+        'cookie_consent_prompt_enabled' => 'CookieConsentPromptEnabled',
+        'country_id' => 'CountryId'
     ];
 
     /**
@@ -172,7 +172,6 @@ class App implements ModelInterface, ArrayAccess
         'app_id' => 'setAppId',
         'has_ios_app' => 'setHasIosApp',
         'has_android_app' => 'setHasAndroidApp',
-        'country_id' => 'setCountryId',
         'logo_image_url' => 'setLogoImageUrl',
         'languages' => 'setLanguages',
         'available_app_languages' => 'setAvailableAppLanguages',
@@ -190,7 +189,8 @@ class App implements ModelInterface, ArrayAccess
         'application_category' => 'setApplicationCategory',
         'is_panacea_enabled' => 'setIsPanaceaEnabled',
         'panacea_vanity_url' => 'setPanaceaVanityUrl',
-        'cookie_consent_prompt_enabled' => 'setCookieConsentPromptEnabled'
+        'cookie_consent_prompt_enabled' => 'setCookieConsentPromptEnabled',
+        'country_id' => 'setCountryId'
     ];
 
     /**
@@ -202,7 +202,6 @@ class App implements ModelInterface, ArrayAccess
         'app_id' => 'getAppId',
         'has_ios_app' => 'getHasIosApp',
         'has_android_app' => 'getHasAndroidApp',
-        'country_id' => 'getCountryId',
         'logo_image_url' => 'getLogoImageUrl',
         'languages' => 'getLanguages',
         'available_app_languages' => 'getAvailableAppLanguages',
@@ -220,7 +219,8 @@ class App implements ModelInterface, ArrayAccess
         'application_category' => 'getApplicationCategory',
         'is_panacea_enabled' => 'getIsPanaceaEnabled',
         'panacea_vanity_url' => 'getPanaceaVanityUrl',
-        'cookie_consent_prompt_enabled' => 'getCookieConsentPromptEnabled'
+        'cookie_consent_prompt_enabled' => 'getCookieConsentPromptEnabled',
+        'country_id' => 'getCountryId'
     ];
 
     /**
@@ -677,7 +677,6 @@ class App implements ModelInterface, ArrayAccess
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
         $this->container['has_ios_app'] = isset($data['has_ios_app']) ? $data['has_ios_app'] : null;
         $this->container['has_android_app'] = isset($data['has_android_app']) ? $data['has_android_app'] : null;
-        $this->container['country_id'] = isset($data['country_id']) ? $data['country_id'] : null;
         $this->container['logo_image_url'] = isset($data['logo_image_url']) ? $data['logo_image_url'] : null;
         $this->container['languages'] = isset($data['languages']) ? $data['languages'] : null;
         $this->container['available_app_languages'] = isset($data['available_app_languages']) ? $data['available_app_languages'] : null;
@@ -696,6 +695,7 @@ class App implements ModelInterface, ArrayAccess
         $this->container['is_panacea_enabled'] = isset($data['is_panacea_enabled']) ? $data['is_panacea_enabled'] : null;
         $this->container['panacea_vanity_url'] = isset($data['panacea_vanity_url']) ? $data['panacea_vanity_url'] : null;
         $this->container['cookie_consent_prompt_enabled'] = isset($data['cookie_consent_prompt_enabled']) ? $data['cookie_consent_prompt_enabled'] : null;
+        $this->container['country_id'] = isset($data['country_id']) ? $data['country_id'] : null;
     }
 
     /**
@@ -706,14 +706,6 @@ class App implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if (!is_null($this->container['country_id']) && (mb_strlen($this->container['country_id']) > 2)) {
-            $invalidProperties[] = "invalid value for 'country_id', the character length must be smaller than or equal to 2.";
-        }
-
-        if (!is_null($this->container['country_id']) && (mb_strlen($this->container['country_id']) < 0)) {
-            $invalidProperties[] = "invalid value for 'country_id', the character length must be bigger than or equal to 0.";
-        }
 
         $allowedValues = $this->getAppAccessLevelAllowableValues();
         if (!is_null($this->container['app_access_level']) && !in_array($this->container['app_access_level'], $allowedValues, true)) {
@@ -729,6 +721,14 @@ class App implements ModelInterface, ArrayAccess
                 "invalid value for 'application_category', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
+        }
+
+        if (!is_null($this->container['country_id']) && (mb_strlen($this->container['country_id']) > 2)) {
+            $invalidProperties[] = "invalid value for 'country_id', the character length must be smaller than or equal to 2.";
+        }
+
+        if (!is_null($this->container['country_id']) && (mb_strlen($this->container['country_id']) < 0)) {
+            $invalidProperties[] = "invalid value for 'country_id', the character length must be bigger than or equal to 0.";
         }
 
         return $invalidProperties;
@@ -814,37 +814,6 @@ class App implements ModelInterface, ArrayAccess
     public function setHasAndroidApp($has_android_app)
     {
         $this->container['has_android_app'] = $has_android_app;
-
-        return $this;
-    }
-
-    /**
-     * Gets country_id
-     *
-     * @return string
-     */
-    public function getCountryId()
-    {
-        return $this->container['country_id'];
-    }
-
-    /**
-     * Sets country_id
-     *
-     * @param string $country_id Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks
-     *
-     * @return $this
-     */
-    public function setCountryId($country_id)
-    {
-        if (!is_null($country_id) && (mb_strlen($country_id) > 2)) {
-            throw new \InvalidArgumentException('invalid length for $country_id when calling App., must be smaller than or equal to 2.');
-        }
-        if (!is_null($country_id) && (mb_strlen($country_id) < 0)) {
-            throw new \InvalidArgumentException('invalid length for $country_id when calling App., must be bigger than or equal to 0.');
-        }
-
-        $this->container['country_id'] = $country_id;
 
         return $this;
     }
@@ -1249,7 +1218,7 @@ class App implements ModelInterface, ArrayAccess
     /**
      * Sets is_panacea_enabled
      *
-     * @param bool $is_panacea_enabled Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App's website is hosted on this domain.  The aternative to using Panacea websites is to use a custom domain.
+     * @param bool $is_panacea_enabled Panacea is the term used for websites that are hosted on the my.flipdish.com domain. This value is true when the App's website is hosted on this domain.  The alternative to using Panacea websites is to use a custom domain.
      *
      * @return $this
      */
@@ -1304,6 +1273,37 @@ class App implements ModelInterface, ArrayAccess
     public function setCookieConsentPromptEnabled($cookie_consent_prompt_enabled)
     {
         $this->container['cookie_consent_prompt_enabled'] = $cookie_consent_prompt_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets country_id
+     *
+     * @return string
+     */
+    public function getCountryId()
+    {
+        return $this->container['country_id'];
+    }
+
+    /**
+     * Sets country_id
+     *
+     * @param string $country_id Country identifier in ISO 3166-1 alpha-2 format.   This code is set automatically based on the locations of the Stores in the App.     The App Country is used    - to determine how to parse mobile phone numbers that are entered in their local numbering format   - to determine if country specific payment methods should be offered   - in various fraud checks
+     *
+     * @return $this
+     */
+    public function setCountryId($country_id)
+    {
+        if (!is_null($country_id) && (mb_strlen($country_id) > 2)) {
+            throw new \InvalidArgumentException('invalid length for $country_id when calling App., must be smaller than or equal to 2.');
+        }
+        if (!is_null($country_id) && (mb_strlen($country_id) < 0)) {
+            throw new \InvalidArgumentException('invalid length for $country_id when calling App., must be bigger than or equal to 0.');
+        }
+
+        $this->container['country_id'] = $country_id;
 
         return $this;
     }
