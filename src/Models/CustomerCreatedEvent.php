@@ -59,6 +59,7 @@ class CustomerCreatedEvent implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'event_name' => 'string',
+        'org_id' => 'string',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
         'description' => 'string',
         'flipdish_event_id' => 'string',
@@ -75,6 +76,7 @@ class CustomerCreatedEvent implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'event_name' => null,
+        'org_id' => null,
         'user' => null,
         'description' => null,
         'flipdish_event_id' => 'uuid',
@@ -112,6 +114,7 @@ class CustomerCreatedEvent implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'event_name' => 'EventName',
+        'org_id' => 'OrgId',
         'user' => 'User',
         'description' => 'Description',
         'flipdish_event_id' => 'FlipdishEventId',
@@ -128,6 +131,7 @@ class CustomerCreatedEvent implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'event_name' => 'setEventName',
+        'org_id' => 'setOrgId',
         'user' => 'setUser',
         'description' => 'setDescription',
         'flipdish_event_id' => 'setFlipdishEventId',
@@ -144,6 +148,7 @@ class CustomerCreatedEvent implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'event_name' => 'getEventName',
+        'org_id' => 'getOrgId',
         'user' => 'getUser',
         'description' => 'getDescription',
         'flipdish_event_id' => 'getFlipdishEventId',
@@ -214,6 +219,7 @@ class CustomerCreatedEvent implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
+        $this->container['org_id'] = isset($data['org_id']) ? $data['org_id'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
@@ -267,6 +273,30 @@ class CustomerCreatedEvent implements ModelInterface, ArrayAccess
     public function setEventName($event_name)
     {
         $this->container['event_name'] = $event_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets org_id
+     *
+     * @return string
+     */
+    public function getOrgId()
+    {
+        return $this->container['org_id'];
+    }
+
+    /**
+     * Sets org_id
+     *
+     * @param string $org_id Organisation Id
+     *
+     * @return $this
+     */
+    public function setOrgId($org_id)
+    {
+        $this->container['org_id'] = $org_id;
 
         return $this;
     }
