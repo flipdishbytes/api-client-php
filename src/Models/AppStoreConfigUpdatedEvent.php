@@ -61,6 +61,7 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'string',
         'app_store_app_id' => 'string',
         'app_store_app_configuration' => '\Flipdish\\Client\Models\UpdateAppStoreAppConfigurationWebhookDTO',
+        'user' => '\Flipdish\\Client\Models\UserEventInfo',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -77,6 +78,7 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'event_name' => null,
         'app_store_app_id' => null,
         'app_store_app_configuration' => null,
+        'user' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -114,6 +116,7 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'EventName',
         'app_store_app_id' => 'AppStoreAppId',
         'app_store_app_configuration' => 'AppStoreAppConfiguration',
+        'user' => 'User',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -130,6 +133,7 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'setEventName',
         'app_store_app_id' => 'setAppStoreAppId',
         'app_store_app_configuration' => 'setAppStoreAppConfiguration',
+        'user' => 'setUser',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -146,6 +150,7 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'getEventName',
         'app_store_app_id' => 'getAppStoreAppId',
         'app_store_app_configuration' => 'getAppStoreAppConfiguration',
+        'user' => 'getUser',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -216,6 +221,7 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
         $this->container['app_store_app_id'] = isset($data['app_store_app_id']) ? $data['app_store_app_id'] : null;
         $this->container['app_store_app_configuration'] = isset($data['app_store_app_configuration']) ? $data['app_store_app_configuration'] : null;
+        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -315,6 +321,30 @@ class AppStoreConfigUpdatedEvent implements ModelInterface, ArrayAccess
     public function setAppStoreAppConfiguration($app_store_app_configuration)
     {
         $this->container['app_store_app_configuration'] = $app_store_app_configuration;
+
+        return $this;
+    }
+
+    /**
+     * Gets user
+     *
+     * @return \Flipdish\\Client\Models\UserEventInfo
+     */
+    public function getUser()
+    {
+        return $this->container['user'];
+    }
+
+    /**
+     * Sets user
+     *
+     * @param \Flipdish\\Client\Models\UserEventInfo $user User who has update the configuration
+     *
+     * @return $this
+     */
+    public function setUser($user)
+    {
+        $this->container['user'] = $user;
 
         return $this;
     }

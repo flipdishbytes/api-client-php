@@ -98,6 +98,13 @@ class AppStoreConfigCreatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "user"
+     */
+    public function testPropertyUser()
+    {
+    }
+
+    /**
      * Test attribute "flipdish_event_id"
      */
     public function testPropertyFlipdishEventId()

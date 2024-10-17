@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **event_name** | **string** | The event name | [optional] 
 **app_store_app_id** | **string** | App Store Id | [optional] 
 **app_store_app_configuration_id** | **string** | App Store Configuration Id | [optional] 
+**user** | [**\Flipdish\\Client\Models\UserEventInfo**](UserEventInfo.md) | User who has deleted the configuration | [optional] 
 **flipdish_event_id** | **string** | The identitfier of the event | [optional] 
 **create_time** | [**\DateTime**](\DateTime.md) | The time of creation of the event | [optional] 
 **position** | **int** | Position | [optional] 
