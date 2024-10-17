@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreGroupTest
+ * CustomerMessagesTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreGroupTest Class Doc Comment
+ * CustomerMessagesTest Class Doc Comment
  *
  * @category    Class
- * @description Store Group
+ * @description Delivery and pickup menu messages for a customer
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreGroupTest extends \PHPUnit_Framework_TestCase
+class CustomerMessagesTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,30 +70,9 @@ class StoreGroupTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreGroup"
+     * Test "CustomerMessages"
      */
-    public function testStoreGroup()
-    {
-    }
-
-    /**
-     * Test attribute "store_group_id"
-     */
-    public function testPropertyStoreGroupId()
-    {
-    }
-
-    /**
-     * Test attribute "general_rating"
-     */
-    public function testPropertyGeneralRating()
-    {
-    }
-
-    /**
-     * Test attribute "general_rating_count"
-     */
-    public function testPropertyGeneralRatingCount()
+    public function testCustomerMessages()
     {
     }
 
@@ -108,20 +87,6 @@ class StoreGroupTest extends \PHPUnit_Framework_TestCase
      * Test attribute "pickup_menu_message"
      */
     public function testPropertyPickupMenuMessage()
-    {
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "currency"
-     */
-    public function testPropertyCurrency()
     {
     }
 }

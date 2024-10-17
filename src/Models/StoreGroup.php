@@ -61,6 +61,8 @@ class StoreGroup implements ModelInterface, ArrayAccess
         'store_group_id' => 'int',
         'general_rating' => 'double',
         'general_rating_count' => 'int',
+        'delivery_menu_message' => 'string',
+        'pickup_menu_message' => 'string',
         'name' => 'string',
         'currency' => 'string'
     ];
@@ -74,6 +76,8 @@ class StoreGroup implements ModelInterface, ArrayAccess
         'store_group_id' => 'int32',
         'general_rating' => 'double',
         'general_rating_count' => 'int32',
+        'delivery_menu_message' => null,
+        'pickup_menu_message' => null,
         'name' => null,
         'currency' => null
     ];
@@ -108,6 +112,8 @@ class StoreGroup implements ModelInterface, ArrayAccess
         'store_group_id' => 'StoreGroupId',
         'general_rating' => 'GeneralRating',
         'general_rating_count' => 'GeneralRatingCount',
+        'delivery_menu_message' => 'DeliveryMenuMessage',
+        'pickup_menu_message' => 'PickupMenuMessage',
         'name' => 'Name',
         'currency' => 'Currency'
     ];
@@ -121,6 +127,8 @@ class StoreGroup implements ModelInterface, ArrayAccess
         'store_group_id' => 'setStoreGroupId',
         'general_rating' => 'setGeneralRating',
         'general_rating_count' => 'setGeneralRatingCount',
+        'delivery_menu_message' => 'setDeliveryMenuMessage',
+        'pickup_menu_message' => 'setPickupMenuMessage',
         'name' => 'setName',
         'currency' => 'setCurrency'
     ];
@@ -134,6 +142,8 @@ class StoreGroup implements ModelInterface, ArrayAccess
         'store_group_id' => 'getStoreGroupId',
         'general_rating' => 'getGeneralRating',
         'general_rating_count' => 'getGeneralRatingCount',
+        'delivery_menu_message' => 'getDeliveryMenuMessage',
+        'pickup_menu_message' => 'getPickupMenuMessage',
         'name' => 'getName',
         'currency' => 'getCurrency'
     ];
@@ -438,6 +448,8 @@ class StoreGroup implements ModelInterface, ArrayAccess
         $this->container['store_group_id'] = isset($data['store_group_id']) ? $data['store_group_id'] : null;
         $this->container['general_rating'] = isset($data['general_rating']) ? $data['general_rating'] : null;
         $this->container['general_rating_count'] = isset($data['general_rating_count']) ? $data['general_rating_count'] : null;
+        $this->container['delivery_menu_message'] = isset($data['delivery_menu_message']) ? $data['delivery_menu_message'] : null;
+        $this->container['pickup_menu_message'] = isset($data['pickup_menu_message']) ? $data['pickup_menu_message'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
     }
@@ -542,6 +554,54 @@ class StoreGroup implements ModelInterface, ArrayAccess
     public function setGeneralRatingCount($general_rating_count)
     {
         $this->container['general_rating_count'] = $general_rating_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_menu_message
+     *
+     * @return string
+     */
+    public function getDeliveryMenuMessage()
+    {
+        return $this->container['delivery_menu_message'];
+    }
+
+    /**
+     * Sets delivery_menu_message
+     *
+     * @param string $delivery_menu_message Delivery menu message
+     *
+     * @return $this
+     */
+    public function setDeliveryMenuMessage($delivery_menu_message)
+    {
+        $this->container['delivery_menu_message'] = $delivery_menu_message;
+
+        return $this;
+    }
+
+    /**
+     * Gets pickup_menu_message
+     *
+     * @return string
+     */
+    public function getPickupMenuMessage()
+    {
+        return $this->container['pickup_menu_message'];
+    }
+
+    /**
+     * Sets pickup_menu_message
+     *
+     * @param string $pickup_menu_message Pickup menu message
+     *
+     * @return $this
+     */
+    public function setPickupMenuMessage($pickup_menu_message)
+    {
+        $this->container['pickup_menu_message'] = $pickup_menu_message;
 
         return $this;
     }

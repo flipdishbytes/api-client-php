@@ -58,14 +58,14 @@ class StoreGroupExtended implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'delivery_menu_message' => 'string',
-        'pickup_menu_message' => 'string',
         'total_stores' => 'int',
         'grouped_coordinates' => '\Flipdish\\Client\Models\GroupedCoordinates[]',
         'store_headers' => '\Flipdish\\Client\Models\StoreHeader[]',
         'store_group_id' => 'int',
         'general_rating' => 'double',
         'general_rating_count' => 'int',
+        'delivery_menu_message' => 'string',
+        'pickup_menu_message' => 'string',
         'name' => 'string',
         'currency' => 'string'
     ];
@@ -76,14 +76,14 @@ class StoreGroupExtended implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'delivery_menu_message' => null,
-        'pickup_menu_message' => null,
         'total_stores' => 'int32',
         'grouped_coordinates' => null,
         'store_headers' => null,
         'store_group_id' => 'int32',
         'general_rating' => 'double',
         'general_rating_count' => 'int32',
+        'delivery_menu_message' => null,
+        'pickup_menu_message' => null,
         'name' => null,
         'currency' => null
     ];
@@ -115,14 +115,14 @@ class StoreGroupExtended implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'delivery_menu_message' => 'DeliveryMenuMessage',
-        'pickup_menu_message' => 'PickupMenuMessage',
         'total_stores' => 'TotalStores',
         'grouped_coordinates' => 'GroupedCoordinates',
         'store_headers' => 'StoreHeaders',
         'store_group_id' => 'StoreGroupId',
         'general_rating' => 'GeneralRating',
         'general_rating_count' => 'GeneralRatingCount',
+        'delivery_menu_message' => 'DeliveryMenuMessage',
+        'pickup_menu_message' => 'PickupMenuMessage',
         'name' => 'Name',
         'currency' => 'Currency'
     ];
@@ -133,14 +133,14 @@ class StoreGroupExtended implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'delivery_menu_message' => 'setDeliveryMenuMessage',
-        'pickup_menu_message' => 'setPickupMenuMessage',
         'total_stores' => 'setTotalStores',
         'grouped_coordinates' => 'setGroupedCoordinates',
         'store_headers' => 'setStoreHeaders',
         'store_group_id' => 'setStoreGroupId',
         'general_rating' => 'setGeneralRating',
         'general_rating_count' => 'setGeneralRatingCount',
+        'delivery_menu_message' => 'setDeliveryMenuMessage',
+        'pickup_menu_message' => 'setPickupMenuMessage',
         'name' => 'setName',
         'currency' => 'setCurrency'
     ];
@@ -151,14 +151,14 @@ class StoreGroupExtended implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'delivery_menu_message' => 'getDeliveryMenuMessage',
-        'pickup_menu_message' => 'getPickupMenuMessage',
         'total_stores' => 'getTotalStores',
         'grouped_coordinates' => 'getGroupedCoordinates',
         'store_headers' => 'getStoreHeaders',
         'store_group_id' => 'getStoreGroupId',
         'general_rating' => 'getGeneralRating',
         'general_rating_count' => 'getGeneralRatingCount',
+        'delivery_menu_message' => 'getDeliveryMenuMessage',
+        'pickup_menu_message' => 'getPickupMenuMessage',
         'name' => 'getName',
         'currency' => 'getCurrency'
     ];
@@ -460,14 +460,14 @@ class StoreGroupExtended implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['delivery_menu_message'] = isset($data['delivery_menu_message']) ? $data['delivery_menu_message'] : null;
-        $this->container['pickup_menu_message'] = isset($data['pickup_menu_message']) ? $data['pickup_menu_message'] : null;
         $this->container['total_stores'] = isset($data['total_stores']) ? $data['total_stores'] : null;
         $this->container['grouped_coordinates'] = isset($data['grouped_coordinates']) ? $data['grouped_coordinates'] : null;
         $this->container['store_headers'] = isset($data['store_headers']) ? $data['store_headers'] : null;
         $this->container['store_group_id'] = isset($data['store_group_id']) ? $data['store_group_id'] : null;
         $this->container['general_rating'] = isset($data['general_rating']) ? $data['general_rating'] : null;
         $this->container['general_rating_count'] = isset($data['general_rating_count']) ? $data['general_rating_count'] : null;
+        $this->container['delivery_menu_message'] = isset($data['delivery_menu_message']) ? $data['delivery_menu_message'] : null;
+        $this->container['pickup_menu_message'] = isset($data['pickup_menu_message']) ? $data['pickup_menu_message'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
     }
@@ -503,54 +503,6 @@ class StoreGroupExtended implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets delivery_menu_message
-     *
-     * @return string
-     */
-    public function getDeliveryMenuMessage()
-    {
-        return $this->container['delivery_menu_message'];
-    }
-
-    /**
-     * Sets delivery_menu_message
-     *
-     * @param string $delivery_menu_message Delivery Menu Message
-     *
-     * @return $this
-     */
-    public function setDeliveryMenuMessage($delivery_menu_message)
-    {
-        $this->container['delivery_menu_message'] = $delivery_menu_message;
-
-        return $this;
-    }
-
-    /**
-     * Gets pickup_menu_message
-     *
-     * @return string
-     */
-    public function getPickupMenuMessage()
-    {
-        return $this->container['pickup_menu_message'];
-    }
-
-    /**
-     * Sets pickup_menu_message
-     *
-     * @param string $pickup_menu_message Pickup Menu Message
-     *
-     * @return $this
-     */
-    public function setPickupMenuMessage($pickup_menu_message)
-    {
-        $this->container['pickup_menu_message'] = $pickup_menu_message;
-
-        return $this;
-    }
 
     /**
      * Gets total_stores
@@ -692,6 +644,54 @@ class StoreGroupExtended implements ModelInterface, ArrayAccess
     public function setGeneralRatingCount($general_rating_count)
     {
         $this->container['general_rating_count'] = $general_rating_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_menu_message
+     *
+     * @return string
+     */
+    public function getDeliveryMenuMessage()
+    {
+        return $this->container['delivery_menu_message'];
+    }
+
+    /**
+     * Sets delivery_menu_message
+     *
+     * @param string $delivery_menu_message Delivery menu message
+     *
+     * @return $this
+     */
+    public function setDeliveryMenuMessage($delivery_menu_message)
+    {
+        $this->container['delivery_menu_message'] = $delivery_menu_message;
+
+        return $this;
+    }
+
+    /**
+     * Gets pickup_menu_message
+     *
+     * @return string
+     */
+    public function getPickupMenuMessage()
+    {
+        return $this->container['pickup_menu_message'];
+    }
+
+    /**
+     * Sets pickup_menu_message
+     *
+     * @param string $pickup_menu_message Pickup menu message
+     *
+     * @return $this
+     */
+    public function setPickupMenuMessage($pickup_menu_message)
+    {
+        $this->container['pickup_menu_message'] = $pickup_menu_message;
 
         return $this;
     }

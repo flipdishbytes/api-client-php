@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**getStoreGroups**](StoreGroupsApi.md#getStoreGroups) | **GET** /api/v1.0/{appNameId}/storegroups | 
 [**getStoreGroupsExtended**](StoreGroupsApi.md#getStoreGroupsExtended) | **GET** /api/v1.0/{appNameId}/storegroups/extended | 
 [**removeStoreGroup**](StoreGroupsApi.md#removeStoreGroup) | **DELETE** /api/v1.0/storegroups/{storeGroupId} | 
-[**setMenuMessagePerDeliveryType**](StoreGroupsApi.md#setMenuMessagePerDeliveryType) | **POST** /api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType | 
+[**setCustomerMessages**](StoreGroupsApi.md#setCustomerMessages) | **POST** /api/v1.0/storegroups/{storeGroupId}/CustomerMessages | 
 [**updateStoreGroup**](StoreGroupsApi.md#updateStoreGroup) | **POST** /api/v1.0/storegroups/{storeGroupId} | 
 
 
@@ -338,8 +338,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **setMenuMessagePerDeliveryType**
-> setMenuMessagePerDeliveryType($store_group_id, $delivery_type, $menu_message)
+# **setCustomerMessages**
+> setCustomerMessages($store_group_id, $customer_messages)
 
 
 
@@ -358,13 +358,12 @@ $apiInstance = new Flipdish\\Client\Api\StoreGroupsApi(
     $config
 );
 $store_group_id = 56; // int | 
-$delivery_type = "delivery_type_example"; // string | 
-$menu_message = "menu_message_example"; // string | 
+$customer_messages = new \Flipdish\\Client\Models\CustomerMessages(); // \Flipdish\\Client\Models\CustomerMessages | 
 
 try {
-    $apiInstance->setMenuMessagePerDeliveryType($store_group_id, $delivery_type, $menu_message);
+    $apiInstance->setCustomerMessages($store_group_id, $customer_messages);
 } catch (Exception $e) {
-    echo 'Exception when calling StoreGroupsApi->setMenuMessagePerDeliveryType: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling StoreGroupsApi->setCustomerMessages: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -374,8 +373,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_group_id** | **int**|  |
- **delivery_type** | **string**|  |
- **menu_message** | **string**|  |
+ **customer_messages** | [**\Flipdish\\Client\Models\CustomerMessages**](../Model/CustomerMessages.md)|  |
 
 ### Return type
 

@@ -1882,36 +1882,34 @@ class StoreGroupsApi
     }
 
     /**
-     * Operation setMenuMessagePerDeliveryType
+     * Operation setCustomerMessages
      *
      * @param  int $store_group_id store_group_id (required)
-     * @param  string $delivery_type delivery_type (required)
-     * @param  string $menu_message menu_message (required)
+     * @param  \Flipdish\\Client\Models\CustomerMessages $customer_messages customer_messages (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function setMenuMessagePerDeliveryType($store_group_id, $delivery_type, $menu_message)
+    public function setCustomerMessages($store_group_id, $customer_messages)
     {
-        $this->setMenuMessagePerDeliveryTypeWithHttpInfo($store_group_id, $delivery_type, $menu_message);
+        $this->setCustomerMessagesWithHttpInfo($store_group_id, $customer_messages);
     }
 
     /**
-     * Operation setMenuMessagePerDeliveryTypeWithHttpInfo
+     * Operation setCustomerMessagesWithHttpInfo
      *
      * @param  int $store_group_id (required)
-     * @param  string $delivery_type (required)
-     * @param  string $menu_message (required)
+     * @param  \Flipdish\\Client\Models\CustomerMessages $customer_messages (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function setMenuMessagePerDeliveryTypeWithHttpInfo($store_group_id, $delivery_type, $menu_message)
+    public function setCustomerMessagesWithHttpInfo($store_group_id, $customer_messages)
     {
         $returnType = '';
-        $request = $this->setMenuMessagePerDeliveryTypeRequest($store_group_id, $delivery_type, $menu_message);
+        $request = $this->setCustomerMessagesRequest($store_group_id, $customer_messages);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1975,20 +1973,19 @@ class StoreGroupsApi
     }
 
     /**
-     * Operation setMenuMessagePerDeliveryTypeAsync
+     * Operation setCustomerMessagesAsync
      *
      * 
      *
      * @param  int $store_group_id (required)
-     * @param  string $delivery_type (required)
-     * @param  string $menu_message (required)
+     * @param  \Flipdish\\Client\Models\CustomerMessages $customer_messages (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function setMenuMessagePerDeliveryTypeAsync($store_group_id, $delivery_type, $menu_message)
+    public function setCustomerMessagesAsync($store_group_id, $customer_messages)
     {
-        return $this->setMenuMessagePerDeliveryTypeAsyncWithHttpInfo($store_group_id, $delivery_type, $menu_message)
+        return $this->setCustomerMessagesAsyncWithHttpInfo($store_group_id, $customer_messages)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1997,21 +1994,20 @@ class StoreGroupsApi
     }
 
     /**
-     * Operation setMenuMessagePerDeliveryTypeAsyncWithHttpInfo
+     * Operation setCustomerMessagesAsyncWithHttpInfo
      *
      * 
      *
      * @param  int $store_group_id (required)
-     * @param  string $delivery_type (required)
-     * @param  string $menu_message (required)
+     * @param  \Flipdish\\Client\Models\CustomerMessages $customer_messages (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function setMenuMessagePerDeliveryTypeAsyncWithHttpInfo($store_group_id, $delivery_type, $menu_message)
+    public function setCustomerMessagesAsyncWithHttpInfo($store_group_id, $customer_messages)
     {
         $returnType = '';
-        $request = $this->setMenuMessagePerDeliveryTypeRequest($store_group_id, $delivery_type, $menu_message);
+        $request = $this->setCustomerMessagesRequest($store_group_id, $customer_messages);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2037,37 +2033,30 @@ class StoreGroupsApi
     }
 
     /**
-     * Create request for operation 'setMenuMessagePerDeliveryType'
+     * Create request for operation 'setCustomerMessages'
      *
      * @param  int $store_group_id (required)
-     * @param  string $delivery_type (required)
-     * @param  string $menu_message (required)
+     * @param  \Flipdish\\Client\Models\CustomerMessages $customer_messages (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function setMenuMessagePerDeliveryTypeRequest($store_group_id, $delivery_type, $menu_message)
+    protected function setCustomerMessagesRequest($store_group_id, $customer_messages)
     {
         // verify the required parameter 'store_group_id' is set
         if ($store_group_id === null || (is_array($store_group_id) && count($store_group_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $store_group_id when calling setMenuMessagePerDeliveryType'
+                'Missing the required parameter $store_group_id when calling setCustomerMessages'
             );
         }
-        // verify the required parameter 'delivery_type' is set
-        if ($delivery_type === null || (is_array($delivery_type) && count($delivery_type) === 0)) {
+        // verify the required parameter 'customer_messages' is set
+        if ($customer_messages === null || (is_array($customer_messages) && count($customer_messages) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $delivery_type when calling setMenuMessagePerDeliveryType'
-            );
-        }
-        // verify the required parameter 'menu_message' is set
-        if ($menu_message === null || (is_array($menu_message) && count($menu_message) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $menu_message when calling setMenuMessagePerDeliveryType'
+                'Missing the required parameter $customer_messages when calling setCustomerMessages'
             );
         }
 
-        $resourcePath = '/api/v1.0/storegroups/{storeGroupId}/{deliveryType}/MenuMessagePerDeliveryType';
+        $resourcePath = '/api/v1.0/storegroups/{storeGroupId}/CustomerMessages';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2083,19 +2072,11 @@ class StoreGroupsApi
                 $resourcePath
             );
         }
-        // path params
-        if ($delivery_type !== null) {
-            $resourcePath = str_replace(
-                '{' . 'deliveryType' . '}',
-                ObjectSerializer::toPathValue($delivery_type),
-                $resourcePath
-            );
-        }
 
         // body params
         $_tempBody = null;
-        if (isset($menu_message)) {
-            $_tempBody = $menu_message;
+        if (isset($customer_messages)) {
+            $_tempBody = $customer_messages;
         }
 
         if ($multipart) {
