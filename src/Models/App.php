@@ -440,6 +440,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_UPDATE_PAY_GREEN_WHITE_LABEL_CONFIGURATION = 'UpdatePayGreenWhiteLabelConfiguration';
     const APP_RESOURCE_SET_UPDATE_PAY_GREEN_STORE_CONFIGURATION = 'UpdatePayGreenStoreConfiguration';
     const APP_RESOURCE_SET_VIEW_SUBSCRIPTIONS = 'ViewSubscriptions';
+    const APP_RESOURCE_SET_VIEW_INVOICES = 'ViewInvoices';
     const APPLICATION_CATEGORY_RESTAURANT = 'Restaurant';
     const APPLICATION_CATEGORY_CAFE = 'Cafe';
     const APPLICATION_CATEGORY_CONVENIENCE = 'Convenience';
@@ -641,6 +642,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_UPDATE_PAY_GREEN_WHITE_LABEL_CONFIGURATION,
             self::APP_RESOURCE_SET_UPDATE_PAY_GREEN_STORE_CONFIGURATION,
             self::APP_RESOURCE_SET_VIEW_SUBSCRIPTIONS,
+            self::APP_RESOURCE_SET_VIEW_INVOICES,
         ];
     }
     

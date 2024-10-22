@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createStoreInProperty**
-> \Flipdish\\Client\Models\RestApiResultStore createStoreInProperty($store_group_id, $property_id, $store)
+> \Flipdish\\Client\Models\RestApiResultStore createStoreInProperty($store_group_id, $property_id, $store, $auto_assign_menu)
 
 
 
@@ -380,9 +380,10 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
 $store_group_id = 56; // int | 
 $property_id = "property_id_example"; // string | 
 $store = new \Flipdish\\Client\Models\StoreCreateBase(); // \Flipdish\\Client\Models\StoreCreateBase | 
+$auto_assign_menu = true; // bool | 
 
 try {
-    $result = $apiInstance->createStoreInProperty($store_group_id, $property_id, $store);
+    $result = $apiInstance->createStoreInProperty($store_group_id, $property_id, $store, $auto_assign_menu);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StoresApi->createStoreInProperty: ', $e->getMessage(), PHP_EOL;
@@ -397,6 +398,7 @@ Name | Type | Description  | Notes
  **store_group_id** | **int**|  |
  **property_id** | **string**|  |
  **store** | [**\Flipdish\\Client\Models\StoreCreateBase**](../Model/StoreCreateBase.md)|  |
+ **auto_assign_menu** | **bool**|  | [optional]
 
 ### Return type
 

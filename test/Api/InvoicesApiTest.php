@@ -80,4 +80,34 @@ class InvoicesApiTest extends \PHPUnit_Framework_TestCase
     public function testGetInvoices()
     {
     }
+
+    /**
+     * Test case for invoicePdf
+     *
+     * .
+     *
+     */
+    public function testInvoicePdf()
+    {
+    }
+
+    /**
+     * Test case for listInvoices
+     *
+     * .
+     *
+     */
+    public function testListInvoices()
+    {
+    }
+
+    /**
+     * Test case for listSubscriptionInvoices
+     *
+     * .
+     *
+     */
+    public function testListSubscriptionInvoices()
+    {
+    }
 }

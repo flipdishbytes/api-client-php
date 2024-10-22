@@ -1893,14 +1893,15 @@ class StoresApi
      * @param  int $store_group_id store_group_id (required)
      * @param  string $property_id property_id (required)
      * @param  \Flipdish\\Client\Models\StoreCreateBase $store store (required)
+     * @param  bool $auto_assign_menu auto_assign_menu (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultStore
      */
-    public function createStoreInProperty($store_group_id, $property_id, $store)
+    public function createStoreInProperty($store_group_id, $property_id, $store, $auto_assign_menu = null)
     {
-        list($response) = $this->createStoreInPropertyWithHttpInfo($store_group_id, $property_id, $store);
+        list($response) = $this->createStoreInPropertyWithHttpInfo($store_group_id, $property_id, $store, $auto_assign_menu);
         return $response;
     }
 
@@ -1910,15 +1911,16 @@ class StoresApi
      * @param  int $store_group_id (required)
      * @param  string $property_id (required)
      * @param  \Flipdish\\Client\Models\StoreCreateBase $store (required)
+     * @param  bool $auto_assign_menu (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultStore, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createStoreInPropertyWithHttpInfo($store_group_id, $property_id, $store)
+    public function createStoreInPropertyWithHttpInfo($store_group_id, $property_id, $store, $auto_assign_menu = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultStore';
-        $request = $this->createStoreInPropertyRequest($store_group_id, $property_id, $store);
+        $request = $this->createStoreInPropertyRequest($store_group_id, $property_id, $store, $auto_assign_menu);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2011,13 +2013,14 @@ class StoresApi
      * @param  int $store_group_id (required)
      * @param  string $property_id (required)
      * @param  \Flipdish\\Client\Models\StoreCreateBase $store (required)
+     * @param  bool $auto_assign_menu (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createStoreInPropertyAsync($store_group_id, $property_id, $store)
+    public function createStoreInPropertyAsync($store_group_id, $property_id, $store, $auto_assign_menu = null)
     {
-        return $this->createStoreInPropertyAsyncWithHttpInfo($store_group_id, $property_id, $store)
+        return $this->createStoreInPropertyAsyncWithHttpInfo($store_group_id, $property_id, $store, $auto_assign_menu)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2033,14 +2036,15 @@ class StoresApi
      * @param  int $store_group_id (required)
      * @param  string $property_id (required)
      * @param  \Flipdish\\Client\Models\StoreCreateBase $store (required)
+     * @param  bool $auto_assign_menu (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createStoreInPropertyAsyncWithHttpInfo($store_group_id, $property_id, $store)
+    public function createStoreInPropertyAsyncWithHttpInfo($store_group_id, $property_id, $store, $auto_assign_menu = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultStore';
-        $request = $this->createStoreInPropertyRequest($store_group_id, $property_id, $store);
+        $request = $this->createStoreInPropertyRequest($store_group_id, $property_id, $store, $auto_assign_menu);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2085,11 +2089,12 @@ class StoresApi
      * @param  int $store_group_id (required)
      * @param  string $property_id (required)
      * @param  \Flipdish\\Client\Models\StoreCreateBase $store (required)
+     * @param  bool $auto_assign_menu (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createStoreInPropertyRequest($store_group_id, $property_id, $store)
+    protected function createStoreInPropertyRequest($store_group_id, $property_id, $store, $auto_assign_menu = null)
     {
         // verify the required parameter 'store_group_id' is set
         if ($store_group_id === null || (is_array($store_group_id) && count($store_group_id) === 0)) {
@@ -2120,6 +2125,10 @@ class StoresApi
         // query params
         if ($store_group_id !== null) {
             $queryParams['storeGroupId'] = ObjectSerializer::toQueryValue($store_group_id);
+        }
+        // query params
+        if ($auto_assign_menu !== null) {
+            $queryParams['autoAssignMenu'] = ObjectSerializer::toQueryValue($auto_assign_menu);
         }
 
         // path params
