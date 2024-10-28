@@ -1,15 +1,11 @@
-# StoreUpdatedEvent
+# VoucherAppliedEvent
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**voucher_id** | **int** | Voucher Id | [optional] 
 **event_name** | **string** | The event name | [optional] 
-**org_id** | **string** | Organisation Id | [optional] 
-**store_id** | **int** | Store Id | [optional] 
-**store_group_id** | **int** | Store group Id | [optional] 
-**user** | [**\Flipdish\\Client\Models\UserEventInfo**](UserEventInfo.md) | User which updated this store | [optional] 
-**description** | **string** | Description | [optional] 
-**store** | [**\Flipdish\\Client\Models\Store**](Store.md) | Updated Store | [optional] 
+**order_id** | **int** | Order id | [optional] 
 **flipdish_event_id** | **string** | The identitfier of the event | [optional] 
 **create_time** | [**\DateTime**](\DateTime.md) | The time of creation of the event | [optional] 
 **position** | **int** | Position | [optional] 

@@ -88,6 +88,7 @@ Name | Type | Description | Notes
 **voucher_created_event** | [**\Flipdish\\Client\Models\VoucherCreatedEvent[]**](VoucherCreatedEvent.md) | Voucher created event | [optional] 
 **voucher_updated_event** | [**\Flipdish\\Client\Models\VoucherUpdatedEvent[]**](VoucherUpdatedEvent.md) | Voucher updated event | [optional] 
 **voucher_deleted_event** | [**\Flipdish\\Client\Models\VoucherDeletedEvent[]**](VoucherDeletedEvent.md) | Voucher deleted event | [optional] 
+**voucher_applied_event** | [**\Flipdish\\Client\Models\VoucherAppliedEvent[]**](VoucherAppliedEvent.md) | Voucher applied event | [optional] 
 **teammate_invite_sent_event** | [**\Flipdish\\Client\Models\TeammateInviteSentEvent[]**](TeammateInviteSentEvent.md) | Teammate invite sent event | [optional] 
 **teammate_invite_accepted_event** | [**\Flipdish\\Client\Models\TeammateInviteAcceptedEvent[]**](TeammateInviteAcceptedEvent.md) | Teammate invite accepted event | [optional] 
 **teammate_updated_event** | [**\Flipdish\\Client\Models\TeammateUpdatedEvent[]**](TeammateUpdatedEvent.md) | Teammate updated event | [optional] 

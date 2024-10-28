@@ -672,6 +672,13 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "voucher_applied_event"
+     */
+    public function testPropertyVoucherAppliedEvent()
+    {
+    }
+
+    /**
      * Test attribute "teammate_invite_sent_event"
      */
     public function testPropertyTeammateInviteSentEvent()

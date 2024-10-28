@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreCreatedEventTest
+ * VoucherAppliedEventTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreCreatedEventTest Class Doc Comment
+ * VoucherAppliedEventTest Class Doc Comment
  *
  * @category    Class
- * @description Store Created Event
+ * @description Voucher Applied Event
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreCreatedEventTest extends \PHPUnit_Framework_TestCase
+class VoucherAppliedEventTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,16 @@ class StoreCreatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreCreatedEvent"
+     * Test "VoucherAppliedEvent"
      */
-    public function testStoreCreatedEvent()
+    public function testVoucherAppliedEvent()
+    {
+    }
+
+    /**
+     * Test attribute "voucher_id"
+     */
+    public function testPropertyVoucherId()
     {
     }
 
@@ -84,37 +91,9 @@ class StoreCreatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "org_id"
+     * Test attribute "order_id"
      */
-    public function testPropertyOrgId()
-    {
-    }
-
-    /**
-     * Test attribute "store_id"
-     */
-    public function testPropertyStoreId()
-    {
-    }
-
-    /**
-     * Test attribute "user"
-     */
-    public function testPropertyUser()
-    {
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-    }
-
-    /**
-     * Test attribute "store"
-     */
-    public function testPropertyStore()
+    public function testPropertyOrderId()
     {
     }
 

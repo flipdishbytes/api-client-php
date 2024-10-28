@@ -143,6 +143,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'voucher_created_event' => '\Flipdish\\Client\Models\VoucherCreatedEvent[]',
         'voucher_updated_event' => '\Flipdish\\Client\Models\VoucherUpdatedEvent[]',
         'voucher_deleted_event' => '\Flipdish\\Client\Models\VoucherDeletedEvent[]',
+        'voucher_applied_event' => '\Flipdish\\Client\Models\VoucherAppliedEvent[]',
         'teammate_invite_sent_event' => '\Flipdish\\Client\Models\TeammateInviteSentEvent[]',
         'teammate_invite_accepted_event' => '\Flipdish\\Client\Models\TeammateInviteAcceptedEvent[]',
         'teammate_updated_event' => '\Flipdish\\Client\Models\TeammateUpdatedEvent[]',
@@ -291,6 +292,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'voucher_created_event' => null,
         'voucher_updated_event' => null,
         'voucher_deleted_event' => null,
+        'voucher_applied_event' => null,
         'teammate_invite_sent_event' => null,
         'teammate_invite_accepted_event' => null,
         'teammate_updated_event' => null,
@@ -460,6 +462,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'voucher_created_event' => 'VoucherCreatedEvent',
         'voucher_updated_event' => 'VoucherUpdatedEvent',
         'voucher_deleted_event' => 'VoucherDeletedEvent',
+        'voucher_applied_event' => 'VoucherAppliedEvent',
         'teammate_invite_sent_event' => 'TeammateInviteSentEvent',
         'teammate_invite_accepted_event' => 'TeammateInviteAcceptedEvent',
         'teammate_updated_event' => 'TeammateUpdatedEvent',
@@ -608,6 +611,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'voucher_created_event' => 'setVoucherCreatedEvent',
         'voucher_updated_event' => 'setVoucherUpdatedEvent',
         'voucher_deleted_event' => 'setVoucherDeletedEvent',
+        'voucher_applied_event' => 'setVoucherAppliedEvent',
         'teammate_invite_sent_event' => 'setTeammateInviteSentEvent',
         'teammate_invite_accepted_event' => 'setTeammateInviteAcceptedEvent',
         'teammate_updated_event' => 'setTeammateUpdatedEvent',
@@ -756,6 +760,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'voucher_created_event' => 'getVoucherCreatedEvent',
         'voucher_updated_event' => 'getVoucherUpdatedEvent',
         'voucher_deleted_event' => 'getVoucherDeletedEvent',
+        'voucher_applied_event' => 'getVoucherAppliedEvent',
         'teammate_invite_sent_event' => 'getTeammateInviteSentEvent',
         'teammate_invite_accepted_event' => 'getTeammateInviteAcceptedEvent',
         'teammate_updated_event' => 'getTeammateUpdatedEvent',
@@ -958,6 +963,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         $this->container['voucher_created_event'] = isset($data['voucher_created_event']) ? $data['voucher_created_event'] : null;
         $this->container['voucher_updated_event'] = isset($data['voucher_updated_event']) ? $data['voucher_updated_event'] : null;
         $this->container['voucher_deleted_event'] = isset($data['voucher_deleted_event']) ? $data['voucher_deleted_event'] : null;
+        $this->container['voucher_applied_event'] = isset($data['voucher_applied_event']) ? $data['voucher_applied_event'] : null;
         $this->container['teammate_invite_sent_event'] = isset($data['teammate_invite_sent_event']) ? $data['teammate_invite_sent_event'] : null;
         $this->container['teammate_invite_accepted_event'] = isset($data['teammate_invite_accepted_event']) ? $data['teammate_invite_accepted_event'] : null;
         $this->container['teammate_updated_event'] = isset($data['teammate_updated_event']) ? $data['teammate_updated_event'] : null;
@@ -3075,6 +3081,30 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     public function setVoucherDeletedEvent($voucher_deleted_event)
     {
         $this->container['voucher_deleted_event'] = $voucher_deleted_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets voucher_applied_event
+     *
+     * @return \Flipdish\\Client\Models\VoucherAppliedEvent[]
+     */
+    public function getVoucherAppliedEvent()
+    {
+        return $this->container['voucher_applied_event'];
+    }
+
+    /**
+     * Sets voucher_applied_event
+     *
+     * @param \Flipdish\\Client\Models\VoucherAppliedEvent[] $voucher_applied_event Voucher applied event
+     *
+     * @return $this
+     */
+    public function setVoucherAppliedEvent($voucher_applied_event)
+    {
+        $this->container['voucher_applied_event'] = $voucher_applied_event;
 
         return $this;
     }

@@ -1403,6 +1403,7 @@ Class | Method | HTTP request | Description
  - [ValidationErrorResult](docs/Model/ValidationErrorResult.md)
  - [ValidityPeriod](docs/Model/ValidityPeriod.md)
  - [Voucher](docs/Model/Voucher.md)
+ - [VoucherAppliedEvent](docs/Model/VoucherAppliedEvent.md)
  - [VoucherCreatedEvent](docs/Model/VoucherCreatedEvent.md)
  - [VoucherDataPoint](docs/Model/VoucherDataPoint.md)
  - [VoucherDeletedEvent](docs/Model/VoucherDeletedEvent.md)

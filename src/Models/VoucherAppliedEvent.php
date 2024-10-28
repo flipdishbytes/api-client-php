@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreCreatedEvent
+ * VoucherAppliedEvent
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * StoreCreatedEvent Class Doc Comment
+ * VoucherAppliedEvent Class Doc Comment
  *
  * @category Class
- * @description Store Created Event
+ * @description Voucher Applied Event
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StoreCreatedEvent implements ModelInterface, ArrayAccess
+class VoucherAppliedEvent implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class StoreCreatedEvent implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'StoreCreatedEvent';
+    protected static $swaggerModelName = 'VoucherAppliedEvent';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,12 +58,9 @@ class StoreCreatedEvent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'voucher_id' => 'int',
         'event_name' => 'string',
-        'org_id' => 'string',
-        'store_id' => 'int',
-        'user' => '\Flipdish\\Client\Models\UserEventInfo',
-        'description' => 'string',
-        'store' => '\Flipdish\\Client\Models\Store',
+        'order_id' => 'int',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -77,12 +74,9 @@ class StoreCreatedEvent implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'voucher_id' => 'int32',
         'event_name' => null,
-        'org_id' => null,
-        'store_id' => 'int32',
-        'user' => null,
-        'description' => null,
-        'store' => null,
+        'order_id' => 'int32',
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -117,12 +111,9 @@ class StoreCreatedEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'voucher_id' => 'VoucherId',
         'event_name' => 'EventName',
-        'org_id' => 'OrgId',
-        'store_id' => 'StoreId',
-        'user' => 'User',
-        'description' => 'Description',
-        'store' => 'Store',
+        'order_id' => 'OrderId',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -136,12 +127,9 @@ class StoreCreatedEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'voucher_id' => 'setVoucherId',
         'event_name' => 'setEventName',
-        'org_id' => 'setOrgId',
-        'store_id' => 'setStoreId',
-        'user' => 'setUser',
-        'description' => 'setDescription',
-        'store' => 'setStore',
+        'order_id' => 'setOrderId',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -155,12 +143,9 @@ class StoreCreatedEvent implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'voucher_id' => 'getVoucherId',
         'event_name' => 'getEventName',
-        'org_id' => 'getOrgId',
-        'store_id' => 'getStoreId',
-        'user' => 'getUser',
-        'description' => 'getDescription',
-        'store' => 'getStore',
+        'order_id' => 'getOrderId',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -228,12 +213,9 @@ class StoreCreatedEvent implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['voucher_id'] = isset($data['voucher_id']) ? $data['voucher_id'] : null;
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
-        $this->container['org_id'] = isset($data['org_id']) ? $data['org_id'] : null;
-        $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['store'] = isset($data['store']) ? $data['store'] : null;
+        $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -266,6 +248,30 @@ class StoreCreatedEvent implements ModelInterface, ArrayAccess
 
 
     /**
+     * Gets voucher_id
+     *
+     * @return int
+     */
+    public function getVoucherId()
+    {
+        return $this->container['voucher_id'];
+    }
+
+    /**
+     * Sets voucher_id
+     *
+     * @param int $voucher_id Voucher Id
+     *
+     * @return $this
+     */
+    public function setVoucherId($voucher_id)
+    {
+        $this->container['voucher_id'] = $voucher_id;
+
+        return $this;
+    }
+
+    /**
      * Gets event_name
      *
      * @return string
@@ -290,121 +296,25 @@ class StoreCreatedEvent implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets org_id
-     *
-     * @return string
-     */
-    public function getOrgId()
-    {
-        return $this->container['org_id'];
-    }
-
-    /**
-     * Sets org_id
-     *
-     * @param string $org_id Organisation Id
-     *
-     * @return $this
-     */
-    public function setOrgId($org_id)
-    {
-        $this->container['org_id'] = $org_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets store_id
+     * Gets order_id
      *
      * @return int
      */
-    public function getStoreId()
+    public function getOrderId()
     {
-        return $this->container['store_id'];
+        return $this->container['order_id'];
     }
 
     /**
-     * Sets store_id
+     * Sets order_id
      *
-     * @param int $store_id Store Id
+     * @param int $order_id Order id
      *
      * @return $this
      */
-    public function setStoreId($store_id)
+    public function setOrderId($order_id)
     {
-        $this->container['store_id'] = $store_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets user
-     *
-     * @return \Flipdish\\Client\Models\UserEventInfo
-     */
-    public function getUser()
-    {
-        return $this->container['user'];
-    }
-
-    /**
-     * Sets user
-     *
-     * @param \Flipdish\\Client\Models\UserEventInfo $user User which created this store
-     *
-     * @return $this
-     */
-    public function setUser($user)
-    {
-        $this->container['user'] = $user;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string $description Description
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets store
-     *
-     * @return \Flipdish\\Client\Models\Store
-     */
-    public function getStore()
-    {
-        return $this->container['store'];
-    }
-
-    /**
-     * Sets store
-     *
-     * @param \Flipdish\\Client\Models\Store $store Created Store
-     *
-     * @return $this
-     */
-    public function setStore($store)
-    {
-        $this->container['store'] = $store;
+        $this->container['order_id'] = $order_id;
 
         return $this;
     }
