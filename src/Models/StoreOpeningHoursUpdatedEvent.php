@@ -59,6 +59,7 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'event_name' => 'string',
+        'org_id' => 'string',
         'store_id' => 'int',
         'store_group_id' => 'int',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
@@ -80,6 +81,7 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'event_name' => null,
+        'org_id' => null,
         'store_id' => 'int32',
         'store_group_id' => 'int32',
         'user' => null,
@@ -122,6 +124,7 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'event_name' => 'EventName',
+        'org_id' => 'OrgId',
         'store_id' => 'StoreId',
         'store_group_id' => 'StoreGroupId',
         'user' => 'User',
@@ -143,6 +146,7 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'event_name' => 'setEventName',
+        'org_id' => 'setOrgId',
         'store_id' => 'setStoreId',
         'store_group_id' => 'setStoreGroupId',
         'user' => 'setUser',
@@ -164,6 +168,7 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'event_name' => 'getEventName',
+        'org_id' => 'getOrgId',
         'store_id' => 'getStoreId',
         'store_group_id' => 'getStoreGroupId',
         'user' => 'getUser',
@@ -254,6 +259,7 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
+        $this->container['org_id'] = isset($data['org_id']) ? $data['org_id'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
         $this->container['store_group_id'] = isset($data['store_group_id']) ? $data['store_group_id'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
@@ -320,6 +326,30 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
     public function setEventName($event_name)
     {
         $this->container['event_name'] = $event_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets org_id
+     *
+     * @return string
+     */
+    public function getOrgId()
+    {
+        return $this->container['org_id'];
+    }
+
+    /**
+     * Sets org_id
+     *
+     * @param string $org_id Organisation Id
+     *
+     * @return $this
+     */
+    public function setOrgId($org_id)
+    {
+        $this->container['org_id'] = $org_id;
 
         return $this;
     }

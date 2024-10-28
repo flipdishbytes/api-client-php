@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **event_name** | **string** | The event name | [optional] 
+**org_id** | **string** | Organisation Id | [optional] 
 **store_id** | **int** | Store Id | [optional] 
 **store_group_id** | **int** | Store group Id | [optional] 
 **user** | [**\Flipdish\\Client\Models\UserEventInfo**](UserEventInfo.md) | User which updated opening hours for this store | [optional] 
