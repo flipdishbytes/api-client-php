@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **getInvoices**
-> \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice getInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number, $store_id)
+> \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultSubscriptionInvoice getInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number, $store_id)
 
 
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice**](../Model/RestApiFinanceSearchPaginationResultInvoice.md)
+[**\Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultSubscriptionInvoice**](../Model/RestApiFinanceSearchPaginationResultSubscriptionInvoice.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listInvoices**
-> object listInvoices($app_id, $store_id)
+> object listInvoices($store_id, $app_id, $limit, $page)
 
 
 
@@ -148,11 +148,13 @@ $apiInstance = new Flipdish\\Client\Api\InvoicesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | 
 $store_id = 56; // int | 
+$app_id = "app_id_example"; // string | 
+$limit = 56; // int | 
+$page = 56; // int | 
 
 try {
-    $result = $apiInstance->listInvoices($app_id, $store_id);
+    $result = $apiInstance->listInvoices($store_id, $app_id, $limit, $page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InvoicesApi->listInvoices: ', $e->getMessage(), PHP_EOL;
@@ -164,8 +166,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
  **store_id** | **int**|  |
+ **app_id** | **string**|  |
+ **limit** | **int**|  | [optional]
+ **page** | **int**|  | [optional]
 
 ### Return type
 
@@ -183,7 +187,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listSubscriptionInvoices**
-> \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice listSubscriptionInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number, $store_id)
+> \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultSubscriptionInvoice listSubscriptionInvoices($app_id, $subscription_id, $limit, $page_id, $exclude_not_owned_invoices, $date_from, $date_to, $invoice_number, $store_id)
 
 
 
@@ -236,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice**](../Model/RestApiFinanceSearchPaginationResultInvoice.md)
+[**\Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultSubscriptionInvoice**](../Model/RestApiFinanceSearchPaginationResultSubscriptionInvoice.md)
 
 ### Authorization
 

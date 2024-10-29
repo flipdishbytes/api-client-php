@@ -3,17 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**invoice_id** | **string** | The invoice identifier | 
-**number** | **string** | Invoice number | 
-**total** | **double** | Total | [optional] 
-**currency** | **string** | Currency | 
-**status** | **string** | Status | 
-**subscription_id** | **string** | The subscription identifier | [optional] 
-**paid_at** | [**\DateTime**](\DateTime.md) | Paid At | [optional] 
-**finalised_at** | [**\DateTime**](\DateTime.md) | Finalised At | [optional] 
-**pdf_link** | **string** | Pdf Link | 
-**hosted_url** | **string** | Hosted Url | 
-**overdue** | **bool** | Overdue | 
+**invoice_number** | **string** | Invoice Number | [optional] 
+**start_day** | [**\DateTime**](\DateTime.md) | The start day of the invoice period. | [optional] 
+**end_day** | [**\DateTime**](\DateTime.md) | The end day of the invoice period. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

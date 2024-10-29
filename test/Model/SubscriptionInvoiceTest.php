@@ -1,6 +1,6 @@
 <?php
 /**
- * InvoiceTest
+ * SubscriptionInvoiceTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * InvoiceTest Class Doc Comment
+ * SubscriptionInvoiceTest Class Doc Comment
  *
  * @category    Class
- * @description Represents an ordering invoice for a period of time.
+ * @description Invoice
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InvoiceTest extends \PHPUnit_Framework_TestCase
+class SubscriptionInvoiceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,30 +70,86 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Invoice"
+     * Test "SubscriptionInvoice"
      */
-    public function testInvoice()
+    public function testSubscriptionInvoice()
     {
     }
 
     /**
-     * Test attribute "invoice_number"
+     * Test attribute "invoice_id"
      */
-    public function testPropertyInvoiceNumber()
+    public function testPropertyInvoiceId()
     {
     }
 
     /**
-     * Test attribute "start_day"
+     * Test attribute "number"
      */
-    public function testPropertyStartDay()
+    public function testPropertyNumber()
     {
     }
 
     /**
-     * Test attribute "end_day"
+     * Test attribute "total"
      */
-    public function testPropertyEndDay()
+    public function testPropertyTotal()
+    {
+    }
+
+    /**
+     * Test attribute "currency"
+     */
+    public function testPropertyCurrency()
+    {
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+    }
+
+    /**
+     * Test attribute "subscription_id"
+     */
+    public function testPropertySubscriptionId()
+    {
+    }
+
+    /**
+     * Test attribute "paid_at"
+     */
+    public function testPropertyPaidAt()
+    {
+    }
+
+    /**
+     * Test attribute "finalised_at"
+     */
+    public function testPropertyFinalisedAt()
+    {
+    }
+
+    /**
+     * Test attribute "pdf_link"
+     */
+    public function testPropertyPdfLink()
+    {
+    }
+
+    /**
+     * Test attribute "hosted_url"
+     */
+    public function testPropertyHostedUrl()
+    {
+    }
+
+    /**
+     * Test attribute "overdue"
+     */
+    public function testPropertyOverdue()
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * InvoiceTest
+ * RestApiFinanceSearchPaginationResultSubscriptionInvoiceTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * InvoiceTest Class Doc Comment
+ * RestApiFinanceSearchPaginationResultSubscriptionInvoiceTest Class Doc Comment
  *
  * @category    Class
- * @description Represents an ordering invoice for a period of time.
+ * @description Rest api finance search pagination result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InvoiceTest extends \PHPUnit_Framework_TestCase
+class RestApiFinanceSearchPaginationResultSubscriptionInvoiceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,30 +70,37 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Invoice"
+     * Test "RestApiFinanceSearchPaginationResultSubscriptionInvoice"
      */
-    public function testInvoice()
+    public function testRestApiFinanceSearchPaginationResultSubscriptionInvoice()
     {
     }
 
     /**
-     * Test attribute "invoice_number"
+     * Test attribute "next_page"
      */
-    public function testPropertyInvoiceNumber()
+    public function testPropertyNextPage()
     {
     }
 
     /**
-     * Test attribute "start_day"
+     * Test attribute "limit"
      */
-    public function testPropertyStartDay()
+    public function testPropertyLimit()
     {
     }
 
     /**
-     * Test attribute "end_day"
+     * Test attribute "total_record_count"
      */
-    public function testPropertyEndDay()
+    public function testPropertyTotalRecordCount()
+    {
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
     {
     }
 }

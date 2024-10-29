@@ -1,6 +1,6 @@
 <?php
 /**
- * Invoice
+ * RestApiFinanceSearchPaginationResultSubscriptionInvoice
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * Invoice Class Doc Comment
+ * RestApiFinanceSearchPaginationResultSubscriptionInvoice Class Doc Comment
  *
  * @category Class
- * @description Represents an ordering invoice for a period of time.
+ * @description Rest api finance search pagination result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Invoice implements ModelInterface, ArrayAccess
+class RestApiFinanceSearchPaginationResultSubscriptionInvoice implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class Invoice implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Invoice';
+    protected static $swaggerModelName = 'RestApiFinanceSearchPaginationResult[SubscriptionInvoice]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,10 @@ class Invoice implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'invoice_number' => 'string',
-        'start_day' => '\DateTime',
-        'end_day' => '\DateTime'
+        'next_page' => 'string',
+        'limit' => 'int',
+        'total_record_count' => 'int',
+        'data' => '\Flipdish\\Client\Models\SubscriptionInvoice[]'
     ];
 
     /**
@@ -69,9 +70,10 @@ class Invoice implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'invoice_number' => null,
-        'start_day' => 'date-time',
-        'end_day' => 'date-time'
+        'next_page' => null,
+        'limit' => 'int32',
+        'total_record_count' => 'int32',
+        'data' => null
     ];
 
     /**
@@ -101,9 +103,10 @@ class Invoice implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'invoice_number' => 'InvoiceNumber',
-        'start_day' => 'StartDay',
-        'end_day' => 'EndDay'
+        'next_page' => 'NextPage',
+        'limit' => 'Limit',
+        'total_record_count' => 'TotalRecordCount',
+        'data' => 'Data'
     ];
 
     /**
@@ -112,9 +115,10 @@ class Invoice implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'invoice_number' => 'setInvoiceNumber',
-        'start_day' => 'setStartDay',
-        'end_day' => 'setEndDay'
+        'next_page' => 'setNextPage',
+        'limit' => 'setLimit',
+        'total_record_count' => 'setTotalRecordCount',
+        'data' => 'setData'
     ];
 
     /**
@@ -123,9 +127,10 @@ class Invoice implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'invoice_number' => 'getInvoiceNumber',
-        'start_day' => 'getStartDay',
-        'end_day' => 'getEndDay'
+        'next_page' => 'getNextPage',
+        'limit' => 'getLimit',
+        'total_record_count' => 'getTotalRecordCount',
+        'data' => 'getData'
     ];
 
     /**
@@ -188,9 +193,10 @@ class Invoice implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['invoice_number'] = isset($data['invoice_number']) ? $data['invoice_number'] : null;
-        $this->container['start_day'] = isset($data['start_day']) ? $data['start_day'] : null;
-        $this->container['end_day'] = isset($data['end_day']) ? $data['end_day'] : null;
+        $this->container['next_page'] = isset($data['next_page']) ? $data['next_page'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['total_record_count'] = isset($data['total_record_count']) ? $data['total_record_count'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -202,6 +208,18 @@ class Invoice implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['next_page'] === null) {
+            $invalidProperties[] = "'next_page' can't be null";
+        }
+        if ($this->container['limit'] === null) {
+            $invalidProperties[] = "'limit' can't be null";
+        }
+        if ($this->container['total_record_count'] === null) {
+            $invalidProperties[] = "'total_record_count' can't be null";
+        }
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -218,73 +236,97 @@ class Invoice implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets invoice_number
+     * Gets next_page
      *
      * @return string
      */
-    public function getInvoiceNumber()
+    public function getNextPage()
     {
-        return $this->container['invoice_number'];
+        return $this->container['next_page'];
     }
 
     /**
-     * Sets invoice_number
+     * Sets next_page
      *
-     * @param string $invoice_number Invoice Number
+     * @param string $next_page Next page
      *
      * @return $this
      */
-    public function setInvoiceNumber($invoice_number)
+    public function setNextPage($next_page)
     {
-        $this->container['invoice_number'] = $invoice_number;
+        $this->container['next_page'] = $next_page;
 
         return $this;
     }
 
     /**
-     * Gets start_day
+     * Gets limit
      *
-     * @return \DateTime
+     * @return int
      */
-    public function getStartDay()
+    public function getLimit()
     {
-        return $this->container['start_day'];
+        return $this->container['limit'];
     }
 
     /**
-     * Sets start_day
+     * Sets limit
      *
-     * @param \DateTime $start_day The start day of the invoice period.
+     * @param int $limit Current page size
      *
      * @return $this
      */
-    public function setStartDay($start_day)
+    public function setLimit($limit)
     {
-        $this->container['start_day'] = $start_day;
+        $this->container['limit'] = $limit;
 
         return $this;
     }
 
     /**
-     * Gets end_day
+     * Gets total_record_count
      *
-     * @return \DateTime
+     * @return int
      */
-    public function getEndDay()
+    public function getTotalRecordCount()
     {
-        return $this->container['end_day'];
+        return $this->container['total_record_count'];
     }
 
     /**
-     * Sets end_day
+     * Sets total_record_count
      *
-     * @param \DateTime $end_day The end day of the invoice period.
+     * @param int $total_record_count Total record count
      *
      * @return $this
      */
-    public function setEndDay($end_day)
+    public function setTotalRecordCount($total_record_count)
     {
-        $this->container['end_day'] = $end_day;
+        $this->container['total_record_count'] = $total_record_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     *
+     * @return \Flipdish\\Client\Models\SubscriptionInvoice[]
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     *
+     * @param \Flipdish\\Client\Models\SubscriptionInvoice[] $data Generic data object.
+     *
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
 
         return $this;
     }
