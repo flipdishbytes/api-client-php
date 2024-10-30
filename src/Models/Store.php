@@ -106,7 +106,8 @@ class Store implements ModelInterface, ArrayAccess
         'is_published' => 'bool',
         'name' => 'string',
         'email_address' => 'string',
-        'staff_language' => 'string'
+        'staff_language' => 'string',
+        'sales_channel_types' => 'string[]'
     ];
 
     /**
@@ -163,7 +164,8 @@ class Store implements ModelInterface, ArrayAccess
         'is_published' => null,
         'name' => null,
         'email_address' => null,
-        'staff_language' => null
+        'staff_language' => null,
+        'sales_channel_types' => null
     ];
 
     /**
@@ -241,7 +243,8 @@ class Store implements ModelInterface, ArrayAccess
         'is_published' => 'IsPublished',
         'name' => 'Name',
         'email_address' => 'EmailAddress',
-        'staff_language' => 'StaffLanguage'
+        'staff_language' => 'StaffLanguage',
+        'sales_channel_types' => 'SalesChannelTypes'
     ];
 
     /**
@@ -298,7 +301,8 @@ class Store implements ModelInterface, ArrayAccess
         'is_published' => 'setIsPublished',
         'name' => 'setName',
         'email_address' => 'setEmailAddress',
-        'staff_language' => 'setStaffLanguage'
+        'staff_language' => 'setStaffLanguage',
+        'sales_channel_types' => 'setSalesChannelTypes'
     ];
 
     /**
@@ -355,7 +359,8 @@ class Store implements ModelInterface, ArrayAccess
         'is_published' => 'getIsPublished',
         'name' => 'getName',
         'email_address' => 'getEmailAddress',
-        'staff_language' => 'getStaffLanguage'
+        'staff_language' => 'getStaffLanguage',
+        'sales_channel_types' => 'getSalesChannelTypes'
     ];
 
     /**
@@ -516,6 +521,10 @@ class Store implements ModelInterface, ArrayAccess
     const CURRENCY_MOP = 'MOP';
     const CURRENCY_TWD = 'TWD';
     const CURRENCY_BMD = 'BMD';
+    const SALES_CHANNEL_TYPES_WEB = 'Web';
+    const SALES_CHANNEL_TYPES_APP = 'App';
+    const SALES_CHANNEL_TYPES_KIOSK = 'Kiosk';
+    const SALES_CHANNEL_TYPES_POS = 'Pos';
     
 
     
@@ -658,6 +667,21 @@ class Store implements ModelInterface, ArrayAccess
         ];
     }
     
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getSalesChannelTypesAllowableValues()
+    {
+        return [
+            self::SALES_CHANNEL_TYPES_WEB,
+            self::SALES_CHANNEL_TYPES_APP,
+            self::SALES_CHANNEL_TYPES_KIOSK,
+            self::SALES_CHANNEL_TYPES_POS,
+        ];
+    }
+    
 
     /**
      * Associative array for storing property values
@@ -723,6 +747,7 @@ class Store implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['email_address'] = isset($data['email_address']) ? $data['email_address'] : null;
         $this->container['staff_language'] = isset($data['staff_language']) ? $data['staff_language'] : null;
+        $this->container['sales_channel_types'] = isset($data['sales_channel_types']) ? $data['sales_channel_types'] : null;
     }
 
     /**
@@ -1970,6 +1995,39 @@ class Store implements ModelInterface, ArrayAccess
     public function setStaffLanguage($staff_language)
     {
         $this->container['staff_language'] = $staff_language;
+
+        return $this;
+    }
+
+    /**
+     * Gets sales_channel_types
+     *
+     * @return string[]
+     */
+    public function getSalesChannelTypes()
+    {
+        return $this->container['sales_channel_types'];
+    }
+
+    /**
+     * Sets sales_channel_types
+     *
+     * @param string[] $sales_channel_types Sales Channel Types
+     *
+     * @return $this
+     */
+    public function setSalesChannelTypes($sales_channel_types)
+    {
+        $allowedValues = $this->getSalesChannelTypesAllowableValues();
+        if (!is_null($sales_channel_types) && array_diff($sales_channel_types, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'sales_channel_types', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['sales_channel_types'] = $sales_channel_types;
 
         return $this;
     }

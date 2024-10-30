@@ -418,4 +418,11 @@ class StoreTest extends \PHPUnit_Framework_TestCase
     public function testPropertyStaffLanguage()
     {
     }
+
+    /**
+     * Test attribute "sales_channel_types"
+     */
+    public function testPropertySalesChannelTypes()
+    {
+    }
 }

@@ -60,7 +60,8 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'name' => 'string',
         'email_address' => 'string',
-        'staff_language' => 'string'
+        'staff_language' => 'string',
+        'sales_channel_type' => 'string'
     ];
 
     /**
@@ -71,7 +72,8 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'name' => null,
         'email_address' => null,
-        'staff_language' => null
+        'staff_language' => null,
+        'sales_channel_type' => null
     ];
 
     /**
@@ -103,7 +105,8 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'name' => 'Name',
         'email_address' => 'EmailAddress',
-        'staff_language' => 'StaffLanguage'
+        'staff_language' => 'StaffLanguage',
+        'sales_channel_type' => 'SalesChannelType'
     ];
 
     /**
@@ -114,7 +117,8 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
     protected static $setters = [
         'name' => 'setName',
         'email_address' => 'setEmailAddress',
-        'staff_language' => 'setStaffLanguage'
+        'staff_language' => 'setStaffLanguage',
+        'sales_channel_type' => 'setSalesChannelType'
     ];
 
     /**
@@ -125,7 +129,8 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
     protected static $getters = [
         'name' => 'getName',
         'email_address' => 'getEmailAddress',
-        'staff_language' => 'getStaffLanguage'
+        'staff_language' => 'getStaffLanguage',
+        'sales_channel_type' => 'getSalesChannelType'
     ];
 
     /**
@@ -169,8 +174,27 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const SALES_CHANNEL_TYPE_WEB = 'Web';
+    const SALES_CHANNEL_TYPE_APP = 'App';
+    const SALES_CHANNEL_TYPE_KIOSK = 'Kiosk';
+    const SALES_CHANNEL_TYPE_POS = 'Pos';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getSalesChannelTypeAllowableValues()
+    {
+        return [
+            self::SALES_CHANNEL_TYPE_WEB,
+            self::SALES_CHANNEL_TYPE_APP,
+            self::SALES_CHANNEL_TYPE_KIOSK,
+            self::SALES_CHANNEL_TYPE_POS,
+        ];
+    }
     
 
     /**
@@ -191,6 +215,7 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['email_address'] = isset($data['email_address']) ? $data['email_address'] : null;
         $this->container['staff_language'] = isset($data['staff_language']) ? $data['staff_language'] : null;
+        $this->container['sales_channel_type'] = isset($data['sales_channel_type']) ? $data['sales_channel_type'] : null;
     }
 
     /**
@@ -208,6 +233,14 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
 
         if (!is_null($this->container['email_address']) && (mb_strlen($this->container['email_address']) < 0)) {
             $invalidProperties[] = "invalid value for 'email_address', the character length must be bigger than or equal to 0.";
+        }
+
+        $allowedValues = $this->getSalesChannelTypeAllowableValues();
+        if (!is_null($this->container['sales_channel_type']) && !in_array($this->container['sales_channel_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'sales_channel_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
         }
 
         return $invalidProperties;
@@ -300,6 +333,39 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
     public function setStaffLanguage($staff_language)
     {
         $this->container['staff_language'] = $staff_language;
+
+        return $this;
+    }
+
+    /**
+     * Gets sales_channel_type
+     *
+     * @return string
+     */
+    public function getSalesChannelType()
+    {
+        return $this->container['sales_channel_type'];
+    }
+
+    /**
+     * Sets sales_channel_type
+     *
+     * @param string $sales_channel_type Sales Channel Type
+     *
+     * @return $this
+     */
+    public function setSalesChannelType($sales_channel_type)
+    {
+        $allowedValues = $this->getSalesChannelTypeAllowableValues();
+        if (!is_null($sales_channel_type) && !in_array($sales_channel_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'sales_channel_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['sales_channel_type'] = $sales_channel_type;
 
         return $this;
     }
