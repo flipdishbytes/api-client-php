@@ -64,6 +64,7 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
         'country_id' => 'string',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
         'account_id' => 'string',
+        'org_id' => 'string',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -83,6 +84,7 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
         'country_id' => null,
         'user' => null,
         'account_id' => null,
+        'org_id' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -123,6 +125,7 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
         'country_id' => 'CountryId',
         'user' => 'User',
         'account_id' => 'AccountId',
+        'org_id' => 'OrgId',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -142,6 +145,7 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
         'country_id' => 'setCountryId',
         'user' => 'setUser',
         'account_id' => 'setAccountId',
+        'org_id' => 'setOrgId',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -161,6 +165,7 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
         'country_id' => 'getCountryId',
         'user' => 'getUser',
         'account_id' => 'getAccountId',
+        'org_id' => 'getOrgId',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -234,6 +239,7 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
         $this->container['country_id'] = isset($data['country_id']) ? $data['country_id'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['account_id'] = isset($data['account_id']) ? $data['account_id'] : null;
+        $this->container['org_id'] = isset($data['org_id']) ? $data['org_id'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -405,6 +411,30 @@ class AppCreatedEvent implements ModelInterface, ArrayAccess
     public function setAccountId($account_id)
     {
         $this->container['account_id'] = $account_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets org_id
+     *
+     * @return string
+     */
+    public function getOrgId()
+    {
+        return $this->container['org_id'];
+    }
+
+    /**
+     * Sets org_id
+     *
+     * @param string $org_id Organisation Id
+     *
+     * @return $this
+     */
+    public function setOrgId($org_id)
+    {
+        $this->container['org_id'] = $org_id;
 
         return $this;
     }

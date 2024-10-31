@@ -65,6 +65,7 @@ class AppUpdatedEvent implements ModelInterface, ArrayAccess
         'country_id' => 'string',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
         'app' => '\Flipdish\\Client\Models\App',
+        'org_id' => 'string',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -85,6 +86,7 @@ class AppUpdatedEvent implements ModelInterface, ArrayAccess
         'country_id' => null,
         'user' => null,
         'app' => null,
+        'org_id' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -126,6 +128,7 @@ class AppUpdatedEvent implements ModelInterface, ArrayAccess
         'country_id' => 'CountryId',
         'user' => 'User',
         'app' => 'App',
+        'org_id' => 'OrgId',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -146,6 +149,7 @@ class AppUpdatedEvent implements ModelInterface, ArrayAccess
         'country_id' => 'setCountryId',
         'user' => 'setUser',
         'app' => 'setApp',
+        'org_id' => 'setOrgId',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -166,6 +170,7 @@ class AppUpdatedEvent implements ModelInterface, ArrayAccess
         'country_id' => 'getCountryId',
         'user' => 'getUser',
         'app' => 'getApp',
+        'org_id' => 'getOrgId',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -240,6 +245,7 @@ class AppUpdatedEvent implements ModelInterface, ArrayAccess
         $this->container['country_id'] = isset($data['country_id']) ? $data['country_id'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
+        $this->container['org_id'] = isset($data['org_id']) ? $data['org_id'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -435,6 +441,30 @@ class AppUpdatedEvent implements ModelInterface, ArrayAccess
     public function setApp($app)
     {
         $this->container['app'] = $app;
+
+        return $this;
+    }
+
+    /**
+     * Gets org_id
+     *
+     * @return string
+     */
+    public function getOrgId()
+    {
+        return $this->container['org_id'];
+    }
+
+    /**
+     * Sets org_id
+     *
+     * @param string $org_id Organisation Id
+     *
+     * @return $this
+     */
+    public function setOrgId($org_id)
+    {
+        $this->container['org_id'] = $org_id;
 
         return $this;
     }

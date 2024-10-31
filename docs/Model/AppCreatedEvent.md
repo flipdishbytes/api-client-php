@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **country_id** | **string** | Country Id | [optional] 
 **user** | [**\Flipdish\\Client\Models\UserEventInfo**](UserEventInfo.md) | User information | [optional] 
 **account_id** | **string** | Salesforce Account Id | [optional] 
+**org_id** | **string** | Organisation Id | [optional] 
 **flipdish_event_id** | **string** | The identitfier of the event | [optional] 
 **create_time** | [**\DateTime**](\DateTime.md) | The time of creation of the event | [optional] 
 **position** | **int** | Position | [optional] 
