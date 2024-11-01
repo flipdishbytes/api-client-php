@@ -59,6 +59,7 @@ class StoreLogoDeletedEvent implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'event_name' => 'string',
+        'org_id' => 'string',
         'store_id' => 'int',
         'description' => 'string',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
@@ -76,6 +77,7 @@ class StoreLogoDeletedEvent implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'event_name' => null,
+        'org_id' => null,
         'store_id' => 'int32',
         'description' => null,
         'user' => null,
@@ -114,6 +116,7 @@ class StoreLogoDeletedEvent implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'event_name' => 'EventName',
+        'org_id' => 'OrgId',
         'store_id' => 'StoreId',
         'description' => 'Description',
         'user' => 'User',
@@ -131,6 +134,7 @@ class StoreLogoDeletedEvent implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'event_name' => 'setEventName',
+        'org_id' => 'setOrgId',
         'store_id' => 'setStoreId',
         'description' => 'setDescription',
         'user' => 'setUser',
@@ -148,6 +152,7 @@ class StoreLogoDeletedEvent implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'event_name' => 'getEventName',
+        'org_id' => 'getOrgId',
         'store_id' => 'getStoreId',
         'description' => 'getDescription',
         'user' => 'getUser',
@@ -219,6 +224,7 @@ class StoreLogoDeletedEvent implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
+        $this->container['org_id'] = isset($data['org_id']) ? $data['org_id'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
@@ -273,6 +279,30 @@ class StoreLogoDeletedEvent implements ModelInterface, ArrayAccess
     public function setEventName($event_name)
     {
         $this->container['event_name'] = $event_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets org_id
+     *
+     * @return string
+     */
+    public function getOrgId()
+    {
+        return $this->container['org_id'];
+    }
+
+    /**
+     * Sets org_id
+     *
+     * @param string $org_id Organisation Id
+     *
+     * @return $this
+     */
+    public function setOrgId($org_id)
+    {
+        $this->container['org_id'] = $org_id;
 
         return $this;
     }
