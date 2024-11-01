@@ -61,6 +61,7 @@ class StoreLogoUpdatedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'string',
         'org_id' => 'string',
         'store_id' => 'int',
+        'logo_url' => 'string',
         'description' => 'string',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
         'flipdish_event_id' => 'string',
@@ -79,6 +80,7 @@ class StoreLogoUpdatedEvent implements ModelInterface, ArrayAccess
         'event_name' => null,
         'org_id' => null,
         'store_id' => 'int32',
+        'logo_url' => null,
         'description' => null,
         'user' => null,
         'flipdish_event_id' => 'uuid',
@@ -118,6 +120,7 @@ class StoreLogoUpdatedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'EventName',
         'org_id' => 'OrgId',
         'store_id' => 'StoreId',
+        'logo_url' => 'LogoUrl',
         'description' => 'Description',
         'user' => 'User',
         'flipdish_event_id' => 'FlipdishEventId',
@@ -136,6 +139,7 @@ class StoreLogoUpdatedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'setEventName',
         'org_id' => 'setOrgId',
         'store_id' => 'setStoreId',
+        'logo_url' => 'setLogoUrl',
         'description' => 'setDescription',
         'user' => 'setUser',
         'flipdish_event_id' => 'setFlipdishEventId',
@@ -154,6 +158,7 @@ class StoreLogoUpdatedEvent implements ModelInterface, ArrayAccess
         'event_name' => 'getEventName',
         'org_id' => 'getOrgId',
         'store_id' => 'getStoreId',
+        'logo_url' => 'getLogoUrl',
         'description' => 'getDescription',
         'user' => 'getUser',
         'flipdish_event_id' => 'getFlipdishEventId',
@@ -226,6 +231,7 @@ class StoreLogoUpdatedEvent implements ModelInterface, ArrayAccess
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
         $this->container['org_id'] = isset($data['org_id']) ? $data['org_id'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
+        $this->container['logo_url'] = isset($data['logo_url']) ? $data['logo_url'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
@@ -327,6 +333,30 @@ class StoreLogoUpdatedEvent implements ModelInterface, ArrayAccess
     public function setStoreId($store_id)
     {
         $this->container['store_id'] = $store_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets logo_url
+     *
+     * @return string
+     */
+    public function getLogoUrl()
+    {
+        return $this->container['logo_url'];
+    }
+
+    /**
+     * Sets logo_url
+     *
+     * @param string $logo_url Url of logo
+     *
+     * @return $this
+     */
+    public function setLogoUrl($logo_url)
+    {
+        $this->container['logo_url'] = $logo_url;
 
         return $this;
     }

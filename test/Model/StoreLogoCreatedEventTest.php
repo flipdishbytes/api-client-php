@@ -98,6 +98,13 @@ class StoreLogoCreatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "logo_url"
+     */
+    public function testPropertyLogoUrl()
+    {
+    }
+
+    /**
      * Test attribute "description"
      */
     public function testPropertyDescription()
