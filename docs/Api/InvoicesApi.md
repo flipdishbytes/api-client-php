@@ -130,7 +130,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listInvoices**
-> object listInvoices($store_id, $app_id, $limit, $page)
+> \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice listInvoices($store_id, $app_id, $limit, $page)
 
 
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice**](../Model/RestApiFinanceSearchPaginationResultInvoice.md)
 
 ### Authorization
 

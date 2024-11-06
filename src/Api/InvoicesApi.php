@@ -744,7 +744,7 @@ class InvoicesApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice
      */
     public function listInvoices($store_id, $app_id, $limit = null, $page = null)
     {
@@ -762,11 +762,11 @@ class InvoicesApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function listInvoicesWithHttpInfo($store_id, $app_id, $limit = null, $page = null)
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice';
         $request = $this->listInvoicesRequest($store_id, $app_id, $limit, $page);
 
         try {
@@ -818,7 +818,7 @@ class InvoicesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -898,7 +898,7 @@ class InvoicesApi
      */
     public function listInvoicesAsyncWithHttpInfo($store_id, $app_id, $limit = null, $page = null)
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiFinanceSearchPaginationResultInvoice';
         $request = $this->listInvoicesRequest($store_id, $app_id, $limit, $page);
 
         return $this->client

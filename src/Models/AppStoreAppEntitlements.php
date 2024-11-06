@@ -58,7 +58,8 @@ class AppStoreAppEntitlements implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'entitlement_quantity' => 'int',
-        'current_usage' => 'int'
+        'current_usage' => 'int',
+        'current_usage_in_brand' => 'int'
     ];
 
     /**
@@ -68,7 +69,8 @@ class AppStoreAppEntitlements implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'entitlement_quantity' => 'int32',
-        'current_usage' => 'int32'
+        'current_usage' => 'int32',
+        'current_usage_in_brand' => 'int32'
     ];
 
     /**
@@ -99,7 +101,8 @@ class AppStoreAppEntitlements implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'entitlement_quantity' => 'EntitlementQuantity',
-        'current_usage' => 'CurrentUsage'
+        'current_usage' => 'CurrentUsage',
+        'current_usage_in_brand' => 'CurrentUsageInBrand'
     ];
 
     /**
@@ -109,7 +112,8 @@ class AppStoreAppEntitlements implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'entitlement_quantity' => 'setEntitlementQuantity',
-        'current_usage' => 'setCurrentUsage'
+        'current_usage' => 'setCurrentUsage',
+        'current_usage_in_brand' => 'setCurrentUsageInBrand'
     ];
 
     /**
@@ -119,7 +123,8 @@ class AppStoreAppEntitlements implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'entitlement_quantity' => 'getEntitlementQuantity',
-        'current_usage' => 'getCurrentUsage'
+        'current_usage' => 'getCurrentUsage',
+        'current_usage_in_brand' => 'getCurrentUsageInBrand'
     ];
 
     /**
@@ -184,6 +189,7 @@ class AppStoreAppEntitlements implements ModelInterface, ArrayAccess
     {
         $this->container['entitlement_quantity'] = isset($data['entitlement_quantity']) ? $data['entitlement_quantity'] : null;
         $this->container['current_usage'] = isset($data['current_usage']) ? $data['current_usage'] : null;
+        $this->container['current_usage_in_brand'] = isset($data['current_usage_in_brand']) ? $data['current_usage_in_brand'] : null;
     }
 
     /**
@@ -254,6 +260,30 @@ class AppStoreAppEntitlements implements ModelInterface, ArrayAccess
     public function setCurrentUsage($current_usage)
     {
         $this->container['current_usage'] = $current_usage;
+
+        return $this;
+    }
+
+    /**
+     * Gets current_usage_in_brand
+     *
+     * @return int
+     */
+    public function getCurrentUsageInBrand()
+    {
+        return $this->container['current_usage_in_brand'];
+    }
+
+    /**
+     * Sets current_usage_in_brand
+     *
+     * @param int $current_usage_in_brand current_usage_in_brand
+     *
+     * @return $this
+     */
+    public function setCurrentUsageInBrand($current_usage_in_brand)
+    {
+        $this->container['current_usage_in_brand'] = $current_usage_in_brand;
 
         return $this;
     }
