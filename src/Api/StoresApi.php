@@ -7506,6 +7506,7 @@ class StoresApi
      *
      * @param  string $app_id app_id (required)
      * @param  string $search_query search_query (optional)
+     * @param  string $sales_channel_type sales_channel_type (optional)
      * @param  int $page page (optional)
      * @param  int $limit limit (optional)
      *
@@ -7513,9 +7514,9 @@ class StoresApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiPaginationResultStore
      */
-    public function getStoresByAppId($app_id, $search_query = null, $page = null, $limit = null)
+    public function getStoresByAppId($app_id, $search_query = null, $sales_channel_type = null, $page = null, $limit = null)
     {
-        list($response) = $this->getStoresByAppIdWithHttpInfo($app_id, $search_query, $page, $limit);
+        list($response) = $this->getStoresByAppIdWithHttpInfo($app_id, $search_query, $sales_channel_type, $page, $limit);
         return $response;
     }
 
@@ -7524,6 +7525,7 @@ class StoresApi
      *
      * @param  string $app_id (required)
      * @param  string $search_query (optional)
+     * @param  string $sales_channel_type (optional)
      * @param  int $page (optional)
      * @param  int $limit (optional)
      *
@@ -7531,10 +7533,10 @@ class StoresApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiPaginationResultStore, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStoresByAppIdWithHttpInfo($app_id, $search_query = null, $page = null, $limit = null)
+    public function getStoresByAppIdWithHttpInfo($app_id, $search_query = null, $sales_channel_type = null, $page = null, $limit = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultStore';
-        $request = $this->getStoresByAppIdRequest($app_id, $search_query, $page, $limit);
+        $request = $this->getStoresByAppIdRequest($app_id, $search_query, $sales_channel_type, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7626,15 +7628,16 @@ class StoresApi
      *
      * @param  string $app_id (required)
      * @param  string $search_query (optional)
+     * @param  string $sales_channel_type (optional)
      * @param  int $page (optional)
      * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStoresByAppIdAsync($app_id, $search_query = null, $page = null, $limit = null)
+    public function getStoresByAppIdAsync($app_id, $search_query = null, $sales_channel_type = null, $page = null, $limit = null)
     {
-        return $this->getStoresByAppIdAsyncWithHttpInfo($app_id, $search_query, $page, $limit)
+        return $this->getStoresByAppIdAsyncWithHttpInfo($app_id, $search_query, $sales_channel_type, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7649,16 +7652,17 @@ class StoresApi
      *
      * @param  string $app_id (required)
      * @param  string $search_query (optional)
+     * @param  string $sales_channel_type (optional)
      * @param  int $page (optional)
      * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStoresByAppIdAsyncWithHttpInfo($app_id, $search_query = null, $page = null, $limit = null)
+    public function getStoresByAppIdAsyncWithHttpInfo($app_id, $search_query = null, $sales_channel_type = null, $page = null, $limit = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultStore';
-        $request = $this->getStoresByAppIdRequest($app_id, $search_query, $page, $limit);
+        $request = $this->getStoresByAppIdRequest($app_id, $search_query, $sales_channel_type, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7702,13 +7706,14 @@ class StoresApi
      *
      * @param  string $app_id (required)
      * @param  string $search_query (optional)
+     * @param  string $sales_channel_type (optional)
      * @param  int $page (optional)
      * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getStoresByAppIdRequest($app_id, $search_query = null, $page = null, $limit = null)
+    protected function getStoresByAppIdRequest($app_id, $search_query = null, $sales_channel_type = null, $page = null, $limit = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -7727,6 +7732,10 @@ class StoresApi
         // query params
         if ($search_query !== null) {
             $queryParams['searchQuery'] = ObjectSerializer::toQueryValue($search_query);
+        }
+        // query params
+        if ($sales_channel_type !== null) {
+            $queryParams['salesChannelType'] = ObjectSerializer::toQueryValue($sales_channel_type);
         }
         // query params
         if ($page !== null) {

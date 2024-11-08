@@ -1342,7 +1342,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStoresByAppId**
-> \Flipdish\\Client\Models\RestApiPaginationResultStore getStoresByAppId($app_id, $search_query, $page, $limit)
+> \Flipdish\\Client\Models\RestApiPaginationResultStore getStoresByAppId($app_id, $search_query, $sales_channel_type, $page, $limit)
 
 
 
@@ -1362,11 +1362,12 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
 );
 $app_id = "app_id_example"; // string | 
 $search_query = "search_query_example"; // string | 
+$sales_channel_type = "sales_channel_type_example"; // string | 
 $page = 56; // int | 
 $limit = 56; // int | 
 
 try {
-    $result = $apiInstance->getStoresByAppId($app_id, $search_query, $page, $limit);
+    $result = $apiInstance->getStoresByAppId($app_id, $search_query, $sales_channel_type, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StoresApi->getStoresByAppId: ', $e->getMessage(), PHP_EOL;
@@ -1380,6 +1381,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**|  |
  **search_query** | **string**|  | [optional]
+ **sales_channel_type** | **string**|  | [optional]
  **page** | **int**|  | [optional]
  **limit** | **int**|  | [optional]
 
