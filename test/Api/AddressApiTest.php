@@ -120,14 +120,4 @@ class AddressApiTest extends \PHPUnit_Framework_TestCase
     public function testGetCountries()
     {
     }
-
-    /**
-     * Test case for validateAddressForm
-     *
-     * .
-     *
-     */
-    public function testValidateAddressForm()
-    {
-    }
 }
