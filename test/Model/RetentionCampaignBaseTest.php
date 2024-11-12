@@ -91,6 +91,13 @@ class RetentionCampaignBaseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "max_discount"
+     */
+    public function testPropertyMaxDiscount()
+    {
+    }
+
+    /**
      * Test attribute "lump_discount_amount"
      */
     public function testPropertyLumpDiscountAmount()

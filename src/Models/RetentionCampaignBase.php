@@ -60,6 +60,7 @@ class RetentionCampaignBase implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'notify_customer_after_minutes' => 'int',
         'percent_discount_amount' => 'int',
+        'max_discount' => 'double',
         'lump_discount_amount' => 'double',
         'voucher_valid_period_days' => 'int',
         'include_delivery_fee' => 'bool',
@@ -79,6 +80,7 @@ class RetentionCampaignBase implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'notify_customer_after_minutes' => 'int32',
         'percent_discount_amount' => 'int32',
+        'max_discount' => 'double',
         'lump_discount_amount' => 'double',
         'voucher_valid_period_days' => 'int32',
         'include_delivery_fee' => null,
@@ -119,6 +121,7 @@ class RetentionCampaignBase implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'notify_customer_after_minutes' => 'NotifyCustomerAfterMinutes',
         'percent_discount_amount' => 'PercentDiscountAmount',
+        'max_discount' => 'MaxDiscount',
         'lump_discount_amount' => 'LumpDiscountAmount',
         'voucher_valid_period_days' => 'VoucherValidPeriodDays',
         'include_delivery_fee' => 'IncludeDeliveryFee',
@@ -138,6 +141,7 @@ class RetentionCampaignBase implements ModelInterface, ArrayAccess
     protected static $setters = [
         'notify_customer_after_minutes' => 'setNotifyCustomerAfterMinutes',
         'percent_discount_amount' => 'setPercentDiscountAmount',
+        'max_discount' => 'setMaxDiscount',
         'lump_discount_amount' => 'setLumpDiscountAmount',
         'voucher_valid_period_days' => 'setVoucherValidPeriodDays',
         'include_delivery_fee' => 'setIncludeDeliveryFee',
@@ -157,6 +161,7 @@ class RetentionCampaignBase implements ModelInterface, ArrayAccess
     protected static $getters = [
         'notify_customer_after_minutes' => 'getNotifyCustomerAfterMinutes',
         'percent_discount_amount' => 'getPercentDiscountAmount',
+        'max_discount' => 'getMaxDiscount',
         'lump_discount_amount' => 'getLumpDiscountAmount',
         'voucher_valid_period_days' => 'getVoucherValidPeriodDays',
         'include_delivery_fee' => 'getIncludeDeliveryFee',
@@ -230,6 +235,7 @@ class RetentionCampaignBase implements ModelInterface, ArrayAccess
     {
         $this->container['notify_customer_after_minutes'] = isset($data['notify_customer_after_minutes']) ? $data['notify_customer_after_minutes'] : null;
         $this->container['percent_discount_amount'] = isset($data['percent_discount_amount']) ? $data['percent_discount_amount'] : null;
+        $this->container['max_discount'] = isset($data['max_discount']) ? $data['max_discount'] : null;
         $this->container['lump_discount_amount'] = isset($data['lump_discount_amount']) ? $data['lump_discount_amount'] : null;
         $this->container['voucher_valid_period_days'] = isset($data['voucher_valid_period_days']) ? $data['voucher_valid_period_days'] : null;
         $this->container['include_delivery_fee'] = isset($data['include_delivery_fee']) ? $data['include_delivery_fee'] : null;
@@ -264,6 +270,10 @@ class RetentionCampaignBase implements ModelInterface, ArrayAccess
 
         if (!is_null($this->container['percent_discount_amount']) && ($this->container['percent_discount_amount'] < 1)) {
             $invalidProperties[] = "invalid value for 'percent_discount_amount', must be bigger than or equal to 1.";
+        }
+
+        if (!is_null($this->container['max_discount']) && ($this->container['max_discount'] < 0)) {
+            $invalidProperties[] = "invalid value for 'max_discount', must be bigger than or equal to 0.";
         }
 
         if (!is_null($this->container['lump_discount_amount']) && ($this->container['lump_discount_amount'] > 2147483647)) {
@@ -357,6 +367,35 @@ class RetentionCampaignBase implements ModelInterface, ArrayAccess
         }
 
         $this->container['percent_discount_amount'] = $percent_discount_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_discount
+     *
+     * @return double
+     */
+    public function getMaxDiscount()
+    {
+        return $this->container['max_discount'];
+    }
+
+    /**
+     * Sets max_discount
+     *
+     * @param double $max_discount Maximum discount for percentage discounts
+     *
+     * @return $this
+     */
+    public function setMaxDiscount($max_discount)
+    {
+
+        if (!is_null($max_discount) && ($max_discount < 0)) {
+            throw new \InvalidArgumentException('invalid value for $max_discount when calling RetentionCampaignBase., must be bigger than or equal to 0.');
+        }
+
+        $this->container['max_discount'] = $max_discount;
 
         return $this;
     }

@@ -60,6 +60,7 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'orders_before_receiving_voucher' => 'int',
         'percent_discount_amount' => 'int',
+        'max_discount' => 'double',
         'rounding_strategy' => 'int',
         'should_include_orders_with_loyalty_voucher' => 'bool',
         'voucher_valid_period_days' => 'int',
@@ -80,6 +81,7 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'orders_before_receiving_voucher' => 'int32',
         'percent_discount_amount' => 'int32',
+        'max_discount' => 'double',
         'rounding_strategy' => 'int32',
         'should_include_orders_with_loyalty_voucher' => null,
         'voucher_valid_period_days' => 'int32',
@@ -121,6 +123,7 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'orders_before_receiving_voucher' => 'OrdersBeforeReceivingVoucher',
         'percent_discount_amount' => 'PercentDiscountAmount',
+        'max_discount' => 'MaxDiscount',
         'rounding_strategy' => 'RoundingStrategy',
         'should_include_orders_with_loyalty_voucher' => 'ShouldIncludeOrdersWithLoyaltyVoucher',
         'voucher_valid_period_days' => 'VoucherValidPeriodDays',
@@ -141,6 +144,7 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
     protected static $setters = [
         'orders_before_receiving_voucher' => 'setOrdersBeforeReceivingVoucher',
         'percent_discount_amount' => 'setPercentDiscountAmount',
+        'max_discount' => 'setMaxDiscount',
         'rounding_strategy' => 'setRoundingStrategy',
         'should_include_orders_with_loyalty_voucher' => 'setShouldIncludeOrdersWithLoyaltyVoucher',
         'voucher_valid_period_days' => 'setVoucherValidPeriodDays',
@@ -161,6 +165,7 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
     protected static $getters = [
         'orders_before_receiving_voucher' => 'getOrdersBeforeReceivingVoucher',
         'percent_discount_amount' => 'getPercentDiscountAmount',
+        'max_discount' => 'getMaxDiscount',
         'rounding_strategy' => 'getRoundingStrategy',
         'should_include_orders_with_loyalty_voucher' => 'getShouldIncludeOrdersWithLoyaltyVoucher',
         'voucher_valid_period_days' => 'getVoucherValidPeriodDays',
@@ -235,6 +240,7 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
     {
         $this->container['orders_before_receiving_voucher'] = isset($data['orders_before_receiving_voucher']) ? $data['orders_before_receiving_voucher'] : null;
         $this->container['percent_discount_amount'] = isset($data['percent_discount_amount']) ? $data['percent_discount_amount'] : null;
+        $this->container['max_discount'] = isset($data['max_discount']) ? $data['max_discount'] : null;
         $this->container['rounding_strategy'] = isset($data['rounding_strategy']) ? $data['rounding_strategy'] : null;
         $this->container['should_include_orders_with_loyalty_voucher'] = isset($data['should_include_orders_with_loyalty_voucher']) ? $data['should_include_orders_with_loyalty_voucher'] : null;
         $this->container['voucher_valid_period_days'] = isset($data['voucher_valid_period_days']) ? $data['voucher_valid_period_days'] : null;
@@ -262,6 +268,10 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
 
         if (!is_null($this->container['percent_discount_amount']) && ($this->container['percent_discount_amount'] < 1)) {
             $invalidProperties[] = "invalid value for 'percent_discount_amount', must be bigger than or equal to 1.";
+        }
+
+        if (!is_null($this->container['max_discount']) && ($this->container['max_discount'] < 0)) {
+            $invalidProperties[] = "invalid value for 'max_discount', must be bigger than or equal to 0.";
         }
 
         if (!is_null($this->container['rounding_strategy']) && ($this->container['rounding_strategy'] > 2)) {
@@ -347,6 +357,35 @@ class LoyaltyCampaignBase implements ModelInterface, ArrayAccess
         }
 
         $this->container['percent_discount_amount'] = $percent_discount_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_discount
+     *
+     * @return double
+     */
+    public function getMaxDiscount()
+    {
+        return $this->container['max_discount'];
+    }
+
+    /**
+     * Sets max_discount
+     *
+     * @param double $max_discount Maximum discount for percentage discounts
+     *
+     * @return $this
+     */
+    public function setMaxDiscount($max_discount)
+    {
+
+        if (!is_null($max_discount) && ($max_discount < 0)) {
+            throw new \InvalidArgumentException('invalid value for $max_discount when calling LoyaltyCampaignBase., must be bigger than or equal to 0.');
+        }
+
+        $this->container['max_discount'] = $max_discount;
 
         return $this;
     }

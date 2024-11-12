@@ -119,6 +119,13 @@ class LoyaltyCampaignTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "max_discount"
+     */
+    public function testPropertyMaxDiscount()
+    {
+    }
+
+    /**
      * Test attribute "rounding_strategy"
      */
     public function testPropertyRoundingStrategy()
