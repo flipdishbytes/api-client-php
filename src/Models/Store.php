@@ -78,6 +78,7 @@ class Store implements ModelInterface, ArrayAccess
         'logo_url' => 'string',
         'fraud_prevention_strategy' => 'string',
         'app_ids' => 'string[]',
+        'property_id' => 'string',
         'phone_number' => 'string',
         'always_appear_open' => 'bool',
         'pre_order_enabled' => 'bool',
@@ -136,6 +137,7 @@ class Store implements ModelInterface, ArrayAccess
         'logo_url' => null,
         'fraud_prevention_strategy' => null,
         'app_ids' => null,
+        'property_id' => null,
         'phone_number' => null,
         'always_appear_open' => null,
         'pre_order_enabled' => null,
@@ -215,6 +217,7 @@ class Store implements ModelInterface, ArrayAccess
         'logo_url' => 'LogoUrl',
         'fraud_prevention_strategy' => 'FraudPreventionStrategy',
         'app_ids' => 'AppIds',
+        'property_id' => 'PropertyId',
         'phone_number' => 'PhoneNumber',
         'always_appear_open' => 'AlwaysAppearOpen',
         'pre_order_enabled' => 'PreOrderEnabled',
@@ -273,6 +276,7 @@ class Store implements ModelInterface, ArrayAccess
         'logo_url' => 'setLogoUrl',
         'fraud_prevention_strategy' => 'setFraudPreventionStrategy',
         'app_ids' => 'setAppIds',
+        'property_id' => 'setPropertyId',
         'phone_number' => 'setPhoneNumber',
         'always_appear_open' => 'setAlwaysAppearOpen',
         'pre_order_enabled' => 'setPreOrderEnabled',
@@ -331,6 +335,7 @@ class Store implements ModelInterface, ArrayAccess
         'logo_url' => 'getLogoUrl',
         'fraud_prevention_strategy' => 'getFraudPreventionStrategy',
         'app_ids' => 'getAppIds',
+        'property_id' => 'getPropertyId',
         'phone_number' => 'getPhoneNumber',
         'always_appear_open' => 'getAlwaysAppearOpen',
         'pre_order_enabled' => 'getPreOrderEnabled',
@@ -718,6 +723,7 @@ class Store implements ModelInterface, ArrayAccess
         $this->container['logo_url'] = isset($data['logo_url']) ? $data['logo_url'] : null;
         $this->container['fraud_prevention_strategy'] = isset($data['fraud_prevention_strategy']) ? $data['fraud_prevention_strategy'] : null;
         $this->container['app_ids'] = isset($data['app_ids']) ? $data['app_ids'] : null;
+        $this->container['property_id'] = isset($data['property_id']) ? $data['property_id'] : null;
         $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
         $this->container['always_appear_open'] = isset($data['always_appear_open']) ? $data['always_appear_open'] : null;
         $this->container['pre_order_enabled'] = isset($data['pre_order_enabled']) ? $data['pre_order_enabled'] : null;
@@ -1292,6 +1298,30 @@ class Store implements ModelInterface, ArrayAccess
     public function setAppIds($app_ids)
     {
         $this->container['app_ids'] = $app_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets property_id
+     *
+     * @return string
+     */
+    public function getPropertyId()
+    {
+        return $this->container['property_id'];
+    }
+
+    /**
+     * Sets property_id
+     *
+     * @param string $property_id Property Id
+     *
+     * @return $this
+     */
+    public function setPropertyId($property_id)
+    {
+        $this->container['property_id'] = $property_id;
 
         return $this;
     }

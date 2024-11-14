@@ -382,6 +382,16 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for storesSetPropertyId
+     *
+     * .
+     *
+     */
+    public function testStoresSetPropertyId()
+    {
+    }
+
+    /**
      * Test case for supportedSalesChannelsTypes
      *
      * .

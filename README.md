@@ -133,6 +133,7 @@ Class | Method | HTTP request | Description
 *AppStoreDeveloperApi* | [**updateExternalProduct**](docs/Api/AppStoreDeveloperApi.md#updateexternalproduct) | **PUT** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/external_product | 
 *AppStoreDeveloperApi* | [**uploadAppStoreAppLogo**](docs/Api/AppStoreDeveloperApi.md#uploadappstoreapplogo) | **POST** /api/v1.0/oauthclients/{oauthAppId}/appstore/apps/{appStoreAppId}/logo | 
 *AppStoreEntitlementsApi* | [**getAppStoreAppEntitlements**](docs/Api/AppStoreEntitlementsApi.md#getappstoreappentitlements) | **GET** /api/v1.0/{appId}/appstore/apps/{appStoreAppId}/entitlements | 
+*AppsApi* | [**appsSetPropertyId**](docs/Api/AppsApi.md#appssetpropertyid) | **POST** /api/v1.0/apps/{appId}/orgId/{orgId} | 
 *AppsApi* | [**createApp**](docs/Api/AppsApi.md#createapp) | **POST** /api/v1.0/apps | 
 *AppsApi* | [**getApp**](docs/Api/AppsApi.md#getapp) | **GET** /api/v1.0/apps/{appId} | 
 *AppsApi* | [**getAppHostnameStatus**](docs/Api/AppsApi.md#getapphostnamestatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
@@ -552,6 +553,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**setBusinessHours**](docs/Api/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 *StoresApi* | [**setPreOrdeEnabled**](docs/Api/StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
 *StoresApi* | [**setStoreLeadTimes**](docs/Api/StoresApi.md#setstoreleadtimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
+*StoresApi* | [**storesSetPropertyId**](docs/Api/StoresApi.md#storessetpropertyid) | **POST** /api/v1.0/stores/{storeId}/propertyId/{propertyId} | 
 *StoresApi* | [**supportedSalesChannelsTypes**](docs/Api/StoresApi.md#supportedsaleschannelstypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 
 *StoresApi* | [**unpublishStore**](docs/Api/StoresApi.md#unpublishstore) | **POST** /api/v1.0/stores/{storeId}/unpublish | 
 *StoresApi* | [**updatePreOrderConfig**](docs/Api/StoresApi.md#updatepreorderconfig) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType} | 

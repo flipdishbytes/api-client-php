@@ -217,6 +217,13 @@ class StoreTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "property_id"
+     */
+    public function testPropertyPropertyId()
+    {
+    }
+
+    /**
      * Test attribute "phone_number"
      */
     public function testPropertyPhoneNumber()

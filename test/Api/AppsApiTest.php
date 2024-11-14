@@ -72,6 +72,16 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for appsSetPropertyId
+     *
+     * .
+     *
+     */
+    public function testAppsSetPropertyId()
+    {
+    }
+
+    /**
      * Test case for createApp
      *
      * .
