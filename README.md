@@ -263,6 +263,7 @@ Class | Method | HTTP request | Description
 *FeaturesApi* | [**enableFeatures**](docs/Api/FeaturesApi.md#enablefeatures) | **POST** /api/v1.0/{appId}/features/enable | 
 *FilesApi* | [**downloadFile**](docs/Api/FilesApi.md#downloadfile) | **GET** /api/v1.0/{appId}/files/download/{fileId} | 
 *FirebaseAppsApi* | [**firebaseAppsAddFirebaseApp**](docs/Api/FirebaseAppsApi.md#firebaseappsaddfirebaseapp) | **POST** /api/v1.0/FirebaseApp | 
+*FirebaseAppsApi* | [**firebaseAppsDeleteFirebaseApp**](docs/Api/FirebaseAppsApi.md#firebaseappsdeletefirebaseapp) | **DELETE** /api/v1.0/FirebaseApp/{whiteLabelId} | 
 *FirebaseAppsApi* | [**firebaseAppsGetFirebaseApp**](docs/Api/FirebaseAppsApi.md#firebaseappsgetfirebaseapp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
 *FpmApi* | [**createFpmForStore**](docs/Api/FpmApi.md#createfpmforstore) | **POST** /api/v1.0/{storeId}/fpm | 
 *FpmApi* | [**editFpmForStore**](docs/Api/FpmApi.md#editfpmforstore) | **POST** /api/v1.0/{storeId}/fpm/edit | 
