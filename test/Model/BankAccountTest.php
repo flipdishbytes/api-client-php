@@ -126,6 +126,13 @@ class BankAccountTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "store_ids"
+     */
+    public function testPropertyStoreIds()
+    {
+    }
+
+    /**
      * Test attribute "bank_address"
      */
     public function testPropertyBankAddress()

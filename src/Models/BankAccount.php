@@ -65,6 +65,7 @@ class BankAccount implements ModelInterface, ArrayAccess
         'populated_account_fields' => '\Flipdish\\Client\Models\AccountFieldKeyValuePair[]',
         'account_state' => 'string',
         'store_names' => 'string[]',
+        'store_ids' => 'int[]',
         'bank_address' => 'string',
         'bank_country_code' => 'string',
         'account_holder_address' => 'string',
@@ -86,6 +87,7 @@ class BankAccount implements ModelInterface, ArrayAccess
         'populated_account_fields' => null,
         'account_state' => null,
         'store_names' => null,
+        'store_ids' => 'int32',
         'bank_address' => null,
         'bank_country_code' => null,
         'account_holder_address' => null,
@@ -128,6 +130,7 @@ class BankAccount implements ModelInterface, ArrayAccess
         'populated_account_fields' => 'PopulatedAccountFields',
         'account_state' => 'AccountState',
         'store_names' => 'StoreNames',
+        'store_ids' => 'StoreIds',
         'bank_address' => 'BankAddress',
         'bank_country_code' => 'BankCountryCode',
         'account_holder_address' => 'AccountHolderAddress',
@@ -149,6 +152,7 @@ class BankAccount implements ModelInterface, ArrayAccess
         'populated_account_fields' => 'setPopulatedAccountFields',
         'account_state' => 'setAccountState',
         'store_names' => 'setStoreNames',
+        'store_ids' => 'setStoreIds',
         'bank_address' => 'setBankAddress',
         'bank_country_code' => 'setBankCountryCode',
         'account_holder_address' => 'setAccountHolderAddress',
@@ -170,6 +174,7 @@ class BankAccount implements ModelInterface, ArrayAccess
         'populated_account_fields' => 'getPopulatedAccountFields',
         'account_state' => 'getAccountState',
         'store_names' => 'getStoreNames',
+        'store_ids' => 'getStoreIds',
         'bank_address' => 'getBankAddress',
         'bank_country_code' => 'getBankCountryCode',
         'account_holder_address' => 'getAccountHolderAddress',
@@ -264,6 +269,7 @@ class BankAccount implements ModelInterface, ArrayAccess
         $this->container['populated_account_fields'] = isset($data['populated_account_fields']) ? $data['populated_account_fields'] : null;
         $this->container['account_state'] = isset($data['account_state']) ? $data['account_state'] : null;
         $this->container['store_names'] = isset($data['store_names']) ? $data['store_names'] : null;
+        $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
         $this->container['bank_address'] = isset($data['bank_address']) ? $data['bank_address'] : null;
         $this->container['bank_country_code'] = isset($data['bank_country_code']) ? $data['bank_country_code'] : null;
         $this->container['account_holder_address'] = isset($data['account_holder_address']) ? $data['account_holder_address'] : null;
@@ -477,6 +483,30 @@ class BankAccount implements ModelInterface, ArrayAccess
     public function setStoreNames($store_names)
     {
         $this->container['store_names'] = $store_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets store_ids
+     *
+     * @return int[]
+     */
+    public function getStoreIds()
+    {
+        return $this->container['store_ids'];
+    }
+
+    /**
+     * Sets store_ids
+     *
+     * @param int[] $store_ids Store Ids that are attached to this account
+     *
+     * @return $this
+     */
+    public function setStoreIds($store_ids)
+    {
+        $this->container['store_ids'] = $store_ids;
 
         return $this;
     }

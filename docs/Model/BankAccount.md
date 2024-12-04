@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **populated_account_fields** | [**\Flipdish\\Client\Models\AccountFieldKeyValuePair[]**](AccountFieldKeyValuePair.md) | A list of one or more populated account fields (field key-value pairs).  If this list contains at least one item, the Iban, Swift and NationalClearingCode fields should be ignored. | [optional] 
 **account_state** | **string** | Status of Account | [optional] 
 **store_names** | **string[]** | Store Names that are attached to this account | [optional] 
+**store_ids** | **int[]** | Store Ids that are attached to this account | [optional] 
 **bank_address** | **string** | Address lf the bank | [optional] 
 **bank_country_code** | **string** | CountryCode of the Bank Account | [optional] 
 **account_holder_address** | **string** | Account Holders Address | [optional] 
