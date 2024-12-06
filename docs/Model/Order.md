@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **order_drop_off_location** | [**\Flipdish\\Client\Models\OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order | [optional] 
 **fulfillment_status** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md) | [BETA - this is a new field in development] Fulfillment status for this order | [optional] 
 **order_batch_info** | [**\Flipdish\\Client\Models\OrderBatchSummary**](OrderBatchSummary.md) | OrderBatch information | [optional] 
+**created_campaign_voucher_id** | **int** | The id of the campaign voucher that was created from this order | [optional] 
 **order_id** | **int** | Order identifier | [optional] 
 **local_order_id** | **string** | Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders) | [optional] 
 **delivery_type** | **string** | Delivery type | [optional] 

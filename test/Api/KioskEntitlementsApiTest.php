@@ -72,16 +72,6 @@ class KioskEntitlementsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for queryKioskEntitlements
-     *
-     * .
-     *
-     */
-    public function testQueryKioskEntitlements()
-    {
-    }
-
-    /**
      * Test case for queryKioskEntitlementsByOrgId
      *
      * .

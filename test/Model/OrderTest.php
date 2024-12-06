@@ -217,6 +217,13 @@ class OrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "created_campaign_voucher_id"
+     */
+    public function testPropertyCreatedCampaignVoucherId()
+    {
+    }
+
+    /**
      * Test attribute "order_id"
      */
     public function testPropertyOrderId()

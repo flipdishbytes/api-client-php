@@ -78,6 +78,7 @@ class Order implements ModelInterface, ArrayAccess
         'order_drop_off_location' => '\Flipdish\\Client\Models\OrderDropOffLocation',
         'fulfillment_status' => '\Flipdish\\Client\Models\OrderFulfillmentStatusBase',
         'order_batch_info' => '\Flipdish\\Client\Models\OrderBatchSummary',
+        'created_campaign_voucher_id' => 'int',
         'order_id' => 'int',
         'local_order_id' => 'string',
         'delivery_type' => 'string',
@@ -136,6 +137,7 @@ class Order implements ModelInterface, ArrayAccess
         'order_drop_off_location' => null,
         'fulfillment_status' => null,
         'order_batch_info' => null,
+        'created_campaign_voucher_id' => 'int32',
         'order_id' => 'int32',
         'local_order_id' => null,
         'delivery_type' => null,
@@ -215,6 +217,7 @@ class Order implements ModelInterface, ArrayAccess
         'order_drop_off_location' => 'OrderDropOffLocation',
         'fulfillment_status' => 'FulfillmentStatus',
         'order_batch_info' => 'OrderBatchInfo',
+        'created_campaign_voucher_id' => 'CreatedCampaignVoucherId',
         'order_id' => 'OrderId',
         'local_order_id' => 'LocalOrderId',
         'delivery_type' => 'DeliveryType',
@@ -273,6 +276,7 @@ class Order implements ModelInterface, ArrayAccess
         'order_drop_off_location' => 'setOrderDropOffLocation',
         'fulfillment_status' => 'setFulfillmentStatus',
         'order_batch_info' => 'setOrderBatchInfo',
+        'created_campaign_voucher_id' => 'setCreatedCampaignVoucherId',
         'order_id' => 'setOrderId',
         'local_order_id' => 'setLocalOrderId',
         'delivery_type' => 'setDeliveryType',
@@ -331,6 +335,7 @@ class Order implements ModelInterface, ArrayAccess
         'order_drop_off_location' => 'getOrderDropOffLocation',
         'fulfillment_status' => 'getFulfillmentStatus',
         'order_batch_info' => 'getOrderBatchInfo',
+        'created_campaign_voucher_id' => 'getCreatedCampaignVoucherId',
         'order_id' => 'getOrderId',
         'local_order_id' => 'getLocalOrderId',
         'delivery_type' => 'getDeliveryType',
@@ -684,6 +689,7 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['order_drop_off_location'] = isset($data['order_drop_off_location']) ? $data['order_drop_off_location'] : null;
         $this->container['fulfillment_status'] = isset($data['fulfillment_status']) ? $data['fulfillment_status'] : null;
         $this->container['order_batch_info'] = isset($data['order_batch_info']) ? $data['order_batch_info'] : null;
+        $this->container['created_campaign_voucher_id'] = isset($data['created_campaign_voucher_id']) ? $data['created_campaign_voucher_id'] : null;
         $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
         $this->container['local_order_id'] = isset($data['local_order_id']) ? $data['local_order_id'] : null;
         $this->container['delivery_type'] = isset($data['delivery_type']) ? $data['delivery_type'] : null;
@@ -1288,6 +1294,30 @@ class Order implements ModelInterface, ArrayAccess
     public function setOrderBatchInfo($order_batch_info)
     {
         $this->container['order_batch_info'] = $order_batch_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_campaign_voucher_id
+     *
+     * @return int
+     */
+    public function getCreatedCampaignVoucherId()
+    {
+        return $this->container['created_campaign_voucher_id'];
+    }
+
+    /**
+     * Sets created_campaign_voucher_id
+     *
+     * @param int $created_campaign_voucher_id The id of the campaign voucher that was created from this order
+     *
+     * @return $this
+     */
+    public function setCreatedCampaignVoucherId($created_campaign_voucher_id)
+    {
+        $this->container['created_campaign_voucher_id'] = $created_campaign_voucher_id;
 
         return $this;
     }
