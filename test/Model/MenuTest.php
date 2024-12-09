@@ -166,4 +166,11 @@ class MenuTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTaxType()
     {
     }
+
+    /**
+     * Test attribute "is_integrated"
+     */
+    public function testPropertyIsIntegrated()
+    {
+    }
 }

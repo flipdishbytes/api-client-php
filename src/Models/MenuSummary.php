@@ -64,7 +64,8 @@ class MenuSummary implements ModelInterface, ArrayAccess
         'menu_url' => 'string',
         'name' => 'string',
         'locked' => 'bool',
-        'store_names' => 'string[]'
+        'store_names' => 'string[]',
+        'is_integrated' => 'bool'
     ];
 
     /**
@@ -79,7 +80,8 @@ class MenuSummary implements ModelInterface, ArrayAccess
         'menu_url' => null,
         'name' => null,
         'locked' => null,
-        'store_names' => null
+        'store_names' => null,
+        'is_integrated' => null
     ];
 
     /**
@@ -115,7 +117,8 @@ class MenuSummary implements ModelInterface, ArrayAccess
         'menu_url' => 'MenuUrl',
         'name' => 'Name',
         'locked' => 'Locked',
-        'store_names' => 'StoreNames'
+        'store_names' => 'StoreNames',
+        'is_integrated' => 'IsIntegrated'
     ];
 
     /**
@@ -130,7 +133,8 @@ class MenuSummary implements ModelInterface, ArrayAccess
         'menu_url' => 'setMenuUrl',
         'name' => 'setName',
         'locked' => 'setLocked',
-        'store_names' => 'setStoreNames'
+        'store_names' => 'setStoreNames',
+        'is_integrated' => 'setIsIntegrated'
     ];
 
     /**
@@ -145,7 +149,8 @@ class MenuSummary implements ModelInterface, ArrayAccess
         'menu_url' => 'getMenuUrl',
         'name' => 'getName',
         'locked' => 'getLocked',
-        'store_names' => 'getStoreNames'
+        'store_names' => 'getStoreNames',
+        'is_integrated' => 'getIsIntegrated'
     ];
 
     /**
@@ -215,6 +220,7 @@ class MenuSummary implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['store_names'] = isset($data['store_names']) ? $data['store_names'] : null;
+        $this->container['is_integrated'] = isset($data['is_integrated']) ? $data['is_integrated'] : null;
     }
 
     /**
@@ -405,6 +411,30 @@ class MenuSummary implements ModelInterface, ArrayAccess
     public function setStoreNames($store_names)
     {
         $this->container['store_names'] = $store_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_integrated
+     *
+     * @return bool
+     */
+    public function getIsIntegrated()
+    {
+        return $this->container['is_integrated'];
+    }
+
+    /**
+     * Sets is_integrated
+     *
+     * @param bool $is_integrated Flag to indicate if the menu is integrated (contains metadata)
+     *
+     * @return $this
+     */
+    public function setIsIntegrated($is_integrated)
+    {
+        $this->container['is_integrated'] = $is_integrated;
 
         return $this;
     }

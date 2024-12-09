@@ -124,4 +124,11 @@ class MenuSummaryTest extends \PHPUnit_Framework_TestCase
     public function testPropertyStoreNames()
     {
     }
+
+    /**
+     * Test attribute "is_integrated"
+     */
+    public function testPropertyIsIntegrated()
+    {
+    }
 }

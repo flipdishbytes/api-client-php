@@ -70,7 +70,8 @@ class Menu implements ModelInterface, ArrayAccess
         'app_id' => 'string',
         'display_section_links' => 'bool',
         'menu_section_behaviour' => 'string',
-        'tax_type' => 'string'
+        'tax_type' => 'string',
+        'is_integrated' => 'bool'
     ];
 
     /**
@@ -91,7 +92,8 @@ class Menu implements ModelInterface, ArrayAccess
         'app_id' => null,
         'display_section_links' => null,
         'menu_section_behaviour' => null,
-        'tax_type' => null
+        'tax_type' => null,
+        'is_integrated' => null
     ];
 
     /**
@@ -133,7 +135,8 @@ class Menu implements ModelInterface, ArrayAccess
         'app_id' => 'AppId',
         'display_section_links' => 'DisplaySectionLinks',
         'menu_section_behaviour' => 'MenuSectionBehaviour',
-        'tax_type' => 'TaxType'
+        'tax_type' => 'TaxType',
+        'is_integrated' => 'IsIntegrated'
     ];
 
     /**
@@ -154,7 +157,8 @@ class Menu implements ModelInterface, ArrayAccess
         'app_id' => 'setAppId',
         'display_section_links' => 'setDisplaySectionLinks',
         'menu_section_behaviour' => 'setMenuSectionBehaviour',
-        'tax_type' => 'setTaxType'
+        'tax_type' => 'setTaxType',
+        'is_integrated' => 'setIsIntegrated'
     ];
 
     /**
@@ -175,7 +179,8 @@ class Menu implements ModelInterface, ArrayAccess
         'app_id' => 'getAppId',
         'display_section_links' => 'getDisplaySectionLinks',
         'menu_section_behaviour' => 'getMenuSectionBehaviour',
-        'tax_type' => 'getTaxType'
+        'tax_type' => 'getTaxType',
+        'is_integrated' => 'getIsIntegrated'
     ];
 
     /**
@@ -281,6 +286,7 @@ class Menu implements ModelInterface, ArrayAccess
         $this->container['display_section_links'] = isset($data['display_section_links']) ? $data['display_section_links'] : null;
         $this->container['menu_section_behaviour'] = isset($data['menu_section_behaviour']) ? $data['menu_section_behaviour'] : null;
         $this->container['tax_type'] = isset($data['tax_type']) ? $data['tax_type'] : null;
+        $this->container['is_integrated'] = isset($data['is_integrated']) ? $data['is_integrated'] : null;
     }
 
     /**
@@ -649,6 +655,30 @@ class Menu implements ModelInterface, ArrayAccess
             );
         }
         $this->container['tax_type'] = $tax_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_integrated
+     *
+     * @return bool
+     */
+    public function getIsIntegrated()
+    {
+        return $this->container['is_integrated'];
+    }
+
+    /**
+     * Sets is_integrated
+     *
+     * @param bool $is_integrated Flag to indicate if the menu is integrated (contains metadata)
+     *
+     * @return $this
+     */
+    public function setIsIntegrated($is_integrated)
+    {
+        $this->container['is_integrated'] = $is_integrated;
 
         return $this;
     }
