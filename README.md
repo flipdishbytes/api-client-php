@@ -585,6 +585,7 @@ Class | Method | HTTP request | Description
 *TeammatesApi* | [**grantaccess**](docs/Api/TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/grantaccess | 
 *TeammatesApi* | [**redeemInvitation**](docs/Api/TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
 *TeammatesApi* | [**teammatesAcceptInvitation**](docs/Api/TeammatesApi.md#teammatesacceptinvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
+*TeammatesApi* | [**teammatesAcceptInvitations**](docs/Api/TeammatesApi.md#teammatesacceptinvitations) | **POST** /api/v1.0/teammates/acceptInvitations | 
 *TeammatesApi* | [**teammatesPendingInvitations**](docs/Api/TeammatesApi.md#teammatespendinginvitations) | **GET** /api/v1.0/teammates/pending-invitations | 
 *TeammatesApi* | [**updateTeammate**](docs/Api/TeammatesApi.md#updateteammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
 *TerminalIotApi* | [**getTerminalIotConnection**](docs/Api/TerminalIotApi.md#getterminaliotconnection) | **POST** /api/v1.0/terminaliot/connect | 
