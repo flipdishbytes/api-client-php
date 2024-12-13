@@ -72,6 +72,7 @@ class App implements ModelInterface, ArrayAccess
         'map_south_west' => '\Flipdish\\Client\Models\Coordinates',
         'google_maps_api_key_web' => 'string',
         'org_id' => 'string',
+        'sms_restaurant_name' => 'string',
         'name' => 'string',
         'host_name' => 'string',
         'main_color' => 'string',
@@ -103,6 +104,7 @@ class App implements ModelInterface, ArrayAccess
         'map_south_west' => null,
         'google_maps_api_key_web' => null,
         'org_id' => null,
+        'sms_restaurant_name' => null,
         'name' => null,
         'host_name' => null,
         'main_color' => null,
@@ -155,6 +157,7 @@ class App implements ModelInterface, ArrayAccess
         'map_south_west' => 'MapSouthWest',
         'google_maps_api_key_web' => 'GoogleMapsApiKeyWeb',
         'org_id' => 'OrgId',
+        'sms_restaurant_name' => 'SmsRestaurantName',
         'name' => 'Name',
         'host_name' => 'HostName',
         'main_color' => 'MainColor',
@@ -186,6 +189,7 @@ class App implements ModelInterface, ArrayAccess
         'map_south_west' => 'setMapSouthWest',
         'google_maps_api_key_web' => 'setGoogleMapsApiKeyWeb',
         'org_id' => 'setOrgId',
+        'sms_restaurant_name' => 'setSmsRestaurantName',
         'name' => 'setName',
         'host_name' => 'setHostName',
         'main_color' => 'setMainColor',
@@ -217,6 +221,7 @@ class App implements ModelInterface, ArrayAccess
         'map_south_west' => 'getMapSouthWest',
         'google_maps_api_key_web' => 'getGoogleMapsApiKeyWeb',
         'org_id' => 'getOrgId',
+        'sms_restaurant_name' => 'getSmsRestaurantName',
         'name' => 'getName',
         'host_name' => 'getHostName',
         'main_color' => 'getMainColor',
@@ -695,6 +700,7 @@ class App implements ModelInterface, ArrayAccess
         $this->container['map_south_west'] = isset($data['map_south_west']) ? $data['map_south_west'] : null;
         $this->container['google_maps_api_key_web'] = isset($data['google_maps_api_key_web']) ? $data['google_maps_api_key_web'] : null;
         $this->container['org_id'] = isset($data['org_id']) ? $data['org_id'] : null;
+        $this->container['sms_restaurant_name'] = isset($data['sms_restaurant_name']) ? $data['sms_restaurant_name'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['host_name'] = isset($data['host_name']) ? $data['host_name'] : null;
         $this->container['main_color'] = isset($data['main_color']) ? $data['main_color'] : null;
@@ -1104,6 +1110,30 @@ class App implements ModelInterface, ArrayAccess
     public function setOrgId($org_id)
     {
         $this->container['org_id'] = $org_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets sms_restaurant_name
+     *
+     * @return string
+     */
+    public function getSmsRestaurantName()
+    {
+        return $this->container['sms_restaurant_name'];
+    }
+
+    /**
+     * Sets sms_restaurant_name
+     *
+     * @param string $sms_restaurant_name SMS Restaurant Name
+     *
+     * @return $this
+     */
+    public function setSmsRestaurantName($sms_restaurant_name)
+    {
+        $this->container['sms_restaurant_name'] = $sms_restaurant_name;
 
         return $this;
     }
