@@ -175,6 +175,13 @@ class AppTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "sms_restaurant_name"
+     */
+    public function testPropertySmsRestaurantName()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
