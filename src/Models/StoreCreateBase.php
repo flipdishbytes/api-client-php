@@ -61,7 +61,8 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
         'name' => 'string',
         'email_address' => 'string',
         'staff_language' => 'string',
-        'sales_channel_type' => 'string'
+        'sales_channel_type' => 'string',
+        'phone_number' => 'string'
     ];
 
     /**
@@ -73,7 +74,8 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
         'name' => null,
         'email_address' => null,
         'staff_language' => null,
-        'sales_channel_type' => null
+        'sales_channel_type' => null,
+        'phone_number' => null
     ];
 
     /**
@@ -106,7 +108,8 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
         'name' => 'Name',
         'email_address' => 'EmailAddress',
         'staff_language' => 'StaffLanguage',
-        'sales_channel_type' => 'SalesChannelType'
+        'sales_channel_type' => 'SalesChannelType',
+        'phone_number' => 'PhoneNumber'
     ];
 
     /**
@@ -118,7 +121,8 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
         'name' => 'setName',
         'email_address' => 'setEmailAddress',
         'staff_language' => 'setStaffLanguage',
-        'sales_channel_type' => 'setSalesChannelType'
+        'sales_channel_type' => 'setSalesChannelType',
+        'phone_number' => 'setPhoneNumber'
     ];
 
     /**
@@ -130,7 +134,8 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
         'name' => 'getName',
         'email_address' => 'getEmailAddress',
         'staff_language' => 'getStaffLanguage',
-        'sales_channel_type' => 'getSalesChannelType'
+        'sales_channel_type' => 'getSalesChannelType',
+        'phone_number' => 'getPhoneNumber'
     ];
 
     /**
@@ -216,6 +221,7 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
         $this->container['email_address'] = isset($data['email_address']) ? $data['email_address'] : null;
         $this->container['staff_language'] = isset($data['staff_language']) ? $data['staff_language'] : null;
         $this->container['sales_channel_type'] = isset($data['sales_channel_type']) ? $data['sales_channel_type'] : null;
+        $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
     }
 
     /**
@@ -366,6 +372,30 @@ class StoreCreateBase implements ModelInterface, ArrayAccess
             );
         }
         $this->container['sales_channel_type'] = $sales_channel_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone_number
+     *
+     * @return string
+     */
+    public function getPhoneNumber()
+    {
+        return $this->container['phone_number'];
+    }
+
+    /**
+     * Sets phone_number
+     *
+     * @param string $phone_number Phone Number
+     *
+     * @return $this
+     */
+    public function setPhoneNumber($phone_number)
+    {
+        $this->container['phone_number'] = $phone_number;
 
         return $this;
     }

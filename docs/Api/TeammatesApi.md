@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **teammatesAcceptInvitations**
-> teammatesAcceptInvitations()
+> \Flipdish\\Client\Models\RestApiArrayResultRedeemInvitationResult teammatesAcceptInvitations()
 
 
 
@@ -405,7 +405,8 @@ $apiInstance = new Flipdish\\Client\Api\TeammatesApi(
 );
 
 try {
-    $apiInstance->teammatesAcceptInvitations();
+    $result = $apiInstance->teammatesAcceptInvitations();
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TeammatesApi->teammatesAcceptInvitations: ', $e->getMessage(), PHP_EOL;
 }
@@ -417,7 +418,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**\Flipdish\\Client\Models\RestApiArrayResultRedeemInvitationResult**](../Model/RestApiArrayResultRedeemInvitationResult.md)
 
 ### Authorization
 

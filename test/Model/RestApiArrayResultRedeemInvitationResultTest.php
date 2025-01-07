@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreCreateBaseTest
+ * RestApiArrayResultRedeemInvitationResultTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreCreateBaseTest Class Doc Comment
+ * RestApiArrayResultRedeemInvitationResultTest Class Doc Comment
  *
  * @category    Class
- * @description Store Create Base
+ * @description Rest api array result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreCreateBaseTest extends \PHPUnit_Framework_TestCase
+class RestApiArrayResultRedeemInvitationResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,44 +70,16 @@ class StoreCreateBaseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreCreateBase"
+     * Test "RestApiArrayResultRedeemInvitationResult"
      */
-    public function testStoreCreateBase()
+    public function testRestApiArrayResultRedeemInvitationResult()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "data"
      */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "email_address"
-     */
-    public function testPropertyEmailAddress()
-    {
-    }
-
-    /**
-     * Test attribute "staff_language"
-     */
-    public function testPropertyStaffLanguage()
-    {
-    }
-
-    /**
-     * Test attribute "sales_channel_type"
-     */
-    public function testPropertySalesChannelType()
-    {
-    }
-
-    /**
-     * Test attribute "phone_number"
-     */
-    public function testPropertyPhoneNumber()
+    public function testPropertyData()
     {
     }
 }

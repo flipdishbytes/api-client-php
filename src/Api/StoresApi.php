@@ -8988,7 +8988,7 @@ class StoresApi
     }
 
     /**
-     * Operation setPreOrdeEnabled
+     * Operation setPreOrderEnabled
      *
      * @param  int $store_id store_id (required)
      * @param  string $delivery_type delivery_type (required)
@@ -8998,14 +8998,14 @@ class StoresApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiArrayResultRestApiDefaultResponse
      */
-    public function setPreOrdeEnabled($store_id, $delivery_type, $enabled)
+    public function setPreOrderEnabled($store_id, $delivery_type, $enabled)
     {
-        list($response) = $this->setPreOrdeEnabledWithHttpInfo($store_id, $delivery_type, $enabled);
+        list($response) = $this->setPreOrderEnabledWithHttpInfo($store_id, $delivery_type, $enabled);
         return $response;
     }
 
     /**
-     * Operation setPreOrdeEnabledWithHttpInfo
+     * Operation setPreOrderEnabledWithHttpInfo
      *
      * @param  int $store_id (required)
      * @param  string $delivery_type (required)
@@ -9015,10 +9015,10 @@ class StoresApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiArrayResultRestApiDefaultResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function setPreOrdeEnabledWithHttpInfo($store_id, $delivery_type, $enabled)
+    public function setPreOrderEnabledWithHttpInfo($store_id, $delivery_type, $enabled)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultRestApiDefaultResponse';
-        $request = $this->setPreOrdeEnabledRequest($store_id, $delivery_type, $enabled);
+        $request = $this->setPreOrderEnabledRequest($store_id, $delivery_type, $enabled);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9104,7 +9104,7 @@ class StoresApi
     }
 
     /**
-     * Operation setPreOrdeEnabledAsync
+     * Operation setPreOrderEnabledAsync
      *
      * 
      *
@@ -9115,9 +9115,9 @@ class StoresApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function setPreOrdeEnabledAsync($store_id, $delivery_type, $enabled)
+    public function setPreOrderEnabledAsync($store_id, $delivery_type, $enabled)
     {
-        return $this->setPreOrdeEnabledAsyncWithHttpInfo($store_id, $delivery_type, $enabled)
+        return $this->setPreOrderEnabledAsyncWithHttpInfo($store_id, $delivery_type, $enabled)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9126,7 +9126,7 @@ class StoresApi
     }
 
     /**
-     * Operation setPreOrdeEnabledAsyncWithHttpInfo
+     * Operation setPreOrderEnabledAsyncWithHttpInfo
      *
      * 
      *
@@ -9137,10 +9137,10 @@ class StoresApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function setPreOrdeEnabledAsyncWithHttpInfo($store_id, $delivery_type, $enabled)
+    public function setPreOrderEnabledAsyncWithHttpInfo($store_id, $delivery_type, $enabled)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultRestApiDefaultResponse';
-        $request = $this->setPreOrdeEnabledRequest($store_id, $delivery_type, $enabled);
+        $request = $this->setPreOrderEnabledRequest($store_id, $delivery_type, $enabled);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9180,7 +9180,7 @@ class StoresApi
     }
 
     /**
-     * Create request for operation 'setPreOrdeEnabled'
+     * Create request for operation 'setPreOrderEnabled'
      *
      * @param  int $store_id (required)
      * @param  string $delivery_type (required)
@@ -9189,24 +9189,24 @@ class StoresApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function setPreOrdeEnabledRequest($store_id, $delivery_type, $enabled)
+    protected function setPreOrderEnabledRequest($store_id, $delivery_type, $enabled)
     {
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling setPreOrdeEnabled'
+                'Missing the required parameter $store_id when calling setPreOrderEnabled'
             );
         }
         // verify the required parameter 'delivery_type' is set
         if ($delivery_type === null || (is_array($delivery_type) && count($delivery_type) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $delivery_type when calling setPreOrdeEnabled'
+                'Missing the required parameter $delivery_type when calling setPreOrderEnabled'
             );
         }
         // verify the required parameter 'enabled' is set
         if ($enabled === null || (is_array($enabled) && count($enabled) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $enabled when calling setPreOrdeEnabled'
+                'Missing the required parameter $enabled when calling setPreOrderEnabled'
             );
         }
 
