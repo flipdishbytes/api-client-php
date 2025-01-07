@@ -362,12 +362,12 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for setPreOrderEnabled
+     * Test case for setPreOrdeEnabled
      *
      * .
      *
      */
-    public function testSetPreOrderEnabled()
+    public function testSetPreOrdeEnabled()
     {
     }
 

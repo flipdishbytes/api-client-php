@@ -551,7 +551,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**publishStore**](docs/Api/StoresApi.md#publishstore) | **POST** /api/v1.0/stores/{storeId}/publish | 
 *StoresApi* | [**putStoreDeliveryFeeConfig**](docs/Api/StoresApi.md#putstoredeliveryfeeconfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 *StoresApi* | [**setBusinessHours**](docs/Api/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
-*StoresApi* | [**setPreOrderEnabled**](docs/Api/StoresApi.md#setpreorderenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
+*StoresApi* | [**setPreOrdeEnabled**](docs/Api/StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
 *StoresApi* | [**setStoreLeadTimes**](docs/Api/StoresApi.md#setstoreleadtimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
 *StoresApi* | [**storesSetPropertyId**](docs/Api/StoresApi.md#storessetpropertyid) | **POST** /api/v1.0/stores/{storeId}/propertyId/{propertyId} | 
 *StoresApi* | [**supportedSalesChannelsTypes**](docs/Api/StoresApi.md#supportedsaleschannelstypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 

@@ -33,7 +33,7 @@ Method | HTTP request | Description
 [**publishStore**](StoresApi.md#publishStore) | **POST** /api/v1.0/stores/{storeId}/publish | 
 [**putStoreDeliveryFeeConfig**](StoresApi.md#putStoreDeliveryFeeConfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 [**setBusinessHours**](StoresApi.md#setBusinessHours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
-[**setPreOrderEnabled**](StoresApi.md#setPreOrderEnabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
+[**setPreOrdeEnabled**](StoresApi.md#setPreOrdeEnabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
 [**setStoreLeadTimes**](StoresApi.md#setStoreLeadTimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
 [**storesSetPropertyId**](StoresApi.md#storesSetPropertyId) | **POST** /api/v1.0/stores/{storeId}/propertyId/{propertyId} | 
 [**supportedSalesChannelsTypes**](StoresApi.md#supportedSalesChannelsTypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 
@@ -1615,8 +1615,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **setPreOrderEnabled**
-> \Flipdish\\Client\Models\RestApiArrayResultRestApiDefaultResponse setPreOrderEnabled($store_id, $delivery_type, $enabled)
+# **setPreOrdeEnabled**
+> \Flipdish\\Client\Models\RestApiArrayResultRestApiDefaultResponse setPreOrdeEnabled($store_id, $delivery_type, $enabled)
 
 
 
@@ -1639,10 +1639,10 @@ $delivery_type = "delivery_type_example"; // string |
 $enabled = true; // bool | 
 
 try {
-    $result = $apiInstance->setPreOrderEnabled($store_id, $delivery_type, $enabled);
+    $result = $apiInstance->setPreOrdeEnabled($store_id, $delivery_type, $enabled);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StoresApi->setPreOrderEnabled: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling StoresApi->setPreOrdeEnabled: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
