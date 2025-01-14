@@ -91,9 +91,23 @@ class AppTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "ios_app_store_url"
+     */
+    public function testPropertyIosAppStoreUrl()
+    {
+    }
+
+    /**
      * Test attribute "has_android_app"
      */
     public function testPropertyHasAndroidApp()
+    {
+    }
+
+    /**
+     * Test attribute "android_play_store_url"
+     */
+    public function testPropertyAndroidPlayStoreUrl()
     {
     }
 

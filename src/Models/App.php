@@ -60,7 +60,9 @@ class App implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'app_id' => 'string',
         'has_ios_app' => 'bool',
+        'ios_app_store_url' => 'string',
         'has_android_app' => 'bool',
+        'android_play_store_url' => 'string',
         'logo_image_url' => 'string',
         'languages' => '\Flipdish\\Client\Models\Language[]',
         'available_app_languages' => '\Flipdish\\Client\Models\Language[]',
@@ -92,7 +94,9 @@ class App implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'app_id' => null,
         'has_ios_app' => null,
+        'ios_app_store_url' => null,
         'has_android_app' => null,
+        'android_play_store_url' => null,
         'logo_image_url' => null,
         'languages' => null,
         'available_app_languages' => null,
@@ -145,7 +149,9 @@ class App implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'app_id' => 'AppId',
         'has_ios_app' => 'HasIosApp',
+        'ios_app_store_url' => 'IosAppStoreUrl',
         'has_android_app' => 'HasAndroidApp',
+        'android_play_store_url' => 'AndroidPlayStoreUrl',
         'logo_image_url' => 'LogoImageUrl',
         'languages' => 'Languages',
         'available_app_languages' => 'AvailableAppLanguages',
@@ -177,7 +183,9 @@ class App implements ModelInterface, ArrayAccess
     protected static $setters = [
         'app_id' => 'setAppId',
         'has_ios_app' => 'setHasIosApp',
+        'ios_app_store_url' => 'setIosAppStoreUrl',
         'has_android_app' => 'setHasAndroidApp',
+        'android_play_store_url' => 'setAndroidPlayStoreUrl',
         'logo_image_url' => 'setLogoImageUrl',
         'languages' => 'setLanguages',
         'available_app_languages' => 'setAvailableAppLanguages',
@@ -209,7 +217,9 @@ class App implements ModelInterface, ArrayAccess
     protected static $getters = [
         'app_id' => 'getAppId',
         'has_ios_app' => 'getHasIosApp',
+        'ios_app_store_url' => 'getIosAppStoreUrl',
         'has_android_app' => 'getHasAndroidApp',
+        'android_play_store_url' => 'getAndroidPlayStoreUrl',
         'logo_image_url' => 'getLogoImageUrl',
         'languages' => 'getLanguages',
         'available_app_languages' => 'getAvailableAppLanguages',
@@ -688,7 +698,9 @@ class App implements ModelInterface, ArrayAccess
     {
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
         $this->container['has_ios_app'] = isset($data['has_ios_app']) ? $data['has_ios_app'] : null;
+        $this->container['ios_app_store_url'] = isset($data['ios_app_store_url']) ? $data['ios_app_store_url'] : null;
         $this->container['has_android_app'] = isset($data['has_android_app']) ? $data['has_android_app'] : null;
+        $this->container['android_play_store_url'] = isset($data['android_play_store_url']) ? $data['android_play_store_url'] : null;
         $this->container['logo_image_url'] = isset($data['logo_image_url']) ? $data['logo_image_url'] : null;
         $this->container['languages'] = isset($data['languages']) ? $data['languages'] : null;
         $this->container['available_app_languages'] = isset($data['available_app_languages']) ? $data['available_app_languages'] : null;
@@ -809,6 +821,30 @@ class App implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets ios_app_store_url
+     *
+     * @return string
+     */
+    public function getIosAppStoreUrl()
+    {
+        return $this->container['ios_app_store_url'];
+    }
+
+    /**
+     * Sets ios_app_store_url
+     *
+     * @param string $ios_app_store_url IOS App Store URL
+     *
+     * @return $this
+     */
+    public function setIosAppStoreUrl($ios_app_store_url)
+    {
+        $this->container['ios_app_store_url'] = $ios_app_store_url;
+
+        return $this;
+    }
+
+    /**
      * Gets has_android_app
      *
      * @return bool
@@ -828,6 +864,30 @@ class App implements ModelInterface, ArrayAccess
     public function setHasAndroidApp($has_android_app)
     {
         $this->container['has_android_app'] = $has_android_app;
+
+        return $this;
+    }
+
+    /**
+     * Gets android_play_store_url
+     *
+     * @return string
+     */
+    public function getAndroidPlayStoreUrl()
+    {
+        return $this->container['android_play_store_url'];
+    }
+
+    /**
+     * Sets android_play_store_url
+     *
+     * @param string $android_play_store_url Android Play Store URL
+     *
+     * @return $this
+     */
+    public function setAndroidPlayStoreUrl($android_play_store_url)
+    {
+        $this->container['android_play_store_url'] = $android_play_store_url;
 
         return $this;
     }
