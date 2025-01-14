@@ -63,6 +63,7 @@ class App implements ModelInterface, ArrayAccess
         'ios_app_store_url' => 'string',
         'has_android_app' => 'bool',
         'android_play_store_url' => 'string',
+        'display_delivery_restaurant_screen' => 'bool',
         'logo_image_url' => 'string',
         'languages' => '\Flipdish\\Client\Models\Language[]',
         'available_app_languages' => '\Flipdish\\Client\Models\Language[]',
@@ -97,6 +98,7 @@ class App implements ModelInterface, ArrayAccess
         'ios_app_store_url' => null,
         'has_android_app' => null,
         'android_play_store_url' => null,
+        'display_delivery_restaurant_screen' => null,
         'logo_image_url' => null,
         'languages' => null,
         'available_app_languages' => null,
@@ -152,6 +154,7 @@ class App implements ModelInterface, ArrayAccess
         'ios_app_store_url' => 'IosAppStoreUrl',
         'has_android_app' => 'HasAndroidApp',
         'android_play_store_url' => 'AndroidPlayStoreUrl',
+        'display_delivery_restaurant_screen' => 'DisplayDeliveryRestaurantScreen',
         'logo_image_url' => 'LogoImageUrl',
         'languages' => 'Languages',
         'available_app_languages' => 'AvailableAppLanguages',
@@ -186,6 +189,7 @@ class App implements ModelInterface, ArrayAccess
         'ios_app_store_url' => 'setIosAppStoreUrl',
         'has_android_app' => 'setHasAndroidApp',
         'android_play_store_url' => 'setAndroidPlayStoreUrl',
+        'display_delivery_restaurant_screen' => 'setDisplayDeliveryRestaurantScreen',
         'logo_image_url' => 'setLogoImageUrl',
         'languages' => 'setLanguages',
         'available_app_languages' => 'setAvailableAppLanguages',
@@ -220,6 +224,7 @@ class App implements ModelInterface, ArrayAccess
         'ios_app_store_url' => 'getIosAppStoreUrl',
         'has_android_app' => 'getHasAndroidApp',
         'android_play_store_url' => 'getAndroidPlayStoreUrl',
+        'display_delivery_restaurant_screen' => 'getDisplayDeliveryRestaurantScreen',
         'logo_image_url' => 'getLogoImageUrl',
         'languages' => 'getLanguages',
         'available_app_languages' => 'getAvailableAppLanguages',
@@ -701,6 +706,7 @@ class App implements ModelInterface, ArrayAccess
         $this->container['ios_app_store_url'] = isset($data['ios_app_store_url']) ? $data['ios_app_store_url'] : null;
         $this->container['has_android_app'] = isset($data['has_android_app']) ? $data['has_android_app'] : null;
         $this->container['android_play_store_url'] = isset($data['android_play_store_url']) ? $data['android_play_store_url'] : null;
+        $this->container['display_delivery_restaurant_screen'] = isset($data['display_delivery_restaurant_screen']) ? $data['display_delivery_restaurant_screen'] : null;
         $this->container['logo_image_url'] = isset($data['logo_image_url']) ? $data['logo_image_url'] : null;
         $this->container['languages'] = isset($data['languages']) ? $data['languages'] : null;
         $this->container['available_app_languages'] = isset($data['available_app_languages']) ? $data['available_app_languages'] : null;
@@ -888,6 +894,30 @@ class App implements ModelInterface, ArrayAccess
     public function setAndroidPlayStoreUrl($android_play_store_url)
     {
         $this->container['android_play_store_url'] = $android_play_store_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets display_delivery_restaurant_screen
+     *
+     * @return bool
+     */
+    public function getDisplayDeliveryRestaurantScreen()
+    {
+        return $this->container['display_delivery_restaurant_screen'];
+    }
+
+    /**
+     * Sets display_delivery_restaurant_screen
+     *
+     * @param bool $display_delivery_restaurant_screen Display delivery restaurant screen
+     *
+     * @return $this
+     */
+    public function setDisplayDeliveryRestaurantScreen($display_delivery_restaurant_screen)
+    {
+        $this->container['display_delivery_restaurant_screen'] = $display_delivery_restaurant_screen;
 
         return $this;
     }

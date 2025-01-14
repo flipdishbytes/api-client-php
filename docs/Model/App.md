@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **ios_app_store_url** | **string** | IOS App Store URL | [optional] 
 **has_android_app** | **bool** | Has Android app in Google Play Store. This is readonly. | [optional] 
 **android_play_store_url** | **string** | Android Play Store URL | [optional] 
+**display_delivery_restaurant_screen** | **bool** | Display delivery restaurant screen | [optional] 
 **logo_image_url** | **string** | Application Logo. | [optional] 
 **languages** | [**\Flipdish\\Client\Models\Language[]**](Language.md) | Languages that have been selected to be available to customers. | [optional] 
 **available_app_languages** | [**\Flipdish\\Client\Models\Language[]**](Language.md) | Lists all languages that are supported by Flipdish. | [optional] 

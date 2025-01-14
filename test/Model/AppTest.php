@@ -112,6 +112,13 @@ class AppTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "display_delivery_restaurant_screen"
+     */
+    public function testPropertyDisplayDeliveryRestaurantScreen()
+    {
+    }
+
+    /**
      * Test attribute "logo_image_url"
      */
     public function testPropertyLogoImageUrl()
