@@ -512,6 +512,7 @@ Class | Method | HTTP request | Description
 *RestaurantVouchersPayGreenApi* | [**listPayGreenConfigurations**](docs/Api/RestaurantVouchersPayGreenApi.md#listpaygreenconfigurations) | **GET** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
 *RestaurantVouchersPayGreenApi* | [**updatePayGreenConfiguration**](docs/Api/RestaurantVouchersPayGreenApi.md#updatepaygreenconfiguration) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
 *RestaurantVouchersPayGreenApi* | [**updateStorePayGreenConfiguration_**](docs/Api/RestaurantVouchersPayGreenApi.md#updatestorepaygreenconfiguration_) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId} | 
+*SearchApi* | [**searchRestaurants**](docs/Api/SearchApi.md#searchrestaurants) | **GET** /api/v1.0/search/restaurants | 
 *StoreGroupsApi* | [**assignStoresToStoreGroup**](docs/Api/StoreGroupsApi.md#assignstorestostoregroup) | **POST** /api/v1.0/{appId}/storegroups/{storeGroupId}/assignStores | 
 *StoreGroupsApi* | [**createStoreGroup**](docs/Api/StoreGroupsApi.md#createstoregroup) | **POST** /api/v1.0/{appNameId}/storegroups | 
 *StoreGroupsApi* | [**getStoreGroup**](docs/Api/StoreGroupsApi.md#getstoregroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | 
@@ -1139,6 +1140,7 @@ Class | Method | HTTP request | Description
  - [RestApiPaginationResultPhoneCall](docs/Model/RestApiPaginationResultPhoneCall.md)
  - [RestApiPaginationResultProduct](docs/Model/RestApiPaginationResultProduct.md)
  - [RestApiPaginationResultPushNotificationResponse](docs/Model/RestApiPaginationResultPushNotificationResponse.md)
+ - [RestApiPaginationResultRestaurant](docs/Model/RestApiPaginationResultRestaurant.md)
  - [RestApiPaginationResultStore](docs/Model/RestApiPaginationResultStore.md)
  - [RestApiPaginationResultStoreGroup](docs/Model/RestApiPaginationResultStoreGroup.md)
  - [RestApiPaginationResultStoreGroupExtended](docs/Model/RestApiPaginationResultStoreGroupExtended.md)
@@ -1267,6 +1269,7 @@ Class | Method | HTTP request | Description
  - [RestApiStringArrayResult](docs/Model/RestApiStringArrayResult.md)
  - [RestApiStringResult](docs/Model/RestApiStringResult.md)
  - [RestApiUnauthorizedResult](docs/Model/RestApiUnauthorizedResult.md)
+ - [Restaurant](docs/Model/Restaurant.md)
  - [RestaurantVoucherAssignedStore](docs/Model/RestaurantVoucherAssignedStore.md)
  - [RestaurantVoucherEligibleStore](docs/Model/RestaurantVoucherEligibleStore.md)
  - [RestaurantVoucherPayGreenConfiguration](docs/Model/RestaurantVoucherPayGreenConfiguration.md)
@@ -1429,6 +1432,7 @@ Class | Method | HTTP request | Description
  - [WebsiteTestimonialBase](docs/Model/WebsiteTestimonialBase.md)
  - [WebsiteUpdatedEvent](docs/Model/WebsiteUpdatedEvent.md)
  - [WebsiteVanityUrlUpdatedEvent](docs/Model/WebsiteVanityUrlUpdatedEvent.md)
+ - [WhiteLabelConfig](docs/Model/WhiteLabelConfig.md)
 
 
 ## Documentation For Authorization
