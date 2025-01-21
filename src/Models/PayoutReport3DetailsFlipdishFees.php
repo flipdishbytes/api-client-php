@@ -76,13 +76,13 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'vat' => 'double',
         'total' => 'double',
         'third_party_integration_fees_and_tips' => 'double',
-        'web_and_app_card_on_x_orders' => 'double',
-        'web_and_app_cash_on_x_orders' => 'double',
-        'kiosk_card_on_x_orders' => 'double',
-        'kiosk_cash_on_x_orders' => 'double',
-        'qrop_card_on_x_orders' => 'double',
-        'qrop_cash_on_x_orders' => 'double',
-        'pos_card_on_x_orders' => 'double'
+        'web_and_app_card_on_x_orders' => 'int',
+        'web_and_app_cash_on_x_orders' => 'int',
+        'kiosk_card_on_x_orders' => 'int',
+        'kiosk_cash_on_x_orders' => 'int',
+        'qrop_card_on_x_orders' => 'int',
+        'qrop_cash_on_x_orders' => 'int',
+        'pos_card_on_x_orders' => 'int'
     ];
 
     /**
@@ -110,13 +110,13 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'vat' => 'double',
         'total' => 'double',
         'third_party_integration_fees_and_tips' => 'double',
-        'web_and_app_card_on_x_orders' => 'double',
-        'web_and_app_cash_on_x_orders' => 'double',
-        'kiosk_card_on_x_orders' => 'double',
-        'kiosk_cash_on_x_orders' => 'double',
-        'qrop_card_on_x_orders' => 'double',
-        'qrop_cash_on_x_orders' => 'double',
-        'pos_card_on_x_orders' => 'double'
+        'web_and_app_card_on_x_orders' => 'int32',
+        'web_and_app_cash_on_x_orders' => 'int32',
+        'kiosk_card_on_x_orders' => 'int32',
+        'kiosk_cash_on_x_orders' => 'int32',
+        'qrop_card_on_x_orders' => 'int32',
+        'qrop_cash_on_x_orders' => 'int32',
+        'pos_card_on_x_orders' => 'int32'
     ];
 
     /**
@@ -813,7 +813,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Gets web_and_app_card_on_x_orders
      *
-     * @return double
+     * @return int
      */
     public function getWebAndAppCardOnXOrders()
     {
@@ -823,7 +823,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Sets web_and_app_card_on_x_orders
      *
-     * @param double $web_and_app_card_on_x_orders web_and_app_card_on_x_orders
+     * @param int $web_and_app_card_on_x_orders web_and_app_card_on_x_orders
      *
      * @return $this
      */
@@ -837,7 +837,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Gets web_and_app_cash_on_x_orders
      *
-     * @return double
+     * @return int
      */
     public function getWebAndAppCashOnXOrders()
     {
@@ -847,7 +847,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Sets web_and_app_cash_on_x_orders
      *
-     * @param double $web_and_app_cash_on_x_orders web_and_app_cash_on_x_orders
+     * @param int $web_and_app_cash_on_x_orders web_and_app_cash_on_x_orders
      *
      * @return $this
      */
@@ -861,7 +861,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Gets kiosk_card_on_x_orders
      *
-     * @return double
+     * @return int
      */
     public function getKioskCardOnXOrders()
     {
@@ -871,7 +871,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Sets kiosk_card_on_x_orders
      *
-     * @param double $kiosk_card_on_x_orders kiosk_card_on_x_orders
+     * @param int $kiosk_card_on_x_orders kiosk_card_on_x_orders
      *
      * @return $this
      */
@@ -885,7 +885,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Gets kiosk_cash_on_x_orders
      *
-     * @return double
+     * @return int
      */
     public function getKioskCashOnXOrders()
     {
@@ -895,7 +895,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Sets kiosk_cash_on_x_orders
      *
-     * @param double $kiosk_cash_on_x_orders kiosk_cash_on_x_orders
+     * @param int $kiosk_cash_on_x_orders kiosk_cash_on_x_orders
      *
      * @return $this
      */
@@ -909,7 +909,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Gets qrop_card_on_x_orders
      *
-     * @return double
+     * @return int
      */
     public function getQropCardOnXOrders()
     {
@@ -919,7 +919,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Sets qrop_card_on_x_orders
      *
-     * @param double $qrop_card_on_x_orders qrop_card_on_x_orders
+     * @param int $qrop_card_on_x_orders qrop_card_on_x_orders
      *
      * @return $this
      */
@@ -933,7 +933,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Gets qrop_cash_on_x_orders
      *
-     * @return double
+     * @return int
      */
     public function getQropCashOnXOrders()
     {
@@ -943,7 +943,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Sets qrop_cash_on_x_orders
      *
-     * @param double $qrop_cash_on_x_orders qrop_cash_on_x_orders
+     * @param int $qrop_cash_on_x_orders qrop_cash_on_x_orders
      *
      * @return $this
      */
@@ -957,7 +957,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Gets pos_card_on_x_orders
      *
-     * @return double
+     * @return int
      */
     public function getPosCardOnXOrders()
     {
@@ -967,7 +967,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     /**
      * Sets pos_card_on_x_orders
      *
-     * @param double $pos_card_on_x_orders pos_card_on_x_orders
+     * @param int $pos_card_on_x_orders pos_card_on_x_orders
      *
      * @return $this
      */

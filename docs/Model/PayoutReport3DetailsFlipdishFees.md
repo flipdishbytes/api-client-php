@@ -22,13 +22,13 @@ Name | Type | Description | Notes
 **vat** | **double** |  | [optional] 
 **total** | **double** |  | [optional] 
 **third_party_integration_fees_and_tips** | **double** |  | [optional] 
-**web_and_app_card_on_x_orders** | **double** |  | [optional] 
-**web_and_app_cash_on_x_orders** | **double** |  | [optional] 
-**kiosk_card_on_x_orders** | **double** |  | [optional] 
-**kiosk_cash_on_x_orders** | **double** |  | [optional] 
-**qrop_card_on_x_orders** | **double** |  | [optional] 
-**qrop_cash_on_x_orders** | **double** |  | [optional] 
-**pos_card_on_x_orders** | **double** |  | [optional] 
+**web_and_app_card_on_x_orders** | **int** |  | [optional] 
+**web_and_app_cash_on_x_orders** | **int** |  | [optional] 
+**kiosk_card_on_x_orders** | **int** |  | [optional] 
+**kiosk_cash_on_x_orders** | **int** |  | [optional] 
+**qrop_card_on_x_orders** | **int** |  | [optional] 
+**qrop_cash_on_x_orders** | **int** |  | [optional] 
+**pos_card_on_x_orders** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
