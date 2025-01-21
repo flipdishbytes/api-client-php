@@ -208,4 +208,53 @@ class PayoutReport3DetailsFlipdishFeesTest extends \PHPUnit_Framework_TestCase
     public function testPropertyThirdPartyIntegrationFeesAndTips()
     {
     }
+
+    /**
+     * Test attribute "web_and_app_card_on_x_orders"
+     */
+    public function testPropertyWebAndAppCardOnXOrders()
+    {
+    }
+
+    /**
+     * Test attribute "web_and_app_cash_on_x_orders"
+     */
+    public function testPropertyWebAndAppCashOnXOrders()
+    {
+    }
+
+    /**
+     * Test attribute "kiosk_card_on_x_orders"
+     */
+    public function testPropertyKioskCardOnXOrders()
+    {
+    }
+
+    /**
+     * Test attribute "kiosk_cash_on_x_orders"
+     */
+    public function testPropertyKioskCashOnXOrders()
+    {
+    }
+
+    /**
+     * Test attribute "qrop_card_on_x_orders"
+     */
+    public function testPropertyQropCardOnXOrders()
+    {
+    }
+
+    /**
+     * Test attribute "qrop_cash_on_x_orders"
+     */
+    public function testPropertyQropCashOnXOrders()
+    {
+    }
+
+    /**
+     * Test attribute "pos_card_on_x_orders"
+     */
+    public function testPropertyPosCardOnXOrders()
+    {
+    }
 }

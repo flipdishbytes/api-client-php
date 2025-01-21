@@ -75,7 +75,14 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'refunded_fees_on_refunded_sales' => 'double',
         'vat' => 'double',
         'total' => 'double',
-        'third_party_integration_fees_and_tips' => 'double'
+        'third_party_integration_fees_and_tips' => 'double',
+        'web_and_app_card_on_x_orders' => 'double',
+        'web_and_app_cash_on_x_orders' => 'double',
+        'kiosk_card_on_x_orders' => 'double',
+        'kiosk_cash_on_x_orders' => 'double',
+        'qrop_card_on_x_orders' => 'double',
+        'qrop_cash_on_x_orders' => 'double',
+        'pos_card_on_x_orders' => 'double'
     ];
 
     /**
@@ -102,7 +109,14 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'refunded_fees_on_refunded_sales' => 'double',
         'vat' => 'double',
         'total' => 'double',
-        'third_party_integration_fees_and_tips' => 'double'
+        'third_party_integration_fees_and_tips' => 'double',
+        'web_and_app_card_on_x_orders' => 'double',
+        'web_and_app_cash_on_x_orders' => 'double',
+        'kiosk_card_on_x_orders' => 'double',
+        'kiosk_cash_on_x_orders' => 'double',
+        'qrop_card_on_x_orders' => 'double',
+        'qrop_cash_on_x_orders' => 'double',
+        'pos_card_on_x_orders' => 'double'
     ];
 
     /**
@@ -150,7 +164,14 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'refunded_fees_on_refunded_sales' => 'RefundedFeesOnRefundedSales',
         'vat' => 'Vat',
         'total' => 'Total',
-        'third_party_integration_fees_and_tips' => 'ThirdPartyIntegrationFeesAndTips'
+        'third_party_integration_fees_and_tips' => 'ThirdPartyIntegrationFeesAndTips',
+        'web_and_app_card_on_x_orders' => 'WebAndAppCardOnXOrders',
+        'web_and_app_cash_on_x_orders' => 'WebAndAppCashOnXOrders',
+        'kiosk_card_on_x_orders' => 'KioskCardOnXOrders',
+        'kiosk_cash_on_x_orders' => 'KioskCashOnXOrders',
+        'qrop_card_on_x_orders' => 'QropCardOnXOrders',
+        'qrop_cash_on_x_orders' => 'QropCashOnXOrders',
+        'pos_card_on_x_orders' => 'PosCardOnXOrders'
     ];
 
     /**
@@ -177,7 +198,14 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'refunded_fees_on_refunded_sales' => 'setRefundedFeesOnRefundedSales',
         'vat' => 'setVat',
         'total' => 'setTotal',
-        'third_party_integration_fees_and_tips' => 'setThirdPartyIntegrationFeesAndTips'
+        'third_party_integration_fees_and_tips' => 'setThirdPartyIntegrationFeesAndTips',
+        'web_and_app_card_on_x_orders' => 'setWebAndAppCardOnXOrders',
+        'web_and_app_cash_on_x_orders' => 'setWebAndAppCashOnXOrders',
+        'kiosk_card_on_x_orders' => 'setKioskCardOnXOrders',
+        'kiosk_cash_on_x_orders' => 'setKioskCashOnXOrders',
+        'qrop_card_on_x_orders' => 'setQropCardOnXOrders',
+        'qrop_cash_on_x_orders' => 'setQropCashOnXOrders',
+        'pos_card_on_x_orders' => 'setPosCardOnXOrders'
     ];
 
     /**
@@ -204,7 +232,14 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'refunded_fees_on_refunded_sales' => 'getRefundedFeesOnRefundedSales',
         'vat' => 'getVat',
         'total' => 'getTotal',
-        'third_party_integration_fees_and_tips' => 'getThirdPartyIntegrationFeesAndTips'
+        'third_party_integration_fees_and_tips' => 'getThirdPartyIntegrationFeesAndTips',
+        'web_and_app_card_on_x_orders' => 'getWebAndAppCardOnXOrders',
+        'web_and_app_cash_on_x_orders' => 'getWebAndAppCashOnXOrders',
+        'kiosk_card_on_x_orders' => 'getKioskCardOnXOrders',
+        'kiosk_cash_on_x_orders' => 'getKioskCashOnXOrders',
+        'qrop_card_on_x_orders' => 'getQropCardOnXOrders',
+        'qrop_cash_on_x_orders' => 'getQropCashOnXOrders',
+        'pos_card_on_x_orders' => 'getPosCardOnXOrders'
     ];
 
     /**
@@ -286,6 +321,13 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['third_party_integration_fees_and_tips'] = isset($data['third_party_integration_fees_and_tips']) ? $data['third_party_integration_fees_and_tips'] : null;
+        $this->container['web_and_app_card_on_x_orders'] = isset($data['web_and_app_card_on_x_orders']) ? $data['web_and_app_card_on_x_orders'] : null;
+        $this->container['web_and_app_cash_on_x_orders'] = isset($data['web_and_app_cash_on_x_orders']) ? $data['web_and_app_cash_on_x_orders'] : null;
+        $this->container['kiosk_card_on_x_orders'] = isset($data['kiosk_card_on_x_orders']) ? $data['kiosk_card_on_x_orders'] : null;
+        $this->container['kiosk_cash_on_x_orders'] = isset($data['kiosk_cash_on_x_orders']) ? $data['kiosk_cash_on_x_orders'] : null;
+        $this->container['qrop_card_on_x_orders'] = isset($data['qrop_card_on_x_orders']) ? $data['qrop_card_on_x_orders'] : null;
+        $this->container['qrop_cash_on_x_orders'] = isset($data['qrop_cash_on_x_orders']) ? $data['qrop_cash_on_x_orders'] : null;
+        $this->container['pos_card_on_x_orders'] = isset($data['pos_card_on_x_orders']) ? $data['pos_card_on_x_orders'] : null;
     }
 
     /**
@@ -764,6 +806,174 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     public function setThirdPartyIntegrationFeesAndTips($third_party_integration_fees_and_tips)
     {
         $this->container['third_party_integration_fees_and_tips'] = $third_party_integration_fees_and_tips;
+
+        return $this;
+    }
+
+    /**
+     * Gets web_and_app_card_on_x_orders
+     *
+     * @return double
+     */
+    public function getWebAndAppCardOnXOrders()
+    {
+        return $this->container['web_and_app_card_on_x_orders'];
+    }
+
+    /**
+     * Sets web_and_app_card_on_x_orders
+     *
+     * @param double $web_and_app_card_on_x_orders web_and_app_card_on_x_orders
+     *
+     * @return $this
+     */
+    public function setWebAndAppCardOnXOrders($web_and_app_card_on_x_orders)
+    {
+        $this->container['web_and_app_card_on_x_orders'] = $web_and_app_card_on_x_orders;
+
+        return $this;
+    }
+
+    /**
+     * Gets web_and_app_cash_on_x_orders
+     *
+     * @return double
+     */
+    public function getWebAndAppCashOnXOrders()
+    {
+        return $this->container['web_and_app_cash_on_x_orders'];
+    }
+
+    /**
+     * Sets web_and_app_cash_on_x_orders
+     *
+     * @param double $web_and_app_cash_on_x_orders web_and_app_cash_on_x_orders
+     *
+     * @return $this
+     */
+    public function setWebAndAppCashOnXOrders($web_and_app_cash_on_x_orders)
+    {
+        $this->container['web_and_app_cash_on_x_orders'] = $web_and_app_cash_on_x_orders;
+
+        return $this;
+    }
+
+    /**
+     * Gets kiosk_card_on_x_orders
+     *
+     * @return double
+     */
+    public function getKioskCardOnXOrders()
+    {
+        return $this->container['kiosk_card_on_x_orders'];
+    }
+
+    /**
+     * Sets kiosk_card_on_x_orders
+     *
+     * @param double $kiosk_card_on_x_orders kiosk_card_on_x_orders
+     *
+     * @return $this
+     */
+    public function setKioskCardOnXOrders($kiosk_card_on_x_orders)
+    {
+        $this->container['kiosk_card_on_x_orders'] = $kiosk_card_on_x_orders;
+
+        return $this;
+    }
+
+    /**
+     * Gets kiosk_cash_on_x_orders
+     *
+     * @return double
+     */
+    public function getKioskCashOnXOrders()
+    {
+        return $this->container['kiosk_cash_on_x_orders'];
+    }
+
+    /**
+     * Sets kiosk_cash_on_x_orders
+     *
+     * @param double $kiosk_cash_on_x_orders kiosk_cash_on_x_orders
+     *
+     * @return $this
+     */
+    public function setKioskCashOnXOrders($kiosk_cash_on_x_orders)
+    {
+        $this->container['kiosk_cash_on_x_orders'] = $kiosk_cash_on_x_orders;
+
+        return $this;
+    }
+
+    /**
+     * Gets qrop_card_on_x_orders
+     *
+     * @return double
+     */
+    public function getQropCardOnXOrders()
+    {
+        return $this->container['qrop_card_on_x_orders'];
+    }
+
+    /**
+     * Sets qrop_card_on_x_orders
+     *
+     * @param double $qrop_card_on_x_orders qrop_card_on_x_orders
+     *
+     * @return $this
+     */
+    public function setQropCardOnXOrders($qrop_card_on_x_orders)
+    {
+        $this->container['qrop_card_on_x_orders'] = $qrop_card_on_x_orders;
+
+        return $this;
+    }
+
+    /**
+     * Gets qrop_cash_on_x_orders
+     *
+     * @return double
+     */
+    public function getQropCashOnXOrders()
+    {
+        return $this->container['qrop_cash_on_x_orders'];
+    }
+
+    /**
+     * Sets qrop_cash_on_x_orders
+     *
+     * @param double $qrop_cash_on_x_orders qrop_cash_on_x_orders
+     *
+     * @return $this
+     */
+    public function setQropCashOnXOrders($qrop_cash_on_x_orders)
+    {
+        $this->container['qrop_cash_on_x_orders'] = $qrop_cash_on_x_orders;
+
+        return $this;
+    }
+
+    /**
+     * Gets pos_card_on_x_orders
+     *
+     * @return double
+     */
+    public function getPosCardOnXOrders()
+    {
+        return $this->container['pos_card_on_x_orders'];
+    }
+
+    /**
+     * Sets pos_card_on_x_orders
+     *
+     * @param double $pos_card_on_x_orders pos_card_on_x_orders
+     *
+     * @return $this
+     */
+    public function setPosCardOnXOrders($pos_card_on_x_orders)
+    {
+        $this->container['pos_card_on_x_orders'] = $pos_card_on_x_orders;
 
         return $this;
     }
