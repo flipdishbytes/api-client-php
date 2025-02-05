@@ -133,6 +133,13 @@ class KioskBluetoothTerminalUnpairedEventTest extends \PHPUnit_Framework_TestCas
     }
 
     /**
+     * Test attribute "org_id"
+     */
+    public function testPropertyOrgId()
+    {
+    }
+
+    /**
      * Test attribute "ip_address"
      */
     public function testPropertyIpAddress()

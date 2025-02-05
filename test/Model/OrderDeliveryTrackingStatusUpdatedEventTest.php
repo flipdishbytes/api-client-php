@@ -140,6 +140,13 @@ class OrderDeliveryTrackingStatusUpdatedEventTest extends \PHPUnit_Framework_Tes
     }
 
     /**
+     * Test attribute "org_id"
+     */
+    public function testPropertyOrgId()
+    {
+    }
+
+    /**
      * Test attribute "ip_address"
      */
     public function testPropertyIpAddress()

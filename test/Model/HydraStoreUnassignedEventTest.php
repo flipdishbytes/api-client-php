@@ -126,6 +126,13 @@ class HydraStoreUnassignedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "org_id"
+     */
+    public function testPropertyOrgId()
+    {
+    }
+
+    /**
      * Test attribute "ip_address"
      */
     public function testPropertyIpAddress()

@@ -76,6 +76,7 @@ class ExternalStoreEvent implements ModelInterface, ArrayAccess
         'create_time' => '\DateTime',
         'position' => 'int',
         'app_id' => 'string',
+        'org_id' => 'string',
         'ip_address' => 'string'
     ];
 
@@ -103,6 +104,7 @@ class ExternalStoreEvent implements ModelInterface, ArrayAccess
         'create_time' => 'date-time',
         'position' => 'int32',
         'app_id' => null,
+        'org_id' => null,
         'ip_address' => null
     ];
 
@@ -151,6 +153,7 @@ class ExternalStoreEvent implements ModelInterface, ArrayAccess
         'create_time' => 'CreateTime',
         'position' => 'Position',
         'app_id' => 'AppId',
+        'org_id' => 'OrgId',
         'ip_address' => 'IpAddress'
     ];
 
@@ -178,6 +181,7 @@ class ExternalStoreEvent implements ModelInterface, ArrayAccess
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
         'app_id' => 'setAppId',
+        'org_id' => 'setOrgId',
         'ip_address' => 'setIpAddress'
     ];
 
@@ -205,6 +209,7 @@ class ExternalStoreEvent implements ModelInterface, ArrayAccess
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
         'app_id' => 'getAppId',
+        'org_id' => 'getOrgId',
         'ip_address' => 'getIpAddress'
     ];
 
@@ -286,6 +291,7 @@ class ExternalStoreEvent implements ModelInterface, ArrayAccess
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
+        $this->container['org_id'] = isset($data['org_id']) ? $data['org_id'] : null;
         $this->container['ip_address'] = isset($data['ip_address']) ? $data['ip_address'] : null;
     }
 
@@ -741,6 +747,30 @@ class ExternalStoreEvent implements ModelInterface, ArrayAccess
     public function setAppId($app_id)
     {
         $this->container['app_id'] = $app_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets org_id
+     *
+     * @return string
+     */
+    public function getOrgId()
+    {
+        return $this->container['org_id'];
+    }
+
+    /**
+     * Sets org_id
+     *
+     * @param string $org_id Org id
+     *
+     * @return $this
+     */
+    public function setOrgId($org_id)
+    {
+        $this->container['org_id'] = $org_id;
 
         return $this;
     }

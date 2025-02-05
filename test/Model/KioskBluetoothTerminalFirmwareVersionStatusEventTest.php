@@ -161,6 +161,13 @@ class KioskBluetoothTerminalFirmwareVersionStatusEventTest extends \PHPUnit_Fram
     }
 
     /**
+     * Test attribute "org_id"
+     */
+    public function testPropertyOrgId()
+    {
+    }
+
+    /**
      * Test attribute "ip_address"
      */
     public function testPropertyIpAddress()
