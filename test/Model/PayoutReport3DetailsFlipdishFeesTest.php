@@ -140,9 +140,23 @@ class PayoutReport3DetailsFlipdishFeesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "qrop_cash_revenue"
+     */
+    public function testPropertyQropCashRevenue()
+    {
+    }
+
+    /**
      * Test attribute "qrop_card"
      */
     public function testPropertyQropCard()
+    {
+    }
+
+    /**
+     * Test attribute "qrop_card_revenue"
+     */
+    public function testPropertyQropCardRevenue()
     {
     }
 

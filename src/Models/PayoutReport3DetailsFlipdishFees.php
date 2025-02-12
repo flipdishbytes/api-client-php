@@ -66,7 +66,9 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'kiosk_card' => 'double',
         'kiosk_card_revenue' => 'double',
         'qrop_cash' => 'double',
+        'qrop_cash_revenue' => 'double',
         'qrop_card' => 'double',
+        'qrop_card_revenue' => 'double',
         'pos_card' => 'double',
         'pos_card_revenue' => 'double',
         'pos_card_on_flipdish_orders' => 'double',
@@ -100,7 +102,9 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'kiosk_card' => 'double',
         'kiosk_card_revenue' => 'double',
         'qrop_cash' => 'double',
+        'qrop_cash_revenue' => 'double',
         'qrop_card' => 'double',
+        'qrop_card_revenue' => 'double',
         'pos_card' => 'double',
         'pos_card_revenue' => 'double',
         'pos_card_on_flipdish_orders' => 'double',
@@ -155,7 +159,9 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'kiosk_card' => 'KioskCard',
         'kiosk_card_revenue' => 'KioskCardRevenue',
         'qrop_cash' => 'QropCash',
+        'qrop_cash_revenue' => 'QropCashRevenue',
         'qrop_card' => 'QropCard',
+        'qrop_card_revenue' => 'QropCardRevenue',
         'pos_card' => 'PosCard',
         'pos_card_revenue' => 'PosCardRevenue',
         'pos_card_on_flipdish_orders' => 'PosCardOnFlipdishOrders',
@@ -189,7 +195,9 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'kiosk_card' => 'setKioskCard',
         'kiosk_card_revenue' => 'setKioskCardRevenue',
         'qrop_cash' => 'setQropCash',
+        'qrop_cash_revenue' => 'setQropCashRevenue',
         'qrop_card' => 'setQropCard',
+        'qrop_card_revenue' => 'setQropCardRevenue',
         'pos_card' => 'setPosCard',
         'pos_card_revenue' => 'setPosCardRevenue',
         'pos_card_on_flipdish_orders' => 'setPosCardOnFlipdishOrders',
@@ -223,7 +231,9 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'kiosk_card' => 'getKioskCard',
         'kiosk_card_revenue' => 'getKioskCardRevenue',
         'qrop_cash' => 'getQropCash',
+        'qrop_cash_revenue' => 'getQropCashRevenue',
         'qrop_card' => 'getQropCard',
+        'qrop_card_revenue' => 'getQropCardRevenue',
         'pos_card' => 'getPosCard',
         'pos_card_revenue' => 'getPosCardRevenue',
         'pos_card_on_flipdish_orders' => 'getPosCardOnFlipdishOrders',
@@ -311,7 +321,9 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         $this->container['kiosk_card'] = isset($data['kiosk_card']) ? $data['kiosk_card'] : null;
         $this->container['kiosk_card_revenue'] = isset($data['kiosk_card_revenue']) ? $data['kiosk_card_revenue'] : null;
         $this->container['qrop_cash'] = isset($data['qrop_cash']) ? $data['qrop_cash'] : null;
+        $this->container['qrop_cash_revenue'] = isset($data['qrop_cash_revenue']) ? $data['qrop_cash_revenue'] : null;
         $this->container['qrop_card'] = isset($data['qrop_card']) ? $data['qrop_card'] : null;
+        $this->container['qrop_card_revenue'] = isset($data['qrop_card_revenue']) ? $data['qrop_card_revenue'] : null;
         $this->container['pos_card'] = isset($data['pos_card']) ? $data['pos_card'] : null;
         $this->container['pos_card_revenue'] = isset($data['pos_card_revenue']) ? $data['pos_card_revenue'] : null;
         $this->container['pos_card_on_flipdish_orders'] = isset($data['pos_card_on_flipdish_orders']) ? $data['pos_card_on_flipdish_orders'] : null;
@@ -571,6 +583,30 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets qrop_cash_revenue
+     *
+     * @return double
+     */
+    public function getQropCashRevenue()
+    {
+        return $this->container['qrop_cash_revenue'];
+    }
+
+    /**
+     * Sets qrop_cash_revenue
+     *
+     * @param double $qrop_cash_revenue qrop_cash_revenue
+     *
+     * @return $this
+     */
+    public function setQropCashRevenue($qrop_cash_revenue)
+    {
+        $this->container['qrop_cash_revenue'] = $qrop_cash_revenue;
+
+        return $this;
+    }
+
+    /**
      * Gets qrop_card
      *
      * @return double
@@ -590,6 +626,30 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     public function setQropCard($qrop_card)
     {
         $this->container['qrop_card'] = $qrop_card;
+
+        return $this;
+    }
+
+    /**
+     * Gets qrop_card_revenue
+     *
+     * @return double
+     */
+    public function getQropCardRevenue()
+    {
+        return $this->container['qrop_card_revenue'];
+    }
+
+    /**
+     * Sets qrop_card_revenue
+     *
+     * @param double $qrop_card_revenue qrop_card_revenue
+     *
+     * @return $this
+     */
+    public function setQropCardRevenue($qrop_card_revenue)
+    {
+        $this->container['qrop_card_revenue'] = $qrop_card_revenue;
 
         return $this;
     }
