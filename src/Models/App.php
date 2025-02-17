@@ -303,6 +303,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_VIEW_APP = 'ViewApp';
     const APP_RESOURCE_SET_CREATE_APP = 'CreateApp';
     const APP_RESOURCE_SET_UPDATE_APP = 'UpdateApp';
+    const APP_RESOURCE_SET_VIEW_APP_NAME = 'ViewAppName';
     const APP_RESOURCE_SET_EDIT_APP_ASSETS = 'EditAppAssets';
     const APP_RESOURCE_SET_EDIT_APP_FEATURES = 'EditAppFeatures';
     const APP_RESOURCE_SET_VIEW_TEAMMATES = 'ViewTeammates';
@@ -505,6 +506,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_VIEW_APP,
             self::APP_RESOURCE_SET_CREATE_APP,
             self::APP_RESOURCE_SET_UPDATE_APP,
+            self::APP_RESOURCE_SET_VIEW_APP_NAME,
             self::APP_RESOURCE_SET_EDIT_APP_ASSETS,
             self::APP_RESOURCE_SET_EDIT_APP_FEATURES,
             self::APP_RESOURCE_SET_VIEW_TEAMMATES,

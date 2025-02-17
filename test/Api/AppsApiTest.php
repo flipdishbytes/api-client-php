@@ -112,6 +112,16 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getAppName
+     *
+     * .
+     *
+     */
+    public function testGetAppName()
+    {
+    }
+
+    /**
      * Test case for getApps
      *
      * .
