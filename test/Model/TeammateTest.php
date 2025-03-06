@@ -138,4 +138,11 @@ class TeammateTest extends \PHPUnit_Framework_TestCase
     public function testPropertyStoreIds()
     {
     }
+
+    /**
+     * Test attribute "property_ids"
+     */
+    public function testPropertyPropertyIds()
+    {
+    }
 }

@@ -60,7 +60,8 @@ class TeammateBase implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'app_access_level' => 'string',
         'has_access_to_all_stores' => 'bool',
-        'store_ids' => 'int[]'
+        'store_ids' => 'int[]',
+        'property_ids' => 'string[]'
     ];
 
     /**
@@ -71,7 +72,8 @@ class TeammateBase implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'app_access_level' => null,
         'has_access_to_all_stores' => null,
-        'store_ids' => 'int32'
+        'store_ids' => 'int32',
+        'property_ids' => null
     ];
 
     /**
@@ -103,7 +105,8 @@ class TeammateBase implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'app_access_level' => 'AppAccessLevel',
         'has_access_to_all_stores' => 'HasAccessToAllStores',
-        'store_ids' => 'StoreIds'
+        'store_ids' => 'StoreIds',
+        'property_ids' => 'PropertyIds'
     ];
 
     /**
@@ -114,7 +117,8 @@ class TeammateBase implements ModelInterface, ArrayAccess
     protected static $setters = [
         'app_access_level' => 'setAppAccessLevel',
         'has_access_to_all_stores' => 'setHasAccessToAllStores',
-        'store_ids' => 'setStoreIds'
+        'store_ids' => 'setStoreIds',
+        'property_ids' => 'setPropertyIds'
     ];
 
     /**
@@ -125,7 +129,8 @@ class TeammateBase implements ModelInterface, ArrayAccess
     protected static $getters = [
         'app_access_level' => 'getAppAccessLevel',
         'has_access_to_all_stores' => 'getHasAccessToAllStores',
-        'store_ids' => 'getStoreIds'
+        'store_ids' => 'getStoreIds',
+        'property_ids' => 'getPropertyIds'
     ];
 
     /**
@@ -174,6 +179,7 @@ class TeammateBase implements ModelInterface, ArrayAccess
     const APP_ACCESS_LEVEL_STORE_OWNER = 'StoreOwner';
     const APP_ACCESS_LEVEL_MANAGED_OWNER = 'ManagedOwner';
     const APP_ACCESS_LEVEL_INTEGRATOR = 'Integrator';
+    const APP_ACCESS_LEVEL_PROPERTY_MANAGER = 'PropertyManager';
     const APP_ACCESS_LEVEL_STORE_MANAGER = 'StoreManager';
     const APP_ACCESS_LEVEL_STORE_STAFF = 'StoreStaff';
     const APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS = 'StoreReadOnlyAccess';
@@ -196,6 +202,7 @@ class TeammateBase implements ModelInterface, ArrayAccess
             self::APP_ACCESS_LEVEL_STORE_OWNER,
             self::APP_ACCESS_LEVEL_MANAGED_OWNER,
             self::APP_ACCESS_LEVEL_INTEGRATOR,
+            self::APP_ACCESS_LEVEL_PROPERTY_MANAGER,
             self::APP_ACCESS_LEVEL_STORE_MANAGER,
             self::APP_ACCESS_LEVEL_STORE_STAFF,
             self::APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS,
@@ -224,6 +231,7 @@ class TeammateBase implements ModelInterface, ArrayAccess
         $this->container['app_access_level'] = isset($data['app_access_level']) ? $data['app_access_level'] : null;
         $this->container['has_access_to_all_stores'] = isset($data['has_access_to_all_stores']) ? $data['has_access_to_all_stores'] : null;
         $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
+        $this->container['property_ids'] = isset($data['property_ids']) ? $data['property_ids'] : null;
     }
 
     /**
@@ -335,6 +343,30 @@ class TeammateBase implements ModelInterface, ArrayAccess
     public function setStoreIds($store_ids)
     {
         $this->container['store_ids'] = $store_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets property_ids
+     *
+     * @return string[]
+     */
+    public function getPropertyIds()
+    {
+        return $this->container['property_ids'];
+    }
+
+    /**
+     * Sets property_ids
+     *
+     * @param string[] $property_ids Property Ids the user has access to (if HasAccessToAllStores is false)
+     *
+     * @return $this
+     */
+    public function setPropertyIds($property_ids)
+    {
+        $this->container['property_ids'] = $property_ids;
 
         return $this;
     }
