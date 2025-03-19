@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **store_group_id** | **int** | Store group Id | [optional] 
 **user** | [**\Flipdish\\Client\Models\UserEventInfo**](UserEventInfo.md) | User which updated opening hours for this store | [optional] 
 **delivery_type** | **string** | Type of opening hours Delivery / Pickup | [optional] 
+**delivery_type_string** | **string** | Type of opening hours Delivery / Pickup as a string | [optional] 
 **business_hours_period_old** | [**\Flipdish\\Client\Models\BusinessHoursPeriod**](BusinessHoursPeriod.md) | The period that was updated | [optional] 
 **business_hours_period** | [**\Flipdish\\Client\Models\BusinessHoursPeriod**](BusinessHoursPeriod.md) | The new values of the period | [optional] 
 **description** | **string** | Description | [optional] 

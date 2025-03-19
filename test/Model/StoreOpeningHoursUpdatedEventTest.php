@@ -119,6 +119,13 @@ class StoreOpeningHoursUpdatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "delivery_type_string"
+     */
+    public function testPropertyDeliveryTypeString()
+    {
+    }
+
+    /**
      * Test attribute "business_hours_period_old"
      */
     public function testPropertyBusinessHoursPeriodOld()

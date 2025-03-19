@@ -64,6 +64,7 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         'store_group_id' => 'int',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
         'delivery_type' => 'string',
+        'delivery_type_string' => 'string',
         'business_hours_period_old' => '\Flipdish\\Client\Models\BusinessHoursPeriod',
         'business_hours_period' => '\Flipdish\\Client\Models\BusinessHoursPeriod',
         'description' => 'string',
@@ -86,6 +87,7 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         'store_group_id' => 'int32',
         'user' => null,
         'delivery_type' => null,
+        'delivery_type_string' => null,
         'business_hours_period_old' => null,
         'business_hours_period' => null,
         'description' => null,
@@ -129,6 +131,7 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         'store_group_id' => 'StoreGroupId',
         'user' => 'User',
         'delivery_type' => 'DeliveryType',
+        'delivery_type_string' => 'DeliveryTypeString',
         'business_hours_period_old' => 'BusinessHoursPeriodOld',
         'business_hours_period' => 'BusinessHoursPeriod',
         'description' => 'Description',
@@ -151,6 +154,7 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         'store_group_id' => 'setStoreGroupId',
         'user' => 'setUser',
         'delivery_type' => 'setDeliveryType',
+        'delivery_type_string' => 'setDeliveryTypeString',
         'business_hours_period_old' => 'setBusinessHoursPeriodOld',
         'business_hours_period' => 'setBusinessHoursPeriod',
         'description' => 'setDescription',
@@ -173,6 +177,7 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         'store_group_id' => 'getStoreGroupId',
         'user' => 'getUser',
         'delivery_type' => 'getDeliveryType',
+        'delivery_type_string' => 'getDeliveryTypeString',
         'business_hours_period_old' => 'getBusinessHoursPeriodOld',
         'business_hours_period' => 'getBusinessHoursPeriod',
         'description' => 'getDescription',
@@ -226,6 +231,8 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
 
     const DELIVERY_TYPE_DELIVERY = 'Delivery';
     const DELIVERY_TYPE_PICKUP = 'Pickup';
+    const DELIVERY_TYPE_STRING_DELIVERY = 'Delivery';
+    const DELIVERY_TYPE_STRING_PICKUP = 'Pickup';
     
 
     
@@ -239,6 +246,19 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         return [
             self::DELIVERY_TYPE_DELIVERY,
             self::DELIVERY_TYPE_PICKUP,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getDeliveryTypeStringAllowableValues()
+    {
+        return [
+            self::DELIVERY_TYPE_STRING_DELIVERY,
+            self::DELIVERY_TYPE_STRING_PICKUP,
         ];
     }
     
@@ -264,6 +284,7 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         $this->container['store_group_id'] = isset($data['store_group_id']) ? $data['store_group_id'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['delivery_type'] = isset($data['delivery_type']) ? $data['delivery_type'] : null;
+        $this->container['delivery_type_string'] = isset($data['delivery_type_string']) ? $data['delivery_type_string'] : null;
         $this->container['business_hours_period_old'] = isset($data['business_hours_period_old']) ? $data['business_hours_period_old'] : null;
         $this->container['business_hours_period'] = isset($data['business_hours_period']) ? $data['business_hours_period'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -287,6 +308,14 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         if (!is_null($this->container['delivery_type']) && !in_array($this->container['delivery_type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'delivery_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getDeliveryTypeStringAllowableValues();
+        if (!is_null($this->container['delivery_type_string']) && !in_array($this->container['delivery_type_string'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'delivery_type_string', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -455,6 +484,39 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
             );
         }
         $this->container['delivery_type'] = $delivery_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_type_string
+     *
+     * @return string
+     */
+    public function getDeliveryTypeString()
+    {
+        return $this->container['delivery_type_string'];
+    }
+
+    /**
+     * Sets delivery_type_string
+     *
+     * @param string $delivery_type_string Type of opening hours Delivery / Pickup as a string
+     *
+     * @return $this
+     */
+    public function setDeliveryTypeString($delivery_type_string)
+    {
+        $allowedValues = $this->getDeliveryTypeStringAllowableValues();
+        if (!is_null($delivery_type_string) && !in_array($delivery_type_string, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'delivery_type_string', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['delivery_type_string'] = $delivery_type_string;
 
         return $this;
     }
