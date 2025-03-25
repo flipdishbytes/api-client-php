@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Id of this account | [optional] 
 **store_names** | **string[]** | Store Names that are attached to this account | [optional] 
+**store_ids** | **int[]** | Store Ids that are attached to this account | [optional] 
 **account_state** | **string** | Status of Account | [optional] 
 **currency_code** | **string** | Currency of Account | [optional] 
 **stripe_connected_account_info** | [**\Flipdish\\Client\Models\StripeConnectedAccountInfo**](StripeConnectedAccountInfo.md) | Information about the Stripe connected account associated with this bank account (if any) | [optional] 

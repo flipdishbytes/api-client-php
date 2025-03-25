@@ -91,6 +91,13 @@ class BankAccountSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "store_ids"
+     */
+    public function testPropertyStoreIds()
+    {
+    }
+
+    /**
      * Test attribute "account_state"
      */
     public function testPropertyAccountState()

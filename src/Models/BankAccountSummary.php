@@ -60,6 +60,7 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'store_names' => 'string[]',
+        'store_ids' => 'int[]',
         'account_state' => 'string',
         'currency_code' => 'string',
         'stripe_connected_account_info' => '\Flipdish\\Client\Models\StripeConnectedAccountInfo',
@@ -80,6 +81,7 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int32',
         'store_names' => null,
+        'store_ids' => 'int32',
         'account_state' => null,
         'currency_code' => null,
         'stripe_connected_account_info' => null,
@@ -121,6 +123,7 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'id' => 'Id',
         'store_names' => 'StoreNames',
+        'store_ids' => 'StoreIds',
         'account_state' => 'AccountState',
         'currency_code' => 'CurrencyCode',
         'stripe_connected_account_info' => 'StripeConnectedAccountInfo',
@@ -141,6 +144,7 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'store_names' => 'setStoreNames',
+        'store_ids' => 'setStoreIds',
         'account_state' => 'setAccountState',
         'currency_code' => 'setCurrencyCode',
         'stripe_connected_account_info' => 'setStripeConnectedAccountInfo',
@@ -161,6 +165,7 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'store_names' => 'getStoreNames',
+        'store_ids' => 'getStoreIds',
         'account_state' => 'getAccountState',
         'currency_code' => 'getCurrencyCode',
         'stripe_connected_account_info' => 'getStripeConnectedAccountInfo',
@@ -273,6 +278,7 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['store_names'] = isset($data['store_names']) ? $data['store_names'] : null;
+        $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
         $this->container['account_state'] = isset($data['account_state']) ? $data['account_state'] : null;
         $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
         $this->container['stripe_connected_account_info'] = isset($data['stripe_connected_account_info']) ? $data['stripe_connected_account_info'] : null;
@@ -369,6 +375,30 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
     public function setStoreNames($store_names)
     {
         $this->container['store_names'] = $store_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets store_ids
+     *
+     * @return int[]
+     */
+    public function getStoreIds()
+    {
+        return $this->container['store_ids'];
+    }
+
+    /**
+     * Sets store_ids
+     *
+     * @param int[] $store_ids Store Ids that are attached to this account
+     *
+     * @return $this
+     */
+    public function setStoreIds($store_ids)
+    {
+        $this->container['store_ids'] = $store_ids;
 
         return $this;
     }
