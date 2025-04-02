@@ -308,6 +308,7 @@ class StoreBase implements ModelInterface, ArrayAccess
     const SALES_CHANNEL_TYPES_APP = 'App';
     const SALES_CHANNEL_TYPES_KIOSK = 'Kiosk';
     const SALES_CHANNEL_TYPES_POS = 'Pos';
+    const SALES_CHANNEL_TYPES_NONE = 'None';
     
 
     
@@ -323,6 +324,7 @@ class StoreBase implements ModelInterface, ArrayAccess
             self::SALES_CHANNEL_TYPES_APP,
             self::SALES_CHANNEL_TYPES_KIOSK,
             self::SALES_CHANNEL_TYPES_POS,
+            self::SALES_CHANNEL_TYPES_NONE,
         ];
     }
     
