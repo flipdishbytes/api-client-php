@@ -112,6 +112,13 @@ class StoreGroupTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "brand_ids"
+     */
+    public function testPropertyBrandIds()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

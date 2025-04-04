@@ -63,6 +63,7 @@ class StoreGroup implements ModelInterface, ArrayAccess
         'general_rating_count' => 'int',
         'delivery_menu_message' => 'string',
         'pickup_menu_message' => 'string',
+        'brand_ids' => 'string[]',
         'name' => 'string',
         'currency' => 'string'
     ];
@@ -78,6 +79,7 @@ class StoreGroup implements ModelInterface, ArrayAccess
         'general_rating_count' => 'int32',
         'delivery_menu_message' => null,
         'pickup_menu_message' => null,
+        'brand_ids' => null,
         'name' => null,
         'currency' => null
     ];
@@ -114,6 +116,7 @@ class StoreGroup implements ModelInterface, ArrayAccess
         'general_rating_count' => 'GeneralRatingCount',
         'delivery_menu_message' => 'DeliveryMenuMessage',
         'pickup_menu_message' => 'PickupMenuMessage',
+        'brand_ids' => 'BrandIds',
         'name' => 'Name',
         'currency' => 'Currency'
     ];
@@ -129,6 +132,7 @@ class StoreGroup implements ModelInterface, ArrayAccess
         'general_rating_count' => 'setGeneralRatingCount',
         'delivery_menu_message' => 'setDeliveryMenuMessage',
         'pickup_menu_message' => 'setPickupMenuMessage',
+        'brand_ids' => 'setBrandIds',
         'name' => 'setName',
         'currency' => 'setCurrency'
     ];
@@ -144,6 +148,7 @@ class StoreGroup implements ModelInterface, ArrayAccess
         'general_rating_count' => 'getGeneralRatingCount',
         'delivery_menu_message' => 'getDeliveryMenuMessage',
         'pickup_menu_message' => 'getPickupMenuMessage',
+        'brand_ids' => 'getBrandIds',
         'name' => 'getName',
         'currency' => 'getCurrency'
     ];
@@ -450,6 +455,7 @@ class StoreGroup implements ModelInterface, ArrayAccess
         $this->container['general_rating_count'] = isset($data['general_rating_count']) ? $data['general_rating_count'] : null;
         $this->container['delivery_menu_message'] = isset($data['delivery_menu_message']) ? $data['delivery_menu_message'] : null;
         $this->container['pickup_menu_message'] = isset($data['pickup_menu_message']) ? $data['pickup_menu_message'] : null;
+        $this->container['brand_ids'] = isset($data['brand_ids']) ? $data['brand_ids'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
     }
@@ -602,6 +608,30 @@ class StoreGroup implements ModelInterface, ArrayAccess
     public function setPickupMenuMessage($pickup_menu_message)
     {
         $this->container['pickup_menu_message'] = $pickup_menu_message;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_ids
+     *
+     * @return string[]
+     */
+    public function getBrandIds()
+    {
+        return $this->container['brand_ids'];
+    }
+
+    /**
+     * Sets brand_ids
+     *
+     * @param string[] $brand_ids List of brand ids (AppIds) that are associated with this store group
+     *
+     * @return $this
+     */
+    public function setBrandIds($brand_ids)
+    {
+        $this->container['brand_ids'] = $brand_ids;
 
         return $this;
     }
