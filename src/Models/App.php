@@ -345,6 +345,8 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_UPDATE_STORES_NAME = 'UpdateStoresName';
     const APP_RESOURCE_SET_EDIT_STORE_KIOSK_SETTINGS = 'EditStoreKioskSettings';
     const APP_RESOURCE_SET_EDIT_STORE_ORDER_CAPACITY = 'EditStoreOrderCapacity';
+    const APP_RESOURCE_SET_ARCHIVE_STORES = 'ArchiveStores';
+    const APP_RESOURCE_SET_PUBLISH_STORES = 'PublishStores';
     const APP_RESOURCE_SET_UPDATE_PRINTER_TERMINALS_ASSIGN = 'UpdatePrinterTerminalsAssign';
     const APP_RESOURCE_SET_UPDATE_PRINTER_TERMINALS_TOGGLE = 'UpdatePrinterTerminalsToggle';
     const APP_RESOURCE_SET_EDIT_STORE_NOTIFICATIONS = 'EditStoreNotifications';
@@ -550,6 +552,8 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_UPDATE_STORES_NAME,
             self::APP_RESOURCE_SET_EDIT_STORE_KIOSK_SETTINGS,
             self::APP_RESOURCE_SET_EDIT_STORE_ORDER_CAPACITY,
+            self::APP_RESOURCE_SET_ARCHIVE_STORES,
+            self::APP_RESOURCE_SET_PUBLISH_STORES,
             self::APP_RESOURCE_SET_UPDATE_PRINTER_TERMINALS_ASSIGN,
             self::APP_RESOURCE_SET_UPDATE_PRINTER_TERMINALS_TOGGLE,
             self::APP_RESOURCE_SET_EDIT_STORE_NOTIFICATIONS,
