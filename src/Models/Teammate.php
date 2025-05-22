@@ -210,7 +210,6 @@ class Teammate implements ModelInterface, ArrayAccess
     const APP_ACCESS_LEVEL_NONE = 'None';
     const APP_ACCESS_LEVEL_OWNER = 'Owner';
     const APP_ACCESS_LEVEL_STORE_OWNER = 'StoreOwner';
-    const APP_ACCESS_LEVEL_PROPERTY_OWNER = 'PropertyOwner';
     const APP_ACCESS_LEVEL_MANAGED_OWNER = 'ManagedOwner';
     const APP_ACCESS_LEVEL_INTEGRATOR = 'Integrator';
     const APP_ACCESS_LEVEL_PROPERTY_MANAGER = 'PropertyManager';
@@ -248,7 +247,6 @@ class Teammate implements ModelInterface, ArrayAccess
             self::APP_ACCESS_LEVEL_NONE,
             self::APP_ACCESS_LEVEL_OWNER,
             self::APP_ACCESS_LEVEL_STORE_OWNER,
-            self::APP_ACCESS_LEVEL_PROPERTY_OWNER,
             self::APP_ACCESS_LEVEL_MANAGED_OWNER,
             self::APP_ACCESS_LEVEL_INTEGRATOR,
             self::APP_ACCESS_LEVEL_PROPERTY_MANAGER,

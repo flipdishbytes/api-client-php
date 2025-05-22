@@ -292,7 +292,6 @@ class App implements ModelInterface, ArrayAccess
     const APP_ACCESS_LEVEL_NONE = 'None';
     const APP_ACCESS_LEVEL_OWNER = 'Owner';
     const APP_ACCESS_LEVEL_STORE_OWNER = 'StoreOwner';
-    const APP_ACCESS_LEVEL_PROPERTY_OWNER = 'PropertyOwner';
     const APP_ACCESS_LEVEL_MANAGED_OWNER = 'ManagedOwner';
     const APP_ACCESS_LEVEL_INTEGRATOR = 'Integrator';
     const APP_ACCESS_LEVEL_PROPERTY_MANAGER = 'PropertyManager';
@@ -320,7 +319,6 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_CREATE_TEAMMATE_INTEGRATOR = 'CreateTeammateIntegrator';
     const APP_RESOURCE_SET_CREATE_TEAMMATE_ONBOARDING = 'CreateTeammateOnboarding';
     const APP_RESOURCE_SET_CREATE_TEAMMATE_PROPERTY_MANAGER = 'CreateTeammatePropertyManager';
-    const APP_RESOURCE_SET_CREATE_TEAMMATE_PROPERTY_OWNER = 'CreateTeammatePropertyOwner';
     const APP_RESOURCE_SET_VIEW_APM_CONFIGURATIONS = 'ViewApmConfigurations';
     const APP_RESOURCE_SET_EDIT_APM_CONFIGURATIONS = 'EditApmConfigurations';
     const APP_RESOURCE_SET_VIEW_CAMPAIGNS_CONFIGURATIONS = 'ViewCampaignsConfigurations';
@@ -473,39 +471,6 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_UPDATE_PAY_GREEN_STORE_CONFIGURATION = 'UpdatePayGreenStoreConfiguration';
     const APP_RESOURCE_SET_VIEW_SUBSCRIPTIONS = 'ViewSubscriptions';
     const APP_RESOURCE_SET_VIEW_INVOICES = 'ViewInvoices';
-    const APP_RESOURCE_SET_EDIT_ACCOUNTS_BILLS = 'EditAccountsBills';
-    const APP_RESOURCE_SET_VIEW_ACCOUNTS_BILLS = 'ViewAccountsBills';
-    const APP_RESOURCE_SET_EDIT_ACCOUNTS_CATEGORIES = 'EditAccountsCategories';
-    const APP_RESOURCE_SET_VIEW_ACCOUNTS_CATEGORIES = 'ViewAccountsCategories';
-    const APP_RESOURCE_SET_EDIT_ACCOUNTS_CREDIT_ACCOUNTS = 'EditAccountsCreditAccounts';
-    const APP_RESOURCE_SET_VIEW_ACCOUNTS_CREDIT_ACCOUNTS = 'ViewAccountsCreditAccounts';
-    const APP_RESOURCE_SET_EDIT_ACCOUNTS_CREDIT_BOOKS = 'EditAccountsCreditBooks';
-    const APP_RESOURCE_SET_VIEW_ACCOUNTS_CREDIT_BOOKS = 'ViewAccountsCreditBooks';
-    const APP_RESOURCE_SET_EDIT_ACCOUNTS_EXPENSES = 'EditAccountsExpenses';
-    const APP_RESOURCE_SET_VIEW_ACCOUNTS_EXPENSES = 'ViewAccountsExpenses';
-    const APP_RESOURCE_SET_EDIT_ACCOUNTS_TRANSACTION_ACCOUNTS = 'EditAccountsTransactionAccounts';
-    const APP_RESOURCE_SET_VIEW_ACCOUNTS_TRANSACTION_ACCOUNTS = 'ViewAccountsTransactionAccounts';
-    const APP_RESOURCE_SET_EDIT_DOCUMENT_EXPLORER = 'EditDocumentExplorer';
-    const APP_RESOURCE_SET_VIEW_DOCUMENT_EXPLORER = 'ViewDocumentExplorer';
-    const APP_RESOURCE_SET_VIEW_INVENTORY_REPORTS = 'ViewInventoryReports';
-    const APP_RESOURCE_SET_EDIT_INVENTORY_PURCHASE_ORDERS = 'EditInventoryPurchaseOrders';
-    const APP_RESOURCE_SET_VIEW_INVENTORY_PURCHASE_ORDERS = 'ViewInventoryPurchaseOrders';
-    const APP_RESOURCE_SET_EDIT_INVENTORY_STOCK_ITEMS = 'EditInventoryStockItems';
-    const APP_RESOURCE_SET_VIEW_INVENTORY_STOCK_ITEMS = 'ViewInventoryStockItems';
-    const APP_RESOURCE_SET_EDIT_INVENTORY_SUPPLIER = 'EditInventorySupplier';
-    const APP_RESOURCE_SET_VIEW_INVENTORY_SUPPLIER = 'ViewInventorySupplier';
-    const APP_RESOURCE_SET_EDIT_INVENTORY_TRACKING_PROFILES = 'EditInventoryTrackingProfiles';
-    const APP_RESOURCE_SET_VIEW_INVENTORY_TRACKING_PROFILES = 'ViewInventoryTrackingProfiles';
-    const APP_RESOURCE_SET_VIEW_PAYROLL_REPORTS = 'ViewPayrollReports';
-    const APP_RESOURCE_SET_EDIT_PAYROLL_HOLIDAY = 'EditPayrollHoliday';
-    const APP_RESOURCE_SET_VIEW_PAYROLL_HOLIDAY = 'ViewPayrollHoliday';
-    const APP_RESOURCE_SET_EDIT_PAYROLL_ROTA = 'EditPayrollRota';
-    const APP_RESOURCE_SET_VIEW_PAYROLL_ROTA = 'ViewPayrollRota';
-    const APP_RESOURCE_SET_EDIT_PAYROLL_STAFF = 'EditPayrollStaff';
-    const APP_RESOURCE_SET_VIEW_PAYROLL_STAFF = 'ViewPayrollStaff';
-    const APP_RESOURCE_SET_VIEW_SALES_REPORTS = 'ViewSalesReports';
-    const APP_RESOURCE_SET_VIEW_COST_REPORTS = 'ViewCostReports';
-    const APP_RESOURCE_SET_VIEW_MENU_REPORTS = 'ViewMenuReports';
     const APPLICATION_CATEGORY_RESTAURANT = 'Restaurant';
     const APPLICATION_CATEGORY_CAFE = 'Cafe';
     const APPLICATION_CATEGORY_CONVENIENCE = 'Convenience';
@@ -523,7 +488,6 @@ class App implements ModelInterface, ArrayAccess
             self::APP_ACCESS_LEVEL_NONE,
             self::APP_ACCESS_LEVEL_OWNER,
             self::APP_ACCESS_LEVEL_STORE_OWNER,
-            self::APP_ACCESS_LEVEL_PROPERTY_OWNER,
             self::APP_ACCESS_LEVEL_MANAGED_OWNER,
             self::APP_ACCESS_LEVEL_INTEGRATOR,
             self::APP_ACCESS_LEVEL_PROPERTY_MANAGER,
@@ -562,7 +526,6 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_CREATE_TEAMMATE_INTEGRATOR,
             self::APP_RESOURCE_SET_CREATE_TEAMMATE_ONBOARDING,
             self::APP_RESOURCE_SET_CREATE_TEAMMATE_PROPERTY_MANAGER,
-            self::APP_RESOURCE_SET_CREATE_TEAMMATE_PROPERTY_OWNER,
             self::APP_RESOURCE_SET_VIEW_APM_CONFIGURATIONS,
             self::APP_RESOURCE_SET_EDIT_APM_CONFIGURATIONS,
             self::APP_RESOURCE_SET_VIEW_CAMPAIGNS_CONFIGURATIONS,
@@ -715,39 +678,6 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_UPDATE_PAY_GREEN_STORE_CONFIGURATION,
             self::APP_RESOURCE_SET_VIEW_SUBSCRIPTIONS,
             self::APP_RESOURCE_SET_VIEW_INVOICES,
-            self::APP_RESOURCE_SET_EDIT_ACCOUNTS_BILLS,
-            self::APP_RESOURCE_SET_VIEW_ACCOUNTS_BILLS,
-            self::APP_RESOURCE_SET_EDIT_ACCOUNTS_CATEGORIES,
-            self::APP_RESOURCE_SET_VIEW_ACCOUNTS_CATEGORIES,
-            self::APP_RESOURCE_SET_EDIT_ACCOUNTS_CREDIT_ACCOUNTS,
-            self::APP_RESOURCE_SET_VIEW_ACCOUNTS_CREDIT_ACCOUNTS,
-            self::APP_RESOURCE_SET_EDIT_ACCOUNTS_CREDIT_BOOKS,
-            self::APP_RESOURCE_SET_VIEW_ACCOUNTS_CREDIT_BOOKS,
-            self::APP_RESOURCE_SET_EDIT_ACCOUNTS_EXPENSES,
-            self::APP_RESOURCE_SET_VIEW_ACCOUNTS_EXPENSES,
-            self::APP_RESOURCE_SET_EDIT_ACCOUNTS_TRANSACTION_ACCOUNTS,
-            self::APP_RESOURCE_SET_VIEW_ACCOUNTS_TRANSACTION_ACCOUNTS,
-            self::APP_RESOURCE_SET_EDIT_DOCUMENT_EXPLORER,
-            self::APP_RESOURCE_SET_VIEW_DOCUMENT_EXPLORER,
-            self::APP_RESOURCE_SET_VIEW_INVENTORY_REPORTS,
-            self::APP_RESOURCE_SET_EDIT_INVENTORY_PURCHASE_ORDERS,
-            self::APP_RESOURCE_SET_VIEW_INVENTORY_PURCHASE_ORDERS,
-            self::APP_RESOURCE_SET_EDIT_INVENTORY_STOCK_ITEMS,
-            self::APP_RESOURCE_SET_VIEW_INVENTORY_STOCK_ITEMS,
-            self::APP_RESOURCE_SET_EDIT_INVENTORY_SUPPLIER,
-            self::APP_RESOURCE_SET_VIEW_INVENTORY_SUPPLIER,
-            self::APP_RESOURCE_SET_EDIT_INVENTORY_TRACKING_PROFILES,
-            self::APP_RESOURCE_SET_VIEW_INVENTORY_TRACKING_PROFILES,
-            self::APP_RESOURCE_SET_VIEW_PAYROLL_REPORTS,
-            self::APP_RESOURCE_SET_EDIT_PAYROLL_HOLIDAY,
-            self::APP_RESOURCE_SET_VIEW_PAYROLL_HOLIDAY,
-            self::APP_RESOURCE_SET_EDIT_PAYROLL_ROTA,
-            self::APP_RESOURCE_SET_VIEW_PAYROLL_ROTA,
-            self::APP_RESOURCE_SET_EDIT_PAYROLL_STAFF,
-            self::APP_RESOURCE_SET_VIEW_PAYROLL_STAFF,
-            self::APP_RESOURCE_SET_VIEW_SALES_REPORTS,
-            self::APP_RESOURCE_SET_VIEW_COST_REPORTS,
-            self::APP_RESOURCE_SET_VIEW_MENU_REPORTS,
         ];
     }
     
