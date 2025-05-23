@@ -292,6 +292,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_ACCESS_LEVEL_NONE = 'None';
     const APP_ACCESS_LEVEL_OWNER = 'Owner';
     const APP_ACCESS_LEVEL_STORE_OWNER = 'StoreOwner';
+    const APP_ACCESS_LEVEL_PROPERTY_OWNER = 'PropertyOwner';
     const APP_ACCESS_LEVEL_MANAGED_OWNER = 'ManagedOwner';
     const APP_ACCESS_LEVEL_INTEGRATOR = 'Integrator';
     const APP_ACCESS_LEVEL_PROPERTY_MANAGER = 'PropertyManager';
@@ -319,6 +320,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_CREATE_TEAMMATE_INTEGRATOR = 'CreateTeammateIntegrator';
     const APP_RESOURCE_SET_CREATE_TEAMMATE_ONBOARDING = 'CreateTeammateOnboarding';
     const APP_RESOURCE_SET_CREATE_TEAMMATE_PROPERTY_MANAGER = 'CreateTeammatePropertyManager';
+    const APP_RESOURCE_SET_CREATE_TEAMMATE_PROPERTY_OWNER = 'CreateTeammatePropertyOwner';
     const APP_RESOURCE_SET_VIEW_APM_CONFIGURATIONS = 'ViewApmConfigurations';
     const APP_RESOURCE_SET_EDIT_APM_CONFIGURATIONS = 'EditApmConfigurations';
     const APP_RESOURCE_SET_VIEW_CAMPAIGNS_CONFIGURATIONS = 'ViewCampaignsConfigurations';
@@ -521,6 +523,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_ACCESS_LEVEL_NONE,
             self::APP_ACCESS_LEVEL_OWNER,
             self::APP_ACCESS_LEVEL_STORE_OWNER,
+            self::APP_ACCESS_LEVEL_PROPERTY_OWNER,
             self::APP_ACCESS_LEVEL_MANAGED_OWNER,
             self::APP_ACCESS_LEVEL_INTEGRATOR,
             self::APP_ACCESS_LEVEL_PROPERTY_MANAGER,
@@ -559,6 +562,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_CREATE_TEAMMATE_INTEGRATOR,
             self::APP_RESOURCE_SET_CREATE_TEAMMATE_ONBOARDING,
             self::APP_RESOURCE_SET_CREATE_TEAMMATE_PROPERTY_MANAGER,
+            self::APP_RESOURCE_SET_CREATE_TEAMMATE_PROPERTY_OWNER,
             self::APP_RESOURCE_SET_VIEW_APM_CONFIGURATIONS,
             self::APP_RESOURCE_SET_EDIT_APM_CONFIGURATIONS,
             self::APP_RESOURCE_SET_VIEW_CAMPAIGNS_CONFIGURATIONS,
