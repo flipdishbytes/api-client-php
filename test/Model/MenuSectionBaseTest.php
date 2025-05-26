@@ -124,4 +124,11 @@ class MenuSectionBaseTest extends \PHPUnit_Framework_TestCase
     public function testPropertyMenuSectionId()
     {
     }
+
+    /**
+     * Test attribute "public_id"
+     */
+    public function testPropertyPublicId()
+    {
+    }
 }

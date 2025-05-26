@@ -117,4 +117,11 @@ class MenuItemOptionSetBaseTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCellLayoutType()
     {
     }
+
+    /**
+     * Test attribute "public_id"
+     */
+    public function testPropertyPublicId()
+    {
+    }
 }

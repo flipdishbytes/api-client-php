@@ -152,4 +152,11 @@ class CreateFullMenuItemOptionSetItemTest extends \PHPUnit_Framework_TestCase
     public function testPropertyImageUrl()
     {
     }
+
+    /**
+     * Test attribute "public_id"
+     */
+    public function testPropertyPublicId()
+    {
+    }
 }

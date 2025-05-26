@@ -66,7 +66,8 @@ class CreateFullMenuSection implements ModelInterface, ArrayAccess
         'is_available' => 'bool',
         'is_hidden_from_customers' => 'bool',
         'image_url' => 'string',
-        'menu_section_id' => 'int'
+        'menu_section_id' => 'int',
+        'public_id' => 'string'
     ];
 
     /**
@@ -83,7 +84,8 @@ class CreateFullMenuSection implements ModelInterface, ArrayAccess
         'is_available' => null,
         'is_hidden_from_customers' => null,
         'image_url' => null,
-        'menu_section_id' => 'int32'
+        'menu_section_id' => 'int32',
+        'public_id' => 'uuid'
     ];
 
     /**
@@ -121,7 +123,8 @@ class CreateFullMenuSection implements ModelInterface, ArrayAccess
         'is_available' => 'IsAvailable',
         'is_hidden_from_customers' => 'IsHiddenFromCustomers',
         'image_url' => 'ImageUrl',
-        'menu_section_id' => 'MenuSectionId'
+        'menu_section_id' => 'MenuSectionId',
+        'public_id' => 'PublicId'
     ];
 
     /**
@@ -138,7 +141,8 @@ class CreateFullMenuSection implements ModelInterface, ArrayAccess
         'is_available' => 'setIsAvailable',
         'is_hidden_from_customers' => 'setIsHiddenFromCustomers',
         'image_url' => 'setImageUrl',
-        'menu_section_id' => 'setMenuSectionId'
+        'menu_section_id' => 'setMenuSectionId',
+        'public_id' => 'setPublicId'
     ];
 
     /**
@@ -155,7 +159,8 @@ class CreateFullMenuSection implements ModelInterface, ArrayAccess
         'is_available' => 'getIsAvailable',
         'is_hidden_from_customers' => 'getIsHiddenFromCustomers',
         'image_url' => 'getImageUrl',
-        'menu_section_id' => 'getMenuSectionId'
+        'menu_section_id' => 'getMenuSectionId',
+        'public_id' => 'getPublicId'
     ];
 
     /**
@@ -227,6 +232,7 @@ class CreateFullMenuSection implements ModelInterface, ArrayAccess
         $this->container['is_hidden_from_customers'] = isset($data['is_hidden_from_customers']) ? $data['is_hidden_from_customers'] : null;
         $this->container['image_url'] = isset($data['image_url']) ? $data['image_url'] : null;
         $this->container['menu_section_id'] = isset($data['menu_section_id']) ? $data['menu_section_id'] : null;
+        $this->container['public_id'] = isset($data['public_id']) ? $data['public_id'] : null;
     }
 
     /**
@@ -495,6 +501,30 @@ class CreateFullMenuSection implements ModelInterface, ArrayAccess
     public function setMenuSectionId($menu_section_id)
     {
         $this->container['menu_section_id'] = $menu_section_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets public_id
+     *
+     * @return string
+     */
+    public function getPublicId()
+    {
+        return $this->container['public_id'];
+    }
+
+    /**
+     * Sets public_id
+     *
+     * @param string $public_id Permanent reference to the item.
+     *
+     * @return $this
+     */
+    public function setPublicId($public_id)
+    {
+        $this->container['public_id'] = $public_id;
 
         return $this;
     }

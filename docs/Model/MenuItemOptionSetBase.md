@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **min_select_count** | **int** | Minimum items must be selected | [optional] 
 **max_select_count** | **int** | Maximum number of items can be selected | [optional] 
 **cell_layout_type** | **string** | Small | Medium | Large  Affects the layout of the menu. | [optional] 
+**public_id** | **string** | Permanent reference to the item. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

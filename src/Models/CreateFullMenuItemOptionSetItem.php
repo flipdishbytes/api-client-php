@@ -68,7 +68,8 @@ class CreateFullMenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'is_available' => 'bool',
         'display_order' => 'int',
         'cell_layout_type' => 'string',
-        'image_url' => 'string'
+        'image_url' => 'string',
+        'public_id' => 'string'
     ];
 
     /**
@@ -87,7 +88,8 @@ class CreateFullMenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'is_available' => null,
         'display_order' => 'int32',
         'cell_layout_type' => null,
-        'image_url' => null
+        'image_url' => null,
+        'public_id' => 'uuid'
     ];
 
     /**
@@ -127,7 +129,8 @@ class CreateFullMenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'is_available' => 'IsAvailable',
         'display_order' => 'DisplayOrder',
         'cell_layout_type' => 'CellLayoutType',
-        'image_url' => 'ImageUrl'
+        'image_url' => 'ImageUrl',
+        'public_id' => 'PublicId'
     ];
 
     /**
@@ -146,7 +149,8 @@ class CreateFullMenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'is_available' => 'setIsAvailable',
         'display_order' => 'setDisplayOrder',
         'cell_layout_type' => 'setCellLayoutType',
-        'image_url' => 'setImageUrl'
+        'image_url' => 'setImageUrl',
+        'public_id' => 'setPublicId'
     ];
 
     /**
@@ -165,7 +169,8 @@ class CreateFullMenuItemOptionSetItem implements ModelInterface, ArrayAccess
         'is_available' => 'getIsAvailable',
         'display_order' => 'getDisplayOrder',
         'cell_layout_type' => 'getCellLayoutType',
-        'image_url' => 'getImageUrl'
+        'image_url' => 'getImageUrl',
+        'public_id' => 'getPublicId'
     ];
 
     /**
@@ -258,6 +263,7 @@ class CreateFullMenuItemOptionSetItem implements ModelInterface, ArrayAccess
         $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
         $this->container['cell_layout_type'] = isset($data['cell_layout_type']) ? $data['cell_layout_type'] : null;
         $this->container['image_url'] = isset($data['image_url']) ? $data['image_url'] : null;
+        $this->container['public_id'] = isset($data['public_id']) ? $data['public_id'] : null;
     }
 
     /**
@@ -561,6 +567,30 @@ class CreateFullMenuItemOptionSetItem implements ModelInterface, ArrayAccess
     public function setImageUrl($image_url)
     {
         $this->container['image_url'] = $image_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets public_id
+     *
+     * @return string
+     */
+    public function getPublicId()
+    {
+        return $this->container['public_id'];
+    }
+
+    /**
+     * Sets public_id
+     *
+     * @param string $public_id Permanent reference to the item.
+     *
+     * @return $this
+     */
+    public function setPublicId($public_id)
+    {
+        $this->container['public_id'] = $public_id;
 
         return $this;
     }

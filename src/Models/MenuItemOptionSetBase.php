@@ -63,7 +63,8 @@ class MenuItemOptionSetBase implements ModelInterface, ArrayAccess
         'display_order' => 'int',
         'min_select_count' => 'int',
         'max_select_count' => 'int',
-        'cell_layout_type' => 'string'
+        'cell_layout_type' => 'string',
+        'public_id' => 'string'
     ];
 
     /**
@@ -77,7 +78,8 @@ class MenuItemOptionSetBase implements ModelInterface, ArrayAccess
         'display_order' => 'int32',
         'min_select_count' => 'int32',
         'max_select_count' => 'int32',
-        'cell_layout_type' => null
+        'cell_layout_type' => null,
+        'public_id' => 'uuid'
     ];
 
     /**
@@ -112,7 +114,8 @@ class MenuItemOptionSetBase implements ModelInterface, ArrayAccess
         'display_order' => 'DisplayOrder',
         'min_select_count' => 'MinSelectCount',
         'max_select_count' => 'MaxSelectCount',
-        'cell_layout_type' => 'CellLayoutType'
+        'cell_layout_type' => 'CellLayoutType',
+        'public_id' => 'PublicId'
     ];
 
     /**
@@ -126,7 +129,8 @@ class MenuItemOptionSetBase implements ModelInterface, ArrayAccess
         'display_order' => 'setDisplayOrder',
         'min_select_count' => 'setMinSelectCount',
         'max_select_count' => 'setMaxSelectCount',
-        'cell_layout_type' => 'setCellLayoutType'
+        'cell_layout_type' => 'setCellLayoutType',
+        'public_id' => 'setPublicId'
     ];
 
     /**
@@ -140,7 +144,8 @@ class MenuItemOptionSetBase implements ModelInterface, ArrayAccess
         'display_order' => 'getDisplayOrder',
         'min_select_count' => 'getMinSelectCount',
         'max_select_count' => 'getMaxSelectCount',
-        'cell_layout_type' => 'getCellLayoutType'
+        'cell_layout_type' => 'getCellLayoutType',
+        'public_id' => 'getPublicId'
     ];
 
     /**
@@ -228,6 +233,7 @@ class MenuItemOptionSetBase implements ModelInterface, ArrayAccess
         $this->container['min_select_count'] = isset($data['min_select_count']) ? $data['min_select_count'] : null;
         $this->container['max_select_count'] = isset($data['max_select_count']) ? $data['max_select_count'] : null;
         $this->container['cell_layout_type'] = isset($data['cell_layout_type']) ? $data['cell_layout_type'] : null;
+        $this->container['public_id'] = isset($data['public_id']) ? $data['public_id'] : null;
     }
 
     /**
@@ -426,6 +432,30 @@ class MenuItemOptionSetBase implements ModelInterface, ArrayAccess
             );
         }
         $this->container['cell_layout_type'] = $cell_layout_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets public_id
+     *
+     * @return string
+     */
+    public function getPublicId()
+    {
+        return $this->container['public_id'];
+    }
+
+    /**
+     * Sets public_id
+     *
+     * @param string $public_id Permanent reference to the item.
+     *
+     * @return $this
+     */
+    public function setPublicId($public_id)
+    {
+        $this->container['public_id'] = $public_id;
 
         return $this;
     }

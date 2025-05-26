@@ -71,7 +71,8 @@ class MenuSectionItemBase implements ModelInterface, ArrayAccess
         'image_name' => 'string',
         'image_url' => 'string',
         'menu_item_id' => 'int',
-        'exclude_from_voucher_discounting' => 'bool'
+        'exclude_from_voucher_discounting' => 'bool',
+        'public_id' => 'string'
     ];
 
     /**
@@ -93,7 +94,8 @@ class MenuSectionItemBase implements ModelInterface, ArrayAccess
         'image_name' => null,
         'image_url' => null,
         'menu_item_id' => 'int32',
-        'exclude_from_voucher_discounting' => null
+        'exclude_from_voucher_discounting' => null,
+        'public_id' => 'uuid'
     ];
 
     /**
@@ -136,7 +138,8 @@ class MenuSectionItemBase implements ModelInterface, ArrayAccess
         'image_name' => 'ImageName',
         'image_url' => 'ImageUrl',
         'menu_item_id' => 'MenuItemId',
-        'exclude_from_voucher_discounting' => 'ExcludeFromVoucherDiscounting'
+        'exclude_from_voucher_discounting' => 'ExcludeFromVoucherDiscounting',
+        'public_id' => 'PublicId'
     ];
 
     /**
@@ -158,7 +161,8 @@ class MenuSectionItemBase implements ModelInterface, ArrayAccess
         'image_name' => 'setImageName',
         'image_url' => 'setImageUrl',
         'menu_item_id' => 'setMenuItemId',
-        'exclude_from_voucher_discounting' => 'setExcludeFromVoucherDiscounting'
+        'exclude_from_voucher_discounting' => 'setExcludeFromVoucherDiscounting',
+        'public_id' => 'setPublicId'
     ];
 
     /**
@@ -180,7 +184,8 @@ class MenuSectionItemBase implements ModelInterface, ArrayAccess
         'image_name' => 'getImageName',
         'image_url' => 'getImageUrl',
         'menu_item_id' => 'getMenuItemId',
-        'exclude_from_voucher_discounting' => 'getExcludeFromVoucherDiscounting'
+        'exclude_from_voucher_discounting' => 'getExcludeFromVoucherDiscounting',
+        'public_id' => 'getPublicId'
     ];
 
     /**
@@ -295,6 +300,7 @@ class MenuSectionItemBase implements ModelInterface, ArrayAccess
         $this->container['image_url'] = isset($data['image_url']) ? $data['image_url'] : null;
         $this->container['menu_item_id'] = isset($data['menu_item_id']) ? $data['menu_item_id'] : null;
         $this->container['exclude_from_voucher_discounting'] = isset($data['exclude_from_voucher_discounting']) ? $data['exclude_from_voucher_discounting'] : null;
+        $this->container['public_id'] = isset($data['public_id']) ? $data['public_id'] : null;
     }
 
     /**
@@ -717,6 +723,30 @@ class MenuSectionItemBase implements ModelInterface, ArrayAccess
     public function setExcludeFromVoucherDiscounting($exclude_from_voucher_discounting)
     {
         $this->container['exclude_from_voucher_discounting'] = $exclude_from_voucher_discounting;
+
+        return $this;
+    }
+
+    /**
+     * Gets public_id
+     *
+     * @return string
+     */
+    public function getPublicId()
+    {
+        return $this->container['public_id'];
+    }
+
+    /**
+     * Sets public_id
+     *
+     * @param string $public_id Permanent reference to the item.
+     *
+     * @return $this
+     */
+    public function setPublicId($public_id)
+    {
+        $this->container['public_id'] = $public_id;
 
         return $this;
     }
