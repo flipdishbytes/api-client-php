@@ -278,8 +278,10 @@ class AppStoreApp implements ModelInterface, ArrayAccess
     const STORE_SELECTOR_TYPE_MULTIPLE = 'Multiple';
     const TEAMMATE_APP_ACCESS_LEVEL_OWNER = 'Owner';
     const TEAMMATE_APP_ACCESS_LEVEL_STORE_OWNER = 'StoreOwner';
+    const TEAMMATE_APP_ACCESS_LEVEL_PROPERTY_OWNER = 'PropertyOwner';
     const TEAMMATE_APP_ACCESS_LEVEL_MANAGED_OWNER = 'ManagedOwner';
     const TEAMMATE_APP_ACCESS_LEVEL_INTEGRATOR = 'Integrator';
+    const TEAMMATE_APP_ACCESS_LEVEL_PROPERTY_MANAGER = 'PropertyManager';
     const TEAMMATE_APP_ACCESS_LEVEL_STORE_MANAGER = 'StoreManager';
     const TEAMMATE_APP_ACCESS_LEVEL_STORE_STAFF = 'StoreStaff';
     const TEAMMATE_APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS = 'StoreReadOnlyAccess';
@@ -363,8 +365,10 @@ class AppStoreApp implements ModelInterface, ArrayAccess
         return [
             self::TEAMMATE_APP_ACCESS_LEVEL_OWNER,
             self::TEAMMATE_APP_ACCESS_LEVEL_STORE_OWNER,
+            self::TEAMMATE_APP_ACCESS_LEVEL_PROPERTY_OWNER,
             self::TEAMMATE_APP_ACCESS_LEVEL_MANAGED_OWNER,
             self::TEAMMATE_APP_ACCESS_LEVEL_INTEGRATOR,
+            self::TEAMMATE_APP_ACCESS_LEVEL_PROPERTY_MANAGER,
             self::TEAMMATE_APP_ACCESS_LEVEL_STORE_MANAGER,
             self::TEAMMATE_APP_ACCESS_LEVEL_STORE_STAFF,
             self::TEAMMATE_APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS,
