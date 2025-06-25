@@ -210,6 +210,13 @@ class PayoutReport3DetailsFlipdishFeesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "refunded_fees_on_pos_sales"
+     */
+    public function testPropertyRefundedFeesOnPosSales()
+    {
+    }
+
+    /**
      * Test attribute "total"
      */
     public function testPropertyTotal()

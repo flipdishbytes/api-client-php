@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **other_integration_tips** | **double** |  | [optional] 
 **refunded_fees_on_refunded_sales** | **double** |  | [optional] 
 **vat** | **double** |  | [optional] 
+**refunded_fees_on_pos_sales** | **double** |  | [optional] 
 **total** | **double** |  | [optional] 
 **third_party_integration_fees_and_tips** | **double** |  | [optional] 
 **web_and_app_card_on_x_orders** | **int** |  | [optional] 

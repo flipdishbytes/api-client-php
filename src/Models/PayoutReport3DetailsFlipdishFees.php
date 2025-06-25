@@ -76,6 +76,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'other_integration_tips' => 'double',
         'refunded_fees_on_refunded_sales' => 'double',
         'vat' => 'double',
+        'refunded_fees_on_pos_sales' => 'double',
         'total' => 'double',
         'third_party_integration_fees_and_tips' => 'double',
         'web_and_app_card_on_x_orders' => 'int',
@@ -112,6 +113,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'other_integration_tips' => 'double',
         'refunded_fees_on_refunded_sales' => 'double',
         'vat' => 'double',
+        'refunded_fees_on_pos_sales' => 'double',
         'total' => 'double',
         'third_party_integration_fees_and_tips' => 'double',
         'web_and_app_card_on_x_orders' => 'int32',
@@ -169,6 +171,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'other_integration_tips' => 'OtherIntegrationTips',
         'refunded_fees_on_refunded_sales' => 'RefundedFeesOnRefundedSales',
         'vat' => 'Vat',
+        'refunded_fees_on_pos_sales' => 'RefundedFeesOnPosSales',
         'total' => 'Total',
         'third_party_integration_fees_and_tips' => 'ThirdPartyIntegrationFeesAndTips',
         'web_and_app_card_on_x_orders' => 'WebAndAppCardOnXOrders',
@@ -205,6 +208,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'other_integration_tips' => 'setOtherIntegrationTips',
         'refunded_fees_on_refunded_sales' => 'setRefundedFeesOnRefundedSales',
         'vat' => 'setVat',
+        'refunded_fees_on_pos_sales' => 'setRefundedFeesOnPosSales',
         'total' => 'setTotal',
         'third_party_integration_fees_and_tips' => 'setThirdPartyIntegrationFeesAndTips',
         'web_and_app_card_on_x_orders' => 'setWebAndAppCardOnXOrders',
@@ -241,6 +245,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'other_integration_tips' => 'getOtherIntegrationTips',
         'refunded_fees_on_refunded_sales' => 'getRefundedFeesOnRefundedSales',
         'vat' => 'getVat',
+        'refunded_fees_on_pos_sales' => 'getRefundedFeesOnPosSales',
         'total' => 'getTotal',
         'third_party_integration_fees_and_tips' => 'getThirdPartyIntegrationFeesAndTips',
         'web_and_app_card_on_x_orders' => 'getWebAndAppCardOnXOrders',
@@ -331,6 +336,7 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         $this->container['other_integration_tips'] = isset($data['other_integration_tips']) ? $data['other_integration_tips'] : null;
         $this->container['refunded_fees_on_refunded_sales'] = isset($data['refunded_fees_on_refunded_sales']) ? $data['refunded_fees_on_refunded_sales'] : null;
         $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
+        $this->container['refunded_fees_on_pos_sales'] = isset($data['refunded_fees_on_pos_sales']) ? $data['refunded_fees_on_pos_sales'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['third_party_integration_fees_and_tips'] = isset($data['third_party_integration_fees_and_tips']) ? $data['third_party_integration_fees_and_tips'] : null;
         $this->container['web_and_app_card_on_x_orders'] = isset($data['web_and_app_card_on_x_orders']) ? $data['web_and_app_card_on_x_orders'] : null;
@@ -818,6 +824,30 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     public function setVat($vat)
     {
         $this->container['vat'] = $vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets refunded_fees_on_pos_sales
+     *
+     * @return double
+     */
+    public function getRefundedFeesOnPosSales()
+    {
+        return $this->container['refunded_fees_on_pos_sales'];
+    }
+
+    /**
+     * Sets refunded_fees_on_pos_sales
+     *
+     * @param double $refunded_fees_on_pos_sales refunded_fees_on_pos_sales
+     *
+     * @return $this
+     */
+    public function setRefundedFeesOnPosSales($refunded_fees_on_pos_sales)
+    {
+        $this->container['refunded_fees_on_pos_sales'] = $refunded_fees_on_pos_sales;
 
         return $this;
     }
