@@ -82,6 +82,16 @@ class VouchersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getVoucherByCode
+     *
+     * .
+     *
+     */
+    public function testGetVoucherByCode()
+    {
+    }
+
+    /**
      * Test case for getVoucherById
      *
      * .

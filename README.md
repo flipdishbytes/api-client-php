@@ -592,6 +592,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**getPreviousOrderCountForStore**](docs/Api/UsersApi.md#getpreviousordercountforstore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
 *UsersApi* | [**getRoles**](docs/Api/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | 
 *VouchersApi* | [**createVoucher**](docs/Api/VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | 
+*VouchersApi* | [**getVoucherByCode**](docs/Api/VouchersApi.md#getvoucherbycode) | **GET** /api/v1.0/{appId}/vouchers/code/{code} | 
 *VouchersApi* | [**getVoucherById**](docs/Api/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | 
 *VouchersApi* | [**getVoucherStatsById**](docs/Api/VouchersApi.md#getvoucherstatsbyid) | **GET** /api/v1.0/vouchers/stats/{voucherId} | 
 *VouchersApi* | [**getVoucherValidityPeriods**](docs/Api/VouchersApi.md#getvouchervalidityperiods) | **GET** /api/v1.0/{appId}/vouchers/{voucherId}/validity-periods | 
@@ -1254,6 +1255,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultTelemetrySeriesResult](docs/Model/RestApiResultTelemetrySeriesResult.md)
  - [RestApiResultTipConfiguration](docs/Model/RestApiResultTipConfiguration.md)
  - [RestApiResultUpdateMobileAppsSubmissionStatus](docs/Model/RestApiResultUpdateMobileAppsSubmissionStatus.md)
+ - [RestApiResultVoucher](docs/Model/RestApiResultVoucher.md)
  - [RestApiResultVoucherWithStats](docs/Model/RestApiResultVoucherWithStats.md)
  - [RestApiResultWebsiteImage](docs/Model/RestApiResultWebsiteImage.md)
  - [RestApiResultWebsiteTestimonial](docs/Model/RestApiResultWebsiteTestimonial.md)
