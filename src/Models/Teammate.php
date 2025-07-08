@@ -59,6 +59,7 @@ class Teammate implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'teammate_id' => 'string',
+        'user_id' => 'int',
         'name' => 'string',
         'last_activity' => '\DateTime',
         'app_id' => 'string',
@@ -77,6 +78,7 @@ class Teammate implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'teammate_id' => null,
+        'user_id' => 'int32',
         'name' => null,
         'last_activity' => 'date-time',
         'app_id' => null,
@@ -116,6 +118,7 @@ class Teammate implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'teammate_id' => 'TeammateId',
+        'user_id' => 'UserId',
         'name' => 'Name',
         'last_activity' => 'LastActivity',
         'app_id' => 'AppId',
@@ -134,6 +137,7 @@ class Teammate implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'teammate_id' => 'setTeammateId',
+        'user_id' => 'setUserId',
         'name' => 'setName',
         'last_activity' => 'setLastActivity',
         'app_id' => 'setAppId',
@@ -152,6 +156,7 @@ class Teammate implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'teammate_id' => 'getTeammateId',
+        'user_id' => 'getUserId',
         'name' => 'getName',
         'last_activity' => 'getLastActivity',
         'app_id' => 'getAppId',
@@ -278,6 +283,7 @@ class Teammate implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['teammate_id'] = isset($data['teammate_id']) ? $data['teammate_id'] : null;
+        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['last_activity'] = isset($data['last_activity']) ? $data['last_activity'] : null;
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
@@ -349,6 +355,30 @@ class Teammate implements ModelInterface, ArrayAccess
     public function setTeammateId($teammate_id)
     {
         $this->container['teammate_id'] = $teammate_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_id
+     *
+     * @return int
+     */
+    public function getUserId()
+    {
+        return $this->container['user_id'];
+    }
+
+    /**
+     * Sets user_id
+     *
+     * @param int $user_id User ID of the teammate
+     *
+     * @return $this
+     */
+    public function setUserId($user_id)
+    {
+        $this->container['user_id'] = $user_id;
 
         return $this;
     }

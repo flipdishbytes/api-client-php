@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **teammate_id** | **string** | Unique indentifier | [optional] 
+**user_id** | **int** | User ID of the teammate | [optional] 
 **name** | **string** | Name | [optional] 
 **last_activity** | [**\DateTime**](\DateTime.md) | Last activity | [optional] 
 **app_id** | **string** | Access level is for this App | [optional] 

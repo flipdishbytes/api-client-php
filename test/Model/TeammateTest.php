@@ -84,6 +84,13 @@ class TeammateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "user_id"
+     */
+    public function testPropertyUserId()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
