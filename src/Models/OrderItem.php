@@ -66,6 +66,7 @@ class OrderItem implements ModelInterface, ArrayAccess
         'name' => 'string',
         'description' => 'string',
         'price' => 'double',
+        'tax_amount' => 'double',
         'price_including_option_set_items' => 'double',
         'menu_item_id' => 'int',
         'menu_item_display_order' => 'int',
@@ -87,6 +88,7 @@ class OrderItem implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'price' => 'double',
+        'tax_amount' => 'double',
         'price_including_option_set_items' => 'double',
         'menu_item_id' => 'int32',
         'menu_item_display_order' => 'int32',
@@ -129,6 +131,7 @@ class OrderItem implements ModelInterface, ArrayAccess
         'name' => 'Name',
         'description' => 'Description',
         'price' => 'Price',
+        'tax_amount' => 'TaxAmount',
         'price_including_option_set_items' => 'PriceIncludingOptionSetItems',
         'menu_item_id' => 'MenuItemId',
         'menu_item_display_order' => 'MenuItemDisplayOrder',
@@ -150,6 +153,7 @@ class OrderItem implements ModelInterface, ArrayAccess
         'name' => 'setName',
         'description' => 'setDescription',
         'price' => 'setPrice',
+        'tax_amount' => 'setTaxAmount',
         'price_including_option_set_items' => 'setPriceIncludingOptionSetItems',
         'menu_item_id' => 'setMenuItemId',
         'menu_item_display_order' => 'setMenuItemDisplayOrder',
@@ -171,6 +175,7 @@ class OrderItem implements ModelInterface, ArrayAccess
         'name' => 'getName',
         'description' => 'getDescription',
         'price' => 'getPrice',
+        'tax_amount' => 'getTaxAmount',
         'price_including_option_set_items' => 'getPriceIncludingOptionSetItems',
         'menu_item_id' => 'getMenuItemId',
         'menu_item_display_order' => 'getMenuItemDisplayOrder',
@@ -246,6 +251,7 @@ class OrderItem implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['tax_amount'] = isset($data['tax_amount']) ? $data['tax_amount'] : null;
         $this->container['price_including_option_set_items'] = isset($data['price_including_option_set_items']) ? $data['price_including_option_set_items'] : null;
         $this->container['menu_item_id'] = isset($data['menu_item_id']) ? $data['menu_item_id'] : null;
         $this->container['menu_item_display_order'] = isset($data['menu_item_display_order']) ? $data['menu_item_display_order'] : null;
@@ -465,6 +471,30 @@ class OrderItem implements ModelInterface, ArrayAccess
     public function setPrice($price)
     {
         $this->container['price'] = $price;
+
+        return $this;
+    }
+
+    /**
+     * Gets tax_amount
+     *
+     * @return double
+     */
+    public function getTaxAmount()
+    {
+        return $this->container['tax_amount'];
+    }
+
+    /**
+     * Sets tax_amount
+     *
+     * @param double $tax_amount Tax currency amount
+     *
+     * @return $this
+     */
+    public function setTaxAmount($tax_amount)
+    {
+        $this->container['tax_amount'] = $tax_amount;
 
         return $this;
     }

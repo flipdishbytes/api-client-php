@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **name** | **string** | Name | [optional] 
 **description** | **string** | Description | [optional] 
 **price** | **double** | Price | [optional] 
+**tax_amount** | **double** | Tax currency amount | [optional] 
 **price_including_option_set_items** | **double** | Price including option set items | [optional] 
 **menu_item_id** | **int** | Menu item identifier | [optional] 
 **menu_item_display_order** | **int** | Menu item display order | [optional] 

@@ -65,7 +65,9 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'currency' => 'string',
         'coordinates' => '\Flipdish\\Client\Models\Coordinates',
         'store_timezone' => 'string',
-        'store_group_id' => 'int'
+        'store_group_id' => 'int',
+        'tax_id' => 'string',
+        'pretty_address' => 'string'
     ];
 
     /**
@@ -81,7 +83,9 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'currency' => null,
         'coordinates' => null,
         'store_timezone' => null,
-        'store_group_id' => 'int32'
+        'store_group_id' => 'int32',
+        'tax_id' => null,
+        'pretty_address' => null
     ];
 
     /**
@@ -118,7 +122,9 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'currency' => 'Currency',
         'coordinates' => 'Coordinates',
         'store_timezone' => 'StoreTimezone',
-        'store_group_id' => 'StoreGroupId'
+        'store_group_id' => 'StoreGroupId',
+        'tax_id' => 'TaxId',
+        'pretty_address' => 'PrettyAddress'
     ];
 
     /**
@@ -134,7 +140,9 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'currency' => 'setCurrency',
         'coordinates' => 'setCoordinates',
         'store_timezone' => 'setStoreTimezone',
-        'store_group_id' => 'setStoreGroupId'
+        'store_group_id' => 'setStoreGroupId',
+        'tax_id' => 'setTaxId',
+        'pretty_address' => 'setPrettyAddress'
     ];
 
     /**
@@ -150,7 +158,9 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'currency' => 'getCurrency',
         'coordinates' => 'getCoordinates',
         'store_timezone' => 'getStoreTimezone',
-        'store_group_id' => 'getStoreGroupId'
+        'store_group_id' => 'getStoreGroupId',
+        'tax_id' => 'getTaxId',
+        'pretty_address' => 'getPrettyAddress'
     ];
 
     /**
@@ -458,6 +468,8 @@ class StoreSummary implements ModelInterface, ArrayAccess
         $this->container['coordinates'] = isset($data['coordinates']) ? $data['coordinates'] : null;
         $this->container['store_timezone'] = isset($data['store_timezone']) ? $data['store_timezone'] : null;
         $this->container['store_group_id'] = isset($data['store_group_id']) ? $data['store_group_id'] : null;
+        $this->container['tax_id'] = isset($data['tax_id']) ? $data['tax_id'] : null;
+        $this->container['pretty_address'] = isset($data['pretty_address']) ? $data['pretty_address'] : null;
     }
 
     /**
@@ -689,6 +701,54 @@ class StoreSummary implements ModelInterface, ArrayAccess
     public function setStoreGroupId($store_group_id)
     {
         $this->container['store_group_id'] = $store_group_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets tax_id
+     *
+     * @return string
+     */
+    public function getTaxId()
+    {
+        return $this->container['tax_id'];
+    }
+
+    /**
+     * Sets tax_id
+     *
+     * @param string $tax_id VAT number or generic Tax ID of the store
+     *
+     * @return $this
+     */
+    public function setTaxId($tax_id)
+    {
+        $this->container['tax_id'] = $tax_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets pretty_address
+     *
+     * @return string
+     */
+    public function getPrettyAddress()
+    {
+        return $this->container['pretty_address'];
+    }
+
+    /**
+     * Sets pretty_address
+     *
+     * @param string $pretty_address Address of the store
+     *
+     * @return $this
+     */
+    public function setPrettyAddress($pretty_address)
+    {
+        $this->container['pretty_address'] = $pretty_address;
 
         return $this;
     }

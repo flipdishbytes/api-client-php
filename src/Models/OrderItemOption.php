@@ -64,6 +64,7 @@ class OrderItemOption implements ModelInterface, ArrayAccess
         'is_master_option_set_item' => 'bool',
         'name' => 'string',
         'price' => 'double',
+        'tax_amount' => 'double',
         'menu_item_option_display_order' => 'int',
         'menu_item_option_set_display_order' => 'int',
         'deposit_return_fee' => 'double'
@@ -81,6 +82,7 @@ class OrderItemOption implements ModelInterface, ArrayAccess
         'is_master_option_set_item' => null,
         'name' => null,
         'price' => 'double',
+        'tax_amount' => 'double',
         'menu_item_option_display_order' => 'int32',
         'menu_item_option_set_display_order' => 'int32',
         'deposit_return_fee' => 'double'
@@ -119,6 +121,7 @@ class OrderItemOption implements ModelInterface, ArrayAccess
         'is_master_option_set_item' => 'IsMasterOptionSetItem',
         'name' => 'Name',
         'price' => 'Price',
+        'tax_amount' => 'TaxAmount',
         'menu_item_option_display_order' => 'MenuItemOptionDisplayOrder',
         'menu_item_option_set_display_order' => 'MenuItemOptionSetDisplayOrder',
         'deposit_return_fee' => 'DepositReturnFee'
@@ -136,6 +139,7 @@ class OrderItemOption implements ModelInterface, ArrayAccess
         'is_master_option_set_item' => 'setIsMasterOptionSetItem',
         'name' => 'setName',
         'price' => 'setPrice',
+        'tax_amount' => 'setTaxAmount',
         'menu_item_option_display_order' => 'setMenuItemOptionDisplayOrder',
         'menu_item_option_set_display_order' => 'setMenuItemOptionSetDisplayOrder',
         'deposit_return_fee' => 'setDepositReturnFee'
@@ -153,6 +157,7 @@ class OrderItemOption implements ModelInterface, ArrayAccess
         'is_master_option_set_item' => 'getIsMasterOptionSetItem',
         'name' => 'getName',
         'price' => 'getPrice',
+        'tax_amount' => 'getTaxAmount',
         'menu_item_option_display_order' => 'getMenuItemOptionDisplayOrder',
         'menu_item_option_set_display_order' => 'getMenuItemOptionSetDisplayOrder',
         'deposit_return_fee' => 'getDepositReturnFee'
@@ -224,6 +229,7 @@ class OrderItemOption implements ModelInterface, ArrayAccess
         $this->container['is_master_option_set_item'] = isset($data['is_master_option_set_item']) ? $data['is_master_option_set_item'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['tax_amount'] = isset($data['tax_amount']) ? $data['tax_amount'] : null;
         $this->container['menu_item_option_display_order'] = isset($data['menu_item_option_display_order']) ? $data['menu_item_option_display_order'] : null;
         $this->container['menu_item_option_set_display_order'] = isset($data['menu_item_option_set_display_order']) ? $data['menu_item_option_set_display_order'] : null;
         $this->container['deposit_return_fee'] = isset($data['deposit_return_fee']) ? $data['deposit_return_fee'] : null;
@@ -393,6 +399,30 @@ class OrderItemOption implements ModelInterface, ArrayAccess
     public function setPrice($price)
     {
         $this->container['price'] = $price;
+
+        return $this;
+    }
+
+    /**
+     * Gets tax_amount
+     *
+     * @return double
+     */
+    public function getTaxAmount()
+    {
+        return $this->container['tax_amount'];
+    }
+
+    /**
+     * Sets tax_amount
+     *
+     * @param double $tax_amount Tax currency amount
+     *
+     * @return $this
+     */
+    public function setTaxAmount($tax_amount)
+    {
+        $this->container['tax_amount'] = $tax_amount;
 
         return $this;
     }

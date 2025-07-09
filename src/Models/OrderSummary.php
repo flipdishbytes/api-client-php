@@ -1586,7 +1586,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_location
      *
-     * @param \Flipdish\\Client\Models\DeliveryLocation $delivery_location delivery_location
+     * @param \Flipdish\\Client\Models\DeliveryLocation $delivery_location Delivery location details
      *
      * @return $this
      */

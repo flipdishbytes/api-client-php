@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **order_drop_off_location** | [**\Flipdish\\Client\Models\OrderDropOffLocation**](OrderDropOffLocation.md) | DropOffLocation selected for this order | [optional] 
 **fulfillment_status** | [**\Flipdish\\Client\Models\OrderFulfillmentStatusBase**](OrderFulfillmentStatusBase.md) | [BETA - this is a new field in development] Fulfillment status for this order | [optional] 
 **order_batch_info** | [**\Flipdish\\Client\Models\OrderBatchSummary**](OrderBatchSummary.md) | OrderBatch information | [optional] 
+**tax_items** | [**\Flipdish\\Client\Models\TaxItem[]**](TaxItem.md) | A collection of tax items on the order. | [optional] 
 **created_campaign_voucher_id** | **int** | The id of the campaign voucher that was created from this order | [optional] 
 **order_id** | **int** | Order identifier | [optional] 
 **local_order_id** | **string** | Local order Id. This is used for displaying a \&quot;shorter\&quot; order ID for customers (eg. Kiosk orders) | [optional] 
@@ -54,6 +55,7 @@ Name | Type | Description | Notes
 **order_tracking_code** | **string** | Unique, 6 character long alpha numeric code for tracking. | [optional] 
 **delivery_fee_area_id** | **int** | Delivery area identifier | [optional] 
 **receipt_code** | **string** | Code used to view the order&#39;s receipt | [optional] 
+**total_deposit_return_fee_amount** | **double** | This contains the total deposit return fee amount for the order. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

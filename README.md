@@ -1354,6 +1354,7 @@ Class | Method | HTTP request | Description
  - [SubscriptionStore](docs/Model/SubscriptionStore.md)
  - [SubscriptionSummary](docs/Model/SubscriptionSummary.md)
  - [SupportedCountry](docs/Model/SupportedCountry.md)
+ - [TaxItem](docs/Model/TaxItem.md)
  - [TaxRate](docs/Model/TaxRate.md)
  - [Teammate](docs/Model/Teammate.md)
  - [TeammateBase](docs/Model/TeammateBase.md)

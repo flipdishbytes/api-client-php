@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomerSummary
+ * TaxItem
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * CustomerSummary Class Doc Comment
+ * TaxItem Class Doc Comment
  *
  * @category Class
- * @description Customer summary
+ * @description A collection of tax items on the order.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomerSummary implements ModelInterface, ArrayAccess
+class TaxItem implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class CustomerSummary implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'CustomerSummary';
+    protected static $swaggerModelName = 'TaxItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,12 +58,9 @@ class CustomerSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
         'name' => 'string',
-        'email_address' => 'string',
-        'phone_number_local_format' => 'string',
-        'phone_number' => 'string',
-        'language_preference' => 'string'
+        'rate' => 'double',
+        'amount' => 'double'
     ];
 
     /**
@@ -72,12 +69,9 @@ class CustomerSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'int32',
         'name' => null,
-        'email_address' => null,
-        'phone_number_local_format' => null,
-        'phone_number' => null,
-        'language_preference' => null
+        'rate' => 'double',
+        'amount' => 'double'
     ];
 
     /**
@@ -107,12 +101,9 @@ class CustomerSummary implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'Id',
         'name' => 'Name',
-        'email_address' => 'EmailAddress',
-        'phone_number_local_format' => 'PhoneNumberLocalFormat',
-        'phone_number' => 'PhoneNumber',
-        'language_preference' => 'LanguagePreference'
+        'rate' => 'Rate',
+        'amount' => 'Amount'
     ];
 
     /**
@@ -121,12 +112,9 @@ class CustomerSummary implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
         'name' => 'setName',
-        'email_address' => 'setEmailAddress',
-        'phone_number_local_format' => 'setPhoneNumberLocalFormat',
-        'phone_number' => 'setPhoneNumber',
-        'language_preference' => 'setLanguagePreference'
+        'rate' => 'setRate',
+        'amount' => 'setAmount'
     ];
 
     /**
@@ -135,12 +123,9 @@ class CustomerSummary implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
         'name' => 'getName',
-        'email_address' => 'getEmailAddress',
-        'phone_number_local_format' => 'getPhoneNumberLocalFormat',
-        'phone_number' => 'getPhoneNumber',
-        'language_preference' => 'getLanguagePreference'
+        'rate' => 'getRate',
+        'amount' => 'getAmount'
     ];
 
     /**
@@ -203,12 +188,9 @@ class CustomerSummary implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['email_address'] = isset($data['email_address']) ? $data['email_address'] : null;
-        $this->container['phone_number_local_format'] = isset($data['phone_number_local_format']) ? $data['phone_number_local_format'] : null;
-        $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
-        $this->container['language_preference'] = isset($data['language_preference']) ? $data['language_preference'] : null;
+        $this->container['rate'] = isset($data['rate']) ? $data['rate'] : null;
+        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
     }
 
     /**
@@ -236,30 +218,6 @@ class CustomerSummary implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int $id Customer identifier
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
      * Gets name
      *
      * @return string
@@ -272,7 +230,7 @@ class CustomerSummary implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name Customer name
+     * @param string $name The name of the tax item.
      *
      * @return $this
      */
@@ -284,97 +242,49 @@ class CustomerSummary implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets email_address
+     * Gets rate
      *
-     * @return string
+     * @return double
      */
-    public function getEmailAddress()
+    public function getRate()
     {
-        return $this->container['email_address'];
+        return $this->container['rate'];
     }
 
     /**
-     * Sets email_address
+     * Sets rate
      *
-     * @param string $email_address Customer email address
+     * @param double $rate The tax rate applied to the item.
      *
      * @return $this
      */
-    public function setEmailAddress($email_address)
+    public function setRate($rate)
     {
-        $this->container['email_address'] = $email_address;
+        $this->container['rate'] = $rate;
 
         return $this;
     }
 
     /**
-     * Gets phone_number_local_format
+     * Gets amount
      *
-     * @return string
+     * @return double
      */
-    public function getPhoneNumberLocalFormat()
+    public function getAmount()
     {
-        return $this->container['phone_number_local_format'];
+        return $this->container['amount'];
     }
 
     /**
-     * Sets phone_number_local_format
+     * Sets amount
      *
-     * @param string $phone_number_local_format Customer local phone number
+     * @param double $amount The amount of tax applied to the item.
      *
      * @return $this
      */
-    public function setPhoneNumberLocalFormat($phone_number_local_format)
+    public function setAmount($amount)
     {
-        $this->container['phone_number_local_format'] = $phone_number_local_format;
-
-        return $this;
-    }
-
-    /**
-     * Gets phone_number
-     *
-     * @return string
-     */
-    public function getPhoneNumber()
-    {
-        return $this->container['phone_number'];
-    }
-
-    /**
-     * Sets phone_number
-     *
-     * @param string $phone_number Customer phone number
-     *
-     * @return $this
-     */
-    public function setPhoneNumber($phone_number)
-    {
-        $this->container['phone_number'] = $phone_number;
-
-        return $this;
-    }
-
-    /**
-     * Gets language_preference
-     *
-     * @return string
-     */
-    public function getLanguagePreference()
-    {
-        return $this->container['language_preference'];
-    }
-
-    /**
-     * Sets language_preference
-     *
-     * @param string $language_preference Preferred language of the consumer
-     *
-     * @return $this
-     */
-    public function setLanguagePreference($language_preference)
-    {
-        $this->container['language_preference'] = $language_preference;
+        $this->container['amount'] = $amount;
 
         return $this;
     }

@@ -78,6 +78,7 @@ class Order implements ModelInterface, ArrayAccess
         'order_drop_off_location' => '\Flipdish\\Client\Models\OrderDropOffLocation',
         'fulfillment_status' => '\Flipdish\\Client\Models\OrderFulfillmentStatusBase',
         'order_batch_info' => '\Flipdish\\Client\Models\OrderBatchSummary',
+        'tax_items' => '\Flipdish\\Client\Models\TaxItem[]',
         'created_campaign_voucher_id' => 'int',
         'order_id' => 'int',
         'local_order_id' => 'string',
@@ -108,7 +109,8 @@ class Order implements ModelInterface, ArrayAccess
         'total_tax' => 'double',
         'order_tracking_code' => 'string',
         'delivery_fee_area_id' => 'int',
-        'receipt_code' => 'string'
+        'receipt_code' => 'string',
+        'total_deposit_return_fee_amount' => 'double'
     ];
 
     /**
@@ -137,6 +139,7 @@ class Order implements ModelInterface, ArrayAccess
         'order_drop_off_location' => null,
         'fulfillment_status' => null,
         'order_batch_info' => null,
+        'tax_items' => null,
         'created_campaign_voucher_id' => 'int32',
         'order_id' => 'int32',
         'local_order_id' => null,
@@ -167,7 +170,8 @@ class Order implements ModelInterface, ArrayAccess
         'total_tax' => 'double',
         'order_tracking_code' => null,
         'delivery_fee_area_id' => 'int32',
-        'receipt_code' => null
+        'receipt_code' => null,
+        'total_deposit_return_fee_amount' => 'double'
     ];
 
     /**
@@ -217,6 +221,7 @@ class Order implements ModelInterface, ArrayAccess
         'order_drop_off_location' => 'OrderDropOffLocation',
         'fulfillment_status' => 'FulfillmentStatus',
         'order_batch_info' => 'OrderBatchInfo',
+        'tax_items' => 'TaxItems',
         'created_campaign_voucher_id' => 'CreatedCampaignVoucherId',
         'order_id' => 'OrderId',
         'local_order_id' => 'LocalOrderId',
@@ -247,7 +252,8 @@ class Order implements ModelInterface, ArrayAccess
         'total_tax' => 'TotalTax',
         'order_tracking_code' => 'OrderTrackingCode',
         'delivery_fee_area_id' => 'DeliveryFeeAreaId',
-        'receipt_code' => 'ReceiptCode'
+        'receipt_code' => 'ReceiptCode',
+        'total_deposit_return_fee_amount' => 'TotalDepositReturnFeeAmount'
     ];
 
     /**
@@ -276,6 +282,7 @@ class Order implements ModelInterface, ArrayAccess
         'order_drop_off_location' => 'setOrderDropOffLocation',
         'fulfillment_status' => 'setFulfillmentStatus',
         'order_batch_info' => 'setOrderBatchInfo',
+        'tax_items' => 'setTaxItems',
         'created_campaign_voucher_id' => 'setCreatedCampaignVoucherId',
         'order_id' => 'setOrderId',
         'local_order_id' => 'setLocalOrderId',
@@ -306,7 +313,8 @@ class Order implements ModelInterface, ArrayAccess
         'total_tax' => 'setTotalTax',
         'order_tracking_code' => 'setOrderTrackingCode',
         'delivery_fee_area_id' => 'setDeliveryFeeAreaId',
-        'receipt_code' => 'setReceiptCode'
+        'receipt_code' => 'setReceiptCode',
+        'total_deposit_return_fee_amount' => 'setTotalDepositReturnFeeAmount'
     ];
 
     /**
@@ -335,6 +343,7 @@ class Order implements ModelInterface, ArrayAccess
         'order_drop_off_location' => 'getOrderDropOffLocation',
         'fulfillment_status' => 'getFulfillmentStatus',
         'order_batch_info' => 'getOrderBatchInfo',
+        'tax_items' => 'getTaxItems',
         'created_campaign_voucher_id' => 'getCreatedCampaignVoucherId',
         'order_id' => 'getOrderId',
         'local_order_id' => 'getLocalOrderId',
@@ -365,7 +374,8 @@ class Order implements ModelInterface, ArrayAccess
         'total_tax' => 'getTotalTax',
         'order_tracking_code' => 'getOrderTrackingCode',
         'delivery_fee_area_id' => 'getDeliveryFeeAreaId',
-        'receipt_code' => 'getReceiptCode'
+        'receipt_code' => 'getReceiptCode',
+        'total_deposit_return_fee_amount' => 'getTotalDepositReturnFeeAmount'
     ];
 
     /**
@@ -689,6 +699,7 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['order_drop_off_location'] = isset($data['order_drop_off_location']) ? $data['order_drop_off_location'] : null;
         $this->container['fulfillment_status'] = isset($data['fulfillment_status']) ? $data['fulfillment_status'] : null;
         $this->container['order_batch_info'] = isset($data['order_batch_info']) ? $data['order_batch_info'] : null;
+        $this->container['tax_items'] = isset($data['tax_items']) ? $data['tax_items'] : null;
         $this->container['created_campaign_voucher_id'] = isset($data['created_campaign_voucher_id']) ? $data['created_campaign_voucher_id'] : null;
         $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
         $this->container['local_order_id'] = isset($data['local_order_id']) ? $data['local_order_id'] : null;
@@ -720,6 +731,7 @@ class Order implements ModelInterface, ArrayAccess
         $this->container['order_tracking_code'] = isset($data['order_tracking_code']) ? $data['order_tracking_code'] : null;
         $this->container['delivery_fee_area_id'] = isset($data['delivery_fee_area_id']) ? $data['delivery_fee_area_id'] : null;
         $this->container['receipt_code'] = isset($data['receipt_code']) ? $data['receipt_code'] : null;
+        $this->container['total_deposit_return_fee_amount'] = isset($data['total_deposit_return_fee_amount']) ? $data['total_deposit_return_fee_amount'] : null;
     }
 
     /**
@@ -1294,6 +1306,30 @@ class Order implements ModelInterface, ArrayAccess
     public function setOrderBatchInfo($order_batch_info)
     {
         $this->container['order_batch_info'] = $order_batch_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets tax_items
+     *
+     * @return \Flipdish\\Client\Models\TaxItem[]
+     */
+    public function getTaxItems()
+    {
+        return $this->container['tax_items'];
+    }
+
+    /**
+     * Sets tax_items
+     *
+     * @param \Flipdish\\Client\Models\TaxItem[] $tax_items A collection of tax items on the order.
+     *
+     * @return $this
+     */
+    public function setTaxItems($tax_items)
+    {
+        $this->container['tax_items'] = $tax_items;
 
         return $this;
     }
@@ -2119,6 +2155,30 @@ class Order implements ModelInterface, ArrayAccess
     public function setReceiptCode($receipt_code)
     {
         $this->container['receipt_code'] = $receipt_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_deposit_return_fee_amount
+     *
+     * @return double
+     */
+    public function getTotalDepositReturnFeeAmount()
+    {
+        return $this->container['total_deposit_return_fee_amount'];
+    }
+
+    /**
+     * Sets total_deposit_return_fee_amount
+     *
+     * @param double $total_deposit_return_fee_amount This contains the total deposit return fee amount for the order.
+     *
+     * @return $this
+     */
+    public function setTotalDepositReturnFeeAmount($total_deposit_return_fee_amount)
+    {
+        $this->container['total_deposit_return_fee_amount'] = $total_deposit_return_fee_amount;
 
         return $this;
     }

@@ -133,6 +133,13 @@ class OrderItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "tax_amount"
+     */
+    public function testPropertyTaxAmount()
+    {
+    }
+
+    /**
      * Test attribute "price_including_option_set_items"
      */
     public function testPropertyPriceIncludingOptionSetItems()

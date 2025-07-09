@@ -119,6 +119,13 @@ class OrderItemOptionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "tax_amount"
+     */
+    public function testPropertyTaxAmount()
+    {
+    }
+
+    /**
      * Test attribute "menu_item_option_display_order"
      */
     public function testPropertyMenuItemOptionDisplayOrder()

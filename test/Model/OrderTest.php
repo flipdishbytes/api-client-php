@@ -217,6 +217,13 @@ class OrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "tax_items"
+     */
+    public function testPropertyTaxItems()
+    {
+    }
+
+    /**
      * Test attribute "created_campaign_voucher_id"
      */
     public function testPropertyCreatedCampaignVoucherId()
@@ -430,6 +437,13 @@ class OrderTest extends \PHPUnit_Framework_TestCase
      * Test attribute "receipt_code"
      */
     public function testPropertyReceiptCode()
+    {
+    }
+
+    /**
+     * Test attribute "total_deposit_return_fee_amount"
+     */
+    public function testPropertyTotalDepositReturnFeeAmount()
     {
     }
 }

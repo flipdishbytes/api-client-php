@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **coordinates** | [**\Flipdish\\Client\Models\Coordinates**](Coordinates.md) | Latitude and longitude of the store | [optional] 
 **store_timezone** | **string** | Timezone of store | [optional] 
 **store_group_id** | **int** | Store group id of store | [optional] 
+**tax_id** | **string** | VAT number or generic Tax ID of the store | [optional] 
+**pretty_address** | **string** | Address of the store | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

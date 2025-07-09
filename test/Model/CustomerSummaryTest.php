@@ -110,4 +110,11 @@ class CustomerSummaryTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPhoneNumber()
     {
     }
+
+    /**
+     * Test attribute "language_preference"
+     */
+    public function testPropertyLanguagePreference()
+    {
+    }
 }

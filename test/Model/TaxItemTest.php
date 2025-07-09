@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreSummaryTest
+ * TaxItemTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreSummaryTest Class Doc Comment
+ * TaxItemTest Class Doc Comment
  *
  * @category    Class
- * @description Store summary
+ * @description A collection of tax items on the order.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreSummaryTest extends \PHPUnit_Framework_TestCase
+class TaxItemTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,9 @@ class StoreSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreSummary"
+     * Test "TaxItem"
      */
-    public function testStoreSummary()
-    {
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
+    public function testTaxItem()
     {
     }
 
@@ -91,58 +84,16 @@ class StoreSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "menu_id"
+     * Test attribute "rate"
      */
-    public function testPropertyMenuId()
+    public function testPropertyRate()
     {
     }
 
     /**
-     * Test attribute "metadata"
+     * Test attribute "amount"
      */
-    public function testPropertyMetadata()
-    {
-    }
-
-    /**
-     * Test attribute "currency"
-     */
-    public function testPropertyCurrency()
-    {
-    }
-
-    /**
-     * Test attribute "coordinates"
-     */
-    public function testPropertyCoordinates()
-    {
-    }
-
-    /**
-     * Test attribute "store_timezone"
-     */
-    public function testPropertyStoreTimezone()
-    {
-    }
-
-    /**
-     * Test attribute "store_group_id"
-     */
-    public function testPropertyStoreGroupId()
-    {
-    }
-
-    /**
-     * Test attribute "tax_id"
-     */
-    public function testPropertyTaxId()
-    {
-    }
-
-    /**
-     * Test attribute "pretty_address"
-     */
-    public function testPropertyPrettyAddress()
+    public function testPropertyAmount()
     {
     }
 }
