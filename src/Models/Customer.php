@@ -59,6 +59,7 @@ class Customer implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'customer_id' => 'int',
+        'name' => 'string',
         'registration_date' => '\DateTime',
         'phone_number' => 'string',
         'cash_orders_enabled' => 'bool',
@@ -73,6 +74,7 @@ class Customer implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'customer_id' => 'int32',
+        'name' => null,
         'registration_date' => 'date-time',
         'phone_number' => null,
         'cash_orders_enabled' => null,
@@ -108,6 +110,7 @@ class Customer implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'customer_id' => 'CustomerId',
+        'name' => 'Name',
         'registration_date' => 'RegistrationDate',
         'phone_number' => 'PhoneNumber',
         'cash_orders_enabled' => 'CashOrdersEnabled',
@@ -122,6 +125,7 @@ class Customer implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'customer_id' => 'setCustomerId',
+        'name' => 'setName',
         'registration_date' => 'setRegistrationDate',
         'phone_number' => 'setPhoneNumber',
         'cash_orders_enabled' => 'setCashOrdersEnabled',
@@ -136,6 +140,7 @@ class Customer implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'customer_id' => 'getCustomerId',
+        'name' => 'getName',
         'registration_date' => 'getRegistrationDate',
         'phone_number' => 'getPhoneNumber',
         'cash_orders_enabled' => 'getCashOrdersEnabled',
@@ -204,6 +209,7 @@ class Customer implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['customer_id'] = isset($data['customer_id']) ? $data['customer_id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['registration_date'] = isset($data['registration_date']) ? $data['registration_date'] : null;
         $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
         $this->container['cash_orders_enabled'] = isset($data['cash_orders_enabled']) ? $data['cash_orders_enabled'] : null;
@@ -255,6 +261,30 @@ class Customer implements ModelInterface, ArrayAccess
     public function setCustomerId($customer_id)
     {
         $this->container['customer_id'] = $customer_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name Customer name
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
 
         return $this;
     }

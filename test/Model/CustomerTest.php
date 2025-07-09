@@ -84,6 +84,13 @@ class CustomerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+    }
+
+    /**
      * Test attribute "registration_date"
      */
     public function testPropertyRegistrationDate()
