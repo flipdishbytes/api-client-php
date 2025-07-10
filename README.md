@@ -511,6 +511,11 @@ Class | Method | HTTP request | Description
 *RestaurantVouchersPayGreenApi* | [**updatePayGreenConfiguration**](docs/Api/RestaurantVouchersPayGreenApi.md#updatepaygreenconfiguration) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/{paygreenConfigurationId} | 
 *RestaurantVouchersPayGreenApi* | [**updateStorePayGreenConfiguration_**](docs/Api/RestaurantVouchersPayGreenApi.md#updatestorepaygreenconfiguration_) | **POST** /api/v1.0/{appId}/restaurant-vouchers/paygreen/stores/{storeId} | 
 *SearchApi* | [**searchRestaurants**](docs/Api/SearchApi.md#searchrestaurants) | **GET** /api/v1.0/search/restaurants | 
+*SmsProviderCredentialsApi* | [**getBrandSmsProviderCredentialByServiceType**](docs/Api/SmsProviderCredentialsApi.md#getbrandsmsprovidercredentialbyservicetype) | **GET** /api/v1.0/sms-providers/orgs/{orgId}/brands/{brandId}/provider-credentials/{serviceType} | 
+*SmsProviderCredentialsApi* | [**getBrandSmsProviderCredentials**](docs/Api/SmsProviderCredentialsApi.md#getbrandsmsprovidercredentials) | **GET** /api/v1.0/sms-providers/orgs/{orgId}/brands/{brandId}/provider-credentials | 
+*SmsProviderCredentialsApi* | [**smsProviderCredentialDelete**](docs/Api/SmsProviderCredentialsApi.md#smsprovidercredentialdelete) | **DELETE** /api/v1.0/sms-providers/orgs/{orgId}/brands/{brandId}/provider-credentials/{serviceType} | 
+*SmsProviderCredentialsApi* | [**smsProviderCredentialUpdate**](docs/Api/SmsProviderCredentialsApi.md#smsprovidercredentialupdate) | **POST** /api/v1.0/sms-providers/orgs/{orgId}/brands/{brandId}/provider-credentials/{serviceType} | 
+*SmsProviderCredentialsApi* | [**smsProviderCredentialsBulkUpsert**](docs/Api/SmsProviderCredentialsApi.md#smsprovidercredentialsbulkupsert) | **POST** /api/v1.0/sms-providers/bulk-upsert | 
 *StoreGroupsApi* | [**assignStoresToStoreGroup**](docs/Api/StoreGroupsApi.md#assignstorestostoregroup) | **POST** /api/v1.0/{appId}/storegroups/{storeGroupId}/assignStores | 
 *StoreGroupsApi* | [**createStoreGroup**](docs/Api/StoreGroupsApi.md#createstoregroup) | **POST** /api/v1.0/{appNameId}/storegroups | 
 *StoreGroupsApi* | [**getStoreGroup**](docs/Api/StoreGroupsApi.md#getstoregroup) | **GET** /api/v1.0/storegroups/{storeGroupId} | 
@@ -1095,6 +1100,7 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultRestaurantVoucherPayGreenConfiguration](docs/Model/RestApiArrayResultRestaurantVoucherPayGreenConfiguration.md)
  - [RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary](docs/Model/RestApiArrayResultRestaurantVoucherPayGreenConfigurationSummary.md)
  - [RestApiArrayResultRetentionCampaign](docs/Model/RestApiArrayResultRetentionCampaign.md)
+ - [RestApiArrayResultSmsProviderCredential](docs/Model/RestApiArrayResultSmsProviderCredential.md)
  - [RestApiArrayResultStoreChannelAssignment](docs/Model/RestApiArrayResultStoreChannelAssignment.md)
  - [RestApiArrayResultStoreChannelStoreMapping](docs/Model/RestApiArrayResultStoreChannelStoreMapping.md)
  - [RestApiArrayResultStoreDeliveryZoneFeeConfig](docs/Model/RestApiArrayResultStoreDeliveryZoneFeeConfig.md)
@@ -1239,6 +1245,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultRestaurantVoucherPayGreenStoreConfiguration](docs/Model/RestApiResultRestaurantVoucherPayGreenStoreConfiguration.md)
  - [RestApiResultRetentionCampaign](docs/Model/RestApiResultRetentionCampaign.md)
  - [RestApiResultServiceCharge](docs/Model/RestApiResultServiceCharge.md)
+ - [RestApiResultSmsProviderCredential](docs/Model/RestApiResultSmsProviderCredential.md)
  - [RestApiResultStore](docs/Model/RestApiResultStore.md)
  - [RestApiResultStoreAddress](docs/Model/RestApiResultStoreAddress.md)
  - [RestApiResultStoreChannelAssignment](docs/Model/RestApiResultStoreChannelAssignment.md)
@@ -1284,6 +1291,8 @@ Class | Method | HTTP request | Description
  - [Setting](docs/Model/Setting.md)
  - [SignupStep](docs/Model/SignupStep.md)
  - [SmsInfo](docs/Model/SmsInfo.md)
+ - [SmsProviderCredential](docs/Model/SmsProviderCredential.md)
+ - [SmsProviderCredentialUpdateRequest](docs/Model/SmsProviderCredentialUpdateRequest.md)
  - [SmsReceivedEvent](docs/Model/SmsReceivedEvent.md)
  - [StatisticsCurrencyDataPoint](docs/Model/StatisticsCurrencyDataPoint.md)
  - [Store](docs/Model/Store.md)
