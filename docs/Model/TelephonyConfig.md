@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **telephony_config_id** | **int** | ID of the phone call | [optional] 
 **apm_enabled** | **bool** | APM enabled flag | [optional] 
+**type** | **string** | Type of telephony service | [optional] 
 **consent_enabled** | **bool** | Consent enabled flag | [optional] 
 **phone_number** | **string** | APM phone number of the store | [optional] 
 **send_app_link_sms** | **bool** | Send app link SMS flag | [optional] 

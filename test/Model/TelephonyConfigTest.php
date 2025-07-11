@@ -91,6 +91,13 @@ class TelephonyConfigTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+    }
+
+    /**
      * Test attribute "consent_enabled"
      */
     public function testPropertyConsentEnabled()

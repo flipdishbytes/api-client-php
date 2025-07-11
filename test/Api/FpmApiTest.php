@@ -90,4 +90,14 @@ class FpmApiTest extends \PHPUnit_Framework_TestCase
     public function testEditFpmForStore()
     {
     }
+
+    /**
+     * Test case for getFpmForStore
+     *
+     * .
+     *
+     */
+    public function testGetFpmForStore()
+    {
+    }
 }

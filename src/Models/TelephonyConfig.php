@@ -60,6 +60,7 @@ class TelephonyConfig implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'telephony_config_id' => 'int',
         'apm_enabled' => 'bool',
+        'type' => 'string',
         'consent_enabled' => 'bool',
         'phone_number' => 'string',
         'send_app_link_sms' => 'bool',
@@ -77,6 +78,7 @@ class TelephonyConfig implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'telephony_config_id' => 'int32',
         'apm_enabled' => null,
+        'type' => null,
         'consent_enabled' => null,
         'phone_number' => null,
         'send_app_link_sms' => null,
@@ -115,6 +117,7 @@ class TelephonyConfig implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'telephony_config_id' => 'TelephonyConfigId',
         'apm_enabled' => 'ApmEnabled',
+        'type' => 'Type',
         'consent_enabled' => 'ConsentEnabled',
         'phone_number' => 'PhoneNumber',
         'send_app_link_sms' => 'SendAppLinkSms',
@@ -132,6 +135,7 @@ class TelephonyConfig implements ModelInterface, ArrayAccess
     protected static $setters = [
         'telephony_config_id' => 'setTelephonyConfigId',
         'apm_enabled' => 'setApmEnabled',
+        'type' => 'setType',
         'consent_enabled' => 'setConsentEnabled',
         'phone_number' => 'setPhoneNumber',
         'send_app_link_sms' => 'setSendAppLinkSms',
@@ -149,6 +153,7 @@ class TelephonyConfig implements ModelInterface, ArrayAccess
     protected static $getters = [
         'telephony_config_id' => 'getTelephonyConfigId',
         'apm_enabled' => 'getApmEnabled',
+        'type' => 'getType',
         'consent_enabled' => 'getConsentEnabled',
         'phone_number' => 'getPhoneNumber',
         'send_app_link_sms' => 'getSendAppLinkSms',
@@ -199,8 +204,23 @@ class TelephonyConfig implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const TYPE_PRE_RECORDED = 'PreRecorded';
+    const TYPE_VOICE_AI = 'VoiceAI';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_PRE_RECORDED,
+            self::TYPE_VOICE_AI,
+        ];
+    }
     
 
     /**
@@ -220,6 +240,7 @@ class TelephonyConfig implements ModelInterface, ArrayAccess
     {
         $this->container['telephony_config_id'] = isset($data['telephony_config_id']) ? $data['telephony_config_id'] : null;
         $this->container['apm_enabled'] = isset($data['apm_enabled']) ? $data['apm_enabled'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['consent_enabled'] = isset($data['consent_enabled']) ? $data['consent_enabled'] : null;
         $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
         $this->container['send_app_link_sms'] = isset($data['send_app_link_sms']) ? $data['send_app_link_sms'] : null;
@@ -237,6 +258,14 @@ class TelephonyConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -297,6 +326,39 @@ class TelephonyConfig implements ModelInterface, ArrayAccess
     public function setApmEnabled($apm_enabled)
     {
         $this->container['apm_enabled'] = $apm_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type Type of telephony service
+     *
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }
