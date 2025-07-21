@@ -381,7 +381,7 @@ class AppConfigSalesChannel implements ModelInterface, ArrayAccess
     /**
      * Sets address_entry_type
      *
-     * @param string $address_entry_type Address entry type
+     * @param string $address_entry_type Address entry type - TextEntryManualDisallowed is the only supported configuration
      *
      * @return $this
      */
