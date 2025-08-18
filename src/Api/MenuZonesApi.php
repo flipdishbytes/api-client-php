@@ -1870,7 +1870,7 @@ class MenuZonesApi
     /**
      * Operation setMenuSectionMenuZone
      *
-     * Sets a zone to a menu section.
+     * Assigns a zone to a menu section.
      *
      * @param  int $menu_zone_id The menu id. (required)
      * @param  int $menu_section_id The menu section id. (required)
@@ -1888,7 +1888,7 @@ class MenuZonesApi
     /**
      * Operation setMenuSectionMenuZoneWithHttpInfo
      *
-     * Sets a zone to a menu section.
+     * Assigns a zone to a menu section.
      *
      * @param  int $menu_zone_id The menu id. (required)
      * @param  int $menu_section_id The menu section id. (required)
@@ -1967,7 +1967,7 @@ class MenuZonesApi
     /**
      * Operation setMenuSectionMenuZoneAsync
      *
-     * Sets a zone to a menu section.
+     * Assigns a zone to a menu section.
      *
      * @param  int $menu_zone_id The menu id. (required)
      * @param  int $menu_section_id The menu section id. (required)
@@ -1989,7 +1989,7 @@ class MenuZonesApi
     /**
      * Operation setMenuSectionMenuZoneAsyncWithHttpInfo
      *
-     * Sets a zone to a menu section.
+     * Assigns a zone to a menu section.
      *
      * @param  int $menu_zone_id The menu id. (required)
      * @param  int $menu_section_id The menu section id. (required)

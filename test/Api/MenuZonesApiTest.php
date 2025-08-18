@@ -134,7 +134,7 @@ class MenuZonesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setMenuSectionMenuZone
      *
-     * Sets a zone to a menu section..
+     * Assigns a zone to a menu section..
      *
      */
     public function testSetMenuSectionMenuZone()
