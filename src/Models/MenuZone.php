@@ -62,7 +62,8 @@ class MenuZone implements ModelInterface, ArrayAccess
         'name' => 'string',
         'description' => 'string',
         'image_name' => 'string',
-        'display_order' => 'int'
+        'display_order' => 'int',
+        'image_url' => 'string'
     ];
 
     /**
@@ -76,7 +77,8 @@ class MenuZone implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'image_name' => null,
-        'display_order' => 'int32'
+        'display_order' => 'int32',
+        'image_url' => null
     ];
 
     /**
@@ -111,7 +113,8 @@ class MenuZone implements ModelInterface, ArrayAccess
         'name' => 'Name',
         'description' => 'Description',
         'image_name' => 'ImageName',
-        'display_order' => 'DisplayOrder'
+        'display_order' => 'DisplayOrder',
+        'image_url' => 'ImageUrl'
     ];
 
     /**
@@ -125,7 +128,8 @@ class MenuZone implements ModelInterface, ArrayAccess
         'name' => 'setName',
         'description' => 'setDescription',
         'image_name' => 'setImageName',
-        'display_order' => 'setDisplayOrder'
+        'display_order' => 'setDisplayOrder',
+        'image_url' => 'setImageUrl'
     ];
 
     /**
@@ -139,7 +143,8 @@ class MenuZone implements ModelInterface, ArrayAccess
         'name' => 'getName',
         'description' => 'getDescription',
         'image_name' => 'getImageName',
-        'display_order' => 'getDisplayOrder'
+        'display_order' => 'getDisplayOrder',
+        'image_url' => 'getImageUrl'
     ];
 
     /**
@@ -208,6 +213,7 @@ class MenuZone implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['image_name'] = isset($data['image_name']) ? $data['image_name'] : null;
         $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
+        $this->container['image_url'] = isset($data['image_url']) ? $data['image_url'] : null;
     }
 
     /**
@@ -374,6 +380,30 @@ class MenuZone implements ModelInterface, ArrayAccess
     public function setDisplayOrder($display_order)
     {
         $this->container['display_order'] = $display_order;
+
+        return $this;
+    }
+
+    /**
+     * Gets image_url
+     *
+     * @return string
+     */
+    public function getImageUrl()
+    {
+        return $this->container['image_url'];
+    }
+
+    /**
+     * Sets image_url
+     *
+     * @param string $image_url image_url
+     *
+     * @return $this
+     */
+    public function setImageUrl($image_url)
+    {
+        $this->container['image_url'] = $image_url;
 
         return $this;
     }

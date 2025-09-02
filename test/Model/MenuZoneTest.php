@@ -117,4 +117,11 @@ class MenuZoneTest extends \PHPUnit_Framework_TestCase
     public function testPropertyDisplayOrder()
     {
     }
+
+    /**
+     * Test attribute "image_url"
+     */
+    public function testPropertyImageUrl()
+    {
+    }
 }
