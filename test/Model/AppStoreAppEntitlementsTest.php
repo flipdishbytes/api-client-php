@@ -89,11 +89,4 @@ class AppStoreAppEntitlementsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCurrentUsage()
     {
     }
-
-    /**
-     * Test attribute "current_usage_in_brand"
-     */
-    public function testPropertyCurrentUsageInBrand()
-    {
-    }
 }
