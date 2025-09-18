@@ -100,7 +100,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_card_pos_transaction' => 'double',
         'fixed_fee_card_pos_transaction' => 'double',
         'percent_fee_order_with_google' => 'double',
-        'fixed_fee_order_with_google' => 'double'
+        'fixed_fee_order_with_google' => 'double',
+        'should_not_auto_increase_before' => '\DateTime',
+        'reason' => 'string'
     ];
 
     /**
@@ -151,7 +153,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_card_pos_transaction' => 'double',
         'fixed_fee_card_pos_transaction' => 'double',
         'percent_fee_order_with_google' => 'double',
-        'fixed_fee_order_with_google' => 'double'
+        'fixed_fee_order_with_google' => 'double',
+        'should_not_auto_increase_before' => 'date-time',
+        'reason' => null
     ];
 
     /**
@@ -223,7 +227,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_card_pos_transaction' => 'PercentFeeCardPosTransaction',
         'fixed_fee_card_pos_transaction' => 'FixedFeeCardPosTransaction',
         'percent_fee_order_with_google' => 'PercentFeeOrderWithGoogle',
-        'fixed_fee_order_with_google' => 'FixedFeeOrderWithGoogle'
+        'fixed_fee_order_with_google' => 'FixedFeeOrderWithGoogle',
+        'should_not_auto_increase_before' => 'ShouldNotAutoIncreaseBefore',
+        'reason' => 'Reason'
     ];
 
     /**
@@ -274,7 +280,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_card_pos_transaction' => 'setPercentFeeCardPosTransaction',
         'fixed_fee_card_pos_transaction' => 'setFixedFeeCardPosTransaction',
         'percent_fee_order_with_google' => 'setPercentFeeOrderWithGoogle',
-        'fixed_fee_order_with_google' => 'setFixedFeeOrderWithGoogle'
+        'fixed_fee_order_with_google' => 'setFixedFeeOrderWithGoogle',
+        'should_not_auto_increase_before' => 'setShouldNotAutoIncreaseBefore',
+        'reason' => 'setReason'
     ];
 
     /**
@@ -325,7 +333,9 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_card_pos_transaction' => 'getPercentFeeCardPosTransaction',
         'fixed_fee_card_pos_transaction' => 'getFixedFeeCardPosTransaction',
         'percent_fee_order_with_google' => 'getPercentFeeOrderWithGoogle',
-        'fixed_fee_order_with_google' => 'getFixedFeeOrderWithGoogle'
+        'fixed_fee_order_with_google' => 'getFixedFeeOrderWithGoogle',
+        'should_not_auto_increase_before' => 'getShouldNotAutoIncreaseBefore',
+        'reason' => 'getReason'
     ];
 
     /**
@@ -431,6 +441,8 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         $this->container['fixed_fee_card_pos_transaction'] = isset($data['fixed_fee_card_pos_transaction']) ? $data['fixed_fee_card_pos_transaction'] : null;
         $this->container['percent_fee_order_with_google'] = isset($data['percent_fee_order_with_google']) ? $data['percent_fee_order_with_google'] : null;
         $this->container['fixed_fee_order_with_google'] = isset($data['fixed_fee_order_with_google']) ? $data['fixed_fee_order_with_google'] : null;
+        $this->container['should_not_auto_increase_before'] = isset($data['should_not_auto_increase_before']) ? $data['should_not_auto_increase_before'] : null;
+        $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
     }
 
     /**
@@ -1485,6 +1497,54 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
     public function setFixedFeeOrderWithGoogle($fixed_fee_order_with_google)
     {
         $this->container['fixed_fee_order_with_google'] = $fixed_fee_order_with_google;
+
+        return $this;
+    }
+
+    /**
+     * Gets should_not_auto_increase_before
+     *
+     * @return \DateTime
+     */
+    public function getShouldNotAutoIncreaseBefore()
+    {
+        return $this->container['should_not_auto_increase_before'];
+    }
+
+    /**
+     * Sets should_not_auto_increase_before
+     *
+     * @param \DateTime $should_not_auto_increase_before Should not auto increase fees before this date
+     *
+     * @return $this
+     */
+    public function setShouldNotAutoIncreaseBefore($should_not_auto_increase_before)
+    {
+        $this->container['should_not_auto_increase_before'] = $should_not_auto_increase_before;
+
+        return $this;
+    }
+
+    /**
+     * Gets reason
+     *
+     * @return string
+     */
+    public function getReason()
+    {
+        return $this->container['reason'];
+    }
+
+    /**
+     * Sets reason
+     *
+     * @param string $reason Reason for the last fee change (optional)
+     *
+     * @return $this
+     */
+    public function setReason($reason)
+    {
+        $this->container['reason'] = $reason;
 
         return $this;
     }

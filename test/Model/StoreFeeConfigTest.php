@@ -376,4 +376,18 @@ class StoreFeeConfigTest extends \PHPUnit_Framework_TestCase
     public function testPropertyFixedFeeOrderWithGoogle()
     {
     }
+
+    /**
+     * Test attribute "should_not_auto_increase_before"
+     */
+    public function testPropertyShouldNotAutoIncreaseBefore()
+    {
+    }
+
+    /**
+     * Test attribute "reason"
+     */
+    public function testPropertyReason()
+    {
+    }
 }

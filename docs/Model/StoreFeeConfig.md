@@ -46,6 +46,8 @@ Name | Type | Description | Notes
 **fixed_fee_card_pos_transaction** | **double** | Gets or sets the fixed fee for POS transactions. | [optional] 
 **percent_fee_order_with_google** | **double** | Additional percentage fee charged on orders submitted through Order With Google | [optional] 
 **fixed_fee_order_with_google** | **double** | Additional fixed fee charged on orders submitted through Order With Google | [optional] 
+**should_not_auto_increase_before** | [**\DateTime**](\DateTime.md) | Should not auto increase fees before this date | [optional] 
+**reason** | **string** | Reason for the last fee change (optional) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
