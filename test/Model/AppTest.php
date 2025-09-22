@@ -203,6 +203,13 @@ class AppTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "web_to_app_redirect"
+     */
+    public function testPropertyWebToAppRedirect()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

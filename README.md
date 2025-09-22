@@ -557,6 +557,7 @@ Class | Method | HTTP request | Description
 *StoresApi* | [**putStoreDeliveryFeeConfig**](docs/Api/StoresApi.md#putstoredeliveryfeeconfig) | **PUT** /api/v1.0/stores/{storeId}/feeConfig/deliveryZones | 
 *StoresApi* | [**setBusinessHours**](docs/Api/StoresApi.md#setbusinesshours) | **POST** /api/v1.0/stores/{storeId}/availability/{deliveryType} | 
 *StoresApi* | [**setPreOrdeEnabled**](docs/Api/StoresApi.md#setpreordeenabled) | **POST** /api/v1.0/stores/{storeId}/preorderconfig/{deliveryType}/enabled | 
+*StoresApi* | [**setStoreCollectionSettings**](docs/Api/StoresApi.md#setstorecollectionsettings) | **POST** /api/v1.0/stores/{storeId}/collectionsettings | 
 *StoresApi* | [**setStoreLeadTimes**](docs/Api/StoresApi.md#setstoreleadtimes) | **POST** /api/v1.0/stores/{storeId}/leadTimes | 
 *StoresApi* | [**storesSetPropertyId**](docs/Api/StoresApi.md#storessetpropertyid) | **POST** /api/v1.0/stores/{storeId}/propertyId/{propertyId} | 
 *StoresApi* | [**supportedSalesChannelsTypes**](docs/Api/StoresApi.md#supportedsaleschannelstypes) | **POST** /api/v1.0/properties/{propertyId}/stores/{storeId}/supportedSalesChannels | 
@@ -1228,6 +1229,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultProduct](docs/Model/RestApiResultProduct.md)
  - [RestApiResultPushNotificationResponse](docs/Model/RestApiResultPushNotificationResponse.md)
  - [RestApiResultRedeemInvitationResult](docs/Model/RestApiResultRedeemInvitationResult.md)
+ - [RestApiResultRestApiDefaultResponse](docs/Model/RestApiResultRestApiDefaultResponse.md)
  - [RestApiResultRestApiIntegerResult](docs/Model/RestApiResultRestApiIntegerResult.md)
  - [RestApiResultRestaurantVoucherPayGreenConfiguration](docs/Model/RestApiResultRestaurantVoucherPayGreenConfiguration.md)
  - [RestApiResultRestaurantVoucherPayGreenStoreConfiguration](docs/Model/RestApiResultRestaurantVoucherPayGreenStoreConfiguration.md)
@@ -1295,6 +1297,7 @@ Class | Method | HTTP request | Description
  - [StoreCampaignStartTime](docs/Model/StoreCampaignStartTime.md)
  - [StoreChannelAssignment](docs/Model/StoreChannelAssignment.md)
  - [StoreCloneSettings](docs/Model/StoreCloneSettings.md)
+ - [StoreCollectionSettings](docs/Model/StoreCollectionSettings.md)
  - [StoreConfig](docs/Model/StoreConfig.md)
  - [StoreCreateBase](docs/Model/StoreCreateBase.md)
  - [StoreCreatedEvent](docs/Model/StoreCreatedEvent.md)

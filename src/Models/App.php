@@ -76,6 +76,7 @@ class App implements ModelInterface, ArrayAccess
         'google_maps_api_key_web' => 'string',
         'org_id' => 'string',
         'sms_restaurant_name' => 'string',
+        'web_to_app_redirect' => 'string',
         'name' => 'string',
         'host_name' => 'string',
         'main_color' => 'string',
@@ -111,6 +112,7 @@ class App implements ModelInterface, ArrayAccess
         'google_maps_api_key_web' => null,
         'org_id' => null,
         'sms_restaurant_name' => null,
+        'web_to_app_redirect' => null,
         'name' => null,
         'host_name' => null,
         'main_color' => null,
@@ -167,6 +169,7 @@ class App implements ModelInterface, ArrayAccess
         'google_maps_api_key_web' => 'GoogleMapsApiKeyWeb',
         'org_id' => 'OrgId',
         'sms_restaurant_name' => 'SmsRestaurantName',
+        'web_to_app_redirect' => 'WebToAppRedirect',
         'name' => 'Name',
         'host_name' => 'HostName',
         'main_color' => 'MainColor',
@@ -202,6 +205,7 @@ class App implements ModelInterface, ArrayAccess
         'google_maps_api_key_web' => 'setGoogleMapsApiKeyWeb',
         'org_id' => 'setOrgId',
         'sms_restaurant_name' => 'setSmsRestaurantName',
+        'web_to_app_redirect' => 'setWebToAppRedirect',
         'name' => 'setName',
         'host_name' => 'setHostName',
         'main_color' => 'setMainColor',
@@ -237,6 +241,7 @@ class App implements ModelInterface, ArrayAccess
         'google_maps_api_key_web' => 'getGoogleMapsApiKeyWeb',
         'org_id' => 'getOrgId',
         'sms_restaurant_name' => 'getSmsRestaurantName',
+        'web_to_app_redirect' => 'getWebToAppRedirect',
         'name' => 'getName',
         'host_name' => 'getHostName',
         'main_color' => 'getMainColor',
@@ -506,6 +511,11 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_VIEW_SALES_REPORTS = 'ViewSalesReports';
     const APP_RESOURCE_SET_VIEW_COST_REPORTS = 'ViewCostReports';
     const APP_RESOURCE_SET_VIEW_MENU_REPORTS = 'ViewMenuReports';
+    const WEB_TO_APP_REDIRECT_NO_REDIRECT = 'NoRedirect';
+    const WEB_TO_APP_REDIRECT_REDIRECT_ONCE = 'RedirectOnce';
+    const WEB_TO_APP_REDIRECT_REDIRECT_ALWAYS = 'RedirectAlways';
+    const WEB_TO_APP_REDIRECT_SUGGEST_PWA = 'SuggestPwa';
+    const WEB_TO_APP_REDIRECT_FORCE_PWA = 'ForcePwa';
     const APPLICATION_CATEGORY_RESTAURANT = 'Restaurant';
     const APPLICATION_CATEGORY_CAFE = 'Cafe';
     const APPLICATION_CATEGORY_CONVENIENCE = 'Convenience';
@@ -756,6 +766,22 @@ class App implements ModelInterface, ArrayAccess
      *
      * @return string[]
      */
+    public function getWebToAppRedirectAllowableValues()
+    {
+        return [
+            self::WEB_TO_APP_REDIRECT_NO_REDIRECT,
+            self::WEB_TO_APP_REDIRECT_REDIRECT_ONCE,
+            self::WEB_TO_APP_REDIRECT_REDIRECT_ALWAYS,
+            self::WEB_TO_APP_REDIRECT_SUGGEST_PWA,
+            self::WEB_TO_APP_REDIRECT_FORCE_PWA,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
     public function getApplicationCategoryAllowableValues()
     {
         return [
@@ -799,6 +825,7 @@ class App implements ModelInterface, ArrayAccess
         $this->container['google_maps_api_key_web'] = isset($data['google_maps_api_key_web']) ? $data['google_maps_api_key_web'] : null;
         $this->container['org_id'] = isset($data['org_id']) ? $data['org_id'] : null;
         $this->container['sms_restaurant_name'] = isset($data['sms_restaurant_name']) ? $data['sms_restaurant_name'] : null;
+        $this->container['web_to_app_redirect'] = isset($data['web_to_app_redirect']) ? $data['web_to_app_redirect'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['host_name'] = isset($data['host_name']) ? $data['host_name'] : null;
         $this->container['main_color'] = isset($data['main_color']) ? $data['main_color'] : null;
@@ -823,6 +850,14 @@ class App implements ModelInterface, ArrayAccess
         if (!is_null($this->container['app_access_level']) && !in_array($this->container['app_access_level'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'app_access_level', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getWebToAppRedirectAllowableValues();
+        if (!is_null($this->container['web_to_app_redirect']) && !in_array($this->container['web_to_app_redirect'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'web_to_app_redirect', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -1304,6 +1339,39 @@ class App implements ModelInterface, ArrayAccess
     public function setSmsRestaurantName($sms_restaurant_name)
     {
         $this->container['sms_restaurant_name'] = $sms_restaurant_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets web_to_app_redirect
+     *
+     * @return string
+     */
+    public function getWebToAppRedirect()
+    {
+        return $this->container['web_to_app_redirect'];
+    }
+
+    /**
+     * Sets web_to_app_redirect
+     *
+     * @param string $web_to_app_redirect Web to App Redirect settings
+     *
+     * @return $this
+     */
+    public function setWebToAppRedirect($web_to_app_redirect)
+    {
+        $allowedValues = $this->getWebToAppRedirectAllowableValues();
+        if (!is_null($web_to_app_redirect) && !in_array($web_to_app_redirect, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'web_to_app_redirect', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['web_to_app_redirect'] = $web_to_app_redirect;
 
         return $this;
     }

@@ -372,6 +372,16 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for setStoreCollectionSettings
+     *
+     * .
+     *
+     */
+    public function testSetStoreCollectionSettings()
+    {
+    }
+
+    /**
      * Test case for setStoreLeadTimes
      *
      * .
