@@ -9328,14 +9328,15 @@ class StoresApi
      *
      * @param  int $store_id store_id (required)
      * @param  \Flipdish\\Client\Models\StoreCollectionSettings $settings settings (required)
+     * @param  bool $inherit_from_property inherit_from_property (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultRestApiDefaultResponse
      */
-    public function setStoreCollectionSettings($store_id, $settings)
+    public function setStoreCollectionSettings($store_id, $settings, $inherit_from_property = null)
     {
-        list($response) = $this->setStoreCollectionSettingsWithHttpInfo($store_id, $settings);
+        list($response) = $this->setStoreCollectionSettingsWithHttpInfo($store_id, $settings, $inherit_from_property);
         return $response;
     }
 
@@ -9344,15 +9345,16 @@ class StoresApi
      *
      * @param  int $store_id (required)
      * @param  \Flipdish\\Client\Models\StoreCollectionSettings $settings (required)
+     * @param  bool $inherit_from_property (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultRestApiDefaultResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function setStoreCollectionSettingsWithHttpInfo($store_id, $settings)
+    public function setStoreCollectionSettingsWithHttpInfo($store_id, $settings, $inherit_from_property = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultRestApiDefaultResponse';
-        $request = $this->setStoreCollectionSettingsRequest($store_id, $settings);
+        $request = $this->setStoreCollectionSettingsRequest($store_id, $settings, $inherit_from_property);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9452,13 +9454,14 @@ class StoresApi
      *
      * @param  int $store_id (required)
      * @param  \Flipdish\\Client\Models\StoreCollectionSettings $settings (required)
+     * @param  bool $inherit_from_property (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function setStoreCollectionSettingsAsync($store_id, $settings)
+    public function setStoreCollectionSettingsAsync($store_id, $settings, $inherit_from_property = null)
     {
-        return $this->setStoreCollectionSettingsAsyncWithHttpInfo($store_id, $settings)
+        return $this->setStoreCollectionSettingsAsyncWithHttpInfo($store_id, $settings, $inherit_from_property)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9473,14 +9476,15 @@ class StoresApi
      *
      * @param  int $store_id (required)
      * @param  \Flipdish\\Client\Models\StoreCollectionSettings $settings (required)
+     * @param  bool $inherit_from_property (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function setStoreCollectionSettingsAsyncWithHttpInfo($store_id, $settings)
+    public function setStoreCollectionSettingsAsyncWithHttpInfo($store_id, $settings, $inherit_from_property = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultRestApiDefaultResponse';
-        $request = $this->setStoreCollectionSettingsRequest($store_id, $settings);
+        $request = $this->setStoreCollectionSettingsRequest($store_id, $settings, $inherit_from_property);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9524,11 +9528,12 @@ class StoresApi
      *
      * @param  int $store_id (required)
      * @param  \Flipdish\\Client\Models\StoreCollectionSettings $settings (required)
+     * @param  bool $inherit_from_property (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function setStoreCollectionSettingsRequest($store_id, $settings)
+    protected function setStoreCollectionSettingsRequest($store_id, $settings, $inherit_from_property = null)
     {
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
@@ -9550,6 +9555,10 @@ class StoresApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($inherit_from_property !== null) {
+            $queryParams['inheritFromProperty'] = ObjectSerializer::toQueryValue($inherit_from_property);
+        }
 
         // path params
         if ($store_id !== null) {

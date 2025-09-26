@@ -1674,7 +1674,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setStoreCollectionSettings**
-> \Flipdish\\Client\Models\RestApiResultRestApiDefaultResponse setStoreCollectionSettings($store_id, $settings)
+> \Flipdish\\Client\Models\RestApiResultRestApiDefaultResponse setStoreCollectionSettings($store_id, $settings, $inherit_from_property)
 
 
 
@@ -1694,9 +1694,10 @@ $apiInstance = new Flipdish\\Client\Api\StoresApi(
 );
 $store_id = 56; // int | 
 $settings = new \Flipdish\\Client\Models\StoreCollectionSettings(); // \Flipdish\\Client\Models\StoreCollectionSettings | 
+$inherit_from_property = true; // bool | 
 
 try {
-    $result = $apiInstance->setStoreCollectionSettings($store_id, $settings);
+    $result = $apiInstance->setStoreCollectionSettings($store_id, $settings, $inherit_from_property);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StoresApi->setStoreCollectionSettings: ', $e->getMessage(), PHP_EOL;
@@ -1710,6 +1711,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **store_id** | **int**|  |
  **settings** | [**\Flipdish\\Client\Models\StoreCollectionSettings**](../Model/StoreCollectionSettings.md)|  |
+ **inherit_from_property** | **bool**|  | [optional]
 
 ### Return type
 
