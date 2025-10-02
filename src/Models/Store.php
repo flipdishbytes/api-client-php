@@ -536,8 +536,7 @@ class Store implements ModelInterface, ArrayAccess
     const SALES_CHANNEL_TYPES_KIOSK = 'Kiosk';
     const SALES_CHANNEL_TYPES_POS = 'Pos';
     const SALES_CHANNEL_TYPES_NONE = 'None';
-    const INHERITANCE_CONFIG_TYPES_COLLECTION_SETTING = 'CollectionSetting';
-    const INHERITANCE_CONFIG_TYPES_DELIVERY_SETTING = 'DeliverySetting';
+    const INHERITANCE_CONFIG_TYPES_COLLECTION_SETTINGS = 'CollectionSettings';
     
 
     
@@ -704,8 +703,7 @@ class Store implements ModelInterface, ArrayAccess
     public function getInheritanceConfigTypesAllowableValues()
     {
         return [
-            self::INHERITANCE_CONFIG_TYPES_COLLECTION_SETTING,
-            self::INHERITANCE_CONFIG_TYPES_DELIVERY_SETTING,
+            self::INHERITANCE_CONFIG_TYPES_COLLECTION_SETTINGS,
         ];
     }
     
