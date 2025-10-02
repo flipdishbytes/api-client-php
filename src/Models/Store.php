@@ -108,7 +108,8 @@ class Store implements ModelInterface, ArrayAccess
         'name' => 'string',
         'email_address' => 'string',
         'staff_language' => 'string',
-        'sales_channel_types' => 'string[]'
+        'sales_channel_types' => 'string[]',
+        'inheritance_config_types' => 'string[]'
     ];
 
     /**
@@ -167,7 +168,8 @@ class Store implements ModelInterface, ArrayAccess
         'name' => null,
         'email_address' => null,
         'staff_language' => null,
-        'sales_channel_types' => null
+        'sales_channel_types' => null,
+        'inheritance_config_types' => null
     ];
 
     /**
@@ -247,7 +249,8 @@ class Store implements ModelInterface, ArrayAccess
         'name' => 'Name',
         'email_address' => 'EmailAddress',
         'staff_language' => 'StaffLanguage',
-        'sales_channel_types' => 'SalesChannelTypes'
+        'sales_channel_types' => 'SalesChannelTypes',
+        'inheritance_config_types' => 'InheritanceConfigTypes'
     ];
 
     /**
@@ -306,7 +309,8 @@ class Store implements ModelInterface, ArrayAccess
         'name' => 'setName',
         'email_address' => 'setEmailAddress',
         'staff_language' => 'setStaffLanguage',
-        'sales_channel_types' => 'setSalesChannelTypes'
+        'sales_channel_types' => 'setSalesChannelTypes',
+        'inheritance_config_types' => 'setInheritanceConfigTypes'
     ];
 
     /**
@@ -365,7 +369,8 @@ class Store implements ModelInterface, ArrayAccess
         'name' => 'getName',
         'email_address' => 'getEmailAddress',
         'staff_language' => 'getStaffLanguage',
-        'sales_channel_types' => 'getSalesChannelTypes'
+        'sales_channel_types' => 'getSalesChannelTypes',
+        'inheritance_config_types' => 'getInheritanceConfigTypes'
     ];
 
     /**
@@ -531,6 +536,8 @@ class Store implements ModelInterface, ArrayAccess
     const SALES_CHANNEL_TYPES_KIOSK = 'Kiosk';
     const SALES_CHANNEL_TYPES_POS = 'Pos';
     const SALES_CHANNEL_TYPES_NONE = 'None';
+    const INHERITANCE_CONFIG_TYPES_COLLECTION_SETTING = 'CollectionSetting';
+    const INHERITANCE_CONFIG_TYPES_DELIVERY_SETTING = 'DeliverySetting';
     
 
     
@@ -689,6 +696,19 @@ class Store implements ModelInterface, ArrayAccess
         ];
     }
     
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getInheritanceConfigTypesAllowableValues()
+    {
+        return [
+            self::INHERITANCE_CONFIG_TYPES_COLLECTION_SETTING,
+            self::INHERITANCE_CONFIG_TYPES_DELIVERY_SETTING,
+        ];
+    }
+    
 
     /**
      * Associative array for storing property values
@@ -756,6 +776,7 @@ class Store implements ModelInterface, ArrayAccess
         $this->container['email_address'] = isset($data['email_address']) ? $data['email_address'] : null;
         $this->container['staff_language'] = isset($data['staff_language']) ? $data['staff_language'] : null;
         $this->container['sales_channel_types'] = isset($data['sales_channel_types']) ? $data['sales_channel_types'] : null;
+        $this->container['inheritance_config_types'] = isset($data['inheritance_config_types']) ? $data['inheritance_config_types'] : null;
     }
 
     /**
@@ -2060,6 +2081,39 @@ class Store implements ModelInterface, ArrayAccess
             );
         }
         $this->container['sales_channel_types'] = $sales_channel_types;
+
+        return $this;
+    }
+
+    /**
+     * Gets inheritance_config_types
+     *
+     * @return string[]
+     */
+    public function getInheritanceConfigTypes()
+    {
+        return $this->container['inheritance_config_types'];
+    }
+
+    /**
+     * Sets inheritance_config_types
+     *
+     * @param string[] $inheritance_config_types Inheritance Config Types
+     *
+     * @return $this
+     */
+    public function setInheritanceConfigTypes($inheritance_config_types)
+    {
+        $allowedValues = $this->getInheritanceConfigTypesAllowableValues();
+        if (!is_null($inheritance_config_types) && array_diff($inheritance_config_types, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'inheritance_config_types', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['inheritance_config_types'] = $inheritance_config_types;
 
         return $this;
     }

@@ -432,4 +432,11 @@ class StoreTest extends \PHPUnit_Framework_TestCase
     public function testPropertySalesChannelTypes()
     {
     }
+
+    /**
+     * Test attribute "inheritance_config_types"
+     */
+    public function testPropertyInheritanceConfigTypes()
+    {
+    }
 }
