@@ -90,4 +90,14 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     public function testGetRoles()
     {
     }
+
+    /**
+     * Test case for searchUsers
+     *
+     * .
+     *
+     */
+    public function testSearchUsers()
+    {
+    }
 }

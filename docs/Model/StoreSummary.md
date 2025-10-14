@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **currency** | **string** | Currency which used by the Store | [optional] 
 **coordinates** | [**\Flipdish\\Client\Models\Coordinates**](Coordinates.md) | Latitude and longitude of the store | [optional] 
 **store_timezone** | **string** | Timezone of store | [optional] 
+**store_iana_timezone** | **string** | IANA Timezone of store | [optional] 
 **store_group_id** | **int** | Store group id of store | [optional] 
 **tax_id** | **string** | VAT number or generic Tax ID of the store | [optional] 
 **pretty_address** | **string** | Address of the store | [optional] 

@@ -1,6 +1,6 @@
 <?php
 /**
- * StoreSummaryTest
+ * UserTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * StoreSummaryTest Class Doc Comment
+ * UserTest Class Doc Comment
  *
  * @category    Class
- * @description Store summary
+ * @description User
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StoreSummaryTest extends \PHPUnit_Framework_TestCase
+class UserTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class StoreSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StoreSummary"
+     * Test "User"
      */
-    public function testStoreSummary()
+    public function testUser()
     {
     }
 
@@ -84,72 +84,58 @@ class StoreSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "phone_number"
      */
-    public function testPropertyName()
+    public function testPropertyPhoneNumber()
     {
     }
 
     /**
-     * Test attribute "menu_id"
+     * Test attribute "email"
      */
-    public function testPropertyMenuId()
+    public function testPropertyEmail()
     {
     }
 
     /**
-     * Test attribute "metadata"
+     * Test attribute "customer_name"
      */
-    public function testPropertyMetadata()
+    public function testPropertyCustomerName()
     {
     }
 
     /**
-     * Test attribute "currency"
+     * Test attribute "has_logged_in"
      */
-    public function testPropertyCurrency()
+    public function testPropertyHasLoggedIn()
     {
     }
 
     /**
-     * Test attribute "coordinates"
+     * Test attribute "user_discriminator"
      */
-    public function testPropertyCoordinates()
+    public function testPropertyUserDiscriminator()
     {
     }
 
     /**
-     * Test attribute "store_timezone"
+     * Test attribute "ts_create"
      */
-    public function testPropertyStoreTimezone()
+    public function testPropertyTsCreate()
     {
     }
 
     /**
-     * Test attribute "store_iana_timezone"
+     * Test attribute "white_label_configs"
      */
-    public function testPropertyStoreIanaTimezone()
+    public function testPropertyWhiteLabelConfigs()
     {
     }
 
     /**
-     * Test attribute "store_group_id"
+     * Test attribute "user_type"
      */
-    public function testPropertyStoreGroupId()
-    {
-    }
-
-    /**
-     * Test attribute "tax_id"
-     */
-    public function testPropertyTaxId()
-    {
-    }
-
-    /**
-     * Test attribute "pretty_address"
-     */
-    public function testPropertyPrettyAddress()
+    public function testPropertyUserType()
     {
     }
 }

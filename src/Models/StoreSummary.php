@@ -65,6 +65,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'currency' => 'string',
         'coordinates' => '\Flipdish\\Client\Models\Coordinates',
         'store_timezone' => 'string',
+        'store_iana_timezone' => 'string',
         'store_group_id' => 'int',
         'tax_id' => 'string',
         'pretty_address' => 'string'
@@ -83,6 +84,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'currency' => null,
         'coordinates' => null,
         'store_timezone' => null,
+        'store_iana_timezone' => null,
         'store_group_id' => 'int32',
         'tax_id' => null,
         'pretty_address' => null
@@ -122,6 +124,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'currency' => 'Currency',
         'coordinates' => 'Coordinates',
         'store_timezone' => 'StoreTimezone',
+        'store_iana_timezone' => 'StoreIanaTimezone',
         'store_group_id' => 'StoreGroupId',
         'tax_id' => 'TaxId',
         'pretty_address' => 'PrettyAddress'
@@ -140,6 +143,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'currency' => 'setCurrency',
         'coordinates' => 'setCoordinates',
         'store_timezone' => 'setStoreTimezone',
+        'store_iana_timezone' => 'setStoreIanaTimezone',
         'store_group_id' => 'setStoreGroupId',
         'tax_id' => 'setTaxId',
         'pretty_address' => 'setPrettyAddress'
@@ -158,6 +162,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'currency' => 'getCurrency',
         'coordinates' => 'getCoordinates',
         'store_timezone' => 'getStoreTimezone',
+        'store_iana_timezone' => 'getStoreIanaTimezone',
         'store_group_id' => 'getStoreGroupId',
         'tax_id' => 'getTaxId',
         'pretty_address' => 'getPrettyAddress'
@@ -467,6 +472,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['coordinates'] = isset($data['coordinates']) ? $data['coordinates'] : null;
         $this->container['store_timezone'] = isset($data['store_timezone']) ? $data['store_timezone'] : null;
+        $this->container['store_iana_timezone'] = isset($data['store_iana_timezone']) ? $data['store_iana_timezone'] : null;
         $this->container['store_group_id'] = isset($data['store_group_id']) ? $data['store_group_id'] : null;
         $this->container['tax_id'] = isset($data['tax_id']) ? $data['tax_id'] : null;
         $this->container['pretty_address'] = isset($data['pretty_address']) ? $data['pretty_address'] : null;
@@ -677,6 +683,30 @@ class StoreSummary implements ModelInterface, ArrayAccess
     public function setStoreTimezone($store_timezone)
     {
         $this->container['store_timezone'] = $store_timezone;
+
+        return $this;
+    }
+
+    /**
+     * Gets store_iana_timezone
+     *
+     * @return string
+     */
+    public function getStoreIanaTimezone()
+    {
+        return $this->container['store_iana_timezone'];
+    }
+
+    /**
+     * Sets store_iana_timezone
+     *
+     * @param string $store_iana_timezone IANA Timezone of store
+     *
+     * @return $this
+     */
+    public function setStoreIanaTimezone($store_iana_timezone)
+    {
+        $this->container['store_iana_timezone'] = $store_iana_timezone;
 
         return $this;
     }
