@@ -82,6 +82,26 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getRestaurantUserAccounts
+     *
+     * .
+     *
+     */
+    public function testGetRestaurantUserAccounts()
+    {
+    }
+
+    /**
+     * Test case for getRestaurantUserStores
+     *
+     * .
+     *
+     */
+    public function testGetRestaurantUserStores()
+    {
+    }
+
+    /**
      * Test case for getRoles
      *
      * .
@@ -92,12 +112,32 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getRolesAndUnassignedRoles
+     *
+     * .
+     *
+     */
+    public function testGetRolesAndUnassignedRoles()
+    {
+    }
+
+    /**
      * Test case for getUserById
      *
      * .
      *
      */
     public function testGetUserById()
+    {
+    }
+
+    /**
+     * Test case for getUserNotes
+     *
+     * .
+     *
+     */
+    public function testGetUserNotes()
     {
     }
 

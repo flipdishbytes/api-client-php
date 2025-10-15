@@ -598,8 +598,12 @@ Class | Method | HTTP request | Description
 *TipsApi* | [**tipConfigGet**](docs/Api/TipsApi.md#tipconfigget) | **GET** /api/v1.0/stores/{storeId}/tipconfig | 
 *TipsApi* | [**tipConfigUpsert**](docs/Api/TipsApi.md#tipconfigupsert) | **POST** /api/v1.0/stores/{storeId}/tipconfig | 
 *UsersApi* | [**getPreviousOrderCountForStore**](docs/Api/UsersApi.md#getpreviousordercountforstore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
+*UsersApi* | [**getRestaurantUserAccounts**](docs/Api/UsersApi.md#getrestaurantuseraccounts) | **GET** /api/v1.0/users/{userId}/RestaurantUserAccounts | 
+*UsersApi* | [**getRestaurantUserStores**](docs/Api/UsersApi.md#getrestaurantuserstores) | **GET** /api/v1.0/users/{userId}/RestaurantUserStores | 
 *UsersApi* | [**getRoles**](docs/Api/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | 
+*UsersApi* | [**getRolesAndUnassignedRoles**](docs/Api/UsersApi.md#getrolesandunassignedroles) | **GET** /api/v1.0/users/{userId}/roles | 
 *UsersApi* | [**getUserById**](docs/Api/UsersApi.md#getuserbyid) | **GET** /api/v1.0/users/{userId} | 
+*UsersApi* | [**getUserNotes**](docs/Api/UsersApi.md#getusernotes) | **GET** /api/v1.0/users/{userId}/UserNotes | 
 *UsersApi* | [**searchUsers**](docs/Api/UsersApi.md#searchusers) | **GET** /api/v1.0/users/search | 
 *VouchersApi* | [**createVoucher**](docs/Api/VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | 
 *VouchersApi* | [**getVoucherByCode**](docs/Api/VouchersApi.md#getvoucherbycode) | **GET** /api/v1.0/{appId}/vouchers/code/{code} | 
@@ -1106,6 +1110,9 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultSubscriptionSummary](docs/Model/RestApiArrayResultSubscriptionSummary.md)
  - [RestApiArrayResultSupportedCountry](docs/Model/RestApiArrayResultSupportedCountry.md)
  - [RestApiArrayResultTeammate](docs/Model/RestApiArrayResultTeammate.md)
+ - [RestApiArrayResultUserFlipdishAccount](docs/Model/RestApiArrayResultUserFlipdishAccount.md)
+ - [RestApiArrayResultUserNote](docs/Model/RestApiArrayResultUserNote.md)
+ - [RestApiArrayResultUserStoreInfo](docs/Model/RestApiArrayResultUserStoreInfo.md)
  - [RestApiArrayResultVoucherDataPoint](docs/Model/RestApiArrayResultVoucherDataPoint.md)
  - [RestApiDefaultResponse](docs/Model/RestApiDefaultResponse.md)
  - [RestApiErrorResult](docs/Model/RestApiErrorResult.md)
@@ -1261,6 +1268,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultTipConfiguration](docs/Model/RestApiResultTipConfiguration.md)
  - [RestApiResultUpdateMobileAppsSubmissionStatus](docs/Model/RestApiResultUpdateMobileAppsSubmissionStatus.md)
  - [RestApiResultUserInfo](docs/Model/RestApiResultUserInfo.md)
+ - [RestApiResultUserRole](docs/Model/RestApiResultUserRole.md)
  - [RestApiResultVoucher](docs/Model/RestApiResultVoucher.md)
  - [RestApiResultVoucherWithStats](docs/Model/RestApiResultVoucherWithStats.md)
  - [RestApiResultWebsiteImage](docs/Model/RestApiResultWebsiteImage.md)
@@ -1405,11 +1413,15 @@ Class | Method | HTTP request | Description
  - [UserCreatedEvent](docs/Model/UserCreatedEvent.md)
  - [UserDeletedEvent](docs/Model/UserDeletedEvent.md)
  - [UserEventInfo](docs/Model/UserEventInfo.md)
+ - [UserFlipdishAccount](docs/Model/UserFlipdishAccount.md)
  - [UserInfo](docs/Model/UserInfo.md)
  - [UserLoginEvent](docs/Model/UserLoginEvent.md)
  - [UserMonthlyCommission](docs/Model/UserMonthlyCommission.md)
+ - [UserNote](docs/Model/UserNote.md)
  - [UserPasswordCreatedEvent](docs/Model/UserPasswordCreatedEvent.md)
+ - [UserRole](docs/Model/UserRole.md)
  - [UserSearch](docs/Model/UserSearch.md)
+ - [UserStoreInfo](docs/Model/UserStoreInfo.md)
  - [UserUpdatedEvent](docs/Model/UserUpdatedEvent.md)
  - [UserWhiteLabelConfig](docs/Model/UserWhiteLabelConfig.md)
  - [UserWhiteLabelInfo](docs/Model/UserWhiteLabelInfo.md)
