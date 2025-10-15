@@ -1,6 +1,6 @@
 <?php
 /**
- * User
+ * UserSearch
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * User Class Doc Comment
+ * UserSearch Class Doc Comment
  *
  * @category Class
- * @description User
+ * @description User Search Result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class User implements ModelInterface, ArrayAccess
+class UserSearch implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class User implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'User';
+    protected static $swaggerModelName = 'UserSearch';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

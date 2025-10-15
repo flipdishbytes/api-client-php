@@ -599,6 +599,7 @@ Class | Method | HTTP request | Description
 *TipsApi* | [**tipConfigUpsert**](docs/Api/TipsApi.md#tipconfigupsert) | **POST** /api/v1.0/stores/{storeId}/tipconfig | 
 *UsersApi* | [**getPreviousOrderCountForStore**](docs/Api/UsersApi.md#getpreviousordercountforstore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
 *UsersApi* | [**getRoles**](docs/Api/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | 
+*UsersApi* | [**getUserById**](docs/Api/UsersApi.md#getuserbyid) | **GET** /api/v1.0/users/{userId} | 
 *UsersApi* | [**searchUsers**](docs/Api/UsersApi.md#searchusers) | **GET** /api/v1.0/users/search | 
 *VouchersApi* | [**createVoucher**](docs/Api/VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | 
 *VouchersApi* | [**getVoucherByCode**](docs/Api/VouchersApi.md#getvoucherbycode) | **GET** /api/v1.0/{appId}/vouchers/code/{code} | 
@@ -654,6 +655,7 @@ Class | Method | HTTP request | Description
  - [AppConfigSalesChannel](docs/Model/AppConfigSalesChannel.md)
  - [AppConfigUpdateModel](docs/Model/AppConfigUpdateModel.md)
  - [AppCreatedEvent](docs/Model/AppCreatedEvent.md)
+ - [AppInstall](docs/Model/AppInstall.md)
  - [AppLookup](docs/Model/AppLookup.md)
  - [AppStoreApp](docs/Model/AppStoreApp.md)
  - [AppStoreAppConfiguration](docs/Model/AppStoreAppConfiguration.md)
@@ -982,6 +984,7 @@ Class | Method | HTTP request | Description
  - [OwnerEntityConfiguration](docs/Model/OwnerEntityConfiguration.md)
  - [OwnerEntityConfigurations](docs/Model/OwnerEntityConfigurations.md)
  - [PasswordResetModel](docs/Model/PasswordResetModel.md)
+ - [PaymentAccount](docs/Model/PaymentAccount.md)
  - [PaymentIntent](docs/Model/PaymentIntent.md)
  - [PaymentTerminalDetails](docs/Model/PaymentTerminalDetails.md)
  - [PaymentTerminalTransactionDetails](docs/Model/PaymentTerminalTransactionDetails.md)
@@ -1138,7 +1141,7 @@ Class | Method | HTTP request | Description
  - [RestApiPaginationResultStoreGroupExtended](docs/Model/RestApiPaginationResultStoreGroupExtended.md)
  - [RestApiPaginationResultStoreHeader](docs/Model/RestApiPaginationResultStoreHeader.md)
  - [RestApiPaginationResultStoreValidationConfig](docs/Model/RestApiPaginationResultStoreValidationConfig.md)
- - [RestApiPaginationResultUser](docs/Model/RestApiPaginationResultUser.md)
+ - [RestApiPaginationResultUserSearch](docs/Model/RestApiPaginationResultUserSearch.md)
  - [RestApiPaginationResultVoucherSummary](docs/Model/RestApiPaginationResultVoucherSummary.md)
  - [RestApiPaginationResultWebhookLog](docs/Model/RestApiPaginationResultWebhookLog.md)
  - [RestApiPaginationResultWebhookSubscription](docs/Model/RestApiPaginationResultWebhookSubscription.md)
@@ -1257,6 +1260,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultTelemetrySeriesResult](docs/Model/RestApiResultTelemetrySeriesResult.md)
  - [RestApiResultTipConfiguration](docs/Model/RestApiResultTipConfiguration.md)
  - [RestApiResultUpdateMobileAppsSubmissionStatus](docs/Model/RestApiResultUpdateMobileAppsSubmissionStatus.md)
+ - [RestApiResultUserInfo](docs/Model/RestApiResultUserInfo.md)
  - [RestApiResultVoucher](docs/Model/RestApiResultVoucher.md)
  - [RestApiResultVoucherWithStats](docs/Model/RestApiResultVoucherWithStats.md)
  - [RestApiResultWebsiteImage](docs/Model/RestApiResultWebsiteImage.md)
@@ -1397,15 +1401,18 @@ Class | Method | HTTP request | Description
  - [UpdateTipConfiguration](docs/Model/UpdateTipConfiguration.md)
  - [UpdateVoucher](docs/Model/UpdateVoucher.md)
  - [UpdateVoucherUsage](docs/Model/UpdateVoucherUsage.md)
- - [User](docs/Model/User.md)
  - [UserAnsweredSignupQuestionsEvent](docs/Model/UserAnsweredSignupQuestionsEvent.md)
  - [UserCreatedEvent](docs/Model/UserCreatedEvent.md)
  - [UserDeletedEvent](docs/Model/UserDeletedEvent.md)
  - [UserEventInfo](docs/Model/UserEventInfo.md)
+ - [UserInfo](docs/Model/UserInfo.md)
  - [UserLoginEvent](docs/Model/UserLoginEvent.md)
+ - [UserMonthlyCommission](docs/Model/UserMonthlyCommission.md)
  - [UserPasswordCreatedEvent](docs/Model/UserPasswordCreatedEvent.md)
+ - [UserSearch](docs/Model/UserSearch.md)
  - [UserUpdatedEvent](docs/Model/UserUpdatedEvent.md)
  - [UserWhiteLabelConfig](docs/Model/UserWhiteLabelConfig.md)
+ - [UserWhiteLabelInfo](docs/Model/UserWhiteLabelInfo.md)
  - [ValidValue](docs/Model/ValidValue.md)
  - [ValidationErrorResult](docs/Model/ValidationErrorResult.md)
  - [ValidityPeriod](docs/Model/ValidityPeriod.md)

@@ -1,6 +1,6 @@
 <?php
 /**
- * LanguageTest
+ * PaymentAccountTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * LanguageTest Class Doc Comment
+ * PaymentAccountTest Class Doc Comment
  *
  * @category    Class
- * @description Sorted Language
+ * @description Payment Account information
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LanguageTest extends \PHPUnit_Framework_TestCase
+class PaymentAccountTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,72 @@ class LanguageTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Language"
+     * Test "PaymentAccount"
      */
-    public function testLanguage()
+    public function testPaymentAccount()
     {
     }
 
     /**
-     * Test attribute "language_id"
+     * Test attribute "user_id"
      */
-    public function testPropertyLanguageId()
+    public function testPropertyUserId()
     {
     }
 
     /**
-     * Test attribute "display_order"
+     * Test attribute "payment_account_id"
      */
-    public function testPropertyDisplayOrder()
+    public function testPropertyPaymentAccountId()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "can_remove_from_customer_view"
      */
-    public function testPropertyName()
+    public function testPropertyCanRemoveFromCustomerView()
     {
     }
 
     /**
-     * Test attribute "enabled"
+     * Test attribute "bin"
      */
-    public function testPropertyEnabled()
+    public function testPropertyBin()
+    {
+    }
+
+    /**
+     * Test attribute "is_default_payment_method"
+     */
+    public function testPropertyIsDefaultPaymentMethod()
+    {
+    }
+
+    /**
+     * Test attribute "is_visible_to_customer"
+     */
+    public function testPropertyIsVisibleToCustomer()
+    {
+    }
+
+    /**
+     * Test attribute "payment_account_type"
+     */
+    public function testPropertyPaymentAccountType()
+    {
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+    }
+
+    /**
+     * Test attribute "customer_id"
+     */
+    public function testPropertyCustomerId()
     {
     }
 }

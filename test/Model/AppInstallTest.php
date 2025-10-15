@@ -1,6 +1,6 @@
 <?php
 /**
- * LanguageTest
+ * AppInstallTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * LanguageTest Class Doc Comment
+ * AppInstallTest Class Doc Comment
  *
  * @category    Class
- * @description Sorted Language
+ * @description App Install information
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LanguageTest extends \PHPUnit_Framework_TestCase
+class AppInstallTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,23 +70,9 @@ class LanguageTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Language"
+     * Test "AppInstall"
      */
-    public function testLanguage()
-    {
-    }
-
-    /**
-     * Test attribute "language_id"
-     */
-    public function testPropertyLanguageId()
-    {
-    }
-
-    /**
-     * Test attribute "display_order"
-     */
-    public function testPropertyDisplayOrder()
+    public function testAppInstall()
     {
     }
 
@@ -98,9 +84,65 @@ class LanguageTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "enabled"
+     * Test attribute "first_login"
      */
-    public function testPropertyEnabled()
+    public function testPropertyFirstLogin()
+    {
+    }
+
+    /**
+     * Test attribute "first_login_human"
+     */
+    public function testPropertyFirstLoginHuman()
+    {
+    }
+
+    /**
+     * Test attribute "last_activity"
+     */
+    public function testPropertyLastActivity()
+    {
+    }
+
+    /**
+     * Test attribute "last_activity_human"
+     */
+    public function testPropertyLastActivityHuman()
+    {
+    }
+
+    /**
+     * Test attribute "google_tokens"
+     */
+    public function testPropertyGoogleTokens()
+    {
+    }
+
+    /**
+     * Test attribute "apple_tokens"
+     */
+    public function testPropertyAppleTokens()
+    {
+    }
+
+    /**
+     * Test attribute "order_count"
+     */
+    public function testPropertyOrderCount()
+    {
+    }
+
+    /**
+     * Test attribute "user_agent_at_signup"
+     */
+    public function testPropertyUserAgentAtSignup()
+    {
+    }
+
+    /**
+     * Test attribute "user_agent_most_recent"
+     */
+    public function testPropertyUserAgentMostRecent()
     {
     }
 }

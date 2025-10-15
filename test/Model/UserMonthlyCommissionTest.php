@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiPaginationResultUserTest
+ * UserMonthlyCommissionTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * RestApiPaginationResultUserTest Class Doc Comment
+ * UserMonthlyCommissionTest Class Doc Comment
  *
  * @category    Class
- * @description Rest api pagination result
+ * @description User Monthly Commission
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RestApiPaginationResultUserTest extends \PHPUnit_Framework_TestCase
+class UserMonthlyCommissionTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,44 @@ class RestApiPaginationResultUserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RestApiPaginationResultUser"
+     * Test "UserMonthlyCommission"
      */
-    public function testRestApiPaginationResultUser()
+    public function testUserMonthlyCommission()
     {
     }
 
     /**
-     * Test attribute "page"
+     * Test attribute "user_id"
      */
-    public function testPropertyPage()
+    public function testPropertyUserId()
     {
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "month_start"
      */
-    public function testPropertyLimit()
+    public function testPropertyMonthStart()
     {
     }
 
     /**
-     * Test attribute "total_record_count"
+     * Test attribute "commission_amount"
      */
-    public function testPropertyTotalRecordCount()
+    public function testPropertyCommissionAmount()
     {
     }
 
     /**
-     * Test attribute "data"
+     * Test attribute "currency"
      */
-    public function testPropertyData()
+    public function testPropertyCurrency()
+    {
+    }
+
+    /**
+     * Test attribute "iso_currency"
+     */
+    public function testPropertyIsoCurrency()
     {
     }
 }

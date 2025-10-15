@@ -1,6 +1,6 @@
 <?php
 /**
- * Language
+ * UserWhiteLabelInfo
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * Language Class Doc Comment
+ * UserWhiteLabelInfo Class Doc Comment
  *
  * @category Class
- * @description Sorted Language
+ * @description User WhiteLabel information
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Language implements ModelInterface, ArrayAccess
+class UserWhiteLabelInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class Language implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Language';
+    protected static $swaggerModelName = 'UserWhiteLabelInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +58,9 @@ class Language implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'language_id' => 'string',
-        'display_order' => 'int',
-        'name' => 'string',
-        'enabled' => 'bool'
+        'wl_config_id' => 'int',
+        'app_id' => 'string',
+        'white_label_name' => 'string'
     ];
 
     /**
@@ -70,10 +69,9 @@ class Language implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'language_id' => null,
-        'display_order' => 'int32',
-        'name' => null,
-        'enabled' => null
+        'wl_config_id' => 'int32',
+        'app_id' => null,
+        'white_label_name' => null
     ];
 
     /**
@@ -103,10 +101,9 @@ class Language implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'language_id' => 'LanguageId',
-        'display_order' => 'DisplayOrder',
-        'name' => 'Name',
-        'enabled' => 'Enabled'
+        'wl_config_id' => 'WlConfigId',
+        'app_id' => 'AppId',
+        'white_label_name' => 'WhiteLabelName'
     ];
 
     /**
@@ -115,10 +112,9 @@ class Language implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'language_id' => 'setLanguageId',
-        'display_order' => 'setDisplayOrder',
-        'name' => 'setName',
-        'enabled' => 'setEnabled'
+        'wl_config_id' => 'setWlConfigId',
+        'app_id' => 'setAppId',
+        'white_label_name' => 'setWhiteLabelName'
     ];
 
     /**
@@ -127,10 +123,9 @@ class Language implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'language_id' => 'getLanguageId',
-        'display_order' => 'getDisplayOrder',
-        'name' => 'getName',
-        'enabled' => 'getEnabled'
+        'wl_config_id' => 'getWlConfigId',
+        'app_id' => 'getAppId',
+        'white_label_name' => 'getWhiteLabelName'
     ];
 
     /**
@@ -193,10 +188,9 @@ class Language implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['language_id'] = isset($data['language_id']) ? $data['language_id'] : null;
-        $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
+        $this->container['wl_config_id'] = isset($data['wl_config_id']) ? $data['wl_config_id'] : null;
+        $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
+        $this->container['white_label_name'] = isset($data['white_label_name']) ? $data['white_label_name'] : null;
     }
 
     /**
@@ -224,97 +218,73 @@ class Language implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets language_id
-     *
-     * @return string
-     */
-    public function getLanguageId()
-    {
-        return $this->container['language_id'];
-    }
-
-    /**
-     * Sets language_id
-     *
-     * @param string $language_id ISO 639-1 Language Code
-     *
-     * @return $this
-     */
-    public function setLanguageId($language_id)
-    {
-        $this->container['language_id'] = $language_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets display_order
+     * Gets wl_config_id
      *
      * @return int
      */
-    public function getDisplayOrder()
+    public function getWlConfigId()
     {
-        return $this->container['display_order'];
+        return $this->container['wl_config_id'];
     }
 
     /**
-     * Sets display_order
+     * Sets wl_config_id
      *
-     * @param int $display_order Display Order
+     * @param int $wl_config_id WhiteLabelConfig Id
      *
      * @return $this
      */
-    public function setDisplayOrder($display_order)
+    public function setWlConfigId($wl_config_id)
     {
-        $this->container['display_order'] = $display_order;
+        $this->container['wl_config_id'] = $wl_config_id;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets app_id
      *
      * @return string
      */
-    public function getName()
+    public function getAppId()
     {
-        return $this->container['name'];
+        return $this->container['app_id'];
     }
 
     /**
-     * Sets name
+     * Sets app_id
      *
-     * @param string $name Language Name
+     * @param string $app_id Brand Id (AppId)
      *
      * @return $this
      */
-    public function setName($name)
+    public function setAppId($app_id)
     {
-        $this->container['name'] = $name;
+        $this->container['app_id'] = $app_id;
 
         return $this;
     }
 
     /**
-     * Gets enabled
+     * Gets white_label_name
      *
-     * @return bool
+     * @return string
      */
-    public function getEnabled()
+    public function getWhiteLabelName()
     {
-        return $this->container['enabled'];
+        return $this->container['white_label_name'];
     }
 
     /**
-     * Sets enabled
+     * Sets white_label_name
      *
-     * @param bool $enabled Is the language enabled for use.
+     * @param string $white_label_name WhiteLabel Name
      *
      * @return $this
      */
-    public function setEnabled($enabled)
+    public function setWhiteLabelName($white_label_name)
     {
-        $this->container['enabled'] = $enabled;
+        $this->container['white_label_name'] = $white_label_name;
 
         return $this;
     }

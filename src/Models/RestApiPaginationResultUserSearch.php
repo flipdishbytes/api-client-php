@@ -1,6 +1,6 @@
 <?php
 /**
- * RestApiPaginationResultUser
+ * RestApiPaginationResultUserSearch
  *
  * PHP version 5
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * RestApiPaginationResultUser Class Doc Comment
+ * RestApiPaginationResultUserSearch Class Doc Comment
  *
  * @category Class
  * @description Rest api pagination result
@@ -41,7 +41,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class RestApiPaginationResultUser implements ModelInterface, ArrayAccess
+class RestApiPaginationResultUserSearch implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class RestApiPaginationResultUser implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'RestApiPaginationResult[User]';
+    protected static $swaggerModelName = 'RestApiPaginationResult[UserSearch]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,7 +61,7 @@ class RestApiPaginationResultUser implements ModelInterface, ArrayAccess
         'page' => 'int',
         'limit' => 'int',
         'total_record_count' => 'int',
-        'data' => '\Flipdish\\Client\Models\User[]'
+        'data' => '\Flipdish\\Client\Models\UserSearch[]'
     ];
 
     /**
@@ -310,7 +310,7 @@ class RestApiPaginationResultUser implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Flipdish\\Client\Models\User[]
+     * @return \Flipdish\\Client\Models\UserSearch[]
      */
     public function getData()
     {
@@ -320,7 +320,7 @@ class RestApiPaginationResultUser implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Flipdish\\Client\Models\User[] $data Generic data object.
+     * @param \Flipdish\\Client\Models\UserSearch[] $data Generic data object.
      *
      * @return $this
      */

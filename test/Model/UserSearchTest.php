@@ -1,6 +1,6 @@
 <?php
 /**
- * LanguageTest
+ * UserSearchTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * LanguageTest Class Doc Comment
+ * UserSearchTest Class Doc Comment
  *
  * @category    Class
- * @description Sorted Language
+ * @description User Search Result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class LanguageTest extends \PHPUnit_Framework_TestCase
+class UserSearchTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,72 @@ class LanguageTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Language"
+     * Test "UserSearch"
      */
-    public function testLanguage()
+    public function testUserSearch()
     {
     }
 
     /**
-     * Test attribute "language_id"
+     * Test attribute "id"
      */
-    public function testPropertyLanguageId()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "display_order"
+     * Test attribute "phone_number"
      */
-    public function testPropertyDisplayOrder()
+    public function testPropertyPhoneNumber()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "email"
      */
-    public function testPropertyName()
+    public function testPropertyEmail()
     {
     }
 
     /**
-     * Test attribute "enabled"
+     * Test attribute "customer_name"
      */
-    public function testPropertyEnabled()
+    public function testPropertyCustomerName()
+    {
+    }
+
+    /**
+     * Test attribute "has_logged_in"
+     */
+    public function testPropertyHasLoggedIn()
+    {
+    }
+
+    /**
+     * Test attribute "user_discriminator"
+     */
+    public function testPropertyUserDiscriminator()
+    {
+    }
+
+    /**
+     * Test attribute "ts_create"
+     */
+    public function testPropertyTsCreate()
+    {
+    }
+
+    /**
+     * Test attribute "white_label_configs"
+     */
+    public function testPropertyWhiteLabelConfigs()
+    {
+    }
+
+    /**
+     * Test attribute "user_type"
+     */
+    public function testPropertyUserType()
     {
     }
 }

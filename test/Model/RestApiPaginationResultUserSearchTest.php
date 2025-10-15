@@ -1,6 +1,6 @@
 <?php
 /**
- * UserTest
+ * RestApiPaginationResultUserSearchTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * UserTest Class Doc Comment
+ * RestApiPaginationResultUserSearchTest Class Doc Comment
  *
  * @category    Class
- * @description User
+ * @description Rest api pagination result
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UserTest extends \PHPUnit_Framework_TestCase
+class RestApiPaginationResultUserSearchTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,72 +70,37 @@ class UserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "User"
+     * Test "RestApiPaginationResultUserSearch"
      */
-    public function testUser()
+    public function testRestApiPaginationResultUserSearch()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "page"
      */
-    public function testPropertyId()
+    public function testPropertyPage()
     {
     }
 
     /**
-     * Test attribute "phone_number"
+     * Test attribute "limit"
      */
-    public function testPropertyPhoneNumber()
+    public function testPropertyLimit()
     {
     }
 
     /**
-     * Test attribute "email"
+     * Test attribute "total_record_count"
      */
-    public function testPropertyEmail()
+    public function testPropertyTotalRecordCount()
     {
     }
 
     /**
-     * Test attribute "customer_name"
+     * Test attribute "data"
      */
-    public function testPropertyCustomerName()
-    {
-    }
-
-    /**
-     * Test attribute "has_logged_in"
-     */
-    public function testPropertyHasLoggedIn()
-    {
-    }
-
-    /**
-     * Test attribute "user_discriminator"
-     */
-    public function testPropertyUserDiscriminator()
-    {
-    }
-
-    /**
-     * Test attribute "ts_create"
-     */
-    public function testPropertyTsCreate()
-    {
-    }
-
-    /**
-     * Test attribute "white_label_configs"
-     */
-    public function testPropertyWhiteLabelConfigs()
-    {
-    }
-
-    /**
-     * Test attribute "user_type"
-     */
-    public function testPropertyUserType()
+    public function testPropertyData()
     {
     }
 }

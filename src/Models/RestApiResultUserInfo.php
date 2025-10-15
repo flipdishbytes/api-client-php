@@ -1,6 +1,6 @@
 <?php
 /**
- * Language
+ * RestApiResultUserInfo
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * Language Class Doc Comment
+ * RestApiResultUserInfo Class Doc Comment
  *
  * @category Class
- * @description Sorted Language
+ * @description Rest api result
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Language implements ModelInterface, ArrayAccess
+class RestApiResultUserInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class Language implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Language';
+    protected static $swaggerModelName = 'RestApiResult[UserInfo]';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +58,7 @@ class Language implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'language_id' => 'string',
-        'display_order' => 'int',
-        'name' => 'string',
-        'enabled' => 'bool'
+        'data' => '\Flipdish\\Client\Models\UserInfo'
     ];
 
     /**
@@ -70,10 +67,7 @@ class Language implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'language_id' => null,
-        'display_order' => 'int32',
-        'name' => null,
-        'enabled' => null
+        'data' => null
     ];
 
     /**
@@ -103,10 +97,7 @@ class Language implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'language_id' => 'LanguageId',
-        'display_order' => 'DisplayOrder',
-        'name' => 'Name',
-        'enabled' => 'Enabled'
+        'data' => 'Data'
     ];
 
     /**
@@ -115,10 +106,7 @@ class Language implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'language_id' => 'setLanguageId',
-        'display_order' => 'setDisplayOrder',
-        'name' => 'setName',
-        'enabled' => 'setEnabled'
+        'data' => 'setData'
     ];
 
     /**
@@ -127,10 +115,7 @@ class Language implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'language_id' => 'getLanguageId',
-        'display_order' => 'getDisplayOrder',
-        'name' => 'getName',
-        'enabled' => 'getEnabled'
+        'data' => 'getData'
     ];
 
     /**
@@ -193,10 +178,7 @@ class Language implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['language_id'] = isset($data['language_id']) ? $data['language_id'] : null;
-        $this->container['display_order'] = isset($data['display_order']) ? $data['display_order'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -208,6 +190,9 @@ class Language implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -224,97 +209,25 @@ class Language implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets language_id
+     * Gets data
      *
-     * @return string
+     * @return \Flipdish\\Client\Models\UserInfo
      */
-    public function getLanguageId()
+    public function getData()
     {
-        return $this->container['language_id'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets language_id
+     * Sets data
      *
-     * @param string $language_id ISO 639-1 Language Code
+     * @param \Flipdish\\Client\Models\UserInfo $data Generic data object.
      *
      * @return $this
      */
-    public function setLanguageId($language_id)
+    public function setData($data)
     {
-        $this->container['language_id'] = $language_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets display_order
-     *
-     * @return int
-     */
-    public function getDisplayOrder()
-    {
-        return $this->container['display_order'];
-    }
-
-    /**
-     * Sets display_order
-     *
-     * @param int $display_order Display Order
-     *
-     * @return $this
-     */
-    public function setDisplayOrder($display_order)
-    {
-        $this->container['display_order'] = $display_order;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name Language Name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets enabled
-     *
-     * @return bool
-     */
-    public function getEnabled()
-    {
-        return $this->container['enabled'];
-    }
-
-    /**
-     * Sets enabled
-     *
-     * @param bool $enabled Is the language enabled for use.
-     *
-     * @return $this
-     */
-    public function setEnabled($enabled)
-    {
-        $this->container['enabled'] = $enabled;
+        $this->container['data'] = $data;
 
         return $this;
     }

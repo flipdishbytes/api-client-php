@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getPreviousOrderCountForStore**](UsersApi.md#getPreviousOrderCountForStore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
 [**getRoles**](UsersApi.md#getRoles) | **GET** /api/v1.0/users/roles | 
+[**getUserById**](UsersApi.md#getUserById) | **GET** /api/v1.0/users/{userId} | 
 [**searchUsers**](UsersApi.md#searchUsers) | **GET** /api/v1.0/users/search | 
 
 
@@ -109,8 +110,59 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getUserById**
+> \Flipdish\\Client\Models\RestApiResultUserInfo getUserById($user_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$user_id = 56; // int | 
+
+try {
+    $result = $apiInstance->getUserById($user_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->getUserById: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **int**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultUserInfo**](../Model/RestApiResultUserInfo.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **searchUsers**
-> \Flipdish\\Client\Models\RestApiPaginationResultUser searchUsers($search_query, $has_user_logged_in, $user_discriminator, $search_in, $page_index, $page_size)
+> \Flipdish\\Client\Models\RestApiPaginationResultUserSearch searchUsers($search_query, $has_user_logged_in, $user_discriminator, $search_in, $page_index, $page_size)
 
 
 
@@ -157,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiPaginationResultUser**](../Model/RestApiPaginationResultUser.md)
+[**\Flipdish\\Client\Models\RestApiPaginationResultUserSearch**](../Model/RestApiPaginationResultUserSearch.md)
 
 ### Authorization
 
