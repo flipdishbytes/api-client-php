@@ -597,6 +597,10 @@ Class | Method | HTTP request | Description
 *TerminalIotApi* | [**getTerminalIotConnection**](docs/Api/TerminalIotApi.md#getterminaliotconnection) | **POST** /api/v1.0/terminaliot/connect | 
 *TipsApi* | [**tipConfigGet**](docs/Api/TipsApi.md#tipconfigget) | **GET** /api/v1.0/stores/{storeId}/tipconfig | 
 *TipsApi* | [**tipConfigUpsert**](docs/Api/TipsApi.md#tipconfigupsert) | **POST** /api/v1.0/stores/{storeId}/tipconfig | 
+*UsersApi* | [**addUserNote**](docs/Api/UsersApi.md#addusernote) | **POST** /api/v1.0/users/{userId}/AddUserNote | 
+*UsersApi* | [**addUserToRole**](docs/Api/UsersApi.md#addusertorole) | **POST** /api/v1.0/users/{userId}/AddUserToRole/{roleName} | 
+*UsersApi* | [**anonymizeUser**](docs/Api/UsersApi.md#anonymizeuser) | **POST** /api/v1.0/users/{userId}/AnonymizeUser | 
+*UsersApi* | [**blockUserPhoneNumber**](docs/Api/UsersApi.md#blockuserphonenumber) | **POST** /api/v1.0/users/{userId}/BlockUserPhoneNumber | 
 *UsersApi* | [**getPreviousOrderCountForStore**](docs/Api/UsersApi.md#getpreviousordercountforstore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
 *UsersApi* | [**getRestaurantUserAccounts**](docs/Api/UsersApi.md#getrestaurantuseraccounts) | **GET** /api/v1.0/users/{userId}/RestaurantUserAccounts | 
 *UsersApi* | [**getRestaurantUserStores**](docs/Api/UsersApi.md#getrestaurantuserstores) | **GET** /api/v1.0/users/{userId}/RestaurantUserStores | 
@@ -604,7 +608,14 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**getRolesAndUnassignedRoles**](docs/Api/UsersApi.md#getrolesandunassignedroles) | **GET** /api/v1.0/users/{userId}/roles | 
 *UsersApi* | [**getUserById**](docs/Api/UsersApi.md#getuserbyid) | **GET** /api/v1.0/users/{userId} | 
 *UsersApi* | [**getUserNotes**](docs/Api/UsersApi.md#getusernotes) | **GET** /api/v1.0/users/{userId}/UserNotes | 
+*UsersApi* | [**markUserAsFraudulent**](docs/Api/UsersApi.md#markuserasfraudulent) | **POST** /api/v1.0/users/{userId}/MarkUserAsFraudulent | 
+*UsersApi* | [**markUserAsSuspicious**](docs/Api/UsersApi.md#markuserassuspicious) | **POST** /api/v1.0/users/{userId}/MarkUserAsSuspicious | 
+*UsersApi* | [**removeUserFromRole**](docs/Api/UsersApi.md#removeuserfromrole) | **POST** /api/v1.0/users/{userId}/RemoveUserFromRole/{roleName} | 
+*UsersApi* | [**resetMfa**](docs/Api/UsersApi.md#resetmfa) | **POST** /api/v1.0/users/{userId}/ResetMfa | 
 *UsersApi* | [**searchUsers**](docs/Api/UsersApi.md#searchusers) | **GET** /api/v1.0/users/search | 
+*UsersApi* | [**setCustomerName**](docs/Api/UsersApi.md#setcustomername) | **POST** /api/v1.0/users/{userId}/SetCustomerName | 
+*UsersApi* | [**setUserLanguage**](docs/Api/UsersApi.md#setuserlanguage) | **POST** /api/v1.0/users/{userId}/SetLanguage/{languageId} | 
+*UsersApi* | [**unblockUserPhoneNumber**](docs/Api/UsersApi.md#unblockuserphonenumber) | **POST** /api/v1.0/users/{userId}/UnblockUserPhoneNumber | 
 *VouchersApi* | [**createVoucher**](docs/Api/VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | 
 *VouchersApi* | [**getVoucherByCode**](docs/Api/VouchersApi.md#getvoucherbycode) | **GET** /api/v1.0/{appId}/vouchers/code/{code} | 
 *VouchersApi* | [**getVoucherById**](docs/Api/VouchersApi.md#getvoucherbyid) | **GET** /api/v1.0/vouchers/{voucherId} | 

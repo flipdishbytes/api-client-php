@@ -72,6 +72,46 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for addUserNote
+     *
+     * .
+     *
+     */
+    public function testAddUserNote()
+    {
+    }
+
+    /**
+     * Test case for addUserToRole
+     *
+     * .
+     *
+     */
+    public function testAddUserToRole()
+    {
+    }
+
+    /**
+     * Test case for anonymizeUser
+     *
+     * .
+     *
+     */
+    public function testAnonymizeUser()
+    {
+    }
+
+    /**
+     * Test case for blockUserPhoneNumber
+     *
+     * .
+     *
+     */
+    public function testBlockUserPhoneNumber()
+    {
+    }
+
+    /**
      * Test case for getPreviousOrderCountForStore
      *
      * .
@@ -142,12 +182,82 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for markUserAsFraudulent
+     *
+     * .
+     *
+     */
+    public function testMarkUserAsFraudulent()
+    {
+    }
+
+    /**
+     * Test case for markUserAsSuspicious
+     *
+     * .
+     *
+     */
+    public function testMarkUserAsSuspicious()
+    {
+    }
+
+    /**
+     * Test case for removeUserFromRole
+     *
+     * .
+     *
+     */
+    public function testRemoveUserFromRole()
+    {
+    }
+
+    /**
+     * Test case for resetMfa
+     *
+     * .
+     *
+     */
+    public function testResetMfa()
+    {
+    }
+
+    /**
      * Test case for searchUsers
      *
      * .
      *
      */
     public function testSearchUsers()
+    {
+    }
+
+    /**
+     * Test case for setCustomerName
+     *
+     * .
+     *
+     */
+    public function testSetCustomerName()
+    {
+    }
+
+    /**
+     * Test case for setUserLanguage
+     *
+     * .
+     *
+     */
+    public function testSetUserLanguage()
+    {
+    }
+
+    /**
+     * Test case for unblockUserPhoneNumber
+     *
+     * .
+     *
+     */
+    public function testUnblockUserPhoneNumber()
     {
     }
 }
