@@ -457,6 +457,7 @@ class Order implements ModelInterface, ArrayAccess
     const ORDER_STATE_REJECTED_AUTOMATICALLY = 'RejectedAutomatically';
     const ORDER_STATE_REJECTED_AFTER_BEING_ACCEPTED = 'RejectedAfterBeingAccepted';
     const ORDER_STATE_ACCEPTED_AND_REFUNDED = 'AcceptedAndRefunded';
+    const ORDER_STATE_PENDING_PAYMENT = 'PendingPayment';
     const APP_TYPE_UNKNOWN = 'Unknown';
     const APP_TYPE_IOS = 'Ios';
     const APP_TYPE_ANDROID = 'Android';
@@ -583,6 +584,7 @@ class Order implements ModelInterface, ArrayAccess
             self::ORDER_STATE_REJECTED_AUTOMATICALLY,
             self::ORDER_STATE_REJECTED_AFTER_BEING_ACCEPTED,
             self::ORDER_STATE_ACCEPTED_AND_REFUNDED,
+            self::ORDER_STATE_PENDING_PAYMENT,
         ];
     }
     

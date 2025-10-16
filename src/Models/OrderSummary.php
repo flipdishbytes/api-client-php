@@ -322,6 +322,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     const ORDER_STATE_REJECTED_AUTOMATICALLY = 'RejectedAutomatically';
     const ORDER_STATE_REJECTED_AFTER_BEING_ACCEPTED = 'RejectedAfterBeingAccepted';
     const ORDER_STATE_ACCEPTED_AND_REFUNDED = 'AcceptedAndRefunded';
+    const ORDER_STATE_PENDING_PAYMENT = 'PendingPayment';
     const PAYMENT_ACCOUNT_TYPE_CARD = 'Card';
     const PAYMENT_ACCOUNT_TYPE_CASH = 'Cash';
     const PAYMENT_ACCOUNT_TYPE_IDEAL = 'Ideal';
@@ -533,6 +534,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
             self::ORDER_STATE_REJECTED_AUTOMATICALLY,
             self::ORDER_STATE_REJECTED_AFTER_BEING_ACCEPTED,
             self::ORDER_STATE_ACCEPTED_AND_REFUNDED,
+            self::ORDER_STATE_PENDING_PAYMENT,
         ];
     }
     
