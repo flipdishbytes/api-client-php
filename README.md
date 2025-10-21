@@ -643,6 +643,21 @@ Class | Method | HTTP request | Description
 *WebsiteApi* | [**setIndexConfiguration**](docs/Api/WebsiteApi.md#setindexconfiguration) | **POST** /api/v1.0/{appId}/website/index | 
 *WebsiteApi* | [**uploadWebsiteImage**](docs/Api/WebsiteApi.md#uploadwebsiteimage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | 
 *WebsiteApi* | [**websiteCheckNow**](docs/Api/WebsiteApi.md#websitechecknow) | **GET** /api/v1.0/{appId}/website/dnscheck | 
+*WhiteLabelBuildsApi* | [**healthCheck**](docs/Api/WhiteLabelBuildsApi.md#healthcheck) | **GET** /api/v1.0/whitelabelbuilds/health | 
+*WhiteLabelBuildsApi* | [**submitAndroidApps**](docs/Api/WhiteLabelBuildsApi.md#submitandroidapps) | **POST** /api/v1.0/whitelabelbuilds/android/multiple | 
+*WhiteLabelBuildsApi* | [**submitAndroidBuild**](docs/Api/WhiteLabelBuildsApi.md#submitandroidbuild) | **POST** /api/v1.0/whitelabelbuilds/{appId}/android | 
+*WhiteLabelBuildsApi* | [**submitIosApps**](docs/Api/WhiteLabelBuildsApi.md#submitiosapps) | **POST** /api/v1.0/whitelabelbuilds/ios/multiple | 
+*WhiteLabelBuildsApi* | [**submitIosBuild**](docs/Api/WhiteLabelBuildsApi.md#submitiosbuild) | **POST** /api/v1.0/whitelabelbuilds/{appId}/ios | 
+*WhiteLabelConfigApi* | [**getAppGeneralConfig**](docs/Api/WhiteLabelConfigApi.md#getappgeneralconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/general | 
+*WhiteLabelConfigApi* | [**getAppStoreConfig**](docs/Api/WhiteLabelConfigApi.md#getappstoreconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/appstore | 
+*WhiteLabelConfigApi* | [**getPlayStoreConfig**](docs/Api/WhiteLabelConfigApi.md#getplaystoreconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/playstore | 
+*WhiteLabelConfigApi* | [**getWhiteLabelConfig**](docs/Api/WhiteLabelConfigApi.md#getwhitelabelconfig) | **GET** /api/v1.0/whitelabelconfig/id/{wlid} | 
+*WhiteLabelConfigApi* | [**getWhiteLabelConfigByAppNameId**](docs/Api/WhiteLabelConfigApi.md#getwhitelabelconfigbyappnameid) | **GET** /api/v1.0/whitelabelconfig/name/{appId} | 
+*WhiteLabelConfigApi* | [**healthCheck**](docs/Api/WhiteLabelConfigApi.md#healthcheck) | **GET** /api/v1.0/whitelabelconfig/health | 
+*WhiteLabelConfigApi* | [**updateAppGeneralConfig**](docs/Api/WhiteLabelConfigApi.md#updateappgeneralconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/general | 
+*WhiteLabelConfigApi* | [**updateAppStoreConfig**](docs/Api/WhiteLabelConfigApi.md#updateappstoreconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/appstore | 
+*WhiteLabelConfigApi* | [**updatePlayStoreConfig**](docs/Api/WhiteLabelConfigApi.md#updateplaystoreconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/playstore | 
+*WhiteLabelConfigApi* | [**uploadAppStoreIcon**](docs/Api/WhiteLabelConfigApi.md#uploadappstoreicon) | **POST** /api/v1.0/whitelabelconfig/{appId}/app-store-icon | 
 
 
 ## Documentation For Models
@@ -670,6 +685,7 @@ Class | Method | HTTP request | Description
  - [AppConfigSalesChannel](docs/Model/AppConfigSalesChannel.md)
  - [AppConfigUpdateModel](docs/Model/AppConfigUpdateModel.md)
  - [AppCreatedEvent](docs/Model/AppCreatedEvent.md)
+ - [AppGeneralConfigModel](docs/Model/AppGeneralConfigModel.md)
  - [AppInstall](docs/Model/AppInstall.md)
  - [AppLookup](docs/Model/AppLookup.md)
  - [AppStoreApp](docs/Model/AppStoreApp.md)
@@ -680,9 +696,11 @@ Class | Method | HTTP request | Description
  - [AppStoreAppSupportInfo](docs/Model/AppStoreAppSupportInfo.md)
  - [AppStoreConfigCreatedEvent](docs/Model/AppStoreConfigCreatedEvent.md)
  - [AppStoreConfigDeletedEvent](docs/Model/AppStoreConfigDeletedEvent.md)
+ - [AppStoreConfigModel](docs/Model/AppStoreConfigModel.md)
  - [AppStoreConfigUpdatedEvent](docs/Model/AppStoreConfigUpdatedEvent.md)
  - [AppStoreSubscriptionChangeJobUpdatedEvent](docs/Model/AppStoreSubscriptionChangeJobUpdatedEvent.md)
  - [AppUpdatedEvent](docs/Model/AppUpdatedEvent.md)
+ - [AssetResultModel](docs/Model/AssetResultModel.md)
  - [AssignedBankAccount](docs/Model/AssignedBankAccount.md)
  - [AuditLogFieldChangeInformation](docs/Model/AuditLogFieldChangeInformation.md)
  - [BalanceDetails](docs/Model/BalanceDetails.md)
@@ -696,6 +714,7 @@ Class | Method | HTTP request | Description
  - [BankAccountSummary](docs/Model/BankAccountSummary.md)
  - [BankAccountUpdatedEvent](docs/Model/BankAccountUpdatedEvent.md)
  - [BluetoothTerminalStatus](docs/Model/BluetoothTerminalStatus.md)
+ - [BuildResultModel](docs/Model/BuildResultModel.md)
  - [BusinessHoursOverride](docs/Model/BusinessHoursOverride.md)
  - [BusinessHoursOverrideBase](docs/Model/BusinessHoursOverrideBase.md)
  - [BusinessHoursPeriod](docs/Model/BusinessHoursPeriod.md)
@@ -1029,6 +1048,7 @@ Class | Method | HTTP request | Description
  - [PhoneCall](docs/Model/PhoneCall.md)
  - [PhoneCallEndedEvent](docs/Model/PhoneCallEndedEvent.md)
  - [PhoneCallStartedEvent](docs/Model/PhoneCallStartedEvent.md)
+ - [PlayStoreConfigModel](docs/Model/PlayStoreConfigModel.md)
  - [PosRevenueDetails](docs/Model/PosRevenueDetails.md)
  - [PreOrderConfig](docs/Model/PreOrderConfig.md)
  - [PreOrderTime](docs/Model/PreOrderTime.md)
@@ -1173,12 +1193,16 @@ Class | Method | HTTP request | Description
  - [RestApiResultAppChannelAssignment](docs/Model/RestApiResultAppChannelAssignment.md)
  - [RestApiResultAppCompliance](docs/Model/RestApiResultAppCompliance.md)
  - [RestApiResultAppConfigSalesChannel](docs/Model/RestApiResultAppConfigSalesChannel.md)
+ - [RestApiResultAppGeneralConfigModel](docs/Model/RestApiResultAppGeneralConfigModel.md)
  - [RestApiResultAppStoreApp](docs/Model/RestApiResultAppStoreApp.md)
  - [RestApiResultAppStoreAppConfiguration](docs/Model/RestApiResultAppStoreAppConfiguration.md)
  - [RestApiResultAppStoreAppEntitlements](docs/Model/RestApiResultAppStoreAppEntitlements.md)
+ - [RestApiResultAppStoreConfigModel](docs/Model/RestApiResultAppStoreConfigModel.md)
+ - [RestApiResultAssetResultModel](docs/Model/RestApiResultAssetResultModel.md)
  - [RestApiResultAssignedBankAccount](docs/Model/RestApiResultAssignedBankAccount.md)
  - [RestApiResultBankAccountDetail](docs/Model/RestApiResultBankAccountDetail.md)
  - [RestApiResultBluetoothTerminalStatus](docs/Model/RestApiResultBluetoothTerminalStatus.md)
+ - [RestApiResultBuildResultModel](docs/Model/RestApiResultBuildResultModel.md)
  - [RestApiResultBusinessHoursOverride](docs/Model/RestApiResultBusinessHoursOverride.md)
  - [RestApiResultBusinessHoursPeriod](docs/Model/RestApiResultBusinessHoursPeriod.md)
  - [RestApiResultCardReader](docs/Model/RestApiResultCardReader.md)
@@ -1250,6 +1274,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultPaymentTerminalTransactionDetails](docs/Model/RestApiResultPaymentTerminalTransactionDetails.md)
  - [RestApiResultPayoutReport3Details](docs/Model/RestApiResultPayoutReport3Details.md)
  - [RestApiResultPayoutReport3Overview](docs/Model/RestApiResultPayoutReport3Overview.md)
+ - [RestApiResultPlayStoreConfigModel](docs/Model/RestApiResultPlayStoreConfigModel.md)
  - [RestApiResultPreOrderConfig](docs/Model/RestApiResultPreOrderConfig.md)
  - [RestApiResultProcessingFeeConfig](docs/Model/RestApiResultProcessingFeeConfig.md)
  - [RestApiResultProduct](docs/Model/RestApiResultProduct.md)
@@ -1284,6 +1309,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultVoucherWithStats](docs/Model/RestApiResultVoucherWithStats.md)
  - [RestApiResultWebsiteImage](docs/Model/RestApiResultWebsiteImage.md)
  - [RestApiResultWebsiteTestimonial](docs/Model/RestApiResultWebsiteTestimonial.md)
+ - [RestApiResultWhiteLabelConfigModel](docs/Model/RestApiResultWhiteLabelConfigModel.md)
  - [RestApiStringArrayResult](docs/Model/RestApiStringArrayResult.md)
  - [RestApiStringResult](docs/Model/RestApiStringResult.md)
  - [RestApiUnauthorizedResult](docs/Model/RestApiUnauthorizedResult.md)
@@ -1460,7 +1486,11 @@ Class | Method | HTTP request | Description
  - [WebsiteTestimonialBase](docs/Model/WebsiteTestimonialBase.md)
  - [WebsiteUpdatedEvent](docs/Model/WebsiteUpdatedEvent.md)
  - [WebsiteVanityUrlUpdatedEvent](docs/Model/WebsiteVanityUrlUpdatedEvent.md)
+ - [WhiteLabelAssetModel](docs/Model/WhiteLabelAssetModel.md)
+ - [WhiteLabelColorSchemeModel](docs/Model/WhiteLabelColorSchemeModel.md)
  - [WhiteLabelConfig](docs/Model/WhiteLabelConfig.md)
+ - [WhiteLabelConfigModel](docs/Model/WhiteLabelConfigModel.md)
+ - [WhiteLabelLanguageModel](docs/Model/WhiteLabelLanguageModel.md)
 
 
 ## Documentation For Authorization
