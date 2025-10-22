@@ -132,6 +132,16 @@ class VouchersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getVouchersByCustomerForApp
+     *
+     * .
+     *
+     */
+    public function testGetVouchersByCustomerForApp()
+    {
+    }
+
+    /**
      * Test case for setVoucherValidityPeriodsSimplified
      *
      * .

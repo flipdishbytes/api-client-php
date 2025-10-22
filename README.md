@@ -622,6 +622,7 @@ Class | Method | HTTP request | Description
 *VouchersApi* | [**getVoucherStatsById**](docs/Api/VouchersApi.md#getvoucherstatsbyid) | **GET** /api/v1.0/vouchers/stats/{voucherId} | 
 *VouchersApi* | [**getVoucherValidityPeriods**](docs/Api/VouchersApi.md#getvouchervalidityperiods) | **GET** /api/v1.0/{appId}/vouchers/{voucherId}/validity-periods | 
 *VouchersApi* | [**getVouchers**](docs/Api/VouchersApi.md#getvouchers) | **GET** /api/v1.0/{appId}/vouchers/summaries | 
+*VouchersApi* | [**getVouchersByCustomerForApp**](docs/Api/VouchersApi.md#getvouchersbycustomerforapp) | **GET** /api/v1.0/vouchers/{appId}/customer/{customerId} | 
 *VouchersApi* | [**setVoucherValidityPeriodsSimplified**](docs/Api/VouchersApi.md#setvouchervalidityperiodssimplified) | **POST** /api/v1.0/{appId}/vouchers/{voucherId}/validity-periods-simplified | 
 *VouchersApi* | [**updateVoucher**](docs/Api/VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | 
 *VouchersApi* | [**updateVoucherUsage**](docs/Api/VouchersApi.md#updatevoucherusage) | **POST** /api/v1.0/{appId}/vouchers/{voucherId}/usage | 
@@ -1145,6 +1146,7 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultUserNote](docs/Model/RestApiArrayResultUserNote.md)
  - [RestApiArrayResultUserStoreInfo](docs/Model/RestApiArrayResultUserStoreInfo.md)
  - [RestApiArrayResultVoucherDataPoint](docs/Model/RestApiArrayResultVoucherDataPoint.md)
+ - [RestApiArrayResultVoucherSummary](docs/Model/RestApiArrayResultVoucherSummary.md)
  - [RestApiDefaultResponse](docs/Model/RestApiDefaultResponse.md)
  - [RestApiErrorResult](docs/Model/RestApiErrorResult.md)
  - [RestApiEventSearchPaginationResult](docs/Model/RestApiEventSearchPaginationResult.md)
