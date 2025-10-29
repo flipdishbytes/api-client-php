@@ -17,10 +17,13 @@ Method | HTTP request | Description
 [**getUserNotes**](UsersApi.md#getUserNotes) | **GET** /api/v1.0/users/{userId}/UserNotes | 
 [**markUserAsFraudulent**](UsersApi.md#markUserAsFraudulent) | **POST** /api/v1.0/users/{userId}/MarkUserAsFraudulent | 
 [**markUserAsSuspicious**](UsersApi.md#markUserAsSuspicious) | **POST** /api/v1.0/users/{userId}/MarkUserAsSuspicious | 
+[**removeFlipdishAccountIdForUser**](UsersApi.md#removeFlipdishAccountIdForUser) | **POST** /api/v1.0/users/{userId}/RemoveFlipdishAccountId/{accountId} | 
 [**removeUserFromRole**](UsersApi.md#removeUserFromRole) | **POST** /api/v1.0/users/{userId}/RemoveUserFromRole/{roleName} | 
 [**resetMfa**](UsersApi.md#resetMfa) | **POST** /api/v1.0/users/{userId}/ResetMfa | 
+[**searchFlipdishAccounts**](UsersApi.md#searchFlipdishAccounts) | **GET** /api/v1.0/users/searchFlipdishAccounts | 
 [**searchUsers**](UsersApi.md#searchUsers) | **GET** /api/v1.0/users/search | 
 [**setCustomerName**](UsersApi.md#setCustomerName) | **POST** /api/v1.0/users/{userId}/SetCustomerName | 
+[**setFlipdishAccountIdForUser**](UsersApi.md#setFlipdishAccountIdForUser) | **POST** /api/v1.0/users/{userId}/SetFlipdishAccountId/{accountId} | 
 [**setUserLanguage**](UsersApi.md#setUserLanguage) | **POST** /api/v1.0/users/{userId}/SetLanguage/{languageId} | 
 [**unblockUserPhoneNumber**](UsersApi.md#unblockUserPhoneNumber) | **POST** /api/v1.0/users/{userId}/UnblockUserPhoneNumber | 
 
@@ -690,6 +693,59 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **removeFlipdishAccountIdForUser**
+> \Flipdish\\Client\Models\RestApiDefaultResponse removeFlipdishAccountIdForUser($user_id, $account_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$user_id = 56; // int | 
+$account_id = 56; // int | 
+
+try {
+    $result = $apiInstance->removeFlipdishAccountIdForUser($user_id, $account_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->removeFlipdishAccountIdForUser: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **int**|  |
+ **account_id** | **int**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiDefaultResponse**](../Model/RestApiDefaultResponse.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **removeUserFromRole**
 > \Flipdish\\Client\Models\RestApiResultUserRole removeUserFromRole($user_id, $role_name)
 
@@ -782,6 +838,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiDefaultResponse**](../Model/RestApiDefaultResponse.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **searchFlipdishAccounts**
+> \Flipdish\\Client\Models\RestApiArrayResultFlipdishAccountName searchFlipdishAccounts($search_pattern)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$search_pattern = "search_pattern_example"; // string | 
+
+try {
+    $result = $apiInstance->searchFlipdishAccounts($search_pattern);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->searchFlipdishAccounts: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **search_pattern** | **string**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiArrayResultFlipdishAccountName**](../Model/RestApiArrayResultFlipdishAccountName.md)
 
 ### Authorization
 
@@ -904,6 +1011,59 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setFlipdishAccountIdForUser**
+> \Flipdish\\Client\Models\RestApiDefaultResponse setFlipdishAccountIdForUser($user_id, $account_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$user_id = 56; // int | 
+$account_id = 56; // int | 
+
+try {
+    $result = $apiInstance->setFlipdishAccountIdForUser($user_id, $account_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->setFlipdishAccountIdForUser: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **int**|  |
+ **account_id** | **int**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiDefaultResponse**](../Model/RestApiDefaultResponse.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

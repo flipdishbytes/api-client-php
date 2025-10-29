@@ -610,10 +610,13 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**getUserNotes**](docs/Api/UsersApi.md#getusernotes) | **GET** /api/v1.0/users/{userId}/UserNotes | 
 *UsersApi* | [**markUserAsFraudulent**](docs/Api/UsersApi.md#markuserasfraudulent) | **POST** /api/v1.0/users/{userId}/MarkUserAsFraudulent | 
 *UsersApi* | [**markUserAsSuspicious**](docs/Api/UsersApi.md#markuserassuspicious) | **POST** /api/v1.0/users/{userId}/MarkUserAsSuspicious | 
+*UsersApi* | [**removeFlipdishAccountIdForUser**](docs/Api/UsersApi.md#removeflipdishaccountidforuser) | **POST** /api/v1.0/users/{userId}/RemoveFlipdishAccountId/{accountId} | 
 *UsersApi* | [**removeUserFromRole**](docs/Api/UsersApi.md#removeuserfromrole) | **POST** /api/v1.0/users/{userId}/RemoveUserFromRole/{roleName} | 
 *UsersApi* | [**resetMfa**](docs/Api/UsersApi.md#resetmfa) | **POST** /api/v1.0/users/{userId}/ResetMfa | 
+*UsersApi* | [**searchFlipdishAccounts**](docs/Api/UsersApi.md#searchflipdishaccounts) | **GET** /api/v1.0/users/searchFlipdishAccounts | 
 *UsersApi* | [**searchUsers**](docs/Api/UsersApi.md#searchusers) | **GET** /api/v1.0/users/search | 
 *UsersApi* | [**setCustomerName**](docs/Api/UsersApi.md#setcustomername) | **POST** /api/v1.0/users/{userId}/SetCustomerName | 
+*UsersApi* | [**setFlipdishAccountIdForUser**](docs/Api/UsersApi.md#setflipdishaccountidforuser) | **POST** /api/v1.0/users/{userId}/SetFlipdishAccountId/{accountId} | 
 *UsersApi* | [**setUserLanguage**](docs/Api/UsersApi.md#setuserlanguage) | **POST** /api/v1.0/users/{userId}/SetLanguage/{languageId} | 
 *UsersApi* | [**unblockUserPhoneNumber**](docs/Api/UsersApi.md#unblockuserphonenumber) | **POST** /api/v1.0/users/{userId}/UnblockUserPhoneNumber | 
 *VouchersApi* | [**createVoucher**](docs/Api/VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | 
@@ -823,6 +826,7 @@ Class | Method | HTTP request | Description
  - [FileCreationResult](docs/Model/FileCreationResult.md)
  - [FileDownloadResult](docs/Model/FileDownloadResult.md)
  - [FirebaseApp](docs/Model/FirebaseApp.md)
+ - [FlipdishAccountName](docs/Model/FlipdishAccountName.md)
  - [FlipdishEventBase](docs/Model/FlipdishEventBase.md)
  - [FlipdishFeesDetails](docs/Model/FlipdishFeesDetails.md)
  - [FulfillentStatusActionItem](docs/Model/FulfillentStatusActionItem.md)
@@ -1098,6 +1102,7 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultCountryWithAccountFieldsDefinitions](docs/Model/RestApiArrayResultCountryWithAccountFieldsDefinitions.md)
  - [RestApiArrayResultDeliveryZone](docs/Model/RestApiArrayResultDeliveryZone.md)
  - [RestApiArrayResultEmvTerminalWithAssignments](docs/Model/RestApiArrayResultEmvTerminalWithAssignments.md)
+ - [RestApiArrayResultFlipdishAccountName](docs/Model/RestApiArrayResultFlipdishAccountName.md)
  - [RestApiArrayResultFulfillmentStatesConfigurationSummary](docs/Model/RestApiArrayResultFulfillmentStatesConfigurationSummary.md)
  - [RestApiArrayResultHomeAction](docs/Model/RestApiArrayResultHomeAction.md)
  - [RestApiArrayResultKioskCashPaymentSettings](docs/Model/RestApiArrayResultKioskCashPaymentSettings.md)

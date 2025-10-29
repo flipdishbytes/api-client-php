@@ -202,6 +202,16 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for removeFlipdishAccountIdForUser
+     *
+     * .
+     *
+     */
+    public function testRemoveFlipdishAccountIdForUser()
+    {
+    }
+
+    /**
      * Test case for removeUserFromRole
      *
      * .
@@ -222,6 +232,16 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for searchFlipdishAccounts
+     *
+     * .
+     *
+     */
+    public function testSearchFlipdishAccounts()
+    {
+    }
+
+    /**
      * Test case for searchUsers
      *
      * .
@@ -238,6 +258,16 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testSetCustomerName()
+    {
+    }
+
+    /**
+     * Test case for setFlipdishAccountIdForUser
+     *
+     * .
+     *
+     */
+    public function testSetFlipdishAccountIdForUser()
     {
     }
 
