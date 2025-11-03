@@ -144,6 +144,7 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**getSupportedCountries**](docs/Api/AppsApi.md#getsupportedcountries) | **GET** /api/v1.0/apps/supportedcountries | 
 *AppsApi* | [**isPanaceaVanityUrlAvailable**](docs/Api/AppsApi.md#ispanaceavanityurlavailable) | **GET** /api/v1.0/apps/{appId}/panacea/url/available | 
 *AppsApi* | [**lookupByWhitelabelId**](docs/Api/AppsApi.md#lookupbywhitelabelid) | **GET** /api/v1.0/apps/{whitelabelId}/lookup | 
+*AppsApi* | [**sendPushNotification**](docs/Api/AppsApi.md#sendpushnotification) | **POST** /api/v1.0/apps/{appId}/SendPushNotification/{customerId} | 
 *AppsApi* | [**setAppConfig**](docs/Api/AppsApi.md#setappconfig) | **POST** /api/v1.0/apps/{appId}/config | 
 *AppsApi* | [**setAppHostname**](docs/Api/AppsApi.md#setapphostname) | **POST** /api/v1.0/apps/{appId}/hostname | 
 *AppsApi* | [**setAppLanguages**](docs/Api/AppsApi.md#setapplanguages) | **POST** /api/v1.0/apps/{appId}/config/languages | 

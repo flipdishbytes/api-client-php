@@ -182,6 +182,16 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for sendPushNotification
+     *
+     * .
+     *
+     */
+    public function testSendPushNotification()
+    {
+    }
+
+    /**
      * Test case for setAppConfig
      *
      * .
