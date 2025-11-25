@@ -58,6 +58,7 @@ class UserFlipdishAccount implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'payee_bank_account_data_id' => 'int',
         'flipdish_account_id' => 'int',
         'name' => 'string'
     ];
@@ -68,6 +69,7 @@ class UserFlipdishAccount implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'payee_bank_account_data_id' => 'int32',
         'flipdish_account_id' => 'int32',
         'name' => null
     ];
@@ -99,6 +101,7 @@ class UserFlipdishAccount implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'payee_bank_account_data_id' => 'PayeeBankAccountDataId',
         'flipdish_account_id' => 'FlipdishAccountId',
         'name' => 'Name'
     ];
@@ -109,6 +112,7 @@ class UserFlipdishAccount implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'payee_bank_account_data_id' => 'setPayeeBankAccountDataId',
         'flipdish_account_id' => 'setFlipdishAccountId',
         'name' => 'setName'
     ];
@@ -119,6 +123,7 @@ class UserFlipdishAccount implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'payee_bank_account_data_id' => 'getPayeeBankAccountDataId',
         'flipdish_account_id' => 'getFlipdishAccountId',
         'name' => 'getName'
     ];
@@ -183,6 +188,7 @@ class UserFlipdishAccount implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['payee_bank_account_data_id'] = isset($data['payee_bank_account_data_id']) ? $data['payee_bank_account_data_id'] : null;
         $this->container['flipdish_account_id'] = isset($data['flipdish_account_id']) ? $data['flipdish_account_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
@@ -210,6 +216,30 @@ class UserFlipdishAccount implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets payee_bank_account_data_id
+     *
+     * @return int
+     */
+    public function getPayeeBankAccountDataId()
+    {
+        return $this->container['payee_bank_account_data_id'];
+    }
+
+    /**
+     * Sets payee_bank_account_data_id
+     *
+     * @param int $payee_bank_account_data_id Payee Bank Account Data Id
+     *
+     * @return $this
+     */
+    public function setPayeeBankAccountDataId($payee_bank_account_data_id)
+    {
+        $this->container['payee_bank_account_data_id'] = $payee_bank_account_data_id;
+
+        return $this;
+    }
 
     /**
      * Gets flipdish_account_id

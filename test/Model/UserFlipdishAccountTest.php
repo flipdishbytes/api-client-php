@@ -77,6 +77,13 @@ class UserFlipdishAccountTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "payee_bank_account_data_id"
+     */
+    public function testPropertyPayeeBankAccountDataId()
+    {
+    }
+
+    /**
      * Test attribute "flipdish_account_id"
      */
     public function testPropertyFlipdishAccountId()
