@@ -82,6 +82,16 @@ class FpmApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for deleteFpmForStore
+     *
+     * .
+     *
+     */
+    public function testDeleteFpmForStore()
+    {
+    }
+
+    /**
      * Test case for editFpmForStore
      *
      * .
