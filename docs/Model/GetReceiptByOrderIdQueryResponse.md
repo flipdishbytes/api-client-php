@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **address** | **string** |  | [optional] 
 **vat_number** | **string** |  | [optional] 
 **payment_method_description** | **string** |  | [optional] 
+**org_id** | **string** |  | [optional] 
+**country_code** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -64,7 +64,9 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
         'logo_url' => 'string',
         'address' => 'string',
         'vat_number' => 'string',
-        'payment_method_description' => 'string'
+        'payment_method_description' => 'string',
+        'org_id' => 'string',
+        'country_code' => 'string'
     ];
 
     /**
@@ -80,7 +82,9 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
         'logo_url' => null,
         'address' => null,
         'vat_number' => null,
-        'payment_method_description' => null
+        'payment_method_description' => null,
+        'org_id' => null,
+        'country_code' => null
     ];
 
     /**
@@ -117,7 +121,9 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
         'logo_url' => 'LogoUrl',
         'address' => 'Address',
         'vat_number' => 'VatNumber',
-        'payment_method_description' => 'PaymentMethodDescription'
+        'payment_method_description' => 'PaymentMethodDescription',
+        'org_id' => 'OrgId',
+        'country_code' => 'CountryCode'
     ];
 
     /**
@@ -133,7 +139,9 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
         'logo_url' => 'setLogoUrl',
         'address' => 'setAddress',
         'vat_number' => 'setVatNumber',
-        'payment_method_description' => 'setPaymentMethodDescription'
+        'payment_method_description' => 'setPaymentMethodDescription',
+        'org_id' => 'setOrgId',
+        'country_code' => 'setCountryCode'
     ];
 
     /**
@@ -149,7 +157,9 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
         'logo_url' => 'getLogoUrl',
         'address' => 'getAddress',
         'vat_number' => 'getVatNumber',
-        'payment_method_description' => 'getPaymentMethodDescription'
+        'payment_method_description' => 'getPaymentMethodDescription',
+        'org_id' => 'getOrgId',
+        'country_code' => 'getCountryCode'
     ];
 
     /**
@@ -220,6 +230,8 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['vat_number'] = isset($data['vat_number']) ? $data['vat_number'] : null;
         $this->container['payment_method_description'] = isset($data['payment_method_description']) ? $data['payment_method_description'] : null;
+        $this->container['org_id'] = isset($data['org_id']) ? $data['org_id'] : null;
+        $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
     }
 
     /**
@@ -434,6 +446,54 @@ class GetReceiptByOrderIdQueryResponse implements ModelInterface, ArrayAccess
     public function setPaymentMethodDescription($payment_method_description)
     {
         $this->container['payment_method_description'] = $payment_method_description;
+
+        return $this;
+    }
+
+    /**
+     * Gets org_id
+     *
+     * @return string
+     */
+    public function getOrgId()
+    {
+        return $this->container['org_id'];
+    }
+
+    /**
+     * Sets org_id
+     *
+     * @param string $org_id org_id
+     *
+     * @return $this
+     */
+    public function setOrgId($org_id)
+    {
+        $this->container['org_id'] = $org_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets country_code
+     *
+     * @return string
+     */
+    public function getCountryCode()
+    {
+        return $this->container['country_code'];
+    }
+
+    /**
+     * Sets country_code
+     *
+     * @param string $country_code country_code
+     *
+     * @return $this
+     */
+    public function setCountryCode($country_code)
+    {
+        $this->container['country_code'] = $country_code;
 
         return $this;
     }

@@ -131,4 +131,18 @@ class GetReceiptByOrderIdQueryResponseTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPaymentMethodDescription()
     {
     }
+
+    /**
+     * Test attribute "org_id"
+     */
+    public function testPropertyOrgId()
+    {
+    }
+
+    /**
+     * Test attribute "country_code"
+     */
+    public function testPropertyCountryCode()
+    {
+    }
 }
