@@ -418,14 +418,15 @@ class MenusApi
      *
      * @param  string $app_id App id (required)
      * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  string $org_id Org id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
-    public function createNewMenuAsync($app_id, $menu)
+    public function createNewMenuAsync($app_id, $menu, $org_id = null)
     {
-        list($response) = $this->createNewMenuAsyncWithHttpInfo($app_id, $menu);
+        list($response) = $this->createNewMenuAsyncWithHttpInfo($app_id, $menu, $org_id);
         return $response;
     }
 
@@ -436,15 +437,16 @@ class MenusApi
      *
      * @param  string $app_id App id (required)
      * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  string $org_id Org id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createNewMenuAsyncWithHttpInfo($app_id, $menu)
+    public function createNewMenuAsyncWithHttpInfo($app_id, $menu, $org_id = null)
     {
         $returnType = 'object';
-        $request = $this->createNewMenuAsyncRequest($app_id, $menu);
+        $request = $this->createNewMenuAsyncRequest($app_id, $menu, $org_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -544,13 +546,14 @@ class MenusApi
      *
      * @param  string $app_id App id (required)
      * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  string $org_id Org id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createNewMenuAsyncAsync($app_id, $menu)
+    public function createNewMenuAsyncAsync($app_id, $menu, $org_id = null)
     {
-        return $this->createNewMenuAsyncAsyncWithHttpInfo($app_id, $menu)
+        return $this->createNewMenuAsyncAsyncWithHttpInfo($app_id, $menu, $org_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -565,14 +568,15 @@ class MenusApi
      *
      * @param  string $app_id App id (required)
      * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  string $org_id Org id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createNewMenuAsyncAsyncWithHttpInfo($app_id, $menu)
+    public function createNewMenuAsyncAsyncWithHttpInfo($app_id, $menu, $org_id = null)
     {
         $returnType = 'object';
-        $request = $this->createNewMenuAsyncRequest($app_id, $menu);
+        $request = $this->createNewMenuAsyncRequest($app_id, $menu, $org_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -616,11 +620,12 @@ class MenusApi
      *
      * @param  string $app_id App id (required)
      * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  string $org_id Org id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createNewMenuAsyncRequest($app_id, $menu)
+    protected function createNewMenuAsyncRequest($app_id, $menu, $org_id = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -642,6 +647,10 @@ class MenusApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($org_id !== null) {
+            $queryParams['orgId'] = ObjectSerializer::toQueryValue($org_id);
+        }
 
         // path params
         if ($app_id !== null) {

@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createNewMenuAsync**
-> object createNewMenuAsync($app_id, $menu)
+> object createNewMenuAsync($app_id, $menu, $org_id)
 
 Create a new menu asynchronously
 
@@ -116,9 +116,10 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
 );
 $app_id = "app_id_example"; // string | App id
 $menu = new \Flipdish\\Client\Models\CreateFullMenu(); // \Flipdish\\Client\Models\CreateFullMenu | Menu
+$org_id = "org_id_example"; // string | Org id
 
 try {
-    $result = $apiInstance->createNewMenuAsync($app_id, $menu);
+    $result = $apiInstance->createNewMenuAsync($app_id, $menu, $org_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MenusApi->createNewMenuAsync: ', $e->getMessage(), PHP_EOL;
@@ -132,6 +133,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **string**| App id |
  **menu** | [**\Flipdish\\Client\Models\CreateFullMenu**](../Model/CreateFullMenu.md)| Menu |
+ **org_id** | **string**| Org id | [optional]
 
 ### Return type
 
