@@ -68,7 +68,8 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'store_iana_timezone' => 'string',
         'store_group_id' => 'int',
         'tax_id' => 'string',
-        'pretty_address' => 'string'
+        'pretty_address' => 'string',
+        'country_code' => 'string'
     ];
 
     /**
@@ -87,7 +88,8 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'store_iana_timezone' => null,
         'store_group_id' => 'int32',
         'tax_id' => null,
-        'pretty_address' => null
+        'pretty_address' => null,
+        'country_code' => null
     ];
 
     /**
@@ -127,7 +129,8 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'store_iana_timezone' => 'StoreIanaTimezone',
         'store_group_id' => 'StoreGroupId',
         'tax_id' => 'TaxId',
-        'pretty_address' => 'PrettyAddress'
+        'pretty_address' => 'PrettyAddress',
+        'country_code' => 'CountryCode'
     ];
 
     /**
@@ -146,7 +149,8 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'store_iana_timezone' => 'setStoreIanaTimezone',
         'store_group_id' => 'setStoreGroupId',
         'tax_id' => 'setTaxId',
-        'pretty_address' => 'setPrettyAddress'
+        'pretty_address' => 'setPrettyAddress',
+        'country_code' => 'setCountryCode'
     ];
 
     /**
@@ -165,7 +169,8 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'store_iana_timezone' => 'getStoreIanaTimezone',
         'store_group_id' => 'getStoreGroupId',
         'tax_id' => 'getTaxId',
-        'pretty_address' => 'getPrettyAddress'
+        'pretty_address' => 'getPrettyAddress',
+        'country_code' => 'getCountryCode'
     ];
 
     /**
@@ -476,6 +481,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         $this->container['store_group_id'] = isset($data['store_group_id']) ? $data['store_group_id'] : null;
         $this->container['tax_id'] = isset($data['tax_id']) ? $data['tax_id'] : null;
         $this->container['pretty_address'] = isset($data['pretty_address']) ? $data['pretty_address'] : null;
+        $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
     }
 
     /**
@@ -779,6 +785,30 @@ class StoreSummary implements ModelInterface, ArrayAccess
     public function setPrettyAddress($pretty_address)
     {
         $this->container['pretty_address'] = $pretty_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets country_code
+     *
+     * @return string
+     */
+    public function getCountryCode()
+    {
+        return $this->container['country_code'];
+    }
+
+    /**
+     * Sets country_code
+     *
+     * @param string $country_code Country code of the store address (ISO 3166-1 alpha-2)
+     *
+     * @return $this
+     */
+    public function setCountryCode($country_code)
+    {
+        $this->container['country_code'] = $country_code;
 
         return $this;
     }

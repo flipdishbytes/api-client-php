@@ -152,4 +152,11 @@ class StoreSummaryTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPrettyAddress()
     {
     }
+
+    /**
+     * Test attribute "country_code"
+     */
+    public function testPropertyCountryCode()
+    {
+    }
 }
