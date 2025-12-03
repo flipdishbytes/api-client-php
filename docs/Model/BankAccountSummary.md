@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **store_ids** | **int[]** | Store Ids that are attached to this account | [optional] 
 **account_state** | **string** | Status of Account | [optional] 
 **currency_code** | **string** | Currency of Account | [optional] 
+**vat_number** | **string** | Account Holders Vat Number | [optional] 
 **stripe_connected_account_info** | [**\Flipdish\\Client\Models\StripeConnectedAccountInfo**](StripeConnectedAccountInfo.md) | Information about the Stripe connected account associated with this bank account (if any) | [optional] 
 **account_name** | **string** | Name of this account | [optional] 
 **iban** | **string** | IBAN of this account | [optional] 

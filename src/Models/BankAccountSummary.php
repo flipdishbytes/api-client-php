@@ -63,6 +63,7 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
         'store_ids' => 'int[]',
         'account_state' => 'string',
         'currency_code' => 'string',
+        'vat_number' => 'string',
         'stripe_connected_account_info' => '\Flipdish\\Client\Models\StripeConnectedAccountInfo',
         'account_name' => 'string',
         'iban' => 'string',
@@ -84,6 +85,7 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
         'store_ids' => 'int32',
         'account_state' => null,
         'currency_code' => null,
+        'vat_number' => null,
         'stripe_connected_account_info' => null,
         'account_name' => null,
         'iban' => null,
@@ -126,6 +128,7 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
         'store_ids' => 'StoreIds',
         'account_state' => 'AccountState',
         'currency_code' => 'CurrencyCode',
+        'vat_number' => 'VatNumber',
         'stripe_connected_account_info' => 'StripeConnectedAccountInfo',
         'account_name' => 'AccountName',
         'iban' => 'Iban',
@@ -147,6 +150,7 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
         'store_ids' => 'setStoreIds',
         'account_state' => 'setAccountState',
         'currency_code' => 'setCurrencyCode',
+        'vat_number' => 'setVatNumber',
         'stripe_connected_account_info' => 'setStripeConnectedAccountInfo',
         'account_name' => 'setAccountName',
         'iban' => 'setIban',
@@ -168,6 +172,7 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
         'store_ids' => 'getStoreIds',
         'account_state' => 'getAccountState',
         'currency_code' => 'getCurrencyCode',
+        'vat_number' => 'getVatNumber',
         'stripe_connected_account_info' => 'getStripeConnectedAccountInfo',
         'account_name' => 'getAccountName',
         'iban' => 'getIban',
@@ -281,6 +286,7 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
         $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
         $this->container['account_state'] = isset($data['account_state']) ? $data['account_state'] : null;
         $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
+        $this->container['vat_number'] = isset($data['vat_number']) ? $data['vat_number'] : null;
         $this->container['stripe_connected_account_info'] = isset($data['stripe_connected_account_info']) ? $data['stripe_connected_account_info'] : null;
         $this->container['account_name'] = isset($data['account_name']) ? $data['account_name'] : null;
         $this->container['iban'] = isset($data['iban']) ? $data['iban'] : null;
@@ -456,6 +462,30 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
     public function setCurrencyCode($currency_code)
     {
         $this->container['currency_code'] = $currency_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets vat_number
+     *
+     * @return string
+     */
+    public function getVatNumber()
+    {
+        return $this->container['vat_number'];
+    }
+
+    /**
+     * Sets vat_number
+     *
+     * @param string $vat_number Account Holders Vat Number
+     *
+     * @return $this
+     */
+    public function setVatNumber($vat_number)
+    {
+        $this->container['vat_number'] = $vat_number;
 
         return $this;
     }

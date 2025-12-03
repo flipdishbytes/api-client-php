@@ -112,6 +112,13 @@ class BankAccountSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "vat_number"
+     */
+    public function testPropertyVatNumber()
+    {
+    }
+
+    /**
      * Test attribute "stripe_connected_account_info"
      */
     public function testPropertyStripeConnectedAccountInfo()
