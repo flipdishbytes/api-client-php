@@ -189,6 +189,20 @@ class PayoutReport3DetailsFlipdishFeesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "other_integration_fees_excluding_vat"
+     */
+    public function testPropertyOtherIntegrationFeesExcludingVat()
+    {
+    }
+
+    /**
+     * Test attribute "other_integration_fees_vat_amount"
+     */
+    public function testPropertyOtherIntegrationFeesVatAmount()
+    {
+    }
+
+    /**
      * Test attribute "other_integration_tips"
      */
     public function testPropertyOtherIntegrationTips()

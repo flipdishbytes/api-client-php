@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **pos_card_revenue** | **double** |  | [optional] 
 **pos_card_on_flipdish_orders** | **double** |  | [optional] 
 **other_integration_fees** | **double** |  | [optional] 
+**other_integration_fees_excluding_vat** | **double** |  | [optional] 
+**other_integration_fees_vat_amount** | **double** |  | [optional] 
 **other_integration_tips** | **double** |  | [optional] 
 **refunded_fees_on_refunded_sales** | **double** |  | [optional] 
 **vat** | **double** |  | [optional] 

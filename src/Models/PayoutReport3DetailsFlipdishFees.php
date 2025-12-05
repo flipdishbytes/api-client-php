@@ -73,6 +73,8 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'pos_card_revenue' => 'double',
         'pos_card_on_flipdish_orders' => 'double',
         'other_integration_fees' => 'double',
+        'other_integration_fees_excluding_vat' => 'double',
+        'other_integration_fees_vat_amount' => 'double',
         'other_integration_tips' => 'double',
         'refunded_fees_on_refunded_sales' => 'double',
         'vat' => 'double',
@@ -110,6 +112,8 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'pos_card_revenue' => 'double',
         'pos_card_on_flipdish_orders' => 'double',
         'other_integration_fees' => 'double',
+        'other_integration_fees_excluding_vat' => 'double',
+        'other_integration_fees_vat_amount' => 'double',
         'other_integration_tips' => 'double',
         'refunded_fees_on_refunded_sales' => 'double',
         'vat' => 'double',
@@ -168,6 +172,8 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'pos_card_revenue' => 'PosCardRevenue',
         'pos_card_on_flipdish_orders' => 'PosCardOnFlipdishOrders',
         'other_integration_fees' => 'OtherIntegrationFees',
+        'other_integration_fees_excluding_vat' => 'OtherIntegrationFeesExcludingVat',
+        'other_integration_fees_vat_amount' => 'OtherIntegrationFeesVatAmount',
         'other_integration_tips' => 'OtherIntegrationTips',
         'refunded_fees_on_refunded_sales' => 'RefundedFeesOnRefundedSales',
         'vat' => 'Vat',
@@ -205,6 +211,8 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'pos_card_revenue' => 'setPosCardRevenue',
         'pos_card_on_flipdish_orders' => 'setPosCardOnFlipdishOrders',
         'other_integration_fees' => 'setOtherIntegrationFees',
+        'other_integration_fees_excluding_vat' => 'setOtherIntegrationFeesExcludingVat',
+        'other_integration_fees_vat_amount' => 'setOtherIntegrationFeesVatAmount',
         'other_integration_tips' => 'setOtherIntegrationTips',
         'refunded_fees_on_refunded_sales' => 'setRefundedFeesOnRefundedSales',
         'vat' => 'setVat',
@@ -242,6 +250,8 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         'pos_card_revenue' => 'getPosCardRevenue',
         'pos_card_on_flipdish_orders' => 'getPosCardOnFlipdishOrders',
         'other_integration_fees' => 'getOtherIntegrationFees',
+        'other_integration_fees_excluding_vat' => 'getOtherIntegrationFeesExcludingVat',
+        'other_integration_fees_vat_amount' => 'getOtherIntegrationFeesVatAmount',
         'other_integration_tips' => 'getOtherIntegrationTips',
         'refunded_fees_on_refunded_sales' => 'getRefundedFeesOnRefundedSales',
         'vat' => 'getVat',
@@ -333,6 +343,8 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
         $this->container['pos_card_revenue'] = isset($data['pos_card_revenue']) ? $data['pos_card_revenue'] : null;
         $this->container['pos_card_on_flipdish_orders'] = isset($data['pos_card_on_flipdish_orders']) ? $data['pos_card_on_flipdish_orders'] : null;
         $this->container['other_integration_fees'] = isset($data['other_integration_fees']) ? $data['other_integration_fees'] : null;
+        $this->container['other_integration_fees_excluding_vat'] = isset($data['other_integration_fees_excluding_vat']) ? $data['other_integration_fees_excluding_vat'] : null;
+        $this->container['other_integration_fees_vat_amount'] = isset($data['other_integration_fees_vat_amount']) ? $data['other_integration_fees_vat_amount'] : null;
         $this->container['other_integration_tips'] = isset($data['other_integration_tips']) ? $data['other_integration_tips'] : null;
         $this->container['refunded_fees_on_refunded_sales'] = isset($data['refunded_fees_on_refunded_sales']) ? $data['refunded_fees_on_refunded_sales'] : null;
         $this->container['vat'] = isset($data['vat']) ? $data['vat'] : null;
@@ -752,6 +764,54 @@ class PayoutReport3DetailsFlipdishFees implements ModelInterface, ArrayAccess
     public function setOtherIntegrationFees($other_integration_fees)
     {
         $this->container['other_integration_fees'] = $other_integration_fees;
+
+        return $this;
+    }
+
+    /**
+     * Gets other_integration_fees_excluding_vat
+     *
+     * @return double
+     */
+    public function getOtherIntegrationFeesExcludingVat()
+    {
+        return $this->container['other_integration_fees_excluding_vat'];
+    }
+
+    /**
+     * Sets other_integration_fees_excluding_vat
+     *
+     * @param double $other_integration_fees_excluding_vat other_integration_fees_excluding_vat
+     *
+     * @return $this
+     */
+    public function setOtherIntegrationFeesExcludingVat($other_integration_fees_excluding_vat)
+    {
+        $this->container['other_integration_fees_excluding_vat'] = $other_integration_fees_excluding_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets other_integration_fees_vat_amount
+     *
+     * @return double
+     */
+    public function getOtherIntegrationFeesVatAmount()
+    {
+        return $this->container['other_integration_fees_vat_amount'];
+    }
+
+    /**
+     * Sets other_integration_fees_vat_amount
+     *
+     * @param double $other_integration_fees_vat_amount other_integration_fees_vat_amount
+     *
+     * @return $this
+     */
+    public function setOtherIntegrationFeesVatAmount($other_integration_fees_vat_amount)
+    {
+        $this->container['other_integration_fees_vat_amount'] = $other_integration_fees_vat_amount;
 
         return $this;
     }
