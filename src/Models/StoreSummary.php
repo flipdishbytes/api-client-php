@@ -61,6 +61,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'id' => 'int',
         'name' => 'string',
         'menu_id' => 'int',
+        'menu_publish_id' => 'string',
         'metadata' => 'map[string,string]',
         'currency' => 'string',
         'coordinates' => '\Flipdish\\Client\Models\Coordinates',
@@ -81,6 +82,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'id' => 'int32',
         'name' => null,
         'menu_id' => 'int32',
+        'menu_publish_id' => 'uuid',
         'metadata' => null,
         'currency' => null,
         'coordinates' => null,
@@ -122,6 +124,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'id' => 'Id',
         'name' => 'Name',
         'menu_id' => 'MenuId',
+        'menu_publish_id' => 'MenuPublishId',
         'metadata' => 'Metadata',
         'currency' => 'Currency',
         'coordinates' => 'Coordinates',
@@ -142,6 +145,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'id' => 'setId',
         'name' => 'setName',
         'menu_id' => 'setMenuId',
+        'menu_publish_id' => 'setMenuPublishId',
         'metadata' => 'setMetadata',
         'currency' => 'setCurrency',
         'coordinates' => 'setCoordinates',
@@ -162,6 +166,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'id' => 'getId',
         'name' => 'getName',
         'menu_id' => 'getMenuId',
+        'menu_publish_id' => 'getMenuPublishId',
         'metadata' => 'getMetadata',
         'currency' => 'getCurrency',
         'coordinates' => 'getCoordinates',
@@ -473,6 +478,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['menu_id'] = isset($data['menu_id']) ? $data['menu_id'] : null;
+        $this->container['menu_publish_id'] = isset($data['menu_publish_id']) ? $data['menu_publish_id'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['coordinates'] = isset($data['coordinates']) ? $data['coordinates'] : null;
@@ -584,6 +590,30 @@ class StoreSummary implements ModelInterface, ArrayAccess
     public function setMenuId($menu_id)
     {
         $this->container['menu_id'] = $menu_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets menu_publish_id
+     *
+     * @return string
+     */
+    public function getMenuPublishId()
+    {
+        return $this->container['menu_publish_id'];
+    }
+
+    /**
+     * Sets menu_publish_id
+     *
+     * @param string $menu_publish_id Stores menu publish GUID
+     *
+     * @return $this
+     */
+    public function setMenuPublishId($menu_publish_id)
+    {
+        $this->container['menu_publish_id'] = $menu_publish_id;
 
         return $this;
     }

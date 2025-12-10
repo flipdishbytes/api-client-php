@@ -90,39 +90,39 @@ class CrossSellApi
     /**
      * Operation getCrossSellMenuItems
      *
+     * @param  string $app_id app_id (required)
      * @param  int $menu_id menu_id (required)
      * @param  int[] $menu_item_id menu_item_id (required)
      * @param  int $limit limit (required)
      * @param  double $total_value total_value (required)
-     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultCrossSellMenuItems
      */
-    public function getCrossSellMenuItems($menu_id, $menu_item_id, $limit, $total_value, $app_id)
+    public function getCrossSellMenuItems($app_id, $menu_id, $menu_item_id, $limit, $total_value)
     {
-        list($response) = $this->getCrossSellMenuItemsWithHttpInfo($menu_id, $menu_item_id, $limit, $total_value, $app_id);
+        list($response) = $this->getCrossSellMenuItemsWithHttpInfo($app_id, $menu_id, $menu_item_id, $limit, $total_value);
         return $response;
     }
 
     /**
      * Operation getCrossSellMenuItemsWithHttpInfo
      *
+     * @param  string $app_id (required)
      * @param  int $menu_id (required)
      * @param  int[] $menu_item_id (required)
      * @param  int $limit (required)
      * @param  double $total_value (required)
-     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultCrossSellMenuItems, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCrossSellMenuItemsWithHttpInfo($menu_id, $menu_item_id, $limit, $total_value, $app_id)
+    public function getCrossSellMenuItemsWithHttpInfo($app_id, $menu_id, $menu_item_id, $limit, $total_value)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultCrossSellMenuItems';
-        $request = $this->getCrossSellMenuItemsRequest($menu_id, $menu_item_id, $limit, $total_value, $app_id);
+        $request = $this->getCrossSellMenuItemsRequest($app_id, $menu_id, $menu_item_id, $limit, $total_value);
 
         try {
             $options = $this->createHttpClientOption();
@@ -212,18 +212,18 @@ class CrossSellApi
      *
      * 
      *
+     * @param  string $app_id (required)
      * @param  int $menu_id (required)
      * @param  int[] $menu_item_id (required)
      * @param  int $limit (required)
      * @param  double $total_value (required)
-     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCrossSellMenuItemsAsync($menu_id, $menu_item_id, $limit, $total_value, $app_id)
+    public function getCrossSellMenuItemsAsync($app_id, $menu_id, $menu_item_id, $limit, $total_value)
     {
-        return $this->getCrossSellMenuItemsAsyncWithHttpInfo($menu_id, $menu_item_id, $limit, $total_value, $app_id)
+        return $this->getCrossSellMenuItemsAsyncWithHttpInfo($app_id, $menu_id, $menu_item_id, $limit, $total_value)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -236,19 +236,19 @@ class CrossSellApi
      *
      * 
      *
+     * @param  string $app_id (required)
      * @param  int $menu_id (required)
      * @param  int[] $menu_item_id (required)
      * @param  int $limit (required)
      * @param  double $total_value (required)
-     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCrossSellMenuItemsAsyncWithHttpInfo($menu_id, $menu_item_id, $limit, $total_value, $app_id)
+    public function getCrossSellMenuItemsAsyncWithHttpInfo($app_id, $menu_id, $menu_item_id, $limit, $total_value)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultCrossSellMenuItems';
-        $request = $this->getCrossSellMenuItemsRequest($menu_id, $menu_item_id, $limit, $total_value, $app_id);
+        $request = $this->getCrossSellMenuItemsRequest($app_id, $menu_id, $menu_item_id, $limit, $total_value);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -290,17 +290,23 @@ class CrossSellApi
     /**
      * Create request for operation 'getCrossSellMenuItems'
      *
+     * @param  string $app_id (required)
      * @param  int $menu_id (required)
      * @param  int[] $menu_item_id (required)
      * @param  int $limit (required)
      * @param  double $total_value (required)
-     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCrossSellMenuItemsRequest($menu_id, $menu_item_id, $limit, $total_value, $app_id)
+    protected function getCrossSellMenuItemsRequest($app_id, $menu_id, $menu_item_id, $limit, $total_value)
     {
+        // verify the required parameter 'app_id' is set
+        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $app_id when calling getCrossSellMenuItems'
+            );
+        }
         // verify the required parameter 'menu_id' is set
         if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -323,12 +329,6 @@ class CrossSellApi
         if ($total_value === null || (is_array($total_value) && count($total_value) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $total_value when calling getCrossSellMenuItems'
-            );
-        }
-        // verify the required parameter 'app_id' is set
-        if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling getCrossSellMenuItems'
             );
         }
 

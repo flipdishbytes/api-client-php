@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getCrossSellMenuItems**
-> \Flipdish\\Client\Models\RestApiResultCrossSellMenuItems getCrossSellMenuItems($menu_id, $menu_item_id, $limit, $total_value, $app_id)
+> \Flipdish\\Client\Models\RestApiResultCrossSellMenuItems getCrossSellMenuItems($app_id, $menu_id, $menu_item_id, $limit, $total_value)
 
 
 
@@ -26,14 +26,14 @@ $apiInstance = new Flipdish\\Client\Api\CrossSellApi(
     new GuzzleHttp\Client(),
     $config
 );
+$app_id = "app_id_example"; // string | 
 $menu_id = 56; // int | 
 $menu_item_id = array(56); // int[] | 
 $limit = 56; // int | 
 $total_value = 1.2; // double | 
-$app_id = "app_id_example"; // string | 
 
 try {
-    $result = $apiInstance->getCrossSellMenuItems($menu_id, $menu_item_id, $limit, $total_value, $app_id);
+    $result = $apiInstance->getCrossSellMenuItems($app_id, $menu_id, $menu_item_id, $limit, $total_value);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CrossSellApi->getCrossSellMenuItems: ', $e->getMessage(), PHP_EOL;
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
  **menu_id** | **int**|  |
  **menu_item_id** | [**int[]**](../Model/int.md)|  |
  **limit** | **int**|  |
  **total_value** | **double**|  |
- **app_id** | **string**|  |
 
 ### Return type
 

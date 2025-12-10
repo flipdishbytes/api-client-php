@@ -98,6 +98,13 @@ class StoreSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "menu_publish_id"
+     */
+    public function testPropertyMenuPublishId()
+    {
+    }
+
+    /**
      * Test attribute "metadata"
      */
     public function testPropertyMetadata()

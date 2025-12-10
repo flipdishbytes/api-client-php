@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** | Store identifier | [optional] 
 **name** | **string** | Store name | [optional] 
 **menu_id** | **int** | Stores menu identifier | [optional] 
+**menu_publish_id** | **string** | Stores menu publish GUID | [optional] 
 **metadata** | **map[string,string]** | Store metadata | [optional] 
 **currency** | **string** | Currency which used by the Store | [optional] 
 **coordinates** | [**\Flipdish\\Client\Models\Coordinates**](Coordinates.md) | Latitude and longitude of the store | [optional] 
