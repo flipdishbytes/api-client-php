@@ -101,7 +101,8 @@ class Payout implements ModelInterface, ArrayAccess
         'total_third_party_fees' => 'double',
         'pos_sales_amount' => 'double',
         'pos_sales_tax' => 'double',
-        'tips_on_pos_sales' => 'double'
+        'tips_on_pos_sales' => 'double',
+        'bank_account_has_changed' => 'bool'
     ];
 
     /**
@@ -153,7 +154,8 @@ class Payout implements ModelInterface, ArrayAccess
         'total_third_party_fees' => 'double',
         'pos_sales_amount' => 'double',
         'pos_sales_tax' => 'double',
-        'tips_on_pos_sales' => 'double'
+        'tips_on_pos_sales' => 'double',
+        'bank_account_has_changed' => null
     ];
 
     /**
@@ -226,7 +228,8 @@ class Payout implements ModelInterface, ArrayAccess
         'total_third_party_fees' => 'TotalThirdPartyFees',
         'pos_sales_amount' => 'PosSalesAmount',
         'pos_sales_tax' => 'PosSalesTax',
-        'tips_on_pos_sales' => 'TipsOnPosSales'
+        'tips_on_pos_sales' => 'TipsOnPosSales',
+        'bank_account_has_changed' => 'BankAccountHasChanged'
     ];
 
     /**
@@ -278,7 +281,8 @@ class Payout implements ModelInterface, ArrayAccess
         'total_third_party_fees' => 'setTotalThirdPartyFees',
         'pos_sales_amount' => 'setPosSalesAmount',
         'pos_sales_tax' => 'setPosSalesTax',
-        'tips_on_pos_sales' => 'setTipsOnPosSales'
+        'tips_on_pos_sales' => 'setTipsOnPosSales',
+        'bank_account_has_changed' => 'setBankAccountHasChanged'
     ];
 
     /**
@@ -330,7 +334,8 @@ class Payout implements ModelInterface, ArrayAccess
         'total_third_party_fees' => 'getTotalThirdPartyFees',
         'pos_sales_amount' => 'getPosSalesAmount',
         'pos_sales_tax' => 'getPosSalesTax',
-        'tips_on_pos_sales' => 'getTipsOnPosSales'
+        'tips_on_pos_sales' => 'getTipsOnPosSales',
+        'bank_account_has_changed' => 'getBankAccountHasChanged'
     ];
 
     /**
@@ -710,6 +715,7 @@ class Payout implements ModelInterface, ArrayAccess
         $this->container['pos_sales_amount'] = isset($data['pos_sales_amount']) ? $data['pos_sales_amount'] : null;
         $this->container['pos_sales_tax'] = isset($data['pos_sales_tax']) ? $data['pos_sales_tax'] : null;
         $this->container['tips_on_pos_sales'] = isset($data['tips_on_pos_sales']) ? $data['tips_on_pos_sales'] : null;
+        $this->container['bank_account_has_changed'] = isset($data['bank_account_has_changed']) ? $data['bank_account_has_changed'] : null;
     }
 
     /**
@@ -1839,6 +1845,30 @@ class Payout implements ModelInterface, ArrayAccess
     public function setTipsOnPosSales($tips_on_pos_sales)
     {
         $this->container['tips_on_pos_sales'] = $tips_on_pos_sales;
+
+        return $this;
+    }
+
+    /**
+     * Gets bank_account_has_changed
+     *
+     * @return bool
+     */
+    public function getBankAccountHasChanged()
+    {
+        return $this->container['bank_account_has_changed'];
+    }
+
+    /**
+     * Sets bank_account_has_changed
+     *
+     * @param bool $bank_account_has_changed Indicates whether the bank account has changed since the previous payout
+     *
+     * @return $this
+     */
+    public function setBankAccountHasChanged($bank_account_has_changed)
+    {
+        $this->container['bank_account_has_changed'] = $bank_account_has_changed;
 
         return $this;
     }

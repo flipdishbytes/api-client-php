@@ -47,6 +47,7 @@ Name | Type | Description | Notes
 **pos_sales_amount** | **double** | POS sales amount | [optional] 
 **pos_sales_tax** | **double** | POS sales tax | [optional] 
 **tips_on_pos_sales** | **double** | Tips on POS sales | [optional] 
+**bank_account_has_changed** | **bool** | Indicates whether the bank account has changed since the previous payout | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

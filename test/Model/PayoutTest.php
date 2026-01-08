@@ -383,4 +383,11 @@ class PayoutTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTipsOnPosSales()
     {
     }
+
+    /**
+     * Test attribute "bank_account_has_changed"
+     */
+    public function testPropertyBankAccountHasChanged()
+    {
+    }
 }

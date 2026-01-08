@@ -159,4 +159,11 @@ class PayoutReport3OverviewHeaderTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCurrency()
     {
     }
+
+    /**
+     * Test attribute "bank_account_has_changed"
+     */
+    public function testPropertyBankAccountHasChanged()
+    {
+    }
 }

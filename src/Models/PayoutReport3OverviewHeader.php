@@ -68,7 +68,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'destination_bank' => 'string',
         'destination_account' => 'string',
         'amount' => 'double',
-        'currency' => 'string'
+        'currency' => 'string',
+        'bank_account_has_changed' => 'bool'
     ];
 
     /**
@@ -88,7 +89,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'destination_bank' => null,
         'destination_account' => null,
         'amount' => 'double',
-        'currency' => null
+        'currency' => null,
+        'bank_account_has_changed' => null
     ];
 
     /**
@@ -129,7 +131,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'destination_bank' => 'DestinationBank',
         'destination_account' => 'DestinationAccount',
         'amount' => 'Amount',
-        'currency' => 'Currency'
+        'currency' => 'Currency',
+        'bank_account_has_changed' => 'BankAccountHasChanged'
     ];
 
     /**
@@ -149,7 +152,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'destination_bank' => 'setDestinationBank',
         'destination_account' => 'setDestinationAccount',
         'amount' => 'setAmount',
-        'currency' => 'setCurrency'
+        'currency' => 'setCurrency',
+        'bank_account_has_changed' => 'setBankAccountHasChanged'
     ];
 
     /**
@@ -169,7 +173,8 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         'destination_bank' => 'getDestinationBank',
         'destination_account' => 'getDestinationAccount',
         'amount' => 'getAmount',
-        'currency' => 'getCurrency'
+        'currency' => 'getCurrency',
+        'bank_account_has_changed' => 'getBankAccountHasChanged'
     ];
 
     /**
@@ -244,6 +249,7 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
         $this->container['destination_account'] = isset($data['destination_account']) ? $data['destination_account'] : null;
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
+        $this->container['bank_account_has_changed'] = isset($data['bank_account_has_changed']) ? $data['bank_account_has_changed'] : null;
     }
 
     /**
@@ -554,6 +560,30 @@ class PayoutReport3OverviewHeader implements ModelInterface, ArrayAccess
     public function setCurrency($currency)
     {
         $this->container['currency'] = $currency;
+
+        return $this;
+    }
+
+    /**
+     * Gets bank_account_has_changed
+     *
+     * @return bool
+     */
+    public function getBankAccountHasChanged()
+    {
+        return $this->container['bank_account_has_changed'];
+    }
+
+    /**
+     * Sets bank_account_has_changed
+     *
+     * @param bool $bank_account_has_changed bank_account_has_changed
+     *
+     * @return $this
+     */
+    public function setBankAccountHasChanged($bank_account_has_changed)
+    {
+        $this->container['bank_account_has_changed'] = $bank_account_has_changed;
 
         return $this;
     }
