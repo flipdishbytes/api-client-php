@@ -105,6 +105,13 @@ class PreviousOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "receipt_code"
+     */
+    public function testPropertyReceiptCode()
+    {
+    }
+
+    /**
      * Test attribute "restaurant_name"
      */
     public function testPropertyRestaurantName()

@@ -61,6 +61,7 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'delivery_location_address_string' => 'string',
         'payment_account_type' => 'string',
         'order_id' => 'int',
+        'receipt_code' => 'string',
         'restaurant_name' => 'string',
         'local_order_id' => 'string',
         'table_service_category' => 'string',
@@ -92,6 +93,7 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'delivery_location_address_string' => null,
         'payment_account_type' => null,
         'order_id' => 'int32',
+        'receipt_code' => null,
         'restaurant_name' => null,
         'local_order_id' => null,
         'table_service_category' => null,
@@ -144,6 +146,7 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'delivery_location_address_string' => 'DeliveryLocationAddressString',
         'payment_account_type' => 'PaymentAccountType',
         'order_id' => 'OrderId',
+        'receipt_code' => 'ReceiptCode',
         'restaurant_name' => 'RestaurantName',
         'local_order_id' => 'LocalOrderId',
         'table_service_category' => 'TableServiceCategory',
@@ -175,6 +178,7 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'delivery_location_address_string' => 'setDeliveryLocationAddressString',
         'payment_account_type' => 'setPaymentAccountType',
         'order_id' => 'setOrderId',
+        'receipt_code' => 'setReceiptCode',
         'restaurant_name' => 'setRestaurantName',
         'local_order_id' => 'setLocalOrderId',
         'table_service_category' => 'setTableServiceCategory',
@@ -206,6 +210,7 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         'delivery_location_address_string' => 'getDeliveryLocationAddressString',
         'payment_account_type' => 'getPaymentAccountType',
         'order_id' => 'getOrderId',
+        'receipt_code' => 'getReceiptCode',
         'restaurant_name' => 'getRestaurantName',
         'local_order_id' => 'getLocalOrderId',
         'table_service_category' => 'getTableServiceCategory',
@@ -528,6 +533,7 @@ class PreviousOrder implements ModelInterface, ArrayAccess
         $this->container['delivery_location_address_string'] = isset($data['delivery_location_address_string']) ? $data['delivery_location_address_string'] : null;
         $this->container['payment_account_type'] = isset($data['payment_account_type']) ? $data['payment_account_type'] : null;
         $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
+        $this->container['receipt_code'] = isset($data['receipt_code']) ? $data['receipt_code'] : null;
         $this->container['restaurant_name'] = isset($data['restaurant_name']) ? $data['restaurant_name'] : null;
         $this->container['local_order_id'] = isset($data['local_order_id']) ? $data['local_order_id'] : null;
         $this->container['table_service_category'] = isset($data['table_service_category']) ? $data['table_service_category'] : null;
@@ -673,6 +679,30 @@ class PreviousOrder implements ModelInterface, ArrayAccess
     public function setOrderId($order_id)
     {
         $this->container['order_id'] = $order_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets receipt_code
+     *
+     * @return string
+     */
+    public function getReceiptCode()
+    {
+        return $this->container['receipt_code'];
+    }
+
+    /**
+     * Sets receipt_code
+     *
+     * @param string $receipt_code receipt_code
+     *
+     * @return $this
+     */
+    public function setReceiptCode($receipt_code)
+    {
+        $this->container['receipt_code'] = $receipt_code;
 
         return $this;
     }

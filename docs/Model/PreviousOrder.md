@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **delivery_location_address_string** | **string** |  | [optional] 
 **payment_account_type** | **string** |  | [optional] 
 **order_id** | **int** |  | [optional] 
+**receipt_code** | **string** |  | [optional] 
 **restaurant_name** | **string** |  | [optional] 
 **local_order_id** | **string** |  | [optional] 
 **table_service_category** | **string** |  | [optional] 
