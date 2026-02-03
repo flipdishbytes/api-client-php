@@ -48,6 +48,14 @@ Name | Type | Description | Notes
 **fixed_fee_order_with_google** | **double** | Additional fixed fee charged on orders submitted through Order With Google | [optional] 
 **should_not_auto_increase_before** | [**\DateTime**](\DateTime.md) | Should not auto increase fees before this date | [optional] 
 **reason** | **string** | Reason for the last fee change (optional) | [optional] 
+**percent_fee_card_orders_phone_agent** | **double** | Gets or sets the percent fee card orders phone agent. | [optional] 
+**percent_fee_cash_orders_phone_agent** | **double** | Gets or sets the percent fee cash orders phone agent. | [optional] 
+**fixed_fee_card_orders_phone_agent** | **double** | Gets or sets the fixed fee card orders phone agent. | [optional] 
+**fixed_fee_cash_orders_phone_agent** | **double** | Gets or sets the fixed fee cash orders phone agent. | [optional] 
+**percent_fee_card_orders_phone_agent_charged_to_customer_including_vat** | **double** | Gets or sets the percent fee card orders phone agent charged to customer including vat. | [optional] 
+**percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat** | **double** | Gets or sets the percent fee cash orders phone agent charged to customer including vat. | [optional] 
+**fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat** | **double** | Gets or sets the fixed fee card orders phone agent charged to customer including vat. | [optional] 
+**fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat** | **double** | Gets or sets the fixed fee cash orders phone agent charged to customer including vat. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

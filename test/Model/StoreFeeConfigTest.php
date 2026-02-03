@@ -390,4 +390,60 @@ class StoreFeeConfigTest extends \PHPUnit_Framework_TestCase
     public function testPropertyReason()
     {
     }
+
+    /**
+     * Test attribute "percent_fee_card_orders_phone_agent"
+     */
+    public function testPropertyPercentFeeCardOrdersPhoneAgent()
+    {
+    }
+
+    /**
+     * Test attribute "percent_fee_cash_orders_phone_agent"
+     */
+    public function testPropertyPercentFeeCashOrdersPhoneAgent()
+    {
+    }
+
+    /**
+     * Test attribute "fixed_fee_card_orders_phone_agent"
+     */
+    public function testPropertyFixedFeeCardOrdersPhoneAgent()
+    {
+    }
+
+    /**
+     * Test attribute "fixed_fee_cash_orders_phone_agent"
+     */
+    public function testPropertyFixedFeeCashOrdersPhoneAgent()
+    {
+    }
+
+    /**
+     * Test attribute "percent_fee_card_orders_phone_agent_charged_to_customer_including_vat"
+     */
+    public function testPropertyPercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat()
+    {
+    }
+
+    /**
+     * Test attribute "percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat"
+     */
+    public function testPropertyPercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat()
+    {
+    }
+
+    /**
+     * Test attribute "fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat"
+     */
+    public function testPropertyFixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat()
+    {
+    }
+
+    /**
+     * Test attribute "fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat"
+     */
+    public function testPropertyFixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat()
+    {
+    }
 }

@@ -102,7 +102,15 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_order_with_google' => 'double',
         'fixed_fee_order_with_google' => 'double',
         'should_not_auto_increase_before' => '\DateTime',
-        'reason' => 'string'
+        'reason' => 'string',
+        'percent_fee_card_orders_phone_agent' => 'double',
+        'percent_fee_cash_orders_phone_agent' => 'double',
+        'fixed_fee_card_orders_phone_agent' => 'double',
+        'fixed_fee_cash_orders_phone_agent' => 'double',
+        'percent_fee_card_orders_phone_agent_charged_to_customer_including_vat' => 'double',
+        'percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat' => 'double',
+        'fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat' => 'double',
+        'fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat' => 'double'
     ];
 
     /**
@@ -155,7 +163,15 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_order_with_google' => 'double',
         'fixed_fee_order_with_google' => 'double',
         'should_not_auto_increase_before' => 'date-time',
-        'reason' => null
+        'reason' => null,
+        'percent_fee_card_orders_phone_agent' => 'double',
+        'percent_fee_cash_orders_phone_agent' => 'double',
+        'fixed_fee_card_orders_phone_agent' => 'double',
+        'fixed_fee_cash_orders_phone_agent' => 'double',
+        'percent_fee_card_orders_phone_agent_charged_to_customer_including_vat' => 'double',
+        'percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat' => 'double',
+        'fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat' => 'double',
+        'fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat' => 'double'
     ];
 
     /**
@@ -229,7 +245,15 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_order_with_google' => 'PercentFeeOrderWithGoogle',
         'fixed_fee_order_with_google' => 'FixedFeeOrderWithGoogle',
         'should_not_auto_increase_before' => 'ShouldNotAutoIncreaseBefore',
-        'reason' => 'Reason'
+        'reason' => 'Reason',
+        'percent_fee_card_orders_phone_agent' => 'PercentFeeCardOrdersPhoneAgent',
+        'percent_fee_cash_orders_phone_agent' => 'PercentFeeCashOrdersPhoneAgent',
+        'fixed_fee_card_orders_phone_agent' => 'FixedFeeCardOrdersPhoneAgent',
+        'fixed_fee_cash_orders_phone_agent' => 'FixedFeeCashOrdersPhoneAgent',
+        'percent_fee_card_orders_phone_agent_charged_to_customer_including_vat' => 'PercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat',
+        'percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat' => 'PercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat',
+        'fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat' => 'FixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat',
+        'fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat' => 'FixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat'
     ];
 
     /**
@@ -282,7 +306,15 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_order_with_google' => 'setPercentFeeOrderWithGoogle',
         'fixed_fee_order_with_google' => 'setFixedFeeOrderWithGoogle',
         'should_not_auto_increase_before' => 'setShouldNotAutoIncreaseBefore',
-        'reason' => 'setReason'
+        'reason' => 'setReason',
+        'percent_fee_card_orders_phone_agent' => 'setPercentFeeCardOrdersPhoneAgent',
+        'percent_fee_cash_orders_phone_agent' => 'setPercentFeeCashOrdersPhoneAgent',
+        'fixed_fee_card_orders_phone_agent' => 'setFixedFeeCardOrdersPhoneAgent',
+        'fixed_fee_cash_orders_phone_agent' => 'setFixedFeeCashOrdersPhoneAgent',
+        'percent_fee_card_orders_phone_agent_charged_to_customer_including_vat' => 'setPercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat',
+        'percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat' => 'setPercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat',
+        'fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat' => 'setFixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat',
+        'fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat' => 'setFixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat'
     ];
 
     /**
@@ -335,7 +367,15 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         'percent_fee_order_with_google' => 'getPercentFeeOrderWithGoogle',
         'fixed_fee_order_with_google' => 'getFixedFeeOrderWithGoogle',
         'should_not_auto_increase_before' => 'getShouldNotAutoIncreaseBefore',
-        'reason' => 'getReason'
+        'reason' => 'getReason',
+        'percent_fee_card_orders_phone_agent' => 'getPercentFeeCardOrdersPhoneAgent',
+        'percent_fee_cash_orders_phone_agent' => 'getPercentFeeCashOrdersPhoneAgent',
+        'fixed_fee_card_orders_phone_agent' => 'getFixedFeeCardOrdersPhoneAgent',
+        'fixed_fee_cash_orders_phone_agent' => 'getFixedFeeCashOrdersPhoneAgent',
+        'percent_fee_card_orders_phone_agent_charged_to_customer_including_vat' => 'getPercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat',
+        'percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat' => 'getPercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat',
+        'fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat' => 'getFixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat',
+        'fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat' => 'getFixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat'
     ];
 
     /**
@@ -443,6 +483,14 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
         $this->container['fixed_fee_order_with_google'] = isset($data['fixed_fee_order_with_google']) ? $data['fixed_fee_order_with_google'] : null;
         $this->container['should_not_auto_increase_before'] = isset($data['should_not_auto_increase_before']) ? $data['should_not_auto_increase_before'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['percent_fee_card_orders_phone_agent'] = isset($data['percent_fee_card_orders_phone_agent']) ? $data['percent_fee_card_orders_phone_agent'] : null;
+        $this->container['percent_fee_cash_orders_phone_agent'] = isset($data['percent_fee_cash_orders_phone_agent']) ? $data['percent_fee_cash_orders_phone_agent'] : null;
+        $this->container['fixed_fee_card_orders_phone_agent'] = isset($data['fixed_fee_card_orders_phone_agent']) ? $data['fixed_fee_card_orders_phone_agent'] : null;
+        $this->container['fixed_fee_cash_orders_phone_agent'] = isset($data['fixed_fee_cash_orders_phone_agent']) ? $data['fixed_fee_cash_orders_phone_agent'] : null;
+        $this->container['percent_fee_card_orders_phone_agent_charged_to_customer_including_vat'] = isset($data['percent_fee_card_orders_phone_agent_charged_to_customer_including_vat']) ? $data['percent_fee_card_orders_phone_agent_charged_to_customer_including_vat'] : null;
+        $this->container['percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat'] = isset($data['percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat']) ? $data['percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat'] : null;
+        $this->container['fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat'] = isset($data['fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat']) ? $data['fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat'] : null;
+        $this->container['fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat'] = isset($data['fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat']) ? $data['fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat'] : null;
     }
 
     /**
@@ -1545,6 +1593,198 @@ class StoreFeeConfig implements ModelInterface, ArrayAccess
     public function setReason($reason)
     {
         $this->container['reason'] = $reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets percent_fee_card_orders_phone_agent
+     *
+     * @return double
+     */
+    public function getPercentFeeCardOrdersPhoneAgent()
+    {
+        return $this->container['percent_fee_card_orders_phone_agent'];
+    }
+
+    /**
+     * Sets percent_fee_card_orders_phone_agent
+     *
+     * @param double $percent_fee_card_orders_phone_agent Gets or sets the percent fee card orders phone agent.
+     *
+     * @return $this
+     */
+    public function setPercentFeeCardOrdersPhoneAgent($percent_fee_card_orders_phone_agent)
+    {
+        $this->container['percent_fee_card_orders_phone_agent'] = $percent_fee_card_orders_phone_agent;
+
+        return $this;
+    }
+
+    /**
+     * Gets percent_fee_cash_orders_phone_agent
+     *
+     * @return double
+     */
+    public function getPercentFeeCashOrdersPhoneAgent()
+    {
+        return $this->container['percent_fee_cash_orders_phone_agent'];
+    }
+
+    /**
+     * Sets percent_fee_cash_orders_phone_agent
+     *
+     * @param double $percent_fee_cash_orders_phone_agent Gets or sets the percent fee cash orders phone agent.
+     *
+     * @return $this
+     */
+    public function setPercentFeeCashOrdersPhoneAgent($percent_fee_cash_orders_phone_agent)
+    {
+        $this->container['percent_fee_cash_orders_phone_agent'] = $percent_fee_cash_orders_phone_agent;
+
+        return $this;
+    }
+
+    /**
+     * Gets fixed_fee_card_orders_phone_agent
+     *
+     * @return double
+     */
+    public function getFixedFeeCardOrdersPhoneAgent()
+    {
+        return $this->container['fixed_fee_card_orders_phone_agent'];
+    }
+
+    /**
+     * Sets fixed_fee_card_orders_phone_agent
+     *
+     * @param double $fixed_fee_card_orders_phone_agent Gets or sets the fixed fee card orders phone agent.
+     *
+     * @return $this
+     */
+    public function setFixedFeeCardOrdersPhoneAgent($fixed_fee_card_orders_phone_agent)
+    {
+        $this->container['fixed_fee_card_orders_phone_agent'] = $fixed_fee_card_orders_phone_agent;
+
+        return $this;
+    }
+
+    /**
+     * Gets fixed_fee_cash_orders_phone_agent
+     *
+     * @return double
+     */
+    public function getFixedFeeCashOrdersPhoneAgent()
+    {
+        return $this->container['fixed_fee_cash_orders_phone_agent'];
+    }
+
+    /**
+     * Sets fixed_fee_cash_orders_phone_agent
+     *
+     * @param double $fixed_fee_cash_orders_phone_agent Gets or sets the fixed fee cash orders phone agent.
+     *
+     * @return $this
+     */
+    public function setFixedFeeCashOrdersPhoneAgent($fixed_fee_cash_orders_phone_agent)
+    {
+        $this->container['fixed_fee_cash_orders_phone_agent'] = $fixed_fee_cash_orders_phone_agent;
+
+        return $this;
+    }
+
+    /**
+     * Gets percent_fee_card_orders_phone_agent_charged_to_customer_including_vat
+     *
+     * @return double
+     */
+    public function getPercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat()
+    {
+        return $this->container['percent_fee_card_orders_phone_agent_charged_to_customer_including_vat'];
+    }
+
+    /**
+     * Sets percent_fee_card_orders_phone_agent_charged_to_customer_including_vat
+     *
+     * @param double $percent_fee_card_orders_phone_agent_charged_to_customer_including_vat Gets or sets the percent fee card orders phone agent charged to customer including vat.
+     *
+     * @return $this
+     */
+    public function setPercentFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat($percent_fee_card_orders_phone_agent_charged_to_customer_including_vat)
+    {
+        $this->container['percent_fee_card_orders_phone_agent_charged_to_customer_including_vat'] = $percent_fee_card_orders_phone_agent_charged_to_customer_including_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat
+     *
+     * @return double
+     */
+    public function getPercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat()
+    {
+        return $this->container['percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat'];
+    }
+
+    /**
+     * Sets percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat
+     *
+     * @param double $percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat Gets or sets the percent fee cash orders phone agent charged to customer including vat.
+     *
+     * @return $this
+     */
+    public function setPercentFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat($percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat)
+    {
+        $this->container['percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat'] = $percent_fee_cash_orders_phone_agent_charged_to_customer_including_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat
+     *
+     * @return double
+     */
+    public function getFixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat()
+    {
+        return $this->container['fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat'];
+    }
+
+    /**
+     * Sets fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat
+     *
+     * @param double $fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat Gets or sets the fixed fee card orders phone agent charged to customer including vat.
+     *
+     * @return $this
+     */
+    public function setFixedFeeCardOrdersPhoneAgentChargedToCustomerIncludingVat($fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat)
+    {
+        $this->container['fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat'] = $fixed_fee_card_orders_phone_agent_charged_to_customer_including_vat;
+
+        return $this;
+    }
+
+    /**
+     * Gets fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat
+     *
+     * @return double
+     */
+    public function getFixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat()
+    {
+        return $this->container['fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat'];
+    }
+
+    /**
+     * Sets fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat
+     *
+     * @param double $fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat Gets or sets the fixed fee cash orders phone agent charged to customer including vat.
+     *
+     * @return $this
+     */
+    public function setFixedFeeCashOrdersPhoneAgentChargedToCustomerIncludingVat($fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat)
+    {
+        $this->container['fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat'] = $fixed_fee_cash_orders_phone_agent_charged_to_customer_including_vat;
 
         return $this;
     }
