@@ -102,6 +102,16 @@ class PayoutReportsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getPayoutReport3Stores
+     *
+     * .
+     *
+     */
+    public function testGetPayoutReport3Stores()
+    {
+    }
+
+    /**
      * Test case for payoutReport3ExportPayoutChargebacks
      *
      * .
@@ -138,6 +148,16 @@ class PayoutReportsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPayoutReport3ExportPayoutRefundedOrders()
+    {
+    }
+
+    /**
+     * Test case for payoutReport3ExportPayoutStores
+     *
+     * .
+     *
+     */
+    public function testPayoutReport3ExportPayoutStores()
     {
     }
 }
