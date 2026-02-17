@@ -119,6 +119,20 @@ class BankAccountSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "account_holder_address"
+     */
+    public function testPropertyAccountHolderAddress()
+    {
+    }
+
+    /**
+     * Test attribute "account_holder_country_code"
+     */
+    public function testPropertyAccountHolderCountryCode()
+    {
+    }
+
+    /**
      * Test attribute "stripe_connected_account_info"
      */
     public function testPropertyStripeConnectedAccountInfo()

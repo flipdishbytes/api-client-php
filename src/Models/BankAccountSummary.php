@@ -64,6 +64,8 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
         'account_state' => 'string',
         'currency_code' => 'string',
         'vat_number' => 'string',
+        'account_holder_address' => 'string',
+        'account_holder_country_code' => 'string',
         'stripe_connected_account_info' => '\Flipdish\\Client\Models\StripeConnectedAccountInfo',
         'account_name' => 'string',
         'iban' => 'string',
@@ -86,6 +88,8 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
         'account_state' => null,
         'currency_code' => null,
         'vat_number' => null,
+        'account_holder_address' => null,
+        'account_holder_country_code' => null,
         'stripe_connected_account_info' => null,
         'account_name' => null,
         'iban' => null,
@@ -129,6 +133,8 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
         'account_state' => 'AccountState',
         'currency_code' => 'CurrencyCode',
         'vat_number' => 'VatNumber',
+        'account_holder_address' => 'AccountHolderAddress',
+        'account_holder_country_code' => 'AccountHolderCountryCode',
         'stripe_connected_account_info' => 'StripeConnectedAccountInfo',
         'account_name' => 'AccountName',
         'iban' => 'Iban',
@@ -151,6 +157,8 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
         'account_state' => 'setAccountState',
         'currency_code' => 'setCurrencyCode',
         'vat_number' => 'setVatNumber',
+        'account_holder_address' => 'setAccountHolderAddress',
+        'account_holder_country_code' => 'setAccountHolderCountryCode',
         'stripe_connected_account_info' => 'setStripeConnectedAccountInfo',
         'account_name' => 'setAccountName',
         'iban' => 'setIban',
@@ -173,6 +181,8 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
         'account_state' => 'getAccountState',
         'currency_code' => 'getCurrencyCode',
         'vat_number' => 'getVatNumber',
+        'account_holder_address' => 'getAccountHolderAddress',
+        'account_holder_country_code' => 'getAccountHolderCountryCode',
         'stripe_connected_account_info' => 'getStripeConnectedAccountInfo',
         'account_name' => 'getAccountName',
         'iban' => 'getIban',
@@ -287,6 +297,8 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
         $this->container['account_state'] = isset($data['account_state']) ? $data['account_state'] : null;
         $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
         $this->container['vat_number'] = isset($data['vat_number']) ? $data['vat_number'] : null;
+        $this->container['account_holder_address'] = isset($data['account_holder_address']) ? $data['account_holder_address'] : null;
+        $this->container['account_holder_country_code'] = isset($data['account_holder_country_code']) ? $data['account_holder_country_code'] : null;
         $this->container['stripe_connected_account_info'] = isset($data['stripe_connected_account_info']) ? $data['stripe_connected_account_info'] : null;
         $this->container['account_name'] = isset($data['account_name']) ? $data['account_name'] : null;
         $this->container['iban'] = isset($data['iban']) ? $data['iban'] : null;
@@ -486,6 +498,54 @@ class BankAccountSummary implements ModelInterface, ArrayAccess
     public function setVatNumber($vat_number)
     {
         $this->container['vat_number'] = $vat_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets account_holder_address
+     *
+     * @return string
+     */
+    public function getAccountHolderAddress()
+    {
+        return $this->container['account_holder_address'];
+    }
+
+    /**
+     * Sets account_holder_address
+     *
+     * @param string $account_holder_address Account Holders Address
+     *
+     * @return $this
+     */
+    public function setAccountHolderAddress($account_holder_address)
+    {
+        $this->container['account_holder_address'] = $account_holder_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets account_holder_country_code
+     *
+     * @return string
+     */
+    public function getAccountHolderCountryCode()
+    {
+        return $this->container['account_holder_country_code'];
+    }
+
+    /**
+     * Sets account_holder_country_code
+     *
+     * @param string $account_holder_country_code Account Holders Country Code
+     *
+     * @return $this
+     */
+    public function setAccountHolderCountryCode($account_holder_country_code)
+    {
+        $this->container['account_holder_country_code'] = $account_holder_country_code;
 
         return $this;
     }

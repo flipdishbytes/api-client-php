@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **account_state** | **string** | Status of Account | [optional] 
 **currency_code** | **string** | Currency of Account | [optional] 
 **vat_number** | **string** | Account Holders Vat Number | [optional] 
+**account_holder_address** | **string** | Account Holders Address | [optional] 
+**account_holder_country_code** | **string** | Account Holders Country Code | [optional] 
 **stripe_connected_account_info** | [**\Flipdish\\Client\Models\StripeConnectedAccountInfo**](StripeConnectedAccountInfo.md) | Information about the Stripe connected account associated with this bank account (if any) | [optional] 
 **account_name** | **string** | Name of this account | [optional] 
 **iban** | **string** | IBAN of this account | [optional] 
