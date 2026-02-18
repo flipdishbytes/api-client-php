@@ -252,36 +252,6 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for menusIsWhiteLabelMigratedToRms
-     *
-     * PRIVATE API, TEMPORARY ENDPOINT  RMS can check if a white label is migrated to RMS.
-     *
-     */
-    public function testMenusIsWhiteLabelMigratedToRms()
-    {
-    }
-
-    /**
-     * Test case for menusMarkWhiteLabelAsMigratedToRms
-     *
-     * PRIVATE API, TEMPORARY ENDPOINT  RMS can set the white label as migrated to RMS, which will block all Menu editing operations via Zeus.
-     *
-     */
-    public function testMenusMarkWhiteLabelAsMigratedToRms()
-    {
-    }
-
-    /**
-     * Test case for menusMarkWhiteLabelAsNotMigratedToRms
-     *
-     * PRIVATE API, TEMPORARY ENDPOINT  RMS can set the white label as NOT migrated to RMS, which will unblock all Menu editing operations via Zeus.
-     *
-     */
-    public function testMenusMarkWhiteLabelAsNotMigratedToRms()
-    {
-    }
-
-    /**
      * Test case for menusSetDisplayOnMenuTax
      *
      * Set if tax shows for a Menu.
