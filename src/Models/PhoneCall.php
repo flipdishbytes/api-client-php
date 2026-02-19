@@ -59,6 +59,7 @@ class PhoneCall implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'phone_call_id' => 'int',
+        'call_sid' => 'string',
         'time_of_call' => '\DateTime',
         'time_of_call_local' => '\DateTime',
         'store_id' => 'int',
@@ -77,6 +78,7 @@ class PhoneCall implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'phone_call_id' => 'int32',
+        'call_sid' => null,
         'time_of_call' => 'date-time',
         'time_of_call_local' => 'date-time',
         'store_id' => 'int32',
@@ -116,6 +118,7 @@ class PhoneCall implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'phone_call_id' => 'PhoneCallId',
+        'call_sid' => 'CallSid',
         'time_of_call' => 'TimeOfCall',
         'time_of_call_local' => 'TimeOfCallLocal',
         'store_id' => 'StoreId',
@@ -134,6 +137,7 @@ class PhoneCall implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'phone_call_id' => 'setPhoneCallId',
+        'call_sid' => 'setCallSid',
         'time_of_call' => 'setTimeOfCall',
         'time_of_call_local' => 'setTimeOfCallLocal',
         'store_id' => 'setStoreId',
@@ -152,6 +156,7 @@ class PhoneCall implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'phone_call_id' => 'getPhoneCallId',
+        'call_sid' => 'getCallSid',
         'time_of_call' => 'getTimeOfCall',
         'time_of_call_local' => 'getTimeOfCallLocal',
         'store_id' => 'getStoreId',
@@ -253,6 +258,7 @@ class PhoneCall implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['phone_call_id'] = isset($data['phone_call_id']) ? $data['phone_call_id'] : null;
+        $this->container['call_sid'] = isset($data['call_sid']) ? $data['call_sid'] : null;
         $this->container['time_of_call'] = isset($data['time_of_call']) ? $data['time_of_call'] : null;
         $this->container['time_of_call_local'] = isset($data['time_of_call_local']) ? $data['time_of_call_local'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
@@ -316,6 +322,30 @@ class PhoneCall implements ModelInterface, ArrayAccess
     public function setPhoneCallId($phone_call_id)
     {
         $this->container['phone_call_id'] = $phone_call_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets call_sid
+     *
+     * @return string
+     */
+    public function getCallSid()
+    {
+        return $this->container['call_sid'];
+    }
+
+    /**
+     * Sets call_sid
+     *
+     * @param string $call_sid Twilio Call SID
+     *
+     * @return $this
+     */
+    public function setCallSid($call_sid)
+    {
+        $this->container['call_sid'] = $call_sid;
 
         return $this;
     }

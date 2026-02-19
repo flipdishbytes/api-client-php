@@ -84,6 +84,13 @@ class PhoneCallTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "call_sid"
+     */
+    public function testPropertyCallSid()
+    {
+    }
+
+    /**
      * Test attribute "time_of_call"
      */
     public function testPropertyTimeOfCall()
