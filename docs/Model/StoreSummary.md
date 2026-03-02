@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **tax_id** | **string** | VAT number or generic Tax ID of the store | [optional] 
 **pretty_address** | **string** | Address of the store | [optional] 
 **country_code** | **string** | Country code of the store address (ISO 3166-1 alpha-2) | [optional] 
+**property_id** | **string** | Property identifier | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

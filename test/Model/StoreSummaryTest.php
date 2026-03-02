@@ -166,4 +166,11 @@ class StoreSummaryTest extends \PHPUnit_Framework_TestCase
     public function testPropertyCountryCode()
     {
     }
+
+    /**
+     * Test attribute "property_id"
+     */
+    public function testPropertyPropertyId()
+    {
+    }
 }

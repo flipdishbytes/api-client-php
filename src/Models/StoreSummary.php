@@ -70,7 +70,8 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'store_group_id' => 'int',
         'tax_id' => 'string',
         'pretty_address' => 'string',
-        'country_code' => 'string'
+        'country_code' => 'string',
+        'property_id' => 'string'
     ];
 
     /**
@@ -91,7 +92,8 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'store_group_id' => 'int32',
         'tax_id' => null,
         'pretty_address' => null,
-        'country_code' => null
+        'country_code' => null,
+        'property_id' => null
     ];
 
     /**
@@ -133,7 +135,8 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'store_group_id' => 'StoreGroupId',
         'tax_id' => 'TaxId',
         'pretty_address' => 'PrettyAddress',
-        'country_code' => 'CountryCode'
+        'country_code' => 'CountryCode',
+        'property_id' => 'PropertyId'
     ];
 
     /**
@@ -154,7 +157,8 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'store_group_id' => 'setStoreGroupId',
         'tax_id' => 'setTaxId',
         'pretty_address' => 'setPrettyAddress',
-        'country_code' => 'setCountryCode'
+        'country_code' => 'setCountryCode',
+        'property_id' => 'setPropertyId'
     ];
 
     /**
@@ -175,7 +179,8 @@ class StoreSummary implements ModelInterface, ArrayAccess
         'store_group_id' => 'getStoreGroupId',
         'tax_id' => 'getTaxId',
         'pretty_address' => 'getPrettyAddress',
-        'country_code' => 'getCountryCode'
+        'country_code' => 'getCountryCode',
+        'property_id' => 'getPropertyId'
     ];
 
     /**
@@ -488,6 +493,7 @@ class StoreSummary implements ModelInterface, ArrayAccess
         $this->container['tax_id'] = isset($data['tax_id']) ? $data['tax_id'] : null;
         $this->container['pretty_address'] = isset($data['pretty_address']) ? $data['pretty_address'] : null;
         $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
+        $this->container['property_id'] = isset($data['property_id']) ? $data['property_id'] : null;
     }
 
     /**
@@ -839,6 +845,30 @@ class StoreSummary implements ModelInterface, ArrayAccess
     public function setCountryCode($country_code)
     {
         $this->container['country_code'] = $country_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets property_id
+     *
+     * @return string
+     */
+    public function getPropertyId()
+    {
+        return $this->container['property_id'];
+    }
+
+    /**
+     * Sets property_id
+     *
+     * @param string $property_id Property identifier
+     *
+     * @return $this
+     */
+    public function setPropertyId($property_id)
+    {
+        $this->container['property_id'] = $property_id;
 
         return $this;
     }
