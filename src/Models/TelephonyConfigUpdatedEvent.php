@@ -62,6 +62,7 @@ class TelephonyConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'description' => 'string',
         'store_id' => 'int',
         'telephony_config' => '\Flipdish\\Client\Models\TelephonyConfig',
+        'property_id' => 'string',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -80,6 +81,7 @@ class TelephonyConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'description' => null,
         'store_id' => 'int32',
         'telephony_config' => null,
+        'property_id' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -119,6 +121,7 @@ class TelephonyConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'description' => 'Description',
         'store_id' => 'StoreId',
         'telephony_config' => 'TelephonyConfig',
+        'property_id' => 'PropertyId',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -137,6 +140,7 @@ class TelephonyConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'description' => 'setDescription',
         'store_id' => 'setStoreId',
         'telephony_config' => 'setTelephonyConfig',
+        'property_id' => 'setPropertyId',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -155,6 +159,7 @@ class TelephonyConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'description' => 'getDescription',
         'store_id' => 'getStoreId',
         'telephony_config' => 'getTelephonyConfig',
+        'property_id' => 'getPropertyId',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -227,6 +232,7 @@ class TelephonyConfigUpdatedEvent implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
         $this->container['telephony_config'] = isset($data['telephony_config']) ? $data['telephony_config'] : null;
+        $this->container['property_id'] = isset($data['property_id']) ? $data['property_id'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -351,6 +357,30 @@ class TelephonyConfigUpdatedEvent implements ModelInterface, ArrayAccess
     public function setTelephonyConfig($telephony_config)
     {
         $this->container['telephony_config'] = $telephony_config;
+
+        return $this;
+    }
+
+    /**
+     * Gets property_id
+     *
+     * @return string
+     */
+    public function getPropertyId()
+    {
+        return $this->container['property_id'];
+    }
+
+    /**
+     * Sets property_id
+     *
+     * @param string $property_id Property Id
+     *
+     * @return $this
+     */
+    public function setPropertyId($property_id)
+    {
+        $this->container['property_id'] = $property_id;
 
         return $this;
     }

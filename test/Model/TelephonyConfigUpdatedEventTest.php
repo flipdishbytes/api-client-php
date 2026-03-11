@@ -105,6 +105,13 @@ class TelephonyConfigUpdatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "property_id"
+     */
+    public function testPropertyPropertyId()
+    {
+    }
+
+    /**
      * Test attribute "flipdish_event_id"
      */
     public function testPropertyFlipdishEventId()
