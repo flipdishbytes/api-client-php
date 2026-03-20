@@ -159,4 +159,18 @@ class KioskBluetoothTerminalInstallationStatusEventTest extends \PHPUnit_Framewo
     public function testPropertyIpAddress()
     {
     }
+
+    /**
+     * Test attribute "activity_id"
+     */
+    public function testPropertyActivityId()
+    {
+    }
+
+    /**
+     * Test attribute "activity_type"
+     */
+    public function testPropertyActivityType()
+    {
+    }
 }

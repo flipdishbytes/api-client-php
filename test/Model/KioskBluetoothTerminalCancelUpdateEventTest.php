@@ -145,4 +145,18 @@ class KioskBluetoothTerminalCancelUpdateEventTest extends \PHPUnit_Framework_Tes
     public function testPropertyIpAddress()
     {
     }
+
+    /**
+     * Test attribute "activity_id"
+     */
+    public function testPropertyActivityId()
+    {
+    }
+
+    /**
+     * Test attribute "activity_type"
+     */
+    public function testPropertyActivityType()
+    {
+    }
 }

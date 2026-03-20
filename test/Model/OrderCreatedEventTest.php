@@ -145,4 +145,18 @@ class OrderCreatedEventTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIpAddress()
     {
     }
+
+    /**
+     * Test attribute "activity_id"
+     */
+    public function testPropertyActivityId()
+    {
+    }
+
+    /**
+     * Test attribute "activity_type"
+     */
+    public function testPropertyActivityType()
+    {
+    }
 }

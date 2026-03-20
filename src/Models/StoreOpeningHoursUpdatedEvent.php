@@ -72,7 +72,9 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         'create_time' => '\DateTime',
         'position' => 'int',
         'app_id' => 'string',
-        'ip_address' => 'string'
+        'ip_address' => 'string',
+        'activity_id' => 'string',
+        'activity_type' => 'string'
     ];
 
     /**
@@ -95,7 +97,9 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         'create_time' => 'date-time',
         'position' => 'int32',
         'app_id' => null,
-        'ip_address' => null
+        'ip_address' => null,
+        'activity_id' => null,
+        'activity_type' => null
     ];
 
     /**
@@ -139,7 +143,9 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         'create_time' => 'CreateTime',
         'position' => 'Position',
         'app_id' => 'AppId',
-        'ip_address' => 'IpAddress'
+        'ip_address' => 'IpAddress',
+        'activity_id' => 'ActivityId',
+        'activity_type' => 'ActivityType'
     ];
 
     /**
@@ -162,7 +168,9 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
         'app_id' => 'setAppId',
-        'ip_address' => 'setIpAddress'
+        'ip_address' => 'setIpAddress',
+        'activity_id' => 'setActivityId',
+        'activity_type' => 'setActivityType'
     ];
 
     /**
@@ -185,7 +193,9 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
         'app_id' => 'getAppId',
-        'ip_address' => 'getIpAddress'
+        'ip_address' => 'getIpAddress',
+        'activity_id' => 'getActivityId',
+        'activity_type' => 'getActivityType'
     ];
 
     /**
@@ -293,6 +303,8 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
         $this->container['ip_address'] = isset($data['ip_address']) ? $data['ip_address'] : null;
+        $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
+        $this->container['activity_type'] = isset($data['activity_type']) ? $data['activity_type'] : null;
     }
 
     /**
@@ -709,6 +721,54 @@ class StoreOpeningHoursUpdatedEvent implements ModelInterface, ArrayAccess
     public function setIpAddress($ip_address)
     {
         $this->container['ip_address'] = $ip_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_id
+     *
+     * @return string
+     */
+    public function getActivityId()
+    {
+        return $this->container['activity_id'];
+    }
+
+    /**
+     * Sets activity_id
+     *
+     * @param string $activity_id Activity Id
+     *
+     * @return $this
+     */
+    public function setActivityId($activity_id)
+    {
+        $this->container['activity_id'] = $activity_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_type
+     *
+     * @return string
+     */
+    public function getActivityType()
+    {
+        return $this->container['activity_type'];
+    }
+
+    /**
+     * Sets activity_type
+     *
+     * @param string $activity_type Activity Type
+     *
+     * @return $this
+     */
+    public function setActivityType($activity_type)
+    {
+        $this->container['activity_type'] = $activity_type;
 
         return $this;
     }
