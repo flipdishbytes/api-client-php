@@ -1,6 +1,6 @@
 <?php
 /**
- * PayoutReport3Overview
+ * PayoutReport3Property
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * PayoutReport3Overview Class Doc Comment
+ * PayoutReport3Property Class Doc Comment
  *
  * @category Class
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PayoutReport3Overview implements ModelInterface, ArrayAccess
+class PayoutReport3Property implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PayoutReport3Overview';
+    protected static $swaggerModelName = 'PayoutReport3Property';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,8 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'payout_report3_overview_header' => '\Flipdish\\Client\Models\PayoutReport3OverviewHeader',
-        'payout_stores' => '\Flipdish\\Client\Models\PayoutReport3Store[]',
-        'payout_properties' => '\Flipdish\\Client\Models\PayoutReport3Property[]'
+        'property_id' => 'string',
+        'property_name' => 'string'
     ];
 
     /**
@@ -68,9 +67,8 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'payout_report3_overview_header' => null,
-        'payout_stores' => null,
-        'payout_properties' => null
+        'property_id' => null,
+        'property_name' => null
     ];
 
     /**
@@ -100,9 +98,8 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'payout_report3_overview_header' => 'PayoutReport3OverviewHeader',
-        'payout_stores' => 'PayoutStores',
-        'payout_properties' => 'PayoutProperties'
+        'property_id' => 'PropertyId',
+        'property_name' => 'PropertyName'
     ];
 
     /**
@@ -111,9 +108,8 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'payout_report3_overview_header' => 'setPayoutReport3OverviewHeader',
-        'payout_stores' => 'setPayoutStores',
-        'payout_properties' => 'setPayoutProperties'
+        'property_id' => 'setPropertyId',
+        'property_name' => 'setPropertyName'
     ];
 
     /**
@@ -122,9 +118,8 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'payout_report3_overview_header' => 'getPayoutReport3OverviewHeader',
-        'payout_stores' => 'getPayoutStores',
-        'payout_properties' => 'getPayoutProperties'
+        'property_id' => 'getPropertyId',
+        'property_name' => 'getPropertyName'
     ];
 
     /**
@@ -187,9 +182,8 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['payout_report3_overview_header'] = isset($data['payout_report3_overview_header']) ? $data['payout_report3_overview_header'] : null;
-        $this->container['payout_stores'] = isset($data['payout_stores']) ? $data['payout_stores'] : null;
-        $this->container['payout_properties'] = isset($data['payout_properties']) ? $data['payout_properties'] : null;
+        $this->container['property_id'] = isset($data['property_id']) ? $data['property_id'] : null;
+        $this->container['property_name'] = isset($data['property_name']) ? $data['property_name'] : null;
     }
 
     /**
@@ -217,73 +211,49 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets payout_report3_overview_header
+     * Gets property_id
      *
-     * @return \Flipdish\\Client\Models\PayoutReport3OverviewHeader
+     * @return string
      */
-    public function getPayoutReport3OverviewHeader()
+    public function getPropertyId()
     {
-        return $this->container['payout_report3_overview_header'];
+        return $this->container['property_id'];
     }
 
     /**
-     * Sets payout_report3_overview_header
+     * Sets property_id
      *
-     * @param \Flipdish\\Client\Models\PayoutReport3OverviewHeader $payout_report3_overview_header payout_report3_overview_header
+     * @param string $property_id property_id
      *
      * @return $this
      */
-    public function setPayoutReport3OverviewHeader($payout_report3_overview_header)
+    public function setPropertyId($property_id)
     {
-        $this->container['payout_report3_overview_header'] = $payout_report3_overview_header;
+        $this->container['property_id'] = $property_id;
 
         return $this;
     }
 
     /**
-     * Gets payout_stores
+     * Gets property_name
      *
-     * @return \Flipdish\\Client\Models\PayoutReport3Store[]
+     * @return string
      */
-    public function getPayoutStores()
+    public function getPropertyName()
     {
-        return $this->container['payout_stores'];
+        return $this->container['property_name'];
     }
 
     /**
-     * Sets payout_stores
+     * Sets property_name
      *
-     * @param \Flipdish\\Client\Models\PayoutReport3Store[] $payout_stores payout_stores
+     * @param string $property_name property_name
      *
      * @return $this
      */
-    public function setPayoutStores($payout_stores)
+    public function setPropertyName($property_name)
     {
-        $this->container['payout_stores'] = $payout_stores;
-
-        return $this;
-    }
-
-    /**
-     * Gets payout_properties
-     *
-     * @return \Flipdish\\Client\Models\PayoutReport3Property[]
-     */
-    public function getPayoutProperties()
-    {
-        return $this->container['payout_properties'];
-    }
-
-    /**
-     * Sets payout_properties
-     *
-     * @param \Flipdish\\Client\Models\PayoutReport3Property[] $payout_properties payout_properties
-     *
-     * @return $this
-     */
-    public function setPayoutProperties($payout_properties)
-    {
-        $this->container['payout_properties'] = $payout_properties;
+        $this->container['property_name'] = $property_name;
 
         return $this;
     }

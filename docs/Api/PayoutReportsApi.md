@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **getPayoutReport3Details**
-> \Flipdish\\Client\Models\RestApiResultPayoutReport3Details getPayoutReport3Details($app_id, $bank_account_id, $payout_id, $store_ids)
+> \Flipdish\\Client\Models\RestApiResultPayoutReport3Details getPayoutReport3Details($app_id, $bank_account_id, $payout_id, $store_ids, $property_ids)
 
 
 
@@ -38,9 +38,10 @@ $app_id = "app_id_example"; // string |
 $bank_account_id = 56; // int | 
 $payout_id = 56; // int | 
 $store_ids = array(56); // int[] | 
+$property_ids = array("property_ids_example"); // string[] | 
 
 try {
-    $result = $apiInstance->getPayoutReport3Details($app_id, $bank_account_id, $payout_id, $store_ids);
+    $result = $apiInstance->getPayoutReport3Details($app_id, $bank_account_id, $payout_id, $store_ids, $property_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayoutReportsApi->getPayoutReport3Details: ', $e->getMessage(), PHP_EOL;
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
  **bank_account_id** | **int**|  |
  **payout_id** | **int**|  |
  **store_ids** | [**int[]**](../Model/int.md)|  | [optional]
+ **property_ids** | [**string[]**](../Model/string.md)|  | [optional]
 
 ### Return type
 
@@ -128,7 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPayoutReport3RefundedOrders**
-> \Flipdish\\Client\Models\RestApiPaginationResultPayoutReport3RefundedOrder getPayoutReport3RefundedOrders($app_id, $bank_account_id, $payout_id, $store_ids, $page, $limit)
+> \Flipdish\\Client\Models\RestApiPaginationResultPayoutReport3RefundedOrder getPayoutReport3RefundedOrders($app_id, $bank_account_id, $payout_id, $store_ids, $property_ids, $page, $limit)
 
 
 
@@ -150,11 +152,12 @@ $app_id = "app_id_example"; // string |
 $bank_account_id = 56; // int | 
 $payout_id = 56; // int | 
 $store_ids = array(56); // int[] | 
+$property_ids = array("property_ids_example"); // string[] | 
 $page = 56; // int | 
 $limit = 56; // int | 
 
 try {
-    $result = $apiInstance->getPayoutReport3RefundedOrders($app_id, $bank_account_id, $payout_id, $store_ids, $page, $limit);
+    $result = $apiInstance->getPayoutReport3RefundedOrders($app_id, $bank_account_id, $payout_id, $store_ids, $property_ids, $page, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayoutReportsApi->getPayoutReport3RefundedOrders: ', $e->getMessage(), PHP_EOL;
@@ -170,6 +173,7 @@ Name | Type | Description  | Notes
  **bank_account_id** | **int**|  |
  **payout_id** | **int**|  |
  **store_ids** | [**int[]**](../Model/int.md)|  | [optional]
+ **property_ids** | [**string[]**](../Model/string.md)|  | [optional]
  **page** | **int**|  | [optional]
  **limit** | **int**|  | [optional]
 
@@ -189,7 +193,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPayoutReport3Stores**
-> \Flipdish\\Client\Models\RestApiResultPayoutReport3StorePayouts getPayoutReport3Stores($app_id, $bank_account_id, $payout_id, $stores)
+> \Flipdish\\Client\Models\RestApiResultPayoutReport3StorePayouts getPayoutReport3Stores($app_id, $bank_account_id, $payout_id, $stores, $property_ids)
 
 
 
@@ -211,9 +215,10 @@ $app_id = "app_id_example"; // string |
 $bank_account_id = 56; // int | 
 $payout_id = 56; // int | 
 $stores = array(56); // int[] | 
+$property_ids = array("property_ids_example"); // string[] | 
 
 try {
-    $result = $apiInstance->getPayoutReport3Stores($app_id, $bank_account_id, $payout_id, $stores);
+    $result = $apiInstance->getPayoutReport3Stores($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayoutReportsApi->getPayoutReport3Stores: ', $e->getMessage(), PHP_EOL;
@@ -229,6 +234,7 @@ Name | Type | Description  | Notes
  **bank_account_id** | **int**|  |
  **payout_id** | **int**|  |
  **stores** | [**int[]**](../Model/int.md)|  | [optional]
+ **property_ids** | [**string[]**](../Model/string.md)|  | [optional]
 
 ### Return type
 
@@ -246,7 +252,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payoutReport3ExportPayoutChargebacks**
-> \Flipdish\\Client\Models\RestApiResultFileCreationResult payoutReport3ExportPayoutChargebacks($app_id, $bank_account_id, $payout_id, $stores)
+> \Flipdish\\Client\Models\RestApiResultFileCreationResult payoutReport3ExportPayoutChargebacks($app_id, $bank_account_id, $payout_id, $stores, $property_ids)
 
 
 
@@ -268,9 +274,10 @@ $app_id = "app_id_example"; // string |
 $bank_account_id = 56; // int | 
 $payout_id = 56; // int | 
 $stores = array(56); // int[] | 
+$property_ids = array("property_ids_example"); // string[] | 
 
 try {
-    $result = $apiInstance->payoutReport3ExportPayoutChargebacks($app_id, $bank_account_id, $payout_id, $stores);
+    $result = $apiInstance->payoutReport3ExportPayoutChargebacks($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayoutReportsApi->payoutReport3ExportPayoutChargebacks: ', $e->getMessage(), PHP_EOL;
@@ -286,6 +293,7 @@ Name | Type | Description  | Notes
  **bank_account_id** | **int**|  |
  **payout_id** | **int**|  |
  **stores** | [**int[]**](../Model/int.md)|  | [optional]
+ **property_ids** | [**string[]**](../Model/string.md)|  | [optional]
 
 ### Return type
 
@@ -303,7 +311,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payoutReport3ExportPayoutOrders**
-> \Flipdish\\Client\Models\RestApiResultFileCreationResult payoutReport3ExportPayoutOrders($app_id, $bank_account_id, $payout_id, $stores)
+> \Flipdish\\Client\Models\RestApiResultFileCreationResult payoutReport3ExportPayoutOrders($app_id, $bank_account_id, $payout_id, $stores, $property_ids)
 
 
 
@@ -325,9 +333,10 @@ $app_id = "app_id_example"; // string |
 $bank_account_id = 56; // int | 
 $payout_id = 56; // int | 
 $stores = array(56); // int[] | 
+$property_ids = array("property_ids_example"); // string[] | 
 
 try {
-    $result = $apiInstance->payoutReport3ExportPayoutOrders($app_id, $bank_account_id, $payout_id, $stores);
+    $result = $apiInstance->payoutReport3ExportPayoutOrders($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayoutReportsApi->payoutReport3ExportPayoutOrders: ', $e->getMessage(), PHP_EOL;
@@ -343,6 +352,7 @@ Name | Type | Description  | Notes
  **bank_account_id** | **int**|  |
  **payout_id** | **int**|  |
  **stores** | [**int[]**](../Model/int.md)|  | [optional]
+ **property_ids** | [**string[]**](../Model/string.md)|  | [optional]
 
 ### Return type
 
@@ -360,7 +370,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payoutReport3ExportPayoutPosSales**
-> \Flipdish\\Client\Models\RestApiResultFileCreationResult payoutReport3ExportPayoutPosSales($app_id, $bank_account_id, $payout_id, $stores)
+> \Flipdish\\Client\Models\RestApiResultFileCreationResult payoutReport3ExportPayoutPosSales($app_id, $bank_account_id, $payout_id, $stores, $property_ids)
 
 
 
@@ -382,9 +392,10 @@ $app_id = "app_id_example"; // string |
 $bank_account_id = 56; // int | 
 $payout_id = 56; // int | 
 $stores = array(56); // int[] | 
+$property_ids = array("property_ids_example"); // string[] | 
 
 try {
-    $result = $apiInstance->payoutReport3ExportPayoutPosSales($app_id, $bank_account_id, $payout_id, $stores);
+    $result = $apiInstance->payoutReport3ExportPayoutPosSales($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayoutReportsApi->payoutReport3ExportPayoutPosSales: ', $e->getMessage(), PHP_EOL;
@@ -400,6 +411,7 @@ Name | Type | Description  | Notes
  **bank_account_id** | **int**|  |
  **payout_id** | **int**|  |
  **stores** | [**int[]**](../Model/int.md)|  | [optional]
+ **property_ids** | [**string[]**](../Model/string.md)|  | [optional]
 
 ### Return type
 
@@ -417,7 +429,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payoutReport3ExportPayoutRefundedOrders**
-> \Flipdish\\Client\Models\RestApiResultFileCreationResult payoutReport3ExportPayoutRefundedOrders($app_id, $bank_account_id, $payout_id, $stores)
+> \Flipdish\\Client\Models\RestApiResultFileCreationResult payoutReport3ExportPayoutRefundedOrders($app_id, $bank_account_id, $payout_id, $stores, $property_ids)
 
 
 
@@ -439,9 +451,10 @@ $app_id = "app_id_example"; // string |
 $bank_account_id = 56; // int | 
 $payout_id = 56; // int | 
 $stores = array(56); // int[] | 
+$property_ids = array("property_ids_example"); // string[] | 
 
 try {
-    $result = $apiInstance->payoutReport3ExportPayoutRefundedOrders($app_id, $bank_account_id, $payout_id, $stores);
+    $result = $apiInstance->payoutReport3ExportPayoutRefundedOrders($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayoutReportsApi->payoutReport3ExportPayoutRefundedOrders: ', $e->getMessage(), PHP_EOL;
@@ -457,6 +470,7 @@ Name | Type | Description  | Notes
  **bank_account_id** | **int**|  |
  **payout_id** | **int**|  |
  **stores** | [**int[]**](../Model/int.md)|  | [optional]
+ **property_ids** | [**string[]**](../Model/string.md)|  | [optional]
 
 ### Return type
 
@@ -474,7 +488,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **payoutReport3ExportPayoutStores**
-> \Flipdish\\Client\Models\RestApiResultFileCreationResult payoutReport3ExportPayoutStores($app_id, $bank_account_id, $payout_id, $stores)
+> \Flipdish\\Client\Models\RestApiResultFileCreationResult payoutReport3ExportPayoutStores($app_id, $bank_account_id, $payout_id, $stores, $property_ids)
 
 
 
@@ -496,9 +510,10 @@ $app_id = "app_id_example"; // string |
 $bank_account_id = 56; // int | 
 $payout_id = 56; // int | 
 $stores = array(56); // int[] | 
+$property_ids = array("property_ids_example"); // string[] | 
 
 try {
-    $result = $apiInstance->payoutReport3ExportPayoutStores($app_id, $bank_account_id, $payout_id, $stores);
+    $result = $apiInstance->payoutReport3ExportPayoutStores($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PayoutReportsApi->payoutReport3ExportPayoutStores: ', $e->getMessage(), PHP_EOL;
@@ -514,6 +529,7 @@ Name | Type | Description  | Notes
  **bank_account_id** | **int**|  |
  **payout_id** | **int**|  |
  **stores** | [**int[]**](../Model/int.md)|  | [optional]
+ **property_ids** | [**string[]**](../Model/string.md)|  | [optional]
 
 ### Return type
 
