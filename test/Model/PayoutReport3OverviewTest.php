@@ -89,11 +89,4 @@ class PayoutReport3OverviewTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPayoutStores()
     {
     }
-
-    /**
-     * Test attribute "payout_properties"
-     */
-    public function testPropertyPayoutProperties()
-    {
-    }
 }
