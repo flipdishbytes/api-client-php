@@ -58,8 +58,7 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'payout_report3_overview_header' => '\Flipdish\\Client\Models\PayoutReport3OverviewHeader',
-        'payout_stores' => '\Flipdish\\Client\Models\PayoutReport3Store[]',
-        'payout_properties' => '\Flipdish\\Client\Models\PayoutReport3Property[]'
+        'payout_stores' => '\Flipdish\\Client\Models\PayoutReport3Store[]'
     ];
 
     /**
@@ -69,8 +68,7 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'payout_report3_overview_header' => null,
-        'payout_stores' => null,
-        'payout_properties' => null
+        'payout_stores' => null
     ];
 
     /**
@@ -101,8 +99,7 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'payout_report3_overview_header' => 'PayoutReport3OverviewHeader',
-        'payout_stores' => 'PayoutStores',
-        'payout_properties' => 'PayoutProperties'
+        'payout_stores' => 'PayoutStores'
     ];
 
     /**
@@ -112,8 +109,7 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'payout_report3_overview_header' => 'setPayoutReport3OverviewHeader',
-        'payout_stores' => 'setPayoutStores',
-        'payout_properties' => 'setPayoutProperties'
+        'payout_stores' => 'setPayoutStores'
     ];
 
     /**
@@ -123,8 +119,7 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'payout_report3_overview_header' => 'getPayoutReport3OverviewHeader',
-        'payout_stores' => 'getPayoutStores',
-        'payout_properties' => 'getPayoutProperties'
+        'payout_stores' => 'getPayoutStores'
     ];
 
     /**
@@ -189,7 +184,6 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
     {
         $this->container['payout_report3_overview_header'] = isset($data['payout_report3_overview_header']) ? $data['payout_report3_overview_header'] : null;
         $this->container['payout_stores'] = isset($data['payout_stores']) ? $data['payout_stores'] : null;
-        $this->container['payout_properties'] = isset($data['payout_properties']) ? $data['payout_properties'] : null;
     }
 
     /**
@@ -260,30 +254,6 @@ class PayoutReport3Overview implements ModelInterface, ArrayAccess
     public function setPayoutStores($payout_stores)
     {
         $this->container['payout_stores'] = $payout_stores;
-
-        return $this;
-    }
-
-    /**
-     * Gets payout_properties
-     *
-     * @return \Flipdish\\Client\Models\PayoutReport3Property[]
-     */
-    public function getPayoutProperties()
-    {
-        return $this->container['payout_properties'];
-    }
-
-    /**
-     * Sets payout_properties
-     *
-     * @param \Flipdish\\Client\Models\PayoutReport3Property[] $payout_properties payout_properties
-     *
-     * @return $this
-     */
-    public function setPayoutProperties($payout_properties)
-    {
-        $this->container['payout_properties'] = $payout_properties;
 
         return $this;
     }
