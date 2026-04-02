@@ -94,14 +94,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id bank_account_id (required)
      * @param  int $payout_id payout_id (required)
      * @param  int[] $store_ids store_ids (optional)
+     * @param  string[] $property_ids property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultPayoutReport3Details
      */
-    public function getPayoutReport3Details($app_id, $bank_account_id, $payout_id, $store_ids = null)
+    public function getPayoutReport3Details($app_id, $bank_account_id, $payout_id, $store_ids = null, $property_ids = null)
     {
-        list($response) = $this->getPayoutReport3DetailsWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids);
+        list($response) = $this->getPayoutReport3DetailsWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids, $property_ids);
         return $response;
     }
 
@@ -112,15 +113,16 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $store_ids (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultPayoutReport3Details, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPayoutReport3DetailsWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids = null)
+    public function getPayoutReport3DetailsWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultPayoutReport3Details';
-        $request = $this->getPayoutReport3DetailsRequest($app_id, $bank_account_id, $payout_id, $store_ids);
+        $request = $this->getPayoutReport3DetailsRequest($app_id, $bank_account_id, $payout_id, $store_ids, $property_ids);
 
         try {
             $options = $this->createHttpClientOption();
@@ -222,13 +224,14 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $store_ids (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPayoutReport3DetailsAsync($app_id, $bank_account_id, $payout_id, $store_ids = null)
+    public function getPayoutReport3DetailsAsync($app_id, $bank_account_id, $payout_id, $store_ids = null, $property_ids = null)
     {
-        return $this->getPayoutReport3DetailsAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids)
+        return $this->getPayoutReport3DetailsAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids, $property_ids)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -245,14 +248,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $store_ids (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPayoutReport3DetailsAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids = null)
+    public function getPayoutReport3DetailsAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultPayoutReport3Details';
-        $request = $this->getPayoutReport3DetailsRequest($app_id, $bank_account_id, $payout_id, $store_ids);
+        $request = $this->getPayoutReport3DetailsRequest($app_id, $bank_account_id, $payout_id, $store_ids, $property_ids);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -298,11 +302,12 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $store_ids (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getPayoutReport3DetailsRequest($app_id, $bank_account_id, $payout_id, $store_ids = null)
+    protected function getPayoutReport3DetailsRequest($app_id, $bank_account_id, $payout_id, $store_ids = null, $property_ids = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -336,6 +341,13 @@ class PayoutReportsApi
         } else
         if ($store_ids !== null) {
             $queryParams['storeIds'] = ObjectSerializer::toQueryValue($store_ids);
+        }
+        // query params
+        if (is_array($property_ids)) {
+            $queryParams['propertyIds'] = $property_ids;
+        } else
+        if ($property_ids !== null) {
+            $queryParams['propertyIds'] = ObjectSerializer::toQueryValue($property_ids);
         }
 
         // path params
@@ -784,6 +796,7 @@ class PayoutReportsApi
      * @param  int $bank_account_id bank_account_id (required)
      * @param  int $payout_id payout_id (required)
      * @param  int[] $store_ids store_ids (optional)
+     * @param  string[] $property_ids property_ids (optional)
      * @param  int $page page (optional)
      * @param  int $limit limit (optional)
      *
@@ -791,9 +804,9 @@ class PayoutReportsApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiPaginationResultPayoutReport3RefundedOrder
      */
-    public function getPayoutReport3RefundedOrders($app_id, $bank_account_id, $payout_id, $store_ids = null, $page = null, $limit = null)
+    public function getPayoutReport3RefundedOrders($app_id, $bank_account_id, $payout_id, $store_ids = null, $property_ids = null, $page = null, $limit = null)
     {
-        list($response) = $this->getPayoutReport3RefundedOrdersWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids, $page, $limit);
+        list($response) = $this->getPayoutReport3RefundedOrdersWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids, $property_ids, $page, $limit);
         return $response;
     }
 
@@ -804,6 +817,7 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $store_ids (optional)
+     * @param  string[] $property_ids (optional)
      * @param  int $page (optional)
      * @param  int $limit (optional)
      *
@@ -811,10 +825,10 @@ class PayoutReportsApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiPaginationResultPayoutReport3RefundedOrder, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPayoutReport3RefundedOrdersWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids = null, $page = null, $limit = null)
+    public function getPayoutReport3RefundedOrdersWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids = null, $property_ids = null, $page = null, $limit = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultPayoutReport3RefundedOrder';
-        $request = $this->getPayoutReport3RefundedOrdersRequest($app_id, $bank_account_id, $payout_id, $store_ids, $page, $limit);
+        $request = $this->getPayoutReport3RefundedOrdersRequest($app_id, $bank_account_id, $payout_id, $store_ids, $property_ids, $page, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -916,15 +930,16 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $store_ids (optional)
+     * @param  string[] $property_ids (optional)
      * @param  int $page (optional)
      * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPayoutReport3RefundedOrdersAsync($app_id, $bank_account_id, $payout_id, $store_ids = null, $page = null, $limit = null)
+    public function getPayoutReport3RefundedOrdersAsync($app_id, $bank_account_id, $payout_id, $store_ids = null, $property_ids = null, $page = null, $limit = null)
     {
-        return $this->getPayoutReport3RefundedOrdersAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids, $page, $limit)
+        return $this->getPayoutReport3RefundedOrdersAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids, $property_ids, $page, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -941,16 +956,17 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $store_ids (optional)
+     * @param  string[] $property_ids (optional)
      * @param  int $page (optional)
      * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPayoutReport3RefundedOrdersAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids = null, $page = null, $limit = null)
+    public function getPayoutReport3RefundedOrdersAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $store_ids = null, $property_ids = null, $page = null, $limit = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiPaginationResultPayoutReport3RefundedOrder';
-        $request = $this->getPayoutReport3RefundedOrdersRequest($app_id, $bank_account_id, $payout_id, $store_ids, $page, $limit);
+        $request = $this->getPayoutReport3RefundedOrdersRequest($app_id, $bank_account_id, $payout_id, $store_ids, $property_ids, $page, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -996,13 +1012,14 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $store_ids (optional)
+     * @param  string[] $property_ids (optional)
      * @param  int $page (optional)
      * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getPayoutReport3RefundedOrdersRequest($app_id, $bank_account_id, $payout_id, $store_ids = null, $page = null, $limit = null)
+    protected function getPayoutReport3RefundedOrdersRequest($app_id, $bank_account_id, $payout_id, $store_ids = null, $property_ids = null, $page = null, $limit = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -1036,6 +1053,13 @@ class PayoutReportsApi
         } else
         if ($store_ids !== null) {
             $queryParams['storeIds'] = ObjectSerializer::toQueryValue($store_ids);
+        }
+        // query params
+        if (is_array($property_ids)) {
+            $queryParams['propertyIds'] = $property_ids;
+        } else
+        if ($property_ids !== null) {
+            $queryParams['propertyIds'] = ObjectSerializer::toQueryValue($property_ids);
         }
         // query params
         if ($page !== null) {
@@ -1153,14 +1177,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id bank_account_id (required)
      * @param  int $payout_id payout_id (required)
      * @param  int[] $stores stores (optional)
+     * @param  string[] $property_ids property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultPayoutReport3StorePayouts
      */
-    public function getPayoutReport3Stores($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function getPayoutReport3Stores($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
-        list($response) = $this->getPayoutReport3StoresWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores);
+        list($response) = $this->getPayoutReport3StoresWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
         return $response;
     }
 
@@ -1171,15 +1196,16 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultPayoutReport3StorePayouts, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPayoutReport3StoresWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function getPayoutReport3StoresWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultPayoutReport3StorePayouts';
-        $request = $this->getPayoutReport3StoresRequest($app_id, $bank_account_id, $payout_id, $stores);
+        $request = $this->getPayoutReport3StoresRequest($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1281,13 +1307,14 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPayoutReport3StoresAsync($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function getPayoutReport3StoresAsync($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
-        return $this->getPayoutReport3StoresAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores)
+        return $this->getPayoutReport3StoresAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores, $property_ids)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1304,14 +1331,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPayoutReport3StoresAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function getPayoutReport3StoresAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultPayoutReport3StorePayouts';
-        $request = $this->getPayoutReport3StoresRequest($app_id, $bank_account_id, $payout_id, $stores);
+        $request = $this->getPayoutReport3StoresRequest($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1357,11 +1385,12 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getPayoutReport3StoresRequest($app_id, $bank_account_id, $payout_id, $stores = null)
+    protected function getPayoutReport3StoresRequest($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -1395,6 +1424,13 @@ class PayoutReportsApi
         } else
         if ($stores !== null) {
             $queryParams['stores'] = ObjectSerializer::toQueryValue($stores);
+        }
+        // query params
+        if (is_array($property_ids)) {
+            $queryParams['propertyIds'] = $property_ids;
+        } else
+        if ($property_ids !== null) {
+            $queryParams['propertyIds'] = ObjectSerializer::toQueryValue($property_ids);
         }
 
         // path params
@@ -1504,14 +1540,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id bank_account_id (required)
      * @param  int $payout_id payout_id (required)
      * @param  int[] $stores stores (optional)
+     * @param  string[] $property_ids property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultFileCreationResult
      */
-    public function payoutReport3ExportPayoutChargebacks($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutChargebacks($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
-        list($response) = $this->payoutReport3ExportPayoutChargebacksWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores);
+        list($response) = $this->payoutReport3ExportPayoutChargebacksWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
         return $response;
     }
 
@@ -1522,15 +1559,16 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultFileCreationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payoutReport3ExportPayoutChargebacksWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutChargebacksWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultFileCreationResult';
-        $request = $this->payoutReport3ExportPayoutChargebacksRequest($app_id, $bank_account_id, $payout_id, $stores);
+        $request = $this->payoutReport3ExportPayoutChargebacksRequest($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1632,13 +1670,14 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function payoutReport3ExportPayoutChargebacksAsync($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutChargebacksAsync($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
-        return $this->payoutReport3ExportPayoutChargebacksAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores)
+        return $this->payoutReport3ExportPayoutChargebacksAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores, $property_ids)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1655,14 +1694,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function payoutReport3ExportPayoutChargebacksAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutChargebacksAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultFileCreationResult';
-        $request = $this->payoutReport3ExportPayoutChargebacksRequest($app_id, $bank_account_id, $payout_id, $stores);
+        $request = $this->payoutReport3ExportPayoutChargebacksRequest($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1708,11 +1748,12 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function payoutReport3ExportPayoutChargebacksRequest($app_id, $bank_account_id, $payout_id, $stores = null)
+    protected function payoutReport3ExportPayoutChargebacksRequest($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -1746,6 +1787,13 @@ class PayoutReportsApi
         } else
         if ($stores !== null) {
             $queryParams['stores'] = ObjectSerializer::toQueryValue($stores);
+        }
+        // query params
+        if (is_array($property_ids)) {
+            $queryParams['propertyIds'] = $property_ids;
+        } else
+        if ($property_ids !== null) {
+            $queryParams['propertyIds'] = ObjectSerializer::toQueryValue($property_ids);
         }
 
         // path params
@@ -1855,14 +1903,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id bank_account_id (required)
      * @param  int $payout_id payout_id (required)
      * @param  int[] $stores stores (optional)
+     * @param  string[] $property_ids property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultFileCreationResult
      */
-    public function payoutReport3ExportPayoutOrders($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutOrders($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
-        list($response) = $this->payoutReport3ExportPayoutOrdersWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores);
+        list($response) = $this->payoutReport3ExportPayoutOrdersWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
         return $response;
     }
 
@@ -1873,15 +1922,16 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultFileCreationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payoutReport3ExportPayoutOrdersWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutOrdersWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultFileCreationResult';
-        $request = $this->payoutReport3ExportPayoutOrdersRequest($app_id, $bank_account_id, $payout_id, $stores);
+        $request = $this->payoutReport3ExportPayoutOrdersRequest($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1983,13 +2033,14 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function payoutReport3ExportPayoutOrdersAsync($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutOrdersAsync($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
-        return $this->payoutReport3ExportPayoutOrdersAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores)
+        return $this->payoutReport3ExportPayoutOrdersAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores, $property_ids)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2006,14 +2057,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function payoutReport3ExportPayoutOrdersAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutOrdersAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultFileCreationResult';
-        $request = $this->payoutReport3ExportPayoutOrdersRequest($app_id, $bank_account_id, $payout_id, $stores);
+        $request = $this->payoutReport3ExportPayoutOrdersRequest($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2059,11 +2111,12 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function payoutReport3ExportPayoutOrdersRequest($app_id, $bank_account_id, $payout_id, $stores = null)
+    protected function payoutReport3ExportPayoutOrdersRequest($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -2097,6 +2150,13 @@ class PayoutReportsApi
         } else
         if ($stores !== null) {
             $queryParams['stores'] = ObjectSerializer::toQueryValue($stores);
+        }
+        // query params
+        if (is_array($property_ids)) {
+            $queryParams['propertyIds'] = $property_ids;
+        } else
+        if ($property_ids !== null) {
+            $queryParams['propertyIds'] = ObjectSerializer::toQueryValue($property_ids);
         }
 
         // path params
@@ -2206,14 +2266,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id bank_account_id (required)
      * @param  int $payout_id payout_id (required)
      * @param  int[] $stores stores (optional)
+     * @param  string[] $property_ids property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultFileCreationResult
      */
-    public function payoutReport3ExportPayoutPosSales($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutPosSales($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
-        list($response) = $this->payoutReport3ExportPayoutPosSalesWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores);
+        list($response) = $this->payoutReport3ExportPayoutPosSalesWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
         return $response;
     }
 
@@ -2224,15 +2285,16 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultFileCreationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payoutReport3ExportPayoutPosSalesWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutPosSalesWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultFileCreationResult';
-        $request = $this->payoutReport3ExportPayoutPosSalesRequest($app_id, $bank_account_id, $payout_id, $stores);
+        $request = $this->payoutReport3ExportPayoutPosSalesRequest($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2334,13 +2396,14 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function payoutReport3ExportPayoutPosSalesAsync($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutPosSalesAsync($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
-        return $this->payoutReport3ExportPayoutPosSalesAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores)
+        return $this->payoutReport3ExportPayoutPosSalesAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores, $property_ids)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2357,14 +2420,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function payoutReport3ExportPayoutPosSalesAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutPosSalesAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultFileCreationResult';
-        $request = $this->payoutReport3ExportPayoutPosSalesRequest($app_id, $bank_account_id, $payout_id, $stores);
+        $request = $this->payoutReport3ExportPayoutPosSalesRequest($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2410,11 +2474,12 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function payoutReport3ExportPayoutPosSalesRequest($app_id, $bank_account_id, $payout_id, $stores = null)
+    protected function payoutReport3ExportPayoutPosSalesRequest($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -2448,6 +2513,13 @@ class PayoutReportsApi
         } else
         if ($stores !== null) {
             $queryParams['stores'] = ObjectSerializer::toQueryValue($stores);
+        }
+        // query params
+        if (is_array($property_ids)) {
+            $queryParams['propertyIds'] = $property_ids;
+        } else
+        if ($property_ids !== null) {
+            $queryParams['propertyIds'] = ObjectSerializer::toQueryValue($property_ids);
         }
 
         // path params
@@ -2557,14 +2629,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id bank_account_id (required)
      * @param  int $payout_id payout_id (required)
      * @param  int[] $stores stores (optional)
+     * @param  string[] $property_ids property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultFileCreationResult
      */
-    public function payoutReport3ExportPayoutRefundedOrders($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutRefundedOrders($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
-        list($response) = $this->payoutReport3ExportPayoutRefundedOrdersWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores);
+        list($response) = $this->payoutReport3ExportPayoutRefundedOrdersWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
         return $response;
     }
 
@@ -2575,15 +2648,16 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultFileCreationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payoutReport3ExportPayoutRefundedOrdersWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutRefundedOrdersWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultFileCreationResult';
-        $request = $this->payoutReport3ExportPayoutRefundedOrdersRequest($app_id, $bank_account_id, $payout_id, $stores);
+        $request = $this->payoutReport3ExportPayoutRefundedOrdersRequest($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2685,13 +2759,14 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function payoutReport3ExportPayoutRefundedOrdersAsync($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutRefundedOrdersAsync($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
-        return $this->payoutReport3ExportPayoutRefundedOrdersAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores)
+        return $this->payoutReport3ExportPayoutRefundedOrdersAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores, $property_ids)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2708,14 +2783,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function payoutReport3ExportPayoutRefundedOrdersAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutRefundedOrdersAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultFileCreationResult';
-        $request = $this->payoutReport3ExportPayoutRefundedOrdersRequest($app_id, $bank_account_id, $payout_id, $stores);
+        $request = $this->payoutReport3ExportPayoutRefundedOrdersRequest($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2761,11 +2837,12 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function payoutReport3ExportPayoutRefundedOrdersRequest($app_id, $bank_account_id, $payout_id, $stores = null)
+    protected function payoutReport3ExportPayoutRefundedOrdersRequest($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -2799,6 +2876,13 @@ class PayoutReportsApi
         } else
         if ($stores !== null) {
             $queryParams['stores'] = ObjectSerializer::toQueryValue($stores);
+        }
+        // query params
+        if (is_array($property_ids)) {
+            $queryParams['propertyIds'] = $property_ids;
+        } else
+        if ($property_ids !== null) {
+            $queryParams['propertyIds'] = ObjectSerializer::toQueryValue($property_ids);
         }
 
         // path params
@@ -2908,14 +2992,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id bank_account_id (required)
      * @param  int $payout_id payout_id (required)
      * @param  int[] $stores stores (optional)
+     * @param  string[] $property_ids property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultFileCreationResult
      */
-    public function payoutReport3ExportPayoutStores($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutStores($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
-        list($response) = $this->payoutReport3ExportPayoutStoresWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores);
+        list($response) = $this->payoutReport3ExportPayoutStoresWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
         return $response;
     }
 
@@ -2926,15 +3011,16 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultFileCreationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function payoutReport3ExportPayoutStoresWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutStoresWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultFileCreationResult';
-        $request = $this->payoutReport3ExportPayoutStoresRequest($app_id, $bank_account_id, $payout_id, $stores);
+        $request = $this->payoutReport3ExportPayoutStoresRequest($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3036,13 +3122,14 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function payoutReport3ExportPayoutStoresAsync($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutStoresAsync($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
-        return $this->payoutReport3ExportPayoutStoresAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores)
+        return $this->payoutReport3ExportPayoutStoresAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores, $property_ids)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3059,14 +3146,15 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function payoutReport3ExportPayoutStoresAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null)
+    public function payoutReport3ExportPayoutStoresAsyncWithHttpInfo($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultFileCreationResult';
-        $request = $this->payoutReport3ExportPayoutStoresRequest($app_id, $bank_account_id, $payout_id, $stores);
+        $request = $this->payoutReport3ExportPayoutStoresRequest($app_id, $bank_account_id, $payout_id, $stores, $property_ids);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3112,11 +3200,12 @@ class PayoutReportsApi
      * @param  int $bank_account_id (required)
      * @param  int $payout_id (required)
      * @param  int[] $stores (optional)
+     * @param  string[] $property_ids (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function payoutReport3ExportPayoutStoresRequest($app_id, $bank_account_id, $payout_id, $stores = null)
+    protected function payoutReport3ExportPayoutStoresRequest($app_id, $bank_account_id, $payout_id, $stores = null, $property_ids = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -3150,6 +3239,13 @@ class PayoutReportsApi
         } else
         if ($stores !== null) {
             $queryParams['stores'] = ObjectSerializer::toQueryValue($stores);
+        }
+        // query params
+        if (is_array($property_ids)) {
+            $queryParams['propertyIds'] = $property_ids;
+        } else
+        if ($property_ids !== null) {
+            $queryParams['propertyIds'] = ObjectSerializer::toQueryValue($property_ids);
         }
 
         // path params

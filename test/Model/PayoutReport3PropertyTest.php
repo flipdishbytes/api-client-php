@@ -1,6 +1,6 @@
 <?php
 /**
- * PayoutReport3OverviewTest
+ * PayoutReport3PropertyTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * PayoutReport3OverviewTest Class Doc Comment
+ * PayoutReport3PropertyTest Class Doc Comment
  *
  * @category    Class
- * @description PayoutReport3Overview
+ * @description PayoutReport3Property
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PayoutReport3OverviewTest extends \PHPUnit_Framework_TestCase
+class PayoutReport3PropertyTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,30 +70,23 @@ class PayoutReport3OverviewTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PayoutReport3Overview"
+     * Test "PayoutReport3Property"
      */
-    public function testPayoutReport3Overview()
+    public function testPayoutReport3Property()
     {
     }
 
     /**
-     * Test attribute "payout_report3_overview_header"
+     * Test attribute "property_id"
      */
-    public function testPropertyPayoutReport3OverviewHeader()
+    public function testPropertyPropertyId()
     {
     }
 
     /**
-     * Test attribute "payout_stores"
+     * Test attribute "property_name"
      */
-    public function testPropertyPayoutStores()
-    {
-    }
-
-    /**
-     * Test attribute "payout_properties"
-     */
-    public function testPropertyPayoutProperties()
+    public function testPropertyPropertyName()
     {
     }
 }

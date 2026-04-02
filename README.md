@@ -151,6 +151,7 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**setAppStoreName**](docs/Api/AppsApi.md#setappstorename) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 *AppsApi* | [**setCompliance**](docs/Api/AppsApi.md#setcompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 *AppsApi* | [**setPanaceaVanityUrl**](docs/Api/AppsApi.md#setpanaceavanityurl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
+*AppsApi* | [**setThirdPartyIntegrations**](docs/Api/AppsApi.md#setthirdpartyintegrations) | **POST** /api/v1.0/apps/{appId}/third-party-integrations | 
 *AppsApi* | [**toggleNextGenWeb**](docs/Api/AppsApi.md#togglenextgenweb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
 *AppsApi* | [**uploadAppLogo**](docs/Api/AppsApi.md#uploadapplogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 *AuditLogsApi* | [**addOrderAuditLog**](docs/Api/AuditLogsApi.md#addorderauditlog) | **POST** /api/v1.0/auditlogs/orders/{orderId} | 
@@ -1042,6 +1043,7 @@ Class | Method | HTTP request | Description
  - [PayoutReport3DetailsSummary](docs/Model/PayoutReport3DetailsSummary.md)
  - [PayoutReport3Overview](docs/Model/PayoutReport3Overview.md)
  - [PayoutReport3OverviewHeader](docs/Model/PayoutReport3OverviewHeader.md)
+ - [PayoutReport3Property](docs/Model/PayoutReport3Property.md)
  - [PayoutReport3RefundedOrder](docs/Model/PayoutReport3RefundedOrder.md)
  - [PayoutReport3Store](docs/Model/PayoutReport3Store.md)
  - [PayoutReport3StorePayout](docs/Model/PayoutReport3StorePayout.md)

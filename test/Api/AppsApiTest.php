@@ -252,6 +252,16 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for setThirdPartyIntegrations
+     *
+     * .
+     *
+     */
+    public function testSetThirdPartyIntegrations()
+    {
+    }
+
+    /**
      * Test case for toggleNextGenWeb
      *
      * .
