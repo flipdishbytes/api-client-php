@@ -92,6 +92,16 @@ class PayoutReportsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getPayoutReport3PropertyDetails
+     *
+     * .
+     *
+     */
+    public function testGetPayoutReport3PropertyDetails()
+    {
+    }
+
+    /**
      * Test case for getPayoutReport3RefundedOrders
      *
      * .

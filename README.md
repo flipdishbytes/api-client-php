@@ -479,6 +479,7 @@ Class | Method | HTTP request | Description
 *PaymentsApi* | [**getOrderPaymentInformation**](docs/Api/PaymentsApi.md#getorderpaymentinformation) | **GET** /api/v1.0/payments/payment/{orderId}/refundable | 
 *PayoutReportsApi* | [**getPayoutReport3Details**](docs/Api/PayoutReportsApi.md#getpayoutreport3details) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/details | 
 *PayoutReportsApi* | [**getPayoutReport3Overview**](docs/Api/PayoutReportsApi.md#getpayoutreport3overview) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/overview | 
+*PayoutReportsApi* | [**getPayoutReport3PropertyDetails**](docs/Api/PayoutReportsApi.md#getpayoutreport3propertydetails) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/properties | 
 *PayoutReportsApi* | [**getPayoutReport3RefundedOrders**](docs/Api/PayoutReportsApi.md#getpayoutreport3refundedorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/refundedOrders | 
 *PayoutReportsApi* | [**getPayoutReport3Stores**](docs/Api/PayoutReportsApi.md#getpayoutreport3stores) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/stores | 
 *PayoutReportsApi* | [**payoutReport3ExportPayoutChargebacks**](docs/Api/PayoutReportsApi.md#payoutreport3exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/chargebacks | 
@@ -1043,6 +1044,8 @@ Class | Method | HTTP request | Description
  - [PayoutReport3DetailsSummary](docs/Model/PayoutReport3DetailsSummary.md)
  - [PayoutReport3Overview](docs/Model/PayoutReport3Overview.md)
  - [PayoutReport3OverviewHeader](docs/Model/PayoutReport3OverviewHeader.md)
+ - [PayoutReport3PropertyDetails](docs/Model/PayoutReport3PropertyDetails.md)
+ - [PayoutReport3PropertyFilterOption](docs/Model/PayoutReport3PropertyFilterOption.md)
  - [PayoutReport3RefundedOrder](docs/Model/PayoutReport3RefundedOrder.md)
  - [PayoutReport3Store](docs/Model/PayoutReport3Store.md)
  - [PayoutReport3StorePayout](docs/Model/PayoutReport3StorePayout.md)
@@ -1285,6 +1288,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultPaymentTerminalTransactionDetails](docs/Model/RestApiResultPaymentTerminalTransactionDetails.md)
  - [RestApiResultPayoutReport3Details](docs/Model/RestApiResultPayoutReport3Details.md)
  - [RestApiResultPayoutReport3Overview](docs/Model/RestApiResultPayoutReport3Overview.md)
+ - [RestApiResultPayoutReport3PropertyDetails](docs/Model/RestApiResultPayoutReport3PropertyDetails.md)
  - [RestApiResultPayoutReport3StorePayouts](docs/Model/RestApiResultPayoutReport3StorePayouts.md)
  - [RestApiResultPlayStoreConfigModel](docs/Model/RestApiResultPlayStoreConfigModel.md)
  - [RestApiResultPreOrderConfig](docs/Model/RestApiResultPreOrderConfig.md)
