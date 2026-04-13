@@ -604,13 +604,19 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**addUserToRole**](docs/Api/UsersApi.md#addusertorole) | **POST** /api/v1.0/users/{userId}/AddUserToRole/{roleName} | 
 *UsersApi* | [**anonymizeUser**](docs/Api/UsersApi.md#anonymizeuser) | **POST** /api/v1.0/users/{userId}/AnonymizeUser | 
 *UsersApi* | [**blockUserPhoneNumber**](docs/Api/UsersApi.md#blockuserphonenumber) | **POST** /api/v1.0/users/{userId}/BlockUserPhoneNumber | 
+*UsersApi* | [**createUserDeliveryLocation**](docs/Api/UsersApi.md#createuserdeliverylocation) | **POST** /api/v1.0/users/{userId}/deliveryLocations | 
 *UsersApi* | [**getPreviousOrderCountForStore**](docs/Api/UsersApi.md#getpreviousordercountforstore) | **GET** /api/v1.0/users/{userId}/previousordercount/{storeId} | 
 *UsersApi* | [**getRestaurantUserAccounts**](docs/Api/UsersApi.md#getrestaurantuseraccounts) | **GET** /api/v1.0/users/{userId}/RestaurantUserAccounts | 
 *UsersApi* | [**getRestaurantUserStores**](docs/Api/UsersApi.md#getrestaurantuserstores) | **GET** /api/v1.0/users/{userId}/RestaurantUserStores | 
 *UsersApi* | [**getRoles**](docs/Api/UsersApi.md#getroles) | **GET** /api/v1.0/users/roles | 
 *UsersApi* | [**getRolesAndUnassignedRoles**](docs/Api/UsersApi.md#getrolesandunassignedroles) | **GET** /api/v1.0/users/{userId}/roles | 
 *UsersApi* | [**getUserById**](docs/Api/UsersApi.md#getuserbyid) | **GET** /api/v1.0/users/{userId} | 
+*UsersApi* | [**getUserDeliveryLocationsForAdmin**](docs/Api/UsersApi.md#getuserdeliverylocationsforadmin) | **GET** /api/v1.0/users/{userId}/deliveryLocations | 
 *UsersApi* | [**getUserNotes**](docs/Api/UsersApi.md#getusernotes) | **GET** /api/v1.0/users/{userId}/UserNotes | 
+*UsersApi* | [**getUserOrderByIdForAdmin**](docs/Api/UsersApi.md#getuserorderbyidforadmin) | **GET** /api/v1.0/users/{userId}/orders/{orderId} | 
+*UsersApi* | [**getUserOrdersForAdmin**](docs/Api/UsersApi.md#getuserordersforadmin) | **GET** /api/v1.0/users/{userId}/orders | 
+*UsersApi* | [**getUserSmsConversationItems**](docs/Api/UsersApi.md#getusersmsconversationitems) | **GET** /api/v1.0/users/{userId}/smsConversationItems | 
+*UsersApi* | [**hideUserDeliveryLocation**](docs/Api/UsersApi.md#hideuserdeliverylocation) | **POST** /api/v1.0/users/{userId}/deliveryLocations/{deliveryLocationId}/hide | 
 *UsersApi* | [**markUserAsFraudulent**](docs/Api/UsersApi.md#markuserasfraudulent) | **POST** /api/v1.0/users/{userId}/MarkUserAsFraudulent | 
 *UsersApi* | [**markUserAsSuspicious**](docs/Api/UsersApi.md#markuserassuspicious) | **POST** /api/v1.0/users/{userId}/MarkUserAsSuspicious | 
 *UsersApi* | [**removeFlipdishAccountIdForUser**](docs/Api/UsersApi.md#removeflipdishaccountidforuser) | **POST** /api/v1.0/users/{userId}/RemoveFlipdishAccountId/{accountId} | 
@@ -618,8 +624,12 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**resetMfa**](docs/Api/UsersApi.md#resetmfa) | **POST** /api/v1.0/users/{userId}/ResetMfa | 
 *UsersApi* | [**searchFlipdishAccounts**](docs/Api/UsersApi.md#searchflipdishaccounts) | **GET** /api/v1.0/users/searchFlipdishAccounts | 
 *UsersApi* | [**searchUsers**](docs/Api/UsersApi.md#searchusers) | **GET** /api/v1.0/users/search | 
+*UsersApi* | [**sendUserPushNotification**](docs/Api/UsersApi.md#senduserpushnotification) | **POST** /api/v1.0/users/{userId}/pushNotifications | 
+*UsersApi* | [**sendUserSms**](docs/Api/UsersApi.md#sendusersms) | **POST** /api/v1.0/users/{userId}/sms | 
 *UsersApi* | [**setCustomerName**](docs/Api/UsersApi.md#setcustomername) | **POST** /api/v1.0/users/{userId}/SetCustomerName | 
 *UsersApi* | [**setFlipdishAccountIdForUser**](docs/Api/UsersApi.md#setflipdishaccountidforuser) | **POST** /api/v1.0/users/{userId}/SetFlipdishAccountId/{accountId} | 
+*UsersApi* | [**setUserDeliveryLocationCoordinates**](docs/Api/UsersApi.md#setuserdeliverylocationcoordinates) | **POST** /api/v1.0/users/{userId}/deliveryLocations/{deliveryLocationId}/coordinates | 
+*UsersApi* | [**setUserDeliveryLocationField**](docs/Api/UsersApi.md#setuserdeliverylocationfield) | **POST** /api/v1.0/users/{userId}/deliveryLocations/{deliveryLocationId}/fields | 
 *UsersApi* | [**setUserLanguage**](docs/Api/UsersApi.md#setuserlanguage) | **POST** /api/v1.0/users/{userId}/SetLanguage/{languageId} | 
 *UsersApi* | [**unblockUserPhoneNumber**](docs/Api/UsersApi.md#unblockuserphonenumber) | **POST** /api/v1.0/users/{userId}/UnblockUserPhoneNumber | 
 *VouchersApi* | [**createVoucher**](docs/Api/VouchersApi.md#createvoucher) | **POST** /api/v1.0/vouchers/{appId} | 
@@ -779,6 +789,7 @@ Class | Method | HTTP request | Description
  - [CreateProductReference](docs/Model/CreateProductReference.md)
  - [CreatePromotion](docs/Model/CreatePromotion.md)
  - [CreateTeammate](docs/Model/CreateTeammate.md)
+ - [CreateUserDeliveryLocationRequest](docs/Model/CreateUserDeliveryLocationRequest.md)
  - [CreateVoucher](docs/Model/CreateVoucher.md)
  - [CreatedMenuSectionItems](docs/Model/CreatedMenuSectionItems.md)
  - [CreditNoteDetails](docs/Model/CreditNoteDetails.md)
@@ -1154,8 +1165,11 @@ Class | Method | HTTP request | Description
  - [RestApiArrayResultSubscriptionSummary](docs/Model/RestApiArrayResultSubscriptionSummary.md)
  - [RestApiArrayResultSupportedCountry](docs/Model/RestApiArrayResultSupportedCountry.md)
  - [RestApiArrayResultTeammate](docs/Model/RestApiArrayResultTeammate.md)
+ - [RestApiArrayResultUserDeliveryLocationAdmin](docs/Model/RestApiArrayResultUserDeliveryLocationAdmin.md)
  - [RestApiArrayResultUserFlipdishAccount](docs/Model/RestApiArrayResultUserFlipdishAccount.md)
  - [RestApiArrayResultUserNote](docs/Model/RestApiArrayResultUserNote.md)
+ - [RestApiArrayResultUserOrderSummary](docs/Model/RestApiArrayResultUserOrderSummary.md)
+ - [RestApiArrayResultUserSmsChatItem](docs/Model/RestApiArrayResultUserSmsChatItem.md)
  - [RestApiArrayResultUserStoreInfo](docs/Model/RestApiArrayResultUserStoreInfo.md)
  - [RestApiArrayResultVoucherDataPoint](docs/Model/RestApiArrayResultVoucherDataPoint.md)
  - [RestApiArrayResultVoucherSummary](docs/Model/RestApiArrayResultVoucherSummary.md)
@@ -1320,6 +1334,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultTipConfiguration](docs/Model/RestApiResultTipConfiguration.md)
  - [RestApiResultUpdateMobileAppsSubmissionStatus](docs/Model/RestApiResultUpdateMobileAppsSubmissionStatus.md)
  - [RestApiResultUserInfo](docs/Model/RestApiResultUserInfo.md)
+ - [RestApiResultUserPushNotificationSentResult](docs/Model/RestApiResultUserPushNotificationSentResult.md)
  - [RestApiResultUserRole](docs/Model/RestApiResultUserRole.md)
  - [RestApiResultVoucher](docs/Model/RestApiResultVoucher.md)
  - [RestApiResultVoucherWithStats](docs/Model/RestApiResultVoucherWithStats.md)
@@ -1344,9 +1359,13 @@ Class | Method | HTTP request | Description
  - [RevenueDetail](docs/Model/RevenueDetail.md)
  - [SafeWaitHandle](docs/Model/SafeWaitHandle.md)
  - [SearchCriteria](docs/Model/SearchCriteria.md)
+ - [SendUserPushNotificationRequest](docs/Model/SendUserPushNotificationRequest.md)
+ - [SendUserSmsRequest](docs/Model/SendUserSmsRequest.md)
  - [ServiceCharge](docs/Model/ServiceCharge.md)
  - [SetOrderBatchingConfiguration](docs/Model/SetOrderBatchingConfiguration.md)
  - [SetPasswordWithPinModel](docs/Model/SetPasswordWithPinModel.md)
+ - [SetUserDeliveryLocationCoordinatesRequest](docs/Model/SetUserDeliveryLocationCoordinatesRequest.md)
+ - [SetUserDeliveryLocationFieldRequest](docs/Model/SetUserDeliveryLocationFieldRequest.md)
  - [SetVoucherValidityPeriodsSimplifiedRequest](docs/Model/SetVoucherValidityPeriodsSimplifiedRequest.md)
  - [Setting](docs/Model/Setting.md)
  - [SignupStep](docs/Model/SignupStep.md)
@@ -1465,15 +1484,19 @@ Class | Method | HTTP request | Description
  - [UserAnsweredSignupQuestionsEvent](docs/Model/UserAnsweredSignupQuestionsEvent.md)
  - [UserCreatedEvent](docs/Model/UserCreatedEvent.md)
  - [UserDeletedEvent](docs/Model/UserDeletedEvent.md)
+ - [UserDeliveryLocationAdmin](docs/Model/UserDeliveryLocationAdmin.md)
  - [UserEventInfo](docs/Model/UserEventInfo.md)
  - [UserFlipdishAccount](docs/Model/UserFlipdishAccount.md)
  - [UserInfo](docs/Model/UserInfo.md)
  - [UserLoginEvent](docs/Model/UserLoginEvent.md)
  - [UserMonthlyCommission](docs/Model/UserMonthlyCommission.md)
  - [UserNote](docs/Model/UserNote.md)
+ - [UserOrderSummary](docs/Model/UserOrderSummary.md)
  - [UserPasswordCreatedEvent](docs/Model/UserPasswordCreatedEvent.md)
+ - [UserPushNotificationSentResult](docs/Model/UserPushNotificationSentResult.md)
  - [UserRole](docs/Model/UserRole.md)
  - [UserSearch](docs/Model/UserSearch.md)
+ - [UserSmsChatItem](docs/Model/UserSmsChatItem.md)
  - [UserStoreInfo](docs/Model/UserStoreInfo.md)
  - [UserUpdatedEvent](docs/Model/UserUpdatedEvent.md)
  - [UserWhiteLabelConfig](docs/Model/UserWhiteLabelConfig.md)

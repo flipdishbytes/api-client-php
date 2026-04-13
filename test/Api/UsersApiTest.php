@@ -112,6 +112,16 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createUserDeliveryLocation
+     *
+     * .
+     *
+     */
+    public function testCreateUserDeliveryLocation()
+    {
+    }
+
+    /**
      * Test case for getPreviousOrderCountForStore
      *
      * .
@@ -172,12 +182,62 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getUserDeliveryLocationsForAdmin
+     *
+     * .
+     *
+     */
+    public function testGetUserDeliveryLocationsForAdmin()
+    {
+    }
+
+    /**
      * Test case for getUserNotes
      *
      * .
      *
      */
     public function testGetUserNotes()
+    {
+    }
+
+    /**
+     * Test case for getUserOrderByIdForAdmin
+     *
+     * .
+     *
+     */
+    public function testGetUserOrderByIdForAdmin()
+    {
+    }
+
+    /**
+     * Test case for getUserOrdersForAdmin
+     *
+     * .
+     *
+     */
+    public function testGetUserOrdersForAdmin()
+    {
+    }
+
+    /**
+     * Test case for getUserSmsConversationItems
+     *
+     * .
+     *
+     */
+    public function testGetUserSmsConversationItems()
+    {
+    }
+
+    /**
+     * Test case for hideUserDeliveryLocation
+     *
+     * .
+     *
+     */
+    public function testHideUserDeliveryLocation()
     {
     }
 
@@ -252,6 +312,26 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for sendUserPushNotification
+     *
+     * .
+     *
+     */
+    public function testSendUserPushNotification()
+    {
+    }
+
+    /**
+     * Test case for sendUserSms
+     *
+     * .
+     *
+     */
+    public function testSendUserSms()
+    {
+    }
+
+    /**
      * Test case for setCustomerName
      *
      * .
@@ -268,6 +348,26 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testSetFlipdishAccountIdForUser()
+    {
+    }
+
+    /**
+     * Test case for setUserDeliveryLocationCoordinates
+     *
+     * .
+     *
+     */
+    public function testSetUserDeliveryLocationCoordinates()
+    {
+    }
+
+    /**
+     * Test case for setUserDeliveryLocationField
+     *
+     * .
+     *
+     */
+    public function testSetUserDeliveryLocationField()
     {
     }
 
