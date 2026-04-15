@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **voucher_sub_type** | **string** | Voucher Sub Type | [optional] 
 **description** | **string** | Voucher Description (Visible on printout) | [optional] 
 **is_enabled** | **bool** | Is voucher enabled | [optional] 
+**store_names** | **string[]** | Store names associated with this voucher | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

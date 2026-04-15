@@ -64,7 +64,8 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_type' => 'string',
         'voucher_sub_type' => 'string',
         'description' => 'string',
-        'is_enabled' => 'bool'
+        'is_enabled' => 'bool',
+        'store_names' => 'string[]'
     ];
 
     /**
@@ -79,7 +80,8 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_type' => null,
         'voucher_sub_type' => null,
         'description' => null,
-        'is_enabled' => null
+        'is_enabled' => null,
+        'store_names' => null
     ];
 
     /**
@@ -115,7 +117,8 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_type' => 'VoucherType',
         'voucher_sub_type' => 'VoucherSubType',
         'description' => 'Description',
-        'is_enabled' => 'IsEnabled'
+        'is_enabled' => 'IsEnabled',
+        'store_names' => 'StoreNames'
     ];
 
     /**
@@ -130,7 +133,8 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_type' => 'setVoucherType',
         'voucher_sub_type' => 'setVoucherSubType',
         'description' => 'setDescription',
-        'is_enabled' => 'setIsEnabled'
+        'is_enabled' => 'setIsEnabled',
+        'store_names' => 'setStoreNames'
     ];
 
     /**
@@ -145,7 +149,8 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_type' => 'getVoucherType',
         'voucher_sub_type' => 'getVoucherSubType',
         'description' => 'getDescription',
-        'is_enabled' => 'getIsEnabled'
+        'is_enabled' => 'getIsEnabled',
+        'store_names' => 'getStoreNames'
     ];
 
     /**
@@ -282,6 +287,7 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         $this->container['voucher_sub_type'] = isset($data['voucher_sub_type']) ? $data['voucher_sub_type'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
+        $this->container['store_names'] = isset($data['store_names']) ? $data['store_names'] : null;
     }
 
     /**
@@ -523,6 +529,30 @@ class VoucherSummary implements ModelInterface, ArrayAccess
     public function setIsEnabled($is_enabled)
     {
         $this->container['is_enabled'] = $is_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets store_names
+     *
+     * @return string[]
+     */
+    public function getStoreNames()
+    {
+        return $this->container['store_names'];
+    }
+
+    /**
+     * Sets store_names
+     *
+     * @param string[] $store_names Store names associated with this voucher
+     *
+     * @return $this
+     */
+    public function setStoreNames($store_names)
+    {
+        $this->container['store_names'] = $store_names;
 
         return $this;
     }

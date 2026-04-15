@@ -124,4 +124,11 @@ class VoucherSummaryTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIsEnabled()
     {
     }
+
+    /**
+     * Test attribute "store_names"
+     */
+    public function testPropertyStoreNames()
+    {
+    }
 }
