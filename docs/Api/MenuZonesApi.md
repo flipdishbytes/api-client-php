@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteMenuZone**
-> deleteMenuZone($menu_zone_id, $menu_id)
+> deleteMenuZone($menu_id, $menu_zone_id)
 
 Deletes a menu zone.
 
@@ -89,11 +89,11 @@ $apiInstance = new Flipdish\\Client\Api\MenuZonesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$menu_id = 56; // int | 
 $menu_zone_id = 56; // int | The menu zone id.
-$menu_id = "menu_id_example"; // string | 
 
 try {
-    $apiInstance->deleteMenuZone($menu_zone_id, $menu_id);
+    $apiInstance->deleteMenuZone($menu_id, $menu_zone_id);
 } catch (Exception $e) {
     echo 'Exception when calling MenuZonesApi->deleteMenuZone: ', $e->getMessage(), PHP_EOL;
 }
@@ -104,8 +104,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
  **menu_zone_id** | **int**| The menu zone id. |
- **menu_id** | **string**|  |
 
 ### Return type
 
@@ -123,7 +123,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteMenuZoneImage**
-> deleteMenuZoneImage($menu_zone_id, $menu_id)
+> deleteMenuZoneImage($menu_id, $menu_zone_id)
 
 Deletes a menu zone image.
 
@@ -141,11 +141,11 @@ $apiInstance = new Flipdish\\Client\Api\MenuZonesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$menu_id = 56; // int | 
 $menu_zone_id = 56; // int | The zone Id/
-$menu_id = "menu_id_example"; // string | 
 
 try {
-    $apiInstance->deleteMenuZoneImage($menu_zone_id, $menu_id);
+    $apiInstance->deleteMenuZoneImage($menu_id, $menu_zone_id);
 } catch (Exception $e) {
     echo 'Exception when calling MenuZonesApi->deleteMenuZoneImage: ', $e->getMessage(), PHP_EOL;
 }
@@ -156,8 +156,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
  **menu_zone_id** | **int**| The zone Id/ |
- **menu_id** | **string**|  |
 
 ### Return type
 
@@ -175,7 +175,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **flipMenuZones**
-> flipMenuZones($menu_zone_id, $menu_zone_i2, $menu_id)
+> flipMenuZones($menu_id, $menu_zone_id, $menu_zone_i2)
 
 Flips the order of two menu zones.
 
@@ -193,12 +193,12 @@ $apiInstance = new Flipdish\\Client\Api\MenuZonesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$menu_id = 56; // int | 
 $menu_zone_id = 56; // int | Source.
 $menu_zone_i2 = 56; // int | Destination.
-$menu_id = "menu_id_example"; // string | 
 
 try {
-    $apiInstance->flipMenuZones($menu_zone_id, $menu_zone_i2, $menu_id);
+    $apiInstance->flipMenuZones($menu_id, $menu_zone_id, $menu_zone_i2);
 } catch (Exception $e) {
     echo 'Exception when calling MenuZonesApi->flipMenuZones: ', $e->getMessage(), PHP_EOL;
 }
@@ -209,9 +209,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
  **menu_zone_id** | **int**| Source. |
  **menu_zone_i2** | **int**| Destination. |
- **menu_id** | **string**|  |
 
 ### Return type
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setMenuSectionMenuZone**
-> setMenuSectionMenuZone($menu_zone_id, $menu_section_id, $menu_id)
+> setMenuSectionMenuZone($menu_id, $menu_zone_id, $menu_section_id)
 
 Assigns a zone to a menu section.
 
@@ -351,12 +351,12 @@ $apiInstance = new Flipdish\\Client\Api\MenuZonesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$menu_id = 56; // int | 
 $menu_zone_id = 56; // int | The menu id.
 $menu_section_id = 56; // int | The menu section id.
-$menu_id = "menu_id_example"; // string | 
 
 try {
-    $apiInstance->setMenuSectionMenuZone($menu_zone_id, $menu_section_id, $menu_id);
+    $apiInstance->setMenuSectionMenuZone($menu_id, $menu_zone_id, $menu_section_id);
 } catch (Exception $e) {
     echo 'Exception when calling MenuZonesApi->setMenuSectionMenuZone: ', $e->getMessage(), PHP_EOL;
 }
@@ -367,9 +367,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
  **menu_zone_id** | **int**| The menu id. |
  **menu_section_id** | **int**| The menu section id. |
- **menu_id** | **string**|  |
 
 ### Return type
 
@@ -387,7 +387,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setMenuZoneDescription**
-> setMenuZoneDescription($menu_zone_id, $description, $menu_id)
+> setMenuZoneDescription($menu_id, $menu_zone_id, $description)
 
 Sets the description of a menu zone.
 
@@ -405,12 +405,12 @@ $apiInstance = new Flipdish\\Client\Api\MenuZonesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$menu_id = 56; // int | 
 $menu_zone_id = 56; // int | The zone id.
 $description = "description_example"; // string | The new description. Add as a raw string in the request, without any JSON wrapper.
-$menu_id = "menu_id_example"; // string | 
 
 try {
-    $apiInstance->setMenuZoneDescription($menu_zone_id, $description, $menu_id);
+    $apiInstance->setMenuZoneDescription($menu_id, $menu_zone_id, $description);
 } catch (Exception $e) {
     echo 'Exception when calling MenuZonesApi->setMenuZoneDescription: ', $e->getMessage(), PHP_EOL;
 }
@@ -421,9 +421,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
  **menu_zone_id** | **int**| The zone id. |
  **description** | **string**| The new description. Add as a raw string in the request, without any JSON wrapper. |
- **menu_id** | **string**|  |
 
 ### Return type
 
@@ -441,7 +441,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setMenuZoneName**
-> setMenuZoneName($menu_zone_id, $menu_zone_name, $menu_id)
+> setMenuZoneName($menu_id, $menu_zone_id, $menu_zone_name)
 
 Sets the name of a menu zone.
 
@@ -459,12 +459,12 @@ $apiInstance = new Flipdish\\Client\Api\MenuZonesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$menu_id = 56; // int | 
 $menu_zone_id = 56; // int | The menu zone id.
 $menu_zone_name = "menu_zone_name_example"; // string | The new name.
-$menu_id = "menu_id_example"; // string | 
 
 try {
-    $apiInstance->setMenuZoneName($menu_zone_id, $menu_zone_name, $menu_id);
+    $apiInstance->setMenuZoneName($menu_id, $menu_zone_id, $menu_zone_name);
 } catch (Exception $e) {
     echo 'Exception when calling MenuZonesApi->setMenuZoneName: ', $e->getMessage(), PHP_EOL;
 }
@@ -475,9 +475,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
  **menu_zone_id** | **int**| The menu zone id. |
  **menu_zone_name** | **string**| The new name. |
- **menu_id** | **string**|  |
 
 ### Return type
 
@@ -549,7 +549,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **uploadMenuZoneImage**
-> uploadMenuZoneImage($menu_zone_id, $file, $menu_id)
+> uploadMenuZoneImage($menu_id, $menu_zone_id, $file)
 
 Uploads an image for a menu zone.
 
@@ -567,12 +567,12 @@ $apiInstance = new Flipdish\\Client\Api\MenuZonesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$menu_id = 56; // int | 
 $menu_zone_id = 56; // int | The zone id.
 $file = array(new \Flipdish\\Client\Models\HttpPostedFileBase()); // \Flipdish\\Client\Models\HttpPostedFileBase[] | The file to upload.
-$menu_id = "menu_id_example"; // string | 
 
 try {
-    $apiInstance->uploadMenuZoneImage($menu_zone_id, $file, $menu_id);
+    $apiInstance->uploadMenuZoneImage($menu_id, $menu_zone_id, $file);
 } catch (Exception $e) {
     echo 'Exception when calling MenuZonesApi->uploadMenuZoneImage: ', $e->getMessage(), PHP_EOL;
 }
@@ -583,9 +583,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
  **menu_zone_id** | **int**| The zone id. |
  **file** | [**\Flipdish\\Client\Models\HttpPostedFileBase[]**](../Model/HttpPostedFileBase.md)| The file to upload. |
- **menu_id** | **string**|  |
 
 ### Return type
 
