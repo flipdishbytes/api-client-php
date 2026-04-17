@@ -65,7 +65,8 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_sub_type' => 'string',
         'description' => 'string',
         'is_enabled' => 'bool',
-        'store_names' => 'string[]'
+        'store_names' => 'string[]',
+        'is_available_on_all_stores' => 'bool'
     ];
 
     /**
@@ -81,7 +82,8 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_sub_type' => null,
         'description' => null,
         'is_enabled' => null,
-        'store_names' => null
+        'store_names' => null,
+        'is_available_on_all_stores' => null
     ];
 
     /**
@@ -118,7 +120,8 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_sub_type' => 'VoucherSubType',
         'description' => 'Description',
         'is_enabled' => 'IsEnabled',
-        'store_names' => 'StoreNames'
+        'store_names' => 'StoreNames',
+        'is_available_on_all_stores' => 'IsAvailableOnAllStores'
     ];
 
     /**
@@ -134,7 +137,8 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_sub_type' => 'setVoucherSubType',
         'description' => 'setDescription',
         'is_enabled' => 'setIsEnabled',
-        'store_names' => 'setStoreNames'
+        'store_names' => 'setStoreNames',
+        'is_available_on_all_stores' => 'setIsAvailableOnAllStores'
     ];
 
     /**
@@ -150,7 +154,8 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_sub_type' => 'getVoucherSubType',
         'description' => 'getDescription',
         'is_enabled' => 'getIsEnabled',
-        'store_names' => 'getStoreNames'
+        'store_names' => 'getStoreNames',
+        'is_available_on_all_stores' => 'getIsAvailableOnAllStores'
     ];
 
     /**
@@ -288,6 +293,7 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
         $this->container['store_names'] = isset($data['store_names']) ? $data['store_names'] : null;
+        $this->container['is_available_on_all_stores'] = isset($data['is_available_on_all_stores']) ? $data['is_available_on_all_stores'] : null;
     }
 
     /**
@@ -553,6 +559,30 @@ class VoucherSummary implements ModelInterface, ArrayAccess
     public function setStoreNames($store_names)
     {
         $this->container['store_names'] = $store_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_available_on_all_stores
+     *
+     * @return bool
+     */
+    public function getIsAvailableOnAllStores()
+    {
+        return $this->container['is_available_on_all_stores'];
+    }
+
+    /**
+     * Sets is_available_on_all_stores
+     *
+     * @param bool $is_available_on_all_stores True if the voucher is available on all active stores in the app
+     *
+     * @return $this
+     */
+    public function setIsAvailableOnAllStores($is_available_on_all_stores)
+    {
+        $this->container['is_available_on_all_stores'] = $is_available_on_all_stores;
 
         return $this;
     }
