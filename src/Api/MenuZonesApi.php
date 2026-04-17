@@ -403,7 +403,7 @@ class MenuZonesApi
      *
      * Deletes a menu zone.
      *
-     * @param  int $menu_id menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu zone id. (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -420,7 +420,7 @@ class MenuZonesApi
      *
      * Deletes a menu zone.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu zone id. (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -498,7 +498,7 @@ class MenuZonesApi
      *
      * Deletes a menu zone.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu zone id. (required)
      *
      * @throws \InvalidArgumentException
@@ -519,7 +519,7 @@ class MenuZonesApi
      *
      * Deletes a menu zone.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu zone id. (required)
      *
      * @throws \InvalidArgumentException
@@ -556,7 +556,7 @@ class MenuZonesApi
     /**
      * Create request for operation 'deleteMenuZone'
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu zone id. (required)
      *
      * @throws \InvalidArgumentException
@@ -682,7 +682,7 @@ class MenuZonesApi
      *
      * Deletes a menu zone image.
      *
-     * @param  int $menu_id menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone Id/ (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -699,7 +699,7 @@ class MenuZonesApi
      *
      * Deletes a menu zone image.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone Id/ (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -777,7 +777,7 @@ class MenuZonesApi
      *
      * Deletes a menu zone image.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone Id/ (required)
      *
      * @throws \InvalidArgumentException
@@ -798,7 +798,7 @@ class MenuZonesApi
      *
      * Deletes a menu zone image.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone Id/ (required)
      *
      * @throws \InvalidArgumentException
@@ -835,7 +835,7 @@ class MenuZonesApi
     /**
      * Create request for operation 'deleteMenuZoneImage'
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone Id/ (required)
      *
      * @throws \InvalidArgumentException
@@ -1872,7 +1872,7 @@ class MenuZonesApi
      *
      * Assigns a zone to a menu section.
      *
-     * @param  int $menu_id menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu id. (required)
      * @param  int $menu_section_id The menu section id. (required)
      *
@@ -1890,7 +1890,7 @@ class MenuZonesApi
      *
      * Assigns a zone to a menu section.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu id. (required)
      * @param  int $menu_section_id The menu section id. (required)
      *
@@ -1969,7 +1969,7 @@ class MenuZonesApi
      *
      * Assigns a zone to a menu section.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu id. (required)
      * @param  int $menu_section_id The menu section id. (required)
      *
@@ -1991,7 +1991,7 @@ class MenuZonesApi
      *
      * Assigns a zone to a menu section.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu id. (required)
      * @param  int $menu_section_id The menu section id. (required)
      *
@@ -2029,7 +2029,7 @@ class MenuZonesApi
     /**
      * Create request for operation 'setMenuSectionMenuZone'
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu id. (required)
      * @param  int $menu_section_id The menu section id. (required)
      *
@@ -2170,7 +2170,7 @@ class MenuZonesApi
      *
      * Sets the description of a menu zone.
      *
-     * @param  int $menu_id menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone id. (required)
      * @param  string $description The new description. Add as a raw string in the request, without any JSON wrapper. (required)
      *
@@ -2188,7 +2188,7 @@ class MenuZonesApi
      *
      * Sets the description of a menu zone.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone id. (required)
      * @param  string $description The new description. Add as a raw string in the request, without any JSON wrapper. (required)
      *
@@ -2267,7 +2267,7 @@ class MenuZonesApi
      *
      * Sets the description of a menu zone.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone id. (required)
      * @param  string $description The new description. Add as a raw string in the request, without any JSON wrapper. (required)
      *
@@ -2289,7 +2289,7 @@ class MenuZonesApi
      *
      * Sets the description of a menu zone.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone id. (required)
      * @param  string $description The new description. Add as a raw string in the request, without any JSON wrapper. (required)
      *
@@ -2327,7 +2327,7 @@ class MenuZonesApi
     /**
      * Create request for operation 'setMenuZoneDescription'
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone id. (required)
      * @param  string $description The new description. Add as a raw string in the request, without any JSON wrapper. (required)
      *
@@ -2463,7 +2463,7 @@ class MenuZonesApi
      *
      * Sets the name of a menu zone.
      *
-     * @param  int $menu_id menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu zone id. (required)
      * @param  string $menu_zone_name The new name. (required)
      *
@@ -2481,7 +2481,7 @@ class MenuZonesApi
      *
      * Sets the name of a menu zone.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu zone id. (required)
      * @param  string $menu_zone_name The new name. (required)
      *
@@ -2560,7 +2560,7 @@ class MenuZonesApi
      *
      * Sets the name of a menu zone.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu zone id. (required)
      * @param  string $menu_zone_name The new name. (required)
      *
@@ -2582,7 +2582,7 @@ class MenuZonesApi
      *
      * Sets the name of a menu zone.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu zone id. (required)
      * @param  string $menu_zone_name The new name. (required)
      *
@@ -2620,7 +2620,7 @@ class MenuZonesApi
     /**
      * Create request for operation 'setMenuZoneName'
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The menu zone id. (required)
      * @param  string $menu_zone_name The new name. (required)
      *
@@ -3054,7 +3054,7 @@ class MenuZonesApi
      *
      * Uploads an image for a menu zone.
      *
-     * @param  int $menu_id menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone id. (required)
      * @param  \Flipdish\\Client\Models\HttpPostedFileBase[] $file The file to upload. (required)
      *
@@ -3072,7 +3072,7 @@ class MenuZonesApi
      *
      * Uploads an image for a menu zone.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone id. (required)
      * @param  \Flipdish\\Client\Models\HttpPostedFileBase[] $file The file to upload. (required)
      *
@@ -3151,7 +3151,7 @@ class MenuZonesApi
      *
      * Uploads an image for a menu zone.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone id. (required)
      * @param  \Flipdish\\Client\Models\HttpPostedFileBase[] $file The file to upload. (required)
      *
@@ -3173,7 +3173,7 @@ class MenuZonesApi
      *
      * Uploads an image for a menu zone.
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone id. (required)
      * @param  \Flipdish\\Client\Models\HttpPostedFileBase[] $file The file to upload. (required)
      *
@@ -3211,7 +3211,7 @@ class MenuZonesApi
     /**
      * Create request for operation 'uploadMenuZoneImage'
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu id. (required)
      * @param  int $menu_zone_id The zone id. (required)
      * @param  \Flipdish\\Client\Models\HttpPostedFileBase[] $file The file to upload. (required)
      *

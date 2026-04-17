@@ -89,7 +89,7 @@ $apiInstance = new Flipdish\\Client\Api\MenuZonesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | 
+$menu_id = 56; // int | Menu id.
 $menu_zone_id = 56; // int | The menu zone id.
 
 try {
@@ -104,7 +104,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**|  |
+ **menu_id** | **int**| Menu id. |
  **menu_zone_id** | **int**| The menu zone id. |
 
 ### Return type
@@ -141,7 +141,7 @@ $apiInstance = new Flipdish\\Client\Api\MenuZonesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | 
+$menu_id = 56; // int | Menu id.
 $menu_zone_id = 56; // int | The zone Id/
 
 try {
@@ -156,7 +156,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**|  |
+ **menu_id** | **int**| Menu id. |
  **menu_zone_id** | **int**| The zone Id/ |
 
 ### Return type
@@ -351,7 +351,7 @@ $apiInstance = new Flipdish\\Client\Api\MenuZonesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | 
+$menu_id = 56; // int | Menu id.
 $menu_zone_id = 56; // int | The menu id.
 $menu_section_id = 56; // int | The menu section id.
 
@@ -367,7 +367,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**|  |
+ **menu_id** | **int**| Menu id. |
  **menu_zone_id** | **int**| The menu id. |
  **menu_section_id** | **int**| The menu section id. |
 
@@ -405,7 +405,7 @@ $apiInstance = new Flipdish\\Client\Api\MenuZonesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | 
+$menu_id = 56; // int | Menu id.
 $menu_zone_id = 56; // int | The zone id.
 $description = "description_example"; // string | The new description. Add as a raw string in the request, without any JSON wrapper.
 
@@ -421,7 +421,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**|  |
+ **menu_id** | **int**| Menu id. |
  **menu_zone_id** | **int**| The zone id. |
  **description** | **string**| The new description. Add as a raw string in the request, without any JSON wrapper. |
 
@@ -459,7 +459,7 @@ $apiInstance = new Flipdish\\Client\Api\MenuZonesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | 
+$menu_id = 56; // int | Menu id.
 $menu_zone_id = 56; // int | The menu zone id.
 $menu_zone_name = "menu_zone_name_example"; // string | The new name.
 
@@ -475,7 +475,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**|  |
+ **menu_id** | **int**| Menu id. |
  **menu_zone_id** | **int**| The menu zone id. |
  **menu_zone_name** | **string**| The new name. |
 
@@ -567,7 +567,7 @@ $apiInstance = new Flipdish\\Client\Api\MenuZonesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | 
+$menu_id = 56; // int | Menu id.
 $menu_zone_id = 56; // int | The zone id.
 $file = array(new \Flipdish\\Client\Models\HttpPostedFileBase()); // \Flipdish\\Client\Models\HttpPostedFileBase[] | The file to upload.
 
@@ -583,7 +583,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**|  |
+ **menu_id** | **int**| Menu id. |
  **menu_zone_id** | **int**| The zone id. |
  **file** | [**\Flipdish\\Client\Models\HttpPostedFileBase[]**](../Model/HttpPostedFileBase.md)| The file to upload. |
 
