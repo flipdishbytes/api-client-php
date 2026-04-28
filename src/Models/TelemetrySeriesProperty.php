@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * TelemetrySeriesProperty Class Doc Comment
  *
  * @category Class
+ * @description TelemetrySeriesProperty.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -241,7 +242,7 @@ class TelemetrySeriesProperty implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name name
+     * @param string $name Name.
      *
      * @return $this
      */
@@ -265,7 +266,7 @@ class TelemetrySeriesProperty implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string $type type
+     * @param string $type Type.
      *
      * @return $this
      */
@@ -289,7 +290,7 @@ class TelemetrySeriesProperty implements ModelInterface, ArrayAccess
     /**
      * Sets int_values
      *
-     * @param int[] $int_values int_values
+     * @param int[] $int_values IntValues.
      *
      * @return $this
      */
@@ -313,7 +314,7 @@ class TelemetrySeriesProperty implements ModelInterface, ArrayAccess
     /**
      * Sets string_values
      *
-     * @param string[] $string_values string_values
+     * @param string[] $string_values StringValues.
      *
      * @return $this
      */
@@ -337,7 +338,7 @@ class TelemetrySeriesProperty implements ModelInterface, ArrayAccess
     /**
      * Sets double_values
      *
-     * @param double[] $double_values double_values
+     * @param double[] $double_values DoubleValues.
      *
      * @return $this
      */

@@ -473,7 +473,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
     /**
      * Sets tax_rate_id
      *
-     * @param int $tax_rate_id tax_rate_id
+     * @param int $tax_rate_id TaxRateId.
      *
      * @return $this
      */
@@ -497,7 +497,7 @@ class MenuItemOptionSetItem implements ModelInterface, ArrayAccess
     /**
      * Sets tax_value
      *
-     * @param double $tax_value tax_value
+     * @param double $tax_value TaxValue.
      *
      * @return $this
      */

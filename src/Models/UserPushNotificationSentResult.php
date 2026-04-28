@@ -218,7 +218,7 @@ class UserPushNotificationSentResult implements ModelInterface, ArrayAccess
     /**
      * Sets token_count
      *
-     * @param int $token_count token_count
+     * @param int $token_count TokenCount.
      *
      * @return $this
      */

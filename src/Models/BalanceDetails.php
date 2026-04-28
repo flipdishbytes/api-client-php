@@ -224,7 +224,7 @@ class BalanceDetails implements ModelInterface, ArrayAccess
     /**
      * Sets opening_balance
      *
-     * @param double $opening_balance opening_balance
+     * @param double $opening_balance OpeningBalance.
      *
      * @return $this
      */
@@ -248,7 +248,7 @@ class BalanceDetails implements ModelInterface, ArrayAccess
     /**
      * Sets closing_balance
      *
-     * @param double $closing_balance closing_balance
+     * @param double $closing_balance ClosingBalance.
      *
      * @return $this
      */

@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * TelemetrySeriesResult Class Doc Comment
  *
  * @category Class
+ * @description TelemetrySeriesResult.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -223,7 +224,7 @@ class TelemetrySeriesResult implements ModelInterface, ArrayAccess
     /**
      * Sets timestamps
      *
-     * @param \DateTime[] $timestamps timestamps
+     * @param \DateTime[] $timestamps Timestamps.
      *
      * @return $this
      */
@@ -247,7 +248,7 @@ class TelemetrySeriesResult implements ModelInterface, ArrayAccess
     /**
      * Sets properties
      *
-     * @param \Flipdish\\Client\Models\TelemetrySeriesProperty[] $properties properties
+     * @param \Flipdish\\Client\Models\TelemetrySeriesProperty[] $properties Properties.
      *
      * @return $this
      */

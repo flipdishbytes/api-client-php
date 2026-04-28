@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * MenuZone Class Doc Comment
  *
  * @category Class
+ * @description MenuZone.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -253,7 +254,7 @@ class MenuZone implements ModelInterface, ArrayAccess
     /**
      * Sets menu_zone_id
      *
-     * @param int $menu_zone_id menu_zone_id
+     * @param int $menu_zone_id MenuZoneId.
      *
      * @return $this
      */
@@ -277,7 +278,7 @@ class MenuZone implements ModelInterface, ArrayAccess
     /**
      * Sets menu_id
      *
-     * @param int $menu_id menu_id
+     * @param int $menu_id MenuId.
      *
      * @return $this
      */
@@ -301,7 +302,7 @@ class MenuZone implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name name
+     * @param string $name Name.
      *
      * @return $this
      */
@@ -325,7 +326,7 @@ class MenuZone implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description description
+     * @param string $description Description.
      *
      * @return $this
      */
@@ -349,7 +350,7 @@ class MenuZone implements ModelInterface, ArrayAccess
     /**
      * Sets image_name
      *
-     * @param string $image_name image_name
+     * @param string $image_name ImageName.
      *
      * @return $this
      */
@@ -373,7 +374,7 @@ class MenuZone implements ModelInterface, ArrayAccess
     /**
      * Sets display_order
      *
-     * @param int $display_order display_order
+     * @param int $display_order DisplayOrder.
      *
      * @return $this
      */
@@ -397,7 +398,7 @@ class MenuZone implements ModelInterface, ArrayAccess
     /**
      * Sets image_url
      *
-     * @param string $image_url image_url
+     * @param string $image_url ImageUrl.
      *
      * @return $this
      */

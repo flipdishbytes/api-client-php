@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * UpcomingInvoiceTest Class Doc Comment
  *
  * @category    Class
- * @description UpcomingInvoice
+ * @description UpcomingInvoice.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

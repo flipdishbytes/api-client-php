@@ -230,7 +230,7 @@ class SendUserSmsRequest implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param string $message message
+     * @param string $message Message.
      *
      * @return $this
      */
@@ -254,7 +254,7 @@ class SendUserSmsRequest implements ModelInterface, ArrayAccess
     /**
      * Sets white_label_id
      *
-     * @param int $white_label_id white_label_id
+     * @param int $white_label_id WhiteLabelId.
      *
      * @return $this
      */
@@ -278,7 +278,7 @@ class SendUserSmsRequest implements ModelInterface, ArrayAccess
     /**
      * Sets from_number
      *
-     * @param string $from_number from_number
+     * @param string $from_number FromNumber.
      *
      * @return $this
      */

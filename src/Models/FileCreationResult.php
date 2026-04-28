@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * FileCreationResult Class Doc Comment
  *
  * @category Class
+ * @description FileCreationResult.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -223,7 +224,7 @@ class FileCreationResult implements ModelInterface, ArrayAccess
     /**
      * Sets file_id
      *
-     * @param string $file_id file_id
+     * @param string $file_id FileId.
      *
      * @return $this
      */
@@ -247,7 +248,7 @@ class FileCreationResult implements ModelInterface, ArrayAccess
     /**
      * Sets location
      *
-     * @param string $location location
+     * @param string $location Location.
      *
      * @return $this
      */

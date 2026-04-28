@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * RestaurantVoucherPayGreenConfigurationSummary Class Doc Comment
  *
  * @category Class
+ * @description RestaurantVoucherPayGreenConfigurationSummary.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -223,7 +224,7 @@ class RestaurantVoucherPayGreenConfigurationSummary implements ModelInterface, A
     /**
      * Sets name
      *
-     * @param string $name name
+     * @param string $name Name.
      *
      * @return $this
      */
@@ -247,7 +248,7 @@ class RestaurantVoucherPayGreenConfigurationSummary implements ModelInterface, A
     /**
      * Sets pay_green_configuration_id
      *
-     * @param int $pay_green_configuration_id pay_green_configuration_id
+     * @param int $pay_green_configuration_id PayGreenConfigurationId.
      *
      * @return $this
      */

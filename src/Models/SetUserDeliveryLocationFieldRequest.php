@@ -286,7 +286,7 @@ class SetUserDeliveryLocationFieldRequest implements ModelInterface, ArrayAccess
     /**
      * Sets value
      *
-     * @param string $value value
+     * @param string $value Value.
      *
      * @return $this
      */

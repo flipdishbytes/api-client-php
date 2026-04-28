@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * StoreConfigTest Class Doc Comment
  *
  * @category    Class
- * @description StoreConfig
+ * @description StoreConfig.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

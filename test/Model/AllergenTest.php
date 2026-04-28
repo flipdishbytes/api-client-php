@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * AllergenTest Class Doc Comment
  *
  * @category    Class
- * @description Allergen
+ * @description Allergen.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * NutritionInfoV2AllergenTest Class Doc Comment
  *
  * @category    Class
- * @description NutritionInfoV2Allergen
+ * @description NutritionInfoV2Allergen.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

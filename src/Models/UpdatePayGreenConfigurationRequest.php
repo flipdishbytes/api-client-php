@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * UpdatePayGreenConfigurationRequest Class Doc Comment
  *
  * @category Class
+ * @description UpdatePayGreenConfigurationRequest.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -223,7 +224,7 @@ class UpdatePayGreenConfigurationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name name
+     * @param string $name Name.
      *
      * @return $this
      */
@@ -247,7 +248,7 @@ class UpdatePayGreenConfigurationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets assigned_stores
      *
-     * @param int[] $assigned_stores assigned_stores
+     * @param int[] $assigned_stores AssignedStores.
      *
      * @return $this
      */

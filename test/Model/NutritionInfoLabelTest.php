@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * NutritionInfoLabelTest Class Doc Comment
  *
  * @category    Class
- * @description NutritionInfoLabel
+ * @description NutritionInfoLabel.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

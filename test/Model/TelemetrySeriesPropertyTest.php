@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * TelemetrySeriesPropertyTest Class Doc Comment
  *
  * @category    Class
- * @description TelemetrySeriesProperty
+ * @description TelemetrySeriesProperty.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

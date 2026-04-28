@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * RestaurantVoucherPayGreenConfigurationSummaryTest Class Doc Comment
  *
  * @category    Class
- * @description RestaurantVoucherPayGreenConfigurationSummary
+ * @description RestaurantVoucherPayGreenConfigurationSummary.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

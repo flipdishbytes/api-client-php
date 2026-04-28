@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * FileCreationResultTest Class Doc Comment
  *
  * @category    Class
- * @description FileCreationResult
+ * @description FileCreationResult.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * FirebaseApp Class Doc Comment
  *
  * @category Class
+ * @description FirebaseApp.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -235,7 +236,7 @@ class FirebaseApp implements ModelInterface, ArrayAccess
     /**
      * Sets whitelabel_id
      *
-     * @param int $whitelabel_id whitelabel_id
+     * @param int $whitelabel_id WhitelabelId.
      *
      * @return $this
      */
@@ -259,7 +260,7 @@ class FirebaseApp implements ModelInterface, ArrayAccess
     /**
      * Sets package_id
      *
-     * @param string $package_id package_id
+     * @param string $package_id PackageId.
      *
      * @return $this
      */
@@ -283,7 +284,7 @@ class FirebaseApp implements ModelInterface, ArrayAccess
     /**
      * Sets firebase_app_id
      *
-     * @param string $firebase_app_id firebase_app_id
+     * @param string $firebase_app_id FirebaseAppId.
      *
      * @return $this
      */
@@ -307,7 +308,7 @@ class FirebaseApp implements ModelInterface, ArrayAccess
     /**
      * Sets firebase_project_id
      *
-     * @param string $firebase_project_id firebase_project_id
+     * @param string $firebase_project_id FirebaseProjectId.
      *
      * @return $this
      */

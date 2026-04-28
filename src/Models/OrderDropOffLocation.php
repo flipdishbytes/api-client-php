@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * OrderDropOffLocation Class Doc Comment
  *
  * @category Class
+ * @description OrderDropOffLocation.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -247,7 +248,7 @@ class OrderDropOffLocation implements ModelInterface, ArrayAccess
     /**
      * Sets order_id
      *
-     * @param int $order_id order_id
+     * @param int $order_id OrderId.
      *
      * @return $this
      */
@@ -271,7 +272,7 @@ class OrderDropOffLocation implements ModelInterface, ArrayAccess
     /**
      * Sets location_name
      *
-     * @param string $location_name location_name
+     * @param string $location_name LocationName.
      *
      * @return $this
      */
@@ -295,7 +296,7 @@ class OrderDropOffLocation implements ModelInterface, ArrayAccess
     /**
      * Sets location_area_name
      *
-     * @param string $location_area_name location_area_name
+     * @param string $location_area_name LocationAreaName.
      *
      * @return $this
      */
@@ -319,7 +320,7 @@ class OrderDropOffLocation implements ModelInterface, ArrayAccess
     /**
      * Sets location_id
      *
-     * @param int $location_id location_id
+     * @param int $location_id LocationId.
      *
      * @return $this
      */
@@ -343,7 +344,7 @@ class OrderDropOffLocation implements ModelInterface, ArrayAccess
     /**
      * Sets location_area_id
      *
-     * @param int $location_area_id location_area_id
+     * @param int $location_area_id LocationAreaId.
      *
      * @return $this
      */
@@ -367,7 +368,7 @@ class OrderDropOffLocation implements ModelInterface, ArrayAccess
     /**
      * Sets external_location_id
      *
-     * @param string $external_location_id external_location_id
+     * @param string $external_location_id ExternalLocationId.
      *
      * @return $this
      */

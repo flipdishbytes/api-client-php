@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * ChannelTest Class Doc Comment
  *
  * @category    Class
- * @description Channel
+ * @description Channel.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

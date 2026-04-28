@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * SmsProviderCredentialUpdateRequest Class Doc Comment
  *
  * @category Class
+ * @description SmsProviderCredentialUpdateRequest.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -229,7 +230,7 @@ class SmsProviderCredentialUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets sender_id
      *
-     * @param string $sender_id sender_id
+     * @param string $sender_id SenderId.
      *
      * @return $this
      */
@@ -253,7 +254,7 @@ class SmsProviderCredentialUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets username
      *
-     * @param string $username username
+     * @param string $username Username.
      *
      * @return $this
      */
@@ -277,7 +278,7 @@ class SmsProviderCredentialUpdateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets auth_token
      *
-     * @param string $auth_token auth_token
+     * @param string $auth_token AuthToken.
      *
      * @return $this
      */

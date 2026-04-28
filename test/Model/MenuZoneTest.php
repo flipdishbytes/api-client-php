@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * MenuZoneTest Class Doc Comment
  *
  * @category    Class
- * @description MenuZone
+ * @description MenuZone.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

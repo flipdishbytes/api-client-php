@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * RestaurantVoucherAssignedStore Class Doc Comment
  *
  * @category Class
+ * @description RestaurantVoucherAssignedStore.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -229,7 +230,7 @@ class RestaurantVoucherAssignedStore implements ModelInterface, ArrayAccess
     /**
      * Sets store_id
      *
-     * @param int $store_id store_id
+     * @param int $store_id StoreId.
      *
      * @return $this
      */
@@ -253,7 +254,7 @@ class RestaurantVoucherAssignedStore implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name name
+     * @param string $name Name.
      *
      * @return $this
      */
@@ -277,7 +278,7 @@ class RestaurantVoucherAssignedStore implements ModelInterface, ArrayAccess
     /**
      * Sets active
      *
-     * @param bool $active active
+     * @param bool $active Active.
      *
      * @return $this
      */

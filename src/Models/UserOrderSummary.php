@@ -278,7 +278,7 @@ class UserOrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets order_id
      *
-     * @param int $order_id order_id
+     * @param int $order_id OrderId.
      *
      * @return $this
      */
@@ -302,7 +302,7 @@ class UserOrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets ts_order_placed_utc
      *
-     * @param \DateTime $ts_order_placed_utc ts_order_placed_utc
+     * @param \DateTime $ts_order_placed_utc TsOrderPlacedUtc.
      *
      * @return $this
      */
@@ -326,7 +326,7 @@ class UserOrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets ts_update_utc
      *
-     * @param \DateTime $ts_update_utc ts_update_utc
+     * @param \DateTime $ts_update_utc TsUpdateUtc.
      *
      * @return $this
      */
@@ -350,7 +350,7 @@ class UserOrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets restaurant_name
      *
-     * @param string $restaurant_name restaurant_name
+     * @param string $restaurant_name RestaurantName.
      *
      * @return $this
      */
@@ -374,7 +374,7 @@ class UserOrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets food_amount
      *
-     * @param double $food_amount food_amount
+     * @param double $food_amount FoodAmount.
      *
      * @return $this
      */
@@ -398,7 +398,7 @@ class UserOrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets tip_amount
      *
-     * @param double $tip_amount tip_amount
+     * @param double $tip_amount TipAmount.
      *
      * @return $this
      */
@@ -422,7 +422,7 @@ class UserOrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets total_restaurant_amount
      *
-     * @param double $total_restaurant_amount total_restaurant_amount
+     * @param double $total_restaurant_amount TotalRestaurantAmount.
      *
      * @return $this
      */
@@ -446,7 +446,7 @@ class UserOrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets iso_currency
      *
-     * @param string $iso_currency iso_currency
+     * @param string $iso_currency IsoCurrency.
      *
      * @return $this
      */
@@ -470,7 +470,7 @@ class UserOrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_type
      *
-     * @param string $delivery_type delivery_type
+     * @param string $delivery_type DeliveryType.
      *
      * @return $this
      */
@@ -494,7 +494,7 @@ class UserOrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets order_state
      *
-     * @param string $order_state order_state
+     * @param string $order_state OrderState.
      *
      * @return $this
      */
@@ -518,7 +518,7 @@ class UserOrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets payment_account_description
      *
-     * @param string $payment_account_description payment_account_description
+     * @param string $payment_account_description PaymentAccountDescription.
      *
      * @return $this
      */

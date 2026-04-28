@@ -260,7 +260,7 @@ class CreateUserDeliveryLocationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets building
      *
-     * @param string $building building
+     * @param string $building Building.
      *
      * @return $this
      */
@@ -284,7 +284,7 @@ class CreateUserDeliveryLocationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets street
      *
-     * @param string $street street
+     * @param string $street Street.
      *
      * @return $this
      */
@@ -308,7 +308,7 @@ class CreateUserDeliveryLocationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets town
      *
-     * @param string $town town
+     * @param string $town Town.
      *
      * @return $this
      */
@@ -332,7 +332,7 @@ class CreateUserDeliveryLocationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets post_code
      *
-     * @param string $post_code post_code
+     * @param string $post_code PostCode.
      *
      * @return $this
      */
@@ -356,7 +356,7 @@ class CreateUserDeliveryLocationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets full_address_json
      *
-     * @param string $full_address_json full_address_json
+     * @param string $full_address_json FullAddressJson.
      *
      * @return $this
      */
@@ -380,7 +380,7 @@ class CreateUserDeliveryLocationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_instructions
      *
-     * @param string $delivery_instructions delivery_instructions
+     * @param string $delivery_instructions DeliveryInstructions.
      *
      * @return $this
      */
@@ -404,7 +404,7 @@ class CreateUserDeliveryLocationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets coordinates
      *
-     * @param \Flipdish\\Client\Models\Coordinates $coordinates coordinates
+     * @param \Flipdish\\Client\Models\Coordinates $coordinates Coordinates.
      *
      * @return $this
      */

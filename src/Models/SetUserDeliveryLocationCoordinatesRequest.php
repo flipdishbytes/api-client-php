@@ -224,7 +224,7 @@ class SetUserDeliveryLocationCoordinatesRequest implements ModelInterface, Array
     /**
      * Sets latitude
      *
-     * @param double $latitude latitude
+     * @param double $latitude Latitude.
      *
      * @return $this
      */
@@ -248,7 +248,7 @@ class SetUserDeliveryLocationCoordinatesRequest implements ModelInterface, Array
     /**
      * Sets longitude
      *
-     * @param double $longitude longitude
+     * @param double $longitude Longitude.
      *
      * @return $this
      */

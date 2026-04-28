@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * NutritionInfoItemAddUpdateLabelModel Class Doc Comment
  *
  * @category Class
+ * @description NutritionInfoItemAddUpdateLabelModel.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -229,7 +230,7 @@ class NutritionInfoItemAddUpdateLabelModel implements ModelInterface, ArrayAcces
     /**
      * Sets name
      *
-     * @param string $name name
+     * @param string $name Name.
      *
      * @return $this
      */
@@ -253,7 +254,7 @@ class NutritionInfoItemAddUpdateLabelModel implements ModelInterface, ArrayAcces
     /**
      * Sets values
      *
-     * @param string[] $values values
+     * @param string[] $values Values.
      *
      * @return $this
      */
@@ -277,7 +278,7 @@ class NutritionInfoItemAddUpdateLabelModel implements ModelInterface, ArrayAcces
     /**
      * Sets icon_url
      *
-     * @param string $icon_url icon_url
+     * @param string $icon_url IconUrl.
      *
      * @return $this
      */

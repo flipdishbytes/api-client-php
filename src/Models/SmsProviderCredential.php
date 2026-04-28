@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * SmsProviderCredential Class Doc Comment
  *
  * @category Class
+ * @description SmsProviderCredential.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -274,7 +275,7 @@ class SmsProviderCredential implements ModelInterface, ArrayAccess
     /**
      * Sets org_id
      *
-     * @param string $org_id org_id
+     * @param string $org_id OrgId.
      *
      * @return $this
      */
@@ -298,7 +299,7 @@ class SmsProviderCredential implements ModelInterface, ArrayAccess
     /**
      * Sets brand_id
      *
-     * @param string $brand_id brand_id
+     * @param string $brand_id BrandId.
      *
      * @return $this
      */
@@ -322,7 +323,7 @@ class SmsProviderCredential implements ModelInterface, ArrayAccess
     /**
      * Sets sms_service_type
      *
-     * @param string $sms_service_type sms_service_type
+     * @param string $sms_service_type SmsServiceType.
      *
      * @return $this
      */
@@ -355,7 +356,7 @@ class SmsProviderCredential implements ModelInterface, ArrayAccess
     /**
      * Sets sender_id
      *
-     * @param string $sender_id sender_id
+     * @param string $sender_id SenderId.
      *
      * @return $this
      */
@@ -379,7 +380,7 @@ class SmsProviderCredential implements ModelInterface, ArrayAccess
     /**
      * Sets username
      *
-     * @param string $username username
+     * @param string $username Username.
      *
      * @return $this
      */
@@ -403,7 +404,7 @@ class SmsProviderCredential implements ModelInterface, ArrayAccess
     /**
      * Sets auth_token
      *
-     * @param string $auth_token auth_token
+     * @param string $auth_token AuthToken.
      *
      * @return $this
      */

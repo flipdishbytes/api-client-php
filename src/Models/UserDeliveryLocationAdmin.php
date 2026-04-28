@@ -272,7 +272,7 @@ class UserDeliveryLocationAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_location_id
      *
-     * @param int $delivery_location_id delivery_location_id
+     * @param int $delivery_location_id DeliveryLocationId.
      *
      * @return $this
      */
@@ -296,7 +296,7 @@ class UserDeliveryLocationAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets building
      *
-     * @param string $building building
+     * @param string $building Building.
      *
      * @return $this
      */
@@ -320,7 +320,7 @@ class UserDeliveryLocationAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets street
      *
-     * @param string $street street
+     * @param string $street Street.
      *
      * @return $this
      */
@@ -344,7 +344,7 @@ class UserDeliveryLocationAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets town
      *
-     * @param string $town town
+     * @param string $town Town.
      *
      * @return $this
      */
@@ -368,7 +368,7 @@ class UserDeliveryLocationAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets post_code
      *
-     * @param string $post_code post_code
+     * @param string $post_code PostCode.
      *
      * @return $this
      */
@@ -392,7 +392,7 @@ class UserDeliveryLocationAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_instructions
      *
-     * @param string $delivery_instructions delivery_instructions
+     * @param string $delivery_instructions DeliveryInstructions.
      *
      * @return $this
      */
@@ -416,7 +416,7 @@ class UserDeliveryLocationAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets auto_select_this_location
      *
-     * @param bool $auto_select_this_location auto_select_this_location
+     * @param bool $auto_select_this_location AutoSelectThisLocation.
      *
      * @return $this
      */
@@ -440,7 +440,7 @@ class UserDeliveryLocationAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets is_displayed
      *
-     * @param bool $is_displayed is_displayed
+     * @param bool $is_displayed IsDisplayed.
      *
      * @return $this
      */
@@ -464,7 +464,7 @@ class UserDeliveryLocationAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets is_confirmed
      *
-     * @param bool $is_confirmed is_confirmed
+     * @param bool $is_confirmed IsConfirmed.
      *
      * @return $this
      */
@@ -488,7 +488,7 @@ class UserDeliveryLocationAdmin implements ModelInterface, ArrayAccess
     /**
      * Sets coordinates
      *
-     * @param \Flipdish\\Client\Models\Coordinates $coordinates coordinates
+     * @param \Flipdish\\Client\Models\Coordinates $coordinates Coordinates.
      *
      * @return $this
      */

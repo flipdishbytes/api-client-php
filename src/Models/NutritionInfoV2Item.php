@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * NutritionInfoV2Item Class Doc Comment
  *
  * @category Class
+ * @description NutritionInfoV2Item.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen

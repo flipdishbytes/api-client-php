@@ -224,7 +224,7 @@ class SendUserPushNotificationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets white_label_id
      *
-     * @param int $white_label_id white_label_id
+     * @param int $white_label_id WhiteLabelId.
      *
      * @return $this
      */
@@ -248,7 +248,7 @@ class SendUserPushNotificationRequest implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param string $message message
+     * @param string $message Message.
      *
      * @return $this
      */

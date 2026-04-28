@@ -242,7 +242,7 @@ class UserSmsChatItem implements ModelInterface, ArrayAccess
     /**
      * Sets sms_conversation_item_id
      *
-     * @param int $sms_conversation_item_id sms_conversation_item_id
+     * @param int $sms_conversation_item_id SmsConversationItemId.
      *
      * @return $this
      */
@@ -266,7 +266,7 @@ class UserSmsChatItem implements ModelInterface, ArrayAccess
     /**
      * Sets direction
      *
-     * @param string $direction direction
+     * @param string $direction Direction.
      *
      * @return $this
      */
@@ -290,7 +290,7 @@ class UserSmsChatItem implements ModelInterface, ArrayAccess
     /**
      * Sets from
      *
-     * @param string $from from
+     * @param string $from From.
      *
      * @return $this
      */
@@ -314,7 +314,7 @@ class UserSmsChatItem implements ModelInterface, ArrayAccess
     /**
      * Sets text
      *
-     * @param string $text text
+     * @param string $text Text.
      *
      * @return $this
      */
@@ -338,7 +338,7 @@ class UserSmsChatItem implements ModelInterface, ArrayAccess
     /**
      * Sets ts_sent_received_utc
      *
-     * @param \DateTime $ts_sent_received_utc ts_sent_received_utc
+     * @param \DateTime $ts_sent_received_utc TsSentReceivedUtc.
      *
      * @return $this
      */

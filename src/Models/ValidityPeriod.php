@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * ValidityPeriod Class Doc Comment
  *
  * @category Class
+ * @description ValidityPeriod.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -262,7 +263,7 @@ class ValidityPeriod implements ModelInterface, ArrayAccess
     /**
      * Sets day_of_week
      *
-     * @param string $day_of_week day_of_week
+     * @param string $day_of_week DayOfWeek.
      *
      * @return $this
      */
@@ -295,7 +296,7 @@ class ValidityPeriod implements ModelInterface, ArrayAccess
     /**
      * Sets start_time
      *
-     * @param string $start_time start_time
+     * @param string $start_time StartTime.
      *
      * @return $this
      */
@@ -319,7 +320,7 @@ class ValidityPeriod implements ModelInterface, ArrayAccess
     /**
      * Sets end_time
      *
-     * @param string $end_time end_time
+     * @param string $end_time EndTime.
      *
      * @return $this
      */

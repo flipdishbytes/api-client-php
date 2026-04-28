@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * TelemetrySeriesQueryParameters Class Doc Comment
  *
  * @category Class
+ * @description TelemetrySeriesQueryParameters.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -235,7 +236,7 @@ class TelemetrySeriesQueryParameters implements ModelInterface, ArrayAccess
     /**
      * Sets kiosk_id
      *
-     * @param string $kiosk_id kiosk_id
+     * @param string $kiosk_id KioskId.
      *
      * @return $this
      */
@@ -259,7 +260,7 @@ class TelemetrySeriesQueryParameters implements ModelInterface, ArrayAccess
     /**
      * Sets variables
      *
-     * @param string[] $variables variables
+     * @param string[] $variables Variables.
      *
      * @return $this
      */
@@ -283,7 +284,7 @@ class TelemetrySeriesQueryParameters implements ModelInterface, ArrayAccess
     /**
      * Sets start_date
      *
-     * @param \DateTime $start_date start_date
+     * @param \DateTime $start_date StartDate.
      *
      * @return $this
      */
@@ -307,7 +308,7 @@ class TelemetrySeriesQueryParameters implements ModelInterface, ArrayAccess
     /**
      * Sets end_date
      *
-     * @param \DateTime $end_date end_date
+     * @param \DateTime $end_date EndDate.
      *
      * @return $this
      */

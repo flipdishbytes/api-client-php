@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * FirebaseAppTest Class Doc Comment
  *
  * @category    Class
- * @description FirebaseApp
+ * @description FirebaseApp.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

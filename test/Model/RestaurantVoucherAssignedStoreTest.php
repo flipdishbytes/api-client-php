@@ -33,7 +33,7 @@ namespace Flipdish\\Client;
  * RestaurantVoucherAssignedStoreTest Class Doc Comment
  *
  * @category    Class
- * @description RestaurantVoucherAssignedStore
+ * @description RestaurantVoucherAssignedStore.
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

@@ -36,6 +36,7 @@ use \Flipdish\\Client\ObjectSerializer;
  * ItemNutritionInfoV2AddUpdateModel Class Doc Comment
  *
  * @category Class
+ * @description ItemNutritionInfoV2AddUpdateModel.
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -217,7 +218,7 @@ class ItemNutritionInfoV2AddUpdateModel implements ModelInterface, ArrayAccess
     /**
      * Sets allergen_ids
      *
-     * @param string[] $allergen_ids allergen_ids
+     * @param string[] $allergen_ids AllergenIds.
      *
      * @return $this
      */
