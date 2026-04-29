@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **next_invoice_amount** | **double** | Next invoice amount | [optional] 
 **next_invoice_billing_date** | [**\DateTime**](\DateTime.md) | Next invoice billing date | [optional] 
 **subscription_id** | **string** | The subscription identifier | 
-**name** | **string** |  | 
+**name** | **string** | Name | 
 **status** | **string** | Status | 
 **currency** | **string** | Currency | 
 **user** | **string** | User | 

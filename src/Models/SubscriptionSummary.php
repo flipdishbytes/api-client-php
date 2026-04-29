@@ -637,7 +637,7 @@ class SubscriptionSummary implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string $name name
+     * @param string $name Name
      *
      * @return $this
      */

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **upcoming_invoice_discounts** | [**\Flipdish\\Client\Models\InvoiceDiscount[]**](InvoiceDiscount.md) | Upcoming invoice discounts | [optional] 
 **upcoming_invoice** | [**\Flipdish\\Client\Models\UpcomingInvoice**](UpcomingInvoice.md) | Upcoming invoice | [optional] 
 **subscription_id** | **string** | The subscription identifier | 
-**name** | **string** |  | 
+**name** | **string** | Name | 
 **status** | **string** | Status | 
 **currency** | **string** | Currency | 
 **user** | **string** | User | 
