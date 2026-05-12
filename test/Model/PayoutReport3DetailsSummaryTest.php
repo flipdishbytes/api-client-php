@@ -91,6 +91,13 @@ class PayoutReport3DetailsSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "unpaid_revenue"
+     */
+    public function testPropertyUnpaidRevenue()
+    {
+    }
+
+    /**
      * Test attribute "revenue_for_fee_calculations"
      */
     public function testPropertyRevenueForFeeCalculations()
