@@ -761,7 +761,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserOrdersForAdmin**
-> \Flipdish\\Client\Models\RestApiArrayResultUserOrderSummary getUserOrdersForAdmin($user_id, $skip, $take, $white_label_id)
+> \Flipdish\\Client\Models\RestApiArrayResultUserOrderSummary getUserOrdersForAdmin($user_id, $skip, $take, $brand_id)
 
 
 
@@ -782,10 +782,10 @@ $apiInstance = new Flipdish\\Client\Api\UsersApi(
 $user_id = 56; // int | 
 $skip = 56; // int | 
 $take = 56; // int | 
-$white_label_id = 56; // int | 
+$brand_id = "brand_id_example"; // string | 
 
 try {
-    $result = $apiInstance->getUserOrdersForAdmin($user_id, $skip, $take, $white_label_id);
+    $result = $apiInstance->getUserOrdersForAdmin($user_id, $skip, $take, $brand_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->getUserOrdersForAdmin: ', $e->getMessage(), PHP_EOL;
@@ -800,7 +800,7 @@ Name | Type | Description  | Notes
  **user_id** | **int**|  |
  **skip** | **int**|  | [optional]
  **take** | **int**|  | [optional]
- **white_label_id** | **int**|  | [optional]
+ **brand_id** | **string**|  | [optional]
 
 ### Return type
 

@@ -4318,15 +4318,15 @@ class UsersApi
      * @param  int $user_id user_id (required)
      * @param  int $skip skip (optional)
      * @param  int $take take (optional)
-     * @param  int $white_label_id white_label_id (optional)
+     * @param  string $brand_id brand_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiArrayResultUserOrderSummary
      */
-    public function getUserOrdersForAdmin($user_id, $skip = null, $take = null, $white_label_id = null)
+    public function getUserOrdersForAdmin($user_id, $skip = null, $take = null, $brand_id = null)
     {
-        list($response) = $this->getUserOrdersForAdminWithHttpInfo($user_id, $skip, $take, $white_label_id);
+        list($response) = $this->getUserOrdersForAdminWithHttpInfo($user_id, $skip, $take, $brand_id);
         return $response;
     }
 
@@ -4336,16 +4336,16 @@ class UsersApi
      * @param  int $user_id (required)
      * @param  int $skip (optional)
      * @param  int $take (optional)
-     * @param  int $white_label_id (optional)
+     * @param  string $brand_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiArrayResultUserOrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getUserOrdersForAdminWithHttpInfo($user_id, $skip = null, $take = null, $white_label_id = null)
+    public function getUserOrdersForAdminWithHttpInfo($user_id, $skip = null, $take = null, $brand_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultUserOrderSummary';
-        $request = $this->getUserOrdersForAdminRequest($user_id, $skip, $take, $white_label_id);
+        $request = $this->getUserOrdersForAdminRequest($user_id, $skip, $take, $brand_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4454,14 +4454,14 @@ class UsersApi
      * @param  int $user_id (required)
      * @param  int $skip (optional)
      * @param  int $take (optional)
-     * @param  int $white_label_id (optional)
+     * @param  string $brand_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserOrdersForAdminAsync($user_id, $skip = null, $take = null, $white_label_id = null)
+    public function getUserOrdersForAdminAsync($user_id, $skip = null, $take = null, $brand_id = null)
     {
-        return $this->getUserOrdersForAdminAsyncWithHttpInfo($user_id, $skip, $take, $white_label_id)
+        return $this->getUserOrdersForAdminAsyncWithHttpInfo($user_id, $skip, $take, $brand_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4477,15 +4477,15 @@ class UsersApi
      * @param  int $user_id (required)
      * @param  int $skip (optional)
      * @param  int $take (optional)
-     * @param  int $white_label_id (optional)
+     * @param  string $brand_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserOrdersForAdminAsyncWithHttpInfo($user_id, $skip = null, $take = null, $white_label_id = null)
+    public function getUserOrdersForAdminAsyncWithHttpInfo($user_id, $skip = null, $take = null, $brand_id = null)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiArrayResultUserOrderSummary';
-        $request = $this->getUserOrdersForAdminRequest($user_id, $skip, $take, $white_label_id);
+        $request = $this->getUserOrdersForAdminRequest($user_id, $skip, $take, $brand_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4530,12 +4530,12 @@ class UsersApi
      * @param  int $user_id (required)
      * @param  int $skip (optional)
      * @param  int $take (optional)
-     * @param  int $white_label_id (optional)
+     * @param  string $brand_id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getUserOrdersForAdminRequest($user_id, $skip = null, $take = null, $white_label_id = null)
+    protected function getUserOrdersForAdminRequest($user_id, $skip = null, $take = null, $brand_id = null)
     {
         // verify the required parameter 'user_id' is set
         if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
@@ -4560,8 +4560,8 @@ class UsersApi
             $queryParams['take'] = ObjectSerializer::toQueryValue($take);
         }
         // query params
-        if ($white_label_id !== null) {
-            $queryParams['whiteLabelId'] = ObjectSerializer::toQueryValue($white_label_id);
+        if ($brand_id !== null) {
+            $queryParams['brandId'] = ObjectSerializer::toQueryValue($brand_id);
         }
 
         // path params
