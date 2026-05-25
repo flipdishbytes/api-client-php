@@ -4,14 +4,14 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**stuartCancelJob**](StuartApi.md#stuartCancelJob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
-[**stuartGetJob**](StuartApi.md#stuartGetJob) | **GET** /api/v1.0/stuart/jobs/{jobId} | 
-[**stuartGetStuartSettings**](StuartApi.md#stuartGetStuartSettings) | **GET** /api/v1.0/stuart/settings/{storeId} | 
-[**stuartPostStuartSettings**](StuartApi.md#stuartPostStuartSettings) | **POST** /api/v1.0/stuart/settings/{storeId} | 
+[**cancelJob**](StuartApi.md#cancelJob) | **DELETE** /api/v1.0/stuart/jobs/{jobId} | 
+[**getJob**](StuartApi.md#getJob) | **GET** /api/v1.0/stuart/jobs/{jobId} | 
+[**getStuartSettings**](StuartApi.md#getStuartSettings) | **GET** /api/v1.0/stuart/settings/{storeId} | 
+[**postStuartSettings**](StuartApi.md#postStuartSettings) | **POST** /api/v1.0/stuart/settings/{storeId} | 
 
 
-# **stuartCancelJob**
-> object stuartCancelJob($job_id, $store_id)
+# **cancelJob**
+> cancelJob($job_id, $store_id)
 
 
 
@@ -33,10 +33,9 @@ $job_id = 56; // int |
 $store_id = 56; // int | 
 
 try {
-    $result = $apiInstance->stuartCancelJob($job_id, $store_id);
-    print_r($result);
+    $apiInstance->cancelJob($job_id, $store_id);
 } catch (Exception $e) {
-    echo 'Exception when calling StuartApi->stuartCancelJob: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling StuartApi->cancelJob: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -50,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -63,8 +62,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **stuartGetJob**
-> \Flipdish\\Client\Models\RestApiResultJobResponse stuartGetJob($job_id, $store_id)
+# **getJob**
+> \Flipdish\\Client\Models\RestApiResultJobResponse getJob($job_id, $store_id)
 
 
 
@@ -86,10 +85,10 @@ $job_id = 56; // int |
 $store_id = 56; // int | 
 
 try {
-    $result = $apiInstance->stuartGetJob($job_id, $store_id);
+    $result = $apiInstance->getJob($job_id, $store_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StuartApi->stuartGetJob: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling StuartApi->getJob: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -116,8 +115,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **stuartGetStuartSettings**
-> \Flipdish\\Client\Models\RestApiResultStuartSettings stuartGetStuartSettings($store_id)
+# **getStuartSettings**
+> \Flipdish\\Client\Models\RestApiResultStuartSettings getStuartSettings($store_id)
 
 
 
@@ -138,10 +137,10 @@ $apiInstance = new Flipdish\\Client\Api\StuartApi(
 $store_id = 56; // int | 
 
 try {
-    $result = $apiInstance->stuartGetStuartSettings($store_id);
+    $result = $apiInstance->getStuartSettings($store_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StuartApi->stuartGetStuartSettings: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling StuartApi->getStuartSettings: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -167,8 +166,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **stuartPostStuartSettings**
-> object stuartPostStuartSettings($store_id, $stuart_settings)
+# **postStuartSettings**
+> object postStuartSettings($store_id, $stuart_settings)
 
 
 
@@ -190,10 +189,10 @@ $store_id = 56; // int |
 $stuart_settings = new \Flipdish\\Client\Models\StuartSettings(); // \Flipdish\\Client\Models\StuartSettings | 
 
 try {
-    $result = $apiInstance->stuartPostStuartSettings($store_id, $stuart_settings);
+    $result = $apiInstance->postStuartSettings($store_id, $stuart_settings);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling StuartApi->stuartPostStuartSettings: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling StuartApi->postStuartSettings: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

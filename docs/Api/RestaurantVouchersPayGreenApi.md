@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deletePayGreenConfiguration**
-> object deletePayGreenConfiguration($app_id, $paygreen_configuration_id)
+> deletePayGreenConfiguration($app_id, $paygreen_configuration_id)
 
 
 
@@ -91,8 +91,7 @@ $app_id = "app_id_example"; // string |
 $paygreen_configuration_id = 56; // int | 
 
 try {
-    $result = $apiInstance->deletePayGreenConfiguration($app_id, $paygreen_configuration_id);
-    print_r($result);
+    $apiInstance->deletePayGreenConfiguration($app_id, $paygreen_configuration_id);
 } catch (Exception $e) {
     echo 'Exception when calling RestaurantVouchersPayGreenApi->deletePayGreenConfiguration: ', $e->getMessage(), PHP_EOL;
 }
@@ -108,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 

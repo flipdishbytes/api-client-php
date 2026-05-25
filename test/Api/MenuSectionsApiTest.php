@@ -114,7 +114,7 @@ class MenuSectionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteMenuSection
      *
-     * Delete menu section.
+     * .
      *
      */
     public function testDeleteMenuSection()
@@ -124,7 +124,7 @@ class MenuSectionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteMenuSectionImage
      *
-     * Delete menu section image.
+     * .
      *
      */
     public function testDeleteMenuSectionImage()
@@ -152,12 +152,12 @@ class MenuSectionsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for menuSectionsSetItemDisplayOrders
+     * Test case for setItemDisplayOrders
      *
-     * Re-arrange Items within a Section.
+     * .
      *
      */
-    public function testMenuSectionsSetItemDisplayOrders()
+    public function testSetItemDisplayOrders()
     {
     }
 
@@ -174,7 +174,7 @@ class MenuSectionsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for uploadMenuSectionImage
      *
-     * Upload menu section image.
+     * .
      *
      */
     public function testUploadMenuSectionImage()

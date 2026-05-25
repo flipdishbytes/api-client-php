@@ -288,6 +288,10 @@ class MetafieldDefinitionRecommendation implements ModelInterface, ArrayAccess
         if ($this->container['key'] === null) {
             $invalidProperties[] = "'key' can't be null";
         }
+        if ((mb_strlen($this->container['key']) > 100)) {
+            $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 100.";
+        }
+
         $allowedValues = $this->getValueTypeAllowableValues();
         if (!is_null($this->container['value_type']) && !in_array($this->container['value_type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -299,6 +303,14 @@ class MetafieldDefinitionRecommendation implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
+        if ((mb_strlen($this->container['name']) > 100)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 100.";
+        }
+
+        if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 400)) {
+            $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 400.";
+        }
+
         return $invalidProperties;
     }
 
@@ -366,6 +378,10 @@ class MetafieldDefinitionRecommendation implements ModelInterface, ArrayAccess
      */
     public function setKey($key)
     {
+        if ((mb_strlen($key) > 100)) {
+            throw new \InvalidArgumentException('invalid length for $key when calling MetafieldDefinitionRecommendation., must be smaller than or equal to 100.');
+        }
+
         $this->container['key'] = $key;
 
         return $this;
@@ -423,6 +439,10 @@ class MetafieldDefinitionRecommendation implements ModelInterface, ArrayAccess
      */
     public function setName($name)
     {
+        if ((mb_strlen($name) > 100)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling MetafieldDefinitionRecommendation., must be smaller than or equal to 100.');
+        }
+
         $this->container['name'] = $name;
 
         return $this;
@@ -447,6 +467,10 @@ class MetafieldDefinitionRecommendation implements ModelInterface, ArrayAccess
      */
     public function setDescription($description)
     {
+        if (!is_null($description) && (mb_strlen($description) > 400)) {
+            throw new \InvalidArgumentException('invalid length for $description when calling MetafieldDefinitionRecommendation., must be smaller than or equal to 400.');
+        }
+
         $this->container['description'] = $description;
 
         return $this;

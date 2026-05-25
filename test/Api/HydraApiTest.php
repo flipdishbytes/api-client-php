@@ -112,6 +112,36 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createEmv
+     *
+     * .
+     *
+     */
+    public function testCreateEmv()
+    {
+    }
+
+    /**
+     * Test case for deleteEmv
+     *
+     * .
+     *
+     */
+    public function testDeleteEmv()
+    {
+    }
+
+    /**
+     * Test case for detachStoreFromKiosk
+     *
+     * .
+     *
+     */
+    public function testDetachStoreFromKiosk()
+    {
+    }
+
+    /**
      * Test case for detachStoreFromTerminal
      *
      * .
@@ -172,6 +202,16 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getEmvsForAppId
+     *
+     * .
+     *
+     */
+    public function testGetEmvsForAppId()
+    {
+    }
+
+    /**
      * Test case for getKioskCashPaymentSettings
      *
      * .
@@ -208,46 +248,6 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testGetSettings()
-    {
-    }
-
-    /**
-     * Test case for hydraCreateEmv
-     *
-     * .
-     *
-     */
-    public function testHydraCreateEmv()
-    {
-    }
-
-    /**
-     * Test case for hydraDeleteEmv
-     *
-     * .
-     *
-     */
-    public function testHydraDeleteEmv()
-    {
-    }
-
-    /**
-     * Test case for hydraDetachStoreFromKiosk
-     *
-     * .
-     *
-     */
-    public function testHydraDetachStoreFromKiosk()
-    {
-    }
-
-    /**
-     * Test case for hydraGetEmvsForAppId
-     *
-     * .
-     *
-     */
-    public function testHydraGetEmvsForAppId()
     {
     }
 

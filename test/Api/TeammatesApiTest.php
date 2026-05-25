@@ -72,6 +72,26 @@ class TeammatesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for acceptInvitation
+     *
+     * .
+     *
+     */
+    public function testAcceptInvitation()
+    {
+    }
+
+    /**
+     * Test case for acceptInvitations
+     *
+     * .
+     *
+     */
+    public function testAcceptInvitations()
+    {
+    }
+
+    /**
      * Test case for createTeammate
      *
      * .
@@ -122,42 +142,22 @@ class TeammatesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for pendingInvitations
+     *
+     * .
+     *
+     */
+    public function testPendingInvitations()
+    {
+    }
+
+    /**
      * Test case for redeemInvitation
      *
      * .
      *
      */
     public function testRedeemInvitation()
-    {
-    }
-
-    /**
-     * Test case for teammatesAcceptInvitation
-     *
-     * .
-     *
-     */
-    public function testTeammatesAcceptInvitation()
-    {
-    }
-
-    /**
-     * Test case for teammatesAcceptInvitations
-     *
-     * .
-     *
-     */
-    public function testTeammatesAcceptInvitations()
-    {
-    }
-
-    /**
-     * Test case for teammatesPendingInvitations
-     *
-     * .
-     *
-     */
-    public function testTeammatesPendingInvitations()
     {
     }
 

@@ -4,69 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**onboardingGetOnboardingConfig**](OnboardingApi.md#onboardingGetOnboardingConfig) | **GET** /api/v1.0/clients/{appId}/onboarding/config | 
-[**onboardingGetOnboardingConfigs**](OnboardingApi.md#onboardingGetOnboardingConfigs) | **GET** /api/v1.0/clients/{appId}/onboarding/configs | 
-[**onboardingGetOnboardingItems**](OnboardingApi.md#onboardingGetOnboardingItems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
-[**onboardingGetOnboardingItemsV2**](OnboardingApi.md#onboardingGetOnboardingItemsV2) | **GET** /api/v1.0/clients/{appId}/onboarding/stores | 
-[**onboardingUpdateOnboardingConfig**](OnboardingApi.md#onboardingUpdateOnboardingConfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
-[**onboardingUpdateOnboardingConfigById**](OnboardingApi.md#onboardingUpdateOnboardingConfigById) | **POST** /api/v1.0/clients/{appId}/onboarding/config/{configId} | 
-[**onboardingUpdateOnboardingItem**](OnboardingApi.md#onboardingUpdateOnboardingItem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
-[**onboardingUpdateOnboardingItemV2**](OnboardingApi.md#onboardingUpdateOnboardingItemV2) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId} | 
+[**getOnboardingConfig**](OnboardingApi.md#getOnboardingConfig) | **GET** /api/v1.0/clients/{appId}/onboarding/config | 
+[**getOnboardingConfigs**](OnboardingApi.md#getOnboardingConfigs) | **GET** /api/v1.0/clients/{appId}/onboarding/configs | 
+[**getOnboardingItems**](OnboardingApi.md#getOnboardingItems) | **GET** /api/v1.0/clients/{appId}/onboarding/stores/{storeId} | 
+[**getOnboardingItemsV2**](OnboardingApi.md#getOnboardingItemsV2) | **GET** /api/v1.0/clients/{appId}/onboarding/stores | 
+[**updateOnboardingConfig**](OnboardingApi.md#updateOnboardingConfig) | **POST** /api/v1.0/clients/{appId}/onboarding/config | 
+[**updateOnboardingConfigById**](OnboardingApi.md#updateOnboardingConfigById) | **POST** /api/v1.0/clients/{appId}/onboarding/config/{configId} | 
+[**updateOnboardingItem**](OnboardingApi.md#updateOnboardingItem) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/{storeId}/items/{onboardingItemId} | 
+[**updateOnboardingItemV2**](OnboardingApi.md#updateOnboardingItemV2) | **POST** /api/v1.0/clients/{appId}/onboarding/stores/items/{onboardingItemId} | 
 
 
-# **onboardingGetOnboardingConfig**
-> object onboardingGetOnboardingConfig($app_id)
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\OnboardingApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$app_id = "app_id_example"; // string | 
-
-try {
-    $result = $apiInstance->onboardingGetOnboardingConfig($app_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OnboardingApi->onboardingGetOnboardingConfig: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
-
-### Return type
-
-**object**
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **onboardingGetOnboardingConfigs**
-> object onboardingGetOnboardingConfigs($app_id)
+# **getOnboardingConfig**
+> \Flipdish\\Client\Models\RestApiResultOnboardingConfig getOnboardingConfig($app_id)
 
 
 
@@ -87,10 +36,10 @@ $apiInstance = new Flipdish\\Client\Api\OnboardingApi(
 $app_id = "app_id_example"; // string | 
 
 try {
-    $result = $apiInstance->onboardingGetOnboardingConfigs($app_id);
+    $result = $apiInstance->getOnboardingConfig($app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OnboardingApi->onboardingGetOnboardingConfigs: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OnboardingApi->getOnboardingConfig: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -103,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\Flipdish\\Client\Models\RestApiResultOnboardingConfig**](../Model/RestApiResultOnboardingConfig.md)
 
 ### Authorization
 
@@ -116,8 +65,59 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **onboardingGetOnboardingItems**
-> object onboardingGetOnboardingItems($app_id, $store_id, $milestone_id)
+# **getOnboardingConfigs**
+> \Flipdish\\Client\Models\RestApiArrayResultOnboardingConfig getOnboardingConfigs($app_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\OnboardingApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+
+try {
+    $result = $apiInstance->getOnboardingConfigs($app_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OnboardingApi->getOnboardingConfigs: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiArrayResultOnboardingConfig**](../Model/RestApiArrayResultOnboardingConfig.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getOnboardingItems**
+> \Flipdish\\Client\Models\RestApiResultOnboardingProcess getOnboardingItems($app_id, $store_id, $milestone_id)
 
 
 
@@ -140,10 +140,10 @@ $store_id = 56; // int |
 $milestone_id = 56; // int | 
 
 try {
-    $result = $apiInstance->onboardingGetOnboardingItems($app_id, $store_id, $milestone_id);
+    $result = $apiInstance->getOnboardingItems($app_id, $store_id, $milestone_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OnboardingApi->onboardingGetOnboardingItems: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OnboardingApi->getOnboardingItems: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\Flipdish\\Client\Models\RestApiResultOnboardingProcess**](../Model/RestApiResultOnboardingProcess.md)
 
 ### Authorization
 
@@ -171,8 +171,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **onboardingGetOnboardingItemsV2**
-> object onboardingGetOnboardingItemsV2($app_id, $store_id, $milestone_id)
+# **getOnboardingItemsV2**
+> \Flipdish\\Client\Models\RestApiResultOnboardingProcess getOnboardingItemsV2($app_id, $store_id, $milestone_id)
 
 
 
@@ -195,10 +195,10 @@ $store_id = 56; // int |
 $milestone_id = 56; // int | 
 
 try {
-    $result = $apiInstance->onboardingGetOnboardingItemsV2($app_id, $store_id, $milestone_id);
+    $result = $apiInstance->getOnboardingItemsV2($app_id, $store_id, $milestone_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OnboardingApi->onboardingGetOnboardingItemsV2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OnboardingApi->getOnboardingItemsV2: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\Flipdish\\Client\Models\RestApiResultOnboardingProcess**](../Model/RestApiResultOnboardingProcess.md)
 
 ### Authorization
 
@@ -226,8 +226,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **onboardingUpdateOnboardingConfig**
-> object onboardingUpdateOnboardingConfig($app_id, $config_update)
+# **updateOnboardingConfig**
+> updateOnboardingConfig($app_id, $config_update)
 
 
 
@@ -249,10 +249,9 @@ $app_id = "app_id_example"; // string |
 $config_update = new \Flipdish\\Client\Models\OnboardingConfigUpdate(); // \Flipdish\\Client\Models\OnboardingConfigUpdate | 
 
 try {
-    $result = $apiInstance->onboardingUpdateOnboardingConfig($app_id, $config_update);
-    print_r($result);
+    $apiInstance->updateOnboardingConfig($app_id, $config_update);
 } catch (Exception $e) {
-    echo 'Exception when calling OnboardingApi->onboardingUpdateOnboardingConfig: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OnboardingApi->updateOnboardingConfig: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -266,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -279,8 +278,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **onboardingUpdateOnboardingConfigById**
-> object onboardingUpdateOnboardingConfigById($app_id, $config_id, $config_update)
+# **updateOnboardingConfigById**
+> updateOnboardingConfigById($app_id, $config_id, $config_update)
 
 
 
@@ -303,10 +302,9 @@ $config_id = 56; // int |
 $config_update = new \Flipdish\\Client\Models\OnboardingConfigUpdate(); // \Flipdish\\Client\Models\OnboardingConfigUpdate | 
 
 try {
-    $result = $apiInstance->onboardingUpdateOnboardingConfigById($app_id, $config_id, $config_update);
-    print_r($result);
+    $apiInstance->updateOnboardingConfigById($app_id, $config_id, $config_update);
 } catch (Exception $e) {
-    echo 'Exception when calling OnboardingApi->onboardingUpdateOnboardingConfigById: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OnboardingApi->updateOnboardingConfigById: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -321,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -334,8 +332,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **onboardingUpdateOnboardingItem**
-> object onboardingUpdateOnboardingItem($app_id, $store_id, $onboarding_item_id, $item_update)
+# **updateOnboardingItem**
+> updateOnboardingItem($app_id, $store_id, $onboarding_item_id, $item_update)
 
 
 
@@ -359,10 +357,9 @@ $onboarding_item_id = 56; // int |
 $item_update = new \Flipdish\\Client\Models\OnboardingItemUpdate(); // \Flipdish\\Client\Models\OnboardingItemUpdate | 
 
 try {
-    $result = $apiInstance->onboardingUpdateOnboardingItem($app_id, $store_id, $onboarding_item_id, $item_update);
-    print_r($result);
+    $apiInstance->updateOnboardingItem($app_id, $store_id, $onboarding_item_id, $item_update);
 } catch (Exception $e) {
-    echo 'Exception when calling OnboardingApi->onboardingUpdateOnboardingItem: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OnboardingApi->updateOnboardingItem: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -378,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -391,8 +388,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **onboardingUpdateOnboardingItemV2**
-> object onboardingUpdateOnboardingItemV2($app_id, $onboarding_item_id, $item_update, $store_id)
+# **updateOnboardingItemV2**
+> updateOnboardingItemV2($app_id, $onboarding_item_id, $item_update, $store_id)
 
 
 
@@ -416,10 +413,9 @@ $item_update = new \Flipdish\\Client\Models\OnboardingItemUpdate(); // \Flipdish
 $store_id = 56; // int | 
 
 try {
-    $result = $apiInstance->onboardingUpdateOnboardingItemV2($app_id, $onboarding_item_id, $item_update, $store_id);
-    print_r($result);
+    $apiInstance->updateOnboardingItemV2($app_id, $onboarding_item_id, $item_update, $store_id);
 } catch (Exception $e) {
-    echo 'Exception when calling OnboardingApi->onboardingUpdateOnboardingItemV2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OnboardingApi->updateOnboardingItemV2: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -435,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 

@@ -74,7 +74,7 @@ class CatalogItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for archiveCatalogItem
      *
-     * Archive Catalog Item.
+     * .
      *
      */
     public function testArchiveCatalogItem()
@@ -84,7 +84,7 @@ class CatalogItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createCatalogItem
      *
-     * Create a Catalog Item.
+     * .
      *
      */
     public function testCreateCatalogItem()
@@ -94,7 +94,7 @@ class CatalogItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for duplicateCatalogItem
      *
-     * Duplicate Catalog Item.
+     * .
      *
      */
     public function testDuplicateCatalogItem()
@@ -104,7 +104,7 @@ class CatalogItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getCatalogItemById
      *
-     * Get item by Id.
+     * .
      *
      */
     public function testGetCatalogItemById()
@@ -114,7 +114,7 @@ class CatalogItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getItems
      *
-     * Get paginated items by app name id filtered by types.
+     * .
      *
      */
     public function testGetItems()
@@ -124,7 +124,7 @@ class CatalogItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateCatalogItem
      *
-     * Update Catalog Item.
+     * .
      *
      */
     public function testUpdateCatalogItem()

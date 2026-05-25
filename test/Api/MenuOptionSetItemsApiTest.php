@@ -74,7 +74,7 @@ class MenuOptionSetItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for addMenuItemOptionSetItem
      *
-     * Create menu item option set item.
+     * .
      *
      */
     public function testAddMenuItemOptionSetItem()
@@ -84,7 +84,7 @@ class MenuOptionSetItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteOptionSetItemImage
      *
-     * Delete menu item option set item image.
+     * .
      *
      */
     public function testDeleteOptionSetItemImage()
@@ -114,7 +114,7 @@ class MenuOptionSetItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for removeMenuItemOptionSetItem
      *
-     * Delete menu item option set item.
+     * .
      *
      */
     public function testRemoveMenuItemOptionSetItem()
@@ -124,7 +124,7 @@ class MenuOptionSetItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setOptionSetItemTax
      *
-     * Set Tax Rate on OptionSetItem.
+     * .
      *
      */
     public function testSetOptionSetItemTax()
@@ -134,7 +134,7 @@ class MenuOptionSetItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateMenuItemOptionSetItem
      *
-     * Update menu item option set item.
+     * .
      *
      */
     public function testUpdateMenuItemOptionSetItem()
@@ -144,7 +144,7 @@ class MenuOptionSetItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for uploadOptionSetItemImage
      *
-     * Upload menu item option set item image.
+     * .
      *
      */
     public function testUploadOptionSetItemImage()

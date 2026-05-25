@@ -4,17 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getPendingMenuChanges**](CatalogChangesApi.md#getPendingMenuChanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | Get menu pending changes from Catalog groups and items
-[**getPendingMenuChangesSummaries**](CatalogChangesApi.md#getPendingMenuChangesSummaries) | **GET** /api/v1.0/{appId}/menus/catalog-changes/summaries | Get menu pending changes summaries by appId
-[**publishPendingMenuChanges**](CatalogChangesApi.md#publishPendingMenuChanges) | **POST** /api/v1.0/{appId}/menus/catalog-changes/publish | Update menus with the pending changes from Catalog groups and items
+[**getPendingMenuChanges**](CatalogChangesApi.md#getPendingMenuChanges) | **GET** /api/v1.0/{appId}/menus/catalog-changes | 
+[**getPendingMenuChangesSummaries**](CatalogChangesApi.md#getPendingMenuChangesSummaries) | **GET** /api/v1.0/{appId}/menus/catalog-changes/summaries | 
+[**publishPendingMenuChanges**](CatalogChangesApi.md#publishPendingMenuChanges) | **POST** /api/v1.0/{appId}/menus/catalog-changes/publish | 
 
 
 # **getPendingMenuChanges**
 > \Flipdish\\Client\Models\RestApiPaginationResultPendingMenuChanges getPendingMenuChanges($app_id, $menu_id, $catalog_item_id, $page, $limit)
 
-Get menu pending changes from Catalog groups and items
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -73,7 +71,7 @@ Name | Type | Description  | Notes
 # **getPendingMenuChangesSummaries**
 > \Flipdish\\Client\Models\RestApiArrayResultPendingMenuChangesSummaries getPendingMenuChangesSummaries($app_id)
 
-Get menu pending changes summaries by appId
+
 
 ### Example
 ```php
@@ -124,9 +122,7 @@ Name | Type | Description  | Notes
 # **publishPendingMenuChanges**
 > publishPendingMenuChanges($app_id, $publish_menu_changes)
 
-Update menus with the pending changes from Catalog groups and items
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php

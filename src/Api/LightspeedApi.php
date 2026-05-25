@@ -88,33 +88,32 @@ class LightspeedApi
     }
 
     /**
-     * Operation lightspeedGenerateMenu
+     * Operation generateMenu
      *
      * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return void
      */
-    public function lightspeedGenerateMenu($store_id)
+    public function generateMenu($store_id)
     {
-        list($response) = $this->lightspeedGenerateMenuWithHttpInfo($store_id);
-        return $response;
+        $this->generateMenuWithHttpInfo($store_id);
     }
 
     /**
-     * Operation lightspeedGenerateMenuWithHttpInfo
+     * Operation generateMenuWithHttpInfo
      *
      * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function lightspeedGenerateMenuWithHttpInfo($store_id)
+    public function generateMenuWithHttpInfo($store_id)
     {
-        $returnType = 'object';
-        $request = $this->lightspeedGenerateMenuRequest($store_id);
+        $returnType = '';
+        $request = $this->generateMenuRequest($store_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -144,32 +143,10 @@ class LightspeedApi
                 );
             }
 
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
+            return [null, $statusCode, $response->getHeaders()];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -200,7 +177,7 @@ class LightspeedApi
     }
 
     /**
-     * Operation lightspeedGenerateMenuAsync
+     * Operation generateMenuAsync
      *
      * 
      *
@@ -209,9 +186,9 @@ class LightspeedApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function lightspeedGenerateMenuAsync($store_id)
+    public function generateMenuAsync($store_id)
     {
-        return $this->lightspeedGenerateMenuAsyncWithHttpInfo($store_id)
+        return $this->generateMenuAsyncWithHttpInfo($store_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -220,7 +197,7 @@ class LightspeedApi
     }
 
     /**
-     * Operation lightspeedGenerateMenuAsyncWithHttpInfo
+     * Operation generateMenuAsyncWithHttpInfo
      *
      * 
      *
@@ -229,30 +206,16 @@ class LightspeedApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function lightspeedGenerateMenuAsyncWithHttpInfo($store_id)
+    public function generateMenuAsyncWithHttpInfo($store_id)
     {
-        $returnType = 'object';
-        $request = $this->lightspeedGenerateMenuRequest($store_id);
+        $returnType = '';
+        $request = $this->generateMenuRequest($store_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -272,19 +235,19 @@ class LightspeedApi
     }
 
     /**
-     * Create request for operation 'lightspeedGenerateMenu'
+     * Create request for operation 'generateMenu'
      *
      * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function lightspeedGenerateMenuRequest($store_id)
+    protected function generateMenuRequest($store_id)
     {
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling lightspeedGenerateMenu'
+                'Missing the required parameter $store_id when calling generateMenu'
             );
         }
 
@@ -381,7 +344,7 @@ class LightspeedApi
     }
 
     /**
-     * Operation lightspeedGetStoreSettings
+     * Operation getStoreSettings
      *
      * @param  int $store_id store_id (required)
      *
@@ -389,14 +352,14 @@ class LightspeedApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultLightspeedSettings
      */
-    public function lightspeedGetStoreSettings($store_id)
+    public function getStoreSettings($store_id)
     {
-        list($response) = $this->lightspeedGetStoreSettingsWithHttpInfo($store_id);
+        list($response) = $this->getStoreSettingsWithHttpInfo($store_id);
         return $response;
     }
 
     /**
-     * Operation lightspeedGetStoreSettingsWithHttpInfo
+     * Operation getStoreSettingsWithHttpInfo
      *
      * @param  int $store_id (required)
      *
@@ -404,10 +367,10 @@ class LightspeedApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultLightspeedSettings, HTTP status code, HTTP response headers (array of strings)
      */
-    public function lightspeedGetStoreSettingsWithHttpInfo($store_id)
+    public function getStoreSettingsWithHttpInfo($store_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultLightspeedSettings';
-        $request = $this->lightspeedGetStoreSettingsRequest($store_id);
+        $request = $this->getStoreSettingsRequest($store_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -493,7 +456,7 @@ class LightspeedApi
     }
 
     /**
-     * Operation lightspeedGetStoreSettingsAsync
+     * Operation getStoreSettingsAsync
      *
      * 
      *
@@ -502,9 +465,9 @@ class LightspeedApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function lightspeedGetStoreSettingsAsync($store_id)
+    public function getStoreSettingsAsync($store_id)
     {
-        return $this->lightspeedGetStoreSettingsAsyncWithHttpInfo($store_id)
+        return $this->getStoreSettingsAsyncWithHttpInfo($store_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -513,7 +476,7 @@ class LightspeedApi
     }
 
     /**
-     * Operation lightspeedGetStoreSettingsAsyncWithHttpInfo
+     * Operation getStoreSettingsAsyncWithHttpInfo
      *
      * 
      *
@@ -522,10 +485,10 @@ class LightspeedApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function lightspeedGetStoreSettingsAsyncWithHttpInfo($store_id)
+    public function getStoreSettingsAsyncWithHttpInfo($store_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultLightspeedSettings';
-        $request = $this->lightspeedGetStoreSettingsRequest($store_id);
+        $request = $this->getStoreSettingsRequest($store_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -565,19 +528,19 @@ class LightspeedApi
     }
 
     /**
-     * Create request for operation 'lightspeedGetStoreSettings'
+     * Create request for operation 'getStoreSettings'
      *
      * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function lightspeedGetStoreSettingsRequest($store_id)
+    protected function getStoreSettingsRequest($store_id)
     {
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling lightspeedGetStoreSettings'
+                'Missing the required parameter $store_id when calling getStoreSettings'
             );
         }
 
@@ -674,7 +637,7 @@ class LightspeedApi
     }
 
     /**
-     * Operation lightspeedSaveStoreSettings
+     * Operation saveStoreSettings
      *
      * @param  int $store_id store_id (required)
      * @param  \Flipdish\\Client\Models\LightspeedSettings $lightspeed_settings lightspeed_settings (required)
@@ -683,14 +646,14 @@ class LightspeedApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultLightspeedSettings
      */
-    public function lightspeedSaveStoreSettings($store_id, $lightspeed_settings)
+    public function saveStoreSettings($store_id, $lightspeed_settings)
     {
-        list($response) = $this->lightspeedSaveStoreSettingsWithHttpInfo($store_id, $lightspeed_settings);
+        list($response) = $this->saveStoreSettingsWithHttpInfo($store_id, $lightspeed_settings);
         return $response;
     }
 
     /**
-     * Operation lightspeedSaveStoreSettingsWithHttpInfo
+     * Operation saveStoreSettingsWithHttpInfo
      *
      * @param  int $store_id (required)
      * @param  \Flipdish\\Client\Models\LightspeedSettings $lightspeed_settings (required)
@@ -699,10 +662,10 @@ class LightspeedApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultLightspeedSettings, HTTP status code, HTTP response headers (array of strings)
      */
-    public function lightspeedSaveStoreSettingsWithHttpInfo($store_id, $lightspeed_settings)
+    public function saveStoreSettingsWithHttpInfo($store_id, $lightspeed_settings)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultLightspeedSettings';
-        $request = $this->lightspeedSaveStoreSettingsRequest($store_id, $lightspeed_settings);
+        $request = $this->saveStoreSettingsRequest($store_id, $lightspeed_settings);
 
         try {
             $options = $this->createHttpClientOption();
@@ -788,7 +751,7 @@ class LightspeedApi
     }
 
     /**
-     * Operation lightspeedSaveStoreSettingsAsync
+     * Operation saveStoreSettingsAsync
      *
      * 
      *
@@ -798,9 +761,9 @@ class LightspeedApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function lightspeedSaveStoreSettingsAsync($store_id, $lightspeed_settings)
+    public function saveStoreSettingsAsync($store_id, $lightspeed_settings)
     {
-        return $this->lightspeedSaveStoreSettingsAsyncWithHttpInfo($store_id, $lightspeed_settings)
+        return $this->saveStoreSettingsAsyncWithHttpInfo($store_id, $lightspeed_settings)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -809,7 +772,7 @@ class LightspeedApi
     }
 
     /**
-     * Operation lightspeedSaveStoreSettingsAsyncWithHttpInfo
+     * Operation saveStoreSettingsAsyncWithHttpInfo
      *
      * 
      *
@@ -819,10 +782,10 @@ class LightspeedApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function lightspeedSaveStoreSettingsAsyncWithHttpInfo($store_id, $lightspeed_settings)
+    public function saveStoreSettingsAsyncWithHttpInfo($store_id, $lightspeed_settings)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultLightspeedSettings';
-        $request = $this->lightspeedSaveStoreSettingsRequest($store_id, $lightspeed_settings);
+        $request = $this->saveStoreSettingsRequest($store_id, $lightspeed_settings);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -862,7 +825,7 @@ class LightspeedApi
     }
 
     /**
-     * Create request for operation 'lightspeedSaveStoreSettings'
+     * Create request for operation 'saveStoreSettings'
      *
      * @param  int $store_id (required)
      * @param  \Flipdish\\Client\Models\LightspeedSettings $lightspeed_settings (required)
@@ -870,18 +833,18 @@ class LightspeedApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function lightspeedSaveStoreSettingsRequest($store_id, $lightspeed_settings)
+    protected function saveStoreSettingsRequest($store_id, $lightspeed_settings)
     {
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling lightspeedSaveStoreSettings'
+                'Missing the required parameter $store_id when calling saveStoreSettings'
             );
         }
         // verify the required parameter 'lightspeed_settings' is set
         if ($lightspeed_settings === null || (is_array($lightspeed_settings) && count($lightspeed_settings) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $lightspeed_settings when calling lightspeedSaveStoreSettings'
+                'Missing the required parameter $lightspeed_settings when calling saveStoreSettings'
             );
         }
 

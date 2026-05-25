@@ -72,82 +72,82 @@ class OnboardingApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for onboardingGetOnboardingConfig
+     * Test case for getOnboardingConfig
      *
      * .
      *
      */
-    public function testOnboardingGetOnboardingConfig()
+    public function testGetOnboardingConfig()
     {
     }
 
     /**
-     * Test case for onboardingGetOnboardingConfigs
+     * Test case for getOnboardingConfigs
      *
      * .
      *
      */
-    public function testOnboardingGetOnboardingConfigs()
+    public function testGetOnboardingConfigs()
     {
     }
 
     /**
-     * Test case for onboardingGetOnboardingItems
+     * Test case for getOnboardingItems
      *
      * .
      *
      */
-    public function testOnboardingGetOnboardingItems()
+    public function testGetOnboardingItems()
     {
     }
 
     /**
-     * Test case for onboardingGetOnboardingItemsV2
+     * Test case for getOnboardingItemsV2
      *
      * .
      *
      */
-    public function testOnboardingGetOnboardingItemsV2()
+    public function testGetOnboardingItemsV2()
     {
     }
 
     /**
-     * Test case for onboardingUpdateOnboardingConfig
+     * Test case for updateOnboardingConfig
      *
      * .
      *
      */
-    public function testOnboardingUpdateOnboardingConfig()
+    public function testUpdateOnboardingConfig()
     {
     }
 
     /**
-     * Test case for onboardingUpdateOnboardingConfigById
+     * Test case for updateOnboardingConfigById
      *
      * .
      *
      */
-    public function testOnboardingUpdateOnboardingConfigById()
+    public function testUpdateOnboardingConfigById()
     {
     }
 
     /**
-     * Test case for onboardingUpdateOnboardingItem
+     * Test case for updateOnboardingItem
      *
      * .
      *
      */
-    public function testOnboardingUpdateOnboardingItem()
+    public function testUpdateOnboardingItem()
     {
     }
 
     /**
-     * Test case for onboardingUpdateOnboardingItemV2
+     * Test case for updateOnboardingItemV2
      *
      * .
      *
      */
-    public function testOnboardingUpdateOnboardingItemV2()
+    public function testUpdateOnboardingItemV2()
     {
     }
 }

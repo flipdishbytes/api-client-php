@@ -90,10 +90,8 @@ class CatalogProductsApi
     /**
      * Operation archiveProduct
      *
-     * Archive Product
-     *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $catalog_item_id catalog_item_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -107,10 +105,8 @@ class CatalogProductsApi
     /**
      * Operation archiveProductWithHttpInfo
      *
-     * Archive Product
-     *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -153,14 +149,6 @@ class CatalogProductsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -185,10 +173,10 @@ class CatalogProductsApi
     /**
      * Operation archiveProductAsync
      *
-     * Archive Product
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -206,10 +194,10 @@ class CatalogProductsApi
     /**
      * Operation archiveProductAsyncWithHttpInfo
      *
-     * Archive Product
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -245,8 +233,8 @@ class CatalogProductsApi
     /**
      * Create request for operation 'archiveProduct'
      *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -369,10 +357,8 @@ class CatalogProductsApi
     /**
      * Operation createProduct
      *
-     * Create a Product
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\CreateProduct $create_product  (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateProduct $create_product create_product (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -387,10 +373,8 @@ class CatalogProductsApi
     /**
      * Operation createProductWithHttpInfo
      *
-     * Create a Product
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\CreateProduct $create_product  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateProduct $create_product (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -455,14 +439,6 @@ class CatalogProductsApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -487,10 +463,10 @@ class CatalogProductsApi
     /**
      * Operation createProductAsync
      *
-     * Create a Product
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\CreateProduct $create_product  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateProduct $create_product (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -508,10 +484,10 @@ class CatalogProductsApi
     /**
      * Operation createProductAsyncWithHttpInfo
      *
-     * Create a Product
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\CreateProduct $create_product  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateProduct $create_product (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -561,8 +537,8 @@ class CatalogProductsApi
     /**
      * Create request for operation 'createProduct'
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\CreateProduct $create_product  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\CreateProduct $create_product (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -680,10 +656,8 @@ class CatalogProductsApi
     /**
      * Operation duplicateProduct
      *
-     * Duplicate Product
-     *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $catalog_item_id catalog_item_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -697,10 +671,8 @@ class CatalogProductsApi
     /**
      * Operation duplicateProductWithHttpInfo
      *
-     * Duplicate Product
-     *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -743,14 +715,6 @@ class CatalogProductsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -775,10 +739,10 @@ class CatalogProductsApi
     /**
      * Operation duplicateProductAsync
      *
-     * Duplicate Product
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -796,10 +760,10 @@ class CatalogProductsApi
     /**
      * Operation duplicateProductAsyncWithHttpInfo
      *
-     * Duplicate Product
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -835,8 +799,8 @@ class CatalogProductsApi
     /**
      * Create request for operation 'duplicateProduct'
      *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -959,10 +923,8 @@ class CatalogProductsApi
     /**
      * Operation getProductById
      *
-     * Get Product by Id
-     *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $catalog_item_id catalog_item_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -977,10 +939,8 @@ class CatalogProductsApi
     /**
      * Operation getProductByIdWithHttpInfo
      *
-     * Get Product by Id
-     *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1077,10 +1037,10 @@ class CatalogProductsApi
     /**
      * Operation getProductByIdAsync
      *
-     * Get Product by Id
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1098,10 +1058,10 @@ class CatalogProductsApi
     /**
      * Operation getProductByIdAsyncWithHttpInfo
      *
-     * Get Product by Id
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1151,8 +1111,8 @@ class CatalogProductsApi
     /**
      * Create request for operation 'getProductById'
      *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1275,13 +1235,11 @@ class CatalogProductsApi
     /**
      * Operation getProducts
      *
-     * Get paginated products by app name id filtered by types
-     *
-     * @param  string $app_id  (required)
-     * @param  string[] $product_types  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  string[] $product_types product_types (required)
+     * @param  string $search_term search_term (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1296,13 +1254,11 @@ class CatalogProductsApi
     /**
      * Operation getProductsWithHttpInfo
      *
-     * Get paginated products by app name id filtered by types
-     *
-     * @param  string $app_id  (required)
-     * @param  string[] $product_types  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  string[] $product_types (required)
+     * @param  string $search_term (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1399,13 +1355,13 @@ class CatalogProductsApi
     /**
      * Operation getProductsAsync
      *
-     * Get paginated products by app name id filtered by types
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string[] $product_types  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  string[] $product_types (required)
+     * @param  string $search_term (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1423,13 +1379,13 @@ class CatalogProductsApi
     /**
      * Operation getProductsAsyncWithHttpInfo
      *
-     * Get paginated products by app name id filtered by types
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string[] $product_types  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  string[] $product_types (required)
+     * @param  string $search_term (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1479,11 +1435,11 @@ class CatalogProductsApi
     /**
      * Create request for operation 'getProducts'
      *
-     * @param  string $app_id  (required)
-     * @param  string[] $product_types  (required)
-     * @param  string $search_term  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  string[] $product_types (required)
+     * @param  string $search_term (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1617,11 +1573,9 @@ class CatalogProductsApi
     /**
      * Operation updateProduct
      *
-     * Update Product
-     *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateProduct $update_product  (required)
+     * @param  string $app_id app_id (required)
+     * @param  string $catalog_item_id catalog_item_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateProduct $update_product update_product (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1635,11 +1589,9 @@ class CatalogProductsApi
     /**
      * Operation updateProductWithHttpInfo
      *
-     * Update Product
-     *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateProduct $update_product  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateProduct $update_product (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1682,14 +1634,6 @@ class CatalogProductsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1714,11 +1658,11 @@ class CatalogProductsApi
     /**
      * Operation updateProductAsync
      *
-     * Update Product
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateProduct $update_product  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateProduct $update_product (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1736,11 +1680,11 @@ class CatalogProductsApi
     /**
      * Operation updateProductAsyncWithHttpInfo
      *
-     * Update Product
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateProduct $update_product  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateProduct $update_product (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1776,9 +1720,9 @@ class CatalogProductsApi
     /**
      * Create request for operation 'updateProduct'
      *
-     * @param  string $app_id  (required)
-     * @param  string $catalog_item_id  (required)
-     * @param  \Flipdish\\Client\Models\UpdateProduct $update_product  (required)
+     * @param  string $app_id (required)
+     * @param  string $catalog_item_id (required)
+     * @param  \Flipdish\\Client\Models\UpdateProduct $update_product (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

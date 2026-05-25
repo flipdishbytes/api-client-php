@@ -72,112 +72,112 @@ class DriversApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for driversAddDriverNotificationToken
+     * Test case for addDriverNotificationToken
      *
      * .
      *
      */
-    public function testDriversAddDriverNotificationToken()
+    public function testAddDriverNotificationToken()
     {
     }
 
     /**
-     * Test case for driversDeleteDriverProfileImage
+     * Test case for deleteDriverProfileImage
      *
      * .
      *
      */
-    public function testDriversDeleteDriverProfileImage()
+    public function testDeleteDriverProfileImage()
     {
     }
 
     /**
-     * Test case for driversDriverLogin
+     * Test case for driverLogin
      *
      * .
      *
      */
-    public function testDriversDriverLogin()
+    public function testDriverLogin()
     {
     }
 
     /**
-     * Test case for driversDriverRequestLoginCodeSms
+     * Test case for driverRequestLoginCodeSms
      *
      * .
      *
      */
-    public function testDriversDriverRequestLoginCodeSms()
+    public function testDriverRequestLoginCodeSms()
     {
     }
 
     /**
-     * Test case for driversGetDriverProfile
+     * Test case for getDriverProfile
      *
      * .
      *
      */
-    public function testDriversGetDriverProfile()
+    public function testGetDriverProfile()
     {
     }
 
     /**
-     * Test case for driversGetStoresForDriver
+     * Test case for getStoresForDriver
      *
      * .
      *
      */
-    public function testDriversGetStoresForDriver()
+    public function testGetStoresForDriver()
     {
     }
 
     /**
-     * Test case for driversRemoveDriverNotificationToken
+     * Test case for removeDriverNotificationToken
      *
      * .
      *
      */
-    public function testDriversRemoveDriverNotificationToken()
+    public function testRemoveDriverNotificationToken()
     {
     }
 
     /**
-     * Test case for driversSetDriverPresenceForStore
+     * Test case for setDriverPresenceForStore
      *
      * .
      *
      */
-    public function testDriversSetDriverPresenceForStore()
+    public function testSetDriverPresenceForStore()
     {
     }
 
     /**
-     * Test case for driversSetDriverProfileImage
+     * Test case for setDriverProfileImage
      *
      * .
      *
      */
-    public function testDriversSetDriverProfileImage()
+    public function testSetDriverProfileImage()
     {
     }
 
     /**
-     * Test case for driversUpdateDeliveryTrackingStatus
+     * Test case for updateDeliveryTrackingStatus
      *
      * .
      *
      */
-    public function testDriversUpdateDeliveryTrackingStatus()
+    public function testUpdateDeliveryTrackingStatus()
     {
     }
 
     /**
-     * Test case for driversUpdateDriverProfile
+     * Test case for updateDriverProfile
      *
      * .
      *
      */
-    public function testDriversUpdateDriverProfile()
+    public function testUpdateDriverProfile()
     {
     }
 }

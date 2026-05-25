@@ -8,20 +8,20 @@ Method | HTTP request | Description
 [**attachStoreToKiosk**](HydraApi.md#attachStoreToKiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | 
 [**attachStoreToTerminal**](HydraApi.md#attachStoreToTerminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | 
 [**cancelEmvPayment**](HydraApi.md#cancelEmvPayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
+[**createEmv**](HydraApi.md#createEmv) | **POST** /api/v1.0/{appId}/emvterminals | 
+[**deleteEmv**](HydraApi.md#deleteEmv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | 
+[**detachStoreFromKiosk**](HydraApi.md#detachStoreFromKiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | 
 [**detachStoreFromTerminal**](HydraApi.md#detachStoreFromTerminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | 
 [**getAblyToken**](HydraApi.md#getAblyToken) | **GET** /api/v1.0/hydra/ably_token | 
 [**getAttachedDevice**](HydraApi.md#getAttachedDevice) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/{deviceId} | 
 [**getAttachedDevices**](HydraApi.md#getAttachedDevices) | **GET** /api/v1.0/{appId}/hydra/{deviceType}/list | 
 [**getEMVTerminalDetails**](HydraApi.md#getEMVTerminalDetails) | **GET** /api/v1.0/{appId}/hydra/emvterminal | 
 [**getEmvOrderState**](HydraApi.md#getEmvOrderState) | **GET** /api/v1.0/{appId}/hydra/emvorderstate/{orderId} | 
+[**getEmvsForAppId**](HydraApi.md#getEmvsForAppId) | **GET** /api/v1.0/{appId}/emvterminals | 
 [**getKioskCashPaymentSettings**](HydraApi.md#getKioskCashPaymentSettings) | **GET** /api/v1.0/{appId}/kioskcashsettings/{deviceId} | 
 [**getKioskSettings**](HydraApi.md#getKioskSettings) | **GET** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
 [**getRegistration**](HydraApi.md#getRegistration) | **GET** /api/v1.0/hydra/registration | 
 [**getSettings**](HydraApi.md#getSettings) | **GET** /api/v1.0/hydra/settings | 
-[**hydraCreateEmv**](HydraApi.md#hydraCreateEmv) | **POST** /api/v1.0/{appId}/emvterminals | 
-[**hydraDeleteEmv**](HydraApi.md#hydraDeleteEmv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | 
-[**hydraDetachStoreFromKiosk**](HydraApi.md#hydraDetachStoreFromKiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | 
-[**hydraGetEmvsForAppId**](HydraApi.md#hydraGetEmvsForAppId) | **GET** /api/v1.0/{appId}/emvterminals | 
 [**loginWithDeviceId**](HydraApi.md#loginWithDeviceId) | **POST** /api/v1.0/hydra/{deviceId}/login | 
 [**register**](HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | 
 [**unAssign**](HydraApi.md#unAssign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | 
@@ -234,6 +234,166 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **createEmv**
+> int createEmv($app_id, $emv)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\HydraApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$emv = new \Flipdish\\Client\Models\EmvTerminal(); // \Flipdish\\Client\Models\EmvTerminal | 
+
+try {
+    $result = $apiInstance->createEmv($app_id, $emv);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling HydraApi->createEmv: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **emv** | [**\Flipdish\\Client\Models\EmvTerminal**](../Model/EmvTerminal.md)|  |
+
+### Return type
+
+**int**
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **deleteEmv**
+> deleteEmv($app_id, $id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\HydraApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$id = 56; // int | 
+
+try {
+    $apiInstance->deleteEmv($app_id, $id);
+} catch (Exception $e) {
+    echo 'Exception when calling HydraApi->deleteEmv: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **id** | **int**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **detachStoreFromKiosk**
+> \Flipdish\\Client\Models\RestApiResultHydraStatus detachStoreFromKiosk($app_id, $store_id, $device_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\HydraApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$store_id = 56; // int | 
+$device_id = "device_id_example"; // string | 
+
+try {
+    $result = $apiInstance->detachStoreFromKiosk($app_id, $store_id, $device_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling HydraApi->detachStoreFromKiosk: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **store_id** | **int**|  |
+ **device_id** | **string**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultHydraStatus**](../Model/RestApiResultHydraStatus.md)
 
 ### Authorization
 
@@ -569,6 +729,57 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getEmvsForAppId**
+> \Flipdish\\Client\Models\RestApiArrayResultEmvTerminalWithAssignments getEmvsForAppId($app_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\HydraApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+
+try {
+    $result = $apiInstance->getEmvsForAppId($app_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling HydraApi->getEmvsForAppId: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiArrayResultEmvTerminalWithAssignments**](../Model/RestApiArrayResultEmvTerminalWithAssignments.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getKioskCashPaymentSettings**
 > \Flipdish\\Client\Models\RestApiArrayResultKioskCashPaymentSettings getKioskCashPaymentSettings($app_id, $device_id)
 
@@ -757,218 +968,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiResultHydraConfig**](../Model/RestApiResultHydraConfig.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **hydraCreateEmv**
-> object hydraCreateEmv($app_id, $emv)
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\HydraApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$app_id = "app_id_example"; // string | 
-$emv = new \Flipdish\\Client\Models\EmvTerminal(); // \Flipdish\\Client\Models\EmvTerminal | 
-
-try {
-    $result = $apiInstance->hydraCreateEmv($app_id, $emv);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling HydraApi->hydraCreateEmv: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
- **emv** | [**\Flipdish\\Client\Models\EmvTerminal**](../Model/EmvTerminal.md)|  |
-
-### Return type
-
-**object**
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **hydraDeleteEmv**
-> object hydraDeleteEmv($app_id, $id)
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\HydraApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$app_id = "app_id_example"; // string | 
-$id = 56; // int | 
-
-try {
-    $result = $apiInstance->hydraDeleteEmv($app_id, $id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling HydraApi->hydraDeleteEmv: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
- **id** | **int**|  |
-
-### Return type
-
-**object**
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **hydraDetachStoreFromKiosk**
-> \Flipdish\\Client\Models\RestApiResultHydraStatus hydraDetachStoreFromKiosk($app_id, $store_id, $device_id)
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\HydraApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$app_id = "app_id_example"; // string | 
-$store_id = 56; // int | 
-$device_id = "device_id_example"; // string | 
-
-try {
-    $result = $apiInstance->hydraDetachStoreFromKiosk($app_id, $store_id, $device_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling HydraApi->hydraDetachStoreFromKiosk: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
- **store_id** | **int**|  |
- **device_id** | **string**|  |
-
-### Return type
-
-[**\Flipdish\\Client\Models\RestApiResultHydraStatus**](../Model/RestApiResultHydraStatus.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **hydraGetEmvsForAppId**
-> \Flipdish\\Client\Models\RestApiArrayResultEmvTerminalWithAssignments hydraGetEmvsForAppId($app_id)
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\HydraApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$app_id = "app_id_example"; // string | 
-
-try {
-    $result = $apiInstance->hydraGetEmvsForAppId($app_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling HydraApi->hydraGetEmvsForAppId: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
-
-### Return type
-
-[**\Flipdish\\Client\Models\RestApiArrayResultEmvTerminalWithAssignments**](../Model/RestApiArrayResultEmvTerminalWithAssignments.md)
 
 ### Authorization
 

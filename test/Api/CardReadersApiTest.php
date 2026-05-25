@@ -92,16 +92,6 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for cardReadersGetReader
-     *
-     * .
-     *
-     */
-    public function testCardReadersGetReader()
-    {
-    }
-
-    /**
      * Test case for generateStripeTerminalLocation
      *
      * .
@@ -118,6 +108,16 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testGetBluetoothTerminalStatus()
+    {
+    }
+
+    /**
+     * Test case for getReader
+     *
+     * .
+     *
+     */
+    public function testGetReader()
     {
     }
 

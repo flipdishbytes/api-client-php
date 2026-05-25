@@ -487,6 +487,10 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
         }
+        if ((mb_strlen($this->container['description']) > 100)) {
+            $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 100.";
+        }
+
         if ($this->container['categories'] === null) {
             $invalidProperties[] = "'categories' can't be null";
         }
@@ -875,6 +879,10 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
      */
     public function setDescription($description)
     {
+        if ((mb_strlen($description) > 100)) {
+            throw new \InvalidArgumentException('invalid length for $description when calling CreateAppStoreApp., must be smaller than or equal to 100.');
+        }
+
         $this->container['description'] = $description;
 
         return $this;

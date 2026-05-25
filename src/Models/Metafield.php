@@ -199,9 +199,17 @@ class Metafield implements ModelInterface, ArrayAccess
         if ($this->container['key'] === null) {
             $invalidProperties[] = "'key' can't be null";
         }
+        if ((mb_strlen($this->container['key']) > 100)) {
+            $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 100.";
+        }
+
         if ($this->container['value'] === null) {
             $invalidProperties[] = "'value' can't be null";
         }
+        if ((mb_strlen($this->container['value']) > 2000)) {
+            $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 2000.";
+        }
+
         return $invalidProperties;
     }
 
@@ -236,6 +244,10 @@ class Metafield implements ModelInterface, ArrayAccess
      */
     public function setKey($key)
     {
+        if ((mb_strlen($key) > 100)) {
+            throw new \InvalidArgumentException('invalid length for $key when calling Metafield., must be smaller than or equal to 100.');
+        }
+
         $this->container['key'] = $key;
 
         return $this;
@@ -260,6 +272,10 @@ class Metafield implements ModelInterface, ArrayAccess
      */
     public function setValue($value)
     {
+        if ((mb_strlen($value) > 2000)) {
+            throw new \InvalidArgumentException('invalid length for $value when calling Metafield., must be smaller than or equal to 2000.');
+        }
+
         $this->container['value'] = $value;
 
         return $this;

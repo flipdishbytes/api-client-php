@@ -90,13 +90,11 @@ class CatalogChangesApi
     /**
      * Operation getPendingMenuChanges
      *
-     * Get menu pending changes from Catalog groups and items
-     *
-     * @param  string $app_id  (required)
-     * @param  int $menu_id  (optional)
-     * @param  string $catalog_item_id  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id app_id (required)
+     * @param  int $menu_id menu_id (optional)
+     * @param  string $catalog_item_id catalog_item_id (optional)
+     * @param  int $page page (optional)
+     * @param  int $limit limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -111,13 +109,11 @@ class CatalogChangesApi
     /**
      * Operation getPendingMenuChangesWithHttpInfo
      *
-     * Get menu pending changes from Catalog groups and items
-     *
-     * @param  string $app_id  (required)
-     * @param  int $menu_id  (optional)
-     * @param  string $catalog_item_id  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  int $menu_id (optional)
+     * @param  string $catalog_item_id (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -182,14 +178,6 @@ class CatalogChangesApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -214,13 +202,13 @@ class CatalogChangesApi
     /**
      * Operation getPendingMenuChangesAsync
      *
-     * Get menu pending changes from Catalog groups and items
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $menu_id  (optional)
-     * @param  string $catalog_item_id  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  int $menu_id (optional)
+     * @param  string $catalog_item_id (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -238,13 +226,13 @@ class CatalogChangesApi
     /**
      * Operation getPendingMenuChangesAsyncWithHttpInfo
      *
-     * Get menu pending changes from Catalog groups and items
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  int $menu_id  (optional)
-     * @param  string $catalog_item_id  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  int $menu_id (optional)
+     * @param  string $catalog_item_id (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -294,11 +282,11 @@ class CatalogChangesApi
     /**
      * Create request for operation 'getPendingMenuChanges'
      *
-     * @param  string $app_id  (required)
-     * @param  int $menu_id  (optional)
-     * @param  string $catalog_item_id  (optional)
-     * @param  int $page  (optional)
-     * @param  int $limit  (optional)
+     * @param  string $app_id (required)
+     * @param  int $menu_id (optional)
+     * @param  string $catalog_item_id (optional)
+     * @param  int $page (optional)
+     * @param  int $limit (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -423,9 +411,7 @@ class CatalogChangesApi
     /**
      * Operation getPendingMenuChangesSummaries
      *
-     * Get menu pending changes summaries by appId
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -440,9 +426,7 @@ class CatalogChangesApi
     /**
      * Operation getPendingMenuChangesSummariesWithHttpInfo
      *
-     * Get menu pending changes summaries by appId
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -539,9 +523,9 @@ class CatalogChangesApi
     /**
      * Operation getPendingMenuChangesSummariesAsync
      *
-     * Get menu pending changes summaries by appId
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -559,9 +543,9 @@ class CatalogChangesApi
     /**
      * Operation getPendingMenuChangesSummariesAsyncWithHttpInfo
      *
-     * Get menu pending changes summaries by appId
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -611,7 +595,7 @@ class CatalogChangesApi
     /**
      * Create request for operation 'getPendingMenuChangesSummaries'
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -720,10 +704,8 @@ class CatalogChangesApi
     /**
      * Operation publishPendingMenuChanges
      *
-     * Update menus with the pending changes from Catalog groups and items
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\PublishMenuChanges $publish_menu_changes  (required)
+     * @param  string $app_id app_id (required)
+     * @param  \Flipdish\\Client\Models\PublishMenuChanges $publish_menu_changes publish_menu_changes (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -737,10 +719,8 @@ class CatalogChangesApi
     /**
      * Operation publishPendingMenuChangesWithHttpInfo
      *
-     * Update menus with the pending changes from Catalog groups and items
-     *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\PublishMenuChanges $publish_menu_changes  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\PublishMenuChanges $publish_menu_changes (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -783,14 +763,6 @@ class CatalogChangesApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -815,10 +787,10 @@ class CatalogChangesApi
     /**
      * Operation publishPendingMenuChangesAsync
      *
-     * Update menus with the pending changes from Catalog groups and items
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\PublishMenuChanges $publish_menu_changes  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\PublishMenuChanges $publish_menu_changes (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -836,10 +808,10 @@ class CatalogChangesApi
     /**
      * Operation publishPendingMenuChangesAsyncWithHttpInfo
      *
-     * Update menus with the pending changes from Catalog groups and items
+     * 
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\PublishMenuChanges $publish_menu_changes  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\PublishMenuChanges $publish_menu_changes (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -875,8 +847,8 @@ class CatalogChangesApi
     /**
      * Create request for operation 'publishPendingMenuChanges'
      *
-     * @param  string $app_id  (required)
-     * @param  \Flipdish\\Client\Models\PublishMenuChanges $publish_menu_changes  (required)
+     * @param  string $app_id (required)
+     * @param  \Flipdish\\Client\Models\PublishMenuChanges $publish_menu_changes (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

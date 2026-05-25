@@ -90,9 +90,7 @@ class CatalogImagesApi
     /**
      * Operation uploadCatalogImage
      *
-     * Upload a Catalog Image
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id app_id (required)
      * @param  \SplFileObject $image Catalog image (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -108,9 +106,7 @@ class CatalogImagesApi
     /**
      * Operation uploadCatalogImageWithHttpInfo
      *
-     * Upload a Catalog Image
-     *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      * @param  \SplFileObject $image Catalog image (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -176,14 +172,6 @@ class CatalogImagesApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -208,9 +196,9 @@ class CatalogImagesApi
     /**
      * Operation uploadCatalogImageAsync
      *
-     * Upload a Catalog Image
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      * @param  \SplFileObject $image Catalog image (required)
      *
      * @throws \InvalidArgumentException
@@ -229,9 +217,9 @@ class CatalogImagesApi
     /**
      * Operation uploadCatalogImageAsyncWithHttpInfo
      *
-     * Upload a Catalog Image
+     * 
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      * @param  \SplFileObject $image Catalog image (required)
      *
      * @throws \InvalidArgumentException
@@ -282,7 +270,7 @@ class CatalogImagesApi
     /**
      * Create request for operation 'uploadCatalogImage'
      *
-     * @param  string $app_id  (required)
+     * @param  string $app_id (required)
      * @param  \SplFileObject $image Catalog image (required)
      *
      * @throws \InvalidArgumentException

@@ -74,7 +74,7 @@ class CatalogChangesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPendingMenuChanges
      *
-     * Get menu pending changes from Catalog groups and items.
+     * .
      *
      */
     public function testGetPendingMenuChanges()
@@ -84,7 +84,7 @@ class CatalogChangesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getPendingMenuChangesSummaries
      *
-     * Get menu pending changes summaries by appId.
+     * .
      *
      */
     public function testGetPendingMenuChangesSummaries()
@@ -94,7 +94,7 @@ class CatalogChangesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for publishPendingMenuChanges
      *
-     * Update menus with the pending changes from Catalog groups and items.
+     * .
      *
      */
     public function testPublishPendingMenuChanges()

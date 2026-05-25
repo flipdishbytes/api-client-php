@@ -8,13 +8,13 @@ Method | HTTP request | Description
 [**createMenuAvailabilityForDay**](MenuSectionsApi.md#createMenuAvailabilityForDay) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability/times/{dayOfWeek} | Set/update menu section availability hours.
 [**createMenuSection**](MenuSectionsApi.md#createMenuSection) | **POST** /api/v1.0/menus/{menuId}/sections | Create menu section
 [**createMenuSectionAvailability**](MenuSectionsApi.md#createMenuSectionAvailability) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/availability | Create menu availability type
-[**deleteMenuSection**](MenuSectionsApi.md#deleteMenuSection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Delete menu section
-[**deleteMenuSectionImage**](MenuSectionsApi.md#deleteMenuSectionImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Delete menu section image
+[**deleteMenuSection**](MenuSectionsApi.md#deleteMenuSection) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | 
+[**deleteMenuSectionImage**](MenuSectionsApi.md#deleteMenuSectionImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | 
 [**getMenuSectionById**](MenuSectionsApi.md#getMenuSectionById) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Get menu section by identifier
 [**getMenuSections**](MenuSectionsApi.md#getMenuSections) | **GET** /api/v1.0/menus/{menuId}/sections | Get menu sections
-[**menuSectionsSetItemDisplayOrders**](MenuSectionsApi.md#menuSectionsSetItemDisplayOrders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | Re-arrange Items within a Section
+[**setItemDisplayOrders**](MenuSectionsApi.md#setItemDisplayOrders) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitemdisplayorders | 
 [**updateMenuSection**](MenuSectionsApi.md#updateMenuSection) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId} | Update menu section
-[**uploadMenuSectionImage**](MenuSectionsApi.md#uploadMenuSectionImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | Upload menu section image
+[**uploadMenuSectionImage**](MenuSectionsApi.md#uploadMenuSectionImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/image | 
 
 
 # **cloneMenuSection**
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 # **deleteMenuSection**
 > deleteMenuSection($menu_id, $menu_section_id)
 
-Delete menu section
+
 
 ### Example
 ```php
@@ -254,8 +254,8 @@ $apiInstance = new Flipdish\\Client\Api\MenuSectionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
-$menu_section_id = 56; // int | Menu section identifier
+$menu_id = 56; // int | 
+$menu_section_id = 56; // int | 
 
 try {
     $apiInstance->deleteMenuSection($menu_id, $menu_section_id);
@@ -269,8 +269,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **menu_section_id** | **int**| Menu section identifier |
+ **menu_id** | **int**|  |
+ **menu_section_id** | **int**|  |
 
 ### Return type
 
@@ -290,7 +290,7 @@ void (empty response body)
 # **deleteMenuSectionImage**
 > deleteMenuSectionImage($menu_id, $menu_section_id)
 
-Delete menu section image
+
 
 ### Example
 ```php
@@ -306,8 +306,8 @@ $apiInstance = new Flipdish\\Client\Api\MenuSectionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
-$menu_section_id = 56; // int | Menu section identifier
+$menu_id = 56; // int | 
+$menu_section_id = 56; // int | 
 
 try {
     $apiInstance->deleteMenuSectionImage($menu_id, $menu_section_id);
@@ -321,8 +321,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **menu_section_id** | **int**| Menu section identifier |
+ **menu_id** | **int**|  |
+ **menu_section_id** | **int**|  |
 
 ### Return type
 
@@ -443,10 +443,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **menuSectionsSetItemDisplayOrders**
-> menuSectionsSetItemDisplayOrders($menu_id, $menu_section_id, $display_orders)
+# **setItemDisplayOrders**
+> setItemDisplayOrders($menu_id, $menu_section_id, $display_orders)
 
-Re-arrange Items within a Section
+
 
 ### Example
 ```php
@@ -462,14 +462,14 @@ $apiInstance = new Flipdish\\Client\Api\MenuSectionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
-$menu_section_id = 56; // int | Menu section identifier
-$display_orders = new \Flipdish\\Client\Models\MenuObjectDisplayOrders(); // \Flipdish\\Client\Models\MenuObjectDisplayOrders | Item Ids and their new display order
+$menu_id = 56; // int | 
+$menu_section_id = 56; // int | 
+$display_orders = new \Flipdish\\Client\Models\MenuObjectDisplayOrders(); // \Flipdish\\Client\Models\MenuObjectDisplayOrders | 
 
 try {
-    $apiInstance->menuSectionsSetItemDisplayOrders($menu_id, $menu_section_id, $display_orders);
+    $apiInstance->setItemDisplayOrders($menu_id, $menu_section_id, $display_orders);
 } catch (Exception $e) {
-    echo 'Exception when calling MenuSectionsApi->menuSectionsSetItemDisplayOrders: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MenuSectionsApi->setItemDisplayOrders: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -478,9 +478,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **menu_section_id** | **int**| Menu section identifier |
- **display_orders** | [**\Flipdish\\Client\Models\MenuObjectDisplayOrders**](../Model/MenuObjectDisplayOrders.md)| Item Ids and their new display order |
+ **menu_id** | **int**|  |
+ **menu_section_id** | **int**|  |
+ **display_orders** | [**\Flipdish\\Client\Models\MenuObjectDisplayOrders**](../Model/MenuObjectDisplayOrders.md)|  |
 
 ### Return type
 
@@ -556,7 +556,7 @@ void (empty response body)
 # **uploadMenuSectionImage**
 > \Flipdish\\Client\Models\RestApiStringResult uploadMenuSectionImage($menu_id, $menu_section_id, $image)
 
-Upload menu section image
+
 
 ### Example
 ```php
@@ -572,8 +572,8 @@ $apiInstance = new Flipdish\\Client\Api\MenuSectionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
-$menu_section_id = 56; // int | Menu section identifier
+$menu_id = 56; // int | 
+$menu_section_id = 56; // int | 
 $image = "/path/to/file.txt"; // \SplFileObject | Menu section image
 
 try {
@@ -589,8 +589,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **menu_section_id** | **int**| Menu section identifier |
+ **menu_id** | **int**|  |
+ **menu_section_id** | **int**|  |
  **image** | **\SplFileObject**| Menu section image |
 
 ### Return type

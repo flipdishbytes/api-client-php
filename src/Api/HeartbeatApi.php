@@ -93,7 +93,7 @@ class HeartbeatApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return \Flipdish\\Client\Models\RestApiStringResult
      */
     public function headHostname()
     {
@@ -107,11 +107,11 @@ class HeartbeatApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiStringResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function headHostnameWithHttpInfo()
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
         $request = $this->headHostnameRequest();
 
         try {
@@ -163,7 +163,7 @@ class HeartbeatApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Flipdish\\Client\Models\RestApiStringResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -227,7 +227,7 @@ class HeartbeatApi
      */
     public function headHostnameAsyncWithHttpInfo()
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
         $request = $this->headHostnameRequest();
 
         return $this->client
@@ -641,7 +641,7 @@ class HeartbeatApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return \Flipdish\\Client\Models\RestApiStringResult
      */
     public function hostname()
     {
@@ -655,11 +655,11 @@ class HeartbeatApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Flipdish\\Client\Models\RestApiStringResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function hostnameWithHttpInfo()
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
         $request = $this->hostnameRequest();
 
         try {
@@ -711,7 +711,7 @@ class HeartbeatApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Flipdish\\Client\Models\RestApiStringResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -775,7 +775,7 @@ class HeartbeatApi
      */
     public function hostnameAsyncWithHttpInfo()
     {
-        $returnType = 'object';
+        $returnType = '\Flipdish\\Client\Models\RestApiStringResult';
         $request = $this->hostnameRequest();
 
         return $this->client

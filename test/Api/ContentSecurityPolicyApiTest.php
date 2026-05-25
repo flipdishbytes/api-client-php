@@ -72,12 +72,12 @@ class ContentSecurityPolicyApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for contentSecurityPolicyReport
+     * Test case for report
      *
      * .
      *
      */
-    public function testContentSecurityPolicyReport()
+    public function testReport()
     {
     }
 }

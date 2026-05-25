@@ -4,20 +4,18 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**archiveProduct**](CatalogProductsApi.md#archiveProduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/archive | Archive Product
-[**createProduct**](CatalogProductsApi.md#createProduct) | **POST** /api/v1.0/{appId}/catalog/products | Create a Product
-[**duplicateProduct**](CatalogProductsApi.md#duplicateProduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/duplicate | Duplicate Product
-[**getProductById**](CatalogProductsApi.md#getProductById) | **GET** /api/v1.0/{appId}/catalog/products/{catalogItemId} | Get Product by Id
-[**getProducts**](CatalogProductsApi.md#getProducts) | **GET** /api/v1.0/{appId}/catalog/products | Get paginated products by app name id filtered by types
-[**updateProduct**](CatalogProductsApi.md#updateProduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId} | Update Product
+[**archiveProduct**](CatalogProductsApi.md#archiveProduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/archive | 
+[**createProduct**](CatalogProductsApi.md#createProduct) | **POST** /api/v1.0/{appId}/catalog/products | 
+[**duplicateProduct**](CatalogProductsApi.md#duplicateProduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId}/duplicate | 
+[**getProductById**](CatalogProductsApi.md#getProductById) | **GET** /api/v1.0/{appId}/catalog/products/{catalogItemId} | 
+[**getProducts**](CatalogProductsApi.md#getProducts) | **GET** /api/v1.0/{appId}/catalog/products | 
+[**updateProduct**](CatalogProductsApi.md#updateProduct) | **POST** /api/v1.0/{appId}/catalog/products/{catalogItemId} | 
 
 
 # **archiveProduct**
 > archiveProduct($app_id, $catalog_item_id)
 
-Archive Product
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -69,9 +67,7 @@ void (empty response body)
 # **createProduct**
 > \Flipdish\\Client\Models\RestApiResultProduct createProduct($app_id, $create_product)
 
-Create a Product
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -124,9 +120,7 @@ Name | Type | Description  | Notes
 # **duplicateProduct**
 > duplicateProduct($app_id, $catalog_item_id)
 
-Duplicate Product
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -178,9 +172,7 @@ void (empty response body)
 # **getProductById**
 > \Flipdish\\Client\Models\Product getProductById($app_id, $catalog_item_id)
 
-Get Product by Id
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -233,9 +225,7 @@ Name | Type | Description  | Notes
 # **getProducts**
 > \Flipdish\\Client\Models\RestApiPaginationResultProduct getProducts($app_id, $product_types, $search_term, $page, $limit)
 
-Get paginated products by app name id filtered by types
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -294,9 +284,7 @@ Name | Type | Description  | Notes
 # **updateProduct**
 > updateProduct($app_id, $catalog_item_id, $update_product)
 
-Update Product
 
-[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php

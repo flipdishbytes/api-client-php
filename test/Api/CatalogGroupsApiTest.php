@@ -74,7 +74,7 @@ class CatalogGroupsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for archiveGroup
      *
-     * Archive Catalog Group.
+     * .
      *
      */
     public function testArchiveGroup()
@@ -84,7 +84,7 @@ class CatalogGroupsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createGroup
      *
-     * Create a Catalog Group.
+     * .
      *
      */
     public function testCreateGroup()
@@ -94,7 +94,7 @@ class CatalogGroupsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for duplicateGroup
      *
-     * Duplicate Catalog Group.
+     * .
      *
      */
     public function testDuplicateGroup()
@@ -104,7 +104,7 @@ class CatalogGroupsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getGroupById
      *
-     * Get group by Id.
+     * .
      *
      */
     public function testGetGroupById()
@@ -114,7 +114,7 @@ class CatalogGroupsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getGroups
      *
-     * Get paginated groups by app name id filtered by types.
+     * .
      *
      */
     public function testGetGroups()
@@ -124,7 +124,7 @@ class CatalogGroupsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateGroup
      *
-     * Update Catalog Group.
+     * .
      *
      */
     public function testUpdateGroup()

@@ -223,12 +223,24 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
         if ($this->container['app_name'] === null) {
             $invalidProperties[] = "'app_name' can't be null";
         }
+        if ((mb_strlen($this->container['app_name']) > 30)) {
+            $invalidProperties[] = "invalid value for 'app_name', the character length must be smaller than or equal to 30.";
+        }
+
         if ($this->container['app_description'] === null) {
             $invalidProperties[] = "'app_description' can't be null";
         }
+        if ((mb_strlen($this->container['app_description']) > 4000)) {
+            $invalidProperties[] = "invalid value for 'app_description', the character length must be smaller than or equal to 4000.";
+        }
+
         if ($this->container['app_short_description'] === null) {
             $invalidProperties[] = "'app_short_description' can't be null";
         }
+        if ((mb_strlen($this->container['app_short_description']) > 80)) {
+            $invalidProperties[] = "invalid value for 'app_short_description', the character length must be smaller than or equal to 80.";
+        }
+
         return $invalidProperties;
     }
 
@@ -287,6 +299,10 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
      */
     public function setAppName($app_name)
     {
+        if ((mb_strlen($app_name) > 30)) {
+            throw new \InvalidArgumentException('invalid length for $app_name when calling MobileAppsSubmission., must be smaller than or equal to 30.');
+        }
+
         $this->container['app_name'] = $app_name;
 
         return $this;
@@ -311,6 +327,10 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
      */
     public function setAppDescription($app_description)
     {
+        if ((mb_strlen($app_description) > 4000)) {
+            throw new \InvalidArgumentException('invalid length for $app_description when calling MobileAppsSubmission., must be smaller than or equal to 4000.');
+        }
+
         $this->container['app_description'] = $app_description;
 
         return $this;
@@ -335,6 +355,10 @@ class MobileAppsSubmission implements ModelInterface, ArrayAccess
      */
     public function setAppShortDescription($app_short_description)
     {
+        if ((mb_strlen($app_short_description) > 80)) {
+            throw new \InvalidArgumentException('invalid length for $app_short_description when calling MobileAppsSubmission., must be smaller than or equal to 80.');
+        }
+
         $this->container['app_short_description'] = $app_short_description;
 
         return $this;

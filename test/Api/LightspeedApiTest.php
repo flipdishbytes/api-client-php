@@ -72,32 +72,32 @@ class LightspeedApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for lightspeedGenerateMenu
+     * Test case for generateMenu
      *
      * .
      *
      */
-    public function testLightspeedGenerateMenu()
+    public function testGenerateMenu()
     {
     }
 
     /**
-     * Test case for lightspeedGetStoreSettings
+     * Test case for getStoreSettings
      *
      * .
      *
      */
-    public function testLightspeedGetStoreSettings()
+    public function testGetStoreSettings()
     {
     }
 
     /**
-     * Test case for lightspeedSaveStoreSettings
+     * Test case for saveStoreSettings
      *
      * .
      *
      */
-    public function testLightspeedSaveStoreSettings()
+    public function testSaveStoreSettings()
     {
     }
 }

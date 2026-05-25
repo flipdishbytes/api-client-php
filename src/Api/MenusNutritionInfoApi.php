@@ -90,10 +90,8 @@ class MenusNutritionInfoApi
     /**
      * Operation addOrUpdateMenuItemNutritionInfo
      *
-     * Add or update menuitem nutrition info by menu item's publicId
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
+     * @param  int $menu_id menu_id (required)
+     * @param  string $public_id public_id (required)
      * @param  \Flipdish\\Client\Models\ItemNutritionInfoAddUpdateModel $add_or_update_model add_or_update_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -109,10 +107,8 @@ class MenusNutritionInfoApi
     /**
      * Operation addOrUpdateMenuItemNutritionInfoWithHttpInfo
      *
-     * Add or update menuitem nutrition info by menu item's publicId
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
      * @param  \Flipdish\\Client\Models\ItemNutritionInfoAddUpdateModel $add_or_update_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -218,10 +214,10 @@ class MenusNutritionInfoApi
     /**
      * Operation addOrUpdateMenuItemNutritionInfoAsync
      *
-     * Add or update menuitem nutrition info by menu item's publicId
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
      * @param  \Flipdish\\Client\Models\ItemNutritionInfoAddUpdateModel $add_or_update_model (required)
      *
      * @throws \InvalidArgumentException
@@ -240,10 +236,10 @@ class MenusNutritionInfoApi
     /**
      * Operation addOrUpdateMenuItemNutritionInfoAsyncWithHttpInfo
      *
-     * Add or update menuitem nutrition info by menu item's publicId
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
      * @param  \Flipdish\\Client\Models\ItemNutritionInfoAddUpdateModel $add_or_update_model (required)
      *
      * @throws \InvalidArgumentException
@@ -294,8 +290,8 @@ class MenusNutritionInfoApi
     /**
      * Create request for operation 'addOrUpdateMenuItemNutritionInfo'
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
      * @param  \Flipdish\\Client\Models\ItemNutritionInfoAddUpdateModel $add_or_update_model (required)
      *
      * @throws \InvalidArgumentException
@@ -428,10 +424,8 @@ class MenusNutritionInfoApi
     /**
      * Operation addOrUpdateMenuItemOptionSetItemNutritionInfo
      *
-     * Add or update menuitem optionsetitem nutrition info its publicId
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
+     * @param  int $menu_id menu_id (required)
+     * @param  string $public_id public_id (required)
      * @param  \Flipdish\\Client\Models\ItemNutritionInfoAddUpdateModel $add_or_update_model add_or_update_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -447,10 +441,8 @@ class MenusNutritionInfoApi
     /**
      * Operation addOrUpdateMenuItemOptionSetItemNutritionInfoWithHttpInfo
      *
-     * Add or update menuitem optionsetitem nutrition info its publicId
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
      * @param  \Flipdish\\Client\Models\ItemNutritionInfoAddUpdateModel $add_or_update_model (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -556,10 +548,10 @@ class MenusNutritionInfoApi
     /**
      * Operation addOrUpdateMenuItemOptionSetItemNutritionInfoAsync
      *
-     * Add or update menuitem optionsetitem nutrition info its publicId
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
      * @param  \Flipdish\\Client\Models\ItemNutritionInfoAddUpdateModel $add_or_update_model (required)
      *
      * @throws \InvalidArgumentException
@@ -578,10 +570,10 @@ class MenusNutritionInfoApi
     /**
      * Operation addOrUpdateMenuItemOptionSetItemNutritionInfoAsyncWithHttpInfo
      *
-     * Add or update menuitem optionsetitem nutrition info its publicId
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
      * @param  \Flipdish\\Client\Models\ItemNutritionInfoAddUpdateModel $add_or_update_model (required)
      *
      * @throws \InvalidArgumentException
@@ -632,8 +624,8 @@ class MenusNutritionInfoApi
     /**
      * Create request for operation 'addOrUpdateMenuItemOptionSetItemNutritionInfo'
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
      * @param  \Flipdish\\Client\Models\ItemNutritionInfoAddUpdateModel $add_or_update_model (required)
      *
      * @throws \InvalidArgumentException
@@ -766,9 +758,7 @@ class MenusNutritionInfoApi
     /**
      * Operation addOrUpdateMenuNutritionInfoByMenuId
      *
-     * Add or update menu nutrition by identifier
-     *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id menu_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -783,9 +773,7 @@ class MenusNutritionInfoApi
     /**
      * Operation addOrUpdateMenuNutritionInfoByMenuIdWithHttpInfo
      *
-     * Add or update menu nutrition by identifier
-     *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -890,9 +878,9 @@ class MenusNutritionInfoApi
     /**
      * Operation addOrUpdateMenuNutritionInfoByMenuIdAsync
      *
-     * Add or update menu nutrition by identifier
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -910,9 +898,9 @@ class MenusNutritionInfoApi
     /**
      * Operation addOrUpdateMenuNutritionInfoByMenuIdAsyncWithHttpInfo
      *
-     * Add or update menu nutrition by identifier
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -962,7 +950,7 @@ class MenusNutritionInfoApi
     /**
      * Create request for operation 'addOrUpdateMenuNutritionInfoByMenuId'
      *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1071,9 +1059,7 @@ class MenusNutritionInfoApi
     /**
      * Operation deleteMenuNutritionInfoByMenuId
      *
-     * Delete menu nutrition information by menuId
-     *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id menu_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1088,9 +1074,7 @@ class MenusNutritionInfoApi
     /**
      * Operation deleteMenuNutritionInfoByMenuIdWithHttpInfo
      *
-     * Delete menu nutrition information by menuId
-     *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1195,9 +1179,9 @@ class MenusNutritionInfoApi
     /**
      * Operation deleteMenuNutritionInfoByMenuIdAsync
      *
-     * Delete menu nutrition information by menuId
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1215,9 +1199,9 @@ class MenusNutritionInfoApi
     /**
      * Operation deleteMenuNutritionInfoByMenuIdAsyncWithHttpInfo
      *
-     * Delete menu nutrition information by menuId
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1267,7 +1251,7 @@ class MenusNutritionInfoApi
     /**
      * Create request for operation 'deleteMenuNutritionInfoByMenuId'
      *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1376,8 +1360,6 @@ class MenusNutritionInfoApi
     /**
      * Operation getAllergens
      *
-     * Get allergens
-     *
      * @param  string $app_id app_id (required)
      * @param  string $language_id language_id (optional)
      *
@@ -1393,8 +1375,6 @@ class MenusNutritionInfoApi
 
     /**
      * Operation getAllergensWithHttpInfo
-     *
-     * Get allergens
      *
      * @param  string $app_id (required)
      * @param  string $language_id (optional)
@@ -1502,7 +1482,7 @@ class MenusNutritionInfoApi
     /**
      * Operation getAllergensAsync
      *
-     * Get allergens
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $language_id (optional)
@@ -1523,7 +1503,7 @@ class MenusNutritionInfoApi
     /**
      * Operation getAllergensAsyncWithHttpInfo
      *
-     * Get allergens
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $language_id (optional)
@@ -1690,9 +1670,7 @@ class MenusNutritionInfoApi
     /**
      * Operation getMenuNutritionInfoByMenuId
      *
-     * Get menu nutrition by menuId
-     *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id menu_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1707,9 +1685,7 @@ class MenusNutritionInfoApi
     /**
      * Operation getMenuNutritionInfoByMenuIdWithHttpInfo
      *
-     * Get menu nutrition by menuId
-     *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1814,9 +1790,9 @@ class MenusNutritionInfoApi
     /**
      * Operation getMenuNutritionInfoByMenuIdAsync
      *
-     * Get menu nutrition by menuId
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1834,9 +1810,9 @@ class MenusNutritionInfoApi
     /**
      * Operation getMenuNutritionInfoByMenuIdAsyncWithHttpInfo
      *
-     * Get menu nutrition by menuId
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1886,7 +1862,7 @@ class MenusNutritionInfoApi
     /**
      * Create request for operation 'getMenuNutritionInfoByMenuId'
      *
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

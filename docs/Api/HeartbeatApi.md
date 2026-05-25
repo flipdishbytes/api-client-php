@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **headHostname**
-> object headHostname()
+> \Flipdish\\Client\Models\RestApiStringResult headHostname()
 
 
 
@@ -44,7 +44,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **hostname**
-> object hostname()
+> \Flipdish\\Client\Models\RestApiStringResult hostname()
 
 
 
@@ -138,7 +138,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
 
 ### Authorization
 

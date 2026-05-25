@@ -176,14 +176,6 @@ class MenuSectionsApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -500,14 +492,6 @@ class MenuSectionsApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Flipdish\\Client\Models\RestApiResultBusinessHoursPeriod',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -857,14 +841,6 @@ class MenuSectionsApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1178,14 +1154,6 @@ class MenuSectionsApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1420,10 +1388,8 @@ class MenuSectionsApi
     /**
      * Operation deleteMenuSection
      *
-     * Delete menu section
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id menu_id (required)
+     * @param  int $menu_section_id menu_section_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1437,10 +1403,8 @@ class MenuSectionsApi
     /**
      * Operation deleteMenuSectionWithHttpInfo
      *
-     * Delete menu section
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1483,14 +1447,6 @@ class MenuSectionsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1515,10 +1471,10 @@ class MenuSectionsApi
     /**
      * Operation deleteMenuSectionAsync
      *
-     * Delete menu section
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1536,10 +1492,10 @@ class MenuSectionsApi
     /**
      * Operation deleteMenuSectionAsyncWithHttpInfo
      *
-     * Delete menu section
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1575,8 +1531,8 @@ class MenuSectionsApi
     /**
      * Create request for operation 'deleteMenuSection'
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1699,10 +1655,8 @@ class MenuSectionsApi
     /**
      * Operation deleteMenuSectionImage
      *
-     * Delete menu section image
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id menu_id (required)
+     * @param  int $menu_section_id menu_section_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1716,10 +1670,8 @@ class MenuSectionsApi
     /**
      * Operation deleteMenuSectionImageWithHttpInfo
      *
-     * Delete menu section image
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1762,14 +1714,6 @@ class MenuSectionsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1794,10 +1738,10 @@ class MenuSectionsApi
     /**
      * Operation deleteMenuSectionImageAsync
      *
-     * Delete menu section image
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1815,10 +1759,10 @@ class MenuSectionsApi
     /**
      * Operation deleteMenuSectionImageAsyncWithHttpInfo
      *
-     * Delete menu section image
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1854,8 +1798,8 @@ class MenuSectionsApi
     /**
      * Create request for operation 'deleteMenuSectionImage'
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2589,40 +2533,36 @@ class MenuSectionsApi
     }
 
     /**
-     * Operation menuSectionsSetItemDisplayOrders
+     * Operation setItemDisplayOrders
      *
-     * Re-arrange Items within a Section
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Item Ids and their new display order (required)
+     * @param  int $menu_id menu_id (required)
+     * @param  int $menu_section_id menu_section_id (required)
+     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders display_orders (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function menuSectionsSetItemDisplayOrders($menu_id, $menu_section_id, $display_orders)
+    public function setItemDisplayOrders($menu_id, $menu_section_id, $display_orders)
     {
-        $this->menuSectionsSetItemDisplayOrdersWithHttpInfo($menu_id, $menu_section_id, $display_orders);
+        $this->setItemDisplayOrdersWithHttpInfo($menu_id, $menu_section_id, $display_orders);
     }
 
     /**
-     * Operation menuSectionsSetItemDisplayOrdersWithHttpInfo
+     * Operation setItemDisplayOrdersWithHttpInfo
      *
-     * Re-arrange Items within a Section
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Item Ids and their new display order (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
+     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function menuSectionsSetItemDisplayOrdersWithHttpInfo($menu_id, $menu_section_id, $display_orders)
+    public function setItemDisplayOrdersWithHttpInfo($menu_id, $menu_section_id, $display_orders)
     {
         $returnType = '';
-        $request = $this->menuSectionsSetItemDisplayOrdersRequest($menu_id, $menu_section_id, $display_orders);
+        $request = $this->setItemDisplayOrdersRequest($menu_id, $menu_section_id, $display_orders);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2656,14 +2596,6 @@ class MenuSectionsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -2686,20 +2618,20 @@ class MenuSectionsApi
     }
 
     /**
-     * Operation menuSectionsSetItemDisplayOrdersAsync
+     * Operation setItemDisplayOrdersAsync
      *
-     * Re-arrange Items within a Section
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Item Ids and their new display order (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
+     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function menuSectionsSetItemDisplayOrdersAsync($menu_id, $menu_section_id, $display_orders)
+    public function setItemDisplayOrdersAsync($menu_id, $menu_section_id, $display_orders)
     {
-        return $this->menuSectionsSetItemDisplayOrdersAsyncWithHttpInfo($menu_id, $menu_section_id, $display_orders)
+        return $this->setItemDisplayOrdersAsyncWithHttpInfo($menu_id, $menu_section_id, $display_orders)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2708,21 +2640,21 @@ class MenuSectionsApi
     }
 
     /**
-     * Operation menuSectionsSetItemDisplayOrdersAsyncWithHttpInfo
+     * Operation setItemDisplayOrdersAsyncWithHttpInfo
      *
-     * Re-arrange Items within a Section
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Item Ids and their new display order (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
+     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function menuSectionsSetItemDisplayOrdersAsyncWithHttpInfo($menu_id, $menu_section_id, $display_orders)
+    public function setItemDisplayOrdersAsyncWithHttpInfo($menu_id, $menu_section_id, $display_orders)
     {
         $returnType = '';
-        $request = $this->menuSectionsSetItemDisplayOrdersRequest($menu_id, $menu_section_id, $display_orders);
+        $request = $this->setItemDisplayOrdersRequest($menu_id, $menu_section_id, $display_orders);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2748,33 +2680,33 @@ class MenuSectionsApi
     }
 
     /**
-     * Create request for operation 'menuSectionsSetItemDisplayOrders'
+     * Create request for operation 'setItemDisplayOrders'
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
-     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Item Ids and their new display order (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
+     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function menuSectionsSetItemDisplayOrdersRequest($menu_id, $menu_section_id, $display_orders)
+    protected function setItemDisplayOrdersRequest($menu_id, $menu_section_id, $display_orders)
     {
         // verify the required parameter 'menu_id' is set
         if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $menu_id when calling menuSectionsSetItemDisplayOrders'
+                'Missing the required parameter $menu_id when calling setItemDisplayOrders'
             );
         }
         // verify the required parameter 'menu_section_id' is set
         if ($menu_section_id === null || (is_array($menu_section_id) && count($menu_section_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $menu_section_id when calling menuSectionsSetItemDisplayOrders'
+                'Missing the required parameter $menu_section_id when calling setItemDisplayOrders'
             );
         }
         // verify the required parameter 'display_orders' is set
         if ($display_orders === null || (is_array($display_orders) && count($display_orders) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $display_orders when calling menuSectionsSetItemDisplayOrders'
+                'Missing the required parameter $display_orders when calling setItemDisplayOrders'
             );
         }
 
@@ -2951,14 +2883,6 @@ class MenuSectionsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -3186,10 +3110,8 @@ class MenuSectionsApi
     /**
      * Operation uploadMenuSectionImage
      *
-     * Upload menu section image
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id menu_id (required)
+     * @param  int $menu_section_id menu_section_id (required)
      * @param  \SplFileObject $image Menu section image (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -3205,10 +3127,8 @@ class MenuSectionsApi
     /**
      * Operation uploadMenuSectionImageWithHttpInfo
      *
-     * Upload menu section image
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
      * @param  \SplFileObject $image Menu section image (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -3274,14 +3194,6 @@ class MenuSectionsApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -3306,10 +3218,10 @@ class MenuSectionsApi
     /**
      * Operation uploadMenuSectionImageAsync
      *
-     * Upload menu section image
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
      * @param  \SplFileObject $image Menu section image (required)
      *
      * @throws \InvalidArgumentException
@@ -3328,10 +3240,10 @@ class MenuSectionsApi
     /**
      * Operation uploadMenuSectionImageAsyncWithHttpInfo
      *
-     * Upload menu section image
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
      * @param  \SplFileObject $image Menu section image (required)
      *
      * @throws \InvalidArgumentException
@@ -3382,8 +3294,8 @@ class MenuSectionsApi
     /**
      * Create request for operation 'uploadMenuSectionImage'
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_id (required)
+     * @param  int $menu_section_id (required)
      * @param  \SplFileObject $image Menu section image (required)
      *
      * @throws \InvalidArgumentException

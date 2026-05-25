@@ -90,11 +90,9 @@ class MenusNutritionInfoV2Api
     /**
      * Operation addOrUpdateMenuItemNutritionInfoV2
      *
-     * Add or update menuitem nutrition info by menu item's publicId
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
-     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model Allergen ids (required)
+     * @param  int $menu_id menu_id (required)
+     * @param  string $public_id public_id (required)
+     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model add_or_update_model (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -110,11 +108,9 @@ class MenusNutritionInfoV2Api
     /**
      * Operation addOrUpdateMenuItemNutritionInfoV2WithHttpInfo
      *
-     * Add or update menuitem nutrition info by menu item's publicId
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
-     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model Allergen ids (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
+     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -212,11 +208,11 @@ class MenusNutritionInfoV2Api
     /**
      * Operation addOrUpdateMenuItemNutritionInfoV2Async
      *
-     * Add or update menuitem nutrition info by menu item's publicId
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
-     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model Allergen ids (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
+     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -235,11 +231,11 @@ class MenusNutritionInfoV2Api
     /**
      * Operation addOrUpdateMenuItemNutritionInfoV2AsyncWithHttpInfo
      *
-     * Add or update menuitem nutrition info by menu item's publicId
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
-     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model Allergen ids (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
+     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -290,9 +286,9 @@ class MenusNutritionInfoV2Api
     /**
      * Create request for operation 'addOrUpdateMenuItemNutritionInfoV2'
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item&#39;s publicId (required)
-     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model Allergen ids (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
+     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -439,11 +435,9 @@ class MenusNutritionInfoV2Api
     /**
      * Operation addOrUpdateMenuItemOptionSetItemNutritionInfoV2
      *
-     * Add or update menuitem option set item's nutrition info by its publicId
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item option set item&#39;s publicId (required)
-     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model Allergen ids (required)
+     * @param  int $menu_id menu_id (required)
+     * @param  string $public_id public_id (required)
+     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model add_or_update_model (required)
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -459,11 +453,9 @@ class MenusNutritionInfoV2Api
     /**
      * Operation addOrUpdateMenuItemOptionSetItemNutritionInfoV2WithHttpInfo
      *
-     * Add or update menuitem option set item's nutrition info by its publicId
-     *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item option set item&#39;s publicId (required)
-     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model Allergen ids (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
+     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model (required)
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -561,11 +553,11 @@ class MenusNutritionInfoV2Api
     /**
      * Operation addOrUpdateMenuItemOptionSetItemNutritionInfoV2Async
      *
-     * Add or update menuitem option set item's nutrition info by its publicId
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item option set item&#39;s publicId (required)
-     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model Allergen ids (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
+     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -584,11 +576,11 @@ class MenusNutritionInfoV2Api
     /**
      * Operation addOrUpdateMenuItemOptionSetItemNutritionInfoV2AsyncWithHttpInfo
      *
-     * Add or update menuitem option set item's nutrition info by its publicId
+     * 
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item option set item&#39;s publicId (required)
-     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model Allergen ids (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
+     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -639,9 +631,9 @@ class MenusNutritionInfoV2Api
     /**
      * Create request for operation 'addOrUpdateMenuItemOptionSetItemNutritionInfoV2'
      *
-     * @param  int $menu_id Menu identifier (required)
-     * @param  string $public_id Menu item option set item&#39;s publicId (required)
-     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model Allergen ids (required)
+     * @param  int $menu_id (required)
+     * @param  string $public_id (required)
+     * @param  \Flipdish\\Client\Models\ItemNutritionInfoV2AddUpdateModel $add_or_update_model (required)
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
@@ -788,8 +780,6 @@ class MenusNutritionInfoV2Api
     /**
      * Operation getAllergensV2
      *
-     * Get allergens
-     *
      * @param  string $app_id app_id (required)
      * @param  string $language_id language_id (optional)
      *
@@ -805,8 +795,6 @@ class MenusNutritionInfoV2Api
 
     /**
      * Operation getAllergensV2WithHttpInfo
-     *
-     * Get allergens
      *
      * @param  string $app_id (required)
      * @param  string $language_id (optional)
@@ -914,7 +902,7 @@ class MenusNutritionInfoV2Api
     /**
      * Operation getAllergensV2Async
      *
-     * Get allergens
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $language_id (optional)
@@ -935,7 +923,7 @@ class MenusNutritionInfoV2Api
     /**
      * Operation getAllergensV2AsyncWithHttpInfo
      *
-     * Get allergens
+     * 
      *
      * @param  string $app_id (required)
      * @param  string $language_id (optional)
@@ -1102,10 +1090,8 @@ class MenusNutritionInfoV2Api
     /**
      * Operation getMenuNutritionInfoV2ByMenuId
      *
-     * Get menu nutrition by menuId
-     *
      * @param  string $app_id app_id (required)
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id menu_id (required)
      * @param  string $language_id language_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1121,10 +1107,8 @@ class MenusNutritionInfoV2Api
     /**
      * Operation getMenuNutritionInfoV2ByMenuIdWithHttpInfo
      *
-     * Get menu nutrition by menuId
-     *
      * @param  string $app_id (required)
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      * @param  string $language_id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -1230,10 +1214,10 @@ class MenusNutritionInfoV2Api
     /**
      * Operation getMenuNutritionInfoV2ByMenuIdAsync
      *
-     * Get menu nutrition by menuId
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      * @param  string $language_id (optional)
      *
      * @throws \InvalidArgumentException
@@ -1252,10 +1236,10 @@ class MenusNutritionInfoV2Api
     /**
      * Operation getMenuNutritionInfoV2ByMenuIdAsyncWithHttpInfo
      *
-     * Get menu nutrition by menuId
+     * 
      *
      * @param  string $app_id (required)
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      * @param  string $language_id (optional)
      *
      * @throws \InvalidArgumentException
@@ -1307,7 +1291,7 @@ class MenusNutritionInfoV2Api
      * Create request for operation 'getMenuNutritionInfoV2ByMenuId'
      *
      * @param  string $app_id (required)
-     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_id (required)
      * @param  string $language_id (optional)
      *
      * @throws \InvalidArgumentException

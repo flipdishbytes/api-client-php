@@ -4,13 +4,15 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createDraftMenuFromExistingMenu**](MenusApi.md#createDraftMenuFromExistingMenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | Clone a menu, (without attaching stores)
-[**createNewMenuAsync**](MenusApi.md#createNewMenuAsync) | **POST** /api/v1.0/{appId}/menus/async | Create a new menu asynchronously
-[**createNewMenuForApp**](MenusApi.md#createNewMenuForApp) | **POST** /api/v1.0/{appId}/menus | Create a new menu
-[**deleteMenu**](MenusApi.md#deleteMenu) | **DELETE** /api/v1.0/menus/{menuId} | Mark a Menu as Deleted
-[**deleteMenuImage**](MenusApi.md#deleteMenuImage) | **DELETE** /api/v1.0/menus/{menuId}/image | Delete menu image
-[**deleteMenuItemMetadata**](MenusApi.md#deleteMenuItemMetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Delete menu item metadata
+[**createDraftMenuFromExistingMenu**](MenusApi.md#createDraftMenuFromExistingMenu) | **POST** /api/v1.0/menus/{menuId}/clone/{newName} | 
+[**createNewMenuAsync**](MenusApi.md#createNewMenuAsync) | **POST** /api/v1.0/{appId}/menus/async | 
+[**createNewMenuForApp**](MenusApi.md#createNewMenuForApp) | **POST** /api/v1.0/{appId}/menus | 
+[**deleteMenu**](MenusApi.md#deleteMenu) | **DELETE** /api/v1.0/menus/{menuId} | 
+[**deleteMenuImage**](MenusApi.md#deleteMenuImage) | **DELETE** /api/v1.0/menus/{menuId}/image | 
+[**deleteMenuItemMetadata**](MenusApi.md#deleteMenuItemMetadata) | **DELETE** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | 
+[**deleteTaxRate**](MenusApi.md#deleteTaxRate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | 
 [**getAllMenuMetadataByMenuIdAndStoreId**](MenusApi.md#getAllMenuMetadataByMenuIdAndStoreId) | **GET** /api/v1.0/menus/{menuId}/metadata/store/{storeId} | Get all menu metadata by menu ID and store ID
+[**getMenuBulkShowHide**](MenusApi.md#getMenuBulkShowHide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | 
 [**getMenuById**](MenusApi.md#getMenuById) | **GET** /api/v1.0/menus/{menuId} | Get menu by identifier
 [**getMenuItemMetadata**](MenusApi.md#getMenuItemMetadata) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Get menu item metadata
 [**getMenuItemMetadataByKey**](MenusApi.md#getMenuItemMetadataByKey) | **GET** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/{key}/store/{storeId} | Get menu item metadata by key
@@ -20,27 +22,25 @@ Method | HTTP request | Description
 [**getMenuTaxDetails**](MenusApi.md#getMenuTaxDetails) | **GET** /api/v1.0/menus/{menuId}/tax | Get menus tax details
 [**getMenusByAppId**](MenusApi.md#getMenusByAppId) | **GET** /api/v1.0/{appId}/menus | Get menus by appId
 [**getMenusCheckpoints**](MenusApi.md#getMenusCheckpoints) | **GET** /api/v1.0/menus/{menuId}/checkpoints | Get a Menus Checkpoints
-[**menusDeleteTaxRate**](MenusApi.md#menusDeleteTaxRate) | **DELETE** /api/v1.0/menus/{menuId}/tax/{taxId} | Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
-[**menusGetMenuBulkShowHide**](MenusApi.md#menusGetMenuBulkShowHide) | **GET** /api/v1.0/menus/{menuId}/bulkshowhide/list | Get bulk show/hide menu items and option set items
-[**menusSetDisplayOnMenuTax**](MenusApi.md#menusSetDisplayOnMenuTax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | Set if tax shows for a Menu
-[**menusSetItemDisplayOrders**](MenusApi.md#menusSetItemDisplayOrders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | Re-arrange Sections within a Menu
-[**menusShowHideBulkItems**](MenusApi.md#menusShowHideBulkItems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | Bulk show/hide menu items or option set items
-[**menusUpdateTaxType**](MenusApi.md#menusUpdateTaxType) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | Set the type of Tax on a Menu
-[**menusUpsertTaxRate**](MenusApi.md#menusUpsertTaxRate) | **POST** /api/v1.0/menus/{menuId}/taxrate | Add/Update a Tax Rate
-[**restoreAMenuCheckpoint**](MenusApi.md#restoreAMenuCheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | Restore a Menu to a checkpoint
-[**setMenuItemMetadata**](MenusApi.md#setMenuItemMetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | Update menu item metadata
-[**setMenuItemOptionSetItemMetadata**](MenusApi.md#setMenuItemOptionSetItemMetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | Update menu item option set item metadata
-[**setMenuLock**](MenusApi.md#setMenuLock) | **POST** /api/v1.0/menus/{menuId}/lock | Lock/Unlock a Menu for Editing
-[**setMenuName**](MenusApi.md#setMenuName) | **POST** /api/v1.0/menus/{menuId}/name | Set Menus Name
-[**updateMenu**](MenusApi.md#updateMenu) | **POST** /api/v1.0/menus/{menuId} | Update menu
-[**uploadMenuImage**](MenusApi.md#uploadMenuImage) | **POST** /api/v1.0/menus/{menuId}/image | Upload menu image
-[**uploadNewMenuForApp**](MenusApi.md#uploadNewMenuForApp) | **POST** /api/v1.0/{appId}/menus/xlsx | Create a new menu from xlsx file.
+[**restoreAMenuCheckpoint**](MenusApi.md#restoreAMenuCheckpoint) | **POST** /api/v1.0/menus/{menuId}/checkpoints/{checkpointId}/restore | 
+[**setDisplayOnMenuTax**](MenusApi.md#setDisplayOnMenuTax) | **POST** /api/v1.0/menus/{menuId}/tax/show/{show} | 
+[**setItemDisplayOrders**](MenusApi.md#setItemDisplayOrders) | **POST** /api/v1.0/menus/{menuId}/sectiondisplayorders | 
+[**setMenuItemMetadata**](MenusApi.md#setMenuItemMetadata) | **PUT** /api/v1.0/menus/{menuId}/menuitem/{menuItemId}/metadata/store/{storeId} | 
+[**setMenuItemOptionSetItemMetadata**](MenusApi.md#setMenuItemOptionSetItemMetadata) | **PUT** /api/v1.0/menus/{menuId}/optionsetitem/{optionSetItemId}/metadata/store/{storeId} | 
+[**setMenuLock**](MenusApi.md#setMenuLock) | **POST** /api/v1.0/menus/{menuId}/lock | 
+[**setMenuName**](MenusApi.md#setMenuName) | **POST** /api/v1.0/menus/{menuId}/name | 
+[**showHideBulkItems**](MenusApi.md#showHideBulkItems) | **POST** /api/v1.0/menus/{menuId}/bulkshowhide | 
+[**updateMenu**](MenusApi.md#updateMenu) | **POST** /api/v1.0/menus/{menuId} | 
+[**updateTaxType**](MenusApi.md#updateTaxType) | **POST** /api/v1.0/menus/{menuId}/tax/type/{type} | 
+[**uploadMenuImage**](MenusApi.md#uploadMenuImage) | **POST** /api/v1.0/menus/{menuId}/image | 
+[**uploadNewMenuForApp**](MenusApi.md#uploadNewMenuForApp) | **POST** /api/v1.0/{appId}/menus/xlsx | 
+[**upsertTaxRate**](MenusApi.md#upsertTaxRate) | **POST** /api/v1.0/menus/{menuId}/taxrate | 
 
 
 # **createDraftMenuFromExistingMenu**
 > \Flipdish\\Client\Models\RestApiResultMenu createDraftMenuFromExistingMenu($menu_id, $new_name)
 
-Clone a menu, (without attaching stores)
+
 
 ### Example
 ```php
@@ -56,8 +56,8 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
-$new_name = "new_name_example"; // string | Name of the new Menu
+$menu_id = 56; // int | 
+$new_name = "new_name_example"; // string | 
 
 try {
     $result = $apiInstance->createDraftMenuFromExistingMenu($menu_id, $new_name);
@@ -72,8 +72,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **new_name** | **string**| Name of the new Menu |
+ **menu_id** | **int**|  |
+ **new_name** | **string**|  |
 
 ### Return type
 
@@ -93,9 +93,7 @@ Name | Type | Description  | Notes
 # **createNewMenuAsync**
 > object createNewMenuAsync($app_id, $menu, $org_id)
 
-Create a new menu asynchronously
 
-You must listen to the webhook menu.async_creation.completed to know when the menu is ready
 
 ### Example
 ```php
@@ -111,9 +109,9 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App id
-$menu = new \Flipdish\\Client\Models\CreateFullMenu(); // \Flipdish\\Client\Models\CreateFullMenu | Menu
-$org_id = "org_id_example"; // string | Org id
+$app_id = "app_id_example"; // string | 
+$menu = new \Flipdish\\Client\Models\CreateFullMenu(); // \Flipdish\\Client\Models\CreateFullMenu | 
+$org_id = "org_id_example"; // string | 
 
 try {
     $result = $apiInstance->createNewMenuAsync($app_id, $menu, $org_id);
@@ -128,9 +126,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App id |
- **menu** | [**\Flipdish\\Client\Models\CreateFullMenu**](../Model/CreateFullMenu.md)| Menu |
- **org_id** | **string**| Org id | [optional]
+ **app_id** | **string**|  |
+ **menu** | [**\Flipdish\\Client\Models\CreateFullMenu**](../Model/CreateFullMenu.md)|  |
+ **org_id** | **string**|  | [optional]
 
 ### Return type
 
@@ -150,9 +148,7 @@ Name | Type | Description  | Notes
 # **createNewMenuForApp**
 > int createNewMenuForApp($app_id, $menu)
 
-Create a new menu
 
-[DEPRECATED] - Please use the async version as this endpoint may timeout for large menus
 
 ### Example
 ```php
@@ -168,8 +164,8 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App identifier
-$menu = new \Flipdish\\Client\Models\CreateFullMenu(); // \Flipdish\\Client\Models\CreateFullMenu | Menu. If empty the system will create a menu with default items
+$app_id = "app_id_example"; // string | 
+$menu = new \Flipdish\\Client\Models\CreateFullMenu(); // \Flipdish\\Client\Models\CreateFullMenu | 
 
 try {
     $result = $apiInstance->createNewMenuForApp($app_id, $menu);
@@ -184,8 +180,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App identifier |
- **menu** | [**\Flipdish\\Client\Models\CreateFullMenu**](../Model/CreateFullMenu.md)| Menu. If empty the system will create a menu with default items |
+ **app_id** | **string**|  |
+ **menu** | [**\Flipdish\\Client\Models\CreateFullMenu**](../Model/CreateFullMenu.md)|  |
 
 ### Return type
 
@@ -205,7 +201,7 @@ Name | Type | Description  | Notes
 # **deleteMenu**
 > deleteMenu($menu_id)
 
-Mark a Menu as Deleted
+
 
 ### Example
 ```php
@@ -221,7 +217,7 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu Identifier
+$menu_id = 56; // int | 
 
 try {
     $apiInstance->deleteMenu($menu_id);
@@ -235,7 +231,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu Identifier |
+ **menu_id** | **int**|  |
 
 ### Return type
 
@@ -255,7 +251,7 @@ void (empty response body)
 # **deleteMenuImage**
 > deleteMenuImage($menu_id)
 
-Delete menu image
+
 
 ### Example
 ```php
@@ -271,7 +267,7 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
+$menu_id = 56; // int | 
 
 try {
     $apiInstance->deleteMenuImage($menu_id);
@@ -285,7 +281,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
+ **menu_id** | **int**|  |
 
 ### Return type
 
@@ -305,7 +301,7 @@ void (empty response body)
 # **deleteMenuItemMetadata**
 > deleteMenuItemMetadata($menu_id, $store_id, $menu_item_id, $key)
 
-Delete menu item metadata
+
 
 ### Example
 ```php
@@ -321,10 +317,10 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
-$store_id = 56; // int | Store identifier
-$menu_item_id = 56; // int | Menu item identifier
-$key = "key_example"; // string | Metadata key
+$menu_id = 56; // int | 
+$store_id = 56; // int | 
+$menu_item_id = 56; // int | 
+$key = "key_example"; // string | 
 
 try {
     $apiInstance->deleteMenuItemMetadata($menu_id, $store_id, $menu_item_id, $key);
@@ -338,10 +334,62 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **store_id** | **int**| Store identifier |
- **menu_item_id** | **int**| Menu item identifier |
- **key** | **string**| Metadata key |
+ **menu_id** | **int**|  |
+ **store_id** | **int**|  |
+ **menu_item_id** | **int**|  |
+ **key** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **deleteTaxRate**
+> deleteTaxRate($menu_id, $tax_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MenusApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$menu_id = 56; // int | 
+$tax_id = 56; // int | 
+
+try {
+    $apiInstance->deleteTaxRate($menu_id, $tax_id);
+} catch (Exception $e) {
+    echo 'Exception when calling MenusApi->deleteTaxRate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
+ **tax_id** | **int**|  |
 
 ### Return type
 
@@ -399,6 +447,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiArrayResultAllMetadataResult**](../Model/RestApiArrayResultAllMetadataResult.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getMenuBulkShowHide**
+> \Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse getMenuBulkShowHide($menu_id, $is_available)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MenusApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$menu_id = 56; // int | 
+$is_available = true; // bool | 
+
+try {
+    $result = $apiInstance->getMenuBulkShowHide($menu_id, $is_available);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MenusApi->getMenuBulkShowHide: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
+ **is_available** | **bool**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse**](../Model/RestApiArrayResultMenuElementListResponse.md)
 
 ### Authorization
 
@@ -884,379 +985,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **menusDeleteTaxRate**
-> menusDeleteTaxRate($menu_id, $tax_id)
-
-Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\MenusApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$menu_id = 56; // int | Menu identifier
-$tax_id = 56; // int | Id of Menu Tax to be removed
-
-try {
-    $apiInstance->menusDeleteTaxRate($menu_id, $tax_id);
-} catch (Exception $e) {
-    echo 'Exception when calling MenusApi->menusDeleteTaxRate: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **tax_id** | **int**| Id of Menu Tax to be removed |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **menusGetMenuBulkShowHide**
-> \Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse menusGetMenuBulkShowHide($menu_id, $is_available)
-
-Get bulk show/hide menu items and option set items
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\MenusApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$menu_id = 56; // int | Menu id
-$is_available = true; // bool | Is available flag
-
-try {
-    $result = $apiInstance->menusGetMenuBulkShowHide($menu_id, $is_available);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling MenusApi->menusGetMenuBulkShowHide: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu id |
- **is_available** | **bool**| Is available flag |
-
-### Return type
-
-[**\Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse**](../Model/RestApiArrayResultMenuElementListResponse.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **menusSetDisplayOnMenuTax**
-> menusSetDisplayOnMenuTax($menu_id, $show)
-
-Set if tax shows for a Menu
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\MenusApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$menu_id = 56; // int | Menu identifier
-$show = true; // bool | Boolean show or dont show tax (Exclusive tax type can only ever be TRUE)
-
-try {
-    $apiInstance->menusSetDisplayOnMenuTax($menu_id, $show);
-} catch (Exception $e) {
-    echo 'Exception when calling MenusApi->menusSetDisplayOnMenuTax: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **show** | **bool**| Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **menusSetItemDisplayOrders**
-> menusSetItemDisplayOrders($menu_id, $display_orders)
-
-Re-arrange Sections within a Menu
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\MenusApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$menu_id = 56; // int | Menu identifier
-$display_orders = new \Flipdish\\Client\Models\MenuObjectDisplayOrders(); // \Flipdish\\Client\Models\MenuObjectDisplayOrders | Section Ids and their new display order
-
-try {
-    $apiInstance->menusSetItemDisplayOrders($menu_id, $display_orders);
-} catch (Exception $e) {
-    echo 'Exception when calling MenusApi->menusSetItemDisplayOrders: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **display_orders** | [**\Flipdish\\Client\Models\MenuObjectDisplayOrders**](../Model/MenuObjectDisplayOrders.md)| Section Ids and their new display order |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **menusShowHideBulkItems**
-> \Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse menusShowHideBulkItems($menu_id, $menu_elements, $is_available)
-
-Bulk show/hide menu items or option set items
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\MenusApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$menu_id = 56; // int | Menu id
-$menu_elements = array(new \Flipdish\\Client\Models\MenuElementHide()); // \Flipdish\\Client\Models\MenuElementHide[] | Elements to be show/hide
-$is_available = true; // bool | Is available flag
-
-try {
-    $result = $apiInstance->menusShowHideBulkItems($menu_id, $menu_elements, $is_available);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling MenusApi->menusShowHideBulkItems: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu id |
- **menu_elements** | [**\Flipdish\\Client\Models\MenuElementHide[]**](../Model/MenuElementHide.md)| Elements to be show/hide |
- **is_available** | **bool**| Is available flag |
-
-### Return type
-
-[**\Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse**](../Model/RestApiArrayResultMenuElementEditResponse.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **menusUpdateTaxType**
-> menusUpdateTaxType($menu_id, $type)
-
-Set the type of Tax on a Menu
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\MenusApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$menu_id = 56; // int | Menu identifier
-$type = "type_example"; // string | Type of Tax
-
-try {
-    $apiInstance->menusUpdateTaxType($menu_id, $type);
-} catch (Exception $e) {
-    echo 'Exception when calling MenusApi->menusUpdateTaxType: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **type** | **string**| Type of Tax |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **menusUpsertTaxRate**
-> \Flipdish\\Client\Models\MenuTaxRate menusUpsertTaxRate($menu_id, $tax_rate)
-
-Add/Update a Tax Rate
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\MenusApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$menu_id = 56; // int | Menu identifier
-$tax_rate = new \Flipdish\\Client\Models\MenuTaxRate(); // \Flipdish\\Client\Models\MenuTaxRate | Tax rate to add/update
-
-try {
-    $result = $apiInstance->menusUpsertTaxRate($menu_id, $tax_rate);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling MenusApi->menusUpsertTaxRate: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **tax_rate** | [**\Flipdish\\Client\Models\MenuTaxRate**](../Model/MenuTaxRate.md)| Tax rate to add/update |
-
-### Return type
-
-[**\Flipdish\\Client\Models\MenuTaxRate**](../Model/MenuTaxRate.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **restoreAMenuCheckpoint**
 > restoreAMenuCheckpoint($menu_id, $checkpoint_id)
 
-Restore a Menu to a checkpoint
+
 
 ### Example
 ```php
@@ -1272,8 +1004,8 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
-$checkpoint_id = 56; // int | Checkpoint to restore menu to
+$menu_id = 56; // int | 
+$checkpoint_id = 56; // int | 
 
 try {
     $apiInstance->restoreAMenuCheckpoint($menu_id, $checkpoint_id);
@@ -1287,8 +1019,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **checkpoint_id** | **int**| Checkpoint to restore menu to |
+ **menu_id** | **int**|  |
+ **checkpoint_id** | **int**|  |
 
 ### Return type
 
@@ -1305,10 +1037,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **setMenuItemMetadata**
-> setMenuItemMetadata($menu_id, $store_id, $menu_item_id, $metadata)
+# **setDisplayOnMenuTax**
+> setDisplayOnMenuTax($menu_id, $show)
 
-Update menu item metadata
+
 
 ### Example
 ```php
@@ -1324,10 +1056,114 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
-$store_id = 56; // int | Store identifier
-$menu_item_id = 56; // int | Menu item identifier
-$metadata = new \Flipdish\\Client\Models\Metadata(); // \Flipdish\\Client\Models\Metadata | Metadata object
+$menu_id = 56; // int | 
+$show = true; // bool | 
+
+try {
+    $apiInstance->setDisplayOnMenuTax($menu_id, $show);
+} catch (Exception $e) {
+    echo 'Exception when calling MenusApi->setDisplayOnMenuTax: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
+ **show** | **bool**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setItemDisplayOrders**
+> setItemDisplayOrders($menu_id, $display_orders)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MenusApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$menu_id = 56; // int | 
+$display_orders = new \Flipdish\\Client\Models\MenuObjectDisplayOrders(); // \Flipdish\\Client\Models\MenuObjectDisplayOrders | 
+
+try {
+    $apiInstance->setItemDisplayOrders($menu_id, $display_orders);
+} catch (Exception $e) {
+    echo 'Exception when calling MenusApi->setItemDisplayOrders: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
+ **display_orders** | [**\Flipdish\\Client\Models\MenuObjectDisplayOrders**](../Model/MenuObjectDisplayOrders.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setMenuItemMetadata**
+> setMenuItemMetadata($menu_id, $store_id, $menu_item_id, $metadata)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MenusApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$menu_id = 56; // int | 
+$store_id = 56; // int | 
+$menu_item_id = 56; // int | 
+$metadata = new \Flipdish\\Client\Models\Metadata(); // \Flipdish\\Client\Models\Metadata | 
 
 try {
     $apiInstance->setMenuItemMetadata($menu_id, $store_id, $menu_item_id, $metadata);
@@ -1341,10 +1177,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **store_id** | **int**| Store identifier |
- **menu_item_id** | **int**| Menu item identifier |
- **metadata** | [**\Flipdish\\Client\Models\Metadata**](../Model/Metadata.md)| Metadata object |
+ **menu_id** | **int**|  |
+ **store_id** | **int**|  |
+ **menu_item_id** | **int**|  |
+ **metadata** | [**\Flipdish\\Client\Models\Metadata**](../Model/Metadata.md)|  |
 
 ### Return type
 
@@ -1364,7 +1200,7 @@ void (empty response body)
 # **setMenuItemOptionSetItemMetadata**
 > setMenuItemOptionSetItemMetadata($menu_id, $store_id, $option_set_item_id, $metadata)
 
-Update menu item option set item metadata
+
 
 ### Example
 ```php
@@ -1380,10 +1216,10 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
-$store_id = 56; // int | Store identifier
-$option_set_item_id = 56; // int | Menu item option set item identifier
-$metadata = new \Flipdish\\Client\Models\Metadata(); // \Flipdish\\Client\Models\Metadata | Metadata object
+$menu_id = 56; // int | 
+$store_id = 56; // int | 
+$option_set_item_id = 56; // int | 
+$metadata = new \Flipdish\\Client\Models\Metadata(); // \Flipdish\\Client\Models\Metadata | 
 
 try {
     $apiInstance->setMenuItemOptionSetItemMetadata($menu_id, $store_id, $option_set_item_id, $metadata);
@@ -1397,10 +1233,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **store_id** | **int**| Store identifier |
- **option_set_item_id** | **int**| Menu item option set item identifier |
- **metadata** | [**\Flipdish\\Client\Models\Metadata**](../Model/Metadata.md)| Metadata object |
+ **menu_id** | **int**|  |
+ **store_id** | **int**|  |
+ **option_set_item_id** | **int**|  |
+ **metadata** | [**\Flipdish\\Client\Models\Metadata**](../Model/Metadata.md)|  |
 
 ### Return type
 
@@ -1420,7 +1256,7 @@ void (empty response body)
 # **setMenuLock**
 > setMenuLock($menu_id, $locked)
 
-Lock/Unlock a Menu for Editing
+
 
 ### Example
 ```php
@@ -1436,8 +1272,8 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
-$locked = true; // bool | True: Locks menu for editing, False: Unlocks for editing
+$menu_id = 56; // int | 
+$locked = true; // bool | 
 
 try {
     $apiInstance->setMenuLock($menu_id, $locked);
@@ -1451,8 +1287,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **locked** | **bool**| True: Locks menu for editing, False: Unlocks for editing |
+ **menu_id** | **int**|  |
+ **locked** | **bool**|  |
 
 ### Return type
 
@@ -1472,7 +1308,7 @@ void (empty response body)
 # **setMenuName**
 > setMenuName($menu_id, $name)
 
-Set Menus Name
+
 
 ### Example
 ```php
@@ -1488,8 +1324,8 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
-$name = "name_example"; // string | Name to set for this Menu
+$menu_id = 56; // int | 
+$name = "name_example"; // string | 
 
 try {
     $apiInstance->setMenuName($menu_id, $name);
@@ -1503,12 +1339,67 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **name** | **string**| Name to set for this Menu |
+ **menu_id** | **int**|  |
+ **name** | **string**|  |
 
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **showHideBulkItems**
+> \Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse showHideBulkItems($menu_id, $menu_elements, $is_available)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MenusApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$menu_id = 56; // int | 
+$menu_elements = array(new \Flipdish\\Client\Models\MenuElementHide()); // \Flipdish\\Client\Models\MenuElementHide[] | 
+$is_available = true; // bool | 
+
+try {
+    $result = $apiInstance->showHideBulkItems($menu_id, $menu_elements, $is_available);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MenusApi->showHideBulkItems: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
+ **menu_elements** | [**\Flipdish\\Client\Models\MenuElementHide[]**](../Model/MenuElementHide.md)|  |
+ **is_available** | **bool**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse**](../Model/RestApiArrayResultMenuElementEditResponse.md)
 
 ### Authorization
 
@@ -1524,7 +1415,7 @@ void (empty response body)
 # **updateMenu**
 > updateMenu($menu_id, $menu)
 
-Update menu
+
 
 ### Example
 ```php
@@ -1540,8 +1431,8 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
-$menu = new \Flipdish\\Client\Models\MenuBase(); // \Flipdish\\Client\Models\MenuBase | Full menu data
+$menu_id = 56; // int | 
+$menu = new \Flipdish\\Client\Models\MenuBase(); // \Flipdish\\Client\Models\MenuBase | 
 
 try {
     $apiInstance->updateMenu($menu_id, $menu);
@@ -1555,8 +1446,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
- **menu** | [**\Flipdish\\Client\Models\MenuBase**](../Model/MenuBase.md)| Full menu data |
+ **menu_id** | **int**|  |
+ **menu** | [**\Flipdish\\Client\Models\MenuBase**](../Model/MenuBase.md)|  |
 
 ### Return type
 
@@ -1573,10 +1464,10 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **uploadMenuImage**
-> \Flipdish\\Client\Models\RestApiStringResult uploadMenuImage($menu_id, $image)
+# **updateTaxType**
+> updateTaxType($menu_id, $type)
 
-Upload menu image
+
 
 ### Example
 ```php
@@ -1592,7 +1483,59 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | Menu identifier
+$menu_id = 56; // int | 
+$type = "type_example"; // string | 
+
+try {
+    $apiInstance->updateTaxType($menu_id, $type);
+} catch (Exception $e) {
+    echo 'Exception when calling MenusApi->updateTaxType: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
+ **type** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **uploadMenuImage**
+> \Flipdish\\Client\Models\RestApiStringResult uploadMenuImage($menu_id, $image)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MenusApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$menu_id = 56; // int | 
 $image = "/path/to/file.txt"; // \SplFileObject | Menu image
 
 try {
@@ -1608,7 +1551,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**| Menu identifier |
+ **menu_id** | **int**|  |
  **image** | **\SplFileObject**| Menu image |
 
 ### Return type
@@ -1629,7 +1572,7 @@ Name | Type | Description  | Notes
 # **uploadNewMenuForApp**
 > int uploadNewMenuForApp($app_id, $menu)
 
-Create a new menu from xlsx file.
+
 
 ### Example
 ```php
@@ -1645,7 +1588,7 @@ $apiInstance = new Flipdish\\Client\Api\MenusApi(
     new GuzzleHttp\Client(),
     $config
 );
-$app_id = "app_id_example"; // string | App identifier
+$app_id = "app_id_example"; // string | 
 $menu = "/path/to/file.txt"; // \SplFileObject | Uploaded xlsx menu
 
 try {
@@ -1661,7 +1604,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **app_id** | **string**| App identifier |
+ **app_id** | **string**|  |
  **menu** | **\SplFileObject**| Uploaded xlsx menu |
 
 ### Return type
@@ -1675,6 +1618,59 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **upsertTaxRate**
+> \Flipdish\\Client\Models\MenuTaxRate upsertTaxRate($menu_id, $tax_rate)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\MenusApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$menu_id = 56; // int | 
+$tax_rate = new \Flipdish\\Client\Models\MenuTaxRate(); // \Flipdish\\Client\Models\MenuTaxRate | 
+
+try {
+    $result = $apiInstance->upsertTaxRate($menu_id, $tax_rate);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MenusApi->upsertTaxRate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **menu_id** | **int**|  |
+ **tax_rate** | [**\Flipdish\\Client\Models\MenuTaxRate**](../Model/MenuTaxRate.md)|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\MenuTaxRate**](../Model/MenuTaxRate.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

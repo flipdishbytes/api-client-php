@@ -88,33 +88,32 @@ class ContentSecurityPolicyApi
     }
 
     /**
-     * Operation contentSecurityPolicyReport
+     * Operation report
      *
      * @param  \Flipdish\\Client\Models\CspReportRequest $request request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return void
      */
-    public function contentSecurityPolicyReport($request)
+    public function report($request)
     {
-        list($response) = $this->contentSecurityPolicyReportWithHttpInfo($request);
-        return $response;
+        $this->reportWithHttpInfo($request);
     }
 
     /**
-     * Operation contentSecurityPolicyReportWithHttpInfo
+     * Operation reportWithHttpInfo
      *
      * @param  \Flipdish\\Client\Models\CspReportRequest $request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function contentSecurityPolicyReportWithHttpInfo($request)
+    public function reportWithHttpInfo($request)
     {
-        $returnType = 'object';
-        $request = $this->contentSecurityPolicyReportRequest($request);
+        $returnType = '';
+        $request = $this->reportRequest($request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -144,32 +143,10 @@ class ContentSecurityPolicyApi
                 );
             }
 
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
+            return [null, $statusCode, $response->getHeaders()];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -200,7 +177,7 @@ class ContentSecurityPolicyApi
     }
 
     /**
-     * Operation contentSecurityPolicyReportAsync
+     * Operation reportAsync
      *
      * 
      *
@@ -209,9 +186,9 @@ class ContentSecurityPolicyApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contentSecurityPolicyReportAsync($request)
+    public function reportAsync($request)
     {
-        return $this->contentSecurityPolicyReportAsyncWithHttpInfo($request)
+        return $this->reportAsyncWithHttpInfo($request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -220,7 +197,7 @@ class ContentSecurityPolicyApi
     }
 
     /**
-     * Operation contentSecurityPolicyReportAsyncWithHttpInfo
+     * Operation reportAsyncWithHttpInfo
      *
      * 
      *
@@ -229,30 +206,16 @@ class ContentSecurityPolicyApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function contentSecurityPolicyReportAsyncWithHttpInfo($request)
+    public function reportAsyncWithHttpInfo($request)
     {
-        $returnType = 'object';
-        $request = $this->contentSecurityPolicyReportRequest($request);
+        $returnType = '';
+        $request = $this->reportRequest($request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -272,19 +235,19 @@ class ContentSecurityPolicyApi
     }
 
     /**
-     * Create request for operation 'contentSecurityPolicyReport'
+     * Create request for operation 'report'
      *
      * @param  \Flipdish\\Client\Models\CspReportRequest $request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function contentSecurityPolicyReportRequest($request)
+    protected function reportRequest($request)
     {
         // verify the required parameter 'request' is set
         if ($request === null || (is_array($request) && count($request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling contentSecurityPolicyReport'
+                'Missing the required parameter $request when calling report'
             );
         }
 
