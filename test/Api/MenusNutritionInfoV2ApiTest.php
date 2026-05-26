@@ -74,7 +74,7 @@ class MenusNutritionInfoV2ApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for addOrUpdateMenuItemNutritionInfoV2
      *
-     * .
+     * Add or update menuitem nutrition info by menu item's publicId.
      *
      */
     public function testAddOrUpdateMenuItemNutritionInfoV2()
@@ -84,7 +84,7 @@ class MenusNutritionInfoV2ApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for addOrUpdateMenuItemOptionSetItemNutritionInfoV2
      *
-     * .
+     * Add or update menuitem option set item's nutrition info by its publicId.
      *
      */
     public function testAddOrUpdateMenuItemOptionSetItemNutritionInfoV2()
@@ -94,7 +94,7 @@ class MenusNutritionInfoV2ApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAllergensV2
      *
-     * .
+     * Get allergens.
      *
      */
     public function testGetAllergensV2()
@@ -104,7 +104,7 @@ class MenusNutritionInfoV2ApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getMenuNutritionInfoV2ByMenuId
      *
-     * .
+     * Get menu nutrition by menuId.
      *
      */
     public function testGetMenuNutritionInfoV2ByMenuId()

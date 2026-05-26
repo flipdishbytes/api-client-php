@@ -74,7 +74,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createDraftMenuFromExistingMenu
      *
-     * .
+     * Clone a menu, (without attaching stores).
      *
      */
     public function testCreateDraftMenuFromExistingMenu()
@@ -84,7 +84,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createNewMenuAsync
      *
-     * .
+     * Create a new menu asynchronously.
      *
      */
     public function testCreateNewMenuAsync()
@@ -94,7 +94,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createNewMenuForApp
      *
-     * .
+     * Create a new menu.
      *
      */
     public function testCreateNewMenuForApp()
@@ -104,7 +104,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteMenu
      *
-     * .
+     * Mark a Menu as Deleted.
      *
      */
     public function testDeleteMenu()
@@ -114,7 +114,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteMenuImage
      *
-     * .
+     * Delete menu image.
      *
      */
     public function testDeleteMenuImage()
@@ -124,20 +124,10 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteMenuItemMetadata
      *
-     * .
+     * Delete menu item metadata.
      *
      */
     public function testDeleteMenuItemMetadata()
-    {
-    }
-
-    /**
-     * Test case for deleteTaxRate
-     *
-     * .
-     *
-     */
-    public function testDeleteTaxRate()
     {
     }
 
@@ -148,16 +138,6 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testGetAllMenuMetadataByMenuIdAndStoreId()
-    {
-    }
-
-    /**
-     * Test case for getMenuBulkShowHide
-     *
-     * .
-     *
-     */
-    public function testGetMenuBulkShowHide()
     {
     }
 
@@ -252,9 +232,79 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for menusDeleteTaxRate
+     *
+     * Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached.
+     *
+     */
+    public function testMenusDeleteTaxRate()
+    {
+    }
+
+    /**
+     * Test case for menusGetMenuBulkShowHide
+     *
+     * Get bulk show/hide menu items and option set items.
+     *
+     */
+    public function testMenusGetMenuBulkShowHide()
+    {
+    }
+
+    /**
+     * Test case for menusSetDisplayOnMenuTax
+     *
+     * Set if tax shows for a Menu.
+     *
+     */
+    public function testMenusSetDisplayOnMenuTax()
+    {
+    }
+
+    /**
+     * Test case for menusSetItemDisplayOrders
+     *
+     * Re-arrange Sections within a Menu.
+     *
+     */
+    public function testMenusSetItemDisplayOrders()
+    {
+    }
+
+    /**
+     * Test case for menusShowHideBulkItems
+     *
+     * Bulk show/hide menu items or option set items.
+     *
+     */
+    public function testMenusShowHideBulkItems()
+    {
+    }
+
+    /**
+     * Test case for menusUpdateTaxType
+     *
+     * Set the type of Tax on a Menu.
+     *
+     */
+    public function testMenusUpdateTaxType()
+    {
+    }
+
+    /**
+     * Test case for menusUpsertTaxRate
+     *
+     * Add/Update a Tax Rate.
+     *
+     */
+    public function testMenusUpsertTaxRate()
+    {
+    }
+
+    /**
      * Test case for restoreAMenuCheckpoint
      *
-     * .
+     * Restore a Menu to a checkpoint.
      *
      */
     public function testRestoreAMenuCheckpoint()
@@ -262,29 +312,9 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for setDisplayOnMenuTax
-     *
-     * .
-     *
-     */
-    public function testSetDisplayOnMenuTax()
-    {
-    }
-
-    /**
-     * Test case for setItemDisplayOrders
-     *
-     * .
-     *
-     */
-    public function testSetItemDisplayOrders()
-    {
-    }
-
-    /**
      * Test case for setMenuItemMetadata
      *
-     * .
+     * Update menu item metadata.
      *
      */
     public function testSetMenuItemMetadata()
@@ -294,7 +324,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setMenuItemOptionSetItemMetadata
      *
-     * .
+     * Update menu item option set item metadata.
      *
      */
     public function testSetMenuItemOptionSetItemMetadata()
@@ -304,7 +334,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setMenuLock
      *
-     * .
+     * Lock/Unlock a Menu for Editing.
      *
      */
     public function testSetMenuLock()
@@ -314,7 +344,7 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setMenuName
      *
-     * .
+     * Set Menus Name.
      *
      */
     public function testSetMenuName()
@@ -322,19 +352,9 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for showHideBulkItems
-     *
-     * .
-     *
-     */
-    public function testShowHideBulkItems()
-    {
-    }
-
-    /**
      * Test case for updateMenu
      *
-     * .
+     * Update menu.
      *
      */
     public function testUpdateMenu()
@@ -342,19 +362,9 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for updateTaxType
-     *
-     * .
-     *
-     */
-    public function testUpdateTaxType()
-    {
-    }
-
-    /**
      * Test case for uploadMenuImage
      *
-     * .
+     * Upload menu image.
      *
      */
     public function testUploadMenuImage()
@@ -364,20 +374,10 @@ class MenusApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for uploadNewMenuForApp
      *
-     * .
+     * Create a new menu from xlsx file..
      *
      */
     public function testUploadNewMenuForApp()
-    {
-    }
-
-    /**
-     * Test case for upsertTaxRate
-     *
-     * .
-     *
-     */
-    public function testUpsertTaxRate()
     {
     }
 }

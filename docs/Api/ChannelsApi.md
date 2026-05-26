@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **attachStoreToSalesChannel**
-> attachStoreToSalesChannel($app_id, $channel_id, $store_id)
+> object attachStoreToSalesChannel($app_id, $channel_id, $store_id)
 
 
 
@@ -150,7 +150,8 @@ $channel_id = 56; // int |
 $store_id = 56; // int | 
 
 try {
-    $apiInstance->attachStoreToSalesChannel($app_id, $channel_id, $store_id);
+    $result = $apiInstance->attachStoreToSalesChannel($app_id, $channel_id, $store_id);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ChannelsApi->attachStoreToSalesChannel: ', $e->getMessage(), PHP_EOL;
 }
@@ -167,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -181,7 +182,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **detachAllStoresFromSalesChannel**
-> detachAllStoresFromSalesChannel($app_id, $channel_id)
+> object detachAllStoresFromSalesChannel($app_id, $channel_id)
 
 
 
@@ -203,7 +204,8 @@ $app_id = "app_id_example"; // string |
 $channel_id = 56; // int | 
 
 try {
-    $apiInstance->detachAllStoresFromSalesChannel($app_id, $channel_id);
+    $result = $apiInstance->detachAllStoresFromSalesChannel($app_id, $channel_id);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ChannelsApi->detachAllStoresFromSalesChannel: ', $e->getMessage(), PHP_EOL;
 }
@@ -219,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -233,7 +235,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **detachStoreFromSalesChannel**
-> detachStoreFromSalesChannel($app_id, $channel_id, $store_id)
+> object detachStoreFromSalesChannel($app_id, $channel_id, $store_id)
 
 
 
@@ -256,7 +258,8 @@ $channel_id = 56; // int |
 $store_id = 56; // int | 
 
 try {
-    $apiInstance->detachStoreFromSalesChannel($app_id, $channel_id, $store_id);
+    $result = $apiInstance->detachStoreFromSalesChannel($app_id, $channel_id, $store_id);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ChannelsApi->detachStoreFromSalesChannel: ', $e->getMessage(), PHP_EOL;
 }
@@ -273,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 

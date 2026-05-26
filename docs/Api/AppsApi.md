@@ -4,6 +4,7 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**appsSetPropertyId**](AppsApi.md#appsSetPropertyId) | **POST** /api/v1.0/apps/{appId}/orgId/{orgId} | 
 [**createApp**](AppsApi.md#createApp) | **POST** /api/v1.0/apps | 
 [**getApp**](AppsApi.md#getApp) | **GET** /api/v1.0/apps/{appId} | 
 [**getAppHostnameStatus**](AppsApi.md#getAppHostnameStatus) | **GET** /api/v1.0/apps/{appId}/hostnamestatus | 
@@ -21,11 +22,63 @@ Method | HTTP request | Description
 [**setAppStoreName**](AppsApi.md#setAppStoreName) | **POST** /api/v1.0/apps/{appId}/appstorename | 
 [**setCompliance**](AppsApi.md#setCompliance) | **POST** /api/v1.0/apps/{appId}/compliance | 
 [**setPanaceaVanityUrl**](AppsApi.md#setPanaceaVanityUrl) | **POST** /api/v1.0/apps/{appId}/panacea/url | 
-[**setPropertyId**](AppsApi.md#setPropertyId) | **POST** /api/v1.0/apps/{appId}/orgId/{orgId} | 
 [**setThirdPartyIntegrations**](AppsApi.md#setThirdPartyIntegrations) | **POST** /api/v1.0/apps/{appId}/third-party-integrations | 
 [**toggleNextGenWeb**](AppsApi.md#toggleNextGenWeb) | **POST** /api/v1.0/apps/{appId}/nextgenweb | 
 [**uploadAppLogo**](AppsApi.md#uploadAppLogo) | **POST** /api/v1.0/apps/{appId}/logo | 
 
+
+# **appsSetPropertyId**
+> object appsSetPropertyId($app_id, $org_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\AppsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = "app_id_example"; // string | 
+$org_id = "org_id_example"; // string | 
+
+try {
+    $result = $apiInstance->appsSetPropertyId($app_id, $org_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AppsApi->appsSetPropertyId: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **string**|  |
+ **org_id** | **string**|  |
+
+### Return type
+
+**object**
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createApp**
 > \Flipdish\\Client\Models\RestApiStringResult createApp($parameters)
@@ -900,58 +953,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiStringResult**](../Model/RestApiStringResult.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **setPropertyId**
-> setPropertyId($app_id, $org_id)
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\AppsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$app_id = "app_id_example"; // string | 
-$org_id = "org_id_example"; // string | 
-
-try {
-    $apiInstance->setPropertyId($app_id, $org_id);
-} catch (Exception $e) {
-    echo 'Exception when calling AppsApi->setPropertyId: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **string**|  |
- **org_id** | **string**|  |
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 

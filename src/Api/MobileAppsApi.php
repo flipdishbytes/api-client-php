@@ -3238,6 +3238,14 @@ class MobileAppsApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),

@@ -72,32 +72,32 @@ class FirebaseAppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for addFirebaseApp
+     * Test case for firebaseAppsAddFirebaseApp
      *
      * .
      *
      */
-    public function testAddFirebaseApp()
+    public function testFirebaseAppsAddFirebaseApp()
     {
     }
 
     /**
-     * Test case for deleteFirebaseApp
+     * Test case for firebaseAppsDeleteFirebaseApp
      *
      * .
      *
      */
-    public function testDeleteFirebaseApp()
+    public function testFirebaseAppsDeleteFirebaseApp()
     {
     }
 
     /**
-     * Test case for getFirebaseApp
+     * Test case for firebaseAppsGetFirebaseApp
      *
      * .
      *
      */
-    public function testGetFirebaseApp()
+    public function testFirebaseAppsGetFirebaseApp()
     {
     }
 }

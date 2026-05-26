@@ -4,19 +4,19 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createMenuItemOptionSet**](MenuOptionSetsApi.md#createMenuItemOptionSet) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | 
-[**deleteMenuItemOptionSet**](MenuOptionSetsApi.md#deleteMenuItemOptionSet) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | 
-[**deleteOptionSetImage**](MenuOptionSetsApi.md#deleteOptionSetImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | 
+[**createMenuItemOptionSet**](MenuOptionSetsApi.md#createMenuItemOptionSet) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | Create menu item option set
+[**deleteMenuItemOptionSet**](MenuOptionSetsApi.md#deleteMenuItemOptionSet) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Delete menu item option set
+[**deleteOptionSetImage**](MenuOptionSetsApi.md#deleteOptionSetImage) | **DELETE** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | Delete option set image
 [**getMenuItemOptionSetById**](MenuOptionSetsApi.md#getMenuItemOptionSetById) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Get menu item option set by identifier
 [**getMenuItemOptionSets**](MenuOptionSetsApi.md#getMenuItemOptionSets) | **GET** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets | Get menu item option sets
-[**updateMenuItemOptionSet**](MenuOptionSetsApi.md#updateMenuItemOptionSet) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | 
-[**uploadOptionSetImage**](MenuOptionSetsApi.md#uploadOptionSetImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | 
+[**updateMenuItemOptionSet**](MenuOptionSetsApi.md#updateMenuItemOptionSet) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId} | Update menu item option set
+[**uploadOptionSetImage**](MenuOptionSetsApi.md#uploadOptionSetImage) | **POST** /api/v1.0/menus/{menuId}/sections/{menuSectionId}/sectionitems/{menuSectionItemId}/optionsets/{optionSetId}/image | Upload menu item option set image
 
 
 # **createMenuItemOptionSet**
 > object createMenuItemOptionSet($menu_id, $menu_section_id, $menu_section_item_id, $menu_item_option_set)
 
-
+Create menu item option set
 
 ### Example
 ```php
@@ -32,10 +32,10 @@ $apiInstance = new Flipdish\\Client\Api\MenuOptionSetsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | 
-$menu_section_id = 56; // int | 
-$menu_section_item_id = 56; // int | 
-$menu_item_option_set = new \Flipdish\\Client\Models\MenuItemOptionSetBase(); // \Flipdish\\Client\Models\MenuItemOptionSetBase | 
+$menu_id = 56; // int | Menu identifier
+$menu_section_id = 56; // int | Menu section identifier
+$menu_section_item_id = 56; // int | Menu section item identifier
+$menu_item_option_set = new \Flipdish\\Client\Models\MenuItemOptionSetBase(); // \Flipdish\\Client\Models\MenuItemOptionSetBase | Menu item option set
 
 try {
     $result = $apiInstance->createMenuItemOptionSet($menu_id, $menu_section_id, $menu_section_item_id, $menu_item_option_set);
@@ -50,10 +50,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**|  |
- **menu_section_id** | **int**|  |
- **menu_section_item_id** | **int**|  |
- **menu_item_option_set** | [**\Flipdish\\Client\Models\MenuItemOptionSetBase**](../Model/MenuItemOptionSetBase.md)|  |
+ **menu_id** | **int**| Menu identifier |
+ **menu_section_id** | **int**| Menu section identifier |
+ **menu_section_item_id** | **int**| Menu section item identifier |
+ **menu_item_option_set** | [**\Flipdish\\Client\Models\MenuItemOptionSetBase**](../Model/MenuItemOptionSetBase.md)| Menu item option set |
 
 ### Return type
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 # **deleteMenuItemOptionSet**
 > deleteMenuItemOptionSet($menu_id, $menu_section_item_id, $menu_section_id, $option_set_id)
 
-
+Delete menu item option set
 
 ### Example
 ```php
@@ -89,10 +89,10 @@ $apiInstance = new Flipdish\\Client\Api\MenuOptionSetsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | 
-$menu_section_item_id = 56; // int | 
-$menu_section_id = 56; // int | 
-$option_set_id = 56; // int | 
+$menu_id = 56; // int | Menu identifier
+$menu_section_item_id = 56; // int | Menu section item identifier
+$menu_section_id = 56; // int | Menu section identifier
+$option_set_id = 56; // int | Option set identifier
 
 try {
     $apiInstance->deleteMenuItemOptionSet($menu_id, $menu_section_item_id, $menu_section_id, $option_set_id);
@@ -106,10 +106,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**|  |
- **menu_section_item_id** | **int**|  |
- **menu_section_id** | **int**|  |
- **option_set_id** | **int**|  |
+ **menu_id** | **int**| Menu identifier |
+ **menu_section_item_id** | **int**| Menu section item identifier |
+ **menu_section_id** | **int**| Menu section identifier |
+ **option_set_id** | **int**| Option set identifier |
 
 ### Return type
 
@@ -129,7 +129,7 @@ void (empty response body)
 # **deleteOptionSetImage**
 > deleteOptionSetImage($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id)
 
-
+Delete option set image
 
 ### Example
 ```php
@@ -145,10 +145,10 @@ $apiInstance = new Flipdish\\Client\Api\MenuOptionSetsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | 
-$menu_section_id = 56; // int | 
-$menu_section_item_id = 56; // int | 
-$option_set_id = 56; // int | 
+$menu_id = 56; // int | Menu identifier
+$menu_section_id = 56; // int | Menu section identifier
+$menu_section_item_id = 56; // int | Menu section item identifier
+$option_set_id = 56; // int | Option set identifier
 
 try {
     $apiInstance->deleteOptionSetImage($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id);
@@ -162,10 +162,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**|  |
- **menu_section_id** | **int**|  |
- **menu_section_item_id** | **int**|  |
- **option_set_id** | **int**|  |
+ **menu_id** | **int**| Menu identifier |
+ **menu_section_id** | **int**| Menu section identifier |
+ **menu_section_item_id** | **int**| Menu section item identifier |
+ **option_set_id** | **int**| Option set identifier |
 
 ### Return type
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 # **updateMenuItemOptionSet**
 > updateMenuItemOptionSet($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id, $menu_item_option_set)
 
-
+Update menu item option set
 
 ### Example
 ```php
@@ -313,11 +313,11 @@ $apiInstance = new Flipdish\\Client\Api\MenuOptionSetsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | 
-$menu_section_id = 56; // int | 
-$menu_section_item_id = 56; // int | 
-$option_set_id = 56; // int | 
-$menu_item_option_set = new \Flipdish\\Client\Models\MenuItemOptionSetBase(); // \Flipdish\\Client\Models\MenuItemOptionSetBase | 
+$menu_id = 56; // int | Menu identifier
+$menu_section_id = 56; // int | Menu section identifier
+$menu_section_item_id = 56; // int | Menu section item identifier
+$option_set_id = 56; // int | Option set identifier
+$menu_item_option_set = new \Flipdish\\Client\Models\MenuItemOptionSetBase(); // \Flipdish\\Client\Models\MenuItemOptionSetBase | Menu item option set (delta)
 
 try {
     $apiInstance->updateMenuItemOptionSet($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id, $menu_item_option_set);
@@ -331,11 +331,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**|  |
- **menu_section_id** | **int**|  |
- **menu_section_item_id** | **int**|  |
- **option_set_id** | **int**|  |
- **menu_item_option_set** | [**\Flipdish\\Client\Models\MenuItemOptionSetBase**](../Model/MenuItemOptionSetBase.md)|  |
+ **menu_id** | **int**| Menu identifier |
+ **menu_section_id** | **int**| Menu section identifier |
+ **menu_section_item_id** | **int**| Menu section item identifier |
+ **option_set_id** | **int**| Option set identifier |
+ **menu_item_option_set** | [**\Flipdish\\Client\Models\MenuItemOptionSetBase**](../Model/MenuItemOptionSetBase.md)| Menu item option set (delta) |
 
 ### Return type
 
@@ -355,7 +355,7 @@ void (empty response body)
 # **uploadOptionSetImage**
 > \Flipdish\\Client\Models\RestApiStringResult uploadOptionSetImage($menu_id, $menu_section_id, $menu_section_item_id, $option_set_id, $image)
 
-
+Upload menu item option set image
 
 ### Example
 ```php
@@ -371,10 +371,10 @@ $apiInstance = new Flipdish\\Client\Api\MenuOptionSetsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$menu_id = 56; // int | 
-$menu_section_id = 56; // int | 
-$menu_section_item_id = 56; // int | 
-$option_set_id = 56; // int | 
+$menu_id = 56; // int | Menu identifier
+$menu_section_id = 56; // int | Menu section identifier
+$menu_section_item_id = 56; // int | Menu section item identifier
+$option_set_id = 56; // int | Option set identifier
 $image = "/path/to/file.txt"; // \SplFileObject | Option set image
 
 try {
@@ -390,10 +390,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **menu_id** | **int**|  |
- **menu_section_id** | **int**|  |
- **menu_section_item_id** | **int**|  |
- **option_set_id** | **int**|  |
+ **menu_id** | **int**| Menu identifier |
+ **menu_section_id** | **int**| Menu section identifier |
+ **menu_section_item_id** | **int**| Menu section item identifier |
+ **option_set_id** | **int**| Option set identifier |
  **image** | **\SplFileObject**| Option set image |
 
 ### Return type

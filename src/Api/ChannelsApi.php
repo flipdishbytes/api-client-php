@@ -763,11 +763,12 @@ class ChannelsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
     public function attachStoreToSalesChannel($app_id, $channel_id, $store_id)
     {
-        $this->attachStoreToSalesChannelWithHttpInfo($app_id, $channel_id, $store_id);
+        list($response) = $this->attachStoreToSalesChannelWithHttpInfo($app_id, $channel_id, $store_id);
+        return $response;
     }
 
     /**
@@ -779,11 +780,11 @@ class ChannelsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
     public function attachStoreToSalesChannelWithHttpInfo($app_id, $channel_id, $store_id)
     {
-        $returnType = '';
+        $returnType = 'object';
         $request = $this->attachStoreToSalesChannelRequest($app_id, $channel_id, $store_id);
 
         try {
@@ -814,10 +815,32 @@ class ChannelsApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -838,22 +861,6 @@ class ChannelsApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 409:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -899,14 +906,28 @@ class ChannelsApi
      */
     public function attachStoreToSalesChannelAsyncWithHttpInfo($app_id, $channel_id, $store_id)
     {
-        $returnType = '';
+        $returnType = 'object';
         $request = $this->attachStoreToSalesChannelRequest($app_id, $channel_id, $store_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1072,11 +1093,12 @@ class ChannelsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
     public function detachAllStoresFromSalesChannel($app_id, $channel_id)
     {
-        $this->detachAllStoresFromSalesChannelWithHttpInfo($app_id, $channel_id);
+        list($response) = $this->detachAllStoresFromSalesChannelWithHttpInfo($app_id, $channel_id);
+        return $response;
     }
 
     /**
@@ -1087,11 +1109,11 @@ class ChannelsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
     public function detachAllStoresFromSalesChannelWithHttpInfo($app_id, $channel_id)
     {
-        $returnType = '';
+        $returnType = 'object';
         $request = $this->detachAllStoresFromSalesChannelRequest($app_id, $channel_id);
 
         try {
@@ -1122,10 +1144,32 @@ class ChannelsApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1146,14 +1190,6 @@ class ChannelsApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1197,14 +1233,28 @@ class ChannelsApi
      */
     public function detachAllStoresFromSalesChannelAsyncWithHttpInfo($app_id, $channel_id)
     {
-        $returnType = '';
+        $returnType = 'object';
         $request = $this->detachAllStoresFromSalesChannelRequest($app_id, $channel_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1356,11 +1406,12 @@ class ChannelsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
     public function detachStoreFromSalesChannel($app_id, $channel_id, $store_id)
     {
-        $this->detachStoreFromSalesChannelWithHttpInfo($app_id, $channel_id, $store_id);
+        list($response) = $this->detachStoreFromSalesChannelWithHttpInfo($app_id, $channel_id, $store_id);
+        return $response;
     }
 
     /**
@@ -1372,11 +1423,11 @@ class ChannelsApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
     public function detachStoreFromSalesChannelWithHttpInfo($app_id, $channel_id, $store_id)
     {
-        $returnType = '';
+        $returnType = 'object';
         $request = $this->detachStoreFromSalesChannelRequest($app_id, $channel_id, $store_id);
 
         try {
@@ -1407,10 +1458,32 @@ class ChannelsApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1431,14 +1504,6 @@ class ChannelsApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1484,14 +1549,28 @@ class ChannelsApi
      */
     public function detachStoreFromSalesChannelAsyncWithHttpInfo($app_id, $channel_id, $store_id)
     {
-        $returnType = '';
+        $returnType = 'object';
         $request = $this->detachStoreFromSalesChannelRequest($app_id, $channel_id, $store_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -3273,6 +3352,14 @@ class ChannelsApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Flipdish\\Client\Models\Response',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

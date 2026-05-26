@@ -90,8 +90,10 @@ class CatalogGroupsApi
     /**
      * Operation archiveGroup
      *
-     * @param  string $app_id app_id (required)
-     * @param  string $catalog_item_id catalog_item_id (required)
+     * Archive Catalog Group
+     *
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -105,8 +107,10 @@ class CatalogGroupsApi
     /**
      * Operation archiveGroupWithHttpInfo
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
+     * Archive Catalog Group
+     *
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -149,6 +153,14 @@ class CatalogGroupsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -173,10 +185,10 @@ class CatalogGroupsApi
     /**
      * Operation archiveGroupAsync
      *
-     * 
+     * Archive Catalog Group
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -194,10 +206,10 @@ class CatalogGroupsApi
     /**
      * Operation archiveGroupAsyncWithHttpInfo
      *
-     * 
+     * Archive Catalog Group
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -233,8 +245,8 @@ class CatalogGroupsApi
     /**
      * Create request for operation 'archiveGroup'
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -357,8 +369,10 @@ class CatalogGroupsApi
     /**
      * Operation createGroup
      *
-     * @param  string $app_id app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateGroup $create_group create_group (required)
+     * Create a Catalog Group
+     *
+     * @param  string $app_id  (required)
+     * @param  \Flipdish\\Client\Models\CreateGroup $create_group  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -373,8 +387,10 @@ class CatalogGroupsApi
     /**
      * Operation createGroupWithHttpInfo
      *
-     * @param  string $app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateGroup $create_group (required)
+     * Create a Catalog Group
+     *
+     * @param  string $app_id  (required)
+     * @param  \Flipdish\\Client\Models\CreateGroup $create_group  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -439,6 +455,14 @@ class CatalogGroupsApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -463,10 +487,10 @@ class CatalogGroupsApi
     /**
      * Operation createGroupAsync
      *
-     * 
+     * Create a Catalog Group
      *
-     * @param  string $app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateGroup $create_group (required)
+     * @param  string $app_id  (required)
+     * @param  \Flipdish\\Client\Models\CreateGroup $create_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -484,10 +508,10 @@ class CatalogGroupsApi
     /**
      * Operation createGroupAsyncWithHttpInfo
      *
-     * 
+     * Create a Catalog Group
      *
-     * @param  string $app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateGroup $create_group (required)
+     * @param  string $app_id  (required)
+     * @param  \Flipdish\\Client\Models\CreateGroup $create_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -537,8 +561,8 @@ class CatalogGroupsApi
     /**
      * Create request for operation 'createGroup'
      *
-     * @param  string $app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateGroup $create_group (required)
+     * @param  string $app_id  (required)
+     * @param  \Flipdish\\Client\Models\CreateGroup $create_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -656,8 +680,10 @@ class CatalogGroupsApi
     /**
      * Operation duplicateGroup
      *
-     * @param  string $app_id app_id (required)
-     * @param  string $catalog_item_id catalog_item_id (required)
+     * Duplicate Catalog Group
+     *
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -671,8 +697,10 @@ class CatalogGroupsApi
     /**
      * Operation duplicateGroupWithHttpInfo
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
+     * Duplicate Catalog Group
+     *
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -715,6 +743,14 @@ class CatalogGroupsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -739,10 +775,10 @@ class CatalogGroupsApi
     /**
      * Operation duplicateGroupAsync
      *
-     * 
+     * Duplicate Catalog Group
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -760,10 +796,10 @@ class CatalogGroupsApi
     /**
      * Operation duplicateGroupAsyncWithHttpInfo
      *
-     * 
+     * Duplicate Catalog Group
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -799,8 +835,8 @@ class CatalogGroupsApi
     /**
      * Create request for operation 'duplicateGroup'
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -923,8 +959,10 @@ class CatalogGroupsApi
     /**
      * Operation getGroupById
      *
-     * @param  string $app_id app_id (required)
-     * @param  string $catalog_item_id catalog_item_id (required)
+     * Get group by Id
+     *
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -939,8 +977,10 @@ class CatalogGroupsApi
     /**
      * Operation getGroupByIdWithHttpInfo
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
+     * Get group by Id
+     *
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1037,10 +1077,10 @@ class CatalogGroupsApi
     /**
      * Operation getGroupByIdAsync
      *
-     * 
+     * Get group by Id
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1058,10 +1098,10 @@ class CatalogGroupsApi
     /**
      * Operation getGroupByIdAsyncWithHttpInfo
      *
-     * 
+     * Get group by Id
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1111,8 +1151,8 @@ class CatalogGroupsApi
     /**
      * Create request for operation 'getGroupById'
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1235,11 +1275,13 @@ class CatalogGroupsApi
     /**
      * Operation getGroups
      *
-     * @param  string $app_id app_id (required)
-     * @param  string[] $group_types group_types (required)
-     * @param  string $search_term search_term (optional)
-     * @param  int $page page (optional)
-     * @param  int $limit limit (optional)
+     * Get paginated groups by app name id filtered by types
+     *
+     * @param  string $app_id  (required)
+     * @param  string[] $group_types  (required)
+     * @param  string $search_term  (optional)
+     * @param  int $page  (optional)
+     * @param  int $limit  (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1254,11 +1296,13 @@ class CatalogGroupsApi
     /**
      * Operation getGroupsWithHttpInfo
      *
-     * @param  string $app_id (required)
-     * @param  string[] $group_types (required)
-     * @param  string $search_term (optional)
-     * @param  int $page (optional)
-     * @param  int $limit (optional)
+     * Get paginated groups by app name id filtered by types
+     *
+     * @param  string $app_id  (required)
+     * @param  string[] $group_types  (required)
+     * @param  string $search_term  (optional)
+     * @param  int $page  (optional)
+     * @param  int $limit  (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1355,13 +1399,13 @@ class CatalogGroupsApi
     /**
      * Operation getGroupsAsync
      *
-     * 
+     * Get paginated groups by app name id filtered by types
      *
-     * @param  string $app_id (required)
-     * @param  string[] $group_types (required)
-     * @param  string $search_term (optional)
-     * @param  int $page (optional)
-     * @param  int $limit (optional)
+     * @param  string $app_id  (required)
+     * @param  string[] $group_types  (required)
+     * @param  string $search_term  (optional)
+     * @param  int $page  (optional)
+     * @param  int $limit  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1379,13 +1423,13 @@ class CatalogGroupsApi
     /**
      * Operation getGroupsAsyncWithHttpInfo
      *
-     * 
+     * Get paginated groups by app name id filtered by types
      *
-     * @param  string $app_id (required)
-     * @param  string[] $group_types (required)
-     * @param  string $search_term (optional)
-     * @param  int $page (optional)
-     * @param  int $limit (optional)
+     * @param  string $app_id  (required)
+     * @param  string[] $group_types  (required)
+     * @param  string $search_term  (optional)
+     * @param  int $page  (optional)
+     * @param  int $limit  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1435,11 +1479,11 @@ class CatalogGroupsApi
     /**
      * Create request for operation 'getGroups'
      *
-     * @param  string $app_id (required)
-     * @param  string[] $group_types (required)
-     * @param  string $search_term (optional)
-     * @param  int $page (optional)
-     * @param  int $limit (optional)
+     * @param  string $app_id  (required)
+     * @param  string[] $group_types  (required)
+     * @param  string $search_term  (optional)
+     * @param  int $page  (optional)
+     * @param  int $limit  (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1573,9 +1617,11 @@ class CatalogGroupsApi
     /**
      * Operation updateGroup
      *
-     * @param  string $app_id app_id (required)
-     * @param  string $catalog_item_id catalog_item_id (required)
-     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group update_group (required)
+     * Update Catalog Group
+     *
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
+     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1589,9 +1635,11 @@ class CatalogGroupsApi
     /**
      * Operation updateGroupWithHttpInfo
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
-     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group (required)
+     * Update Catalog Group
+     *
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
+     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group  (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1634,6 +1682,14 @@ class CatalogGroupsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1658,11 +1714,11 @@ class CatalogGroupsApi
     /**
      * Operation updateGroupAsync
      *
-     * 
+     * Update Catalog Group
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
-     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group (required)
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
+     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1680,11 +1736,11 @@ class CatalogGroupsApi
     /**
      * Operation updateGroupAsyncWithHttpInfo
      *
-     * 
+     * Update Catalog Group
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
-     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group (required)
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
+     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1720,9 +1776,9 @@ class CatalogGroupsApi
     /**
      * Create request for operation 'updateGroup'
      *
-     * @param  string $app_id (required)
-     * @param  string $catalog_item_id (required)
-     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group (required)
+     * @param  string $app_id  (required)
+     * @param  string $catalog_item_id  (required)
+     * @param  \Flipdish\\Client\Models\UpdateGroup $update_group  (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -88,33 +88,33 @@ class OnboardingApi
     }
 
     /**
-     * Operation getOnboardingConfig
+     * Operation onboardingGetOnboardingConfig
      *
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultOnboardingConfig
+     * @return object
      */
-    public function getOnboardingConfig($app_id)
+    public function onboardingGetOnboardingConfig($app_id)
     {
-        list($response) = $this->getOnboardingConfigWithHttpInfo($app_id);
+        list($response) = $this->onboardingGetOnboardingConfigWithHttpInfo($app_id);
         return $response;
     }
 
     /**
-     * Operation getOnboardingConfigWithHttpInfo
+     * Operation onboardingGetOnboardingConfigWithHttpInfo
      *
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultOnboardingConfig, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOnboardingConfigWithHttpInfo($app_id)
+    public function onboardingGetOnboardingConfigWithHttpInfo($app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultOnboardingConfig';
-        $request = $this->getOnboardingConfigRequest($app_id);
+        $returnType = 'object';
+        $request = $this->onboardingGetOnboardingConfigRequest($app_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -165,7 +165,7 @@ class OnboardingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultOnboardingConfig',
+                        'object',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,21 +194,13 @@ class OnboardingApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation getOnboardingConfigAsync
+     * Operation onboardingGetOnboardingConfigAsync
      *
      * 
      *
@@ -217,9 +209,9 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOnboardingConfigAsync($app_id)
+    public function onboardingGetOnboardingConfigAsync($app_id)
     {
-        return $this->getOnboardingConfigAsyncWithHttpInfo($app_id)
+        return $this->onboardingGetOnboardingConfigAsyncWithHttpInfo($app_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -228,7 +220,7 @@ class OnboardingApi
     }
 
     /**
-     * Operation getOnboardingConfigAsyncWithHttpInfo
+     * Operation onboardingGetOnboardingConfigAsyncWithHttpInfo
      *
      * 
      *
@@ -237,10 +229,10 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOnboardingConfigAsyncWithHttpInfo($app_id)
+    public function onboardingGetOnboardingConfigAsyncWithHttpInfo($app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultOnboardingConfig';
-        $request = $this->getOnboardingConfigRequest($app_id);
+        $returnType = 'object';
+        $request = $this->onboardingGetOnboardingConfigRequest($app_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -280,19 +272,19 @@ class OnboardingApi
     }
 
     /**
-     * Create request for operation 'getOnboardingConfig'
+     * Create request for operation 'onboardingGetOnboardingConfig'
      *
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOnboardingConfigRequest($app_id)
+    protected function onboardingGetOnboardingConfigRequest($app_id)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling getOnboardingConfig'
+                'Missing the required parameter $app_id when calling onboardingGetOnboardingConfig'
             );
         }
 
@@ -389,33 +381,33 @@ class OnboardingApi
     }
 
     /**
-     * Operation getOnboardingConfigs
+     * Operation onboardingGetOnboardingConfigs
      *
      * @param  string $app_id app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiArrayResultOnboardingConfig
+     * @return object
      */
-    public function getOnboardingConfigs($app_id)
+    public function onboardingGetOnboardingConfigs($app_id)
     {
-        list($response) = $this->getOnboardingConfigsWithHttpInfo($app_id);
+        list($response) = $this->onboardingGetOnboardingConfigsWithHttpInfo($app_id);
         return $response;
     }
 
     /**
-     * Operation getOnboardingConfigsWithHttpInfo
+     * Operation onboardingGetOnboardingConfigsWithHttpInfo
      *
      * @param  string $app_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiArrayResultOnboardingConfig, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOnboardingConfigsWithHttpInfo($app_id)
+    public function onboardingGetOnboardingConfigsWithHttpInfo($app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultOnboardingConfig';
-        $request = $this->getOnboardingConfigsRequest($app_id);
+        $returnType = 'object';
+        $request = $this->onboardingGetOnboardingConfigsRequest($app_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -466,7 +458,7 @@ class OnboardingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiArrayResultOnboardingConfig',
+                        'object',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -495,21 +487,13 @@ class OnboardingApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation getOnboardingConfigsAsync
+     * Operation onboardingGetOnboardingConfigsAsync
      *
      * 
      *
@@ -518,9 +502,9 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOnboardingConfigsAsync($app_id)
+    public function onboardingGetOnboardingConfigsAsync($app_id)
     {
-        return $this->getOnboardingConfigsAsyncWithHttpInfo($app_id)
+        return $this->onboardingGetOnboardingConfigsAsyncWithHttpInfo($app_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -529,7 +513,7 @@ class OnboardingApi
     }
 
     /**
-     * Operation getOnboardingConfigsAsyncWithHttpInfo
+     * Operation onboardingGetOnboardingConfigsAsyncWithHttpInfo
      *
      * 
      *
@@ -538,10 +522,10 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOnboardingConfigsAsyncWithHttpInfo($app_id)
+    public function onboardingGetOnboardingConfigsAsyncWithHttpInfo($app_id)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultOnboardingConfig';
-        $request = $this->getOnboardingConfigsRequest($app_id);
+        $returnType = 'object';
+        $request = $this->onboardingGetOnboardingConfigsRequest($app_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -581,19 +565,19 @@ class OnboardingApi
     }
 
     /**
-     * Create request for operation 'getOnboardingConfigs'
+     * Create request for operation 'onboardingGetOnboardingConfigs'
      *
      * @param  string $app_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOnboardingConfigsRequest($app_id)
+    protected function onboardingGetOnboardingConfigsRequest($app_id)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling getOnboardingConfigs'
+                'Missing the required parameter $app_id when calling onboardingGetOnboardingConfigs'
             );
         }
 
@@ -690,7 +674,7 @@ class OnboardingApi
     }
 
     /**
-     * Operation getOnboardingItems
+     * Operation onboardingGetOnboardingItems
      *
      * @param  string $app_id app_id (required)
      * @param  int $store_id store_id (required)
@@ -698,16 +682,16 @@ class OnboardingApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultOnboardingProcess
+     * @return object
      */
-    public function getOnboardingItems($app_id, $store_id, $milestone_id = null)
+    public function onboardingGetOnboardingItems($app_id, $store_id, $milestone_id = null)
     {
-        list($response) = $this->getOnboardingItemsWithHttpInfo($app_id, $store_id, $milestone_id);
+        list($response) = $this->onboardingGetOnboardingItemsWithHttpInfo($app_id, $store_id, $milestone_id);
         return $response;
     }
 
     /**
-     * Operation getOnboardingItemsWithHttpInfo
+     * Operation onboardingGetOnboardingItemsWithHttpInfo
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
@@ -715,12 +699,12 @@ class OnboardingApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultOnboardingProcess, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOnboardingItemsWithHttpInfo($app_id, $store_id, $milestone_id = null)
+    public function onboardingGetOnboardingItemsWithHttpInfo($app_id, $store_id, $milestone_id = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultOnboardingProcess';
-        $request = $this->getOnboardingItemsRequest($app_id, $store_id, $milestone_id);
+        $returnType = 'object';
+        $request = $this->onboardingGetOnboardingItemsRequest($app_id, $store_id, $milestone_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -771,7 +755,7 @@ class OnboardingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultOnboardingProcess',
+                        'object',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -800,21 +784,13 @@ class OnboardingApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation getOnboardingItemsAsync
+     * Operation onboardingGetOnboardingItemsAsync
      *
      * 
      *
@@ -825,9 +801,9 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOnboardingItemsAsync($app_id, $store_id, $milestone_id = null)
+    public function onboardingGetOnboardingItemsAsync($app_id, $store_id, $milestone_id = null)
     {
-        return $this->getOnboardingItemsAsyncWithHttpInfo($app_id, $store_id, $milestone_id)
+        return $this->onboardingGetOnboardingItemsAsyncWithHttpInfo($app_id, $store_id, $milestone_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -836,7 +812,7 @@ class OnboardingApi
     }
 
     /**
-     * Operation getOnboardingItemsAsyncWithHttpInfo
+     * Operation onboardingGetOnboardingItemsAsyncWithHttpInfo
      *
      * 
      *
@@ -847,10 +823,10 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOnboardingItemsAsyncWithHttpInfo($app_id, $store_id, $milestone_id = null)
+    public function onboardingGetOnboardingItemsAsyncWithHttpInfo($app_id, $store_id, $milestone_id = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultOnboardingProcess';
-        $request = $this->getOnboardingItemsRequest($app_id, $store_id, $milestone_id);
+        $returnType = 'object';
+        $request = $this->onboardingGetOnboardingItemsRequest($app_id, $store_id, $milestone_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -890,7 +866,7 @@ class OnboardingApi
     }
 
     /**
-     * Create request for operation 'getOnboardingItems'
+     * Create request for operation 'onboardingGetOnboardingItems'
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
@@ -899,18 +875,18 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOnboardingItemsRequest($app_id, $store_id, $milestone_id = null)
+    protected function onboardingGetOnboardingItemsRequest($app_id, $store_id, $milestone_id = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling getOnboardingItems'
+                'Missing the required parameter $app_id when calling onboardingGetOnboardingItems'
             );
         }
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling getOnboardingItems'
+                'Missing the required parameter $store_id when calling onboardingGetOnboardingItems'
             );
         }
 
@@ -1019,7 +995,7 @@ class OnboardingApi
     }
 
     /**
-     * Operation getOnboardingItemsV2
+     * Operation onboardingGetOnboardingItemsV2
      *
      * @param  string $app_id app_id (required)
      * @param  int $store_id store_id (optional)
@@ -1027,16 +1003,16 @@ class OnboardingApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiResultOnboardingProcess
+     * @return object
      */
-    public function getOnboardingItemsV2($app_id, $store_id = null, $milestone_id = null)
+    public function onboardingGetOnboardingItemsV2($app_id, $store_id = null, $milestone_id = null)
     {
-        list($response) = $this->getOnboardingItemsV2WithHttpInfo($app_id, $store_id, $milestone_id);
+        list($response) = $this->onboardingGetOnboardingItemsV2WithHttpInfo($app_id, $store_id, $milestone_id);
         return $response;
     }
 
     /**
-     * Operation getOnboardingItemsV2WithHttpInfo
+     * Operation onboardingGetOnboardingItemsV2WithHttpInfo
      *
      * @param  string $app_id (required)
      * @param  int $store_id (optional)
@@ -1044,12 +1020,12 @@ class OnboardingApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiResultOnboardingProcess, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOnboardingItemsV2WithHttpInfo($app_id, $store_id = null, $milestone_id = null)
+    public function onboardingGetOnboardingItemsV2WithHttpInfo($app_id, $store_id = null, $milestone_id = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultOnboardingProcess';
-        $request = $this->getOnboardingItemsV2Request($app_id, $store_id, $milestone_id);
+        $returnType = 'object';
+        $request = $this->onboardingGetOnboardingItemsV2Request($app_id, $store_id, $milestone_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1100,7 +1076,7 @@ class OnboardingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiResultOnboardingProcess',
+                        'object',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1129,21 +1105,13 @@ class OnboardingApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation getOnboardingItemsV2Async
+     * Operation onboardingGetOnboardingItemsV2Async
      *
      * 
      *
@@ -1154,9 +1122,9 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOnboardingItemsV2Async($app_id, $store_id = null, $milestone_id = null)
+    public function onboardingGetOnboardingItemsV2Async($app_id, $store_id = null, $milestone_id = null)
     {
-        return $this->getOnboardingItemsV2AsyncWithHttpInfo($app_id, $store_id, $milestone_id)
+        return $this->onboardingGetOnboardingItemsV2AsyncWithHttpInfo($app_id, $store_id, $milestone_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1165,7 +1133,7 @@ class OnboardingApi
     }
 
     /**
-     * Operation getOnboardingItemsV2AsyncWithHttpInfo
+     * Operation onboardingGetOnboardingItemsV2AsyncWithHttpInfo
      *
      * 
      *
@@ -1176,10 +1144,10 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOnboardingItemsV2AsyncWithHttpInfo($app_id, $store_id = null, $milestone_id = null)
+    public function onboardingGetOnboardingItemsV2AsyncWithHttpInfo($app_id, $store_id = null, $milestone_id = null)
     {
-        $returnType = '\Flipdish\\Client\Models\RestApiResultOnboardingProcess';
-        $request = $this->getOnboardingItemsV2Request($app_id, $store_id, $milestone_id);
+        $returnType = 'object';
+        $request = $this->onboardingGetOnboardingItemsV2Request($app_id, $store_id, $milestone_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1219,7 +1187,7 @@ class OnboardingApi
     }
 
     /**
-     * Create request for operation 'getOnboardingItemsV2'
+     * Create request for operation 'onboardingGetOnboardingItemsV2'
      *
      * @param  string $app_id (required)
      * @param  int $store_id (optional)
@@ -1228,12 +1196,12 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOnboardingItemsV2Request($app_id, $store_id = null, $milestone_id = null)
+    protected function onboardingGetOnboardingItemsV2Request($app_id, $store_id = null, $milestone_id = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling getOnboardingItemsV2'
+                'Missing the required parameter $app_id when calling onboardingGetOnboardingItemsV2'
             );
         }
 
@@ -1338,34 +1306,35 @@ class OnboardingApi
     }
 
     /**
-     * Operation updateOnboardingConfig
+     * Operation onboardingUpdateOnboardingConfig
      *
      * @param  string $app_id app_id (required)
      * @param  \Flipdish\\Client\Models\OnboardingConfigUpdate $config_update config_update (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function updateOnboardingConfig($app_id, $config_update)
+    public function onboardingUpdateOnboardingConfig($app_id, $config_update)
     {
-        $this->updateOnboardingConfigWithHttpInfo($app_id, $config_update);
+        list($response) = $this->onboardingUpdateOnboardingConfigWithHttpInfo($app_id, $config_update);
+        return $response;
     }
 
     /**
-     * Operation updateOnboardingConfigWithHttpInfo
+     * Operation onboardingUpdateOnboardingConfigWithHttpInfo
      *
      * @param  string $app_id (required)
      * @param  \Flipdish\\Client\Models\OnboardingConfigUpdate $config_update (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOnboardingConfigWithHttpInfo($app_id, $config_update)
+    public function onboardingUpdateOnboardingConfigWithHttpInfo($app_id, $config_update)
     {
-        $returnType = '';
-        $request = $this->updateOnboardingConfigRequest($app_id, $config_update);
+        $returnType = 'object';
+        $request = $this->onboardingUpdateOnboardingConfigRequest($app_id, $config_update);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1395,10 +1364,32 @@ class OnboardingApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1423,21 +1414,13 @@ class OnboardingApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation updateOnboardingConfigAsync
+     * Operation onboardingUpdateOnboardingConfigAsync
      *
      * 
      *
@@ -1447,9 +1430,9 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOnboardingConfigAsync($app_id, $config_update)
+    public function onboardingUpdateOnboardingConfigAsync($app_id, $config_update)
     {
-        return $this->updateOnboardingConfigAsyncWithHttpInfo($app_id, $config_update)
+        return $this->onboardingUpdateOnboardingConfigAsyncWithHttpInfo($app_id, $config_update)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1458,7 +1441,7 @@ class OnboardingApi
     }
 
     /**
-     * Operation updateOnboardingConfigAsyncWithHttpInfo
+     * Operation onboardingUpdateOnboardingConfigAsyncWithHttpInfo
      *
      * 
      *
@@ -1468,16 +1451,30 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOnboardingConfigAsyncWithHttpInfo($app_id, $config_update)
+    public function onboardingUpdateOnboardingConfigAsyncWithHttpInfo($app_id, $config_update)
     {
-        $returnType = '';
-        $request = $this->updateOnboardingConfigRequest($app_id, $config_update);
+        $returnType = 'object';
+        $request = $this->onboardingUpdateOnboardingConfigRequest($app_id, $config_update);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1497,7 +1494,7 @@ class OnboardingApi
     }
 
     /**
-     * Create request for operation 'updateOnboardingConfig'
+     * Create request for operation 'onboardingUpdateOnboardingConfig'
      *
      * @param  string $app_id (required)
      * @param  \Flipdish\\Client\Models\OnboardingConfigUpdate $config_update (required)
@@ -1505,18 +1502,18 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateOnboardingConfigRequest($app_id, $config_update)
+    protected function onboardingUpdateOnboardingConfigRequest($app_id, $config_update)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling updateOnboardingConfig'
+                'Missing the required parameter $app_id when calling onboardingUpdateOnboardingConfig'
             );
         }
         // verify the required parameter 'config_update' is set
         if ($config_update === null || (is_array($config_update) && count($config_update) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $config_update when calling updateOnboardingConfig'
+                'Missing the required parameter $config_update when calling onboardingUpdateOnboardingConfig'
             );
         }
 
@@ -1616,7 +1613,7 @@ class OnboardingApi
     }
 
     /**
-     * Operation updateOnboardingConfigById
+     * Operation onboardingUpdateOnboardingConfigById
      *
      * @param  string $app_id app_id (required)
      * @param  int $config_id config_id (required)
@@ -1624,15 +1621,16 @@ class OnboardingApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function updateOnboardingConfigById($app_id, $config_id, $config_update)
+    public function onboardingUpdateOnboardingConfigById($app_id, $config_id, $config_update)
     {
-        $this->updateOnboardingConfigByIdWithHttpInfo($app_id, $config_id, $config_update);
+        list($response) = $this->onboardingUpdateOnboardingConfigByIdWithHttpInfo($app_id, $config_id, $config_update);
+        return $response;
     }
 
     /**
-     * Operation updateOnboardingConfigByIdWithHttpInfo
+     * Operation onboardingUpdateOnboardingConfigByIdWithHttpInfo
      *
      * @param  string $app_id (required)
      * @param  int $config_id (required)
@@ -1640,12 +1638,12 @@ class OnboardingApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOnboardingConfigByIdWithHttpInfo($app_id, $config_id, $config_update)
+    public function onboardingUpdateOnboardingConfigByIdWithHttpInfo($app_id, $config_id, $config_update)
     {
-        $returnType = '';
-        $request = $this->updateOnboardingConfigByIdRequest($app_id, $config_id, $config_update);
+        $returnType = 'object';
+        $request = $this->onboardingUpdateOnboardingConfigByIdRequest($app_id, $config_id, $config_update);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1675,10 +1673,32 @@ class OnboardingApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1703,29 +1723,13 @@ class OnboardingApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation updateOnboardingConfigByIdAsync
+     * Operation onboardingUpdateOnboardingConfigByIdAsync
      *
      * 
      *
@@ -1736,9 +1740,9 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOnboardingConfigByIdAsync($app_id, $config_id, $config_update)
+    public function onboardingUpdateOnboardingConfigByIdAsync($app_id, $config_id, $config_update)
     {
-        return $this->updateOnboardingConfigByIdAsyncWithHttpInfo($app_id, $config_id, $config_update)
+        return $this->onboardingUpdateOnboardingConfigByIdAsyncWithHttpInfo($app_id, $config_id, $config_update)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1747,7 +1751,7 @@ class OnboardingApi
     }
 
     /**
-     * Operation updateOnboardingConfigByIdAsyncWithHttpInfo
+     * Operation onboardingUpdateOnboardingConfigByIdAsyncWithHttpInfo
      *
      * 
      *
@@ -1758,16 +1762,30 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOnboardingConfigByIdAsyncWithHttpInfo($app_id, $config_id, $config_update)
+    public function onboardingUpdateOnboardingConfigByIdAsyncWithHttpInfo($app_id, $config_id, $config_update)
     {
-        $returnType = '';
-        $request = $this->updateOnboardingConfigByIdRequest($app_id, $config_id, $config_update);
+        $returnType = 'object';
+        $request = $this->onboardingUpdateOnboardingConfigByIdRequest($app_id, $config_id, $config_update);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1787,7 +1805,7 @@ class OnboardingApi
     }
 
     /**
-     * Create request for operation 'updateOnboardingConfigById'
+     * Create request for operation 'onboardingUpdateOnboardingConfigById'
      *
      * @param  string $app_id (required)
      * @param  int $config_id (required)
@@ -1796,24 +1814,24 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateOnboardingConfigByIdRequest($app_id, $config_id, $config_update)
+    protected function onboardingUpdateOnboardingConfigByIdRequest($app_id, $config_id, $config_update)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling updateOnboardingConfigById'
+                'Missing the required parameter $app_id when calling onboardingUpdateOnboardingConfigById'
             );
         }
         // verify the required parameter 'config_id' is set
         if ($config_id === null || (is_array($config_id) && count($config_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $config_id when calling updateOnboardingConfigById'
+                'Missing the required parameter $config_id when calling onboardingUpdateOnboardingConfigById'
             );
         }
         // verify the required parameter 'config_update' is set
         if ($config_update === null || (is_array($config_update) && count($config_update) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $config_update when calling updateOnboardingConfigById'
+                'Missing the required parameter $config_update when calling onboardingUpdateOnboardingConfigById'
             );
         }
 
@@ -1921,7 +1939,7 @@ class OnboardingApi
     }
 
     /**
-     * Operation updateOnboardingItem
+     * Operation onboardingUpdateOnboardingItem
      *
      * @param  string $app_id app_id (required)
      * @param  int $store_id store_id (required)
@@ -1930,15 +1948,16 @@ class OnboardingApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function updateOnboardingItem($app_id, $store_id, $onboarding_item_id, $item_update)
+    public function onboardingUpdateOnboardingItem($app_id, $store_id, $onboarding_item_id, $item_update)
     {
-        $this->updateOnboardingItemWithHttpInfo($app_id, $store_id, $onboarding_item_id, $item_update);
+        list($response) = $this->onboardingUpdateOnboardingItemWithHttpInfo($app_id, $store_id, $onboarding_item_id, $item_update);
+        return $response;
     }
 
     /**
-     * Operation updateOnboardingItemWithHttpInfo
+     * Operation onboardingUpdateOnboardingItemWithHttpInfo
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
@@ -1947,12 +1966,12 @@ class OnboardingApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOnboardingItemWithHttpInfo($app_id, $store_id, $onboarding_item_id, $item_update)
+    public function onboardingUpdateOnboardingItemWithHttpInfo($app_id, $store_id, $onboarding_item_id, $item_update)
     {
-        $returnType = '';
-        $request = $this->updateOnboardingItemRequest($app_id, $store_id, $onboarding_item_id, $item_update);
+        $returnType = 'object';
+        $request = $this->onboardingUpdateOnboardingItemRequest($app_id, $store_id, $onboarding_item_id, $item_update);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1982,10 +2001,32 @@ class OnboardingApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -2010,21 +2051,13 @@ class OnboardingApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation updateOnboardingItemAsync
+     * Operation onboardingUpdateOnboardingItemAsync
      *
      * 
      *
@@ -2036,9 +2069,9 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOnboardingItemAsync($app_id, $store_id, $onboarding_item_id, $item_update)
+    public function onboardingUpdateOnboardingItemAsync($app_id, $store_id, $onboarding_item_id, $item_update)
     {
-        return $this->updateOnboardingItemAsyncWithHttpInfo($app_id, $store_id, $onboarding_item_id, $item_update)
+        return $this->onboardingUpdateOnboardingItemAsyncWithHttpInfo($app_id, $store_id, $onboarding_item_id, $item_update)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2047,7 +2080,7 @@ class OnboardingApi
     }
 
     /**
-     * Operation updateOnboardingItemAsyncWithHttpInfo
+     * Operation onboardingUpdateOnboardingItemAsyncWithHttpInfo
      *
      * 
      *
@@ -2059,16 +2092,30 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOnboardingItemAsyncWithHttpInfo($app_id, $store_id, $onboarding_item_id, $item_update)
+    public function onboardingUpdateOnboardingItemAsyncWithHttpInfo($app_id, $store_id, $onboarding_item_id, $item_update)
     {
-        $returnType = '';
-        $request = $this->updateOnboardingItemRequest($app_id, $store_id, $onboarding_item_id, $item_update);
+        $returnType = 'object';
+        $request = $this->onboardingUpdateOnboardingItemRequest($app_id, $store_id, $onboarding_item_id, $item_update);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -2088,7 +2135,7 @@ class OnboardingApi
     }
 
     /**
-     * Create request for operation 'updateOnboardingItem'
+     * Create request for operation 'onboardingUpdateOnboardingItem'
      *
      * @param  string $app_id (required)
      * @param  int $store_id (required)
@@ -2098,30 +2145,30 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateOnboardingItemRequest($app_id, $store_id, $onboarding_item_id, $item_update)
+    protected function onboardingUpdateOnboardingItemRequest($app_id, $store_id, $onboarding_item_id, $item_update)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling updateOnboardingItem'
+                'Missing the required parameter $app_id when calling onboardingUpdateOnboardingItem'
             );
         }
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling updateOnboardingItem'
+                'Missing the required parameter $store_id when calling onboardingUpdateOnboardingItem'
             );
         }
         // verify the required parameter 'onboarding_item_id' is set
         if ($onboarding_item_id === null || (is_array($onboarding_item_id) && count($onboarding_item_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $onboarding_item_id when calling updateOnboardingItem'
+                'Missing the required parameter $onboarding_item_id when calling onboardingUpdateOnboardingItem'
             );
         }
         // verify the required parameter 'item_update' is set
         if ($item_update === null || (is_array($item_update) && count($item_update) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $item_update when calling updateOnboardingItem'
+                'Missing the required parameter $item_update when calling onboardingUpdateOnboardingItem'
             );
         }
 
@@ -2237,7 +2284,7 @@ class OnboardingApi
     }
 
     /**
-     * Operation updateOnboardingItemV2
+     * Operation onboardingUpdateOnboardingItemV2
      *
      * @param  string $app_id app_id (required)
      * @param  int $onboarding_item_id onboarding_item_id (required)
@@ -2246,15 +2293,16 @@ class OnboardingApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function updateOnboardingItemV2($app_id, $onboarding_item_id, $item_update, $store_id = null)
+    public function onboardingUpdateOnboardingItemV2($app_id, $onboarding_item_id, $item_update, $store_id = null)
     {
-        $this->updateOnboardingItemV2WithHttpInfo($app_id, $onboarding_item_id, $item_update, $store_id);
+        list($response) = $this->onboardingUpdateOnboardingItemV2WithHttpInfo($app_id, $onboarding_item_id, $item_update, $store_id);
+        return $response;
     }
 
     /**
-     * Operation updateOnboardingItemV2WithHttpInfo
+     * Operation onboardingUpdateOnboardingItemV2WithHttpInfo
      *
      * @param  string $app_id (required)
      * @param  int $onboarding_item_id (required)
@@ -2263,12 +2311,12 @@ class OnboardingApi
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateOnboardingItemV2WithHttpInfo($app_id, $onboarding_item_id, $item_update, $store_id = null)
+    public function onboardingUpdateOnboardingItemV2WithHttpInfo($app_id, $onboarding_item_id, $item_update, $store_id = null)
     {
-        $returnType = '';
-        $request = $this->updateOnboardingItemV2Request($app_id, $onboarding_item_id, $item_update, $store_id);
+        $returnType = 'object';
+        $request = $this->onboardingUpdateOnboardingItemV2Request($app_id, $onboarding_item_id, $item_update, $store_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2298,10 +2346,32 @@ class OnboardingApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -2326,21 +2396,13 @@ class OnboardingApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 500:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiErrorResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation updateOnboardingItemV2Async
+     * Operation onboardingUpdateOnboardingItemV2Async
      *
      * 
      *
@@ -2352,9 +2414,9 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOnboardingItemV2Async($app_id, $onboarding_item_id, $item_update, $store_id = null)
+    public function onboardingUpdateOnboardingItemV2Async($app_id, $onboarding_item_id, $item_update, $store_id = null)
     {
-        return $this->updateOnboardingItemV2AsyncWithHttpInfo($app_id, $onboarding_item_id, $item_update, $store_id)
+        return $this->onboardingUpdateOnboardingItemV2AsyncWithHttpInfo($app_id, $onboarding_item_id, $item_update, $store_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2363,7 +2425,7 @@ class OnboardingApi
     }
 
     /**
-     * Operation updateOnboardingItemV2AsyncWithHttpInfo
+     * Operation onboardingUpdateOnboardingItemV2AsyncWithHttpInfo
      *
      * 
      *
@@ -2375,16 +2437,30 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateOnboardingItemV2AsyncWithHttpInfo($app_id, $onboarding_item_id, $item_update, $store_id = null)
+    public function onboardingUpdateOnboardingItemV2AsyncWithHttpInfo($app_id, $onboarding_item_id, $item_update, $store_id = null)
     {
-        $returnType = '';
-        $request = $this->updateOnboardingItemV2Request($app_id, $onboarding_item_id, $item_update, $store_id);
+        $returnType = 'object';
+        $request = $this->onboardingUpdateOnboardingItemV2Request($app_id, $onboarding_item_id, $item_update, $store_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -2404,7 +2480,7 @@ class OnboardingApi
     }
 
     /**
-     * Create request for operation 'updateOnboardingItemV2'
+     * Create request for operation 'onboardingUpdateOnboardingItemV2'
      *
      * @param  string $app_id (required)
      * @param  int $onboarding_item_id (required)
@@ -2414,24 +2490,24 @@ class OnboardingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateOnboardingItemV2Request($app_id, $onboarding_item_id, $item_update, $store_id = null)
+    protected function onboardingUpdateOnboardingItemV2Request($app_id, $onboarding_item_id, $item_update, $store_id = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $app_id when calling updateOnboardingItemV2'
+                'Missing the required parameter $app_id when calling onboardingUpdateOnboardingItemV2'
             );
         }
         // verify the required parameter 'onboarding_item_id' is set
         if ($onboarding_item_id === null || (is_array($onboarding_item_id) && count($onboarding_item_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $onboarding_item_id when calling updateOnboardingItemV2'
+                'Missing the required parameter $onboarding_item_id when calling onboardingUpdateOnboardingItemV2'
             );
         }
         // verify the required parameter 'item_update' is set
         if ($item_update === null || (is_array($item_update) && count($item_update) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $item_update when calling updateOnboardingItemV2'
+                'Missing the required parameter $item_update when calling onboardingUpdateOnboardingItemV2'
             );
         }
 

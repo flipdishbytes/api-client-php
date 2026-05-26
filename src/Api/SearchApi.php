@@ -190,6 +190,14 @@ class SearchApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),

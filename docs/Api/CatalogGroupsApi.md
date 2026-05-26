@@ -4,18 +4,20 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**archiveGroup**](CatalogGroupsApi.md#archiveGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | 
-[**createGroup**](CatalogGroupsApi.md#createGroup) | **POST** /api/v1.0/{appId}/catalog/groups | 
-[**duplicateGroup**](CatalogGroupsApi.md#duplicateGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | 
-[**getGroupById**](CatalogGroupsApi.md#getGroupById) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | 
-[**getGroups**](CatalogGroupsApi.md#getGroups) | **GET** /api/v1.0/{appId}/catalog/groups | 
-[**updateGroup**](CatalogGroupsApi.md#updateGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | 
+[**archiveGroup**](CatalogGroupsApi.md#archiveGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/archive | Archive Catalog Group
+[**createGroup**](CatalogGroupsApi.md#createGroup) | **POST** /api/v1.0/{appId}/catalog/groups | Create a Catalog Group
+[**duplicateGroup**](CatalogGroupsApi.md#duplicateGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId}/duplicate | Duplicate Catalog Group
+[**getGroupById**](CatalogGroupsApi.md#getGroupById) | **GET** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Get group by Id
+[**getGroups**](CatalogGroupsApi.md#getGroups) | **GET** /api/v1.0/{appId}/catalog/groups | Get paginated groups by app name id filtered by types
+[**updateGroup**](CatalogGroupsApi.md#updateGroup) | **POST** /api/v1.0/{appId}/catalog/groups/{catalogItemId} | Update Catalog Group
 
 
 # **archiveGroup**
 > archiveGroup($app_id, $catalog_item_id)
 
+Archive Catalog Group
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -67,7 +69,9 @@ void (empty response body)
 # **createGroup**
 > \Flipdish\\Client\Models\RestApiResultGroup createGroup($app_id, $create_group)
 
+Create a Catalog Group
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -120,7 +124,9 @@ Name | Type | Description  | Notes
 # **duplicateGroup**
 > duplicateGroup($app_id, $catalog_item_id)
 
+Duplicate Catalog Group
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -172,7 +178,9 @@ void (empty response body)
 # **getGroupById**
 > \Flipdish\\Client\Models\Group getGroupById($app_id, $catalog_item_id)
 
+Get group by Id
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -225,7 +233,9 @@ Name | Type | Description  | Notes
 # **getGroups**
 > \Flipdish\\Client\Models\RestApiPaginationResultGroup getGroups($app_id, $group_types, $search_term, $page, $limit)
 
+Get paginated groups by app name id filtered by types
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php
@@ -284,7 +294,9 @@ Name | Type | Description  | Notes
 # **updateGroup**
 > updateGroup($app_id, $catalog_item_id, $update_group)
 
+Update Catalog Group
 
+[BETA - this endpoint is under development, do not use it in your production system]
 
 ### Example
 ```php

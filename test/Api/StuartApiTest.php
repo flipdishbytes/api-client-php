@@ -72,42 +72,42 @@ class StuartApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for cancelJob
+     * Test case for stuartCancelJob
      *
      * .
      *
      */
-    public function testCancelJob()
+    public function testStuartCancelJob()
     {
     }
 
     /**
-     * Test case for getJob
+     * Test case for stuartGetJob
      *
      * .
      *
      */
-    public function testGetJob()
+    public function testStuartGetJob()
     {
     }
 
     /**
-     * Test case for getStuartSettings
+     * Test case for stuartGetStuartSettings
      *
      * .
      *
      */
-    public function testGetStuartSettings()
+    public function testStuartGetStuartSettings()
     {
     }
 
     /**
-     * Test case for postStuartSettings
+     * Test case for stuartPostStuartSettings
      *
      * .
      *
      */
-    public function testPostStuartSettings()
+    public function testStuartPostStuartSettings()
     {
     }
 }

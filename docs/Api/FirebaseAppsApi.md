@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addFirebaseApp**](FirebaseAppsApi.md#addFirebaseApp) | **POST** /api/v1.0/FirebaseApp | 
-[**deleteFirebaseApp**](FirebaseAppsApi.md#deleteFirebaseApp) | **DELETE** /api/v1.0/FirebaseApp/{whiteLabelId} | 
-[**getFirebaseApp**](FirebaseAppsApi.md#getFirebaseApp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
+[**firebaseAppsAddFirebaseApp**](FirebaseAppsApi.md#firebaseAppsAddFirebaseApp) | **POST** /api/v1.0/FirebaseApp | 
+[**firebaseAppsDeleteFirebaseApp**](FirebaseAppsApi.md#firebaseAppsDeleteFirebaseApp) | **DELETE** /api/v1.0/FirebaseApp/{whiteLabelId} | 
+[**firebaseAppsGetFirebaseApp**](FirebaseAppsApi.md#firebaseAppsGetFirebaseApp) | **GET** /api/v1.0/FirebaseApp/{whitelabelId} | 
 
 
-# **addFirebaseApp**
-> object addFirebaseApp($firebase_app)
+# **firebaseAppsAddFirebaseApp**
+> object firebaseAppsAddFirebaseApp($firebase_app)
 
 
 
@@ -31,10 +31,10 @@ $apiInstance = new Flipdish\\Client\Api\FirebaseAppsApi(
 $firebase_app = new \Flipdish\\Client\Models\FirebaseApp(); // \Flipdish\\Client\Models\FirebaseApp | 
 
 try {
-    $result = $apiInstance->addFirebaseApp($firebase_app);
+    $result = $apiInstance->firebaseAppsAddFirebaseApp($firebase_app);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FirebaseAppsApi->addFirebaseApp: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FirebaseAppsApi->firebaseAppsAddFirebaseApp: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -60,8 +60,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteFirebaseApp**
-> object deleteFirebaseApp($white_label_id)
+# **firebaseAppsDeleteFirebaseApp**
+> object firebaseAppsDeleteFirebaseApp($white_label_id)
 
 
 
@@ -82,10 +82,10 @@ $apiInstance = new Flipdish\\Client\Api\FirebaseAppsApi(
 $white_label_id = 56; // int | 
 
 try {
-    $result = $apiInstance->deleteFirebaseApp($white_label_id);
+    $result = $apiInstance->firebaseAppsDeleteFirebaseApp($white_label_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FirebaseAppsApi->deleteFirebaseApp: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FirebaseAppsApi->firebaseAppsDeleteFirebaseApp: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -111,8 +111,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getFirebaseApp**
-> getFirebaseApp($whitelabel_id)
+# **firebaseAppsGetFirebaseApp**
+> object firebaseAppsGetFirebaseApp($whitelabel_id)
 
 
 
@@ -133,9 +133,10 @@ $apiInstance = new Flipdish\\Client\Api\FirebaseAppsApi(
 $whitelabel_id = 56; // int | 
 
 try {
-    $apiInstance->getFirebaseApp($whitelabel_id);
+    $result = $apiInstance->firebaseAppsGetFirebaseApp($whitelabel_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FirebaseAppsApi->getFirebaseApp: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FirebaseAppsApi->firebaseAppsGetFirebaseApp: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -148,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 

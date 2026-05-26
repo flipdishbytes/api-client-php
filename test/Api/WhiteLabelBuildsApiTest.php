@@ -72,6 +72,16 @@ class WhiteLabelBuildsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for healthCheck
+     *
+     * .
+     *
+     */
+    public function testHealthCheck()
+    {
+    }
+
+    /**
      * Test case for submitAndroidApps
      *
      * .
@@ -108,16 +118,6 @@ class WhiteLabelBuildsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testSubmitIosBuild()
-    {
-    }
-
-    /**
-     * Test case for whiteLabelBuildsHealthCheck
-     *
-     * .
-     *
-     */
-    public function testWhiteLabelBuildsHealthCheck()
     {
     }
 }

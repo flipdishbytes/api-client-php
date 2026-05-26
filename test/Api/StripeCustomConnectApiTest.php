@@ -122,22 +122,22 @@ class StripeCustomConnectApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for refresh
-     *
-     * .
-     *
-     */
-    public function testRefresh()
-    {
-    }
-
-    /**
      * Test case for setBankAccountBusinessType
      *
      * .
      *
      */
     public function testSetBankAccountBusinessType()
+    {
+    }
+
+    /**
+     * Test case for stripeCustomConnectRefresh
+     *
+     * .
+     *
+     */
+    public function testStripeCustomConnectRefresh()
     {
     }
 

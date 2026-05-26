@@ -176,6 +176,14 @@ class SmsProviderCredentialsApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -818,6 +826,14 @@ class SmsProviderCredentialsApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1139,6 +1155,14 @@ class SmsProviderCredentialsApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Flipdish\\Client\Models\RestApiResultSmsProviderCredential',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1470,6 +1494,14 @@ class SmsProviderCredentialsApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Flipdish\\Client\Models\RestApiArrayResultSmsProviderCredential',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

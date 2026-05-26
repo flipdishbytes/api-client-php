@@ -90,10 +90,12 @@ class MenuOptionSetsApi
     /**
      * Operation createMenuItemOptionSet
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  int $menu_section_id menu_section_id (required)
-     * @param  int $menu_section_item_id menu_section_item_id (required)
-     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set menu_item_option_set (required)
+     * Create menu item option set
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set Menu item option set (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -108,10 +110,12 @@ class MenuOptionSetsApi
     /**
      * Operation createMenuItemOptionSetWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set (required)
+     * Create menu item option set
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set Menu item option set (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -184,6 +188,14 @@ class MenuOptionSetsApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -208,12 +220,12 @@ class MenuOptionSetsApi
     /**
      * Operation createMenuItemOptionSetAsync
      *
-     * 
+     * Create menu item option set
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set Menu item option set (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -231,12 +243,12 @@ class MenuOptionSetsApi
     /**
      * Operation createMenuItemOptionSetAsyncWithHttpInfo
      *
-     * 
+     * Create menu item option set
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set Menu item option set (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -286,10 +298,10 @@ class MenuOptionSetsApi
     /**
      * Create request for operation 'createMenuItemOptionSet'
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set Menu item option set (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -435,10 +447,12 @@ class MenuOptionSetsApi
     /**
      * Operation deleteMenuItemOptionSet
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  int $menu_section_item_id menu_section_item_id (required)
-     * @param  int $menu_section_id menu_section_id (required)
-     * @param  int $option_set_id option_set_id (required)
+     * Delete menu item option set
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -452,10 +466,12 @@ class MenuOptionSetsApi
     /**
      * Operation deleteMenuItemOptionSetWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $option_set_id (required)
+     * Delete menu item option set
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -498,6 +514,14 @@ class MenuOptionSetsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -522,12 +546,12 @@ class MenuOptionSetsApi
     /**
      * Operation deleteMenuItemOptionSetAsync
      *
-     * 
+     * Delete menu item option set
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $option_set_id (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -545,12 +569,12 @@ class MenuOptionSetsApi
     /**
      * Operation deleteMenuItemOptionSetAsyncWithHttpInfo
      *
-     * 
+     * Delete menu item option set
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $option_set_id (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -586,10 +610,10 @@ class MenuOptionSetsApi
     /**
      * Create request for operation 'deleteMenuItemOptionSet'
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $option_set_id (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -740,10 +764,12 @@ class MenuOptionSetsApi
     /**
      * Operation deleteOptionSetImage
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  int $menu_section_id menu_section_id (required)
-     * @param  int $menu_section_item_id menu_section_item_id (required)
-     * @param  int $option_set_id option_set_id (required)
+     * Delete option set image
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -757,10 +783,12 @@ class MenuOptionSetsApi
     /**
      * Operation deleteOptionSetImageWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $option_set_id (required)
+     * Delete option set image
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -803,6 +831,14 @@ class MenuOptionSetsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -827,12 +863,12 @@ class MenuOptionSetsApi
     /**
      * Operation deleteOptionSetImageAsync
      *
-     * 
+     * Delete option set image
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $option_set_id (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -850,12 +886,12 @@ class MenuOptionSetsApi
     /**
      * Operation deleteOptionSetImageAsyncWithHttpInfo
      *
-     * 
+     * Delete option set image
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $option_set_id (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -891,10 +927,10 @@ class MenuOptionSetsApi
     /**
      * Create request for operation 'deleteOptionSetImage'
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $option_set_id (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1734,11 +1770,13 @@ class MenuOptionSetsApi
     /**
      * Operation updateMenuItemOptionSet
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  int $menu_section_id menu_section_id (required)
-     * @param  int $menu_section_item_id menu_section_item_id (required)
-     * @param  int $option_set_id option_set_id (required)
-     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set menu_item_option_set (required)
+     * Update menu item option set
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set Menu item option set (delta) (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1752,11 +1790,13 @@ class MenuOptionSetsApi
     /**
      * Operation updateMenuItemOptionSetWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $option_set_id (required)
-     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set (required)
+     * Update menu item option set
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set Menu item option set (delta) (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1799,6 +1839,14 @@ class MenuOptionSetsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1823,13 +1871,13 @@ class MenuOptionSetsApi
     /**
      * Operation updateMenuItemOptionSetAsync
      *
-     * 
+     * Update menu item option set
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $option_set_id (required)
-     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set Menu item option set (delta) (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1847,13 +1895,13 @@ class MenuOptionSetsApi
     /**
      * Operation updateMenuItemOptionSetAsyncWithHttpInfo
      *
-     * 
+     * Update menu item option set
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $option_set_id (required)
-     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set Menu item option set (delta) (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1889,11 +1937,11 @@ class MenuOptionSetsApi
     /**
      * Create request for operation 'updateMenuItemOptionSet'
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $option_set_id (required)
-     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuItemOptionSetBase $menu_item_option_set Menu item option set (delta) (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2053,10 +2101,12 @@ class MenuOptionSetsApi
     /**
      * Operation uploadOptionSetImage
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  int $menu_section_id menu_section_id (required)
-     * @param  int $menu_section_item_id menu_section_item_id (required)
-     * @param  int $option_set_id option_set_id (required)
+     * Upload menu item option set image
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      * @param  \SplFileObject $image Option set image (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -2072,10 +2122,12 @@ class MenuOptionSetsApi
     /**
      * Operation uploadOptionSetImageWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $option_set_id (required)
+     * Upload menu item option set image
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      * @param  \SplFileObject $image Option set image (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -2141,6 +2193,14 @@ class MenuOptionSetsApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -2165,12 +2225,12 @@ class MenuOptionSetsApi
     /**
      * Operation uploadOptionSetImageAsync
      *
-     * 
+     * Upload menu item option set image
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $option_set_id (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      * @param  \SplFileObject $image Option set image (required)
      *
      * @throws \InvalidArgumentException
@@ -2189,12 +2249,12 @@ class MenuOptionSetsApi
     /**
      * Operation uploadOptionSetImageAsyncWithHttpInfo
      *
-     * 
+     * Upload menu item option set image
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $option_set_id (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      * @param  \SplFileObject $image Option set image (required)
      *
      * @throws \InvalidArgumentException
@@ -2245,10 +2305,10 @@ class MenuOptionSetsApi
     /**
      * Create request for operation 'uploadOptionSetImage'
      *
-     * @param  int $menu_id (required)
-     * @param  int $menu_section_id (required)
-     * @param  int $menu_section_item_id (required)
-     * @param  int $option_set_id (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $menu_section_id Menu section identifier (required)
+     * @param  int $menu_section_item_id Menu section item identifier (required)
+     * @param  int $option_set_id Option set identifier (required)
      * @param  \SplFileObject $image Option set image (required)
      *
      * @throws \InvalidArgumentException

@@ -4,13 +4,13 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**generateMenu**](LightspeedApi.md#generateMenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
-[**getStoreSettings**](LightspeedApi.md#getStoreSettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
-[**saveStoreSettings**](LightspeedApi.md#saveStoreSettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
+[**lightspeedGenerateMenu**](LightspeedApi.md#lightspeedGenerateMenu) | **POST** /api/v1.0/lightspeed/{storeId}/menu/generate | 
+[**lightspeedGetStoreSettings**](LightspeedApi.md#lightspeedGetStoreSettings) | **GET** /api/v1.0/lightspeed/{storeId}/settings | 
+[**lightspeedSaveStoreSettings**](LightspeedApi.md#lightspeedSaveStoreSettings) | **POST** /api/v1.0/lightspeed/{storeId}/settings | 
 
 
-# **generateMenu**
-> generateMenu($store_id)
+# **lightspeedGenerateMenu**
+> object lightspeedGenerateMenu($store_id)
 
 
 
@@ -31,9 +31,10 @@ $apiInstance = new Flipdish\\Client\Api\LightspeedApi(
 $store_id = 56; // int | 
 
 try {
-    $apiInstance->generateMenu($store_id);
+    $result = $apiInstance->lightspeedGenerateMenu($store_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LightspeedApi->generateMenu: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LightspeedApi->lightspeedGenerateMenu: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -46,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -59,8 +60,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getStoreSettings**
-> \Flipdish\\Client\Models\RestApiResultLightspeedSettings getStoreSettings($store_id)
+# **lightspeedGetStoreSettings**
+> \Flipdish\\Client\Models\RestApiResultLightspeedSettings lightspeedGetStoreSettings($store_id)
 
 
 
@@ -81,10 +82,10 @@ $apiInstance = new Flipdish\\Client\Api\LightspeedApi(
 $store_id = 56; // int | 
 
 try {
-    $result = $apiInstance->getStoreSettings($store_id);
+    $result = $apiInstance->lightspeedGetStoreSettings($store_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LightspeedApi->getStoreSettings: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LightspeedApi->lightspeedGetStoreSettings: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -110,8 +111,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **saveStoreSettings**
-> \Flipdish\\Client\Models\RestApiResultLightspeedSettings saveStoreSettings($store_id, $lightspeed_settings)
+# **lightspeedSaveStoreSettings**
+> \Flipdish\\Client\Models\RestApiResultLightspeedSettings lightspeedSaveStoreSettings($store_id, $lightspeed_settings)
 
 
 
@@ -133,10 +134,10 @@ $store_id = 56; // int |
 $lightspeed_settings = new \Flipdish\\Client\Models\LightspeedSettings(); // \Flipdish\\Client\Models\LightspeedSettings | 
 
 try {
-    $result = $apiInstance->saveStoreSettings($store_id, $lightspeed_settings);
+    $result = $apiInstance->lightspeedSaveStoreSettings($store_id, $lightspeed_settings);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LightspeedApi->saveStoreSettings: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LightspeedApi->lightspeedSaveStoreSettings: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

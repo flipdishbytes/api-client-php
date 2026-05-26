@@ -4,117 +4,17 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**acceptInvitation**](TeammatesApi.md#acceptInvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
-[**acceptInvitations**](TeammatesApi.md#acceptInvitations) | **POST** /api/v1.0/teammates/acceptInvitations | 
 [**createTeammate**](TeammatesApi.md#createTeammate) | **POST** /api/v1.0/{appId}/teammates | 
 [**deleteTeammate**](TeammatesApi.md#deleteTeammate) | **DELETE** /api/v1.0/{appId}/teammates/{id} | 
 [**getTeammateByAppIdAndTeammateId**](TeammatesApi.md#getTeammateByAppIdAndTeammateId) | **GET** /api/v1.0/{appId}/teammates/{id} | 
 [**getTeammatesByAppId**](TeammatesApi.md#getTeammatesByAppId) | **GET** /api/v1.0/{appId}/teammates | 
 [**grantaccess**](TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/grantaccess | 
-[**pendingInvitations**](TeammatesApi.md#pendingInvitations) | **GET** /api/v1.0/teammates/pending-invitations | 
 [**redeemInvitation**](TeammatesApi.md#redeemInvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+[**teammatesAcceptInvitation**](TeammatesApi.md#teammatesAcceptInvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
+[**teammatesAcceptInvitations**](TeammatesApi.md#teammatesAcceptInvitations) | **POST** /api/v1.0/teammates/acceptInvitations | 
+[**teammatesPendingInvitations**](TeammatesApi.md#teammatesPendingInvitations) | **GET** /api/v1.0/teammates/pending-invitations | 
 [**updateTeammate**](TeammatesApi.md#updateTeammate) | **POST** /api/v1.0/{appId}/teammates/{id} | 
 
-
-# **acceptInvitation**
-> \Flipdish\\Client\Models\RestApiResultAcceptInvitationResult acceptInvitation($otc, $app_id)
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\TeammatesApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$otc = "otc_example"; // string | 
-$app_id = "app_id_example"; // string | 
-
-try {
-    $result = $apiInstance->acceptInvitation($otc, $app_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeammatesApi->acceptInvitation: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **otc** | **string**|  |
- **app_id** | **string**|  |
-
-### Return type
-
-[**\Flipdish\\Client\Models\RestApiResultAcceptInvitationResult**](../Model/RestApiResultAcceptInvitationResult.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **acceptInvitations**
-> \Flipdish\\Client\Models\RestApiArrayResultRedeemInvitationResult acceptInvitations()
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\TeammatesApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-
-try {
-    $result = $apiInstance->acceptInvitations();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeammatesApi->acceptInvitations: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\Flipdish\\Client\Models\RestApiArrayResultRedeemInvitationResult**](../Model/RestApiArrayResultRedeemInvitationResult.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createTeammate**
 > \Flipdish\\Client\Models\RestApiResultTeammate createTeammate($app_id, $teammate)
@@ -326,7 +226,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **grantaccess**
-> \Flipdish\\Client\Models\RestApiResultTeammate grantaccess($app_id, $teammate)
+> object grantaccess($app_id, $teammate)
 
 
 
@@ -365,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Flipdish\\Client\Models\RestApiResultTeammate**](../Model/RestApiResultTeammate.md)
+**object**
 
 ### Authorization
 
@@ -374,53 +274,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **pendingInvitations**
-> \Flipdish\\Client\Models\RestApiArrayResultPendingInvitation pendingInvitations()
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\TeammatesApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-
-try {
-    $result = $apiInstance->pendingInvitations();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TeammatesApi->pendingInvitations: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\Flipdish\\Client\Models\RestApiArrayResultPendingInvitation**](../Model/RestApiArrayResultPendingInvitation.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -466,6 +319,153 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiResultRedeemInvitationResult**](../Model/RestApiResultRedeemInvitationResult.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teammatesAcceptInvitation**
+> \Flipdish\\Client\Models\RestApiResultAcceptInvitationResult teammatesAcceptInvitation($otc, $app_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\TeammatesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$otc = "otc_example"; // string | 
+$app_id = "app_id_example"; // string | 
+
+try {
+    $result = $apiInstance->teammatesAcceptInvitation($otc, $app_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeammatesApi->teammatesAcceptInvitation: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **otc** | **string**|  |
+ **app_id** | **string**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultAcceptInvitationResult**](../Model/RestApiResultAcceptInvitationResult.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teammatesAcceptInvitations**
+> \Flipdish\\Client\Models\RestApiArrayResultRedeemInvitationResult teammatesAcceptInvitations()
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\TeammatesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->teammatesAcceptInvitations();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeammatesApi->teammatesAcceptInvitations: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiArrayResultRedeemInvitationResult**](../Model/RestApiArrayResultRedeemInvitationResult.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teammatesPendingInvitations**
+> \Flipdish\\Client\Models\RestApiArrayResultPendingInvitation teammatesPendingInvitations()
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\TeammatesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->teammatesPendingInvitations();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TeammatesApi->teammatesPendingInvitations: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiArrayResultPendingInvitation**](../Model/RestApiArrayResultPendingInvitation.md)
 
 ### Authorization
 

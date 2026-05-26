@@ -72,6 +72,16 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for appsSetPropertyId
+     *
+     * .
+     *
+     */
+    public function testAppsSetPropertyId()
+    {
+    }
+
+    /**
      * Test case for createApp
      *
      * .
@@ -238,16 +248,6 @@ class AppsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testSetPanaceaVanityUrl()
-    {
-    }
-
-    /**
-     * Test case for setPropertyId
-     *
-     * .
-     *
-     */
-    public function testSetPropertyId()
     {
     }
 

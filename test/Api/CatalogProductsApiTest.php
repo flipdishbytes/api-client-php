@@ -74,7 +74,7 @@ class CatalogProductsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for archiveProduct
      *
-     * .
+     * Archive Product.
      *
      */
     public function testArchiveProduct()
@@ -84,7 +84,7 @@ class CatalogProductsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createProduct
      *
-     * .
+     * Create a Product.
      *
      */
     public function testCreateProduct()
@@ -94,7 +94,7 @@ class CatalogProductsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for duplicateProduct
      *
-     * .
+     * Duplicate Product.
      *
      */
     public function testDuplicateProduct()
@@ -104,7 +104,7 @@ class CatalogProductsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getProductById
      *
-     * .
+     * Get Product by Id.
      *
      */
     public function testGetProductById()
@@ -114,7 +114,7 @@ class CatalogProductsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getProducts
      *
-     * .
+     * Get paginated products by app name id filtered by types.
      *
      */
     public function testGetProducts()
@@ -124,7 +124,7 @@ class CatalogProductsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateProduct
      *
-     * .
+     * Update Product.
      *
      */
     public function testUpdateProduct()

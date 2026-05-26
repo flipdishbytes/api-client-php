@@ -82,16 +82,6 @@ class WebsiteApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for checkNow
-     *
-     * .
-     *
-     */
-    public function testCheckNow()
-    {
-    }
-
-    /**
      * Test case for deleteTestimonial
      *
      * .
@@ -148,6 +138,16 @@ class WebsiteApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testUploadWebsiteImage()
+    {
+    }
+
+    /**
+     * Test case for websiteCheckNow
+     *
+     * .
+     *
+     */
+    public function testWebsiteCheckNow()
     {
     }
 }

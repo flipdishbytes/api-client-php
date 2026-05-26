@@ -90,8 +90,10 @@ class MenusApi
     /**
      * Operation createDraftMenuFromExistingMenu
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  string $new_name new_name (required)
+     * Clone a menu, (without attaching stores)
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $new_name Name of the new Menu (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -106,8 +108,10 @@ class MenusApi
     /**
      * Operation createDraftMenuFromExistingMenuWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  string $new_name (required)
+     * Clone a menu, (without attaching stores)
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $new_name Name of the new Menu (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -172,6 +176,14 @@ class MenusApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -204,10 +216,10 @@ class MenusApi
     /**
      * Operation createDraftMenuFromExistingMenuAsync
      *
-     * 
+     * Clone a menu, (without attaching stores)
      *
-     * @param  int $menu_id (required)
-     * @param  string $new_name (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $new_name Name of the new Menu (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -225,10 +237,10 @@ class MenusApi
     /**
      * Operation createDraftMenuFromExistingMenuAsyncWithHttpInfo
      *
-     * 
+     * Clone a menu, (without attaching stores)
      *
-     * @param  int $menu_id (required)
-     * @param  string $new_name (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $new_name Name of the new Menu (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -278,8 +290,8 @@ class MenusApi
     /**
      * Create request for operation 'createDraftMenuFromExistingMenu'
      *
-     * @param  int $menu_id (required)
-     * @param  string $new_name (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $new_name Name of the new Menu (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -402,9 +414,11 @@ class MenusApi
     /**
      * Operation createNewMenuAsync
      *
-     * @param  string $app_id app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu menu (required)
-     * @param  string $org_id org_id (optional)
+     * Create a new menu asynchronously
+     *
+     * @param  string $app_id App id (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  string $org_id Org id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -419,9 +433,11 @@ class MenusApi
     /**
      * Operation createNewMenuAsyncWithHttpInfo
      *
-     * @param  string $app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu (required)
-     * @param  string $org_id (optional)
+     * Create a new menu asynchronously
+     *
+     * @param  string $app_id App id (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  string $org_id Org id (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -494,6 +510,14 @@ class MenusApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -518,11 +542,11 @@ class MenusApi
     /**
      * Operation createNewMenuAsyncAsync
      *
-     * 
+     * Create a new menu asynchronously
      *
-     * @param  string $app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu (required)
-     * @param  string $org_id (optional)
+     * @param  string $app_id App id (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  string $org_id Org id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -540,11 +564,11 @@ class MenusApi
     /**
      * Operation createNewMenuAsyncAsyncWithHttpInfo
      *
-     * 
+     * Create a new menu asynchronously
      *
-     * @param  string $app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu (required)
-     * @param  string $org_id (optional)
+     * @param  string $app_id App id (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  string $org_id Org id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -594,9 +618,9 @@ class MenusApi
     /**
      * Create request for operation 'createNewMenuAsync'
      *
-     * @param  string $app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu (required)
-     * @param  string $org_id (optional)
+     * @param  string $app_id App id (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu (required)
+     * @param  string $org_id Org id (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -718,8 +742,10 @@ class MenusApi
     /**
      * Operation createNewMenuForApp
      *
-     * @param  string $app_id app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu menu (required)
+     * Create a new menu
+     *
+     * @param  string $app_id App identifier (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu. If empty the system will create a menu with default items (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -734,8 +760,10 @@ class MenusApi
     /**
      * Operation createNewMenuForAppWithHttpInfo
      *
-     * @param  string $app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu (required)
+     * Create a new menu
+     *
+     * @param  string $app_id App identifier (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu. If empty the system will create a menu with default items (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -800,6 +828,14 @@ class MenusApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -824,10 +860,10 @@ class MenusApi
     /**
      * Operation createNewMenuForAppAsync
      *
-     * 
+     * Create a new menu
      *
-     * @param  string $app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu (required)
+     * @param  string $app_id App identifier (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu. If empty the system will create a menu with default items (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -845,10 +881,10 @@ class MenusApi
     /**
      * Operation createNewMenuForAppAsyncWithHttpInfo
      *
-     * 
+     * Create a new menu
      *
-     * @param  string $app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu (required)
+     * @param  string $app_id App identifier (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu. If empty the system will create a menu with default items (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -898,8 +934,8 @@ class MenusApi
     /**
      * Create request for operation 'createNewMenuForApp'
      *
-     * @param  string $app_id (required)
-     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu (required)
+     * @param  string $app_id App identifier (required)
+     * @param  \Flipdish\\Client\Models\CreateFullMenu $menu Menu. If empty the system will create a menu with default items (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1017,7 +1053,9 @@ class MenusApi
     /**
      * Operation deleteMenu
      *
-     * @param  int $menu_id menu_id (required)
+     * Mark a Menu as Deleted
+     *
+     * @param  int $menu_id Menu Identifier (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1031,7 +1069,9 @@ class MenusApi
     /**
      * Operation deleteMenuWithHttpInfo
      *
-     * @param  int $menu_id (required)
+     * Mark a Menu as Deleted
+     *
+     * @param  int $menu_id Menu Identifier (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1074,6 +1114,14 @@ class MenusApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1098,9 +1146,9 @@ class MenusApi
     /**
      * Operation deleteMenuAsync
      *
-     * 
+     * Mark a Menu as Deleted
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu Identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1118,9 +1166,9 @@ class MenusApi
     /**
      * Operation deleteMenuAsyncWithHttpInfo
      *
-     * 
+     * Mark a Menu as Deleted
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu Identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1156,7 +1204,7 @@ class MenusApi
     /**
      * Create request for operation 'deleteMenu'
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu Identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1265,7 +1313,9 @@ class MenusApi
     /**
      * Operation deleteMenuImage
      *
-     * @param  int $menu_id menu_id (required)
+     * Delete menu image
+     *
+     * @param  int $menu_id Menu identifier (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1279,7 +1329,9 @@ class MenusApi
     /**
      * Operation deleteMenuImageWithHttpInfo
      *
-     * @param  int $menu_id (required)
+     * Delete menu image
+     *
+     * @param  int $menu_id Menu identifier (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1322,6 +1374,14 @@ class MenusApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1354,9 +1414,9 @@ class MenusApi
     /**
      * Operation deleteMenuImageAsync
      *
-     * 
+     * Delete menu image
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1374,9 +1434,9 @@ class MenusApi
     /**
      * Operation deleteMenuImageAsyncWithHttpInfo
      *
-     * 
+     * Delete menu image
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1412,7 +1472,7 @@ class MenusApi
     /**
      * Create request for operation 'deleteMenuImage'
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1521,10 +1581,12 @@ class MenusApi
     /**
      * Operation deleteMenuItemMetadata
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  int $store_id store_id (required)
-     * @param  int $menu_item_id menu_item_id (required)
-     * @param  string $key key (required)
+     * Delete menu item metadata
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $menu_item_id Menu item identifier (required)
+     * @param  string $key Metadata key (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1538,10 +1600,12 @@ class MenusApi
     /**
      * Operation deleteMenuItemMetadataWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  int $store_id (required)
-     * @param  int $menu_item_id (required)
-     * @param  string $key (required)
+     * Delete menu item metadata
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $menu_item_id Menu item identifier (required)
+     * @param  string $key Metadata key (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1584,6 +1648,14 @@ class MenusApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1616,12 +1688,12 @@ class MenusApi
     /**
      * Operation deleteMenuItemMetadataAsync
      *
-     * 
+     * Delete menu item metadata
      *
-     * @param  int $menu_id (required)
-     * @param  int $store_id (required)
-     * @param  int $menu_item_id (required)
-     * @param  string $key (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $menu_item_id Menu item identifier (required)
+     * @param  string $key Metadata key (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1639,12 +1711,12 @@ class MenusApi
     /**
      * Operation deleteMenuItemMetadataAsyncWithHttpInfo
      *
-     * 
+     * Delete menu item metadata
      *
-     * @param  int $menu_id (required)
-     * @param  int $store_id (required)
-     * @param  int $menu_item_id (required)
-     * @param  string $key (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $menu_item_id Menu item identifier (required)
+     * @param  string $key Metadata key (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1680,10 +1752,10 @@ class MenusApi
     /**
      * Create request for operation 'deleteMenuItemMetadata'
      *
-     * @param  int $menu_id (required)
-     * @param  int $store_id (required)
-     * @param  int $menu_item_id (required)
-     * @param  string $key (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $menu_item_id Menu item identifier (required)
+     * @param  string $key Metadata key (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1752,273 +1824,6 @@ class MenusApi
             $resourcePath = str_replace(
                 '{' . 'key' . '}',
                 ObjectSerializer::toPathValue($key),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'DELETE',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation deleteTaxRate
-     *
-     * @param  int $menu_id menu_id (required)
-     * @param  int $tax_id tax_id (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function deleteTaxRate($menu_id, $tax_id)
-    {
-        $this->deleteTaxRateWithHttpInfo($menu_id, $tax_id);
-    }
-
-    /**
-     * Operation deleteTaxRateWithHttpInfo
-     *
-     * @param  int $menu_id (required)
-     * @param  int $tax_id (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteTaxRateWithHttpInfo($menu_id, $tax_id)
-    {
-        $returnType = '';
-        $request = $this->deleteTaxRateRequest($menu_id, $tax_id);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation deleteTaxRateAsync
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  int $tax_id (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteTaxRateAsync($menu_id, $tax_id)
-    {
-        return $this->deleteTaxRateAsyncWithHttpInfo($menu_id, $tax_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation deleteTaxRateAsyncWithHttpInfo
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  int $tax_id (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteTaxRateAsyncWithHttpInfo($menu_id, $tax_id)
-    {
-        $returnType = '';
-        $request = $this->deleteTaxRateRequest($menu_id, $tax_id);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'deleteTaxRate'
-     *
-     * @param  int $menu_id (required)
-     * @param  int $tax_id (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteTaxRateRequest($menu_id, $tax_id)
-    {
-        // verify the required parameter 'menu_id' is set
-        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $menu_id when calling deleteTaxRate'
-            );
-        }
-        // verify the required parameter 'tax_id' is set
-        if ($tax_id === null || (is_array($tax_id) && count($tax_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $tax_id when calling deleteTaxRate'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/menus/{menuId}/tax/{taxId}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-        // path params
-        if ($menu_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'menuId' . '}',
-                ObjectSerializer::toPathValue($menu_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($tax_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'taxId' . '}',
-                ObjectSerializer::toPathValue($tax_id),
                 $resourcePath
             );
         }
@@ -2343,306 +2148,6 @@ class MenusApi
             $resourcePath = str_replace(
                 '{' . 'storeId' . '}',
                 ObjectSerializer::toPathValue($store_id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation getMenuBulkShowHide
-     *
-     * @param  int $menu_id menu_id (required)
-     * @param  bool $is_available is_available (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse
-     */
-    public function getMenuBulkShowHide($menu_id, $is_available)
-    {
-        list($response) = $this->getMenuBulkShowHideWithHttpInfo($menu_id, $is_available);
-        return $response;
-    }
-
-    /**
-     * Operation getMenuBulkShowHideWithHttpInfo
-     *
-     * @param  int $menu_id (required)
-     * @param  bool $is_available (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getMenuBulkShowHideWithHttpInfo($menu_id, $is_available)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse';
-        $request = $this->getMenuBulkShowHideRequest($menu_id, $is_available);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getMenuBulkShowHideAsync
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  bool $is_available (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getMenuBulkShowHideAsync($menu_id, $is_available)
-    {
-        return $this->getMenuBulkShowHideAsyncWithHttpInfo($menu_id, $is_available)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getMenuBulkShowHideAsyncWithHttpInfo
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  bool $is_available (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getMenuBulkShowHideAsyncWithHttpInfo($menu_id, $is_available)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse';
-        $request = $this->getMenuBulkShowHideRequest($menu_id, $is_available);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'getMenuBulkShowHide'
-     *
-     * @param  int $menu_id (required)
-     * @param  bool $is_available (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getMenuBulkShowHideRequest($menu_id, $is_available)
-    {
-        // verify the required parameter 'menu_id' is set
-        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $menu_id when calling getMenuBulkShowHide'
-            );
-        }
-        // verify the required parameter 'is_available' is set
-        if ($is_available === null || (is_array($is_available) && count($is_available) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $is_available when calling getMenuBulkShowHide'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/menus/{menuId}/bulkshowhide/list';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if ($is_available !== null) {
-            $queryParams['isAvailable'] = ObjectSerializer::toQueryValue($is_available);
-        }
-
-        // path params
-        if ($menu_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'menuId' . '}',
-                ObjectSerializer::toPathValue($menu_id),
                 $resourcePath
             );
         }
@@ -5577,10 +5082,2072 @@ class MenusApi
     }
 
     /**
+     * Operation menusDeleteTaxRate
+     *
+     * Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $tax_id Id of Menu Tax to be removed (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function menusDeleteTaxRate($menu_id, $tax_id)
+    {
+        $this->menusDeleteTaxRateWithHttpInfo($menu_id, $tax_id);
+    }
+
+    /**
+     * Operation menusDeleteTaxRateWithHttpInfo
+     *
+     * Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $tax_id Id of Menu Tax to be removed (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function menusDeleteTaxRateWithHttpInfo($menu_id, $tax_id)
+    {
+        $returnType = '';
+        $request = $this->menusDeleteTaxRateRequest($menu_id, $tax_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation menusDeleteTaxRateAsync
+     *
+     * Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $tax_id Id of Menu Tax to be removed (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusDeleteTaxRateAsync($menu_id, $tax_id)
+    {
+        return $this->menusDeleteTaxRateAsyncWithHttpInfo($menu_id, $tax_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation menusDeleteTaxRateAsyncWithHttpInfo
+     *
+     * Remove a Menus Tax Rate, can only remove a tax rate that does not have items/optionSetItems attached
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $tax_id Id of Menu Tax to be removed (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusDeleteTaxRateAsyncWithHttpInfo($menu_id, $tax_id)
+    {
+        $returnType = '';
+        $request = $this->menusDeleteTaxRateRequest($menu_id, $tax_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'menusDeleteTaxRate'
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $tax_id Id of Menu Tax to be removed (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function menusDeleteTaxRateRequest($menu_id, $tax_id)
+    {
+        // verify the required parameter 'menu_id' is set
+        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $menu_id when calling menusDeleteTaxRate'
+            );
+        }
+        // verify the required parameter 'tax_id' is set
+        if ($tax_id === null || (is_array($tax_id) && count($tax_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $tax_id when calling menusDeleteTaxRate'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/menus/{menuId}/tax/{taxId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($menu_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'menuId' . '}',
+                ObjectSerializer::toPathValue($menu_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($tax_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'taxId' . '}',
+                ObjectSerializer::toPathValue($tax_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'DELETE',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation menusGetMenuBulkShowHide
+     *
+     * Get bulk show/hide menu items and option set items
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  bool $is_available Is available flag (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse
+     */
+    public function menusGetMenuBulkShowHide($menu_id, $is_available)
+    {
+        list($response) = $this->menusGetMenuBulkShowHideWithHttpInfo($menu_id, $is_available);
+        return $response;
+    }
+
+    /**
+     * Operation menusGetMenuBulkShowHideWithHttpInfo
+     *
+     * Get bulk show/hide menu items and option set items
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  bool $is_available Is available flag (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function menusGetMenuBulkShowHideWithHttpInfo($menu_id, $is_available)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse';
+        $request = $this->menusGetMenuBulkShowHideRequest($menu_id, $is_available);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation menusGetMenuBulkShowHideAsync
+     *
+     * Get bulk show/hide menu items and option set items
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  bool $is_available Is available flag (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusGetMenuBulkShowHideAsync($menu_id, $is_available)
+    {
+        return $this->menusGetMenuBulkShowHideAsyncWithHttpInfo($menu_id, $is_available)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation menusGetMenuBulkShowHideAsyncWithHttpInfo
+     *
+     * Get bulk show/hide menu items and option set items
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  bool $is_available Is available flag (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusGetMenuBulkShowHideAsyncWithHttpInfo($menu_id, $is_available)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultMenuElementListResponse';
+        $request = $this->menusGetMenuBulkShowHideRequest($menu_id, $is_available);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'menusGetMenuBulkShowHide'
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  bool $is_available Is available flag (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function menusGetMenuBulkShowHideRequest($menu_id, $is_available)
+    {
+        // verify the required parameter 'menu_id' is set
+        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $menu_id when calling menusGetMenuBulkShowHide'
+            );
+        }
+        // verify the required parameter 'is_available' is set
+        if ($is_available === null || (is_array($is_available) && count($is_available) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $is_available when calling menusGetMenuBulkShowHide'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/menus/{menuId}/bulkshowhide/list';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($is_available !== null) {
+            $queryParams['isAvailable'] = ObjectSerializer::toQueryValue($is_available);
+        }
+
+        // path params
+        if ($menu_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'menuId' . '}',
+                ObjectSerializer::toPathValue($menu_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation menusSetDisplayOnMenuTax
+     *
+     * Set if tax shows for a Menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  bool $show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function menusSetDisplayOnMenuTax($menu_id, $show)
+    {
+        $this->menusSetDisplayOnMenuTaxWithHttpInfo($menu_id, $show);
+    }
+
+    /**
+     * Operation menusSetDisplayOnMenuTaxWithHttpInfo
+     *
+     * Set if tax shows for a Menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  bool $show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function menusSetDisplayOnMenuTaxWithHttpInfo($menu_id, $show)
+    {
+        $returnType = '';
+        $request = $this->menusSetDisplayOnMenuTaxRequest($menu_id, $show);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation menusSetDisplayOnMenuTaxAsync
+     *
+     * Set if tax shows for a Menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  bool $show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusSetDisplayOnMenuTaxAsync($menu_id, $show)
+    {
+        return $this->menusSetDisplayOnMenuTaxAsyncWithHttpInfo($menu_id, $show)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation menusSetDisplayOnMenuTaxAsyncWithHttpInfo
+     *
+     * Set if tax shows for a Menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  bool $show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusSetDisplayOnMenuTaxAsyncWithHttpInfo($menu_id, $show)
+    {
+        $returnType = '';
+        $request = $this->menusSetDisplayOnMenuTaxRequest($menu_id, $show);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'menusSetDisplayOnMenuTax'
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  bool $show Boolean show or dont show tax (Exclusive tax type can only ever be TRUE) (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function menusSetDisplayOnMenuTaxRequest($menu_id, $show)
+    {
+        // verify the required parameter 'menu_id' is set
+        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $menu_id when calling menusSetDisplayOnMenuTax'
+            );
+        }
+        // verify the required parameter 'show' is set
+        if ($show === null || (is_array($show) && count($show) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $show when calling menusSetDisplayOnMenuTax'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/menus/{menuId}/tax/show/{show}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($menu_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'menuId' . '}',
+                ObjectSerializer::toPathValue($menu_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($show !== null) {
+            $resourcePath = str_replace(
+                '{' . 'show' . '}',
+                ObjectSerializer::toPathValue($show),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation menusSetItemDisplayOrders
+     *
+     * Re-arrange Sections within a Menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Section Ids and their new display order (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function menusSetItemDisplayOrders($menu_id, $display_orders)
+    {
+        $this->menusSetItemDisplayOrdersWithHttpInfo($menu_id, $display_orders);
+    }
+
+    /**
+     * Operation menusSetItemDisplayOrdersWithHttpInfo
+     *
+     * Re-arrange Sections within a Menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Section Ids and their new display order (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function menusSetItemDisplayOrdersWithHttpInfo($menu_id, $display_orders)
+    {
+        $returnType = '';
+        $request = $this->menusSetItemDisplayOrdersRequest($menu_id, $display_orders);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation menusSetItemDisplayOrdersAsync
+     *
+     * Re-arrange Sections within a Menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Section Ids and their new display order (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusSetItemDisplayOrdersAsync($menu_id, $display_orders)
+    {
+        return $this->menusSetItemDisplayOrdersAsyncWithHttpInfo($menu_id, $display_orders)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation menusSetItemDisplayOrdersAsyncWithHttpInfo
+     *
+     * Re-arrange Sections within a Menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Section Ids and their new display order (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusSetItemDisplayOrdersAsyncWithHttpInfo($menu_id, $display_orders)
+    {
+        $returnType = '';
+        $request = $this->menusSetItemDisplayOrdersRequest($menu_id, $display_orders);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'menusSetItemDisplayOrders'
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders Section Ids and their new display order (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function menusSetItemDisplayOrdersRequest($menu_id, $display_orders)
+    {
+        // verify the required parameter 'menu_id' is set
+        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $menu_id when calling menusSetItemDisplayOrders'
+            );
+        }
+        // verify the required parameter 'display_orders' is set
+        if ($display_orders === null || (is_array($display_orders) && count($display_orders) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $display_orders when calling menusSetItemDisplayOrders'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/menus/{menuId}/sectiondisplayorders';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($menu_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'menuId' . '}',
+                ObjectSerializer::toPathValue($menu_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($display_orders)) {
+            $_tempBody = $display_orders;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation menusShowHideBulkItems
+     *
+     * Bulk show/hide menu items or option set items
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements Elements to be show/hide (required)
+     * @param  bool $is_available Is available flag (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse
+     */
+    public function menusShowHideBulkItems($menu_id, $menu_elements, $is_available)
+    {
+        list($response) = $this->menusShowHideBulkItemsWithHttpInfo($menu_id, $menu_elements, $is_available);
+        return $response;
+    }
+
+    /**
+     * Operation menusShowHideBulkItemsWithHttpInfo
+     *
+     * Bulk show/hide menu items or option set items
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements Elements to be show/hide (required)
+     * @param  bool $is_available Is available flag (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function menusShowHideBulkItemsWithHttpInfo($menu_id, $menu_elements, $is_available)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse';
+        $request = $this->menusShowHideBulkItemsRequest($menu_id, $menu_elements, $is_available);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation menusShowHideBulkItemsAsync
+     *
+     * Bulk show/hide menu items or option set items
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements Elements to be show/hide (required)
+     * @param  bool $is_available Is available flag (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusShowHideBulkItemsAsync($menu_id, $menu_elements, $is_available)
+    {
+        return $this->menusShowHideBulkItemsAsyncWithHttpInfo($menu_id, $menu_elements, $is_available)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation menusShowHideBulkItemsAsyncWithHttpInfo
+     *
+     * Bulk show/hide menu items or option set items
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements Elements to be show/hide (required)
+     * @param  bool $is_available Is available flag (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusShowHideBulkItemsAsyncWithHttpInfo($menu_id, $menu_elements, $is_available)
+    {
+        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse';
+        $request = $this->menusShowHideBulkItemsRequest($menu_id, $menu_elements, $is_available);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'menusShowHideBulkItems'
+     *
+     * @param  int $menu_id Menu id (required)
+     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements Elements to be show/hide (required)
+     * @param  bool $is_available Is available flag (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function menusShowHideBulkItemsRequest($menu_id, $menu_elements, $is_available)
+    {
+        // verify the required parameter 'menu_id' is set
+        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $menu_id when calling menusShowHideBulkItems'
+            );
+        }
+        // verify the required parameter 'menu_elements' is set
+        if ($menu_elements === null || (is_array($menu_elements) && count($menu_elements) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $menu_elements when calling menusShowHideBulkItems'
+            );
+        }
+        // verify the required parameter 'is_available' is set
+        if ($is_available === null || (is_array($is_available) && count($is_available) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $is_available when calling menusShowHideBulkItems'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/menus/{menuId}/bulkshowhide';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($is_available !== null) {
+            $queryParams['isAvailable'] = ObjectSerializer::toQueryValue($is_available);
+        }
+
+        // path params
+        if ($menu_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'menuId' . '}',
+                ObjectSerializer::toPathValue($menu_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($menu_elements)) {
+            $_tempBody = $menu_elements;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation menusUpdateTaxType
+     *
+     * Set the type of Tax on a Menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $type Type of Tax (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function menusUpdateTaxType($menu_id, $type)
+    {
+        $this->menusUpdateTaxTypeWithHttpInfo($menu_id, $type);
+    }
+
+    /**
+     * Operation menusUpdateTaxTypeWithHttpInfo
+     *
+     * Set the type of Tax on a Menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $type Type of Tax (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function menusUpdateTaxTypeWithHttpInfo($menu_id, $type)
+    {
+        $returnType = '';
+        $request = $this->menusUpdateTaxTypeRequest($menu_id, $type);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation menusUpdateTaxTypeAsync
+     *
+     * Set the type of Tax on a Menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $type Type of Tax (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusUpdateTaxTypeAsync($menu_id, $type)
+    {
+        return $this->menusUpdateTaxTypeAsyncWithHttpInfo($menu_id, $type)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation menusUpdateTaxTypeAsyncWithHttpInfo
+     *
+     * Set the type of Tax on a Menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $type Type of Tax (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusUpdateTaxTypeAsyncWithHttpInfo($menu_id, $type)
+    {
+        $returnType = '';
+        $request = $this->menusUpdateTaxTypeRequest($menu_id, $type);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'menusUpdateTaxType'
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $type Type of Tax (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function menusUpdateTaxTypeRequest($menu_id, $type)
+    {
+        // verify the required parameter 'menu_id' is set
+        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $menu_id when calling menusUpdateTaxType'
+            );
+        }
+        // verify the required parameter 'type' is set
+        if ($type === null || (is_array($type) && count($type) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $type when calling menusUpdateTaxType'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/menus/{menuId}/tax/type/{type}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($menu_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'menuId' . '}',
+                ObjectSerializer::toPathValue($menu_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($type !== null) {
+            $resourcePath = str_replace(
+                '{' . 'type' . '}',
+                ObjectSerializer::toPathValue($type),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation menusUpsertTaxRate
+     *
+     * Add/Update a Tax Rate
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax rate to add/update (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Flipdish\\Client\Models\MenuTaxRate
+     */
+    public function menusUpsertTaxRate($menu_id, $tax_rate)
+    {
+        list($response) = $this->menusUpsertTaxRateWithHttpInfo($menu_id, $tax_rate);
+        return $response;
+    }
+
+    /**
+     * Operation menusUpsertTaxRateWithHttpInfo
+     *
+     * Add/Update a Tax Rate
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax rate to add/update (required)
+     *
+     * @throws \Flipdish\\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Flipdish\\Client\Models\MenuTaxRate, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function menusUpsertTaxRateWithHttpInfo($menu_id, $tax_rate)
+    {
+        $returnType = '\Flipdish\\Client\Models\MenuTaxRate';
+        $request = $this->menusUpsertTaxRateRequest($menu_id, $tax_rate);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\MenuTaxRate',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation menusUpsertTaxRateAsync
+     *
+     * Add/Update a Tax Rate
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax rate to add/update (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusUpsertTaxRateAsync($menu_id, $tax_rate)
+    {
+        return $this->menusUpsertTaxRateAsyncWithHttpInfo($menu_id, $tax_rate)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation menusUpsertTaxRateAsyncWithHttpInfo
+     *
+     * Add/Update a Tax Rate
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax rate to add/update (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function menusUpsertTaxRateAsyncWithHttpInfo($menu_id, $tax_rate)
+    {
+        $returnType = '\Flipdish\\Client\Models\MenuTaxRate';
+        $request = $this->menusUpsertTaxRateRequest($menu_id, $tax_rate);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'menusUpsertTaxRate'
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate Tax rate to add/update (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function menusUpsertTaxRateRequest($menu_id, $tax_rate)
+    {
+        // verify the required parameter 'menu_id' is set
+        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $menu_id when calling menusUpsertTaxRate'
+            );
+        }
+        // verify the required parameter 'tax_rate' is set
+        if ($tax_rate === null || (is_array($tax_rate) && count($tax_rate) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $tax_rate when calling menusUpsertTaxRate'
+            );
+        }
+
+        $resourcePath = '/api/v1.0/menus/{menuId}/taxrate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($menu_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'menuId' . '}',
+                ObjectSerializer::toPathValue($menu_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($tax_rate)) {
+            $_tempBody = $tax_rate;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json', 'application/xml', 'text/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json', 'application/xml', 'text/xml'],
+                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation restoreAMenuCheckpoint
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  int $checkpoint_id checkpoint_id (required)
+     * Restore a Menu to a checkpoint
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $checkpoint_id Checkpoint to restore menu to (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5594,8 +7161,10 @@ class MenusApi
     /**
      * Operation restoreAMenuCheckpointWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  int $checkpoint_id (required)
+     * Restore a Menu to a checkpoint
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $checkpoint_id Checkpoint to restore menu to (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5638,6 +7207,14 @@ class MenusApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -5662,10 +7239,10 @@ class MenusApi
     /**
      * Operation restoreAMenuCheckpointAsync
      *
-     * 
+     * Restore a Menu to a checkpoint
      *
-     * @param  int $menu_id (required)
-     * @param  int $checkpoint_id (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $checkpoint_id Checkpoint to restore menu to (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5683,10 +7260,10 @@ class MenusApi
     /**
      * Operation restoreAMenuCheckpointAsyncWithHttpInfo
      *
-     * 
+     * Restore a Menu to a checkpoint
      *
-     * @param  int $menu_id (required)
-     * @param  int $checkpoint_id (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $checkpoint_id Checkpoint to restore menu to (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5722,8 +7299,8 @@ class MenusApi
     /**
      * Create request for operation 'restoreAMenuCheckpoint'
      *
-     * @param  int $menu_id (required)
-     * @param  int $checkpoint_id (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $checkpoint_id Checkpoint to restore menu to (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5844,541 +7421,14 @@ class MenusApi
     }
 
     /**
-     * Operation setDisplayOnMenuTax
-     *
-     * @param  int $menu_id menu_id (required)
-     * @param  bool $show show (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function setDisplayOnMenuTax($menu_id, $show)
-    {
-        $this->setDisplayOnMenuTaxWithHttpInfo($menu_id, $show);
-    }
-
-    /**
-     * Operation setDisplayOnMenuTaxWithHttpInfo
-     *
-     * @param  int $menu_id (required)
-     * @param  bool $show (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function setDisplayOnMenuTaxWithHttpInfo($menu_id, $show)
-    {
-        $returnType = '';
-        $request = $this->setDisplayOnMenuTaxRequest($menu_id, $show);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation setDisplayOnMenuTaxAsync
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  bool $show (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function setDisplayOnMenuTaxAsync($menu_id, $show)
-    {
-        return $this->setDisplayOnMenuTaxAsyncWithHttpInfo($menu_id, $show)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation setDisplayOnMenuTaxAsyncWithHttpInfo
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  bool $show (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function setDisplayOnMenuTaxAsyncWithHttpInfo($menu_id, $show)
-    {
-        $returnType = '';
-        $request = $this->setDisplayOnMenuTaxRequest($menu_id, $show);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'setDisplayOnMenuTax'
-     *
-     * @param  int $menu_id (required)
-     * @param  bool $show (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function setDisplayOnMenuTaxRequest($menu_id, $show)
-    {
-        // verify the required parameter 'menu_id' is set
-        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $menu_id when calling setDisplayOnMenuTax'
-            );
-        }
-        // verify the required parameter 'show' is set
-        if ($show === null || (is_array($show) && count($show) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $show when calling setDisplayOnMenuTax'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/menus/{menuId}/tax/show/{show}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-        // path params
-        if ($menu_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'menuId' . '}',
-                ObjectSerializer::toPathValue($menu_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($show !== null) {
-            $resourcePath = str_replace(
-                '{' . 'show' . '}',
-                ObjectSerializer::toPathValue($show),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation setItemDisplayOrders
-     *
-     * @param  int $menu_id menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders display_orders (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function setItemDisplayOrders($menu_id, $display_orders)
-    {
-        $this->setItemDisplayOrdersWithHttpInfo($menu_id, $display_orders);
-    }
-
-    /**
-     * Operation setItemDisplayOrdersWithHttpInfo
-     *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function setItemDisplayOrdersWithHttpInfo($menu_id, $display_orders)
-    {
-        $returnType = '';
-        $request = $this->setItemDisplayOrdersRequest($menu_id, $display_orders);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation setItemDisplayOrdersAsync
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function setItemDisplayOrdersAsync($menu_id, $display_orders)
-    {
-        return $this->setItemDisplayOrdersAsyncWithHttpInfo($menu_id, $display_orders)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation setItemDisplayOrdersAsyncWithHttpInfo
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function setItemDisplayOrdersAsyncWithHttpInfo($menu_id, $display_orders)
-    {
-        $returnType = '';
-        $request = $this->setItemDisplayOrdersRequest($menu_id, $display_orders);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'setItemDisplayOrders'
-     *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuObjectDisplayOrders $display_orders (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function setItemDisplayOrdersRequest($menu_id, $display_orders)
-    {
-        // verify the required parameter 'menu_id' is set
-        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $menu_id when calling setItemDisplayOrders'
-            );
-        }
-        // verify the required parameter 'display_orders' is set
-        if ($display_orders === null || (is_array($display_orders) && count($display_orders) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $display_orders when calling setItemDisplayOrders'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/menus/{menuId}/sectiondisplayorders';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-        // path params
-        if ($menu_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'menuId' . '}',
-                ObjectSerializer::toPathValue($menu_id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-        if (isset($display_orders)) {
-            $_tempBody = $display_orders;
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
      * Operation setMenuItemMetadata
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  int $store_id store_id (required)
-     * @param  int $menu_item_id menu_item_id (required)
-     * @param  \Flipdish\\Client\Models\Metadata $metadata metadata (required)
+     * Update menu item metadata
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $menu_item_id Menu item identifier (required)
+     * @param  \Flipdish\\Client\Models\Metadata $metadata Metadata object (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6392,10 +7442,12 @@ class MenusApi
     /**
      * Operation setMenuItemMetadataWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  int $store_id (required)
-     * @param  int $menu_item_id (required)
-     * @param  \Flipdish\\Client\Models\Metadata $metadata (required)
+     * Update menu item metadata
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $menu_item_id Menu item identifier (required)
+     * @param  \Flipdish\\Client\Models\Metadata $metadata Metadata object (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6438,6 +7490,14 @@ class MenusApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -6470,12 +7530,12 @@ class MenusApi
     /**
      * Operation setMenuItemMetadataAsync
      *
-     * 
+     * Update menu item metadata
      *
-     * @param  int $menu_id (required)
-     * @param  int $store_id (required)
-     * @param  int $menu_item_id (required)
-     * @param  \Flipdish\\Client\Models\Metadata $metadata (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $menu_item_id Menu item identifier (required)
+     * @param  \Flipdish\\Client\Models\Metadata $metadata Metadata object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6493,12 +7553,12 @@ class MenusApi
     /**
      * Operation setMenuItemMetadataAsyncWithHttpInfo
      *
-     * 
+     * Update menu item metadata
      *
-     * @param  int $menu_id (required)
-     * @param  int $store_id (required)
-     * @param  int $menu_item_id (required)
-     * @param  \Flipdish\\Client\Models\Metadata $metadata (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $menu_item_id Menu item identifier (required)
+     * @param  \Flipdish\\Client\Models\Metadata $metadata Metadata object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6534,10 +7594,10 @@ class MenusApi
     /**
      * Create request for operation 'setMenuItemMetadata'
      *
-     * @param  int $menu_id (required)
-     * @param  int $store_id (required)
-     * @param  int $menu_item_id (required)
-     * @param  \Flipdish\\Client\Models\Metadata $metadata (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $menu_item_id Menu item identifier (required)
+     * @param  \Flipdish\\Client\Models\Metadata $metadata Metadata object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6683,10 +7743,12 @@ class MenusApi
     /**
      * Operation setMenuItemOptionSetItemMetadata
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  int $store_id store_id (required)
-     * @param  int $option_set_item_id option_set_item_id (required)
-     * @param  \Flipdish\\Client\Models\Metadata $metadata metadata (required)
+     * Update menu item option set item metadata
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $option_set_item_id Menu item option set item identifier (required)
+     * @param  \Flipdish\\Client\Models\Metadata $metadata Metadata object (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6700,10 +7762,12 @@ class MenusApi
     /**
      * Operation setMenuItemOptionSetItemMetadataWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  int $store_id (required)
-     * @param  int $option_set_item_id (required)
-     * @param  \Flipdish\\Client\Models\Metadata $metadata (required)
+     * Update menu item option set item metadata
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $option_set_item_id Menu item option set item identifier (required)
+     * @param  \Flipdish\\Client\Models\Metadata $metadata Metadata object (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -6746,6 +7810,14 @@ class MenusApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -6778,12 +7850,12 @@ class MenusApi
     /**
      * Operation setMenuItemOptionSetItemMetadataAsync
      *
-     * 
+     * Update menu item option set item metadata
      *
-     * @param  int $menu_id (required)
-     * @param  int $store_id (required)
-     * @param  int $option_set_item_id (required)
-     * @param  \Flipdish\\Client\Models\Metadata $metadata (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $option_set_item_id Menu item option set item identifier (required)
+     * @param  \Flipdish\\Client\Models\Metadata $metadata Metadata object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6801,12 +7873,12 @@ class MenusApi
     /**
      * Operation setMenuItemOptionSetItemMetadataAsyncWithHttpInfo
      *
-     * 
+     * Update menu item option set item metadata
      *
-     * @param  int $menu_id (required)
-     * @param  int $store_id (required)
-     * @param  int $option_set_item_id (required)
-     * @param  \Flipdish\\Client\Models\Metadata $metadata (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $option_set_item_id Menu item option set item identifier (required)
+     * @param  \Flipdish\\Client\Models\Metadata $metadata Metadata object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6842,10 +7914,10 @@ class MenusApi
     /**
      * Create request for operation 'setMenuItemOptionSetItemMetadata'
      *
-     * @param  int $menu_id (required)
-     * @param  int $store_id (required)
-     * @param  int $option_set_item_id (required)
-     * @param  \Flipdish\\Client\Models\Metadata $metadata (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  int $store_id Store identifier (required)
+     * @param  int $option_set_item_id Menu item option set item identifier (required)
+     * @param  \Flipdish\\Client\Models\Metadata $metadata Metadata object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6991,8 +8063,10 @@ class MenusApi
     /**
      * Operation setMenuLock
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  bool $locked locked (required)
+     * Lock/Unlock a Menu for Editing
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  bool $locked True: Locks menu for editing, False: Unlocks for editing (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7006,8 +8080,10 @@ class MenusApi
     /**
      * Operation setMenuLockWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  bool $locked (required)
+     * Lock/Unlock a Menu for Editing
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  bool $locked True: Locks menu for editing, False: Unlocks for editing (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7050,6 +8126,14 @@ class MenusApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -7074,10 +8158,10 @@ class MenusApi
     /**
      * Operation setMenuLockAsync
      *
-     * 
+     * Lock/Unlock a Menu for Editing
      *
-     * @param  int $menu_id (required)
-     * @param  bool $locked (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  bool $locked True: Locks menu for editing, False: Unlocks for editing (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7095,10 +8179,10 @@ class MenusApi
     /**
      * Operation setMenuLockAsyncWithHttpInfo
      *
-     * 
+     * Lock/Unlock a Menu for Editing
      *
-     * @param  int $menu_id (required)
-     * @param  bool $locked (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  bool $locked True: Locks menu for editing, False: Unlocks for editing (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7134,8 +8218,8 @@ class MenusApi
     /**
      * Create request for operation 'setMenuLock'
      *
-     * @param  int $menu_id (required)
-     * @param  bool $locked (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  bool $locked True: Locks menu for editing, False: Unlocks for editing (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7253,8 +8337,10 @@ class MenusApi
     /**
      * Operation setMenuName
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  string $name name (required)
+     * Set Menus Name
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $name Name to set for this Menu (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7268,8 +8354,10 @@ class MenusApi
     /**
      * Operation setMenuNameWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  string $name (required)
+     * Set Menus Name
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $name Name to set for this Menu (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7312,6 +8400,14 @@ class MenusApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -7336,10 +8432,10 @@ class MenusApi
     /**
      * Operation setMenuNameAsync
      *
-     * 
+     * Set Menus Name
      *
-     * @param  int $menu_id (required)
-     * @param  string $name (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $name Name to set for this Menu (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7357,10 +8453,10 @@ class MenusApi
     /**
      * Operation setMenuNameAsyncWithHttpInfo
      *
-     * 
+     * Set Menus Name
      *
-     * @param  int $menu_id (required)
-     * @param  string $name (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $name Name to set for this Menu (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7396,8 +8492,8 @@ class MenusApi
     /**
      * Create request for operation 'setMenuName'
      *
-     * @param  int $menu_id (required)
-     * @param  string $name (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  string $name Name to set for this Menu (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7513,324 +8609,12 @@ class MenusApi
     }
 
     /**
-     * Operation showHideBulkItems
-     *
-     * @param  int $menu_id menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements menu_elements (required)
-     * @param  bool $is_available is_available (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse
-     */
-    public function showHideBulkItems($menu_id, $menu_elements, $is_available)
-    {
-        list($response) = $this->showHideBulkItemsWithHttpInfo($menu_id, $menu_elements, $is_available);
-        return $response;
-    }
-
-    /**
-     * Operation showHideBulkItemsWithHttpInfo
-     *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements (required)
-     * @param  bool $is_available (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function showHideBulkItemsWithHttpInfo($menu_id, $menu_elements, $is_available)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse';
-        $request = $this->showHideBulkItemsRequest($menu_id, $menu_elements, $is_available);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation showHideBulkItemsAsync
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements (required)
-     * @param  bool $is_available (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function showHideBulkItemsAsync($menu_id, $menu_elements, $is_available)
-    {
-        return $this->showHideBulkItemsAsyncWithHttpInfo($menu_id, $menu_elements, $is_available)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation showHideBulkItemsAsyncWithHttpInfo
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements (required)
-     * @param  bool $is_available (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function showHideBulkItemsAsyncWithHttpInfo($menu_id, $menu_elements, $is_available)
-    {
-        $returnType = '\Flipdish\\Client\Models\RestApiArrayResultMenuElementEditResponse';
-        $request = $this->showHideBulkItemsRequest($menu_id, $menu_elements, $is_available);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'showHideBulkItems'
-     *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuElementHide[] $menu_elements (required)
-     * @param  bool $is_available (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function showHideBulkItemsRequest($menu_id, $menu_elements, $is_available)
-    {
-        // verify the required parameter 'menu_id' is set
-        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $menu_id when calling showHideBulkItems'
-            );
-        }
-        // verify the required parameter 'menu_elements' is set
-        if ($menu_elements === null || (is_array($menu_elements) && count($menu_elements) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $menu_elements when calling showHideBulkItems'
-            );
-        }
-        // verify the required parameter 'is_available' is set
-        if ($is_available === null || (is_array($is_available) && count($is_available) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $is_available when calling showHideBulkItems'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/menus/{menuId}/bulkshowhide';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if ($is_available !== null) {
-            $queryParams['isAvailable'] = ObjectSerializer::toQueryValue($is_available);
-        }
-
-        // path params
-        if ($menu_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'menuId' . '}',
-                ObjectSerializer::toPathValue($menu_id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-        if (isset($menu_elements)) {
-            $_tempBody = $menu_elements;
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
      * Operation updateMenu
      *
-     * @param  int $menu_id menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuBase $menu menu (required)
+     * Update menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuBase $menu Full menu data (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7844,8 +8628,10 @@ class MenusApi
     /**
      * Operation updateMenuWithHttpInfo
      *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuBase $menu (required)
+     * Update menu
+     *
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuBase $menu Full menu data (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -7888,6 +8674,14 @@ class MenusApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -7912,10 +8706,10 @@ class MenusApi
     /**
      * Operation updateMenuAsync
      *
-     * 
+     * Update menu
      *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuBase $menu (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuBase $menu Full menu data (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7933,10 +8727,10 @@ class MenusApi
     /**
      * Operation updateMenuAsyncWithHttpInfo
      *
-     * 
+     * Update menu
      *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuBase $menu (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuBase $menu Full menu data (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7972,8 +8766,8 @@ class MenusApi
     /**
      * Create request for operation 'updateMenu'
      *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuBase $menu (required)
+     * @param  int $menu_id Menu identifier (required)
+     * @param  \Flipdish\\Client\Models\MenuBase $menu Full menu data (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -8089,276 +8883,11 @@ class MenusApi
     }
 
     /**
-     * Operation updateTaxType
-     *
-     * @param  int $menu_id menu_id (required)
-     * @param  string $type type (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function updateTaxType($menu_id, $type)
-    {
-        $this->updateTaxTypeWithHttpInfo($menu_id, $type);
-    }
-
-    /**
-     * Operation updateTaxTypeWithHttpInfo
-     *
-     * @param  int $menu_id (required)
-     * @param  string $type (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function updateTaxTypeWithHttpInfo($menu_id, $type)
-    {
-        $returnType = '';
-        $request = $this->updateTaxTypeRequest($menu_id, $type);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation updateTaxTypeAsync
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  string $type (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateTaxTypeAsync($menu_id, $type)
-    {
-        return $this->updateTaxTypeAsyncWithHttpInfo($menu_id, $type)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation updateTaxTypeAsyncWithHttpInfo
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  string $type (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateTaxTypeAsyncWithHttpInfo($menu_id, $type)
-    {
-        $returnType = '';
-        $request = $this->updateTaxTypeRequest($menu_id, $type);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'updateTaxType'
-     *
-     * @param  int $menu_id (required)
-     * @param  string $type (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function updateTaxTypeRequest($menu_id, $type)
-    {
-        // verify the required parameter 'menu_id' is set
-        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $menu_id when calling updateTaxType'
-            );
-        }
-        // verify the required parameter 'type' is set
-        if ($type === null || (is_array($type) && count($type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $type when calling updateTaxType'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/menus/{menuId}/tax/type/{type}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-        // path params
-        if ($menu_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'menuId' . '}',
-                ObjectSerializer::toPathValue($menu_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($type !== null) {
-            $resourcePath = str_replace(
-                '{' . 'type' . '}',
-                ObjectSerializer::toPathValue($type),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
      * Operation uploadMenuImage
      *
-     * @param  int $menu_id menu_id (required)
+     * Upload menu image
+     *
+     * @param  int $menu_id Menu identifier (required)
      * @param  \SplFileObject $image Menu image (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -8374,7 +8903,9 @@ class MenusApi
     /**
      * Operation uploadMenuImageWithHttpInfo
      *
-     * @param  int $menu_id (required)
+     * Upload menu image
+     *
+     * @param  int $menu_id Menu identifier (required)
      * @param  \SplFileObject $image Menu image (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -8440,6 +8971,14 @@ class MenusApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -8464,9 +9003,9 @@ class MenusApi
     /**
      * Operation uploadMenuImageAsync
      *
-     * 
+     * Upload menu image
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu identifier (required)
      * @param  \SplFileObject $image Menu image (required)
      *
      * @throws \InvalidArgumentException
@@ -8485,9 +9024,9 @@ class MenusApi
     /**
      * Operation uploadMenuImageAsyncWithHttpInfo
      *
-     * 
+     * Upload menu image
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu identifier (required)
      * @param  \SplFileObject $image Menu image (required)
      *
      * @throws \InvalidArgumentException
@@ -8538,7 +9077,7 @@ class MenusApi
     /**
      * Create request for operation 'uploadMenuImage'
      *
-     * @param  int $menu_id (required)
+     * @param  int $menu_id Menu identifier (required)
      * @param  \SplFileObject $image Menu image (required)
      *
      * @throws \InvalidArgumentException
@@ -8659,7 +9198,9 @@ class MenusApi
     /**
      * Operation uploadNewMenuForApp
      *
-     * @param  string $app_id app_id (required)
+     * Create a new menu from xlsx file.
+     *
+     * @param  string $app_id App identifier (required)
      * @param  \SplFileObject $menu Uploaded xlsx menu (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -8675,7 +9216,9 @@ class MenusApi
     /**
      * Operation uploadNewMenuForAppWithHttpInfo
      *
-     * @param  string $app_id (required)
+     * Create a new menu from xlsx file.
+     *
+     * @param  string $app_id App identifier (required)
      * @param  \SplFileObject $menu Uploaded xlsx menu (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
@@ -8741,6 +9284,14 @@ class MenusApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -8765,9 +9316,9 @@ class MenusApi
     /**
      * Operation uploadNewMenuForAppAsync
      *
-     * 
+     * Create a new menu from xlsx file.
      *
-     * @param  string $app_id (required)
+     * @param  string $app_id App identifier (required)
      * @param  \SplFileObject $menu Uploaded xlsx menu (required)
      *
      * @throws \InvalidArgumentException
@@ -8786,9 +9337,9 @@ class MenusApi
     /**
      * Operation uploadNewMenuForAppAsyncWithHttpInfo
      *
-     * 
+     * Create a new menu from xlsx file.
      *
-     * @param  string $app_id (required)
+     * @param  string $app_id App identifier (required)
      * @param  \SplFileObject $menu Uploaded xlsx menu (required)
      *
      * @throws \InvalidArgumentException
@@ -8839,7 +9390,7 @@ class MenusApi
     /**
      * Create request for operation 'uploadNewMenuForApp'
      *
-     * @param  string $app_id (required)
+     * @param  string $app_id App identifier (required)
      * @param  \SplFileObject $menu Uploaded xlsx menu (required)
      *
      * @throws \InvalidArgumentException
@@ -8893,305 +9444,6 @@ class MenusApi
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json', 'text/json', 'application/xml', 'text/xml'],
                 ['multipart/form-data']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-        // this endpoint requires OAuth (access token)
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation upsertTaxRate
-     *
-     * @param  int $menu_id menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate tax_rate (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Flipdish\\Client\Models\MenuTaxRate
-     */
-    public function upsertTaxRate($menu_id, $tax_rate)
-    {
-        list($response) = $this->upsertTaxRateWithHttpInfo($menu_id, $tax_rate);
-        return $response;
-    }
-
-    /**
-     * Operation upsertTaxRateWithHttpInfo
-     *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate (required)
-     *
-     * @throws \Flipdish\\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Flipdish\\Client\Models\MenuTaxRate, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function upsertTaxRateWithHttpInfo($menu_id, $tax_rate)
-    {
-        $returnType = '\Flipdish\\Client\Models\MenuTaxRate';
-        $request = $this->upsertTaxRateRequest($menu_id, $tax_rate);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\MenuTaxRate',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiUnauthorizedResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Flipdish\\Client\Models\RestApiForbiddenResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation upsertTaxRateAsync
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function upsertTaxRateAsync($menu_id, $tax_rate)
-    {
-        return $this->upsertTaxRateAsyncWithHttpInfo($menu_id, $tax_rate)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation upsertTaxRateAsyncWithHttpInfo
-     *
-     * 
-     *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function upsertTaxRateAsyncWithHttpInfo($menu_id, $tax_rate)
-    {
-        $returnType = '\Flipdish\\Client\Models\MenuTaxRate';
-        $request = $this->upsertTaxRateRequest($menu_id, $tax_rate);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'upsertTaxRate'
-     *
-     * @param  int $menu_id (required)
-     * @param  \Flipdish\\Client\Models\MenuTaxRate $tax_rate (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function upsertTaxRateRequest($menu_id, $tax_rate)
-    {
-        // verify the required parameter 'menu_id' is set
-        if ($menu_id === null || (is_array($menu_id) && count($menu_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $menu_id when calling upsertTaxRate'
-            );
-        }
-        // verify the required parameter 'tax_rate' is set
-        if ($tax_rate === null || (is_array($tax_rate) && count($tax_rate) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $tax_rate when calling upsertTaxRate'
-            );
-        }
-
-        $resourcePath = '/api/v1.0/menus/{menuId}/taxrate';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-        // path params
-        if ($menu_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'menuId' . '}',
-                ObjectSerializer::toPathValue($menu_id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-        if (isset($tax_rate)) {
-            $_tempBody = $tax_rate;
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json', 'application/xml', 'text/xml']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json', 'application/xml', 'text/xml'],
-                ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded']
             );
         }
 

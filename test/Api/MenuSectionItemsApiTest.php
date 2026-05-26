@@ -74,7 +74,7 @@ class MenuSectionItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for cloneMenuSectionItem
      *
-     * .
+     * Clone menu section item.
      *
      */
     public function testCloneMenuSectionItem()
@@ -84,7 +84,7 @@ class MenuSectionItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createMenuSectionItem
      *
-     * .
+     * Create menu section item.
      *
      */
     public function testCreateMenuSectionItem()
@@ -94,7 +94,7 @@ class MenuSectionItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createMenuSectionItemFromCatalogItems
      *
-     * .
+     * Create menu section items from a list of Catalog Items.
      *
      */
     public function testCreateMenuSectionItemFromCatalogItems()
@@ -104,7 +104,7 @@ class MenuSectionItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteMenuSectionItem
      *
-     * .
+     * Delete menu section item.
      *
      */
     public function testDeleteMenuSectionItem()
@@ -114,7 +114,7 @@ class MenuSectionItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteMenuSectionItemImage
      *
-     * .
+     * Delete menu section item image.
      *
      */
     public function testDeleteMenuSectionItemImage()
@@ -144,7 +144,7 @@ class MenuSectionItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for moveMenuItem
      *
-     * .
+     * Move an Item within a menu.
      *
      */
     public function testMoveMenuItem()
@@ -154,7 +154,7 @@ class MenuSectionItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setSectionItemTax
      *
-     * .
+     * Set tax rate for menu item.
      *
      */
     public function testSetSectionItemTax()
@@ -164,7 +164,7 @@ class MenuSectionItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateMenuSectionItem
      *
-     * .
+     * Update menu section item.
      *
      */
     public function testUpdateMenuSectionItem()
@@ -174,7 +174,7 @@ class MenuSectionItemsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for uploadMenuSectionItemImage
      *
-     * .
+     * Upload menu section item image.
      *
      */
     public function testUploadMenuSectionItemImage()

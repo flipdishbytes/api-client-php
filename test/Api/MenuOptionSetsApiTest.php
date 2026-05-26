@@ -74,7 +74,7 @@ class MenuOptionSetsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createMenuItemOptionSet
      *
-     * .
+     * Create menu item option set.
      *
      */
     public function testCreateMenuItemOptionSet()
@@ -84,7 +84,7 @@ class MenuOptionSetsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteMenuItemOptionSet
      *
-     * .
+     * Delete menu item option set.
      *
      */
     public function testDeleteMenuItemOptionSet()
@@ -94,7 +94,7 @@ class MenuOptionSetsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteOptionSetImage
      *
-     * .
+     * Delete option set image.
      *
      */
     public function testDeleteOptionSetImage()
@@ -124,7 +124,7 @@ class MenuOptionSetsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateMenuItemOptionSet
      *
-     * .
+     * Update menu item option set.
      *
      */
     public function testUpdateMenuItemOptionSet()
@@ -134,7 +134,7 @@ class MenuOptionSetsApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for uploadOptionSetImage
      *
-     * .
+     * Upload menu item option set image.
      *
      */
     public function testUploadOptionSetImage()

@@ -6,9 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cancelCurrentlyInitiatedBluetoothDeviceUpdate**](CardReadersApi.md#cancelCurrentlyInitiatedBluetoothDeviceUpdate) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/cancelUpdate | 
 [**cancelReaderAction**](CardReadersApi.md#cancelReaderAction) | **POST** /api/v1.0/{appId}/payments/terminals/stripe/{readerId}/cancel_action | 
+[**cardReadersGetReader**](CardReadersApi.md#cardReadersGetReader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | 
 [**generateStripeTerminalLocation**](CardReadersApi.md#generateStripeTerminalLocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | 
 [**getBluetoothTerminalStatus**](CardReadersApi.md#getBluetoothTerminalStatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | 
-[**getReader**](CardReadersApi.md#getReader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | 
 [**getStripeConnectionToken**](CardReadersApi.md#getStripeConnectionToken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | 
 [**initiateBluetoothTerminalDeviceUpdateCheck**](CardReadersApi.md#initiateBluetoothTerminalDeviceUpdateCheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | 
 [**initiateKioskBluetoothPairingMode**](CardReadersApi.md#initiateKioskBluetoothPairingMode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | 
@@ -100,6 +100,59 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CardReadersApi->cancelReaderAction: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reader_id** | **string**|  |
+ **app_id** | **string**|  |
+
+### Return type
+
+[**\Flipdish\\Client\Models\RestApiResultCardReader**](../Model/RestApiResultCardReader.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **cardReadersGetReader**
+> \Flipdish\\Client\Models\RestApiResultCardReader cardReadersGetReader($reader_id, $app_id)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Flipdish\\Client\Api\CardReadersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$reader_id = "reader_id_example"; // string | 
+$app_id = "app_id_example"; // string | 
+
+try {
+    $result = $apiInstance->cardReadersGetReader($reader_id, $app_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CardReadersApi->cardReadersGetReader: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -220,59 +273,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Flipdish\\Client\Models\RestApiResultBluetoothTerminalStatus**](../Model/RestApiResultBluetoothTerminalStatus.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **getReader**
-> \Flipdish\\Client\Models\RestApiResultCardReader getReader($reader_id, $app_id)
-
-
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = Flipdish\\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-$apiInstance = new Flipdish\\Client\Api\CardReadersApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$reader_id = "reader_id_example"; // string | 
-$app_id = "app_id_example"; // string | 
-
-try {
-    $result = $apiInstance->getReader($reader_id, $app_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CardReadersApi->getReader: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reader_id** | **string**|  |
- **app_id** | **string**|  |
-
-### Return type
-
-[**\Flipdish\\Client\Models\RestApiResultCardReader**](../Model/RestApiResultCardReader.md)
 
 ### Authorization
 

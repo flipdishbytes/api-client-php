@@ -88,34 +88,35 @@ class StuartApi
     }
 
     /**
-     * Operation cancelJob
+     * Operation stuartCancelJob
      *
      * @param  int $job_id job_id (required)
      * @param  int $store_id store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function cancelJob($job_id, $store_id)
+    public function stuartCancelJob($job_id, $store_id)
     {
-        $this->cancelJobWithHttpInfo($job_id, $store_id);
+        list($response) = $this->stuartCancelJobWithHttpInfo($job_id, $store_id);
+        return $response;
     }
 
     /**
-     * Operation cancelJobWithHttpInfo
+     * Operation stuartCancelJobWithHttpInfo
      *
      * @param  int $job_id (required)
      * @param  int $store_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function cancelJobWithHttpInfo($job_id, $store_id)
+    public function stuartCancelJobWithHttpInfo($job_id, $store_id)
     {
-        $returnType = '';
-        $request = $this->cancelJobRequest($job_id, $store_id);
+        $returnType = 'object';
+        $request = $this->stuartCancelJobRequest($job_id, $store_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -145,10 +146,32 @@ class StuartApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -179,7 +202,7 @@ class StuartApi
     }
 
     /**
-     * Operation cancelJobAsync
+     * Operation stuartCancelJobAsync
      *
      * 
      *
@@ -189,9 +212,9 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelJobAsync($job_id, $store_id)
+    public function stuartCancelJobAsync($job_id, $store_id)
     {
-        return $this->cancelJobAsyncWithHttpInfo($job_id, $store_id)
+        return $this->stuartCancelJobAsyncWithHttpInfo($job_id, $store_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -200,7 +223,7 @@ class StuartApi
     }
 
     /**
-     * Operation cancelJobAsyncWithHttpInfo
+     * Operation stuartCancelJobAsyncWithHttpInfo
      *
      * 
      *
@@ -210,16 +233,30 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function cancelJobAsyncWithHttpInfo($job_id, $store_id)
+    public function stuartCancelJobAsyncWithHttpInfo($job_id, $store_id)
     {
-        $returnType = '';
-        $request = $this->cancelJobRequest($job_id, $store_id);
+        $returnType = 'object';
+        $request = $this->stuartCancelJobRequest($job_id, $store_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -239,7 +276,7 @@ class StuartApi
     }
 
     /**
-     * Create request for operation 'cancelJob'
+     * Create request for operation 'stuartCancelJob'
      *
      * @param  int $job_id (required)
      * @param  int $store_id (required)
@@ -247,18 +284,18 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function cancelJobRequest($job_id, $store_id)
+    protected function stuartCancelJobRequest($job_id, $store_id)
     {
         // verify the required parameter 'job_id' is set
         if ($job_id === null || (is_array($job_id) && count($job_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $job_id when calling cancelJob'
+                'Missing the required parameter $job_id when calling stuartCancelJob'
             );
         }
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling cancelJob'
+                'Missing the required parameter $store_id when calling stuartCancelJob'
             );
         }
 
@@ -359,7 +396,7 @@ class StuartApi
     }
 
     /**
-     * Operation getJob
+     * Operation stuartGetJob
      *
      * @param  int $job_id job_id (required)
      * @param  int $store_id store_id (required)
@@ -368,14 +405,14 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultJobResponse
      */
-    public function getJob($job_id, $store_id)
+    public function stuartGetJob($job_id, $store_id)
     {
-        list($response) = $this->getJobWithHttpInfo($job_id, $store_id);
+        list($response) = $this->stuartGetJobWithHttpInfo($job_id, $store_id);
         return $response;
     }
 
     /**
-     * Operation getJobWithHttpInfo
+     * Operation stuartGetJobWithHttpInfo
      *
      * @param  int $job_id (required)
      * @param  int $store_id (required)
@@ -384,10 +421,10 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultJobResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getJobWithHttpInfo($job_id, $store_id)
+    public function stuartGetJobWithHttpInfo($job_id, $store_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultJobResponse';
-        $request = $this->getJobRequest($job_id, $store_id);
+        $request = $this->stuartGetJobRequest($job_id, $store_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -473,7 +510,7 @@ class StuartApi
     }
 
     /**
-     * Operation getJobAsync
+     * Operation stuartGetJobAsync
      *
      * 
      *
@@ -483,9 +520,9 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getJobAsync($job_id, $store_id)
+    public function stuartGetJobAsync($job_id, $store_id)
     {
-        return $this->getJobAsyncWithHttpInfo($job_id, $store_id)
+        return $this->stuartGetJobAsyncWithHttpInfo($job_id, $store_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -494,7 +531,7 @@ class StuartApi
     }
 
     /**
-     * Operation getJobAsyncWithHttpInfo
+     * Operation stuartGetJobAsyncWithHttpInfo
      *
      * 
      *
@@ -504,10 +541,10 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getJobAsyncWithHttpInfo($job_id, $store_id)
+    public function stuartGetJobAsyncWithHttpInfo($job_id, $store_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultJobResponse';
-        $request = $this->getJobRequest($job_id, $store_id);
+        $request = $this->stuartGetJobRequest($job_id, $store_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -547,7 +584,7 @@ class StuartApi
     }
 
     /**
-     * Create request for operation 'getJob'
+     * Create request for operation 'stuartGetJob'
      *
      * @param  int $job_id (required)
      * @param  int $store_id (required)
@@ -555,18 +592,18 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getJobRequest($job_id, $store_id)
+    protected function stuartGetJobRequest($job_id, $store_id)
     {
         // verify the required parameter 'job_id' is set
         if ($job_id === null || (is_array($job_id) && count($job_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $job_id when calling getJob'
+                'Missing the required parameter $job_id when calling stuartGetJob'
             );
         }
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling getJob'
+                'Missing the required parameter $store_id when calling stuartGetJob'
             );
         }
 
@@ -667,7 +704,7 @@ class StuartApi
     }
 
     /**
-     * Operation getStuartSettings
+     * Operation stuartGetStuartSettings
      *
      * @param  int $store_id store_id (required)
      *
@@ -675,14 +712,14 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultStuartSettings
      */
-    public function getStuartSettings($store_id)
+    public function stuartGetStuartSettings($store_id)
     {
-        list($response) = $this->getStuartSettingsWithHttpInfo($store_id);
+        list($response) = $this->stuartGetStuartSettingsWithHttpInfo($store_id);
         return $response;
     }
 
     /**
-     * Operation getStuartSettingsWithHttpInfo
+     * Operation stuartGetStuartSettingsWithHttpInfo
      *
      * @param  int $store_id (required)
      *
@@ -690,10 +727,10 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultStuartSettings, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStuartSettingsWithHttpInfo($store_id)
+    public function stuartGetStuartSettingsWithHttpInfo($store_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultStuartSettings';
-        $request = $this->getStuartSettingsRequest($store_id);
+        $request = $this->stuartGetStuartSettingsRequest($store_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -779,7 +816,7 @@ class StuartApi
     }
 
     /**
-     * Operation getStuartSettingsAsync
+     * Operation stuartGetStuartSettingsAsync
      *
      * 
      *
@@ -788,9 +825,9 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStuartSettingsAsync($store_id)
+    public function stuartGetStuartSettingsAsync($store_id)
     {
-        return $this->getStuartSettingsAsyncWithHttpInfo($store_id)
+        return $this->stuartGetStuartSettingsAsyncWithHttpInfo($store_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -799,7 +836,7 @@ class StuartApi
     }
 
     /**
-     * Operation getStuartSettingsAsyncWithHttpInfo
+     * Operation stuartGetStuartSettingsAsyncWithHttpInfo
      *
      * 
      *
@@ -808,10 +845,10 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStuartSettingsAsyncWithHttpInfo($store_id)
+    public function stuartGetStuartSettingsAsyncWithHttpInfo($store_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultStuartSettings';
-        $request = $this->getStuartSettingsRequest($store_id);
+        $request = $this->stuartGetStuartSettingsRequest($store_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -851,19 +888,19 @@ class StuartApi
     }
 
     /**
-     * Create request for operation 'getStuartSettings'
+     * Create request for operation 'stuartGetStuartSettings'
      *
      * @param  int $store_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getStuartSettingsRequest($store_id)
+    protected function stuartGetStuartSettingsRequest($store_id)
     {
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling getStuartSettings'
+                'Missing the required parameter $store_id when calling stuartGetStuartSettings'
             );
         }
 
@@ -960,7 +997,7 @@ class StuartApi
     }
 
     /**
-     * Operation postStuartSettings
+     * Operation stuartPostStuartSettings
      *
      * @param  int $store_id store_id (required)
      * @param  \Flipdish\\Client\Models\StuartSettings $stuart_settings stuart_settings (required)
@@ -969,14 +1006,14 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return object
      */
-    public function postStuartSettings($store_id, $stuart_settings)
+    public function stuartPostStuartSettings($store_id, $stuart_settings)
     {
-        list($response) = $this->postStuartSettingsWithHttpInfo($store_id, $stuart_settings);
+        list($response) = $this->stuartPostStuartSettingsWithHttpInfo($store_id, $stuart_settings);
         return $response;
     }
 
     /**
-     * Operation postStuartSettingsWithHttpInfo
+     * Operation stuartPostStuartSettingsWithHttpInfo
      *
      * @param  int $store_id (required)
      * @param  \Flipdish\\Client\Models\StuartSettings $stuart_settings (required)
@@ -985,10 +1022,10 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postStuartSettingsWithHttpInfo($store_id, $stuart_settings)
+    public function stuartPostStuartSettingsWithHttpInfo($store_id, $stuart_settings)
     {
         $returnType = 'object';
-        $request = $this->postStuartSettingsRequest($store_id, $stuart_settings);
+        $request = $this->stuartPostStuartSettingsRequest($store_id, $stuart_settings);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1082,7 +1119,7 @@ class StuartApi
     }
 
     /**
-     * Operation postStuartSettingsAsync
+     * Operation stuartPostStuartSettingsAsync
      *
      * 
      *
@@ -1092,9 +1129,9 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postStuartSettingsAsync($store_id, $stuart_settings)
+    public function stuartPostStuartSettingsAsync($store_id, $stuart_settings)
     {
-        return $this->postStuartSettingsAsyncWithHttpInfo($store_id, $stuart_settings)
+        return $this->stuartPostStuartSettingsAsyncWithHttpInfo($store_id, $stuart_settings)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1103,7 +1140,7 @@ class StuartApi
     }
 
     /**
-     * Operation postStuartSettingsAsyncWithHttpInfo
+     * Operation stuartPostStuartSettingsAsyncWithHttpInfo
      *
      * 
      *
@@ -1113,10 +1150,10 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postStuartSettingsAsyncWithHttpInfo($store_id, $stuart_settings)
+    public function stuartPostStuartSettingsAsyncWithHttpInfo($store_id, $stuart_settings)
     {
         $returnType = 'object';
-        $request = $this->postStuartSettingsRequest($store_id, $stuart_settings);
+        $request = $this->stuartPostStuartSettingsRequest($store_id, $stuart_settings);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1156,7 +1193,7 @@ class StuartApi
     }
 
     /**
-     * Create request for operation 'postStuartSettings'
+     * Create request for operation 'stuartPostStuartSettings'
      *
      * @param  int $store_id (required)
      * @param  \Flipdish\\Client\Models\StuartSettings $stuart_settings (required)
@@ -1164,18 +1201,18 @@ class StuartApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function postStuartSettingsRequest($store_id, $stuart_settings)
+    protected function stuartPostStuartSettingsRequest($store_id, $stuart_settings)
     {
         // verify the required parameter 'store_id' is set
         if ($store_id === null || (is_array($store_id) && count($store_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $store_id when calling postStuartSettings'
+                'Missing the required parameter $store_id when calling stuartPostStuartSettings'
             );
         }
         // verify the required parameter 'stuart_settings' is set
         if ($stuart_settings === null || (is_array($stuart_settings) && count($stuart_settings) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stuart_settings when calling postStuartSettings'
+                'Missing the required parameter $stuart_settings when calling stuartPostStuartSettings'
             );
         }
 

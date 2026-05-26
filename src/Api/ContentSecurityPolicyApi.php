@@ -88,32 +88,33 @@ class ContentSecurityPolicyApi
     }
 
     /**
-     * Operation report
+     * Operation contentSecurityPolicyReport
      *
      * @param  \Flipdish\\Client\Models\CspReportRequest $request request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function report($request)
+    public function contentSecurityPolicyReport($request)
     {
-        $this->reportWithHttpInfo($request);
+        list($response) = $this->contentSecurityPolicyReportWithHttpInfo($request);
+        return $response;
     }
 
     /**
-     * Operation reportWithHttpInfo
+     * Operation contentSecurityPolicyReportWithHttpInfo
      *
      * @param  \Flipdish\\Client\Models\CspReportRequest $request (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function reportWithHttpInfo($request)
+    public function contentSecurityPolicyReportWithHttpInfo($request)
     {
-        $returnType = '';
-        $request = $this->reportRequest($request);
+        $returnType = 'object';
+        $request = $this->contentSecurityPolicyReportRequest($request);
 
         try {
             $options = $this->createHttpClientOption();
@@ -143,10 +144,32 @@ class ContentSecurityPolicyApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -177,7 +200,7 @@ class ContentSecurityPolicyApi
     }
 
     /**
-     * Operation reportAsync
+     * Operation contentSecurityPolicyReportAsync
      *
      * 
      *
@@ -186,9 +209,9 @@ class ContentSecurityPolicyApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function reportAsync($request)
+    public function contentSecurityPolicyReportAsync($request)
     {
-        return $this->reportAsyncWithHttpInfo($request)
+        return $this->contentSecurityPolicyReportAsyncWithHttpInfo($request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -197,7 +220,7 @@ class ContentSecurityPolicyApi
     }
 
     /**
-     * Operation reportAsyncWithHttpInfo
+     * Operation contentSecurityPolicyReportAsyncWithHttpInfo
      *
      * 
      *
@@ -206,16 +229,30 @@ class ContentSecurityPolicyApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function reportAsyncWithHttpInfo($request)
+    public function contentSecurityPolicyReportAsyncWithHttpInfo($request)
     {
-        $returnType = '';
-        $request = $this->reportRequest($request);
+        $returnType = 'object';
+        $request = $this->contentSecurityPolicyReportRequest($request);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -235,19 +272,19 @@ class ContentSecurityPolicyApi
     }
 
     /**
-     * Create request for operation 'report'
+     * Create request for operation 'contentSecurityPolicyReport'
      *
      * @param  \Flipdish\\Client\Models\CspReportRequest $request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function reportRequest($request)
+    protected function contentSecurityPolicyReportRequest($request)
     {
         // verify the required parameter 'request' is set
         if ($request === null || (is_array($request) && count($request) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling report'
+                'Missing the required parameter $request when calling contentSecurityPolicyReport'
             );
         }
 

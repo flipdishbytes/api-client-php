@@ -102,16 +102,6 @@ class OAuthClientsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getApplications
-     *
-     * .
-     *
-     */
-    public function testGetApplications()
-    {
-    }
-
-    /**
      * Test case for getOAuthApps
      *
      * .
@@ -158,6 +148,16 @@ class OAuthClientsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testGetRedirectUris()
+    {
+    }
+
+    /**
+     * Test case for oAuthClientsGetApplications
+     *
+     * .
+     *
+     */
+    public function testOAuthClientsGetApplications()
     {
     }
 

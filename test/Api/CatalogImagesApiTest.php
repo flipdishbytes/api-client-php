@@ -74,7 +74,7 @@ class CatalogImagesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for uploadCatalogImage
      *
-     * .
+     * Upload a Catalog Image.
      *
      */
     public function testUploadCatalogImage()

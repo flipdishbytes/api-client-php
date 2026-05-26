@@ -74,7 +74,7 @@ class MenusNutritionInfoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for addOrUpdateMenuItemNutritionInfo
      *
-     * .
+     * Add or update menuitem nutrition info by menu item's publicId.
      *
      */
     public function testAddOrUpdateMenuItemNutritionInfo()
@@ -84,7 +84,7 @@ class MenusNutritionInfoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for addOrUpdateMenuItemOptionSetItemNutritionInfo
      *
-     * .
+     * Add or update menuitem optionsetitem nutrition info its publicId.
      *
      */
     public function testAddOrUpdateMenuItemOptionSetItemNutritionInfo()
@@ -94,7 +94,7 @@ class MenusNutritionInfoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for addOrUpdateMenuNutritionInfoByMenuId
      *
-     * .
+     * Add or update menu nutrition by identifier.
      *
      */
     public function testAddOrUpdateMenuNutritionInfoByMenuId()
@@ -104,7 +104,7 @@ class MenusNutritionInfoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteMenuNutritionInfoByMenuId
      *
-     * .
+     * Delete menu nutrition information by menuId.
      *
      */
     public function testDeleteMenuNutritionInfoByMenuId()
@@ -114,7 +114,7 @@ class MenusNutritionInfoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getAllergens
      *
-     * .
+     * Get allergens.
      *
      */
     public function testGetAllergens()
@@ -124,7 +124,7 @@ class MenusNutritionInfoApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for getMenuNutritionInfoByMenuId
      *
-     * .
+     * Get menu nutrition by menuId.
      *
      */
     public function testGetMenuNutritionInfoByMenuId()

@@ -4,11 +4,11 @@ All URIs are relative to *https://api.flipdish.co*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**report**](ContentSecurityPolicyApi.md#report) | **POST** /api/v1.0/csp/report | 
+[**contentSecurityPolicyReport**](ContentSecurityPolicyApi.md#contentSecurityPolicyReport) | **POST** /api/v1.0/csp/report | 
 
 
-# **report**
-> report($request)
+# **contentSecurityPolicyReport**
+> object contentSecurityPolicyReport($request)
 
 
 
@@ -29,9 +29,10 @@ $apiInstance = new Flipdish\\Client\Api\ContentSecurityPolicyApi(
 $request = new \Flipdish\\Client\Models\CspReportRequest(); // \Flipdish\\Client\Models\CspReportRequest | 
 
 try {
-    $apiInstance->report($request);
+    $result = $apiInstance->contentSecurityPolicyReport($request);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContentSecurityPolicyApi->report: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContentSecurityPolicyApi->contentSecurityPolicyReport: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -44,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 

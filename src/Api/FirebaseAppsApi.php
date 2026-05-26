@@ -88,7 +88,7 @@ class FirebaseAppsApi
     }
 
     /**
-     * Operation addFirebaseApp
+     * Operation firebaseAppsAddFirebaseApp
      *
      * @param  \Flipdish\\Client\Models\FirebaseApp $firebase_app firebase_app (required)
      *
@@ -96,14 +96,14 @@ class FirebaseAppsApi
      * @throws \InvalidArgumentException
      * @return object
      */
-    public function addFirebaseApp($firebase_app)
+    public function firebaseAppsAddFirebaseApp($firebase_app)
     {
-        list($response) = $this->addFirebaseAppWithHttpInfo($firebase_app);
+        list($response) = $this->firebaseAppsAddFirebaseAppWithHttpInfo($firebase_app);
         return $response;
     }
 
     /**
-     * Operation addFirebaseAppWithHttpInfo
+     * Operation firebaseAppsAddFirebaseAppWithHttpInfo
      *
      * @param  \Flipdish\\Client\Models\FirebaseApp $firebase_app (required)
      *
@@ -111,10 +111,10 @@ class FirebaseAppsApi
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function addFirebaseAppWithHttpInfo($firebase_app)
+    public function firebaseAppsAddFirebaseAppWithHttpInfo($firebase_app)
     {
         $returnType = 'object';
-        $request = $this->addFirebaseAppRequest($firebase_app);
+        $request = $this->firebaseAppsAddFirebaseAppRequest($firebase_app);
 
         try {
             $options = $this->createHttpClientOption();
@@ -170,6 +170,14 @@ class FirebaseAppsApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Flipdish\\Client\Models\RestApiErrorResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -192,7 +200,7 @@ class FirebaseAppsApi
     }
 
     /**
-     * Operation addFirebaseAppAsync
+     * Operation firebaseAppsAddFirebaseAppAsync
      *
      * 
      *
@@ -201,9 +209,9 @@ class FirebaseAppsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addFirebaseAppAsync($firebase_app)
+    public function firebaseAppsAddFirebaseAppAsync($firebase_app)
     {
-        return $this->addFirebaseAppAsyncWithHttpInfo($firebase_app)
+        return $this->firebaseAppsAddFirebaseAppAsyncWithHttpInfo($firebase_app)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -212,7 +220,7 @@ class FirebaseAppsApi
     }
 
     /**
-     * Operation addFirebaseAppAsyncWithHttpInfo
+     * Operation firebaseAppsAddFirebaseAppAsyncWithHttpInfo
      *
      * 
      *
@@ -221,10 +229,10 @@ class FirebaseAppsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function addFirebaseAppAsyncWithHttpInfo($firebase_app)
+    public function firebaseAppsAddFirebaseAppAsyncWithHttpInfo($firebase_app)
     {
         $returnType = 'object';
-        $request = $this->addFirebaseAppRequest($firebase_app);
+        $request = $this->firebaseAppsAddFirebaseAppRequest($firebase_app);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -264,19 +272,19 @@ class FirebaseAppsApi
     }
 
     /**
-     * Create request for operation 'addFirebaseApp'
+     * Create request for operation 'firebaseAppsAddFirebaseApp'
      *
      * @param  \Flipdish\\Client\Models\FirebaseApp $firebase_app (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function addFirebaseAppRequest($firebase_app)
+    protected function firebaseAppsAddFirebaseAppRequest($firebase_app)
     {
         // verify the required parameter 'firebase_app' is set
         if ($firebase_app === null || (is_array($firebase_app) && count($firebase_app) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $firebase_app when calling addFirebaseApp'
+                'Missing the required parameter $firebase_app when calling firebaseAppsAddFirebaseApp'
             );
         }
 
@@ -368,7 +376,7 @@ class FirebaseAppsApi
     }
 
     /**
-     * Operation deleteFirebaseApp
+     * Operation firebaseAppsDeleteFirebaseApp
      *
      * @param  int $white_label_id white_label_id (required)
      *
@@ -376,14 +384,14 @@ class FirebaseAppsApi
      * @throws \InvalidArgumentException
      * @return object
      */
-    public function deleteFirebaseApp($white_label_id)
+    public function firebaseAppsDeleteFirebaseApp($white_label_id)
     {
-        list($response) = $this->deleteFirebaseAppWithHttpInfo($white_label_id);
+        list($response) = $this->firebaseAppsDeleteFirebaseAppWithHttpInfo($white_label_id);
         return $response;
     }
 
     /**
-     * Operation deleteFirebaseAppWithHttpInfo
+     * Operation firebaseAppsDeleteFirebaseAppWithHttpInfo
      *
      * @param  int $white_label_id (required)
      *
@@ -391,10 +399,10 @@ class FirebaseAppsApi
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteFirebaseAppWithHttpInfo($white_label_id)
+    public function firebaseAppsDeleteFirebaseAppWithHttpInfo($white_label_id)
     {
         $returnType = 'object';
-        $request = $this->deleteFirebaseAppRequest($white_label_id);
+        $request = $this->firebaseAppsDeleteFirebaseAppRequest($white_label_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -480,7 +488,7 @@ class FirebaseAppsApi
     }
 
     /**
-     * Operation deleteFirebaseAppAsync
+     * Operation firebaseAppsDeleteFirebaseAppAsync
      *
      * 
      *
@@ -489,9 +497,9 @@ class FirebaseAppsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteFirebaseAppAsync($white_label_id)
+    public function firebaseAppsDeleteFirebaseAppAsync($white_label_id)
     {
-        return $this->deleteFirebaseAppAsyncWithHttpInfo($white_label_id)
+        return $this->firebaseAppsDeleteFirebaseAppAsyncWithHttpInfo($white_label_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -500,7 +508,7 @@ class FirebaseAppsApi
     }
 
     /**
-     * Operation deleteFirebaseAppAsyncWithHttpInfo
+     * Operation firebaseAppsDeleteFirebaseAppAsyncWithHttpInfo
      *
      * 
      *
@@ -509,10 +517,10 @@ class FirebaseAppsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteFirebaseAppAsyncWithHttpInfo($white_label_id)
+    public function firebaseAppsDeleteFirebaseAppAsyncWithHttpInfo($white_label_id)
     {
         $returnType = 'object';
-        $request = $this->deleteFirebaseAppRequest($white_label_id);
+        $request = $this->firebaseAppsDeleteFirebaseAppRequest($white_label_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -552,19 +560,19 @@ class FirebaseAppsApi
     }
 
     /**
-     * Create request for operation 'deleteFirebaseApp'
+     * Create request for operation 'firebaseAppsDeleteFirebaseApp'
      *
      * @param  int $white_label_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function deleteFirebaseAppRequest($white_label_id)
+    protected function firebaseAppsDeleteFirebaseAppRequest($white_label_id)
     {
         // verify the required parameter 'white_label_id' is set
         if ($white_label_id === null || (is_array($white_label_id) && count($white_label_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $white_label_id when calling deleteFirebaseApp'
+                'Missing the required parameter $white_label_id when calling firebaseAppsDeleteFirebaseApp'
             );
         }
 
@@ -661,32 +669,33 @@ class FirebaseAppsApi
     }
 
     /**
-     * Operation getFirebaseApp
+     * Operation firebaseAppsGetFirebaseApp
      *
      * @param  int $whitelabel_id whitelabel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return object
      */
-    public function getFirebaseApp($whitelabel_id)
+    public function firebaseAppsGetFirebaseApp($whitelabel_id)
     {
-        $this->getFirebaseAppWithHttpInfo($whitelabel_id);
+        list($response) = $this->firebaseAppsGetFirebaseAppWithHttpInfo($whitelabel_id);
+        return $response;
     }
 
     /**
-     * Operation getFirebaseAppWithHttpInfo
+     * Operation firebaseAppsGetFirebaseAppWithHttpInfo
      *
      * @param  int $whitelabel_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFirebaseAppWithHttpInfo($whitelabel_id)
+    public function firebaseAppsGetFirebaseAppWithHttpInfo($whitelabel_id)
     {
-        $returnType = '';
-        $request = $this->getFirebaseAppRequest($whitelabel_id);
+        $returnType = 'object';
+        $request = $this->firebaseAppsGetFirebaseAppRequest($whitelabel_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -716,10 +725,32 @@ class FirebaseAppsApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -750,7 +781,7 @@ class FirebaseAppsApi
     }
 
     /**
-     * Operation getFirebaseAppAsync
+     * Operation firebaseAppsGetFirebaseAppAsync
      *
      * 
      *
@@ -759,9 +790,9 @@ class FirebaseAppsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFirebaseAppAsync($whitelabel_id)
+    public function firebaseAppsGetFirebaseAppAsync($whitelabel_id)
     {
-        return $this->getFirebaseAppAsyncWithHttpInfo($whitelabel_id)
+        return $this->firebaseAppsGetFirebaseAppAsyncWithHttpInfo($whitelabel_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -770,7 +801,7 @@ class FirebaseAppsApi
     }
 
     /**
-     * Operation getFirebaseAppAsyncWithHttpInfo
+     * Operation firebaseAppsGetFirebaseAppAsyncWithHttpInfo
      *
      * 
      *
@@ -779,16 +810,30 @@ class FirebaseAppsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFirebaseAppAsyncWithHttpInfo($whitelabel_id)
+    public function firebaseAppsGetFirebaseAppAsyncWithHttpInfo($whitelabel_id)
     {
-        $returnType = '';
-        $request = $this->getFirebaseAppRequest($whitelabel_id);
+        $returnType = 'object';
+        $request = $this->firebaseAppsGetFirebaseAppRequest($whitelabel_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -808,19 +853,19 @@ class FirebaseAppsApi
     }
 
     /**
-     * Create request for operation 'getFirebaseApp'
+     * Create request for operation 'firebaseAppsGetFirebaseApp'
      *
      * @param  int $whitelabel_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getFirebaseAppRequest($whitelabel_id)
+    protected function firebaseAppsGetFirebaseAppRequest($whitelabel_id)
     {
         // verify the required parameter 'whitelabel_id' is set
         if ($whitelabel_id === null || (is_array($whitelabel_id) && count($whitelabel_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $whitelabel_id when calling getFirebaseApp'
+                'Missing the required parameter $whitelabel_id when calling firebaseAppsGetFirebaseApp'
             );
         }
 

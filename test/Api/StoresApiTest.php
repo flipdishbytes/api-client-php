@@ -372,16 +372,6 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for setPropertyId
-     *
-     * .
-     *
-     */
-    public function testSetPropertyId()
-    {
-    }
-
-    /**
      * Test case for setStoreCollectionSettings
      *
      * .
@@ -398,6 +388,16 @@ class StoresApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testSetStoreLeadTimes()
+    {
+    }
+
+    /**
+     * Test case for storesSetPropertyId
+     *
+     * .
+     *
+     */
+    public function testStoresSetPropertyId()
     {
     }
 
