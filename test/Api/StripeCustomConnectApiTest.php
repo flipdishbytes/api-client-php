@@ -112,16 +112,6 @@ class StripeCustomConnectApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getVerificationStatus
-     *
-     * .
-     *
-     */
-    public function testGetVerificationStatus()
-    {
-    }
-
-    /**
      * Test case for setBankAccountBusinessType
      *
      * .
