@@ -536,6 +536,7 @@ class Store implements ModelInterface, ArrayAccess
     const SALES_CHANNEL_TYPES_KIOSK = 'Kiosk';
     const SALES_CHANNEL_TYPES_POS = 'Pos';
     const SALES_CHANNEL_TYPES_NONE = 'None';
+    const SALES_CHANNEL_TYPES_PHONE_AGENT = 'PhoneAgent';
     const INHERITANCE_CONFIG_TYPES_COLLECTION_SETTINGS = 'CollectionSettings';
     
 
@@ -692,6 +693,7 @@ class Store implements ModelInterface, ArrayAccess
             self::SALES_CHANNEL_TYPES_KIOSK,
             self::SALES_CHANNEL_TYPES_POS,
             self::SALES_CHANNEL_TYPES_NONE,
+            self::SALES_CHANNEL_TYPES_PHONE_AGENT,
         ];
     }
     
