@@ -592,6 +592,7 @@ Class | Method | HTTP request | Description
 *TeammatesApi* | [**getTeammatesByAppId**](docs/Api/TeammatesApi.md#getteammatesbyappid) | **GET** /api/v1.0/{appId}/teammates | 
 *TeammatesApi* | [**grantaccess**](docs/Api/TeammatesApi.md#grantaccess) | **POST** /api/v1.0/{appId}/teammates/grantaccess | 
 *TeammatesApi* | [**redeemInvitation**](docs/Api/TeammatesApi.md#redeeminvitation) | **GET** /api/v1.0/{appId}/teammates/redeem/{otc} | 
+*TeammatesApi* | [**teammateMobileRedirect**](docs/Api/TeammatesApi.md#teammatemobileredirect) | **GET** /api/v1.0/teammates/mobile-redirect | 
 *TeammatesApi* | [**teammatesAcceptInvitation**](docs/Api/TeammatesApi.md#teammatesacceptinvitation) | **GET** /api/v1.0/{appId}/teammates/accept/{otc} | 
 *TeammatesApi* | [**teammatesAcceptInvitations**](docs/Api/TeammatesApi.md#teammatesacceptinvitations) | **POST** /api/v1.0/teammates/acceptInvitations | 
 *TeammatesApi* | [**teammatesPendingInvitations**](docs/Api/TeammatesApi.md#teammatespendinginvitations) | **GET** /api/v1.0/teammates/pending-invitations | 

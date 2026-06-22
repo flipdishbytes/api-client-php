@@ -132,6 +132,16 @@ class TeammatesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for teammateMobileRedirect
+     *
+     * .
+     *
+     */
+    public function testTeammateMobileRedirect()
+    {
+    }
+
+    /**
      * Test case for teammatesAcceptInvitation
      *
      * .
