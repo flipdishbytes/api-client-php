@@ -506,7 +506,7 @@ class PlayStoreConfigModel implements ModelInterface, ArrayAccess
     /**
      * Sets play_console_account
      *
-     * @param int $play_console_account Play Console account  0: UK, 1: IE
+     * @param int $play_console_account Play Console account: 0 = IE, 1 = UK, 2 = IE2
      *
      * @return $this
      */
