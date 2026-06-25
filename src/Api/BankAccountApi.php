@@ -93,14 +93,15 @@ class BankAccountApi
      * @param  string $app_id app_id (required)
      * @param  int $bank_account_id bank_account_id (required)
      * @param  int $store_id store_id (required)
+     * @param  bool $skip_bank_account_update_warning_email skip_bank_account_update_warning_email (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function attachBankAccountToStore($app_id, $bank_account_id, $store_id)
+    public function attachBankAccountToStore($app_id, $bank_account_id, $store_id, $skip_bank_account_update_warning_email = null)
     {
-        $this->attachBankAccountToStoreWithHttpInfo($app_id, $bank_account_id, $store_id);
+        $this->attachBankAccountToStoreWithHttpInfo($app_id, $bank_account_id, $store_id, $skip_bank_account_update_warning_email);
     }
 
     /**
@@ -109,15 +110,16 @@ class BankAccountApi
      * @param  string $app_id (required)
      * @param  int $bank_account_id (required)
      * @param  int $store_id (required)
+     * @param  bool $skip_bank_account_update_warning_email (optional)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function attachBankAccountToStoreWithHttpInfo($app_id, $bank_account_id, $store_id)
+    public function attachBankAccountToStoreWithHttpInfo($app_id, $bank_account_id, $store_id, $skip_bank_account_update_warning_email = null)
     {
         $returnType = '';
-        $request = $this->attachBankAccountToStoreRequest($app_id, $bank_account_id, $store_id);
+        $request = $this->attachBankAccountToStoreRequest($app_id, $bank_account_id, $store_id, $skip_bank_account_update_warning_email);
 
         try {
             $options = $this->createHttpClientOption();
@@ -188,13 +190,14 @@ class BankAccountApi
      * @param  string $app_id (required)
      * @param  int $bank_account_id (required)
      * @param  int $store_id (required)
+     * @param  bool $skip_bank_account_update_warning_email (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function attachBankAccountToStoreAsync($app_id, $bank_account_id, $store_id)
+    public function attachBankAccountToStoreAsync($app_id, $bank_account_id, $store_id, $skip_bank_account_update_warning_email = null)
     {
-        return $this->attachBankAccountToStoreAsyncWithHttpInfo($app_id, $bank_account_id, $store_id)
+        return $this->attachBankAccountToStoreAsyncWithHttpInfo($app_id, $bank_account_id, $store_id, $skip_bank_account_update_warning_email)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -210,14 +213,15 @@ class BankAccountApi
      * @param  string $app_id (required)
      * @param  int $bank_account_id (required)
      * @param  int $store_id (required)
+     * @param  bool $skip_bank_account_update_warning_email (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function attachBankAccountToStoreAsyncWithHttpInfo($app_id, $bank_account_id, $store_id)
+    public function attachBankAccountToStoreAsyncWithHttpInfo($app_id, $bank_account_id, $store_id, $skip_bank_account_update_warning_email = null)
     {
         $returnType = '';
-        $request = $this->attachBankAccountToStoreRequest($app_id, $bank_account_id, $store_id);
+        $request = $this->attachBankAccountToStoreRequest($app_id, $bank_account_id, $store_id, $skip_bank_account_update_warning_email);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -248,11 +252,12 @@ class BankAccountApi
      * @param  string $app_id (required)
      * @param  int $bank_account_id (required)
      * @param  int $store_id (required)
+     * @param  bool $skip_bank_account_update_warning_email (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function attachBankAccountToStoreRequest($app_id, $bank_account_id, $store_id)
+    protected function attachBankAccountToStoreRequest($app_id, $bank_account_id, $store_id, $skip_bank_account_update_warning_email = null)
     {
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
@@ -280,6 +285,10 @@ class BankAccountApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($skip_bank_account_update_warning_email !== null) {
+            $queryParams['skipBankAccountUpdateWarningEmail'] = ObjectSerializer::toQueryValue($skip_bank_account_update_warning_email);
+        }
 
         // path params
         if ($app_id !== null) {

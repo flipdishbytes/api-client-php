@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **attachBankAccountToStore**
-> attachBankAccountToStore($app_id, $bank_account_id, $store_id)
+> attachBankAccountToStore($app_id, $bank_account_id, $store_id, $skip_bank_account_update_warning_email)
 
 
 
@@ -37,9 +37,10 @@ $apiInstance = new Flipdish\\Client\Api\BankAccountApi(
 $app_id = "app_id_example"; // string | 
 $bank_account_id = 56; // int | 
 $store_id = 56; // int | 
+$skip_bank_account_update_warning_email = true; // bool | 
 
 try {
-    $apiInstance->attachBankAccountToStore($app_id, $bank_account_id, $store_id);
+    $apiInstance->attachBankAccountToStore($app_id, $bank_account_id, $store_id, $skip_bank_account_update_warning_email);
 } catch (Exception $e) {
     echo 'Exception when calling BankAccountApi->attachBankAccountToStore: ', $e->getMessage(), PHP_EOL;
 }
@@ -53,6 +54,7 @@ Name | Type | Description  | Notes
  **app_id** | **string**|  |
  **bank_account_id** | **int**|  |
  **store_id** | **int**|  |
+ **skip_bank_account_update_warning_email** | **bool**|  | [optional]
 
 ### Return type
 
