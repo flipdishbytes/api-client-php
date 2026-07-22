@@ -153,6 +153,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'bank_account_deleted_event' => '\Flipdish\\Client\Models\BankAccountDeletedEvent[]',
         'bank_account_assigned_event' => '\Flipdish\\Client\Models\BankAccountAssignedEvent[]',
         'hydra_assigned_event' => '\Flipdish\\Client\Models\HydraAssignedEvent[]',
+        'hydra_created_event' => '\Flipdish\\Client\Models\HydraCreatedEvent[]',
         'hydra_request_reset_event' => '\Flipdish\\Client\Models\HydraRequestResetEvent[]',
         'hydra_store_assigned_event' => '\Flipdish\\Client\Models\HydraStoreAssignedEvent[]',
         'hydra_store_unassigned_event' => '\Flipdish\\Client\Models\HydraStoreUnassignedEvent[]',
@@ -302,6 +303,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'bank_account_deleted_event' => null,
         'bank_account_assigned_event' => null,
         'hydra_assigned_event' => null,
+        'hydra_created_event' => null,
         'hydra_request_reset_event' => null,
         'hydra_store_assigned_event' => null,
         'hydra_store_unassigned_event' => null,
@@ -472,6 +474,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'bank_account_deleted_event' => 'BankAccountDeletedEvent',
         'bank_account_assigned_event' => 'BankAccountAssignedEvent',
         'hydra_assigned_event' => 'HydraAssignedEvent',
+        'hydra_created_event' => 'HydraCreatedEvent',
         'hydra_request_reset_event' => 'HydraRequestResetEvent',
         'hydra_store_assigned_event' => 'HydraStoreAssignedEvent',
         'hydra_store_unassigned_event' => 'HydraStoreUnassignedEvent',
@@ -621,6 +624,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'bank_account_deleted_event' => 'setBankAccountDeletedEvent',
         'bank_account_assigned_event' => 'setBankAccountAssignedEvent',
         'hydra_assigned_event' => 'setHydraAssignedEvent',
+        'hydra_created_event' => 'setHydraCreatedEvent',
         'hydra_request_reset_event' => 'setHydraRequestResetEvent',
         'hydra_store_assigned_event' => 'setHydraStoreAssignedEvent',
         'hydra_store_unassigned_event' => 'setHydraStoreUnassignedEvent',
@@ -770,6 +774,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         'bank_account_deleted_event' => 'getBankAccountDeletedEvent',
         'bank_account_assigned_event' => 'getBankAccountAssignedEvent',
         'hydra_assigned_event' => 'getHydraAssignedEvent',
+        'hydra_created_event' => 'getHydraCreatedEvent',
         'hydra_request_reset_event' => 'getHydraRequestResetEvent',
         'hydra_store_assigned_event' => 'getHydraStoreAssignedEvent',
         'hydra_store_unassigned_event' => 'getHydraStoreUnassignedEvent',
@@ -973,6 +978,7 @@ class EventSearchResult implements ModelInterface, ArrayAccess
         $this->container['bank_account_deleted_event'] = isset($data['bank_account_deleted_event']) ? $data['bank_account_deleted_event'] : null;
         $this->container['bank_account_assigned_event'] = isset($data['bank_account_assigned_event']) ? $data['bank_account_assigned_event'] : null;
         $this->container['hydra_assigned_event'] = isset($data['hydra_assigned_event']) ? $data['hydra_assigned_event'] : null;
+        $this->container['hydra_created_event'] = isset($data['hydra_created_event']) ? $data['hydra_created_event'] : null;
         $this->container['hydra_request_reset_event'] = isset($data['hydra_request_reset_event']) ? $data['hydra_request_reset_event'] : null;
         $this->container['hydra_store_assigned_event'] = isset($data['hydra_store_assigned_event']) ? $data['hydra_store_assigned_event'] : null;
         $this->container['hydra_store_unassigned_event'] = isset($data['hydra_store_unassigned_event']) ? $data['hydra_store_unassigned_event'] : null;
@@ -3321,6 +3327,30 @@ class EventSearchResult implements ModelInterface, ArrayAccess
     public function setHydraAssignedEvent($hydra_assigned_event)
     {
         $this->container['hydra_assigned_event'] = $hydra_assigned_event;
+
+        return $this;
+    }
+
+    /**
+     * Gets hydra_created_event
+     *
+     * @return \Flipdish\\Client\Models\HydraCreatedEvent[]
+     */
+    public function getHydraCreatedEvent()
+    {
+        return $this->container['hydra_created_event'];
+    }
+
+    /**
+     * Sets hydra_created_event
+     *
+     * @param \Flipdish\\Client\Models\HydraCreatedEvent[] $hydra_created_event Hydra created event
+     *
+     * @return $this
+     */
+    public function setHydraCreatedEvent($hydra_created_event)
+    {
+        $this->container['hydra_created_event'] = $hydra_created_event;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * HydraStatusTest
+ * HydraCreatedEventTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Flipdish\\Client;
 
 /**
- * HydraStatusTest Class Doc Comment
+ * HydraCreatedEventTest Class Doc Comment
  *
  * @category    Class
- * @description Hydra status
+ * @description Hydra device created event (pin-stage / pre-register).
  * @package     Flipdish\\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class HydraStatusTest extends \PHPUnit_Framework_TestCase
+class HydraCreatedEventTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,51 +70,30 @@ class HydraStatusTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "HydraStatus"
+     * Test "HydraCreatedEvent"
      */
-    public function testHydraStatus()
+    public function testHydraCreatedEvent()
     {
     }
 
     /**
-     * Test attribute "app_id"
+     * Test attribute "user"
      */
-    public function testPropertyAppId()
+    public function testPropertyUser()
     {
     }
 
     /**
-     * Test attribute "store_ids"
+     * Test attribute "device_id"
      */
-    public function testPropertyStoreIds()
+    public function testPropertyDeviceId()
     {
     }
 
     /**
-     * Test attribute "property_ids"
+     * Test attribute "hydra_user_id"
      */
-    public function testPropertyPropertyIds()
-    {
-    }
-
-    /**
-     * Test attribute "is_registered"
-     */
-    public function testPropertyIsRegistered()
-    {
-    }
-
-    /**
-     * Test attribute "pin_code"
-     */
-    public function testPropertyPinCode()
-    {
-    }
-
-    /**
-     * Test attribute "images"
-     */
-    public function testPropertyImages()
+    public function testPropertyHydraUserId()
     {
     }
 
@@ -126,9 +105,65 @@ class HydraStatusTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "hydra_user_id"
+     * Test attribute "event_name"
      */
-    public function testPropertyHydraUserId()
+    public function testPropertyEventName()
+    {
+    }
+
+    /**
+     * Test attribute "flipdish_event_id"
+     */
+    public function testPropertyFlipdishEventId()
+    {
+    }
+
+    /**
+     * Test attribute "create_time"
+     */
+    public function testPropertyCreateTime()
+    {
+    }
+
+    /**
+     * Test attribute "position"
+     */
+    public function testPropertyPosition()
+    {
+    }
+
+    /**
+     * Test attribute "app_id"
+     */
+    public function testPropertyAppId()
+    {
+    }
+
+    /**
+     * Test attribute "org_id"
+     */
+    public function testPropertyOrgId()
+    {
+    }
+
+    /**
+     * Test attribute "ip_address"
+     */
+    public function testPropertyIpAddress()
+    {
+    }
+
+    /**
+     * Test attribute "activity_id"
+     */
+    public function testPropertyActivityId()
+    {
+    }
+
+    /**
+     * Test attribute "activity_type"
+     */
+    public function testPropertyActivityType()
     {
     }
 }

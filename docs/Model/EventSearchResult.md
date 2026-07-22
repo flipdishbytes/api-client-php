@@ -98,6 +98,7 @@ Name | Type | Description | Notes
 **bank_account_deleted_event** | [**\Flipdish\\Client\Models\BankAccountDeletedEvent[]**](BankAccountDeletedEvent.md) | Bank account updated event | [optional] 
 **bank_account_assigned_event** | [**\Flipdish\\Client\Models\BankAccountAssignedEvent[]**](BankAccountAssignedEvent.md) | Bank account assigned event | [optional] 
 **hydra_assigned_event** | [**\Flipdish\\Client\Models\HydraAssignedEvent[]**](HydraAssignedEvent.md) | Hydra assigned event | [optional] 
+**hydra_created_event** | [**\Flipdish\\Client\Models\HydraCreatedEvent[]**](HydraCreatedEvent.md) | Hydra created event | [optional] 
 **hydra_request_reset_event** | [**\Flipdish\\Client\Models\HydraRequestResetEvent[]**](HydraRequestResetEvent.md) | Hydra reset requested event | [optional] 
 **hydra_store_assigned_event** | [**\Flipdish\\Client\Models\HydraStoreAssignedEvent[]**](HydraStoreAssignedEvent.md) | Hydra store assigned event | [optional] 
 **hydra_store_unassigned_event** | [**\Flipdish\\Client\Models\HydraStoreUnassignedEvent[]**](HydraStoreUnassignedEvent.md) | Hydra store unassigned | [optional] 

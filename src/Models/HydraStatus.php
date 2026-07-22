@@ -60,10 +60,12 @@ class HydraStatus implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'app_id' => 'string',
         'store_ids' => 'int[]',
+        'property_ids' => 'string[]',
         'is_registered' => 'bool',
         'pin_code' => 'int',
         'images' => 'string[]',
-        'user_type' => 'string'
+        'user_type' => 'string',
+        'hydra_user_id' => 'int'
     ];
 
     /**
@@ -74,10 +76,12 @@ class HydraStatus implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'app_id' => null,
         'store_ids' => 'int32',
+        'property_ids' => null,
         'is_registered' => null,
         'pin_code' => 'int32',
         'images' => null,
-        'user_type' => null
+        'user_type' => null,
+        'hydra_user_id' => 'int32'
     ];
 
     /**
@@ -109,10 +113,12 @@ class HydraStatus implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'app_id' => 'AppId',
         'store_ids' => 'StoreIds',
+        'property_ids' => 'PropertyIds',
         'is_registered' => 'IsRegistered',
         'pin_code' => 'PinCode',
         'images' => 'Images',
-        'user_type' => 'UserType'
+        'user_type' => 'UserType',
+        'hydra_user_id' => 'HydraUserId'
     ];
 
     /**
@@ -123,10 +129,12 @@ class HydraStatus implements ModelInterface, ArrayAccess
     protected static $setters = [
         'app_id' => 'setAppId',
         'store_ids' => 'setStoreIds',
+        'property_ids' => 'setPropertyIds',
         'is_registered' => 'setIsRegistered',
         'pin_code' => 'setPinCode',
         'images' => 'setImages',
-        'user_type' => 'setUserType'
+        'user_type' => 'setUserType',
+        'hydra_user_id' => 'setHydraUserId'
     ];
 
     /**
@@ -137,10 +145,12 @@ class HydraStatus implements ModelInterface, ArrayAccess
     protected static $getters = [
         'app_id' => 'getAppId',
         'store_ids' => 'getStoreIds',
+        'property_ids' => 'getPropertyIds',
         'is_registered' => 'getIsRegistered',
         'pin_code' => 'getPinCode',
         'images' => 'getImages',
-        'user_type' => 'getUserType'
+        'user_type' => 'getUserType',
+        'hydra_user_id' => 'getHydraUserId'
     ];
 
     /**
@@ -222,10 +232,12 @@ class HydraStatus implements ModelInterface, ArrayAccess
     {
         $this->container['app_id'] = isset($data['app_id']) ? $data['app_id'] : null;
         $this->container['store_ids'] = isset($data['store_ids']) ? $data['store_ids'] : null;
+        $this->container['property_ids'] = isset($data['property_ids']) ? $data['property_ids'] : null;
         $this->container['is_registered'] = isset($data['is_registered']) ? $data['is_registered'] : null;
         $this->container['pin_code'] = isset($data['pin_code']) ? $data['pin_code'] : null;
         $this->container['images'] = isset($data['images']) ? $data['images'] : null;
         $this->container['user_type'] = isset($data['user_type']) ? $data['user_type'] : null;
+        $this->container['hydra_user_id'] = isset($data['hydra_user_id']) ? $data['hydra_user_id'] : null;
     }
 
     /**
@@ -318,6 +330,30 @@ class HydraStatus implements ModelInterface, ArrayAccess
     public function setStoreIds($store_ids)
     {
         $this->container['store_ids'] = $store_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets property_ids
+     *
+     * @return string[]
+     */
+    public function getPropertyIds()
+    {
+        return $this->container['property_ids'];
+    }
+
+    /**
+     * Sets property_ids
+     *
+     * @param string[] $property_ids AuthZ Property ids for assigned stores
+     *
+     * @return $this
+     */
+    public function setPropertyIds($property_ids)
+    {
+        $this->container['property_ids'] = $property_ids;
 
         return $this;
     }
@@ -431,6 +467,30 @@ class HydraStatus implements ModelInterface, ArrayAccess
             );
         }
         $this->container['user_type'] = $user_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets hydra_user_id
+     *
+     * @return int
+     */
+    public function getHydraUserId()
+    {
+        return $this->container['hydra_user_id'];
+    }
+
+    /**
+     * Sets hydra_user_id
+     *
+     * @param int $hydra_user_id Zeus Hydra user id
+     *
+     * @return $this
+     */
+    public function setHydraUserId($hydra_user_id)
+    {
+        $this->container['hydra_user_id'] = $hydra_user_id;
 
         return $this;
     }

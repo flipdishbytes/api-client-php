@@ -742,6 +742,13 @@ class EventSearchResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "hydra_created_event"
+     */
+    public function testPropertyHydraCreatedEvent()
+    {
+    }
+
+    /**
      * Test attribute "hydra_request_reset_event"
      */
     public function testPropertyHydraRequestResetEvent()

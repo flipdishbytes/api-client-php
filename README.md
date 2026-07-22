@@ -868,6 +868,7 @@ Class | Method | HTTP request | Description
  - [HydraAssignedEvent](docs/Model/HydraAssignedEvent.md)
  - [HydraConfig](docs/Model/HydraConfig.md)
  - [HydraConnectionStatusChangedEvent](docs/Model/HydraConnectionStatusChangedEvent.md)
+ - [HydraCreatedEvent](docs/Model/HydraCreatedEvent.md)
  - [HydraDeviceDetails](docs/Model/HydraDeviceDetails.md)
  - [HydraRegistrationRequest](docs/Model/HydraRegistrationRequest.md)
  - [HydraRequestResetEvent](docs/Model/HydraRequestResetEvent.md)
