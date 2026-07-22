@@ -303,6 +303,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_ACCESS_LEVEL_PROPERTY_MANAGER = 'PropertyManager';
     const APP_ACCESS_LEVEL_STORE_MANAGER = 'StoreManager';
     const APP_ACCESS_LEVEL_STORE_STAFF = 'StoreStaff';
+    const APP_ACCESS_LEVEL_STAFF_MEMBER = 'StaffMember';
     const APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS = 'StoreReadOnlyAccess';
     const APP_ACCESS_LEVEL_FINANCE_MANGER = 'FinanceManger';
     const APP_ACCESS_LEVEL_ONBOARDING = 'Onboarding';
@@ -326,6 +327,7 @@ class App implements ModelInterface, ArrayAccess
     const APP_RESOURCE_SET_CREATE_TEAMMATE_ONBOARDING = 'CreateTeammateOnboarding';
     const APP_RESOURCE_SET_CREATE_TEAMMATE_PROPERTY_MANAGER = 'CreateTeammatePropertyManager';
     const APP_RESOURCE_SET_CREATE_TEAMMATE_PROPERTY_OWNER = 'CreateTeammatePropertyOwner';
+    const APP_RESOURCE_SET_CREATE_TEAMMATE_STAFF_MEMBER = 'CreateTeammateStaffMember';
     const APP_RESOURCE_SET_VIEW_APM_CONFIGURATIONS = 'ViewApmConfigurations';
     const APP_RESOURCE_SET_EDIT_APM_CONFIGURATIONS = 'EditApmConfigurations';
     const APP_RESOURCE_SET_VIEW_CAMPAIGNS_CONFIGURATIONS = 'ViewCampaignsConfigurations';
@@ -539,6 +541,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_ACCESS_LEVEL_PROPERTY_MANAGER,
             self::APP_ACCESS_LEVEL_STORE_MANAGER,
             self::APP_ACCESS_LEVEL_STORE_STAFF,
+            self::APP_ACCESS_LEVEL_STAFF_MEMBER,
             self::APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS,
             self::APP_ACCESS_LEVEL_FINANCE_MANGER,
             self::APP_ACCESS_LEVEL_ONBOARDING,
@@ -573,6 +576,7 @@ class App implements ModelInterface, ArrayAccess
             self::APP_RESOURCE_SET_CREATE_TEAMMATE_ONBOARDING,
             self::APP_RESOURCE_SET_CREATE_TEAMMATE_PROPERTY_MANAGER,
             self::APP_RESOURCE_SET_CREATE_TEAMMATE_PROPERTY_OWNER,
+            self::APP_RESOURCE_SET_CREATE_TEAMMATE_STAFF_MEMBER,
             self::APP_RESOURCE_SET_VIEW_APM_CONFIGURATIONS,
             self::APP_RESOURCE_SET_EDIT_APM_CONFIGURATIONS,
             self::APP_RESOURCE_SET_VIEW_CAMPAIGNS_CONFIGURATIONS,

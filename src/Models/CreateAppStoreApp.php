@@ -256,6 +256,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
     const TEAMMATE_APP_ACCESS_LEVEL_PROPERTY_MANAGER = 'PropertyManager';
     const TEAMMATE_APP_ACCESS_LEVEL_STORE_MANAGER = 'StoreManager';
     const TEAMMATE_APP_ACCESS_LEVEL_STORE_STAFF = 'StoreStaff';
+    const TEAMMATE_APP_ACCESS_LEVEL_STAFF_MEMBER = 'StaffMember';
     const TEAMMATE_APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS = 'StoreReadOnlyAccess';
     const TEAMMATE_APP_ACCESS_LEVEL_FINANCE_MANGER = 'FinanceManger';
     const PERMISSIONS_TYPE_TEAMMATE = 'Teammate';
@@ -329,6 +330,7 @@ class CreateAppStoreApp implements ModelInterface, ArrayAccess
             self::TEAMMATE_APP_ACCESS_LEVEL_PROPERTY_MANAGER,
             self::TEAMMATE_APP_ACCESS_LEVEL_STORE_MANAGER,
             self::TEAMMATE_APP_ACCESS_LEVEL_STORE_STAFF,
+            self::TEAMMATE_APP_ACCESS_LEVEL_STAFF_MEMBER,
             self::TEAMMATE_APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS,
             self::TEAMMATE_APP_ACCESS_LEVEL_FINANCE_MANGER,
         ];

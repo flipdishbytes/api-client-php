@@ -188,6 +188,7 @@ class UserWhiteLabelConfig implements ModelInterface, ArrayAccess
     const LEVEL_PROPERTY_MANAGER = 'PropertyManager';
     const LEVEL_STORE_MANAGER = 'StoreManager';
     const LEVEL_STORE_STAFF = 'StoreStaff';
+    const LEVEL_STAFF_MEMBER = 'StaffMember';
     const LEVEL_STORE_READ_ONLY_ACCESS = 'StoreReadOnlyAccess';
     const LEVEL_FINANCE_MANAGER = 'FinanceManager';
     const LEVEL_SUPPORT = 'Support';
@@ -211,6 +212,7 @@ class UserWhiteLabelConfig implements ModelInterface, ArrayAccess
             self::LEVEL_PROPERTY_MANAGER,
             self::LEVEL_STORE_MANAGER,
             self::LEVEL_STORE_STAFF,
+            self::LEVEL_STAFF_MEMBER,
             self::LEVEL_STORE_READ_ONLY_ACCESS,
             self::LEVEL_FINANCE_MANAGER,
             self::LEVEL_SUPPORT,

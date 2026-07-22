@@ -183,6 +183,7 @@ class TeammateBase implements ModelInterface, ArrayAccess
     const APP_ACCESS_LEVEL_PROPERTY_MANAGER = 'PropertyManager';
     const APP_ACCESS_LEVEL_STORE_MANAGER = 'StoreManager';
     const APP_ACCESS_LEVEL_STORE_STAFF = 'StoreStaff';
+    const APP_ACCESS_LEVEL_STAFF_MEMBER = 'StaffMember';
     const APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS = 'StoreReadOnlyAccess';
     const APP_ACCESS_LEVEL_FINANCE_MANGER = 'FinanceManger';
     const APP_ACCESS_LEVEL_ONBOARDING = 'Onboarding';
@@ -207,6 +208,7 @@ class TeammateBase implements ModelInterface, ArrayAccess
             self::APP_ACCESS_LEVEL_PROPERTY_MANAGER,
             self::APP_ACCESS_LEVEL_STORE_MANAGER,
             self::APP_ACCESS_LEVEL_STORE_STAFF,
+            self::APP_ACCESS_LEVEL_STAFF_MEMBER,
             self::APP_ACCESS_LEVEL_STORE_READ_ONLY_ACCESS,
             self::APP_ACCESS_LEVEL_FINANCE_MANGER,
             self::APP_ACCESS_LEVEL_ONBOARDING,
