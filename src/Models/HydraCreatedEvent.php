@@ -62,6 +62,7 @@ class HydraCreatedEvent implements ModelInterface, ArrayAccess
         'device_id' => 'string',
         'hydra_user_id' => 'int',
         'user_type' => 'string',
+        'device_type' => 'string',
         'event_name' => 'string',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
@@ -83,6 +84,7 @@ class HydraCreatedEvent implements ModelInterface, ArrayAccess
         'device_id' => null,
         'hydra_user_id' => 'int32',
         'user_type' => null,
+        'device_type' => null,
         'event_name' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
@@ -125,6 +127,7 @@ class HydraCreatedEvent implements ModelInterface, ArrayAccess
         'device_id' => 'DeviceId',
         'hydra_user_id' => 'HydraUserId',
         'user_type' => 'UserType',
+        'device_type' => 'DeviceType',
         'event_name' => 'EventName',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
@@ -146,6 +149,7 @@ class HydraCreatedEvent implements ModelInterface, ArrayAccess
         'device_id' => 'setDeviceId',
         'hydra_user_id' => 'setHydraUserId',
         'user_type' => 'setUserType',
+        'device_type' => 'setDeviceType',
         'event_name' => 'setEventName',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
@@ -167,6 +171,7 @@ class HydraCreatedEvent implements ModelInterface, ArrayAccess
         'device_id' => 'getDeviceId',
         'hydra_user_id' => 'getHydraUserId',
         'user_type' => 'getUserType',
+        'device_type' => 'getDeviceType',
         'event_name' => 'getEventName',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
@@ -222,6 +227,9 @@ class HydraCreatedEvent implements ModelInterface, ArrayAccess
     const USER_TYPE_KIOSK = 'Kiosk';
     const USER_TYPE_TERMINAL = 'Terminal';
     const USER_TYPE_LEGACY_PRINTER = 'LegacyPrinter';
+    const DEVICE_TYPE_KIOSK = 'Kiosk';
+    const DEVICE_TYPE_TERMINAL = 'Terminal';
+    const DEVICE_TYPE_LEGACY_PRINTER = 'LegacyPrinter';
     
 
     
@@ -236,6 +244,20 @@ class HydraCreatedEvent implements ModelInterface, ArrayAccess
             self::USER_TYPE_KIOSK,
             self::USER_TYPE_TERMINAL,
             self::USER_TYPE_LEGACY_PRINTER,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getDeviceTypeAllowableValues()
+    {
+        return [
+            self::DEVICE_TYPE_KIOSK,
+            self::DEVICE_TYPE_TERMINAL,
+            self::DEVICE_TYPE_LEGACY_PRINTER,
         ];
     }
     
@@ -259,6 +281,7 @@ class HydraCreatedEvent implements ModelInterface, ArrayAccess
         $this->container['device_id'] = isset($data['device_id']) ? $data['device_id'] : null;
         $this->container['hydra_user_id'] = isset($data['hydra_user_id']) ? $data['hydra_user_id'] : null;
         $this->container['user_type'] = isset($data['user_type']) ? $data['user_type'] : null;
+        $this->container['device_type'] = isset($data['device_type']) ? $data['device_type'] : null;
         $this->container['event_name'] = isset($data['event_name']) ? $data['event_name'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
@@ -283,6 +306,14 @@ class HydraCreatedEvent implements ModelInterface, ArrayAccess
         if (!is_null($this->container['user_type']) && !in_array($this->container['user_type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'user_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getDeviceTypeAllowableValues();
+        if (!is_null($this->container['device_type']) && !in_array($this->container['device_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'device_type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -387,7 +418,7 @@ class HydraCreatedEvent implements ModelInterface, ArrayAccess
     /**
      * Sets user_type
      *
-     * @param string $user_type Hydra user type (Kiosk / Terminal)
+     * @param string $user_type Hydra user type (Kiosk / Terminal) as integer. Prefer {Flipdish.PublicModels.V1.Events.Hydra.HydraCreatedEvent.DeviceType}.
      *
      * @return $this
      */
@@ -403,6 +434,39 @@ class HydraCreatedEvent implements ModelInterface, ArrayAccess
             );
         }
         $this->container['user_type'] = $user_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets device_type
+     *
+     * @return string
+     */
+    public function getDeviceType()
+    {
+        return $this->container['device_type'];
+    }
+
+    /**
+     * Sets device_type
+     *
+     * @param string $device_type Hydra device type (Kiosk / Terminal), serialized as string.
+     *
+     * @return $this
+     */
+    public function setDeviceType($device_type)
+    {
+        $allowedValues = $this->getDeviceTypeAllowableValues();
+        if (!is_null($device_type) && !in_array($device_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'device_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['device_type'] = $device_type;
 
         return $this;
     }

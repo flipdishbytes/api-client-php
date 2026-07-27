@@ -105,6 +105,13 @@ class HydraCreatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "device_type"
+     */
+    public function testPropertyDeviceType()
+    {
+    }
+
+    /**
      * Test attribute "event_name"
      */
     public function testPropertyEventName()

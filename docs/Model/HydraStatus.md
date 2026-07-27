@@ -9,7 +9,8 @@ Name | Type | Description | Notes
 **is_registered** | **bool** | The device has been already registered | 
 **pin_code** | **int** | 6 digit PIN code (not starting with zero). | [optional] 
 **images** | **string[]** | Hydra images (covers) | [optional] 
-**user_type** | **string** | Hydra User Type | [optional] 
+**user_type** | **string** | Hydra User Type as integer. Prefer {Flipdish.PublicModels.V1.Hydra.HydraStatus.DeviceType}. | [optional] 
+**device_type** | **string** | Hydra device type (Kiosk / Terminal), serialized as string. | [optional] 
 **hydra_user_id** | **int** | Zeus Hydra user id | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

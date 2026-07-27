@@ -126,6 +126,13 @@ class HydraStatusTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "device_type"
+     */
+    public function testPropertyDeviceType()
+    {
+    }
+
+    /**
      * Test attribute "hydra_user_id"
      */
     public function testPropertyHydraUserId()

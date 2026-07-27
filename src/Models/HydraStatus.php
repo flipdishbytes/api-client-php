@@ -65,6 +65,7 @@ class HydraStatus implements ModelInterface, ArrayAccess
         'pin_code' => 'int',
         'images' => 'string[]',
         'user_type' => 'string',
+        'device_type' => 'string',
         'hydra_user_id' => 'int'
     ];
 
@@ -81,6 +82,7 @@ class HydraStatus implements ModelInterface, ArrayAccess
         'pin_code' => 'int32',
         'images' => null,
         'user_type' => null,
+        'device_type' => null,
         'hydra_user_id' => 'int32'
     ];
 
@@ -118,6 +120,7 @@ class HydraStatus implements ModelInterface, ArrayAccess
         'pin_code' => 'PinCode',
         'images' => 'Images',
         'user_type' => 'UserType',
+        'device_type' => 'DeviceType',
         'hydra_user_id' => 'HydraUserId'
     ];
 
@@ -134,6 +137,7 @@ class HydraStatus implements ModelInterface, ArrayAccess
         'pin_code' => 'setPinCode',
         'images' => 'setImages',
         'user_type' => 'setUserType',
+        'device_type' => 'setDeviceType',
         'hydra_user_id' => 'setHydraUserId'
     ];
 
@@ -150,6 +154,7 @@ class HydraStatus implements ModelInterface, ArrayAccess
         'pin_code' => 'getPinCode',
         'images' => 'getImages',
         'user_type' => 'getUserType',
+        'device_type' => 'getDeviceType',
         'hydra_user_id' => 'getHydraUserId'
     ];
 
@@ -197,6 +202,9 @@ class HydraStatus implements ModelInterface, ArrayAccess
     const USER_TYPE_KIOSK = 'Kiosk';
     const USER_TYPE_TERMINAL = 'Terminal';
     const USER_TYPE_LEGACY_PRINTER = 'LegacyPrinter';
+    const DEVICE_TYPE_KIOSK = 'Kiosk';
+    const DEVICE_TYPE_TERMINAL = 'Terminal';
+    const DEVICE_TYPE_LEGACY_PRINTER = 'LegacyPrinter';
     
 
     
@@ -211,6 +219,20 @@ class HydraStatus implements ModelInterface, ArrayAccess
             self::USER_TYPE_KIOSK,
             self::USER_TYPE_TERMINAL,
             self::USER_TYPE_LEGACY_PRINTER,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getDeviceTypeAllowableValues()
+    {
+        return [
+            self::DEVICE_TYPE_KIOSK,
+            self::DEVICE_TYPE_TERMINAL,
+            self::DEVICE_TYPE_LEGACY_PRINTER,
         ];
     }
     
@@ -237,6 +259,7 @@ class HydraStatus implements ModelInterface, ArrayAccess
         $this->container['pin_code'] = isset($data['pin_code']) ? $data['pin_code'] : null;
         $this->container['images'] = isset($data['images']) ? $data['images'] : null;
         $this->container['user_type'] = isset($data['user_type']) ? $data['user_type'] : null;
+        $this->container['device_type'] = isset($data['device_type']) ? $data['device_type'] : null;
         $this->container['hydra_user_id'] = isset($data['hydra_user_id']) ? $data['hydra_user_id'] : null;
     }
 
@@ -267,6 +290,14 @@ class HydraStatus implements ModelInterface, ArrayAccess
         if (!is_null($this->container['user_type']) && !in_array($this->container['user_type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'user_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getDeviceTypeAllowableValues();
+        if (!is_null($this->container['device_type']) && !in_array($this->container['device_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'device_type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -451,7 +482,7 @@ class HydraStatus implements ModelInterface, ArrayAccess
     /**
      * Sets user_type
      *
-     * @param string $user_type Hydra User Type
+     * @param string $user_type Hydra User Type as integer. Prefer {Flipdish.PublicModels.V1.Hydra.HydraStatus.DeviceType}.
      *
      * @return $this
      */
@@ -467,6 +498,39 @@ class HydraStatus implements ModelInterface, ArrayAccess
             );
         }
         $this->container['user_type'] = $user_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets device_type
+     *
+     * @return string
+     */
+    public function getDeviceType()
+    {
+        return $this->container['device_type'];
+    }
+
+    /**
+     * Sets device_type
+     *
+     * @param string $device_type Hydra device type (Kiosk / Terminal), serialized as string.
+     *
+     * @return $this
+     */
+    public function setDeviceType($device_type)
+    {
+        $allowedValues = $this->getDeviceTypeAllowableValues();
+        if (!is_null($device_type) && !in_array($device_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'device_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['device_type'] = $device_type;
 
         return $this;
     }
