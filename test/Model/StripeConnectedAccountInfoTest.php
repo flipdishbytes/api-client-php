@@ -124,4 +124,11 @@ class StripeConnectedAccountInfoTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPaymentsEnabled()
     {
     }
+
+    /**
+     * Test attribute "disabled_reason"
+     */
+    public function testPropertyDisabledReason()
+    {
+    }
 }

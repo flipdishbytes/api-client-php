@@ -64,7 +64,8 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         'payout_schedule_interval' => 'string',
         'payouts_enabled' => 'bool',
         'payouts_paused' => 'bool',
-        'payments_enabled' => 'bool'
+        'payments_enabled' => 'bool',
+        'disabled_reason' => 'string'
     ];
 
     /**
@@ -79,7 +80,8 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         'payout_schedule_interval' => null,
         'payouts_enabled' => null,
         'payouts_paused' => null,
-        'payments_enabled' => null
+        'payments_enabled' => null,
+        'disabled_reason' => null
     ];
 
     /**
@@ -115,7 +117,8 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         'payout_schedule_interval' => 'PayoutScheduleInterval',
         'payouts_enabled' => 'PayoutsEnabled',
         'payouts_paused' => 'PayoutsPaused',
-        'payments_enabled' => 'PaymentsEnabled'
+        'payments_enabled' => 'PaymentsEnabled',
+        'disabled_reason' => 'DisabledReason'
     ];
 
     /**
@@ -130,7 +133,8 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         'payout_schedule_interval' => 'setPayoutScheduleInterval',
         'payouts_enabled' => 'setPayoutsEnabled',
         'payouts_paused' => 'setPayoutsPaused',
-        'payments_enabled' => 'setPaymentsEnabled'
+        'payments_enabled' => 'setPaymentsEnabled',
+        'disabled_reason' => 'setDisabledReason'
     ];
 
     /**
@@ -145,7 +149,8 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         'payout_schedule_interval' => 'getPayoutScheduleInterval',
         'payouts_enabled' => 'getPayoutsEnabled',
         'payouts_paused' => 'getPayoutsPaused',
-        'payments_enabled' => 'getPaymentsEnabled'
+        'payments_enabled' => 'getPaymentsEnabled',
+        'disabled_reason' => 'getDisabledReason'
     ];
 
     /**
@@ -280,6 +285,7 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
         $this->container['payouts_enabled'] = isset($data['payouts_enabled']) ? $data['payouts_enabled'] : null;
         $this->container['payouts_paused'] = isset($data['payouts_paused']) ? $data['payouts_paused'] : null;
         $this->container['payments_enabled'] = isset($data['payments_enabled']) ? $data['payments_enabled'] : null;
+        $this->container['disabled_reason'] = isset($data['disabled_reason']) ? $data['disabled_reason'] : null;
     }
 
     /**
@@ -521,6 +527,30 @@ class StripeConnectedAccountInfo implements ModelInterface, ArrayAccess
     public function setPaymentsEnabled($payments_enabled)
     {
         $this->container['payments_enabled'] = $payments_enabled;
+
+        return $this;
+    }
+
+    /**
+     * Gets disabled_reason
+     *
+     * @return string
+     */
+    public function getDisabledReason()
+    {
+        return $this->container['disabled_reason'];
+    }
+
+    /**
+     * Sets disabled_reason
+     *
+     * @param string $disabled_reason If the Stripe connected account is disabled, this is Stripe's raw  requirements.disabled_reason describing why, as last recorded from a Stripe  connected-account webhook. Known values are requirements.fields_needed,  requirements.past_due, requirements.pending_verification,  rejected.fraud, rejected.terms_of_service, rejected.listed,  rejected.other and platform_paused, but Stripe can introduce new ones, so  the value is passed through unmapped (the same way  CapabilityRequirementsInfo.DisabledReason is). null when the account is  not disabled. Note that {Flipdish.PublicModels.V1.BankAccount.StripeConnectedAccountInfo.AccountStatus} is a deliberately lossy mapping of  this value and the two can legitimately disagree - do not derive one from the other.
+     *
+     * @return $this
+     */
+    public function setDisabledReason($disabled_reason)
+    {
+        $this->container['disabled_reason'] = $disabled_reason;
 
         return $this;
     }
