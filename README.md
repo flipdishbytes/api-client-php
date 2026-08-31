@@ -252,6 +252,8 @@ Class | Method | HTTP request | Description
 *DriversApi* | [**driversSetDriverProfileImage**](docs/Api/DriversApi.md#driverssetdriverprofileimage) | **POST** /api/v1.0/drivers/profile/image | 
 *DriversApi* | [**driversUpdateDeliveryTrackingStatus**](docs/Api/DriversApi.md#driversupdatedeliverytrackingstatus) | **POST** /api/v1.0/orders/{orderId}/tracking/{deliveryTrackingStatus} | 
 *DriversApi* | [**driversUpdateDriverProfile**](docs/Api/DriversApi.md#driversupdatedriverprofile) | **POST** /api/v1.0/drivers/profile | 
+*EndUserFeesApi* | [**createEndUserFeeConfig**](docs/Api/EndUserFeesApi.md#createenduserfeeconfig) | **POST** /api/v1.0/{appId}/stores/{storeId}/end-user-fees | 
+*EndUserFeesApi* | [**getEndUserFeesForStore**](docs/Api/EndUserFeesApi.md#getenduserfeesforstore) | **GET** /api/v1.0/{appId}/stores/{storeId}/end-user-fees | 
 *EventsApi* | [**getCustomerEvents**](docs/Api/EventsApi.md#getcustomerevents) | **GET** /api/v1.0/{appId}/events/customer/{customerId} | 
 *EventsApi* | [**getEvents**](docs/Api/EventsApi.md#getevents) | **GET** /api/v1.0/{appId}/events | 
 *EventsApi* | [**getEventsById**](docs/Api/EventsApi.md#geteventsbyid) | **GET** /api/v1.0/{appId}/events/{eventId} | 
@@ -771,6 +773,7 @@ Class | Method | HTTP request | Description
  - [CreateBasicAccountModel](docs/Model/CreateBasicAccountModel.md)
  - [CreateCatalogGroupReference](docs/Model/CreateCatalogGroupReference.md)
  - [CreateCatalogItem](docs/Model/CreateCatalogItem.md)
+ - [CreateEndUserFeeConfig](docs/Model/CreateEndUserFeeConfig.md)
  - [CreateFulfillmentStatesConfiguration](docs/Model/CreateFulfillmentStatesConfiguration.md)
  - [CreateFullMenu](docs/Model/CreateFullMenu.md)
  - [CreateFullMenuItemOptionSet](docs/Model/CreateFullMenuItemOptionSet.md)
@@ -829,6 +832,7 @@ Class | Method | HTTP request | Description
  - [EmvNotificationEvent](docs/Model/EmvNotificationEvent.md)
  - [EmvTerminal](docs/Model/EmvTerminal.md)
  - [EmvTerminalWithAssignments](docs/Model/EmvTerminalWithAssignments.md)
+ - [EndUserFeeConfig](docs/Model/EndUserFeeConfig.md)
  - [EventSearchResult](docs/Model/EventSearchResult.md)
  - [ExecuteConfigurationActionRequest](docs/Model/ExecuteConfigurationActionRequest.md)
  - [ExecuteConfigurationActionResult](docs/Model/ExecuteConfigurationActionResult.md)
@@ -850,6 +854,7 @@ Class | Method | HTTP request | Description
  - [FulfillmentStatesConfiguredStore](docs/Model/FulfillmentStatesConfiguredStore.md)
  - [FulfillmentStatusConfigurationItem](docs/Model/FulfillmentStatusConfigurationItem.md)
  - [GeoPointRequest](docs/Model/GeoPointRequest.md)
+ - [GetEndUserFeeConfigsResponse](docs/Model/GetEndUserFeeConfigsResponse.md)
  - [GetReceiptByOrderIdQueryResponse](docs/Model/GetReceiptByOrderIdQueryResponse.md)
  - [GoogleAddress](docs/Model/GoogleAddress.md)
  - [GoogleAddressComponent](docs/Model/GoogleAddressComponent.md)
@@ -1249,10 +1254,12 @@ Class | Method | HTTP request | Description
  - [RestApiResultCustomers](docs/Model/RestApiResultCustomers.md)
  - [RestApiResultDeliveryZone](docs/Model/RestApiResultDeliveryZone.md)
  - [RestApiResultDnsRecordInformation](docs/Model/RestApiResultDnsRecordInformation.md)
+ - [RestApiResultEndUserFeeConfig](docs/Model/RestApiResultEndUserFeeConfig.md)
  - [RestApiResultExecuteConfigurationActionResult](docs/Model/RestApiResultExecuteConfigurationActionResult.md)
  - [RestApiResultFileCreationResult](docs/Model/RestApiResultFileCreationResult.md)
  - [RestApiResultFileDownloadResult](docs/Model/RestApiResultFileDownloadResult.md)
  - [RestApiResultFulfillmentStatesConfiguration](docs/Model/RestApiResultFulfillmentStatesConfiguration.md)
+ - [RestApiResultGetEndUserFeeConfigsResponse](docs/Model/RestApiResultGetEndUserFeeConfigsResponse.md)
  - [RestApiResultGroup](docs/Model/RestApiResultGroup.md)
  - [RestApiResultHasPaymentMethodResponse](docs/Model/RestApiResultHasPaymentMethodResponse.md)
  - [RestApiResultHomeStatistics](docs/Model/RestApiResultHomeStatistics.md)
