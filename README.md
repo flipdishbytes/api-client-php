@@ -254,6 +254,7 @@ Class | Method | HTTP request | Description
 *DriversApi* | [**driversUpdateDriverProfile**](docs/Api/DriversApi.md#driversupdatedriverprofile) | **POST** /api/v1.0/drivers/profile | 
 *EndUserFeesApi* | [**createEndUserFeeConfig**](docs/Api/EndUserFeesApi.md#createenduserfeeconfig) | **POST** /api/v1.0/{appId}/stores/{storeId}/end-user-fees | 
 *EndUserFeesApi* | [**getEndUserFeesForStore**](docs/Api/EndUserFeesApi.md#getenduserfeesforstore) | **GET** /api/v1.0/{appId}/stores/{storeId}/end-user-fees | 
+*EndUserFeesApi* | [**setV2FeeCalculation**](docs/Api/EndUserFeesApi.md#setv2feecalculation) | **POST** /api/v1.0/{appId}/stores/{storeId}/end-user-fees/v2-fee-calculation | 
 *EventsApi* | [**getCustomerEvents**](docs/Api/EventsApi.md#getcustomerevents) | **GET** /api/v1.0/{appId}/events/customer/{customerId} | 
 *EventsApi* | [**getEvents**](docs/Api/EventsApi.md#getevents) | **GET** /api/v1.0/{appId}/events | 
 *EventsApi* | [**getEventsById**](docs/Api/EventsApi.md#geteventsbyid) | **GET** /api/v1.0/{appId}/events/{eventId} | 
@@ -1327,6 +1328,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultRestaurantVoucherPayGreenStoreConfiguration](docs/Model/RestApiResultRestaurantVoucherPayGreenStoreConfiguration.md)
  - [RestApiResultRetentionCampaign](docs/Model/RestApiResultRetentionCampaign.md)
  - [RestApiResultServiceCharge](docs/Model/RestApiResultServiceCharge.md)
+ - [RestApiResultSetV2FeeCalculationRequest](docs/Model/RestApiResultSetV2FeeCalculationRequest.md)
  - [RestApiResultSmsProviderCredential](docs/Model/RestApiResultSmsProviderCredential.md)
  - [RestApiResultStore](docs/Model/RestApiResultStore.md)
  - [RestApiResultStoreAddress](docs/Model/RestApiResultStoreAddress.md)
@@ -1377,6 +1379,7 @@ Class | Method | HTTP request | Description
  - [SetPasswordWithPinModel](docs/Model/SetPasswordWithPinModel.md)
  - [SetUserDeliveryLocationCoordinatesRequest](docs/Model/SetUserDeliveryLocationCoordinatesRequest.md)
  - [SetUserDeliveryLocationFieldRequest](docs/Model/SetUserDeliveryLocationFieldRequest.md)
+ - [SetV2FeeCalculationRequest](docs/Model/SetV2FeeCalculationRequest.md)
  - [SetVoucherValidityPeriodsSimplifiedRequest](docs/Model/SetVoucherValidityPeriodsSimplifiedRequest.md)
  - [Setting](docs/Model/Setting.md)
  - [SignupStep](docs/Model/SignupStep.md)

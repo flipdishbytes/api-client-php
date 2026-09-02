@@ -1,6 +1,6 @@
 <?php
 /**
- * GetEndUserFeeConfigsResponse
+ * SetV2FeeCalculationRequest
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Flipdish\\Client\ObjectSerializer;
 
 /**
- * GetEndUserFeeConfigsResponse Class Doc Comment
+ * SetV2FeeCalculationRequest Class Doc Comment
  *
  * @category Class
- * @description The current end user fee configs for a Store, one per channel and payment method
+ * @description Input model for setting whether the V2 (tiered) fee calculation is enabled for a Store
  * @package  Flipdish\\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class GetEndUserFeeConfigsResponse implements ModelInterface, ArrayAccess
+class SetV2FeeCalculationRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class GetEndUserFeeConfigsResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'GetEndUserFeeConfigsResponse';
+    protected static $swaggerModelName = 'SetV2FeeCalculationRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,7 @@ class GetEndUserFeeConfigsResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'end_user_fees' => '\Flipdish\\Client\Models\EndUserFeeConfig[]',
-        'is_v2_fee_calculation_enabled' => 'bool'
+        'is_enabled' => 'bool'
     ];
 
     /**
@@ -68,8 +67,7 @@ class GetEndUserFeeConfigsResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'end_user_fees' => null,
-        'is_v2_fee_calculation_enabled' => null
+        'is_enabled' => null
     ];
 
     /**
@@ -99,8 +97,7 @@ class GetEndUserFeeConfigsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'end_user_fees' => 'EndUserFees',
-        'is_v2_fee_calculation_enabled' => 'IsV2FeeCalculationEnabled'
+        'is_enabled' => 'IsEnabled'
     ];
 
     /**
@@ -109,8 +106,7 @@ class GetEndUserFeeConfigsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'end_user_fees' => 'setEndUserFees',
-        'is_v2_fee_calculation_enabled' => 'setIsV2FeeCalculationEnabled'
+        'is_enabled' => 'setIsEnabled'
     ];
 
     /**
@@ -119,8 +115,7 @@ class GetEndUserFeeConfigsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'end_user_fees' => 'getEndUserFees',
-        'is_v2_fee_calculation_enabled' => 'getIsV2FeeCalculationEnabled'
+        'is_enabled' => 'getIsEnabled'
     ];
 
     /**
@@ -183,8 +178,7 @@ class GetEndUserFeeConfigsResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['end_user_fees'] = isset($data['end_user_fees']) ? $data['end_user_fees'] : null;
-        $this->container['is_v2_fee_calculation_enabled'] = isset($data['is_v2_fee_calculation_enabled']) ? $data['is_v2_fee_calculation_enabled'] : null;
+        $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
     }
 
     /**
@@ -212,49 +206,25 @@ class GetEndUserFeeConfigsResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets end_user_fees
-     *
-     * @return \Flipdish\\Client\Models\EndUserFeeConfig[]
-     */
-    public function getEndUserFees()
-    {
-        return $this->container['end_user_fees'];
-    }
-
-    /**
-     * Sets end_user_fees
-     *
-     * @param \Flipdish\\Client\Models\EndUserFeeConfig[] $end_user_fees The current end user fee configs for the Store, one per channel and payment method combination present
-     *
-     * @return $this
-     */
-    public function setEndUserFees($end_user_fees)
-    {
-        $this->container['end_user_fees'] = $end_user_fees;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_v2_fee_calculation_enabled
+     * Gets is_enabled
      *
      * @return bool
      */
-    public function getIsV2FeeCalculationEnabled()
+    public function getIsEnabled()
     {
-        return $this->container['is_v2_fee_calculation_enabled'];
+        return $this->container['is_enabled'];
     }
 
     /**
-     * Sets is_v2_fee_calculation_enabled
+     * Sets is_enabled
      *
-     * @param bool $is_v2_fee_calculation_enabled Whether the V2 (tiered) fee calculation is enabled for this Store
+     * @param bool $is_enabled Whether the V2 (tiered) fee calculation should be enabled for this Store. Required.
      *
      * @return $this
      */
-    public function setIsV2FeeCalculationEnabled($is_v2_fee_calculation_enabled)
+    public function setIsEnabled($is_enabled)
     {
-        $this->container['is_v2_fee_calculation_enabled'] = $is_v2_fee_calculation_enabled;
+        $this->container['is_enabled'] = $is_enabled;
 
         return $this;
     }
