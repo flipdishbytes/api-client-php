@@ -210,6 +210,13 @@ class UpdateVoucherTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_promoted"
+     */
+    public function testPropertyIsPromoted()
+    {
+    }
+
+    /**
      * Test attribute "force_discount"
      */
     public function testPropertyForceDiscount()

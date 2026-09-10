@@ -83,6 +83,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => 'bool',
         'is_valid_only_once' => 'bool',
         'is_discoverable' => 'bool',
+        'is_promoted' => 'bool',
         'force_discount' => 'bool',
         'start_date' => '\DateTime',
         'expiry_date' => '\DateTime',
@@ -124,6 +125,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => null,
         'is_valid_only_once' => null,
         'is_discoverable' => null,
+        'is_promoted' => null,
         'force_discount' => null,
         'start_date' => 'date-time',
         'expiry_date' => 'date-time',
@@ -186,6 +188,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => 'IsValidOncePerCustomer',
         'is_valid_only_once' => 'IsValidOnlyOnce',
         'is_discoverable' => 'IsDiscoverable',
+        'is_promoted' => 'IsPromoted',
         'force_discount' => 'ForceDiscount',
         'start_date' => 'StartDate',
         'expiry_date' => 'ExpiryDate',
@@ -227,6 +230,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => 'setIsValidOncePerCustomer',
         'is_valid_only_once' => 'setIsValidOnlyOnce',
         'is_discoverable' => 'setIsDiscoverable',
+        'is_promoted' => 'setIsPromoted',
         'force_discount' => 'setForceDiscount',
         'start_date' => 'setStartDate',
         'expiry_date' => 'setExpiryDate',
@@ -268,6 +272,7 @@ class Voucher implements ModelInterface, ArrayAccess
         'is_valid_once_per_customer' => 'getIsValidOncePerCustomer',
         'is_valid_only_once' => 'getIsValidOnlyOnce',
         'is_discoverable' => 'getIsDiscoverable',
+        'is_promoted' => 'getIsPromoted',
         'force_discount' => 'getForceDiscount',
         'start_date' => 'getStartDate',
         'expiry_date' => 'getExpiryDate',
@@ -690,6 +695,7 @@ class Voucher implements ModelInterface, ArrayAccess
         $this->container['is_valid_once_per_customer'] = isset($data['is_valid_once_per_customer']) ? $data['is_valid_once_per_customer'] : null;
         $this->container['is_valid_only_once'] = isset($data['is_valid_only_once']) ? $data['is_valid_only_once'] : null;
         $this->container['is_discoverable'] = isset($data['is_discoverable']) ? $data['is_discoverable'] : null;
+        $this->container['is_promoted'] = isset($data['is_promoted']) ? $data['is_promoted'] : null;
         $this->container['force_discount'] = isset($data['force_discount']) ? $data['force_discount'] : null;
         $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
         $this->container['expiry_date'] = isset($data['expiry_date']) ? $data['expiry_date'] : null;
@@ -1379,6 +1385,30 @@ class Voucher implements ModelInterface, ArrayAccess
     public function setIsDiscoverable($is_discoverable)
     {
         $this->container['is_discoverable'] = $is_discoverable;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_promoted
+     *
+     * @return bool
+     */
+    public function getIsPromoted()
+    {
+        return $this->container['is_promoted'];
+    }
+
+    /**
+     * Sets is_promoted
+     *
+     * @param bool $is_promoted Marks the voucher as promoted
+     *
+     * @return $this
+     */
+    public function setIsPromoted($is_promoted)
+    {
+        $this->container['is_promoted'] = $is_promoted;
 
         return $this;
     }
