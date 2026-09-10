@@ -65,8 +65,10 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_sub_type' => 'string',
         'description' => 'string',
         'is_enabled' => 'bool',
+        'is_promoted' => 'bool',
         'store_names' => 'string[]',
-        'is_available_on_all_stores' => 'bool'
+        'is_available_on_all_stores' => 'bool',
+        'channel_restrictions' => 'string[]'
     ];
 
     /**
@@ -82,8 +84,10 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_sub_type' => null,
         'description' => null,
         'is_enabled' => null,
+        'is_promoted' => null,
         'store_names' => null,
-        'is_available_on_all_stores' => null
+        'is_available_on_all_stores' => null,
+        'channel_restrictions' => null
     ];
 
     /**
@@ -120,8 +124,10 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_sub_type' => 'VoucherSubType',
         'description' => 'Description',
         'is_enabled' => 'IsEnabled',
+        'is_promoted' => 'IsPromoted',
         'store_names' => 'StoreNames',
-        'is_available_on_all_stores' => 'IsAvailableOnAllStores'
+        'is_available_on_all_stores' => 'IsAvailableOnAllStores',
+        'channel_restrictions' => 'ChannelRestrictions'
     ];
 
     /**
@@ -137,8 +143,10 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_sub_type' => 'setVoucherSubType',
         'description' => 'setDescription',
         'is_enabled' => 'setIsEnabled',
+        'is_promoted' => 'setIsPromoted',
         'store_names' => 'setStoreNames',
-        'is_available_on_all_stores' => 'setIsAvailableOnAllStores'
+        'is_available_on_all_stores' => 'setIsAvailableOnAllStores',
+        'channel_restrictions' => 'setChannelRestrictions'
     ];
 
     /**
@@ -154,8 +162,10 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         'voucher_sub_type' => 'getVoucherSubType',
         'description' => 'getDescription',
         'is_enabled' => 'getIsEnabled',
+        'is_promoted' => 'getIsPromoted',
         'store_names' => 'getStoreNames',
-        'is_available_on_all_stores' => 'getIsAvailableOnAllStores'
+        'is_available_on_all_stores' => 'getIsAvailableOnAllStores',
+        'channel_restrictions' => 'getChannelRestrictions'
     ];
 
     /**
@@ -216,6 +226,12 @@ class VoucherSummary implements ModelInterface, ArrayAccess
     const VOUCHER_SUB_TYPE_RETENTION = 'Retention';
     const VOUCHER_SUB_TYPE_SECONDARY_RETENTION = 'SecondaryRetention';
     const VOUCHER_SUB_TYPE_CUSTOM = 'Custom';
+    const CHANNEL_RESTRICTIONS_IOS = 'Ios';
+    const CHANNEL_RESTRICTIONS_ANDROID = 'Android';
+    const CHANNEL_RESTRICTIONS_WEB = 'Web';
+    const CHANNEL_RESTRICTIONS_KIOSK = 'Kiosk';
+    const CHANNEL_RESTRICTIONS_POS = 'Pos';
+    const CHANNEL_RESTRICTIONS_GOOGLE = 'Google';
     
 
     
@@ -269,6 +285,23 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         ];
     }
     
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getChannelRestrictionsAllowableValues()
+    {
+        return [
+            self::CHANNEL_RESTRICTIONS_IOS,
+            self::CHANNEL_RESTRICTIONS_ANDROID,
+            self::CHANNEL_RESTRICTIONS_WEB,
+            self::CHANNEL_RESTRICTIONS_KIOSK,
+            self::CHANNEL_RESTRICTIONS_POS,
+            self::CHANNEL_RESTRICTIONS_GOOGLE,
+        ];
+    }
+    
 
     /**
      * Associative array for storing property values
@@ -292,8 +325,10 @@ class VoucherSummary implements ModelInterface, ArrayAccess
         $this->container['voucher_sub_type'] = isset($data['voucher_sub_type']) ? $data['voucher_sub_type'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['is_enabled'] = isset($data['is_enabled']) ? $data['is_enabled'] : null;
+        $this->container['is_promoted'] = isset($data['is_promoted']) ? $data['is_promoted'] : null;
         $this->container['store_names'] = isset($data['store_names']) ? $data['store_names'] : null;
         $this->container['is_available_on_all_stores'] = isset($data['is_available_on_all_stores']) ? $data['is_available_on_all_stores'] : null;
+        $this->container['channel_restrictions'] = isset($data['channel_restrictions']) ? $data['channel_restrictions'] : null;
     }
 
     /**
@@ -540,6 +575,30 @@ class VoucherSummary implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets is_promoted
+     *
+     * @return bool
+     */
+    public function getIsPromoted()
+    {
+        return $this->container['is_promoted'];
+    }
+
+    /**
+     * Sets is_promoted
+     *
+     * @param bool $is_promoted Marks the voucher as promoted
+     *
+     * @return $this
+     */
+    public function setIsPromoted($is_promoted)
+    {
+        $this->container['is_promoted'] = $is_promoted;
+
+        return $this;
+    }
+
+    /**
      * Gets store_names
      *
      * @return string[]
@@ -583,6 +642,39 @@ class VoucherSummary implements ModelInterface, ArrayAccess
     public function setIsAvailableOnAllStores($is_available_on_all_stores)
     {
         $this->container['is_available_on_all_stores'] = $is_available_on_all_stores;
+
+        return $this;
+    }
+
+    /**
+     * Gets channel_restrictions
+     *
+     * @return string[]
+     */
+    public function getChannelRestrictions()
+    {
+        return $this->container['channel_restrictions'];
+    }
+
+    /**
+     * Sets channel_restrictions
+     *
+     * @param string[] $channel_restrictions Channels the voucher is restricted to
+     *
+     * @return $this
+     */
+    public function setChannelRestrictions($channel_restrictions)
+    {
+        $allowedValues = $this->getChannelRestrictionsAllowableValues();
+        if (!is_null($channel_restrictions) && array_diff($channel_restrictions, $allowedValues)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'channel_restrictions', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['channel_restrictions'] = $channel_restrictions;
 
         return $this;
     }

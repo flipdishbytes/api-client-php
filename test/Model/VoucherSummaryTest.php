@@ -126,6 +126,13 @@ class VoucherSummaryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_promoted"
+     */
+    public function testPropertyIsPromoted()
+    {
+    }
+
+    /**
      * Test attribute "store_names"
      */
     public function testPropertyStoreNames()
@@ -136,6 +143,13 @@ class VoucherSummaryTest extends \PHPUnit_Framework_TestCase
      * Test attribute "is_available_on_all_stores"
      */
     public function testPropertyIsAvailableOnAllStores()
+    {
+    }
+
+    /**
+     * Test attribute "channel_restrictions"
+     */
+    public function testPropertyChannelRestrictions()
     {
     }
 }
