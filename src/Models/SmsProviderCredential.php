@@ -188,7 +188,6 @@ class SmsProviderCredential implements ModelInterface, ArrayAccess
     const SMS_SERVICE_TYPE_TWILIO = 'Twilio';
     const SMS_SERVICE_TYPE__DEFAULT = 'Default';
     const SMS_SERVICE_TYPE_MESSAGE_BIRD = 'MessageBird';
-    const SMS_SERVICE_TYPE_COMMUNICATION_SERVICE = 'CommunicationService';
     
 
     
@@ -204,7 +203,6 @@ class SmsProviderCredential implements ModelInterface, ArrayAccess
             self::SMS_SERVICE_TYPE_TWILIO,
             self::SMS_SERVICE_TYPE__DEFAULT,
             self::SMS_SERVICE_TYPE_MESSAGE_BIRD,
-            self::SMS_SERVICE_TYPE_COMMUNICATION_SERVICE,
         ];
     }
     
