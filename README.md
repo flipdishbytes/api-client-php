@@ -663,7 +663,6 @@ Class | Method | HTTP request | Description
 *WebsiteApi* | [**getIndexConfiguration**](docs/Api/WebsiteApi.md#getindexconfiguration) | **GET** /api/v1.0/{appId}/website/index | 
 *WebsiteApi* | [**setIndexConfiguration**](docs/Api/WebsiteApi.md#setindexconfiguration) | **POST** /api/v1.0/{appId}/website/index | 
 *WebsiteApi* | [**uploadWebsiteImage**](docs/Api/WebsiteApi.md#uploadwebsiteimage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | 
-*WebsiteApi* | [**websiteCheckNow**](docs/Api/WebsiteApi.md#websitechecknow) | **GET** /api/v1.0/{appId}/website/dnscheck | 
 *WhiteLabelBuildsApi* | [**healthCheck**](docs/Api/WhiteLabelBuildsApi.md#healthcheck) | **GET** /api/v1.0/whitelabelbuilds/health | 
 *WhiteLabelBuildsApi* | [**submitAndroidApps**](docs/Api/WhiteLabelBuildsApi.md#submitandroidapps) | **POST** /api/v1.0/whitelabelbuilds/android/multiple | 
 *WhiteLabelBuildsApi* | [**submitAndroidBuild**](docs/Api/WhiteLabelBuildsApi.md#submitandroidbuild) | **POST** /api/v1.0/whitelabelbuilds/{appId}/android | 
