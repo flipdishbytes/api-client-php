@@ -140,4 +140,14 @@ class WebsiteApiTest extends \PHPUnit_Framework_TestCase
     public function testUploadWebsiteImage()
     {
     }
+
+    /**
+     * Test case for websiteCheckNow
+     *
+     * .
+     *
+     */
+    public function testWebsiteCheckNow()
+    {
+    }
 }
