@@ -60,7 +60,8 @@ class CustomerCreateModel implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'phone_number' => 'string',
         'app_type' => 'string',
-        'name' => 'string'
+        'name' => 'string',
+        'marketing_enabled' => 'bool'
     ];
 
     /**
@@ -71,7 +72,8 @@ class CustomerCreateModel implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'phone_number' => null,
         'app_type' => null,
-        'name' => null
+        'name' => null,
+        'marketing_enabled' => null
     ];
 
     /**
@@ -103,7 +105,8 @@ class CustomerCreateModel implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'phone_number' => 'PhoneNumber',
         'app_type' => 'AppType',
-        'name' => 'Name'
+        'name' => 'Name',
+        'marketing_enabled' => 'MarketingEnabled'
     ];
 
     /**
@@ -114,7 +117,8 @@ class CustomerCreateModel implements ModelInterface, ArrayAccess
     protected static $setters = [
         'phone_number' => 'setPhoneNumber',
         'app_type' => 'setAppType',
-        'name' => 'setName'
+        'name' => 'setName',
+        'marketing_enabled' => 'setMarketingEnabled'
     ];
 
     /**
@@ -125,7 +129,8 @@ class CustomerCreateModel implements ModelInterface, ArrayAccess
     protected static $getters = [
         'phone_number' => 'getPhoneNumber',
         'app_type' => 'getAppType',
-        'name' => 'getName'
+        'name' => 'getName',
+        'marketing_enabled' => 'getMarketingEnabled'
     ];
 
     /**
@@ -224,6 +229,7 @@ class CustomerCreateModel implements ModelInterface, ArrayAccess
         $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
         $this->container['app_type'] = isset($data['app_type']) ? $data['app_type'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['marketing_enabled'] = isset($data['marketing_enabled']) ? $data['marketing_enabled'] : null;
     }
 
     /**
@@ -335,6 +341,30 @@ class CustomerCreateModel implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets marketing_enabled
+     *
+     * @return bool
+     */
+    public function getMarketingEnabled()
+    {
+        return $this->container['marketing_enabled'];
+    }
+
+    /**
+     * Sets marketing_enabled
+     *
+     * @param bool $marketing_enabled marketing_enabled
+     *
+     * @return $this
+     */
+    public function setMarketingEnabled($marketing_enabled)
+    {
+        $this->container['marketing_enabled'] = $marketing_enabled;
 
         return $this;
     }

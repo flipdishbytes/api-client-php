@@ -96,4 +96,11 @@ class CustomerCreateModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyName()
     {
     }
+
+    /**
+     * Test attribute "marketing_enabled"
+     */
+    public function testPropertyMarketingEnabled()
+    {
+    }
 }
