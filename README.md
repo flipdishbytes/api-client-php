@@ -485,11 +485,6 @@ Class | Method | HTTP request | Description
 *PayoutReportsApi* | [**getPayoutReport3PropertyDetails**](docs/Api/PayoutReportsApi.md#getpayoutreport3propertydetails) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/properties | 
 *PayoutReportsApi* | [**getPayoutReport3RefundedOrders**](docs/Api/PayoutReportsApi.md#getpayoutreport3refundedorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/refundedOrders | 
 *PayoutReportsApi* | [**getPayoutReport3Stores**](docs/Api/PayoutReportsApi.md#getpayoutreport3stores) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/stores | 
-*PayoutReportsApi* | [**payoutReport3ExportPayoutChargebacks**](docs/Api/PayoutReportsApi.md#payoutreport3exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/chargebacks | 
-*PayoutReportsApi* | [**payoutReport3ExportPayoutOrders**](docs/Api/PayoutReportsApi.md#payoutreport3exportpayoutorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/orders | 
-*PayoutReportsApi* | [**payoutReport3ExportPayoutPosSales**](docs/Api/PayoutReportsApi.md#payoutreport3exportpayoutpossales) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/possales | 
-*PayoutReportsApi* | [**payoutReport3ExportPayoutRefundedOrders**](docs/Api/PayoutReportsApi.md#payoutreport3exportpayoutrefundedorders) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/refundedOrders | 
-*PayoutReportsApi* | [**payoutReport3ExportPayoutStores**](docs/Api/PayoutReportsApi.md#payoutreport3exportpayoutstores) | **GET** /api/v1.0/{appId}/reporting/reports/payouts3/{bankAccountId}/{payoutId}/export/stores | 
 *PayoutsApi* | [**getPayout**](docs/Api/PayoutsApi.md#getpayout) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId} | 
 *PayoutsApi* | [**getPayoutChargebacks**](docs/Api/PayoutsApi.md#getpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks | 
 *PayoutsApi* | [**getPayoutOrders**](docs/Api/PayoutsApi.md#getpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders | 
@@ -497,12 +492,6 @@ Class | Method | HTTP request | Description
 *PayoutsApi* | [**getPayoutRefunds**](docs/Api/PayoutsApi.md#getpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds | 
 *PayoutsApi* | [**getPayoutSummaries**](docs/Api/PayoutsApi.md#getpayoutsummaries) | **GET** /api/v1.0/{appId}/payouts/summaries | 
 *PayoutsApi* | [**getPayouts**](docs/Api/PayoutsApi.md#getpayouts) | **GET** /api/v1.0/{appId}/payouts | 
-*PayoutsExportApi* | [**exportPayoutChargebacks**](docs/Api/PayoutsExportApi.md#exportpayoutchargebacks) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/chargebacks/export | 
-*PayoutsExportApi* | [**exportPayoutOrders**](docs/Api/PayoutsExportApi.md#exportpayoutorders) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/orders/export | 
-*PayoutsExportApi* | [**exportPayoutOtherCharges**](docs/Api/PayoutsExportApi.md#exportpayoutothercharges) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/othercharges/export | 
-*PayoutsExportApi* | [**exportPayoutRefunds**](docs/Api/PayoutsExportApi.md#exportpayoutrefunds) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/refunds/export | 
-*PayoutsExportApi* | [**exportPayoutStores**](docs/Api/PayoutsExportApi.md#exportpayoutstores) | **GET** /api/v1.0/{appId}/bankaccounts/{bankAccountId}/payouts/{payoutId}/export | 
-*PayoutsExportApi* | [**exportPayouts**](docs/Api/PayoutsExportApi.md#exportpayouts) | **GET** /api/v1.0/{appId}/payouts/export | 
 *ProcessingFeeConfigsApi* | [**getProcessingFeeConfigsByStoreIds**](docs/Api/ProcessingFeeConfigsApi.md#getprocessingfeeconfigsbystoreids) | **GET** /api/v1.0/processingfeeconfigs | 
 *PushNotificationsApi* | [**deletePushNotification**](docs/Api/PushNotificationsApi.md#deletepushnotification) | **DELETE** /api/v1.0/{appId}/pushnotifications/{scheduledPushNotificationId} | 
 *PushNotificationsApi* | [**getPushNotifications**](docs/Api/PushNotificationsApi.md#getpushnotifications) | **GET** /api/v1.0/{appId}/pushnotifications | 
@@ -842,7 +831,6 @@ Class | Method | HTTP request | Description
  - [Field](docs/Model/Field.md)
  - [FieldChangeInformation](docs/Model/FieldChangeInformation.md)
  - [FieldGroup](docs/Model/FieldGroup.md)
- - [FileCreationResult](docs/Model/FileCreationResult.md)
  - [FirebaseApp](docs/Model/FirebaseApp.md)
  - [FlipdishAccountName](docs/Model/FlipdishAccountName.md)
  - [FlipdishEventBase](docs/Model/FlipdishEventBase.md)
@@ -1255,7 +1243,6 @@ Class | Method | HTTP request | Description
  - [RestApiResultDnsRecordInformation](docs/Model/RestApiResultDnsRecordInformation.md)
  - [RestApiResultEndUserFeeConfig](docs/Model/RestApiResultEndUserFeeConfig.md)
  - [RestApiResultExecuteConfigurationActionResult](docs/Model/RestApiResultExecuteConfigurationActionResult.md)
- - [RestApiResultFileCreationResult](docs/Model/RestApiResultFileCreationResult.md)
  - [RestApiResultFulfillmentStatesConfiguration](docs/Model/RestApiResultFulfillmentStatesConfiguration.md)
  - [RestApiResultGetEndUserFeeConfigsResponse](docs/Model/RestApiResultGetEndUserFeeConfigsResponse.md)
  - [RestApiResultGroup](docs/Model/RestApiResultGroup.md)
