@@ -122,6 +122,16 @@ class CardReadersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getKioskStripeLocation
+     *
+     * .
+     *
+     */
+    public function testGetKioskStripeLocation()
+    {
+    }
+
+    /**
      * Test case for getStripeConnectionToken
      *
      * .

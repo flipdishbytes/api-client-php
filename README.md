@@ -182,6 +182,7 @@ Class | Method | HTTP request | Description
 *CardReadersApi* | [**cardReadersGetReader**](docs/Api/CardReadersApi.md#cardreadersgetreader) | **GET** /api/v1.0/{appId}/payments/terminals/stripe/{readerId} | 
 *CardReadersApi* | [**generateStripeTerminalLocation**](docs/Api/CardReadersApi.md#generatestripeterminallocation) | **POST** /api/v1.0/{appId}/stripeterminal/location | 
 *CardReadersApi* | [**getBluetoothTerminalStatus**](docs/Api/CardReadersApi.md#getbluetoothterminalstatus) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/status | 
+*CardReadersApi* | [**getKioskStripeLocation**](docs/Api/CardReadersApi.md#getkioskstripelocation) | **GET** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/stripe-location | 
 *CardReadersApi* | [**getStripeConnectionToken**](docs/Api/CardReadersApi.md#getstripeconnectiontoken) | **GET** /api/v1.0/{appId}/stripeterminal/connectiontoken | 
 *CardReadersApi* | [**initiateBluetoothTerminalDeviceUpdateCheck**](docs/Api/CardReadersApi.md#initiatebluetoothterminaldeviceupdatecheck) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/checkForUpdate | 
 *CardReadersApi* | [**initiateKioskBluetoothPairingMode**](docs/Api/CardReadersApi.md#initiatekioskbluetoothpairingmode) | **POST** /api/v1.0/{appId}/cardreaders/kiosk/{deviceId}/bluetooth/{terminalType}/pair | 
@@ -902,6 +903,7 @@ Class | Method | HTTP request | Description
  - [KioskEntitlementsResult](docs/Model/KioskEntitlementsResult.md)
  - [KioskIotConnectionParameters](docs/Model/KioskIotConnectionParameters.md)
  - [KioskSettings](docs/Model/KioskSettings.md)
+ - [KioskStripeLocation](docs/Model/KioskStripeLocation.md)
  - [KioskTerminalActionStateChangedEvent](docs/Model/KioskTerminalActionStateChangedEvent.md)
  - [Language](docs/Model/Language.md)
  - [LastPaymentError](docs/Model/LastPaymentError.md)
@@ -1258,6 +1260,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultKioskEntitlementsResult](docs/Model/RestApiResultKioskEntitlementsResult.md)
  - [RestApiResultKioskIotConnectionParameters](docs/Model/RestApiResultKioskIotConnectionParameters.md)
  - [RestApiResultKioskSettings](docs/Model/RestApiResultKioskSettings.md)
+ - [RestApiResultKioskStripeLocation](docs/Model/RestApiResultKioskStripeLocation.md)
  - [RestApiResultLightspeedSettings](docs/Model/RestApiResultLightspeedSettings.md)
  - [RestApiResultLocationArea](docs/Model/RestApiResultLocationArea.md)
  - [RestApiResultLocationAreaLocation](docs/Model/RestApiResultLocationAreaLocation.md)
