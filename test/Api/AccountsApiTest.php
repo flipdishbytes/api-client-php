@@ -162,16 +162,6 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for loginWithPin
-     *
-     * .
-     *
-     */
-    public function testLoginWithPin()
-    {
-    }
-
-    /**
      * Test case for logout
      *
      * .
@@ -198,16 +188,6 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testRecaptchaValidate()
-    {
-    }
-
-    /**
-     * Test case for requestLoginPin
-     *
-     * .
-     *
-     */
-    public function testRequestLoginPin()
     {
     }
 
