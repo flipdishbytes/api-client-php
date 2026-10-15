@@ -86,7 +86,6 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AccountsApi* | [**answerSignUpQuestion**](docs/Api/AccountsApi.md#answersignupquestion) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/answer | 
 *AccountsApi* | [**changePassword**](docs/Api/AccountsApi.md#changepassword) | **PUT** /api/v1.0/accounts/password | 
-*AccountsApi* | [**changePasswordWithPin**](docs/Api/AccountsApi.md#changepasswordwithpin) | **PUT** /api/v1.0/accounts/password/pin | 
 *AccountsApi* | [**createAccount**](docs/Api/AccountsApi.md#createaccount) | **POST** /api/v1.0/accounts | 
 *AccountsApi* | [**createBasicAccount**](docs/Api/AccountsApi.md#createbasicaccount) | **POST** /api/v1.0/accounts/basic-account | 
 *AccountsApi* | [**getAccountDetails**](docs/Api/AccountsApi.md#getaccountdetails) | **GET** /api/v1.0/accounts | 
@@ -97,7 +96,6 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**passwordResetWithToken**](docs/Api/AccountsApi.md#passwordresetwithtoken) | **POST** /api/v1.0/accounts/password | 
 *AccountsApi* | [**recaptchaValidate**](docs/Api/AccountsApi.md#recaptchavalidate) | **POST** /api/v1.0/accounts/recaptcha | 
 *AccountsApi* | [**requestPasswordReset**](docs/Api/AccountsApi.md#requestpasswordreset) | **POST** /api/v1.0/accounts/passwordreset | 
-*AccountsApi* | [**sendPinForPasswordReset**](docs/Api/AccountsApi.md#sendpinforpasswordreset) | **POST** /api/v1.0/accounts/password/resetpin | 
 *AccountsApi* | [**skipSignupStep**](docs/Api/AccountsApi.md#skipsignupstep) | **POST** /api/v1.0/accounts/signupstep/{signupStepAction}/skip | 
 *AccountsApi* | [**updateAccount**](docs/Api/AccountsApi.md#updateaccount) | **PUT** /api/v1.0/accounts | 
 *AddressApi* | [**addressTemplates**](docs/Api/AddressApi.md#addresstemplates) | **POST** /api/v1.0/address/templates | 
@@ -1096,7 +1094,6 @@ Class | Method | HTTP request | Description
  - [Refund](docs/Model/Refund.md)
  - [Reject](docs/Model/Reject.md)
  - [RequestPasswordResetModel](docs/Model/RequestPasswordResetModel.md)
- - [RequestPasswordResetPinResponse](docs/Model/RequestPasswordResetPinResponse.md)
  - [Response](docs/Model/Response.md)
  - [RestApiArrayResultAllMetadataResult](docs/Model/RestApiArrayResultAllMetadataResult.md)
  - [RestApiArrayResultAllergen](docs/Model/RestApiArrayResultAllergen.md)
@@ -1358,7 +1355,6 @@ Class | Method | HTTP request | Description
  - [SendUserSmsRequest](docs/Model/SendUserSmsRequest.md)
  - [ServiceCharge](docs/Model/ServiceCharge.md)
  - [SetOrderBatchingConfiguration](docs/Model/SetOrderBatchingConfiguration.md)
- - [SetPasswordWithPinModel](docs/Model/SetPasswordWithPinModel.md)
  - [SetUserDeliveryLocationCoordinatesRequest](docs/Model/SetUserDeliveryLocationCoordinatesRequest.md)
  - [SetUserDeliveryLocationFieldRequest](docs/Model/SetUserDeliveryLocationFieldRequest.md)
  - [SetV2FeeCalculationRequest](docs/Model/SetV2FeeCalculationRequest.md)

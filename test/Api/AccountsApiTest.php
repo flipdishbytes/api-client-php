@@ -92,16 +92,6 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for changePasswordWithPin
-     *
-     * .
-     *
-     */
-    public function testChangePasswordWithPin()
-    {
-    }
-
-    /**
      * Test case for createAccount
      *
      * .
@@ -198,16 +188,6 @@ class AccountsApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testRequestPasswordReset()
-    {
-    }
-
-    /**
-     * Test case for sendPinForPasswordReset
-     *
-     * .
-     *
-     */
-    public function testSendPinForPasswordReset()
     {
     }
 
