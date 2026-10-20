@@ -631,6 +631,8 @@ Class | Method | HTTP request | Description
 *VouchersApi* | [**setVoucherValidityPeriodsSimplified**](docs/Api/VouchersApi.md#setvouchervalidityperiodssimplified) | **POST** /api/v1.0/{appId}/vouchers/{voucherId}/validity-periods-simplified | 
 *VouchersApi* | [**updateVoucher**](docs/Api/VouchersApi.md#updatevoucher) | **POST** /api/v1.0/vouchers/{voucherId} | 
 *VouchersApi* | [**updateVoucherUsage**](docs/Api/VouchersApi.md#updatevoucherusage) | **POST** /api/v1.0/{appId}/vouchers/{voucherId}/usage | 
+*WebOrderPageApi* | [**getWebOrderPage**](docs/Api/WebOrderPageApi.md#getweborderpage) | **GET** /api/v1.0/apps/{appId}/weborderpage | 
+*WebOrderPageApi* | [**setWebOrderPage**](docs/Api/WebOrderPageApi.md#setweborderpage) | **POST** /api/v1.0/apps/{appId}/weborderpage | 
 *WebhooksApi* | [**createWebhookSubscription**](docs/Api/WebhooksApi.md#createwebhooksubscription) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions | 
 *WebhooksApi* | [**createWebhookSubscriptionEventNames**](docs/Api/WebhooksApi.md#createwebhooksubscriptioneventnames) | **POST** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId}/events/{eventName} | 
 *WebhooksApi* | [**deleteWebhookSubscription**](docs/Api/WebhooksApi.md#deletewebhooksubscription) | **DELETE** /api/v1.0/{appId}/webhooks/{oauthAppId}/subscriptions/{webhookSubscriptionId} | 
@@ -1334,6 +1336,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultUserRole](docs/Model/RestApiResultUserRole.md)
  - [RestApiResultVoucher](docs/Model/RestApiResultVoucher.md)
  - [RestApiResultVoucherWithStats](docs/Model/RestApiResultVoucherWithStats.md)
+ - [RestApiResultWebOrderPage](docs/Model/RestApiResultWebOrderPage.md)
  - [RestApiResultWebsiteImage](docs/Model/RestApiResultWebsiteImage.md)
  - [RestApiResultWebsiteTestimonial](docs/Model/RestApiResultWebsiteTestimonial.md)
  - [RestApiResultWhiteLabelConfigModel](docs/Model/RestApiResultWhiteLabelConfigModel.md)
@@ -1363,6 +1366,7 @@ Class | Method | HTTP request | Description
  - [SetUserDeliveryLocationFieldRequest](docs/Model/SetUserDeliveryLocationFieldRequest.md)
  - [SetV2FeeCalculationRequest](docs/Model/SetV2FeeCalculationRequest.md)
  - [SetVoucherValidityPeriodsSimplifiedRequest](docs/Model/SetVoucherValidityPeriodsSimplifiedRequest.md)
+ - [SetWebOrderPage](docs/Model/SetWebOrderPage.md)
  - [Setting](docs/Model/Setting.md)
  - [SignupStep](docs/Model/SignupStep.md)
  - [SmsInfo](docs/Model/SmsInfo.md)
@@ -1509,6 +1513,7 @@ Class | Method | HTTP request | Description
  - [VoucherUpdatedEvent](docs/Model/VoucherUpdatedEvent.md)
  - [VoucherWithStats](docs/Model/VoucherWithStats.md)
  - [WaitHandle](docs/Model/WaitHandle.md)
+ - [WebOrderPage](docs/Model/WebOrderPage.md)
  - [WebhookEventSample](docs/Model/WebhookEventSample.md)
  - [WebhookLog](docs/Model/WebhookLog.md)
  - [WebhookSubscription](docs/Model/WebhookSubscription.md)
