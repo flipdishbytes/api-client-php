@@ -651,21 +651,21 @@ Class | Method | HTTP request | Description
 *WebsiteApi* | [**setIndexConfiguration**](docs/Api/WebsiteApi.md#setindexconfiguration) | **POST** /api/v1.0/{appId}/website/index | 
 *WebsiteApi* | [**uploadWebsiteImage**](docs/Api/WebsiteApi.md#uploadwebsiteimage) | **POST** /api/v1.0/{appId}/website/image/{imageLocation} | 
 *WebsiteApi* | [**websiteCheckNow**](docs/Api/WebsiteApi.md#websitechecknow) | **GET** /api/v1.0/{appId}/website/dnscheck | 
-*WhiteLabelBuildsApi* | [**healthCheck**](docs/Api/WhiteLabelBuildsApi.md#healthcheck) | **GET** /api/v1.0/whitelabelbuilds/health | 
 *WhiteLabelBuildsApi* | [**submitAndroidApps**](docs/Api/WhiteLabelBuildsApi.md#submitandroidapps) | **POST** /api/v1.0/whitelabelbuilds/android/multiple | 
 *WhiteLabelBuildsApi* | [**submitAndroidBuild**](docs/Api/WhiteLabelBuildsApi.md#submitandroidbuild) | **POST** /api/v1.0/whitelabelbuilds/{appId}/android | 
 *WhiteLabelBuildsApi* | [**submitIosApps**](docs/Api/WhiteLabelBuildsApi.md#submitiosapps) | **POST** /api/v1.0/whitelabelbuilds/ios/multiple | 
 *WhiteLabelBuildsApi* | [**submitIosBuild**](docs/Api/WhiteLabelBuildsApi.md#submitiosbuild) | **POST** /api/v1.0/whitelabelbuilds/{appId}/ios | 
+*WhiteLabelBuildsApi* | [**whiteLabelBuildsHealthCheck**](docs/Api/WhiteLabelBuildsApi.md#whitelabelbuildshealthcheck) | **GET** /api/v1.0/whitelabelbuilds/health | 
 *WhiteLabelConfigApi* | [**getAppGeneralConfig**](docs/Api/WhiteLabelConfigApi.md#getappgeneralconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/general | 
-*WhiteLabelConfigApi* | [**getAppStoreConfig**](docs/Api/WhiteLabelConfigApi.md#getappstoreconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 *WhiteLabelConfigApi* | [**getPlayStoreConfig**](docs/Api/WhiteLabelConfigApi.md#getplaystoreconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/playstore | 
+*WhiteLabelConfigApi* | [**getWhiteLabelAppStoreConfig**](docs/Api/WhiteLabelConfigApi.md#getwhitelabelappstoreconfig) | **GET** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 *WhiteLabelConfigApi* | [**getWhiteLabelConfig**](docs/Api/WhiteLabelConfigApi.md#getwhitelabelconfig) | **GET** /api/v1.0/whitelabelconfig/id/{wlid} | 
 *WhiteLabelConfigApi* | [**getWhiteLabelConfigByAppNameId**](docs/Api/WhiteLabelConfigApi.md#getwhitelabelconfigbyappnameid) | **GET** /api/v1.0/whitelabelconfig/name/{appId} | 
-*WhiteLabelConfigApi* | [**healthCheck**](docs/Api/WhiteLabelConfigApi.md#healthcheck) | **GET** /api/v1.0/whitelabelconfig/health | 
 *WhiteLabelConfigApi* | [**updateAppGeneralConfig**](docs/Api/WhiteLabelConfigApi.md#updateappgeneralconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/general | 
-*WhiteLabelConfigApi* | [**updateAppStoreConfig**](docs/Api/WhiteLabelConfigApi.md#updateappstoreconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 *WhiteLabelConfigApi* | [**updatePlayStoreConfig**](docs/Api/WhiteLabelConfigApi.md#updateplaystoreconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/playstore | 
+*WhiteLabelConfigApi* | [**updateWhiteLabelAppStoreConfig**](docs/Api/WhiteLabelConfigApi.md#updatewhitelabelappstoreconfig) | **POST** /api/v1.0/whitelabelconfig/{appId}/appstore | 
 *WhiteLabelConfigApi* | [**uploadAppStoreIcon**](docs/Api/WhiteLabelConfigApi.md#uploadappstoreicon) | **POST** /api/v1.0/whitelabelconfig/{appId}/app-store-icon | 
+*WhiteLabelConfigApi* | [**whiteLabelConfigHealthCheck**](docs/Api/WhiteLabelConfigApi.md#whitelabelconfighealthcheck) | **GET** /api/v1.0/whitelabelconfig/health | 
 *WhiteLabelContactFormTypeApi* | [**getAppContactFormType**](docs/Api/WhiteLabelContactFormTypeApi.md#getappcontactformtype) | **GET** /api/v1.0/whitelabelconfig/{appId}/contact-form-type | 
 *WhiteLabelContactFormTypeApi* | [**updateAppContactFormType**](docs/Api/WhiteLabelContactFormTypeApi.md#updateappcontactformtype) | **POST** /api/v1.0/whitelabelconfig/{appId}/contact-form-type | 
 

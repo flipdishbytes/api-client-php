@@ -82,22 +82,22 @@ class WhiteLabelConfigApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getAppStoreConfig
-     *
-     * .
-     *
-     */
-    public function testGetAppStoreConfig()
-    {
-    }
-
-    /**
      * Test case for getPlayStoreConfig
      *
      * .
      *
      */
     public function testGetPlayStoreConfig()
+    {
+    }
+
+    /**
+     * Test case for getWhiteLabelAppStoreConfig
+     *
+     * .
+     *
+     */
+    public function testGetWhiteLabelAppStoreConfig()
     {
     }
 
@@ -122,32 +122,12 @@ class WhiteLabelConfigApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for healthCheck
-     *
-     * .
-     *
-     */
-    public function testHealthCheck()
-    {
-    }
-
-    /**
      * Test case for updateAppGeneralConfig
      *
      * .
      *
      */
     public function testUpdateAppGeneralConfig()
-    {
-    }
-
-    /**
-     * Test case for updateAppStoreConfig
-     *
-     * .
-     *
-     */
-    public function testUpdateAppStoreConfig()
     {
     }
 
@@ -162,12 +142,32 @@ class WhiteLabelConfigApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for updateWhiteLabelAppStoreConfig
+     *
+     * .
+     *
+     */
+    public function testUpdateWhiteLabelAppStoreConfig()
+    {
+    }
+
+    /**
      * Test case for uploadAppStoreIcon
      *
      * .
      *
      */
     public function testUploadAppStoreIcon()
+    {
+    }
+
+    /**
+     * Test case for whiteLabelConfigHealthCheck
+     *
+     * .
+     *
+     */
+    public function testWhiteLabelConfigHealthCheck()
     {
     }
 }
