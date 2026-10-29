@@ -64,6 +64,9 @@ class OrderFulfillmentStatusUpdatedEvent implements ModelInterface, ArrayAccess
         'order_id' => 'int',
         'status_name' => 'string',
         'status_id' => 'string',
+        'customer' => '\Flipdish\\Client\Models\FulfillmentStatusEventCustomer',
+        'store' => '\Flipdish\\Client\Models\FulfillmentStatusEventStore',
+        'app_type' => 'string',
         'flipdish_event_id' => 'string',
         'create_time' => '\DateTime',
         'position' => 'int',
@@ -86,6 +89,9 @@ class OrderFulfillmentStatusUpdatedEvent implements ModelInterface, ArrayAccess
         'order_id' => 'int32',
         'status_name' => null,
         'status_id' => null,
+        'customer' => null,
+        'store' => null,
+        'app_type' => null,
         'flipdish_event_id' => 'uuid',
         'create_time' => 'date-time',
         'position' => 'int32',
@@ -129,6 +135,9 @@ class OrderFulfillmentStatusUpdatedEvent implements ModelInterface, ArrayAccess
         'order_id' => 'OrderId',
         'status_name' => 'StatusName',
         'status_id' => 'StatusId',
+        'customer' => 'Customer',
+        'store' => 'Store',
+        'app_type' => 'AppType',
         'flipdish_event_id' => 'FlipdishEventId',
         'create_time' => 'CreateTime',
         'position' => 'Position',
@@ -151,6 +160,9 @@ class OrderFulfillmentStatusUpdatedEvent implements ModelInterface, ArrayAccess
         'order_id' => 'setOrderId',
         'status_name' => 'setStatusName',
         'status_id' => 'setStatusId',
+        'customer' => 'setCustomer',
+        'store' => 'setStore',
+        'app_type' => 'setAppType',
         'flipdish_event_id' => 'setFlipdishEventId',
         'create_time' => 'setCreateTime',
         'position' => 'setPosition',
@@ -173,6 +185,9 @@ class OrderFulfillmentStatusUpdatedEvent implements ModelInterface, ArrayAccess
         'order_id' => 'getOrderId',
         'status_name' => 'getStatusName',
         'status_id' => 'getStatusId',
+        'customer' => 'getCustomer',
+        'store' => 'getStore',
+        'app_type' => 'getAppType',
         'flipdish_event_id' => 'getFlipdishEventId',
         'create_time' => 'getCreateTime',
         'position' => 'getPosition',
@@ -249,6 +264,9 @@ class OrderFulfillmentStatusUpdatedEvent implements ModelInterface, ArrayAccess
         $this->container['order_id'] = isset($data['order_id']) ? $data['order_id'] : null;
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
+        $this->container['customer'] = isset($data['customer']) ? $data['customer'] : null;
+        $this->container['store'] = isset($data['store']) ? $data['store'] : null;
+        $this->container['app_type'] = isset($data['app_type']) ? $data['app_type'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
         $this->container['create_time'] = isset($data['create_time']) ? $data['create_time'] : null;
         $this->container['position'] = isset($data['position']) ? $data['position'] : null;
@@ -423,6 +441,78 @@ class OrderFulfillmentStatusUpdatedEvent implements ModelInterface, ArrayAccess
     public function setStatusId($status_id)
     {
         $this->container['status_id'] = $status_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets customer
+     *
+     * @return \Flipdish\\Client\Models\FulfillmentStatusEventCustomer
+     */
+    public function getCustomer()
+    {
+        return $this->container['customer'];
+    }
+
+    /**
+     * Sets customer
+     *
+     * @param \Flipdish\\Client\Models\FulfillmentStatusEventCustomer $customer Optional slim customer (Id + language) for push / notification consumers
+     *
+     * @return $this
+     */
+    public function setCustomer($customer)
+    {
+        $this->container['customer'] = $customer;
+
+        return $this;
+    }
+
+    /**
+     * Gets store
+     *
+     * @return \Flipdish\\Client\Models\FulfillmentStatusEventStore
+     */
+    public function getStore()
+    {
+        return $this->container['store'];
+    }
+
+    /**
+     * Sets store
+     *
+     * @param \Flipdish\\Client\Models\FulfillmentStatusEventStore $store Optional slim store (Name); StoreId remains top-level
+     *
+     * @return $this
+     */
+    public function setStore($store)
+    {
+        $this->container['store'] = $store;
+
+        return $this;
+    }
+
+    /**
+     * Gets app_type
+     *
+     * @return string
+     */
+    public function getAppType()
+    {
+        return $this->container['app_type'];
+    }
+
+    /**
+     * Sets app_type
+     *
+     * @param string $app_type Order app type (e.g. Ios, Android) when known
+     *
+     * @return $this
+     */
+    public function setAppType($app_type)
+    {
+        $this->container['app_type'] = $app_type;
 
         return $this;
     }

@@ -119,6 +119,27 @@ class OrderFulfillmentStatusUpdatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "customer"
+     */
+    public function testPropertyCustomer()
+    {
+    }
+
+    /**
+     * Test attribute "store"
+     */
+    public function testPropertyStore()
+    {
+    }
+
+    /**
+     * Test attribute "app_type"
+     */
+    public function testPropertyAppType()
+    {
+    }
+
+    /**
      * Test attribute "flipdish_event_id"
      */
     public function testPropertyFlipdishEventId()

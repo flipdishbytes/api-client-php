@@ -842,6 +842,8 @@ Class | Method | HTTP request | Description
  - [FulfillmentStatesConfigurationSummary](docs/Model/FulfillmentStatesConfigurationSummary.md)
  - [FulfillmentStatesConfiguredStore](docs/Model/FulfillmentStatesConfiguredStore.md)
  - [FulfillmentStatusConfigurationItem](docs/Model/FulfillmentStatusConfigurationItem.md)
+ - [FulfillmentStatusEventCustomer](docs/Model/FulfillmentStatusEventCustomer.md)
+ - [FulfillmentStatusEventStore](docs/Model/FulfillmentStatusEventStore.md)
  - [GeoPointRequest](docs/Model/GeoPointRequest.md)
  - [GetEndUserFeeConfigsResponse](docs/Model/GetEndUserFeeConfigsResponse.md)
  - [GetReceiptByOrderIdQueryResponse](docs/Model/GetReceiptByOrderIdQueryResponse.md)
