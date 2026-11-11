@@ -967,33 +967,33 @@ class BankAccountApi
     /**
      * Operation getBankAccountById
      *
-     * @param  int $bank_account_id bank_account_id (required)
      * @param  string $app_id app_id (required)
+     * @param  int $bank_account_id bank_account_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Flipdish\\Client\Models\RestApiResultBankAccountDetail
      */
-    public function getBankAccountById($bank_account_id, $app_id)
+    public function getBankAccountById($app_id, $bank_account_id)
     {
-        list($response) = $this->getBankAccountByIdWithHttpInfo($bank_account_id, $app_id);
+        list($response) = $this->getBankAccountByIdWithHttpInfo($app_id, $bank_account_id);
         return $response;
     }
 
     /**
      * Operation getBankAccountByIdWithHttpInfo
      *
-     * @param  int $bank_account_id (required)
      * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
      *
      * @throws \Flipdish\\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Flipdish\\Client\Models\RestApiResultBankAccountDetail, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getBankAccountByIdWithHttpInfo($bank_account_id, $app_id)
+    public function getBankAccountByIdWithHttpInfo($app_id, $bank_account_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultBankAccountDetail';
-        $request = $this->getBankAccountByIdRequest($bank_account_id, $app_id);
+        $request = $this->getBankAccountByIdRequest($app_id, $bank_account_id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1083,15 +1083,15 @@ class BankAccountApi
      *
      * 
      *
-     * @param  int $bank_account_id (required)
      * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getBankAccountByIdAsync($bank_account_id, $app_id)
+    public function getBankAccountByIdAsync($app_id, $bank_account_id)
     {
-        return $this->getBankAccountByIdAsyncWithHttpInfo($bank_account_id, $app_id)
+        return $this->getBankAccountByIdAsyncWithHttpInfo($app_id, $bank_account_id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1104,16 +1104,16 @@ class BankAccountApi
      *
      * 
      *
-     * @param  int $bank_account_id (required)
      * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getBankAccountByIdAsyncWithHttpInfo($bank_account_id, $app_id)
+    public function getBankAccountByIdAsyncWithHttpInfo($app_id, $bank_account_id)
     {
         $returnType = '\Flipdish\\Client\Models\RestApiResultBankAccountDetail';
-        $request = $this->getBankAccountByIdRequest($bank_account_id, $app_id);
+        $request = $this->getBankAccountByIdRequest($app_id, $bank_account_id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1155,24 +1155,24 @@ class BankAccountApi
     /**
      * Create request for operation 'getBankAccountById'
      *
-     * @param  int $bank_account_id (required)
      * @param  string $app_id (required)
+     * @param  int $bank_account_id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getBankAccountByIdRequest($bank_account_id, $app_id)
+    protected function getBankAccountByIdRequest($app_id, $bank_account_id)
     {
-        // verify the required parameter 'bank_account_id' is set
-        if ($bank_account_id === null || (is_array($bank_account_id) && count($bank_account_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $bank_account_id when calling getBankAccountById'
-            );
-        }
         // verify the required parameter 'app_id' is set
         if ($app_id === null || (is_array($app_id) && count($app_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $app_id when calling getBankAccountById'
+            );
+        }
+        // verify the required parameter 'bank_account_id' is set
+        if ($bank_account_id === null || (is_array($bank_account_id) && count($bank_account_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $bank_account_id when calling getBankAccountById'
             );
         }
 
@@ -1185,18 +1185,18 @@ class BankAccountApi
 
 
         // path params
-        if ($bank_account_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'bankAccountId' . '}',
-                ObjectSerializer::toPathValue($bank_account_id),
-                $resourcePath
-            );
-        }
-        // path params
         if ($app_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'appId' . '}',
                 ObjectSerializer::toPathValue($app_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($bank_account_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'bankAccountId' . '}',
+                ObjectSerializer::toPathValue($bank_account_id),
                 $resourcePath
             );
         }

@@ -177,7 +177,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getBankAccountById**
-> \Flipdish\\Client\Models\RestApiResultBankAccountDetail getBankAccountById($bank_account_id, $app_id)
+> \Flipdish\\Client\Models\RestApiResultBankAccountDetail getBankAccountById($app_id, $bank_account_id)
 
 
 
@@ -195,11 +195,11 @@ $apiInstance = new Flipdish\\Client\Api\BankAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$bank_account_id = 56; // int | 
 $app_id = "app_id_example"; // string | 
+$bank_account_id = 56; // int | 
 
 try {
-    $result = $apiInstance->getBankAccountById($bank_account_id, $app_id);
+    $result = $apiInstance->getBankAccountById($app_id, $bank_account_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BankAccountApi->getBankAccountById: ', $e->getMessage(), PHP_EOL;
@@ -211,8 +211,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bank_account_id** | **int**|  |
  **app_id** | **string**|  |
+ **bank_account_id** | **int**|  |
 
 ### Return type
 
