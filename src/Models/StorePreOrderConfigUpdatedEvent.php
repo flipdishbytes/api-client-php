@@ -62,6 +62,7 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'store_id' => 'int',
         'user' => '\Flipdish\\Client\Models\UserEventInfo',
         'description' => 'string',
+        'delivery_type' => 'string',
         'pre_order_config' => '\Flipdish\\Client\Models\PreOrderConfig',
         'old_pre_order_config' => '\Flipdish\\Client\Models\PreOrderConfig',
         'flipdish_event_id' => 'string',
@@ -84,6 +85,7 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'store_id' => 'int32',
         'user' => null,
         'description' => null,
+        'delivery_type' => null,
         'pre_order_config' => null,
         'old_pre_order_config' => null,
         'flipdish_event_id' => 'uuid',
@@ -127,6 +129,7 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'store_id' => 'StoreId',
         'user' => 'User',
         'description' => 'Description',
+        'delivery_type' => 'DeliveryType',
         'pre_order_config' => 'PreOrderConfig',
         'old_pre_order_config' => 'OldPreOrderConfig',
         'flipdish_event_id' => 'FlipdishEventId',
@@ -149,6 +152,7 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'store_id' => 'setStoreId',
         'user' => 'setUser',
         'description' => 'setDescription',
+        'delivery_type' => 'setDeliveryType',
         'pre_order_config' => 'setPreOrderConfig',
         'old_pre_order_config' => 'setOldPreOrderConfig',
         'flipdish_event_id' => 'setFlipdishEventId',
@@ -171,6 +175,7 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
         'store_id' => 'getStoreId',
         'user' => 'getUser',
         'description' => 'getDescription',
+        'delivery_type' => 'getDeliveryType',
         'pre_order_config' => 'getPreOrderConfig',
         'old_pre_order_config' => 'getOldPreOrderConfig',
         'flipdish_event_id' => 'getFlipdishEventId',
@@ -224,8 +229,23 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
+    const DELIVERY_TYPE_DELIVERY = 'Delivery';
+    const DELIVERY_TYPE_PICKUP = 'Pickup';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getDeliveryTypeAllowableValues()
+    {
+        return [
+            self::DELIVERY_TYPE_DELIVERY,
+            self::DELIVERY_TYPE_PICKUP,
+        ];
+    }
     
 
     /**
@@ -247,6 +267,7 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
         $this->container['store_id'] = isset($data['store_id']) ? $data['store_id'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['delivery_type'] = isset($data['delivery_type']) ? $data['delivery_type'] : null;
         $this->container['pre_order_config'] = isset($data['pre_order_config']) ? $data['pre_order_config'] : null;
         $this->container['old_pre_order_config'] = isset($data['old_pre_order_config']) ? $data['old_pre_order_config'] : null;
         $this->container['flipdish_event_id'] = isset($data['flipdish_event_id']) ? $data['flipdish_event_id'] : null;
@@ -267,6 +288,14 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getDeliveryTypeAllowableValues();
+        if (!is_null($this->container['delivery_type']) && !in_array($this->container['delivery_type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'delivery_type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -375,6 +404,39 @@ class StorePreOrderConfigUpdatedEvent implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets delivery_type
+     *
+     * @return string
+     */
+    public function getDeliveryType()
+    {
+        return $this->container['delivery_type'];
+    }
+
+    /**
+     * Sets delivery_type
+     *
+     * @param string $delivery_type Type of pre order configuration Delivery / Pickup
+     *
+     * @return $this
+     */
+    public function setDeliveryType($delivery_type)
+    {
+        $allowedValues = $this->getDeliveryTypeAllowableValues();
+        if (!is_null($delivery_type) && !in_array($delivery_type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'delivery_type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['delivery_type'] = $delivery_type;
 
         return $this;
     }

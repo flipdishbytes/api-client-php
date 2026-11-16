@@ -105,6 +105,13 @@ class StorePreOrderConfigUpdatedEventTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "delivery_type"
+     */
+    public function testPropertyDeliveryType()
+    {
+    }
+
+    /**
      * Test attribute "pre_order_config"
      */
     public function testPropertyPreOrderConfig()

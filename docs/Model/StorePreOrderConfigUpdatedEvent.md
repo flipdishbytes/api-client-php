@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **store_id** | **int** | Store Id | [optional] 
 **user** | [**\Flipdish\\Client\Models\UserEventInfo**](UserEventInfo.md) | User which deleted delivery zone for this store | [optional] 
 **description** | **string** | Description | [optional] 
+**delivery_type** | **string** | Type of pre order configuration Delivery / Pickup | [optional] 
 **pre_order_config** | [**\Flipdish\\Client\Models\PreOrderConfig**](PreOrderConfig.md) | Pre Order Configuration | [optional] 
 **old_pre_order_config** | [**\Flipdish\\Client\Models\PreOrderConfig**](PreOrderConfig.md) | Old Pre Order Configuration | [optional] 
 **flipdish_event_id** | **string** | The identitfier of the event | [optional] 
