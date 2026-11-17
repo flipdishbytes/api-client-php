@@ -82,6 +82,9 @@ class StoreEndOfDayReport implements ModelInterface, ArrayAccess
         'cash_order_value' => 'double',
         'paid_online_order_value_excluding_delivery_fees' => 'double',
         'cash_order_value_excluding_delivery_fees' => 'double',
+        'user_end_fee' => 'double',
+        'cash_user_end_fee' => 'double',
+        'paid_online_user_end_fee' => 'double',
         'start_time' => '\DateTime',
         'end_time' => '\DateTime'
     ];
@@ -116,6 +119,9 @@ class StoreEndOfDayReport implements ModelInterface, ArrayAccess
         'cash_order_value' => 'double',
         'paid_online_order_value_excluding_delivery_fees' => 'double',
         'cash_order_value_excluding_delivery_fees' => 'double',
+        'user_end_fee' => 'double',
+        'cash_user_end_fee' => 'double',
+        'paid_online_user_end_fee' => 'double',
         'start_time' => 'date-time',
         'end_time' => 'date-time'
     ];
@@ -171,6 +177,9 @@ class StoreEndOfDayReport implements ModelInterface, ArrayAccess
         'cash_order_value' => 'CashOrderValue',
         'paid_online_order_value_excluding_delivery_fees' => 'PaidOnlineOrderValueExcludingDeliveryFees',
         'cash_order_value_excluding_delivery_fees' => 'CashOrderValueExcludingDeliveryFees',
+        'user_end_fee' => 'UserEndFee',
+        'cash_user_end_fee' => 'CashUserEndFee',
+        'paid_online_user_end_fee' => 'PaidOnlineUserEndFee',
         'start_time' => 'StartTime',
         'end_time' => 'EndTime'
     ];
@@ -205,6 +214,9 @@ class StoreEndOfDayReport implements ModelInterface, ArrayAccess
         'cash_order_value' => 'setCashOrderValue',
         'paid_online_order_value_excluding_delivery_fees' => 'setPaidOnlineOrderValueExcludingDeliveryFees',
         'cash_order_value_excluding_delivery_fees' => 'setCashOrderValueExcludingDeliveryFees',
+        'user_end_fee' => 'setUserEndFee',
+        'cash_user_end_fee' => 'setCashUserEndFee',
+        'paid_online_user_end_fee' => 'setPaidOnlineUserEndFee',
         'start_time' => 'setStartTime',
         'end_time' => 'setEndTime'
     ];
@@ -239,6 +251,9 @@ class StoreEndOfDayReport implements ModelInterface, ArrayAccess
         'cash_order_value' => 'getCashOrderValue',
         'paid_online_order_value_excluding_delivery_fees' => 'getPaidOnlineOrderValueExcludingDeliveryFees',
         'cash_order_value_excluding_delivery_fees' => 'getCashOrderValueExcludingDeliveryFees',
+        'user_end_fee' => 'getUserEndFee',
+        'cash_user_end_fee' => 'getCashUserEndFee',
+        'paid_online_user_end_fee' => 'getPaidOnlineUserEndFee',
         'start_time' => 'getStartTime',
         'end_time' => 'getEndTime'
     ];
@@ -564,6 +579,9 @@ class StoreEndOfDayReport implements ModelInterface, ArrayAccess
         $this->container['cash_order_value'] = isset($data['cash_order_value']) ? $data['cash_order_value'] : null;
         $this->container['paid_online_order_value_excluding_delivery_fees'] = isset($data['paid_online_order_value_excluding_delivery_fees']) ? $data['paid_online_order_value_excluding_delivery_fees'] : null;
         $this->container['cash_order_value_excluding_delivery_fees'] = isset($data['cash_order_value_excluding_delivery_fees']) ? $data['cash_order_value_excluding_delivery_fees'] : null;
+        $this->container['user_end_fee'] = isset($data['user_end_fee']) ? $data['user_end_fee'] : null;
+        $this->container['cash_user_end_fee'] = isset($data['cash_user_end_fee']) ? $data['cash_user_end_fee'] : null;
+        $this->container['paid_online_user_end_fee'] = isset($data['paid_online_user_end_fee']) ? $data['paid_online_user_end_fee'] : null;
         $this->container['start_time'] = isset($data['start_time']) ? $data['start_time'] : null;
         $this->container['end_time'] = isset($data['end_time']) ? $data['end_time'] : null;
     }
@@ -1181,6 +1199,78 @@ class StoreEndOfDayReport implements ModelInterface, ArrayAccess
     public function setCashOrderValueExcludingDeliveryFees($cash_order_value_excluding_delivery_fees)
     {
         $this->container['cash_order_value_excluding_delivery_fees'] = $cash_order_value_excluding_delivery_fees;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_end_fee
+     *
+     * @return double
+     */
+    public function getUserEndFee()
+    {
+        return $this->container['user_end_fee'];
+    }
+
+    /**
+     * Sets user_end_fee
+     *
+     * @param double $user_end_fee Total user end fee (processing fee charged to the customer, including VAT)
+     *
+     * @return $this
+     */
+    public function setUserEndFee($user_end_fee)
+    {
+        $this->container['user_end_fee'] = $user_end_fee;
+
+        return $this;
+    }
+
+    /**
+     * Gets cash_user_end_fee
+     *
+     * @return double
+     */
+    public function getCashUserEndFee()
+    {
+        return $this->container['cash_user_end_fee'];
+    }
+
+    /**
+     * Sets cash_user_end_fee
+     *
+     * @param double $cash_user_end_fee User end fee charged on cash orders
+     *
+     * @return $this
+     */
+    public function setCashUserEndFee($cash_user_end_fee)
+    {
+        $this->container['cash_user_end_fee'] = $cash_user_end_fee;
+
+        return $this;
+    }
+
+    /**
+     * Gets paid_online_user_end_fee
+     *
+     * @return double
+     */
+    public function getPaidOnlineUserEndFee()
+    {
+        return $this->container['paid_online_user_end_fee'];
+    }
+
+    /**
+     * Sets paid_online_user_end_fee
+     *
+     * @param double $paid_online_user_end_fee User end fee charged on paid online (card) orders
+     *
+     * @return $this
+     */
+    public function setPaidOnlineUserEndFee($paid_online_user_end_fee)
+    {
+        $this->container['paid_online_user_end_fee'] = $paid_online_user_end_fee;
 
         return $this;
     }

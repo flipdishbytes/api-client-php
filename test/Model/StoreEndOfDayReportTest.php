@@ -245,6 +245,27 @@ class StoreEndOfDayReportTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "user_end_fee"
+     */
+    public function testPropertyUserEndFee()
+    {
+    }
+
+    /**
+     * Test attribute "cash_user_end_fee"
+     */
+    public function testPropertyCashUserEndFee()
+    {
+    }
+
+    /**
+     * Test attribute "paid_online_user_end_fee"
+     */
+    public function testPropertyPaidOnlineUserEndFee()
+    {
+    }
+
+    /**
      * Test attribute "start_time"
      */
     public function testPropertyStartTime()
