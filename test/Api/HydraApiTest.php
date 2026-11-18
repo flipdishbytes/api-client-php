@@ -82,6 +82,16 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for attachStoreToKiosk
+     *
+     * .
+     *
+     */
+    public function testAttachStoreToKiosk()
+    {
+    }
+
+    /**
      * Test case for attachStoreToTerminal
      *
      * .
@@ -222,6 +232,16 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for hydraDetachStoreFromKiosk
+     *
+     * .
+     *
+     */
+    public function testHydraDetachStoreFromKiosk()
+    {
+    }
+
+    /**
      * Test case for hydraGetEmvsForAppId
      *
      * .
@@ -238,6 +258,26 @@ class HydraApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testLoginWithDeviceId()
+    {
+    }
+
+    /**
+     * Test case for register
+     *
+     * .
+     *
+     */
+    public function testRegister()
+    {
+    }
+
+    /**
+     * Test case for unAssign
+     *
+     * .
+     *
+     */
+    public function testUnAssign()
     {
     }
 

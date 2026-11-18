@@ -285,6 +285,7 @@ Class | Method | HTTP request | Description
 *HomeApi* | [**getHomeStatistics**](docs/Api/HomeApi.md#gethomestatistics) | **GET** /api/v1.0/{appId}/home/stats | 
 *HomeApi* | [**getOktaPortalFeatureFlag**](docs/Api/HomeApi.md#getoktaportalfeatureflag) | **GET** /api/v1.0/home/okta-portal | 
 *HydraApi* | [**assignEmv**](docs/Api/HydraApi.md#assignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/assign/{hydraConfigId}/{emvTerminalId} | 
+*HydraApi* | [**attachStoreToKiosk**](docs/Api/HydraApi.md#attachstoretokiosk) | **POST** /api/v1.0/{appId}/AttachStoreToKiosk/{deviceId}/store/{storeId} | 
 *HydraApi* | [**attachStoreToTerminal**](docs/Api/HydraApi.md#attachstoretoterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/attach/{storeId} | 
 *HydraApi* | [**cancelEmvPayment**](docs/Api/HydraApi.md#cancelemvpayment) | **POST** /api/v1.0/{appId}/hydra/cancelemvpayment/{orderId} | 
 *HydraApi* | [**detachStoreFromTerminal**](docs/Api/HydraApi.md#detachstorefromterminal) | **POST** /api/v1.0/{appId}/hydra/{deviceId}/detach/{storeId} | 
@@ -299,8 +300,11 @@ Class | Method | HTTP request | Description
 *HydraApi* | [**getSettings**](docs/Api/HydraApi.md#getsettings) | **GET** /api/v1.0/hydra/settings | 
 *HydraApi* | [**hydraCreateEmv**](docs/Api/HydraApi.md#hydracreateemv) | **POST** /api/v1.0/{appId}/emvterminals | 
 *HydraApi* | [**hydraDeleteEmv**](docs/Api/HydraApi.md#hydradeleteemv) | **DELETE** /api/v1.0/{appId}/emvterminals/{id} | 
+*HydraApi* | [**hydraDetachStoreFromKiosk**](docs/Api/HydraApi.md#hydradetachstorefromkiosk) | **DELETE** /api/v1.0/{appId}/DetachStoreFromKiosk/{deviceId}/store/{storeId} | 
 *HydraApi* | [**hydraGetEmvsForAppId**](docs/Api/HydraApi.md#hydragetemvsforappid) | **GET** /api/v1.0/{appId}/emvterminals | 
 *HydraApi* | [**loginWithDeviceId**](docs/Api/HydraApi.md#loginwithdeviceid) | **POST** /api/v1.0/hydra/{deviceId}/login | 
+*HydraApi* | [**register**](docs/Api/HydraApi.md#register) | **POST** /api/v1.0/{appId}/hydra/registration | 
+*HydraApi* | [**unAssign**](docs/Api/HydraApi.md#unassign) | **DELETE** /api/v1.0/{appId}/hydra/{deviceId}/registration | 
 *HydraApi* | [**unassignEmv**](docs/Api/HydraApi.md#unassignemv) | **POST** /api/v1.0/{appId}/hydra/emvterminal/unassign/{hydraConfigId} | 
 *HydraApi* | [**updateKioskCashVisibilitySettings**](docs/Api/HydraApi.md#updatekioskcashvisibilitysettings) | **POST** /api/v1.0/{appId}/kioskupdatecashsettings | 
 *HydraApi* | [**updateKioskSettings**](docs/Api/HydraApi.md#updatekiosksettings) | **POST** /api/v1.0/{appId}/kiosksettings/{deviceId} | 
@@ -862,6 +866,8 @@ Class | Method | HTTP request | Description
  - [HydraConnectionStatusChangedEvent](docs/Model/HydraConnectionStatusChangedEvent.md)
  - [HydraCreatedEvent](docs/Model/HydraCreatedEvent.md)
  - [HydraDeviceDetails](docs/Model/HydraDeviceDetails.md)
+ - [HydraRegistrationRequest](docs/Model/HydraRegistrationRequest.md)
+ - [HydraRegistrationStatus](docs/Model/HydraRegistrationStatus.md)
  - [HydraRequestResetEvent](docs/Model/HydraRequestResetEvent.md)
  - [HydraSettingChangedEvent](docs/Model/HydraSettingChangedEvent.md)
  - [HydraStatus](docs/Model/HydraStatus.md)
@@ -1247,6 +1253,7 @@ Class | Method | HTTP request | Description
  - [RestApiResultHomeStatistics](docs/Model/RestApiResultHomeStatistics.md)
  - [RestApiResultHydraConfig](docs/Model/RestApiResultHydraConfig.md)
  - [RestApiResultHydraDeviceDetails](docs/Model/RestApiResultHydraDeviceDetails.md)
+ - [RestApiResultHydraRegistrationStatus](docs/Model/RestApiResultHydraRegistrationStatus.md)
  - [RestApiResultHydraStatus](docs/Model/RestApiResultHydraStatus.md)
  - [RestApiResultIndexPage](docs/Model/RestApiResultIndexPage.md)
  - [RestApiResultIndexPageBase](docs/Model/RestApiResultIndexPageBase.md)

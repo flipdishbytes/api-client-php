@@ -1,0 +1,20 @@
+# HydraRegistrationStatus
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**device_id** | **string** | Device id supplied by the device at login | [optional] 
+**serial_number** | **string** | Device serial number, when the device reported one at login | [optional] 
+**app_id** | **string** |  | 
+**store_ids** | **int[]** | Store to assign the hydra | [optional] 
+**property_ids** | **string[]** | AuthZ Property ids for assigned stores | [optional] 
+**is_registered** | **bool** | The device has been already registered | 
+**pin_code** | **int** | 6 digit PIN code (not starting with zero). | [optional] 
+**images** | **string[]** | Hydra images (covers) | [optional] 
+**user_type** | **string** | Hydra User Type as integer. Prefer {Flipdish.PublicModels.V1.Hydra.HydraStatus.DeviceType}. | [optional] 
+**device_type** | **string** | Hydra device type (Kiosk / Terminal), serialized as string. | [optional] 
+**hydra_user_id** | **int** | Zeus Hydra user id | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
